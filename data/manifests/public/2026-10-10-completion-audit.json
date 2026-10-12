@@ -1,0 +1,183 @@
+{
+  "audit_date": "2026-10-10",
+  "timezone": "America/Los_Angeles",
+  "artifact_type": "documentation_completion_audit",
+  "scope": "Finish omissions within the accepted documentation-only milestone; official documentation/page metadata and normalized data requirements only.",
+  "catalog_path": "data/catalog/sources.json",
+  "catalog_counts": {
+    "providers": 83,
+    "datasets": 177
+  },
+  "initial_findings": {
+    "checked_products_without_evidence": [
+      "clinvar_versions",
+      "orcs_screens",
+      "replogle_perturbseq",
+      "lincs_level5",
+      "cellxgene_census",
+      "tabula_sapiens_v2",
+      "hpa_expression",
+      "cptac_processed",
+      "htan_processed",
+      "htan_controlled_sequencing",
+      "alphafold_models",
+      "protacdb_compounds",
+      "onsides_release",
+      "google_patents_export",
+      "meddra_hierarchy"
+    ],
+    "outcome_gwas_contracts": "Inherited gene/assay fields were inappropriate and conditional case/control counts were missing.",
+    "qtl_contracts": "Effect scale, phenotype context and cohort overlap were incompletely represented.",
+    "ld_contract": "Phased reference-panel genotypes were incorrectly described as if a provider-supplied LD matrix were included."
+  },
+  "documentation_checks": [
+    {
+      "dataset_id": "clinvar_versions",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/downloads/",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "orcs_screens",
+      "url": "https://downloads.thebiogrid.org/BioGRID-ORCS/Latest-Release/",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "replogle_perturbseq",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9380471/",
+      "kind": "primary_paper",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "lincs_level5",
+      "url": "https://clue.io/connectopedia/guide_to_geo_l1000_data",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "cellxgene_census",
+      "url": "https://chanzuckerberg.github.io/cellxgene-census/cellxgene_census_docsite_data_release_info.html",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "tabula_sapiens_v2",
+      "url": "https://figshare.com/articles/dataset/Tabula_Sapiens_v2/27921984",
+      "kind": "official_dataset_page",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "hpa_expression",
+      "url": "https://www.proteinatlas.org/about/download",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "cptac_processed",
+      "url": "https://pdc.cancer.gov/pdc/data-use-guidelines",
+      "kind": "official_documentation_search_extract",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "htan_processed",
+      "url": "https://docs.humantumoratlas.org/overview/data_access/",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "htan_controlled_sequencing",
+      "url": "https://docs.humantumoratlas.org/overview/data_access/",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "alphafold_models",
+      "url": "https://alphafold.ebi.ac.uk/download",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "protacdb_compounds",
+      "url": "https://cadd.zju.edu.cn/protacdb/downloads",
+      "kind": "official_terms",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "onsides_release",
+      "url": "https://github.com/tatonetti-lab/onsides/blob/main/README.md",
+      "kind": "official_repository_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "google_patents_export",
+      "url": "https://docs.cloud.google.com/bigquery/public-data",
+      "kind": "official_documentation",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    },
+    {
+      "dataset_id": "meddra_hierarchy",
+      "url": "https://files.meddra.org/www/Website%20Files/Welcome%20Pages/001418%20Statement%20on%20MedDRA%20Data%20Sharing.pdf",
+      "kind": "official_terms",
+      "checked_at": "2026-10-10",
+      "result": "Supporting documentation evidence attached to catalog; exact file content/access/temporal eligibility remain unresolved."
+    }
+  ],
+  "rendering_limitations": [
+    {
+      "url": "https://pdc.cancer.gov/pdc/faq/Files_Download",
+      "observation": "Direct rendering returned a page shell; official indexed data-use guidance was used and explicitly labeled."
+    },
+    {
+      "url": "https://alphafold.ebi.ac.uk/faq",
+      "observation": "Direct rendering omitted expanded FAQ text; the official indexed license statement was separately labeled."
+    }
+  ],
+  "contract_changes": {
+    "qtl_products": [
+      "ukb_ppp_pqtl",
+      "decode_pqtl",
+      "eqtl_catalogue_nominal",
+      "gtex_v8_nominal_eqtl",
+      "gtex_v8_nominal_sqtl",
+      "interval_pqtl"
+    ],
+    "outcome_gwas_products": [
+      "finngen_gwas",
+      "pan_ukb_gwas",
+      "gwas_full_sumstats"
+    ],
+    "other_products": [
+      "opengwas_services",
+      "igsr_ld_reference",
+      "study_ld_matrices",
+      "genetics_results"
+    ],
+    "rules": [
+      "Binary case counts and case fraction are condition-specific, not universal or equivalent to population prevalence.",
+      "Unknown and not-applicable fields do not become zero or invented estimates.",
+      "Raw phased genotypes and calculated/public LD matrices are separate products.",
+      "Dependencies specify interpretation/validation inputs; they do not grant access or impose a raw-download sequence."
+    ]
+  },
+  "dataset_collection_performed": false,
+  "ingestion_or_scientific_analysis_performed": false,
+  "accounts_or_paid_queries_performed": false,
+  "limitations": [
+    "This is source documentation and catalog consistency work, not artifact validation, genetic inference or clinical prediction."
+  ]
+}

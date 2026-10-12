@@ -1,0 +1,389 @@
+{
+  "date": "2026-10-10",
+  "timezone": "America/Los_Angeles",
+  "scope": "Authorized initial public acquisition; point-in-time progress snapshot, not scientific validation.",
+  "storage_role": "external_bulk_E",
+  "datasets": [
+    {
+      "dataset_id": "chembl_molecules",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "partial",
+      "expected_files": 5,
+      "completed_files": 4,
+      "completed_bytes": 26266.0,
+      "in_progress_files": 1
+    },
+    {
+      "dataset_id": "ot_association_by_datasource_direct",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 31548642.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_association_by_datasource_indirect",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 103431546.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_association_by_datatype_direct",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 32355246.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_association_by_datatype_indirect",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 107893382.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_association_by_overall_indirect",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 92369063.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_association_overall_direct",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 20,
+      "completed_files": 20,
+      "completed_bytes": 30780022.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_biosample",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 6447427.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_colocalisation_coloc",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "downloading",
+      "expected_files": 25,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 4
+    },
+    {
+      "dataset_id": "ot_colocalisation_ecaviar",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 25,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_credible_set",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 25,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_disease",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 5545555.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_disease_hpo",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_disease_phenotype",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_drug_indication",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 2758480.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_drug_mechanism_of_action",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 478223.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_drug_molecule",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 2275731.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_drug_warning",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_evidence",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "partial",
+      "expected_files": 2294,
+      "completed_files": 411,
+      "completed_bytes": 13449406.0,
+      "in_progress_files": 2
+    },
+    {
+      "dataset_id": "ot_expression",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 4,
+      "completed_files": 4,
+      "completed_bytes": 39426999.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_go",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 8,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_interaction",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 8,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_interaction_evidence",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 200,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_interval",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 83,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_known_drug",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 2,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_l2g_prediction",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 16,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_literature",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 334,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_literature_vector",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 256,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_mouse_phenotype",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_openfda_significant_adverse_drug_reactions",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 20,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_openfda_significant_adverse_target_reactions",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "partial",
+      "expected_files": 20,
+      "completed_files": 4,
+      "completed_bytes": 120125.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_pharmacogenomics",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_reactome",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_so",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 26339.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_study",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 1,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_target",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 10,
+      "completed_files": 10,
+      "completed_bytes": 75568567.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_target_essentiality",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "collected",
+      "expected_files": 10,
+      "completed_files": 10,
+      "completed_bytes": 405282884.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_target_prioritisation",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 10,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "ot_variant",
+      "batch_id": "core-25-09-chembl35-2026-10-10",
+      "status": "queued",
+      "expected_files": 25,
+      "completed_files": 0,
+      "completed_bytes": null,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "hgnc_symbols",
+      "batch_id": "starter-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 16973159.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "vbt_labels",
+      "batch_id": "starter-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 6074477.0,
+      "in_progress_files": 0
+    },
+    {
+      "dataset_id": "vbt_linkage",
+      "batch_id": "starter-2026-10-10",
+      "status": "collected",
+      "expected_files": 1,
+      "completed_files": 1,
+      "completed_bytes": 10375291.0,
+      "in_progress_files": 0
+    }
+  ],
+  "parsed_products": 0,
+  "scientifically_validated_products": 0,
+  "note": "Live worker state and source receipts are outside version control. No credentials, label values, signed URLs or private absolute paths are published here."
+}

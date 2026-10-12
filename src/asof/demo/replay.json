@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "responses": {
+    "genetics": [
+      {
+        "observation_ids": [
+          "demo-genetics-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "perturbation": [
+      {
+        "observation_ids": [
+          "demo-perturbation-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "expression": [
+      {
+        "observation_ids": [
+          "demo-expression-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "modality": [
+      {
+        "observation_ids": [
+          "demo-modality-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "literature": [
+      {
+        "observation_ids": [
+          "demo-literature-1",
+          "demo-literature-duplicate"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "clinical": [
+      {
+        "observation_ids": [
+          "demo-clinical-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "safety": [
+      {
+        "observation_ids": [
+          "demo-safety-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ],
+    "pathway": [
+      {
+        "observation_ids": [
+          "demo-pathway-1"
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        }
+      }
+    ]
+  }
+}

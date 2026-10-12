@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "responses": {
+    "genetics": [
+      {
+        "request_sha256": "4916f9457bfbb52041ae2b79e3ee492f98e1c8545dfc37068adebab8d34c47eb",
+        "selection": {
+          "observation_ids": [
+            "demo-genetics-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "perturbation": [
+      {
+        "request_sha256": "a2730145468dfd971d30b511af2ea31508c5bf20a9cd2d704f9fc6656d45197d",
+        "selection": {
+          "observation_ids": [
+            "demo-perturbation-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "expression": [
+      {
+        "request_sha256": "7291f77e3600efa643309b7581d03c51857c248be20b27400322229fc3db39ed",
+        "selection": {
+          "observation_ids": [
+            "demo-expression-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "modality": [
+      {
+        "request_sha256": "b0ac14802e5bf793fe2302ba38edea7bd4e8c5b454901f659f34d04171eaaccc",
+        "selection": {
+          "observation_ids": [
+            "demo-modality-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "literature": [
+      {
+        "request_sha256": "9c9da2370a7fd9d7a03bf67d936c0d448ddcb33606a9741321695a77316128b3",
+        "selection": {
+          "observation_ids": [
+            "demo-literature-1",
+            "demo-literature-duplicate"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "clinical": [
+      {
+        "request_sha256": "4023284163bce250a7354a507897da7b5a5570b3b3b6f10e36f498ce77e1001f",
+        "selection": {
+          "observation_ids": [
+            "demo-clinical-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "safety": [
+      {
+        "request_sha256": "cc1e029d5b1675455da66be2445f030422a7b7e1779d050b4ab0776badd67fd6",
+        "selection": {
+          "observation_ids": [
+            "demo-safety-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ],
+    "pathway": [
+      {
+        "request_sha256": "e65bc21c483325d56cd5e503364fad7df62f765f45588c919cc8d1b1199ee574",
+        "selection": {
+          "observation_ids": [
+            "demo-pathway-1"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cost_usd": 0
+          }
+        }
+      }
+    ]
+  }
+}

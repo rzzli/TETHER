@@ -1,0 +1,37 @@
+# Keep originals, reference payloads, generated outputs, evaluation records and caches out of version control.
+/raw/**
+!/raw/**/
+!/raw/**/.gitkeep
+/reference/**
+!/reference/**/
+!/reference/**/.gitkeep
+/derived/**
+!/derived/**/
+!/derived/**/.gitkeep
+/benchmark/**
+!/benchmark/**/
+!/benchmark/**/.gitkeep
+/cache/**
+!/cache/**/
+!/cache/**/.gitkeep
+
+# Only deliberately reviewed/sanitized JSON or Markdown manifests are versionable.
+/manifests/**
+!/manifests/**/
+!/manifests/.gitkeep
+!/manifests/public/
+!/manifests/public/**/
+!/manifests/public/**/.gitkeep
+!/manifests/public/**/*.json
+!/manifests/public/**/*.md
+
+# Never track local credentials, signed-link files or editor/runtime residue.
+**/.env
+**/.env.*
+**/*credentials*
+**/*secrets*
+**/*signed_urls*
+**/*.tmp
+**/*.partial
+**/__pycache__/
+**/.DS_Store

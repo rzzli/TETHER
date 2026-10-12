@@ -1,0 +1,182 @@
+{
+  "review_date": "2026-10-09",
+  "scope": "Small read-only unauthenticated access probes and pinned Virtual Biotech source/label inspection. No agent execution or statistical-genetics analysis.",
+  "virtual_biotech_commit": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+  "checks": [
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/registry.py",
+      "status": 200,
+      "bytes": 16201,
+      "sha256": "B8EECBBC21716E0636C4E635C69852438D29CE095BD69C8169CDF6E98F66227C",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\src__agents__registry.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/data/loader.py",
+      "status": 200,
+      "bytes": 12794,
+      "sha256": "FCB42DB91750B6242759558AC08FAC92A5A4BE255B02C38A744E806398703BD4",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\src__data__loader.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/mcp_servers/association_mcp/tools.py",
+      "status": 200,
+      "bytes": 53263,
+      "sha256": "C6FDBF80321395E55104301437D7EE1BAB7968B4B34B28A707C00730350FC83F",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\src__mcp_servers__association_mcp__tools.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/mcp_servers/clinicaltrials_mcp/tools.py",
+      "status": 200,
+      "bytes": 62673,
+      "sha256": "2814A1471CB9F99A29E1CF810A99E3CD6000EDE9C32931C7ADAFE16980539B64",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\src__mcp_servers__clinicaltrials_mcp__tools.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/mcp_servers/genetics_mcp/tools.py",
+      "status": 200,
+      "bytes": 54064,
+      "sha256": "9FD5DD5D66506F02C1DC1E46C05F06AC529A88A75DB42A5B072CFCC36E47D9CD",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\src__mcp_servers__genetics_mcp__tools.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/datasets/clinical_trials/clinical_trial_labels_reconciled.csv",
+      "status": 200,
+      "bytes": 6074477,
+      "sha256": "01F7F80686087051D49F3ADB88B7F891B432C32B570739C8F4EBDFB2F3DB533C",
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\datasets__clinical_trials__clinical_trial_labels_reconciled.csv"
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "response_characters": 10750,
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\probe-6.txt"
+    },
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "response_characters": 8570,
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\probe-7.txt"
+    },
+    {
+      "url": "https://ukbiobank.opendata.sagebase.org.s3.amazonaws.com/?list-type=2&max-keys=1",
+      "status": null,
+      "error": "The SSL connection could not be established, see inner exception."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/eqtl/Data_access/",
+      "status": 200,
+      "content_type": "text/html",
+      "response_characters": 17203,
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\probe-9.txt"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/eqtl/License/",
+      "status": 200,
+      "content_type": "text/html",
+      "response_characters": 12913,
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\probe-10.txt"
+    },
+    {
+      "url": "https://aact.ctti-clinicaltrials.org/downloads/snapshots?type=flatfiles",
+      "status": 404,
+      "error": "Response status code does not indicate success: 404 (Not Found)."
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:38632401%20AND%20SRC:MED&format=json&pageSize=1",
+      "status": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "response_characters": 1029,
+      "cache_file": "C:\\Users\\zzric\\AppData\\Local\\Temp\\AsOf-feasibility-2026-10-09\\probe-12.txt"
+    },
+    {
+      "url": "https://s3.amazonaws.com/ukbiobank.opendata.sagebase.org?list-type=2&max-keys=1",
+      "status": 403,
+      "scope": "Unauthenticated bucket listing only; this does not establish object-level permissions."
+    }
+  ],
+  "label_summary": {
+    "rows": 56707,
+    "columns": [
+      "nct_id",
+      "phase",
+      "status",
+      "studyStopReason",
+      "studyStopReasonCategories",
+      "phase2_progression",
+      "primary_endpoint_result",
+      "secondary_endpoint_result",
+      "virtualbiotech_stop_reason_categories",
+      "results_source",
+      "ae_source",
+      "pubmed_ids",
+      "ae_serious_infections_pct",
+      "ae_serious_gastrointestinal_pct",
+      "ae_serious_cardiac_pct",
+      "ae_serious_blood_lymphatic_pct",
+      "ae_serious_nervous_pct",
+      "ae_serious_respiratory_pct",
+      "ae_serious_general_pct",
+      "ae_serious_vascular_pct",
+      "ae_serious_renal_pct",
+      "ae_serious_injury_pct"
+    ],
+    "unique_nct_ids": 56707,
+    "primary_endpoint_counts": [
+      {
+        "Name": "",
+        "Count": 20115
+      },
+      {
+        "Name": "NEGATIVE",
+        "Count": 9477
+      },
+      {
+        "Name": "POSITIVE",
+        "Count": 19623
+      },
+      {
+        "Name": "UNKNOWN",
+        "Count": 7492
+      }
+    ],
+    "phase2_progression_counts": [
+      {
+        "Name": "",
+        "Count": 45295
+      },
+      {
+        "Name": "EVER",
+        "Count": 3026
+      },
+      {
+        "Name": "NEVER",
+        "Count": 8386
+      }
+    ],
+    "phase_counts": [
+      {
+        "Name": "0.5",
+        "Count": 723
+      },
+      {
+        "Name": "1.0",
+        "Count": 14237
+      },
+      {
+        "Name": "2.0",
+        "Count": 22164
+      },
+      {
+        "Name": "3.0",
+        "Count": 14911
+      },
+      {
+        "Name": "4.0",
+        "Count": 4672
+      }
+    ],
+    "rows_with_safety_stop_category": 700
+  }
+}

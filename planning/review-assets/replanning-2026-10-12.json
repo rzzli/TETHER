@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-12",
+  "timezone": "America/Los_Angeles",
+  "scope": "Planning revalidation; no runtime edits or full data/source verification rerun",
+  "plan_path": "planning/Revised Next Stage Plan after Repository Review.md",
+  "review_path": "planning/Full Repository Review and Verified Findings_claude10112026.md",
+  "review_sha256": "c6de7d63ef6b6ac055ddb86ac473811762982801d25a178ed9128ea8aa0bffde",
+  "canonical_pilot": "runs/v02-realdata-20261012T015124Z",
+  "pilot_report_sha256": "051b6fcd1f2facc7bf6059370b4ff60b9b7137b9fdb91153dc31aca482f3838d",
+  "ten_receipt_anchors_and_current_code_match": true,
+  "source_audit_rows": 20,
+  "source_audit_sha256": "568c022abcda049d45fbafd872e2d2fa63c81f65ea7215c50e49f28d6e876de8",
+  "git_present": false,
+  "github_ci_present": false,
+  "fresh_case_validate_probes": {
+    "withdrawn_t6": "accepted_intended_context",
+    "future_eligible_since_t6": "accepted_requires_contract_decision",
+    "mapping_confidence_2_t6": "accepted_structural_gap",
+    "empty_program_id_t6": "accepted_structural_gap"
+  },
+  "missing_probe_none_overall_exit": "currently_success",
+  "planning_links_checked": true,
+  "scientific_adjudication": "not_run",
+  "runtime_and_acquisition_modified_this_replanning_turn": false
+}

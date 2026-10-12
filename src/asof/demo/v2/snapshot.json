@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "snapshot_id": "synthetic-v2",
+  "profile": "synthetic_demo",
+  "origin": "2023-01-01",
+  "allow_reconstructed": false,
+  "artifacts": [
+    {
+      "artifact_id": "demo-evidence",
+      "dataset_id": "synthetic_fixture",
+      "release_id": "fixture-v1",
+      "path": "evidence.json",
+      "sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+      "role": "agent_evidence",
+      "access_approved": true,
+      "temporal_classification": "verified_historical",
+      "availability": {
+        "first_public_at": "2018-01-01",
+        "release_public_at": "2019-01-01",
+        "record_public_at": "2019-01-01",
+        "annotation_public_at": "2019-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed"
+      },
+      "source_url": "https://example.invalid/synthetic-fixture",
+      "input_refs": [
+        "demo-original-input"
+      ]
+    },
+    {
+      "artifact_id": "demo-future",
+      "dataset_id": "synthetic_fixture",
+      "release_id": "fixture-v1",
+      "path": "future.json",
+      "sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+      "role": "agent_evidence",
+      "access_approved": true,
+      "temporal_classification": "verified_historical",
+      "availability": {
+        "first_public_at": "2018-01-01",
+        "release_public_at": "2025-01-01",
+        "record_public_at": "2025-01-01",
+        "annotation_public_at": "2025-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed"
+      },
+      "source_url": "https://example.invalid/synthetic-fixture",
+      "input_refs": [
+        "demo-future-input"
+      ]
+    }
+  ],
+  "origin_at": "2023-01-01T23:59:59.999999+00:00",
+  "sources": [
+    {
+      "source_id": "demo-original-input",
+      "dataset_id": "synthetic_fixture",
+      "release_id": "fixture-v1",
+      "path": "raw-inputs.json",
+      "sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+      "role": "agent_evidence",
+      "availability": {
+        "first_public_at": "2018-01-01",
+        "release_public_at": "2019-01-01",
+        "record_public_at": "2019-01-01",
+        "annotation_public_at": "2019-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed"
+      },
+      "temporal_classification": "verified_historical",
+      "source_url": "https://example.invalid/synthetic-fixture"
+    },
+    {
+      "source_id": "demo-future-input",
+      "dataset_id": "synthetic_fixture",
+      "release_id": "fixture-v1",
+      "path": "future.json",
+      "sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+      "role": "agent_evidence",
+      "availability": {
+        "first_public_at": "2018-01-01",
+        "release_public_at": "2025-01-01",
+        "record_public_at": "2025-01-01",
+        "annotation_public_at": "2025-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed"
+      },
+      "temporal_classification": "verified_historical",
+      "source_url": "https://example.invalid/synthetic-fixture"
+    }
+  ],
+  "coverage": {
+    "source_completeness": "complete"
+  }
+}

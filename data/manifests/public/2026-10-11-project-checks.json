@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "timezone": "America/Los_Angeles",
+  "python_files_parsed": 28,
+  "catalog_providers": 83,
+  "catalog_products": 178,
+  "document_index_products": 178,
+  "preserved_originals": {
+    "planning/Agentic Target-Evaluation Frameworks Critical Review.md": "19e0b7b9909d0c758cd2a3dff4c5d5012f584379609b2047fb86778c6af3669e",
+    "planning/Beyond the Virtual Biotech Tooling Gaps and Project Plan.md": "b64d7ce002cdd6f4929d91e48f67851dd596e76f964c660ac0ede5a21c3c9f28",
+    "planning/AsOf Feasibility Analysis and Peer Survey.md": "b5c5a3d998f9dee40fe4b1d6b9a108e54c445ae4736ba557378ada7f2c6b080b",
+    "tools/data/Start-DownloadBatch.ps1": "e432007fea83a2e6838002318cfaa87351ce59328533fa6b023182d422659601",
+    "tools/data/Watch-DownloadBatch.ps1": "7416c820984edee3bd5037570049c95eeda89bd861da8af1f2666d25313b938f"
+  },
+  "archived_v1": {
+    "status": "integrity_verified",
+    "outputs": 7,
+    "source_artifacts_checked": 1,
+    "trace_events": 27,
+    "receipt_sha256": "575beba2b50f88a5c9f8587384433b6d16c8a3290d37c408d55d0defbad2f2ca",
+    "external_anchor_checked": true,
+    "auxiliary_outputs_checked": 0,
+    "unsealed_auxiliary_outputs": [],
+    "code_matches_current": false,
+    "semantic_consistency": "unavailable_legacy_v1",
+    "source_binding": "current_originals",
+    "scientific_validity": "not_established"
+  },
+  "archived_v2": {
+    "status": "integrity_verified",
+    "outputs": 8,
+    "source_artifacts_checked": 2,
+    "trace_events": 37,
+    "receipt_sha256": "8bee15863a3c0df4aedbd9b4de59e44bae7be4280e151dbd71395cef9ee91e4b",
+    "external_anchor_checked": true,
+    "auxiliary_outputs_checked": 0,
+    "unsealed_auxiliary_outputs": [
+      "request.json"
+    ],
+    "code_matches_current": false,
+    "semantic_consistency": "verified",
+    "source_binding": "current_originals",
+    "scientific_validity": "not_established"
+  },
+  "unit_tests": {
+    "passed": 100,
+    "elapsed_seconds": 30.592
+  },
+  "review_probes_passed": 10,
+  "dependency_free_demo_receipt_sha256": "a47b55ed6e593b480569dcad4d61271ad020265791092e8202a7d9351c1afc45",
+  "scientific_validation": "not_run"
+}

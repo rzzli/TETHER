@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "case_id": "demo-program-001",
+  "task": "T1",
+  "origin": "2023-01-01",
+  "hypothesis": {
+    "target_id": "DEMO:TARGET1",
+    "indication_id": "DEMO:DISEASE1",
+    "target_namespace_version": "demo-v1",
+    "indication_namespace_version": "demo-v1",
+    "intended_action": "inhibit",
+    "modality": "small_molecule",
+    "tissue": "fictional tissue",
+    "availability": {
+      "first_public_at": "2018-01-01",
+      "release_public_at": "2019-01-01",
+      "record_public_at": "2019-01-01",
+      "annotation_public_at": "2019-01-01",
+      "retrieved_at": "2026-10-10",
+      "basis": "Fictional fixture availability dates",
+      "uncertainty": "Synthetic; no historical availability is claimed",
+      "known_public_by": null,
+      "evidence_ref": null
+    }
+  },
+  "program": {
+    "program_id": "DEMO:PROGRAM1",
+    "molecule_id": "DEMO:MOLECULE1",
+    "sponsor": "Fictional sponsor",
+    "phase_at_origin": 2,
+    "status_at_origin": "active",
+    "eligible_since": "2022-01-01",
+    "mapping_confidence": 1.0,
+    "trial_ids": [
+      "DEMO:TRIAL1"
+    ],
+    "availability": {
+      "first_public_at": "2022-01-01",
+      "release_public_at": "2022-01-01",
+      "record_public_at": "2022-01-01",
+      "annotation_public_at": "2022-01-01",
+      "retrieved_at": "2026-10-10",
+      "basis": "Fictional fixture availability dates",
+      "uncertainty": "Synthetic; no historical availability is claimed",
+      "known_public_by": null,
+      "evidence_ref": null
+    }
+  },
+  "endpoint": {
+    "name": "phase_2_to_3",
+    "horizon_months": 24
+  },
+  "origin_at": "2023-01-01T23:59:59.999999+00:00"
+}

@@ -1,0 +1,213 @@
+{
+  "review_date": "2026-10-09",
+  "timezone": "America/Los_Angeles",
+  "artifact_type": "sanitized_metadata_access_observations",
+  "scope": "Unauthenticated directory/document metadata only. No biological data, accounts, bulk downloads, restore, ingestion, analysis or model execution.",
+  "observations": [
+    {
+      "kind": "directory_listing",
+      "checked_at": "2026-10-09",
+      "method": "HTTP GET",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/19.11/output/",
+      "status": 200,
+      "entries": [
+        "19.11_association_data.json.gz",
+        "19.11_association_data.json.gz.md5sum",
+        "19.11_disease_list.csv.gz",
+        "19.11_disease_list.json.gz",
+        "19.11_evidence_data.json.gz",
+        "19.11_evidence_data.json.gz.md5sum",
+        "19.11_target_list.csv.gz",
+        "19.11_target_list.json.gz",
+        "es_snapshot/"
+      ],
+      "limitations": [
+        "Listing success and a candidate name do not certify payload access, schema, release date, semantic equivalence or historical eligibility."
+      ]
+    },
+    {
+      "kind": "directory_listing",
+      "checked_at": "2026-10-09",
+      "method": "HTTP GET",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/21.11/output/etl/parquet/",
+      "status": 200,
+      "entries": [
+        "AOTFClickhouse/",
+        "AOTFElasticsearch/",
+        "associationByDatasourceDirect/",
+        "associationByDatasourceIndirect/",
+        "associationByDatatypeDirect/",
+        "associationByDatatypeIndirect/",
+        "associationByOverallDirect/",
+        "associationByOverallIndirect/",
+        "baselineExpression/",
+        "diseaseToPhenotype/",
+        "diseases/",
+        "drugWarnings/",
+        "ebisearchAssociations/",
+        "ebisearchEvidence/",
+        "errors/",
+        "evidence/",
+        "fda/",
+        "go/",
+        "hpo/",
+        "indication/",
+        "interaction/",
+        "interactionEvidence/",
+        "knownDrugsAggregated/",
+        "mechanismOfAction/",
+        "metadata/",
+        "molecule/",
+        "mousePhenotypes/",
+        "reactome/",
+        "searchDisease/",
+        "searchDrug/",
+        "searchTarget/",
+        "targets/"
+      ],
+      "limitations": [
+        "Listing success and a candidate name do not certify payload access, schema, release date, semantic equivalence or historical eligibility."
+      ]
+    },
+    {
+      "kind": "directory_listing",
+      "checked_at": "2026-10-09",
+      "method": "HTTP GET",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/23.12/output/etl/parquet/",
+      "status": 200,
+      "entries": [
+        "AOTFClickhouse/",
+        "AOTFElasticsearch/",
+        "associationByDatasourceDirect/",
+        "associationByDatasourceIndirect/",
+        "associationByDatatypeDirect/",
+        "associationByDatatypeIndirect/",
+        "associationByOverallDirect/",
+        "associationByOverallIndirect/",
+        "baselineExpression/",
+        "diseaseToPhenotype/",
+        "diseases/",
+        "drugWarnings/",
+        "ebisearchAssociations/",
+        "ebisearchEvidence/",
+        "epmcCooccurrences/",
+        "errors/",
+        "evidence/",
+        "expressionSpecificity/",
+        "fda/",
+        "go/",
+        "hpo/",
+        "indication/",
+        "interaction/",
+        "interactionEvidence/",
+        "knownDrugsAggregated/",
+        "literature/",
+        "mechanismOfAction/",
+        "metadata/",
+        "molecule/",
+        "mousePhenotypes/",
+        "pharmacogenomics/",
+        "reactome/",
+        "searchDisease/",
+        "searchDrug/",
+        "searchTarget/",
+        "targetEssentiality/",
+        "targetPrioritisation/",
+        "targets/"
+      ],
+      "limitations": [
+        "Listing success and a candidate name do not certify payload access, schema, release date, semantic equivalence or historical eligibility."
+      ]
+    },
+    {
+      "kind": "directory_listing",
+      "checked_at": "2026-10-09",
+      "method": "HTTP GET",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/",
+      "status": 200,
+      "entries": [
+        "association_by_datasource_direct/",
+        "association_by_datasource_indirect/",
+        "association_by_datatype_direct/",
+        "association_by_datatype_indirect/",
+        "association_by_overall_indirect/",
+        "association_overall_direct/",
+        "biosample/",
+        "colocalisation_coloc/",
+        "colocalisation_ecaviar/",
+        "credible_set/",
+        "disease/",
+        "disease_hpo/",
+        "disease_phenotype/",
+        "drug_indication/",
+        "drug_mechanism_of_action/",
+        "drug_molecule/",
+        "drug_warning/",
+        "evidence/",
+        "expression/",
+        "go/",
+        "interaction/",
+        "interaction_evidence/",
+        "interval/",
+        "known_drug/",
+        "l2g_prediction/",
+        "literature/",
+        "literature_vector/",
+        "mouse_phenotype/",
+        "openfda_significant_adverse_drug_reactions/",
+        "openfda_significant_adverse_target_reactions/",
+        "pharmacogenomics/",
+        "reactome/",
+        "so/",
+        "study/",
+        "target/",
+        "target_essentiality/",
+        "target_prioritisation/",
+        "variant/"
+      ],
+      "limitations": [
+        "Listing success and a candidate name do not certify payload access, schema, release date, semantic equivalence or historical eligibility."
+      ]
+    }
+  ],
+  "related_observations": [
+    {
+      "kind": "directory_listing",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/genetics/",
+      "checked_at": "2026-10-09",
+      "status": 200,
+      "entries": [
+        "21.10.01/",
+        "22.02.01/",
+        "22.09/",
+        "190303/",
+        "190504/",
+        "190505/",
+        "210608/",
+        "20022712/",
+        "latest/"
+      ],
+      "limitations": [
+        "Exact release dates, schemas and model-training provenance unverified. Do not use latest as a pin."
+      ]
+    },
+    {
+      "kind": "official_release_documentation",
+      "url": "https://www.ebi.ac.uk/eqtl/Release_notes/",
+      "checked_at": "2026-10-09",
+      "finding": "Release metadata/corrections and persistent IDs with changed sample content require release and content-hash pins.",
+      "limitations": [
+        "No nominal statistics or metadata release payload acquired."
+      ]
+    },
+    {
+      "kind": "prior_observation_reference",
+      "workspace_path": "planning/review-assets/access-audit.json",
+      "finding": "Earlier source audit includes AACT legacy listing failure, UKB anonymous bucket listing failure and Virtual Biotech label-file inspection.",
+      "limitations": [
+        "Reference only; cached biological payloads are not copied into this scaffold."
+      ]
+    }
+  ],
+  "dataset_collection_performed": false
+}

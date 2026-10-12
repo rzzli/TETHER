@@ -1,0 +1,3 @@
+# Preserve exact fixture/catalog/source bytes across Windows and portable checkouts.
+# Receipt hashes must not change through implicit line-ending conversion.
+* -text
