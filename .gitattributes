@@ -1,3 +1,5 @@
 # Preserve exact fixture/catalog/source bytes across Windows and portable checkouts.
 # Receipt hashes must not change through implicit line-ending conversion.
 * -text
+# Legacy receipt-bound bytes intentionally retain their original Windows endings.
+tests/fixtures/legacy-v1/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

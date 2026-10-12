@@ -35,3 +35,15 @@ the prepared reviewer rubric is not expert gold. No new downloads, paid calls or
 accounts were introduced. The download worker remains byte-identical. The monitor's
 implementation was corrected without restarting it. Original proposals and dated
 research findings remain preserved.
+
+Final validation: fresh Windows clone at `8e022e7` passed full (114 tests, no skips)
+and core (92 executed, 22 explicit optional skips), each with ten probes and wheel
+verification. All ten canonical real dossiers passed fresh source-inclusive semantic
+verification with unchanged receipt anchors. Code fingerprints differ as expected
+because the runtime has since been modified.
+
+User confirmed no local historical/regional genetics inputs and can arrange expert
+review. Prepared ten unanswered evaluator-only forms with 20 original-audit claims,
+scientific adjudication `not_run`. The packet is a purposive unblinded development
+sample, not independent gold or an error-rate benchmark. Reviewer scheduling and
+actual data acquisition/restoration remain next steps.

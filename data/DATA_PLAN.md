@@ -23,6 +23,12 @@ scientific validation `not_run`. Its scoped catalog update is backed by
 other source to parsed or historically eligible. See [[Stabilization Completion and Feasibility Gates]]
 for the current implementation status and [[Feasibility Gate Decision]] for unresolved scientific inputs.
 
+October 12 access correction: the provider's current
+[eQTL data-access page](https://www.ebi.ac.uk/eqtl/Data_access/) marks its REST API as
+deprecated/unavailable. Plan regional access through release-pinned tabix files;
+indexed legacy API documentation is not proof of a working service. No collection
+status is changed by this documentation check.
+
 The requirements, compatibility candidates and scientific gates below remain applicable during acquisition. Transport queues and receipts do not certify temporal eligibility or normalized schemas. Earlier documentation-only statements describe the initial milestone; subsequent authorized acquisition status is reported separately.
 
 Implemented: documentation-only scope; dataset-level inventory beneath providers; public/account-mediated research route with restricted products conditional; regional/selected-study acquisition before bulk; separate historical/contemporary/reproduction/evaluation profiles; unknown values remain unknown.

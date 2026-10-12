@@ -20,6 +20,14 @@ keeps expert gold, historical restoration, regional genetics and empirical power
 No live adapter, provider spend or acquisition/monitor restart. The downloader is
 unchanged; monitor utility code was repaired and tested with `-ValidateOnly` only.
 
+Latest user clarification: historical AACT and regional genetics/LD files are not
+available locally; a domain scientist can be arranged for review. Prepared ten
+evaluator-only unanswered development forms covering the 20 retained audit claims.
+Review is unblinded/purposive and remains unperformed. Fresh Windows checkout passed
+full validation (114 tests, no skips) and core (92 executed, 22 expected ingestion
+skips), plus ten required probes and installed-wheel checks for each. Hosted CI remains
+unverified. See [[Feasibility Gate Decision]] for the review package and next gates.
+
 The following paragraphs retain the earlier replanning state for context.
 
 The user requested replanning against [[Full Repository Review and Verified Findings_claude10112026]]. [[Revised Next Stage Plan after Repository Review]] is now the authoritative forward plan: close v0.2 documentation, establish local version control, repair utility/catalog ownership and portable required checks, then resolve scientific feasibility before model expansion. The canonical pilot `runs/v02-realdata-20261012T015124Z/` is complete: ten verified dossiers and 20 original-row fidelity checks, $0 spending, no real probabilities. Administrative catalog/registry closeout remains open.

@@ -1,7 +1,7 @@
 ---
 title: Stabilization completion and feasibility gates
 date: 2026-10-12
-status: implementation-complete-clean-checkout-check-pending
+status: stabilization-verified-scientific-gates-open
 tags: [asof, implementation, verification]
 ---
 
@@ -17,8 +17,8 @@ Original proposals and the independent repository review were preserved.
 | A — Completion record and Git | Implemented | Baseline `91e9cc4`; versioned [[planning/run-registry.json]] selects ten canonical dossiers; superseded/unknown-failure sidecars are outside sealed outputs. No remote published. |
 | B — Utility/catalog ownership | Implemented | `asof.maintenance` validates reports, prior hashes, references and exclusive writes; preparation is read-only; fresh-output reports cannot overwrite history. Catalog stays 83 providers / 178 products. |
 | C — Program contracts/required checks | Implemented | Invalid T6 context fails before dispatch. Withdrawn dated context remains valid; confidence-zero mappings cannot support program-specific claims. Mandatory relocated v1 fixture verifies with legacy semantic limits explicit. |
-| D — Reproducible validation | Implemented; clean-checkout confirmation pending | Shared validation command, failure-gate tests, installed-wheel check and pinned Windows/Linux CI configuration. Hosted CI has not run. |
-| E — Scientific feasibility | Partially prepared; required evidence missing | T6 estimand/review rubric and bounded T1 candidate dates documented. Historical restore, empirical event counts/power, regional QC and independent expert gold remain unverified. |
+| D — Reproducible validation | Passed locally from fresh checkout | Full: 114 tests, zero skips. Core: 114 discovered, 92 executed, 22 explicit ingestion skips. Both pass ten probes and installed-wheel demo checks. Hosted CI has not run. |
+| E — Scientific feasibility | Review package prepared; required evidence missing | User can arrange domain review; ten unanswered forms/20 selected claims prepared. Historical/regional files confirmed absent locally. Historical restore, empirical event counts/power, regional QC and independent expert gold remain unverified. |
 | F — Live specialist | Deferred behind E | No model adapter or provider requests added; spending remains $0. |
 
 ## What changed and why
@@ -48,7 +48,20 @@ The first integrated implementation pass ran 112 tests with no failures/skips,
 all ten required review probes, PowerShell syntax checks and an isolated installed-wheel
 demo/verification. Two additional regression tests subsequently confirmed that a
 required test failure or unexpected skip returns nonzero, including core/full skip
-policy. Final validation results are retained in public metadata below.
+policy. The final integrated run passed **114 tests with zero skips** and all ten
+probes. A fresh local Git clone at `8e022e7` passed the same full gate and the core gate
+(92 executed, 22 named optional ingestion skips). Both built and installed the wheel
+into a separate dependency-free environment and verified its demo. No private runs,
+queues or E: data were copied into the checkout. Retained reports:
+
+- [[data/manifests/public/2026-10-12-stabilization-validation.json]].
+- [[data/manifests/public/2026-10-12-clean-checkout-full.json]].
+- [[data/manifests/public/2026-10-12-clean-checkout-core.json]].
+
+The later expert-review packaging utility was checked separately against the canonical
+artifacts: ten forms/20 source-bound claims, all reviewer fields unanswered, valid file
+hashes, existing-output rejection and enforcement of evaluator-only output placement.
+It does not modify runtime execution, archived runs or catalog scientific status.
 
 All ten canonical dossiers were freshly verified against their retained receipt
 anchors and source originals using the updated runtime. Byte integrity and semantic

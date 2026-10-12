@@ -57,3 +57,11 @@ gate (pyarrow 21.0.0 and PowerShell 7 required). Core mode permits explicitly na
 optional-dependency skips. Both run required probes, catalog/index checks, syntax
 checks and, with `--package`, an isolated dependency-free installed-wheel demo.
 An optional `--report <fresh-path>` retains the validation summary.
+
+To prepare unanswered expert development forms from the canonical retained audit:
+`uv run --no-sync python tools/review/prepare_expert_review.py --output
+data/benchmark/gold_evidence/<fresh-review-directory>`. The tool checks registry and
+sealed claim hashes, binds physical row locators, and requires evaluator-only output
+placement. It leaves scientific judgments null. Review forms and completed answers
+must never be added to an agent manifest. This purposive, unblinded development sample
+does not establish a representative benchmark or whole-dossier error rate.

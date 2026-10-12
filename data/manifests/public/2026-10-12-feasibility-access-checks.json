@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-12",
+  "kind": "documentation_access_check",
+  "collected_files": 0,
+  "historical_restoration": "not_run",
+  "regional_genetics_qc": "not_run",
+  "observations": [
+    {
+      "provider_id": "aact",
+      "url": "https://aact.ctti-clinicaltrials.org/landing",
+      "result": "Official access page directs users to accounts for cloud access and snapshots; historical downloads advertised; no registration performed"
+    },
+    {
+      "provider_id": "aact",
+      "url": "https://aact.ctti-clinicaltrials.org/downloads/snapshots?type=flatfiles",
+      "result": "Web fetch returned 404; archive availability not determined"
+    },
+    {
+      "provider": "eQTL Catalogue",
+      "url": "https://www.ebi.ac.uk/eqtl/Data_access/",
+      "result": "Official current page marks REST API deprecated and unavailable; documents tabix regional retrieval from complete summary statistics; no data retrieved"
+    }
+  ]
+}

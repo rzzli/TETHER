@@ -19,18 +19,18 @@ single-cell reconstruction retain their original meanings and are deferred.
 | Gate | Retained evidence | Decision and next required artifact |
 | --- | --- | --- |
 | Technical T6 feasibility | Ten finalized dossiers, 20 distinct source-row fidelity checks; pinned contemporary OT/HGNC | Passed for technical development. Does not establish accuracy of biological conclusions. |
-| Historical trial restoration | No restored origin/follow-up database in the frozen pilot; no audited program/event cohort | Unverified. Supply or authorize bounded acquisition of specific dated AACT snapshots, restore both, retain checksums/schema/query results and 20–30 adjudicated mappings. |
+| Historical trial restoration | User confirmed historical files are not available locally; no audited program/event cohort | Unverified. Plan bounded acquisition of specific dated AACT snapshots, restore both, retain checksums/schema/query results and 20–30 adjudicated mappings. Account/transfer requirements must be established before execution. |
 | Regional genetics | No complete regional exposure/outcome/LD bundle in the frozen pilot | Unverified. Select one exposure/outcome question before choosing versions, ancestry and LD. Preserve all variants in the region, alleles, build, uncertainty, sample size, assay identity and cohort-overlap information. |
 | Cohort size and power | Ten development hypotheses, with shared targets and source evidence | Cannot estimate clinical power. First count eligible programs/events/censoring and independent target/drug/disease clusters from restored data. |
 | Model/data chronology | No live provider/version selected or called | Open. Pin lifecycle, evidence cutoff, training-knowledge limitations and outcome reporting lag before designing a comparison. Historical evidence restriction alone does not remove model training contamination. |
-| Independent expert gold | Automated technical fidelity checks only; no confirmed reviewer commitment | Externally blocked. Obtain reviewer availability and complete the rubric below before promoting any case to gold. |
+| Independent expert gold | User confirmed they can arrange a domain review; ten-case unanswered package prepared | Scheduling and adjudication pending. Complete the rubric below before promoting any case to gold. Reviewer number/availability and completed assessments remain unconfirmed. |
 
 A read-only filename search of the authorized E: data root on October 12 found no
 files matching AACT, GTEx, FinnGen, INTERVAL, pQTL, VCF or PLINK bed/bim/fam patterns.
 This is a limited discovery check, not proof that those datasets are unavailable or
 absent under other names. No transport progress polling, download or account operation
-was performed. The user was asked for existing approved data paths and reviewer availability;
-neither is assumed. No HTTP status is being treated as a successful historical restore.
+was performed. The user confirmed these data are not available locally and that they
+can arrange domain review. No HTTP status is being treated as a successful historical restore.
 
 For a bounded T1 access test, use **January 1, 2023 origin / January 1, 2025 24-month
 endpoint**, with a separately dated later label/publication freeze as a candidate only.
@@ -41,6 +41,16 @@ Contemporary October 2026 predictions with 24-month follow-up mature in October 
 before reporting lag. A June 2027 deliverable can concern methods, not those outcomes.
 
 ## T6 development review protocol, ready for reviewer input
+
+The prepared local package is
+[[data/benchmark/gold_evidence/t6-development-review-20261012/README.md]]. It contains
+ten case forms and the 20 retained technical-audit claims with original row locators,
+full normalized context, hypothesis fingerprints, sealed-run references and blank
+assessment fields. It is evaluator-only, unreviewed and unblinded. Selection reuses
+purposive technical-audit rows, so review results cannot estimate whole-dossier error
+rates. The original technical pass/fail assessments are not supplied as reviewer answers.
+Use this package to refine the rubric and assess review burden before designing a
+representative blinded comparison. Forms remain ignored; no gold catalog status was promoted.
 
 The unit is one target–indication–action–modality–tissue hypothesis. Reused evidence
 and repeated targets are dependence clusters; the ten development cases are not ten
@@ -74,6 +84,28 @@ Reserve new cases and target clusters before any locked evaluation. Estimate pai
 variability and review burden from development cases before selecting evaluation size.
 
 ## Decision boundary
+
+### Access-path recheck, October 12
+
+AACT's current official landing page directs users to an account for cloud access
+and full snapshots and advertises historical downloads. The previously indexed flatfile
+snapshot-list URL returned 404 in this check. This is an access-path failure, not
+proof that historical snapshots do not exist. No account was created and no database
+was restored. Next, resolve the intended 2023/2025 releases through the supported
+account/download workflow and record exact archive metadata before transfer.
+[AACT access](https://aact.ctti-clinicaltrials.org/landing).
+
+The current eQTL Catalogue data-access page says its REST API is deprecated and
+unavailable, although older API documentation is still indexed. Use the supported
+release metadata and tabix-indexed complete summary-statistic files for a bounded
+regional feasibility test. Limit request frequency as instructed by the provider;
+resolve the exact dataset/region plus compatible GWAS and LD before retrieval.
+No region, completeness or LD compatibility has been verified yet.
+[Official eQTL data access](https://www.ebi.ac.uk/eqtl/Data_access/).
+
+These documentation checks identify the next access work; they do not change catalog
+collection/parse status or establish a historical data release. The processed Catalogue
+remains ineligible for a strict 2019 input profile.
 
 Continue offline maintenance and prepare the review package. Do not start a live
 adapter experiment until the T6 protocol, reviewer capacity, eligible data and an
