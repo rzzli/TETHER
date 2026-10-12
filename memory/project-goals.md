@@ -10,6 +10,18 @@ updated: 2026-10-12
 
 ## Current next-stage plan — October 12
 
+Implementation continuation: local Git baseline `91e9cc4` preserved the reviewed
+state. Utility/catalog ownership, T6 program validation, portable required legacy
+coverage, no-clobber outputs, canonical registry and local/CI validation are implemented.
+The normalized product is collected/parsed for the ten-case release only; scientific
+validation is `not_run`. See [[Stabilization Completion and Feasibility Gates]] for
+verification results. [[Feasibility Gate Decision]] prepares a T6 review protocol but
+keeps expert gold, historical restoration, regional genetics and empirical power open.
+No live adapter, provider spend or acquisition/monitor restart. The downloader is
+unchanged; monitor utility code was repaired and tested with `-ValidateOnly` only.
+
+The following paragraphs retain the earlier replanning state for context.
+
 The user requested replanning against [[Full Repository Review and Verified Findings_claude10112026]]. [[Revised Next Stage Plan after Repository Review]] is now the authoritative forward plan: close v0.2 documentation, establish local version control, repair utility/catalog ownership and portable required checks, then resolve scientific feasibility before model expansion. The canonical pilot `runs/v02-realdata-20261012T015124Z/` is complete: ten verified dossiers and 20 original-row fidelity checks, $0 spending, no real probabilities. Administrative catalog/registry closeout remains open.
 
 The review's absence of live models/probabilities is accurate but describes intentional v0.2 scope. T6 should retain inactive-program context; shared identity/mapping validation and the semantics of actual versus anticipated eligibility need correction without imposing all T1 rules. Preserve H3 as popularity confounding and H5 as dossier quality/error/cost. A single live adapter follows a measurable T6 evaluation and explicit spending gate; T1 remains conditional on restored dates, mature outcomes, chronology and power. The October 12 turn revises planning/status documents, not runtime or acquisition behavior.

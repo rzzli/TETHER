@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "claim_id": "claim-cb170a33df15e02b331a",
+      "specialist": "genetics",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-genetics-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "genetics",
+          "source_kind": "primary",
+          "statement": "Fictional genetics observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-genetics",
+          "dependency_group": "demo-cohort-genetics",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-genetics"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "genetic_support": 0.8,
+            "direction_alignment": 0.6
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-8d3df5a40c1f6f9e4cc4",
+      "specialist": "perturbation",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-perturbation-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "perturbation",
+          "source_kind": "primary",
+          "statement": "Fictional perturbation observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-perturbation",
+          "dependency_group": "demo-cohort-perturbation",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-perturbation"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "perturbation_support": 0.4
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-66804d6d7c643c52bacb",
+      "specialist": "expression",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-expression-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "expression",
+          "source_kind": "primary",
+          "statement": "Fictional expression observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-expression",
+          "dependency_group": "demo-cohort-expression",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-expression"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "expression_relevance": 0.7
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-7f81978ebe292bbcda24",
+      "specialist": "modality",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-modality-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "modality",
+          "source_kind": "primary",
+          "statement": "Fictional modality observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-modality",
+          "dependency_group": "demo-cohort-modality",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-modality"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "modality_feasibility": 0.5
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-6a3614910edd39cc907f",
+      "specialist": "literature",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-literature-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "literature",
+          "source_kind": "primary",
+          "statement": "Fictional literature observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-literature",
+          "dependency_group": "demo-cohort-literature",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-literature"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "literature_support": 0.6
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-4bfb46ebed099919f473",
+      "specialist": "literature",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-literature-duplicate",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "literature",
+          "source_kind": "integrated",
+          "statement": "Fictional literature observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-literature",
+          "dependency_group": "demo-cohort-literature",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-literature"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "literature_support": 0.6
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-e608554021cb58cc4d8e",
+      "specialist": "clinical",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-clinical-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": "DEMO:PROGRAM1",
+          "category": "clinical",
+          "source_kind": "clinical",
+          "statement": "Fictional clinical observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-clinical",
+          "dependency_group": "demo-cohort-clinical",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-clinical"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {}
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-c10f5d431873789f35f4",
+      "specialist": "safety",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-safety-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "safety",
+          "source_kind": "primary",
+          "statement": "Fictional safety observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-safety",
+          "dependency_group": "demo-cohort-safety",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-safety"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "safety_liability": 0.2
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    },
+    {
+      "claim_id": "claim-43d6c2a22f92c7ad6487",
+      "specialist": "pathway",
+      "evidence": {
+        "observation": {
+          "observation_id": "demo-pathway-1",
+          "target_id": "DEMO:TARGET1",
+          "indication_id": "DEMO:DISEASE1",
+          "program_id": null,
+          "category": "pathway",
+          "source_kind": "primary",
+          "statement": "Fictional pathway observation for workflow testing; no biological finding is asserted.",
+          "status": "observed",
+          "polarity": "uncertain",
+          "mechanism_direction": "uncertain",
+          "study_id": "DEMO:STUDY-pathway",
+          "dependency_group": "demo-cohort-pathway",
+          "context": {
+            "species": "synthetic",
+            "ancestry": "fictional",
+            "tissue": "fictional tissue",
+            "disease_state": "fictional",
+            "intervention": "fictional inhibition",
+            "comparator": "fictional control",
+            "cohort_ids": [
+              "DEMO:COHORT-pathway"
+            ]
+          },
+          "quantitative": {
+            "effect": 0.1,
+            "scale": "synthetic",
+            "standard_error": 0.05,
+            "ci_lower": 0.002,
+            "ci_upper": 0.198,
+            "sample_size": 100,
+            "adjusted_p_value": 0.04
+          },
+          "method": {
+            "code_id": "synthetic-fixture",
+            "version": "1",
+            "parameters": {},
+            "qc_status": "passed",
+            "limitations": [
+              "Invented fixture; not a scientific calculation"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2018-01-01",
+            "release_public_at": "2019-01-01",
+            "record_public_at": "2019-01-01",
+            "annotation_public_at": "2019-01-01",
+            "retrieved_at": "2026-10-10",
+            "basis": "Fictional fixture availability dates",
+            "uncertainty": "Synthetic; no historical availability is claimed"
+          },
+          "features": {
+            "pathway_support": 0.3
+          }
+        },
+        "citation": {
+          "artifact_id": "demo-evidence",
+          "dataset_id": "synthetic_fixture",
+          "release_id": "fixture-v1",
+          "artifact_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+          "source_url": "https://example.invalid/synthetic-fixture"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection"
+    }
+  ]
+}

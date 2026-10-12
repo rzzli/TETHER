@@ -28218,7 +28218,7 @@
         "JSON (version 2)",
         "Markdown dossiers"
       ],
-      "release_policy": "Immutable build-time UTC cutoff and checksum-backed input manifests; never historical backfill",
+      "release_policy": "Pinned build contemporary-364e5d635c2f2716; full input lineage and UTC origin retained; no historical eligibility claim",
       "candidate_releases": [
         "Build-time UTC snapshots"
       ],
@@ -28264,23 +28264,30 @@
       },
       "storage": {
         "compressed_bytes": null,
-        "expanded_bytes": null,
+        "expanded_bytes": 128475568,
         "index_bytes": null,
         "working_bytes": null,
         "cache_bytes": null,
         "backup_bytes": null,
         "quoted_estimate": null,
-        "estimate_basis": "No selected artifact has been sized; null values are unknown, not zero.",
+        "estimate_basis": "Measured ten-case normalized JSON packets only; build intermediates, run outputs, originals and backups excluded",
         "basis_urls": []
       },
       "verification": {
-        "level": "not_checked",
-        "checked_at": null,
-        "evidence": [],
-        "next_acquisition_check": "Run v2 build, verify every dossier and audit twenty statements against source rows"
+        "level": "sample_inspected",
+        "checked_at": "2026-10-12",
+        "evidence": [
+          {
+            "kind": "scoped_normalization",
+            "workspace_path": "data/manifests/public/2026-10-12-v02-normalization.json",
+            "sha256": "050601fe9772f629163d2eb6bebb639099c1d033fab363a0d86d6774d311e14c",
+            "result": "Ten finalized contemporary cases; 20-row technical audit and source-inclusive semantic verification; scientific validation not run"
+          }
+        ],
+        "next_acquisition_check": "Independent biological review; resolve selected-subset missing inputs before broader claims"
       },
-      "collection_status": "planned",
-      "parse_status": "not_run",
+      "collection_status": "collected",
+      "parse_status": "parsed",
       "validation_status": "not_run",
       "profile_policy": {
         "historical_benchmark": "excluded_from_this_milestone",
@@ -28289,15 +28296,26 @@
         "evaluation_only": "excluded_from_this_milestone"
       },
       "blockers": [
-        "Build, integrity/semantic verification and retained source-field audit must complete"
+        "65 frozen inputs missing; no absence-of-evidence inference",
+        "Independent scientific validation not run"
       ]
     }
   ],
-  "last_updated": "2026-10-10",
+  "last_updated": "2026-10-12",
   "contract_policy": {
     "conditional_fields": "Required only when the stated scientific condition applies; unknown/non-applicable values remain explicit and never become zero.",
     "dependency_semantics": "dependencies describe unconditional inputs needed to normalize/interpret/validate a product; they are not permission grants or a required order for metadata lookup/raw-file access.",
     "ld_reference": "Raw reference-panel genotypes and computed/public LD matrices are distinct inputs.",
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
+  },
+  "last_maintenance_update": {
+    "expected_prior_sha256": "c7e15b7a5949d16088218ccb40d52c7b03afc0d51bc0cfe4546228b4e28be76c",
+    "report": "data/manifests/public/2026-10-12-v02-normalization.json",
+    "report_sha256": "050601fe9772f629163d2eb6bebb639099c1d033fab363a0d86d6774d311e14c",
+    "kind": "normalization",
+    "datasets": [
+      "asof_normalized_packets"
+    ],
+    "created_at_utc": "2026-10-12T15:23:27.147884+00:00"
   }
 }

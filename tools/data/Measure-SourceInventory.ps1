@@ -1,7 +1,14 @@
+#Requires -Version 7.0
 param(
-    [string]$OutputPath = 'D:\Projects\drug_target_agents\data\manifests\public\2026-10-10-download-size-inventory.json'
+    [string]$OutputPath
 )
 $ErrorActionPreference = 'Stop'
+if (-not $OutputPath) {
+    $projectRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+    $OutputPath = Join-Path $projectRoot ('data/manifests/public/' + [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssfffffffZ') + '-download-size-inventory.json')
+}
+if (Test-Path -LiteralPath $OutputPath) { throw 'Inventory report exists; choose a new output.' }
+$checkedAt = [DateTimeOffset]::UtcNow.ToString('o')
 $rootUrls = @(
     'https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/19.11/output/',
     'https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/21.11/output/etl/parquet/',
@@ -53,7 +60,7 @@ $inventories = foreach ($rootUrl in $rootUrls) {
     }
     $payloads = @($files | Where-Object { $_.relative_path -match '\.parquet$|\.json\.gz$|\.csv\.gz$' })
     [pscustomobject]@{
-        release_id=$releaseId; root_url=$rootUrl; metadata_checked_at='2026-10-10'; directories_inspected=$visited.Count
+        release_id=$releaseId; root_url=$rootUrl; metadata_checked_at=$checkedAt; directories_inspected=$visited.Count
         payload_files=$payloads.Count; estimated_payload_bytes=($payloads | Measure-Object estimated_bytes -Sum).Sum
         planning_upper_payload_bytes=($payloads | Measure-Object planning_upper_bytes -Sum).Sum
         unknown_size_files=@($payloads | Where-Object { $null -eq $_.estimated_bytes }).Count
@@ -62,9 +69,17 @@ $inventories = foreach ($rootUrl in $rootUrls) {
     Write-Host ('Inventory {0}: {1} payload files, estimated {2:N2} GiB' -f $releaseId,$payloads.Count,(($payloads | Measure-Object estimated_bytes -Sum).Sum / 1GB))
 }
 $result = [pscustomobject]@{
-    checked_at='2026-10-10'; method='Recursive public Apache directory metadata; displayed sizes are rounded estimates with a conservative planning bound, not exact Content-Length.'
+    checked_at=$checkedAt; method='Recursive public Apache directory metadata; displayed sizes are rounded estimates with a conservative planning bound, not exact Content-Length.'
     exclusions='Elasticsearch snapshots, AOTF/search/error derivatives excluded; avoid counting duplicate deployment/index formats.'
     inventories=@($inventories); dataset_payloads_downloaded=$false
 }
-$result | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $OutputPath -Encoding utf8NoBOM
+$outputParent = [IO.Path]::GetDirectoryName([IO.Path]::GetFullPath($OutputPath))
+[IO.Directory]::CreateDirectory($outputParent) | Out-Null
+$temporaryPath = Join-Path $outputParent ([IO.Path]::GetRandomFileName())
+try {
+    [IO.File]::WriteAllText($temporaryPath, ($result | ConvertTo-Json -Depth 10), [Text.UTF8Encoding]::new($false))
+    [IO.File]::Move($temporaryPath, $OutputPath, $false)
+} finally {
+    if (Test-Path -LiteralPath $temporaryPath) { Remove-Item -LiteralPath $temporaryPath }
+}
 $result.inventories | Select-Object release_id,payload_files,@{Name='EstimatedGiB';Expression={[math]::Round($_.estimated_payload_bytes / 1GB,3)}},@{Name='UpperGiB';Expression={[math]::Round($_.planning_upper_payload_bytes / 1GB,3)}},unknown_size_files,@{Name='failed_directories';Expression={$_.failures.Count}} | ConvertTo-Json

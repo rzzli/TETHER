@@ -1,9 +1,16 @@
+#Requires -Version 7.0
 param(
     [string]$DataRoot = 'E:\projects_data\drug_target_agents_data',
-    [string]$BatchId = 'core-25-09-chembl35-2026-10-10',
-    [ValidateRange(1,60)][int]$IntervalMinutes = 15
+    [Parameter(Mandatory)][string]$QueuePath,
+    [ValidateRange(1,60)][int]$IntervalMinutes = 15,
+    [switch]$ValidateOnly
 )
 $ErrorActionPreference = 'Stop'
+$queueFullPath = [IO.Path]::GetFullPath($QueuePath)
+$queue = Get-Content -LiteralPath $queueFullPath -Raw | ConvertFrom-Json -Depth 100
+$BatchId = [string]$queue.batch_id
+if ($BatchId -notmatch '^[a-zA-Z0-9_-]+$') { throw 'Invalid explicit queue batch identity.' }
+if ($ValidateOnly) { @{batch_id=$BatchId;queue_path=$queueFullPath;monitor_started=$false} | ConvertTo-Json; return }
 $root = [IO.Path]::GetFullPath($DataRoot).TrimEnd('\')
 $statePath = Join-Path $root ('manifests\' + $BatchId + '-state.json')
 $monitorPath = Join-Path $root ('manifests\' + $BatchId + '-monitor.json')
@@ -17,7 +24,7 @@ while ($true) {
     try {
         $state = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json @readArgs
         $process = Get-CimInstance Win32_Process -Filter ('ProcessId = ' + [int]$state.process_id) -ErrorAction Stop
-        $identityMatches = $process -and $process.CommandLine -like '*Start-DownloadBatch.ps1*' -and $process.CommandLine -like ('*' + $BatchId.Replace('core-25-09-chembl35-2026-10-10','core-2026-10-10') + '-queue.json*')
+        $identityMatches = $process -and $process.CommandLine -like '*Start-DownloadBatch.ps1*' -and $process.CommandLine.Contains($queueFullPath, [StringComparison]::OrdinalIgnoreCase)
         $identity = if ($identityMatches) { [pscustomobject]@{pid=$process.ProcessId;created_at_utc=$process.CreationDate.ToUniversalTime().ToString('o')} } else { $null }
         if ($identity) { $previousIdentity = $identity }
         $effective = if ($state.status -eq 'running' -and -not $identityMatches) { 'worker_absent_or_identity_mismatch' } else { $state.status }

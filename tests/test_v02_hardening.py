@@ -46,14 +46,10 @@ class HardeningTests(unittest.TestCase):
         change(snapshot)
         write_json(self.fixture / "snapshot.json", snapshot)
 
-    def test_v1_execution_rejected_and_v1_verification_preserved(self):
+    def test_v1_execution_rejected(self):
         legacy = decode(Case, read_json(ROOT / "src/asof/demo/case.json"))
         with self.assertRaisesRegex(ContractError, "v2"):
             legacy.validate()
-        archived = ROOT / "runs/framework-v0.1-verified"
-        if archived.exists():
-            result = verify_run(archived)
-            self.assertEqual(result["semantic_consistency"], "unavailable_legacy_v1")
 
     def test_nested_parameters_coverage_trace_features_and_contributions_are_frozen(self):
         def modify(packet):

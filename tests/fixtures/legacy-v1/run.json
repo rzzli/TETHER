@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "software_version": "0.1.0",
+  "created_at_utc": "2026-10-11T03:02:40.334435+00:00",
+  "case_id": "demo-program-001",
+  "status": "completed",
+  "profile": "synthetic_demo",
+  "snapshot_id": "synthetic-v1",
+  "backend_id": "offline-extractive-v1",
+  "input_fingerprint": "b3a4ca9c8c9e8951c6b3b754c7cc92662cbc5dfb00ab4fe566be9c6c4ae6adb2",
+  "budget": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0,
+    "max_seconds": 300,
+    "max_retries": 1
+  },
+  "calls": 8,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0
+  },
+  "plan": [
+    {
+      "category": "genetics",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "perturbation",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "expression",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "modality",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "literature",
+      "observed_records": 2,
+      "initial_status": "ready"
+    },
+    {
+      "category": "clinical",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "safety",
+      "observed_records": 1,
+      "initial_status": "ready"
+    },
+    {
+      "category": "pathway",
+      "observed_records": 1,
+      "initial_status": "ready"
+    }
+  ],
+  "coverage": {
+    "genetics": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    },
+    "perturbation": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": [
+        {
+          "observation_id": "demo-perturbation-unmeasured",
+          "status": "not_measured",
+          "reason": "The fictional primary-cell perturbation was not measured."
+        }
+      ]
+    },
+    "expression": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    },
+    "modality": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    },
+    "literature": {
+      "status": "completed",
+      "available_observations": 2,
+      "selected_observations": 2,
+      "nonobserved": []
+    },
+    "clinical": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    },
+    "safety": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    },
+    "pathway": {
+      "status": "completed",
+      "available_observations": 1,
+      "selected_observations": 1,
+      "nonobserved": []
+    }
+  },
+  "exclusions": [
+    {
+      "item_id": "demo-future-record",
+      "level": "observation",
+      "reason": "available_after_origin"
+    },
+    {
+      "item_id": "demo-future",
+      "level": "artifact",
+      "reason": "available_after_origin"
+    }
+  ]
+}

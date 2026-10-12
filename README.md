@@ -12,8 +12,10 @@ and archived receipts remain available; v1 semantic verification is unavailable.
 The bundled demonstration uses fictional observations and scorer weights. Contemporary
 real-data T6 dossiers use descriptive source evidence, empty numerical prediction features
 and null probabilities. Mechanical verification does not establish biological correctness
-or clinical predictive validity. The production pilot and retained source audit are being
-finalized; generated artifacts determine completion.
+or clinical predictive validity. The production pilot is complete: ten finalized dossiers
+and a retained audit of 20 distinct original rows. The versioned
+[run registry](planning/run-registry.json) identifies the canonical artifacts and retained
+failed attempts. See the [stabilization report](planning/Stabilization Completion and Feasibility Gates.md).
 
 ## Run the offline demonstration
 
@@ -25,6 +27,13 @@ uv run --no-sync asof demo --output runs/demo-v02-001
 uv run --no-sync asof verify --run-dir runs/demo-v02-001
 uv run --no-sync python -m unittest discover -s tests -v
 ```
+
+For the shared local/CI validation command, use `uv run --no-sync python tools/validate.py
+--mode core --package`. Full validation requires the ingestion extra and PowerShell 7:
+`uv run --no-sync python tools/validate.py --mode full --package`. Full mode rejects all
+skips; core mode permits only named optional-dependency skips. Both require the portable
+legacy fixture and all review probes. Windows/Linux CI is configured; hosted execution
+remains unverified until a remote runner executes it.
 
 Choose a new output directory for each execution. `dossier.md` is the readable report;
 `ledger.json`, `features.json`, `prediction.json`, `inputs.json`, `run.json`,

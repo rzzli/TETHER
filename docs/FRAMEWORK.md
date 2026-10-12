@@ -1,7 +1,7 @@
 ---
 title: AsOf Framework Implementation
 date: 2026-10-11
-status: v02-completion-in-progress
+status: v02-technical-pilot-complete
 tags:
   - asof
   - framework
@@ -20,7 +20,9 @@ require later work.
 correctness findings motivated v2 contracts, nested immutability, preflight temporal
 checks, hypothesis-bound features and durable execution. See [[V02_MIGRATION]] for
 conversion requirements. Production pilot completion is established by finalized
-artifacts and its retained source audit; these are currently being finalized.
+artifacts and its retained source audit. All ten dossiers and the 20-row technical
+source audit are finalized; [[planning/run-registry.json|the registry]] selects the
+canonical run explicitly. Scientific adjudication remains outstanding.
 
 ## Execution and interfaces
 
@@ -84,6 +86,15 @@ Program availability is checked for both T1 and T6. T1 additionally requires an 
 origin-eligible Phase 1/2 program, nonzero mapping confidence, and matching next-phase
 endpoint with positive horizon. T6 produces an audit dossier and never a clinical
 probability. Event outcomes are not case inputs.
+
+Supplied programs in both tasks require nonempty program/molecule identity, sponsor
+and status, an integer phase in 0–4, and finite mapping confidence in [0,1]. Explicit
+source-supported unknown labels may represent missing sponsor/status; phase 0 is not
+an invented substitute for an unknown phase. `eligible_since` is an occurred date and
+must be on/before the origin even for T6. Anticipated eligibility needs a future
+versioned field; target-only T6 can omit program context. Withdrawn dated programs are
+valid T6 context. Confidence zero marks an unresolved mapping: program-specific
+observations are excluded (`unresolved_program_mapping`) and cannot enter the ledger.
 
 A snapshot declares packet artifacts, source nodes, a raw-data root and coverage.
 Each artifact binds dataset/release, relative path, exact SHA-256, access approval,

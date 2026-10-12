@@ -1,7 +1,7 @@
 ---
 title: AsOf Full Data Requirements and Acquisition Plan
 date: 2026-10-09
-updated: 2026-10-11
+updated: 2026-10-12
 tags:
   - asof
   - data-plan
@@ -16,6 +16,12 @@ This is the data implementation of [[AsOf Feasibility Analysis and Peer Survey]]
 The authoritative inventory, [[data/catalog/sources.json|sources.json]], contains **83 providers and 178 dataset/product records**. It covers every source family in the original proposal plus dependency data needed for identifiers, LD, temporal reconstruction, terminology, validation and optional component compatibility. The additional v0.2 product is `asof_normalized_packets`. Provider count is not study count; overlapping sources and bundles are explicitly recorded. Current implementation status is in [[Project Audit and v0.2 Completion]]; dated scaffold checks below retain their original counts.
 
 ## 1. Decisions implemented and research decisions remaining
+
+The ten-case contemporary normalization is collected and parsed, with independent
+scientific validation `not_run`. Its scoped catalog update is backed by
+[[data/manifests/public/2026-10-12-v02-normalization.json]]. This does not promote any
+other source to parsed or historically eligible. See [[Stabilization Completion and Feasibility Gates]]
+for the current implementation status and [[Feasibility Gate Decision]] for unresolved scientific inputs.
 
 The requirements, compatibility candidates and scientific gates below remain applicable during acquisition. Transport queues and receipts do not certify temporal eligibility or normalized schemas. Earlier documentation-only statements describe the initial milestone; subsequent authorized acquisition status is reported separately.
 

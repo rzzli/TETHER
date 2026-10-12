@@ -2,7 +2,7 @@
 title: Revised Next Stage Plan after Repository Review
 date: 2026-10-12
 timezone: America/Los_Angeles
-status: proposed
+status: stabilization-implemented-feasibility-gated
 tags:
   - asof
   - planning
@@ -11,6 +11,12 @@ tags:
 ---
 
 # Revised next-stage plan
+
+Implementation update, October 12: A–D have been implemented; validation results and
+remaining limits are recorded in [[Stabilization Completion and Feasibility Gates]].
+The canonical registry and scoped catalog update now exist. [[Feasibility Gate Decision]]
+records the incomplete scientific gate and prepared T6 review protocol. The original
+starting-point observations below describe the state when this plan was written.
 
 The next milestone should establish a reproducible repository and a feasible scientific evaluation before expanding the agent architecture. Close the v0.2 record, repair the verified maintenance/test gaps, then run a bounded feasibility phase. A live model adapter follows a defined evaluation and spending decision; it is not evidence of scientific progress by itself.
 

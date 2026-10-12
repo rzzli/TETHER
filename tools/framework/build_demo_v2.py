@@ -1,5 +1,6 @@
 """Build v2 fictional fixtures from copies of archived v1 inputs; never rewrite v1."""
 import json
+import argparse
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -10,9 +11,18 @@ from asof.serde import decode, encode, fingerprint, read_json, sha256_file, writ
 
 
 def main():
-    legacy = Path(__file__).resolve().parents[2] / "src/asof/demo"
-    root = legacy / "v2"
-    root.mkdir(exist_ok=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--input', type=Path, default=Path(__file__).resolve().parents[2] / 'src/asof/demo')
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    legacy, root = args.input, args.output
+    required = ('case.json','evidence.json','future.json','snapshot.json','scorer.json')
+    missing = [name for name in required if not (legacy/name).is_file()]
+    if missing:
+        parser.error('Missing preserved v1 inputs: '+', '.join(missing))
+    for name in required:
+        read_json(legacy/name)
+    root.mkdir(parents=True, exist_ok=False)
     case_doc = read_json(legacy / "case.json")
     case_doc.update(schema_version=2, origin_at="2023-01-01T23:59:59.999999+00:00")
     case = decode(Case, case_doc)

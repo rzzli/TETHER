@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 from pathlib import Path
 
@@ -12,8 +13,10 @@ def write(path: Path, document: object) -> None:
 
 
 def main() -> None:
-    root = Path(__file__).resolve().parents[2] / "src" / "asof" / "demo"
-    root.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True)
+    root = parser.parse_args().output
+    root.mkdir(parents=True, exist_ok=False)
     availability = {"first_public_at": "2018-01-01", "release_public_at": "2019-01-01",
                     "record_public_at": "2019-01-01", "annotation_public_at": "2019-01-01",
                     "retrieved_at": "2026-10-10", "basis": "Fictional fixture availability dates",

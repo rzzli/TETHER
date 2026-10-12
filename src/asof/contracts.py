@@ -7,6 +7,7 @@ from datetime import date, datetime, time, timezone
 from collections.abc import Mapping
 from enum import StrEnum
 from typing import Any
+import math
 
 from .serde import ContractError, Frozen, fingerprint
 
@@ -137,6 +138,10 @@ class Case(Frozen):
     def cutoff(self) -> datetime:
         return self.origin_at or datetime.combine(self.origin, time.max, timezone.utc)
 
+    def permits_program(self, program_id: str | None) -> bool:
+        return program_id is None or (self.program is not None and
+            self.program.mapping_confidence > 0 and self.program.program_id == program_id)
+
     def validate(self) -> None:
         if self.schema_version != 2 or self.task not in ("T1", "T6"):
             raise ContractError("New execution requires v2 inputs; see docs/V02_MIGRATION.md")
@@ -153,6 +158,19 @@ class Case(Frozen):
             raise ContractError("Hypothesis mappings/annotations are not verified at origin")
         if self.program is not None and self.program.availability.exclusion(self.cutoff):
             raise ContractError("Program state/mapping was not available at origin")
+        if self.program is not None:
+            program = self.program
+            if not all(value.strip() for value in (program.program_id, program.molecule_id,
+                                                  program.sponsor, program.status_at_origin)):
+                raise ContractError("Program identity, sponsor and status must be explicit; use documented unknown labels")
+            if type(program.phase_at_origin) is not int or not 0 <= program.phase_at_origin <= 4:
+                raise ContractError("Program phase must be an integer from 0 to 4")
+            confidence = program.mapping_confidence
+            if (type(confidence) not in (int, float) or not math.isfinite(confidence) or
+                    not 0 <= confidence <= 1):
+                raise ContractError("Program mapping confidence must be finite and within [0,1]")
+            if program.eligible_since > self.origin:
+                raise ContractError("Actual program eligibility cannot occur after origin")
         if self.task == "T1":
             if self.program is None or self.endpoint is None:
                 raise ContractError("T1 requires an origin-eligible program and endpoint")
@@ -166,8 +184,6 @@ class Case(Frozen):
                 raise ContractError("Program was not active/eligible at origin")
             if not 0 < program.mapping_confidence <= 1:
                 raise ContractError("Unresolved program mapping cannot be scored")
-            if not all((program.program_id.strip(), program.molecule_id.strip(), program.sponsor.strip())):
-                raise ContractError("Program identity must be explicit")
 
 
 @dataclass(frozen=True)

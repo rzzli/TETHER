@@ -78,6 +78,14 @@ The October 10 completion audit attached missing documentation evidence to 15 re
 
 ## Tracking and provenance
 
+Catalog mutation now has one validated entry point; preparation and transport
+inspection are read-only. See [[docs/MAINTENANCE]] for explicit paths, immutable
+reports, locking and prior-hash checks. The normalized ten-case product is collected
+and parsed, with scientific validation `not_run`; its evidence is recorded in
+[[data/manifests/public/2026-10-12-v02-normalization.json]]. The canonical local
+build and dossiers are selected by [[planning/run-registry.json]], including retained
+superseded/incomplete attempts. Bulk artifacts remain intentionally absent from Git.
+
 Documentation/catalog files and reviewed metadata under `manifests/public/` are versionable. Raw/reference/derived data, benchmark records and caches are ignored, while placeholders preserve the folder structure.
 
 Only put sanitized metadata in public manifests: source/dataset/release IDs, public unsigned URLs, hashes, sizes, software versions, access observations, limitations and protocol identifiers. Exclude credentials, signed URLs, tokens, private host/cache paths, patient identifiers, benchmark answers, outcome labels and licensed content.

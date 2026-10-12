@@ -1,3 +1,4 @@
+#Requires -Version 7.0
 param([string]$DataRoot = 'E:\projects_data\drug_target_agents_data')
 $ErrorActionPreference = 'Stop'
 $manifestRoot = Join-Path $DataRoot 'manifests'

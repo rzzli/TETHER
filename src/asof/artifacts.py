@@ -191,6 +191,8 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
     if verify_sources and legacy:
         for proof in receipt["sources"]:
             path = Path(proof["path"])
+            if not path.is_absolute():
+                path = safe_child(output, proof["path"])
             if not path.is_file() or sha256_file(path) != proof["sha256"]:
                 raise ContractError(f"Source integrity failure: {proof['artifact_id']}")
             if proof.get("receipt_path") and sha256_file(Path(proof["receipt_path"])) != proof["receipt_sha256"]:

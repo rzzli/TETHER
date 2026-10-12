@@ -110,7 +110,7 @@ def check_semantics(case, snapshot, claims, features, prediction, coverage, conf
         seen.add(observation.observation_id)
         if (observation.target_id != case.hypothesis.target_id or observation.indication_id != case.hypothesis.indication_id or
                 claim.specialist != observation.category or
-                observation.program_id is not None and (case.program is None or observation.program_id != case.program.program_id)):
+                not case.permits_program(observation.program_id)):
             raise ContractError("Semantic claim outside hypothesis/program capability")
         artifact = artifacts.get(citation.artifact_id)
         if (artifact is None or citation.artifact_sha256 != artifact.sha256 or

@@ -17,7 +17,7 @@ availability evidence remains a blocker.
 Archived v1 runs still support `asof verify`, with byte integrity and
 `semantic_consistency: unavailable_legacy_v1`. Conversion cannot retroactively add v2
 guarantees to a completed run. Original fictional fixtures remain in `src/asof/demo/`;
-new fixtures live in `src/asof/demo/v2/`. `tools/framework/build_demo_v2.py` regenerates
+new fixtures live in `src/asof/demo/v2/`. `tools/framework/build_demo_v2.py --output <fresh-directory>` regenerates
 only fictional v2 fixtures and is not a scientific-data conversion tool.
 
 ## Cases and exact cutoffs

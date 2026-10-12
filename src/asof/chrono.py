@@ -41,9 +41,7 @@ class EvidenceStore:
         # Exact normalized identifiers only; crosswalks belong in audited adapters.
         return tuple(record for record in self._query_index.get(
                          (case.hypothesis.target_id, case.hypothesis.indication_id, category), ())
-                     if (record.observation.program_id is None or
-                          (case.program is not None and
-                           record.observation.program_id == case.program.program_id)))
+                     if case.permits_program(record.observation.program_id))
 
     def lookup(self, observation_id: str) -> GroundedObservation:
         try:
@@ -55,6 +53,8 @@ class EvidenceStore:
 def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, artifact_inputs=None) -> str | None:
     """The same observation gate is used for admission and semantic verification."""
     validate_observation(observation)
+    if observation.program_id is not None and case.program is not None and case.program.mapping_confidence == 0:
+        return "unresolved_program_mapping"
     if artifact_inputs is None:
         artifact_inputs = frozenset(graph.closure(artifact.input_refs))
     if not set(graph.closure(observation.input_refs)).issubset(artifact_inputs):

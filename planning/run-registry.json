@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-10-12T15:23:27.207664+00:00",
+  "canonical_pilot_id": "v02-realdata-20261012T015124Z",
+  "status_basis": "Explicit selection; not latest-directory discovery",
+  "entries": [
+    {
+      "id": "v02-realdata-20261012T015124Z",
+      "state": "canonical",
+      "path": "runs/v02-realdata-20261012T015124Z",
+      "reports": [
+        {
+          "path": "runs/v02-realdata-20261012T015124Z/pilot-report.json",
+          "sha256": "051b6fcd1f2facc7bf6059370b4ff60b9b7137b9fdb91153dc31aca482f3838d"
+        },
+        {
+          "path": "runs/v02-realdata-20261012T015124Z/source-review.json",
+          "sha256": "568c022abcda049d45fbafd872e2d2fa63c81f65ea7215c50e49f28d6e876de8"
+        }
+      ],
+      "build_id": "v02-contemporary-pilot-20261012T014305Z",
+      "cases": [
+        {
+          "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+          "receipt_sha256": "104de06d88889dad1d64461a33adbe0ea23ab71c7b917cd24e5c07358ae9dadd",
+          "path": "runs/v02-realdata-20261012T015124Z/cd276-efo_0003060-delivery_antigen-adc"
+        },
+        {
+          "case_id": "osmr-efo_0000729-inhibit-antibody",
+          "receipt_sha256": "7cf1a0f1c2a8c9b9d07d1d9a49bd5f543c42a0647d0316bc96994b7edf660c0c",
+          "path": "runs/v02-realdata-20261012T015124Z/osmr-efo_0000729-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-inhibit-antibody",
+          "receipt_sha256": "2b49e17c5756894d290ca07f79aca67ced2c1e483b4e364646118b02a844f270",
+          "path": "runs/v02-realdata-20261012T015124Z/erbb2-efo_0000305-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-delivery_antigen-adc",
+          "receipt_sha256": "bc15f4694e09e94fadc5fcd7ffc08dfb15ef4bdec9b3996fb3c3071d6972c3ec",
+          "path": "runs/v02-realdata-20261012T015124Z/erbb2-efo_0000305-delivery_antigen-adc"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-inhibit-antibody",
+          "receipt_sha256": "f334900f343764939f44d7728fafab0307705eaef4035e789a342ba6327565ba",
+          "path": "runs/v02-realdata-20261012T015124Z/pcsk9-efo_0004911-inhibit-antibody"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-reduce_expression-sirna",
+          "receipt_sha256": "37111cde1be26d3b4c61ec825921872612d7b9299976fa8f4eb3324dff99503a",
+          "path": "runs/v02-realdata-20261012T015124Z/pcsk9-efo_0004911-reduce_expression-sirna"
+        },
+        {
+          "case_id": "il6r-efo_0000685-inhibit-antibody",
+          "receipt_sha256": "a363f0a8ed12748b4305381cfebbc6cd16ac1a801d19f93d9fed3e1091b91705",
+          "path": "runs/v02-realdata-20261012T015124Z/il6r-efo_0000685-inhibit-antibody"
+        },
+        {
+          "case_id": "cftr-mondo_0009061-activate-small_molecule",
+          "receipt_sha256": "4b6d9cb13e555ccacc0058a21e55479eb82b43e6b4d59ba97840efb6899e2d21",
+          "path": "runs/v02-realdata-20261012T015124Z/cftr-mondo_0009061-activate-small_molecule"
+        },
+        {
+          "case_id": "glp1r-mondo_0005148-activate-peptide",
+          "receipt_sha256": "d3aa0146853b0f81b2ae52400391e7bdff9016582d966c25b8b35bee63b5b2d3",
+          "path": "runs/v02-realdata-20261012T015124Z/glp1r-mondo_0005148-activate-peptide"
+        },
+        {
+          "case_id": "scn9a-efo_0005762-inhibit-small_molecule",
+          "receipt_sha256": "c3d27f5dab6a980f703cec2c81585be709803f21f4d4fdbbe1363b7e2fe116be",
+          "path": "runs/v02-realdata-20261012T015124Z/scn9a-efo_0005762-inhibit-small_molecule"
+        }
+      ],
+      "scientific_validation": "not_run"
+    },
+    {
+      "id": "v02-contemporary-pilot-20261012T014305Z",
+      "state": "canonical",
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z",
+      "reports": [
+        {
+          "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json",
+          "sha256": "979f12e19eda2f50f13dcf887b562fc4cd0c426b46ef989765cab6acb29aaead"
+        },
+        {
+          "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/journal.jsonl",
+          "sha256": "39c111a94eb463f3b5fe8a7aaa4db0e01904d2b7fc8440bd725e5f3ff70be35d"
+        }
+      ]
+    },
+    {
+      "id": "v02-realdata-20261012T014305Z",
+      "state": "superseded",
+      "execution_status": "failed",
+      "path": "runs/v02-realdata-20261012T014305Z",
+      "replaced_by": "v02-realdata-20261012T015124Z",
+      "reason": "Old normalized-input reader rejected a valid 73413457-byte generated ledger; bounded output reader fixed before canonical retry"
+    },
+    {
+      "id": "v02-contemporary-pilot",
+      "state": "incomplete",
+      "path": "data/derived/v02-contemporary-pilot",
+      "replaced_by": "v02-contemporary-pilot-20261012T014305Z",
+      "reason": "Only inspection retained; original termination cause unknown"
+    }
+  ]
+}

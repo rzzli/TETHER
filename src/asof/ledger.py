@@ -23,8 +23,7 @@ class EvidenceLedger:
         observation = evidence.observation
         if (observation.category != category or observation.target_id != self.case.hypothesis.target_id or
                 observation.indication_id != self.case.hypothesis.indication_id or
-                observation.program_id is not None and (self.case.program is None or
-                                                         observation.program_id != self.case.program.program_id)):
+                not self.case.permits_program(observation.program_id)):
             raise ContractError("Claim is outside specialist/case retrieval capability")
         digest = fingerprint(evidence)
         if digest != self.store.admitted_fingerprints.get(observation_id):

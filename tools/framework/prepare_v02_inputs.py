@@ -1,69 +1,57 @@
-"""Select pinned inputs from existing transport receipts; never control the downloader."""
-import copy
+"""Prepare a fresh explicit manifest from receipts without changing catalog or transport."""
+import argparse
 from pathlib import Path
-
 from asof.ingest import InputFile, InputManifest
-from asof.serde import read_json, safe_child, write_json
+from asof.maintenance import write_new_json, validate_catalog
+from asof.serde import ContractError, read_json, safe_child
+
+
+def prepare(raw_root, queues, catalog_path, destination):
+    if destination.exists():
+        raise ContractError('Manifest exists; preserve frozen inputs and choose a new output')
+    catalog = read_json(catalog_path)
+    validate_catalog(catalog)
+    required = {'ot_target','ot_disease','ot_evidence','hgnc_symbols','asof_normalized_packets'}
+    if not required.issubset({row['dataset_id'] for row in catalog['datasets']}):
+        raise ContractError('Catalog lacks required products; use the reviewed maintenance workflow')
+    raw_root = raw_root.resolve()
+    files, missing, expected, seen = [], [], {}, set()
+    for queue_path in queues:
+        for row in read_json(queue_path)['files']:
+            if row['dataset_id'] not in required - {'asof_normalized_packets'}:
+                continue
+            key = row['relative_path'].replace('\\','/')
+            if 'sourceId=chembl' in key.split('/'):
+                continue
+            if key in seen:
+                raise ContractError('Duplicate queued input path')
+            seen.add(key)
+            expected[row['dataset_id']] = expected.get(row['dataset_id'],0)+1
+            relative = 'manifests/receipts/'+row['receipt_id']+'.json'
+            receipt = safe_child(raw_root,relative)
+            source = safe_child(raw_root,row['relative_path'])
+            if not source.is_file() or not receipt.is_file() or read_json(receipt).get('status') != 'completed':
+                missing.append(row['relative_path'])
+            else:
+                files.append(InputFile(row['dataset_id'],row['release_id'],row['relative_path'],relative))
+    if not expected:
+        raise ContractError('No supported inputs in selected queues')
+    value = InputManifest(2,str(raw_root),tuple(files),expected,tuple(missing))
+    write_new_json(destination,value)
+    return value
 
 
 def main():
-    project = Path(__file__).resolve().parents[2]
-    catalog_path = project / "data/catalog/sources.json"
-    catalog = read_json(catalog_path)
-    if not any(row["dataset_id"] == "asof_normalized_packets" for row in catalog["datasets"]):
-        template = copy.deepcopy(next(row for row in catalog["datasets"] if row["dataset_id"] == "evidence_ledgers"))
-        template.update(dataset_id="asof_normalized_packets", provider_id="project",
-            name="AsOf v2 contemporary normalized evidence packets", roles=["agent_evidence"],
-            supported_tasks=["T6"], supported_hypotheses=[], supported_ablations=[],
-            purpose="Receipt-verified contemporary target/disease/evidence packets with complete raw-input lineage",
-            required_fields=["schema_version", "origin_at", "hypothesis_key", "input_refs", "source_locator",
-                             "source_metrics", "missingness", "availability", "computed_at"],
-            field_contract_note="Runtime v2 contracts; provider scores are descriptive. No real prediction features or clinical probabilities.",
-            collection_scope="Ten development hypotheses; selected Open Targets 25.09/HGNC inputs. Source completeness is explicit.",
-            formats=["JSON (version 2)", "Markdown dossiers"],
-            release_policy="Immutable build-time UTC cutoff and checksum-backed input manifests; never historical backfill",
-            candidate_releases=["Build-time UTC snapshots"],
-            dependencies=["ot_target", "ot_disease", "ot_evidence", "hgnc_symbols"],
-            collection_status="planned", parse_status="not_run", validation_status="not_run",
-            blockers=["Build, integrity/semantic verification and retained source-field audit must complete"])
-        template["temporal"].update(classification="contemporary_only", annotation_version="Open Targets 25.09 / HGNC snapshot_2026-10-10",
-            eligibility_note="Verified public-download observations bound current availability; no historical eligibility claim",
-            unknowns=["Earliest publisher availability and scientific interpretation remain unverified"])
-        template["verification"].update(level="not_checked", checked_at=None, evidence=[],
-            next_acquisition_check="Run v2 build, verify every dossier and audit twenty statements against source rows")
-        for key in template["profile_policy"]:
-            template["profile_policy"][key] = ("contemporary_development_only" if key == "contemporary_assessment" else
-                                               "excluded_from_this_milestone")
-        catalog["datasets"].append(template)
-        catalog["last_updated"] = "2026-10-10"
-        catalog["scope"] = "Full requirements catalog with transport and v2 contemporary normalization; scientific/model validation remains separate."
-        write_json(catalog_path, catalog)
-    raw_root = Path("E:/projects_data/drug_target_agents_data")
-    rows = []
-    for name in ("core-2026-10-10-queue.json", "starter-2026-10-10-queue.json"):
-        queue = read_json(project / "data/manifests/private" / name)
-        rows.extend(row for row in queue["files"] if row["dataset_id"] in (
-            "ot_target", "ot_disease", "ot_evidence", "hgnc_symbols"))
-    files, missing, expected = [], [], {}
-    for row in rows:
-        if "sourceId=chembl" in row["relative_path"].replace("\\", "/").split("/"):
-            continue
-        expected[row["dataset_id"]] = expected.get(row["dataset_id"], 0) + 1
-        receipt_relative = "manifests/receipts/" + row["receipt_id"] + ".json"
-        receipt_path = safe_child(raw_root, receipt_relative)
-        if not receipt_path.is_file() or not safe_child(raw_root, row["relative_path"]).is_file():
-            missing.append(row["relative_path"])
-            continue
-        receipt = read_json(receipt_path)
-        if receipt.get("status") != "completed":
-            missing.append(row["relative_path"])
-            continue
-        files.append(InputFile(row["dataset_id"], row["release_id"], row["relative_path"], receipt_relative))
-    destination = project / "data/manifests/private/v02-inputs.json"
-    write_json(destination, InputManifest(2, str(raw_root), tuple(files), expected, tuple(missing)))
-    print(f"Prepared explicit input manifest: {destination}")
-    print("No transport queues, worker or monitoring configuration changed.")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--project-root',type=Path,default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--raw-root',type=Path,required=True)
+    parser.add_argument('--queue',type=Path,action='append',required=True)
+    parser.add_argument('--catalog',type=Path)
+    parser.add_argument('--output',type=Path,required=True)
+    args = parser.parse_args()
+    value = prepare(args.raw_root,args.queue,args.catalog or args.project_root/'data/catalog/sources.json',args.output)
+    print(f'Prepared {len(value.files)} inputs; {len(value.missing_inputs)} missing. Catalog and transport unchanged.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

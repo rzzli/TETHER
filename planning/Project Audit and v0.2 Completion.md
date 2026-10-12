@@ -95,4 +95,11 @@ The [production build report](../data/derived/v02-contemporary-pilot-20261012T01
 
 The final integrated suite passed **100 tests**; the current review utility passed **ten probes**. A dependency-free demo ran and verified with site packages disabled. Original plans/downloader/monitor hashes, archived v1/v2 verification and the 83-provider/178-product documentation index were checked in [[data/manifests/public/2026-10-11-project-checks.json]]. V1 semantic verification remains unavailable.
 
-Administrative completion is still open: generated-product catalog status needs a scoped update, and version control, CI, portable legacy verification fixtures and a canonical-run registry need implementation. The user requested replanning after [[Full Repository Review and Verified Findings_claude10112026]]. [[Revised Next Stage Plan after Repository Review]] now governs these corrections and the scientific feasibility gates. The completed dossiers do not establish a live model system, clinical predictor or scientifically validated benchmark.
+October 12 stabilization update: generated-product catalog status now records the scoped
+ten-case collection/parsing with scientific validation `not_run`. Local Git, CI
+configuration, required portable legacy coverage and the canonical registry have been
+implemented. [[Stabilization Completion and Feasibility Gates]] records the new tests
+and clean-checkout results; [[Feasibility Gate Decision]] records unresolved scientific
+inputs. The earlier 100-test result above is the production baseline. Hosted CI has
+not run. The completed dossiers do not establish a live model system, clinical
+predictor or scientifically validated benchmark.

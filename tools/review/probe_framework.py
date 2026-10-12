@@ -239,16 +239,17 @@ def new_computation_old_inputs(root):
 
 
 def legacy_verification(root):
-    del root
-    archived = PROJECT / "runs/framework-v0.1-verified"
-    if not archived.is_dir():
-        return {"status": "not_available", "passed": None,
-                "reason": "Archived local v1 run is absent; original v1 fixtures remain preserved"}
-    checked = verify_run(archived)
+    archived = root / "legacy-v1"
+    shutil.copytree(PROJECT / "tests/fixtures/legacy-v1", archived)
+    checked = verify_run(archived, (archived / "receipt.sha256").read_text().strip())
     return report("Keep legacy byte verification without claiming v2 semantics",
                   checked["semantic_consistency"] == "unavailable_legacy_v1",
                   semantic_consistency=checked["semantic_consistency"],
                   scientific_validity=checked["scientific_validity"])
+
+
+def required_probes_passed(results):
+    return bool(results) and all(result.get("passed") is True for result in results.values())
 
 
 def main():
@@ -275,6 +276,7 @@ def main():
             except Exception as error:
                 results[name] = {"passed": False, "probe_error": type(error).__name__,
                                  "message": str(error)}
+            results[name]["status"] = "passed" if results[name].get("passed") is True else "failed"
     report_value = {"schema_version": 2, "reviewed_at_utc": datetime.now(timezone.utc),
               "scope": "Current v2 fictional probes; no downloads, models or scientific conclusions",
               "fixture_schema_version": 2,
@@ -292,7 +294,7 @@ def main():
     write_json(args.output, report_value)
     for name, result in results.items():
         print(f"{name}: passed={result.get('passed')}; error={result.get('probe_error')}")
-    return 1 if any(result.get("passed") is False for result in results.values()) else 0
+    return 0 if required_probes_passed(results) else 1
 
 
 if __name__ == "__main__":
