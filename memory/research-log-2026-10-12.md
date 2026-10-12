@@ -47,3 +47,19 @@ review. Prepared ten unanswered evaluator-only forms with 20 original-audit clai
 scientific adjudication `not_run`. The packet is a purposive unblinded development
 sample, not independent gold or an error-rate benchmark. Reviewer scheduling and
 actual data acquisition/restoration remain next steps.
+
+## Reviewer-friendly delivery
+
+Created a dependency-free HTML workbook and portable ZIP from the hash-verified blank
+forms. Reviewers see one hypothesis at a time, two source-linked evidence cards, six
+plain-language questions per card, rationale fields and excerpt-level utility. Exact
+statements/context/provenance remain available. Browser drafts, import/export, readable
+summary and print support are implemented; no automatic network calls or uploaded
+answers. Delivered package remains entirely unanswered and evaluator-only.
+
+Nine headless Edge acceptance checks passed in isolated profiles: blank defaults,
+autosave/reload, partial-completion rules, answer export, import/reset and foreign-draft
+rejection, readable summary, mobile fit, print restoration and storage-denied export.
+Desktop/mobile/print layouts were visually inspected. QA answers remain in ignored
+cache storage and do not enter the scientific review package. Documentation connector
+tools were unavailable; the local workbook needs no account or installation.

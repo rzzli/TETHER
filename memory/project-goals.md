@@ -28,6 +28,13 @@ full validation (114 tests, no skips) and core (92 executed, 22 expected ingesti
 skips), plus ten required probes and installed-wheel checks for each. Hosted CI remains
 unverified. See [[Feasibility Gate Decision]] for the review package and next gates.
 
+The user requested a more friendly review format. A portable offline workbook now
+exists at `data/benchmark/gold_evidence/expert-review-workbook-20261012-final/Review.html`
+with a shareable ZIP. It displays ten hypotheses/twenty claims, guided questions,
+source links, expandable context, local draft saving, validated import/export and
+printing. Nine isolated-browser acceptance checks passed. All delivered judgments
+remain blank; scientific adjudication remains unperformed.
+
 The following paragraphs retain the earlier replanning state for context.
 
 The user requested replanning against [[Full Repository Review and Verified Findings_claude10112026]]. [[Revised Next Stage Plan after Repository Review]] is now the authoritative forward plan: close v0.2 documentation, establish local version control, repair utility/catalog ownership and portable required checks, then resolve scientific feasibility before model expansion. The canonical pilot `runs/v02-realdata-20261012T015124Z/` is complete: ten verified dossiers and 20 original-row fidelity checks, $0 spending, no real probabilities. Administrative catalog/registry closeout remains open.

@@ -65,3 +65,24 @@ sealed claim hashes, binds physical row locators, and requires evaluator-only ou
 placement. It leaves scientific judgments null. Review forms and completed answers
 must never be added to an agent manifest. This purposive, unblinded development sample
 does not establish a representative benchmark or whole-dossier error rate.
+
+For reviewers, prefer the guided offline workbook over raw JSON forms:
+
+```powershell
+uv run --no-sync python tools/review/build_review_workbook.py `
+  --source data/benchmark/gold_evidence/t6-development-review-20261012 `
+  --output data/benchmark/gold_evidence/<fresh-workbook-directory>
+```
+
+This produces `Review.html`, `START_HERE.txt` and a small portable ZIP. The workbook
+checks input hashes, keeps assessments blank, hides machine-specific source paths,
+and retains claim/row provenance. Reviewers use dropdowns and notes; drafts save locally
+when browser storage is available. JSON export/import moves drafts between machines;
+a readable Markdown export and print layout support review outside the form. No
+answers are uploaded. Completed forms remain single-reviewer assessments pending
+adjudication, never automatically promoted to scientific gold.
+
+The optional `check_review_workbook.cjs <Review.html> <fresh-QA-directory>` browser
+check uses Playwright with isolated profiles. Set `NODE_PATH` to an installed
+Playwright package and optionally `REVIEW_BROWSER_CHANNEL` (default `msedge`). Its
+synthetic answers belong in ignored cache storage, not the gold review package.
