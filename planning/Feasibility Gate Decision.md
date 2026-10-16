@@ -1,11 +1,33 @@
 ---
 title: Scientific feasibility gate decision
 date: 2026-10-12
-status: blocked-on-evidence-and-review
+status: ai-development-review-complete-evidence-gates-open
+updated: 2026-10-15
 tags: [asof, feasibility, t6]
 ---
 
 # Scientific feasibility decision
+
+## Current decision — October 15, 2026
+
+The user replaced the human-only development review with parallel AI-assisted domain research and internet source checks. This development review is complete: ten prescribed hypotheses, 20 original claims and 120 categorical assessment fields, with original evidence and fingerprints preserved. October 13 reviews remain dated October 13; the resumed integrity/source verification is dated October 15. Human reviewer availability no longer blocks this development phase. These are evaluation-only AI research judgments, not independently adjudicated gold or proof of predictive validity.
+
+See [[AI Assisted Review Completion]] for retained artifacts and corrective priorities. The combined research bundle retains narrative utility judgments and heterogeneous source references; it is not compatible with native workbook answer import. The original human workbook remains blank and hash-verified. Six priority source conclusions received a bounded second pass; unresolved current English CFTR-label reconciliation and unreconstructed historical ClinVar versions remain explicit.
+
+The next development work is to preserve omitted source context in a separately versioned adapter update and test the resulting output against frozen source rows. `textMiningSentences`, publication/study context and `clinicalSignificances` require explicit projection and semantics review; do not silently add current annotations or clinical outcomes to sealed agent inputs. External trial results remain evaluator-only supplements.
+
+| Gate | Current decision |
+| --- | --- |
+| AI-assisted ten-case development review | Complete, with explicit source-access/version limitations. Human scheduling is no longer a blocker for this phase. |
+| Independent scientific gold / representative benchmark | Not established. Parallel agents from the same AI workflow are not independent expert adjudication or a held-out evaluation sample. |
+| Historical trial snapshots and cohort restoration | Open; no qualifying local historical input or restored event/censoring cohort. |
+| Complete regional QTL/GWAS/LD bundle | Open; completeness, ancestry/build/allele compatibility and cohort overlap remain to be demonstrated. |
+| Empirical cohort size and power | Open; ten purposively chosen cases cannot supply clinical event counts or generalization power. |
+| Live adapter comparison | Not launched. Define eligible inputs, comparison protocol, model chronology and explicit spending decision before execution. |
+
+## Archived decision — October 12, 2026
+
+The following dated rationale and human-review preparation are preserved as history. The October 15 current decision supersedes the human-availability prerequisite for the AI-assisted development phase only.
 
 **Repository stabilization can proceed; a scientific evaluation and live model
 expansion cannot yet pass their evidence gates.** The working route is a contemporary

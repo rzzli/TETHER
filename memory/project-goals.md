@@ -3,10 +3,18 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-12
+updated: 2026-10-15
 ---
 
 # Project goals
+
+## Current status — October 15
+
+The user replaced the human-only development review with parallel AI-assisted domain research and internet source checks. This development review is complete: ten prescribed hypotheses, 20 original claims and 120 categorical assessment fields, with original evidence and fingerprints preserved. October 13 reviews remain dated October 13; the resumed integrity/source verification is dated October 15. Human reviewer availability no longer blocks this development phase. These are evaluation-only AI research judgments, not independently adjudicated gold or proof of predictive validity.
+
+See [[AI Assisted Review Completion]], [[Feasibility Gate Decision]] and [[research-log-2026-10-15]]. The main findings require source-context enrichment and narrower interpretation of disease, intervention and genotype evidence. Original statements, sealed packets, the blank human workbook, null probabilities and empty numerical features remain unchanged. Historical snapshots/cohort restoration, complete regional genetics/LD, actual event counts/power and a controlled comparison remain open. No new provider adapter, catalog promotion, downloader restart or monitor restart was introduced by this review.
+
+The October 12 and earlier paragraphs below are retained historical state, including the then-pending human review.
 
 ## Current next-stage plan — October 12
 
