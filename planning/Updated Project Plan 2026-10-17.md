@@ -1,7 +1,7 @@
 ---
 title: Updated Project Plan — October 17, 2026
 date: 2026-10-17
-status: local-wp0-complete-v04-frozen-enumeration-pending
+status: registry-v04-technically-audited-scientific-gates-open
 tags: [asof, roadmap, clinical-evaluation, feasibility]
 ---
 
@@ -9,16 +9,21 @@ tags: [asof, roadmap, clinical-evaluation, feasibility]
 
 ## Decision
 
-Execution update: local WP0 is complete. Checkpoint `f36f548` captures the runnable
-state; an E: recovery copy passed rehash/restore tests; three catalog descriptions
-are corrected; full local validation passed 175 tests without skips. The development
-sizing protocol is frozen at `planning/protocols/registry-sizing-v0.4.json` with
-SHA-256 `5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd`.
-See `planning/review-assets/wp0-20261017/README.md` and the sanitized WP0 completion
-manifest. Remote/off-machine backup/hosted CI remain open. **Next is the registry
-origin/follow-up extraction; enumeration and power simulation have not run.**
+Execution update: local preservation, private Git hosting and baseline off-machine
+recovery/hosted CI are complete. The frozen v0.4 registry extraction and technical
+label audit now cover 232,722 observations, 4,419 included programs and 37 distinct
+recorded registry-start events across 27 programs. All programs/event links passed
+original-row checks; 185 sampled programs have technical annotations and 33 have
+AI-assisted narrative notes. No clinical training labels or scientific accuracy
+estimates were produced. See [[Registry-scale Cohort and Label Audit v0.4]] and its
+evidence index for canonical hashes, final registry backup/CI and limitations.
 
-**The next scientific milestone is registry-scale label sizing, preceded by preservation of the working tree and evaluator evidence.** Further qualification of the same 15 non-excluded development representatives is an audit subtask, not the prerequisite for measuring whether T1 is feasible.
+Next: separately freeze clinical-scope/condition-equivalence sensitivities, qualify
+prior advancement and regimen/population roles, then simulate dependency-aware power.
+Do not infer feasibility from raw program totals or resume the superseded per-case
+sequence. The 2023 mappings remain contemporary oracle evaluator information.
+
+**Registry-scale development sizing and its first technical audit are complete; scientific label validity and empirical design power are the next gates.** Further qualification of the same 15 non-excluded development representatives is an audit subtask, not the prerequisite for measuring whether T1 is feasible.
 
 This revision reconciles [[Claude Review and Plan_claude10172026]] with the code, retained review assets and [[project-goals]]. It supersedes this file's earlier per-case-first sequence. The Claude review, original proposals, dated completion notes and sealed v0.3 artifacts remain historical evidence. The planning reconciliation was followed by the local preservation and v0.4 protocol freeze recorded above; no benchmark labels, paid calls or external publication are authorized by that freeze.
 
@@ -32,7 +37,7 @@ The working research objective remains H1–H6 from [[Beyond the Virtual Biotech
 - The v0.3 milestone accounts for all **24** exposed representatives, but `evaluate()` runs on only **two authored fact records, P01 and P24**. The other 22 have routing/disposition records, not completed transition searches. The 15 non-excluded representatives are not a sized program universe.
 - Zero qualified events under strict v0.3 is a reason not to train on that set. It is not a conclusion that T1 itself is infeasible.
 - The review's crude linkage scenarios give 659 higher-phase pair matches among 46,819 pairs, or 485 among 15,631 under a five-year recency restriction. These are neither adjudicated program counts nor statistical bounds: lagging linkage, comparator contamination, phase collapsing and cross-program matching can bias them in different directions. Recency is not origin-active status. The 343 twelve-month matches are similarly preliminary.
-- I checked the local dependency metadata: Open Targets 25.09 `drug_molecule` has 18,119 rows and `drug_mechanism_of_action` 6,332 rows. The raw fields include molecule `id`/synonyms/parent IDs and mechanism `chemblIds`/`targets`, rather than the catalog's normalized field names. An evaluator adapter still needs validation. Clinical-phase, linked-disease and approval fields in those tables must not enter origin predictors.
+- I checked the local dependency metadata: Open Targets 25.09 `drug_molecule` has 18,119 rows and `drug_mechanism_of_action` 6,332 rows. The raw fields include molecule `id`/synonyms/parent IDs and mechanism `chemblIds`/`targets`, rather than the catalog's normalized field names. The evaluator adapter and source-inclusive checks are now implemented for the frozen v0.4 sizing route. Clinical-phase, linked-disease and approval fields in those tables must not enter origin predictors.
 
 ## Revised work sequence
 
@@ -40,7 +45,7 @@ The working research objective remains H1–H6 from [[Beyond the Virtual Biotech
 
 Prepare logical local commits of runtime/tests, evaluator tools, catalog/anchors and documentation; inspect the intended contents and run the required validation before committing. Preserve all pre-existing work. Keep credentials, bulk originals and third-party page bodies out of the repository. Public-manifest names do not imply externally published or independently timestamped anchors.
 
-Record the current lack of a remote, the uncommitted release and the missing verified off-machine backup as open risks. Creating a private remote, transmitting data or choosing an off-machine destination requires the actual owner/destination and the user's instruction; none is assumed by this planning request. A local checkpoint and further local sizing design can proceed without waiting for a hosted account. Hosted CI is complete only after a real run is retained.
+At the start of this work package the remote, committed release and off-machine recovery test were missing. The later user-authorized execution completed private Git hosting, baseline hosted CI and off-machine restoration; see the milestone evidence index. Creating a private remote, transmitting data or choosing an off-machine destination requires the actual owner/destination and the user's instruction; none is assumed by this planning request. A local checkpoint and further local sizing design can proceed without waiting for a hosted account. Hosted CI is complete only after a real run is retained.
 
 Back up the small evaluator/derived artifacts and source manifests to an authorized independent destination and test restoration. Preserve rights restrictions on page bodies. Repair catalog metadata through the existing single writer, without changing download-worker state or transport receipts:
 

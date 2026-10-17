@@ -1,5 +1,24 @@
 # Bounded feasibility utilities
 
+Registry-scale evaluator sizing is implemented under the frozen v0.4 protocol.
+See `planning/Registry-scale Cohort and Label Audit v0.4.md`; these are development
+events, with null training labels and no scientific validation claim.
+
+```powershell
+.venv/Scripts/python.exe -m tools.feasibility.registry_extract --protocol planning/protocols/registry-sizing-v0.4.json --output data/benchmark/cohorts/NEW-EXTRACTION
+.venv/Scripts/python.exe -m tools.feasibility.registry_cohort --protocol planning/protocols/registry-sizing-v0.4.json --frames data/benchmark/cohorts/NEW-EXTRACTION/frames.json --output data/benchmark/cohorts/NEW-COHORT
+.venv/Scripts/python.exe -m tools.feasibility.registry_audit --protocol planning/protocols/registry-sizing-v0.4.json --frames data/benchmark/cohorts/NEW-EXTRACTION/frames.json --cohort data/benchmark/cohorts/NEW-COHORT --output data/benchmark/cohorts/NEW-AUDIT
+```
+
+Use fresh directories; these commands are examples, not instructions to repeat
+completed extraction. `registry_extract` owns and stops only initially stopped
+restores, uses read-only transactions and verifies completed frames before explicit
+reuse with `--resume-completed-from`. Do not restart on a polling timeout.
+`registry_cohort` streams records into a local SQLite index using the optional
+ingestion dependency; mapping fields are explicitly projected and evaluator-only.
+`registry_audit` verifies original JSONL bytes and source fields, retains qualified
+AI-authored review separately, and never infers negative labels or scientific accuracy.
+
 `advancement_rules.py` implements the evaluator-only v0.3 program relations,
 experimental-regimen dosing endpoint and shared-event accounting.
 `apply_advancement_policy.py` applies explicit source-bound development judgments

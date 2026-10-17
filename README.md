@@ -47,8 +47,9 @@ For the shared local/CI validation command, use `uv run --no-sync python tools/v
 --mode core --package`. Full validation requires the ingestion extra and PowerShell 7:
 `uv run --no-sync python tools/validate.py --mode full --package`. Full mode rejects all
 skips; core mode permits only named optional-dependency skips. Both require the portable
-legacy fixture and all review probes. Windows/Linux CI is configured; hosted execution
-remains unverified until a remote runner executes it.
+legacy fixture and all review probes. Windows/Linux core/full hosted CI has passed
+for the private repository checkpoint. See the [registry milestone evidence](planning/review-assets/registry-sizing-20261017/README.md)
+for exact commits and hosted results.
 
 Choose a new output directory for each execution. `dossier.md` is the readable report;
 `ledger.json`, `features.json`, `prediction.json`, `inputs.json`, `run.json`,

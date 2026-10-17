@@ -118,3 +118,40 @@ See `planning/review-assets/wp0-20261017/README.md` and
 Next: read-only registry origin/follow-up extraction and conservative drug-role/alias
 mapping under v0.4. No database restart, data download, model call, paid activity or
 external transmission occurred in this step. Do not repeat the completed freeze.
+
+## Registry-scale sizing, source audit and private hosting
+
+The user activated the two-track completion goal. GitHub CLI sign-in was completed
+locally as rzzli. Created/pushed a private repository, ran all four hosted CI jobs,
+and tested actual downloaded baseline recovery assets: all 1,811 archived entries,
+a sealed milestone and a Git bundle clone/fsck passed.
+
+Under the already-frozen v0.4 protocol, extracted five existing restores read-only,
+reusing three completed frames after hash checks. Two retained query plans exposed
+quadratic child aggregation; controlled cancellation and a fresh set-based/session
+hash-join extraction completed the remaining sources. All owned servers stopped.
+Final source frames: 232,722 observations, 196,940 trial IDs, 719,992,409 bytes.
+
+Final cohort: 4,419 programs; 27 recorded-start programs, 41 unresolved transitions,
+4,351 no recorded transition. 37 unique recorded events, 19 positive dependency
+components, ten positive mapped targets. 1,073 programs lack target mapping.
+No training/negative/censoring labels. Fixed literal condition rules retained;
+no outcome-selected synonym merging or scientific validation claim.
+
+Source review found narrative companion-drug/cocktail omissions, later unresolved
+roles, contradictory dates/withdrawals and an audit-empty-lookup counter. Added
+regressions and held those ambiguities. Original-row checks cover every included
+program and 98 links, rehashing 2,497 rows. Final 185-program stratified sample has
+65 candidates and 120 controls; 33 AI narrative notes cite 88 distinct rows. No
+independent scientific annotations, recall, precision or per-case-time inference.
+The three Phase 4/estimated/comparator leads in an earlier diagnostic control sample
+are not eligible events; the final deterministic sample changed with corrected
+membership and has no relaxed leads. Both are limited searches, not recall evidence.
+
+Canonical workspace `registry-sizing-20261017T202655Z/cohort-v04` and `audit-v04`;
+previous builds retained as diagnostics. Final build: 141.95 seconds, ~251 MiB peak
+working set. The registry report, updated roadmap and public manifest bind results.
+Private final-milestone recovery/CI evidence is retained in the milestone index.
+Next: condition/clinical-scope sensitivity freeze, prior-risk/population adjudication,
+then dependency-aware power. No provider-model calls, training, new downloads or
+changes to the original downloader/stopped periodic monitor.

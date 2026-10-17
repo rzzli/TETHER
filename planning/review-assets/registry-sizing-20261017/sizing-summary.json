@@ -1,0 +1,72 @@
+{
+  "protocol_sha256": "5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd",
+  "frames": {
+    "2023-01-01": {
+      "studies": 182591,
+      "arms": 366212
+    },
+    "2023-07-02": {
+      "studies": 7029,
+      "arms": 12766
+    },
+    "2024-01-01": {
+      "studies": 10803,
+      "arms": 20874
+    },
+    "2024-07-01": {
+      "studies": 14658,
+      "arms": 29092
+    },
+    "2025-01-01": {
+      "studies": 17641,
+      "arms": 35611
+    }
+  },
+  "arm_resolution_reasons": {
+    "drug_alias_unresolved_or_conflicting": 354814,
+    "no_active_drug_product": 108611,
+    "no_explicit_arm_title_alias": 367477,
+    "not_experimental_arm": 176173,
+    "multiple_active_products_or_roles_unresolved": 81467,
+    "arm_composition_or_scope_text_requires_review": 55623,
+    "multi_program_study_condition_scope_unqualified": 8694,
+    "arm_description_composition_requires_review": 10424,
+    "arm_role_cue_requires_review": 2092,
+    "drug_description_composition_requires_review": 4041,
+    "unsupported_active_product_type": 4932,
+    "drug_role_cue_requires_review": 1967,
+    "arm_explicitly_closed": 82
+  },
+  "origin_program_status": {
+    "unresolved_origin": 16888,
+    "excluded_prior_higher_phase": 5338,
+    "excluded_not_active_in_origin_snapshot": 5788,
+    "resolved_origin_program": 4419
+  },
+  "cohort_programs": 4419,
+  "label_states": {
+    "no_recorded_transition_by_cutoff": 4351,
+    "recorded_next_phase_start": 27,
+    "unresolved_transition": 41
+  },
+  "candidate_event_links": 98,
+  "resolved_unique_development_events": 37,
+  "resolved_event_ncts": 37,
+  "unique_drugs": 1039,
+  "mapped_targets": 745,
+  "programs_with_target_mapping": 3346,
+  "programs_without_target_mapping": 1073,
+  "target_indication_pairs": 9532,
+  "audit_sample": 185,
+  "training_labels": 0,
+  "scientific_validation": "not_established",
+  "dependency_components": 1001,
+  "origin_lead_sponsors": 850,
+  "limitations": [
+    "Conservative automatically resolved subset; unresolved arm roles/combinations/aliases are retained separately",
+    "Exact normalized condition baseline can miss synonyms/subtypes; no unsupported family merge",
+    "Registry enrollment at observed phase is a surrogate, not experimental dosing or therapeutic success",
+    "Contemporary target mapping is oracle information for sizing; no predictor admission",
+    "No recorded transition is not a verified negative or censoring assignment"
+  ]
+}

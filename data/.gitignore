@@ -35,3 +35,6 @@
 **/*.partial
 **/__pycache__/
 **/.DS_Store
+
+# An actual restore clone contains a nested Git repository; do not traverse it.
+/cache/remote-recovery-restore-test/

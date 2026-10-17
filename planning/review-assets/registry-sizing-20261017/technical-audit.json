@@ -1,0 +1,29 @@
+{
+  "status": "technical_audit_passed_scientific_adjudication_incomplete",
+  "role": "evaluation_only",
+  "protocol_sha256": "5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd",
+  "cohort_sha256": "6cd9eb4ff2ec06c15ef375e861e77158a3d6e87288edaa9fab78bcc2f75b83a7",
+  "sample_sha256": "3f5644e51bafe1c2d44208913ea7acf05ba3aeac432b59c2ef2fb4f0320ea3de",
+  "programs_source_checked": 4419,
+  "event_links_source_checked": 98,
+  "original_rows_rehashed": 2497,
+  "physical_rows_scanned": 232722,
+  "sample_annotations": 185,
+  "sample_groups": {
+    "candidate_transitions": 65,
+    "no_recorded_transition_by_cutoff": 120
+  },
+  "controls_with_relaxed_followup_leads": 0,
+  "relaxed_leads": 0,
+  "independent_human_annotations": 0,
+  "recall": null,
+  "scientifically_validated_precision": null,
+  "elapsed_seconds": 5.625,
+  "provider_spending_usd": 0,
+  "limitations": [
+    "Original-row checks establish consistency, not correct drug roles or equivalent eligibility.",
+    "Relaxed follow-up search is not an independent exhaustive event search; no recall estimate.",
+    "No observed transition remains a search result, not negative truth.",
+    "Tier B experimental dosing and independent scientific validation remain unestablished."
+  ]
+}
