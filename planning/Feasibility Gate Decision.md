@@ -1,16 +1,20 @@
 ---
 title: Scientific feasibility gate decision
 date: 2026-10-12
-status: ai-development-review-complete-evidence-gates-open
+status: origin-screen-regional-qc-complete-with-exceptions-followup-open
 updated: 2026-10-16
 tags: [asof, feasibility, t6]
 ---
 
 # Scientific feasibility decision
 
+## Current status — clinical and genetics feasibility pilots
+
+The resumed steps produced a 24-trial origin mapping screen (12 candidates, five exclusions, seven requiring separation/review) and one complete indexed IL6R/RA regional retrieval with 1,690 QC-passing SNPs and 503 EUR LD samples. Clinical longitudinal labels remain null because the January 1, 2025 follow-up snapshot is missing. The regional technical checks retain two provider exceptions: a GWAS metadata MD5 mismatch confirmed by identical redownload, and an LD README sample count inconsistent with the VCF. External LD/cohort overlap and scientific interpretation remain unresolved. No MR, causal inference, live model or clinical probabilities. See [[Clinical and Genetics Feasibility Pilot]] for artifacts, source checks and next gates. Default dependencies, downloader and stopped monitoring are unchanged; $0 provider spending. This supersedes the earlier deferral below.
+
 ## Completed technical step — one AACT snapshot
 
-The January 1, 2023 versioned archive supplied by the user has been restored: 437,548 unique studies in 55 tables, complete TOC/table agreement, valid indexes and validated declared constraints. Nine stored-record rows for four study IDs have no matching study and remain documented exceptions. See [[AACT Historical Restoration]] for hashes, SQL, logs, storage and missingness. Exact first-public availability and strict temporal benchmark admission remain unverified; this is not a restored longitudinal event/censoring cohort. The 20–30-program audit and regional QTL/GWAS/LD pilot remain deferred by the user.
+The January 1, 2023 versioned archive supplied by the user has been restored: 437,548 unique studies in 55 tables, complete TOC/table agreement, valid indexes and validated declared constraints. Nine stored-record rows for four study IDs have no matching study and remain documented exceptions. See [[AACT Historical Restoration]] for hashes, SQL, logs, storage and missingness. Exact first-public availability and strict temporal benchmark admission remain unverified; this is not a restored longitudinal event/censoring cohort. The resumed bounded pilots are reported above; longitudinal labels and scientific validation remain open.
 
 ## Current decision — October 16, 2026
 
@@ -29,7 +33,7 @@ The next development work is to preserve omitted source context in a separately 
 | AI-assisted ten-case development review | Complete, with explicit source-access/version limitations. Human scheduling is no longer a blocker for this phase. |
 | Independent scientific gold / representative benchmark | Not established. Parallel agents from the same AI workflow are not independent expert adjudication or a held-out evaluation sample. |
 | Historical trial snapshots and cohort restoration | One January 1, 2023 snapshot technically restored with data exceptions; strict availability gate and longitudinal event/censoring cohort remain open. |
-| Complete regional QTL/GWAS/LD bundle | Open; completeness, ancestry/build/allele compatibility and cohort overlap remain to be demonstrated. |
+| Complete regional QTL/GWAS/LD bundle | One IL6R/RA interval retrieved and technically checked: 1,690 SNPs / 503 EUR reference samples. Provider metadata exceptions, external LD and unknown overlap keep scientific inference open. |
 | Empirical cohort size and power | Open; ten purposively chosen cases cannot supply clinical event counts or generalization power. |
 | Live adapter comparison | Not launched. Define eligible inputs, comparison protocol, model chronology and explicit spending decision before execution. |
 

@@ -97,7 +97,9 @@ A single snapshot establishes restoration feasibility only. It cannot establish 
 | Order | Work | Status |
 | --- | --- | --- |
 | 1 | Restore one historical AACT snapshot and verify its schema/content | Complete with documented data exceptions; January 1, 2023 snapshot |
-| 2 | Audit 20–30 clinical programs, target/drug/indication mappings, event dates and censoring | Deferred by user; not started |
-| 3 | Assemble and QC one complete regional QTL/GWAS/LD example | Deferred by user; not started |
+| 2 | Audit 20–30 clinical programs, target/drug/indication mappings, event dates and censoring | Resumed: 24-trial origin screen complete; January 2025 follow-up missing, all labels null |
+| 3 | Assemble and QC one complete regional QTL/GWAS/LD example | IL6R/RA regional technical pilot complete with provider exceptions; scientific inference gate open |
 
 The existing download worker and stopped periodic monitor remain untouched. Collection is recorded for this one archive; historical benchmark admission and scientific validation are not promoted by the restoration. See [[Feasibility Gate Decision]] and [[project-goals]].
+
+Continuation: see [[Clinical and Genetics Feasibility Pilot]] for the resumed steps. Earlier access/restoration-only instructions above describe the preserved prior scope.

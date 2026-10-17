@@ -47,3 +47,7 @@ Starter files total 33,422,927 bytes. The core queue is 3,513 files, bounded at 
 Both drives are NTFS; after reserving 20% of capacity they offer approximately 2.62 TiB usable. The measured core/historical Open Targets payloads fit; unrestricted multi-TB pQTL/GWAS/raw imaging mirrors do not. The GCS Open Targets mirror requires a billing project; no paid transfer was attempted. Details and commands: [[data/STORAGE_AND_DOWNLOAD_REPORT]].
 
 October 10 completion: attached primary documentation evidence for 15 previously checked-but-unreferenced records. Thirteen contracts now distinguish molecular QTLs, phenotype-specific outcome GWAS, API responses, raw phased genotype panels and derived LD provenance. Conditional counts/variance fields preserve explicit unknowns. Provider/product counts and collection status are unchanged; see [[data/manifests/public/2026-10-10-completion-audit.json|the public metadata audit]] and [[research-log-2026-10-10]].
+
+## October 16 feasibility continuation
+
+See [[Clinical and Genetics Feasibility Pilot]]: 24 origin trial representatives screened; all event/censoring labels remain null pending January 2025 follow-up. Indexed BLUEPRINT QTD000021, GCST90132223 and IGSR regional slices are collected/QC-processed only for the specified IL6R interval. Source metadata checksum/count exceptions remain explicit. Whole-provider catalog statuses are unchanged; the scoped public manifest is authoritative for this pilot.

@@ -8,6 +8,10 @@ updated: 2026-10-16
 
 # Project goals
 
+## Current status — clinical and genetics feasibility pilots
+
+The resumed steps produced a 24-trial origin mapping screen (12 candidates, five exclusions, seven requiring separation/review) and one complete indexed IL6R/RA regional retrieval with 1,690 QC-passing SNPs and 503 EUR LD samples. Clinical longitudinal labels remain null because the January 1, 2025 follow-up snapshot is missing. The regional technical checks retain two provider exceptions: a GWAS metadata MD5 mismatch confirmed by identical redownload, and an LD README sample count inconsistent with the VCF. External LD/cohort overlap and scientific interpretation remain unresolved. No MR, causal inference, live model or clinical probabilities. See [[Clinical and Genetics Feasibility Pilot]] for artifacts, source checks and next gates. Default dependencies, downloader and stopped monitoring are unchanged; $0 provider spending. This supersedes the earlier deferral below.
+
 ## Current status — one historical AACT snapshot restored
 
 The user supplied the January 1, 2023 versioned AACT archive and confirmed its date. Full ZIP integrity checks, isolated PostgreSQL restoration and technical audits completed: 55 tables, 40,240,578 rows, 437,548 unique studies, 227 application indexes (322 including TOAST) valid, and 72 declared constraints validated. Nine stored-record rows for four NCT IDs have no matching study; they remain unchanged with the exception retained. Snapshot version date is supported by user confirmation/internal timestamps; exact first-public availability and strict benchmark eligibility remain unverified.

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-16",
+  "created_at_utc": "2026-10-17T02:31:35.142558+00:00",
+  "scope": "bounded evaluator-only clinical screen and contemporary regional genetics pilot",
+  "catalog_dataset_ids": [
+    "aact_snapshots",
+    "eqtl_catalogue_nominal",
+    "eqtl_catalogue_metadata",
+    "gwas_full_sumstats",
+    "gwas_study_metadata",
+    "igsr_ld_reference"
+  ],
+  "catalog_promotion": false,
+  "provider_spend_usd": 0,
+  "clinical": {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-17T02:24:54.274204+00:00",
+    "status": "origin_mapping_screen_completed_longitudinal_audit_pending",
+    "cases_reviewed": 24,
+    "target_families": {
+      "CD276": 5,
+      "OSMR": 1,
+      "ERBB2": 4,
+      "PCSK9": 4,
+      "IL6R": 4,
+      "CFTR": 2,
+      "GLP1R": 4
+    },
+    "decisions": {
+      "candidate": 12,
+      "requires_arm_split": 2,
+      "exclude_as_anchor_program": 4,
+      "separate_safety_extension": 1,
+      "requires_cohort_split": 1,
+      "exclude_fresh_outcome_cohort": 1,
+      "requires_phase_and_target_review": 1,
+      "separate_safety_combination": 1,
+      "requires_phase_and_cohort_split": 1
+    },
+    "current_status_descriptive_only": {
+      "ACTIVE_NOT_RECRUITING": 8,
+      "COMPLETED": 7,
+      "TERMINATED": 3,
+      "RECRUITING": 3,
+      "UNKNOWN": 3
+    },
+    "origin_results_already_available": 1,
+    "clinical_outcome_labels_assigned": 0,
+    "followup_snapshot_missing": "2025-01-01",
+    "independent_adjudication": false,
+    "coverage_limit": "SCN9A has no selected qualifying seed-matched trial; not evidence of biological absence"
+  },
+  "genetics": {
+    "region": "GRCh38 1:153900000-154900000",
+    "qtl": "QTD000021",
+    "gwas": "GCST90132223",
+    "ld": "IGSR 20190312 GRCh38 / phase3 EUR panel",
+    "status": "regional_acquisition_and_qc_completed_with_source_exceptions",
+    "scientific_validation": "not_run",
+    "causal_inference_performed": false,
+    "coverage": "all indexed source rows returned in prespecified interval; source-wide hashes unverified"
+  },
+  "verification": {
+    "status": "passed_with_source_exceptions",
+    "clinical_selection_replay": "identical",
+    "clinical_cases": 24,
+    "clinical_current_record_hashes": 24,
+    "clinical_labels_assigned": 0,
+    "regional_rows_verified": {
+      "eqtl": 207274,
+      "gwas": 3109,
+      "ld": 25641
+    },
+    "provider_index_md5_checks_passed": 2,
+    "provider_metadata_md5": "mismatch_unresolved_identical_redownload",
+    "shared_variants": 1690,
+    "ld_samples": 503,
+    "independent_correlation_submatrix_variants": 40,
+    "gwas_missing_effect_allele_frequencies": 1690,
+    "qtl_reported_an_range": [
+      382,
+      382
+    ],
+    "source_discrepancy": "LD README states N=5248; observed VCF header has 2548. All 503 requested EUR samples present.",
+    "scientific_validation": "not_established"
+  },
+  "evidence_manifests": [
+    {
+      "root": "D:/Projects/drug_target_agents/data/benchmark/cohorts/aact-origin-audit-20261017T021043Z",
+      "manifest": "evidence-manifest.json",
+      "sha256": "20c9f13c8b4b44c7e25f84fa26c7916f888081c5d11d3b52f4f23c1523f7ba65",
+      "files": 56,
+      "payload_bytes": 10206970
+    },
+    {
+      "root": "E:/projects_data/drug_target_agents_data/derived/regional_genetics/il6r-ra-20261017T021530Z",
+      "manifest": "evidence-manifest.json",
+      "sha256": "7582b3565881dd581225f12be2bf3318938f7bf0f3d55788320f6d21f70bc9d7",
+      "files": 31,
+      "payload_bytes": 36478820
+    }
+  ],
+  "framework_validation": {
+    "path": "data/derived/feasibility-tests-20261017.json",
+    "sha256": "a8147d43a033e8cc89bbc2d1d21a239c0a55c0b520f6cbe8d34fc06e1fa40ae1",
+    "report": {
+      "schema_version": 1,
+      "mode": "full",
+      "structural": {
+        "tracked_scope_files": 161,
+        "providers": 83,
+        "datasets": 178
+      },
+      "powershell_syntax": true,
+      "tests": {
+        "run": 126,
+        "failures": 0,
+        "errors": 0,
+        "skipped": []
+      },
+      "required_probes_exit_code": 0,
+      "status": "passed",
+      "elapsed_seconds": 32.10899999999674
+    }
+  },
+  "code": {
+    "tools/feasibility/audit_clinical_origin.py": "b6ebbef43e796b375178eec809f6bb46fa79cfd664e717fadc08858fb8c1a965",
+    "tools/feasibility/fetch_genetics_region.py": "a3e62a774cf7bc81d9d15106f272d08038cafcf606fa04b348f3a93e848b125e",
+    "tools/feasibility/qc_genetics_region.py": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3",
+    "tools/feasibility/render_clinical_audit.py": "223c7152cf564d7a33c9f46259658b9ab542ae415f9a1bbc952a9ccd0d183fed",
+    "tools/feasibility/verify_pilots.py": "ee1b2e51ba29a6f06ce23b177acab399d4d8ec2036bb8cc2af8d331bfe5f43b6"
+  },
+  "agent_admission": false,
+  "limitations": [
+    "January 2025 follow-up snapshot missing; all clinical event/outcome/censoring labels null",
+    "Contemporary identifier/mechanism normalization not historical annotation",
+    "GWAS metadata provider MD5 mismatch; identical redownload retained",
+    "LD README N=5248 differs from observed 2548 VCF samples; requested 503 EUR present",
+    "Unknown cohort overlap; external reference LD; no independent scientific adjudication",
+    "No provider-wide catalog status promotion from regional subsets"
+  ]
+}

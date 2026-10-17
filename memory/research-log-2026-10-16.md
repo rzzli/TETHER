@@ -9,6 +9,10 @@ timezone: America/Los_Angeles
 
 # Context revision completion
 
+## Current status — clinical and genetics feasibility pilots
+
+The resumed steps produced a 24-trial origin mapping screen (12 candidates, five exclusions, seven requiring separation/review) and one complete indexed IL6R/RA regional retrieval with 1,690 QC-passing SNPs and 503 EUR LD samples. Clinical longitudinal labels remain null because the January 1, 2025 follow-up snapshot is missing. The regional technical checks retain two provider exceptions: a GWAS metadata MD5 mismatch confirmed by identical redownload, and an LD README sample count inconsistent with the VCF. External LD/cohort overlap and scientific interpretation remain unresolved. No MR, causal inference, live model or clinical probabilities. See [[Clinical and Genetics Feasibility Pilot]] for artifacts, source checks and next gates. Default dependencies, downloader and stopped monitoring are unchanged; $0 provider spending. This supersedes the earlier deferral below.
+
 ## Historical AACT restoration completed
 
 The user supplied a 3,194,237,475-byte ZIP and confirmed the January 1, 2023 versioned download. The dump creation timestamp matches. CRC/SHA-256 checks, isolated portable PostgreSQL 15.19 restoration and all technical queries completed. Retained results: 55 tables, 437,548 unique studies, 40,240,578 total rows, 72 validated constraints and 227 valid application indexes (322 including TOAST). Nine `study_records` rows for four missing study IDs are a documented unresolved source-relationship exception. Missing phase/study-type/download-date fields and planned date extremes remain explicit. No records were repaired or removed.
