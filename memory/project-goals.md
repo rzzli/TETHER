@@ -8,6 +8,10 @@ updated: 2026-10-16
 
 # Project goals
 
+## Current priority — one historical AACT snapshot
+
+The user selected restoration of one historical AACT snapshot as the only active next task. The 20–30-program clinical audit and regional QTL/GWAS/LD example remain next-to-do, deferred and not started. The current official snapshot route redirects to sign-in; legacy download routes return 404. An authorized archive link or local file path is required. No archive has been obtained or restored, and no acquisition/validation status is promoted. The existing January 1, 2023 candidate origin is a selection bound, not a locked protocol; exact historical availability remains unverified. See [[AACT Historical Restoration]] for the retained access evidence and restore acceptance checklist.
+
 ## Current status — October 16: context correction complete
 
 Normalization recipe 2.2 now preserves literature passages/sections, PMC IDs, study overviews and frozen clinical significance. Ten revised contemporary dossiers passed source-inclusive semantic verification; a fresh 20-row audit and recheck of the original 20 review rows are retained. The comparison confirms unchanged source identities, hypothesis keys, records and original scientific fields. All 120 tests passed with no skips, required probes and installed-wheel checks passed, and six comparator/context regressions were rerun after the final comparator change.

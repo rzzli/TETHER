@@ -8,6 +8,10 @@ tags: [asof, feasibility, t6]
 
 # Scientific feasibility decision
 
+## Active task — one AACT snapshot
+
+The user chose to restore one historical AACT snapshot first. The 20–30-program mapping/outcome audit and complete regional QTL/GWAS/LD example remain deferred next-to-do items. Current access checks found a sign-in redirect on the official snapshot route and 404 responses on legacy download routes. No archive has yet been acquired or restored. See [[AACT Historical Restoration]] for the exact selection rule, access evidence and technical acceptance checklist; the January 1, 2023 candidate origin remains provisional.
+
 ## Current decision — October 16, 2026
 
 The versioned source-context correction is complete. Normalization recipe 2.2 and ten revised dossiers passed source-inclusive verification, original-row comparison and technical audits; see [[Context Revision Completion]]. Unresolved disease/mechanism qualifiers are explicit, while clinical outcomes and reviewer judgments remain evaluator-only. This closes the adapter correction, not the independent scientific gold, historical restoration, regional genetics, event-count/power or live-comparison gates below. Future specified qualifiers require versioned hypothesis contracts and new fingerprints.
