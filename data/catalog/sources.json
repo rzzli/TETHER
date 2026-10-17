@@ -13763,21 +13763,23 @@
       ],
       "acquisition_snapshot": {
         "dataset_id": "aact_snapshots",
-        "expected_files": 1,
-        "completed_files": 1,
+        "expected_files": 2,
+        "completed_files": 2,
         "in_progress_files": 0,
-        "completed_bytes": 3194237475,
+        "completed_bytes": 5299237535,
         "release_ids": [
-          "2023-01-01"
+          "2023-01-01",
+          "2025-01-01"
         ],
         "batch_ids": [
-          "manual-aact-20261016"
+          "manual-aact-20261016",
+          "manual-aact-followup-20261016"
         ],
         "status": "collected",
-        "report": "data/manifests/public/2026-10-16-aact-acquisition.json",
-        "report_sha256": "87bbc0583da714f27200097df7b1a0b817c239daaeca3c2c0d6a8094f22e407c",
-        "scope": "Exactly one user-downloaded January 1, 2023 AACT ZIP, hash/CRC verified and technically restored. Not the full historical archive series. Raw data remain outside agent manifests; no AsOf AACT adapter or scientific validation exists. See linked restoration evidence for 9 unmatched study_records rows and temporal limitations.",
-        "created_at_utc": "2026-10-17T02:05:41.561312+00:00"
+        "report": "data/manifests/public/2026-10-16-aact-paired-acquisition.json",
+        "report_sha256": "8a925389eeaec7aa9019fa0cd1692a1def44ab85bd78f4f31d94b4d6ce199396",
+        "scope": "Exactly two user-downloaded January 1, 2023 and January 1, 2025 AACT ZIPs, hash/CRC checked and restored separately. Not the historical series. Evaluator-only 24-trial paired registry screen; no AsOf AACT adapter, clinical labels or scientific validation. Prior archive evidence remains in the original acquisition report.",
+        "created_at_utc": "2026-10-17T05:53:11.956566+00:00"
       }
     },
     {
@@ -28327,13 +28329,13 @@
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
   },
   "last_maintenance_update": {
-    "expected_prior_sha256": "6680e777deafdd78a783b154d81a6856162c4574074958e91ec6346b87b86183",
-    "report": "data/manifests/public/2026-10-16-aact-acquisition.json",
-    "report_sha256": "87bbc0583da714f27200097df7b1a0b817c239daaeca3c2c0d6a8094f22e407c",
+    "expected_prior_sha256": "059b473a20bf60f61a59b5fb2eeec9ee88805d91b465bcee306e4e980850a870",
+    "report": "data/manifests/public/2026-10-16-aact-paired-acquisition.json",
+    "report_sha256": "8a925389eeaec7aa9019fa0cd1692a1def44ab85bd78f4f31d94b4d6ce199396",
     "kind": "acquisition",
     "datasets": [
       "aact_snapshots"
     ],
-    "created_at_utc": "2026-10-17T02:05:41.607214+00:00"
+    "created_at_utc": "2026-10-17T05:53:47.542508+00:00"
   }
 }

@@ -9,6 +9,12 @@ timezone: America/Los_Angeles
 
 # Context revision completion
 
+## January 2025 follow-up restored and compared
+
+The supplied January 1, 2025 AACT archive is restored separately with PostgreSQL 17.11: 50 tables, 48,706,419 rows and 520,688 unique studies; 114 validated constraints and 267 valid indexes including TOAST. Checked identifier relationships have no exceptions. All 24 frozen trial IDs were found and replay-verified; the original 2023 evidence is unchanged. Both servers are stopped. See [[AACT January 2025 Follow-up]] and `data/manifests/public/2026-10-16-aact-followup.json`.
+
+The file-access blocker is resolved. The 24 records show four completed, one terminated, ten active-not-recruiting, six recruiting and three unknown states at follow-up. The sole newly posted registry result belongs to the already-separated CFTR safety extension; none of the twelve provisional candidates has registry results posted by endpoint. External publications may still exist. Clinical outcome/event/censoring labels remain null pending program/arm rules and dated evidence adjudication; this is not absence of therapeutic evidence or a power estimate. Later 2026 statuses remain separate. All 130 tests and required probes passed; four targeted tests were rerun after phase-format correction. No live models, probabilities, MR or monitoring/downloader changes; $0 provider spending. Earlier dated entries below preserve prior missing-input states.
+
 ## Current status — clinical and genetics feasibility pilots
 
 The resumed steps produced a 24-trial origin mapping screen (12 candidates, five exclusions, seven requiring separation/review) and one complete indexed IL6R/RA regional retrieval with 1,690 QC-passing SNPs and 503 EUR LD samples. Clinical longitudinal labels remain null because the January 1, 2025 follow-up snapshot is missing. The regional technical checks retain two provider exceptions: a GWAS metadata MD5 mismatch confirmed by identical redownload, and an LD README sample count inconsistent with the VCF. External LD/cohort overlap and scientific interpretation remain unresolved. No MR, causal inference, live model or clinical probabilities. See [[Clinical and Genetics Feasibility Pilot]] for artifacts, source checks and next gates. Default dependencies, downloader and stopped monitoring are unchanged; $0 provider spending. This supersedes the earlier deferral below.

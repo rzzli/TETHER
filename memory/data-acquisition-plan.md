@@ -8,6 +8,12 @@ updated: 2026-10-16
 
 # AsOf data acquisition plan
 
+## January 2025 follow-up restored and compared
+
+The supplied January 1, 2025 AACT archive is restored separately with PostgreSQL 17.11: 50 tables, 48,706,419 rows and 520,688 unique studies; 114 validated constraints and 267 valid indexes including TOAST. Checked identifier relationships have no exceptions. All 24 frozen trial IDs were found and replay-verified; the original 2023 evidence is unchanged. Both servers are stopped. See [[AACT January 2025 Follow-up]] and `data/manifests/public/2026-10-16-aact-followup.json`.
+
+The file-access blocker is resolved. The 24 records show four completed, one terminated, ten active-not-recruiting, six recruiting and three unknown states at follow-up. The sole newly posted registry result belongs to the already-separated CFTR safety extension; none of the twelve provisional candidates has registry results posted by endpoint. External publications may still exist. Clinical outcome/event/censoring labels remain null pending program/arm rules and dated evidence adjudication; this is not absence of therapeutic evidence or a power estimate. Later 2026 statuses remain separate. All 130 tests and required probes passed; four targeted tests were rerun after phase-format correction. No live models, probabilities, MR or monitoring/downloader changes; $0 provider spending. Earlier dated entries below preserve prior missing-input states.
+
 ## Current addition — October 16
 
 One user-downloaded January 1, 2023 AACT snapshot is collected and technically restored on E:. See [[AACT Historical Restoration]] for 55-table/437,548-study validation, nine unmatched stored-record rows, hashes and resource evidence. The catalog acquisition scope is one archive, not the historical series. This is a direct PostgreSQL restore, not an AsOf parser/agent packet; scientific validation and strict first-public availability remain unverified. No new clinical audit or genetics work; downloader and monitor untouched.

@@ -7,6 +7,8 @@ tags: [asof, feasibility, clinical, genetics]
 
 # Clinical and genetics feasibility pilot
 
+Continuation: the user supplied the follow-up archive. [[AACT January 2025 Follow-up]] records its completed restoration and paired comparison. The missing-file blocker described in this earlier pilot report is resolved; program outcomes and censoring remain unadjudicated.
+
 The user resumed the two deferred feasibility steps. The **24-trial origin mapping screen is complete**, while the longitudinal program/outcome audit remains incomplete. The **IL6R–rheumatoid arthritis regional acquisition and technical QC are complete with source exceptions**. Neither pilot establishes clinical predictive validity or independently validated biology.
 
 Dates in this report use America/Los_Angeles; artifacts retain their actual October 17 UTC timestamps. The January 2023 database was queried read-only and shut down cleanly. The existing downloader and stopped monitor were untouched. Provider spending was $0.

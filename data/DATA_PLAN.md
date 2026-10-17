@@ -19,6 +19,9 @@ October 16 addition: one January 1, 2023 AACT archive is collected and technical
 
 October 16 continuation: [[Clinical and Genetics Feasibility Pilot]] records a 24-trial evaluator-only origin screen and regional BLUEPRINT QTD000021 / GCST90132223 / IGSR slices. The regional QC retains 1,690 variants and 503 EUR reference samples, with explicit provider metadata exceptions. January 2025 follow-up is still missing; labels remain null. Scoped acquisition/provenance is in `data/manifests/public/2026-10-16-feasibility-pilots.json`; this does not promote full-source catalog status or admit historical agent inputs.
 
+
+January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.
+
 ## 1. Decisions implemented and research decisions remaining
 
 The ten-case contemporary normalization is collected and parsed, with independent

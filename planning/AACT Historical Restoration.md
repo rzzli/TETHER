@@ -7,7 +7,7 @@ tags: [asof, aact, historical-data, feasibility]
 
 # One historical AACT restoration
 
-**One January 1, 2023 AACT snapshot has been restored and technically checked.** The user confirmed the versioned download date, matching the dump's internal creation timestamp. The 20–30-program clinical audit and regional QTL/GWAS/LD example remain deferred. Restoration is complete with documented data exceptions; scientific validation and strict historical benchmark admission remain open.
+**One January 1, 2023 AACT snapshot has been restored and technically checked.** The user confirmed the versioned download date, matching the dump's internal creation timestamp. The subsequent origin screen and regional pilot are in [[Clinical and Genetics Feasibility Pilot]]; the second snapshot and paired comparison are in [[AACT January 2025 Follow-up]]. Restoration is complete with documented data exceptions; scientific validation and strict historical benchmark admission remain open.
 
 ## Completed restoration — October 16, 2026 local date
 
@@ -97,7 +97,7 @@ A single snapshot establishes restoration feasibility only. It cannot establish 
 | Order | Work | Status |
 | --- | --- | --- |
 | 1 | Restore one historical AACT snapshot and verify its schema/content | Complete with documented data exceptions; January 1, 2023 snapshot |
-| 2 | Audit 20–30 clinical programs, target/drug/indication mappings, event dates and censoring | Resumed: 24-trial origin screen complete; January 2025 follow-up missing, all labels null |
+| 2 | Audit 20–30 clinical programs, target/drug/indication mappings, event dates and censoring | 24-trial origin screen and January 2025 paired registry comparison complete; program outcome/censoring adjudication still open, all labels null |
 | 3 | Assemble and QC one complete regional QTL/GWAS/LD example | IL6R/RA regional technical pilot complete with provider exceptions; scientific inference gate open |
 
 The existing download worker and stopped periodic monitor remain untouched. Collection is recorded for this one archive; historical benchmark admission and scientific validation are not promoted by the restoration. See [[Feasibility Gate Decision]] and [[project-goals]].

@@ -13,3 +13,4 @@
 - [[research-log-2026-10-16]] — Context recipe 2.2, ten rebuilt/verified dossiers, original-row comparison and remaining scientific gates.
 - [[AACT Historical Restoration]] — Completed January 1, 2023 snapshot restoration, retained technical exceptions and subsequent feasibility work.
 - [[Clinical and Genetics Feasibility Pilot]] — 24-trial origin screen, qualified IL6R/RA regional QC and missing January 2025 follow-up.
+- [[AACT January 2025 Follow-up]] — Second snapshot restored, 24 paired trial states verified, outcome/censoring adjudication still open.

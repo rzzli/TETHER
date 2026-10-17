@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "acquisition",
+  "created_at_utc": "2026-10-17T05:53:11.956566+00:00",
+  "scope": "Exactly two user-downloaded January 1, 2023 and January 1, 2025 AACT ZIPs, hash/CRC checked and restored separately. Not the historical series. Evaluator-only 24-trial paired registry screen; no AsOf AACT adapter, clinical labels or scientific validation. Prior archive evidence remains in the original acquisition report.",
+  "datasets": [
+    {
+      "dataset_id": "aact_snapshots",
+      "expected_files": 2,
+      "completed_files": 2,
+      "in_progress_files": 0,
+      "completed_bytes": 5299237535,
+      "release_ids": [
+        "2023-01-01",
+        "2025-01-01"
+      ],
+      "batch_ids": [
+        "manual-aact-20261016",
+        "manual-aact-followup-20261016"
+      ]
+    }
+  ],
+  "prior_acquisition_evidence": {
+    "path": "data/manifests/public/2026-10-16-aact-acquisition.json",
+    "sha256": "87bbc0583da714f27200097df7b1a0b817c239daaeca3c2c0d6a8094f22e407c"
+  },
+  "followup_evidence": {
+    "path": "data/manifests/public/2026-10-16-aact-followup.json",
+    "sha256": "1bf76099ac6ca07ea289cc5d3119a569559a435078e48abfcf5d2021a2779760"
+  },
+  "transport": "user_download; existing worker and transport receipts untouched"
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-16",
+  "created_at_utc": "2026-10-17T05:53:11.949113+00:00",
+  "status": "restored_and_compared_technical_checks_passed",
+  "archive": {
+    "schema_version": 1,
+    "status": "archive_integrity_passed",
+    "archive": "E:\\projects_data\\drug_target_agents_data\\raw\\aact_snapshots\\jan2025zip\\d3q4ma1gbexj9z8dnia2w8m7t5a4.zip",
+    "bytes": 2105000060,
+    "user_supplied_as": "January 2025 follow-up archive",
+    "started_at_utc": "2026-10-17T05:18:34.396662+00:00",
+    "members": [
+      {
+        "name": "nlm_protocol_definitions.html",
+        "bytes": 74825,
+        "zip_timestamp": [
+          2024,
+          12,
+          12,
+          17,
+          41,
+          14
+        ],
+        "sha256": "9c12b18fa5c3f8ab94e9cf348c122286c2829368bc0b69a852b06d0276bb82f6",
+        "crc_check": "passed"
+      },
+      {
+        "name": "nlm_results_definitions.html",
+        "bytes": 74825,
+        "zip_timestamp": [
+          2024,
+          12,
+          12,
+          17,
+          41,
+          14
+        ],
+        "sha256": "9c12b18fa5c3f8ab94e9cf348c122286c2829368bc0b69a852b06d0276bb82f6",
+        "crc_check": "passed"
+      },
+      {
+        "name": "schema.png",
+        "bytes": 0,
+        "zip_timestamp": [
+          2025,
+          1,
+          1,
+          5,
+          30,
+          4
+        ],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "crc_check": "passed"
+      },
+      {
+        "name": "data_dictionary.csv",
+        "bytes": 45395,
+        "zip_timestamp": [
+          2025,
+          1,
+          1,
+          5,
+          30,
+          6
+        ],
+        "sha256": "ad1b11136dcadfe47a4c70c2f077f007a32f6161e4db975fea6a823cc777e602",
+        "crc_check": "passed"
+      },
+      {
+        "name": "postgres.dmp",
+        "bytes": 2109959523,
+        "zip_timestamp": [
+          2025,
+          1,
+          1,
+          5,
+          30,
+          2
+        ],
+        "sha256": "e14fd827d451ed585036e321c604c4cc7cabb5cb3d6cf1d165c8b8699ad93468",
+        "crc_check": "passed"
+      }
+    ],
+    "sha256": "53bb8d15d3bc902659f2f64985af4636679d1208eac1f143d96aa42d7f2ef297",
+    "elapsed_seconds": 103.36000000000058
+  },
+  "dump_creation": "2025-01-01 05:22:15; timezone unspecified",
+  "snapshot_version_date": "2025-01-01",
+  "exact_first_public_availability": null,
+  "publisher_checksum": null,
+  "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/followup-20250101-20261017T051834Z",
+  "comparison_root": "D:/Projects/drug_target_agents/data/benchmark/cohorts/aact-followup-20250101-20261017T051834Z",
+  "verification": {
+    "schema_version": 1,
+    "status": "technical_checks_passed",
+    "tables": 50,
+    "total_table_rows": 48706419,
+    "studies": 520688,
+    "constraints": 114,
+    "valid_indexes_including_toast": 267,
+    "application_indexes": 177,
+    "table_id_exceptions": [],
+    "posting_date_checks": [
+      {
+        "column": "study_first_posted_date",
+        "min": "1999-09-20",
+        "max": "2024-12-27",
+        "nulls": 0,
+        "after_candidate_date": 0
+      },
+      {
+        "column": "results_first_posted_date",
+        "min": "2008-09-26",
+        "max": "2024-12-27",
+        "nulls": 452271,
+        "after_candidate_date": 0
+      },
+      {
+        "column": "last_update_posted_date",
+        "min": "2005-06-24",
+        "max": "2024-12-27",
+        "nulls": 0,
+        "after_candidate_date": 0
+      }
+    ],
+    "comparison_trials": 24,
+    "comparison_replay": "identical",
+    "origin_evidence_manifest": "unchanged",
+    "clinical_labels_assigned": 0,
+    "scientific_validation": "not_established",
+    "publisher_checksum_and_exact_public_availability": "unverified"
+  },
+  "comparison": {
+    "status": "registry_comparison_completed_program_labels_unadjudicated",
+    "selected_trials": 24,
+    "found_followup": 24,
+    "followup_status_counts": {
+      "ACTIVE_NOT_RECRUITING": 10,
+      "COMPLETED": 4,
+      "UNKNOWN": 3,
+      "TERMINATED": 1,
+      "RECRUITING": 6
+    },
+    "observations": {
+      "registry_status_changed_not_program_outcome": 15,
+      "no_results_posting_date_in_snapshot_not_absence_of_external_results": 22,
+      "primary_completion_date_reported_actual_by_endpoint": 10,
+      "completion_date_reported_actual_by_endpoint": 5,
+      "verbatim_conditions_changed_requires_mapping_review": 2,
+      "results_first_posted_within_followup_window": 1,
+      "registry_stop_reason_available_requires_program_adjudication": 1,
+      "results_posted_before_origin": 1,
+      "phase_field_changed_not_proven_transition": 2
+    },
+    "clinical_labels_assigned": 0,
+    "independent_program_count": null,
+    "power_estimate": null
+  },
+  "candidate_coverage": {
+    "candidate_trials": 12,
+    "candidate_statuses": {
+      "ACTIVE_NOT_RECRUITING": 4,
+      "COMPLETED": 3,
+      "UNKNOWN": 3,
+      "RECRUITING": 2
+    },
+    "candidates_with_registry_results_posted": 0,
+    "interpretation": "Purposive trial representatives; these are registry states, not program event rates or evidence that no external results exist."
+  },
+  "resources": {
+    "database_bytes_at_audit_start": 17832359603,
+    "pgdata_bytes_after_shutdown": 18931181033,
+    "extracted_bytes": 2110154568,
+    "restore": {
+      "schema_version": 1,
+      "status": "completed",
+      "restore_elapsed_seconds": 1661.2820000000065,
+      "restore_status": "completed",
+      "server_stopped": true,
+      "total_elapsed_seconds": 1770.5320000000065
+    },
+    "audit_seconds": 96.09400000001187,
+    "peak_memory": null,
+    "peak_memory_reason": "Not instrumented",
+    "tool_cache_bytes": 522317400
+  },
+  "free_storage_bytes": {
+    "D": 1776785383424,
+    "E": 1824390615040
+  },
+  "evidence_manifests": [
+    {
+      "root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/followup-20250101-20261017T051834Z/sealed-evidence",
+      "manifest": "evidence-manifest.json",
+      "sha256": "5360b05a134579775fe4abcc005891c0df6f0a23499c3cff5705a8bc2e9fe557",
+      "files": 395
+    },
+    {
+      "root": "D:/Projects/drug_target_agents/data/benchmark/cohorts/aact-followup-20250101-20261017T051834Z",
+      "manifest": "evidence-manifest.json",
+      "sha256": "0c5ca850e61b922e379258072f79821e55aeed3e9fb2dc3be3ca8005568aaf9b",
+      "files": 12
+    }
+  ],
+  "tool_receipt": {
+    "url": "https://sbp.enterprisedb.com/getfile.jsp?fileid=1260616",
+    "final_url": "https://get.enterprisedb.com/postgresql/postgresql-17.11-5-windows-x64-binaries.zip",
+    "official_discovery": "https://www.postgresql.org/download/windows/",
+    "vendor_listing": "https://www.enterprisedb.com/download-postgresql-binaries",
+    "retrieved_at_utc": "2026-10-17T05:20:59.685973+00:00",
+    "bytes": 381531864,
+    "sha256": "80379b2c04d51c30225532e0ae04509899141e9957ed096fe749d7fd9df8f82f",
+    "elapsed_seconds": 21.703000000008615,
+    "selection": "bin, lib, share only; no system installation",
+    "publisher_checksum": "not_available"
+  },
+  "schema_change": {
+    "origin_tables": 55,
+    "followup_tables": 50,
+    "removed_tables": [
+      "active_storage_attachments",
+      "active_storage_blobs",
+      "file_records",
+      "study_records",
+      "verifiers"
+    ],
+    "added_tables": []
+  },
+  "limitations": [
+    "Empty bundled schema.png; two definition HTML files identical; dump SQL schema used",
+    "January 2023 sealed evidence unchanged",
+    "Two snapshots do not establish first-public transition dates or program outcome labels",
+    "No independent program adjudication, censoring determination or clinical power estimate",
+    "No AsOf AACT adapter or agent-visible admission"
+  ],
+  "provider_spend_usd": 0,
+  "server_stopped": true,
+  "framework_tests": {
+    "passed": 130,
+    "skipped": 0,
+    "required_probes_passed": 10,
+    "note": "Four targeted comparison tests rerun after phase-format normalization correction"
+  },
+  "code_sha256": {
+    "compare_clinical_snapshots.py": "5f3d056578d4645605aee256094423b09bbdcb0475a586eff9f87c90e0d3b397",
+    "verify_clinical_followup.py": "78887b1ad4832c2268c4838e31dcd7ee4e7495fad81fbc55b656a47cdf85963d"
+  }
+}

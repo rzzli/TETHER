@@ -24,7 +24,7 @@ the pinned Open Targets 25.09/HGNC selection. It is a new derived release, not a
 acquisition or a correction to provider originals. The before/after comparison remains
 evaluator-only; it must not enter agent-visible manifests. See [[Context Revision Completion]].
 
-October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; program auditing and regional genetics remain deferred.
+October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; subsequent origin and regional technical pilots are documented below.
 
 ## Layout
 
@@ -119,3 +119,5 @@ The ten development hypotheses use Open Targets 25.09 and HGNC `snapshot_2026-10
 Normalized products remain under ignored `data/derived/`; finalized dossiers and their private lineage live under ignored `runs/`. Sanitized completion metadata belongs under `manifests/public/`. The original incomplete build directory is retained for diagnosis, with no invented explanation for its termination.
 
 New bounded feasibility artifacts: [[Clinical and Genetics Feasibility Pilot]] links the 24-trial clinical review and IL6R/RA regional QC. The public scoped manifest is `data/manifests/public/2026-10-16-feasibility-pilots.json`. Regional data are on E:, clinical records remain evaluator-only, and full-provider catalog status is unchanged. Follow-up labels and scientific inference remain unvalidated.
+
+January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.

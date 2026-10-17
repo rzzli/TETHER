@@ -7,6 +7,8 @@ These scripts produce evaluator-only development artifacts, not AsOf agent input
 - `fetch_genetics_region.py`: retrieve all indexed records in a frozen interval using isolated pysam. Retains partial failures, headers, hashes and counters; refuses an existing regional output directory.
 - `qc_genetics_region.py`: gene-specific deduplication, allele alignment, explicit QC exclusions and ALT-dosage external-reference LD. Requires isolated NumPy; no MR or colocalization.
 - `verify_pilots.py`: read-only checks for this fixed 24-case / IL6R pilot, including independent correlation recomputation. The two provider exceptions are recorded; this is not a generic validated ingestion pipeline.
+- `compare_clinical_snapshots.py`: query the same frozen NCT IDs from a separate follow-up restore; retain registry changes, arm context and date types without clinical labels. Refuses an existing output directory and retains execution failures.
+- `verify_clinical_followup.py`: verify the original sealed selection, restored table/constraint/index/date audits and deterministic comparison. Checks source and code hashes; reports source identifier exceptions separately from scientific validity.
 
 From the repository root, repeat retained-artifact verification with a **new** output file:
 
@@ -16,3 +18,5 @@ From the repository root, repeat retained-artifact verification with a **new** o
 ```
 
 Frozen protocols, raw regional subsets, source receipts and exact executed extraction code are retained in their respective artifact directories. Do not rerun acquisition or rendering into those directories. Local content hashes do not attest a publisher's historical availability. See `planning/Clinical and Genetics Feasibility Pilot.md` for limitations and the unresolved provider metadata checksum.
+
+The January 2025 continuation uses portable PostgreSQL 17.11 on local port 55433, separately from the 2023 restore. Its source directory and retained setup/import recipes are in `planning/AACT January 2025 Follow-up.md`. Do not rerun an import against a completed database. Comparison is evaluator-only; registry completion, termination and administrative observation cutoff are not substituted for program success, failure or censoring.
