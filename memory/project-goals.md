@@ -3,10 +3,18 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-15
+updated: 2026-10-16
 ---
 
 # Project goals
+
+## Current status — October 16: context correction complete
+
+Normalization recipe 2.2 now preserves literature passages/sections, PMC IDs, study overviews and frozen clinical significance. Ten revised contemporary dossiers passed source-inclusive semantic verification; a fresh 20-row audit and recheck of the original 20 review rows are retained. The comparison confirms unchanged source identities, hypothesis keys, records and original scientific fields. All 120 tests passed with no skips, required probes and installed-wheel checks passed, and six comparator/context regressions were rerun after the final comparator change.
+
+See [[Context Revision Completion]] for canonical artifacts, measured resources and the retained path-spelling comparison rejection. Compact JSON retains all records below the unchanged 64 MiB limit. Therapeutic relevance remains unassessed, qualifications null, features empty and probabilities withheld. No refined subtype/genotype hypothesis was invented; specified qualifiers need versioned contracts and new fingerprints before future execution. Historical trial restoration, regional genetics, empirical power and independent scientific evaluation remain open. Originals, AI review, download worker and paused monitoring remain unchanged.
+
+The dated entries below preserve the earlier state.
 
 ## Current status — October 15
 

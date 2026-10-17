@@ -28218,7 +28218,7 @@
         "JSON (version 2)",
         "Markdown dossiers"
       ],
-      "release_policy": "Pinned build contemporary-364e5d635c2f2716; full input lineage and UTC origin retained; no historical eligibility claim",
+      "release_policy": "Pinned build contemporary-35a9c32c931fae18; full input lineage and UTC origin retained; no historical eligibility claim",
       "candidate_releases": [
         "Build-time UTC snapshots"
       ],
@@ -28264,7 +28264,7 @@
       },
       "storage": {
         "compressed_bytes": null,
-        "expanded_bytes": 128475568,
+        "expanded_bytes": 101674606,
         "index_bytes": null,
         "working_bytes": null,
         "cache_bytes": null,
@@ -28275,12 +28275,12 @@
       },
       "verification": {
         "level": "sample_inspected",
-        "checked_at": "2026-10-12",
+        "checked_at": "2026-10-17",
         "evidence": [
           {
             "kind": "scoped_normalization",
-            "workspace_path": "data/manifests/public/2026-10-12-v02-normalization.json",
-            "sha256": "050601fe9772f629163d2eb6bebb639099c1d033fab363a0d86d6774d311e14c",
+            "workspace_path": "data/manifests/public/2026-10-16-context-normalization.json",
+            "sha256": "06f44e69f2b8928c546323543e7268a38b884214668a237fc05f4571ef9c80e4",
             "result": "Ten finalized contemporary cases; 20-row technical audit and source-inclusive semantic verification; scientific validation not run"
           }
         ],
@@ -28301,7 +28301,7 @@
       ]
     }
   ],
-  "last_updated": "2026-10-12",
+  "last_updated": "2026-10-17",
   "contract_policy": {
     "conditional_fields": "Required only when the stated scientific condition applies; unknown/non-applicable values remain explicit and never become zero.",
     "dependency_semantics": "dependencies describe unconditional inputs needed to normalize/interpret/validate a product; they are not permission grants or a required order for metadata lookup/raw-file access.",
@@ -28309,13 +28309,13 @@
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
   },
   "last_maintenance_update": {
-    "expected_prior_sha256": "c7e15b7a5949d16088218ccb40d52c7b03afc0d51bc0cfe4546228b4e28be76c",
-    "report": "data/manifests/public/2026-10-12-v02-normalization.json",
-    "report_sha256": "050601fe9772f629163d2eb6bebb639099c1d033fab363a0d86d6774d311e14c",
+    "expected_prior_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+    "report": "data/manifests/public/2026-10-16-context-normalization.json",
+    "report_sha256": "06f44e69f2b8928c546323543e7268a38b884214668a237fc05f4571ef9c80e4",
     "kind": "normalization",
     "datasets": [
       "asof_normalized_packets"
     ],
-    "created_at_utc": "2026-10-12T15:23:27.147884+00:00"
+    "created_at_utc": "2026-10-17T00:03:36.753123+00:00"
   }
 }

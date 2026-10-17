@@ -29,6 +29,7 @@ CONTEXT_FIELDS = (
     "geneticBackground", "alleleOrigins", "allelicRequirements", "sex", "contrast",
     "crisprScreenLibrary", "diseaseModelAssociatedHumanPhenotypes", "diseaseModelAssociatedModelPhenotypes",
     "cohortDescription", "cohortPhenotypes", "cohortShortName", "studyLocusId", "targetModulation",
+    "textMiningSentences", "pmcIds", "studyOverview", "clinicalSignificances",
 )
 FORBIDDEN = {"clinicalPhase", "clinicalStatus", "trialPhase", "trialStatus",
              "studyStopReason", "studyStopReasonCategories", "trialOutcome", "outcome"}
@@ -164,7 +165,10 @@ class SourceAudit:
             if node["dataset_id"] != "ot_evidence" or node["release_id"] != "25.09":
                 raise ContractError("Evidence audit references the wrong provider product")
             projection = observation["method"]["parameters"]["projection"]
-            row = self.parquet_row(node, snapshot["raw_root"], locator, tuple(dict.fromkeys((*projection, *CONTEXT_FIELDS))))
+            # The archived 2.1 recipe did not promise these fields. Its original
+            # source audit remains reproducible; 2.2 requires them when supplied.
+            context_fields = CONTEXT_FIELDS if observation["method"]["version"] == "2.2" else CONTEXT_FIELDS[:-4]
+            row = self.parquet_row(node, snapshot["raw_root"], locator, tuple(dict.fromkeys((*projection, *context_fields))))
             if set(projection) - row.keys() or len(projection) != len(set(projection)):
                 raise ContractError("Audit projection contains missing or duplicate fields")
             projected = {key: row[key] for key in projection}
@@ -189,7 +193,7 @@ class SourceAudit:
                 "id", "targetId", "diseaseId", "datasourceId", "datatypeId")}
             if metrics != expected_metrics or FORBIDDEN.intersection(metrics):
                 raise ContractError("Source metrics differ or contain excluded clinical fields")
-            for field in CONTEXT_FIELDS:
+            for field in context_fields:
                 if row.get(field) not in (None, [], "") and metrics.get(field) != row[field]:
                     raise ContractError(f"Reported context lost: {field}")
             if observation["context"]["tissue"] is not None:

@@ -1,6 +1,7 @@
 ---
 title: AsOf v0.2 Migration
 date: 2026-10-11
+updated: 2026-10-16
 tags:
   - asof
   - contracts
@@ -8,6 +9,27 @@ tags:
 ---
 
 # Explicit migration from v1 to v2
+
+## Normalization 2.1 to 2.2 within v2 contracts
+
+The context revision changes the Open Targets projection and dossier presentation;
+it does not change contract schema version 2 or the seven-field hypothesis fingerprint.
+Build into a new directory from the same explicit files and content-addressed archived
+receipts. Retain the original build, runs and reviews. Use a newly captured contemporary
+cutoff and report it in the comparison; do not present the rebuild as a historical run.
+
+Recipe 2.2 retains source passages/sections, PMC IDs, study descriptions and clinical
+significance without importing current web annotations or evaluator clinical outcomes.
+Canonical compact packet JSON changes byte hashes without dropping records. The packet
+limit remains 64 MiB. Existing 2.1 runs can still be verified, and the source audit uses
+the context requirements of their retained recipe.
+
+Unresolved qualifications are null coverage metadata. They do not narrow the original
+hypothesis or create a validated derivation scope. Before executing a future case with
+specified subtype, biomarker or genotype, extend/version the contract and fingerprint
+to bind those semantics; merely editing a case name or coverage text is insufficient.
+
+## Original v1 migration
 
 New execution accepts only v2 cases, snapshots and evidence packets. Preserve original
 v1 artifacts and prepare a new conversion directory. Changing `schema_version` alone

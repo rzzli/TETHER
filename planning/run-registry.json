@@ -1,12 +1,112 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-12T15:23:27.207664+00:00",
-  "canonical_pilot_id": "v02-realdata-20261012T015124Z",
+  "updated_at_utc": "2026-10-17T00:03:36.134485+00:00",
+  "canonical_pilot_id": "context-revision-pilot-20261016T055518Z",
   "status_basis": "Explicit selection; not latest-directory discovery",
   "entries": [
     {
-      "id": "v02-realdata-20261012T015124Z",
+      "id": "context-revision-pilot-20261016T055518Z",
       "state": "canonical",
+      "path": "runs/context-revision-20261016T055518Z",
+      "reports": [
+        {
+          "path": "runs/context-revision-20261016T055518Z/pilot-report.json",
+          "sha256": "036797164bec02afccf3d46158392a5913a526a5d558478a0537a2648630e82e"
+        },
+        {
+          "path": "runs/context-revision-20261016T055518Z/source-review.json",
+          "sha256": "177cd54a4f14c85292bd620be58ba19020a7df16531a8f2661e395155386c696"
+        }
+      ],
+      "build_id": "context-revision-build-20261016T055518Z",
+      "cases": [
+        {
+          "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+          "receipt_sha256": "9ab64f7371f1a48497ab16e259dfb05444d69ca32a44ba1a730add69c370814f",
+          "path": "runs/context-revision-20261016T055518Z/cd276-efo_0003060-delivery_antigen-adc"
+        },
+        {
+          "case_id": "osmr-efo_0000729-inhibit-antibody",
+          "receipt_sha256": "93a0a57d28386e426a9d95d954d83a8960ecf83165c6d0112678c5065227f8ef",
+          "path": "runs/context-revision-20261016T055518Z/osmr-efo_0000729-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-inhibit-antibody",
+          "receipt_sha256": "2e58d13ebf8dbe4a04b9280defffcd6f0264afa6c99855e77449c31e783e8c27",
+          "path": "runs/context-revision-20261016T055518Z/erbb2-efo_0000305-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-delivery_antigen-adc",
+          "receipt_sha256": "906317021ddbd859fc715b9fc621f6188d174b3ff563b1060225ab330de73ea8",
+          "path": "runs/context-revision-20261016T055518Z/erbb2-efo_0000305-delivery_antigen-adc"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-inhibit-antibody",
+          "receipt_sha256": "cc9b0aeeaea8462d1a1d4e351ba869253f777bae5068ab9c8d36313e029ddc37",
+          "path": "runs/context-revision-20261016T055518Z/pcsk9-efo_0004911-inhibit-antibody"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-reduce_expression-sirna",
+          "receipt_sha256": "db06533df54ba31bd9b3772579504b4f093a1bae3ce3681bc7363de68f1b532a",
+          "path": "runs/context-revision-20261016T055518Z/pcsk9-efo_0004911-reduce_expression-sirna"
+        },
+        {
+          "case_id": "il6r-efo_0000685-inhibit-antibody",
+          "receipt_sha256": "fbd00287d94b5d73571f0143709acdb4bcf32edeeb3a9540ae14416c811cadcc",
+          "path": "runs/context-revision-20261016T055518Z/il6r-efo_0000685-inhibit-antibody"
+        },
+        {
+          "case_id": "cftr-mondo_0009061-activate-small_molecule",
+          "receipt_sha256": "d3abe7f3dcafb61e3af235558092e81770193dc02076533778ed9066b25b55fe",
+          "path": "runs/context-revision-20261016T055518Z/cftr-mondo_0009061-activate-small_molecule"
+        },
+        {
+          "case_id": "glp1r-mondo_0005148-activate-peptide",
+          "receipt_sha256": "8ad49ee62274818efb6311536ef221658a2e09650f2e85604234f7727f99eb33",
+          "path": "runs/context-revision-20261016T055518Z/glp1r-mondo_0005148-activate-peptide"
+        },
+        {
+          "case_id": "scn9a-efo_0005762-inhibit-small_molecule",
+          "receipt_sha256": "bd82c69810d11a53badb2686506cf873fc73f42464c1b0de5507096664ed78f0",
+          "path": "runs/context-revision-20261016T055518Z/scn9a-efo_0005762-inhibit-small_molecule"
+        }
+      ],
+      "scientific_validation": "not_run"
+    },
+    {
+      "id": "context-revision-build-20261016T055518Z",
+      "state": "canonical",
+      "path": "data/derived/context-revision-20261016T055518Z",
+      "reports": [
+        {
+          "path": "data/derived/context-revision-20261016T055518Z/build-report.json",
+          "sha256": "b4889c36c6efa4e00c422412e53037871117aa129c5aef07420251fa56b86c3b"
+        },
+        {
+          "path": "data/derived/context-revision-20261016T055518Z/journal.jsonl",
+          "sha256": "8d92370fb2ce4794dba67ea19dc7a93b96805d4abf8f1fe7aa7a09457465d93b"
+        }
+      ]
+    },
+    {
+      "id": "context-revision-pilot-20261016T054655Z",
+      "state": "superseded",
+      "path": "runs/context-revision-20261016T054655Z",
+      "execution_status": "completed",
+      "replaced_by": "context-revision-pilot-20261016T055518Z",
+      "reason": "Comparison rejected source IDs changed by normalized path spelling; raw bytes unchanged"
+    },
+    {
+      "id": "context-revision-build-20261016T054655Z",
+      "state": "superseded",
+      "path": "data/derived/context-revision-20261016T054655Z",
+      "execution_status": "built",
+      "replaced_by": "context-revision-build-20261016T055518Z",
+      "reason": "Replaced with original manifest path spelling for stable source identities"
+    },
+    {
+      "id": "v02-realdata-20261012T015124Z",
+      "state": "superseded",
       "path": "runs/v02-realdata-20261012T015124Z",
       "reports": [
         {
@@ -71,11 +171,13 @@
           "path": "runs/v02-realdata-20261012T015124Z/scn9a-efo_0005762-inhibit-small_molecule"
         }
       ],
-      "scientific_validation": "not_run"
+      "scientific_validation": "not_run",
+      "replaced_by": "context-revision-pilot-20261016T055518Z",
+      "reason": "Preserved 2.1 baseline; context revision 2.2 compared against original rows"
     },
     {
       "id": "v02-contemporary-pilot-20261012T014305Z",
-      "state": "canonical",
+      "state": "superseded",
       "path": "data/derived/v02-contemporary-pilot-20261012T014305Z",
       "reports": [
         {
@@ -86,7 +188,9 @@
           "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/journal.jsonl",
           "sha256": "39c111a94eb463f3b5fe8a7aaa4db0e01904d2b7fc8440bd725e5f3ff70be35d"
         }
-      ]
+      ],
+      "replaced_by": "context-revision-build-20261016T055518Z",
+      "reason": "Preserved 2.1 baseline; context revision 2.2 compared against original rows"
     },
     {
       "id": "v02-realdata-20261012T014305Z",

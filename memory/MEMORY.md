@@ -10,3 +10,4 @@
 - [[research-log-2026-10-11]] — Full-project corrections, production pilot, retained source audit and completion evidence.
 - [[research-log-2026-10-12]] — Independent-review reconciliation and revised stabilization/feasibility-first plan.
 - [[research-log-2026-10-15]] — Completed AI-assisted ten-case/20-claim development review, source/version qualifications and remaining scientific gates.
+- [[research-log-2026-10-16]] — Context recipe 2.2, ten rebuilt/verified dossiers, original-row comparison and remaining scientific gates.

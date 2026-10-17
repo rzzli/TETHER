@@ -1,7 +1,7 @@
 ---
 title: AsOf Data Workspace
 date: 2026-10-09
-updated: 2026-10-11
+updated: 2026-10-16
 tags:
   - asof
   - data
@@ -18,6 +18,11 @@ Read [[data/STORAGE_AND_DOWNLOAD_REPORT|the capacity and download report]] first
 Start with [[data/DATA_PLAN|the detailed data plan]]. The machine-readable inventory is [[data/catalog/sources.json|catalog/sources.json]]: **83 providers and 178 dataset/product records**, including all 38 components required by the pinned Virtual Biotech release and `asof_normalized_packets`. Counts describe acquisition units and generated products, not independent studies or datasets ready to analyze.
 
 Related project notes: [[AsOf Feasibility Analysis and Peer Survey]], [[Beyond the Virtual Biotech Tooling Gaps and Project Plan]], [[Agentic Target-Evaluation Frameworks Critical Review]].
+
+Normalization recipe 2.2 retains four additional source-context fields while preserving
+the pinned Open Targets 25.09/HGNC selection. It is a new derived release, not a new
+acquisition or a correction to provider originals. The before/after comparison remains
+evaluator-only; it must not enter agent-visible manifests. See [[Context Revision Completion]].
 
 ## Layout
 

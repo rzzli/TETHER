@@ -1,6 +1,7 @@
 ---
 title: AsOf Framework Implementation
 date: 2026-10-11
+updated: 2026-10-16
 status: v02-technical-pilot-complete
 tags:
   - asof
@@ -23,6 +24,30 @@ conversion requirements. Production pilot completion is established by finalized
 artifacts and its retained source audit. All ten dossiers and the 20-row technical
 source audit are finalized; [[planning/run-registry.json|the registry]] selects the
 canonical run explicitly. Scientific adjudication remains outstanding.
+
+## Context revision: normalization recipe 2.2
+
+The reviewed projection now includes `textMiningSentences` (including provider-reported
+sections and offsets), `pmcIds`, `studyOverview` and `clinicalSignificances`. Values and
+nulls are retained exactly in descriptive `source_metrics` and included in source-row
+fingerprints. Conflicting duplicate IDs that differ in these fields fail explicitly.
+No article type, citation-chain interpretation, variant direction or efficacy label is
+inferred from them. Clinical significance describes a source variant annotation; it is
+distinct from the excluded clinical trial status/outcome fields.
+
+The method carries `interpretation_scope: resource_annotation_only`. Snapshot coverage
+and dossiers separately state that therapeutic relevance is unassessed. Unspecified
+subtype, population, regimen and endpoint remain null. Target-specific qualification
+fields identify missing HER2 biomarker status, FH subtype/LDLR function, CFTR
+genotype/protein production/modulator mechanism and neuropathy subtype. These are
+unresolved design fields, not evaluator answers or refinements of the fixed hypotheses.
+
+Packets use compact canonical JSON with the same 64 MiB limit and complete records.
+The build report records the recipe version, projection, source-code fingerprint and
+encoding, and binds them into the bundle identity. Old snapshots remain sealed.
+`tools/framework/compare_context_revision.py` compares two explicitly selected bundles
+and rechecks the original review rows against local originals. Detailed comparison
+answers belong in ignored evaluator-only storage. See [[Context Revision Completion]].
 
 ## Execution and interfaces
 

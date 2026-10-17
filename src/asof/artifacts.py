@@ -42,6 +42,17 @@ def dossier(result: RunResult, store: EvidenceStore) -> str:
              f"tissue: {case.hypothesis.tissue or 'unspecified'}.",
              f"Origin: {case.origin}; profile: {result.profile}; task: {case.task}.",
              f"Workflow: {result.status}; backend: {result.backend_id}.", ""]
+    if store.snapshot.coverage.get("interpretation_scope") == "resource_annotation_only":
+        lines += ["## Evidence relevance and hypothesis limits", "",
+                  "Resource annotation support: source-linked target/disease records are reproduced. "
+                  "Therapeutic relevance: not assessed for the intended action, modality, population or regimen. "
+                  "A literature mention, genetic association or provider score does not establish intervention efficacy.", "",
+                  "Clinical outcomes and reviewer judgments remain evaluator-only. No disease subtype was inferred "
+                  "and this hypothesis has not been refined.", "",
+                  "| Unresolved qualification | Value |", "| --- | --- |"]
+        for name, qualification in store.snapshot.coverage.get("hypothesis_qualification", {}).items():
+            lines.append(f"| {name.replace('_', ' ')} | {qualification['value'] or 'unspecified'} |")
+        lines.append("")
     if prediction.synthetic:
         lines += ["**Synthetic demonstration: the weights and observations are fixtures. "
                   "This number is not a scientific prediction.**", ""]

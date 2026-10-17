@@ -24,6 +24,8 @@ from .serde import (ContractError, Frozen, canonical, decode, encode, fingerprin
 
 
 DATASETS = {"ot_target", "ot_disease", "ot_evidence", "hgnc_symbols"}
+NORMALIZATION_VERSION = "2.2"
+REVIEW_CONTEXT_COLUMNS = ("textMiningSentences", "pmcIds", "studyOverview", "clinicalSignificances")
 TYPE_CATEGORIES = {"genetic_association": Category.GENETICS, "somatic_mutation": Category.GENETICS,
                    "rna_expression": Category.EXPRESSION, "animal_model": Category.PERTURBATION,
                    "affected_pathway": Category.PATHWAY, "literature": Category.LITERATURE}
@@ -43,7 +45,7 @@ EVIDENCE_COLUMNS = ("id", "targetId", "diseaseId", "datasourceId", "datatypeId",
                     "cohortDescription", "cohortPhenotypes", "cohortShortName", "studyLocusId",
                     "studyCases", "studyCasesWithQualifyingVariants", "statisticalMethod",
                     "statisticalMethodOverview", "statisticalTestTail", "log2FoldChangeValue",
-                    "log2FoldChangePercentileRank", "pathways", "reactionId", "reactionName")
+                    "log2FoldChangePercentileRank", "pathways", "reactionId", "reactionName") + REVIEW_CONTEXT_COLUMNS
 PILOT = (
     ("CD276", "EFO_0003060", "delivery_antigen", "adc"),
     ("OSMR", "EFO_0000729", "inhibit", "antibody"),
@@ -56,6 +58,16 @@ PILOT = (
     ("GLP1R", "MONDO_0005148", "activate", "peptide"),
     ("SCN9A", "EFO_0005762", "inhibit", "small_molecule"),
 )
+
+
+def hypothesis_qualification(symbol):
+    """Unresolved design fields only; no evaluator answers or inferred subtypes."""
+    fields = ["disease_subtype", "population", "regimen", "endpoint"]
+    fields += {"ERBB2": ["her2_biomarker_status"],
+               "PCSK9": ["familial_hypercholesterolemia_subtype", "ldlr_function"],
+               "CFTR": ["genotype", "protein_production", "modulator_mechanism"],
+               "SCN9A": ["neuropathy_subtype"]}.get(symbol, [])
+    return {key: {"value": None, "reason": "not_specified_in_development_case"} for key in fields}
 
 
 @dataclass(frozen=True)
@@ -502,8 +514,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                     ScientificContext(None, ancestry, None, None, None, None,
                                       (str(source) + ":" + cohort,) if cohort else ()),
                     QuantitativeResult(None, None, None, None, None, None, None),
-                    Method("asof.opentargets.normalize", "2.1", {"projection": tuple(row), "source_row_sha256": payload_hash,
-                           "scientific_validation": "not_run"}, "passed", (
+                    Method("asof.opentargets.normalize", NORMALIZATION_VERSION, {"projection": tuple(row), "source_row_sha256": payload_hash,
+                           "interpretation_scope": "resource_annotation_only", "scientific_validation": "not_run"}, "passed", (
                         "Contract/field normalization checked; scientific interpretation is unreviewed",
                         "Provider score is descriptive and is not an effect size or prediction feature")),
                     item["node"].availability, {}, None,
@@ -518,7 +530,11 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         if counters["evidence_files_scanned"] % 64 == 0:
             progress("evidence_normalization", total_evidence_files=inspection["dataset_counts"].get("ot_evidence", 0))
     progress("evidence_normalization", total_evidence_files=inspection["dataset_counts"].get("ot_evidence", 0))
-    bundle_id = "contemporary-" + fingerprint({"cutoff": cutoff, "manifest": inspection["manifest_sha256"]})[:16]
+    recipe = {"method": "asof.opentargets.normalize", "version": NORMALIZATION_VERSION,
+              "projection": EVIDENCE_COLUMNS, "code_sha256": sha256_file(Path(__file__)),
+              "packet_encoding": "canonical_json"}
+    bundle_id = "contemporary-" + fingerprint({"cutoff": cutoff, "manifest": inspection["manifest_sha256"],
+                                              "recipe": recipe})[:16]
     cases_report = []
     stage("packet_finalization")
     for job in jobs:
@@ -529,9 +545,9 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         packet = EvidencePacket(2, observations)
         if len(canonical(packet)) > 64 * 1024 * 1024:
             raise ContractError("Oversized evidence packet; no silent truncation is permitted")
-        write_json(packet_path, packet)
+        write_json(packet_path, packet, compact=True)
         if packet_path.stat().st_size > 64 * 1024 * 1024:
-            raise ContractError("Pretty-printed evidence packet exceeds 64 MiB")
+            raise ContractError("Evidence packet exceeds 64 MiB")
         refs = tuple(sorted(set(job["mapping_refs"]) | {ref for observation in observations for ref in observation.input_refs}))
         coverage = {"source_completeness": inspection["source_completeness"],
                     "expected_counts": manifest.expected_counts, "selected_counts": inspection["dataset_counts"],
@@ -541,7 +557,12 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                     "rejection_reasons": dict(Counter(record["reason"] for record in job["rejections"])),
                     "unknown_context": {field: sum(getattr(observation.context, field) is None for observation in observations)
                                         for field in ("species", "ancestry", "tissue")},
-                    "scientific_interpretation": "unreviewed"}
+                    "scientific_interpretation": "unreviewed",
+                    "interpretation_scope": "resource_annotation_only",
+                    "therapeutic_relevance": "not_assessed", "hypothesis_refined": False,
+                    "hypothesis_qualification": hypothesis_qualification(job["symbol"]),
+                    "review_context_nonempty": {field: sum(observation.source_metrics.get(field) not in (None, (), "")
+                        for observation in observations) for field in REVIEW_CONTEXT_COLUMNS}}
         snapshot = Snapshot(2, bundle_id + ":" + case.case_id, Profile.CONTEMPORARY, case.origin, False,
             (Artifact("packet-" + case.case_id, "asof_normalized_packets", bundle_id, "evidence.json",
                       sha256_file(packet_path), "agent_evidence", True, TemporalClass.CONTEMPORARY,
@@ -575,6 +596,7 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
               "unsupported_datatypes": dict(unsupported_types),
               "elapsed_seconds": time.monotonic() - started, "peak_memory_bytes": peak_memory_bytes(),
               "output_bytes": sum(path.stat().st_size for path in output.rglob("*.json")),
+              "normalization_recipe": recipe,
               "scientific_validation": "not_run", "probabilities": "withheld"}
     write_json(output / "build-report.json", report)
     journal.append("build_completed", report_sha256=sha256_file(output / "build-report.json"),

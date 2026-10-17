@@ -264,10 +264,10 @@ class IngestTests(unittest.TestCase):
         from asof import ingest
         real_write = ingest.write_json
 
-        def fail_packet(path, value):
+        def fail_packet(path, value, **kwargs):
             if path.name == "evidence.json":
                 raise OSError("fixture full disk")
-            return real_write(path, value)
+            return real_write(path, value, **kwargs)
 
         with patch("asof.ingest.write_json", side_effect=fail_packet):
             with self.assertRaisesRegex(OSError, "full disk"):

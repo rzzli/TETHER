@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "context_revision_closeout",
+  "created_at_utc": "2026-10-17T00:03:36.134485+00:00",
+  "status": "completed",
+  "normalization_version": "2.2",
+  "contract_schema_version": 2,
+  "cases": 10,
+  "source_rows": 14207,
+  "case_records": 16914,
+  "missing_inputs": 65,
+  "original_review_rows_rechecked": 20,
+  "new_source_audit_rows": 20,
+  "same_raw_sources_and_original_observation_fields": true,
+  "scientific_validation": "not_run",
+  "provider_spend_usd": 0,
+  "source_inclusive_semantic_verification": "passed_all_ten",
+  "reports": [
+    {
+      "path": "data/manifests/public/2026-10-16-context-normalization.json",
+      "sha256": "06f44e69f2b8928c546323543e7268a38b884214668a237fc05f4571ef9c80e4"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/context-revision-20261016T055518Z/comparison.json",
+      "sha256": "d7ed2ae47f59c73ea0da3d33662eb697933964e6c146a5b1f04ce01db748d99d"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/context-revision-20261016T055518Z/comparison.md",
+      "sha256": "df7dd18f20591f64da6200e0f994bbec090900946bdf6720bfaa18dab866b5a8"
+    },
+    {
+      "path": "data/manifests/public/2026-10-15-context-revision-final-validation.json",
+      "sha256": "358df44e8ff396226ea7770d3ce296c840551e5f73225b5abfbcbbca16915d50"
+    }
+  ],
+  "comparison_role": "evaluation_only",
+  "contains_detailed_assessment_answers": false,
+  "input_manifest": {
+    "path": "data/manifests/private/context-revision-20261016T055518Z.json",
+    "sha256": "ba8e8931f3135f45817ba7cc2eae12c7bfd3abe5200af8224dd9f637d39cc497"
+  },
+  "registry": {
+    "path": "planning/run-registry.json",
+    "sha256": "efdaad1d061aa52deed0901c5fe743046b7e6580e921a8ed4d9f7de78e15ea47"
+  },
+  "catalog_update": {
+    "catalog_sha256": "6680e777deafdd78a783b154d81a6856162c4574074958e91ec6346b87b86183",
+    "updated_datasets": [
+      "asof_normalized_packets"
+    ],
+    "report_sha256": "06f44e69f2b8928c546323543e7268a38b884214668a237fc05f4571ef9c80e4"
+  },
+  "resources": {
+    "build_elapsed_seconds": 48.56199999999808,
+    "build_peak_memory_bytes": 1918406656,
+    "selected_original_bytes": 3752440123,
+    "packet_bytes": 101674606,
+    "largest_packet_bytes": 47668802,
+    "physical_rows_scanned": 14940949,
+    "pilot_elapsed_seconds": 326.75,
+    "pilot_peak_memory_bytes": 2194010112,
+    "pilot_peak_memory_scope": "pilot_parent_source_verification_and_audit_only",
+    "pilot_output_bytes": 498734520
+  },
+  "limitations": [
+    "65 frozen missing inputs; no biological absence inference",
+    "Therapeutic relevance remains unassessed; qualifications remain unspecified",
+    "Clinical outcome supplements and detailed comparisons remain evaluation-only",
+    "Current ClinVar reconciliation, full current CFTR label and independent scientific validation remain open"
+  ],
+  "code_fingerprints": {
+    "src/asof/ingest.py": "fc4c35e675f2106d2419bc2cfca09a9f64ab0cf5610617ef2674acac2b1ba339",
+    "src/asof/artifacts.py": "9535b57004dbd25da2833b17d34e6128809ed5f82d212e56acc26d3cb9a1c58c",
+    "src/asof/serde.py": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+    "tools/framework/run_pilot.py": "cd2046198ae3d2930a35cd1fbfb66f22a7cdcbfaed7b13d8e9c8af2f09832f0f",
+    "tools/framework/compare_context_revision.py": "e6827054f2c408998bb830da4dc77d28fe94a2141a61ea948b4e542e852f2a5c",
+    "tests/test_context_revision.py": "ca2371102c6319d9af88115db7860da8ed40733546581acc94ae32ee9dd93f4c"
+  },
+  "validation_note": "120-test full suite, required probes and installed-wheel test passed; six targeted regressions rerun after tightening comparator method/QC checks"
+}

@@ -17,6 +17,13 @@ and a retained audit of 20 distinct original rows. The versioned
 [run registry](planning/run-registry.json) identifies the canonical artifacts and retained
 failed attempts. See the [stabilization report](planning/Stabilization Completion and Feasibility Gates.md).
 
+The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
+It retains reported literature passages/sections, PMC IDs, study overviews and variant
+clinical significance. Dossiers distinguish resource annotations from unassessed
+therapeutic relevance and display unresolved hypothesis qualifications. See the
+[context revision report](planning/Context Revision Completion.md) for the rebuild,
+comparison and remaining scientific limitations.
+
 ## Run the offline demonstration
 
 From `D:\Projects\drug_target_agents` in PowerShell:

@@ -2,13 +2,17 @@
 title: Scientific feasibility gate decision
 date: 2026-10-12
 status: ai-development-review-complete-evidence-gates-open
-updated: 2026-10-15
+updated: 2026-10-16
 tags: [asof, feasibility, t6]
 ---
 
 # Scientific feasibility decision
 
-## Current decision — October 15, 2026
+## Current decision — October 16, 2026
+
+The versioned source-context correction is complete. Normalization recipe 2.2 and ten revised dossiers passed source-inclusive verification, original-row comparison and technical audits; see [[Context Revision Completion]]. Unresolved disease/mechanism qualifiers are explicit, while clinical outcomes and reviewer judgments remain evaluator-only. This closes the adapter correction, not the independent scientific gold, historical restoration, regional genetics, event-count/power or live-comparison gates below. Future specified qualifiers require versioned hypothesis contracts and new fingerprints.
+
+## Preserved decision — October 15, 2026
 
 The user replaced the human-only development review with parallel AI-assisted domain research and internet source checks. This development review is complete: ten prescribed hypotheses, 20 original claims and 120 categorical assessment fields, with original evidence and fingerprints preserved. October 13 reviews remain dated October 13; the resumed integrity/source verification is dated October 15. Human reviewer availability no longer blocks this development phase. These are evaluation-only AI research judgments, not independently adjudicated gold or proof of predictive validity.
 

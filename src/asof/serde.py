@@ -213,8 +213,9 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def write_json(path: Path, value: Any) -> None:
-    payload = (json.dumps(encode(value), indent=2, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
+def write_json(path: Path, value: Any, *, compact: bool = False) -> None:
+    payload = canonical(value) if compact else (
+        json.dumps(encode(value), indent=2, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
     descriptor, name = tempfile.mkstemp(prefix=".writing-", dir=path.parent)
     temporary = Path(name)
     try:
