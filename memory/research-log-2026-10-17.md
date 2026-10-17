@@ -155,3 +155,12 @@ Private final-milestone recovery/CI evidence is retained in the milestone index.
 Next: condition/clinical-scope sensitivity freeze, prior-risk/population adjudication,
 then dependency-aware power. No provider-model calls, training, new downloads or
 changes to the original downloader/stopped periodic monitor.
+
+Registry closeout: all four hosted jobs passed at `f57c448`. Downloaded the private
+541,153,875-byte evidence ZIP and Git bundle. All 146 files / 2,842,669,284 source
+bytes restored/rehashed; code clone/fsck, SQLite integrity (232,722 observations),
+and the 21-file milestone seal passed. The restore helper uses immutable SQLite
+mode to avoid mutating sealed WAL shared-memory sidecars. Final full local validation
+passed 186 tests without skips/failures/errors, required probes and installed-wheel
+checks. Separate prior-risk proofs explain the three unresolved programs without
+incident event IDs. The final report retains scientific limitations and next gates.

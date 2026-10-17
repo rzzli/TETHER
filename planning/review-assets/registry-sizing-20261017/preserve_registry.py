@@ -95,11 +95,25 @@ def restore(download,destination,expected):
     subprocess.run(['git','fsck','--full'],cwd=destination/'repository-restore',check=True,capture_output=True)
     dbs=[p for p in seen if p.name=='cohort.sqlite']
     if len(dbs)!=1:raise ValueError('Canonical SQLite index missing')
-    db=sqlite3.connect('file:'+dbs[0].as_posix()+'?mode=ro',uri=True)
+    wal=dbs[0].with_name(dbs[0].name+'-wal')
+    if wal.exists() and wal.stat().st_size:raise ValueError('Uncheckpointed WAL requires a separate recovery review')
+    # The checkpointed index is sealed evidence. Normal WAL readers can alter
+    # its shared-memory sidecar even with mode=ro; immutable mode leaves it intact.
+    db=sqlite3.connect('file:'+dbs[0].as_posix()+'?mode=ro&immutable=1',uri=True)
     if db.execute('PRAGMA integrity_check').fetchone()[0]!='ok':raise ValueError('Restored SQLite integrity failed')
     observations=db.execute('SELECT COUNT(*) FROM observations').fetchone()[0];db.close()
+    anchor=json.loads((destination/'repository-restore/data/manifests/public/2026-10-17-registry-sizing.json').read_text(encoding='utf-8'))['canonical_manifest']
+    sealed_path=(destination/'project'/anchor['path']).resolve()
+    if not sealed_path.is_relative_to(destination) or digest(sealed_path)!=anchor['sha256']:raise ValueError('Restored milestone anchor mismatch')
+    sealed=json.loads(sealed_path.read_text(encoding='utf-8'));sealed_members=set()
+    for item in sealed['files']:
+        p=(sealed_path.parent/item['path']).resolve()
+        if not p.is_relative_to(sealed_path.parent) or p in sealed_members:raise ValueError('Unsafe sealed member')
+        sealed_members.add(p)
+        if digest(p)!=item['sha256']:raise ValueError('Restored milestone seal changed')
     report={'downloaded_asset_hashes':'passed','all_archived_files_restored_and_rehashed':len(seen),
-        'code_commit':restored,'git_fsck':'passed','sqlite_integrity':'passed','restored_source_observations':observations,
+        'code_commit':restored,'git_fsck':'passed','sqlite_integrity':'passed','sqlite_open_mode':'immutable_readonly','restored_source_observations':observations,
+        'restored_milestone_files_verified_after_index_check':len(sealed_members),'milestone_sha256':anchor['sha256'],
         'source_bytes':sum(e['bytes'] for e in manifest['files']),'asset_index_sha256':expected,
         'coverage':'Registry frames, canonical index/outputs/audit, mapping inputs and diagnostic metadata; original full archives/databases excluded.'}
     write(destination/'restore-report.json',report);print(json.dumps(report))

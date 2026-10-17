@@ -18,6 +18,10 @@ reuse with `--resume-completed-from`. Do not restart on a polling timeout.
 ingestion dependency; mapping fields are explicitly projected and evaluator-only.
 `registry_audit` verifies original JSONL bytes and source fields, retains qualified
 AI-authored review separately, and never infers negative labels or scientific accuracy.
+The sealed SQLite index is checkpointed. Inspect it with SQLite URI
+`file:PATH?mode=ro&immutable=1`, or make a separate working copy; ordinary WAL readers
+can update shared-memory sidecars even in read-only mode. The recovery test verifies
+the seal again after its immutable index integrity check.
 
 `advancement_rules.py` implements the evaluator-only v0.3 program relations,
 experimental-regimen dosing endpoint and shared-event accounting.

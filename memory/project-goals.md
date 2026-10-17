@@ -14,7 +14,9 @@ User authorized both private off-machine recovery/hosting/CI and registry-scale
 cohorts/transition-label audit. Private repository: `rzzli/drug_target_agents`.
 Baseline four-job Windows/Linux core/full hosted CI passed at `d069dcd`; downloaded
 baseline assets passed all 1,811 entry hashes, sealed-milestone restore and Git clone/fsck.
-Final-registry backup and hosted CI are recorded in the registry milestone index.
+Final registry four-job CI passed at `f57c448`. Downloaded private registry recovery
+assets passed 146 restored file hashes, code clone/fsck, SQLite integrity and the
+21-file milestone seal. Metadata/helper closeout is separately bundled; see the index.
 Raw AACT archives/databases remain outside these limited recovery bundles.
 
 Frozen v0.4 SHA remains `5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd`.

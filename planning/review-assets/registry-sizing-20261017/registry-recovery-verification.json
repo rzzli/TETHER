@@ -1,0 +1,18 @@
+{
+  "downloaded_asset_hashes": "passed",
+  "all_archived_files_restored_and_rehashed": 146,
+  "code_commit": "f57c448ece4d022cad335b7803878ed8cdde8108",
+  "git_fsck": "passed",
+  "sqlite_integrity": "passed",
+  "sqlite_open_mode": "immutable_readonly",
+  "restored_source_observations": 232722,
+  "restored_milestone_files_verified_after_index_check": 21,
+  "milestone_sha256": "83361699b956059b01accf68d96e572928d19fc8888829872121a625cc329a0d",
+  "source_bytes": 2842669284,
+  "asset_index_sha256": "bb4006c601e4ad18ddba041b44c6f8a9be1dbbd34d38106293483dd66a355080",
+  "coverage": "Registry frames, canonical index/outputs/audit, mapping inputs and diagnostic metadata; original full archives/databases excluded.",
+  "repository": "rzzli/drug_target_agents",
+  "visibility": "private",
+  "backup_url": "https://github.com/rzzli/drug_target_agents/releases/tag/registry-sizing-20261017",
+  "restore_helper_sha256": "c7d2e7ee5627d81189fcf11b7d86272fdd837908326db7a01a8365b72a3396bc"
+}
