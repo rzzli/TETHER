@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "acquisition",
+  "created_at_utc": "2026-10-17T02:05:41.561312+00:00",
+  "scope": "Exactly one user-downloaded January 1, 2023 AACT ZIP, hash/CRC verified and technically restored. Not the full historical archive series. Raw data remain outside agent manifests; no AsOf AACT adapter or scientific validation exists. See linked restoration evidence for 9 unmatched study_records rows and temporal limitations.",
+  "datasets": [
+    {
+      "dataset_id": "aact_snapshots",
+      "expected_files": 1,
+      "completed_files": 1,
+      "in_progress_files": 0,
+      "completed_bytes": 3194237475,
+      "release_ids": [
+        "2023-01-01"
+      ],
+      "batch_ids": [
+        "manual-aact-20261016"
+      ]
+    }
+  ],
+  "restoration_evidence": {
+    "path": "data/manifests/public/2026-10-16-aact-restoration.json",
+    "sha256": "0e5165d08a105fc2f6ea0b5f8d162aeed55e6fb148cf5faeae704cb89215ef0b"
+  },
+  "transport": "user_download; existing download worker/receipts untouched"
+}

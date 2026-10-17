@@ -24,6 +24,8 @@ the pinned Open Targets 25.09/HGNC selection. It is a new derived release, not a
 acquisition or a correction to provider originals. The before/after comparison remains
 evaluator-only; it must not enter agent-visible manifests. See [[Context Revision Completion]].
 
+October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; program auditing and regional genetics remain deferred.
+
 ## Layout
 
 ```text

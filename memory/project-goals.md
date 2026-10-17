@@ -8,9 +8,11 @@ updated: 2026-10-16
 
 # Project goals
 
-## Current priority — one historical AACT snapshot
+## Current status — one historical AACT snapshot restored
 
-The user selected restoration of one historical AACT snapshot as the only active next task. The 20–30-program clinical audit and regional QTL/GWAS/LD example remain next-to-do, deferred and not started. The current official snapshot route redirects to sign-in; legacy download routes return 404. An authorized archive link or local file path is required. No archive has been obtained or restored, and no acquisition/validation status is promoted. The existing January 1, 2023 candidate origin is a selection bound, not a locked protocol; exact historical availability remains unverified. See [[AACT Historical Restoration]] for the retained access evidence and restore acceptance checklist.
+The user supplied the January 1, 2023 versioned AACT archive and confirmed its date. Full ZIP integrity checks, isolated PostgreSQL restoration and technical audits completed: 55 tables, 40,240,578 rows, 437,548 unique studies, 227 application indexes (322 including TOAST) valid, and 72 declared constraints validated. Nine stored-record rows for four NCT IDs have no matching study; they remain unchanged with the exception retained. Snapshot version date is supported by user confirmation/internal timestamps; exact first-public availability and strict benchmark eligibility remain unverified.
+
+Canonical restore: `E:/projects_data/drug_target_agents_data/derived/aact_restore/restore-20261017T011039Z/`. The database is cleanly stopped. Sanitized evidence is `data/manifests/public/2026-10-16-aact-restoration.json`; 419 evidence files are hash-bound locally. The catalog's scoped acquisition update records exactly one archive; no AsOf AACT adapter or agent-visible data was added. See [[AACT Historical Restoration]] for measured storage, date/missingness limitations and reproducible procedures. The 20–30-program audit and regional QTL/GWAS/LD pilot remain deferred next-to-do items. Existing downloader and periodic monitoring remain untouched; $0 provider spending.
 
 ## Current status — October 16: context correction complete
 

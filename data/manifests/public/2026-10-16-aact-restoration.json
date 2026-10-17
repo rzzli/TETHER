@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "kind": "historical_aact_restore",
+  "created_at_utc": "2026-10-17T02:05:25.031603+00:00",
+  "dataset_id": "aact_snapshots",
+  "status": "restored_with_documented_data_exceptions",
+  "snapshot_date": "2023-01-01",
+  "snapshot_date_evidence": [
+    "User confirmed January 1, 2023 versioned AACT download",
+    "Dump TOC: archive created at 2023-01-01 06:11:12 (timezone unspecified)",
+    "ZIP members dated 2023-01-01 06:21:48 (timezone unspecified)"
+  ],
+  "first_public_availability": null,
+  "first_public_availability_note": "No independently retained provider listing/checksum; dump creation and user confirmation do not establish exact first-public availability. Strict benchmark admission remains unverified.",
+  "retrieval_time_utc": null,
+  "retrieval_time_note": "User performed download; first local integrity check began 2026-10-17T01:10:39.164548+00:00",
+  "input": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\raw\\aact_snapshots\\t28miw7docut6vcrht1ff6ci630i.zip",
+    "bytes": 3194237475,
+    "sha256": "0e7c54e6e7214ac7bd31da20960e1a9ce8590b18b87a9661b414f5b1c76cf1d1",
+    "provider_checksum": null
+  },
+  "restore_root": "E:\\projects_data\\drug_target_agents_data\\derived\\aact_restore\\restore-20261017T011039Z",
+  "database": "aact_snapshot",
+  "server_version": "PostgreSQL 15.19, compiled by Visual C++ build 1944, 64-bit",
+  "original_database_version": "14.3",
+  "dump_tool_version": "15.1 (Debian 15.1-1.pgdg110+1)",
+  "restore_options": [
+    "--exit-on-error",
+    "--verbose",
+    "--no-owner",
+    "--no-acl",
+    "--jobs=4"
+  ],
+  "ownership_note": "All data/schema restored into a new local database. Original owner and ACL assignments intentionally omitted; no source row edits.",
+  "checks": {
+    "zip_crc_all_members": true,
+    "archive_sha256_recorded": true,
+    "table_names_match_dump_toc": true,
+    "tables": 55,
+    "total_rows": 40240578,
+    "studies": {
+      "rows": 437548,
+      "distinct_nct_ids": 437548,
+      "null_nct_ids": 0
+    },
+    "application_indexes": 227,
+    "all_checked_indexes_including_toast": 322,
+    "invalid_indexes": 0,
+    "declared_constraints": 72,
+    "unvalidated_constraints": 0,
+    "restore_exit_code": 0,
+    "restore_error_or_warning_lines": 0,
+    "nct_tables_checked": 48,
+    "null_or_malformed_nct_ids": 0
+  },
+  "exceptions": [
+    {
+      "table": "ctgov.study_records",
+      "kind": "unmatched_nct_id",
+      "rows": 9,
+      "distinct_nct_ids": 4,
+      "handling": "Retained unchanged; origin/cause unresolved. No match invented, no deletion or newer-source repair."
+    },
+    {
+      "table": "ctgov.studies",
+      "kind": "missing_context",
+      "phase_nulls": 99586,
+      "study_type_nulls": 829,
+      "note": "Not interpreted as corruption; missing values require later eligibility rules."
+    },
+    {
+      "table": "ctgov.studies",
+      "kind": "missing_download_date",
+      "rows": 437548,
+      "note": "nlm_download_date_description null throughout; cannot establish row availability from this field."
+    }
+  ],
+  "date_ranges": [
+    {
+      "column": "study_first_submitted_date",
+      "min": "1999-09-17",
+      "max": "2022-12-29",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "results_first_submitted_date",
+      "min": "2008-09-25",
+      "max": "2022-12-09",
+      "nulls": 381055,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "disposition_first_submitted_date",
+      "min": "2008-10-09",
+      "max": "2022-12-21",
+      "nulls": 429150,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "last_update_submitted_date",
+      "min": "2005-06-23",
+      "max": "2022-12-29",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "study_first_submitted_qc_date",
+      "min": "1999-09-17",
+      "max": "2022-12-29",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "study_first_posted_date",
+      "min": "1999-09-20",
+      "max": "2022-12-30",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "results_first_submitted_qc_date",
+      "min": "2008-09-25",
+      "max": "2022-12-14",
+      "nulls": 381055,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "results_first_posted_date",
+      "min": "2008-09-26",
+      "max": "2022-12-26",
+      "nulls": 381055,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "disposition_first_submitted_qc_date",
+      "min": "2008-10-22",
+      "max": "2022-12-21",
+      "nulls": 429165,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "disposition_first_posted_date",
+      "min": "2009-08-10",
+      "max": "2022-12-26",
+      "nulls": 429165,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "last_update_submitted_qc_date",
+      "min": "2005-06-23",
+      "max": "2022-12-29",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "last_update_posted_date",
+      "min": "2005-06-24",
+      "max": "2022-12-30",
+      "nulls": 0,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "start_date",
+      "min": "1900-01-31",
+      "max": "2100-01-31",
+      "nulls": 5031,
+      "after_candidate_date": 3574
+    },
+    {
+      "column": "verification_date",
+      "min": "1920-01-31",
+      "max": "2022-12-31",
+      "nulls": 829,
+      "after_candidate_date": 0
+    },
+    {
+      "column": "completion_date",
+      "min": "1900-01-31",
+      "max": "2100-12-31",
+      "nulls": 16970,
+      "after_candidate_date": 82954
+    },
+    {
+      "column": "primary_completion_date",
+      "min": "1900-01-31",
+      "max": "2100-12-31",
+      "nulls": 21811,
+      "after_candidate_date": 67924
+    }
+  ],
+  "resources": {
+    "pgdata_bytes_after_clean_shutdown": 18950483482,
+    "wal_bytes_after_clean_shutdown": 1073741824,
+    "extracted_bytes": 3200288842,
+    "restore_directory_bytes_before_evidence_seal": 22151495733,
+    "postgres_portable_cache_bytes": 492905865,
+    "source_zip_bytes": 3194237475,
+    "free_bytes": {
+      "D:/": 1781535436800,
+      "E:/": 1848187891712
+    },
+    "peak_memory_bytes": null,
+    "peak_memory_reason": "Process-level peak working set was not instrumented for this restoration; no estimate substituted."
+  },
+  "timing": {
+    "schema_version": 1,
+    "status": "completed",
+    "restore_elapsed_seconds": 1978.25,
+    "restore_status": "completed",
+    "server_stopped": true,
+    "total_elapsed_seconds": 2192.2810000000027
+  },
+  "technical_audit_seconds": 117.46800000000803,
+  "runtime_state": {
+    "server_stopped": true,
+    "windows_service_installed": false,
+    "listen_address": "127.0.0.1",
+    "port": 55432,
+    "authentication": "scram-sha-256"
+  },
+  "agent_admission": "not_approved; no snapshot manifest or adapter connects raw restored clinical data to agents",
+  "scientific_validation": "not_run",
+  "deferred_by_user": [
+    "20\u201330-program clinical audit",
+    "regional QTL/GWAS/LD pilot"
+  ],
+  "provider_spend_usd": 0,
+  "retained_evidence": {
+    "root": "E:\\projects_data\\drug_target_agents_data\\derived\\aact_restore\\restore-20261017T011039Z\\sealed-evidence",
+    "manifest_sha256": "20bfe2968653f9cc751f2c95cc992576fe3a743919dd176b4422404967f429c3",
+    "file_count": 419
+  }
+}

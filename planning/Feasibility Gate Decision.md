@@ -8,9 +8,9 @@ tags: [asof, feasibility, t6]
 
 # Scientific feasibility decision
 
-## Active task — one AACT snapshot
+## Completed technical step — one AACT snapshot
 
-The user chose to restore one historical AACT snapshot first. The 20–30-program mapping/outcome audit and complete regional QTL/GWAS/LD example remain deferred next-to-do items. Current access checks found a sign-in redirect on the official snapshot route and 404 responses on legacy download routes. No archive has yet been acquired or restored. See [[AACT Historical Restoration]] for the exact selection rule, access evidence and technical acceptance checklist; the January 1, 2023 candidate origin remains provisional.
+The January 1, 2023 versioned archive supplied by the user has been restored: 437,548 unique studies in 55 tables, complete TOC/table agreement, valid indexes and validated declared constraints. Nine stored-record rows for four study IDs have no matching study and remain documented exceptions. See [[AACT Historical Restoration]] for hashes, SQL, logs, storage and missingness. Exact first-public availability and strict temporal benchmark admission remain unverified; this is not a restored longitudinal event/censoring cohort. The 20–30-program audit and regional QTL/GWAS/LD pilot remain deferred by the user.
 
 ## Current decision — October 16, 2026
 
@@ -28,7 +28,7 @@ The next development work is to preserve omitted source context in a separately 
 | --- | --- |
 | AI-assisted ten-case development review | Complete, with explicit source-access/version limitations. Human scheduling is no longer a blocker for this phase. |
 | Independent scientific gold / representative benchmark | Not established. Parallel agents from the same AI workflow are not independent expert adjudication or a held-out evaluation sample. |
-| Historical trial snapshots and cohort restoration | Open; no qualifying local historical input or restored event/censoring cohort. |
+| Historical trial snapshots and cohort restoration | One January 1, 2023 snapshot technically restored with data exceptions; strict availability gate and longitudinal event/censoring cohort remain open. |
 | Complete regional QTL/GWAS/LD bundle | Open; completeness, ancestry/build/allele compatibility and cohort overlap remain to be demonstrated. |
 | Empirical cohort size and power | Open; ten purposively chosen cases cannot supply clinical event counts or generalization power. |
 | Live adapter comparison | Not launched. Define eligible inputs, comparison protocol, model chronology and explicit spending decision before execution. |

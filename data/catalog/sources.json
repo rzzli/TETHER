@@ -13748,7 +13748,7 @@
         ],
         "next_acquisition_check": "Identify one exact eligible artifact, confirm file-level terms, inspect complete content/metadata, measure size and verify its hash before ingestion."
       },
-      "collection_status": "planned",
+      "collection_status": "collected",
       "parse_status": "not_run",
       "validation_status": "not_run",
       "profile_policy": {
@@ -13760,7 +13760,25 @@
       "blockers": [
         "Restore actual origin/follow-up archives and verify snapshot dates, schema, longitudinal coverage and export/restore size.",
         "A monthly snapshot gives an observation interval, not necessarily an exact event/publication date."
-      ]
+      ],
+      "acquisition_snapshot": {
+        "dataset_id": "aact_snapshots",
+        "expected_files": 1,
+        "completed_files": 1,
+        "in_progress_files": 0,
+        "completed_bytes": 3194237475,
+        "release_ids": [
+          "2023-01-01"
+        ],
+        "batch_ids": [
+          "manual-aact-20261016"
+        ],
+        "status": "collected",
+        "report": "data/manifests/public/2026-10-16-aact-acquisition.json",
+        "report_sha256": "87bbc0583da714f27200097df7b1a0b817c239daaeca3c2c0d6a8094f22e407c",
+        "scope": "Exactly one user-downloaded January 1, 2023 AACT ZIP, hash/CRC verified and technically restored. Not the full historical archive series. Raw data remain outside agent manifests; no AsOf AACT adapter or scientific validation exists. See linked restoration evidence for 9 unmatched study_records rows and temporal limitations.",
+        "created_at_utc": "2026-10-17T02:05:41.561312+00:00"
+      }
     },
     {
       "dataset_id": "clinicaltrials_current",
@@ -28309,13 +28327,13 @@
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
   },
   "last_maintenance_update": {
-    "expected_prior_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
-    "report": "data/manifests/public/2026-10-16-context-normalization.json",
-    "report_sha256": "06f44e69f2b8928c546323543e7268a38b884214668a237fc05f4571ef9c80e4",
-    "kind": "normalization",
+    "expected_prior_sha256": "6680e777deafdd78a783b154d81a6856162c4574074958e91ec6346b87b86183",
+    "report": "data/manifests/public/2026-10-16-aact-acquisition.json",
+    "report_sha256": "87bbc0583da714f27200097df7b1a0b817c239daaeca3c2c0d6a8094f22e407c",
+    "kind": "acquisition",
     "datasets": [
-      "asof_normalized_packets"
+      "aact_snapshots"
     ],
-    "created_at_utc": "2026-10-17T00:03:36.753123+00:00"
+    "created_at_utc": "2026-10-17T02:05:41.607214+00:00"
   }
 }

@@ -11,4 +11,4 @@
 - [[research-log-2026-10-12]] — Independent-review reconciliation and revised stabilization/feasibility-first plan.
 - [[research-log-2026-10-15]] — Completed AI-assisted ten-case/20-claim development review, source/version qualifications and remaining scientific gates.
 - [[research-log-2026-10-16]] — Context recipe 2.2, ten rebuilt/verified dossiers, original-row comparison and remaining scientific gates.
-- [[AACT Historical Restoration]] — Active one-snapshot restoration, account-access blocker and deferred clinical-program/genetics tasks.
+- [[AACT Historical Restoration]] — Completed January 1, 2023 snapshot restoration, retained technical exceptions and deferred clinical-program/genetics tasks.

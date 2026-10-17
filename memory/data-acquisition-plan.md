@@ -3,12 +3,16 @@ name: data-acquisition-plan
 description: Implemented AsOf data inventory, historical compatibility and staged acquisition requirements
 metadata:
   type: project
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 
 # AsOf data acquisition plan
 
-## Current state — October 11
+## Current addition — October 16
+
+One user-downloaded January 1, 2023 AACT snapshot is collected and technically restored on E:. See [[AACT Historical Restoration]] for 55-table/437,548-study validation, nine unmatched stored-record rows, hashes and resource evidence. The catalog acquisition scope is one archive, not the historical series. This is a direct PostgreSQL restore, not an AsOf parser/agent packet; scientific validation and strict first-public availability remain unverified. No new clinical audit or genetics work; downloader and monitor untouched.
+
+## Archived state — October 11
 
 The catalog contains **83 providers / 178 products**. The v0.2 adapter reads a frozen selected manifest of **2,141 files / 3,752,440,123 bytes**, using Open Targets 25.09 and HGNC `snapshot_2026-10-10`. Its 65 missing inputs remain explicit. Generated normalized packets carry parent hashes, exact archived receipt bytes, original row locators, unresolved scientific context and selected-subset coverage. Parsing status changes only for retained scoped products; independent scientific validation remains `not_run`.
 

@@ -1,7 +1,7 @@
 ---
 title: AsOf Full Data Requirements and Acquisition Plan
 date: 2026-10-09
-updated: 2026-10-12
+updated: 2026-10-16
 tags:
   - asof
   - data-plan
@@ -14,6 +14,8 @@ status: acquisition-started
 This is the data implementation of [[AsOf Feasibility Analysis and Peer Survey]] and the revalidated scaffold approved by the user. The initial documentation deliverable was completed without dataset acquisition or analysis. On October 10 the user authorized public downloads, storage sizing and the external E: root; starter data are now collected and the core wave has started. See [[data/STORAGE_AND_DOWNLOAD_REPORT|the acquisition/storage report]] for this subsequent phase. No statistical analyses, model runs or new adjudicated benchmark labels have been created.
 
 The authoritative inventory, [[data/catalog/sources.json|sources.json]], contains **83 providers and 178 dataset/product records**. It covers every source family in the original proposal plus dependency data needed for identifiers, LD, temporal reconstruction, terminology, validation and optional component compatibility. The additional v0.2 product is `asof_normalized_packets`. Provider count is not study count; overlapping sources and bundles are explicitly recorded. Current implementation status is in [[Project Audit and v0.2 Completion]]; dated scaffold checks below retain their original counts.
+
+October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; program auditing and regional genetics remain deferred.
 
 ## 1. Decisions implemented and research decisions remaining
 
