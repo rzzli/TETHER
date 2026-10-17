@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "protocol_id": "registry-sizing-development-v0.4",
+  "frozen_at_utc": "2026-10-17T19:55:44.742084+00:00",
+  "status": "frozen_before_registry_scale_enumeration",
+  "role": "evaluation_only",
+  "purpose": "Measure program and target-indication sizing/observability under a registry-observable progression endpoint; not a trained or locked clinical benchmark.",
+  "prior_exposure": "24 purposive cases and P01/P24 advancement leads exposed; crude contemporary pair counts inspected. No performance-selected endpoint or untouched-test claim.",
+  "origin": "2023-01-01",
+  "occurrence_endpoint": "2025-01-01",
+  "ascertainment_cutoff": "2025-01-01",
+  "snapshots": [
+    {
+      "date": "2023-01-01",
+      "role": "origin",
+      "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/restore-20261017T011039Z"
+    },
+    {
+      "date": "2023-07-02",
+      "requested_archive_date": "2023-07-01",
+      "role": "followup",
+      "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/intermediate-20261017T064802Z/2023-07-01"
+    },
+    {
+      "date": "2024-01-01",
+      "role": "followup",
+      "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/intermediate-20261017T064802Z/2024-01-01"
+    },
+    {
+      "date": "2024-07-01",
+      "role": "followup",
+      "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/intermediate-20261017T064802Z/2024-07-01"
+    },
+    {
+      "date": "2025-01-01",
+      "role": "endpoint",
+      "restore_root": "E:/projects_data/drug_target_agents_data/derived/aact_restore/followup-20250101-20261017T051834Z"
+    }
+  ],
+  "input_anchors": [
+    {
+      "path": "data/manifests/public/2026-10-16-aact-restoration.json",
+      "sha256": "0e5165d08a105fc2f6ea0b5f8d162aeed55e6fb148cf5faeae704cb89215ef0b"
+    },
+    {
+      "path": "data/manifests/public/2026-10-16-aact-followup.json",
+      "sha256": "1bf76099ac6ca07ea289cc5d3119a569559a435078e48abfcf5d2021a2779760"
+    },
+    {
+      "path": "data/manifests/public/2026-10-17-aact-intermediate-restorations.json",
+      "sha256": "d64f8491dcd2f0b73eb1051e2fdb9ebec4ce06444b1c148c5561f7581dccb1d5"
+    },
+    {
+      "path": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
+      "sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065"
+    },
+    {
+      "path": "data/manifests/public/2026-10-17-advancement-rules.json",
+      "sha256": "7aa7a8f4609a0cff96901fb85ba098ce30a9ef34cf84399dac1c0c6e0d288039"
+    }
+  ],
+  "mapping_inputs": [
+    {
+      "component": "drug_molecule",
+      "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\drug_molecule\\part-00000-35323264-2241-4256-b643-3a92cd0230e5-c000.snappy.parquet",
+      "sha256": "787072c82b312f5b2b91221d3cd9d65f92d0055905346dd0fafd6783b4aa491a",
+      "use": "evaluator_only_oracle_mapping_for_2023"
+    },
+    {
+      "component": "drug_mechanism_of_action",
+      "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\drug_mechanism_of_action\\part-00000-bcd725a7-a061-4bcf-bcab-271f0e87cdac-c000.snappy.parquet",
+      "sha256": "30a71a351a96bc110c6e1d4279c9dfc09807ac66ab402132613466136963fa52",
+      "use": "evaluator_only_oracle_mapping_for_2023"
+    }
+  ],
+  "endpoint_tiers": {
+    "A": "First distinct next-numerical-phase interventional NCT for same resolved drug/product composition and normalized indication, with ACTUAL registry study-start date in (origin, endpoint] and public registry posting no later than the observation snapshot/cutoff. This is enrollment/development progression, not experimental dosing or efficacy.",
+    "B": "Unmodified v0.3 experimental-regimen first-dosing audit tier. Incomplete higher-specificity evidence, not a perfect gold reference.",
+    "C": "Separate descriptive any-arm initiation, efficacy, safety and administrative events; never collapsed to biological success."
+  },
+  "eligibility": {
+    "study_type": "INTERVENTIONAL",
+    "resolved_origin_phases": [
+      "PHASE1",
+      "PHASE2"
+    ],
+    "active_statuses": [
+      "RECRUITING",
+      "ACTIVE_NOT_RECRUITING",
+      "ENROLLING_BY_INVITATION"
+    ],
+    "origin_start": "ACTUAL date on/before origin; missing/estimated dates remain unresolved rather than assumed enrolled",
+    "origin_arm_type": "EXPERIMENTAL",
+    "higher_phase_before_origin": "Exclude same resolved program from that edge if actual qualifying higher-phase start is already known at origin; ambiguous prior advancement remains unresolved.",
+    "excluded": [
+      "NOT_YET_RECRUITING",
+      "Phase 3 or later for primary origin route",
+      "observational and expanded-access studies",
+      "closed/comparator/rescue/background anchor programs"
+    ],
+    "mixed_phase": "PHASE1/PHASE2 and PHASE2/PHASE3 remain separately counted unresolved unless arm-specific dated stage is established. No numeric collapsing.",
+    "phase_edges": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "within_trial_phase_change": "Not counted from a phase-field change or the original enrollment date; requires separate cohort-stage evidence. Primary registry route uses distinct NCT IDs."
+  },
+  "drug_role_and_regimen": {
+    "automatic_resolved_subset": "Drug/Biological interventions linked to an EXPERIMENTAL arm; one uniquely resolved active product, explicit arm-title product/alias match, no conflicting arm/intervention description and no comparator/rescue/background role cue. Preserve source strings and rule reasons.",
+    "multiple_active_products": "Retain full composition as combination candidate; never assign all linked components to individual monotherapy programs. Unresolved active roles or supportive components require audit before resolved count.",
+    "ambiguous_roles": "EXPERIMENTAL membership alone is insufficient. Unknown role is an unresolved candidate, not a non-event or zero.",
+    "dose_population": "Tier A is a product-composition/indication development surrogate. Preserve dose/route/line/genotype differences as scope flags and audit/sensitivity strata; no claim that every dose/population advanced. New product, ADC payload or active composition requires separate identity."
+  },
+  "normalization": {
+    "drug": "Unicode NFKC, casefold, collapse whitespace; unique exact alias among molecule name/synonyms/tradeNames or explicit source identifier. No fuzzy matching, no automatic parent/salt/ADC-payload merging and no stripping numeric identity. Multiple matches unresolved.",
+    "condition_primary": "Unicode NFKC, casefold and whitespace normalization of verbatim condition; preserve disease subtype, stage, genotype and negation. Exact normalized string is the automatic baseline.",
+    "condition_sensitivity": "Explicit unique ontology-equivalent aliases may be studied only with a separately frozen mapping/version before that count. No automatic descendant or broad family merging.",
+    "mechanism": "Use chemblIds-to-targets as a multivalued mapping; record all targets and missingness. Later target knowledge is oracle mapping for sizing, not historical feature evidence.",
+    "forbidden_predictor_fields": [
+      "maximumClinicalTrialPhase",
+      "linkedDiseases",
+      "approval/withdrawal status",
+      "trial outcomes",
+      "future molecule annotations"
+    ]
+  },
+  "event_rules": {
+    "date_type": "ACTUAL only for resolved event count; estimated/unknown dates separately tabulated",
+    "availability": "study_first_posted_date and last_update_posted_date must be within each source snapshot/cutoff; a later report of an earlier start cannot silently enter the earlier ascertainment count",
+    "phase_identity": "Same program composition/normalized indication and allowed numerical phase edge; separately report shared-target different-drug coincidences",
+    "date_precision": "Preserve original date strings/precision; month-only bounds straddling a boundary unresolved, never invent a day",
+    "duplicate_event": "Canonical next NCT plus resolved product composition and event type; shared predecessors/conditions/reports count once as a development event and retain their rollups/dependency links",
+    "contradictions": "Preserve conflicting ACTUAL dates, withdrawal/enrollment contradictions, intervention links and role disagreements; adjudicate before promoting resolved counts"
+  },
+  "no_recorded_transition": "Report no recorded advancement by cutoff under measured search/mapping coverage. This is not biological failure or a defensible individual censoring date; incomplete coverage is unresolved.",
+  "estimands": {
+    "primary": "Resolved drug-product-composition × normalized-indication programs active at origin, stratified by phase edge",
+    "secondary": [
+      "target-indication any-program rollup",
+      "one origin-selected representative program per target-indication, deterministic earliest origin study-first-posted then NCT tie break; chosen without outcomes"
+    ],
+    "counts": [
+      "screened studies/arms",
+      "resolved and unresolved programs",
+      "origin exclusions by reason",
+      "mapped/unmapped drug and target coverage",
+      "candidate versus resolved event counts",
+      "unique event NCTs and dependency components",
+      "drug/target/sponsor clusters",
+      "reporting/snapshot intervals"
+    ],
+    "representative_selection": "Record full origin ranking before follow-up joins; no favorable-outcome replacement.",
+    "strict_vs_relaxed": "Report resolved subset and uncertainty strata, not mathematical lower/upper bounds on true prevalence."
+  },
+  "audit": {
+    "target_sample": {
+      "candidate_transitions": 120,
+      "at_risk_without_recorded_transition": 120
+    },
+    "sampling": "Deterministic random seed 20261017; stratify by phase edge, mapping ambiguity, regimen complexity and snapshot/reporting interval. Adjust allocations to available strata and record inclusion probabilities. Do not use the sample to select better-performing endpoint definitions.",
+    "review": "Two separately recorded annotations where feasible, including an independent human for scientific validation/publication. AI-only exploration may proceed but is not independent gold.",
+    "metrics": [
+      "Tier A precision and agreement with uncertainty",
+      "unresolved rate and minutes per case",
+      "recall only with a systematic independent event search of weighted sampled non-transitions",
+      "kappa as agreement, not proof of validity"
+    ]
+  },
+  "power_plan": {
+    "scenario_target": {
+      "power": 0.8,
+      "auroc_difference": 0.05
+    },
+    "method": "Simulate or resample measured dependency components across prevalence, score-correlation, effect-size and label-error scenarios. No empirical discrimination claim before actual predictions.",
+    "outputs": [
+      "effective independent units and positive counts",
+      "sample-size/power curves with assumptions",
+      "annotation and model-cost scenarios",
+      "precision-recall and calibration considerations"
+    ],
+    "decision": "Proceed only if audited mappings and attainable independent/event counts support an affordable design under explicit assumptions; otherwise revise design or methods/T6 fallback. Missing cost/validity inputs yield an unresolved decision, not automatic go/no-go."
+  },
+  "isolation": "Evaluator-only products. No labels, future mappings or gold answers in agent-visible manifests. No model-provider calls or scorer training in this milestone.",
+  "spend_usd": 0,
+  "implementation_status": "Protocol only; registry-scale SQL extraction, role mapping, event enumeration, sample audit and power simulation not run."
+}

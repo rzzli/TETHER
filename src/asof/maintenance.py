@@ -194,16 +194,50 @@ def update_catalog(project: Path, catalog_path: Path, report_path: Path, expecte
                 raise ContractError('Invalid normalization proposal fields')
             build,pilot,audit = checked_product_reports(project, report)
             row = rows['asof_normalized_packets']
+            missing_count = len(build['inspection']['missing_inputs'])
             row.update(collection_status='collected', parse_status='parsed', validation_status='not_run')
             row['verification'] = {'level': 'sample_inspected','checked_at': str(report['created_at_utc'])[:10],
                 'evidence': [{'kind':'scoped_normalization','workspace_path': reference,'sha256':report_sha,
                     'result':'Ten finalized contemporary cases; 20-row technical audit and source-inclusive semantic verification; scientific validation not run'}],
-                'next_acquisition_check':'Independent biological review; resolve selected-subset missing inputs before broader claims'}
-            row['blockers'] = [f"{len(build['inspection']['missing_inputs'])} frozen inputs missing; no absence-of-evidence inference", 'Independent scientific validation not run']
+                'next_acquisition_check':('Independent biological review; resolve selected-subset missing inputs before broader claims'
+                    if missing_count else 'Independent biological review; selected-manifest completeness does not establish biological coverage')}
+            row['blockers'] = ([f"{missing_count} frozen inputs missing; no absence-of-evidence inference"]
+                               if missing_count else []) + ['Independent scientific validation not run']
             row['storage']['expanded_bytes'] = sum(x['packet_bytes'] for x in build['cases'])
             row['storage']['estimate_basis'] = 'Measured ten-case normalized JSON packets only; build intermediates, run outputs, originals and backups excluded'
             row['release_policy'] = 'Pinned build '+build['snapshot_id']+'; full input lineage and UTC origin retained; no historical eligibility claim'
             changed.append(row['dataset_id'])
+        elif report.get('kind') == 'status_correction':
+            allowed_report = {'schema_version','kind','created_at_utc','scope','evidence','datasets'}
+            if set(report) != allowed_report or not report['evidence'] or not report['datasets']:
+                raise ContractError('Invalid status correction proposal')
+            for proof in report['evidence']:
+                if set(proof) != {'path','sha256'}:
+                    raise ContractError('Invalid correction evidence')
+                source = safe_child(project, proof['path'])
+                if sha256_file(source) != proof['sha256']:
+                    raise ContractError('Correction evidence changed')
+            for item in report['datasets']:
+                if (set(item) != {'dataset_id','collection_status','verification','blockers'} or
+                    item['dataset_id'] not in rows or item['dataset_id'] in changed):
+                    raise ContractError('Invalid correction fields or dataset')
+                row = rows[item['dataset_id']]
+                # Corrections may describe an idle/incomplete collection; they
+                # cannot promote acquisition, parsing, science or access policy.
+                if (item['collection_status'] != row['collection_status'] and
+                    item['collection_status'] not in {'partial','blocked','failed'}):
+                    raise ContractError('Status correction cannot promote collection')
+                verification = item['verification']
+                if (not isinstance(verification, dict) or
+                    set(verification) != {'level','checked_at','evidence','next_acquisition_check'} or
+                    verification['level'] not in catalog['status_definitions']['verification_level'] or
+                    not isinstance(verification['evidence'],list) or not verification['evidence'] or
+                    not isinstance(item['blockers'],list) or
+                    any(not isinstance(value,str) for value in item['blockers'])):
+                    raise ContractError('Invalid status correction verification')
+                for key in ('collection_status','verification','blockers'):
+                    row[key] = copy.deepcopy(item[key])
+                changed.append(item['dataset_id'])
         else:
             raise ContractError('Unsupported maintenance report kind')
         updated['last_updated'] = datetime.now(timezone.utc).date().isoformat()

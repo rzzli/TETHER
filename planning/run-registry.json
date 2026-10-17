@@ -1,12 +1,113 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-17T00:03:36.134485+00:00",
-  "canonical_pilot_id": "context-revision-pilot-20261016T055518Z",
+  "updated_at_utc": "2026-10-17T08:31:47.801900+00:00",
+  "canonical_pilot_id": "literature-coverage-20261017T082208Z-pilot",
   "status_basis": "Explicit selection; not latest-directory discovery",
   "entries": [
     {
-      "id": "context-revision-pilot-20261016T055518Z",
+      "id": "literature-coverage-20261017T082208Z-pilot",
       "state": "canonical",
+      "path": "runs/literature-coverage-20261017T082208Z",
+      "reports": [
+        {
+          "path": "runs/literature-coverage-20261017T082208Z/pilot-report.json",
+          "sha256": "b788e21338390cd858d3dd9f530ef407aedb73f34edb4e6b0bdd7fa6c167cc7e"
+        },
+        {
+          "path": "runs/literature-coverage-20261017T082208Z/source-review.json",
+          "sha256": "306da2a9474422ef6c006850e66ace272b88cf4b6378a6f87d78594cb289db69"
+        }
+      ],
+      "build_id": "literature-coverage-20261017T082208Z-build",
+      "cases": [
+        {
+          "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+          "receipt_sha256": "9013699793bc3b39c19780af9b688d65ba6fadc706aff0e3c5d852477a8c0fd0",
+          "path": "runs/literature-coverage-20261017T082208Z/cd276-efo_0003060-delivery_antigen-adc"
+        },
+        {
+          "case_id": "osmr-efo_0000729-inhibit-antibody",
+          "receipt_sha256": "fe79ee4663ec541e012ec3d2fc06cc21da11f186f29336104f03483f8f022ca9",
+          "path": "runs/literature-coverage-20261017T082208Z/osmr-efo_0000729-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-inhibit-antibody",
+          "receipt_sha256": "83a9072d62cb113b177b2b1846ac775852223c10bef6994f2991c16e522f3a87",
+          "path": "runs/literature-coverage-20261017T082208Z/erbb2-efo_0000305-inhibit-antibody"
+        },
+        {
+          "case_id": "erbb2-efo_0000305-delivery_antigen-adc",
+          "receipt_sha256": "1d2feb2cbcb36401b9ef896611424d19b2857e7fe3403f9e3eb56e32ade8c46b",
+          "path": "runs/literature-coverage-20261017T082208Z/erbb2-efo_0000305-delivery_antigen-adc"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-inhibit-antibody",
+          "receipt_sha256": "f8ae72e5432ae4e35167b96c3f55235f91e1544cf095bb9f8694057312e7012c",
+          "path": "runs/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-inhibit-antibody"
+        },
+        {
+          "case_id": "pcsk9-efo_0004911-reduce_expression-sirna",
+          "receipt_sha256": "c3769b3f1d497dabd46e849c60b2667f0fed12f7ca28ef84c48d909c0cebfd45",
+          "path": "runs/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-reduce_expression-sirna"
+        },
+        {
+          "case_id": "il6r-efo_0000685-inhibit-antibody",
+          "receipt_sha256": "c3cc8177edb3e23ea25adafe064ba82b8d56d79d275c5ebec8d129d11ec14ac2",
+          "path": "runs/literature-coverage-20261017T082208Z/il6r-efo_0000685-inhibit-antibody"
+        },
+        {
+          "case_id": "cftr-mondo_0009061-activate-small_molecule",
+          "receipt_sha256": "3957f8f65f327e9702618c0c22b242e9166a0ca93ca7d8c16b61e0d73446c6ab",
+          "path": "runs/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule"
+        },
+        {
+          "case_id": "glp1r-mondo_0005148-activate-peptide",
+          "receipt_sha256": "507b5292dced9a3cf919da27717815405cd3e4bc3956bd6e9f556a0ececfb8ec",
+          "path": "runs/literature-coverage-20261017T082208Z/glp1r-mondo_0005148-activate-peptide"
+        },
+        {
+          "case_id": "scn9a-efo_0005762-inhibit-small_molecule",
+          "receipt_sha256": "19ae5d5f1f2e3b471788748f555903edfa752147e4174a29423f65400fbf562b",
+          "path": "runs/literature-coverage-20261017T082208Z/scn9a-efo_0005762-inhibit-small_molecule"
+        }
+      ],
+      "scientific_validation": "not_run"
+    },
+    {
+      "id": "literature-coverage-20261017T082208Z-build",
+      "state": "canonical",
+      "path": "data/derived/literature-coverage-20261017T082208Z",
+      "reports": [
+        {
+          "path": "data/derived/literature-coverage-20261017T082208Z/build-report.json",
+          "sha256": "755f3ec861e3283ea6e04bd802fdc39d1e810cdf70556ac30718f796915f4115"
+        },
+        {
+          "path": "data/derived/literature-coverage-20261017T082208Z/journal.jsonl",
+          "sha256": "0ce9a89385a866d1c69c0760e5001076d3506ffd0bfe671eed218a0b3d9ed1c1"
+        }
+      ]
+    },
+    {
+      "id": "literature-coverage-20261017T081106Z-build",
+      "state": "failed",
+      "path": "data/derived/literature-coverage-20261017T081106Z",
+      "reports": [
+        {
+          "path": "data/derived/literature-coverage-20261017T081106Z/build-failure.json",
+          "sha256": "ab2c895d8b52ea83cccf0f439b7c3f34e738e381bc1e83b5426303b7706b5654"
+        },
+        {
+          "path": "data/derived/literature-coverage-20261017T081106Z/journal.jsonl",
+          "sha256": "da1f8a8e8e9f04072f570bc191286b07ff62b5a05702da40f78e259520ce286c"
+        }
+      ],
+      "reason": "Single packet exceeded 64 MiB; retained intact; explicitly recovered with bounded packets",
+      "replaced_by": "literature-coverage-20261017T082208Z-build"
+    },
+    {
+      "id": "context-revision-pilot-20261016T055518Z",
+      "state": "superseded",
       "path": "runs/context-revision-20261016T055518Z",
       "reports": [
         {
@@ -71,11 +172,13 @@
           "path": "runs/context-revision-20261016T055518Z/scn9a-efo_0005762-inhibit-small_molecule"
         }
       ],
-      "scientific_validation": "not_run"
+      "scientific_validation": "not_run",
+      "replaced_by": "literature-coverage-20261017T082208Z-pilot",
+      "reason": "Complete previously missing same-release literature selection; old sources and observations exactly preserved"
     },
     {
       "id": "context-revision-build-20261016T055518Z",
-      "state": "canonical",
+      "state": "superseded",
       "path": "data/derived/context-revision-20261016T055518Z",
       "reports": [
         {
@@ -86,7 +189,9 @@
           "path": "data/derived/context-revision-20261016T055518Z/journal.jsonl",
           "sha256": "8d92370fb2ce4794dba67ea19dc7a93b96805d4abf8f1fe7aa7a09457465d93b"
         }
-      ]
+      ],
+      "replaced_by": "literature-coverage-20261017T082208Z-build",
+      "reason": "Complete previously missing same-release literature selection; old sources and observations exactly preserved"
     },
     {
       "id": "context-revision-pilot-20261016T054655Z",

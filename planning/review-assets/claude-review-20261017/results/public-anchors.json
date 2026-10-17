@@ -1,0 +1,253 @@
+{
+ "2026-10-09-source-revalidation.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-10-acquisition-summary.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-10-completion-audit.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-10-download-size-inventory.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-10-storage-assessment.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-11-project-checks.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-clean-checkout-core.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-clean-checkout-full.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-expert-review-preparation.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-expert-review-workbook.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-feasibility-access-checks.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-retained-run-verification.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-stabilization-validation.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-12-v02-normalization.json": {
+  "pairs": 3,
+  "ok": 3,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-15-ai-assisted-review.json": {
+  "pairs": 9,
+  "ok": 9,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-15-context-revision-final-validation.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-15-context-revision-validation.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-acquisition.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-followup.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-paired-acquisition.json": {
+  "pairs": 2,
+  "ok": 2,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-public-alternatives.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-restoration-access.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-aact-restoration.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-context-normalization.json": {
+  "pairs": 3,
+  "ok": 3,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-16-context-revision.json": {
+  "pairs": 6,
+  "ok": 5,
+  "missing": [],
+  "mismatch": [
+   {
+    "path": "planning/run-registry.json",
+    "claimed": "efdaad1d061a",
+    "actual": "dab89cd5dbcf"
+   }
+  ],
+  "external_or_absolute": []
+ },
+ "2026-10-16-feasibility-pilots.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-aact-five-acquisition.json": {
+  "pairs": 2,
+  "ok": 2,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-aact-intermediate-restorations.json": {
+  "pairs": 3,
+  "ok": 3,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-advancement-rules.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-full-cis-revision.json": {
+  "pairs": 0,
+  "ok": 0,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-literature-complete-selection.json": {
+  "pairs": 3,
+  "ok": 3,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-literature-normalization.json": {
+  "pairs": 3,
+  "ok": 3,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-long-session-completion.json": {
+  "pairs": 9,
+  "ok": 9,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-phase3-linkage.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ },
+ "2026-10-17-program-outcome-feasibility.json": {
+  "pairs": 1,
+  "ok": 1,
+  "missing": [],
+  "mismatch": [],
+  "external_or_absolute": []
+ }
+}

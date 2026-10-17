@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "protocol_freeze",
+  "created_at_utc": "2026-10-17T19:55:44.745087+00:00",
+  "role": "evaluation_only",
+  "protocol": {
+    "path": "planning/protocols/registry-sizing-v0.4.json",
+    "sha256": "5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd"
+  },
+  "prior_exposure": true,
+  "registry_scale_enumeration_started": false
+}

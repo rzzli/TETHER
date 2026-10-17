@@ -1,7 +1,7 @@
 ---
 title: AsOf Framework Implementation
 date: 2026-10-11
-updated: 2026-10-16
+updated: 2026-10-17
 status: v02-technical-pilot-complete
 tags:
   - asof
@@ -10,6 +10,21 @@ tags:
 ---
 
 # AsOf framework v0.2
+
+The October 17 build adds opt-in `build-snapshot --packet-layout bounded` for
+larger case collections. It partitions whole observations in input order into
+individually sealed packets, each including its JSON envelope and newline within
+64 MiB. A single oversized observation fails. The default `single` layout still
+fails for an oversized case; it never partitions or truncates implicitly.
+
+This uses the existing v2 snapshot artifact list. Observation normalization stays
+at recipe 2.2; the build recipe records the layout, limit and code hash. Case
+reports include `packets[]` with paths, hashes, byte and observation counts.
+`packet_bytes` is their total; `packet_sha256` is null when there are multiple
+packets. Consumers must follow the snapshot artifact list or `packets[]`, rather
+than assume `evidence.json`. Existing snapshots and receipts are unchanged.
+The 256 MiB ledger-output bound and execution budgets remain unchanged, so packet
+partitioning alone does not guarantee arbitrary-sized runs can finalize.
 
 AsOf follows [[AsOf Feasibility Analysis and Peer Survey]]: begin with a bounded
 extractor and deterministic checks, preserving the useful Virtual Biotech pattern of

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "acquisition",
+  "created_at_utc": "2026-10-17T08:31:47.801900+00:00",
+  "scope": "Exactly five user-downloaded AACT archives, separately restored and audited. Not the complete historical series. January 2026 is excluded from this unit.",
+  "datasets": [
+    {
+      "dataset_id": "aact_snapshots",
+      "expected_files": 5,
+      "completed_files": 5,
+      "in_progress_files": 0,
+      "completed_bytes": 10587494178,
+      "release_ids": [
+        "2023-01-01",
+        "2023-07-02",
+        "2024-01-01",
+        "2024-07-01",
+        "2025-01-01"
+      ],
+      "batch_ids": [
+        "manual-aact-20261016",
+        "manual-aact-followup-20261016",
+        "manual-aact-intermediate-20261017"
+      ]
+    }
+  ],
+  "prior_acquisition_evidence": {
+    "path": "data/manifests/public/2026-10-16-aact-paired-acquisition.json",
+    "sha256": "8a925389eeaec7aa9019fa0cd1692a1def44ab85bd78f4f31d94b4d6ce199396"
+  },
+  "intermediate_restoration_evidence": {
+    "path": "data/manifests/public/2026-10-17-aact-intermediate-restorations.json",
+    "sha256": "d64f8491dcd2f0b73eb1051e2fdb9ebec4ce06444b1c148c5561f7581dccb1d5"
+  }
+}

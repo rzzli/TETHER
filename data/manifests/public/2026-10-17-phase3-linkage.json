@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "kind": "linked_phase3_development_review",
+  "role": "evaluation_only",
+  "completed_at_utc": "2026-10-17T14:56:42.349788+00:00",
+  "evidence_manifest": {
+    "path": "data/benchmark/cohorts/phase3-linkage-20261017T144828Z/evidence-manifest.json",
+    "sha256": "0fe053721ee85e661eccc843b7c639458060058031e4fb27837b4cce1753e5b5"
+  },
+  "verification": {
+    "byte_integrity": "passed",
+    "source_inclusive_checks": "passed",
+    "timing_replay": "passed",
+    "journal_and_shutdown": "passed",
+    "files_verified": 38,
+    "source_fields_checked": 30,
+    "query_validation": {
+      "status": "passed",
+      "records": 3,
+      "read_only": true,
+      "posting_dates_within_snapshot": true
+    },
+    "scientific_validation": "not_established"
+  },
+  "snapshot_date": "2025-01-01",
+  "trial_ids": [
+    "NCT06203210",
+    "NCT05280470",
+    "NCT04145622"
+  ],
+  "linked_phase3": "NCT06203210",
+  "actual_enrollment_start": "2024-05-21",
+  "conditional_trial_dosing_interval": {
+    "lower": "2024-05-21",
+    "upper": "2024-08-01",
+    "kind": "inferred; assumptions in timing-assessment.json"
+  },
+  "exact_first_dose_date": null,
+  "population_relation": "overlap_with_P01_origin_second_line_stratum_not_identical_whole_cohort",
+  "training_labels_added": 0,
+  "scientific_validation": "not_established",
+  "tests_passed": 26,
+  "source_fields_checked": 30,
+  "server_stopped_confirmed": true,
+  "provider_spend_usd": 0,
+  "new_dataset_downloads": 0,
+  "source_dump_sha256": "e14fd827d451ed585036e321c604c4cc7cabb5cb3d6cf1d165c8b8699ad93468",
+  "extraction_elapsed_seconds": 63.75,
+  "next_step": "Freeze explicit program-equivalence, dose-selection, nested-population and shared-event rules before expansion",
+  "report": "planning/Phase 3 Linkage Follow-up.md"
+}

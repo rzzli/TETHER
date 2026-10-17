@@ -51,6 +51,8 @@ def parser() -> argparse.ArgumentParser:
     build.add_argument("--manifest", type=Path, required=True)
     build.add_argument("--catalog", type=Path, required=True)
     build.add_argument("--output", type=Path, required=True)
+    build.add_argument("--packet-layout", choices=("single", "bounded"), default="single",
+                       help="Explicitly permit multiple complete packets per case; each stays within 64 MiB")
     evaluation = commands.add_parser("evaluate", help="Evaluator-only descriptive T1 metrics")
     evaluation.add_argument("--predictions", type=Path, nargs="+", required=True)
     evaluation.add_argument("--labels", type=Path, required=True)
@@ -77,7 +79,7 @@ def main(argv: list[str] | None = None) -> int:
                     args.report.parent.mkdir(parents=True, exist_ok=True)
                     write_json(args.report, answer)
             else:
-                answer = build_snapshot(args.manifest, args.catalog, args.output)
+                answer = build_snapshot(args.manifest, args.catalog, args.output, packet_layout=args.packet_layout)
         elif args.command == "evaluate":
             # Deliberately imported only in the separate evaluator command.
             from .evaluation import Outcomes, evaluate

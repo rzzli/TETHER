@@ -1,5 +1,24 @@
 # Research memory index
 
+- [[Updated Project Plan 2026-10-17]] — Current roadmap reconciled with the Oct 17 Claude review: preserve work, freeze registry-observable development sizing, measure at scale, then decide chronology and bounded T6 evaluation. The 15-case queue is an audit subtask.
+
+- [[Claude Review and Plan_claude10172026]] — Independent re-verification report and proposed protect–measure–decide plan; reconciled in the current roadmap with endpoint, chronology, audit-design and authorization qualifications.
+- [[research-log-2026-10-17-claude-review]] — Review session record: what was re-run, what could not be verified, and the first action (commit, remote, backup).
+
+- [[Program Advancement Rules v0.3]] — Frozen strict experimental-dosing rule, evaluated on two authored facts (P01/P24); all 24 cases accounted for; 36 relevant tests passed. Strict development/audit tier, not evidence that registry-scale T1 is infeasible.
+- [[research-log-2026-10-17-advancement-rules]] — Dated rules milestone; its 15-case next-action queue is superseded by the registry-scale sizing priority in the current roadmap.
+
+- [[Phase 3 Linkage Follow-up]] — NCT06203210 January 2025 extract resolves actual enrollment timing; P01 population/dose overlap and conditional dosing interval retained without training labels.
+- [[research-log-2026-10-17-phase3-linkage]] — Three read-only trial extracts, 30 source checks, 26 relevant tests and program-equivalence rules as the next gate.
+
+- [[Program and Outcome Feasibility]] — First development pass: 24 cases, 32 candidate scopes, 18 reports and no certified incident outcomes; subsequent linkage/rules work is retained separately.
+- [[research-log-2026-10-17-program-feasibility]] — Source-inclusive replay, 21 relevant tests, retained recovery attempts and the T1 no-go decision.
+
+- [[research-log-2026-10-17-planning]] — Documentation-only planning update requested before further execution; original task/hypothesis meanings and scientific boundaries preserved.
+
+- [[Clinical Long Session Progress]] — Completed five-date/24-trial clinical review, complete-input ten-dossier release, 149-test verification and remaining scientific gates.
+- [[Full Cis Genetics Revision]] — Complete source-defined IL6R regional technical revision, 2,979 QC variants, source conflicts and independent LD checks; no causal inference.
+- [[Long Run Data Preflight]] — Manual AACT preparations, public-data gaps and checkpointed next-session work; no long-running task started.
 - [[project-goals]] — Current AsOf review objective, proposed scope and unresolved feasibility gates.
 - [[asof-feasibility-findings]] — Dated source/code/data findings and methodological corrections from the planning review.
 - [[research-log-2026-10-09]] — Session record, peer-survey scope, created artifacts and remaining verification.
@@ -12,5 +31,7 @@
 - [[research-log-2026-10-15]] — Completed AI-assisted ten-case/20-claim development review, source/version qualifications and remaining scientific gates.
 - [[research-log-2026-10-16]] — Context recipe 2.2, ten rebuilt/verified dossiers, original-row comparison and remaining scientific gates.
 - [[AACT Historical Restoration]] — Completed January 1, 2023 snapshot restoration, retained technical exceptions and subsequent feasibility work.
-- [[Clinical and Genetics Feasibility Pilot]] — 24-trial origin screen, qualified IL6R/RA regional QC and missing January 2025 follow-up.
+- [[Clinical and Genetics Feasibility Pilot]] — Original 24-trial screen and regional QC; its missing-follow-up state is superseded by later restoration and full-cis revision.
 - [[AACT January 2025 Follow-up]] — Second snapshot restored, 24 paired trial states verified, outcome/censoring adjudication still open.
+
+- [[research-log-2026-10-17]] — Completed long-session queue, retained source failures, packet-layout recovery and remaining scientific gates.

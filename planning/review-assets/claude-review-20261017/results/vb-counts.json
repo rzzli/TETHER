@@ -1,0 +1,18 @@
+{
+ "label_rows": 56707,
+ "label_unique_nct_ids": 56707,
+ "primary_endpoint_result": {
+  "": 20115,
+  "NEGATIVE": 9477,
+  "POSITIVE": 19623,
+  "UNKNOWN": 7492
+ },
+ "decisive_primary_endpoints": 29100,
+ "linkage_rows": 488361,
+ "linkage_unique_trials": 76925,
+ "linkage_unique_targets": 1520,
+ "linkage_unique_diseases": 2559,
+ "linkage_unique_target_disease_pairs": 72158,
+ "labels_sha256": "01f7f80686087051d49f3adb88b7f891b432c32b570739c8f4ebdfb2f3db533c",
+ "linkage_sha256": "50580ad5681c87aa9f7c3741f340a3a408fbd43ccba388546a172289fcda5897"
+}

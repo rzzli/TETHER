@@ -95,6 +95,19 @@ class MaintenanceTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError,'receipt'):
             acquisition_report(self.root,self.raw,[self.queue],self.catalog)
 
+    def test_complete_normalization_clears_only_missing_input_blocker(self):
+        report = {'schema_version':1,'kind':'normalization','created_at_utc':'2026-10-17T00:00:00Z',
+                  'build_report':{},'pilot_report':{},'source_review':{}}
+        write_json(self.report,report)
+        build = {'inspection':{'missing_inputs':[]},'cases':[{'packet_bytes':123}],
+                 'snapshot_id':'fixture-complete'}
+        with patch('asof.maintenance.checked_product_reports',return_value=(build,{},{})):
+            update_catalog(self.root,self.catalog,self.report,self.anchor)
+        row = next(r for r in read_json(self.catalog)['datasets'] if r['dataset_id']=='asof_normalized_packets')
+        self.assertEqual(row['blockers'],['Independent scientific validation not run'])
+        self.assertEqual(row['validation_status'],'not_run')
+        self.assertNotIn('resolve selected-subset missing inputs',row['verification']['next_acquisition_check'])
+
     def test_missing_demo_inputs_do_not_leave_output(self):
         output = self.root/'demo'
         result = subprocess.run([sys.executable,str(ROOT/'tools/framework/build_demo_v2.py'),
@@ -102,6 +115,45 @@ class MaintenanceTests(unittest.TestCase):
         self.assertNotEqual(result.returncode,0)
         self.assertIn('Missing preserved v1 inputs',result.stderr)
         self.assertFalse(output.exists())
+
+    def correction_report(self):
+        proof = self.public/'technical-evidence.json'
+        write_new_json(proof, {'fixture':'synthetic technical evidence, not scientific validation'})
+        row = next(r for r in self.original['datasets'] if r['dataset_id']=='aact_snapshots')
+        return {'schema_version':1,'kind':'status_correction','created_at_utc':'2026-10-17T00:00:00Z',
+            'scope':'Fixture metadata correction only',
+            'evidence':[{'path':'data/manifests/public/technical-evidence.json','sha256':sha256_file(proof)}],
+            'datasets':[{'dataset_id':'aact_snapshots','collection_status':row['collection_status'],
+                'verification':{'level':'sample_inspected','checked_at':'2026-10-17',
+                    'evidence':[{'result':'Fixture restoration metadata inspected'}],
+                    'next_acquisition_check':'Scientific qualification remains open'},
+                'blockers':['No independent scientific validation']} ]}
+
+    def test_status_correction_preserves_acquisition_policy_and_scientific_status(self):
+        report=self.correction_report();write_json(self.report,report)
+        update_catalog(self.root,self.catalog,self.report,self.anchor)
+        after=read_json(self.catalog)
+        for before,row in zip(self.original['datasets'],after['datasets']):
+            for key in before:
+                if row['dataset_id']!='aact_snapshots' or key not in {'collection_status','verification','blockers'}:
+                    self.assertEqual(before[key],row[key],(row['dataset_id'],key))
+        self.assertEqual(next(r for r in after['datasets'] if r['dataset_id']=='aact_snapshots')['validation_status'],'not_run')
+
+    def test_correction_rejects_tampering_and_scientific_or_collection_promotion(self):
+        report=self.correction_report()
+        for field,value in [('parse_status','parsed'),('validation_status','validated'),('roles',['agent_evidence'])]:
+            bad=copy.deepcopy(report);bad['datasets'][0][field]=value;write_json(self.report,bad)
+            with self.assertRaises(ContractError):update_catalog(self.root,self.catalog,self.report,self.anchor)
+            self.assertEqual(sha256_file(self.catalog),self.anchor)
+        # A correction cannot turn an uncollected product into a collected one.
+        bad=copy.deepcopy(report);bad['datasets'][0]['dataset_id']='chembl_molecules'
+        bad['datasets'][0]['collection_status']='collected';write_json(self.report,bad)
+        with self.assertRaises(ContractError):update_catalog(self.root,self.catalog,self.report,self.anchor)
+        write_json(self.report,report)
+        (self.public/'technical-evidence.json').write_text('changed',encoding='utf-8')
+        with self.assertRaisesRegex(ContractError,'evidence changed'):
+            update_catalog(self.root,self.catalog,self.report,self.anchor)
+        self.assertEqual(sha256_file(self.catalog),self.anchor)
 
     def test_required_probe_none_and_empty_cannot_succeed(self):
         for result in ({},{'legacy':{'passed':None}},{'legacy':{'passed':False}}):

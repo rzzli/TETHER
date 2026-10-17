@@ -3,10 +3,22 @@ name: data-acquisition-plan
 description: Implemented AsOf data inventory, historical compatibility and staged acquisition requirements
 metadata:
   type: project
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # AsOf data acquisition plan
+
+## October 17 completed continuation
+
+[[Clinical Long Session Progress]] supersedes the older collection counts below: five
+selected AACT archives restored; all 24 frozen trials extracted at five dates; a complete
+2,206-file Open Targets 25.09/HGNC selection with zero missing inputs; ten new verified
+dossiers and a fresh 20-row audit. The selected evidence acquisition unit is 2,194 files.
+The source-defined full-cis IL6R revision retains 2,979 QC variants. Historical archive
+checks remain scoped and evaluator-only. No independent clinical labels, historical
+agent admission, MR or scientific validation were established. The optional January
+2026 ZIP passed archive checks only and remains outside the endpoint. Source failures,
+the retained packet-size failure and its explicit bounded-packet recovery are documented.
 
 ## January 2025 follow-up restored and compared
 

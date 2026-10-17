@@ -20,7 +20,7 @@ from .contracts import (Artifact, Availability, Case, Category, EvidencePacket, 
 from .provenance import catalog_index, check_role
 from .journal import RunJournal
 from .serde import (ContractError, Frozen, canonical, decode, encode, fingerprint, read_json,
-                    parse_json, safe_child, sha256_file, write_json)
+                    parse_json, safe_child, sha256_file, write_json, MAX_NORMALIZED_JSON_BYTES)
 
 
 DATASETS = {"ot_target", "ot_disease", "ot_evidence", "hgnc_symbols"}
@@ -336,7 +336,31 @@ def _publication(row, cutoff):
     return published, year, unknown, None
 
 
-def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path):
+def _packet_groups(observations, layout):
+    """Preserve order and whole records; account for commas, envelope and newline."""
+    if layout == "single":
+        if len(canonical(EvidencePacket(2, observations))) + 1 > MAX_NORMALIZED_JSON_BYTES:
+            raise ContractError("Oversized evidence packet; no silent truncation is permitted")
+        return [observations]
+    envelope = len(canonical(EvidencePacket(2, ()))) + 1
+    groups, current, size = [], [], envelope
+    for observation in observations:
+        encoded_size = len(canonical(observation))
+        if envelope + encoded_size > MAX_NORMALIZED_JSON_BYTES:
+            raise ContractError("Oversized single observation; no splitting or truncation is permitted")
+        increment = encoded_size + bool(current)
+        if size + increment > MAX_NORMALIZED_JSON_BYTES:
+            groups.append(tuple(current))
+            current, size = [], envelope
+            increment = encoded_size
+        current.append(observation)
+        size += increment
+    if current or not groups:
+        groups.append(tuple(current))
+    return groups
+
+
+def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, packet_layout="single"):
     """Reserve first; every later stage leaves inspectable, non-retrying records."""
     journal = RunJournal(output, kind="build")
     started = time.monotonic()
@@ -344,8 +368,10 @@ def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path):
     state = {"stage": "reservation", "counters": Counter()}
     try:
         journal.append("build_request", manifest_path=str(manifest_path.resolve()),
-                       catalog_path=str(catalog_path.resolve()), origin_at_utc=cutoff)
-        return _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff)
+                       catalog_path=str(catalog_path.resolve()), origin_at_utc=cutoff, packet_layout=packet_layout)
+        if packet_layout not in ("single", "bounded"):
+            raise ContractError("Unknown evidence packet layout")
+        return _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout)
     except BaseException as error:
         failure = {"schema_version": 2, "status": "interrupted" if isinstance(error, KeyboardInterrupt) else "failed",
                    "stage": state["stage"], "error_class": type(error).__name__, "message": str(error),
@@ -364,7 +390,7 @@ def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path):
         journal.close()
 
 
-def _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff):
+def _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout):
     def stage(name):
         state["stage"] = name
         journal.append("build_stage", stage=name, elapsed_seconds=time.monotonic() - started)
@@ -532,7 +558,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
     progress("evidence_normalization", total_evidence_files=inspection["dataset_counts"].get("ot_evidence", 0))
     recipe = {"method": "asof.opentargets.normalize", "version": NORMALIZATION_VERSION,
               "projection": EVIDENCE_COLUMNS, "code_sha256": sha256_file(Path(__file__)),
-              "packet_encoding": "canonical_json"}
+              "packet_encoding": "canonical_json", "packet_layout": packet_layout,
+              "packet_limit_bytes": MAX_NORMALIZED_JSON_BYTES}
     bundle_id = "contemporary-" + fingerprint({"cutoff": cutoff, "manifest": inspection["manifest_sha256"],
                                               "recipe": recipe})[:16]
     cases_report = []
@@ -541,13 +568,21 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         case, observations = job["case"], tuple(job["observations"])
         case_dir = output / case.case_id
         case_dir.mkdir()
-        packet_path = case_dir / "evidence.json"
-        packet = EvidencePacket(2, observations)
-        if len(canonical(packet)) > 64 * 1024 * 1024:
-            raise ContractError("Oversized evidence packet; no silent truncation is permitted")
-        write_json(packet_path, packet, compact=True)
-        if packet_path.stat().st_size > 64 * 1024 * 1024:
-            raise ContractError("Evidence packet exceeds 64 MiB")
+        groups = _packet_groups(observations, packet_layout)
+        packets, artifacts = [], []
+        for number, group in enumerate(groups, 1):
+            suffix = "" if len(groups) == 1 else f"-{number:04d}"
+            packet_path = case_dir / f"evidence{suffix}.json"
+            write_json(packet_path, EvidencePacket(2, group), compact=True)
+            if packet_path.stat().st_size > MAX_NORMALIZED_JSON_BYTES:
+                raise ContractError("Evidence packet exceeds 64 MiB")
+            digest = sha256_file(packet_path)
+            packet_refs = tuple(sorted(set(job["mapping_refs"]) | {ref for obs in group for ref in obs.input_refs}))
+            artifacts.append(Artifact("packet-" + case.case_id + suffix, "asof_normalized_packets", bundle_id,
+                packet_path.name, digest, "agent_evidence", True, TemporalClass.CONTEMPORARY,
+                case.hypothesis.availability, "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/", packet_refs))
+            packets.append({"path": packet_path.name, "sha256": digest, "bytes": packet_path.stat().st_size,
+                            "observations": len(group)})
         refs = tuple(sorted(set(job["mapping_refs"]) | {ref for observation in observations for ref in observation.input_refs}))
         coverage = {"source_completeness": inspection["source_completeness"],
                     "expected_counts": manifest.expected_counts, "selected_counts": inspection["dataset_counts"],
@@ -564,9 +599,7 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                     "review_context_nonempty": {field: sum(observation.source_metrics.get(field) not in (None, (), "")
                         for observation in observations) for field in REVIEW_CONTEXT_COLUMNS}}
         snapshot = Snapshot(2, bundle_id + ":" + case.case_id, Profile.CONTEMPORARY, case.origin, False,
-            (Artifact("packet-" + case.case_id, "asof_normalized_packets", bundle_id, "evidence.json",
-                      sha256_file(packet_path), "agent_evidence", True, TemporalClass.CONTEMPORARY,
-                      case.hypothesis.availability, "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/", refs),),
+            tuple(artifacts),
             tuple(nodes[ref] for ref in refs), manifest.raw_root, coverage, case.origin_at)
         write_json(case_dir / "case.json", case)
         write_json(case_dir / "snapshot.json", snapshot)
@@ -575,8 +608,9 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
             "symbol": job["symbol"], "hgnc": hgnc[job["symbol"]],
             "target": targets[case.hypothesis.target_id], "disease": diseases[case.hypothesis.indication_id]})
         cases_report.append({"case_id": case.case_id, "hypothesis_key": case.hypothesis.key,
-                             "observations": len(observations), "packet_bytes": packet_path.stat().st_size,
-                             "packet_sha256": sha256_file(packet_path), "input_sources": len(refs)})
+                             "observations": len(observations), "packet_bytes": sum(p["bytes"] for p in packets),
+                             "packet_sha256": packets[0]["sha256"] if len(packets) == 1 else None,
+                             "packets": packets, "input_sources": len(refs)})
         journal.append("build_case_written", **cases_report[-1])
     # Inputs are independently rechecked after scanning so concurrent source changes fail closed.
     stage("source_recheck")

@@ -1,7 +1,7 @@
 ---
 title: AsOf Full Data Requirements and Acquisition Plan
 date: 2026-10-09
-updated: 2026-10-16
+updated: 2026-10-17
 tags:
   - asof
   - data-plan
@@ -21,6 +21,18 @@ October 16 continuation: [[Clinical and Genetics Feasibility Pilot]] records a 2
 
 
 January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.
+
+## October 17 completed continuation
+
+[[Clinical Long Session Progress]] supersedes the older collection counts below: five
+selected AACT archives restored; all 24 frozen trials extracted at five dates; a complete
+2,206-file Open Targets 25.09/HGNC selection with zero missing inputs; ten new verified
+dossiers and a fresh 20-row audit. The selected evidence acquisition unit is 2,194 files.
+The source-defined full-cis IL6R revision retains 2,979 QC variants. Historical archive
+checks remain scoped and evaluator-only. No independent clinical labels, historical
+agent admission, MR or scientific validation were established. The optional January
+2026 ZIP passed archive checks only and remains outside the endpoint. Source failures,
+the retained packet-size failure and its explicit bounded-packet recovery are documented.
 
 ## 1. Decisions implemented and research decisions remaining
 

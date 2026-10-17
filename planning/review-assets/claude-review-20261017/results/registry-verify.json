@@ -1,0 +1,339 @@
+{
+  "canonical_pilot_id": "literature-coverage-20261017T082208Z-pilot",
+  "entries": {
+    "literature-coverage-20261017T082208Z-pilot": {
+      "state": "canonical",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "runs/literature-coverage-20261017T082208Z/pilot-report.json",
+          "match": true,
+          "actual": "b788e21338390cd858d3dd9f530ef407aedb73f34edb4e6b0bdd7fa6c167cc7e"
+        },
+        {
+          "path": "runs/literature-coverage-20261017T082208Z/source-review.json",
+          "match": true,
+          "actual": "306da2a9474422ef6c006850e66ace272b88cf4b6378a6f87d78594cb289db69"
+        }
+      ]
+    },
+    "literature-coverage-20261017T082208Z-build": {
+      "state": "canonical",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "data/derived/literature-coverage-20261017T082208Z/build-report.json",
+          "match": true,
+          "actual": "755f3ec861e3283ea6e04bd802fdc39d1e810cdf70556ac30718f796915f4115"
+        },
+        {
+          "path": "data/derived/literature-coverage-20261017T082208Z/journal.jsonl",
+          "match": true,
+          "actual": "0ce9a89385a866d1c69c0760e5001076d3506ffd0bfe671eed218a0b3d9ed1c1"
+        }
+      ]
+    },
+    "literature-coverage-20261017T081106Z-build": {
+      "state": "failed",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "data/derived/literature-coverage-20261017T081106Z/build-failure.json",
+          "match": true,
+          "actual": "ab2c895d8b52ea83cccf0f439b7c3f34e738e381bc1e83b5426303b7706b5654"
+        },
+        {
+          "path": "data/derived/literature-coverage-20261017T081106Z/journal.jsonl",
+          "match": true,
+          "actual": "da1f8a8e8e9f04072f570bc191286b07ff62b5a05702da40f78e259520ce286c"
+        }
+      ]
+    },
+    "context-revision-pilot-20261016T055518Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "runs/context-revision-20261016T055518Z/pilot-report.json",
+          "match": true,
+          "actual": "036797164bec02afccf3d46158392a5913a526a5d558478a0537a2648630e82e"
+        },
+        {
+          "path": "runs/context-revision-20261016T055518Z/source-review.json",
+          "match": true,
+          "actual": "177cd54a4f14c85292bd620be58ba19020a7df16531a8f2661e395155386c696"
+        }
+      ]
+    },
+    "context-revision-build-20261016T055518Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "data/derived/context-revision-20261016T055518Z/build-report.json",
+          "match": true,
+          "actual": "b4889c36c6efa4e00c422412e53037871117aa129c5aef07420251fa56b86c3b"
+        },
+        {
+          "path": "data/derived/context-revision-20261016T055518Z/journal.jsonl",
+          "match": true,
+          "actual": "8d92370fb2ce4794dba67ea19dc7a93b96805d4abf8f1fe7aa7a09457465d93b"
+        }
+      ]
+    },
+    "context-revision-pilot-20261016T054655Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": []
+    },
+    "context-revision-build-20261016T054655Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": []
+    },
+    "v02-realdata-20261012T015124Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "runs/v02-realdata-20261012T015124Z/pilot-report.json",
+          "match": true,
+          "actual": "051b6fcd1f2facc7bf6059370b4ff60b9b7137b9fdb91153dc31aca482f3838d"
+        },
+        {
+          "path": "runs/v02-realdata-20261012T015124Z/source-review.json",
+          "match": true,
+          "actual": "568c022abcda049d45fbafd872e2d2fa63c81f65ea7215c50e49f28d6e876de8"
+        }
+      ]
+    },
+    "v02-contemporary-pilot-20261012T014305Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": [
+        {
+          "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json",
+          "match": true,
+          "actual": "979f12e19eda2f50f13dcf887b562fc4cd0c426b46ef989765cab6acb29aaead"
+        },
+        {
+          "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/journal.jsonl",
+          "match": true,
+          "actual": "39c111a94eb463f3b5fe8a7aaa4db0e01904d2b7fc8440bd725e5f3ff70be35d"
+        }
+      ]
+    },
+    "v02-realdata-20261012T014305Z": {
+      "state": "superseded",
+      "path_exists": true,
+      "report_checks": []
+    },
+    "v02-contemporary-pilot": {
+      "state": "incomplete",
+      "path_exists": true,
+      "report_checks": []
+    }
+  },
+  "verifications": [
+    {
+      "case": "cd276-efo_0003060-delivery_antigen-adc",
+      "exit": 0,
+      "seconds": 29.5,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 89,
+        "trace_events": 195,
+        "receipt_sha256": "9013699793bc3b39c19780af9b688d65ba6fadc706aff0e3c5d852477a8c0fd0",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "osmr-efo_0000729-inhibit-antibody",
+      "exit": 0,
+      "seconds": 0.9,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 19,
+        "trace_events": 28,
+        "receipt_sha256": "fe79ee4663ec541e012ec3d2fc06cc21da11f186f29336104f03483f8f022ca9",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "erbb2-efo_0000305-inhibit-antibody",
+      "exit": 0,
+      "seconds": 23.1,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 106,
+        "trace_events": 2352,
+        "receipt_sha256": "83a9072d62cb113b177b2b1846ac775852223c10bef6994f2991c16e522f3a87",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "erbb2-efo_0000305-delivery_antigen-adc",
+      "exit": 0,
+      "seconds": 20.4,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 106,
+        "trace_events": 2352,
+        "receipt_sha256": "1d2feb2cbcb36401b9ef896611424d19b2857e7fe3403f9e3eb56e32ade8c46b",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "pcsk9-efo_0004911-inhibit-antibody",
+      "exit": 0,
+      "seconds": 23.5,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 117,
+        "trace_events": 2240,
+        "receipt_sha256": "f8ae72e5432ae4e35167b96c3f55235f91e1544cf095bb9f8694057312e7012c",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "pcsk9-efo_0004911-reduce_expression-sirna",
+      "exit": 0,
+      "seconds": 19.2,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 117,
+        "trace_events": 2240,
+        "receipt_sha256": "c3769b3f1d497dabd46e849c60b2667f0fed12f7ca28ef84c48d909c0cebfd45",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "il6r-efo_0000685-inhibit-antibody",
+      "exit": 0,
+      "seconds": 2.9,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 23,
+        "trace_events": 31,
+        "receipt_sha256": "c3cc8177edb3e23ea25adafe064ba82b8d56d79d275c5ebec8d129d11ec14ac2",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "cftr-mondo_0009061-activate-small_molecule",
+      "exit": 0,
+      "seconds": 118.0,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 206,
+        "trace_events": 12565,
+        "receipt_sha256": "3957f8f65f327e9702618c0c22b242e9166a0ca93ca7d8c16b61e0d73446c6ab",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "glp1r-mondo_0005148-activate-peptide",
+      "exit": 0,
+      "seconds": 80.0,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 119,
+        "trace_events": 9629,
+        "receipt_sha256": "507b5292dced9a3cf919da27717815405cd3e4bc3956bd6e9f556a0ececfb8ec",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "case": "scn9a-efo_0005762-inhibit-small_molecule",
+      "exit": 0,
+      "seconds": 2.4,
+      "stderr": "",
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 29,
+        "trace_events": 34,
+        "receipt_sha256": "19ae5d5f1f2e3b471788748f555903edfa752147e4174a29423f65400fbf562b",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    }
+  ]
+}

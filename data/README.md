@@ -1,7 +1,7 @@
 ---
 title: AsOf Data Workspace
 date: 2026-10-09
-updated: 2026-10-16
+updated: 2026-10-17
 tags:
   - asof
   - data
@@ -27,6 +27,14 @@ evaluator-only; it must not enter agent-visible manifests. See [[Context Revisio
 October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; subsequent origin and regional technical pilots are documented below.
 
 ## Layout
+
+The completed October 17 continuation is documented in [[Clinical Long Session Progress]].
+Five selected AACT archives are restored; all three new servers are stopped. The new
+2,206-file contemporary manifest has no missing selected inputs, and ten dossiers passed
+source-inclusive verification. CFTR uses two bounded packets without losing records.
+Previous missing-input records and failed builds stay frozen. The full-window IL6R
+technical revision preserves the original pilot. These products do not establish
+independent clinical labels, causal effects or scientific validity.
 
 ```text
 data/

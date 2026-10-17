@@ -1,0 +1,83 @@
+{
+ "physical_rows_scanned": 29823171,
+ "evidence_files": 2194,
+ "matched_rows_total": 26985,
+ "distinct_ids_total": 26985,
+ "comparison": [
+  {
+   "case": "cd276-efo_0003060-delivery_antigen-adc",
+   "observations": 188,
+   "raw_rows": 188,
+   "raw_distinct_ids": 188,
+   "equal": true
+  },
+  {
+   "case": "osmr-efo_0000729-inhibit-antibody",
+   "observations": 15,
+   "raw_rows": 15,
+   "raw_distinct_ids": 15,
+   "equal": true
+  },
+  {
+   "case": "erbb2-efo_0000305-inhibit-antibody",
+   "observations": 2339,
+   "raw_rows": 2339,
+   "raw_distinct_ids": 2339,
+   "equal": true
+  },
+  {
+   "case": "erbb2-efo_0000305-delivery_antigen-adc",
+   "observations": 2339,
+   "raw_rows": 2339,
+   "raw_distinct_ids": 2339,
+   "equal": true
+  },
+  {
+   "case": "pcsk9-efo_0004911-inhibit-antibody",
+   "observations": 2230,
+   "raw_rows": 2230,
+   "raw_distinct_ids": 2230,
+   "equal": true
+  },
+  {
+   "case": "pcsk9-efo_0004911-reduce_expression-sirna",
+   "observations": 2230,
+   "raw_rows": 2230,
+   "raw_distinct_ids": 2230,
+   "equal": true
+  },
+  {
+   "case": "il6r-efo_0000685-inhibit-antibody",
+   "observations": 21,
+   "raw_rows": 21,
+   "raw_distinct_ids": 21,
+   "equal": true
+  },
+  {
+   "case": "cftr-mondo_0009061-activate-small_molecule",
+   "observations": 12549,
+   "raw_rows": 12549,
+   "raw_distinct_ids": 12549,
+   "equal": true
+  },
+  {
+   "case": "glp1r-mondo_0005148-activate-peptide",
+   "observations": 9616,
+   "raw_rows": 9616,
+   "raw_distinct_ids": 9616,
+   "equal": true
+  },
+  {
+   "case": "scn9a-efo_0005762-inhibit-small_molecule",
+   "observations": 27,
+   "raw_rows": 27,
+   "raw_distinct_ids": 27,
+   "equal": true
+  }
+ ],
+ "trace": {
+  "checked": 213,
+  "mismatches": [],
+  "fields_compared": 13845
+ }
+}

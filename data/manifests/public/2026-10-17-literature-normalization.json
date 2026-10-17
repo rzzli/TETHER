@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "normalization",
+  "created_at_utc": "2026-10-17T08:31:47.801900+00:00",
+  "build_report": {
+    "path": "data/derived/literature-coverage-20261017T082208Z/build-report.json",
+    "sha256": "755f3ec861e3283ea6e04bd802fdc39d1e810cdf70556ac30718f796915f4115"
+  },
+  "pilot_report": {
+    "path": "runs/literature-coverage-20261017T082208Z/pilot-report.json",
+    "sha256": "b788e21338390cd858d3dd9f530ef407aedb73f34edb4e6b0bdd7fa6c167cc7e"
+  },
+  "source_review": {
+    "path": "runs/literature-coverage-20261017T082208Z/source-review.json",
+    "sha256": "306da2a9474422ef6c006850e66ace272b88cf4b6378a6f87d78594cb289db69"
+  }
+}

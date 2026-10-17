@@ -130,6 +130,14 @@ explicitly supplies the weaker archived-fingerprint check.
 
 ## Validate the converted inputs
 
+October 17 ingestion extension: `build-snapshot --packet-layout bounded` can
+write multiple packets under the existing v2 artifact-list contract. This is
+opt-in and retains every complete observation; all packets remain within 64 MiB.
+No conversion of old fixtures or snapshots is needed. New consumers should read
+the listed artifact paths and hashes. In build reports, `packets[]` enumerates
+them, `packet_bytes` totals them and `packet_sha256` is null for multiple packets.
+The default single-packet mode and finite runtime/output budgets are unchanged.
+
 ```powershell
 uv sync --python 3.11
 uv run --no-sync asof run --case converted/case.json --snapshot converted/snapshot.json `

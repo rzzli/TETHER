@@ -3,10 +3,113 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Project goals
+
+## Current priority after the Claude review — October 17
+
+[[Updated Project Plan 2026-10-17]] is the reconciled forward roadmap. Preserve the
+uncommitted runnable state and evaluator evidence, then freeze a v0.4 protocol for
+registry-scale **development label sizing**. The 24 exposed cases are audit examples;
+further qualification of the same 15 cases is no longer the main feasibility gate.
+Zero labels under v0.3 does not establish that T1 is infeasible. Proposed registry
+ACTUAL-start progression and strict experimental dosing remain different estimands;
+no sealed endpoint or existing label is changed by the planning revision.
+
+The rules evaluator ran on only P01/P24 authored facts; all 24 cases were accounted
+for. The Claude assets report 173 passing full-suite tests with zero skips; the
+149-test long-session result is historical. This reconciliation did not rerun them.
+OT molecule/mechanism metadata are locally available for evaluator-side sizing;
+the later mapping is oracle information for the 2023 window and cannot enter
+historical predictors. EXPERIMENTAL-arm membership alone does not prove drug role.
+
+October 2025 plus 12 months is a candidate chronology only. A matching origin state,
+October 2026-or-later endpoint/reporting coverage and model/tool contamination controls
+remain required. January 2026 cannot close that horizon, and reconstructed origin
+status cannot silently become locked-test evidence. No new data request is needed
+for the initial 2023 sizing protocol. Paid calls, remote destination/publication and
+preregistration submission require their concrete user decisions when reached.
+
+This session changed plans and memory only. Catalog drift, commit/remote/backup/CI,
+v0.4 implementation, empirical power and scientific validation remain open. Keep one
+dated session entry and seal milestones. The entries below preserve prior checkpoints
+and are superseded where their next-action scheduling differs.
+
+## Dated checkpoint: advancement rules frozen — October 17
+
+[[Program Advancement Rules v0.3]] completes the rules step requested below.
+Primary advancement now explicitly requires experimental-regimen receipt; any-arm
+trial initiation is descriptive. Origin dose selection and documented nested
+populations can qualify with narrower coverage; shared events count once.
+All 24 cases accounted for, 36 relevant tests and source-inclusive replay passed.
+P01's scope link is admissible but event/risk qualifications remain unresolved;
+P24 remains unresolved. No labels or cohort members added.
+Next: qualify origin arm activity/stage and prior advancement for the 15
+non-excluded representatives, retaining P03/P21 conflicts, before expansion.
+
+## Linked Phase 3 timing resolved with qualifications — October 17
+
+[[Phase 3 Linkage Follow-up]] completes the NCT06203210 extraction requested below.
+Actual enrollment is May 21, 2024; conditional trial-dosing interval runs to the
+August 1 announcement. Phase 3 overlaps P01's second-line ES-SCLC/12 mg/kg scope,
+but whole-population equivalence and P24 origin stage remain unresolved. No labels added.
+The database is stopped. Next: freeze dose-selection/nested-population/shared-event
+rules before expansion, then resolve origin stage and follow-up. Do not repeat the extraction.
+
+## Program/outcome phase executed — October 17
+
+[[Program and Outcome Feasibility]] supersedes the pending WP1–WP4 scheduling state below.
+The first development pass is complete with explicit unresolved gates: all 24 cases
+accounted for, 32 candidate program scopes, 18 reports / 17 candidate events, no certified
+incident advancement or training labels. Source-inclusive replay and 21 relevant tests pass.
+Next: read NCT06203210 from the existing January 2025 restore to resolve the P01/P24
+advancement lead, then establish origin stage/mappings and follow-up before expansion.
+No new user download is immediately required. Canonical T6 runs and old sealed sessions remain unchanged.
+
+## Current forward plan — October 17
+
+[[Updated Project Plan 2026-10-17]] is the current roadmap, written at the user's
+request before starting further execution. The next milestone is WP1–WP4: amend
+the development protocol, define program/arm units and origin-qualified mappings,
+adjudicate event timing/follow-up, and retain an explicit feasibility decision.
+Preserve next-phase advancement as the candidate T1 endpoint; efficacy, safety and
+administrative events remain distinct. The 24 exposed representatives remain
+development data, and AI-assisted review is not independent scientific gold.
+Historical ingestion, genetics, model-backed T6 evaluation, comparators and scorer
+training have separate gates. This update starts none of those activities; the
+completed session, canonical dossiers and existing runtime/data artifacts are unchanged.
+
+## Long clinical session completed
+
+See [[Clinical Long Session Progress]] and the completed `data/derived/active-clinical-session.json`.
+Five AACT dates now support 24 frozen trial timelines. Three new restores passed full
+archive/hash/technical/cohort checks and are stopped. July 2023 is actually July 2.
+January 2026 passed archive-only checks and is excluded from the January 2025 endpoint.
+The 18 structured source reports and eight origin-scope reviews are AI-assisted,
+unblinded development evidence; clinical training remains no-go with event/program,
+outcome, censoring and power unresolved.
+
+All 65 missing contemporary inputs are now receipt/hash verified (16 already present,
+49 separately acquired). The 2,206-file build preserves all old observations and adds
+14,640 case-level literature records. Ten dossiers passed source-inclusive verification
+and a fresh 20-row audit. A retained single-packet failure motivated opt-in bounded
+packets under unchanged v2 contracts and a 64 MiB per-packet limit; CFTR has two packets.
+149 tests, all required probes and installed-wheel checks passed. Canonical selection
+is explicit in the run registry; old outputs are preserved. Full-cis IL6R technical QC
+has 2,979 variants, with unresolved provider/LD/overlap qualifications. Historical
+archives are scoped checks, not agent admission. No live model, causal analysis,
+scientific gold, trained scorer or numerical probability; $0 provider spending.
+
+Next: origin-only program/arm/indication definitions and explicit event/censoring
+adjudication, then eligible independent counts. No immediate additional user download
+is required. Existing download worker/state/receipts and stopped monitoring are unchanged.
+The dated entries below are preserved history, superseded by this completed checkpoint.
+
+## Long-session data preflight
+
+See [[Long Run Data Preflight]] for the next execution queue and manual preparations. January 2023 and January 2025 AACT are restored; recommended additional observations are January 2024, with July 2023 and July 2024 useful for narrower timing intervals. They are not prerequisites for public-source outcome/protocol work. The `jan2026zip` folder is empty and a 2026 endpoint is optional/separate. All 65 frozen missing T6 inputs are public Europe PMC partition files; 16 now exist on disk but are not newly receipt-verified, and 49 remain absent. Frozen artifacts are unchanged. No new account, paid source or live model is required for the proposed immediate work; no twelve-hour goal, downloader or monitor was started. Preflight is documentation-only and does not establish new scientific validation.
 
 ## January 2025 follow-up restored and compared
 

@@ -1,0 +1,18 @@
+{
+ "files_in_selection": 2205,
+ "sampled": 2205,
+ "ok": 2204,
+ "errors": [
+  [
+   "output/evidence/sourceId=gene2phenotype/part-00132-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+   null,
+   "ERROR URLError"
+  ]
+ ],
+ "error_count": 1,
+ "earliest": "2025-08-19T08:52:06+00:00",
+ "latest": "2025-08-19T21:02:22+00:00",
+ "distinct_days": {
+  "2025-08-19": 2204
+ }
+}

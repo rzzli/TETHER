@@ -13,7 +13,7 @@ from asof.chrono import load_snapshot
 from asof.contracts import Case
 from asof.ingest import PILOT, InputFile, InputManifest, build_snapshot, inspect_sources
 from asof.journal import inspect_run, read_chain
-from asof.serde import ContractError, decode, read_json, sha256_file, write_json
+from asof.serde import ContractError, canonical, decode, read_json, sha256_file, write_json
 from asof.workflow import run_workflow
 
 GENES = {"CD276": "ENSG00000103855", "OSMR": "ENSG00000145623", "ERBB2": "ENSG00000141736",
@@ -114,6 +114,58 @@ class IngestTests(unittest.TestCase):
         self.assertIsNone(observation["quantitative"]["effect"])
         self.assertEqual(observation["source_metrics"]["score"], 0.25)
         self.assertEqual(observation["features"], {})
+
+    def test_opt_in_bounded_packets_preserve_all_records_and_verify(self):
+        original, baseline = self.build()
+        before = {r["case_id"]: read_json(original / r["case_id"] / "evidence.json")["observations"]
+                  for r in baseline["cases"]}
+        limit = max(len(canonical({"schema_version": 2, "observations": [r]}))
+                    for rows in before.values() for r in rows) + 128
+        output = self.root / "bounded"
+        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", limit):
+            report = build_snapshot(self.manifest, self.catalog, output, packet_layout="bounded")
+        self.assertEqual(report["normalization_recipe"]["packet_layout"], "bounded")
+        multiple = []
+        for item in report["cases"]:
+            directory = output / item["case_id"]
+            snapshot = read_json(directory / "snapshot.json")
+            rows = []
+            for packet, artifact in zip(item["packets"], snapshot["artifacts"]):
+                path = directory / packet["path"]
+                self.assertEqual(packet["sha256"], sha256_file(path))
+                self.assertEqual(artifact["sha256"], packet["sha256"])
+                self.assertLessEqual(path.stat().st_size, limit)
+                rows.extend(read_json(path)["observations"])
+            self.assertEqual(rows, before[item["case_id"]])
+            self.assertEqual(sum(p["bytes"] for p in item["packets"]), item["packet_bytes"])
+            if len(item["packets"]) > 1:
+                multiple.append(directory)
+                self.assertIsNone(item["packet_sha256"])
+        self.assertTrue(multiple)
+        directory = multiple[0]
+        case = decode(Case, read_json(directory / "case.json"))
+        store = load_snapshot(directory / "snapshot.json", case, self.catalog)
+        result = run_workflow(case, store, ExtractiveBackend())
+        run = self.root / "bounded-run"
+        anchor = write_run(run, result, store, None)
+        self.assertEqual(verify_run(run, anchor)["semantic_consistency"], "verified")
+        second = read_json(directory / "snapshot.json")["artifacts"][1]
+        (directory / second["path"]).write_text("{}", encoding="utf-8")
+        with self.assertRaises(ContractError):
+            verify_run(run, anchor)
+
+    def test_oversized_single_record_still_fails_with_bounded_layout(self):
+        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
+            with self.assertRaisesRegex(ContractError, "single observation"):
+                build_snapshot(self.manifest, self.catalog, self.root / "too-large", packet_layout="bounded")
+        failure = read_json(self.root / "too-large" / "build-failure.json")
+        self.assertEqual(failure["stage"], "packet_finalization")
+
+    def test_single_packet_default_does_not_implicitly_shard(self):
+        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
+            with self.assertRaisesRegex(ContractError, "Oversized evidence packet"):
+                build_snapshot(self.manifest, self.catalog, self.root / "single-large")
+        self.assertEqual(read_json(self.root / "single-large" / "build-failure.json")["status"], "failed")
 
     def test_future_unknown_datatype_and_known_drug_records_are_excluded(self):
         rows = self.rows + [dict(self.rows[0], id="future", publicationYear=2099),

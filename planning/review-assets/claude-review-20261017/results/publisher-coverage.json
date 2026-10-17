@@ -1,0 +1,26 @@
+{
+ "evidence": {
+  "publisher_files_excluding_chembl": 2195,
+  "present_locally": 2194,
+  "absent": [
+   "output/evidence/_SUCCESS"
+  ],
+  "local_not_in_publisher_list": []
+ },
+ "target": {
+  "publisher_files_excluding_chembl": 11,
+  "present_locally": 10,
+  "absent": [
+   "output/target/_SUCCESS"
+  ],
+  "local_not_in_publisher_list": []
+ },
+ "disease": {
+  "publisher_files_excluding_chembl": 1,
+  "present_locally": 1,
+  "absent": [],
+  "local_not_in_publisher_list": []
+ },
+ "publisher_chembl_evidence_files_excluded_by_design": 100,
+ "evidence_sources": 24
+}

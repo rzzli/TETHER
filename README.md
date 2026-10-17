@@ -24,6 +24,14 @@ therapeutic relevance and display unresolved hypothesis qualifications. See the
 [context revision report](planning/Context Revision Completion.md) for the rebuild,
 comparison and remaining scientific limitations.
 
+The completed [long-session report](planning/Clinical Long Session Progress.md) covers
+five restored AACT dates, 24 trial timelines and the full-window genetics technical
+revision. A separate complete-input T6 release now has 2,206 files, zero missing selected
+inputs and ten source-verified dossiers; the registry identifies it explicitly. Clinical
+feasibility evidence remains evaluator-only, with no validated outcome labels. Larger
+collections can opt into `build-snapshot --packet-layout bounded`; every packet retains
+the 64 MiB limit, and every observation is preserved.
+
 ## Run the offline demonstration
 
 From `D:\Projects\drug_target_agents` in PowerShell:
