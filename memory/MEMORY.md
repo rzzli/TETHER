@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[Updated Project Plan 2026-10-17]] — Current roadmap reconciled with the Oct 17 Claude review: preserve work, freeze registry-observable development sizing, measure at scale, then decide chronology and bounded T6 evaluation. The 15-case queue is an audit subtask.
+- [[Updated Project Plan 2026-10-17]] — Local WP0 complete: committed checkpoint, tested E: recovery copy and catalog corrections; v0.4 sizing protocol frozen. Next is read-only registry-scale enumeration/mapping; remote/off-machine backup/hosted CI remain open.
 
 - [[Claude Review and Plan_claude10172026]] — Independent re-verification report and proposed protect–measure–decide plan; reconciled in the current roadmap with endpoint, chronology, audit-design and authorization qualifications.
 - [[research-log-2026-10-17-claude-review]] — Review session record: what was re-run, what could not be verified, and the first action (commit, remote, backup).

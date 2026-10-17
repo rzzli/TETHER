@@ -287,6 +287,15 @@ fidelity; biological adjudication remains separate.
 
 ## Evaluator boundary and later milestones
 
+Operational metadata corrections use the existing `asof.maintenance update-catalog`
+entry point with a `status_correction` public proposal. It checks referenced evidence
+hashes, the expected prior catalog hash and the exclusive writer lock. The proposal
+can update only collection status, verification and blocker descriptions; it cannot
+promote collection to complete, parsing/scientific validation, access/roles or temporal
+policy. Dated acquisition snapshots remain intact. Existing catalog formatting is
+preserved by its canonical writer. The October 17 correction is separately recorded
+from the frozen evaluator-only v0.4 sizing protocol; no clinical labels are added.
+
 `evaluate` imports labels only in its separate command. Labels require matching case,
 origin, endpoint/horizon, resolved/censored/unresolved state, event/follow-up/availability
 dates, cluster and label freeze. Censored or unresolved cases are not negatives.

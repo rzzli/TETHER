@@ -1,7 +1,7 @@
 ---
 title: Updated Project Plan — October 17, 2026
 date: 2026-10-17
-status: revised-after-claude-review-planning-only
+status: local-wp0-complete-v04-frozen-enumeration-pending
 tags: [asof, roadmap, clinical-evaluation, feasibility]
 ---
 
@@ -9,9 +9,18 @@ tags: [asof, roadmap, clinical-evaluation, feasibility]
 
 ## Decision
 
+Execution update: local WP0 is complete. Checkpoint `f36f548` captures the runnable
+state; an E: recovery copy passed rehash/restore tests; three catalog descriptions
+are corrected; full local validation passed 175 tests without skips. The development
+sizing protocol is frozen at `planning/protocols/registry-sizing-v0.4.json` with
+SHA-256 `5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd`.
+See `planning/review-assets/wp0-20261017/README.md` and the sanitized WP0 completion
+manifest. Remote/off-machine backup/hosted CI remain open. **Next is the registry
+origin/follow-up extraction; enumeration and power simulation have not run.**
+
 **The next scientific milestone is registry-scale label sizing, preceded by preservation of the working tree and evaluator evidence.** Further qualification of the same 15 non-excluded development representatives is an audit subtask, not the prerequisite for measuring whether T1 is feasible.
 
-This revision reconciles [[Claude Review and Plan_claude10172026]] with the code, retained review assets and [[project-goals]]. It supersedes this file's earlier per-case-first sequence. The Claude review, original proposals, dated completion notes and sealed v0.3 artifacts remain historical evidence. This turn updates planning and memory; it does not enact a new endpoint, start enumeration, commit/push files, restart databases or authorize paid calls.
+This revision reconciles [[Claude Review and Plan_claude10172026]] with the code, retained review assets and [[project-goals]]. It supersedes this file's earlier per-case-first sequence. The Claude review, original proposals, dated completion notes and sealed v0.3 artifacts remain historical evidence. The planning reconciliation was followed by the local preservation and v0.4 protocol freeze recorded above; no benchmark labels, paid calls or external publication are authorized by that freeze.
 
 The working research objective remains H1–H6 from [[Beyond the Virtual Biotech Tooling Gaps and Project Plan]]. Technical reproducibility is established for the selected offline pipeline. Clinical discrimination, therapeutic interpretation and comparative dossier quality remain untested.
 
@@ -43,7 +52,7 @@ Exit: a recoverable local code/evidence checkpoint, consistent metadata, and an 
 
 ### WP1 — Measure label feasibility at registry scale
 
-**Freeze a v0.4 development-sizing protocol before new enumeration.** The v0.3 protocol and results remain unchanged. Proposed endpoint hierarchy:
+**The v0.4 development-sizing protocol is now frozen before enumeration.** The v0.3 protocol and results remain unchanged. Development-sizing endpoint hierarchy:
 
 | Tier | Meaning | Use |
 | --- | --- | --- |
@@ -100,4 +109,4 @@ Use one dated session notebook entry and milestone-level sealing. Record executa
 
 The user can authorize a capped model run, remote publication, off-machine destination or preregistration submission when those concrete choices are ready. Those decisions do not block drafting the sizing protocol, auditing local schemas or preparing local preservation. Independent human availability affects adjudication and publication claims, not exploratory counts. Confirm exact account-mediated AACT versions only after the chronology memo identifies what is missing; do not request another broad download list now.
 
-**Next execution unit: WP0 local preservation/drift correction, followed by a frozen v0.4 development-sizing protocol and registry-scale count.** Do not resume the 15-case qualification queue as the main feasibility gate. Record the remaining mapping/arm uncertainties within the sizing audit. No new clinical probabilities, historical backfill, model calls, database restart or data acquisition was performed by this planning reconciliation.
+**Next execution unit: read-only registry-scale origin/follow-up extraction and role/alias mapping under frozen v0.4.** Local preservation and drift correction are complete; remote/independent backup remain separate open dependencies. Do not resume the 15-case qualification queue as the main feasibility gate. Record remaining mapping/arm uncertainties within the sizing audit. Clinical probabilities, scorer training and new benchmark claims remain gated.

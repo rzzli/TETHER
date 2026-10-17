@@ -85,3 +85,36 @@ This was planning/memory correction only: no code/catalog mutation, new cohort,
 endpoint implementation, commit/push, backup transmission, database restart, model
 call or paid activity. Independent human adjudication and publication claims remain
 separate gates. Concrete remote destinations/budgets are needed only when reached.
+
+## WP0 local preservation and v0.4 freeze executed
+
+Committed the recoverable October 17 code/evidence-anchor state as
+`f36f548d2d1459d39a14346305f83c4d045d2e39`. Added a constrained status-correction
+report kind to the existing catalog writer, with two regressions covering policy/
+science preservation and rejection of promotion or tampered evidence. Corrected
+AACT restoration prose and the idle/incomplete ChEMBL/colocalisation observations.
+Transport queues/receipts, workers, scientific-validation flags and dated acquisition
+snapshots were unchanged. CRLF hash-bound bytes were retained using Git whitespace
+attributes instead of reserializing old receipts or archived evaluator code.
+
+Full validation passed: 175 tests, zero skips/failures/errors, required probes,
+PowerShell syntax and installed-wheel demo. The frozen evaluator-only protocol is
+`planning/protocols/registry-sizing-v0.4.json`, SHA-256
+`5757670106359cbd007cc1dd9ed0b0acad44086852e81f4b2dd6494d79ac51cd`.
+It fixes the ACTUAL-start sizing estimand, origin role/stage rules, uncertainty,
+alias/regimen handling, phase edges, ascertainment cutoff, clustering, audit sampling
+and power scenarios before registry enumeration. No new scientific labels/counts.
+
+E: local recovery copy:
+`E:/projects_data/drug_target_agents_data/backups/wp0-20261017-f36f548/`.
+All 1,811 files / 719,427,970 source bytes were archived and rehashed. The 21-file
+sealed milestone passed a real restore; the Git bundle cloned at the same checkpoint.
+The archive is 72,528,636 bytes. Off-machine backup, remote/push and hosted CI remain
+open. Bulk raw archives, database pages/credentials and large external scientific
+payloads are outside this local copy; do not claim complete disaster recovery.
+
+See `planning/review-assets/wp0-20261017/README.md` and
+`data/manifests/public/2026-10-17-wp0-local-checkpoint.json`.
+Next: read-only registry origin/follow-up extraction and conservative drug-role/alias
+mapping under v0.4. No database restart, data download, model call, paid activity or
+external transmission occurred in this step. Do not repeat the completed freeze.

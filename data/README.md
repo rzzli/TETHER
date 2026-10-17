@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October 17 WP0 correction: the catalog now records the five AACT technical restores
+in its verification/blocker fields. ChEMBL and colocalisation are incomplete/idle at
+the retained process/filesystem observation. Dated acquisition snapshots remain
+unchanged; no partial file is promoted or worker restarted. See
+`data/manifests/public/2026-10-17-catalog-status-correction.json` and
+`planning/review-assets/wp0-20261017/README.md`. The evaluator-only registry sizing
+protocol is frozen at `planning/protocols/registry-sizing-v0.4.json`; counts are pending.
+
 This folder contains the complete data requirements and acquisition inventory for AsOf. The documentation scaffold and authorized public transport are implemented. Originals live under `E:\projects_data\drug_target_agents_data`. [[docs/FRAMEWORK|The v0.2 framework]] now includes a pinned local Open Targets/HGNC adapter, source lineage, bounded offline extraction and semantic verification. MR calculations and a trained/validated clinical scoring pipeline remain later work. See [[Project Audit and v0.2 Completion]] for the current completion evidence and full requirements status.
 
 Read [[data/STORAGE_AND_DOWNLOAD_REPORT|the capacity and download report]] first for the storage verdict, measured source sizes, current scope and monitoring/resume commands. The collection uses E: for originals and D: mainly for derived data and scratch; the placeholder `raw/` folders shown below are not where the active bulk worker writes.

@@ -8,6 +8,24 @@ updated: 2026-10-17
 
 # Project goals
 
+## Local preservation complete; registry enumeration next — October 17
+
+Local WP0 is complete: checkpoint `f36f548`, 175 full-validation tests with no skips,
+catalog status correction for three products and a verified E: recovery copy.
+The local archive covers 1,811 files / 719,427,970 source bytes; all entries were
+rehashed, a sealed milestone restored and the Git bundle cloned at the same commit.
+No remote/off-machine destination or hosted CI result exists; raw bulk/database
+pages are excluded. See `planning/review-assets/wp0-20261017/README.md` and
+`data/manifests/public/2026-10-17-wp0-local-checkpoint.json`.
+
+The evaluator-only v0.4 protocol is frozen in
+`planning/protocols/registry-sizing-v0.4.json` before enumeration. It defines
+ACTUAL-start progression, origin eligibility, conservative drug-role/alias handling,
+uncertainty accounting, event deduplication and the audit/power plan. No counts,
+labels, power simulation, database restart, model call or spending were introduced.
+Next: read-only origin/follow-up extraction and program/role mapping at registry scale.
+The historical 24 cases remain audit material; do not repeat protocol-freeze steps.
+
 ## Current priority after the Claude review — October 17
 
 [[Updated Project Plan 2026-10-17]] is the reconciled forward roadmap. Preserve the
