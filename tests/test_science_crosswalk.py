@@ -81,7 +81,7 @@ class ScienceCrosswalkTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory); path = root / "receipt.json"; path.write_bytes(b"fixture")
             digest = sha256_file(path)
-            self.assertEqual(pinned(root, "receipt.json", digest), path)
+            self.assertEqual(pinned(root, "receipt.json", digest), path.resolve())
             path.write_bytes(b"changed")
             with self.assertRaises(ContractError): pinned(root, "receipt.json", digest)
             with self.assertRaises(ContractError): pinned(root, "../outside", digest)

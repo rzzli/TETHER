@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "original_commit": "823a4bb47991462203050d24d08605e87a7b71e7",
+  "original_run_url": "https://github.com/rzzli/drug_target_agents/actions/runs/39149953111",
+  "linux_core_full": "passed",
+  "windows_core_full": "failed one test-only path spelling assertion",
+  "cause": "Windows temporary directory short 8.3 alias and long path refer to same resolved file",
+  "correction": "Compare returned canonical pinned path with path.resolve(); runtime path containment and hashing unchanged",
+  "targeted_crosswalk_tests": 8,
+  "targeted_result": "passed",
+  "corrected_test_sha256": "435fd5ad9e01a1974322e525f05e03a9612e562fd3a6bef30a20f4c2227d289e",
+  "biological_source_and_review_artifacts": "unchanged",
+  "original_freeze": "preserved; corrected test is a later revision, not silently rewritten historical proof",
+  "hosted_revalidation": "pending"
+}
