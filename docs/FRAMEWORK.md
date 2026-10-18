@@ -1,7 +1,7 @@
 ---
 title: AsOf Framework Implementation
 date: 2026-10-11
-updated: 2026-10-17
+updated: 2026-10-18
 status: v02-technical-pilot-complete
 tags:
   - asof
@@ -287,6 +287,22 @@ or trusted timestamps. Code drift is reported separately. V1 retains seven-outpu
 verification with `semantic_consistency: unavailable_legacy_v1`.
 
 ## Pinned contemporary adapter and pilot
+
+October 18 adds optional `build-snapshot --cases PATH --cases-sha256 SHA256`.
+The schema-version-1 authored pack contains `cases[]` with approved `symbol`,
+`disease_id`, `intended_action`, `modality` and optional `tissue`, `target_id` and
+`hgnc_id`. Explicit identifiers must match the pinned source records; unresolved
+cases are blocked without replacements. Duplicate scopes and changed input bytes
+fail. The builder archives the exact pack as `case-pack.json` and binds its hash and
+scope fingerprint in the journal, recipe and report. Omitting `--cases` preserves
+the original ten-case default. The external hash is optional in the general CLI;
+a frozen scientific pilot supplies it explicitly.
+
+The new ten-case source-reference pilot is distinct from the canonical earlier
+dossiers. Original-row audits and AI source adjudication remain evaluator-only
+under `data/benchmark/gold_evidence/science-prerequisites-20261018/`; they must not
+enter agent-visible manifests. External contemporary literature can qualify a
+source interpretation but cannot silently become historical predictor evidence.
 
 `inspect-source` validates an explicit manifest against receipt identity, bytes, schema,
 roles and paths. `build-snapshot` repeats inspection and creates a new snapshot for the

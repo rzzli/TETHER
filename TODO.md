@@ -1,5 +1,27 @@
 # Project execution checklist
 
+## Active seven-item scientific-prerequisite execution — October 18
+
+The user authorized executing the seven-item science plan in order, using delegated
+agent expertise instead of waiting for human domain input. Agent review provenance
+and validation limits must stay explicit. File/access/permission gaps are escalated
+to the user. Previous task completion scopes and historical results below remain.
+
+- [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
+- [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
+- [ ] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
+- [ ] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
+- [ ] **Science 5 — Qualify genetics as a conditional scientific branch.**
+- [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
+- [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
+
+Current item: Science 3. Science 1 passed 262 full tests; Science 2 passed 326 full
+tests, 50 original-row/reference checks and 30 literature-question adjudications.
+Core validation passed with 52 expected ingestion skips. See planning/Scientific
+Prerequisites Execution 2026-10-18.md. Do not mark a conditional defer, AI-assisted reference or
+technical receipt as independently validated clinical science. Do not open later
+endpoint labels before origin selection is sealed.
+
 Run tasks in order. Mark complete only after the task's validation passes. Stop and
 record a blocker if a task cannot be completed after reasonable attempts. Existing
 development artifacts are evidence, not independent scientific validation.

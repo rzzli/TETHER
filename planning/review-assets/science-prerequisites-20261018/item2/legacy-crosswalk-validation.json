@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "test_modules": [
+    "tests.test_science_crosswalk",
+    "tests.test_science_qualification"
+  ],
+  "tests_passed": 24,
+  "report_sha256": "da58cfd7ef856877f5ca22eea6cdb98e07e02cfb2d7dc431020b832a2eb3ff20",
+  "explicit_pins_rehashed_again": 147,
+  "unique_claims": 20,
+  "source_sha256": "fe54a6ecc60d61fd3836582609fca88705db2b4b24022a35e43ae3b618393f99",
+  "ratings_copied": false,
+  "scientific_validation": "not_performed"
+}

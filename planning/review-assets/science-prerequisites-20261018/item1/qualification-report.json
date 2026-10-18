@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "item": 1,
+  "completed_at_utc": "2026-10-18T16:57:16.132713+00:00",
+  "protocol_sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7",
+  "full_tests": {
+    "run": 262,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "new_contract_tests": 16,
+  "questions_and_distinct_endpoints_frozen": true,
+  "agent_expertise_authorized": true,
+  "clinical_activation": false,
+  "source_based_agent_reference_allowed": true,
+  "external_scientific_independence_inferred": false,
+  "validation_evidence": [
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\final-validation.json",
+      "sha256": "674b58469ab12fcc0670b7e02c35648c37784ff1c896038e5c8385dbbcd0820f"
+    }
+  ],
+  "limitations": [
+    "Contract checks are not empirical clinical or biological validation",
+    "Detailed source/reference fields are populated in downstream stages",
+    "Archived evaluation protocols and source artifacts unchanged"
+  ]
+}

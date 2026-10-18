@@ -73,3 +73,56 @@ The adapted offline Virtual Biotech arm and end-to-end ablation engineering can
 proceed without qualified outcome labels. Scientific metrics remain gated. Earlier
 Task 3 and Task 5 checkboxes mean local protocol completion and a conditional no-go
 assessment, respectively, not clinical activation or trained scoring.
+
+
+## Scientific-prerequisite planning request
+
+Reviewed current protocols, power/causal-genetics no-go records and existing AI
+review. Proposed separate T6 quality and clinical qualification tracks, with genetics
+conditional. Important design corrections: January 2026 endpoint data need an explicit
+reporting-delay/ascertainment rule; mature calibration labels must predate January
+2025 test origin; progression is not H1 clinical success; same-model agreement and
+post-selection masks are not scientific validation. Use existing review artifacts
+rather than recreating them, with exact source/version applicability checks.
+
+Consulted primary reporting/methodology sources: TRIPOD+AI (BMJ 2024;e078378),
+external-validation sample-size guidance (BMJ 2024;e074821), and STROBE-MR (BMJ
+2021;n2233). These inform adapted reporting/assumption checklists, not automatic
+validation or universal thresholds. AACT snapshots still redirect to sign-in;
+future dated-archive availability is not assumed. PMC/full-text access was incomplete
+in this check. No implementation or scientific gate was completed in this planning
+turn; see [[project-goals]] for the proposed roadmap.
+
+## Authorized seven-item science execution
+
+The user subsequently authorized the seven science prerequisites in order and
+agent expertise in place of waiting for human domain input. File/access/permission
+gaps remain user-handled; separate AI contexts do not establish external truth.
+Item 1 is frozen and validated: three distinct endpoint contracts, source/reference
+qualification and per-origin chronology checks; 262 full-suite tests passed.
+Item 2 is active: legacy twenty-claim crosswalk retained; all matching statements
+need reassessment because current normalized context differs. Ten new target/pair
+hypotheses were identity-frozen before biological review. Two fresh-context source
+panels are blind to arm outputs and each other. The anchored source build and
+original-row audit were underway at this progress entry. Later items had not started.
+
+Item 2 subsequently passed: ten cases/10,512 observations, fifty original-row
+audits, two separately sealed blind reviews and third-agent adjudication of all
+50 rows and 30 literature questions. All 326 full tests passed; core validation
+passed with 52 expected skips. Final review fixed tissue overrides, reused
+adjudicator contexts and review parse/hash binding races.
+
+New primary context qualifies older mechanistic arguments: 2026 AL002 randomized
+evidence challenges TREM2-activation efficacy inference; LUMA topline limits broad
+LRRK2 inhibition claims; SOD1's negative randomized primary endpoint remains
+distinct from later follow-up; KRAS pancreatic evidence includes broader RAS
+intervention with genotype/drug-selectivity qualifications. These targeted AI
+adjudications are not exhaustive or externally validated. Twenty-six primary
+abstracts and all access limits are retained. Original-row review identifies HS
+background mentions, CAR-NK/CAR-T differences and VUS/benign variants that simple
+target/disease filtering cannot interpret therapeutically.
+
+See planning/Scientific Prerequisites Execution 2026-10-18.md and
+data/benchmark/gold_evidence/science-prerequisites-20261018/reference-panel/adjudication/.
+Item 3 is next; origin selection precedes endpoint joins. Model arms remain Item 7,
+clinical probabilities null and runtime provider spending zero.

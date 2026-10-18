@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "legacy_t6_review_crosswalk",
+  "role": "evaluation_only",
+  "created_at_utc": "2026-10-18T17:00:55.039414+00:00",
+  "canonical_pilot_id": "literature-coverage-20261017T082208Z-pilot",
+  "legacy_run_id": "v02-realdata-20261012T015124Z",
+  "legacy_bundle_sha256": "3df5e07b88c31f73e5e2cbdfc80abcd457c254989427f72d7b72cb758f3f907b",
+  "registry_sha256": "dab89cd5dbcfa410d0453b628414cb642547374cdb2cb9c9c7cafed792a67561",
+  "tool_sha256": "fe54a6ecc60d61fd3836582609fca88705db2b4b24022a35e43ae3b618393f99",
+  "cases": 10,
+  "claims": 20,
+  "counts": {
+    "same_statement_changed_context": 20
+  },
+  "limitations": [
+    "Current receipts, all receipt outputs, packet bytes, old original forms and legacy review bundle were rehashed.",
+    "Raw biological files and receipt ancestor closure were NOT freshly rehashed; source-file identities inherit earlier source-inclusive verification.",
+    "Projected row hashes can change when the normalization projection expands; raw-file hash plus physical row locator establishes inherited row identity.",
+    "This crosswalk performs no scientific re-review and copies no legacy rating or answer.",
+    "All ten cases are exposed development cases; exact applicability is not independent gold."
+  ],
+  "scientific_validation": "not_performed",
+  "copied_ratings": false,
+  "independent_gold": false,
+  "verified_pin_count": 147,
+  "changed_fields_counts": {
+    "method": 20,
+    "source_metrics": 20
+  },
+  "report_path": "data/benchmark/gold_evidence/science-prerequisites-20261018/legacy-crosswalk/revalidated",
+  "report_sha256": "da58cfd7ef856877f5ca22eea6cdb98e07e02cfb2d7dc431020b832a2eb3ff20"
+}

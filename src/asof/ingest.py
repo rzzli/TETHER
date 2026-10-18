@@ -5,6 +5,7 @@ import csv
 import hashlib
 import math
 import os
+import re
 import tempfile
 import time
 from collections import Counter
@@ -58,6 +59,81 @@ PILOT = (
     ("GLP1R", "MONDO_0005148", "activate", "peptide"),
     ("SCN9A", "EFO_0005762", "inhibit", "small_molecule"),
 )
+
+
+@dataclass(frozen=True)
+class CaseDefinition(Frozen):
+    symbol: str
+    disease_id: str
+    intended_action: str
+    modality: str
+    tissue: str | None
+    case_id: str
+    target_id: str | None = None
+    hgnc_id: str | None = None
+
+
+def _case_definitions(document):
+    """Validate authored contemporary hypothesis scopes without biological inference."""
+    if (not isinstance(document, dict) or type(document.get("schema_version")) is not int or
+            document["schema_version"] != 1 or not isinstance(document.get("cases"), list) or
+            not document["cases"]):
+        raise ContractError("Case pack requires schema_version 1 and a nonempty cases array")
+    if document.get("task", "T6") != "T6" or document.get("profile", "contemporary") != "contemporary":
+        raise ContractError("Case packs support contemporary T6 hypotheses only")
+    definitions, scopes, identifiers = [], set(), set()
+    required = ("symbol", "disease_id", "intended_action", "modality", "tissue")
+    for row in document["cases"]:
+        if not isinstance(row, dict) or any(key not in row for key in required):
+            raise ContractError("Every case requires symbol, disease_id, intended_action, modality and explicit tissue")
+        if (row.get("task", "T6") != "T6" or row.get("profile", "contemporary") != "contemporary" or
+                row.get("program") is not None or row.get("endpoint") is not None):
+            raise ContractError("Case packs cannot introduce clinical programs, endpoints or historical profiles")
+        for key in required[:-1]:
+            value = row[key]
+            if not isinstance(value, str) or not value or value != value.strip():
+                raise ContractError("Case pack scope strings must be explicit and nonempty")
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", row["symbol"]):
+            raise ContractError("Case pack requires an explicit HGNC symbol")
+        if not re.fullmatch(r"[A-Z][A-Z0-9]*_[0-9]+", row["disease_id"]):
+            raise ContractError("Case pack requires an explicit canonical disease ID")
+        if any(not re.fullmatch(r"[a-z][a-z0-9_]*", row[key]) for key in ("intended_action", "modality")):
+            raise ContractError("Case pack actions/modalities require normalized lowercase tokens")
+        tissue = row["tissue"]
+        if tissue is not None and (not isinstance(tissue, str) or not tissue or tissue != tissue.strip()):
+            raise ContractError("Case tissue must be null or an explicit nonempty value")
+        scope = tuple(row[key] for key in required)
+        if scope in scopes:
+            raise ContractError("Duplicate complete hypothesis scope in case pack")
+        scopes.add(scope)
+        slug = f"{row['symbol'].lower()}-{row['disease_id'].lower()}-{row['intended_action']}-{row['modality']}"
+        if tissue is not None:
+            slug += "-tissue-" + fingerprint(tissue)[:16]
+        case_id = row.get("case_id", slug)
+        if not isinstance(case_id, str) or not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,199}", case_id):
+            raise ContractError("Case pack case_id must be a safe lowercase directory name")
+        if case_id in identifiers:
+            raise ContractError("Duplicate case_id in case pack")
+        identifiers.add(case_id)
+        for key in ("target_id", "hgnc_id"):
+            if key in row and (not isinstance(row[key], str) or not row[key] or row[key] != row[key].strip()):
+                raise ContractError("Declared canonical identifiers must be explicit nonempty strings")
+        definitions.append(CaseDefinition(row["symbol"], row["disease_id"], row["intended_action"],
+            row["modality"], tissue, case_id, row.get("target_id"), row.get("hgnc_id")))
+    return tuple(definitions)
+
+
+def _load_case_pack(path, expected_sha256=None):
+    if expected_sha256 is not None and not re.fullmatch(r"[a-f0-9]{64}", expected_sha256):
+        raise ContractError("Case-pack SHA-256 anchor must be 64 lowercase hexadecimal characters")
+    with path.open("rb") as stream:
+        payload = stream.read(MAX_NORMALIZED_JSON_BYTES + 1)
+    if len(payload) > MAX_NORMALIZED_JSON_BYTES:
+        raise ContractError("Case pack exceeds the 64 MiB JSON limit")
+    digest = hashlib.sha256(payload).hexdigest()
+    if expected_sha256 is not None and digest != expected_sha256:
+        raise ContractError("Case pack differs from its frozen SHA-256 anchor")
+    return _case_definitions(parse_json(payload)), payload, digest
 
 
 def hypothesis_qualification(symbol):
@@ -360,18 +436,23 @@ def _packet_groups(observations, layout):
     return groups
 
 
-def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, packet_layout="single"):
+def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, packet_layout="single",
+                   cases_path: Path | None = None, cases_sha256: str | None = None):
     """Reserve first; every later stage leaves inspectable, non-retrying records."""
     journal = RunJournal(output, kind="build")
     started = time.monotonic()
     cutoff = datetime.now(timezone.utc)
     state = {"stage": "reservation", "counters": Counter()}
     try:
+        custom = {"cases_path": str(cases_path.resolve()), "cases_sha256": cases_sha256} if cases_path else {}
         journal.append("build_request", manifest_path=str(manifest_path.resolve()),
-                       catalog_path=str(catalog_path.resolve()), origin_at_utc=cutoff, packet_layout=packet_layout)
+                       catalog_path=str(catalog_path.resolve()), origin_at_utc=cutoff, packet_layout=packet_layout, **custom)
         if packet_layout not in ("single", "bounded"):
             raise ContractError("Unknown evidence packet layout")
-        return _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout)
+        if cases_sha256 is not None and cases_path is None:
+            raise ContractError("A case-pack SHA-256 anchor requires an explicit case pack")
+        return _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff,
+                               packet_layout, cases_path, cases_sha256)
     except BaseException as error:
         failure = {"schema_version": 2, "status": "interrupted" if isinstance(error, KeyboardInterrupt) else "failed",
                    "stage": state["stage"], "error_class": type(error).__name__, "message": str(error),
@@ -390,7 +471,8 @@ def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, pac
         journal.close()
 
 
-def _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout):
+def _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout,
+                    cases_path=None, cases_sha256=None):
     def stage(name):
         state["stage"] = name
         journal.append("build_stage", stage=name, elapsed_seconds=time.monotonic() - started)
@@ -403,6 +485,21 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                        counters=dict(state["counters"]), **values)
         last_progress = time.monotonic()
 
+    case_pack = None
+    if cases_path is not None:
+        stage("case_pack_validation")
+        definitions, payload, digest = _load_case_pack(cases_path, cases_sha256)
+        with (output / "case-pack.json").open("xb") as stream:
+            stream.write(payload)
+            stream.flush()
+            os.fsync(stream.fileno())
+        case_pack = {"path": "case-pack.json", "sha256": digest,
+                     "scopes_sha256": fingerprint(definitions), "cases": len(definitions)}
+        journal.append("build_case_pack_frozen", source_path=str(cases_path.resolve()), **case_pack)
+    else:
+        definitions = _case_definitions({"schema_version": 1, "cases": [
+            {"symbol": symbol, "disease_id": disease, "intended_action": action,
+             "modality": modality, "tissue": None} for symbol, disease, action, modality in PILOT]})
     stage("inspection")
     manifest, files, inspection = _inspect(manifest_path, catalog_path, progress)
     stage("receipt_archival")
@@ -416,7 +513,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
     stage("identifier_resolution")
     policy = catalog_index(read_json(catalog_path))
     check_role("asof_normalized_packets", "agent_evidence", policy)
-    wanted_symbols, wanted_diseases = {item[0] for item in PILOT}, {item[1] for item in PILOT}
+    wanted_symbols = {item.symbol for item in definitions}
+    wanted_diseases = {item.disease_id for item in definitions}
     hgnc, targets, diseases = {}, {}, {}
     hg_item = None
     for item in files:
@@ -449,12 +547,16 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                     diseases[row["id"]] = (row, locator)
     jobs, blocked = [], []
     nodes = {item["node"].source_id: item["node"] for item in files}
-    for symbol, disease_id, action, modality in PILOT:
-        slug = f"{symbol.lower()}-{disease_id.lower()}-{action}-{modality}"
+    for definition in definitions:
+        symbol, disease_id, action, modality = (definition.symbol, definition.disease_id,
+            definition.intended_action, definition.modality)
+        slug = definition.case_id
         row = hgnc.get(symbol)
         target_id = row[0]["ensembl_gene_id"] if row else None
         if (not target_id or target_id not in targets or disease_id not in diseases or
-                targets[target_id][0]["approvedSymbol"] != symbol):
+                targets[target_id][0]["approvedSymbol"] != symbol or
+                definition.target_id is not None and definition.target_id != target_id or
+                definition.hgnc_id is not None and (not row or definition.hgnc_id != row[0]["hgnc_id"])):
             blocked.append({"case_id": slug, "reason": "canonical_identifier_missing_or_conflicting"})
             continue
         mapping_refs = tuple(sorted({row[1]["source_id"], targets[target_id][1]["source_id"], diseases[disease_id][1]["source_id"]}))
@@ -464,7 +566,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         target_version = "OpenTargets-25.09:target:" + nodes[targets[target_id][1]["source_id"]].sha256
         disease_version = "OpenTargets-25.09:disease:" + nodes[diseases[disease_id][1]["source_id"]].sha256
         case = Case(2, slug, "T6", cutoff.date(), Hypothesis(target_id, disease_id, target_version,
-                    disease_version, action, modality, None, availability), None, None, cutoff)
+                    disease_version, action, modality, definition.tissue, availability), None, None, cutoff)
+        case.validate()
         jobs.append({"case": case, "symbol": symbol, "disease_name": diseases[disease_id][0]["name"],
                      "mapping_refs": mapping_refs, "observations": [], "rejections": [], "seen": {}})
     pairs = {(job["case"].hypothesis.target_id, job["case"].hypothesis.indication_id) for job in jobs}
@@ -560,6 +663,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
               "projection": EVIDENCE_COLUMNS, "code_sha256": sha256_file(Path(__file__)),
               "packet_encoding": "canonical_json", "packet_layout": packet_layout,
               "packet_limit_bytes": MAX_NORMALIZED_JSON_BYTES}
+    if case_pack is not None:
+        recipe["case_pack"] = case_pack
     bundle_id = "contemporary-" + fingerprint({"cutoff": cutoff, "manifest": inspection["manifest_sha256"],
                                               "recipe": recipe})[:16]
     cases_report = []
@@ -598,6 +703,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                     "hypothesis_qualification": hypothesis_qualification(job["symbol"]),
                     "review_context_nonempty": {field: sum(observation.source_metrics.get(field) not in (None, (), "")
                         for observation in observations) for field in REVIEW_CONTEXT_COLUMNS}}
+        if case_pack is not None:
+            coverage["case_pack"] = case_pack
         snapshot = Snapshot(2, bundle_id + ":" + case.case_id, Profile.CONTEMPORARY, case.origin, False,
             tuple(artifacts),
             tuple(nodes[ref] for ref in refs), manifest.raw_root, coverage, case.origin_at)
@@ -614,6 +721,10 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         journal.append("build_case_written", **cases_report[-1])
     # Inputs are independently rechecked after scanning so concurrent source changes fail closed.
     stage("source_recheck")
+    if case_pack is not None:
+        if (sha256_file(cases_path) != case_pack["sha256"] or
+                sha256_file(output / case_pack["path"]) != case_pack["sha256"]):
+            raise ContractError("Case pack changed during snapshot build")
     for number, item in enumerate(files, 1):
         if sha256_file(item["path"]) != item["node"].sha256:
             raise ContractError("Raw input changed during snapshot build")
@@ -632,6 +743,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
               "output_bytes": sum(path.stat().st_size for path in output.rglob("*.json")),
               "normalization_recipe": recipe,
               "scientific_validation": "not_run", "probabilities": "withheld"}
+    if case_pack is not None:
+        report["case_pack"] = case_pack
     write_json(output / "build-report.json", report)
     journal.append("build_completed", report_sha256=sha256_file(output / "build-report.json"),
                    cases=len(cases_report), blocked_cases=len(blocked), counters=dict(counters),

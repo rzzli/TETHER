@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "contract_id": "asof-science-endpoint-fields-proposal-v1",
+  "review_date": "2026-10-18",
+  "status": "proposed_design_only_no_labels_assigned",
+  "role": "evaluation_only",
+  "json_schema": false,
+  "required_policy": "Every listed field is required in an instantiated row. Nullable fields remain null with an explanation in missingness_reasons. Null is not false or zero. Arrays may be empty only when conceptually valid. This is a proposed field contract, not a runtime validator.",
+  "endpoint_ids": [
+    "registry_next_phase_enrollment_v1",
+    "experimental_arm_first_dosing_v1",
+    "clinical_efficacy_success_v1"
+  ],
+  "required_fields": {
+    "identity": {
+      "reference_id": "string; unique immutable row ID",
+      "schema_version": "integer",
+      "protocol_id": "string; frozen protocol and amendment ID",
+      "program_id": "string; product/regimen x indication/population x origin phase",
+      "endpoint_id": "string; one separate named endpoint",
+      "role": "evaluation_only",
+      "source_record_ids": "nonempty array; NCT and arm/substudy IDs",
+      "origin_manifest_sha256": "SHA256 of cohort freeze before endpoint joins"
+    },
+    "hypothesis": {
+      "target_ids": "array; empty with explanation if unresolved",
+      "identifier_namespaces": "array; namespace and historical version",
+      "intended_action": "nullable string; never inferred from outcomes",
+      "modality": "nullable string with mapping proof",
+      "mapping_status": "qualified|unresolved|inapplicable",
+      "target_aggregation_rule": "nullable string; mandatory before target-level aggregation"
+    },
+    "scope": {
+      "drug_product_ids": "array; identity/formulation where consequential",
+      "experimental_arm_ids": "array; study-wide status insufficient",
+      "regimen": "array; product, dose/schedule and experimental/background/comparator/rescue role",
+      "population": "object; disease/subtype, biomarker, stage/severity, prior therapy/line, age, geography",
+      "route": "nullable string",
+      "origin_phase": "nullable string; qualified arm phase",
+      "next_phase": "nullable string; numerical phase when applicable",
+      "comparability": "array; dimension, matched/mismatch/unknown/not_applicable, proof and rationale",
+      "prior_qualifying_event": "nullable boolean; late-disclosed pre-origin events retained",
+      "eligibility": "eligible|excluded|unresolved",
+      "eligibility_reasons": "array"
+    },
+    "window": {
+      "origin_at": "analytic boundary",
+      "occurrence_endpoint_at": "event occurrence boundary",
+      "ascertainment_cutoff_at": "separate publication/search allowance cutoff",
+      "reporting_allowance_days": "integer; freeze before endpoint inspection",
+      "analytic_timezone": "string; not an assertion about source timezone",
+      "source_time_precision": "string; retain unknown or partial date precision",
+      "exposure_status": "unexposed|exposed_development|uncertain"
+    },
+    "event": {
+      "event_id": "nullable string; shared event for deduplication/dependence",
+      "occurrence_lower": "nullable inclusive earliest date",
+      "occurrence_upper": "nullable inclusive latest date",
+      "date_type": "ACTUAL|estimated|inferred_interval|unknown",
+      "first_dosing_lower": "nullable experimental-arm dose lower bound",
+      "first_dosing_upper": "nullable experimental-arm dose upper bound",
+      "result_data_cutoff": "nullable analysis follow-up date",
+      "primary_completion_at": "nullable; not success itself",
+      "first_public_lower": "nullable first-disclosure lower bound",
+      "first_public_upper": "nullable first-disclosure upper bound",
+      "public_timing_basis": "version/publication/disclosure proof or unknown",
+      "study_first_post_at": "nullable initial registration only",
+      "registry_version_post_at": "nullable version containing event",
+      "snapshot_at": "nullable source snapshot date",
+      "retrieved_at": "retrieval clock",
+      "source_timezone": "nullable; unknown stays unknown"
+    },
+    "efficacy": {
+      "primary_objective": "nullable eligible clinical efficacy objective",
+      "protocol_version": "nullable version and public-availability proof",
+      "sap_version": "nullable analysis-plan version",
+      "analysis_population": "nullable prespecified population/analysis set",
+      "endpoint_measure": "nullable primary outcome and unit",
+      "comparison": "nullable comparator or prespecified single-arm threshold",
+      "decision_rule": "nullable success/failure rule including multiplicity",
+      "effect_estimate": "nullable reported number with scale",
+      "uncertainty": "nullable CI/SE with unit and level",
+      "p_value": "nullable; nominal versus adjusted explicit",
+      "multiplicity_status": "nullable controlled/not_applicable/unresolved",
+      "intercurrent_event_strategy": "nullable discontinuation/rescue/switch handling",
+      "safety_disposition": "nullable separate safety assessment",
+      "regulatory_disposition": "nullable separate indication-specific outcome"
+    },
+    "observation": {
+      "latest_qualified_observation_at": "nullable source-supported ascertainment date",
+      "ascertainment_coverage": "complete_for_defined_registry_search|partial|unknown; not global completeness",
+      "search_protocol_id": "nullable reproducible source/alias/date/arm-check protocol",
+      "censoring_at": "nullable supported pre-endpoint cutoff",
+      "censoring_reason": "nullable supported reason",
+      "competing_event_type": "nullable business/safety/futility/other with source",
+      "reporting_lag_qualified": "boolean; actual evidence coverage through allowance cutoff",
+      "missingness_reasons": "array; unavailable/inaccessible/ambiguous/not_applicable distinctions"
+    },
+    "label": {
+      "state": "positive|negative|censored|unresolved|ineligible|competing_event",
+      "binary_value": "nullable integer 0/1; endpoint specific",
+      "negative_subtype": "nullable failed_prespecified_efficacy_objective|no_qualifying_registry_record",
+      "rationale": "source-linked adjudication",
+      "qualification": "unqualified|operationally_qualified_ai_assisted|independently_adjudicated_reference|externally_validated_science",
+      "confidence": "qualified|uncertain|unresolved; not fabricated numerical confidence",
+      "training_eligible": "boolean; separate fit-for-purpose admission required",
+      "evaluation_uses": "array; explicit permitted development/independent analyses"
+    },
+    "provenance": {
+      "source_evidence": "nonempty for decisions; official URL, content/row SHA256, version, locator, excerpt, availability and retrieval dates",
+      "adjudications": "array; reviewer/agent/model identity, prompt hashes, blinded status, exposure, sources and rationale",
+      "disagreements": "array; retain differing interpretations and resolution",
+      "independence_basis": "string; multiple agent names do not certify independence",
+      "reference_row_sha256": "nullable before sealing; required when sealed",
+      "reviewed_at": "adjudication clock distinct from historical information"
+    }
+  },
+  "conditional_rules": [
+    "Endpoint IDs never pool or silently substitute for original H1 clinical success.",
+    "Positive requires qualified origin risk and program scope, source proof and actual occurrence interval wholly within (origin, endpoint].",
+    "Actual study enrollment is not experimental-arm dosing; estimated or boundary-straddling dates cannot produce a positive label.",
+    "Efficacy negative requires an eligible final primary analysis explicitly failing its prespecified decision rule; study status or no posted results is insufficient.",
+    "Registry no-record negative requires a frozen qualified search through mature ascertainment cutoff and is not efficacy failure.",
+    "Censoring requires a source-supported pre-endpoint observation cutoff; missing evidence is not automatically censoring.",
+    "Binary value is null for unresolved, censored, ineligible and competing_event; positive=1 and negative=0 only for the named endpoint.",
+    "Efficacy labels require objective, analysis-population, decision-rule and multiplicity qualification; no efficacy objective means ineligible.",
+    "Occurrence, result data cutoff, initial registration, version post, public disclosure, snapshot and retrieval dates remain distinct.",
+    "Proposed 90 calendar days after 2026-01-01 ends 2026-04-01; events after endpoint remain excluded even when disclosed within allowance.",
+    "Outcome evidence remains evaluator-only and cannot enter historical predictor lineage.",
+    "Business stops and toxicity are separate events handled by frozen competing-event/composite policies, never automatic efficacy negatives.",
+    "AI adjudication can qualify operational procedures; it cannot automatically certify independent H5 expert preference or external validity.",
+    "No training admission without historical input eligibility, label availability before training cutoff, split/dependence and leakage gates.",
+    "Current mapping may assist evaluator discovery but cannot silently replace missing historical normalization.",
+    "Every sealed reference retains protocol hash, source proofs, exposure record and admitted uses."
+  ],
+  "primary_sources": [
+    {
+      "url": "https://clinicaltrials.gov/policy/protocol-definitions?trk=article-ssr-frontend-pulse_little-text-block",
+      "supports": "Study enrollment-date and conduct-status meanings; official indexed full text available while bare-page renderer returned shell."
+    },
+    {
+      "url": "https://clinicaltrials.gov/data-about-studies/csv-download",
+      "supports": "Distinct first-post, results-post, last-update and start-date fields."
+    },
+    {
+      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-and-sensitivity-analysis-clinical-trials-guideline-statistical-principles-clinical-trials-step-5_en.pdf",
+      "supports": "Final estimand framework; program-level benchmark adaptation is proposed project design."
+    }
+  ],
+  "source_access_note": "AACT /points_to_consider returned 404 and was not evidence. No dataset downloads, credentials, accounts, new cohort extraction or endpoint joins were used."
+}

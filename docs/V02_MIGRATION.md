@@ -130,6 +130,14 @@ explicitly supplies the weaker archived-fingerprint check.
 
 ## Validate the converted inputs
 
+October 18 authored case packs are optional configuration, not replacements for v2
+case/snapshot/evidence contracts. `build-snapshot --cases pack.json
+--cases-sha256 <sha256>` (one shell line) seals the selected schema-version-1 pack
+alongside newly generated v2 cases. Old fixtures, the original default case pack,
+normalization recipe 2.2 and existing receipts are preserved. Approved HGNC symbols
+and supplied Ensembl/HGNC IDs must match the selected source records. Evaluator
+answers and reference annotations are not eligible case-pack evidence.
+
 October 17 ingestion extension: `build-snapshot --packet-layout bounded` can
 write multiple packets under the existing v2 artifact-list contract. This is
 opt-in and retains every complete observation; all packets remain within 64 MiB.

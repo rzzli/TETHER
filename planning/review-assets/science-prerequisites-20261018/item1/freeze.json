@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "path": "planning\\protocols\\science-prerequisites-v0.1.json",
+    "sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7"
+  },
+  "files": [
+    {
+      "path": "planning\\protocols\\science-prerequisites-v0.1.json",
+      "sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7",
+      "bytes": 8823
+    },
+    {
+      "path": "tools\\science\\qualification.py",
+      "sha256": "c31a6f3b701063ac928336f4958e31f98250eb7b71013a4e23692f113999e819",
+      "bytes": 12028
+    },
+    {
+      "path": "tests\\test_science_qualification.py",
+      "sha256": "d7c2ca8a8f854947ad211b8d3b36d8f9287d05a6a6899adf185ebb5738d6e8be",
+      "bytes": 10433
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\DECISIONS.md",
+      "sha256": "4f7d892622806f517eba59075f482e8fa42b733c5457a41c1d83233ddff80b4c",
+      "bytes": 3178
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\endpoint-fields.json",
+      "sha256": "e1aeccf7d74c16a4e161b030d51175b386ecd58f02515266ad09be42ff1f7dc9",
+      "bytes": 10328
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\endpoint-notes.md",
+      "sha256": "d6906621130aa2db4f73f6a0a5d30574e974d31e1c800059d46b7e1774d0ffc4",
+      "bytes": 11088
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\final-validation.json",
+      "sha256": "674b58469ab12fcc0670b7e02c35648c37784ff1c896038e5c8385dbbcd0820f",
+      "bytes": 470
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\full-validation.json",
+      "sha256": "dacb80429dd89daf8396d97fa62bf1f3ca75fc18a81e26395488f26543e536a0",
+      "bytes": 470
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\gate-audit.md",
+      "sha256": "dd271935f52d7c539e9592d81f8ac97dde1c88b91534a539fa85372f59adbbb1",
+      "bytes": 13483
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\proposed-gates.json",
+      "sha256": "e4ab86eef6f80c949efe20a72c6bdf4f11a05460b7cc6223295813d7a52e7ffc",
+      "bytes": 8222
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\qualification-report.json",
+      "sha256": "69ac59645744de8290f0dac1239202c2e52b68a4a26e106cbb358014c930e705",
+      "bytes": 1023
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\reference-fields.json",
+      "sha256": "b55a6838c4578ec6385c392bac6077b838a3df688b403ae83a530991ef90451e",
+      "bytes": 10673
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\reference-notes.md",
+      "sha256": "7e58a7a3c68d21545ca9520a15244b7c939ebe9d2ef3168514a8231b78c089f3",
+      "bytes": 11414
+    }
+  ],
+  "execution_state": {
+    "path": "data\\derived\\science-prerequisites-20261018\\execution-science1.json",
+    "sha256": "18d4441694ab8514b7b4b16ceed9ae34829fb9cd7d921804b4b4b469b9cce33a"
+  }
+}

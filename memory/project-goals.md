@@ -311,3 +311,49 @@ The October 10 request to finish outstanding plan work led to a completion audit
 The later download request supersedes the documentation-only acquisition boundary. Starter Virtual Biotech labels/linkage and an HGNC snapshot are collected on E:. A 34.04 GiB core wave covers Open Targets 25.09 and one ChEMBL 35 SQLite archive plus attribution metadata. Completed receipts are preserved across retries; catalog states are now point-in-time planned/queued/downloading/partial/collected snapshots.
 
 Measured combined usable capacity after 20% disk reserves is approximately 2.62 TiB, sufficient for core and selective research inputs, not every full-provider collection. Four inventoried Open Targets releases total approximately 196 GiB with a 198.47 GiB planning bound. The large UKB-PPP and GTEx collections need selection/access/cost decisions. See [[data/STORAGE_AND_DOWNLOAD_REPORT]], [[data-acquisition-plan]] and [[research-log-2026-10-10]].
+
+
+## Scientific-prerequisite roadmap proposed — October 18
+
+The user requested planning, not execution. Proposed staged work: freeze a scientific
+gate register and separate endpoint definitions; reuse/match the existing 20-claim
+AI-assisted review as development feedback; build a fresh, blinded T6 reference
+pilot and adapted comparator independently of clinical-label readiness; qualify
+2025 origin programs and historical OT24.09 inputs before endpoint access; restore
+the supplied January 2026 AACT archive on the evaluator side and qualify a separately
+dated reporting-lag cutoff; adjudicate candidate events and sampled non-transitions;
+repeat group-aware power and calibration-precision planning; validate genetics as an
+optional branch; train/calibrate only on outcomes available before the test origin;
+freeze final models/protocol before locked evaluation. Registry progression remains
+a separate estimand from original H1 clinical success.
+
+Default resources remain public/account-mediated data and zero provider spend.
+Independent reviewer availability was asked as an optional planning clarification;
+AI-assisted preparation can proceed either way, while independent-validation claims
+remain gated. No new data collection, restored database, model inference, scorer
+training, public registration or completed scientific gate is implied by this plan.
+
+
+Training chronology qualification: September 2024 Qwen weights cannot be treated as
+pre-origin for 2023 training/calibration cases. The proposed initial scorer therefore
+uses deterministic, identically defined historical feature derivations. Any use of
+LLM-selected training features needs an eligible earlier model or a newly qualified
+window. This architecture choice must be explicit in the next protocol amendment;
+no training pipeline or prediction behavior was changed in the planning turn.
+
+## Authorized execution — October 18
+
+The user authorized all seven science items in sequence, delegating domain work to
+agents and reserving file/access/permission issues for the user. Agent-adjudicated
+source references are permitted; independent biological validation is not implied.
+TODO.md and `planning/protocols/science-prerequisites-v0.1.json` track this execution.
+Item 1 passed 262 full tests. Item 2 is in progress: twenty legacy statements are
+crosswalked with changed context explicitly flagged; ten new hypotheses are frozen;
+separate blinded source panels are researching; the anchored contemporary build
+completed ten cases/10,512 observations in 176.344 seconds, peak process memory
+1,925,799,936 bytes. Item 2 subsequently passed all 326 full tests, fifty source
+references and thirty literature-question adjudications. Two blind initial agents
+and a third adjudicator are retained, with shared-model/access limits explicit.
+Item 3 is next; Items 4–7 have not started. See planning/Scientific Prerequisites
+Execution 2026-10-18.md. Original H1 clinical success, registry advancement and
+verified dosing remain distinct; real probabilities remain null.

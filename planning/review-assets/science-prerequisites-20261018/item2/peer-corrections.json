@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "all_three_original_probes_rejected",
+  "reviewer_execution": "/root/science_gate_audit",
+  "production_artifacts_edited": false,
+  "corrections": [
+    "Tissue scope override rejected",
+    "Distinct third execution required",
+    "Exact parsed bytes fingerprinted before validation and rechecked"
+  ],
+  "regressions": "tests/test_science_reference_panel.py; tests/test_science_finalize_reference.py"
+}

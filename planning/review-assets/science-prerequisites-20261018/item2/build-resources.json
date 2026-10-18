@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "build_path": "data\\derived\\science2-fresh-20261018T170501Z",
+  "build_report_sha256": "b3f5b4352215bd571159f190799d4ce865999d8bf3d9e51712183d55979124f3",
+  "manifest_sha256": "4fc1c0d4902bdc2f5493d878eff209f5049f198d1926f7ca6434a1b5b983e126",
+  "case_pack_sha256": "3d9e5763e5b9a48bd333dc67697becf1badf00d83ed166fc5a018c40dac62f90",
+  "selected_files": 2206,
+  "selected_bytes": 9038960079,
+  "missing_selected_inputs": [],
+  "counters": {
+    "physical_rows_scanned": 29823171,
+    "scanned_rows": 29823171,
+    "selected_rows": 10512,
+    "matched_rows": 10512,
+    "accepted_source_rows": 10512,
+    "normalized_case_records": 10512,
+    "evidence_files_scanned": 2194
+  },
+  "elapsed_seconds": 176.34399999999732,
+  "peak_process_memory_bytes": 1925799936,
+  "output_bytes": 83123984,
+  "cases": [
+    {
+      "case_id": "tnf-efo_0000685-inhibit-antibody",
+      "observations": 288,
+      "packet_bytes": 1878918,
+      "packet_sha256": "201eabbd9eb549166415752139396a6b2f25607b33d1d57d8f9b9357aad5f825"
+    },
+    {
+      "case_id": "il23a-efo_0000676-inhibit-antibody",
+      "observations": 2315,
+      "packet_bytes": 14625512,
+      "packet_sha256": "7f806638dc8ab9c2373e25c428f446bc3bc123d02a471bfb8b6c9b5f28051c23"
+    },
+    {
+      "case_id": "jak1-efo_0000729-inhibit-small_molecule",
+      "observations": 164,
+      "packet_bytes": 1005412,
+      "packet_sha256": "b5621f1017440bc7839e5fd0397dacd955a0c2b0c081c5996750b06d018383df"
+    },
+    {
+      "case_id": "trem2-mondo_0004975-activate-antibody",
+      "observations": 2475,
+      "packet_bytes": 17144276,
+      "packet_sha256": "cc9984d2db7bb8588aebb607b57115d6251f48098944e1e33af347ee6ff06d70"
+    },
+    {
+      "case_id": "lrrk2-mondo_0005180-inhibit-small_molecule",
+      "observations": 3321,
+      "packet_bytes": 25612444,
+      "packet_sha256": "2c42be2685e411885a1863257178787a545c424512d04d40ee75ef53f13082cf"
+    },
+    {
+      "case_id": "angptl3-efo_0004911-inhibit-antibody",
+      "observations": 64,
+      "packet_bytes": 383809,
+      "packet_sha256": "5a75606705aff5e5df877948fa9cb1c7d91d8ddd06f7037f4062acc2ca006c91"
+    },
+    {
+      "case_id": "apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide",
+      "observations": 338,
+      "packet_bytes": 2076879,
+      "packet_sha256": "31af944a9e9ad2e493c64e9c1655730d3b5a0b070d0305c98bffdadbfdc68fb2"
+    },
+    {
+      "case_id": "sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide",
+      "observations": 365,
+      "packet_bytes": 2071148,
+      "packet_sha256": "dd9298d41b5c4393ebc5d9a6d9dfb7d7baf1b3b29807acfe097cbe50c0af1e24"
+    },
+    {
+      "case_id": "kras-efo_0002618-inhibit-small_molecule",
+      "observations": 267,
+      "packet_bytes": 1611172,
+      "packet_sha256": "430561c016b68561fa89e3081e2a3b8bb0462a2169652f5e5b7f30a983caf6a9"
+    },
+    {
+      "case_id": "cd19-efo_0000403-antigen_directed_cell_killing-car_t",
+      "observations": 915,
+      "packet_bytes": 5846383,
+      "packet_sha256": "9351202671a09619faf54cc69784bd47508f09e12c8c30e67b394accdcb28ec6"
+    }
+  ],
+  "scientific_validation": "pending_source_reference_adjudication",
+  "probabilities": "withheld"
+}
