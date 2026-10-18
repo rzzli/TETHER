@@ -150,6 +150,23 @@ def run_workflow(case: Case, store: EvidenceStore, backend: Backend,
         feedback, accepted = (), False
         for attempt in range(budget.max_retries + 1):
             request = make_request(case, category, records, feedback)
+            preparer = getattr(backend, 'prepare_request', None)
+            if preparer is not None:
+                original = request
+                request, retrieval = preparer(original)
+                allowed = {item.observation_id: item for item in original.evidence}
+                if (request.case_json != original.case_json or request.category != original.category or
+                        request.instructions != original.instructions or request.feedback != original.feedback or
+                        len({x.observation_id for x in request.evidence}) != len(request.evidence) or
+                        any(item.observation_id not in allowed or item != allowed[item.observation_id]
+                            for item in request.evidence)):
+                    raise ContractError('Retrieval changed case/instructions or admitted records')
+                event('bounded_retrieval', category=category, attempt=attempt + 1, **retrieval)
+                coverage[category.value]['retrieval'] = retrieval
+                if not request.evidence:
+                    coverage[category.value]['status'] = 'no_records_within_retrieval_budget'
+                    accepted = True
+                    break
             try:
                 quote = backend.quote(request)
                 quote.validate()
@@ -198,6 +215,8 @@ def run_workflow(case: Case, store: EvidenceStore, backend: Backend,
                 exhausted = True
                 break
             problems = critique(selection, records)
+            if set(selection.observation_ids) - {item.observation_id for item in request.evidence}:
+                problems += ('Selection outside the actual bounded request',)
             event("review", category=category, problems=problems, usage=selection.usage,
                   selected=selection.observation_ids)
             if problems:

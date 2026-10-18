@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "protocol_id": "asof-evaluation-v0.1",
+  "frozen_at_utc": "2026-10-18T03:23:27.109218+00:00",
+  "provider_spend_usd": 0,
+  "registration": {
+    "local_only": true,
+    "publicly_registered": false,
+    "external_submission": "Requires explicit user decision; no OSF filing or registration priority is claimed",
+    "amendments": "Version and hash every change; list exposure and reason before new outcomes or model comparisons"
+  },
+  "models": [
+    {
+      "id": "Qwen/Qwen2.5-14B-Instruct-GGUF",
+      "revision": "b466e1f8c07172155743e8e1307507d8a4f91fbd",
+      "released_at_upper_bound": "2024-09-21T00:00:00Z",
+      "training_cutoff": null,
+      "cutoff_reason": "No exact training cutoff verified. Immutable official weights uploaded before origin provide the chronology route.",
+      "license": "Apache-2.0",
+      "roles": [
+        "specialist",
+        "reviewer",
+        "chief_of_staff"
+      ],
+      "later_finetune_permitted": false,
+      "quantization": "Q4_K_M",
+      "files": [
+        {
+          "path": "qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+          "bytes": 3991999872,
+          "sha256": "a09ea5e7b1eafb1b30b241726c3cc3c905c96f14ad41e246ffa5f44e53904f68"
+        },
+        {
+          "path": "qwen2.5-14b-instruct-q4_k_m-00002-of-00003.gguf",
+          "bytes": 3989373504,
+          "sha256": "21b9457d079680d284e90ef69607c4b2d8ef64a09d4729cb7b5e1357bdba41ae"
+        },
+        {
+          "path": "qwen2.5-14b-instruct-q4_k_m-00003-of-00003.gguf",
+          "bytes": 1006737120,
+          "sha256": "c8d37006760a387a35216e070e6664d7da927f10be8eb870fef2e3d4833d9976"
+        }
+      ],
+      "collection_status": "planned",
+      "runtime_validation": "pending Task 4; no hardware capacity claim from file size alone"
+    }
+  ],
+  "development": {
+    "task": "T6",
+    "cases": "Existing ten case pack; all exposed, development-only; repeat action/modality variants remain dependent",
+    "sources": "Sealed contemporary OT25.09/HGNC2026 packets; contextual annotations, not intervention validation",
+    "probabilities_withheld": true,
+    "numeric_features": {},
+    "primary_measure": "Source-linked claim precision/error and evidence selection; no clinical discrimination claim",
+    "selection_limits": {
+      "max_records_per_category": 12,
+      "max_request_utf8_bytes": 12000,
+      "max_generation_tokens": 256,
+      "temperature": 0,
+      "seed": 20261017
+    },
+    "budgets": {
+      "max_calls": 16,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_cost_usd": 0,
+      "max_seconds": 300,
+      "max_retries": 1
+    },
+    "human_review": "Independent blinded reference panel still required for H5; model review is development feedback only"
+  },
+  "clinical": {
+    "origin_at": "2025-01-01T00:00:00Z",
+    "endpoint_at": "2026-01-01T00:00:00Z",
+    "horizon_months": 12,
+    "status": "retrospective_candidate_only",
+    "lock_status": "not_locked",
+    "qualified_label_count": null,
+    "window_justification": "Selected for user-supplied paired archive availability and immutable September 2024 weights; not selected using clinical performance. UTC values are analytic calendar boundaries, not verified archive public times.",
+    "archive_precision": "Dump creation time and ZIP time do not establish first-public availability. Unknown timezone and end-of-window reporting lag require qualification before activation.",
+    "origin_selection": "Enumerate only origin experimental interventional Phase1/2 drug programs with full arm, regimen, population and prior-risk audit. Resolve drugs/targets/conditions with eligible historical versions only. Seal cohort IDs, eligibility reasons and dependency groups before endpoint query. Exclude every previously inspected program/NCT from a confirmatory candidate or call the entire analysis retrospective development.",
+    "endpoint_hierarchy": [
+      "Tier1 registry recorded next-phase actual start, adjudicated program/regimen/population and role linkage; enrollment surrogate, not success",
+      "Tier2 protocol status/design change is separate",
+      "Tier3 results or success require explicit independent adjudication; no automatic clinical-success labels"
+    ],
+    "missing_outcomes": "No recorded transition is not a negative. Record latest observation, reporting delay, censoring and unresolved status. No binary Brier/AUC until negatives/censoring qualify.",
+    "predictor_sources": [
+      {
+        "id": "open_targets_platform_24_09",
+        "released_at_upper_bound": "2024-09-20T00:00:00Z",
+        "role": "agent_visible",
+        "evaluator_only": false,
+        "current_version_fallback": false,
+        "collection_status": "archive_index_checked_only",
+        "normalization": "Identifiers and annotations from this release only; current HGNC/MONDO/OT cannot fill gaps",
+        "exclusions": [
+          "known_drug",
+          "ChEMBL evidence",
+          "clinical outcomes/status/stop reasons",
+          "post-origin publications/annotations"
+        ]
+      }
+    ],
+    "outcome_access": "AACT endpoint and previously reviewed outcome links remain evaluator-only. No network tools, raw paths, search engine or later model is exposed to historical agents. Current coding agent must not add later scientific knowledge to packets.",
+    "activation_gates": {
+      "origin_selection_sealed": false,
+      "historical_inputs_qualified": false,
+      "independent_labels": false,
+      "dependence_and_power": false,
+      "predictions_sealed_before_label_join": false,
+      "model_runtime_hashes": false,
+      "registration_decision": false
+    },
+    "power_rule": "Repeat frozen v0.2 conditional power on qualified new-window dependence units, with >=80% power for 0.05 AUC difference under justified assumptions. Otherwise report feasibility/descriptive results; no powered superiority claim.",
+    "analysis": "Preserve original H1-H6 meanings. AUROC/Brier co-primary only with qualified binary outcomes and calibrated scores; paired component bootstrap intervals and all exclusions/missingness; paired DeLong sensitivity when independence is defensible. Freeze multiplicity plan and scores before any confirmatory label join. H3 bottom publication tercile uses origin-dated counts; H4 requires validated genetics; H5 independent blinded panel; H6 separate gated protocol."
+  },
+  "comparison": {
+    "virtual_biotech_adapted": true,
+    "label": "Adapted local-model, evidence-constrained Virtual Biotech comparison; not original reproduction",
+    "upstream_revision": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+    "same_model_roles": true,
+    "rules": "Same origin-filtered source world, selected data, budgets and case pack. Record deviations and unsupported upstream datasets; do not fabricate replacements. No comparator performance until its adapter and semantic output pass validation.",
+    "baselines": [
+      "offline-extractive",
+      "bounded lexical selector",
+      "origin-masked OT association descriptive metric, if eligible",
+      "validated genetics-only, conditional"
+    ],
+    "ablations": [
+      "no reviewer retries",
+      "no perturbation",
+      "no literature",
+      "no scorer, only if scorer qualifies",
+      "no causal genetics, only if derivations qualify"
+    ]
+  },
+  "stopping_rules": [
+    "No paid provider calls, new account, paid transfer or public submission",
+    "Stop locked clinical execution on any chronology/lineage/canary failure",
+    "No automatic retry of unknown-dispatch calls; preserve failures",
+    "Stop confirmatory inference if independent truth or power gate fails",
+    "Do not promote exploratory T6 error or relevance judgments to independent validation"
+  ],
+  "unchanged_hypotheses_source": "planning/Beyond the Virtual Biotech Tooling Gaps and Project Plan.md"
+}

@@ -124,8 +124,10 @@ before dispatch. Applicability mismatches abstain. Recorded selections supplied 
 | `memory/` | Current decisions and implementation history |
 
 Defaults remain 16 calls, 32,000 input tokens, 8,000 output tokens, $0 provider spending,
-300 seconds and one critic retry per category. No live model, MR/colocalization computation,
-trained clinical scorer or competitor execution is included. T1 has a program/endpoint
+300 seconds and one critic retry per category. An optional explicit loopback model
+adapter is available through `--local-model config.json`; the default stays offline.
+MR/colocalization computation, a trained clinical scorer and competitor execution
+remain gated. T1 has a program/endpoint
 interface; T6 has a dossier interface. T2–T5, historical clinical cohorts, H6 reconstruction
 and locked benchmark inference remain later milestones. The separate evaluator reports
 descriptive metrics for supplied cohorts.

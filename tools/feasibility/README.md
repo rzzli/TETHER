@@ -72,3 +72,21 @@ Frozen protocols, raw regional subsets, source receipts and exact executed extra
 The January 2025 continuation uses portable PostgreSQL 17.11 on local port 55433, separately from the 2023 restore. Its source directory and retained setup/import recipes are in `planning/AACT January 2025 Follow-up.md`. Do not rerun an import against a completed database. Comparison is evaluator-only; registry completion, termination and administrative observation cutoff are not substituted for program success, failure or censoring.
 
 The intermediate batch uses separate ports 55434–55436 and preserves each actual dump date, including July 2 for the supplied July 2023 archive. Read `planning/Clinical Long Session Progress.md` and the batch's `result.json` before resuming. A live import must not be restarted; a failed stage requires inspection and a separately recorded recovery decision. The optional January 2026 archive is outside the frozen endpoint.
+
+## Ordered registry execution (October 17)
+
+`registry_scope.py` audits the fixed v0.4 members with pinned exact ontology aliases,
+prior-risk alerts and source-qualified regimen/population text cues. The v0.5 protocol
+and public freeze/manifest bind sources; it neither changes labels nor assumes that
+exact disease names define equivalent programs. SQLite is opened read-only/immutable.
+
+`registry_power.py` measures component/target/sponsor dependency views and conditional
+paired-AUROC power. Canonical v0.2 uses independent finite-rank parametric null
+calibration; the failed v0.1 calibration is retained as a diagnostic. Missing transitions
+are descriptive proxies, not negatives. See `2026-10-17-registry-power.json`.
+
+`chronology_policy.py` validates the local frozen protocol and its source proofs.
+It rejects later contributing models, mutable model revisions, evaluator predictors,
+current-annotation fallback and unearned lock/registration. Protocol validity does
+not satisfy the separate clinical activation gates. No source is promoted to parsed
+or scientifically validated by directory HTTP success or an archive hash.

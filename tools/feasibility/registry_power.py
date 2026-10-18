@@ -46,13 +46,20 @@ def wilson(k,n):
     return [0.0 if k==0 else max(0.0,center-radius),1.0 if k==n else min(1.0,center+radius)]
 
 
-def simulate(n_case,n_control,auc,delta,rho,noise,reps,seed,alpha=.05):
+def mc_pvalue(statistic,reference):
+    if not reference or not math.isfinite(statistic) or any(not math.isfinite(x) for x in reference):raise ValueError('Invalid null reference')
+    return (1+sum(x>=statistic for x in reference))/(len(reference)+1)
+
+
+def simulate(n_case,n_control,auc,delta,rho,noise,reps,seed,alpha=.05,reference=None,collect_statistics=False):
     if min(n_case,n_control)<2:return {'estimable':False,'reason':'fewer_than_two_units_per_class','replicates':0}
     if not 0<auc<1 or not 0<auc+delta<1 or not -1<=rho<=1 or reps<1 or not 0<alpha<1:raise ValueError('Invalid simulation parameters')
     if set(noise)!={'case_to_control','control_to_case'} or not all(0<=p<=1 for p in noise.values()):raise ValueError('Invalid label-error assumptions')
     rng=random.Random(seed);normal=NormalDist();mu_a=math.sqrt(2)*normal.inv_cdf(auc);mu_b=math.sqrt(2)*normal.inv_cdf(auc+delta)
     critical=normal.inv_cdf(1-alpha/2);orthogonal=math.sqrt(1-rho*rho)
-    rejected=0;valid=0;observed_case=[];deltas=[]
+    if reference is not None and (not reference or any(not math.isfinite(x) for x in reference)):raise ValueError('Invalid null reference')
+    ordered_reference=sorted(reference) if reference is not None else None
+    rejected=0;valid=0;observed_case=[];deltas=[];statistics=[]
     for _ in range(reps):
         pa=[];na=[];pb=[];nb=[]
         for truth,count in [(True,n_case),(False,n_control)]:
@@ -66,11 +73,17 @@ def simulate(n_case,n_control,auc,delta,rho,noise,reps,seed,alpha=.05):
         if min(len(pa),len(na))<2:continue
         stats=paired_stats(pa,na,pb,nb)
         if stats['z'] is None:continue
-        valid+=1;rejected+=abs(stats['z'])>critical;deltas.append(stats['difference']);observed_case.append(len(pa))
-    return {'estimable':bool(valid),'requested_replicates':reps,'valid_replicates':valid,'invalid_replicates':reps-valid,
+        absolute=abs(stats['z']);valid+=1
+        pvalue=(1+len(reference)-bisect_left(ordered_reference,absolute))/(len(reference)+1) if reference is not None else None
+        rejected+=(pvalue<=alpha) if reference is not None else absolute>critical
+        if collect_statistics:statistics.append(absolute)
+        deltas.append(stats['difference']);observed_case.append(len(pa))
+    result={'estimable':bool(valid),'requested_replicates':reps,'valid_replicates':valid,'invalid_replicates':reps-valid,
         'rejections':rejected,'rejection_probability':rejected/valid if valid else None,
         'monte_carlo_95_interval':wilson(rejected,valid) if valid else None,
         'mean_observed_auc_difference':mean(deltas) if valid else None,'mean_observed_case_units':mean(observed_case) if valid else None}
+    if collect_statistics:result['absolute_statistics']=statistics
+    return result
 
 
 def dependency_profile(programs,mode):
@@ -118,10 +131,12 @@ def run(protocol,freeze,output):
     output=Path(output).resolve();output.mkdir(parents=True,exist_ok=False);started=time.monotonic()
     try:
         policy=load(protocol);pin=load(freeze)
-        if policy['protocol_id']!='registry-feasibility-power-v0.1' or policy['role']!='evaluation_only':raise ValueError('Invalid power protocol')
+        if policy['protocol_id'] not in {'registry-feasibility-power-v0.1','registry-feasibility-power-v0.2'} or policy['role']!='evaluation_only':raise ValueError('Invalid power protocol')
+        calibrated=policy['protocol_id'].endswith('v0.2')
         if sha256_file(protocol)!=pin['protocol']['sha256']:raise ValueError('Changed power protocol')
         for p in pin['parents']:
             if sha256_file(Path(p['path']))!=p['sha256']:raise ValueError('Changed parent anchor')
+        if calibrated and sha256_file(Path(policy['parent_diagnostic']))!=pin['diagnostic_sha256']:raise ValueError('Changed calibration diagnostic')
         root=checked_parent(load(pin['parents'][0]['path']));scope=checked_parent(load(pin['parents'][1]['path']))
         programs=[json.loads(line) for line in (root/'cohort-v04/cohort.jsonl').read_text(encoding='utf-8').splitlines()]
         audits={p['program_id']:p for p in load(scope/'program-scope.json')}
@@ -139,31 +154,47 @@ def run(protocol,freeze,output):
         for n in policy['hypothetical_positive_units']:scenarios.append({'name':f'hypothetical:{n}','n_case':n,
             'n_control':policy['hypothetical_no_recorded_units'],'reps':policy['grid_replicates']})
         results=[]
-        def one(spec,auc,delta,rho,noise,reps):
+        def one(spec,auc,delta,rho,noise,reps,reference=None,collect=False,seed_tag='power'):
             config={**spec,'auc':auc,'delta':delta,'rho':rho,'noise':noise,'reps':reps}
-            seed=int(hashlib.sha256((str(policy['seed'])+json.dumps(config,sort_keys=True)).encode()).hexdigest()[:16],16)
-            result=simulate(spec['n_case'],spec['n_control'],auc,delta,rho,noise,reps,seed,policy['alpha'])
+            seed=int(hashlib.sha256((str(policy['seed'])+(seed_tag if calibrated else '')+json.dumps(config,sort_keys=True)).encode()).hexdigest()[:16],16)
+            result=simulate(spec['n_case'],spec['n_control'],auc,delta,rho,noise,reps,seed,policy['alpha'],reference,collect)
             return {**config,'result':result}
+        references={};reference_rows=[]
+        def reference_for(spec,auc,rho,noise):
+            if not calibrated or min(spec['n_case'],spec['n_control'])<2:return None
+            key=json.dumps([spec['n_case'],spec['n_control'],auc,rho,noise],sort_keys=True)
+            if key not in references:
+                row=one(spec,auc,0,rho,noise,policy['calibration_replicates'],collect=True,seed_tag='null_reference')
+                references[key]=row['result']['absolute_statistics'];reference_rows.append(row)
+            return references[key]
         base=scenarios[0];calibration=[]
         for rho in policy['within_class_score_correlation']:
-            item=one(base,policy['baseline_auc'][0],0,rho,policy['label_error'][0],policy['null_replicates'])
+            ref=reference_for(base,policy['baseline_auc'][0],rho,policy['label_error'][0])
+            item=one(base,policy['baseline_auc'][0],0,rho,policy['label_error'][0],policy['null_replicates'],ref,seed_tag='heldout_null_validation')
             interval=item['result'].get('monte_carlo_95_interval')
             item['nominal_alpha_in_mc_interval']=bool(interval and interval[0]<=policy['alpha']<=interval[1]);calibration.append(item)
+            if calibrated:
+                limit=policy['alpha']+NormalDist().inv_cdf(1-.05/3)*math.sqrt(policy['alpha']*(1-policy['alpha'])*(1/policy['null_replicates']+1/policy['calibration_replicates']))
+                item['inflation_acceptance_limit']=limit
+                item['calibration_passed']=bool(item['result'].get('rejection_probability') is not None and item['result']['rejection_probability']<=limit)
         write(output/'null-calibration.json',calibration)
         for spec in scenarios:
             for auc in policy['baseline_auc']:
                 for rho in policy['within_class_score_correlation']:
                     for noise in policy['label_error']:
-                        results.append(one(spec,auc,policy['auc_difference'],rho,noise,spec['reps']))
+                        ref=reference_for(spec,auc,rho,noise)
+                        results.append(one(spec,auc,policy['auc_difference'],rho,noise,spec['reps'],ref))
             print(json.dumps({'stage':'scenario_complete','name':spec['name'],'n_case':spec['n_case'],'n_control':spec['n_control']}),flush=True)
         write(output/'power-scenarios.json',results)
+        if calibrated:write(output/'calibration-references.json',reference_rows)
         costs=policy['annotation_cost_scenarios']
         write(output/'annotation-cost-scenarios.json',[{'cases':n,'reviewers':costs['reviewers'],'minutes_per_case':minutes,
             'reviewer_hours':n*costs['reviewers']*minutes/60,'measured':False} for n in costs['cases'] for minutes in costs['minutes_per_case']])
         report={'role':'evaluation_only','decision':'revise_before_clinical_training_or_locked_evaluation',
             'sample_profiles':{k:{x:y for x,y in v.items() if x!='memberships'} for k,v in profiles.items()},
             'scenario_rows':len(results),'nominal_target_power':policy['target_power'],
-            'null_calibration_warnings':sum(not c['nominal_alpha_in_mc_interval'] for c in calibration),
+            'null_calibration_warnings':sum(not c.get('calibration_passed',c['nominal_alpha_in_mc_interval']) for c in calibration),
+            'test_method':'finite_rank_parametric_null_calibration' if calibrated else 'asymptotic_normal_approximation',
             'assumption_warning':'Synthetic normal-score power conditional on proxy class sizes, not empirical model performance or clinical-label validity.',
             'clinical_readiness':{'independent_scientific_review':False,'adjudicated_negatives_or_censoring':False,
                 'full_regimen_population_equivalence':False,'locked_model_window_chronology':'Task 3 pending'},

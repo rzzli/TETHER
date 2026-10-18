@@ -34,3 +34,77 @@ Task 1 is complete for development cohort construction and source/scope auditing
 Independent scientific and locked-test evaluation remain Task 7. Task 2 follows:
 measure dependent sample sizes, power scenarios and clinical feasibility using these
 uncertainties. No new downloads, restored-server starts or model-provider calls.
+
+## Task 2: sample size, power and clinical feasibility
+
+Completed after correcting a failed small-sample calibration check. The original
+v0.1 asymptotic run is retained at commit c7f6105 and its diagnostic seal; false-null
+rejection reached 6.9% and 7.3% at intended alpha 5%. No frozen v0.1 result was rewritten.
+
+Frozen v0.2 uses independent parametric null references and finite-rank Monte Carlo
+p-values. These are synthetic normal-score experiments, not model predictions or a
+permutation of clinical data. The paired ROC statistic follows
+[DeLong et al.](https://pubmed.ncbi.nlm.nih.gov/3203132/); finite-rank Monte Carlo
+construction is described in [SciPy's method documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.monte_carlo_test.html).
+No SciPy dependency was installed. Exact-rank/tie, brute-force covariance, dependency,
+determinism and tampered-source regressions passed.
+
+The measured base graph has 1,001 units: 19 with recorded-start proxies, 953 with no
+recorded-start proxies and 29 unresolved. Adding target links gives 627 units; adding
+target and sponsor links gives 261 units, only six with recorded starts. These are
+explicit dependence graphs, not identified effective sample sizes. The uncertainty-hold
+view retains 3,960 programs and 16 positive base units; it is not adjudicated exclusion.
+
+All 120 power scenarios finished. At current base sizes, estimated power spans
+6.2–46.7% across the prespecified AUC/correlation/error assumptions. Sponsor/target
+stress spans 3.9–16.2%; the 16-unit uncertainty-hold view spans 7.3–40.4%. Current
+scenarios do not achieve the 80% planning target. Illustrative no-label-error results
+at baseline AUC .65 and a .05 AUC difference:
+
+| Positive units | No-recorded units | Correlation 0.3 | Correlation 0.7 | Correlation 0.9 |
+| ---: | ---: | ---: | ---: | ---: |
+| 19 | 953 | 10.0% | 14.9% | 38.5% |
+| 50 | 1000 | 20.0% | 31.6% | 77.6% |
+| 100 | 1000 | 27.4% | 53.2% | 97.2% |
+| 200 | 1000 | 52.4% | 76.8% | 100.0% |
+| 400 | 1000 | 67.8% | 98.6% | 100.0% |
+
+Grid points are hypothetical independently scored units and cannot be converted to
+registry-trial requirements using unvalidated prevalence. Estimated power and Wilson
+Monte Carlo intervals are conditional on the score distribution, unit endpoint and
+finite null reference; they exclude reference/distribution/label-validity uncertainty.
+Independent null checks returned 5.05%, 4.9% and 4.7%; all pass the frozen inflation
+check accounting for both Monte Carlo samples. No actual AUROC/AP/calibration was measured.
+
+Two-reviewer pilot costs span 30.8–240 reviewer-hours for 185–240 cases and assumed
+5–30 minutes per reviewer/case. These are scenarios, not measured adjudication time.
+Clinical readiness remains unresolved: no independent scientific reference, verified
+negatives/censoring, full regimen/population qualification or locked chronology.
+Decision: **revise before clinical training or locked evaluation**; continue to the
+Task 3 chronology/window audit. This measures feasibility rather than asserting that
+T1 is impossible. Clinical probabilities and training labels remain unset.
+
+Validation: **201 tests passed, zero skips/failures/errors**, required probes,
+PowerShell syntax and installed-wheel checks. The corrected run's eight files passed
+seal verification. See task2-corrected-validation.json and task2-summary.json.
+Canonical output: `data/benchmark/cohorts/registry-power-calibrated-20261018T030335Z`.
+
+
+## Task 3 - validated local chronology/protocol decision
+
+Completed after 208 full-suite tests, required probes, PowerShell checks and wheel
+verification. See `Evaluation Chronology and Local Preregistration 2026-10-17.md`,
+`protocols/evaluation-v0.1.json`, its public freeze anchor, and task3-validation.json.
+The official Qwen September 2024 immutable weights support a candidate January
+2025-January 2026 window. Exact training cutoff is unknown, not invented. Three
+Q4_K_M shards total 8,988,110,496 bytes; download/runtime validation belongs Task 4.
+A fresh January 2026 full archive hash/member CRC and PostgreSQL TOC check passed;
+zero clinical outcome queries, no database restoration. Open Targets 24.09 release
+and archive layout were checked, not collected/parsed. No current annotation fallback.
+
+This freezes local development registration and a gated clinical design, not an OSF
+submission or a locked clinical evaluation. Seven clinical activation gates remain
+unmet, including independent labels, historical inputs, qualified new-window power
+and origin selection. The original window remains exposed development. Virtual
+Biotech with common local weights will be explicitly labeled an adapted comparison.
+Proceed to Task 4's bounded development pilot; clinical execution remains disabled.

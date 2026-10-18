@@ -5,7 +5,7 @@ import unittest
 from statistics import mean,variance
 
 from asof.serde import sha256_file
-from tools.feasibility.registry_power import paired_stats,placements,wilson,simulate,dependency_profile,run
+from tools.feasibility.registry_power import paired_stats,placements,wilson,simulate,dependency_profile,run,mc_pvalue
 
 
 def program(pid,component,state,target=None,sponsor=None):
@@ -53,6 +53,22 @@ class RegistryPowerTests(unittest.TestCase):
         self.assertFalse(simulate(1,30,.65,.05,.7,noise,40,100)['estimable'])
         with self.assertRaises(ValueError):simulate(10,30,.65,.05,2,noise,40,100)
 
+    def test_finite_rank_null_pvalues_control_alpha_and_conservative_ties(self):
+        rejected=0
+        for heldout in range(100):
+            reference=[float(x) for x in range(100) if x!=heldout]
+            rejected+=mc_pvalue(float(heldout),reference)<=.05
+        self.assertEqual(rejected/100,.05)
+        self.assertEqual(mc_pvalue(1,[1,1,1]),1)
+        self.assertEqual(mc_pvalue(2,[1,1,1]),.25)
+        with self.assertRaises(ValueError):mc_pvalue(1,[])
+
+    def test_reference_test_accepts_identical_predictions_and_validates_reference(self):
+        noise={'case_to_control':0.,'control_to_case':0.}
+        null=simulate(10,30,.65,0,1,noise,40,100,reference=[0.]*99,collect_statistics=True)
+        self.assertEqual(null['rejections'],0);self.assertEqual(null['absolute_statistics'],[0.]*40)
+        with self.assertRaises(ValueError):simulate(10,30,.65,.05,.7,noise,10,100,reference=[])
+
     def test_full_pipeline_small_synthetic_fixture_and_tamper_detection(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);(root/'cohort-v04').mkdir();scope=root/'scope';scope.mkdir()
@@ -76,6 +92,13 @@ class RegistryPowerTests(unittest.TestCase):
             freeze.write_text(json.dumps({'protocol':{'sha256':sha256_file(pp)},'parents':pins}))
             run(pp,freeze,root/'result');summary=json.loads((root/'result/summary.json').read_text())
             self.assertEqual(summary['training_labels'],0);self.assertEqual(summary['scenario_rows'],2)
+            diagnostic=root/'diagnostic.json';diagnostic.write_text('{}')
+            policy.update(protocol_id='registry-feasibility-power-v0.2',parent_diagnostic=str(diagnostic),calibration_replicates=30)
+            pp2=root/'policy2.json';pp2.write_text(json.dumps(policy));fr2=root/'freeze2.json'
+            fr2.write_text(json.dumps({'protocol':{'sha256':sha256_file(pp2)},'parents':pins,'diagnostic_sha256':sha256_file(diagnostic)}))
+            run(pp2,fr2,root/'calibrated')
+            self.assertEqual(json.loads((root/'calibrated/summary.json').read_text())['test_method'],'finite_rank_parametric_null_calibration')
+            self.assertTrue((root/'calibrated/calibration-references.json').exists())
             with data.open('a') as f:f.write('\n')
             with self.assertRaises(ValueError):run(pp,freeze,root/'bad')
             self.assertTrue((root/'bad/failure.json').exists())

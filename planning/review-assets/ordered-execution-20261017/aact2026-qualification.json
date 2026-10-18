@@ -1,0 +1,97 @@
+{
+  "status": "archive_crc_hash_and_toc_passed",
+  "started_at_utc": "2026-10-18T03:21:14.908760+00:00",
+  "archive": "E:\\projects_data\\drug_target_agents_data\\raw\\aact_snapshots\\jan2026zip\\5tzn1rk7zy0q2xbdspg5iicwh9tt.zip",
+  "root": "E:\\projects_data\\drug_target_agents_data\\cache\\aact-20260101-qualification-20261018T032114Z",
+  "provider_spend_usd": 0,
+  "clinical_rows_queried": 0,
+  "database_restored": false,
+  "archive_sha256": "7fb923dacecae1dfec864c3e21fbed669add8a64b6bd1664ce973c24a514035c",
+  "archive_bytes": 2344676979,
+  "members": [
+    {
+      "name": "nlm_protocol_definitions.html",
+      "bytes": 92364,
+      "sha256": "cdf319d04029f1c1c2d54336622e0870a8e80629535f039858ac7570d8c40a13",
+      "crc32": 2255259866,
+      "crc_check": "passed_full_read",
+      "zip_timestamp": [
+        2025,
+        12,
+        17,
+        14,
+        29,
+        10
+      ]
+    },
+    {
+      "name": "nlm_results_definitions.html",
+      "bytes": 92364,
+      "sha256": "cdf319d04029f1c1c2d54336622e0870a8e80629535f039858ac7570d8c40a13",
+      "crc32": 2255259866,
+      "crc_check": "passed_full_read",
+      "zip_timestamp": [
+        2025,
+        12,
+        17,
+        14,
+        29,
+        10
+      ]
+    },
+    {
+      "name": "schema.png",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "crc32": 0,
+      "crc_check": "passed_full_read",
+      "zip_timestamp": [
+        2026,
+        1,
+        1,
+        5,
+        33,
+        26
+      ]
+    },
+    {
+      "name": "data_dictionary.csv",
+      "bytes": 45395,
+      "sha256": "ad1b11136dcadfe47a4c70c2f077f007a32f6161e4db975fea6a823cc777e602",
+      "crc32": 3893228052,
+      "crc_check": "passed_full_read",
+      "zip_timestamp": [
+        2026,
+        1,
+        1,
+        5,
+        33,
+        26
+      ]
+    },
+    {
+      "name": "postgres.dmp",
+      "bytes": 2351315997,
+      "sha256": "328fd718d3e34189158ab995337ca37021139e71b7224aad92cf7d1e4305aaa3",
+      "crc32": 1279458923,
+      "crc_check": "passed_full_read",
+      "zip_timestamp": [
+        2026,
+        1,
+        1,
+        5,
+        33,
+        24
+      ]
+    }
+  ],
+  "snapshot_date": "2026-01-01",
+  "exact_first_public_availability": null,
+  "exact_first_public_availability_reason": "User-supplied versioned archive; dump and member times have unspecified timezone",
+  "limitations": [
+    "schema.png is empty",
+    "HTML ancillary definitions are not qualified scientific inputs",
+    "Database has not been restored or scientifically validated"
+  ],
+  "finished_at_utc": "2026-10-18T03:23:21.793961+00:00"
+}

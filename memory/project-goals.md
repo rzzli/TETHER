@@ -8,6 +8,29 @@ updated: 2026-10-17
 
 # Project goals
 
+## Ordered execution update - October 17
+
+Tasks 1-3 in `TODO.md` are complete within their documented scope. The v0.5 scope
+audit retains 4,419 programs, 367 prior-risk alerts and 3,516 original-row checks.
+The corrected v0.2 power simulation passed three independent null checks and all
+120 scenarios; base-graph power ranges 6.2-46.7%, not the 80% planning target.
+No empirical clinical accuracy, qualified negatives or training labels exist.
+
+A frozen local development registration and gated clinical protocol selects official
+September 2024 Qwen2.5-14B Q4_K_M weights and a candidate January 2025-2026 window.
+An exact training cutoff is unknown; immutable pre-origin release is the route.
+The January 2026 ZIP passed fresh full SHA/member CRC/TOC checks; no outcome queries
+or restore were performed. OT24.09 is only archive/release-checked, not ingested.
+No current identifiers fill historical gaps. All seven clinical activation gates
+are unmet; no OSF filing or locked clinical evaluation is claimed.
+
+Task 4 code passes 216 tests, with bounded source-only packets and a loopback adapter.
+Public weights/runtime downloaded and hash-verified on E:; real ten-case local-model
+pilot validation is active and not yet complete. All later tasks remain pending.
+See [[Ordered Execution Progress 2026-10-17]] and
+[[Evaluation Chronology and Local Preregistration 2026-10-17]]. Prior dated status
+below is retained as history and superseded for scheduling. $0 provider spending.
+
 ## Registry-scale sizing and first label audit complete — October 17
 
 User authorized both private off-machine recovery/hosting/CI and registry-scale

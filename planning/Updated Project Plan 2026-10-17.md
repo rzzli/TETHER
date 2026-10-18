@@ -114,8 +114,11 @@ Use one dated session notebook entry and milestone-level sealing. Record executa
 
 The user can authorize a capped model run, remote publication, off-machine destination or preregistration submission when those concrete choices are ready. Those decisions do not block drafting the sizing protocol, auditing local schemas or preparing local preservation. Independent human availability affects adjudication and publication claims, not exploratory counts. Confirm exact account-mediated AACT versions only after the chronology memo identifies what is missing; do not request another broad download list now.
 
-**Next execution unit: Task 2 in `TODO.md`, sample size/power and clinical feasibility.**
-Registry extraction, private recovery/hosting/CI, and the fixed-cohort v0.5 scope audit
-are complete. Task 1 passed 194 full-suite tests and original-row checks. Do not
-repeat the extraction or treat the 37 recorded starts as independent validated
-clinical labels. Task ordering and stop-on-blocker rules now follow the user's TODO.
+**Current execution unit: Task 4 in `TODO.md`, bounded retrieval/local specialist.**
+Tasks 1-3 passed source/scope checks, corrected conditional power calibration, and
+frozen local chronology/protocol validation. Base-graph power is 6.2-46.7% across
+assumptions, below the 80% target. Clinical labels/probabilities remain unqualified.
+The candidate 2025-2026 local-model design supersedes the October window as the
+currently available route, without asserting historical source readiness or a lock.
+See `Evaluation Chronology and Local Preregistration 2026-10-17.md`. Task 4 has 216
+passing tests; real local-model pilot validation is pending. Preserve all old seals.

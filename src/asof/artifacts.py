@@ -122,6 +122,12 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
                     result.coverage, result.configuration, result.status, model, store.admitted_fingerprints,
                     store.catalog_policy, store.snapshot_base, result.trace)
     _check_source_inventory(store.snapshot, result.case, store.snapshot_base, store.catalog_policy, store.source_proofs)
+    if result.backend_id == 'local-structured-selection-v1':
+        from .local_model import verify_backend_execution
+        from .retrieval import RetrievalPolicy, verify_retrieval_trace
+        verify_backend_execution(read_json(output / 'backend-execution.json'), encode(result.trace), encode(result.configuration))
+        verify_retrieval_trace(result.case, store, encode(result.trace),
+            RetrievalPolicy(**result.configuration['backend_provenance']['config']['retrieval']))
     if journal is None:
         output.mkdir(parents=True, exist_ok=False)
     elif output.resolve() != journal.output or fingerprint(journal.events) != fingerprint(result.trace):
@@ -165,8 +171,10 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
                "sources": store.source_proofs,
                "admitted_fingerprints": store.admitted_fingerprints,
                "code": {path.relative_to(code_root).as_posix(): sha256_file(path) for path in sorted(code_root.rglob("*.py"))}}
-    if (output / "request.json").is_file():
-        receipt["auxiliary_outputs"] = {"request.json": sha256_file(output / "request.json")}
+    auxiliary = {name: sha256_file(output / name) for name in ('request.json', 'backend-execution.json')
+                 if (output / name).is_file()}
+    if auxiliary:
+        receipt["auxiliary_outputs"] = auxiliary
     write_json(output / "receipt.json", receipt)
     # Return this digest for external anchoring. A local receipt is not a trusted timestamp.
     return sha256_file(output / "receipt.json")
@@ -186,7 +194,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
         if not path.is_file() or sha256_file(path) != expected:
             raise ContractError(f"Run output integrity failure: {relative}")
     auxiliary = receipt.get("auxiliary_outputs", {})
-    if not isinstance(auxiliary, dict) or set(auxiliary) - {"request.json"}:
+    if not isinstance(auxiliary, dict) or set(auxiliary) - {"request.json", "backend-execution.json"}:
         raise ContractError("Invalid auxiliary output inventory")
     for relative, expected in auxiliary.items():
         path = safe_child(output, relative)
@@ -217,6 +225,11 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             raise ContractError("Semantic ledger schema mismatch")
         claims = decode(tuple[Claim, ...], ledger["claims"])
         run = read_json(output / "run.json")
+        if run['backend_id'] == 'local-structured-selection-v1':
+            from .local_model import verify_backend_execution
+            if 'backend-execution.json' not in auxiliary:
+                raise ContractError('Local model run is missing its sealed execution archive')
+            verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])
         if run["input_fingerprint"] != receipt["input_fingerprint"]:
             raise ContractError("Semantic run input fingerprint mismatch")
         admitted = receipt["admitted_fingerprints"]
@@ -228,6 +241,10 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                 raise ContractError(f"Source integrity or admission failure: {error}") from error
             if fingerprint(restored.admitted_fingerprints) != fingerprint(admitted):
                 raise ContractError("Semantic admitted fingerprints differ from eligible source packets")
+            if run['backend_id'] == 'local-structured-selection-v1':
+                from .retrieval import RetrievalPolicy, verify_retrieval_trace
+                verify_retrieval_trace(case, restored, trace,
+                    RetrievalPolicy(**inputs['configuration']['backend_provenance']['config']['retrieval']))
             if fingerprint(restored.exclusions) != fingerprint(run["exclusions"]):
                 raise ContractError("Semantic source exclusions mismatch")
             for category, coverage in run["coverage"].items():

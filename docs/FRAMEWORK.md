@@ -192,6 +192,29 @@ observation IDs and `Usage` contains token/cost accounting. Replay entries bind 
 selection and exact request fingerprint. The offline extractive backend selects approved
 observed records; it is neither a live LLM nor a biological computation.
 
+An explicit `run --local-model config.json` uses a separately owned local
+llama-server. It is restricted to an IPv4 loopback endpoint, bypasses environment
+proxies, rejects redirects, applies request deadlines and makes no provider calls.
+The configuration declares pinned weight/runtime hashes; the trusted launcher must
+verify them and own the server. This declaration is not remote model attestation.
+The default CLI behavior and budget caps are unchanged.
+
+`RetrievalPolicy` bounds whole admitted records by count and canonical UTF-8 bytes.
+Literal case-token overlap ranks candidates, with stable ID tie-breaking. Provider
+scores do not rank or weight evidence. Oversized records are omitted with an explicit
+reason; they are not silently truncated. The model selects at most three IDs per
+category from a 12-record/12,000-byte default packet. Rendered prompts have a separate
+16,384-byte cap, escaped role delimiters and a 256-token generation limit. This is
+heuristic evidence selection, not new scientific synthesis or a calibrated predictor.
+
+Retrieval events bind the admitted universe, exact selected/omitted IDs, policy,
+request fingerprint and byte count. The critic also checks membership in the actual
+bounded request. `backend-execution.json` retains payloads/responses and usage and is
+sealed as an auxiliary output. Local-run verification recomputes bounded retrieval
+from admitted sources and checks model request, response, selected IDs, measured
+usage and dispatch/journal bindings. Local model execution does not establish
+therapeutic relevance, independent review or clinical probabilities.
+
 The critic rejects duplicate or out-of-packet selections. Accepted claims copy approved
 statements and retain registered fingerprints. Backend-authored interpretations do not
 enter factual claims. Critic retries are bounded; unexpected provider errors do not
@@ -230,13 +253,16 @@ progress. `inspect-run` reads unresolved reservations or build state without res
 work. New attempts require fresh output directories. Hard termination may leave no
 terminal event; the last durable stage is the retained recovery evidence.
 
-Wall-time checks cannot forcibly interrupt an arbitrary blocking backend. Future live
-adapters need request deadlines and process supervision for hard limits.
+Wall-time checks cannot forcibly interrupt an arbitrary blocking backend. The local
+adapter has a request deadline; an arbitrary backend still needs process supervision
+for hard limits. Source admission/verification time is outside the workflow meter
+and is reported separately by the development harness.
 
 Finalization archives effective case/snapshot/scorer, catalog policy, configuration,
 replay provenance, code fingerprints and dependency versions. The required v2 receipt
 set has eight outputs: run, inputs, ledger, features, prediction, trace, journal and
-dossier. `request.json`, when present, is sealed through optional `auxiliary_outputs`.
+dossier. `request.json` and `backend-execution.json`, when present, are sealed through
+optional `auxiliary_outputs`. Existing valid v1/v2 receipts remain compatible.
 
 | Verification layer | Meaning |
 | --- | --- |
@@ -302,8 +328,9 @@ dates, cluster and label freeze. Censored or unresolved cases are not negatives.
 The evaluator reports descriptive coverage, AUROC, average precision and Brier scores;
 it does not certify an anchored, locked prospective cohort.
 
-Historical cohorts, MR/colocalization, scorer training/calibration, live model adapters,
-competitor execution, T2–T5, clustered statistical inference and H6 remain later work.
+Qualified historical cohorts, MR/colocalization, scorer training/calibration, paid
+provider adapters, competitor execution, T2–T5 and H6 remain later work. The frozen
+registry power study is conditional simulation, not observed comparative performance.
 Arbitrary agents require OS-level read-only mounts, evaluator/credential isolation,
 controlled network access and contamination audits before locked evaluation. Python
 protocols provide no OS containment. Original plans and dated reviews remain preserved;

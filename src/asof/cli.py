@@ -27,6 +27,7 @@ def parser() -> argparse.ArgumentParser:
     run.add_argument("--catalog", type=Path)
     run.add_argument("--scorer", type=Path)
     run.add_argument("--replay", type=Path)
+    run.add_argument("--local-model", type=Path, help="Explicit loopback model configuration; never the default")
     run.add_argument("--disable", action="append", choices=[item.value for item in Category], default=[])
     run.add_argument("--no-review-retries", action="store_true")
     run.add_argument("--max-calls", type=int, default=16)
@@ -100,7 +101,13 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 case_path, snapshot_path, model_path = args.case, args.snapshot, args.scorer
                 catalog = args.catalog
-                backend = ReplayBackend(args.replay) if args.replay else ExtractiveBackend()
+                if args.replay and args.local_model:
+                    raise ContractError('Choose replay or explicit local inference')
+                if args.local_model:
+                    from .local_model import LocalSelectionBackend
+                    backend = LocalSelectionBackend(args.local_model)
+                else:
+                    backend = ReplayBackend(args.replay) if args.replay else ExtractiveBackend()
                 budget = Budget(args.max_calls, args.max_input_tokens, args.max_output_tokens,
                                 args.max_cost_usd, args.max_seconds, args.max_retries)
                 disabled = tuple(Category(item) for item in args.disable)
@@ -119,6 +126,8 @@ def main(argv: list[str] | None = None) -> int:
             store = load_snapshot(snapshot_path, case, catalog)
             stage = "execution"
             result = run_workflow(case, store, backend, model, budget, disabled, review, journal)
+            if hasattr(backend, 'records'):
+                write_json(args.output / 'backend-execution.json', {'schema_version': 1, 'attempts': backend.records})
             stage = "artifact_finalization"
             digest = write_run(args.output, result, store, model, journal)
             answer = {"status": result.status, "output": str(args.output.resolve()),

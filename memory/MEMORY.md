@@ -1,7 +1,8 @@
 # Research memory index
 
-- [[Updated Project Plan 2026-10-17]] — Private hosting/recovery/CI and v0.4 cohort are complete; v0.5 fixed-cohort scope audit passed. Follow TODO.md in order; power/clinical feasibility is next.
-- [[Ordered Execution Progress 2026-10-17]] — User-ordered task checklist; Task 1 passed 194 tests and source/scope checks. Scientific validation and later tasks remain open.
+- [[Updated Project Plan 2026-10-17]] — Ordered Tasks 1-3 passed: fixed-cohort scope audit, corrected conditional power, frozen local chronology/protocol. Task 4 local-model pilot is active; clinical activation gates remain unmet.
+- [[Evaluation Chronology and Local Preregistration 2026-10-17]] — Immutable September 2024 Qwen weights, candidate January 2025-2026 archives, T6 development protocol; no public registration or clinical lock.
+- [[Ordered Execution Progress 2026-10-17]] — User-ordered checklist; scope and power are measured, local evaluation protocol frozen. Task 4 code passes 216 tests; real local-model pilot validation is pending.
 
 - [[Claude Review and Plan_claude10172026]] — Independent re-verification report and proposed protect–measure–decide plan; reconciled in the current roadmap with endpoint, chronology, audit-design and authorization qualifications.
 - [[research-log-2026-10-17-claude-review]] — Review session record: what was re-run, what could not be verified, and the first action (commit, remote, backup).

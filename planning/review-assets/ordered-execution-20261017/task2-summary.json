@@ -1,0 +1,93 @@
+{
+  "role": "evaluation_only",
+  "decision": "revise_before_clinical_training_or_locked_evaluation",
+  "sample_profiles": {
+    "base:v04_component": {
+      "mode": "v04_component",
+      "programs": 4419,
+      "units": 1001,
+      "states": {
+        "proxy_no_recorded_start": 953,
+        "unresolved": 29,
+        "proxy_recorded_start": 19
+      },
+      "largest_unit_programs": 248,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    },
+    "base:shared_target_connections": {
+      "mode": "shared_target_connections",
+      "programs": 4419,
+      "units": 627,
+      "states": {
+        "proxy_no_recorded_start": 592,
+        "proxy_recorded_start": 19,
+        "unresolved": 16
+      },
+      "largest_unit_programs": 1840,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    },
+    "base:shared_target_and_sponsor_connections": {
+      "mode": "shared_target_and_sponsor_connections",
+      "programs": 4419,
+      "units": 261,
+      "states": {
+        "proxy_recorded_start": 6,
+        "proxy_no_recorded_start": 248,
+        "unresolved": 7
+      },
+      "largest_unit_programs": 3864,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    },
+    "uncertainty_hold:v04_component": {
+      "mode": "v04_component",
+      "programs": 3960,
+      "units": 925,
+      "states": {
+        "proxy_no_recorded_start": 889,
+        "unresolved": 20,
+        "proxy_recorded_start": 16
+      },
+      "largest_unit_programs": 216,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    },
+    "uncertainty_hold:shared_target_connections": {
+      "mode": "shared_target_connections",
+      "programs": 3960,
+      "units": 585,
+      "states": {
+        "proxy_no_recorded_start": 560,
+        "proxy_recorded_start": 16,
+        "unresolved": 9
+      },
+      "largest_unit_programs": 1648,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    },
+    "uncertainty_hold:shared_target_and_sponsor_connections": {
+      "mode": "shared_target_and_sponsor_connections",
+      "programs": 3960,
+      "units": 258,
+      "states": {
+        "proxy_recorded_start": 6,
+        "proxy_no_recorded_start": 247,
+        "unresolved": 5
+      },
+      "largest_unit_programs": 3422,
+      "interpretation": "Explicit graph components and any-program proxy endpoint; not effective sample size or validated outcomes."
+    }
+  },
+  "scenario_rows": 120,
+  "nominal_target_power": 0.8,
+  "null_calibration_warnings": 0,
+  "test_method": "finite_rank_parametric_null_calibration",
+  "assumption_warning": "Synthetic normal-score power conditional on proxy class sizes, not empirical model performance or clinical-label validity.",
+  "clinical_readiness": {
+    "independent_scientific_review": false,
+    "adjudicated_negatives_or_censoring": false,
+    "full_regimen_population_equivalence": false,
+    "locked_model_window_chronology": "Task 3 pending"
+  },
+  "next": "Task 3 chronology/window/preregistration audit; do not train from these proxy labels.",
+  "clinical_probabilities": null,
+  "training_labels": 0,
+  "provider_spend_usd": 0
+}
