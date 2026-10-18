@@ -1,0 +1,19 @@
+{
+  "status": "development_substeps_verified_scientific_gate_blocked",
+  "source_checkpoint": "66634ae903e8f14b030e19195b8d2f73d7805a2b",
+  "required_tests": {
+    "run": 246,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "hosted_ci_status": "success",
+  "owned_server_loopback_port_closed": true,
+  "recovery_status": "downloaded_increment_restored_and_verified",
+  "recovery_index_sha256": "dc2ce6ad6b84eb57c4f60720ba06e3bc31794e5439c1c65c0ce24ab482c259c8",
+  "comparison_seal_sha256": "3500928aca5be00e96d6677368eda04b9418030085c8d13c4f7bb89c3a9ed022",
+  "task6_complete": false,
+  "task7_started": false,
+  "task8_started": false,
+  "provider_spend_usd": 0
+}

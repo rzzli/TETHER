@@ -164,3 +164,21 @@ qualified scientific references support the requested analyses. Clinical AUROC/
 Brier remain unavailable; independent relevance/error metrics remain unavailable.
 Tasks 1–5 retain their documented scopes and conditional decisions. The downloader,
 transport receipts and stopped periodic monitor are untouched.
+
+
+## Preservation and final checks
+
+All four hosted Windows/Linux jobs also passed at the artifact/documentation
+checkpoint `66634ae903e8f14b030e19195b8d2f73d7805a2b`. The private
+`task6-development-20261018` recovery release was downloaded and restored: all
+119 retained files (31,921,594 bytes), four product seals, the source clone and
+Git fsck passed. Compressed evidence is 5,908,482 bytes. Independently retained
+asset-index SHA-256:
+`dc2ce6ad6b84eb57c4f60720ba06e3bc31794e5439c1c65c0ce24ab482c259c8`.
+
+This is an increment depending on previous recovery releases. Full biological
+originals, AACT archives/databases, model/native binaries and credentials are
+excluded; it is not a complete original-data backup or new scientific validation.
+The final handoff metadata is retained separately in private Git. The owned
+loopback server port was independently confirmed closed. See `closeout.json` and
+`incremental-recovery-verification.json` in the retained Task 6 evidence directory.
