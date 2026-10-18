@@ -150,3 +150,11 @@ freeze hashes and backed up; this is explicitly post-hoc recovery.
 Science3 remains blocked on the April1,2026 AACT archive. The requested folder now
 exists and is empty. No endpoint joins/labels, clinical activation, scorer fitting or
 Items4–7 were performed. See the execution document and Item3 partial checkpoint.
+
+The user subsequently delivered April1AACT. Exactdate/5CRCs/repeatedZIPhash passed;
+SHA6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3,
+2,420,893,767bytes. April technicalrestore resumed fresh, evaluator-only/emptycohort.
+Pre-labelscope/temporal amendment is sealed;conservative civil-dateoffset bounds hold
+March31/April1updates without assuming NLMtimezone or moving cutoff.381fulltests,
+probes,packaging and demo passed; origin-onlyreview sample and independentterminal
+verifier being prepared. No endpointcohortqueries/labels yet;Item3remainsactive.

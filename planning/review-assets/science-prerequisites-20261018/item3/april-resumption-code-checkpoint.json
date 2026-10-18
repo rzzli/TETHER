@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-18T21:08:51.440079+00:00",
+  "status": "code_and_pre_label_inputs_validated_restore_in_progress",
+  "science_stage": "science_3",
+  "science_stage_complete": false,
+  "full_tests": 402,
+  "core_expected_skips": 52,
+  "provider_spend_usd": 0,
+  "endpoint_cohort_rows_queried": 0,
+  "clinical_activation": false,
+  "later_stages_started": false,
+  "source_code_and_proofs": [
+    {
+      "path": "tools/science/ascertainment_inputs.py",
+      "bytes": 12675,
+      "sha256": "6bd71fe1c0a22ae2ba04b3c0280828cd42b89f81c214918693b6f95b976236ab"
+    },
+    {
+      "path": "tools/science/ascertainment_policy.py",
+      "bytes": 2914,
+      "sha256": "d64feb10c06beabcdb44ecb70b9a6fb80dab7e6474394a571b4d6d8251fc844e"
+    },
+    {
+      "path": "tools/science/endpoint_restore.py",
+      "bytes": 9611,
+      "sha256": "b23ff6eb81a89fae4903273930ee5a65657059bd19fc5c9bdc39362138e6fc7b"
+    },
+    {
+      "path": "tools/science/origin_review.py",
+      "bytes": 15365,
+      "sha256": "e7c344085544f2f208017bd341691fc247ce202ee4fabafdede5ca09ab42b20c"
+    },
+    {
+      "path": "tools/science/restore_verification.py",
+      "bytes": 24782,
+      "sha256": "f4890498d1f2ef52e5db798d9707a7f05a16d2f77c0c47840d19b6e1b497c52b"
+    },
+    {
+      "path": "tests/test_science_ascertainment_inputs.py",
+      "bytes": 7624,
+      "sha256": "3180bdc4b50d7a91295853d4e944b5e843f104f6b292582112fb289e4f3f7057"
+    },
+    {
+      "path": "tests/test_science_ascertainment_policy.py",
+      "bytes": 2606,
+      "sha256": "f1b797066006676676a55bdc289ccd59d5f4abccfe351247236533eb579500ef"
+    },
+    {
+      "path": "tests/test_science_endpoint_restore.py",
+      "bytes": 13411,
+      "sha256": "a930d4997b0ce310423b35277bcc617ab59877ff2cb1b45fd43aa348350cde1c"
+    },
+    {
+      "path": "tests/test_science_origin_review.py",
+      "bytes": 8121,
+      "sha256": "1abcbb733ad073f30c5592c266af5531aa275c03d5d1afa46ef37055614ca055"
+    },
+    {
+      "path": "tests/test_science_restore_verification.py",
+      "bytes": 19357,
+      "sha256": "b5cdbf9cb98b445e3dcb7e31d960a2fff7a1565069a306ffc8326917b3794788"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-final-code-validation.json",
+      "bytes": 470,
+      "sha256": "9f2b78c9544108dce70034770451c4f53123db13b30990d3292e0b6812be3c10"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-core-code-validation.json",
+      "bytes": 11263,
+      "sha256": "8a05fb33f852202cc7c44f029783faffedabfd40053c527007ffaa0d18d8c71c"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-input-scope-amendment.json",
+      "bytes": 3442,
+      "sha256": "1e19a4cd1b1cedeb2db9a3fc1427bcd8d20e3bc77eb777f2cff374dd3ed018e9"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-gate-peer-validation.json",
+      "bytes": 4262,
+      "sha256": "04dc111acf5a31787656bc04f4395f357701b682bcb019697a6169f635e78e41"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-terminal-verifier-peer-review.json",
+      "bytes": 6345,
+      "sha256": "fdad439580c977434ba6884532a97c46df9945a96dcb89fbd0dbb82c384cf28a"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-archive-qualification.json",
+      "bytes": 761,
+      "sha256": "4036eabadc5b85c13487b219ce2542df423399a4f3919c51b161aa4c871c843b"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/april-gate-code-capture-correction.json",
+      "bytes": 847,
+      "sha256": "84478a6175551608cd620d54ee552f67f1e4593bf3617108acfa62d4a8bdbee2"
+    }
+  ],
+  "origin_pilot": {
+    "seal_sha256": "5a4842f9b1751d3e0b2e50c166c5bf1786e3639741072b38b8ad264b4b8da56d",
+    "audit_sha256": "97b37cdb6f1f6c3f894292f185141ec172c0b9a8c8bb2bd75069dfc29948fd7b",
+    "selected_distinct_trials": 12,
+    "source_projection_rows_checked": 32,
+    "representative_population_claim": false,
+    "followup_inspected": false
+  }
+}

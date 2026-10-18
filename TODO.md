@@ -15,7 +15,10 @@ to the user. Previous task completion scopes and historical results below remain
 - [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
-Current item: Science 3, blocked on the user-supplied April 2026 AACT archive.
+Current item: Science 3, resumed after the user supplied the April 2026 AACT archive.
+The exact April1 dump date, repeated ZIP hashes and all five member CRC/hash checks
+passed. April technical restoration is running in a fresh evaluator-only directory;
+source coverage and terminal acceptance remain pending.
 January 2026 restoration and independent terminal acceptance passed. The Windows
 temporary-path test assertion was corrected;
 all four hosted Windows/Linux core/full jobs passed at c52b2ff. Original failed CI
@@ -38,16 +41,24 @@ development artifacts are evidence, not independent scientific validation.
   audit all 61,541 scope memberships and preserve unresolved scientific equivalence.
 - [x] Validate the origin/endpoint gates and integrity corrections: 363 full tests,
   dependency-free validation, original corruption probes and 1,648 ancestor checks.
+- [x] Validate the April archive/cutoff gates, independent verifier and source-only
+  pilot sampler: 402 full tests, required probes, package/demo and core checks
+  (52 expected ingestion skips). Hosted checks for these additions remain pending.
 - [x] Complete January 2026 technical restoration and independent audit: 52 tables,
   563,840 studies, 55,380,326 rows, 394 retained evidence files and 1,648 ancestor
   commitments verified; empty cohort output; owned server stopped and port closed.
-- [ ] Receive and qualify April 1, 2026 AACT ascertainment input. Actual file/access
-  gap: official API401/sign-in; requested user delivery folder is
-  E:\projects_data\drug_target_agents_data\raw\aact_snapshots\apr2026zip\.
+- [x] Receive and qualify April 1, 2026 AACT archive: 2,420,893,767 bytes,
+  SHA256 `6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3`;
+  exact TOC date and all five CRC/member checks passed. Ancillary schema.png is empty;
+  archived HTML is integrity-checked only, not adopted as scientific documentation.
+- [ ] Complete April technical restoration, independent terminal verification and
+  source-coverage/cutoff disposition under the frozen pre-label amendment.
 
-Science 3 remains incomplete; ordered execution stops at the file/access blocker.
+Science 3 remains incomplete; the prior file/access blocker is resolved and execution
+has resumed within Item3. The earlier blocked checkpoint remains preserved in Git
+and its verified E: backup. Items4–7 remain unstarted until Item3 passes.
 All four hosted jobs passed at 67cde1e. The restoration acceptance report and blocked
-execution state are sealed in the Item 3 checkpoint. No endpoint cohort joins, clinical labels, training,
+execution state are sealed in the earlier Item 3 checkpoint. No endpoint cohort joins, clinical labels, training,
 negatives, locked evaluation or later science stages are activated.
 
 - [x] **Task 1 — Build registry-scale cohorts and audit transition labels.** Verify

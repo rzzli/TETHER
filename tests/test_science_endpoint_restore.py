@@ -27,6 +27,72 @@ class EndpointRestoreGateTests(unittest.TestCase):
         self.origin.update(files=[proof],parent_origin_seal={'path':str(parent),'sha256':sha256_file(parent)},
             historical_mapping_manifest={'path':str(manifest),'sha256':sha256_file(manifest)},reconstruction_rules_proof=proof)
 
+    def april_inputs(self, p, actual_date='2026-04-01'):
+        self.ancestors(p)
+        write_json(p/'origin.json',self.origin)
+        self.decision.update(origin_seal_sha256=sha256_file(p/'origin.json'),
+            technical_snapshot_date='2026-04-01', snapshot_purpose='ascertainment',
+            ascertainment_at='2026-04-01T00:00:00Z')
+        write_json(p/'decision.json',self.decision)
+        archive=p/'archive.zip';archive.write_bytes(b'invented April archive fixture')
+        qualification={'schema_version':1,'status':'archive_qualification_passed',
+            'requested_date':'2026-04-01','actual_dump_date':actual_date,
+            'archive':{'path':str(archive),'sha256':sha256_file(archive),'bytes':archive.stat().st_size}}
+        write_json(p/'qualification.json',qualification)
+        return {'snapshots':[{'requested_date':'2026-04-01','archive':str(archive)}],
+            'frozen_nct_ids':[],'source_archive_sha256':sha256_file(archive),
+            'archive_qualification':{'path':str(p/'qualification.json'),'sha256':sha256_file(p/'qualification.json')}}
+
+    def test_explicit_april_technical_restore_preserves_cutoff_and_empty_cohort(self):
+        with tempfile.TemporaryDirectory() as temp:
+            p=Path(temp);plan=self.april_inputs(p);calls=[]
+            def execute(plan,out):
+                calls.append(plan)
+                self.assertEqual(Path(plan['frozen_cohort_query']).read_text(),"SELECT '[]'::text;\n")
+            result=restore(p/'origin.json',sha256_file(p/'origin.json'),p/'decision.json',
+                sha256_file(p/'decision.json'),p/'out',plan,executor=execute)
+            self.assertEqual(len(calls),1)
+            self.assertEqual(result['snapshot_date'],'2026-04-01')
+            self.assertFalse(result['ascertainment_qualified'])
+
+    def test_april_mismatch_missing_proof_or_extended_cutoff_fails_before_dispatch(self):
+        for change in ('actual_date','missing_proof','changed_proof','extended_cutoff','purpose','requested_date'):
+            with self.subTest(change=change),tempfile.TemporaryDirectory() as temp:
+                p=Path(temp);plan=self.april_inputs(p,actual_date='2026-04-02' if change=='actual_date' else '2026-04-01')
+                if change=='missing_proof':plan.pop('archive_qualification')
+                if change=='changed_proof':(p/'qualification.json').write_bytes(b'changed qualification')
+                if change=='extended_cutoff':
+                    self.decision['ascertainment_at']='2026-04-02T00:00:00Z';write_json(p/'decision.json',self.decision)
+                if change=='purpose':
+                    self.decision['snapshot_purpose']='clinical_labels';write_json(p/'decision.json',self.decision)
+                if change=='requested_date':plan['snapshots'][0]['requested_date']='2026-04-02'
+                calls=[]
+                with self.assertRaises(ContractError):restore(p/'origin.json',sha256_file(p/'origin.json'),
+                    p/'decision.json',sha256_file(p/'decision.json'),p/'out',plan,executor=lambda *a:calls.append(a))
+                self.assertEqual(calls,[])
+                self.assertTrue((p/'out/failure.json').exists())
+
+    def test_april_qualification_and_ancestor_mutations_cannot_finalize(self):
+        for change in ('ancestor_before','ancestor_during','qualification_during'):
+            with self.subTest(change=change),tempfile.TemporaryDirectory() as temp:
+                p=Path(temp);plan=self.april_inputs(p)
+                ancestor=p/'qualified-toc.txt';ancestor.write_text('invented qualified TOC fixture',encoding='utf-8')
+                qualification=read_json(p/'qualification.json')
+                qualification['proofs']=[{'path':str(ancestor),'sha256':sha256_file(ancestor),'bytes':ancestor.stat().st_size}]
+                write_json(p/'qualification.json',qualification)
+                plan['archive_qualification']['sha256']=sha256_file(p/'qualification.json')
+                calls=[]
+                if change=='ancestor_before':ancestor.write_text('changed before dispatch',encoding='utf-8')
+                def execute(*args):
+                    calls.append(1)
+                    changed=ancestor if change=='ancestor_during' else p/'qualification.json'
+                    changed.write_text('changed during execution',encoding='utf-8')
+                with self.assertRaises(ContractError):restore(p/'origin.json',sha256_file(p/'origin.json'),
+                    p/'decision.json',sha256_file(p/'decision.json'),p/'out',plan,executor=execute)
+                self.assertEqual(len(calls),0 if change=='ancestor_before' else 1)
+                self.assertFalse((p/'out/report.json').exists())
+                self.assertTrue((p/'out/failure.json').exists())
+
     def test_candidate_only_seal_cannot_open_restore_gate(self):
         self.origin['mapping_qualified']=False
         with self.assertRaises(ContractError):validate_gate(self.origin,self.decision)

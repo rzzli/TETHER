@@ -8,7 +8,7 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 |---|---|---|
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
-| 3. Historical inputs/origin/endpoint | Blocked; file needed | Historical mappings/origin seal and January2026 technical restore passed; April2026 ascertainment archive requires user access. |
+| 3. Historical inputs/origin/endpoint | Resumed; April restore running | Historical mappings/origin seal and January2026 technical restore passed; user supplied April archive, exact date/integrity passed; terminal restoration and coverage remain pending. |
 | 4. Outcomes/power/precision | Pending | Endpoint-specific adjudication; unknown is not a negative. |
 | 5. Conditional genetics | Pending | Method-specific source/QC and biological eligibility; explicit defer allowed. |
 | 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
@@ -126,7 +126,7 @@ post-hoc; it does not imply an automatic acquisition-time code archive. Verified
 copies and their recovery map are backed up on E:. The correction and original
 freezes remain separate.
 
-The missing input is a versioned PostgreSQL AACT snapshot dated April1,2026. Official
+The earlier missing input was a versioned PostgreSQL AACT snapshot dated April1,2026. Official
 listing requires sign-in and API returns401; no publisher filename or stable
 historical-version API is assumed. User delivery requested at
 `E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/`.
@@ -134,9 +134,41 @@ Nearby dates require explicit evaluation; a later snapshot cannot silently exten
 the midnight-UTC ascertainment cutoff. Ninety days remains a proposed reporting
 allowance, not demonstrated completeness. Items4–7 remain unstarted.
 
-Ordered execution stops at this actual file/access gap under the user's exception.
-Item3 is not marked complete. The retained `item3/partial-closeout.json`,
+The earlier checkpoint stopped at this actual file/access gap under the user's exception.
+It did not mark Item3 complete. The retained `item3/partial-closeout.json`,
 `item3/endpoint-terminal-validation.json` and `item3/checkpoint-freeze.json` bind the
 completed supporting work, validation and blocker. After delivery, verify the archive
 date, integrity and cutoff eligibility before continuing Item3, then proceed to Item4.
 Do not substitute a nearby snapshot or treat absent transitions as failures.
+
+## April archive delivery and resumption
+
+The user supplied the requested archive later on October18. Exact PostgreSQL TOC
+date is April1,2026; ZIP SHA256 is
+`6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3`
+and size is2,420,893,767 bytes. Repeated full ZIP hashes, stable identity and all five
+member CRC/hash checks passed in135.671 seconds. Ancillary schema.png is empty;
+archived HTML has integrity proof only and is not treated as verified documentation.
+The original archive stays untouched. The prior blocked checkpoint and its exact
+document versions remain preserved in Git at `b30cf15` and the verified E: backup.
+
+An explicitly pinned, empty-cohort April technical restore is running in a fresh
+E: directory, with source hashes, origin ancestry and qualification ancestors checked
+before/after dispatch. The new April gate and conservative date policy passed381
+full tests, probes, packaging and the installed dependency-free demo. Further verifier
+and origin-review tests are being added and will receive their own validation.
+
+Before endpoint records or labels, `item3/april-input-scope-amendment.json` freezes
+input-stage scope and a conservative civil-date offset envelope. It assumes a public
+posting DATE is a civil date with unknown conventional UTC offset in[-12,+14]hours;
+it does not claim a known NLM timezone or original historical version bytes. March30
+can qualify conditionally for the April1midnightUTC cutoff; March31/April1 are held.
+First registration/submission dates cannot backdate a later update's content.
+Held versions stay missing, never origin exclusions or negatives. The January1
+event horizon and90-day allowance are unchanged; reporting completeness stays
+unqualified. Strict/clinical-ready/locked flags remain false.
+
+A bounded, source-only origin review is being prepared from the existing sealed
+universe before follow-up inspection. It cannot alter universe membership, erase
+qualification holds, or establish representative population performance. Item3 is
+still incomplete; Items4–7 have not started.

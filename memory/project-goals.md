@@ -373,3 +373,13 @@ April2026 AACT remains a real authenticated-file gap requested from the user at
 E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/.
 Science3 is blocked/incomplete; ordered execution stops at that permitted exception.
 Strict complete,clinical-ready and locked flags remain false. Items4–7 are not started.
+
+April-delivery resumption later October18: user supplied the requested archive.
+Exact dumpdate2026-04-01,ZIP6bc8662e...04b8c3,2,420,893,767bytes;all5CRCs/memberhashes
+and repeatedfullZIPhash passed. Prior blockedcheckpoint remains historical atb30cf15.
+Fresh evaluator-only technicalrestore is running onownedport55438 withliteralempty
+cohort SQL. Pre-label input-scope amendment adopts an explicit conservative civil-date
+offset envelope[-12,+14]hours;March31/April1postingsheld, no knownNLMtimezone claimed.
+No horizon/cutoffshift, no unknown-to-negative conversion.381fulltests/probes/package
+passed before further verifier/origin-review additions. Item3active/incomplete;
+origin-only review preparation permitted, Items4–7stillunstarted.

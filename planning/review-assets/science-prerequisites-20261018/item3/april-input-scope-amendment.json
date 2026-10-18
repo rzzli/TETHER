@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "amendment_id": "science3-input-scope-and-ascertainment-v1",
+  "frozen_at_utc": "2026-10-18T20:52:40.444829+00:00",
+  "role": "evaluation_only",
+  "parent_protocol": {
+    "path": "planning\\protocols\\science-prerequisites-v0.1.json",
+    "sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7"
+  },
+  "amendment_timing": "Before endpoint cohort extraction, outcome research or labels; only technical archives/metadata inspected",
+  "science3_scope": "Historical/input readiness and immutable origin candidate universe; not qualified clinical programs or locked cohort",
+  "qualified_clinical_programs": 0,
+  "origin_membership_may_change_from_followup": false,
+  "origin_scope_hold_rule": "Origin identity,regimen,population,arm-role and prior-risk unresolved dimensions must be resolved using origin-only evidence or held before any resolved label. Follow-up cannot admit or remove origin members.",
+  "window": {
+    "origin_at": "2025-01-01T00:00:00Z",
+    "horizon_at": "2026-01-01T00:00:00Z",
+    "ascertainment_at": "2026-04-01T00:00:00Z",
+    "occurrence_interval": "(origin,horizon]",
+    "reporting_allowance_days": 90,
+    "reporting_allowance_completeness_qualified": false
+  },
+  "posting_date_policy": {
+    "id": "aact-public-date-offset-envelope-v1",
+    "assumptions": [
+      "DATE denotes civil date of actual public posting of the used record version",
+      "Unknown conventional UTC offset within[-12,+14]hours; actual NLM timezone not asserted",
+      "Record-level posting does not date separate results versions or AACT enrichment"
+    ],
+    "interval": "[D00UTC-14h,(D+1)00UTC+12h)",
+    "eligible_when": "Entire availability upper bound<=fixed cutoff",
+    "boundary_examples": {
+      "2026-03-30": "eligible_reconstructed_date_bound",
+      "2026-03-31": "held_boundary_uncertain",
+      "2026-04-01": "held_boundary_uncertain"
+    },
+    "sensitivity": "UTC-calendar day assumptions may be separately reported; do not choose after outcomes",
+    "strict_timestamp_qualified": false,
+    "original_version_bytes_qualified": false
+  },
+  "held_followup_rule": "Recover eligible earlier version or retain missingness; never treat unknown as negative, change origin membership or silently extend cutoff",
+  "input_coverage_requirement": "Retain restored table/row/identifier/date audit plus unknown source-version/absence/reporting-lag limitations; no whole-world completeness claim",
+  "endpoint_truth": "Registry start,enrollment,dosing and clinical efficacy remain distinct; no outcome automatically inferred",
+  "next_stage_gate": "Only after Science3 report validates, freeze a separate read-only extraction/review/search protocol before any endpoint cohort query",
+  "provider_spend_usd": 0,
+  "proofs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item3\\april-resumption-scope-review.md",
+      "sha256": "11fa08fb5f1b71f9ccb1771ee9f67036c4e9d285cce4b39b046181ae7645ef41"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item3\\april-temporal-qualification-review.json",
+      "sha256": "4b9307590064aebb2d2648f6f0bb3ad2370a7c68b5a07e091076d80c82b630fb"
+    },
+    {
+      "path": "tools\\science\\ascertainment_policy.py",
+      "sha256": "d64feb10c06beabcdb44ecb70b9a6fb80dab7e6474394a571b4d6d8251fc844e"
+    }
+  ]
+}

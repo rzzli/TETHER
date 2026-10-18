@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[Scientific Prerequisites Execution 2026-10-18]] — Active seven-item science execution: Items1–2 passed; Item3 resumed after April1AACT delivery and archive qualification; technical restoration/source-only origin review underway; Items4–7 not yet started. Current details in [[project-goals]] and [[research-log-2026-10-18]].
+
 - [[Task 6 Development Comparisons 2026-10-18]] — Validated baselines/masks, competitor configuration audit and four source-verified wider-candidate dossiers. Model/lexical sets match 11/11; 246 tests and four hosted jobs pass. Task 6 scientific/comparator gates remain open.
 - [[research-log-2026-10-18]] — Task 6 resumption, retained comparison findings and stopping decision; no independent quality or clinical prediction result.
 

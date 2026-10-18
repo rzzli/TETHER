@@ -86,11 +86,36 @@ def restore(origin_path, origin_sha256, decision_path, decision_sha256, output, 
             raise ContractError('Restore route decision does not bind the exact origin seal')
         _,pins=verify_origin_closure(origin_path,origin_hash)
         pins[Path(decision_path)]=decision_hash
-        if (len(plan.get('snapshots',[]))!=1 or plan['snapshots'][0].get('requested_date')!='2026-01-01' or
-                plan.get('frozen_nct_ids')!=[]):
-            raise ContractError('Only technical January2026 restoration with an empty cohort is authorized here')
+        if len(plan.get('snapshots',[]))!=1 or plan.get('frozen_nct_ids')!=[]:
+            raise ContractError('Technical restoration requires one snapshot and an empty cohort')
+        requested_date=plan['snapshots'][0].get('requested_date')
+        if requested_date not in ('2026-01-01','2026-04-01'):
+            raise ContractError('Unapproved technical snapshot date')
         archive=Path(plan['snapshots'][0]['archive'])
         archive_hash=plan.get('source_archive_sha256')
+        if requested_date=='2026-04-01':
+            if (decision.get('technical_snapshot_date')!=requested_date or
+                    decision.get('snapshot_purpose')!='ascertainment' or
+                    decision.get('ascertainment_at')!='2026-04-01T00:00:00Z'):
+                raise ContractError('April restoration needs an exact ascertainment decision without cutoff extension')
+            proof=plan.get('archive_qualification')
+            if not isinstance(proof,dict) or not proof.get('path') or not proof.get('sha256'):
+                raise ContractError('April archive requires a pinned qualification report')
+            qualification_path=Path(proof['path'])
+            qualification,qualification_hash=read_bound_json(qualification_path,proof['sha256'])
+            source=qualification.get('archive',{})
+            if (qualification.get('schema_version')!=1 or qualification.get('status')!='archive_qualification_passed' or
+                    qualification.get('requested_date')!=requested_date or qualification.get('actual_dump_date')!=requested_date or
+                    Path(source.get('path','')).resolve()!=archive.resolve() or source.get('sha256')!=archive_hash or
+                    source.get('bytes')!=archive.stat().st_size):
+                raise ContractError('April archive qualification does not match the requested original and date')
+            pins[qualification_path]=qualification_hash
+            for ancestor in qualification.get('proofs',[]):
+                path=Path(ancestor['path'])
+                if (sha256_file(path)!=ancestor['sha256'] or
+                        ('bytes' in ancestor and path.stat().st_size!=ancestor['bytes'])):
+                    raise ContractError('Changed archive qualification ancestor')
+                pins[path]=ancestor['sha256']
         if not archive_hash or sha256_file(archive)!=archive_hash:
             raise ContractError('Endpoint archive differs from its prior qualification receipt')
         pins[archive]=archive_hash
@@ -110,6 +135,7 @@ def restore(origin_path, origin_sha256, decision_path, decision_sha256, output, 
         for p,h in pins.items():
             if sha256_file(p)!=h:raise ContractError('Origin inputs changed during endpoint restoration')
         result={'schema_version':1,'role':'evaluation_only','status':'technical_restore_completed',
+            'snapshot_date':requested_date,'snapshot_purpose':'ascertainment' if requested_date=='2026-04-01' else 'endpoint',
             'origin_seal_sha256':origin_hash,'decision_sha256':decision_hash,'endpoint_cohort_rows_queried':0,
             'clinical_activation':False,'ascertainment_qualified':False,'provider_spend_usd':0}
         write_json(output/'report.json',result)

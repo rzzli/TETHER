@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "review_id": "april-terminal-verifier-bounded-peer-review",
+  "recorded_at_utc": "2026-10-18T21:01:04.967857+00:00",
+  "status": "bounded_peer_review_passed_after_corrections",
+  "provider_spend_usd": 0,
+  "production_files_modified": false,
+  "clinical_database_queries": 0,
+  "production_terminal_verification_run": false,
+  "scope": "Source review, temporary format fixtures and in-memory copies of retained January technical metadata only",
+  "source_sha256_at_record_creation": {
+    "path": "tools\\science\\restore_verification.py",
+    "sha256": "13bb5ee8828a2302176cf85a97e8e61e7e0874b4dcff344ece3d4f48c7faf9c8"
+  },
+  "source_hash_caveat": "The original omission probes preceded corrective source edits and this hash capture. This fingerprint is current source at record creation, not a fabricated archive of the initial defective version. Final corrected source fingerprint will be retained after bounded rechecks.",
+  "reviewed_small_metadata": [
+    {
+      "path": "E:\\projects_data\\drug_target_agents_data\\derived\\aact_restore\\science-endpoint-20260101-20261018T174448Z\\restore\\2026-01-01\\technical-audit.json",
+      "sha256": "30652066bff081fc12bee6c0f97519fcf468621d27c19d5ba63615cb9672ae45"
+    },
+    {
+      "path": "E:\\projects_data\\drug_target_agents_data\\derived\\aact_restore\\science-endpoint-20260101-20261018T174448Z\\restore\\2026-01-01\\dump-toc-pg17.txt",
+      "sha256": "2e47b60bb7e4b60094f5bbd46d92de0576297b259eacae764ff5cbe5b4eb932b"
+    }
+  ],
+  "before_fix_findings": [
+    {
+      "id": "R1",
+      "finding": "LF-only byte equality rejected legitimate Windows CRLF empty SQL emitted by the gate",
+      "evidence": "Actual April root reported raw SELECT empty-selection SQL with CRLF; January root used the same newline-translating write_text recipe",
+      "required_correction": "Accept only explicitly LF or CRLF literal empty-query representations, keeping exact actual-byte hash pins",
+      "production_gate_mutation_needed": false
+    },
+    {
+      "id": "R2",
+      "finding": "Empty constraints or index arrays passed vacuous all() despite source TOC requirements",
+      "probe": "Apply strict_technical to separate in-memory January audit copies with constraints=[] or indexes=[]",
+      "observed_results": [
+        {
+          "omitted": "constraints",
+          "accepted": true,
+          "reported_count": 0
+        },
+        {
+          "omitted": "indexes",
+          "accepted": true,
+          "reported_count": 0
+        }
+      ],
+      "actual_metadata": {
+        "toc_ctgov_constraints": 117,
+        "audited_ctgov_constraints": 117,
+        "toc_explicit_indexes": 131,
+        "audited_ctgov_indexes": 182,
+        "pk_constraint_backing_indexes": 51,
+        "audited_toast_indexes": 92
+      },
+      "required_correction": "Reconcile exact TOC constraint identities, explicit and p/u/x backing index identities; reject duplicate identities; allow legitimate toast extras"
+    },
+    {
+      "id": "R3",
+      "finding": "Unexpected schema table counters inflated total rows while reported table count stayed ctgov-only",
+      "probe": "Append unrelated_fixture.injected rows=999 to an in-memory January audit copy",
+      "accepted": true,
+      "reported_tables": 52,
+      "reported_total_rows": 55381325,
+      "correct_ctgov_rows": 55380326,
+      "actual_january_table_schemas": [
+        "ctgov"
+      ],
+      "required_correction": "Reject unsupported table schemas because the source audit query is scoped to ctgov only"
+    }
+  ],
+  "after_fix_validation": {
+    "checked_at_utc": "2026-10-18T21:03:21.812565+00:00",
+    "corrected_module": {
+      "path": "tools\\science\\restore_verification.py",
+      "sha256": "f4890498d1f2ef52e5db798d9707a7f05a16d2f77c0c47840d19b6e1b497c52b"
+    },
+    "regression_tests": {
+      "path": "tests\\test_science_restore_verification.py",
+      "sha256": "b5cdbf9cb98b445e3dcb7e31d960a2fff7a1565069a306ffc8326917b3794788",
+      "command": ".venv/Scripts/python.exe -m unittest tests.test_science_restore_verification -v",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "real_january_metadata_only": {
+      "status": "passed",
+      "tables": 52,
+      "studies": 563840,
+      "total_rows": 55380326,
+      "constraints": 117,
+      "indexes_including_toast": 274,
+      "source_data_rehashed": false,
+      "database_queried": false
+    },
+    "original_omission_rechecks": [
+      {
+        "probe": "constraints_empty",
+        "result": "rejected",
+        "error": "Technical constraints omit, duplicate or differ from TOC identities"
+      },
+      {
+        "probe": "indexes_empty",
+        "result": "rejected",
+        "error": "Technical indexes omit or differ from TOC/backing identities"
+      },
+      {
+        "probe": "extra_unrelated_table_schema",
+        "result": "rejected",
+        "error": "Unexpected technical table schema"
+      }
+    ],
+    "sql_format_recheck": {
+      "LF": "accepted_exact_literal",
+      "CRLF": "accepted_exact_literal",
+      "changed_clinical_query": "rejected",
+      "actual_raw_copy_hash_binding": "verified_by_focused_regression"
+    },
+    "additional_regressions_passed": [
+      "Required constraint-backed indexes for primary, unique and exclusion constraints",
+      "Duplicate table/constraint/index identities rejected",
+      "Unrelated table and index schemas rejected",
+      "Legitimate pg_toast extras accepted",
+      "Literal-dot source index names retained",
+      "Corrupted measured retained-byte counter rejected",
+      "Pinned qualification proof omissions rejected",
+      "Terminal journal truncation, changed output and reused output rejected",
+      "Alive owned port or PID rejected without start/stop",
+      "Transitive origin or extracted-dump tampering rejected"
+    ],
+    "actual_april_terminal_verification_performed": false,
+    "clinical_activation": false,
+    "scientific_validation": "not_established"
+  },
+  "limitations": [
+    "No current April terminal artifact was accepted by this reviewer",
+    "Retained metadata checks do not query a database or independently establish biological outcomes",
+    "Original source corruption was never performed; mutations used temporary fixtures or in-memory copies only"
+  ]
+}
