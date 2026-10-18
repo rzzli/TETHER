@@ -147,8 +147,13 @@ work, not an achieved comparator result.
 
 There are also no independent T6 reference judgments, qualified clinical outcomes/
 negatives/censoring, activated historical prediction cohort, qualified scorer or
-adequately powered clinical comparison. The labels and gold-evidence directories
-still contain placeholders only. AI-assisted review and model agreement cannot
+adequately powered clinical comparison. The labels directory contains a placeholder.
+The gold-evidence directory already contains unreviewed forms and the completed
+AI-assisted development review (ten cases, 20 claims, 120 categorical assessments).
+Its retained status is `ai_reviewed_unadjudicated`, not independently validated
+gold. The earlier placeholder-only gold inventory was incorrect; see
+`planning/review-assets/task6-resumption-20261018/review-inventory-correction.json`.
+AI-assisted review and model agreement cannot
 supply those references. Repeating more model calls on this exposed pack would
 not resolve that limitation. The prior feasibility and training no-go decisions
 remain in force.
@@ -158,6 +163,12 @@ work. Keep Task 6 and Tasks 7–8 unchecked. Resume the scientific comparison af
 reference qualification and the relevant chronology/scoring/power gates; qualify
 the adapted comparator against those same cases, inputs and budgets. No task is
 silently skipped and no whole-project completion is claimed.
+
+Review clarification: these scientific gates prevent scientific performance claims;
+they do not prevent implementing/testing the adapted offline comparator, preparing
+matched end-to-end ablation runs, or auditing existing AI assessments as development
+feedback. Those are executable engineering tasks. Independent reference qualification
+is a separate requirement, and should not be treated as a blanket coding blocker.
 
 Task 6 remains unchecked until a matched executable comparator and the appropriate
 qualified scientific references support the requested analyses. Clinical AUROC/

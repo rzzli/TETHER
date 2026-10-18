@@ -25,6 +25,12 @@ Task 6 remains incomplete; Tasks 7–8 remain unstarted. See
 [[Task 6 Development Comparisons 2026-10-18]]. Scientific references, a qualified
 scorer and the adapted comparator are still required; no probabilities are produced.
 
+Review clarification: engineering the offline comparator and end-to-end ablations
+is actionable without outcome labels. Existing AI-assisted review of ten cases /
+20 claims remains usable development feedback; its unadjudicated status does not
+qualify it as independent evaluation truth. A prior placeholder-only gold inventory
+was corrected after rehashing its 14 retained AI artifacts and ten blank forms.
+
 ## Ordered execution update - October 17
 
 Tasks 1-3 in `TODO.md` are complete within their documented scope. The v0.5 scope

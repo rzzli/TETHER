@@ -61,7 +61,13 @@
       ".gitkeep"
     ],
     "data/benchmark/gold_evidence": [
-      ".gitkeep"
+      ".gitkeep",
+      "ai-assisted-review-20261013",
+      "context-revision-20261016T054655Z",
+      "context-revision-20261016T055518Z",
+      "expert-review-workbook-20261012",
+      "expert-review-workbook-20261012-final",
+      "t6-development-review-20261012"
     ]
   },
   "clinical_metrics": null,
@@ -71,5 +77,12 @@
   "owned_local_model_server_stopped": true,
   "task7_started": false,
   "task8_started": false,
-  "decision": "Stop at Task6 under user failure rule; do not substitute selection agreement or AI judgments for qualified truth. Finish comparator/scientific analyses after required reference and feasibility qualifications."
+  "decision": "Stop at Task6 under user failure rule; do not substitute selection agreement or AI judgments for qualified truth. Finish comparator/scientific analyses after required reference and feasibility qualifications.",
+  "inventory_correction": {
+    "checked_at_utc": "2026-10-18T16:20:10.323491+00:00",
+    "path": "planning/review-assets/task6-resumption-20261018/review-inventory-correction.json",
+    "sha256": "a62a8e8e3339a71eff5b2104ce8d4d2bd52594162be224d51beda77dc548fb9e",
+    "prior_sha256": "f2251ba7f40b468e576f91c5bc79f4e765cdf8f306ab0435c4fd8c5643a9547a",
+    "independent_reference_status": "not_established; existing AI-assisted development review is unadjudicated"
+  }
 }

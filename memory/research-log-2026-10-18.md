@@ -50,10 +50,26 @@ process high-water sample is retained.
 Task 6 remains incomplete: no executable matched Virtual Biotech arm, independent
 T6 truth, qualified clinical outcomes/negatives/censoring, activated eligible cohort,
 qualified scorer or powered clinical comparison. Gold/label directories contain
-placeholders only. Stopped under the user's failure rule after finishing supported
+placeholders only [inventory statement corrected in the subsequent review below].
+Stopped under the user's failure rule after finishing supported
 development comparisons. Tasks 7–8 were not started. No public registration or
 independently validated biological conclusion was introduced.
 
 See [[Task 6 Development Comparisons 2026-10-18]], [[project-goals]], TODO.md and
 `planning/review-assets/task6-resumption-20261018/` for exact proofs and remaining
 requirements. Original hypotheses H1–H6 and earlier freezes are unchanged.
+
+## Subsequent unfinished-work review
+
+Corrected a status error: only the labels directory contains a placeholder alone.
+Gold-evidence has original unreviewed forms, expert workbooks, AI-assisted review
+and context-revision artifacts. Rehashed all 14 AI completion-manifest members and
+ten original forms. The AI review covers ten cases / 20 claims / 120 categorical
+assessments and explicitly remains unadjudicated; original forms remain unreviewed.
+This does not remove the independent-reference gate, but those completed development
+reviews must not be described as absent or needlessly recreated.
+
+The adapted offline Virtual Biotech arm and end-to-end ablation engineering can
+proceed without qualified outcome labels. Scientific metrics remain gated. Earlier
+Task 3 and Task 5 checkboxes mean local protocol completion and a conditional no-go
+assessment, respectively, not clinical activation or trained scoring.

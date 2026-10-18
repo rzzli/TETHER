@@ -71,6 +71,11 @@ no public registration, clinical success claim or locked evaluation is made.
 
 ## Task 6 resumption checks — October 18
 
+Review clarification: the adapted offline comparator and matched end-to-end
+ablation implementation can proceed without qualified outcome labels. Scientific
+metrics remain gated separately. Existing AI-assisted development assessments are
+available (ten cases / 20 claims); they are not independently adjudicated gold.
+
 - [x] Implement and validate paired lexical/provider-score baselines, an uncapped
   extractive reference and explicit deterministic evidence masks; 246 full-suite
   tests, required probes, packaging and four hosted CI jobs passed.
@@ -84,5 +89,7 @@ no public registration, clinical success claim or locked evaluation is made.
   requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
 - [ ] Implement and validate the adapted Virtual Biotech execution arm under
   matched evidence, model, budget and containment rules.
+- [ ] Implement/run matched end-to-end ablations. Existing no-literature and
+  no-perturbation results are post-selection masks only; they are not model reruns.
 - [ ] Complete scientific comparisons with independent quality/clinical references
   and qualified scoring/power. These prerequisites remain unmet.
