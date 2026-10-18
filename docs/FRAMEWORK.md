@@ -199,7 +199,13 @@ The configuration declares pinned weight/runtime hashes; the trusted launcher mu
 verify them and own the server. This declaration is not remote model attestation.
 The default CLI behavior and budget caps are unchanged.
 
-`RetrievalPolicy` bounds whole admitted records by count and canonical UTF-8 bytes.
+`RetrievalPolicy` bounds whole admitted records by count and UTF-8 transport bytes.
+The default canonical mode retains the original policy and request fingerprints.
+The optional `asof-shared-scientific-fields-v1` mode factors identical fields across
+records and references duplicate identity fields in their envelope. It preserves all
+fields, nulls, contexts and method parameters and must reconstruct the exact canonical
+logical request before dispatch. It uses a finite cache of small immutable parsed
+records. It does not summarize, truncate or change scientific observations.
 Literal case-token overlap ranks candidates, with stable ID tie-breaking. Provider
 scores do not rank or weight evidence. Oversized records are omitted with an explicit
 reason; they are not silently truncated. The model selects at most three IDs per
@@ -214,6 +220,9 @@ sealed as an auxiliary output. Local-run verification recomputes bounded retriev
 from admitted sources and checks model request, response, selected IDs, measured
 usage and dispatch/journal bindings. Local model execution does not establish
 therapeutic relevance, independent review or clinical probabilities.
+The native response must explicitly report `truncated: false`; valid JSON cannot
+qualify a selection from an incomplete or unqualified prompt. The guard also runs
+during verification of archived local responses.
 
 The critic rejects duplicate or out-of-packet selections. Accepted claims copy approved
 statements and retain registered fingerprints. Backend-authored interpretations do not

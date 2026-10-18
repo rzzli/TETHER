@@ -12,10 +12,11 @@ from asof.artifacts import verify_run, write_run
 from asof.chrono import load_snapshot
 from asof.contracts import Case, Category
 from asof.journal import RunJournal
-from asof.local_model import LocalSelectionBackend, selection_payload, verify_backend_execution
+from asof.local_model import LocalSelectionBackend, selection_payload, verify_backend_execution, parse_selection
 from asof.retrieval import RetrievalPolicy, bounded_request, verify_retrieval_trace
 from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
 from asof.workflow import run_workflow
+from asof.wire import request_bytes, FORMAT
 
 
 FIXTURES = Path(__file__).resolve().parents[1] / 'src/asof/demo/v2'
@@ -31,7 +32,8 @@ class FakeOpener:
         payload = json.loads(request.data)
         ids = payload['json_schema']['properties']['observation_ids']['items']['enum'][:1]
         answer = self.response if self.response is not None else {'content': json.dumps({'observation_ids': ids}),
-            'tokens_evaluated': 30, 'tokens_predicted': 20}
+            'tokens_evaluated': 30, 'tokens_predicted': 20, 'truncated': False}
+        answer = {'truncated': False, **answer}
         return io.BytesIO(canonical(answer))
 
 
@@ -61,6 +63,26 @@ class LocalModelTests(unittest.TestCase):
         # Count ties depend on IDs rather than caller order.
         reverse = replace(self.request, evidence=tuple(reversed(self.request.evidence)))
         self.assertEqual(result.evidence, bounded_request(reverse, RetrievalPolicy(3, 2000))[0].evidence)
+
+    def test_legacy_canonical_retrieval_fingerprint_is_preserved(self):
+        request, audit = bounded_request(self.request, RetrievalPolicy())
+        self.assertEqual(fingerprint(audit), 'e037f53d6a36b6c69996d3ed09115d85283799d84e77143489975880208124ed')
+        self.assertEqual(fingerprint(request), '65312eaea8a2d241654a7ef2caf3c28cc7bb24ca445dd0c5c75e667308bedfaf')
+
+    def test_wire_budget_admits_multiple_unchanged_complete_records(self):
+        science = {'method': {'projection': ['column_' + str(i) for i in range(100)]},
+            'context': {'tissue': None, 'cell_type': 'reported cell'},
+            'missingness': {'species': 'unreported'}, 'variantEffect': [{'direction': 'loss_of_function'}]}
+        views = tuple(EvidenceView(str(i), 'inhibit evidence ' + str(i), 'source',
+            canonical({**science, 'observation_id': str(i), 'statement': 'inhibit evidence ' + str(i), 'score': i / 10}).decode('utf-8'))
+            for i in range(6))
+        request = replace(self.request, evidence=views)
+        canonical_request, _ = bounded_request(request, RetrievalPolicy(12, 4096))
+        wire_request, audit = bounded_request(request, RetrievalPolicy(12, 4096, FORMAT))
+        self.assertGreater(len(wire_request.evidence), len(canonical_request.evidence))
+        self.assertLessEqual(len(request_bytes(wire_request, FORMAT)), 4096)
+        for item in wire_request.evidence: self.assertIn(item, request.evidence)
+        self.assertEqual(audit['wire_roundtrip_sha256'], fingerprint(wire_request))
 
     def test_oversized_whole_records_skipped_and_case_overflow_fails(self):
         large = replace(self.request, evidence=(EvidenceView('big', 'x' * 4000, 'source', '{}'), self.request.evidence[0]))
@@ -98,6 +120,13 @@ class LocalModelTests(unittest.TestCase):
         self.assertEqual(b.records[0]['status'], 'completed')
         self.assertEqual(len(b.opener.calls), 1)
 
+    def test_truncated_or_unqualified_native_prompt_is_not_an_accepted_selection(self):
+        for flag in ({'truncated': True}, {}):
+            with self.subTest(flag=flag):
+                response = {'content': '{"observation_ids":["0"]}',
+                    'tokens_evaluated': 30, 'tokens_predicted': 20, **flag}
+                with self.assertRaises(ContractError): parse_selection(response, ['0'])
+
     def test_malformed_unknown_duplicate_over_budget_and_timeout_no_retry(self):
         for response in [{'content': '{}', 'tokens_evaluated': 1, 'tokens_predicted': 1},
                          {'content': '{"observation_ids":["forged"]}', 'tokens_evaluated': 1, 'tokens_predicted': 1},
@@ -134,6 +163,15 @@ class LocalModelTests(unittest.TestCase):
         with self.assertRaises(ContractError): verify_retrieval_trace(result.case, store, trace, RetrievalPolicy())
         write_json(out / 'backend-execution.json', doc)
         with self.assertRaises(ContractError): verify_run(out, receipt)
+
+    def test_shared_wire_model_execution_is_source_verified_without_rewriting_evidence(self):
+        self.config['retrieval']['wire_format'] = FORMAT
+        write_json(self.path, self.config)
+        _, result, out, receipt, _ = self.workflow()
+        self.assertEqual(result.status, 'completed')
+        self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')
+        data = read_json(out / 'backend-execution.json')
+        self.assertIn(FORMAT, data['attempts'][0]['payload']['prompt'])
 
     def test_workflow_timeout_preserves_attempt_and_conservative_accounting(self):
         b, result, out, receipt, _ = self.workflow(TimeoutError('fixture'))

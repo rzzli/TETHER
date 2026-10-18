@@ -66,3 +66,34 @@ per-case verification, resource observations and final seal are retained there.
 evidence. Model receipts are under the E: model root. This is technical execution
 and source consistency; biological relevance and independent reference quality
 remain unestablished. No clinical AUROC, calibration or therapeutic claim is produced.
+
+## Interim correction and transport amendment
+
+The original ten-case run finished and its owned server stopped. All ten dossiers
+passed separate-process source-inclusive verification: 22 local calls, 61,022 input
+tokens and 1,247 output tokens, with $0 provider charges. Native prompt/generation
+time summed to 64.797 seconds; end-to-end time was 3,075.469 seconds. Original inputs
+span 8,256,817,498 unique bytes. These timings measure this machine and workflow,
+not model quality or an amortized production service.
+
+The original cap admitted only one candidate per model call. Preserve that result
+as a diagnostic, not a ranking-quality benchmark. Frozen evaluation-v0.2 adds a
+readable lossless common-field transport and three fixed development validation
+cases. Every scientific field, null, context, parameter and identity reconstructs
+exactly. The adapter still accepts only unchanged admitted views and source IDs.
+The canonical representation and its old trace fingerprints remain compatible.
+
+A new regression reproduced acceptance of a native truncated/unqualified prompt
+with otherwise valid JSON. The adapter now rejects it. All 22 original responses
+report `truncated: false`; sealed outputs pass the stronger response and unchanged
+canonical retrieval checks. That compatibility pass did not repeat raw hashing;
+the original per-case source-inclusive checks are retained separately. The full
+suite now passes 228 tests. The focused new-format native run is still in progress;
+Task 4 remains incomplete until it passes. Do not pool the two formats as a
+comparative or independent scientific evaluation.
+
+The final all-ten transport probe fits 66 candidates versus 22 under the original
+format at the same 12,000-byte cap. Twenty of 24 populated categories fit multiple
+candidates. Every probed selected packet reconstructs exactly; this is a width and
+fidelity measurement, not model-quality validation. The full suite now passes 229
+tests including portable seal-path handling. The focused native run remains active.

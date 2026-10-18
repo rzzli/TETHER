@@ -4,6 +4,7 @@ No provider calls, historical labels, independent scientific review or trained s
 New output only; server shutdown is attempted in finally, never implicit resumption.
 """
 from datetime import datetime, timezone
+import argparse
 import json
 import os
 from pathlib import Path
@@ -21,6 +22,12 @@ def write(path, value):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--wire-format', default='canonical',
+        choices=('canonical', 'asof-shared-scientific-fields-v1'))
+    parser.add_argument('--case-id', action='append', default=[])
+    parser.add_argument('--protocol', type=Path, default=Path('planning/protocols/evaluation-v0.1.json'))
+    args = parser.parse_args()
     pointer = json.loads(Path('data/derived/active-local-model-acquisition.json').read_text(encoding='utf-8'))
     receipt_path = Path(pointer['path'])
     if sha256_file(receipt_path) != pointer['sha256']:
@@ -30,11 +37,14 @@ def main():
         raise ValueError('Model acquisition is incomplete')
     model_root = Path(receipt['root'])
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    out = Path('runs') / ('local-model-pilot-' + stamp); out.mkdir(parents=True, exist_ok=False)
+    prefix = 'local-model-pilot-' if args.wire_format == 'canonical' else 'local-wire-pilot-'
+    out = Path('runs') / (prefix + stamp); out.mkdir(parents=True, exist_ok=False)
+    (out / 'executed-launcher.py').write_bytes(Path(__file__).read_bytes())
     write(Path('data/derived/active-local-model-pilot.json'), {'path': str(out)})
     result = {'status': 'running', 'root': str(out), 'started_at_utc': datetime.now(timezone.utc).isoformat(),
         'cases': [], 'provider_spend_usd': 0, 'scientific_validation': 'not_established',
-        'independent_human_reviews': 0, 'weights_receipt': str(receipt_path), 'weights_receipt_sha256': pointer['sha256']}
+        'independent_human_reviews': 0, 'weights_receipt': str(receipt_path), 'weights_receipt_sha256': pointer['sha256'],
+        'wire_format': args.wire_format, 'protocol': str(args.protocol), 'protocol_sha256': sha256_file(args.protocol)}
     previous = None
     def event(stage, **fields):
         nonlocal previous
@@ -45,6 +55,12 @@ def main():
         print(json.dumps({'stage': stage, **fields}), flush=True); write(out / 'pilot-report.json', result)
     process = None; started = time.monotonic()
     try:
+        protocol = json.loads(args.protocol.read_text(encoding='utf-8'))
+        if protocol['development']['selection_limits'].get('wire_format', 'canonical') != args.wire_format:
+            raise ValueError('Wire format differs from the frozen development protocol')
+        requested_cases = args.case_id or protocol['development'].get('validation_case_ids', [])
+        if args.case_id and protocol['development'].get('validation_case_ids') != args.case_id:
+            raise ValueError('Focused case IDs differ from the frozen development protocol')
         event('asset_verification_started')
         for item in receipt['items']:
             path = model_root / item['name']
@@ -88,6 +104,8 @@ def main():
                 'runtime_sha256': sha256_file(server), 'acquisition_receipt_sha256': pointer['sha256']},
             'retrieval': {'max_records': 12, 'max_request_bytes': 12000},
             'max_output_tokens': 256, 'timeout_seconds': 120, 'seed': 20261017}
+        if args.wire_format != 'canonical':
+            config['retrieval']['wire_format'] = args.wire_format
         write(out / 'model-config.json', config)
         registry = json.loads(Path('planning/run-registry.json').read_text(encoding='utf-8'))
         old = next(x for x in registry['entries'] if x['id'] == registry['canonical_pilot_id'])
@@ -97,7 +115,13 @@ def main():
         for item in build['reports']:
             if sha256_file(Path(item['path'])) != item['sha256']:
                 raise ValueError('Canonical source build proof changed')
-        for case in old['cases']:
+        cases = old['cases']
+        if requested_cases:
+            if len(set(requested_cases)) != len(requested_cases) or set(requested_cases) - {c['case_id'] for c in cases}:
+                raise ValueError('Unknown or duplicate selected development case')
+            cases = [next(c for c in cases if c['case_id'] == cid) for cid in requested_cases]
+        result['planned_case_ids'] = [c['case_id'] for c in cases]
+        for case in cases:
             case_id = case['case_id']; case_started = time.monotonic()
             event('case_started', case_id=case_id)
             run = out / case_id
@@ -125,7 +149,7 @@ def main():
                 'receipt_sha256': sha256_file(run / 'receipt.json'), 'verification': json.loads(check.stdout),
                 'elapsed_seconds_including_source_verification': time.monotonic() - case_started})
             event('case_verified', case_id=case_id, calls=status['calls'])
-        result['status'] = 'ten_development_cases_verified'
+        result['status'] = 'ten_development_cases_verified' if len(cases) == 10 else 'selected_development_cases_verified'
     except BaseException as error:
         result.update(status='failed', error_class=type(error).__name__, error=str(error))
         event('failed', error_class=type(error).__name__)
@@ -140,7 +164,7 @@ def main():
             elapsed_seconds=time.monotonic() - started,
             server_stopped=process is None or process.poll() is not None)
         event('terminal', status=result['status'], server_stopped=result['server_stopped'])
-        seal = {'files': [{'path': str(p.relative_to(out)), 'bytes': p.stat().st_size, 'sha256': sha256_file(p)}
+        seal = {'files': [{'path': p.relative_to(out).as_posix(), 'bytes': p.stat().st_size, 'sha256': sha256_file(p)}
             for p in sorted(out.rglob('*')) if p.is_file()]}
         write(out / 'evidence-manifest.json', seal)
         write(Path('data/derived/active-local-model-pilot.json'), {'path': str(out),

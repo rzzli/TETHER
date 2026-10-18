@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "mode": "full",
+  "structural": {
+    "tracked_scope_files": 330,
+    "providers": 83,
+    "datasets": 178
+  },
+  "powershell_syntax": true,
+  "tests": {
+    "run": 228,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "asof_target_agents-0.2.0-py3-none-any.whl",
+    "dependency_free_demo": "passed"
+  },
+  "status": "passed",
+  "elapsed_seconds": 40.578000000008615
+}

@@ -4,17 +4,21 @@ import re
 
 from .agents import SpecialistRequest
 from .serde import ContractError, Frozen, canonical, fingerprint
+from .wire import FORMAT, request_bytes
 
 
 @dataclass(frozen=True)
 class RetrievalPolicy(Frozen):
     max_records: int = 12
     max_request_bytes: int = 12000
+    wire_format: str = 'canonical'
 
     def validate(self):
         if (type(self.max_records) is not int or not 1 <= self.max_records <= 100 or
                 type(self.max_request_bytes) is not int or not 1024 <= self.max_request_bytes <= 64000):
             raise ContractError('Invalid bounded retrieval limits')
+        if self.wire_format not in ('canonical', FORMAT):
+            raise ContractError('Unsupported bounded retrieval transport')
 
 
 def bounded_request(request: SpecialistRequest, policy: RetrievalPolicy):
@@ -27,7 +31,7 @@ def bounded_request(request: SpecialistRequest, policy: RetrievalPolicy):
     policy.validate()
     tokens = set(re.findall(r'[a-z0-9_]{3,}', request.case_json.casefold()))
     empty = replace(request, evidence=())
-    if len(canonical(empty)) > policy.max_request_bytes:
+    if len(request_bytes(empty, policy.wire_format, verify=False)) > policy.max_request_bytes:
         raise ContractError('Case/instructions exceed bounded request size')
     ids = [x.observation_id for x in request.evidence]
     if len(ids) != len(set(ids)):
@@ -38,16 +42,23 @@ def bounded_request(request: SpecialistRequest, policy: RetrievalPolicy):
     for item in ranked:
         if len(kept) == policy.max_records:
             excluded.append({'observation_id': item.observation_id, 'reason': 'record_count_cap'})
-        elif len(canonical(replace(request, evidence=tuple(kept + [item])))) > policy.max_request_bytes:
+        elif len(request_bytes(replace(request, evidence=tuple(kept + [item])), policy.wire_format, verify=False)) > policy.max_request_bytes:
             excluded.append({'observation_id': item.observation_id, 'reason': 'whole_record_exceeds_byte_cap'})
         else:
             kept.append(item)
     prepared = replace(request, evidence=tuple(kept))
-    audit = {'policy': policy, 'input_request_sha256': fingerprint(request),
+    data = request_bytes(prepared, policy.wire_format)
+    # Preserve the original two-field canonical policy encoding and trace hashes.
+    archived_policy = {'max_records': policy.max_records, 'max_request_bytes': policy.max_request_bytes}
+    if policy.wire_format != 'canonical':
+        archived_policy['wire_format'] = policy.wire_format
+    audit = {'policy': archived_policy, 'input_request_sha256': fingerprint(request),
         'request_sha256': fingerprint(prepared), 'available_records': len(request.evidence),
         'selected_ids': tuple(x.observation_id for x in kept), 'excluded': excluded,
-        'request_bytes': len(canonical(prepared)), 'ranking': 'literal_case_overlap_then_id',
+        'request_bytes': len(data), 'ranking': 'literal_case_overlap_then_id',
         'interpretation': 'selected subset only; excluded records are not biological absence'}
+    if policy.wire_format != 'canonical':
+        audit.update(logical_request_bytes=len(canonical(prepared)), wire_roundtrip_sha256=fingerprint(prepared))
     return prepared, audit
 
 

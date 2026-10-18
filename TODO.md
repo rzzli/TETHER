@@ -36,6 +36,11 @@ these are conditional simulations, not clinical performance or validated labels.
 Task 3 passed 208 full-suite tests and proof/hash validation. A local development
 protocol and gated 2025-2026 clinical design are frozen; no public registration or
 locked clinical set is claimed. Task 4 is active: bounded retrieval and local inference.
+The prompt-truncation guard is fixed and 229 full-suite tests pass. The original
+ten local-model dossiers passed separate-process source-inclusive verification.
+Their one-candidate-per-call limitation is retained as a diagnostic. Lossless shared-
+field transport is implemented; the three-case validation frozen in
+`planning/protocols/evaluation-v0.2.json` is running. Task 4 remains incomplete.
 
 ## Validation and blockers
 
