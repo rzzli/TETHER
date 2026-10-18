@@ -172,3 +172,28 @@ and an exposure-audited origin cohort; qualify historical predictors and re-size
 new window, then freeze/train/calibrate and compare only if those gates pass.
 A separate independent T6 reference is needed for scientific H5 claims. These needs
 are independent of $0 local inference and cannot be manufactured by additional calls.
+
+
+## Files and preservation
+
+Runtime changes: `src/asof/local_model.py`, `retrieval.py`, `wire.py`, `workflow.py`,
+`artifacts.py` and `cli.py`. Feasibility utilities add fixed-cohort scope, conditional
+power and chronology checks. Framework utilities prepare pinned assets, own the
+local server, run/replay cases, probe transport and verify pilot summaries. Regression
+coverage, protocol/freeze manifests, README/framework documentation and project memory
+were updated. Original proposals, old fixtures and sealed scientific outputs remain.
+
+The final 229-test suite passed with no skips/failures/errors, plus required probes,
+PowerShell syntax and installed-wheel/demo checks. The regional gate also passed
+13 targeted tests and the retained-byte/independent-LD recheck. See closeout-validation.
+
+Private incremental recovery is uploaded at the ordered-execution-20261017 release.
+Downloaded assets restored and rehashed all 308 files / 181,211,105 bytes and six
+sealed products; code clone and Git fsck passed. The ZIP is 72,142,241 bytes. The
+independently retained asset index SHA-256 is
+`707d55079a39bdf0c0c401183d597696ade347a654d829b28b19194d72815185`.
+This supplements the prior recovery-20261017 and registry-sizing-20261017 releases.
+It excludes bulk originals, full AACT archives/databases, model/native binaries and
+credentials, and does not establish new scientific validation. The backed source
+checkpoint is b31d1d56583ba23c64adf23d39fe70517ee4adf9; later handoff metadata is in
+private Git and recorded separately. See incremental-recovery-verification.json.

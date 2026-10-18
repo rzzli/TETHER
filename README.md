@@ -128,10 +128,16 @@ Defaults remain 16 calls, 32,000 input tokens, 8,000 output tokens, $0 provider 
 adapter is available through `--local-model config.json`; the default stays offline.
 MR/colocalization computation, a trained clinical scorer and competitor execution
 remain gated. T1 has a program/endpoint
-interface; T6 has a dossier interface. T2–T5, historical clinical cohorts, H6 reconstruction
+interface; T6 has a dossier interface. T2–T5, qualified historical clinical benchmarks, H6 reconstruction
 and locked benchmark inference remain later milestones. The separate evaluator reports
 descriptive metrics for supplied cohorts.
 
 Python interfaces are not an OS sandbox. Dataset terms remain source-specific; Apache-2.0
 licenses the code, not acquired biomedical data. The download worker and the user's
 stopped periodic monitoring are independent of this milestone.
+
+Current ordered execution is stopped at Task 6's scientific comparison gate. Tasks
+1-4 passed their documented technical checks; Task 5's feasibility decision defers
+predictive genetics and training. See [TODO.md](TODO.md), the
+[execution report](planning/Ordered%20Execution%20Progress%202026-10-17.md) and the
+[local-model pilot](planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md).

@@ -1,0 +1,18 @@
+{
+  "status": "downloaded_increment_restored_and_verified",
+  "files_rehashed": 308,
+  "sealed_products_verified": 6,
+  "code_commit": "b31d1d56583ba23c64adf23d39fe70517ee4adf9",
+  "git_fsck": "passed",
+  "asset_index_sha256": "707d55079a39bdf0c0c401183d597696ade347a654d829b28b19194d72815185",
+  "payload_bytes": 181211105,
+  "scope": "Incremental scientific artifacts and code; not a full original-data/model backup or new scientific validation",
+  "repository": "rzzli/drug_target_agents",
+  "visibility": "private",
+  "backup_url": "https://github.com/rzzli/drug_target_agents/releases/tag/ordered-execution-20261017",
+  "archive_bytes": 72142241,
+  "source_baseline_releases": [
+    "recovery-20261017",
+    "registry-sizing-20261017"
+  ]
+}

@@ -50,7 +50,8 @@ selections to the dispatch/journal and ledger, and independently check current r
 parents and archived receipts. A separate process verifies every completed dossier.
 Failures retain the reserved directory, console output, attempts and accounting.
 
-The code passes 218 full-suite tests, required probes, PowerShell syntax and installed
+At the initial checkpoint, the code passed 218 full-suite tests, required probes,
+PowerShell syntax and installed
 wheel/demo checks. Ten local-adapter tests cover caps, whole-record exclusion,
 ordering, role-token injection, remote endpoints/redirects, malformed or out-of-packet
 IDs, timeout accounting, provenance tampering and attempted rewriting of admitted
@@ -69,7 +70,7 @@ evidence. Model receipts are under the E: model root. This is technical executio
 and source consistency; biological relevance and independent reference quality
 remain unestablished. No clinical AUROC, calibration or therapeutic claim is produced.
 
-## Interim correction and transport amendment
+## Preserved interim correction and transport amendment
 
 The original ten-case run finished and its owned server stopped. All ten dossiers
 passed separate-process source-inclusive verification: 22 local calls, 61,022 input
