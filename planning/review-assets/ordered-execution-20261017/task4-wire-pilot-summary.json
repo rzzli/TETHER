@@ -1,0 +1,86 @@
+{
+  "status": "focused_local_development_dossiers_verified",
+  "case_count": 3,
+  "root": "D:\\Projects\\drug_target_agents\\runs\\local-wire-pilot-20261018T042530Z",
+  "evidence_manifest_sha256": "cd96967c334938ff36a5d7695e1cc702bea5457c7cbe1e82335b656431de20f3",
+  "sealed_files_verified": 53,
+  "cases": [
+    {
+      "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+      "available_annotations": 188,
+      "bounded_candidates_across_categories": 3,
+      "selected_source_statements": 3,
+      "calls": 1,
+      "elapsed_seconds_including_source_verification": 163.26600000000326,
+      "receipt_sha256": "e7cb6e6f0174207a9aade34531c1239ba4b03dbd7d0dac2de3c86cecaf015c96"
+    },
+    {
+      "case_id": "osmr-efo_0000729-inhibit-antibody",
+      "available_annotations": 15,
+      "bounded_candidates_across_categories": 8,
+      "selected_source_statements": 8,
+      "calls": 3,
+      "elapsed_seconds_including_source_verification": 17.875,
+      "receipt_sha256": "deab53f74678849fca15d47624f395b8309e8f3562045bbd025f2fb5f1022f57"
+    },
+    {
+      "case_id": "erbb2-efo_0000305-inhibit-antibody",
+      "available_annotations": 2339,
+      "bounded_candidates_across_categories": 4,
+      "selected_source_statements": 4,
+      "calls": 3,
+      "elapsed_seconds_including_source_verification": 434.6719999999914,
+      "receipt_sha256": "c97a1e0ed92c40ce688c5df5e5565a64750a7ed9ac2ffab10976130d0d894371"
+    }
+  ],
+  "calls": 7,
+  "input_tokens": 26030,
+  "output_tokens": 764,
+  "provider_spend_usd": 0,
+  "native_prompt_and_generation_seconds_sum": 22.090055,
+  "native_timings_missing_attempts": 0,
+  "elapsed_seconds_end_to_end": 749.1090000000258,
+  "median_case_seconds_including_source_verification": 163.26600000000326,
+  "unique_original_paths": 117,
+  "unique_original_bytes": 8175060045,
+  "omitted_records_by_reason": {
+    "whole_record_exceeds_byte_cap": 2527
+  },
+  "server_stopped": true,
+  "scientific_validation": "not_established",
+  "independent_human_reviews": 0,
+  "probabilities_withheld": true,
+  "non_null_numerical_prediction_features": 0,
+  "limitations": [
+    "Exposed, dependent development hypotheses; not an independent sample of targets",
+    "Whole-record caps can leave only one candidate; selection quality is not independently adjudicated",
+    "Native timing sum excludes admission, verification, startup, scheduling and I/O; not end-to-end latency",
+    "Byte and semantic consistency do not validate therapeutic relevance or clinical performance"
+  ],
+  "frozen_transport_acceptance": [
+    {
+      "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+      "category": "literature",
+      "bounded_candidates": 3,
+      "wire_bytes": 11694,
+      "logical_bytes": 22781,
+      "status": "passed"
+    },
+    {
+      "case_id": "osmr-efo_0000729-inhibit-antibody",
+      "category": "expression",
+      "bounded_candidates": 3,
+      "wire_bytes": 10699,
+      "logical_bytes": 21524,
+      "status": "passed"
+    },
+    {
+      "case_id": "osmr-efo_0000729-inhibit-antibody",
+      "category": "literature",
+      "bounded_candidates": 3,
+      "wire_bytes": 11005,
+      "logical_bytes": 22054,
+      "status": "passed"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # Bounded local specialist pilot
 
-**Status: running; Task 4 is not complete until the ten-case pilot passes.**
+**Status: Task 4 technical development and validation completed.**
+Ten original dossiers and three focused lossless-wire dossiers passed source-inclusive
+verification. Scientific review and clinical evaluation remain unqualified.
 This document describes exposed T6 development work, not independent scientific
 validation or a locked clinical comparison. The model selects source observation
 IDs; accepted factual statements are copied from admitted records. Probabilities
@@ -97,3 +99,25 @@ format at the same 12,000-byte cap. Twenty of 24 populated categories fit multip
 candidates. Every probed selected packet reconstructs exactly; this is a width and
 fidelity measurement, not model-quality validation. The full suite now passes 229
 tests including portable seal-path handling. The focused native run remains active.
+
+## Final focused validation
+
+All three cases frozen in evaluation-v0.2 passed source-inclusive verification and
+the multi-candidate acceptance checks. The owned server is stopped. The focused
+run used seven calls, 26,030 input tokens and 764 output tokens, with $0 provider
+charges. Native prompt/generation time summed to 22.090 seconds; total time including
+asset checks, admission and verification was 749.109 seconds. It is a separate
+engineering validation, not an independent three-case scientific benchmark.
+
+The source-inclusive native run is `runs/local-wire-pilot-20261018T042530Z`. Its public
+anchor is `data/manifests/public/2026-10-17-local-model-wire-pilot.json`; original
+ten-case output is retained separately under its canonical-pilot public anchor.
+The 229-test full suite and four hosted Windows/Linux jobs passed at 48359ca.
+The later genetics feasibility decision defers features and training; the ordered
+execution is stopped at Task 6 for missing qualified scientific comparison inputs.
+See `Ordered Execution Progress 2026-10-17.md` and `TODO.md`.
+
+A session-local sample observed native-process peak working set of 13,890,174,976
+bytes so far and total device use of 13,250 MiB. The GPU sample includes other
+applications and is not a continuously measured isolated peak. These measured
+workloads fit this 32 GiB/16 GB machine; they do not size the full data inventory.

@@ -1,0 +1,41 @@
+{
+  "status": "blocked_not_completed",
+  "task": 6,
+  "checked_at_utc": "2026-10-18T04:41:13.306686+00:00",
+  "requested_comparison": "Virtual Biotech, simple baselines and ablations under H1/H2/H4/H5",
+  "evidence": [
+    {
+      "path": "planning\\review-assets\\ordered-execution-20261017\\task5-feasibility.json",
+      "sha256": "1fd86b034ff748a8d2f8c2709295d4e35405bb8bbc0c3743170e3b17505b5738"
+    },
+    {
+      "path": "planning\\review-assets\\ordered-execution-20261017\\task2-summary.json",
+      "sha256": "dd43f73ca29f73bebe3a4361c14f3ffca739a540d79257e09294c070b343caf3"
+    },
+    {
+      "path": "planning\\review-assets\\ordered-execution-20261017\\task4-wire-pilot-summary.json",
+      "sha256": "0f8669ee138d293c0b2d63851f73e0cebdd2b43654746b3492a26cfc62aa4b17"
+    },
+    {
+      "path": "planning\\protocols\\evaluation-v0.2.json",
+      "sha256": "254838b088929c749dd1b75f72f3597982b03d429d0f157831591e9ed7dcb90d"
+    }
+  ],
+  "available": "Technical local-model dossiers, exact source/retrieval/response consistency, measured execution resources and conditional power scenarios",
+  "missing": [
+    "Independently qualified clinical outcomes and negatives/censoring",
+    "Origin-sealed, exposure-audited clinical cohort and qualified historical predictors",
+    "Validated prediction features and trained/calibrated clinical scorer",
+    "Adequate justified power for a comparative claim",
+    "Independent T6 relevance/quality reference for H5"
+  ],
+  "training_labels": 0,
+  "real_probabilities_available": 0,
+  "clinical_comparative_metrics": "not_estimable_from_available_inputs",
+  "virtual_biotech_execution": "not_attempted_past_failed_scientific_gate; no comparator result claimed",
+  "task7_started": false,
+  "task8_started": false,
+  "why_stop": "Additional model calls or code cannot supply independent clinical truth; do not fabricate negatives, probabilities or an independent reference. User instructed stopping rather than skipping an unfinishable task.",
+  "next_required_artifact": "A qualified/adjudicated reference and censoring specification, then new-window eligibility/power qualification and a frozen scoring/comparison protocol",
+  "provider_spend_usd": 0
+}

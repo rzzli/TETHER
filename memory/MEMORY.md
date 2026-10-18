@@ -1,8 +1,9 @@
 # Research memory index
 
-- [[Updated Project Plan 2026-10-17]] — Ordered Tasks 1-3 passed: fixed-cohort scope audit, corrected conditional power, frozen local chronology/protocol. Task 4 local-model pilot is active; clinical activation gates remain unmet.
+- [[Updated Project Plan 2026-10-17]] — Ordered Tasks 1-3 passed: fixed-cohort scope audit, corrected conditional power, frozen local chronology/protocol. Task 4 local-model/wire pilots passed. Task 5 conditionally defers genetics/training; ordered execution is stopped at Task 6 for missing qualified comparative truth/scoring inputs.
+- [[Local Model Specialist Pilot 2026-10-17]] — Pinned Qwen local inference, lossless scientific-field transport, exact replay and technical resources; no independent quality or clinical performance claim.
 - [[Evaluation Chronology and Local Preregistration 2026-10-17]] — Immutable September 2024 Qwen weights, candidate January 2025-2026 archives, T6 development protocol; no public registration or clinical lock.
-- [[Ordered Execution Progress 2026-10-17]] — User-ordered checklist; scope and power are measured, local evaluation protocol frozen. Task 4 code passes 216 tests; real local-model pilot validation is pending.
+- [[Ordered Execution Progress 2026-10-17]] — User-ordered checklist; scope and power are measured, local evaluation protocol frozen. Tasks 1-4 passed, including 229 tests, ten original and three lossless-wire source-verified local dossiers. Task 5 feasibility defers training; Task 6 blocked, Tasks 7-8 unstarted.
 
 - [[Claude Review and Plan_claude10172026]] — Independent re-verification report and proposed protect–measure–decide plan; reconciled in the current roadmap with endpoint, chronology, audit-design and authorization qualifications.
 - [[research-log-2026-10-17-claude-review]] — Review session record: what was re-run, what could not be verified, and the first action (commit, remote, backup).

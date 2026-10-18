@@ -164,3 +164,30 @@ mode to avoid mutating sealed WAL shared-memory sidecars. Final full local valid
 passed 186 tests without skips/failures/errors, required probes and installed-wheel
 checks. Separate prior-risk proofs explain the three unresolved programs without
 incident event IDs. The final report retains scientific limitations and next gates.
+
+
+## Ordered execution closeout (October 17 local / October 18 UTC)
+
+Followed the user's ordered TODO. The v0.5 fixed-cohort scope audit and corrected
+v0.2 conditional power study passed; base proxy-size power remains 6.2-46.7% under
+assumptions, below target. Froze a local development/conditional clinical protocol
+with immutable September 2024 Qwen weights, verified January 2026 archive CRC/hash/
+TOC without querying outcomes, and retained OT24.09 release/layout proof only.
+No public registration or clinical lock was established.
+
+Implemented bounded loopback local-model selection, payload/response/source binding,
+truncation rejection, exact offline replay and lossless shared scientific fields.
+Ten original and three focused dossiers source-verified; 229 tests and four hosted
+Windows/Linux jobs passed. Original single-candidate behavior is a retained diagnostic;
+lossless transport fits 66 versus 22 candidates with all fields reconstructing exactly.
+All model calls were local; provider spending $0, predictions null, features unmeasured.
+
+The conditional genetics/scoring gate was reassessed: 38 full-cis files rehashed,
+4,096 independent LD checks agree within 3.44e-15. Scientific qualifications, source
+exceptions and zero clinical training labels prevent feature derivation/training.
+Task 5's no-go branch is documented, not presented as trained science. Task 6 is
+blocked by missing independent outcomes/negative-or-censoring reference, qualified
+cohort/scoring and power. Tasks 7-8 remain unstarted; stop-on-blocker rule applied.
+See [[Ordered Execution Progress 2026-10-17]], [[Local Model Specialist Pilot 2026-10-17]]
+and TODO.md. Earlier model/data-access/milestone next actions are preserved history.
+The biomedical downloader, originals and stopped periodic monitor remain untouched.

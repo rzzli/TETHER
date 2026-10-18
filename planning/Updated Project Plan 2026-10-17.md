@@ -114,11 +114,18 @@ Use one dated session notebook entry and milestone-level sealing. Record executa
 
 The user can authorize a capped model run, remote publication, off-machine destination or preregistration submission when those concrete choices are ready. Those decisions do not block drafting the sizing protocol, auditing local schemas or preparing local preservation. Independent human availability affects adjudication and publication claims, not exploratory counts. Confirm exact account-mediated AACT versions only after the chronology memo identifies what is missing; do not request another broad download list now.
 
-**Current execution unit: Task 4 in `TODO.md`, bounded retrieval/local specialist.**
-Tasks 1-3 passed source/scope checks, corrected conditional power calibration, and
-frozen local chronology/protocol validation. Base-graph power is 6.2-46.7% across
-assumptions, below the 80% target. Clinical labels/probabilities remain unqualified.
-The candidate 2025-2026 local-model design supersedes the October window as the
-currently available route, without asserting historical source readiness or a lock.
-See `Evaluation Chronology and Local Preregistration 2026-10-17.md`. Task 4 has 216
-passing tests; real local-model pilot validation is pending. Preserve all old seals.
+**Ordered execution is stopped at Task 6's scientific comparison gate.**
+Tasks 1-4 passed their documented technical/source validations. Task 5's conditional
+feasibility decision is complete: no predictive causal-genetics features or scorer
+training/calibration, because the required qualifications fail. The full 229-test
+suite and four hosted Windows/Linux jobs pass. Ten original local-model dossiers
+and three focused lossless-wire dossiers passed source-inclusive verification.
+All real probabilities remain null; numerical prediction features are unmeasured.
+
+Task 6 is blocked, not completed: independent clinical truth, qualified negatives/
+censoring, an exposure-audited origin cohort, validated scoring inputs and adequate
+power remain missing. Independent T6 reference quality is also unestablished. Tasks
+7-8 were not started under the user's stop-on-blocker execution rules. See `TODO.md`,
+`Ordered Execution Progress 2026-10-17.md` and `Local Model Specialist Pilot 2026-10-17.md`.
+Resolve those scientific inputs before further comparative model execution; do not
+substitute proxy negatives, synthetic scores or same-workflow AI judgments as truth.

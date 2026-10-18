@@ -24,9 +24,20 @@ or restore were performed. OT24.09 is only archive/release-checked, not ingested
 No current identifiers fill historical gaps. All seven clinical activation gates
 are unmet; no OSF filing or locked clinical evaluation is claimed.
 
-Task 4 code passes 216 tests, with bounded source-only packets and a loopback adapter.
-Public weights/runtime downloaded and hash-verified on E:; real ten-case local-model
-pilot validation is active and not yet complete. All later tasks remain pending.
+Task 4 passes 229 tests and four hosted Windows/Linux jobs. Public weights/runtime
+are hash-verified on E:. Ten original and three focused lossless-wire local-model
+dossiers passed source-inclusive checks, owned servers are stopped, probabilities
+are null and prediction features unmeasured. Original one-candidate prompts remain
+a diagnostic; lossless transport fits 66 versus 22 candidates across ten inputs.
+No formats are pooled as independent model-quality evidence.
+
+Task 5's conditional feasibility decision defers predictive genetics and training.
+Rehashed 38 full-cis files and independently checked 4,096 LD entries (maximum
+error 3.44e-15), but source/assay/LD/overlap qualifications and clinical labels remain
+unresolved. Task 6 is blocked on independent qualified reference outcomes, negatives/
+censoring, historical/cohort qualification, scoring and power. Tasks 7-8 are not
+started; execution stops under the user's explicit rule. No scientific comparison,
+trained scorer, MR, public registration or locked evaluation is claimed.
 See [[Ordered Execution Progress 2026-10-17]] and
 [[Evaluation Chronology and Local Preregistration 2026-10-17]]. Prior dated status
 below is retained as history and superseded for scheduling. $0 provider spending.

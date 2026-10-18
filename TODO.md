@@ -14,10 +14,11 @@ development artifacts are evidence, not independent scientific validation.
   Verify model versions/cutoffs and matching historical origin/endpoint data; complete
   a defensible frozen evaluation protocol before treating a set as locked. Completed
   as a local protocol; public filing and clinical activation remain gated.
-- [ ] **Task 4 — Build bounded retrieval and the model-backed specialist.** Preserve
+- [x] **Task 4 — Build bounded retrieval and the model-backed specialist.** Preserve
   the default budget and $0 provider-spending boundary; validate offline/replay behavior.
-- [ ] **Task 5 — If feasible, validate genetics features and train/calibrate scoring.**
+- [x] **Task 5 — If feasible, validate genetics features and train/calibrate scoring.**
   Scientific derivations, leakage-safe cohorts and calibration data must qualify first.
+  Feasibility assessed: defer derivation/training; required qualifications are unmet.
 - [ ] **Task 6 — Compare Virtual Biotech, simple baselines and ablations.** Verify
   compatible data/model chronology and comparable budgets and retain evaluation outputs.
 - [ ] **Task 7 — Run independent T6 quality and locked clinical evaluations.**
@@ -35,15 +36,27 @@ Task 2 passed corrected small-sample null validation, all 120 scenario checks an
 these are conditional simulations, not clinical performance or validated labels.
 Task 3 passed 208 full-suite tests and proof/hash validation. A local development
 protocol and gated 2025-2026 clinical design are frozen; no public registration or
-locked clinical set is claimed. Task 4 is active: bounded retrieval and local inference.
-The prompt-truncation guard is fixed and 229 full-suite tests pass. The original
-ten local-model dossiers passed separate-process source-inclusive verification.
-Their one-candidate-per-call limitation is retained as a diagnostic. Lossless shared-
-field transport is implemented; the three-case validation frozen in
-`planning/protocols/evaluation-v0.2.json` is running. Task 4 remains incomplete.
+locked clinical set is claimed.
+Task 4 passed 229 full-suite tests, four hosted Windows/Linux jobs, ten original
+source-verified local-model dossiers and three source-verified lossless-wire dossiers.
+The response-truncation guard and exact offline replay passed. The final transport
+probe fits 66 versus 22 candidates without dropping scientific fields. Owned servers
+are stopped; all probabilities remain null.
+Task 5 passed its conditional feasibility assessment: technical QC revalidated, while
+predictive genetics and scorer training are deferred because scientific prerequisites fail.
 
 ## Validation and blockers
 
-Tasks 1-3 are complete within their documented scope after successful validation. No blocker has yet been declared
-for this ordered execution. Original proposals and sealed outputs remain
-unchanged; no paid model calls or public preregistration submission is assumed.
+Tasks 1-4 are complete within their documented scope. Task 5's conditional decision
+is validated: no predictive feature derivation, training or calibration was performed.
+
+**Task 6 is blocked, not completed.** There is no independently qualified clinical
+reference, no adjudicated negatives/censoring, no validated predictive feature set or
+trained/calibrated scorer, and current proxy-size power does not meet the target.
+All real dossier probabilities remain null. AUROC/Brier comparisons against Virtual
+Biotech/baselines and scientific ablations cannot be estimated from these inputs.
+AI-assisted review and source-copy fidelity cannot replace independent truth.
+
+Execution stops here under the user's failure rule. Tasks 7-8 are not started.
+The original proposals and sealed outputs remain preserved. Provider spending is $0;
+no public registration, clinical success claim or locked evaluation is made.

@@ -1,0 +1,341 @@
+{
+  "conclusion": "success",
+  "databaseId": 39097352777,
+  "headSha": "48359caa780a908b59aefa515d8fd44e67ded72c",
+  "jobs": [
+    {
+      "completedAt": "2026-10-18T04:32:19Z",
+      "conclusion": "success",
+      "databaseId": 117586440561,
+      "name": "validate (windows-latest, full)",
+      "startedAt": "2026-10-18T04:30:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:30:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:30:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-18T04:30:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:04Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 3,
+          "startedAt": "2026-10-18T04:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:04Z",
+          "conclusion": "skipped",
+          "name": "Install core",
+          "number": 4,
+          "startedAt": "2026-10-18T04:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:09Z",
+          "conclusion": "success",
+          "name": "Install ingestion extra",
+          "number": 5,
+          "startedAt": "2026-10-18T04:31:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:32:14Z",
+          "conclusion": "success",
+          "name": "Validate clean checkout",
+          "number": 6,
+          "startedAt": "2026-10-18T04:31:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:32:15Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 11,
+          "startedAt": "2026-10-18T04:32:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:32:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-18T04:32:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:32:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-18T04:32:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39097352777/job/117586440561"
+    },
+    {
+      "completedAt": "2026-10-18T04:31:19Z",
+      "conclusion": "success",
+      "databaseId": 117586440658,
+      "name": "validate (ubuntu-latest, core)",
+      "startedAt": "2026-10-18T04:30:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:30:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:30:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:30:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-18T04:30:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:30:58Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 3,
+          "startedAt": "2026-10-18T04:30:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:02Z",
+          "conclusion": "success",
+          "name": "Install core",
+          "number": 4,
+          "startedAt": "2026-10-18T04:30:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:02Z",
+          "conclusion": "skipped",
+          "name": "Install ingestion extra",
+          "number": 5,
+          "startedAt": "2026-10-18T04:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:16Z",
+          "conclusion": "success",
+          "name": "Validate clean checkout",
+          "number": 6,
+          "startedAt": "2026-10-18T04:31:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:17Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 11,
+          "startedAt": "2026-10-18T04:31:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-18T04:31:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-18T04:31:17Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39097352777/job/117586440658"
+    },
+    {
+      "completedAt": "2026-10-18T04:31:17Z",
+      "conclusion": "success",
+      "databaseId": 117586440671,
+      "name": "validate (ubuntu-latest, full)",
+      "startedAt": "2026-10-18T04:30:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:30:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:30:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:30:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-18T04:30:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:30:58Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 3,
+          "startedAt": "2026-10-18T04:30:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:30:58Z",
+          "conclusion": "skipped",
+          "name": "Install core",
+          "number": 4,
+          "startedAt": "2026-10-18T04:30:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:01Z",
+          "conclusion": "success",
+          "name": "Install ingestion extra",
+          "number": 5,
+          "startedAt": "2026-10-18T04:30:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:15Z",
+          "conclusion": "success",
+          "name": "Validate clean checkout",
+          "number": 6,
+          "startedAt": "2026-10-18T04:31:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:16Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 11,
+          "startedAt": "2026-10-18T04:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-18T04:31:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-18T04:31:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39097352777/job/117586440671"
+    },
+    {
+      "completedAt": "2026-10-18T04:31:46Z",
+      "conclusion": "success",
+      "databaseId": 117586440695,
+      "name": "validate (windows-latest, core)",
+      "startedAt": "2026-10-18T04:30:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:30:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:30:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-18T04:30:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:05Z",
+          "conclusion": "success",
+          "name": "Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 3,
+          "startedAt": "2026-10-18T04:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:09Z",
+          "conclusion": "success",
+          "name": "Install core",
+          "number": 4,
+          "startedAt": "2026-10-18T04:31:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:09Z",
+          "conclusion": "skipped",
+          "name": "Install ingestion extra",
+          "number": 5,
+          "startedAt": "2026-10-18T04:31:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:42Z",
+          "conclusion": "success",
+          "name": "Validate clean checkout",
+          "number": 6,
+          "startedAt": "2026-10-18T04:31:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:42Z",
+          "conclusion": "success",
+          "name": "Post Run astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9",
+          "number": 11,
+          "startedAt": "2026-10-18T04:31:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:44Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 12,
+          "startedAt": "2026-10-18T04:31:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:31:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-10-18T04:31:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39097352777/job/117586440695"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39097352777"
+}

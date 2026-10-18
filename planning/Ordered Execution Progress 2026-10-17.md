@@ -108,3 +108,67 @@ unmet, including independent labels, historical inputs, qualified new-window pow
 and origin selection. The original window remains exposed development. Virtual
 Biotech with common local weights will be explicitly labeled an adapted comparison.
 Proceed to Task 4's bounded development pilot; clinical execution remains disabled.
+
+
+## Task 4 - validated bounded local specialist
+
+The 229-test full suite, required probes, PowerShell and wheel checks passed. Four
+hosted Windows/Linux core/full jobs passed at 48359ca. Official pinned Qwen14B Q4_K_M
+weights and llama.cpp b11717 Vulkan ran locally with $0 provider spending. Ten original
+dossiers passed separate-process source-inclusive verification; all owned servers
+stopped. The original format admitted one candidate per call, so it is retained as
+a diagnostic rather than a selection-quality benchmark. Its 22 calls used 61,022
+input and 1,247 output tokens; native time summed to 64.797 seconds, versus 3,075.469
+seconds end to end including source work. Inputs span 8,256,817,498 unique bytes.
+
+Lossless common-field transport preserves every scientific field and exact request
+fingerprint on reconstruction. All-ten capacity probes fit 66 versus 22 candidates
+at unchanged byte limits; 20 of 24 populated categories fit multiple candidates.
+Three cases, fixed before new-format inference in evaluation-v0.2, passed fresh
+source-inclusive verification and the frozen multi-candidate acceptance checks.
+No two formats are pooled as comparative or independent scientific evaluation.
+
+A new regression reproduced missing native prompt-truncation rejection, then passed
+after correction. All original responses report no truncation and pass the stronger
+archived response/retrieval checks. Exact OSMR replay reproduced ledger, features
+and null prediction with zero model calls. Reports/seal-path bugs found during real
+summary validation were fixed and covered by portable-path and incomplete/seal tests.
+See `Local Model Specialist Pilot 2026-10-17.md` and task4-* evidence. All real
+probabilities remain null and numerical features unmeasured. Proceed to Task 5.
+
+
+## Task 5 - conditional feasibility decision validated; training deferred
+
+Rehashed the full-cis IL6R bundle's 38 sealed files and checked 2,979 variants /
+503 EUR external-reference samples. Independently recomputed 4,096 LD entries;
+maximum absolute difference 3.4416913763379853e-15. Thirteen targeted genetics/QC
+and power regressions passed. No originals, QC arrays or prior sealed summaries
+were rewritten. See task5-feasibility.json and task5-validation.json.
+
+Predictive genetics features and clinical scorer derivation/training are **not
+feasible under the current qualifications**, so the task's conditional branch is
+explicitly deferred. The one transcript-exposure region does not validate protein
+perturbation or drug inhibition. Publisher metadata mismatch, study-specific LD,
+cohort overlap, per-variant GWAS N/EAF, scientific interpretation and historical
+eligibility remain unresolved. There are zero qualified clinical training labels,
+no adjudicated negatives/censoring and no independent clinical reference.
+
+## Task 6 - blocked; ordered execution stopped
+
+The requested scientific comparison cannot be completed from the available inputs.
+All real predictions are withheld, there is no validated/scientifically qualified
+scorer, clinical reference or locked origin cohort, and conditional proxy-size power
+does not reach the planning target. Source-copy consistency, metadata, synthetic
+scores and AI-assisted judgments cannot substitute for those artifacts.
+
+No Virtual Biotech performance, clinical AUROC/Brier, scientific ablation effect or
+independent T6 quality result is claimed. Engineering timing/packet measurements
+remain usable within their stated scope. Task 6 is unchecked and blocked, and
+Tasks 7-8 remain unchecked/unstarted. This is the user's prescribed stop-on-blocker
+exception, not completion of the whole project. See task6-blocker.json.
+
+Required resolution: independently adjudicated outcomes/negative-or-censoring rules
+and an exposure-audited origin cohort; qualify historical predictors and re-size the
+new window, then freeze/train/calibrate and compare only if those gates pass.
+A separate independent T6 reference is needed for scientific H5 claims. These needs
+are independent of $0 local inference and cannot be manufactured by additional calls.

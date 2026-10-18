@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-18T04:38:56.821602+00:00",
+  "kind": "focused_lossless_wire_development_experiment",
+  "status": "focused_local_development_dossiers_verified",
+  "canonical_source_pilot_unchanged": true,
+  "canonical_manifest": {
+    "path": "runs\\local-wire-pilot-20261018T042530Z\\evidence-manifest.json",
+    "sha256": "cd96967c334938ff36a5d7695e1cc702bea5457c7cbe1e82335b656431de20f3"
+  },
+  "case_count": 3,
+  "case_receipts": [
+    {
+      "case_id": "cd276-efo_0003060-delivery_antigen-adc",
+      "receipt_sha256": "e7cb6e6f0174207a9aade34531c1239ba4b03dbd7d0dac2de3c86cecaf015c96"
+    },
+    {
+      "case_id": "osmr-efo_0000729-inhibit-antibody",
+      "receipt_sha256": "deab53f74678849fca15d47624f395b8309e8f3562045bbd025f2fb5f1022f57"
+    },
+    {
+      "case_id": "erbb2-efo_0000305-inhibit-antibody",
+      "receipt_sha256": "c97a1e0ed92c40ce688c5df5e5565a64750a7ed9ac2ffab10976130d0d894371"
+    }
+  ],
+  "summary": {
+    "path": "planning\\review-assets\\ordered-execution-20261017\\task4-wire-pilot-summary.json",
+    "sha256": "0f8669ee138d293c0b2d63851f73e0cebdd2b43654746b3492a26cfc62aa4b17"
+  },
+  "scientific_validation": "not_established",
+  "provider_spend_usd": 0,
+  "probabilities_withheld": true
+}
