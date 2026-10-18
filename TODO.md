@@ -12,7 +12,8 @@ development artifacts are evidence, not independent scientific validation.
   simulations and a proceed/revise decision without claiming observed model accuracy.
 - [x] **Task 3 — Finalize model chronology, evaluation windows and preregistration.**
   Verify model versions/cutoffs and matching historical origin/endpoint data; complete
-  a defensible frozen evaluation protocol before treating a set as locked.
+  a defensible frozen evaluation protocol before treating a set as locked. Completed
+  as a local protocol; public filing and clinical activation remain gated.
 - [ ] **Task 4 — Build bounded retrieval and the model-backed specialist.** Preserve
   the default budget and $0 provider-spending boundary; validate offline/replay behavior.
 - [ ] **Task 5 — If feasible, validate genetics features and train/calibrate scoring.**
@@ -21,7 +22,7 @@ development artifacts are evidence, not independent scientific validation.
   compatible data/model chronology and comparable budgets and retain evaluation outputs.
 - [ ] **Task 7 — Run independent T6 quality and locked clinical evaluations.**
   Independent review and an actually locked, temporally eligible cohort are required.
-- [ ] **Task 8 — Conditionally extend T2â€“T5 and H6.** Proceed only after their
+- [ ] **Task 8 — Conditionally extend T2-T5 and H6.** Proceed only after their
   prespecified feasibility and data gates pass; document any unmet condition explicitly.
 
 ## Current execution

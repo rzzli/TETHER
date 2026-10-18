@@ -1,0 +1,23 @@
+{
+  "status": "verified_exact_derived_output_replay",
+  "case_id": "osmr-efo_0000729-inhibit-antibody",
+  "output": "runs\\local-model-replay-osmr-20261018T034716Z",
+  "receipt_sha256": "1e74c04e70a65510817d5ab127bc8c6b6c04fa2a81a5629244f1ebd05a5cd3f3",
+  "model_server_calls": 0,
+  "provider_spend_usd": 0,
+  "verification": {
+    "status": "integrity_verified",
+    "outputs": 8,
+    "source_artifacts_checked": 19,
+    "trace_events": 19,
+    "receipt_sha256": "1e74c04e70a65510817d5ab127bc8c6b6c04fa2a81a5629244f1ebd05a5cd3f3",
+    "external_anchor_checked": true,
+    "auxiliary_outputs_checked": 1,
+    "unsealed_auxiliary_outputs": [],
+    "code_matches_current": true,
+    "semantic_consistency": "verified",
+    "source_binding": "current_originals",
+    "scientific_validity": "not_established"
+  },
+  "usage_interpretation": "accounting replays recorded tokens; no inference tokens consumed"
+}

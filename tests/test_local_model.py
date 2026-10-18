@@ -7,7 +7,7 @@ import shutil
 import tempfile
 import unittest
 
-from asof.agents import EvidenceView, SpecialistRequest
+from asof.agents import EvidenceView, SpecialistRequest, ExtractiveBackend, Selection, Usage
 from asof.artifacts import verify_run, write_run
 from asof.chrono import load_snapshot
 from asof.contracts import Case, Category
@@ -142,3 +142,37 @@ class LocalModelTests(unittest.TestCase):
         self.assertGreater(result.estimated_usage.input_tokens, 0)
         self.assertEqual(result.measured_usage.input_tokens, 0)
         self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')
+
+    def test_preparer_cannot_rewrite_admitted_content_or_hypothesis(self):
+        fixture = self.root / 'fixture'; shutil.copytree(FIXTURES, fixture)
+        case = decode(Case, read_json(fixture / 'case.json'))
+        store = load_snapshot(fixture / 'snapshot.json', case)
+        class MaliciousPreparer(ExtractiveBackend):
+            called = False
+            def prepare_request(self, request):
+                altered = replace(request.evidence[0], statement='fabricated')
+                return replace(request, evidence=(altered,)), {}
+            def select(self, request):
+                self.called = True
+                return super().select(request)
+        backend = MaliciousPreparer()
+        with self.assertRaises(ContractError): run_workflow(case, store, backend)
+        self.assertFalse(backend.called)
+
+    def test_critic_rejects_in_store_selection_omitted_from_actual_packet(self):
+        fixture = self.root / 'fixture'; shutil.copytree(FIXTURES, fixture)
+        case = decode(Case, read_json(fixture / 'case.json'))
+        store = load_snapshot(fixture / 'snapshot.json', case)
+        class OmittedReply(ExtractiveBackend):
+            omitted = None
+            def prepare_request(self, request):
+                prepared, audit = bounded_request(request, RetrievalPolicy(1, 12000))
+                self.omitted = next((r.observation_id for r in request.evidence if r not in prepared.evidence), None)
+                return prepared, audit
+            def select(self, request):
+                return Selection((self.omitted,), Usage(0, 0, 0)) if self.omitted else super().select(request)
+        result = run_workflow(case, store, OmittedReply())
+        self.assertEqual(result.status, 'partial')
+        self.assertEqual(result.coverage['literature']['selected_observations'], 0)
+        self.assertTrue(any('Selection outside the actual bounded request' in e['details']['problems']
+            for e in result.trace if e['event'] == 'review'))

@@ -1,0 +1,68 @@
+# Bounded local specialist pilot
+
+**Status: running; Task 4 is not complete until the ten-case pilot passes.**
+This document describes exposed T6 development work, not independent scientific
+validation or a locked clinical comparison. The model selects source observation
+IDs; accepted factual statements are copied from admitted records. Probabilities
+remain null and real numerical prediction features remain empty.
+
+## Model, data and controls
+
+Official Qwen2.5-14B-Instruct Q4_K_M uses the three pinned GGUF shards at revision
+`b466e1f8c07172155743e8e1307507d8a4f91fbd`, totaling 8,988,110,496 bytes.
+The separate download tool verified every publisher LFS SHA-256. Portable llama.cpp
+`b11717` uses the publisher-hashed Windows Vulkan archive (32,307,240 bytes).
+Extracted runtime binaries are rehashed before launch. Assets and the original
+license are on E:, outside Git. The biomedical downloader/monitor are unchanged.
+
+The launcher owns one IPv4-loopback server with `--offline`, a 16,384-token context,
+one slot and eight CPU threads. It starts without a visible window and is stopped
+in `finally`. Local model setup is explicit; the dependency-free default stays
+offline extraction. The model has no search, filesystem, evaluator-label or tool
+interface. Python orchestration is trusted code, not an OS sandbox.
+
+Inputs are the canonical complete-selected-literature contemporary build,
+`data/derived/literature-coverage-20261017T082208Z`, selected through the run registry.
+Old source packets, baseline outputs and receipts are unchanged. Historical source
+eligibility and the candidate clinical window are separate gates.
+
+Each category receives whole admitted records ranked by literal case-token overlap,
+then stable ID. Maximums are 12 records and 12,000 canonical UTF-8 bytes; a separate
+rendered-prompt byte cap includes escaped role delimiters. Oversized records are
+reported and skipped, not truncated. Provider scores do not become ranking weights
+or effect sizes. These conservative packets can hold very few complete records;
+that limits the selection exercise and is not evidence of biological absence.
+
+The model returns at most three allowlisted IDs, with temperature zero, seed
+20261017 and 256 generation tokens. A deadline and bounded response reader protect
+each attempt. No automatic HTTP retry occurs. The workflow retains its existing
+16-call/32,000-input-token/8,000-output-token/$0/300-second defaults. Source admission
+and source-inclusive verification are outside the workflow meter; end-to-end times
+include them and must not be described as inference latency.
+
+## Verification and retained evidence
+
+The model archive seals exact requests, native payloads, responses, hashes and usage.
+Finalization and verification recompute retrieval from admitted records, match model
+selections to the dispatch/journal and ledger, and independently check current raw
+parents and archived receipts. A separate process verifies every completed dossier.
+Failures retain the reserved directory, console output, attempts and accounting.
+
+The code passes 218 full-suite tests, required probes, PowerShell syntax and installed
+wheel/demo checks. Ten local-adapter tests cover caps, whole-record exclusion,
+ordering, role-token injection, remote endpoints/redirects, malformed or out-of-packet
+IDs, timeout accounting, provenance tampering and attempted rewriting of admitted
+content. Four hosted Windows/Linux core/full jobs passed for the initial 216-test
+code checkpoint; the two additional adversarial checks passed locally.
+
+The completed OSMR case has also replayed with identical ledger, features and null
+prediction and zero model-server calls. Replay accounting uses recorded original
+tokens; it does not mean tokens were consumed during replay. The first replay
+diagnostic is retained separately from the corrected tool's fresh-output validation.
+
+Active pilot: `runs/local-model-pilot-20261018T033050Z`. The execution journal,
+per-case verification, resource observations and final seal are retained there.
+`planning/review-assets/ordered-execution-20261017/` holds sanitized test/replay/CI
+evidence. Model receipts are under the E: model root. This is technical execution
+and source consistency; biological relevance and independent reference quality
+remain unestablished. No clinical AUROC, calibration or therapeutic claim is produced.
