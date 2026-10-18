@@ -1,7 +1,7 @@
 ---
 title: AsOf Data Workspace
 date: 2026-10-09
-updated: 2026-10-17
+updated: 2026-10-18
 tags:
   - asof
   - data
@@ -10,6 +10,26 @@ status: acquisition-started
 ---
 
 # AsOf data workspace
+
+October 18 science-prerequisite work adds a separate ten-case contemporary source
+reference pilot: 10,512 observations, fifty original-row audits, two blinded AI
+source reviews and third-agent adjudication. Its answers stay evaluator-only under
+`data/benchmark/gold_evidence/science-prerequisites-20261018/`; they are not independent
+biological truth or agent-visible evidence.
+
+Four historical Open Targets 24.09 mapping products are now collected and parsed:
+800 publisher-matched Parquet partitions / 115,821 projected rows, plus five
+release/integrity metadata originals (121,968,718 total bytes). These products retain
+historical identifiers, names and mechanism annotations with explicit clinical-field
+exclusions. They do not supply association/genetics features or the full Virtual
+Biotech evidence bundle. See `data/manifests/public/2026-10-18-historical-mappings.json`.
+The original downloader and transport receipts remain unchanged.
+
+The January 2025 origin candidate universe is sealed as reconstructed exploratory
+information, with historical mapping candidates and all clinical-ready/locked flags
+false. January 2026 endpoint restoration is technical-only; April 2026 ascertainment
+data are still missing. Current scientific status is in
+`planning/Scientific Prerequisites Execution 2026-10-18.md` and TODO.md.
 
 October 17 WP0 correction: the catalog now records the five AACT technical restores
 in its verification/blocker fields. ChEMBL and colocalisation are incomplete/idle at

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "ci": {
+    "conclusion": "success",
+    "headSha": "c52b2ffa221f7ab0a99d67b0a091738e60dc80c9",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "name": "validate (ubuntu-latest, core)"
+      },
+      {
+        "conclusion": "success",
+        "name": "validate (windows-latest, core)"
+      },
+      {
+        "conclusion": "success",
+        "name": "validate (ubuntu-latest, full)"
+      },
+      {
+        "conclusion": "success",
+        "name": "validate (windows-latest, full)"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39150314104"
+  },
+  "original_failure_preserved": true,
+  "test_only": true,
+  "targeted_tests": 8,
+  "source_artifacts_changed": false
+}

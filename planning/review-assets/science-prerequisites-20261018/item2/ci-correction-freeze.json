@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "revises": "item2/freeze.json test member only",
+  "original_freeze_sha256": "ce660cd96401a8f7a79ff87be46b16724db61eaac58ced9d496e2ba5a713e9e5",
+  "files": [
+    {
+      "path": "tests/test_science_crosswalk.py",
+      "sha256": "435fd5ad9e01a1974322e525f05e03a9612e562fd3a6bef30a20f4c2227d289e",
+      "bytes": 5244
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item2/hosted-path-correction.json",
+      "sha256": "eff0d2d1d34297e48bbae547bdc4a568f7e61ded996d547b84e9825d9a3770bd",
+      "bytes": 876
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item2/hosted-path-correction-passed.json",
+      "sha256": "4774e6ec0597847074f9949c8e9e49dd1b1172d61b5a3df4b30f42861a9e508c",
+      "bytes": 797
+    }
+  ],
+  "hosted_all_four": "passed",
+  "biological_inputs_and_answers": "unchanged"
+}

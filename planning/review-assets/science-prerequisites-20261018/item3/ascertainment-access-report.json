@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-18T17:33:52.618166+00:00",
+  "role": "evaluation_only",
+  "status": "access_audit_complete_missing_ascertainment_source",
+  "science_stage": "science_3",
+  "origin_at": "2025-01-01T00:00:00Z",
+  "occurrence_horizon_at": "2026-01-01T00:00:00Z",
+  "proposed_ascertainment_at": "2026-04-01T00:00:00Z",
+  "reporting_allowance_days_proposed": 90,
+  "reporting_allowance_qualified": false,
+  "candidate_ascertainment_coverage": "unknown_not_executed",
+  "origin_seal_prerequisite": "No candidate outcome content, future AACT table queries or endpoint joins until parent-owned origin seal.",
+  "source_access": {
+    "local_archive_count": 6,
+    "april_archive_local": false,
+    "april_exact_date_exists": null,
+    "official_filename": null,
+    "filename_reason": "Unauthenticated official listing redirects to sign-in; metadata API requires key.",
+    "official_checks": [
+      {
+        "source_url": "https://aact.ctti-clinicaltrials.org/landing",
+        "status": 200,
+        "location": null
+      },
+      {
+        "source_url": "https://aact.ctti-clinicaltrials.org/snapshots",
+        "status": 302,
+        "location": "https://aact.ctti-clinicaltrials.org/session/new"
+      },
+      {
+        "source_url": "https://aact.ctti-clinicaltrials.org/session/new",
+        "status": 200,
+        "location": null
+      },
+      {
+        "source_url": "https://aact.ctti-clinicaltrials.org/downloads/snapshots?type=pgdump&year=2026",
+        "status": 404,
+        "location": null
+      },
+      {
+        "source_url": "https://aact.ctti-clinicaltrials.org/api/v1/snapshots",
+        "status": 401,
+        "location": null
+      },
+      {
+        "source_url": "https://clinicaltrials.gov/data-api/about-api",
+        "status": 200,
+        "location": null
+      },
+      {
+        "source_url": "https://clinicaltrials.gov/data-api/api",
+        "status": 200,
+        "location": null
+      },
+      {
+        "source_url": "https://clinicaltrials.gov/api/v2/version",
+        "status": 200,
+        "location": null
+      },
+      {
+        "source_url": "https://clinicaltrials.gov/api/v2/openapi.json",
+        "status": 404,
+        "location": null
+      }
+    ],
+    "download_needed": {
+      "source": "AACT PostgreSQL snapshot",
+      "snapshot_date": "2026-04-01",
+      "publisher_filename": null,
+      "preserve_original_filename": true,
+      "folder": "E:/projects_data/drug_target_agents_data/raw/project-qualified-history-20261018/aact_snapshots/2026-04-01/",
+      "needed_metadata": [
+        "exact publisher filename",
+        "visible publisher date/selection",
+        "non-secret download receipt"
+      ],
+      "near_after_search_proposal": {
+        "earliest": "2026-04-01",
+        "latest": "2026-04-08",
+        "available_dates_observed": null,
+        "selected_date": null,
+        "extends_scientific_cutoff": false
+      },
+      "accepted_user_delivery_directory": "E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/",
+      "folder_role": "optional_post_verification_organization_proposal",
+      "receipt_binding": "User-provided archive may stay in accepted_user_delivery_directory with its receipt bound to its original path; do not move or rename files."
+    },
+    "jan2026_prior_qualification": {
+      "archive_sha256": "7fb923dacecae1dfec864c3e21fbed669add8a64b6bd1664ce973c24a514035c",
+      "bytes": 2344676979,
+      "snapshot_date": "2026-01-01",
+      "crc_and_toc": "prior_pass",
+      "first_public_at": null,
+      "restoration_owned_by": "parent_after_origin_seal"
+    }
+  },
+  "timing_policy": [
+    "Snapshot date, dump creation, ZIP local clock, public availability and retrieval remain distinct.",
+    "Exact cutoff midnight UTC cannot be inferred from day-only source date.",
+    "Near-after archive cannot silently admit disclosures after cutoff.",
+    "Occurrence must be wholly in (origin,horizon]; source public availability must qualify separately."
+  ],
+  "planned_coverage": {
+    "registry_next_phase_enrollment_v1": {
+      "status": "pending_missing_april_source_and_post_seal_search",
+      "sources": [
+        "January2026 occurrence-horizon snapshot",
+        "April2026 ascertainment snapshot",
+        "qualified historical versions for corrections/boundaries"
+      ]
+    },
+    "experimental_arm_first_dosing_v1": {
+      "status": "pending_post_seal_source_adjudication",
+      "sources": [
+        "experimental-arm-specific dated first-dose disclosures",
+        "registry histories for supporting chronology"
+      ]
+    },
+    "clinical_efficacy_success_v1": {
+      "status": "pending_post_seal_source_adjudication",
+      "sources": [
+        "qualified results versions",
+        "protocol/SAP versions",
+        "eligible primary-analysis reports"
+      ]
+    }
+  },
+  "coverage_counts": {
+    "candidate_programs_searched": null,
+    "accessible_candidate_histories": null,
+    "complete_defined_registry_searches": null,
+    "unknown_timing_or_scope": null,
+    "clinical_endpoint_labels": null
+  },
+  "ctgov_alternative": {
+    "public_record_history_ui": "metadata_discovered",
+    "history_ordering": "submitted_date_not_public_posting_proof",
+    "candidate_history_requests": 0,
+    "stable_historical_version_api": "not_qualified",
+    "bulk_historical_completeness": "not_qualified",
+    "current_version_endpoint": "current_refresh_metadata_only"
+  },
+  "activity": {
+    "new_downloads": 0,
+    "database_restores": 0,
+    "clinical_table_queries": 0,
+    "endpoint_joins": 0,
+    "candidate_outcome_requests": 0,
+    "credentials_used": false,
+    "provider_spend_usd": 0,
+    "original_worker_receipts_modified": false
+  },
+  "limitations": [
+    "Access qualification does not establish complete ascertainment.",
+    "90 calendar days remains proposed, with no empirical completeness conclusion.",
+    "Missing records are unresolved; no clinical negatives assigned.",
+    "Exact April publisher filename cannot be known from inaccessible listing and is intentionally null."
+  ],
+  "metadata_directory": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z",
+  "evidence": [
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\aact-api-snapshots.response.txt",
+      "sha256": "4e106f4cbcf6f750735fef7ccc33e58870ef6736b25d8d2914ab2ca1be328e12"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\aact-landing.response.txt",
+      "sha256": "188d8df8be986ad45824d343e519fd040f18f7eeb02f35a488335e0069319dd5"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\aact-legacy-2026-list.response.txt",
+      "sha256": "0a10392fb2545ac066492b4b4fac41308ccd6095aed5f5c2eb8773c92ebfcdfa"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\aact-session.response.txt",
+      "sha256": "0f5046b5422f1b7e5268bbf1a8fa6739e608d756fee3eaaaeb8bd91f3ed3ab40"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\aact-snapshots.response.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\ctgov-about-api.response.txt",
+      "sha256": "e8fcbc816e6452bd42991c0e19b1091a5f6346ee14ea10581a95733a0047860a"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\ctgov-api-docs.response.txt",
+      "sha256": "e8fcbc816e6452bd42991c0e19b1091a5f6346ee14ea10581a95733a0047860a"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\ctgov-openapi-probe.response.txt",
+      "sha256": "a6160dd1e4fe6e2ab9489d84bc830834d3928ceb319e082cd468fdc5716bed32"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\ctgov-version.response.txt",
+      "sha256": "aca1155026a105520e0653c4952fde281c4846b1613c8bd9a818bab78bab2121"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\http-receipts.json",
+      "sha256": "440dba360dd6b521b76cd7d3f245c2e3dcccce500c19ea6826d3c042e7c164b4"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\local-archive-inventory.json",
+      "sha256": "cde7ce52941a4ec299beacc3717352ff2995391acba9f82111bc874d281086fb"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\prior-evidence-crosswalk.json",
+      "sha256": "9dfbbb145623fd90935b0c6d81a47fdd9bb0e3641dda70afe8421d1c629b20a0"
+    },
+    {
+      "path": "data\\derived\\science-prerequisites-20261018\\ascertainment-access-20261018T173212Z\\run-scope.json",
+      "sha256": "c444caf6ffdb7bc74126a0045542052e8629475eff75cb63c87e08da62a1006a"
+    }
+  ]
+}

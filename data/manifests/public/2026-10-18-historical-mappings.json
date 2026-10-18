@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "role": "reference",
+  "created_at_utc": "2026-10-18T17:57:37.968371+00:00",
+  "origin_at": "2025-01-01T00:00:00Z",
+  "release_id": "24.09",
+  "availability_bound": "2024-09-19T00:00:00Z",
+  "versions": {
+    "chembl": "34",
+    "ensembl": "112",
+    "efo": "v3.68.0",
+    "mondo": "v2021-12-30",
+    "hgnc": "archived captured set; no numbered release declared; capture 2024-08-16T16:50:06+00:00"
+  },
+  "collection_scope": "four complete selected mapping products only; all other biological evidence and broader inventory states unchanged",
+  "original_files": 805,
+  "original_bytes": 121968718,
+  "projected_rows": 115821,
+  "canonical_manifest": {
+    "path": "data\\derived\\science-prerequisites-20261018\\historical-inputs-20261018T173300Z\\manifest.json",
+    "sha256": "e3c3b0ed80022f2f4cfb077387a6b5021b04fe51526b08a09d93e8d954303d54"
+  },
+  "products": [
+    {
+      "catalog_dataset_id": "ot_target",
+      "product": "targets",
+      "rows": 63121,
+      "partitions": 200,
+      "projection_sha256": "571ceb2d1ae845b5776713241e8025edfd9d53046143396f5e6b879a60c2962d",
+      "approved_columns": [
+        "id",
+        "approvedSymbol",
+        "approvedName",
+        "synonyms",
+        "symbolSynonyms",
+        "nameSynonyms",
+        "obsoleteSymbols",
+        "obsoleteNames",
+        "dbXrefs"
+      ]
+    },
+    {
+      "catalog_dataset_id": "ot_disease",
+      "product": "diseases",
+      "rows": 28327,
+      "partitions": 200,
+      "projection_sha256": "f0617f5b0eeb4777f7ca541c63437c8aca3683f2a1fb1d545e10d9a453d6bb6b",
+      "approved_columns": [
+        "id",
+        "name",
+        "synonyms",
+        "dbXRefs",
+        "obsoleteTerms"
+      ]
+    },
+    {
+      "catalog_dataset_id": "ot_drug_molecule",
+      "product": "molecule",
+      "rows": 18041,
+      "partitions": 200,
+      "projection_sha256": "bef07b1286c0e943477aeb8c3f4b3f83d20f873fd18a077d023c383be4eab041",
+      "approved_columns": [
+        "id",
+        "name",
+        "synonyms",
+        "tradeNames",
+        "crossReferences",
+        "parentId",
+        "childChemblIds",
+        "drugType"
+      ]
+    },
+    {
+      "catalog_dataset_id": "ot_drug_mechanism_of_action",
+      "product": "mechanismOfAction",
+      "rows": 6332,
+      "partitions": 200,
+      "projection_sha256": "7be045858273b30a13ca9d6de0ed6b9df784e0a0e7492aa04a53e2cac7da9142",
+      "approved_columns": [
+        "chemblIds",
+        "targetName",
+        "targetType",
+        "mechanismOfAction",
+        "actionType",
+        "targets",
+        "references"
+      ]
+    }
+  ],
+  "verification": "all800publisherSHA1 matched; all115821 original projected rows compared; full transitive1619 ancestor closure verified",
+  "scientific_prediction_features_qualified": false,
+  "clinical_outcomes_queried": 0,
+  "agent_access": "No automatic raw-data permission. Future manifests must use explicitly approved projections and preserve input lineage."
+}

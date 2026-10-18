@@ -1,0 +1,82 @@
+{
+  "status": "passed_reconstructed_exploratory_origin_selection",
+  "completed_at_utc": "2026-10-18T17:43:15.088543+00:00",
+  "origin_parent_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-20250101-20261018T173340Z\\origin-freeze.json",
+    "sha256": "2e1217ec2d6636ba02a0ade85489931a0da2330a6809d109345cac48237f3731"
+  },
+  "mapping_revision_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-20250101-20261018T173340Z\\mapping-r1\\origin-freeze.json",
+    "sha256": "8622c4896796489e0d34c9359ccdbc3a1ad0eb1778541e173e0ab34ff7cd26e8"
+  },
+  "audit_code": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-20250101-20261018T173340Z\\origin-final-audit.py",
+    "sha256": "357d6df764153ca794916674e524b32700a09ea97b412f29a9c7d5d14087241f"
+  },
+  "all_membership_and_scope_fields_checked": 61541,
+  "original_source_projection_samples": 91,
+  "counts": {
+    "unique_exact_historical_drug_aliases": 22089,
+    "without_target_annotation": 42961,
+    "unknown_or_ambiguous_historical_drug_aliases": 39452,
+    "with_target_annotation": 18580
+  },
+  "unique_origin_trial_ids": 12941,
+  "unique_historical_drug_annotations": 1605,
+  "unique_historical_target_annotations": 816,
+  "unique_lead_sponsor_verbatim_names": 3697,
+  "endpoint_rows_queried": 0,
+  "qualified_clinical_programs": 0,
+  "clinical_locked": false,
+  "clinical_ready": false,
+  "limits": "Artifact/source fidelity and historical annotation lineage; no independent therapeutic target, regimen/population equivalence, outcome or clinical truth established.",
+  "strict_complete_locked_qualification": false,
+  "origin_at": "2025-01-01T00:00:00Z",
+  "horizon_at": "2026-01-01T00:00:00Z",
+  "snapshot_date": "2025-01-01",
+  "origin_candidate_counts": {
+    "source_trials": 203147,
+    "trial_excluded": 188129,
+    "trial_eligible": 15018,
+    "excluded_arm_condition_scopes": 398718,
+    "conditional_origin_candidates": 61541,
+    "candidates_with_prior_higher_phase_alerts": 11955
+  },
+  "mapping_qualified": true,
+  "mapping_qualification_scope": "complete release-pinned input projections and exact alias candidates; not clinical equivalence",
+  "historical_mapping_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\historical-inputs-20261018T173300Z\\manifest.json",
+    "sha256": "e3c3b0ed80022f2f4cfb077387a6b5021b04fe51526b08a09d93e8d954303d54",
+    "release_id": "24.09",
+    "available_by": "2024-09-19T00:00:00Z"
+  },
+  "reconstruction_rules_proof": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item3\\origin-reconstructed-availability.md",
+    "sha256": "1a3fcb468fed400d9e6063d3bd5cb1d8f123c73934928de59cb67e9527541b44"
+  },
+  "origin_final_audit": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-20250101-20261018T173340Z\\origin-final-audit.json",
+    "sha256": "366eda6464539081aff0be909ba21140c3610c05b25304544cac9ca2db59a68f"
+  },
+  "regression_tests": {
+    "tests_passed": 37,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item3\\origin-regression-tests.log",
+    "sha256": "11d9440b06ab84c33a2dcd46541d88771edf3b6723ca40432ce9858f50aa2012"
+  },
+  "code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_programs.py",
+    "sha256": "2bdca680cc06040f8ba653ed35b6c88d2207b121f90eec5616e6187abb1865f5"
+  },
+  "test_code": {
+    "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_origin_programs.py",
+    "sha256": "74181763aa0d0be48e94219ae47c3810d5b14c4177f88c9b997fcdaab1fb53f0"
+  },
+  "source_server_stopped": true,
+  "paid_provider_calls": 0,
+  "prior_attempt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-20250101-20261018T173122Z\\origin-failure.json",
+    "status": "failed_before_origin_query; retained; own server stopped"
+  },
+  "later_aact_sources_accessed": false,
+  "earlier_cohort_outcome_labels_accessed": false
+}

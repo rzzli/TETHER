@@ -8,17 +8,17 @@ and validation limits must stay explicit. File/access/permission gaps are escala
 to the user. Previous task completion scopes and historical results below remain.
 
 - [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
-- [ ] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
+- [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
 - [ ] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
 - [ ] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
 - [ ] **Science 5 — Qualify genetics as a conditional scientific branch.**
 - [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
-Current item: Science 2 hosted-validation correction, with Item 3 source preparation
-only in progress. Windows CI exposed a temporary-path alias assertion error in a
-test; the original local success and reference seals are retained. Correct and
-revalidate before endpoint execution. Science 1 passed 262 full tests; Science 2 passed 326 full
+Current item: Science 3. The Windows temporary-path test assertion was corrected;
+all four hosted Windows/Linux core/full jobs passed at c52b2ff. Original failed CI
+and corrected-test proofs are retained separately. Science 1 passed 262 full tests;
+Science 2 passed 326 full
 tests, 50 original-row/reference checks and 30 literature-question adjudications.
 Core validation passed with 52 expected ingestion skips. See planning/Scientific
 Prerequisites Execution 2026-10-18.md. Do not mark a conditional defer, AI-assisted reference or
@@ -28,6 +28,21 @@ endpoint labels before origin selection is sealed.
 Run tasks in order. Mark complete only after the task's validation passes. Stop and
 record a blocker if a task cannot be completed after reasonable attempts. Existing
 development artifacts are evidence, not independent scientific validation.
+
+### Science 3 supporting work
+
+- [x] Qualify four historical OT24.09 mapping products and complete source ancestry.
+- [x] Seal the origin-only reconstructed exploratory universe and mapping revision;
+  audit all 61,541 scope memberships and preserve unresolved scientific equivalence.
+- [x] Validate the origin/endpoint gates and integrity corrections: 363 full tests,
+  dependency-free validation, original corruption probes and 1,648 ancestor checks.
+- [ ] Complete the running January 2026 technical database restoration and audit.
+- [ ] Receive and qualify April 1, 2026 AACT ascertainment input. Actual file/access
+  gap: official API401/sign-in; requested user delivery folder is
+  E:\projects_data\drug_target_agents_data\raw\aact_snapshots\apr2026zip\.
+
+Science 3 remains incomplete. No endpoint cohort joins, clinical labels, training,
+negatives, locked evaluation or later science stages are activated.
 
 - [x] **Task 1 — Build registry-scale cohorts and audit transition labels.** Verify
   the sealed v0.4 milestone, freeze the condition/scope sensitivity rules, and finish

@@ -357,3 +357,11 @@ and a third adjudicator are retained, with shared-model/access limits explicit.
 Item 3 is next; Items 4–7 have not started. See planning/Scientific Prerequisites
 Execution 2026-10-18.md. Original H1 clinical success, registry advancement and
 verified dosing remain distinct; real probabilities remain null.
+
+Item3 supporting work: OT24.09 four-product historical mapping qualification
+passed (805 originals,115,821 projected rows); origin-only reconstructed exploratory
+universe sealed (61,541 conditional scopes, not qualified independent programs).
+All363 full tests and core validation passed after source-ancestry hardening.
+January2026 technical restore is running with an empty cohort query; April2026
+AACT is a real authenticated-file gap requested from the user. Strict complete,
+clinical-ready and locked flags remain false. Items4–7 are not started.

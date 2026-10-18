@@ -8,7 +8,7 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 |---|---|---|
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
-| 3. Historical inputs/origin/endpoint | Next | Seal origin selection before endpoint queries; qualify historical evidence and ascertainment. |
+| 3. Historical inputs/origin/endpoint | In progress; file needed | Historical mappings/origin seal passed; January2026 technical restore running; April2026 ascertainment archive requires user access. |
 | 4. Outcomes/power/precision | Pending | Endpoint-specific adjudication; unknown is not a negative. |
 | 5. Conditional genetics | Pending | Method-specific source/QC and biological eligibility; explicit defer allowed. |
 | 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
@@ -49,6 +49,13 @@ for adjudication and review parse/hash races. Regressions and the reviewer's ori
 probes reject all three. All 326 full tests and packaging/demo checks passed. A
 separate dependency-free environment passed with 52 expected ingestion skips.
 
+Hosted Windows validation exposed a test-only comparison of a temporary directory's
+short alias versus its canonical full path. The assertion now resolves both paths;
+runtime containment/hashing and biological artifacts were unchanged. After that
+correction all four hosted Windows/Linux core/full jobs passed at `c52b2ff`.
+The original local freeze/failed CI remain historical evidence; a separate correction
+seal binds the revised test and successful hosted run.
+
 ## Navigation and limits
 
 Tracked proofs: `planning/review-assets/science-prerequisites-20261018/item1/` and
@@ -64,3 +71,47 @@ truth, clinical labels, trained probabilities, powered superiority or completed
 comparator evaluation is claimed. The blinded reference procedure is Item 2;
 actual arms/ablations belong to Item 7. Runtime provider spending is $0. Existing
 downloader, transport receipts and stopped periodic monitor remain untouched.
+
+## Item 3 work and current file gate
+
+Four complete mapping products from OT24.09 are qualified: 805 originals/receipts,
+121,968,718 acquired bytes, 800 publisher-matched Parquet partitions and 115,821
+independently checked projected rows. Historical versions include ChEMBL34,
+Ensembl112, EFO3.68.0 and archived integrated HGNC. No contemporary fallback or
+association/genetics prediction feature was admitted.
+
+The January2025 origin-only extraction retains 203,147 phased interventional trials;
+15,018 satisfy the source-level trial rules. Its 61,541 conditional arm/condition
+scopes span 12,941 trials. Historical exact aliases resolve 22,089 scope drug sets;
+18,580 have resource target annotations, while 39,452 remain drug-unmapped/ambiguous
+and 42,961 lack target annotations. These are overlapping scope counts, not
+independent or clinically qualified programs. Scientific equivalence remains
+unresolved; qualified clinical programs remain zero.
+
+All memberships were preserved in the immutable mapping revision, with 91 source
+projection samples checked (and 70 parent source checks). Both source posting-date
+maxima are December27,2024. Official NLM posting semantics and AACT daily-copy
+provenance support an explicitly reconstructed exploratory route. Bulk publication
+before origin, original version-byte identity and exact-origin completeness remain
+unverified; strict/clinical-ready/locked flags remain false. No origin was shifted.
+
+Two ancestry-verification gaps were reproduced and corrected: mapping and endpoint
+gates now check complete historical raw/receipt/projection/schema closure and origin
+ancestors, not just direct seal files. Mutation probes reject corrupt inputs before
+mapping output or restoration dispatch. All 363 full tests passed; core validation
+passed with 52 expected ingestion skips. An independent production check verified
+1,648 commitments / 7,346,406,693 bytes, including the original AACT archive and dump.
+Old code/source freezes are retained; correction reports bind new verification.
+
+The January2026 archive's fresh SHA256 and member CRCs match its prior qualification.
+It is restoring only after the audited origin seal, with literal empty cohort SQL.
+This performs structural checks, not clinical outcome analysis. Its terminal
+restoration/audit is still pending at this progress entry.
+
+The missing input is a versioned PostgreSQL AACT snapshot dated April1,2026. Official
+listing requires sign-in and API returns401; no publisher filename or stable
+historical-version API is assumed. User delivery requested at
+`E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/`.
+Nearby dates require explicit evaluation; a later snapshot cannot silently extend
+the midnight-UTC ascertainment cutoff. Ninety days remains a proposed reporting
+allowance, not demonstrated completeness. Items4–7 remain unstarted.

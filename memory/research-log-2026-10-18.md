@@ -126,3 +126,13 @@ See planning/Scientific Prerequisites Execution 2026-10-18.md and
 data/benchmark/gold_evidence/science-prerequisites-20261018/reference-panel/adjudication/.
 Item 3 is next; origin selection precedes endpoint joins. Model arms remain Item 7,
 clinical probabilities null and runtime provider spending zero.
+
+Hosted Windows initially exposed a test-only temporary-path alias assertion; it
+was corrected with canonical path comparison. All four Windows/Linux core/full
+jobs passed at c52b2ff; source/review artifacts unchanged. Item 3 historical mapping
+source qualification acquired only 121,968,718 bytes, all 800 Parquet partitions
+publisher-matched and 115,821 projected rows reread. April 2026 AACT is an actual
+file/access gap: official API401/sign-in; user asked to place April1version in
+E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/. Origin-only
+selection continues without endpoint joins. Exact-origin strict eligibility is
+not inferred from bulk dump creation; reconstructed exploratory route is explicit.
