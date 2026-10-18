@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "all_backup_hashes_verified",
+  "backup_path": "E:\\projects_data\\drug_target_agents_data\\backups\\science-historical-code-20261018T182714Z",
+  "files": [
+    {
+      "name": "archive-map.json",
+      "bytes": 1942,
+      "sha256": "3cd6e833d98acb39f2349e470af4b36ad77cdd38b9e6184c03343d88a032024d"
+    },
+    {
+      "name": "historical_inputs.py",
+      "bytes": 15937,
+      "sha256": "9a6c3da7d11ca3eac4941bf53fb962367c03e812204c529a53ce25f1d1617da0"
+    },
+    {
+      "name": "test_science_historical_inputs.py",
+      "bytes": 5320,
+      "sha256": "0089919c2c69ace5bc83647bef0dd6cf456063279031ed19e131adda227dee28"
+    }
+  ],
+  "original_source": "exact recovered pre-correction frozen script/test; recovery map preserves post-hoc qualification"
+}

@@ -362,6 +362,14 @@ Item3 supporting work: OT24.09 four-product historical mapping qualification
 passed (805 originals,115,821 projected rows); origin-only reconstructed exploratory
 universe sealed (61,541 conditional scopes, not qualified independent programs).
 All363 full tests and core validation passed after source-ancestry hardening.
-January2026 technical restore is running with an empty cohort query; April2026
-AACT is a real authenticated-file gap requested from the user. Strict complete,
-clinical-ready and locked flags remain false. Items4–7 are not started.
+January2026 technical restoration and independent terminal acceptance passed:
+52 tables,563,840 studies,55,380,326 rows;394 evidence files and1,648 ancestor
+commitments reverified. Empty cohort output, owned server stopped and port55437
+closed. Batch41.27minutes;23,709,068,263 retained bytes; peak memory uninstrumented.
+All four hosted Windows/Linux jobs passed at67cde1e. Exact original acquisition
+code/test recovery matched old freeze hashes and has a verified E: backup; recovery
+is post-hoc, not an automatic acquisition-time archive.
+April2026 AACT remains a real authenticated-file gap requested from the user at
+E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/.
+Science3 is blocked/incomplete; ordered execution stops at that permitted exception.
+Strict complete,clinical-ready and locked flags remain false. Items4–7 are not started.

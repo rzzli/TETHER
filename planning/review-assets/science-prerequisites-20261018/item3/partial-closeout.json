@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-10-18T18:31:32.260276+00:00",
+  "status": "blocked_user_file_required",
+  "science_stage": "science_3",
+  "provider_spend_usd": 0,
+  "completed_items": [
+    "science_1",
+    "science_2"
+  ],
+  "current_item_complete": false,
+  "later_items": "science_4 through science_7 not started; ordered execution respected",
+  "completed_supporting_work": [
+    "Four historical OT24.09 mapping products:805 originals,800 partitions,115821 projected rows reread",
+    "Origin-only reconstructed exploratory universe sealed:61541 conditional scopes; zero qualified clinical programs",
+    "Source ancestry hardening,363 full tests, dependency-free checks and four hosted jobs passed",
+    "January2026 technical restore and independent terminal acceptance passed",
+    "Recovered original acquisition-code freeze bytes and verified backup"
+  ],
+  "restoration": {
+    "technical_checks": {
+      "snapshot_date": "2026-01-01",
+      "tables": 52,
+      "studies": 563840,
+      "total_rows": 55380326,
+      "identifier_exceptions": [],
+      "constraints": 117,
+      "indexes_including_toast": 274,
+      "scientific_validation": "not_established"
+    },
+    "source_archive_sha256": "7fb923dacecae1dfec864c3e21fbed669add8a64b6bd1664ce973c24a514035c",
+    "source_archive_bytes": 2344676979,
+    "source_members_verified": 5,
+    "evidence_files_verified": 394,
+    "ancestor_pins_reverified": 1648,
+    "restore_elapsed_seconds": 2475.936999999998,
+    "import_elapsed_seconds": 2185.2969999999987,
+    "retained_bytes": 23709068263,
+    "peak_memory_bytes": null,
+    "peak_memory_reason": "Database subprocess peak not instrumented; no inferred estimate",
+    "server_stopped": true,
+    "owned_port_listening": false
+  },
+  "blocker": {
+    "owner": "user_file_access",
+    "required_snapshot_date": "2026-04-01",
+    "expected_format": "AACT versioned PostgreSQL archive",
+    "delivery_folder": "E:\\projects_data\\drug_target_agents_data\\raw\\aact_snapshots\\apr2026zip",
+    "folder_exists": true,
+    "archive_present": false,
+    "publisher_filename": null,
+    "exact_version_availability": null,
+    "access_evidence": "Official unauthenticated listing requires sign-in; metadata API401; access report retained",
+    "substitution_policy": "Do not substitute nearby dates without explicit eligibility evaluation; report offered dates first"
+  },
+  "remaining_qualification": [
+    "Historical strict availability/completeness remains unverified; reconstructed exploratory route only",
+    "Clinical program/regimen/population/prior-risk equivalence unresolved",
+    "90-day reporting allowance and ascertainment completeness unqualified",
+    "No clinical outcome labels, negatives, predictive features, fitting, calibration or locked clinical evaluation"
+  ],
+  "endpoint_cohort_rows_queried": 0,
+  "clinical_activation": false,
+  "probabilities": "remain null",
+  "next_authorized_action": "When file arrives: verify date/hash/CRC/cutoff, finish Science3, then proceed to Science4 in order",
+  "proofs": [
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/historical-input-validation.json",
+      "sha256": "a998ea2c3779475bae35c8e22e5e07a7198293c19dc87a4f3eb0ff55fa561560"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/origin-integrity-correction.json",
+      "sha256": "a7cfbd1cdeb1ac74448ca542bf10109b21f45e9b679ef33a5e54ab15b9c7d35b"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/endpoint-terminal-validation.json",
+      "sha256": "6e9b5ee9898e778e3cf1ce568b9e0cddc9c328d5a43e292962ec1a1934fbfa84"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/final-code-validation.json",
+      "sha256": "38609cda9da631e61fdee713afe2dd0f9c49594b547daed4e1dc9455dcb8cd08"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/core-code-validation.json",
+      "sha256": "7eb40bcf2a60d543038140d20d76517c70050e9f11a98f804b912fbca2a8f47b"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/ascertainment-access-report.json",
+      "sha256": "df74261c78ddb2420a8ba5955421ce2c349694d35a6d02afb51cb95f159dcf1f"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/historical-code-archive-map.json",
+      "sha256": "3cd6e833d98acb39f2349e470af4b36ad77cdd38b9e6184c03343d88a032024d"
+    },
+    {
+      "path": "planning/review-assets/science-prerequisites-20261018/item3/historical-code-backup.json",
+      "sha256": "4d9b3a21cae29039ac896b8c68318fcb38f3f29ecc81502eeda5e6366377c27f"
+    }
+  ]
+}

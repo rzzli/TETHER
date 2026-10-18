@@ -8,7 +8,7 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 |---|---|---|
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
-| 3. Historical inputs/origin/endpoint | In progress; file needed | Historical mappings/origin seal passed; January2026 technical restore running; April2026 ascertainment archive requires user access. |
+| 3. Historical inputs/origin/endpoint | Blocked; file needed | Historical mappings/origin seal and January2026 technical restore passed; April2026 ascertainment archive requires user access. |
 | 4. Outcomes/power/precision | Pending | Endpoint-specific adjudication; unknown is not a negative. |
 | 5. Conditional genetics | Pending | Method-specific source/QC and biological eligibility; explicit defer allowed. |
 | 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
@@ -103,10 +103,28 @@ passed with 52 expected ingestion skips. An independent production check verifie
 1,648 commitments / 7,346,406,693 bytes, including the original AACT archive and dump.
 Old code/source freezes are retained; correction reports bind new verification.
 
-The January2026 archive's fresh SHA256 and member CRCs match its prior qualification.
-It is restoring only after the audited origin seal, with literal empty cohort SQL.
-This performs structural checks, not clinical outcome analysis. Its terminal
-restoration/audit is still pending at this progress entry.
+The January2026 archive's fresh SHA256 and five member hashes/CRCs match its prior
+qualification. Restoration completed after the audited origin seal, using literal
+empty cohort SQL. Independent terminal acceptance passed: 52 tables, 563,840 studies,
+55,380,326 rows, 117 validated constraints and 274 valid/ready indexes, with no
+identifier exceptions. All 394 retained evidence-file commitments and 1,648 source
+ancestor commitments were reverified. Cohort output is empty; the owned server is
+stopped and port55437 is closed. This is structural validation, not outcome analysis.
+
+The batch took 2,475.937 seconds (41.27 minutes), including 2,185.297 seconds of import;
+the restored workspace retains 23,709,068,263 bytes (22.08 GiB), excluding the original
+ZIP. Peak subprocess memory was not instrumented and remains null. Independent
+acceptance took 223.437 seconds. The initially dispatched wrapper version is archived;
+the corrected archive/ancestry guards were independently applied at terminal
+acceptance without repeating the restore. All four hosted Windows/Linux core/full
+jobs passed at `67cde1e`; all 363 local full tests passed, with 52 expected ingestion
+skips in the separate dependency-free validation.
+
+Exact original pre-correction acquisition code/test bytes were recovered from retained
+patch context and matched their original freeze hashes. The recovery is explicitly
+post-hoc; it does not imply an automatic acquisition-time code archive. Verified
+copies and their recovery map are backed up on E:. The correction and original
+freezes remain separate.
 
 The missing input is a versioned PostgreSQL AACT snapshot dated April1,2026. Official
 listing requires sign-in and API returns401; no publisher filename or stable
@@ -115,3 +133,10 @@ historical-version API is assumed. User delivery requested at
 Nearby dates require explicit evaluation; a later snapshot cannot silently extend
 the midnight-UTC ascertainment cutoff. Ninety days remains a proposed reporting
 allowance, not demonstrated completeness. Items4–7 remain unstarted.
+
+Ordered execution stops at this actual file/access gap under the user's exception.
+Item3 is not marked complete. The retained `item3/partial-closeout.json`,
+`item3/endpoint-terminal-validation.json` and `item3/checkpoint-freeze.json` bind the
+completed supporting work, validation and blocker. After delivery, verify the archive
+date, integrity and cutoff eligibility before continuing Item3, then proceed to Item4.
+Do not substitute a nearby snapshot or treat absent transitions as failures.

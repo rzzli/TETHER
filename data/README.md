@@ -146,6 +146,15 @@ Folder separation and `.gitignore` do **not** enforce confidentiality or histori
 
 The contemporary pilot uses a frozen explicit manifest with 65 missing inputs; the builder cannot silently use newly downloaded replacements. Exact historical-origin and clinical-protocol decisions, AACT restoration, regional genetics/LD access and independent scientific validation remain outstanding. No accounts or paid transfers were created by this milestone. The user's stopped periodic monitoring remains stopped; inspect transport progress only on request.
 
+October18 qualification update: four OT24.09 mapping products are qualified and an
+origin-only reconstructed exploratory universe is sealed; strict historical completeness
+and clinical program equivalence remain unqualified. January2026 AACT technical
+restoration passed independent terminal checks (52 tables,563,840 studies,
+55,380,326 rows), with an empty cohort result and stopped owned server. The scoped
+manifest is `data/manifests/public/2026-10-18-aact-endpoint-technical.json`.
+April1,2026 ascertainment data remain missing, so Science3 is blocked and Items4–7
+have not started. No clinical labels or agent-visible future data were admitted.
+
 ## Contemporary normalization and retained provenance
 
 `inspect-source` checks selected originals, transport receipts, schemas, roles and approved paths. `build-snapshot` reserves a new directory, repeats inspection, archives exact receipt bytes at `E:\projects_data\drug_target_agents_data\manifests\receipt-archive\<sha256>.json`, and creates packets with raw-parent references and physical row locators. The copied receipts keep runs stable if a later transport retry rewrites its own receipt. Build journals retain stages, counters and terminal failures; `inspect-run` describes them without restarting work.

@@ -136,3 +136,17 @@ file/access gap: official API401/sign-in; user asked to place April1version in
 E:/projects_data/drug_target_agents_data/raw/aact_snapshots/apr2026zip/. Origin-only
 selection continues without endpoint joins. Exact-origin strict eligibility is
 not inferred from bulk dump creation; reconstructed exploratory route is explicit.
+
+Science3 supporting work subsequently passed: origin mapping revision sealed all
+61,541 conditional scopes without claiming qualified clinical programs. Source
+ancestry defects were fixed and 363 full tests plus four hosted Windows/Linux jobs
+passed. January2026 technical restoration completed:52 tables,563,840 studies,
+55,380,326 rows,117 constraints,274 indexes; no identifier exceptions. Independent
+terminal acceptance reverified394 evidence files and1,648 ancestor commitments.
+Only empty cohort SQL ran; owned server stopped and port55437 closed. Batch took
+2,475.937 seconds and retains23,709,068,263 bytes; peak memory remains unknown.
+Original acquisition code/test versions were recovered byte-identically against old
+freeze hashes and backed up; this is explicitly post-hoc recovery.
+Science3 remains blocked on the April1,2026 AACT archive. The requested folder now
+exists and is empty. No endpoint joins/labels, clinical activation, scorer fitting or
+Items4–7 were performed. See the execution document and Item3 partial checkpoint.
