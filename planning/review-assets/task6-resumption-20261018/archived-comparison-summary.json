@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "technical_diagnostics_completed_scientific_comparison_blocked",
+  "protocol_sha256": "854887cf1a6083b1973284041419516e318b0819527d1efa85de9c6505b5268f",
+  "source_verification": "Archived runs/seals reverified; original raw bytes not rehashed in this diagnostic",
+  "new_model_calls": 0,
+  "provider_spend_usd": 0,
+  "clinical_metrics": null,
+  "independent_quality_metrics": null,
+  "virtual_biotech_performance": null,
+  "task6_complete": false,
+  "elapsed_seconds": 10.375,
+  "limitations": [
+    "Selection agreement is not accuracy, scientific relevance or clinical prediction performance",
+    "Conditional on previously bounded candidates; does not compare end-to-end retrieval or full evidence coverage",
+    "Original and wire formats are separate diagnostics; all cases were exposed and action/modality variants are dependent",
+    "If every candidate set fits the three-ID selection cap, this design does not compel prioritization",
+    "Provider scores are descriptive source metrics, not comparable calibrated scientific support across datasources",
+    "Mask retention is a deterministic engineering result; model reruns, reviewer quality and causal feature effects remain unmeasured",
+    "Inherited source-inclusive proofs and sealed bytes are checked; raw originals are not rehashed in this diagnostic",
+    "Independent T6 truth, eligible clinical labels/censoring, qualified scoring and an executable matched Virtual Biotech arm remain required for Task 6 completion"
+  ],
+  "output": "data\\derived\\development-comparison-20261018-resume03",
+  "groups": [
+    {
+      "id": "canonical_diagnostic",
+      "wire_format": "canonical",
+      "parent_seal_sha256": "d673477bb40abf068bcbff39c13cd8a57fdd27e8b1ed5b6d28f380309c614377",
+      "case_count": 10,
+      "request_count": 22,
+      "model_selected_all_candidates_requests": 22,
+      "requests_with_more_than_three_candidates": 0,
+      "baseline_agreement_counts": {
+        "extractive_all": {
+          "applicable_requests": 22,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 22
+        },
+        "lexical_top_k": {
+          "applicable_requests": 22,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 22
+        },
+        "provider_score_top_k": {
+          "applicable_requests": 22,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 22
+        }
+      },
+      "inherited_resource_summary": {
+        "calls": 22,
+        "input_tokens": 61022,
+        "output_tokens": 1247,
+        "native_prompt_and_generation_seconds_sum": 64.79696499999999
+      }
+    },
+    {
+      "id": "lossless_wire_diagnostic",
+      "wire_format": "asof-shared-scientific-fields-v1",
+      "parent_seal_sha256": "cd96967c334938ff36a5d7695e1cc702bea5457c7cbe1e82335b656431de20f3",
+      "case_count": 3,
+      "request_count": 7,
+      "model_selected_all_candidates_requests": 7,
+      "requests_with_more_than_three_candidates": 0,
+      "baseline_agreement_counts": {
+        "extractive_all": {
+          "applicable_requests": 7,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 7
+        },
+        "lexical_top_k": {
+          "applicable_requests": 7,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 7
+        },
+        "provider_score_top_k": {
+          "applicable_requests": 7,
+          "inapplicable_requests": 0,
+          "identical_selection_sets": 7
+        }
+      },
+      "inherited_resource_summary": {
+        "calls": 7,
+        "input_tokens": 26030,
+        "output_tokens": 764,
+        "native_prompt_and_generation_seconds_sum": 22.090055
+      }
+    }
+  ]
+}

@@ -3,10 +3,27 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Project goals
+
+## Task 6 resumption — October 18
+
+Development comparison tools now execute deterministic lexical and within-datasource
+provider-score baselines against sealed model requests, with explicit no-literature/
+no-perturbation post-selection masks. Initial results: all 22 original-format and
+seven focused-wire calls selected every offered candidate; none exceeded the three-ID
+selection cap. These are separate, exposed diagnostics and cannot demonstrate quality.
+A fixed four-case wider-candidate challenge passed source-inclusive verification
+under evaluation-v0.3: 11 requests, five requiring prioritization. Model/lexical
+selection sets agree 11/11 and model/provider-score sets 8/11. All 246 full-suite
+tests and four hosted jobs passed. The owned server stopped; provider spending $0.
+Pinned Virtual Biotech source/configuration audit confirms provider-specific execution
+and fixed Haiku roles; 34 of 38 directories have local Parquet files (presence only).
+Task 6 remains incomplete; Tasks 7–8 remain unstarted. See
+[[Task 6 Development Comparisons 2026-10-18]]. Scientific references, a qualified
+scorer and the adapted comparator are still required; no probabilities are produced.
 
 ## Ordered execution update - October 17
 

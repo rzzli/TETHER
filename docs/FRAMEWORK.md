@@ -344,3 +344,26 @@ Arbitrary agents require OS-level read-only mounts, evaluator/credential isolati
 controlled network access and contamination audits before locked evaluation. Python
 protocols provide no OS containment. Original plans and dated reviews remain preserved;
 the download worker and stopped periodic monitor are independent of this milestone.
+
+
+## Development selection diagnostics
+
+`tools/framework/compare_development.py` compares completed, sealed local T6
+requests against a lexical top-three selector and a within-datasource provider-score
+top-three selector. It also reports an uncapped extractive candidate reference and
+explicit post-selection evidence masks. No clinical labels or evaluator answers
+are read. The recorded model responses and usage are reused, with zero new
+inference calls. Scores remain descriptive; mixed or missing source scales abstain.
+
+```powershell
+uv run --no-sync python -m tools.framework.compare_development --protocol planning/protocols/development-comparison-v0.1.json --output data/derived/comparison-new
+uv run --no-sync python -m tools.framework.compare_development --output data/derived/comparison-new --verify-seal-sha256 <saved-seal-hash>
+```
+
+The output directory must be new. Status and completed case records survive later
+failure. Successful reports archive the executed tool source and a hash manifest.
+Verification reconstructs paired selections and deterministic masks from anchored
+parent runs; it rechecks archived source proofs without rehashing original raw data.
+Selection agreement is not quality, and these masks are not end-to-end model
+ablations. Keep transport versions separate. See the October 18 Task 6 report for
+exact scope and the pinned Virtual Biotech compatibility audit.

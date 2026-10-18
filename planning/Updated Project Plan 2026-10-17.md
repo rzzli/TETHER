@@ -7,6 +7,17 @@ tags: [asof, roadmap, clinical-evaluation, feasibility]
 
 # AsOf: current project plan
 
+## October 18 resumption
+
+Task 6's development baseline/mask utilities and pinned competitor compatibility
+audit are implemented. Four wider-candidate dossiers passed source-inclusive
+verification; their 11 requests matched lexical top-three selection sets 11/11 and
+provider-score top-three 8/11. All 246 tests and four hosted jobs passed. See
+[[Task 6 Development Comparisons 2026-10-18]] for the separate
+transport groups, scientific limitations and retained evidence. Task 6 remains
+incomplete; the independent reference/scoring/comparator gates and Tasks 7–8 remain
+open. The earlier dated sequence below is preserved as history.
+
 ## Decision
 
 Execution update: local preservation, private Git hosting and baseline off-machine

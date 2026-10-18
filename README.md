@@ -17,6 +17,11 @@ and a retained audit of 20 distinct original rows. The versioned
 [run registry](planning/run-registry.json) identifies the canonical artifacts and retained
 failed attempts. See the [stabilization report](planning/Stabilization Completion and Feasibility Gates.md).
 
+Task 6 now has [development comparison tools](planning/Task%206%20Development%20Comparisons%202026-10-18.md)
+for exact-request lexical/provider-score baselines and explicit evidence masks, plus
+a pinned Virtual Biotech configuration audit. These diagnose selection behavior;
+independent scientific quality and clinical performance remain unmeasured.
+
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant
 clinical significance. Dossiers distinguish resource annotations from unassessed

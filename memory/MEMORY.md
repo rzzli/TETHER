@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[Task 6 Development Comparisons 2026-10-18]] — Validated baselines/masks, competitor configuration audit and four source-verified wider-candidate dossiers. Model/lexical sets match 11/11; 246 tests and four hosted jobs pass. Task 6 scientific/comparator gates remain open.
+- [[research-log-2026-10-18]] — Task 6 resumption, retained comparison findings and stopping decision; no independent quality or clinical prediction result.
+
 - [[Updated Project Plan 2026-10-17]] — Ordered Tasks 1-3 passed: fixed-cohort scope audit, corrected conditional power, frozen local chronology/protocol. Task 4 local-model/wire pilots passed. Task 5 conditionally defers genetics/training; ordered execution is stopped at Task 6 for missing qualified comparative truth/scoring inputs.
 - [[Local Model Specialist Pilot 2026-10-17]] — Pinned Qwen local inference, lossless scientific-field transport, exact replay and technical resources; no independent quality or clinical performance claim.
 - [[Evaluation Chronology and Local Preregistration 2026-10-17]] — Immutable September 2024 Qwen weights, candidate January 2025-2026 archives, T6 development protocol; no public registration or clinical lock.

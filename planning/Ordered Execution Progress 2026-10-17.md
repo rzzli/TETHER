@@ -197,3 +197,24 @@ It excludes bulk originals, full AACT archives/databases, model/native binaries 
 credentials, and does not establish new scientific validation. The backed source
 checkpoint is b31d1d56583ba23c64adf23d39fe70517ee4adf9; later handoff metadata is in
 private Git and recorded separately. See incremental-recovery-verification.json.
+
+
+## October 18 resumption — Task 6 development diagnostics verified
+
+The earlier Task 6 stop above is preserved as dated history. On resumption,
+implemented exact-request lexical/provider-score baselines and deterministic
+no-literature/no-perturbation masks, plus a pinned Virtual Biotech configuration
+and local-directory compatibility audit. The 29 archived calls all selected every
+candidate offered and never had more than three candidates.
+
+Four fixed wider-candidate cases then passed fresh source-inclusive verification
+under evaluation-v0.3. Of 11 requests, five required prioritization. Model/lexical
+selection sets matched 11/11 and model/provider-score sets 8/11; no accuracy or
+quality inference follows. Independent diagnostic regeneration checked 40 requests
+in three separate groups. All 246 tests, required probes, packaging and four hosted
+CI jobs passed. The owned server stopped; probabilities null; provider spending $0.
+
+Task 6 stays unchecked: matched adapted Virtual Biotech execution and scientific
+reference/scoring/chronology/power qualifications are incomplete. Tasks 7–8 remain
+unstarted. See [[Task 6 Development Comparisons 2026-10-18]] and the new retained
+`planning/review-assets/task6-resumption-20261018/task6-blocker-recheck.json`.

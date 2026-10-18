@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "exposed_t6_development_comparison",
+  "scientific_validation": "not_established",
+  "canonical_manifest": {
+    "path": "data\\derived\\development-comparison-20261018-final\\evidence-manifest.json",
+    "sha256": "3500928aca5be00e96d6677368eda04b9418030085c8d13c4f7bb89c3a9ed022"
+  },
+  "challenge_manifest": {
+    "path": "runs/local-wire-pilot-20261018T153612Z/evidence-manifest.json",
+    "sha256": "bfc3a472797aba837ce3b9354ae5dbdccb4d3bab6c3299388b1781c8f6771667"
+  },
+  "upstream_audit_manifest": {
+    "path": "data/derived/virtual-biotech-compatibility-20261018-resume01/evidence-manifest.json",
+    "sha256": "79f3d73175e3ace3cd8006fd62544fbee81f6b2dedef1ac0138f927d2a20c557"
+  },
+  "protocol": {
+    "path": "planning/protocols/development-comparison-v0.2.json",
+    "sha256": "cff948b9c3734bc0627b63610560f7ab669d313c4884200fe7659163dddcfaeb"
+  },
+  "provider_spend_usd": 0,
+  "task6_complete": false
+}

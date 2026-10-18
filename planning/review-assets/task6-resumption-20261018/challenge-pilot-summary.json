@@ -1,0 +1,69 @@
+{
+  "status": "focused_local_development_dossiers_verified",
+  "case_count": 4,
+  "root": "D:\\Projects\\drug_target_agents\\runs\\local-wire-pilot-20261018T153612Z",
+  "evidence_manifest_sha256": "bfc3a472797aba837ce3b9354ae5dbdccb4d3bab6c3299388b1781c8f6771667",
+  "sealed_files_verified": 67,
+  "cases": [
+    {
+      "case_id": "pcsk9-efo_0004911-inhibit-antibody",
+      "available_annotations": 2230,
+      "bounded_candidates_across_categories": 8,
+      "selected_source_statements": 6,
+      "calls": 2,
+      "elapsed_seconds_including_source_verification": 234.51600000000326,
+      "receipt_sha256": "f305a864eaaea1294808e8393543a136fe0045ac02dedc5fc48313cc460c57b4"
+    },
+    {
+      "case_id": "il6r-efo_0000685-inhibit-antibody",
+      "available_annotations": 21,
+      "bounded_candidates_across_categories": 7,
+      "selected_source_statements": 6,
+      "calls": 2,
+      "elapsed_seconds_including_source_verification": 12.875,
+      "receipt_sha256": "ca2de11f372a3e23d5f98e6fe836bbc5513cb162c7a52ddf9e3299260cd85f11"
+    },
+    {
+      "case_id": "cftr-mondo_0009061-activate-small_molecule",
+      "available_annotations": 12549,
+      "bounded_candidates_across_categories": 13,
+      "selected_source_statements": 11,
+      "calls": 4,
+      "elapsed_seconds_including_source_verification": 322.98399999999674,
+      "receipt_sha256": "98d5a83c916f6577358acac2a7e8d3192796053746a62390a18698f44cb2ab0a"
+    },
+    {
+      "case_id": "glp1r-mondo_0005148-activate-peptide",
+      "available_annotations": 9616,
+      "bounded_candidates_across_categories": 9,
+      "selected_source_statements": 8,
+      "calls": 3,
+      "elapsed_seconds_including_source_verification": 489.73399999999674,
+      "receipt_sha256": "6fcb03a3da12b581bf5d09acd73e904ff204b79148155717847602ed2b604d9e"
+    }
+  ],
+  "calls": 11,
+  "input_tokens": 46773,
+  "output_tokens": 1519,
+  "provider_spend_usd": 0,
+  "native_prompt_and_generation_seconds_sum": 40.171877,
+  "native_timings_missing_attempts": 0,
+  "elapsed_seconds_end_to_end": 1301.015999999996,
+  "median_case_seconds_including_source_verification": 278.75,
+  "unique_original_paths": 234,
+  "unique_original_bytes": 8229760654,
+  "omitted_records_by_reason": {
+    "whole_record_exceeds_byte_cap": 24379
+  },
+  "server_stopped": true,
+  "scientific_validation": "not_established",
+  "independent_human_reviews": 0,
+  "probabilities_withheld": true,
+  "non_null_numerical_prediction_features": 0,
+  "limitations": [
+    "Exposed, dependent development hypotheses; not an independent sample of targets",
+    "Whole-record caps can leave only one candidate; selection quality is not independently adjudicated",
+    "Native timing sum excludes admission, verification, startup, scheduling and I/O; not end-to-end latency",
+    "Byte and semantic consistency do not validate therapeutic relevance or clinical performance"
+  ]
+}

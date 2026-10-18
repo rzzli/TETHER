@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "status": "pinned_source_compatibility_audited_not_executed",
+  "checked_at_utc": "2026-10-18T15:38:04.064951+00:00",
+  "repository": "https://github.com/harrisongzhang/TheVirtualBiotech",
+  "revision": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+  "sources": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/README.md",
+      "bytes": 22937,
+      "sha256": "fd80f70ef302c434943f2e29e6e55ff32da3100995cb94f9396887e2169731f6"
+    },
+    {
+      "path": "src/config/datasets.py",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/config/datasets.py",
+      "bytes": 1055,
+      "sha256": "55b9a96428520a9e95f967407e4288c88e005a6945786a81d867dbd20e277fa1"
+    },
+    {
+      "path": "src/config/models.py",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/config/models.py",
+      "bytes": 1233,
+      "sha256": "d1d33579a224316894afc75fe84dc6877af30736ef768727eba3848d92d4e455"
+    },
+    {
+      "path": "src/agents/registry.py",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/registry.py",
+      "bytes": 16201,
+      "sha256": "b8eecbbc21716e0636c4e635c69852438d29ce095bd69c8169cdf6e98f66227c"
+    },
+    {
+      "path": "environment.yml",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/environment.yml",
+      "bytes": 1446,
+      "sha256": "121e090328ae899a62c79ec2e714776fe35ae76691d075a03534b1fda4b1a6d5"
+    }
+  ],
+  "default_model": "claude-sonnet-4-5-20250929",
+  "agents": {
+    "genomics-analyst": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "mcp__genetics__query_gwas_associations",
+        "mcp__genetics__query_l2g_predictions",
+        "mcp__genetics__get_credible_sets",
+        "mcp__genetics__get_qtl_colocalization",
+        "mcp__genetics__convert_rsid_to_variant_id",
+        "mcp__genetics__get_variant_annotation",
+        "mcp__genetics__get_study_metadata",
+        "mcp__genetics__query_regulatory_regions",
+        "mcp__genetics__query_colocalisation",
+        "mcp__genetics__get_colocalisation_by_chromosome",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name",
+        "mcp__target__get_target_tractability",
+        "mcp__target__get_target_prioritisation_scores",
+        "mcp__target__prioritize_targets",
+        "mcp__target__get_target_safety_profile",
+        "mcp__disease__get_disease_info",
+        "mcp__disease__search_diseases_by_name"
+      ],
+      "source_line": 68
+    },
+    "functional-genomics-analyst": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "mcp__functional_genomics__query_gene_essentiality",
+        "mcp__functional_genomics__find_essential_genes",
+        "mcp__functional_genomics__query_cell_line_dependency",
+        "mcp__functional_genomics__compare_essentiality_across_diseases",
+        "mcp__functional_genomics__find_selective_dependencies",
+        "mcp__functional_genomics__query_drug_perturbation",
+        "mcp__functional_genomics__find_drugs_affecting_gene",
+        "mcp__functional_genomics__compare_drug_effects",
+        "mcp__functional_genomics__find_cell_line_selective_effects",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name"
+      ],
+      "source_line": 89
+    },
+    "single-cell-analyst": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "WebFetch",
+        "WebSearch",
+        "mcp__single_cell__get_census_info",
+        "mcp__single_cell__list_metadata_values",
+        "mcp__single_cell__search_genes",
+        "mcp__single_cell__query_cell_metadata",
+        "mcp__single_cell__get_anndata",
+        "mcp__single_cell__count_cells",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name",
+        "mcp__expression__list_available_tissues",
+        "mcp__expression__query_expression_by_gene",
+        "mcp__expression__query_expression_by_tissue",
+        "mcp__expression__compare_expression_across_tissues",
+        "mcp__expression__find_tissue_specific_genes",
+        "mcp__expression__search_biosample_ontology"
+      ],
+      "source_line": 111
+    },
+    "fda-safety-officer": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "WebFetch",
+        "WebSearch",
+        "mcp__drug__search_known_drugs",
+        "mcp__drug__get_drug_warnings",
+        "mcp__drug__get_drug_indications",
+        "mcp__drug__get_drug_mechanisms",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name",
+        "mcp__target__get_target_safety_profile",
+        "mcp__target__get_mouse_phenotype",
+        "mcp__target__get_pharmacogenomics",
+        "mcp__target__get_homologues"
+      ],
+      "source_line": 141
+    },
+    "bio-pathways-ppi-analyst": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "mcp__pathway__get_gene_pathways",
+        "mcp__pathway__search_pathways",
+        "mcp__pathway__get_gene_ontology",
+        "mcp__pathway__search_go_terms",
+        "mcp__pathway__find_genes_in_pathway",
+        "mcp__pathway__get_pathway_enrichment",
+        "mcp__pathway__get_go_enrichment",
+        "mcp__pathway__get_go_term_info",
+        "mcp__pathway__get_pathway_info",
+        "mcp__interaction__get_interactions",
+        "mcp__interaction__get_interaction_evidence",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name"
+      ],
+      "source_line": 159
+    },
+    "clinical-trialist": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "WebFetch",
+        "WebSearch",
+        "mcp__clinicaltrials__get_clinical_trial_details",
+        "mcp__clinicaltrials__clear_trial_cache",
+        "mcp__clinicaltrials__get_all_cancer_types",
+        "mcp__clinicaltrials__search_studies",
+        "mcp__clinicaltrials__get_study_details",
+        "mcp__clinicaltrials__get_clinical_data",
+        "mcp__drug__search_known_drugs",
+        "mcp__drug__get_drug_mechanisms",
+        "mcp__drug__get_drug_indications",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name"
+      ],
+      "source_line": 182
+    },
+    "target-biologist": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name",
+        "mcp__target__get_target_tractability",
+        "mcp__target__get_subcellular_locations",
+        "mcp__target__get_target_class",
+        "mcp__target__get_chemical_probes",
+        "mcp__target__get_homologues",
+        "mcp__drug__search_known_drugs",
+        "mcp__drug__get_drug_mechanisms",
+        "mcp__drug__get_drug_indications",
+        "mcp__interaction__get_interactions",
+        "mcp__interaction__get_interaction_evidence",
+        "mcp__pathway__get_gene_pathways",
+        "mcp__pathway__get_pathway_info",
+        "mcp__pathway__find_genes_in_pathway",
+        "mcp__expression__list_available_tissues",
+        "mcp__expression__query_expression_by_gene",
+        "mcp__expression__query_expression_by_tissue",
+        "mcp__expression__compare_expression_across_tissues",
+        "mcp__expression__find_tissue_specific_genes",
+        "mcp__expression__search_biosample_ontology"
+      ],
+      "source_line": 206
+    },
+    "medchem-pharmacologist": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "Skill",
+        "NotebookEdit",
+        "mcp__provenance__register_artifact",
+        "mcp__provenance__list_artifacts",
+        "mcp__drug__search_known_drugs",
+        "mcp__drug__get_drug_mechanisms",
+        "mcp__drug__get_drug_indications",
+        "mcp__drug__get_drug_warnings",
+        "mcp__target__get_target_info",
+        "mcp__target__search_targets_by_name",
+        "mcp__target__get_target_tractability",
+        "mcp__target__get_chemical_probes",
+        "mcp__target__get_homologues",
+        "mcp__pathway__get_gene_pathways",
+        "mcp__pathway__find_genes_in_pathway",
+        "mcp__interaction__get_interactions"
+      ],
+      "source_line": 233
+    },
+    "chief-of-staff": {
+      "model": "haiku",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "WebFetch",
+        "WebSearch"
+      ],
+      "source_line": 253
+    },
+    "scientific-reviewer": {
+      "model": "haiku",
+      "tools": [
+        "Read"
+      ],
+      "source_line": 265
+    },
+    "trial-matching-specialist": {
+      "model": "specialist_model",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash",
+        "TodoWrite",
+        "WebSearch",
+        "WebFetch",
+        "mcp__clinicaltrials__search_clinical_trials",
+        "mcp__clinicaltrials__count_clinical_trials",
+        "mcp__clinicaltrials__get_clinical_trial_details",
+        "mcp__clinicaltrials__get_all_cancer_types",
+        "mcp__clinicaltrials__search_studies",
+        "mcp__drug__search_known_drugs",
+        "mcp__drug__get_drug_mechanisms",
+        "mcp__drug__get_drug_indications",
+        "mcp__drug__get_drug_warnings"
+      ],
+      "source_line": 276
+    }
+  },
+  "required_dataset_count": 38,
+  "local_data_root": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output",
+  "local_inventory": [
+    {
+      "dataset": "target",
+      "directory_present": true,
+      "parquet_files_present": 10,
+      "file_bytes_present": 75568567,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "credible_set",
+      "directory_present": true,
+      "parquet_files_present": 2,
+      "file_bytes_present": 157880681,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "l2g_prediction",
+      "directory_present": true,
+      "parquet_files_present": 16,
+      "file_bytes_present": 314192617,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "expression",
+      "directory_present": true,
+      "parquet_files_present": 4,
+      "file_bytes_present": 39426999,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "target_essentiality",
+      "directory_present": true,
+      "parquet_files_present": 10,
+      "file_bytes_present": 405282884,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "known_drug",
+      "directory_present": true,
+      "parquet_files_present": 2,
+      "file_bytes_present": 11030681,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "drug_mechanism_of_action",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 478223,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "disease",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 5545555,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "disease_phenotype",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 7089121,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "disease_hpo",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 1757137,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_overall_direct",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 30780022,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_by_overall_indirect",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 92369063,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_by_datatype_direct",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 32355246,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_by_datatype_indirect",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 107893382,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_by_datasource_direct",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 31548642,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "association_by_datasource_indirect",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 103431546,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "variant",
+      "directory_present": false,
+      "parquet_files_present": 0,
+      "file_bytes_present": 0,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "study",
+      "directory_present": false,
+      "parquet_files_present": 0,
+      "file_bytes_present": 0,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "interval",
+      "directory_present": true,
+      "parquet_files_present": 83,
+      "file_bytes_present": 3226652611,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "biosample",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 6447427,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "drug_molecule",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 2275731,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "drug_indication",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 2758480,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "drug_warning",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 203238,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "openfda_significant_adverse_target_reactions",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 735927,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "openfda_significant_adverse_drug_reactions",
+      "directory_present": true,
+      "parquet_files_present": 20,
+      "file_bytes_present": 2520173,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "target_prioritisation",
+      "directory_present": true,
+      "parquet_files_present": 10,
+      "file_bytes_present": 1014771,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "mouse_phenotype",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 9848028,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "pharmacogenomics",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 5893338,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "go",
+      "directory_present": true,
+      "parquet_files_present": 8,
+      "file_bytes_present": 976586,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "reactome",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 197905,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "so",
+      "directory_present": true,
+      "parquet_files_present": 1,
+      "file_bytes_present": 26339,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "interaction",
+      "directory_present": true,
+      "parquet_files_present": 8,
+      "file_bytes_present": 90202596,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "interaction_evidence",
+      "directory_present": true,
+      "parquet_files_present": 200,
+      "file_bytes_present": 296743279,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "colocalisation_coloc",
+      "directory_present": true,
+      "parquet_files_present": 0,
+      "file_bytes_present": 0,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "colocalisation_ecaviar",
+      "directory_present": false,
+      "parquet_files_present": 0,
+      "file_bytes_present": 0,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "evidence",
+      "directory_present": true,
+      "parquet_files_present": 2245,
+      "file_bytes_present": 4998818431,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "literature",
+      "directory_present": true,
+      "parquet_files_present": 334,
+      "file_bytes_present": 2267570736,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    },
+    {
+      "dataset": "literature_vector",
+      "directory_present": true,
+      "parquet_files_present": 256,
+      "file_bytes_present": 35364234,
+      "qualification": "presence_only_not_receipt_hash_schema_or_release_validation"
+    }
+  ],
+  "directories_with_parquet": 34,
+  "sdk_initialized": false,
+  "credentials_read": false,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "unmodified_execution_status": "blocked_by_current_offline_zero_provider_spend_boundary",
+  "adapted_local_execution_status": "not_implemented_requires_explicit_adapter_and_containment_validation",
+  "adaptation_requirements": [
+    "Replace provider execution for coordinator, specialists, chief-of-staff and scientific-reviewer with the same pinned eligible local weights",
+    "Expose identical admitted source packets and budgets; remove known_drug, ChEMBL and evaluator-only/outcome sources",
+    "Contain filesystem, shell and network capabilities for every role; application hooks alone do not establish historical isolation",
+    "Record all deviations, prompts, tool outputs, usage and failures; validate canaries and semantic source binding before inference",
+    "Label result adapted, not original reproduction; no scientific-quality or clinical metric without qualified truth"
+  ],
+  "scientific_performance": null
+}

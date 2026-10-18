@@ -50,13 +50,39 @@ predictive genetics and scorer training are deferred because scientific prerequi
 Tasks 1-4 are complete within their documented scope. Task 5's conditional decision
 is validated: no predictive feature derivation, training or calibration was performed.
 
-**Task 6 is blocked, not completed.** There is no independently qualified clinical
+**Task 6 resumed on October 18; not completed.** The prior stop is preserved in the
+dated execution log. Development-only baseline diagnostics and an upstream source
+compatibility audit are now implemented and validated. The fixed four-case selection
+challenge passed source-inclusive verification and matched baseline analysis. These
+technical comparisons do not require clinical labels or claim scientific quality.
+
+There is no independently qualified clinical
 reference, no adjudicated negatives/censoring, no validated predictive feature set or
 trained/calibrated scorer, and current proxy-size power does not meet the target.
 All real dossier probabilities remain null. AUROC/Brier comparisons against Virtual
 Biotech/baselines and scientific ablations cannot be estimated from these inputs.
 AI-assisted review and source-copy fidelity cannot replace independent truth.
 
-Execution stops here under the user's failure rule. Tasks 7-8 are not started.
+Scientific Task 6 completion remains blocked under the user's failure rule. Tasks
+7-8 are not started. The development substeps are finished; ordered execution stops
+at the remaining scientific/comparator gates. See the October 18 Task 6 report.
 The original proposals and sealed outputs remain preserved. Provider spending is $0;
 no public registration, clinical success claim or locked evaluation is made.
+
+## Task 6 resumption checks — October 18
+
+- [x] Implement and validate paired lexical/provider-score baselines, an uncapped
+  extractive reference and explicit deterministic evidence masks; 246 full-suite
+  tests, required probes, packaging and four hosted CI jobs passed.
+- [x] Reverify and compare all 29 archived requests, keeping the ten-case canonical
+  and three-case wire diagnostics separate. All selected every offered candidate;
+  none had to prioritize more than three IDs.
+- [x] Audit and archive pinned Virtual Biotech configuration/source and local
+  directory presence without SDK initialization, credentials or provider calls.
+- [x] Finish and source-verify the fixed four-case wider-candidate challenge,
+  then seal and verify its matched development baseline comparison. Eleven new
+  requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
+- [ ] Implement and validate the adapted Virtual Biotech execution arm under
+  matched evidence, model, budget and containment rules.
+- [ ] Complete scientific comparisons with independent quality/clinical references
+  and qualified scoring/power. These prerequisites remain unmet.
