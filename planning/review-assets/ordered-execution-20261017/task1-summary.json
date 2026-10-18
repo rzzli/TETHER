@@ -1,0 +1,43 @@
+{
+  "role": "evaluation_only",
+  "protocol_sha256": "6df990b17ea0aeb47baece84b185d505899d87bb1ecdd4a0bdbdfd71574ff4fb",
+  "programs": 4419,
+  "event_links": 98,
+  "mapping_status": {
+    "unmapped": 2832,
+    "unique_exact": 1330,
+    "ambiguous": 257
+  },
+  "clinical_scope": {
+    "requires_population_review": 4321,
+    "outside_disease_focus": 41,
+    "broad_condition_requires_review": 57
+  },
+  "programs_with_prior_alerts": 367,
+  "prior_relations": {
+    "same_unique_ontology_id": 348,
+    "hierarchy_alert_only": 2239,
+    "same_verbatim_unresolved_ontology": 102
+  },
+  "recorded_start_programs_with_prior_alerts": 4,
+  "event_comparison_alerts": {
+    "study_wide_extension_or_regional_context": 13,
+    "non_drug_regimen_partner": 18,
+    "study_wide_prior_treatment_text_differs": 1,
+    "study_wide_setting_text_differs": 2,
+    "route_text_differs": 2,
+    "extension_or_regional_context": 8,
+    "additional_drug_narrative": 4
+  },
+  "original_rows_rehashed_for_origin_and_prior_proofs": 3516,
+  "v04_parent_files_verified": 21,
+  "scientifically_qualified_labels": null,
+  "training_labels": 0,
+  "scientific_validation": "not_established",
+  "limitations": [
+    "Fixed v0.4 population/links; no ontology-normalized event re-enumeration or recall estimate.",
+    "Ontology includes phenotypes and measurements; exact alias identity is not clinical population identity.",
+    "Hierarchy and text differences are review alerts, not proven exclusions or contradictions.",
+    "Complete eligibility and experimental arm-specific first dosing are unavailable in selected frames."
+  ]
+}

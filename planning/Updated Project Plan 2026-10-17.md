@@ -114,4 +114,8 @@ Use one dated session notebook entry and milestone-level sealing. Record executa
 
 The user can authorize a capped model run, remote publication, off-machine destination or preregistration submission when those concrete choices are ready. Those decisions do not block drafting the sizing protocol, auditing local schemas or preparing local preservation. Independent human availability affects adjudication and publication claims, not exploratory counts. Confirm exact account-mediated AACT versions only after the chronology memo identifies what is missing; do not request another broad download list now.
 
-**Next execution unit: read-only registry-scale origin/follow-up extraction and role/alias mapping under frozen v0.4.** Local preservation and drift correction are complete; remote/independent backup remain separate open dependencies. Do not resume the 15-case qualification queue as the main feasibility gate. Record remaining mapping/arm uncertainties within the sizing audit. Clinical probabilities, scorer training and new benchmark claims remain gated.
+**Next execution unit: Task 2 in `TODO.md`, sample size/power and clinical feasibility.**
+Registry extraction, private recovery/hosting/CI, and the fixed-cohort v0.5 scope audit
+are complete. Task 1 passed 194 full-suite tests and original-row checks. Do not
+repeat the extraction or treat the 37 recorded starts as independent validated
+clinical labels. Task ordering and stop-on-blocker rules now follow the user's TODO.

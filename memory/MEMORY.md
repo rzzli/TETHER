@@ -1,6 +1,7 @@
 # Research memory index
 
-- [[Updated Project Plan 2026-10-17]] — Local WP0 complete: committed checkpoint, tested E: recovery copy and catalog corrections; v0.4 sizing protocol frozen. Next is read-only registry-scale enumeration/mapping; remote/off-machine backup/hosted CI remain open.
+- [[Updated Project Plan 2026-10-17]] — Private hosting/recovery/CI and v0.4 cohort are complete; v0.5 fixed-cohort scope audit passed. Follow TODO.md in order; power/clinical feasibility is next.
+- [[Ordered Execution Progress 2026-10-17]] — User-ordered task checklist; Task 1 passed 194 tests and source/scope checks. Scientific validation and later tasks remain open.
 
 - [[Claude Review and Plan_claude10172026]] — Independent re-verification report and proposed protect–measure–decide plan; reconciled in the current roadmap with endpoint, chronology, audit-design and authorization qualifications.
 - [[research-log-2026-10-17-claude-review]] — Review session record: what was re-run, what could not be verified, and the first action (commit, remote, backup).

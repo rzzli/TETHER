@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "protocol_id": "registry-feasibility-power-v0.1",
+  "role": "evaluation_only",
+  "frozen_at_utc": "2026-10-18T02:56:29+00:00",
+  "parent_anchor_paths": [
+    "data/manifests/public/2026-10-17-registry-sizing.json",
+    "data/manifests/public/2026-10-17-registry-scope.json"
+  ],
+  "analysis_units": ["v04_component", "shared_target_connections", "shared_target_and_sponsor_connections"],
+  "sensitivity_view": "Hold programs with any v0.5 prior-risk alert, exact healthy-participant condition or broad condition. This is an uncertainty stress test, not adjudicated exclusion.",
+  "unit_proxy_label": "Any recorded registry start within unit; otherwise unresolved if any unresolved program; otherwise no recorded start. This descriptive unit endpoint is not validated clinical truth or a verified negative.",
+  "score_model": "Independent units; correlated bivariate equal-variance Gaussian scores within each true class. Positive means sqrt(2)*Phi^-1(AUC). Scores are synthetic, not model predictions.",
+  "baseline_auc": [0.65, 0.75],
+  "auc_difference": 0.05,
+  "within_class_score_correlation": [0.3, 0.7, 0.9],
+  "label_error": [
+    {"case_to_control": 0.0, "control_to_case": 0.0},
+    {"case_to_control": 0.1, "control_to_case": 0.01}
+  ],
+  "primary_replicates": 1000,
+  "grid_replicates": 500,
+  "null_replicates": 1000,
+  "seed": 20261017,
+  "hypothetical_positive_units": [50, 100, 200, 400],
+  "hypothetical_no_recorded_units": 1000,
+  "test": "Two-sided paired AUROC difference with DeLong placement-difference variance and normal alpha=0.05 critical value. Half credit for ties. Fewer than two observations per class is not estimable.",
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "uncertainty": "Wilson 95% Monte Carlo binomial intervals exclude label-validity, model and data-distribution uncertainty.",
+  "null_calibration": "Run delta=0 at observed base-unit counts for every correlation without label error. Retain rejection rates. Failure to cover alpha is an approximation warning, not a reason to tune to model results.",
+  "interpretation": "Scenario power only. No observed clinical AUROC, AP, calibration, locked-test performance, validated prevalence or independent sample-size claim from program totals.",
+  "annotation_cost_scenarios": {"cases": [185, 240], "minutes_per_case": [5, 15, 30], "reviewers": 2, "measured_review_time_available": false},
+  "clinical_readiness_gate": [
+    "Adjudicated events and negative or censoring definitions",
+    "Regimen, population and prior-risk qualification",
+    "Chronologically eligible origin features and models",
+    "Independent reference review",
+    "Adequate power under plausible dependence and label error"
+  ],
+  "primary_method_source": "https://pubmed.ncbi.nlm.nih.gov/3203132/",
+  "provider_spend_usd": 0
+}

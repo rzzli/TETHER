@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "protocol_id": "registry-scope-development-v0.5",
+  "role": "evaluation_only",
+  "frozen_at_utc": "2026-10-18T02:48:45.366811+00:00",
+  "prior_exposure": "v0.4 counts and 33 narrative reviews exposed; v0.5 ontology joins and alert counts not computed",
+  "parent_anchor": {
+    "path": "data/manifests/public/2026-10-17-registry-sizing.json",
+    "sha256": "bcac9e427a734111bf8edd82633a8a8f9aa0f3e18317b5be45627c11195c1110"
+  },
+  "disease_input": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+    "sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+    "bytes": 5545555,
+    "release": "25.09",
+    "receipt_path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+    "receipt_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+    "availability": "contemporary_oracle_evaluator_reference_not_2023_predictor"
+  },
+  "population": "Fixed 4,419 v0.4 programs and 98 candidate links. No new origin members or clinical labels. Mapping coverage is conditional on this selected subset.",
+  "normalization": "Unicode NFKC, casefold, whitespace only. Do not remove punctuation, numbers, stage, genotype or negation.",
+  "equivalence": {
+    "accepted_fields": [
+      "name",
+      "synonyms.hasExactSynonym"
+    ],
+    "unique_id_required": true,
+    "obsolete_aliases": false,
+    "excluded": [
+      "hasNarrowSynonym",
+      "hasBroadSynonym",
+      "hasRelatedSynonym",
+      "obsoleteTerms",
+      "dbXRefs",
+      "ancestors/descendants as aliases"
+    ],
+    "ambiguity": "All candidate IDs retained. No label precedence or favorable tie break. Unmapped and ambiguous terms remain unresolved."
+  },
+  "prior_risk": {
+    "sources": "All experimental-product possible rows from the sealed origin index for the same exact drug ID",
+    "relations": [
+      "same unique ontology ID",
+      "ancestor or descendant alert only",
+      "same verbatim condition when unmapped"
+    ],
+    "known_start": "ACTUAL original precision upper bound at/before origin; preserve missing/estimated dates and mixed phase as uncertainty",
+    "higher_phase": "Numerical stage above baseline, or mixed phase whose highest declared stage exceeds baseline",
+    "interpretation": "Same-ID higher phase is a prior-risk alert; hierarchy-related terms never establish equivalence. Regimen/population equivalence is not assumed. Original origin membership/labels unchanged."
+  },
+  "clinical_scope": {
+    "non_disease_exact_terms": [
+      "healthy",
+      "healthy volunteers",
+      "healthy volunteer",
+      "healthy subjects",
+      "healthy subject",
+      "healthy participants",
+      "healthy adults",
+      "healthy adult volunteers",
+      "normal volunteers"
+    ],
+    "broad_condition_exact_terms": [
+      "disease",
+      "cancer",
+      "neoplasms",
+      "skin diseases",
+      "solid tumors",
+      "solid tumour",
+      "solid tumours",
+      "solid tumor",
+      "malignant solid neoplasm"
+    ],
+    "behavior": "Exact non-disease terms are outside the disease-focused sensitivity view, not biological failures. Broad terms require scope review, never automatic family merge.",
+    "context_fields": [
+      "matched arm title/description",
+      "linked intervention names/descriptions",
+      "study title as separately tagged study-wide context"
+    ],
+    "facets": [
+      "route",
+      "population age words",
+      "treatment setting",
+      "prior-treatment words",
+      "extension/continuation",
+      "regional/bridging",
+      "non-drug intervention partners",
+      "additional-drug narrative"
+    ],
+    "unknowns": [
+      "inclusion/exclusion criteria",
+      "actual age bounds",
+      "enrollment per arm",
+      "arm activation and experimental first dosing",
+      "full dose/genotype/population equivalence"
+    ],
+    "context_comparison": "Report positive text signals and their source fields. Missing signal is unknown. A difference is an alert, not proof of incompatible populations; matching words never establish equivalence."
+  },
+  "outputs": [
+    "condition map sealed before outcome context joins",
+    "program scope/prior-risk audit",
+    "all 98 original event-link context audits",
+    "source-proof verification",
+    "measured summary"
+  ],
+  "no_event_reenumeration": "This stage audits fixed v0.4 membership/links. It is not a newly enumerated ontology-normalized clinical cohort or a recall estimate.",
+  "validation": "Synthetic relation/ambiguity/negation/context tests; parent/raw/receipt hashes; original frame row proofs; full existing regressions; no scientific gold claim.",
+  "primary_sources": [
+    {
+      "url": "https://platform-docs.opentargets.org/disease-or-phenotype",
+      "supports": "Open Targets covers diseases, phenotypes, biological processes and measurements; ontology mapping alone is not a clinical-disease filter."
+    },
+    {
+      "url": "https://platform.opentargets.org/downloads/disease/schema",
+      "supports": "Disease products distinguish synonym relations and hierarchy. Pinned local schema checked directly; web page requires JavaScript."
+    }
+  ],
+  "spending_usd": 0,
+  "scientific_validation": "not_established",
+  "downloader_and_monitor": "untouched"
+}
