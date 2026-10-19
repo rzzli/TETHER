@@ -9,8 +9,8 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
 | 3. Historical inputs/origin/endpoint | Passed bounded input readiness | Historical mapping/origin closure, both technical restores, independent acceptance and source-only origin review passed; clinical/scoring gates remain unqualified. |
-| 4. Outcomes/power/precision | Pending | Endpoint-specific adjudication; unknown is not a negative. |
-| 5. Conditional genetics | Pending | Method-specific source/QC and biological eligibility; explicit defer allowed. |
+| 4. Outcomes/power/precision | Completed bounded audit | Twelve cases/36 endpoints, two source reviews and third reconciliation; all unresolved/null. Power nonestimable; clinical qualification and fitting withheld. |
+| 5. Conditional genetics | In progress | Method-specific source/QC and biological eligibility; explicit defer allowed. |
 | 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
 | 7. Supported comparisons | Pending | Actual matched comparator/workflow ablations; clinical activation conditional. |
 
@@ -203,3 +203,29 @@ and clinical efficacy, retain null outcomes when scope or ascertainment fails, a
 feed qualified counts and measured dependence into the power/precision decision.
 No endpoint cohort extraction, outcome research, training or clinical activation
 was performed during Item3. Items5–7 remain pending.
+
+## October19: Science4 completed within the frozen audit scope
+
+Origin-only design enrichment and both follow-up extracts independently passed.
+All twelve members are present in each source; version eligibility is11/12,7/12
+and12/12 at the three snapshots. Original membership is unchanged. The r1 review
+pack excludes all six held payloads and masks the held origin's narrative.
+
+Two source/Internet reviews were sealed before third-context reconciliation, then
+independently checked against source pointers, copied fields and normalized outcome
+contracts. All36 case–endpoint units remain unresolved/null. This is not a negative
+outcome finding or an estimate of full-registry event prevalence. Specific scope,
+timeframe, regimen and source-access distinctions are retained in the adjudication.
+
+The dependence audit counts twelve core components, eleven under each target or
+sponsor sensitivity and ten under their joint sensitivity; none is an effective-N
+estimate. No qualified positives or negatives exist in this pilot, so power and
+calibration remain nonestimable and fitting is withheld. A statistical guard was
+corrected: prospective power planning can use justified distribution/dependence
+assumptions without already having trained-model predictions. All445 full tests,
+core validation (52 expected skips), required probes and packaging/demo checks pass.
+
+`item4/outcome-feasibility-report.json` completes the bounded pre-frozen audit;
+G03 predictive inputs, G04 outcome qualification, G05 power and G07 fitting remain
+false. Active register: `data/derived/science-prerequisites-20261018/execution-science4-passed.json`.
+Science5 conditional genetics now starts; Science6–7 remain pending.

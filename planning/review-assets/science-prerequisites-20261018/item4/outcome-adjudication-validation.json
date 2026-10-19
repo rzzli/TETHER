@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "status": "passed_bounded_independent_outcome_adjudication_validation",
+  "role": "evaluation_only",
+  "verified_at_utc": "2026-10-19T17:44:44.682173+00:00",
+  "counts": {
+    "cases": 12,
+    "endpoint_units": 36,
+    "validate_outcome_passed": 36,
+    "normalized_source_reference_lists_validated": 36,
+    "case_registry_source_reference_lists_validated": 42,
+    "copied_eligible_registry_versions_checked": 30,
+    "panel_B_projected_fact_checks": 90,
+    "panel_A_copied_study_checks": 50,
+    "panel_endpoint_comparisons": 36,
+    "unique_bounded_pins_checked": 110,
+    "actual_reference_locator_occurrences_checked": {
+      "json_pointer_occurrences": 302,
+      "url_occurrence_locators": 64,
+      "primary_text_range_locators": 8
+    },
+    "substantive_source_comparisons": 6,
+    "unresolved_null": 36,
+    "qualified_positive": 0,
+    "qualified_negative": 0,
+    "raw_row_bytes_rechecked_in_this_pass": 0,
+    "candidate_census_reparsed_in_this_pass": 0
+  },
+  "checker_actual_code": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\validate_science4_adjudication_independent.py",
+    "sha256": "16030f83c8702c9b8014962ec45ab49eec7b6a47c206eba19782f228d5e93c10",
+    "bytes": 19345
+  },
+  "study_version_counts": {
+    "2025-01-01": {
+      "eligible": 11,
+      "held": 1
+    },
+    "2026-01-01": {
+      "eligible": 7,
+      "held": 5
+    },
+    "2026-04-01": {
+      "eligible": 12,
+      "held": 0
+    }
+  },
+  "feasibility_recomputed_exact_match": true,
+  "remaining_gates": {
+    "G04_scientific_truth": false,
+    "features_qualified": false,
+    "labels_qualified": false,
+    "scorer_qualified": false,
+    "power_qualified": false,
+    "clinical_fit": false,
+    "clinical_activation": false
+  },
+  "defects_found": [],
+  "database_queries": 0,
+  "server_operations": 0,
+  "web_requests": 0,
+  "provider_spend_usd": 0,
+  "limitations": [
+    "Bounded retained-artifact acceptance, not independent external biological/scientific validation.",
+    "Prior 36 raw-row/candidate-file audit is relied on via unchanged r1 case pins and independently pinned prior report; raw bytes and candidate censuses were not checked again.",
+    "Third-context 50 raw-byte checks are retained claims, not counted as independently repeated checks here.",
+    "URL-occurrence locators prove retained URL presence only. Primary log access/full-text depth and historical applicability remain limited as recorded.",
+    "Panel A copied study fields and Panel B projected assertions were checked; Panel A free-text/encoding artifacts are not certified exact full-payload copies.",
+    "Shared model-family error and procedural reviewer blinding are not independently certified."
+  ],
+  "disposition": "Audit acceptance only. All twelve members and all 36 endpoint units retained unresolved/null; scientific truth, power and clinical fitting remain unqualified.",
+  "evaluator_report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\independent-validation\\report.json",
+    "sha256": "d2c53c7a4466f85a4eee5eab323531e6aa84763d49d4dd35b9f24bf6df689e0f",
+    "bytes": 44477
+  },
+  "sealed_roots": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\two-review-seal.json",
+      "sha256": "39f2ba8782e0b4127846360eecaeb3959af556f00b0d7a710819573ec6ee159c",
+      "bytes": 11076,
+      "expected_sha256": "39f2ba8782e0b4127846360eecaeb3959af556f00b0d7a710819573ec6ee159c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\review-pack-r1\\pack-freeze.json",
+      "sha256": "be957f06750faabd590b0cac0ebb1e0ca61ef6ac13e78df5a8f2a990ed6e82b1",
+      "bytes": 5247,
+      "expected_sha256": "be957f06750faabd590b0cac0ebb1e0ca61ef6ac13e78df5a8f2a990ed6e82b1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\review-pack-r1\\validation\\report.json",
+      "sha256": "64f55ed5a969b78216fd2c98e54879d8dd4b8e295b85401a4f35e35f9d45d945",
+      "bytes": 98537,
+      "expected_sha256": "64f55ed5a969b78216fd2c98e54879d8dd4b8e295b85401a4f35e35f9d45d945"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\assessments.json",
+      "sha256": "f5b1663b4770e3ef930dd98473ac7f0a8e6a6cd6c8ad473dcd1c041186af24eb",
+      "bytes": 420831,
+      "expected_sha256": "f5b1663b4770e3ef930dd98473ac7f0a8e6a6cd6c8ad473dcd1c041186af24eb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734,
+      "expected_sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\validation.json",
+      "sha256": "03fa8bcfb7de95cdb1dd22d6c5fe5ffd8d505f63d8b51e887b33b476945505dc",
+      "bytes": 112779,
+      "expected_sha256": "03fa8bcfb7de95cdb1dd22d6c5fe5ffd8d505f63d8b51e887b33b476945505dc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\notes.md",
+      "sha256": "4c12e5089913652538b13d0aeb0acfb6a9f92f4ba91e1b34050eeded7ef96a0f",
+      "bytes": 2738,
+      "expected_sha256": "4c12e5089913652538b13d0aeb0acfb6a9f92f4ba91e1b34050eeded7ef96a0f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\feasibility.json",
+      "sha256": "aaf4ea7865f03b67a50f2a47834714f813ddcb091c0f45220520864980cef2ff",
+      "bytes": 89040,
+      "expected_sha256": "aaf4ea7865f03b67a50f2a47834714f813ddcb091c0f45220520864980cef2ff"
+    }
+  ]
+}

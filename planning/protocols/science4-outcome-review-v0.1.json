@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "protocol_id": "science4-outcome-review-v0.1",
+  "frozen_before_followup_queries": true,
+  "role": "evaluation_only",
+  "provider_spend_usd": 0,
+  "scope": "Twelve fixed origin-only pilot scopes; annotation and ascertainment feasibility, not a representative registry outcome cohort or locked clinical test",
+  "origin_at": "2025-01-01T00:00:00Z",
+  "horizon_at": "2026-01-01T00:00:00Z",
+  "ascertainment_at": "2026-04-01T00:00:00Z",
+  "parent_pack_sha256": "5a4842f9b1751d3e0b2e50c166c5bf1786e3639741072b38b8ad264b4b8da56d",
+  "parent_origin_sha256": "8622c4896796489e0d34c9359ccdbc3a1ad0eb1778541e173e0ab34ff7cd26e8",
+  "endpoints": ["registry_next_phase_actual_start", "verified_experimental_dosing", "clinical_success"],
+  "phases": [
+    {
+      "id": "4A",
+      "source": "2025-01-01 AACT only",
+      "purpose": "Append origin-only planned outcomes, detailed scope, design, references and bounded alias candidate discovery without changing origin membership",
+      "no_future_inputs": true,
+      "query_approval": "Freeze generated query bytes, explicit projection, schema gaps, aliases, original twelve IDs, code and source identities before dispatch",
+      "origin_enrichment": "A new child seal; no overwrite or reinterpretation of prior freezes"
+    },
+    {
+      "id": "4B",
+      "sources": ["2026-01-01", "2026-04-01"],
+      "purpose": "Find same-trial follow-up and exact-alias candidate trials; adjudicate leads without equating a match to a program transition",
+      "selection": "Retain all twelve origin members. Freeze source-only aliases before future records. Match intervention names and secondary names of drug/biological interventions, any phase, without event-date/status/outcome filtering",
+      "candidate_caps": {"per_origin_trial": 20, "total_distinct_trials": 200},
+      "overflow": "Retain failure and coverage gap; no truncation, outcome ranking or automatic relaxation",
+      "results_phase": "Freeze selected candidate IDs and explicit result-table projection before any result extraction; keep planned and reported endpoints separately versioned"
+    }
+  ],
+  "temporal_policy": {
+    "policy_id": "aact-public-date-offset-envelope-v1",
+    "source_date_precision": "DATE is a civil day with unknown conventional offset [-12,+14]; preserve [D00UTC-14h,(D+1)00UTC+12h)",
+    "version_eligibility": "Qualify current version with last_update_posted_date, never initial registration or first result date alone",
+    "boundary_versions": "Hold March31/April1 at April1 midnight; hold December31/January1 at January1 midnight; recover an eligible older version or keep unknown",
+    "event_dates": "Preserve original month/year/day precision and ACTUAL versus estimated. Whole occurrence interval must fit (origin,horizon]; an imputed AACT date cannot refine precision",
+    "allowance_completeness_qualified": false,
+    "raw_quarantine": "Later raw rows may be retained evaluator-only for coverage; they cannot support eligible labels or historical predictors"
+  },
+  "review": {
+    "procedure": "Two fresh source-grounded agent assessments, blinded to each other, then separate reconciliation; reviewers may use eligible original primary sources under fixed time/scope limits",
+    "unit": "Each of twelve origin scopes by each of three endpoint IDs, plus every discovered candidate event",
+    "source_search": "NCT ID and frozen product aliases; official registry, sponsor/investigator primary reports and primary publications. Maximum five retained primary-source documents per origin scope; inaccessible/missing documents explicit. Stop at bound, never expand because results are favorable",
+    "current_web": "Discovery only unless document version/publication and relevant content independently qualify by ascertainment. Current API record payloads cannot be backdated with initial posting dates",
+    "prespecified_information": "Origin protocol/SAP primary efficacy objective, analysis population, comparison, decision rule and multiplicity must qualify for clinical success/failure; reported nominal significance alone is insufficient",
+    "risk": "Origin scope and prior qualifying event must be explicitly adjudicated. Discovery readiness is insufficient; unresolved global prior risk remains a label hold",
+    "scope": "Assess formulation, experimental/background/comparator/rescue role, dose/route/schedule, partners, age/line/biomarker/condition; source numeric IDs are local to each snapshot",
+    "states": ["resolved", "unresolved", "censored", "competing_event"],
+    "null_rule": "Unknown, censoring and competing events have null binary values. No record, no results, business stop, completion or enrollment cannot automatically become clinical failure",
+    "reference_level": "ai_source_adjudicated",
+    "independence": "Distinct review contexts do not certify external scientific truth or independent model errors",
+    "membership": "No origin removal for difficult scope, missing evidence, source corrections or unavailable outcomes"
+  },
+  "power_precision": {
+    "inputs": "Only endpoint-qualified labels and explicit dependence graph; raw candidates and source counts remain separate",
+    "dependence": ["shared trial", "shared historical drug", "shared canonical event", "shared target sensitivity", "shared lead sponsor sensitivity"],
+    "target": {"paired_auc_difference": 0.05, "power": 0.8, "two_sided_alpha": 0.05},
+    "simulation": "Reuse independently checked paired-statistic/null-calibrated primitives in a new adapter only if two qualified units per class exist; preserve explicit score-correlation and label-error assumptions",
+    "insufficient_classes": "No simulation or AUROC estimate; report nonestimable with qualified and unresolved counts, not zero power",
+    "calibration": "Separate held-out calibration precision; no Brier/calibration estimate without valid probability predictions and mature labels",
+    "pilot_limit": "Twelve purposively selected scopes do not establish registry prevalence, effective independent sample size or the full-cohort power target"
+  },
+  "execution": {
+    "one_owned_server_at_a_time": true,
+    "network": "Local PostgreSQL only during extraction; public primary-source research separately recorded",
+    "transactions": "Read only; generated SQL and exact source/code hashes frozen before dispatch",
+    "integrity": "Two identical reads, child/FK checks, requested-member/missingness accounting, pre/post source pins, exclusive cluster lease, durable journal and stopped-server/closed-port checks",
+    "outputs": "Fresh ignored evaluator directories; retain failures; no automatic retry",
+    "isolation": "No label or future ancestor may enter agent-visible manifests or historical features"
+  },
+  "clinical_activation": false,
+  "probabilities": "remain null",
+  "next_stage": "Retain qualified labels and feasibility decision or an explicit no-fit/no-powered-comparison disposition; scientific qualification is separate from completing the audit work"
+}

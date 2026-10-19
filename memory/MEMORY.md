@@ -1,6 +1,7 @@
 # Research memory index
 
 - [[Scientific Prerequisites Execution 2026-10-18]] — Active seven-item science execution: Items1–3 passed within stated scope; both evaluator restores independently verified; Item4 outcome/power protocol next; Items5–7 pending. Clinical/scoring gates remain unqualified. Details in [[project-goals]] and [[research-log-2026-10-18]].
+- [[research-log-2026-10-19]] — Science4 bounded audit completed: twelve cases/36 unresolved endpoints, source reconciliation and independent checks passed; power nonestimable. Science5 conditional genetics next; 445 full tests pass. Clinical gates remain false.
 
 - [[Task 6 Development Comparisons 2026-10-18]] — Validated baselines/masks, competitor configuration audit and four source-verified wider-candidate dossiers. Model/lexical sets match 11/11; 246 tests and four hosted jobs pass. Task 6 scientific/comparator gates remain open.
 - [[research-log-2026-10-18]] — Task 6 resumption, retained comparison findings and stopping decision; no independent quality or clinical prediction result.

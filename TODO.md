@@ -10,13 +10,29 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
 - [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
 - [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
-- [ ] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
+- [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
 - [ ] **Science 5 — Qualify genetics as a conditional scientific branch.**
 - [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
-Current item: Science 4 — freeze evaluator extraction and outcome-review procedures,
-then adjudicate follow-up facts and assess dependence-aware power/precision.
+### Science 4 supporting work
+
+- [x] Freeze the evaluator-only review procedure, source-only aliases and explicit
+  pre-query candidate-cap amendment; preserve all twelve origin members.
+- [x] Validate generated queries, request/source binding, row/lineage checks and
+  process ownership: 436 full tests pass; core passes with 52 expected skips.
+- [x] Extract and independently verify origin-only design metadata: all twelve
+  present, eleven reconstructed-date eligible, one estimated-posting hold retained;
+  seal the child before follow-up queries. Owned server stopped/port closed.
+- [x] Finish and verify January/April follow-up extraction and eligible review packets.
+- [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
+- [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
+
+Current item: Science 5 — assess the conditional genetics branch against retained
+source, method, scope and chronology requirements. Science4 completed its frozen
+twelve-case audit: all36 outcomes remain unresolved/null; qualified classes absent,
+so power/calibration are nonestimable and clinical fitting remains withheld.
+This is an audit completion, not G04 outcome qualification or a powered clinical set.
 Science 3 passed bounded input readiness: both evaluator snapshots independently
 verified; source coverage and twelve-case origin review retained. This does not
 qualify historical predictors, clinical outcomes, reporting completeness or scoring.

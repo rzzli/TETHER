@@ -397,3 +397,20 @@ Source report: planning/review-assets/science-prerequisites-20261018/item3/sourc
 Active register: data/derived/science-prerequisites-20261018/execution-science3-passed.json.
 402 full tests, core with52 expected skips, four hosted jobs passed at195d7d6.
 Science4 starts with a frozen evaluator extraction/review protocol; Science5–7 pending.
+
+### October19: Science4 bounded audit complete; Science5 active
+
+All three source extracts independently passed. The verified r1 pack has30 eligible
+source payloads and6 held payloads excluded; all12 members remain. Two blinded
+source/Internet reviews and fresh third reconciliation produced36 unresolved/null
+endpoint records, with substantive timeframe, population, regimen and source-access
+corrections retained. Independent source/contract/feasibility checks pass.
+
+No qualified binary classes exist in this pilot: power/calibration nonestimable,
+clinical fitting withheld. Twelve/eleven/ten dependence components are sensitivity
+descriptors, not effective sample sizes. No full-registry prevalence or failed-trial
+finding is inferred.445fulltests/corewith52expectedskips/probes/package/demo pass.
+Science4 completed its frozen feasibility-audit scope while G03/G04/G05/G07 remain
+unqualified. Active register execution-science4-passed.json; conditionalScience5
+genetics is next, then conditionaltraining/no-fit and supportedT6 comparisons.
+See [[research-log-2026-10-19]] and item4/outcome-feasibility-report.json.

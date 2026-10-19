@@ -68,3 +68,21 @@ qualified at-risk program. Review these distinctions against the original rows.
 The original seven-stage protocol, amendments and current execution status are under
 `planning/` and `TODO.md`. Passing a utility, receiving a source or agreeing across
 agent reviewers never independently validates a clinical conclusion.
+
+`outcome_inputs` builds deterministic, explicit evaluator SQL and validates its
+outputs. It retains all requested-member missingness, checks child links, preserves
+original date precision and separates raw quarantined versions from eligible views.
+The sixteen-table metadata projection contains planned outcomes and document links;
+it does not contain reported result tables. Exact drug-name/secondary-name discovery
+has no outcome or phase filter. Matches are leads, and candidate caps fail explicitly.
+
+`outcome_extract` accepts a byte-pinned, previously generated plan through
+`--plan`, `--expected-sha256` and a fresh `--output`. The plan must bind the actual
+twelve-member origin pilot, frozen aliases/policy/cap amendment, approved restored
+cluster, mandatory source proofs and executing helper code. SQL is regenerated and
+compared before dispatch. This is a project-scoped evaluator tool, not a general
+SQL runner. It checks two identical reads, typed rows and temporal dispositions;
+uses an exclusive source lease and a unique PostgreSQL-created ownership PID file;
+and records failures without automatically retrying. It refuses to stop a server
+whose startup ownership cannot be established. Source-reading completion does not
+establish clinical linkage, outcome truth or scientific validation.
