@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "kind": "status_correction",
+  "created_at_utc": "2026-10-19T02:30:46.252510+00:00",
+  "scope": "Update only the selected AACT collection observation/technical verification description. Preserve previous historical evidence and all roles, access, licensing, temporal policy, AsOf parse/scientific statuses and other datasets. Technical/source readiness is not clinical activation.",
+  "evidence": [
+    {
+      "path": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
+      "sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065"
+    },
+    {
+      "path": "data/manifests/public/2026-10-18-aact-endpoint-technical.json",
+      "sha256": "43dbf594bcf67340203065660f4f6e07965b0822e46e2dfb28d68584d42beabb"
+    },
+    {
+      "path": "data/manifests/public/2026-10-18-aact-ascertainment-technical.json",
+      "sha256": "c33b6de916059601c4cb4cc7f1ed956f11c6d0446ed5bd95497612fd3804e8e7"
+    },
+    {
+      "path": "data/manifests/public/2026-10-18-aact-seven-acquisition.json",
+      "sha256": "77008d8ed9bea555baef622f9c04a65adca32430b953f45c54c2a5a6e2bbf46f"
+    }
+  ],
+  "datasets": [
+    {
+      "dataset_id": "aact_snapshots",
+      "collection_status": "collected",
+      "verification": {
+        "level": "sample_inspected",
+        "checked_at": "2026-10-19",
+        "evidence": [
+          {
+            "kind": "official_documentation",
+            "url": "https://aact.ctti-clinicaltrials.org/landing",
+            "result": "Historical/account access documented; no archive restored."
+          },
+          {
+            "kind": "prior_probe",
+            "workspace_path": "planning/review-assets/access-audit.json",
+            "url": "https://aact.ctti-clinicaltrials.org/downloads/snapshots?type=flatfiles",
+            "result": "Legacy listing returned HTTP 404; cached indexed listings are not working-download proof."
+          },
+          {
+            "kind": "status_correction",
+            "workspace_path": "data/manifests/public/2026-10-17-catalog-operational-observation.json",
+            "sha256": "ddb419d86dd4a2a7e050836ceaa055e6f9e69a77742d215c140500b4996e6184",
+            "result": "Five versioned snapshots separately restored and technically audited; see the anchored restoration reports. Prior documentation-only observation is historical."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-16-aact-restoration.json",
+            "sha256": "0e5165d08a105fc2f6ea0b5f8d162aeed55e6fb148cf5faeae704cb89215ef0b",
+            "result": "Retained technical restoration evidence; no scientific label validation or AsOf adapter promotion."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-16-aact-followup.json",
+            "sha256": "1bf76099ac6ca07ea289cc5d3119a569559a435078e48abfcf5d2021a2779760",
+            "result": "Retained technical restoration evidence; no scientific label validation or AsOf adapter promotion."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-17-aact-intermediate-restorations.json",
+            "sha256": "d64f8491dcd2f0b73eb1051e2fdb9ebec4ce06444b1c148c5561f7581dccb1d5",
+            "result": "Retained technical restoration evidence; no scientific label validation or AsOf adapter promotion."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
+            "sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065",
+            "result": "Retained technical restoration evidence; no scientific label validation or AsOf adapter promotion."
+          },
+          {
+            "kind": "catalog_observation_history",
+            "result": "Previously retained documentation-only and five-archive observations remain historical evidence; the new entries below describe the selected seven-archive collection."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-endpoint-technical.json",
+            "sha256": "43dbf594bcf67340203065660f4f6e07965b0822e46e2dfb28d68584d42beabb",
+            "result": "User-supplied evaluator snapshot restored and independently structurally accepted with empty cohort output and stopped server; exact public-release timing, reporting completeness, clinical labels and AsOf parsing/science are not qualified."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-ascertainment-technical.json",
+            "sha256": "c33b6de916059601c4cb4cc7f1ed956f11c6d0446ed5bd95497612fd3804e8e7",
+            "result": "User-supplied evaluator snapshot restored and independently structurally accepted with empty cohort output and stopped server; exact public-release timing, reporting completeness, clinical labels and AsOf parsing/science are not qualified."
+          },
+          {
+            "kind": "acquisition_observation",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-seven-acquisition.json",
+            "sha256": "77008d8ed9bea555baef622f9c04a65adca32430b953f45c54c2a5a6e2bbf46f",
+            "result": "Seven selected archives collected; aggregate15353064924 bytes; prior acquisition observation preserved in this report; no entire-series completeness claim."
+          }
+        ],
+        "next_acquisition_check": "Selected seven-archive collection is complete; no new acquisition requested. Any clinical use remains gated by program scope, version/public timing, endpoint adjudication and qualified ascertainment; AsOf parsing/scientific validation is not promoted."
+      },
+      "blockers": [
+        "Clinical program/outcome labels remain unadjudicated; no scientific validation or AsOf AACT adapter.",
+        "Origin restore retains nine unmatched stored-record rows; original exceptions are preserved.",
+        "Snapshot date is not an exact first-public field date; reporting lag and historical eligibility remain qualified.",
+        "Seven collected archives and structural restores do not establish exact first-public availability, historical predictor eligibility, program/regimen/population equivalence, universal reporting completeness or clinical outcome labels. AsOf parse and scientific validation remain not_run."
+      ]
+    }
+  ]
+}

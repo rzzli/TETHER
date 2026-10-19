@@ -8,7 +8,7 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 |---|---|---|
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
-| 3. Historical inputs/origin/endpoint | Resumed; April restore running | Historical mappings/origin seal and January2026 technical restore passed; user supplied April archive, exact date/integrity passed; terminal restoration and coverage remain pending. |
+| 3. Historical inputs/origin/endpoint | Passed bounded input readiness | Historical mapping/origin closure, both technical restores, independent acceptance and source-only origin review passed; clinical/scoring gates remain unqualified. |
 | 4. Outcomes/power/precision | Pending | Endpoint-specific adjudication; unknown is not a negative. |
 | 5. Conditional genetics | Pending | Method-specific source/QC and biological eligibility; explicit defer allowed. |
 | 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
@@ -172,3 +172,34 @@ A bounded, source-only origin review is being prepared from the existing sealed
 universe before follow-up inspection. It cannot alter universe membership, erase
 qualification holds, or establish representative population performance. Item3 is
 still incomplete; Items4–7 have not started.
+
+## Item 3 validated closeout; Item 4 next
+
+The earlier running/blocked entries above are dated history. April restoration and
+independent terminal acceptance completed successfully: 52 tables, 578,527 studies,
+56,751,088 rows, 117 validated constraints and 274 valid/ready indexes. All 394
+evidence files, five archive members and 1,648 origin ancestors were independently
+rechecked. Empty cohort output and stopped owned server were verified. Restoration
+took 2,446.297 seconds (import 2,094.031 seconds), retained 24,376,012,544 bytes;
+peak memory was not instrumented. Independent acceptance took 237.187 seconds.
+
+Two fresh source-only reviewers and third-agent adjudication covered twelve distinct
+origin trials and twenty prior rows. A separate integrity check resolved 752 evidence
+pointers. Nine cases support discovery searches, three remain unresolved; all twelve
+retain unknown global prior risk and unresolved clinical linkage. Zero clinical
+labels or exclusions were assigned. AI agreement is not external scientific truth.
+
+`item3/source-readiness-report.json` closes the pre-label input-scope amendment,
+with all unresolved temporal, completeness, biological-feature and scoring gates
+explicit. The last source posting date is March31; boundary versions remain held,
+not negative. Per-record eligible counts are unknown, not zero. The ninety-day
+allowance is not a completeness guarantee. All 402 full tests and four hosted jobs
+passed; core checks passed with 52 expected ingestion skips. The new execution
+register is `data/derived/science-prerequisites-20261018/execution-science3-passed.json`.
+
+Item4 now begins with a frozen evaluator-only extraction/review protocol. It must
+preserve all origin memberships, distinguish registry start, experimental dosing
+and clinical efficacy, retain null outcomes when scope or ascertainment fails, and
+feed qualified counts and measured dependence into the power/precision decision.
+No endpoint cohort extraction, outcome research, training or clinical activation
+was performed during Item3. Items5–7 remain pending.

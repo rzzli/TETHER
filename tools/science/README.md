@@ -54,6 +54,11 @@ origin universe. The current twelve-trial pack is a deterministic purposive subs
 not an independent sample-size or performance claim. It preserves all original
 qualification holds and contains no follow-up labels:
 
+An exact alias is unique only within the selected resource. It does not certify a
+biological formulation, and resource target annotations remain candidates rather
+than verified therapeutic targets. A source-operational search candidate is not a
+qualified at-risk program. Review these distinctions against the original rows.
+
 ```powershell
 .venv/Scripts/python.exe -m tools.science.origin_review `
   --origin-seal D:/path/to/origin-freeze.json --origin-sha256 ACTUAL_ORIGIN_SHA256 `

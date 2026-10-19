@@ -27,8 +27,12 @@ The original downloader and transport receipts remain unchanged.
 
 The January 2025 origin candidate universe is sealed as reconstructed exploratory
 information, with historical mapping candidates and all clinical-ready/locked flags
-false. January 2026 endpoint restoration is technical-only; April 2026 ascertainment
-data are still missing. Current scientific status is in
+false. January 2026 and April 2026 evaluator snapshots are technically restored
+and independently verified. April contains 578,527 studies; its latest posting date
+is March31 and boundary versions remain held under the frozen offset-envelope rule.
+Neither technical restore supplies adjudicated labels or established reporting
+completeness. See `data/manifests/public/2026-10-18-aact-ascertainment-technical.json`.
+Current scientific status is in
 `planning/Scientific Prerequisites Execution 2026-10-18.md` and TODO.md.
 
 October 17 WP0 correction: the catalog now records the five AACT technical restores

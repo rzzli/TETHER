@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "acquisition",
+  "created_at_utc": "2026-10-19T02:30:46.252510+00:00",
+  "scope": "Exactly seven user-supplied AACT archives at the seven listed version dates; collected subset only, not the complete historical series. Counts/bytes inherit the retained five-archive acquisition and January/April2026 independent technical acceptance reports. No new archive acquisition, raw-byte inspection, database query, AsOf parsing or scientific/clinical qualification is claimed by this catalog observation. July2023 uses its actual July2 dump date.",
+  "datasets": [
+    {
+      "dataset_id": "aact_snapshots",
+      "expected_files": 7,
+      "completed_files": 7,
+      "in_progress_files": 0,
+      "completed_bytes": 15353064924,
+      "release_ids": [
+        "2023-01-01",
+        "2023-07-02",
+        "2024-01-01",
+        "2024-07-01",
+        "2025-01-01",
+        "2026-01-01",
+        "2026-04-01"
+      ],
+      "batch_ids": [
+        "manual-aact-20261016",
+        "manual-aact-followup-20261016",
+        "manual-aact-intermediate-20261017",
+        "user-supplied-aact-endpoint-2026-01-01",
+        "user-supplied-aact-ascertainment-2026-04-01"
+      ]
+    }
+  ],
+  "authoritative_evidence": [
+    {
+      "path": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
+      "sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065"
+    },
+    {
+      "path": "data/manifests/public/2026-10-18-aact-endpoint-technical.json",
+      "sha256": "43dbf594bcf67340203065660f4f6e07965b0822e46e2dfb28d68584d42beabb"
+    },
+    {
+      "path": "data/manifests/public/2026-10-18-aact-ascertainment-technical.json",
+      "sha256": "c33b6de916059601c4cb4cc7f1ed956f11c6d0446ed5bd95497612fd3804e8e7"
+    }
+  ],
+  "previous_acquisition_observation": {
+    "dataset_id": "aact_snapshots",
+    "expected_files": 5,
+    "completed_files": 5,
+    "in_progress_files": 0,
+    "completed_bytes": 10587494178,
+    "release_ids": [
+      "2023-01-01",
+      "2023-07-02",
+      "2024-01-01",
+      "2024-07-01",
+      "2025-01-01"
+    ],
+    "batch_ids": [
+      "manual-aact-20261016",
+      "manual-aact-followup-20261016",
+      "manual-aact-intermediate-20261017"
+    ],
+    "status": "collected",
+    "report": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
+    "report_sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065",
+    "scope": "Exactly five user-downloaded AACT archives, separately restored and audited. Not the complete historical series. January 2026 is excluded from this unit.",
+    "created_at_utc": "2026-10-17T08:31:47.801900+00:00"
+  },
+  "new_batch_identity_basis": "Project observation identifiers for the two accepted user-supplied units; not downloader receipt/job IDs.",
+  "new_archive_identity": [
+    {
+      "snapshot_date": "2026-01-01",
+      "bytes": 2344676979,
+      "sha256": "7fb923dacecae1dfec864c3e21fbed669add8a64b6bd1664ce973c24a514035c",
+      "public_availability_at": null,
+      "scope": "evaluator-only technical restore; no outcome/ascertainment completeness qualification"
+    },
+    {
+      "snapshot_date": "2026-04-01",
+      "bytes": 2420893767,
+      "sha256": "6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3",
+      "public_availability_at": null,
+      "scope": "evaluator-only technical restore; no outcome/ascertainment completeness qualification"
+    }
+  ]
+}

@@ -9,16 +9,17 @@ to the user. Previous task completion scopes and historical results below remain
 
 - [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
 - [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
-- [ ] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
+- [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
 - [ ] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
 - [ ] **Science 5 — Qualify genetics as a conditional scientific branch.**
 - [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
-Current item: Science 3, resumed after the user supplied the April 2026 AACT archive.
-The exact April1 dump date, repeated ZIP hashes and all five member CRC/hash checks
-passed. April technical restoration is running in a fresh evaluator-only directory;
-source coverage and terminal acceptance remain pending.
+Current item: Science 4 — freeze evaluator extraction and outcome-review procedures,
+then adjudicate follow-up facts and assess dependence-aware power/precision.
+Science 3 passed bounded input readiness: both evaluator snapshots independently
+verified; source coverage and twelve-case origin review retained. This does not
+qualify historical predictors, clinical outcomes, reporting completeness or scoring.
 January 2026 restoration and independent terminal acceptance passed. The Windows
 temporary-path test assertion was corrected;
 all four hosted Windows/Linux core/full jobs passed at c52b2ff. Original failed CI
@@ -43,7 +44,7 @@ development artifacts are evidence, not independent scientific validation.
   dependency-free validation, original corruption probes and 1,648 ancestor checks.
 - [x] Validate the April archive/cutoff gates, independent verifier and source-only
   pilot sampler: 402 full tests, required probes, package/demo and core checks
-  (52 expected ingestion skips). Hosted checks for these additions remain pending.
+  (52 expected ingestion skips). All four hosted Windows/Linux jobs passed at195d7d6.
 - [x] Complete January 2026 technical restoration and independent audit: 52 tables,
   563,840 studies, 55,380,326 rows, 394 retained evidence files and 1,648 ancestor
   commitments verified; empty cohort output; owned server stopped and port closed.
@@ -51,15 +52,19 @@ development artifacts are evidence, not independent scientific validation.
   SHA256 `6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3`;
   exact TOC date and all five CRC/member checks passed. Ancillary schema.png is empty;
   archived HTML is integrity-checked only, not adopted as scientific documentation.
-- [ ] Complete April technical restoration, independent terminal verification and
-  source-coverage/cutoff disposition under the frozen pre-label amendment.
+- [x] Complete April technical restoration and independent terminal verification:
+  52 tables,578,527 studies,56,751,088 rows;394 evidence files,all5archive members
+  and1,648 ancestors verified;emptycohort and stoppedownedserver/closedport.
+- [x] Finalize source-coverage/cutoff and origin-review disposition under the frozen
+  pre-label amendment; preserve all unresolved clinical/scoring gates.
 
-Science 3 remains incomplete; the prior file/access blocker is resolved and execution
-has resumed within Item3. The earlier blocked checkpoint remains preserved in Git
-and its verified E: backup. Items4–7 remain unstarted until Item3 passes.
-All four hosted jobs passed at 67cde1e. The restoration acceptance report and blocked
-execution state are sealed in the earlier Item 3 checkpoint. No endpoint cohort joins, clinical labels, training,
-negatives, locked evaluation or later science stages are activated.
+Science 3 is complete within its amended input-readiness scope. The prior file/access
+blocker is resolved. The earlier blocked checkpoint remains preserved in Git and its
+verified E: backup. Independent source-review validation checked 12 cases, 20 prior
+rows and 752 source pointers. Nine are discovery candidates; all twelve retain
+unknown global prior risk and unresolved clinical linkage. No labels were assigned.
+Full/core checks passed (402 tests, 52 expected core skips), and all four hosted jobs
+passed at 195d7d6. See item3/source-readiness-report.json and its register validation.
 
 - [x] **Task 1 — Build registry-scale cohorts and audit transition labels.** Verify
   the sealed v0.4 milestone, freeze the condition/scope sensitivity rules, and finish

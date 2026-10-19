@@ -383,3 +383,17 @@ offset envelope[-12,+14]hours;March31/April1postingsheld, no knownNLMtimezone cl
 No horizon/cutoffshift, no unknown-to-negative conversion.381fulltests/probes/package
 passed before further verifier/origin-review additions. Item3active/incomplete;
 origin-only review preparation permitted, Items4–7stillunstarted.
+
+### Science 3 input readiness passed; Science 4 active
+
+Both Jan2026 and Apr2026 evaluator restores passed independent acceptance. April:
+578,527 studies, 56,751,088 rows, 394 evidence files and 1,648 origin ancestors;
+owned server stopped. Source-only twelve-trial adjudication checked twenty prior
+rows and 752 evidence pointers. Nine discovery candidates do not establish clinical
+programs: all twelve retain unknown prior risk and unresolved clinical linkage;
+zero labels. The amended bounded input-readiness task passed; historical predictive
+features, reporting completeness, clinical outcomes/power/scoring remain unqualified.
+Source report: planning/review-assets/science-prerequisites-20261018/item3/source-readiness-report.json.
+Active register: data/derived/science-prerequisites-20261018/execution-science3-passed.json.
+402 full tests, core with52 expected skips, four hosted jobs passed at195d7d6.
+Science4 starts with a frozen evaluator extraction/review protocol; Science5–7 pending.

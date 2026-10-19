@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-18T21:19:05.043481+00:00",
+  "role": "evaluation_only",
+  "purpose": "Prevent technical/input task completion being read as scientific gate activation",
+  "science3_complete_now": false,
+  "completion_requires": [
+    "Both endpoint/ascertainment technical restore reports and independent source-inclusive acceptance",
+    "Historical mapping/source closure and immutable origin selection preserved",
+    "Explicit source/date/coverage disposition, holds and next-stage search gate",
+    "Retained review/validation/documentation with no clinical activation"
+  ],
+  "task_vs_gate": {
+    "science3": "Bounded input-readiness work; origin candidate universe, not certified clinical population",
+    "G03_historical_predictive_qualification": {
+      "qualified": false,
+      "reason": "Four historical mapping products are qualified for their declared projection scope; no historical biological feature table or complete scoring evidence bundle is admitted"
+    },
+    "G04_outcome_ascertainment": {
+      "qualified": false,
+      "reason": "Endpoint cases, equivalence, observation/censoring, negatives and mature reporting coverage require later source-linked adjudication"
+    },
+    "G05_power_and_precision": {
+      "qualified": false,
+      "reason": "No new-window adjudicated class counts or prospective prediction performance yet"
+    },
+    "G07_training_calibration": {
+      "qualified": false,
+      "reason": "No qualified feature/label/split/scorer route activated"
+    }
+  },
+  "invariants": [
+    "Original H1 clinical success is not registry progression or dosing",
+    "Dictionary-exact alias uniqueness is not biological formulation identity",
+    "Historical resource target annotations are candidates, not verified therapeutic targets",
+    "A source-operational discovery candidate is not an at-risk, label-eligible clinical program",
+    "Agent agreements are source-grounded development reviews, not external validation",
+    "Unknown or held facts cannot become negatives or censoring without source proof",
+    "No later stage is passed while Science3 remains incomplete"
+  ],
+  "provider_spend_usd": 0,
+  "endpoint_cohort_rows_queried": 0,
+  "proofs": [
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item3\\april-input-scope-amendment.json",
+      "sha256": "1e19a4cd1b1cedeb2db9a3fc1427bcd8d20e3bc77eb777f2cff374dd3ed018e9"
+    },
+    {
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\proposed-gates.json",
+      "sha256": "e4ab86eef6f80c949efe20a72c6bdf4f11a05460b7cc6223295813d7a52e7ffc"
+    }
+  ]
+}

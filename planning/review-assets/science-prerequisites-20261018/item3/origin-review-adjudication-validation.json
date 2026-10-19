@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "status": "passed_bounded_origin_source_adjudication_validation",
+  "checked_at_utc": "2026-10-19T02:23:17.835936+00:00",
+  "provider_spend_usd": 0,
+  "full_evaluator_report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-review-20261018T210300Z\\adjudication\\assessments.json",
+    "sha256": "ab02cd61911d903e155438efa20c18452d8025b3d3097417277a0e56a7a0ffab"
+  },
+  "evaluator_notes": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-review-20261018T210300Z\\adjudication\\notes.md",
+    "sha256": "4a078c523e9d1104d4cd7e2c8e4a370f08173e898b38afa4e1a7351b682dc5eb"
+  },
+  "initial_review_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-review-20261018T210300Z\\initial-review-seal.json",
+    "sha256": "73a82d2fd5113631c382e1806627be1ffc155b526a1b4ec75835f30a8f2aa5e5"
+  },
+  "pack_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science-origin-review-20261018T210300Z\\pack-freeze.json",
+    "sha256": "5a4842f9b1751d3e0b2e50c166c5bf1786e3639741072b38b8ad264b4b8da56d"
+  },
+  "verified_small_artifacts": 23,
+  "case_memberships_checked": 12,
+  "review_unit_assessments_checked": 36,
+  "original_prior_comparisons_checked": 20,
+  "prior_cases_checked": 3,
+  "evidence_pointers_checked": {
+    "review_a": 152,
+    "review_b": 176,
+    "adjudication": 424
+  },
+  "total_evidence_pointers_checked": 752,
+  "phase_and_start_source_fields_checked": 84,
+  "original_hold_entries_checked": 63,
+  "discovery_status_counts": {
+    "candidate_scope_resolved_for_search": 9,
+    "unresolved": 3
+  },
+  "global_prior_risk_unknown": 12,
+  "label_linkage_unresolved": 12,
+  "clinical_labels_assigned": 0,
+  "origin_membership_changed": false,
+  "clinical_ready": false,
+  "strict_historical_qualification": false,
+  "external_independent_scientific_truth": false,
+  "outcome_research_or_endpoint_queries": false,
+  "gb_ancestor_rehashes": 0,
+  "original32source_rows_reaudited": false,
+  "issues": {},
+  "validation_script": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science-origin-adjudication-validation-20261018.py",
+    "sha256": "6c4694c80188dd128632a230be60ad1b81e7fbd02585e584e30adbd42794d666"
+  },
+  "scope_and_limits": [
+    "Every review unit and all prior comparisons bind the frozen packet set; all evidence pointers resolve and exact source-structured factual fields match",
+    "Packet and sealed review artifact bytes freshly checked; full original external ancestry was previously audited and not rehashed here",
+    "Discovery search readiness does not establish exact clinical linkage or globally qualified origin risk; all12 remain unresolved for clinical labels",
+    "Narrative adjudication and common model-family blind spots are not externally independent scientific truth",
+    "Sanitized report intentionally omits individual case identifiers and answers; full evaluator report is separately pinned"
+  ],
+  "final_small_artifact_rehash": {
+    "status": "passed",
+    "checked_at_utc": "2026-10-19T02:24:01.752668+00:00",
+    "distinct_artifacts": 25,
+    "total_bytes": 3143800,
+    "gb_ancestors_read": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-19T02:29:14.774931+00:00",
+  "status": "register_valid",
+  "stages": {
+    "science_1": "passed",
+    "science_2": "passed",
+    "science_3": "passed",
+    "science_4": "pending",
+    "science_5": "pending",
+    "science_6": "pending",
+    "science_7": "pending"
+  },
+  "scientific_validation": "not_inferred_from_contract_validation",
+  "register": {
+    "path": "data\\derived\\science-prerequisites-20261018\\execution-science3-passed.json",
+    "sha256": "b12f37b91f1d793eaa3fdbbcb1e697686819863efa1bd182df2f816d5811080e"
+  },
+  "source_report_sha256": "22fc2a8b17a34796eaf4b824168fd9f8a29fcd0a2713cc4c7446505d1debd12b",
+  "scientific_activation": false
+}

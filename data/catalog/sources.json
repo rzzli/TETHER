@@ -11447,7 +11447,7 @@
       },
       "verification": {
         "level": "sample_inspected",
-        "checked_at": "2026-10-17",
+        "checked_at": "2026-10-19",
         "evidence": [
           {
             "kind": "official_documentation",
@@ -11489,9 +11489,31 @@
             "workspace_path": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
             "sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065",
             "result": "Retained technical restoration evidence; no scientific label validation or AsOf adapter promotion."
+          },
+          {
+            "kind": "catalog_observation_history",
+            "result": "Previously retained documentation-only and five-archive observations remain historical evidence; the new entries below describe the selected seven-archive collection."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-endpoint-technical.json",
+            "sha256": "43dbf594bcf67340203065660f4f6e07965b0822e46e2dfb28d68584d42beabb",
+            "result": "User-supplied evaluator snapshot restored and independently structurally accepted with empty cohort output and stopped server; exact public-release timing, reporting completeness, clinical labels and AsOf parsing/science are not qualified."
+          },
+          {
+            "kind": "technical_restoration_report",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-ascertainment-technical.json",
+            "sha256": "c33b6de916059601c4cb4cc7f1ed956f11c6d0446ed5bd95497612fd3804e8e7",
+            "result": "User-supplied evaluator snapshot restored and independently structurally accepted with empty cohort output and stopped server; exact public-release timing, reporting completeness, clinical labels and AsOf parsing/science are not qualified."
+          },
+          {
+            "kind": "acquisition_observation",
+            "workspace_path": "data/manifests/public/2026-10-18-aact-seven-acquisition.json",
+            "sha256": "77008d8ed9bea555baef622f9c04a65adca32430b953f45c54c2a5a6e2bbf46f",
+            "result": "Seven selected archives collected; aggregate15353064924 bytes; prior acquisition observation preserved in this report; no entire-series completeness claim."
           }
         ],
-        "next_acquisition_check": "Registry-scale evaluator-only sizing from existing restores; preserve source timing, stored-row exceptions and unresolved clinical/program mappings."
+        "next_acquisition_check": "Selected seven-archive collection is complete; no new acquisition requested. Any clinical use remains gated by program scope, version/public timing, endpoint adjudication and qualified ascertainment; AsOf parsing/scientific validation is not promoted."
       },
       "collection_status": "collected",
       "parse_status": "not_run",
@@ -11505,31 +11527,36 @@
       "blockers": [
         "Clinical program/outcome labels remain unadjudicated; no scientific validation or AsOf AACT adapter.",
         "Origin restore retains nine unmatched stored-record rows; original exceptions are preserved.",
-        "Snapshot date is not an exact first-public field date; reporting lag and historical eligibility remain qualified."
+        "Snapshot date is not an exact first-public field date; reporting lag and historical eligibility remain qualified.",
+        "Seven collected archives and structural restores do not establish exact first-public availability, historical predictor eligibility, program/regimen/population equivalence, universal reporting completeness or clinical outcome labels. AsOf parse and scientific validation remain not_run."
       ],
       "acquisition_snapshot": {
         "dataset_id": "aact_snapshots",
-        "expected_files": 5,
-        "completed_files": 5,
+        "expected_files": 7,
+        "completed_files": 7,
         "in_progress_files": 0,
-        "completed_bytes": 10587494178,
+        "completed_bytes": 15353064924,
         "release_ids": [
           "2023-01-01",
           "2023-07-02",
           "2024-01-01",
           "2024-07-01",
-          "2025-01-01"
+          "2025-01-01",
+          "2026-01-01",
+          "2026-04-01"
         ],
         "batch_ids": [
           "manual-aact-20261016",
           "manual-aact-followup-20261016",
-          "manual-aact-intermediate-20261017"
+          "manual-aact-intermediate-20261017",
+          "user-supplied-aact-endpoint-2026-01-01",
+          "user-supplied-aact-ascertainment-2026-04-01"
         ],
         "status": "collected",
-        "report": "data/manifests/public/2026-10-17-aact-five-acquisition.json",
-        "report_sha256": "8b311165d487cd4ed303295f008c8e90bed641f562c5260b6f1607b18c15e065",
-        "scope": "Exactly five user-downloaded AACT archives, separately restored and audited. Not the complete historical series. January 2026 is excluded from this unit.",
-        "created_at_utc": "2026-10-17T08:31:47.801900+00:00"
+        "report": "data/manifests/public/2026-10-18-aact-seven-acquisition.json",
+        "report_sha256": "77008d8ed9bea555baef622f9c04a65adca32430b953f45c54c2a5a6e2bbf46f",
+        "scope": "Exactly seven user-supplied AACT archives at the seven listed version dates; collected subset only, not the complete historical series. Counts/bytes inherit the retained five-archive acquisition and January/April2026 independent technical acceptance reports. No new archive acquisition, raw-byte inspection, database query, AsOf parsing or scientific/clinical qualification is claimed by this catalog observation. July2023 uses its actual July2 dump date.",
+        "created_at_utc": "2026-10-19T02:30:46.252510+00:00"
       }
     },
     {
@@ -26077,7 +26104,7 @@
       ]
     }
   ],
-  "last_updated": "2026-10-17",
+  "last_updated": "2026-10-19",
   "contract_policy": {
     "conditional_fields": "Required only when the stated scientific condition applies; unknown/non-applicable values remain explicit and never become zero.",
     "dependency_semantics": "dependencies describe unconditional inputs needed to normalize/interpret/validate a product; they are not permission grants or a required order for metadata lookup/raw-file access.",
@@ -26085,15 +26112,13 @@
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
   },
   "last_maintenance_update": {
-    "expected_prior_sha256": "ee1299357db2bfa31139272109b6994ddd0a1056171ff786edc52e867af65072",
-    "report": "data/manifests/public/2026-10-17-catalog-status-correction.json",
-    "report_sha256": "d04fd0401be0e14dc8e1946e0cc63d432e811e607311436d7920f50b8dc3b880",
+    "expected_prior_sha256": "d4946be2bf76da79925cef15e86f6b33a486aff19ca3376c63a0de6734aed355",
+    "report": "data/manifests/public/2026-10-18-aact-seven-status-observation.json",
+    "report_sha256": "7d5fba6e857b116411cc44e40e134efdccebb0139e5cd38e1da6d3039b694e1d",
     "kind": "status_correction",
     "datasets": [
-      "aact_snapshots",
-      "chembl_molecules",
-      "ot_colocalisation_coloc"
+      "aact_snapshots"
     ],
-    "created_at_utc": "2026-10-17T19:54:33.043936+00:00"
+    "created_at_utc": "2026-10-19T02:31:02.712868+00:00"
   }
 }
