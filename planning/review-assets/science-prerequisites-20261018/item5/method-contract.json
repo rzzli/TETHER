@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "contract_id": "science5-conditional-genetics-method-contract-20261019",
+  "reviewed_at_utc": "2026-10-19T17:50:00Z",
+  "role": "evaluation_only_method_qualification",
+  "provider_spend_usd": 0,
+  "new_source_downloads": 0,
+  "decision": "defer_all_predictive_genetics_features",
+  "decision_scope": "The method/input contract is reviewed for a retained deferral. No MR or colocalization algorithm or biological feature is scientifically validated by this review.",
+  "G06_qualified": false,
+  "MR_performed": false,
+  "colocalization_performed": false,
+  "new_numeric_prediction_features": 0,
+  "non_genetic_routes_blocked_by_this_decision": false,
+  "scope": {
+    "target": "IL6R",
+    "gene_id": "ENSG00000160712",
+    "exposure_dataset": "BLUEPRINT QTS000002/QTD000021",
+    "exposure": "Naive-monocyte gene-level transcript abundance",
+    "exposure_not_established": ["specific transcript isoform", "circulating IL6R protein", "membrane IL6R protein", "soluble IL6R protein", "IL6R activity", "antibody blockade", "therapeutic dose-response"],
+    "outcome_dataset": "GCST90132223 EUR rheumatoid arthritis case-control meta-analysis",
+    "outcome": "Rheumatoid arthritis susceptibility; not response among treated patients or clinical-trial efficacy",
+    "coordinate_system": "GRCh38 one-based inclusive",
+    "region": "1:153405193-155405193",
+    "region_rule": "Versioned Ensembl 105 phenotype_pos 154405193 +/- 1000000; fixed from annotation, without association-peak or P-value selection",
+    "reported_exposure_study_N": 191,
+    "reported_gwas_cases": 22350,
+    "reported_gwas_controls": 74823,
+    "reported_gwas_total_N": 97173,
+    "reported_N_usage": "Study-level descriptors only until exact release, analysis sample set and variant-level applicability are qualified. QTL AN is an allele count, not automatically individual N. Study case fraction is not disease population prevalence.",
+    "reference_LD": "503 EUR samples from the retained 1000 Genomes/IGSR GRCh38 panel; external reference rather than either association study",
+    "assessment_profile": "contemporary_technical_example_only",
+    "source_historical_availability": "unverified",
+    "historical_origin": "2025-01-01T00:00:00Z",
+    "historical_eligibility": false,
+    "historical_reason": "Complete release/annotation/source-availability lineage has not been qualified at January 2025. The retained GWAS metadata states last modified 2025-01-02 and was retrieved in October 2026. Those dates do not prove the underlying statistics were unavailable before origin, but neither original 2022 publication nor April 2023 annotation establishes eligibility of the exact retained processed lineage. January 2023 in old QC limitations must not be mistaken for a January 2025 qualification."
+  },
+  "distinct_evidence_levels": [
+    {"level": "phenotype_association", "claim": "A specified variant or locus is associated with a defined phenotype in a specified population and study.", "does_not_establish": ["gene assignment", "shared causal variant", "causal exposure effect", "drug action", "clinical success"]},
+    {"level": "regional_colocalization", "claim": "Conditional on coverage, model, priors and study compatibility, regional association patterns support or fail to distinguish shared versus distinct causal signals.", "does_not_establish": ["exposure mediates disease effect", "absence of horizontal pleiotropy", "drug mechanism", "therapeutic effect size"]},
+    {"level": "instrumental_variable_MR", "claim": "A specified genetic proxy evaluates an exposure-outcome causal hypothesis under stated identification assumptions.", "does_not_establish": ["all instrumental-variable assumptions are true", "lifelong genetic effects equal a finite treatment", "abundance equals activity", "drug dose or success probability"]},
+    {"level": "therapeutic_interpretation", "claim": "Requires separately qualified assay, molecular species, functional mechanism, tissue, developmental timing and intervention correspondence plus triangulation.", "current_status": "unqualified; transcript sign cannot set inhibit/activate"}
+  ],
+  "common_scientific_and_lineage_contract": {
+    "source_identity": ["provider/study/accession and exact release", "immutable URL or release identifier where possible", "file/header/index/annotation/recipe hashes and byte lengths", "retrieval timestamp, source publication and availability bounds separately", "original-versus-harmonized relationship and processing provenance", "all source exceptions, missing values and unverified whole-source hashes"],
+    "variant_identity": ["genome build and coordinate convention", "chromosome/position/ref/alt and normalized unique allele key", "effect/other allele and original effect orientation", "documented liftover/complement/flip with exclusions; no rsID-only join", "reference-build and source-secondary-coordinate conflicts retained", "indels/multiallelic/palindromic variants resolved by method-specific evidence or excluded with reasons, never guessed"],
+    "statistics": ["finite beta and positive finite SE where used; varbeta=SE squared", "effect scale and units: linear normalized expression versus disease log odds", "P encoding and underflow handling where P is used", "frequency meaning and provenance: EAF versus MAF versus external-reference frequency distinguished", "N meaning: individuals versus alleles, study versus per-variant/effective N distinguished", "unknown/not-applicable/unavailable explicit; no arbitrary N/EAF/sdY imputation"],
+    "molecular_exposure_mapping": ["gene/protein/assay identifier and mapping version", "gene-level versus isoform/transcript-level measurement", "cell/tissue/context and stimulation", "quantification and normalization, covariate adjustment and beta units", "protein assay platform, epitope and binding-artifact sensitivity only for a future protein route", "membrane/soluble species, cleavage/splicing and abundance/activity hypotheses remain distinct"],
+    "outcome_mapping": ["phenotype definition, diagnosis/ascertainment and inclusion criteria", "binary/quantitative type and transform", "case/control definitions and study counts for binary traits", "ancestry and cohort composition", "outcome GWAS does not require a gene-specific assay assignment"],
+    "study_design_QC_separate_from_algorithm_fields": ["ancestry/population stratification, relatedness and imputation quality", "cohort membership and quantified/bounded exposure-outcome overlap", "discovery versus estimation and winner's-curse concerns", "heterogeneous per-variant sample sets and meta-analysis weights", "power/precision, independent-study replication and assay/context replication where claimed", "association-study ancestry need not be identical for ABF, but cross-population causal-variant comparability and dense coverage must be assessed; each LD-based fit needs suitable study LD"],
+    "regional_coverage": ["retain complete measured/source-indexed eligible regional variants before statistical significance filtering", "produce stage-specific variant counts, exclusions, both-study/shared coverage and peak/credible-set coverage", "no significant-hit-only catalog substitute for regional colocalization", "missing causal variants/poor tagging can prevent distinction of shared and distinct signals", "coordinate completeness is not proof that every genomic variant was measured"],
+    "historical_feature_lineage": ["each information-bearing ancestor availability upper bound <= row origin", "include source, release, gene/assay mapping, annotations, sample set, instrument selection, priors if data-derived, and all biological interpretation", "later deterministic computation is allowed only when eligible inputs and fixed recipes introduce no later information", "current method documentation informs this review but does not certify historical data availability", "never feed current evaluator interpretation into historical features"]
+  },
+  "method_routes": [
+    {
+      "id": "association_descriptive",
+      "algorithm_inputs": ["qualified study/phenotype and variant identity", "reported estimate/SE or correctly encoded association test result and effect definition"],
+      "not_universally_required_for_numeric_display": ["LD", "per-variant N", "EAF"],
+      "qualification": "Source trust, multiple testing, regional context and study QC determine interpretation. A locus P value does not identify an exposure, causal gene or treatment direction.",
+      "allowed_current_use": "Audit of technical source records with explicit source-trust exception; no admitted predictive feature"
+    },
+    {
+      "id": "coloc_abf_beta_variance",
+      "implementation_to_pin_before_execution": "coloc::coloc.abf; immutable package/source/runtime revision required",
+      "algorithm_inputs_both_traits": ["unique aligned SNP identities over a dense shared region", "beta", "varbeta=SE squared", "type quant or cc"],
+      "conditional_algorithm_inputs": {
+        "quant_known_scale": "documented sdY on the analyzed phenotype scale; sdY=1 only when exact input processing supports unit variance, not because convenient",
+        "quant_unknown_sdY": "qualified N and corresponding MAF plus beta/varbeta for sdY estimation; assumptions and estimator uncertainty retained",
+        "binary_beta_variance": "log-odds beta/variance; current implementation uses fixed case-control effect prior without requiring s/N/MAF for this calculation",
+        "binary_study_QC": "case/control counts and study fraction remain required descriptors of the biological study even when unused by beta/variance ABF"
+      },
+      "not_universal_algorithm_requirements": ["LD", "per-variant GWAS N", "GWAS EAF/MAF", "GWAS case fraction s when beta/variance is supplied"],
+      "required_assumptions": ["at most one causal variant per trait in region for this model", "appropriate association and effect-size prior models", "adequate regional variant coverage and comparable variant identities", "dependence/overlap assumptions reviewed rather than silently assumed"],
+      "reporting": ["all PP.H0-H4, SNP count, effect priors and p1/p2/p12", "prior sensitivity including H3 versus H4 rather than H4 alone", "low power, one-trait-only evidence, absent/weak signals and uncertainty", "region/coverage sensitivity, multiple testing and single-signal-model limitations"],
+      "direction_rule": "ABF is based on squared Z; changing beta sign does not identify drug action. Identity/coverage is essential, while signed LD is not an input.",
+      "current_qualification": "deferred: source exception, exact exposure scale/sdY, dense ABF-specific overlap, study compatibility and independent algorithm fixtures not qualified",
+      "source_ids": ["coloc_data", "coloc_check_source", "coloc_algorithm_source", "coloc_abf", "coloc_priors", "coloc_2014"]
+    },
+    {
+      "id": "coloc_abf_pvalue_approximation",
+      "algorithm_inputs": ["all eligible regional SNP identities", "correctly encoded P values", "appropriate MAF", "qualified study N", "trait type", "case fraction s for case-control approximation"],
+      "qualification": "Fallback only when beta/variance unavailable and approximation is justified; beta/SE is present in the retained data and preferred. Missing GWAS EAF/N must not be fabricated or replaced by 503-panel values. EAF can yield MAF only when the reported quantity is qualified.",
+      "precision_limit": "Approximation does not capture imputation uncertainty as supplied beta/variance can; extreme/zero P values require a valid representation, not silent clipping chosen for a result.",
+      "current_qualification": "not selected; unavailable/unevaluated necessary approximation metadata",
+      "source_ids": ["coloc_check", "coloc_algorithm_source"]
+    },
+    {
+      "id": "coloc_susie_runsusie",
+      "implementation_to_pin_before_execution": "coloc::runsusie plus susieR, then coloc::coloc.susie; immutable compatible revisions required",
+      "algorithm_inputs": ["each study's dense eligible regional identities", "signed beta/SE or Z in the selected wrapper", "signed genotype-correlation LD in exactly the same SNP and effect-allele order", "qualified study N for the chosen coloc::runsusie route", "quantitative scale/trait information as required by the pinned wrapper"],
+      "N_distinction": "coloc::runsusie requires N. Current lower-level susie_rss documentation permits some n-absent routes; those are separate explicitly justified methods, not permission to substitute 503 reference individuals for association-study N or to claim the chosen wrapper is qualified.",
+      "LD_qualification": ["document each study's ancestry, sample composition and LD suitability; a shared broad EUR proxy is not automatic study matching", "finite/symmetric/unit-diagonal/positive-semidefinite correlation matrix, exact row-column keys and signed allele orientation", "reference sampling error and summary/LD consistency diagnostics and sensitivity", "external LD residual-variance and regularization options fixed explicitly; no silent ridge or inverse of singular 2979-by-2979 matrix", "study N and LD reference sample count kept separate"],
+      "assumptions_and_outputs": ["multiple signals permitted only within the chosen sparse model and sufficiently covered region", "retain convergence/ELBO, fitted signal count, credible sets/purity and signal-pair PP.H0-H4", "no credible set/nonconvergence/weak evidence remains unresolved, not a negative", "retain prior/L/LD-reference sensitivity and all compared signal pairs"],
+      "current_qualification": "deferred: suitable study LD and N/sample-set compatibility not qualified; technical ALT-correlation reproducibility is insufficient",
+      "source_ids": ["runsusie", "susie_rss", "coloc_susie_vignette", "coloc_2021"]
+    },
+    {
+      "id": "cis_MR_single_instrument_Wald_ratio",
+      "algorithm_inputs": ["prespecified eligible cis instrument and harmonized effect allele", "nonzero exposure beta and exposure SE", "outcome beta and outcome SE", "defined exposure units and outcome scale", "specified uncertainty model and exposure-outcome covariance/overlap assumption"],
+      "not_universal_arithmetic_requirements": ["N", "EAF", "LD for an isolated instrument"],
+      "arithmetic": "ratio=beta_outcome/beta_exposure; first-order SE=SE_outcome/abs(beta_exposure) assumes negligible exposure-estimation error and suitable independence. Full delta/Fieller or weak-instrument-robust inference must be selected where first-order assumptions are unsuitable; never silently omit covariance under unqualified overlap.",
+      "identification_assumptions": ["relevance: proxy genuinely influences the specified exposure with sufficient strength", "independence: proxy not associated with confounding pathways, considering ancestry/selection/relatedness", "exclusion restriction: outcome association operates through specified exposure, not a horizontal pleiotropic path or neighboring gene", "consistency/intervention correspondence and transport assumptions for a causal effect interpretation"],
+      "strength_and_sensitivity": ["report approximate per-instrument F=(beta_exposure/SE_exposure)^2 with model limitations", "freeze selection/strength rules before outcome analysis; never relax threshold to manufacture an instrument", "address winner's curse, weak-denominator uncertainty, sample overlap and selection", "colocalization can address linked distinct signals but cannot prove mediation or exclusion restriction", "one instrument cannot support instrument-heterogeneity or MR-Egger pleiotropy diagnostics"],
+      "current_qualification": "deferred; no prespecified scientifically qualified instrument or estimator, overlap/source qualification or independent fixtures",
+      "source_ids": ["MR_guidelines", "MR_overlap"]
+    },
+    {
+      "id": "cis_MR_multiple_instrument",
+      "algorithm_inputs": ["prespecified exposure instruments and beta/SE for exposure and outcome", "effect-allele harmonization", "specified estimator and uncertainty model", "independent-instrument justification or signed aligned LD/covariance for correlated instruments"],
+      "not_universal_arithmetic_requirements": ["per-variant N", "EAF"],
+      "requirements": ["IVW on independent instruments must not silently treat correlated cis variants as independent", "generalized IVW requires covariance/LD suitability, conditioning/rank diagnostics and prespecified treatment of near-singularity", "quantify joint/conditional strength as appropriate; individual F alone cannot qualify many correlated instruments", "record heterogeneity, instrument selection and weak/pleiotropic sensitivity justified by instrument count", "few cis instruments do not justify an arbitrary minimum count or informative MR-Egger claims", "Steiger/directionality or R-squared calculations require their own sample-size/frequency/scale/measurement-error inputs if used; they are not universally executable or definitive"],
+      "current_qualification": "deferred; no estimator or causal instrument set qualified; 2979 shared QC variants are not 2979 independent instruments",
+      "source_ids": ["MR_guidelines", "MR_cis_correlated"]
+    }
+  ],
+  "retained_QC_disposition": {
+    "existing_results": "Public manifest reports 6120 IL6R QTL rows, 5325 unique variants, 5722 GWAS rows, 2979 LD-shared QC variants and 503 EUR reference individuals. Separate Science5 input revalidation freshly hashed all 38 files/93166905 bytes; counted 336006 eQTL/5722 GWAS/50412 LD rows; verified 503 EUR samples and 4096 LD entries with maximum absolute difference 3.4416913763379853e-15. These are technical checks, not MR/colocalization or biological validation.",
+    "fresh_input_proof": {"path": "planning/review-assets/science-prerequisites-20261018/item5/input-revalidation.json", "sha256": "13d5ec30d1a9c25d5dca8b49bc43ed3a3d8539b636b6cf09e660ce980092f865"},
+    "neutral_shared_region": "Input reviewer found 3968 shared valid-statistic allele keys after source-conflict exclusion without LD/MAF/significance filtering: 3187 nonpalindromic SNPs, 511 palindromic SNPs and 270 other variants. This is a method-review candidate count, not automatically a qualified ABF input. Identity/scale/source qualification remains necessary.",
+    "coverage_correction": "The 2979-variant QC list is an LD-oriented pilot output, not automatically the coloc.abf input. Existing report excludes 146 no-exact-LD variants and 62 external-panel MAF<0.01 variants after other filters. Those are not necessary ABF exclusions. Reconstruct the complete method-eligible dense shared beta/SE region from retained full rows, retaining identity/conflict/statistic exclusions and documenting coverage. Resolve known identities of palindromic/non-SNP variants by method; do not impose signed-LD restrictions on a squared-Z method without justification.",
+    "conflicts": "The GWAS duplicate allele-key with distinct rs2990223 estimates remains excluded unless source-qualified. Neither convenient duplicate choice nor significant-hit pruning is allowed.",
+    "technical_checks_not_scientific_proofs": ["sha256 rehash identifies retained bytes, not publisher trust", "source-window coordinate check does not prove exhaustive biological-variant coverage", "ALT-correlation recomputation verifies stored genotype transformation, not source study LD", "finite/symmetric/unit diagonal does not verify allele order against study effects", "expected rank<=502 for centered 503-sample LD is not proof of failure and does not justify arbitrary regularization"],
+    "LD_documentation_discrepancy": "Retained VCF has 2548 samples while provider README says 5248; discrepancy remains unresolved even though 503 EUR membership and arithmetic reproduce. Preserve source documentation exception separately from numeric matrix integrity."
+  },
+  "source_discrepancy": {
+    "object": "GWAS metadata YAML GCST90132223.h.tsv.gz-meta.yaml",
+    "publisher_MD5": "f0f6f56d1b808a1e8634003221b1c6f1",
+    "observed_local_MD5": "e564a41aadc76047d8b761d0e401db94",
+    "local_sha256": "2e007b38cae87e233fc857885f79de25870484cf247c4ff1320e0bc8e3eb009b",
+    "status": "unresolved_source_provenance_exception",
+    "disposition": "Quarantine scientific feature use of the affected GWAS-dependent route while preserving all files, raw metadata and receipts. Repeated identical retrievals establish repeatability, not resolution. No evidence here implies every regional payload is corrupted.",
+    "separate_unverified_fact": "Publisher payload MD5 678a83e0bca52db0a22f65b127c17157 is a different object; whole remote GWAS file was not retrieved/hashed. Local regional SHA256 verifies only the retained slice.",
+    "future_resolution_routes": ["publisher supplies corrected checksum or immutable matched metadata/payload release", "independently authenticated source/version correspondence reconciles metadata and payload, recorded under a concrete source-trust policy before use", "otherwise continue explicit route quarantine"],
+    "resolution_not_performed": true
+  },
+  "independent_numeric_admission_fixtures": {
+    "status": "required_before_feature_admission_not_performed_by_this_review",
+    "acceptance_policy": "Pin reference implementation and separate derivation, seed/input hashes, tolerances, full outputs, disagreements and reviewer provenance. Agreement validates implementation only, not causal assumptions. No production source MR/coloc is authorized by this review.",
+    "required": [
+      {"fixture": "Wald/IVW analytic strong positive and negative effects", "checks": "Independent ratio/uncertainty and multi-instrument arithmetic; allele recoding invariance; exposure-only sign flip reverses ratio; exact scale conversion."},
+      {"fixture": "weak or zero exposure and unknown overlap", "checks": "Reject zero denominator; preserve weak/wide or unbounded uncertainty; first-order inference not silently used under violated assumptions; overlap unknown never set to zero."},
+      {"fixture": "ABF null, one-trait-only, shared and distinct signals", "checks": "Independent Bayes-factor/configuration sums agree with pinned coloc PP.H0-H4; posterior normalized, finite and stable under extreme log evidence; no weak H0/H1/H2 case becomes therapeutic failure."},
+      {"fixture": "ABF supplied beta/variance without N/MAF/LD", "checks": "Known-sdY quantitative and beta/variance binary routes execute in the pinned reference without invented unused fields; unknown-sdY and P-approximation paths fail when their actual required inputs are absent."},
+      {"fixture": "coverage, duplicates and variant order", "checks": "SNP permutations preserve correctly rejoined result; duplicate conflicting keys fail or remain excluded; dropping non-significant/LD-missing variants is detectable and changes coverage record; method-specific exclusion ledger retained."},
+      {"fixture": "multiple signals and conflicting MR/coloc evidence", "checks": "Single-causal ABF limitation exposed; qualified SuSiE reference distinguishes shared/nonshared signal pairs where identifiable; MR positive plus H3 or weak colocalization remains discordant/inconclusive."},
+      {"fixture": "signed LD, sample compatibility and singularity", "checks": "Known allele-flip and SNP-permutation faults rejected unless LD and effects consistently transformed; r-squared input rejected; non-PSD/invalid matrix diagnosed; expected singular PSD matrix handled only by a qualified algorithm; convergence and reference-LD sensitivity retained."},
+      {"fixture": "causal claims and chronology", "checks": "Transcript MR sign cannot emit inhibit/activate; association/coloc/MR are distinct fields; unavailable sources produce deferred/missing, not zero; January-2025 lineage rejects 2025-01-02 metadata/current annotations absent independent pre-origin proof."}
+    ]
+  },
+  "feature_output_contract_if_future_admission": {
+    "status_values": ["qualified", "inconclusive", "conflicting", "weak_instrument", "coverage_failed", "source_quarantined", "temporally_ineligible", "method_not_applicable", "not_computed"],
+    "fields": ["target, molecular entity/assay/context and phenotype", "source/release/lineage hashes and row origin", "method/version, variant set/exclusions and sample/overlap/LD qualification", "estimate/uncertainty and units for MR or all hypothesis posteriors for coloc", "strength, prior/model/coverage sensitivity and assumption violations", "missingness/status/reason and review provenance"],
+    "forbidden": ["uncomputed=0", "weak or null genetics=drug failure", "PP.H4=causal mediation probability or clinical success probability", "transcript direction=drug inhibition/activation", "contemporary-only feature=January2025 predictor", "one-locus example=cross-target model validation"],
+    "admission_conditions": ["source disposition accepted for exact route", "method-specific dense regional/assay/study compatibility contract passes", "historical lineage passes for every intended row origin", "prespecified estimator/priors/selection/multiplicity and uncertainty policy", "independent numeric fixtures and reference comparison pass", "biological scope and uncertain/conflicting results retained", "separate training/outcome/power gates pass if clinical prediction/evaluation is later requested"]
+  },
+  "references": [
+    {"id": "coloc_data", "url": "https://chr1swallace.github.io/coloc/articles/a02_data.html", "retrieved_date": "2026-10-19", "access_depth": "full official vignette; rendered version 6.0.1 dated 2025-12-04", "historical_warning": "Current method guidance, not pre-origin biological data or an immutable runtime pin"},
+    {"id": "coloc_check", "url": "https://chr1swallace.github.io/coloc/reference/check_dataset.html", "retrieved_date": "2026-10-19", "access_depth": "full official function documentation", "note": "Summary text suggests cc needs s; executable check/source and minimal beta/variance cc example show conditional requirement"},
+    {"id": "coloc_check_source", "url": "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/check.R", "retrieved_date": "2026-10-19", "access_depth": "official source read through beta/variance, conditional s/N/MAF/sdY and LD checks", "note": "Mutable main read for methodological review; no immutable implementation pin asserted"},
+    {"id": "coloc_algorithm_source", "url": "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/claudia.R", "retrieved_date": "2026-10-19", "access_depth": "official source read: variance approximations, effect-prior ABFs, H0-H4 combination and process.dataset", "note": "Mutable main; case-control beta/variance uses neither N nor s nor MAF"},
+    {"id": "coloc_abf", "url": "https://chr1swallace.github.io/coloc/reference/coloc.abf.html", "retrieved_date": "2026-10-19", "access_depth": "full official function documentation"},
+    {"id": "coloc_priors", "url": "https://chr1swallace.github.io/coloc/articles/a04_sensitivity.html", "retrieved_date": "2026-10-19", "access_depth": "full official vignette"},
+    {"id": "runsusie", "url": "https://chr1swallace.github.io/coloc/reference/runsusie.html", "retrieved_date": "2026-10-19", "access_depth": "full official wrapper documentation; signed LD and N explicitly required"},
+    {"id": "susie_rss", "url": "https://stephenslab.github.io/susieR/reference/susie_rss.html", "retrieved_date": "2026-10-19", "access_depth": "official current function documentation including sample-size, residual-variance and reference-LD options", "note": "Current lower-level interface includes newer options; not a pinned historical algorithm"},
+    {"id": "coloc_susie_vignette", "url": "https://chr1swallace.github.io/coloc/articles/a06_SuSiE.html", "retrieved_date": "2026-10-19", "access_depth": "official vignette read through multi-signal example and signal-pair outputs"},
+    {"id": "coloc_2014", "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004383", "retrieved_date": "2026-10-19", "access_depth": "primary original method paper full HTML accessible; DOI resolver itself failed"},
+    {"id": "coloc_2021", "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009440", "retrieved_date": "2026-10-19", "access_depth": "primary multi-signal method paper full HTML accessible; DOI resolver itself failed"},
+    {"id": "MR_guidelines", "url": "https://pmc.ncbi.nlm.nih.gov/articles/7384151/", "retrieved_date": "2026-10-19", "access_depth": "primary author-guidance article detailed search-index excerpts available; direct PMC open hit CAPTCHA; publisher open returned no readable body", "note": "Burgess et al. version 3 summer-2023 update; limited access disclosed"},
+    {"id": "MR_overlap", "url": "https://pubmed.ncbi.nlm.nih.gov/27625185/", "retrieved_date": "2026-10-19", "access_depth": "primary article abstract in search result; direct open returned only footer; PMC search excerpts corroborated", "note": "Burgess/Davies/Thompson 2016, doi:10.1002/gepi.21998; no full-text inspection claimed"},
+    {"id": "MR_cis_correlated", "url": "https://arxiv.org/abs/1707.02215", "retrieved_date": "2026-10-19", "access_depth": "primary author preprint abstract in search result only", "note": "Burgess et al., choosing among correlated instruments; not full-text adjudication"},
+    {"id": "eqtl_methods", "url": "https://www.ebi.ac.uk/eqtl/Methods/", "retrieved_date": "2026-10-19", "access_depth": "full official methods overview including normalization, association testing and cis window", "note": "Current overview does not alone prove exact retained QTD000021 version scale"},
+    {"id": "STROBE_MR", "url": "https://www.bmj.com/content/375/bmj.n2233", "retrieved_date": "2026-10-19", "access_depth": "direct open failed; existing project seed retained as reporting pointer only; not relied upon as inspected scientific validation"}
+  ]
+}

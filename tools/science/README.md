@@ -86,3 +86,9 @@ uses an exclusive source lease and a unique PostgreSQL-created ownership PID fil
 and records failures without automatically retrying. It refuses to stop a server
 whose startup ownership cannot be established. Source-reading completion does not
 establish clinical linkage, outcome truth or scientific validation.
+
+`genetics_qualification.review_method_plan` checks declared method inputs without
+running MR/colocalization or admitting a feature. ABF beta/variance, P-value and
+SuSiE routes have different input needs. Historical ancestors require identity,
+SHA256, permitted predictor/reference role and an availability bound. A passing
+declaration is not payload verification or independent biological validation.

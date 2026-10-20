@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-19T17:55:48.743966+00:00",
+  "status": "passed",
+  "commit": "c3087155677fc97f3e8a080f1768a0bb822308bb",
+  "hosted_run_id": 39297332749,
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "Science4 code,445tests; laterScience5changesnotincluded",
+  "proof": {
+    "path": "data\\derived\\science-prerequisites-20261018\\hosted-c308715.json",
+    "sha256": "03b57ec357f01f1b6e54dc84b1ee798aef35f8a93ab513bde1feeac2c2a427b6"
+  },
+  "clinical_activation": false
+}

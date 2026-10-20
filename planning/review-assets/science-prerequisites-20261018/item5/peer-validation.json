@@ -1,0 +1,1352 @@
+{
+  "boundary": {
+    "MR_runs": 0,
+    "colocalization_runs": 0,
+    "new_data_downloads": 0,
+    "new_prediction_features": 0,
+    "provider_spend_usd": 0,
+    "runtime_edits_by_peer": 0,
+    "source_bundle_rehashed_again": false,
+    "source_data_mutations": 0
+  },
+  "checked_at_utc": "2026-10-19T17:57:13.322946+00:00",
+  "clinical_gate_opened": false,
+  "decision_scope": "Independent bounded peer review of declared-plan guard, source/method deferral and software-route distinctions; no numeric genetics validation",
+  "finding_history": [
+    {
+      "code_sha256": "b0fa2aea392377a9ff23f9eb17ea3d65f5f54617e8f53607ff28f9ba7d0bff45",
+      "notification": "Reported to root and method author before runtime changes; peer reviewer did not edit runtime or earlier reports.",
+      "observed": "Original 14-test guard accepted evaluator_only and availability-only anonymous ancestors as historically ready; feature_admitted remained false."
+    }
+  ],
+  "findings": [],
+  "focused_regressions": {
+    "errors": 0,
+    "failures": 0,
+    "output": "test_2979_LD_intersection_is_not_dense_ABF_by_assertion (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_2979_LD_intersection_is_not_dense_ABF_by_assertion) ... ok\ntest_MR_arithmetic_inputs_do_not_require_N_EAF_but_identification_still_does (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_MR_arithmetic_inputs_do_not_require_N_EAF_but_identification_still_does) ... ok\ntest_RNA_sign_cannot_set_protein_or_drug_claim (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_RNA_sign_cannot_set_protein_or_drug_claim) ... ok\ntest_bare_date_and_missing_or_malformed_ancestor_identity_hash_role_hold (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_bare_date_and_missing_or_malformed_ancestor_identity_hash_role_hold) ... ok\ntest_beta_variance_abf_does_not_invent_unused_N_EAF_LD_or_case_fraction (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_beta_variance_abf_does_not_invent_unused_N_EAF_LD_or_case_fraction) ... ok\ntest_conflicting_duplicate_source_hashes_do_not_qualify_lineage (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_conflicting_duplicate_source_hashes_do_not_qualify_lineage) ... ok\ntest_correlated_IVW_never_silently_treats_cis_SNPs_as_independent (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_correlated_IVW_never_silently_treats_cis_SNPs_as_independent) ... ok\ntest_even_passed_plan_assertions_do_not_admit_feature_or_run_analysis (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_even_passed_plan_assertions_do_not_admit_feature_or_run_analysis) ... ok\ntest_explicit_source_id_and_at_origin_bound_remain_valid_declarations (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_explicit_source_id_and_at_origin_bound_remain_valid_declarations) ... ok\ntest_external_LD_reproducibility_does_not_qualify_study_matching_or_N (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_external_LD_reproducibility_does_not_qualify_study_matching_or_N) ... ok\ntest_historical_unknown_and_post_origin_ancestor_do_not_qualify_Jan2025 (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_historical_unknown_and_post_origin_ancestor_do_not_qualify_Jan2025) ... ok\ntest_old_evaluator_content_cannot_become_historical_predictor_input (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_old_evaluator_content_cannot_become_historical_predictor_input) ... ok\ntest_p_approximation_does_need_N_MAF_and_case_fraction (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_p_approximation_does_need_N_MAF_and_case_fraction) ... ok\ntest_sdY_one_requires_scale_evidence (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_sdY_one_requires_scale_evidence) ... ok\ntest_significant_hits_do_not_substitute_for_complete_region (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_significant_hits_do_not_substitute_for_complete_region) ... ok\ntest_source_discrepancy_and_unknown_overlap_are_scientific_not_missing_algorithm_fields (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_source_discrepancy_and_unknown_overlap_are_scientific_not_missing_algorithm_fields) ... ok\ntest_susie_needs_signed_aligned_LD_and_study_N (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_susie_needs_signed_aligned_LD_and_study_N) ... ok\ntest_unknown_quantitative_scale_needs_real_estimation_inputs (tests.test_science_genetics_qualification.GeneticsMethodGuardTests.test_unknown_quantitative_scale_needs_real_estimation_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.001s\n\nOK\n",
+    "passed": true,
+    "tests_run": 18
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\science5-input-20261019\\peer_review_corrected.py",
+    "sha256": "6b39ccec5c8dfeb4ba26a3fb7a616b2f7bef9ee23c26c79b1bc4e2853d2f4ba3"
+  },
+  "independent_probes": [
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": null,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": true,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "algorithm_plan_ready": true,
+        "feature_admitted": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "exposure_kind": "gene_transcript",
+        "historical_use": false,
+        "method": "coloc_abf_beta",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "ABF_beta_cc_does_not_require_N_MAF_case_fraction_or_LD",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": null,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": true,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "algorithm_plan_ready": true,
+        "feature_admitted": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "exposure_kind": "gene_transcript",
+        "historical_use": false,
+        "method": "coloc_abf_beta",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "N",
+              "MAF"
+            ],
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "quantitative_unknown_sdY_N_MAF_estimation_declared_route",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [
+          "trait_0:sdY_or_N_MAF_required"
+        ],
+        "algorithm_plan_ready": false,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": null,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "algorithm_plan_ready": false,
+        "feature_admitted": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "exposure_kind": "gene_transcript",
+        "historical_use": false,
+        "method": "coloc_abf_beta",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "MAF"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "quantitative_unknown_sdY_without_N_rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": null,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [
+          "ABF_cannot_inherit_LD_only_coverage"
+        ],
+        "scientific_plan_ready": false
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "scientific_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "exposure_kind": "gene_transcript",
+        "historical_use": false,
+        "method": "coloc_abf_beta",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": true,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "signed_LD_intersection_not_automatic_dense_ABF_universe",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": null,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [
+          "RNA_cannot_be_relabelled_protein_or_drug_action",
+          "drug_action_outside_genetics_method_guard"
+        ],
+        "scientific_plan_ready": false
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "scientific_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "protein",
+        "drug_action": "inhibit",
+        "exposure_kind": "gene_transcript",
+        "historical_use": false,
+        "method": "coloc_abf_beta",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "RNA_never_proves_protein_or_drug_action",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:sha256_required",
+          "ancestor_0:historical_input_role_unqualified"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2024-12-31T23:00:00Z",
+            "role": "evaluator_only",
+            "source": "evaluator_interpretation"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "declared_evaluator_only_ancestor_cannot_be_historically_ready",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:source_identity_required",
+          "ancestor_0:sha256_required",
+          "ancestor_0:historical_input_role_unqualified"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2024-12-31T23:00:00Z"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "anonymous_unidentified_ancestor_cannot_be_complete_lineage",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [],
+        "historical_plan_ready": true,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": true,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": true
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "valid_complete_ancestor_declaration_at_origin_only_readiness",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:historical_input_role_unqualified"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "evaluator_only",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "evaluator_only_role_rejected_even_with_valid_identity_hash_and_time",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:source_identity_required"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": " "
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "blank_source_identity_rejected_with_other_valid_declarations",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:sha256_required"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "malformed_SHA256_gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:sha256_required"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "malformed_SHA256_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:sha256_required"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "malformed_SHA256_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:sha256_required"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": null,
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "malformed_SHA256_None",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_1:conflicting_source_hash"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          },
+          {
+            "available_by": "2025-01-01T00:00:00Z",
+            "role": "reference",
+            "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "conflicting_repeated_source_hashes_rejected",
+      "passed": true
+    },
+    {
+      "actual": {
+        "admission_holds": [
+          "independent_numeric_validation_required",
+          "review_assertions_require_retained_verified_evidence",
+          "plan_guard_never_admits_predictive_features"
+        ],
+        "algorithm_holds": [],
+        "algorithm_plan_ready": true,
+        "feature_admitted": false,
+        "genetics_computation_performed": false,
+        "historical_holds": [
+          "ancestor_0:availability_after_origin"
+        ],
+        "historical_plan_ready": false,
+        "method": "coloc_abf_beta",
+        "ready_for_independent_review": false,
+        "scientific_holds": [],
+        "scientific_plan_ready": true
+      },
+      "expected_output_fields": {
+        "feature_admitted": false,
+        "historical_plan_ready": false
+      },
+      "input": {
+        "analysis_plan_frozen": true,
+        "assay_mapping_qualified": true,
+        "claim_scope": "transcript",
+        "complete_lineage_qualified": true,
+        "exposure_kind": "gene_transcript",
+        "historical_use": true,
+        "lineage": [
+          {
+            "available_by": "2025-01-02T00:00:00Z",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "declared_source_release"
+          }
+        ],
+        "method": "coloc_abf_beta",
+        "origin_at": "2025-01-01T00:00:00Z",
+        "overlap_review": "disjoint_documented",
+        "region": {
+          "LD_only_subset": false,
+          "dense_shared_eligible_region": true,
+          "scope_frozen": true,
+          "significance_filtered": false,
+          "variant_identity_qualified": true
+        },
+        "single_causal_model_reviewed": true,
+        "source_trust": "qualified",
+        "study_context_qualified": true,
+        "traits": [
+          {
+            "fields": [
+              "beta",
+              "varbeta",
+              "sdY"
+            ],
+            "scale_qualified": true,
+            "type": "quant"
+          },
+          {
+            "fields": [
+              "beta",
+              "varbeta"
+            ],
+            "type": "cc"
+          }
+        ]
+      },
+      "name": "post_origin_ancestor_held_independently_of_identity_role",
+      "passed": true
+    }
+  ],
+  "never_admit_property_cases": 60,
+  "original_findings_resolution": {
+    "historical_ancestor_identity_closed_by_fresh_probe": true,
+    "historical_role_conflict_closed_by_fresh_probe": true,
+    "initial_report_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item5\\peer-validation-initial.json",
+    "initial_report_sha256": "6096ebca5b2d62ca984593daf5b37064729ecf1ac1b6028dc7504bea5079c0e4",
+    "limits": "New declaration requirements reject shape/role conflicts; they do not inspect underlying payloads, prove source availability, or establish graph completeness. Original review/14-test report is historical evidence; corrected validation report attests current 18-test guard.",
+    "original_archive": {
+      "created_at_utc": "2026-10-19T17:55:14.900304+00:00",
+      "files": [
+        {
+          "archive_path": "data/derived/science-prerequisites-20261018/science5-pre-lineage-correction/genetics_qualification.py",
+          "archived_sha256": "b0fa2aea392377a9ff23f9eb17ea3d65f5f54617e8f53607ff28f9ba7d0bff45",
+          "bytes": 8332,
+          "expected_sha256": "b0fa2aea392377a9ff23f9eb17ea3d65f5f54617e8f53607ff28f9ba7d0bff45",
+          "source_path": "tools/science/genetics_qualification.py"
+        },
+        {
+          "archive_path": "data/derived/science-prerequisites-20261018/science5-pre-lineage-correction/test_science_genetics_qualification.py",
+          "archived_sha256": "c3b4fecbcc8579598ad7fc43c5a63a9dfe6831b48531a8f29bbd12034e1e0781",
+          "bytes": 8634,
+          "expected_sha256": "c3b4fecbcc8579598ad7fc43c5a63a9dfe6831b48531a8f29bbd12034e1e0781",
+          "source_path": "tests/test_science_genetics_qualification.py"
+        },
+        {
+          "archive_path": "data/derived/science-prerequisites-20261018/science5-pre-lineage-correction/method-plan-validation.json",
+          "archived_sha256": "124c8435d6931c61bc661ccf1fbccc5d66827d0d7d2cf892f4a5d33644b0c8eb",
+          "bytes": 7386,
+          "expected_sha256": "124c8435d6931c61bc661ccf1fbccc5d66827d0d7d2cf892f4a5d33644b0c8eb",
+          "source_path": "planning/review-assets/science-prerequisites-20261018/item5/method-plan-validation.json"
+        }
+      ],
+      "reason": "Preserve original method guard/tests/validation before correcting historical ancestor identity/hash/role validation. Original report remains immutable and does not attest the corrected code.",
+      "schema_version": 1
+    },
+    "original_code_tests_and_report_archive_verified": true
+  },
+  "predictive_feature_admitted": false,
+  "primary_source_access": {
+    "depth": "full check.R and relevant claudia.R/runsusie source branches; current RSS reference",
+    "immutable_runtime_pin_established": false,
+    "limits": "Mutable main is source-level contemporary review evidence, not a release pin or historical biological source. No R execution/reference numeric comparison performed.",
+    "mechanism": "web read of official primary coloc code and susieR documentation",
+    "retrieved_date": "2026-10-19"
+  },
+  "proofs": [
+    {
+      "bytes": 9663,
+      "path": "tools/science/genetics_qualification.py",
+      "sha256": "a70f070a426f0f518f3794a851fecd321934ee665c881058f76161ac4437c799"
+    },
+    {
+      "bytes": 11292,
+      "path": "tests/test_science_genetics_qualification.py",
+      "sha256": "307db3d5c2b0b35280bd8217cb12fbbf4d07420a4f0fe7eb71f1dafa272d3cca"
+    },
+    {
+      "bytes": 25437,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/input-revalidation.json",
+      "sha256": "13d5ec30d1a9c25d5dca8b49bc43ed3a3d8539b636b6cf09e660ce980092f865"
+    },
+    {
+      "bytes": 4273,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/input-notes.md",
+      "sha256": "e34700764758412e3ca2fb3741e1b1ed88299e89b79306fcb12dde855f544393"
+    },
+    {
+      "bytes": 29929,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/method-contract.json",
+      "sha256": "8ffb9e5b85ba3246213c25af9dacf6975e19c3212d6ac53e0a61ed98abc09559"
+    },
+    {
+      "bytes": 14652,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/method-review.md",
+      "sha256": "e3a3d6e40e62646e06ec04232ccc49296fad136708f76aab333a00094518da6a"
+    },
+    {
+      "bytes": 7386,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/method-plan-validation.json",
+      "sha256": "124c8435d6931c61bc661ccf1fbccc5d66827d0d7d2cf892f4a5d33644b0c8eb"
+    },
+    {
+      "bytes": 11276,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/method-plan-validation-corrected.json",
+      "sha256": "1706c8d9b9b2328d8e97d68d9d9d4d7a2481d790c646393d318b35a5d3965665"
+    },
+    {
+      "bytes": 25198,
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/peer-validation-initial.json",
+      "sha256": "6096ebca5b2d62ca984593daf5b37064729ecf1ac1b6028dc7504bea5079c0e4"
+    }
+  ],
+  "qualified_genetics": false,
+  "recommendation": "Science5 can close as an explicit conditional defer after this bounded peer pass; keep G06 and every predictive genetics admission false.",
+  "retained_actual_plan_reproduced": {
+    "admission_holds": [
+      "independent_numeric_validation_required",
+      "review_assertions_require_retained_verified_evidence",
+      "plan_guard_never_admits_predictive_features"
+    ],
+    "algorithm_holds": [
+      "trait_0:sdY_or_N_MAF_required"
+    ],
+    "algorithm_plan_ready": false,
+    "feature_admitted": false,
+    "genetics_computation_performed": false,
+    "historical_holds": [
+      "complete_information_lineage_required",
+      "ancestor_0:sha256_required",
+      "ancestor_0:historical_input_role_unqualified",
+      "ancestor_0:availability_unverified",
+      "ancestor_1:sha256_required",
+      "ancestor_1:historical_input_role_unqualified",
+      "ancestor_1:availability_unverified",
+      "ancestor_2:sha256_required",
+      "ancestor_2:historical_input_role_unqualified",
+      "ancestor_2:availability_unverified"
+    ],
+    "historical_plan_ready": false,
+    "method": "coloc_abf_beta",
+    "ready_for_independent_review": false,
+    "scientific_holds": [
+      "dense_shared_region_unqualified",
+      "ABF_cannot_inherit_LD_only_coverage",
+      "source_trust_unqualified",
+      "study_context_qualified_required",
+      "analysis_plan_frozen_required",
+      "overlap_not_qualified",
+      "single_causal_model_not_reviewed"
+    ],
+    "scientific_plan_ready": false
+  },
+  "schema_version": 1,
+  "source_and_method_checks": [
+    {
+      "evidence": "Official check.R conditionally needs s, N and MAF on the missing-beta/variance path; claudia.R uses beta/variance ABFs without them for binary traits. Quantitative beta/variance needs supplied sdY or N/MAF-based scale estimation.",
+      "id": "ABF_beta_vs_P_route",
+      "passed": true,
+      "urls": [
+        "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/check.R",
+        "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/claudia.R"
+      ]
+    },
+    {
+      "evidence": "Official runsusie requires beta, varbeta, named SNP identity, LD and study N; check_dataset also enforces trait type and quantitative scale route. It passes N to RSS. The lower-level interface permits some n-absent modes, which do not erase wrapper requirements.",
+      "id": "wrapper_vs_lower_level_RSS",
+      "passed": true,
+      "urls": [
+        "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/susie.R",
+        "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/check.R",
+        "https://stephenslab.github.io/susieR/reference/susie_rss.html"
+      ]
+    },
+    {
+      "evidence": "Exact SNP ordering and signed correlation are distinct from study compatibility; 503 external reference people cannot stand in for association-study N. Singular correlation from many variants is not itself proof of invalidity.",
+      "id": "signed_LD_is_not_study_N",
+      "passed": true,
+      "urls": [
+        "https://raw.githubusercontent.com/chr1swallace/coloc/main/R/susie.R",
+        "https://stephenslab.github.io/susieR/reference/susie_rss.html"
+      ]
+    },
+    {
+      "evidence": "Previously fresh-verified local source inventory has 3968 shared valid-statistic allele keys. The 2979 LD subset equals 3187 nonpalindromic candidates minus missing-LD 146 and LD-MAF 62. The method contract preserves these as separate, unqualified candidate sets.",
+      "id": "dense_ABF_region_separate_from_LD_subset",
+      "local_proof": "input-revalidation.json",
+      "passed": true
+    },
+    {
+      "evidence": "BLUEPRINT RNA is not GTEx/protein/blockade; RA susceptibility is not treatment response. Whole-remote hashes absent, GWAS metadata MD5 mismatch and LD README discrepancy persist. Historical January2025 availability is unverified, not proved unavailable by October2026 retrieval.",
+      "id": "biology_source_trust_chronology",
+      "local_proof": "input-revalidation.json and method-contract.json",
+      "passed": true
+    },
+    {
+      "evidence": "Guard explicitly checks inventories/assertions only, always denies feature admission and computation. Independent numeric fixtures, verified review evidence and biological assumptions remain separate; no causal algorithm was run.",
+      "id": "assertion_guard_not_biological_or_implementation_proof",
+      "passed": true
+    }
+  ],
+  "status": "passed_for_conditional_defer"
+}

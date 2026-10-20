@@ -414,3 +414,25 @@ Science4 completed its frozen feasibility-audit scope while G03/G04/G05/G07 rema
 unqualified. Active register execution-science4-passed.json; conditionalScience5
 genetics is next, then conditionaltraining/no-fit and supportedT6 comparisons.
 See [[research-log-2026-10-19]] and item4/outcome-feasibility-report.json.
+
+## Science5 conditional branch completed — October19
+
+Fresh verification covered38 retained files/93,166,905bytes and reproduced the
+2,979-by-503 dosage selection and4,096 LD values. BLUEPRINT naive-monocyte RNA
+and RA susceptibility cannot stand in for protein blockade or clinical response.
+The3,968 shared-statistic inventory and2,979 LD subset remain distinct; dense ABF
+cannot silently inherit LD-only exclusions. Source digest/documentation discrepancies,
+unknown overlap/scales and exact January2025 information availability remain held.
+
+Independent peer review exposed anonymous/evaluator-only historical ancestors being
+accepted as plan-ready. Corrected declaration checks and18 regressions pass;16
+independent probes and60 never-admit cases pass. Original bytes and reproductions
+are retained. All463 full tests, core validation with52 expected skips, required
+probes and packaging/demo pass. The guard never admits a feature or certifies
+source payloads. No MR, colocalization, numerical prediction feature or fit occurred.
+
+Science5 is complete as an explicit defer, with G06 false. See
+`planning/review-assets/science-prerequisites-20261018/item5/genetics-disposition.json`
+and `data/derived/science-prerequisites-20261018/execution-science5-passed.json`.
+Science6 now assesses qualified non-genetic training or an evidence-backed no-fit;
+Science7 remains pending.

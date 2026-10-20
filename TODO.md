@@ -11,7 +11,7 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
 - [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
 - [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
-- [ ] **Science 5 — Qualify genetics as a conditional scientific branch.**
+- [x] **Science 5 — Qualify genetics as a conditional scientific branch.**
 - [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
@@ -28,8 +28,13 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
 - [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
 
-Current item: Science 5 — assess the conditional genetics branch against retained
-source, method, scope and chronology requirements. Science4 completed its frozen
+Current item: Science 6 — decide training/calibration eligibility or retain a no-fit
+report. Science5 passed its bounded assessment with predictive genetics deferred:
+38 files rehashed, method-specific contracts reviewed, historical-lineage guard
+corrected and independently retested. All463 full tests, core checks (52 expected
+skips), probes and packaging/demo passed. G06 remains false; no MR/colocalization or
+prediction features were produced. See item5/genetics-disposition.json.
+Science4 completed its frozen
 twelve-case audit: all36 outcomes remain unresolved/null; qualified classes absent,
 so power/calibration are nonestimable and clinical fitting remains withheld.
 This is an audit completion, not G04 outcome qualification or a powered clinical set.

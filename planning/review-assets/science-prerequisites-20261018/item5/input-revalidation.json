@@ -1,0 +1,635 @@
+{
+  "algorithm_neutral_shared_statistics_inventory": {
+    "LD_MAF_filter_excluded_among_QC_candidates": 62,
+    "QC_nonpalindromic_SNP_candidates_before_LD": 3187,
+    "definition": "Unique exact-coordinate/unordered-allele matched QTL/GWAS keys, source conflicts excluded, finite beta/SE and valid P in both. No significance, palindrome, SNP-only, LD-availability or LD-MAF filter. Inventory only, not a method-qualified analytic set.",
+    "interpretation": "The existing signed-LD intersection is a technical selection; it must not silently become a dense-statistics/ABF analysis universe.",
+    "missing_exact_LD_among_QC_candidates": 146,
+    "shared_keys": 3968,
+    "signed_LD_QC_subset": 2979,
+    "variant_classes": {
+      "nonpalindromic_biallelic_snp": 3187,
+      "other_exact_allele_matched_variant": 270,
+      "palindromic_biallelic_snp": 511
+    }
+  },
+  "all_retained_dosages_matched_regional_vcf": true,
+  "annotation": {
+    "annotation_md5_verified": "b999b21dcffeecbfe0bf886a5a91997b",
+    "basis": "Ensembl105 phenotype_pos +/-1Mb",
+    "coordinate_interval": "1:153405193-155405193",
+    "coverage": "all retained indexed source rows in requested coordinate interval; not proof every biological variant was measured or source-index completeness",
+    "metadata_row_exact_match": true
+  },
+  "boundary": {
+    "MR_runs": 0,
+    "colocalization_runs": 0,
+    "model_fits": 0,
+    "new_accounts": 0,
+    "new_downloads": 0,
+    "new_prediction_features": 0,
+    "provider_spend_usd": 0,
+    "source_mutations": 0
+  },
+  "checked_at_utc": "2026-10-19T17:49:35.233517+00:00",
+  "chronology": {
+    "acquired_at": "2026-10-17, per retained receipts",
+    "asof_snapshot_or_immutable_release_eligibility_proof": "not retained for this selected branch",
+    "clinical_origin": "2025-01-01T00:00:00Z",
+    "current_methods_pages_role": "retrieved in 2026 and evaluated as contemporary documentation; no historical timestamp guarantee",
+    "historical_eligibility": "unverified_for_selected_bytes_at_origin",
+    "interpretation": "2026 retrieval does not prove post-origin product release. 2023/2024/2019 source timestamps and 2022 publication do not prove exact selected bytes, transformations, metadata or information availability at January 1 2025; do not automatically exclude all pre-2025 sources merely because the earlier QC discussed January 2023",
+    "retained_protocol_classification": "contemporary_only; preserved as original protocol wording, not an independently verified post-origin product release",
+    "source_time_clues": {
+      "eqtl_remote_last_modified": "Thu, 06 Apr 2023 13:37:12 GMT",
+      "gwas_metadata_last_modified": "2025-01-02 (after exact origin)",
+      "gwas_remote_last_modified": "Fri, 04 Oct 2024 10:00:02 GMT",
+      "ld_remote_last_modified": "Tue, 12 Mar 2019 16:04:51 GMT"
+    },
+    "technical_QC_profile": "contemporary retained-source revalidation"
+  },
+  "code_and_numeric_pins": {
+    "helper_path": "D:\\Projects\\drug_target_agents\\runs\\science5-input-20261019\\revalidate.py",
+    "helper_sha256": "5805af88f56d4a6fffda0ec6e19bb63fa3849c0bc91ec8d35a67cc1c29384a08",
+    "numpy_path": "E:\\projects_data\\drug_target_agents_data\\cache\\numpy-2.3.4-win-cp311\\numpy\\__init__.py",
+    "numpy_version": "2.3.4",
+    "numpy_wheel_path": "E:\\projects_data\\drug_target_agents_data\\cache\\numpy-2.3.4-win-cp311\\numpy-2.3.4-cp311-cp311-win_amd64.whl",
+    "numpy_wheel_sha256": "faba246fb30ea2a526c2e9645f61612341de1a83fb1e0c5edf4ddda5a9c10996",
+    "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+    "retained_fetch_pysam_version": "0.24.1 (receipt; no new fetch run)",
+    "tools": [
+      {
+        "active_path": "D:\\Projects\\drug_target_agents\\tools\\feasibility\\fetch_genetics_region.py",
+        "active_sha256": "a3e62a774cf7bc81d9d15106f272d08038cafcf606fa04b348f3a93e848b125e",
+        "retained_executed_path": "E:\\projects_data\\drug_target_agents_data\\derived\\regional_genetics\\il6r-ra-full-cis-20261017T071600Z\\executed-fetch_genetics_region.py",
+        "retained_executed_sha256": "a3e62a774cf7bc81d9d15106f272d08038cafcf606fa04b348f3a93e848b125e",
+        "same": true
+      },
+      {
+        "active_path": "D:\\Projects\\drug_target_agents\\tools\\feasibility\\qc_genetics_region.py",
+        "active_sha256": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3",
+        "retained_executed_path": "E:\\projects_data\\drug_target_agents_data\\derived\\regional_genetics\\il6r-ra-full-cis-20261017T071600Z\\executed-qc_genetics_region.py",
+        "retained_executed_sha256": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3",
+        "same": true
+      }
+    ],
+    "wheel_receipt": {
+      "bytes": 13089358,
+      "sha256": "faba246fb30ea2a526c2e9645f61612341de1a83fb1e0c5edf4ddda5a9c10996",
+      "url": "https://files.pythonhosted.org/packages/7d/10/f8850982021cb90e2ec31990291f9e830ce7d94eef432b15066e7cbe0bec/numpy-2.3.4-cp311-cp311-win_amd64.whl"
+    }
+  },
+  "cohort_overlap": {
+    "external_proxy": "1000 Genomes phase3 EUR subset; five population groups, 503 samples",
+    "ld_vs_gwas": "unknown",
+    "ld_vs_qtl": "unknown",
+    "overlap_matrix_or_participant_evidence_retained": false,
+    "qtl_vs_gwas": "unknown; not assumed absent",
+    "study_matched_LD_retained": false
+  },
+  "decision_recommendation": "Explicitly defer predictive or causal genetics from this bundle; retain one contemporary transcript/RA region as technical evidence only. A source/method contract can be specified separately without claiming these scientific requirements have passed.",
+  "exclusion_counts_revalidated": {
+    "conflicting_gwas_duplicate": 1,
+    "ld_maf_below_0.01_including_monomorphic": 62,
+    "no_allele_matched_gwas": 1356,
+    "no_exact_ref_alt_ld_record": 146,
+    "palindromic_or_non_biallelic_snp_or_allele_mismatch": 781
+  },
+  "exposure": {
+    "GTEx_assessment": "No GTEx exposure file belongs to this selected 38-file bundle. Broader eQTL Catalogue metadata includes other studies and does not make BLUEPRINT into GTEx; storage estimates are not retained exposure measurements.",
+    "GTEx_selected": false,
+    "ancestry": "not present in selected dataset metadata row or regional schema; not independently verified",
+    "assay": "bulk RNA-seq gene-expression association, naive monocyte; normalized transcript abundance",
+    "build": "GRCh38",
+    "effect_scale": "retained methods describe conditional quantile normalization then inverse-normal transformation of gene counts; exact study-specific implementation/version not qualified here",
+    "gene_id": "ENSG00000160712",
+    "not_measured": [
+      "IL6R protein quantity",
+      "soluble versus membrane IL6R protein effects",
+      "pharmacologic blockade",
+      "drug dose or clinical response"
+    ],
+    "provider": "eQTL Catalogue",
+    "reported_dataset_sample_size": 191,
+    "selected_metadata_row": {
+      "condition_label": "naive",
+      "dataset_id": "QTD000021",
+      "ftp_cs_path": "ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000002/QTD000021/QTD000021.credible_sets.tsv.gz",
+      "ftp_lbf_path": "ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/susie/QTS000002/QTD000021/QTD000021.lbf_variable.txt.gz",
+      "ftp_path": "ftp://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000002/QTD000021/QTD000021.all.tsv.gz",
+      "quant_method": "ge",
+      "sample_group": "monocyte",
+      "sample_size": "191",
+      "study_id": "QTS000002",
+      "study_label": "BLUEPRINT",
+      "tissue_id": "CL_0002057",
+      "tissue_label": "monocyte"
+    },
+    "source_gene_row_fields": {
+      "ac": {
+        "distinct": 343,
+        "max": 375.0,
+        "min": 6.0,
+        "missing_rows": 0
+      },
+      "an": {
+        "distinct": 1,
+        "max": 382.0,
+        "min": 382.0,
+        "missing_rows": 0
+      },
+      "ma_samples": {
+        "distinct": 146,
+        "max": 151.0,
+        "min": 5.0,
+        "missing_rows": 0
+      },
+      "maf": {
+        "distinct": 187,
+        "max": 0.5,
+        "min": 0.013089,
+        "missing_rows": 0
+      },
+      "r2": {
+        "values": {
+          "NA": 6120
+        }
+      },
+      "type": {
+        "values": {
+          "INDEL": 2238,
+          "SNP": 3882
+        }
+      }
+    },
+    "study": "BLUEPRINT",
+    "target": "IL6R",
+    "variant_N": "AN/ac/ma_samples are retained source fields; AN is allele number, not a verified per-variant participant N; sample N must not be imputed as AN/2"
+  },
+  "ld_revalidation": {
+    "covariance_inversion_or_regularization": false,
+    "dosage_shape": [
+      2979,
+      503
+    ],
+    "finite": true,
+    "independent_entries": 4096,
+    "max_absolute_difference": 3.4416913763379853e-15,
+    "sample_population_counts": {
+      "CEU": 99,
+      "FIN": 99,
+      "GBR": 91,
+      "IBS": 107,
+      "TSI": 107
+    },
+    "samples": 503,
+    "shape": [
+      2979,
+      2979
+    ],
+    "study_ld": false,
+    "symmetric": true,
+    "unit_diagonal": true
+  },
+  "missing_or_conditional": [
+    "Study-specific LD and ancestry-match adequacy",
+    "Cohort overlap evidence",
+    "Outcome per-variant N and EAF",
+    "Verified exposure ancestry and participant-level N interpretation",
+    "Resolved GWAS metadata MD5 and coordinate/harmonization conflicts",
+    "Exact-byte historical eligibility and origin-available methods/annotation",
+    "Independent source-assay biological mapping to the intended intervention estimand"
+  ],
+  "not_assessed": [
+    "MR/colocalization/credible sets",
+    "Instrument strength/weak-instrument diagnostics",
+    "Conditional independence/fine mapping",
+    "Horizontal pleiotropy or direction tests",
+    "Cross-target generalization",
+    "Clinical scoring/training/calibration",
+    "Whole-genome/source-wide integrity",
+    "New primary-paper ancestry or overlap adjudication"
+  ],
+  "observed_qc_counts": {
+    "gwas_beta_flips": 0,
+    "gwas_conflicting_keys": 1,
+    "gwas_duplicate_rows": 0,
+    "gwas_unique_variant_allele_keys": 5721,
+    "ld_regional_records": 50412,
+    "ld_samples": 503,
+    "qtl_conflicting_keys": 0,
+    "qtl_gene_rows": 6120,
+    "qtl_rsid_duplicate_rows": 795,
+    "qtl_unique_variants": 5325,
+    "shared_after_qc": 2979
+  },
+  "outcome": {
+    "EAF_missing_regional_rows": 5722,
+    "EAF_missing_selected_rows": 2979,
+    "ancestry": "European per retained study metadata; participant-level ancestry not independently verified",
+    "assay": "genome-wide genotyping array association with rheumatoid arthritis case-control status",
+    "build": "harmonized GRCh38 1-based, original study GRCh37; source primary/secondary coordinates retained distinctly",
+    "cases_reported": 22350,
+    "controls_reported": 74823,
+    "disagreement_rows_selected": 0,
+    "per_variant_N": "absent from regional schema; retained selection explicitly null for 2979/2979",
+    "phenotype_limit": "RA disease susceptibility association is not clinical trial response or therapeutic advancement",
+    "secondary_coordinate_disagreements": [
+      {
+        "base_pair_location": "155190214",
+        "base_pair_location_grch38": "155192042",
+        "beta": "0.2211",
+        "chromosome": "1",
+        "effect_allele": "G",
+        "effect_allele_frequency": "NA",
+        "hm_code": "5",
+        "hm_coordinate_conversion": "rs",
+        "other_allele": "C",
+        "p_value": "0.0198",
+        "rsid": "rs147687610",
+        "standard_error": "0.0949",
+        "variant_id": "rs147687610",
+        "variant_id_hg19": "1_155161833_C_G"
+      },
+      {
+        "base_pair_location": "155215184",
+        "base_pair_location_grch38": "155235866",
+        "beta": "-0.2345",
+        "chromosome": "1",
+        "effect_allele": "A",
+        "effect_allele_frequency": "NA",
+        "hm_code": "11",
+        "hm_coordinate_conversion": "rs",
+        "other_allele": "G",
+        "p_value": "0.378",
+        "rsid": "rs2990223",
+        "standard_error": "0.2660",
+        "variant_id": "rs2990223",
+        "variant_id_hg19": "1_155205657_A_G"
+      }
+    ],
+    "study": "GCST90132223 / Ishigaki 2022 EUR RA meta-analysis",
+    "total_N_reported": 97173
+  },
+  "retained_sample_order_exactly_reproduced": true,
+  "retained_selection_exactly_reproduced": true,
+  "schema_revalidated": {
+    "eqtl": {
+      "columns": 19,
+      "fields": [
+        "molecular_trait_id",
+        "chromosome",
+        "position",
+        "ref",
+        "alt",
+        "variant",
+        "ma_samples",
+        "maf",
+        "pvalue",
+        "beta",
+        "se",
+        "type",
+        "ac",
+        "an",
+        "r2",
+        "molecular_trait_object_id",
+        "gene_id",
+        "median_tpm",
+        "rsid"
+      ],
+      "malformed_rows": 0,
+      "out_of_interval_rows": 0,
+      "position_max": 155405032,
+      "position_min": 153405330,
+      "rows": 336006
+    },
+    "gwas": {
+      "columns": 14,
+      "fields": [
+        "chromosome",
+        "base_pair_location",
+        "effect_allele",
+        "other_allele",
+        "beta",
+        "standard_error",
+        "effect_allele_frequency",
+        "p_value",
+        "variant_id",
+        "variant_id_hg19",
+        "base_pair_location_grch38",
+        "hm_coordinate_conversion",
+        "hm_code",
+        "rsid"
+      ],
+      "malformed_rows": 0,
+      "out_of_interval_rows": 0,
+      "position_max": 155405032,
+      "position_min": 153405222,
+      "rows": 5722
+    },
+    "ld": {
+      "columns": 2557,
+      "header_reference_lines": [
+        "##fileDate=26022019_15h52m43s",
+        "##source=IGSRpipeline",
+        "##reference=ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa"
+      ],
+      "malformed_rows": 0,
+      "out_of_interval_rows": 0,
+      "position_max": 155405032,
+      "position_min": 153405193,
+      "rows": 50412,
+      "total_vcf_samples": 2548
+    }
+  },
+  "schema_version": 1,
+  "scope": "Science 5 source/input revalidation only; no MR, colocalization, instruments, predictive features, clinical direction, training or calibration",
+  "source_bundle": {
+    "actual_checked_files": [
+      {
+        "bytes": 150,
+        "path": "eqtl-header.txt",
+        "sha256": "478488900d3571ffa59e1368d60aaaefa00bd1279c17510accf92f8c2b06b068"
+      },
+      {
+        "bytes": 287387,
+        "path": "eqtl-metadata.tsv",
+        "sha256": "20912adbeb700bb0224e73f1acba79921cb7afd4323955b00e4e9a73da49b7f4"
+      },
+      {
+        "bytes": 3456,
+        "path": "executed-fetch_genetics_region.py",
+        "sha256": "a3e62a774cf7bc81d9d15106f272d08038cafcf606fa04b348f3a93e848b125e"
+      },
+      {
+        "bytes": 9314,
+        "path": "executed-qc_genetics_region.py",
+        "sha256": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3"
+      },
+      {
+        "bytes": 201,
+        "path": "gwas-header.txt",
+        "sha256": "3cf8c28f50c6c15cd1152b73c9c39fdaba8ffaedaaf3af6de56d779302d9e6c6"
+      },
+      {
+        "bytes": 281,
+        "path": "gwas-md5.txt",
+        "sha256": "dde0e13b0e9a58eb945e8b9d29654e5e1661c3cde531f5b31de90e2947bd6493"
+      },
+      {
+        "bytes": 4833,
+        "path": "gwas-metadata.yaml",
+        "sha256": "2e007b38cae87e233fc857885f79de25870484cf247c4ff1320e0bc8e3eb009b"
+      },
+      {
+        "bytes": 1057,
+        "path": "header-receipts.json",
+        "sha256": "af485f3fb602d3163e56259c81b497745bb7c3ff7ce7a9c5b5dcf5c8c709b219"
+      },
+      {
+        "bytes": 3136,
+        "path": "independent-verification.json",
+        "sha256": "1d46b13074260256ba90042e40d6f3090f2594a993a96f674767ca336181976d"
+      },
+      {
+        "bytes": 3135,
+        "path": "inherited-provenance.json",
+        "sha256": "1bb93bd3a747feb6e85ef3bb796cba6f975f9ceebea3597573377880b545e467"
+      },
+      {
+        "bytes": 5700,
+        "path": "ld-manifest.txt",
+        "sha256": "70a0cb40ce40bda549c80eacc5f573cd4fb0be730a968797a0f468edf796616c"
+      },
+      {
+        "bytes": 999,
+        "path": "ld-readme.txt",
+        "sha256": "554a558ce92957af61eebc8de11eabe3bc9082044c2293023a36b35a4ba6975d"
+      },
+      {
+        "bytes": 2400,
+        "path": "metadata-receipts.json",
+        "sha256": "42ac183cc89a9836001fdeefcac655f1a62bbfb735700d9063ab01a86d4b9024"
+      },
+      {
+        "bytes": 3217,
+        "path": "protocol.json",
+        "sha256": "c1db31f6e388153508a5ca11567daa9685e9e4f232f2da227c4d78915fad00ac"
+      },
+      {
+        "bytes": 1498565,
+        "path": "qc/dosages.alt-oriented.npy",
+        "sha256": "f0d0636c69b567b1962361d1a8b88ed346149019ccb74c8e126a7100ed1fa627"
+      },
+      {
+        "bytes": 70995656,
+        "path": "qc/ld.alt-oriented.npy",
+        "sha256": "3aa4910373b637f9f3dd334d353c0ac9be60eaf9e4bc45ca4769b7bbbc30e4d9"
+      },
+      {
+        "bytes": 356313,
+        "path": "qc/report.json",
+        "sha256": "96038471a9c52a7ed170c5ce4f896e9e13bf27956f73f729d7633cff2791b10a"
+      },
+      {
+        "bytes": 29176,
+        "path": "qc/sample-order.json",
+        "sha256": "d97b04db30c8e0bc32cb0f7392d7059aa484e0222a836e62804d1ffb5944324c"
+      },
+      {
+        "bytes": 1564333,
+        "path": "qc/variant-order.json",
+        "sha256": "a6f4610fd8b75a3f2b962ece98c74b99b28235a9e2426b52782d55536122a760"
+      },
+      {
+        "bytes": 273,
+        "path": "qc-resources.json",
+        "sha256": "5d7abd002b044854af2cfb09d2299d58fd8c86fa2db13ef03ec87b9023dc5a1c"
+      },
+      {
+        "bytes": 2999,
+        "path": "regional-receipts.json",
+        "sha256": "932eec3b5934cd390b58fc59763cf47cd30ad651651368c0a46f176aaf14d07c"
+      },
+      {
+        "bytes": 6963598,
+        "path": "regional_originals/eqtl.region.tsv.gz",
+        "sha256": "22d1a2c9c6f0d075a64720e0d9972bcac09c40825c87df92544e425d12c7118e"
+      },
+      {
+        "bytes": 1935109,
+        "path": "regional_originals/eqtl.tbi",
+        "sha256": "9e1da70c6e0c2a51459bcde4284a71f8a0cef040a3ec739ddcabeeece145cfcd"
+      },
+      {
+        "bytes": 165426,
+        "path": "regional_originals/gwas.region.tsv.gz",
+        "sha256": "c51c83b62de56725ca609405b8503fcc4777ac631cc9f6eae6f1fb5b98b64334"
+      },
+      {
+        "bytes": 1525839,
+        "path": "regional_originals/gwas.tbi",
+        "sha256": "fe155ce80ad850dd0425f81067b3120290aba6c449405414b5477d0b2c692a68"
+      },
+      {
+        "bytes": 5560635,
+        "path": "regional_originals/ld.region.tsv.gz",
+        "sha256": "f181a52ff78df8f5f0ebc07dcb707c7efae892d0af7b9f5d607a617af1b4f0e6"
+      },
+      {
+        "bytes": 214641,
+        "path": "regional_originals/ld.tbi",
+        "sha256": "e43f96ce1204f135b3604b815b851938904c2a71826560359d657d892e51b8a6"
+      },
+      {
+        "bytes": 2416,
+        "path": "revision-summary.json",
+        "sha256": "3a139be7ebf8c8d5e22668c9d390f6e937214e9328d068a18176e32766accf8c"
+      },
+      {
+        "bytes": 1179,
+        "path": "run_qc_measured.py",
+        "sha256": "dfb9826f1ddce0bc3a83f32a8b48ee129d5872d6ff1a11cde11ab8def7113bcd"
+      },
+      {
+        "bytes": 55156,
+        "path": "sample-panel.txt",
+        "sha256": "b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858"
+      },
+      {
+        "bytes": 1458,
+        "path": "secondary-coordinate-review.json",
+        "sha256": "f89508bcd5a30196c247c6d0ddb427dddb2923d623235133a5fb6a6b603931f8"
+      },
+      {
+        "bytes": 7900,
+        "path": "source_references/gene-annotation-receipts/eqtl-annotation-record.body",
+        "sha256": "8cbe79f6ad83206a5217667c8277ec1a6e3b7ba92763f8757d2c533facce84dc"
+      },
+      {
+        "bytes": 1905386,
+        "path": "source_references/gene-annotation-receipts/gene-counts-ensembl105.body",
+        "sha256": "c2f3647901119fc211db8e8a157dd567f70e0716d7e2a2d9baf263aa1405ea15"
+      },
+      {
+        "bytes": 1080,
+        "path": "source_references/gene-annotation-receipts/index.json",
+        "sha256": "bc05f3c04c779e9042ec78e0e8d68eafb9bcf9f6ba9f9adeb3f98eaaaeae74dd"
+      },
+      {
+        "bytes": 17657,
+        "path": "source_references/genetics-next-receipts/eqtl-methods.body",
+        "sha256": "93566c27f7748d87eaf041577b90e6937f3157b2fdfea5201f3ebc809bd7b273"
+      },
+      {
+        "bytes": 29290,
+        "path": "source_references/genetics-next-receipts/eqtl-release-notes.body",
+        "sha256": "74774f6e11ce0e0872aa18ccd833c3c246aafcbd11424c98a36c90e9a4ffc21d"
+      },
+      {
+        "bytes": 1990,
+        "path": "source_references/genetics-next-receipts/index.json",
+        "sha256": "c1b34765e7df1ba05fe1eb420798c97c7d4420c4e30ff23e06c7a26ef55b8fbb"
+      },
+      {
+        "bytes": 5564,
+        "path": "verify_full_cis.py",
+        "sha256": "017422c68aa9e57ef712face784f85c83801885b6f04789ed3a6eaea8ca5616f"
+      }
+    ],
+    "files_rehashed": 38,
+    "manifest_path": "E:\\projects_data\\drug_target_agents_data\\derived\\regional_genetics\\il6r-ra-full-cis-20261017T071600Z\\evidence-manifest.json",
+    "manifest_sha256": "d9968672ffe65ef3e3ace22928697b1e3cd047b1bde4a59abfb6fca3ee9e83b5",
+    "payload_bytes": 93166905,
+    "public_anchor": "D:\\Projects\\drug_target_agents\\data\\manifests\\public\\2026-10-17-full-cis-revision.json",
+    "public_anchor_sha256": "e039b9659e23f7fc9d8608e8fac4856abfd52b69b63bbd7656b86f8a83a05572",
+    "root": "E:\\projects_data\\drug_target_agents_data\\derived\\regional_genetics\\il6r-ra-full-cis-20261017T071600Z",
+    "unsealed_files": 0
+  },
+  "source_integrity_exceptions": {
+    "GWAS_full_source_md5_published": "678a83e0bca52db0a22f65b127c17157",
+    "GWAS_full_source_md5_verified": false,
+    "GWAS_metadata_md5_actual": "e564a41aadc76047d8b761d0e401db94",
+    "GWAS_metadata_md5_mismatch_unresolved": true,
+    "GWAS_metadata_md5_publisher": "f0f6f56d1b808a1e8634003221b1c6f1",
+    "LD_readme_claim_samples": "N=5248",
+    "LD_readme_scope_discrepancy_unresolved": true,
+    "actual_vcf_samples": 2548,
+    "regional_hashes_do_not_verify_remote_whole_files": true,
+    "source_duplicate_conflict_disposition": "excluded, no arbitrary preference",
+    "source_duplicate_key_conflicts": 1,
+    "whole_remote_source_files_downloaded_or_hashed": false
+  },
+  "source_receipts": [
+    {
+      "bytes": 6963598,
+      "coverage": "All indexed records returned for the requested interval; source-wide hash not verified",
+      "elapsed_seconds": 31.529839394,
+      "index_bytes": 1935109,
+      "index_sha256": "9e1da70c6e0c2a51459bcde4284a71f8a0cef040a3ec739ddcabeeece145cfcd",
+      "output": "eqtl.region.tsv.gz",
+      "pysam_version": "0.24.1",
+      "region": "1:153405193-155405193",
+      "remote_headers": {
+        "Accept-Ranges": "bytes",
+        "Content-Length": "2991536954",
+        "ETag": "\"b24f3b3a-5f8ab0190fe13\"",
+        "Last-Modified": "Thu, 06 Apr 2023 13:37:12 GMT"
+      },
+      "rows": 336006,
+      "sha256": "22d1a2c9c6f0d075a64720e0d9972bcac09c40825c87df92544e425d12c7118e",
+      "source": "eqtl",
+      "started_at_utc": "2026-10-17T07:16:31.185414+00:00",
+      "status": "retrieved",
+      "uncompressed_row_bytes": 53324878,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/sumstats/QTS000002/QTD000021/QTD000021.all.tsv.gz"
+    },
+    {
+      "bytes": 165426,
+      "coverage": "All indexed records returned for the requested interval; source-wide hash not verified",
+      "elapsed_seconds": 13.492389900000006,
+      "index_bytes": 1525839,
+      "index_sha256": "fe155ce80ad850dd0425f81067b3120290aba6c449405414b5477d0b2c692a68",
+      "output": "gwas.region.tsv.gz",
+      "pysam_version": "0.24.1",
+      "region": "1:153405193-155405193",
+      "remote_headers": {
+        "Accept-Ranges": "bytes",
+        "Content-Length": "365067300",
+        "ETag": "\"15c27c24-623a3bc1b9509\"",
+        "Last-Modified": "Fri, 04 Oct 2024 10:00:02 GMT"
+      },
+      "rows": 5722,
+      "sha256": "c51c83b62de56725ca609405b8503fcc4777ac631cc9f6eae6f1fb5b98b64334",
+      "source": "gwas",
+      "started_at_utc": "2026-10-17T07:17:05.946963+00:00",
+      "status": "retrieved",
+      "uncompressed_row_bytes": 540619,
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90132001-GCST90133000/GCST90132223/harmonised/GCST90132223.h.tsv.gz"
+    },
+    {
+      "bytes": 5560635,
+      "coverage": "All indexed records returned for the requested interval; source-wide hash not verified",
+      "elapsed_seconds": 23.29848139299999,
+      "index_bytes": 214641,
+      "index_sha256": "e43f96ce1204f135b3604b815b851938904c2a71826560359d657d892e51b8a6",
+      "output": "ld.region.tsv.gz",
+      "pysam_version": "0.24.1",
+      "region": "1:153405193-155405193",
+      "remote_headers": {
+        "Accept-Ranges": "bytes",
+        "Content-Length": "1040182789",
+        "ETag": "\"3dffee05-583e7d95d2ec0\"",
+        "Last-Modified": "Tue, 12 Mar 2019 16:04:51 GMT"
+      },
+      "rows": 50412,
+      "sha256": "f181a52ff78df8f5f0ebc07dcb707c7efae892d0af7b9f5d607a617af1b4f0e6",
+      "source": "ld",
+      "started_at_utc": "2026-10-17T07:17:22.707898+00:00",
+      "status": "retrieved",
+      "uncompressed_row_bytes": 519798894,
+      "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/release/20190312_biallelic_SNV_and_INDEL/ALL.chr1.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz"
+    }
+  ],
+  "status": "retained_input_technical_revalidation_passed_with_unresolved_scientific_requirements"
+}

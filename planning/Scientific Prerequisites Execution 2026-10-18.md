@@ -10,8 +10,8 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 | 2. T6 reference pilot | Completed | Ten fresh cases, 50 audited original rows, two blind reviews and third-agent adjudication, 30 external literature questions; 326 full tests. |
 | 3. Historical inputs/origin/endpoint | Passed bounded input readiness | Historical mapping/origin closure, both technical restores, independent acceptance and source-only origin review passed; clinical/scoring gates remain unqualified. |
 | 4. Outcomes/power/precision | Completed bounded audit | Twelve cases/36 endpoints, two source reviews and third reconciliation; all unresolved/null. Power nonestimable; clinical qualification and fitting withheld. |
-| 5. Conditional genetics | In progress | Method-specific source/QC and biological eligibility; explicit defer allowed. |
-| 6. Qualified training/calibration | Pending | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
+| 5. Conditional genetics | Completed conditional defer | Fresh38-file QC, method review and independently corrected lineage guard; no predictive feature admitted. |
+| 6. Qualified training/calibration | In progress | Eligible features, mature labels and adequate counts; retain no-fit decision if conditions fail. |
 | 7. Supported comparisons | Pending | Actual matched comparator/workflow ablations; clinical activation conditional. |
 
 ## Completed reference work
@@ -229,3 +229,25 @@ core validation (52 expected skips), required probes and packaging/demo checks p
 G03 predictive inputs, G04 outcome qualification, G05 power and G07 fitting remain
 false. Active register: `data/derived/science-prerequisites-20261018/execution-science4-passed.json`.
 Science5 conditional genetics now starts; Science6–7 remain pending.
+
+## Science5 conditional branch completed — October19
+
+Fresh verification covered38 retained files/93,166,905bytes and reproduced the
+2,979-by-503 dosage selection and4,096 LD values. BLUEPRINT naive-monocyte RNA
+and RA susceptibility cannot stand in for protein blockade or clinical response.
+The3,968 shared-statistic inventory and2,979 LD subset remain distinct; dense ABF
+cannot silently inherit LD-only exclusions. Source digest/documentation discrepancies,
+unknown overlap/scales and exact January2025 information availability remain held.
+
+Independent peer review exposed anonymous/evaluator-only historical ancestors being
+accepted as plan-ready. Corrected declaration checks and18 regressions pass;16
+independent probes and60 never-admit cases pass. Original bytes and reproductions
+are retained. All463 full tests, core validation with52 expected skips, required
+probes and packaging/demo pass. The guard never admits a feature or certifies
+source payloads. No MR, colocalization, numerical prediction feature or fit occurred.
+
+Science5 is complete as an explicit defer, with G06 false. See
+`planning/review-assets/science-prerequisites-20261018/item5/genetics-disposition.json`
+and `data/derived/science-prerequisites-20261018/execution-science5-passed.json`.
+Science6 now assesses qualified non-genetic training or an evidence-backed no-fit;
+Science7 remains pending.
