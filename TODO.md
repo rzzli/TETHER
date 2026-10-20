@@ -12,7 +12,7 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
 - [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
 - [x] **Science 5 — Qualify genetics as a conditional scientific branch.**
-- [ ] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
+- [x] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
 - [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
 ### Science 4 supporting work
@@ -28,8 +28,14 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
 - [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
 
-Current item: Science 6 — decide training/calibration eligibility or retain a no-fit
-report. Science5 passed its bounded assessment with predictive genetics deferred:
+Current item: Science 7 — implement and validate the adapted comparator, matched
+end-to-end ablations and supported T6 source-reference comparisons. Clinical
+activation remains conditional and withheld. Science6 passed with an explicit
+no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
+22 focused regressions and68 independent probes pass. G07 remains false, no model
+was trained/calibrated. The pilot's0/0 qualified classes are separate from unknown
+historical training-inventory size. See item6/training-feasibility-r1.json.
+Science5 passed its bounded assessment with predictive genetics deferred:
 38 files rehashed, method-specific contracts reviewed, historical-lineage guard
 corrected and independently retested. All463 full tests, core checks (52 expected
 skips), probes and packaging/demo passed. G06 remains false; no MR/colocalization or

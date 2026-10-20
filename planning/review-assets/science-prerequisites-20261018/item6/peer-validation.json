@@ -1,0 +1,250 @@
+{
+  "boundary": {
+    "calibration_fits": 0,
+    "downloads": 0,
+    "fits": 0,
+    "new_features": 0,
+    "provider_spend_usd": 0,
+    "runtime_edits_by_peer": 0,
+    "source_mutations": 0,
+    "task7_started": false
+  },
+  "checked_at_utc": "2026-10-20T05:24:58.825479+00:00",
+  "checked_proof_references": [
+    {
+      "bytes": 17263,
+      "context": "training-contract-r1.training_guard",
+      "path": "tools\\science\\scoring_qualification.py",
+      "sha256": "a16d3f1ed39b653af502dc7df1eefce5eefb7289a6564385ef6c1f69644621ad"
+    },
+    {
+      "bytes": 16618,
+      "context": "training-contract-r1.regressions",
+      "path": "tests\\test_science_scoring_qualification.py",
+      "sha256": "6f70df21725779661504b94c67006991d65b007e799f8856aac6ee9bf5f92cdc"
+    },
+    {
+      "bytes": 3240,
+      "context": "training-feasibility-r1.training_contract",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\training-contract-r1.json",
+      "sha256": "b33e5d07d10ae90320c99540014c165f729d6929e7869b6db6254b8ce1fe61d2"
+    },
+    {
+      "bytes": 4858,
+      "context": "training-feasibility-r1.focused_tests.proof",
+      "path": "data\\cache\\science6-focused-r1.log",
+      "sha256": "023efbd7580dab9dcd1e16770cedd3134721ff1e6a61b08b7a31514ec1447862"
+    },
+    {
+      "bytes": 8222,
+      "context": "training-feasibility-r1.proofs[0]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item1\\proposed-gates.json",
+      "sha256": "e4ab86eef6f80c949efe20a72c6bdf4f11a05460b7cc6223295813d7a52e7ffc"
+    },
+    {
+      "bytes": 8823,
+      "context": "training-feasibility-r1.proofs[1]",
+      "path": "planning\\protocols\\science-prerequisites-v0.1.json",
+      "sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7"
+    },
+    {
+      "bytes": 10274,
+      "context": "training-feasibility-r1.proofs[2]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item3\\source-readiness-report.json",
+      "sha256": "22fc2a8b17a34796eaf4b824168fd9f8a29fcd0a2713cc4c7446505d1debd12b"
+    },
+    {
+      "bytes": 13308,
+      "context": "training-feasibility-r1.proofs[3]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item4\\outcome-feasibility-report.json",
+      "sha256": "12ae6ee317944b3bc275d0d64703070745933c909b1fac6d510c8802488d84d5"
+    },
+    {
+      "bytes": 17130,
+      "context": "training-feasibility-r1.proofs[4]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item5\\genetics-disposition.json",
+      "sha256": "19652d2d56b519b666e419d013f8cf494a0d0a606ac768347090abec7c7c5c09"
+    },
+    {
+      "bytes": 180772,
+      "context": "training-feasibility-r1.proofs[5]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\peer-validation-initial.json",
+      "sha256": "bcbc2fe0f8e9904df014ef7984908a05e7a1292c3b00ad8da503e9a914c5a5c3"
+    },
+    {
+      "bytes": 4858,
+      "context": "training-feasibility-r1.proofs[6]",
+      "path": "data\\cache\\science6-focused-r1.log",
+      "sha256": "023efbd7580dab9dcd1e16770cedd3134721ff1e6a61b08b7a31514ec1447862"
+    },
+    {
+      "bytes": 1962,
+      "context": "training-feasibility-r1.proofs[7]",
+      "path": "data\\cache\\science6-fresh-peer-before-fix-r1.log",
+      "sha256": "0852f4f6a14aafab6cab64193a2eb5310d11ab8ae68b626e03f91951fae9e540"
+    },
+    {
+      "bytes": 17263,
+      "context": "training-feasibility-r1.implementation_proofs[0]",
+      "path": "tools\\science\\scoring_qualification.py",
+      "sha256": "a16d3f1ed39b653af502dc7df1eefce5eefb7289a6564385ef6c1f69644621ad"
+    },
+    {
+      "bytes": 16618,
+      "context": "training-feasibility-r1.implementation_proofs[1]",
+      "path": "tests\\test_science_scoring_qualification.py",
+      "sha256": "6f70df21725779661504b94c67006991d65b007e799f8856aac6ee9bf5f92cdc"
+    },
+    {
+      "bytes": 3242,
+      "context": "training-feasibility-r1.supersedes[0]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\training-contract.json",
+      "sha256": "5b0ef6aa49996c32695c3a8f33c20dc72d2ea7616a41b124adf3689e9e6161a3"
+    },
+    {
+      "bytes": 9244,
+      "context": "training-feasibility-r1.supersedes[1]",
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\training-feasibility.json",
+      "sha256": "e2c7b75bdef5591824681523e8fd9d514262b070e35159f9f6e32dfa910a329a"
+    },
+    {
+      "bytes": 8369,
+      "context": "training-feasibility-r1.builder",
+      "path": "data\\cache\\build_science6_reports_r1.py",
+      "sha256": "301d0441df5e68cacc30d5d118cbdc5bf78bc039daf890d253bf053758e03d38"
+    }
+  ],
+  "independent_probes": {
+    "all_paths_fit_allowed_false": true,
+    "coverage": [
+      "future/unknown/evaluator-only weights, tokenizer, config, prompts, retrieval indexes and adapters",
+      "immutable identity/hash and contradictory role/source_role identity reuse",
+      "compatible agent_evidence/reference roles",
+      "program/dependence split leakage and duplicate rows",
+      "train-only preprocessing, separate calibration, scorer/schema/test-label isolation",
+      "mature supervised labels versus late/unresolved/boolean labels and late label-source knowledge",
+      "optional genetics, probability calibration precision versus rank-only output",
+      "allowed late deterministic computation, weight conversion and explicitly non-scientific runtime"
+    ],
+    "failures": 0,
+    "proof": {
+      "bytes": 1502605,
+      "path": "runs\\science6-peer-fresh-20261019\\corrected-probes-r2.json",
+      "sha256": "66da08b647536d4adc0edcc46c16196f9ba30fbb42ce3a177bc52137bf5157b5"
+    },
+    "run": 68
+  },
+  "local_date": "2026-10-19",
+  "local_timezone": "America/Los_Angeles",
+  "proofs": [
+    {
+      "bytes": 17263,
+      "path": "tools\\science\\scoring_qualification.py",
+      "sha256": "a16d3f1ed39b653af502dc7df1eefce5eefb7289a6564385ef6c1f69644621ad"
+    },
+    {
+      "bytes": 16618,
+      "path": "tests\\test_science_scoring_qualification.py",
+      "sha256": "6f70df21725779661504b94c67006991d65b007e799f8856aac6ee9bf5f92cdc"
+    },
+    {
+      "bytes": 8823,
+      "path": "planning\\protocols\\science-prerequisites-v0.1.json",
+      "sha256": "4c9cfb4510622b60550bfb3e9caa2fb6d41e51a269ad51728ae39522e9946ba7"
+    },
+    {
+      "bytes": 13308,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item4\\outcome-feasibility-report.json",
+      "sha256": "12ae6ee317944b3bc275d0d64703070745933c909b1fac6d510c8802488d84d5"
+    },
+    {
+      "bytes": 17130,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item5\\genetics-disposition.json",
+      "sha256": "19652d2d56b519b666e419d013f8cf494a0d0a606ac768347090abec7c7c5c09"
+    },
+    {
+      "bytes": 3240,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\training-contract-r1.json",
+      "sha256": "b33e5d07d10ae90320c99540014c165f729d6929e7869b6db6254b8ce1fe61d2"
+    },
+    {
+      "bytes": 9889,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\training-feasibility-r1.json",
+      "sha256": "4231da1ab1bf2c443229d5705d4bdfb152adff228140b98de097205c0666d9ef"
+    },
+    {
+      "bytes": 180772,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\peer-validation-initial.json",
+      "sha256": "bcbc2fe0f8e9904df014ef7984908a05e7a1292c3b00ad8da503e9a914c5a5c3"
+    },
+    {
+      "bytes": 42467,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\peer-validation-fresh-initial.json",
+      "sha256": "ba9d551d882d8507eb1e74af33d72f6817c99283a1c45e9e01fa54210218c1dc"
+    },
+    {
+      "bytes": 13262,
+      "path": "planning\\review-assets\\science-prerequisites-20261018\\item6\\peer-validation-fresh-role-shadow-initial.json",
+      "sha256": "ecf39ca2f2139676ecabe5e9e6c5c68eb8ad963632550b9e3ff9b40253259e8c"
+    },
+    {
+      "bytes": 1502605,
+      "path": "runs\\science6-peer-fresh-20261019\\corrected-probes-r2.json",
+      "sha256": "66da08b647536d4adc0edcc46c16196f9ba30fbb42ce3a177bc52137bf5157b5"
+    },
+    {
+      "bytes": 7796,
+      "path": "runs\\science6-peer-fresh-20261019\\review_probes.py",
+      "sha256": "3af62fb0fb97a8f586d56021963f251a3451e71a15f8f2a9bd2eb6942c21b928"
+    },
+    {
+      "bytes": 8429,
+      "path": "runs\\science6-peer-fresh-20261019\\finalize_peer.py",
+      "sha256": "1439ea430062a13ce8acbed3c19e7cd1fdf6a3b2abd390f9c63875c3fb2c189f"
+    }
+  ],
+  "report_checks": {
+    "G07_qualified": false,
+    "calibration_precision": "separate unqualified requirement",
+    "clinical_locked": false,
+    "current_no_fit_guard_replay_matches": true,
+    "genetics_defer_blocks_non_genetic_route": false,
+    "original_H1_clinical_success_preserved": true,
+    "pilot_qualified_negatives": 0,
+    "pilot_qualified_positives": 0,
+    "pilot_unresolved_endpoint_units": 36,
+    "power": "nonestimable, not zero",
+    "proof_reference_failures": 0,
+    "proof_references_checked": 17,
+    "qualified_training_inventory": "not supplied; size unknown"
+  },
+  "retained_findings": [
+    {
+      "disposition": "Corrected: every information-bearing model asset needs row-origin eligible lineage; aggregate release cannot override contradictions.",
+      "id": "model_component_role_or_time_ignored"
+    },
+    {
+      "disposition": "Corrected: conflicting evaluator/predictor/runtime roles for the same declared artifact identity are held.",
+      "id": "same_identity_evaluator_and_predictor"
+    },
+    {
+      "disposition": "Corrected: all extra non-runtime model assets go through the information-lineage guard.",
+      "id": "future_information_bearing_unknown_asset_kind"
+    },
+    {
+      "disposition": "Corrected: both role and source_role participate in identity consistency; one cannot shadow the other.",
+      "id": "role_shadows_evaluation_source_role"
+    }
+  ],
+  "reviewer": "fresh_independent_peer",
+  "role": "evaluation_only",
+  "schema_version": 1,
+  "scope": "Independent declaration-consistency and report-integrity review; not independent clinical truth, source payload certification, statistical adequacy or fitting authorization.",
+  "status": "passed_after_retained_declaration_guard_corrections",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "output": "test_Qwen_Sep2024_is_too_late_for_2023_but_can_qualify_for_Jan2025 (tests.test_science_scoring_qualification.ScoringQualificationTests.test_Qwen_Sep2024_is_too_late_for_2023_but_can_qualify_for_Jan2025) ... ok\ntest_all_scientific_model_roles_assets_and_adaptations_must_qualify (tests.test_science_scoring_qualification.ScoringQualificationTests.test_all_scientific_model_roles_assets_and_adaptations_must_qualify) ... ok\ntest_conflicting_source_hash_and_current_mapping_fallback_are_held (tests.test_science_scoring_qualification.ScoringQualificationTests.test_conflicting_source_hash_and_current_mapping_fallback_are_held) ... ok\ntest_discrimination_design_does_not_certify_calibration_precision (tests.test_science_scoring_qualification.ScoringQualificationTests.test_discrimination_design_does_not_certify_calibration_precision) ... ok\ntest_endpoint_label_identity_and_maturity_are_not_assumed (tests.test_science_scoring_qualification.ScoringQualificationTests.test_endpoint_label_identity_and_maturity_are_not_assumed) ... ok\ntest_evaluator_interpretation_is_not_a_feature_but_mature_labels_can_be (tests.test_science_scoring_qualification.ScoringQualificationTests.test_evaluator_interpretation_is_not_a_feature_but_mature_labels_can_be) ... ok\ntest_evaluator_only_bytes_cannot_reappear_as_predictor_under_same_identity (tests.test_science_scoring_qualification.ScoringQualificationTests.test_evaluator_only_bytes_cannot_reappear_as_predictor_under_same_identity) ... ok\ntest_extra_information_bearing_model_asset_kind_cannot_escape_chronology (tests.test_science_scoring_qualification.ScoringQualificationTests.test_extra_information_bearing_model_asset_kind_cannot_escape_chronology) ... ok\ntest_extra_role_key_cannot_shadow_evaluator_only_label_source_role (tests.test_science_scoring_qualification.ScoringQualificationTests.test_extra_role_key_cannot_shadow_evaluator_only_label_source_role) ... ok\ntest_feature_identity_hash_role_mapping_and_unknown_availability_fail_closed (tests.test_science_scoring_qualification.ScoringQualificationTests.test_feature_identity_hash_role_mapping_and_unknown_availability_fail_closed) ... ok\ntest_genetics_is_optional_for_non_genetic_route (tests.test_science_scoring_qualification.ScoringQualificationTests.test_genetics_is_optional_for_non_genetic_route) ... ok\ntest_label_source_lineage_cannot_hide_later_knowledge_behind_old_label_date (tests.test_science_scoring_qualification.ScoringQualificationTests.test_label_source_lineage_cannot_hide_later_knowledge_behind_old_label_date) ... ok\ntest_late_non_scientific_runtime_and_late_deterministic_weight_conversion_are_permitted (tests.test_science_scoring_qualification.ScoringQualificationTests.test_late_non_scientific_runtime_and_late_deterministic_weight_conversion_are_permitted) ... ok\ntest_later_deterministic_computation_is_permitted_later_knowledge_is_not (tests.test_science_scoring_qualification.ScoringQualificationTests.test_later_deterministic_computation_is_permitted_later_knowledge_is_not) ... ok\ntest_missing_bundle_and_unknown_training_inventory_produce_no_fit (tests.test_science_scoring_qualification.ScoringQualificationTests.test_missing_bundle_and_unknown_training_inventory_produce_no_fit) ... ok\ntest_old_event_with_later_public_label_cannot_train_Jan2025_model (tests.test_science_scoring_qualification.ScoringQualificationTests.test_old_event_with_later_public_label_cannot_train_Jan2025_model) ... ok\ntest_old_model_release_cannot_hide_new_or_evaluator_only_weights_tokenizer_config (tests.test_science_scoring_qualification.ScoringQualificationTests.test_old_model_release_cannot_hide_new_or_evaluator_only_weights_tokenizer_config) ... ok\ntest_program_and_dependence_leakage_detected_even_when_flags_say_qualified (tests.test_science_scoring_qualification.ScoringQualificationTests.test_program_and_dependence_leakage_detected_even_when_flags_say_qualified) ... ok\ntest_qualified_declarations_allow_review_never_training_or_probability (tests.test_science_scoring_qualification.ScoringQualificationTests.test_qualified_declarations_allow_review_never_training_or_probability) ... ok\ntest_test_outcomes_cannot_select_schema_or_enter_development (tests.test_science_scoring_qualification.ScoringQualificationTests.test_test_outcomes_cannot_select_schema_or_enter_development) ... ok\ntest_train_only_preprocessing_and_separate_calibration_are_required (tests.test_science_scoring_qualification.ScoringQualificationTests.test_train_only_preprocessing_and_separate_calibration_are_required) ... ok\ntest_unresolved_labels_never_become_negative_or_qualified_classes (tests.test_science_scoring_qualification.ScoringQualificationTests.test_unresolved_labels_never_become_negative_or_qualified_classes) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.006s\n\nOK\n",
+    "run": 22
+  }
+}

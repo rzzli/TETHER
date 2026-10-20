@@ -1,0 +1,373 @@
+{
+  "boundary": {
+    "downloads": 0,
+    "fits": 0,
+    "new_features": 0,
+    "runtime_edits_by_peer": 0
+  },
+  "checked_at_utc": "2026-10-20T05:23:23.267047+00:00",
+  "finding": {
+    "description": "Optional role key shadows explicitly evaluator-only source_role when tracking duplicate artifact identity.",
+    "id": "role_shadows_evaluation_source_role",
+    "priority": 2
+  },
+  "plan": {
+    "calibration": {
+      "artifact_id": "calibration-v1",
+      "fit_partitions": [
+        "calibration"
+      ],
+      "method_frozen": true,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "derivation": {
+      "artifact_id": "recipe-v1",
+      "computed_at": "2026-10-20T00:00:00Z",
+      "deterministic": true,
+      "no_later_information": true,
+      "same_recipe_all_partitions": true,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "endpoint_id": "clinical_success",
+    "feature_schema": {
+      "artifact_id": "schema-v1",
+      "columns": [
+        "historical_evidence_count"
+      ],
+      "frozen_before_test_outcomes": true,
+      "scientific_model_roles": [],
+      "selection_used_test_outcomes": false,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "genetics_method_qualified": false,
+    "independent_payload_and_design_review_passed": true,
+    "output_mode": "probability",
+    "predictor_bundle_qualified": true,
+    "preprocessing": {
+      "artifact_id": "preprocess-v1",
+      "fit_partitions": [
+        "train"
+      ],
+      "selection_and_transforms_train_only": true,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "rows": [
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "train-0",
+        "features_qualified": true,
+        "label": {
+          "artifact_id": "old-source-v1",
+          "ascertainment_qualified": true,
+          "available_by": "2023-12-01T00:00:00Z",
+          "complete_label_lineage": true,
+          "endpoint_id": "clinical_success",
+          "horizon_at": "2023-10-01T00:00:00Z",
+          "purpose": "training_label",
+          "role": "reference",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "source_role": "evaluation_only",
+          "sources": [
+            {
+              "artifact_id": "train-0-outcome-source",
+              "available_by": "2023-12-01T00:00:00Z",
+              "role": "evaluation_only",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "status": "qualified_binary",
+          "value": 0
+        },
+        "models": [],
+        "origin_at": "2023-01-01T00:00:00Z",
+        "partition": "train",
+        "program_id": "train-0",
+        "row_id": "train-0"
+      },
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "train-1",
+        "features_qualified": true,
+        "label": {
+          "artifact_id": "train-1-label",
+          "ascertainment_qualified": true,
+          "available_by": "2023-12-01T00:00:00Z",
+          "complete_label_lineage": true,
+          "endpoint_id": "clinical_success",
+          "horizon_at": "2023-10-01T00:00:00Z",
+          "purpose": "training_label",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "source_role": "evaluation_only",
+          "sources": [
+            {
+              "artifact_id": "train-1-outcome-source",
+              "available_by": "2023-12-01T00:00:00Z",
+              "role": "evaluation_only",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "status": "qualified_binary",
+          "value": 1
+        },
+        "models": [],
+        "origin_at": "2023-01-01T00:00:00Z",
+        "partition": "train",
+        "program_id": "train-1",
+        "row_id": "train-1"
+      },
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "calibration-0",
+        "features_qualified": true,
+        "label": {
+          "artifact_id": "calibration-0-label",
+          "ascertainment_qualified": true,
+          "available_by": "2024-12-01T00:00:00Z",
+          "complete_label_lineage": true,
+          "endpoint_id": "clinical_success",
+          "horizon_at": "2024-10-01T00:00:00Z",
+          "purpose": "calibration_label",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "source_role": "evaluation_only",
+          "sources": [
+            {
+              "artifact_id": "calibration-0-outcome-source",
+              "available_by": "2024-12-01T00:00:00Z",
+              "role": "evaluation_only",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "status": "qualified_binary",
+          "value": 0
+        },
+        "models": [],
+        "origin_at": "2024-01-01T00:00:00Z",
+        "partition": "calibration",
+        "program_id": "calibration-0",
+        "row_id": "calibration-0"
+      },
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "calibration-1",
+        "features_qualified": true,
+        "label": {
+          "artifact_id": "calibration-1-label",
+          "ascertainment_qualified": true,
+          "available_by": "2024-12-01T00:00:00Z",
+          "complete_label_lineage": true,
+          "endpoint_id": "clinical_success",
+          "horizon_at": "2024-10-01T00:00:00Z",
+          "purpose": "calibration_label",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "source_role": "evaluation_only",
+          "sources": [
+            {
+              "artifact_id": "calibration-1-outcome-source",
+              "available_by": "2024-12-01T00:00:00Z",
+              "role": "evaluation_only",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "status": "qualified_binary",
+          "value": 1
+        },
+        "models": [],
+        "origin_at": "2024-01-01T00:00:00Z",
+        "partition": "calibration",
+        "program_id": "calibration-1",
+        "row_id": "calibration-1"
+      },
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "test-0",
+        "features_qualified": true,
+        "label": null,
+        "models": [],
+        "origin_at": "2025-01-01T00:00:00Z",
+        "partition": "test",
+        "program_id": "test-0",
+        "row_id": "test-0"
+      },
+      {
+        "ancestors": [
+          {
+            "artifact_id": "old-source-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "source",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          {
+            "artifact_id": "old-mapping-v1",
+            "available_by": "2022-01-01T00:00:00Z",
+            "current_fallback": false,
+            "kind": "mapping",
+            "role": "reference",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "complete_feature_lineage": true,
+        "dependence_component_id": "test-1",
+        "features_qualified": true,
+        "label": null,
+        "models": [],
+        "origin_at": "2025-01-01T00:00:00Z",
+        "partition": "test",
+        "program_id": "test-1",
+        "row_id": "test-1"
+      }
+    ],
+    "scientific_design": {
+      "calibration_precision_qualified": true,
+      "dependence_qualified": true,
+      "discrimination_power_qualified": true,
+      "sample_adequacy_qualified": true,
+      "training_cohort_qualified": true
+    },
+    "scorer_spec": {
+      "artifact_id": "scorer-spec-v1",
+      "estimator_id": "prespecified_estimator",
+      "hyperparameters_frozen": true,
+      "selection_used_test_outcomes": false,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "split_manifest": {
+      "artifact_id": "split-v1",
+      "dependence_graph_qualified": true,
+      "frozen_before_fitting": true,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "test_origin_at": "2025-01-01T00:00:00Z",
+    "test_outcomes_accessed": false,
+    "uses_genetics": false
+  },
+  "result": {
+    "calibrated_models": 0,
+    "decision": "independent_review_only_no_fit_authorized",
+    "declared_class_counts": {
+      "calibration": {
+        "negative": 1,
+        "positive": 1
+      },
+      "train": {
+        "negative": 1,
+        "positive": 1
+      }
+    },
+    "fit_allowed": false,
+    "holds": {
+      "chronology": [],
+      "features": [],
+      "labels": [],
+      "models": [],
+      "preprocessing": [],
+      "science": [],
+      "scope": [],
+      "splits": []
+    },
+    "new_features": 0,
+    "probabilities_emitted": 0,
+    "ready_for_independent_review": true,
+    "trained_models": 0,
+    "verification_limit": "Declaration consistency only; no payload, scientific-validity or fitting authorization claim."
+  },
+  "reviewer": "fresh_independent_peer",
+  "role": "evaluation_only",
+  "schema_version": 1,
+  "source_proof": {
+    "bytes": 17220,
+    "path": "tools\\science\\scoring_qualification.py",
+    "sha256": "19422bac42c2353343e7437dcdf5ff7f12ee16b082d5de8e8aed2ba8c9be7cce"
+  }
+}

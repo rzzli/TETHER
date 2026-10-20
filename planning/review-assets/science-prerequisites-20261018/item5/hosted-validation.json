@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-20T02:51:04.299250+00:00",
+  "code_commit": "6c0f7b3f3dd27d99f59cce6e35df1044ea8d4fa8",
+  "status": "passed",
+  "scope": "Science5/463-tests; excludes later Science6 edits",
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39360851564",
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "conclusion": "success"
+    }
+  ]
+}

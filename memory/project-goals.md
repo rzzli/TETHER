@@ -3,10 +3,20 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-18
+updated: 2026-10-19
 ---
 
 # Project goals
+
+## Current scientific prerequisite execution — October 19
+
+Science1–4 passed within their recorded scopes. Science5 also passed its conditional
+assessment, with predictive genetics explicitly deferred and G06 false. Its final
+463-test validation and independent lineage-guard correction are retained under
+`planning/review-assets/science-prerequisites-20261018/item5/`.
+Science7 is now active after Science6 passed its explicit no-fit disposition and
+485-test full validation; G07 remains false. All real probabilities remain null. The dated Task6
+development history below is preserved; it is not the current execution pointer.
 
 ## Task 6 resumption — October 18
 
@@ -436,3 +446,21 @@ Science5 is complete as an explicit defer, with G06 false. See
 and `data/derived/science-prerequisites-20261018/execution-science5-passed.json`.
 Science6 now assesses qualified non-genetic training or an evidence-backed no-fit;
 Science7 remains pending.
+
+## Science6 no-fit complete; Science7 active — October19 LA
+
+The conditional training assessment completed with an evidence-backed no-fit. All
+36 pilot labels remain unresolved, while historical training/calibration inventory
+size is unknown. Four qualified historical mapping products are not a biological
+predictor bundle. Genetics is optional, and its defer is not the sole blocker.
+
+The declaration guard now checks every information-bearing model asset and
+contradictory source-role declarations. Later non-scientific runtime and genuinely
+old-input computations remain permitted. Original failures/drafts and an explicitly
+post-hoc exact code recovery are retained. No fitting was ever authorized.
+Independent review passes22 regressions and68 probes;485 full tests, core validation
+with52 expected skips, probes and packaging/demo pass. G07 and clinical lock remain
+false. Authoritative reports are item6/training-contract-r1.json and
+training-feasibility-r1.json; execution-science6-passed.json validates the closeout.
+Science7 now starts supported T6 comparisons, adapted execution and actual workflow
+ablations. Clinical AUROC/Brier remain withheld unless scientific gates qualify.
