@@ -1,0 +1,2537 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "reviewer": "fresh_independent_peer",
+  "checked_at_utc": "2026-10-20T05:55:33.243147+00:00",
+  "scope": "Synthetic opener only; no model/server/inference",
+  "probes": [
+    {
+      "name": "role_selection_before_dispatch",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison selection ordering differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "0e0e60df0169ccd505bf2e89dc778e7ea9ff09db0a039fcd813c4e530061cb7f"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\role_selection_before_dispatch",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "accounting_before_dispatch",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison accounting ordering differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "0bb0705f7db2addbd0567a20b16fcd5f79ad4668959061aebf15751e913055f7"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\accounting_before_dispatch",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "claim_committed_before_selection",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison claim precedes completed call"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "9e858b1b02757aaaa2bc9341b8fb1aa039992ec152c213fea8dd6b856f5559d8"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\claim_committed_before_selection",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "duplicate_role_selection",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison selection ordering differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "922b712f874137c1877c83c7736e82e4d0d076eabb8ac921f7fd3b86479d246e"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\duplicate_role_selection",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "duplicate_comparison_plan",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison journal plan grammar differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "71e17dd504b0dbfc319cf0955e97ba3836efe2a3bc9c832a406c483c545eb80e"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\duplicate_comparison_plan",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "fabricated_source_claim_consistently_resealed",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison journal/source claims differ"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "3732c7bbf820f72747f0df3ff90cf5f02bcd55b36fec84a08c372b7fa7651116"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\fabricated_source_claim_consistently_resealed",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "coverage_source_count_wrong",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison source coverage differs from admission"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "e529c7e8530a45637fd314521d488878a54489897cfc5094d9b78b8bb73a18cc"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\coverage_source_count_wrong",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "false_probability",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison source/case/prediction contract differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "b82fb89a443005b4743715b51554ddbf57f250ca77739b2bc080c2c7e4aaceb3"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\false_probability",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "false_prediction_features",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison source/case/prediction contract differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "c400c609f1ab9812c73f80d0649fb2345c9b0bb0a19598a3e6c66fd1afe1a963"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\false_prediction_features",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "native_request_fingerprint_wrong",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison native request binding differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "4b80ddc632bca143ce42e5ec5c44db8960e0b4bd39faeb0d84d40a3dad5eacdb"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\native_request_fingerprint_wrong",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "native_payload_fingerprint_wrong",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison model payload differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "5db7a3f67d282c1eee2c9923b7753e2586633ce17c06c79531e8f1c8ff0be489"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\native_payload_fingerprint_wrong",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "native_response_tokens_changed",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison native response/accounting differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "bf1f778e15f5b4e1536efd1d90ba2c8e71f658cc66b6612cf91d996175d22f1a"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\native_response_tokens_changed",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "native_unknown_selection",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Local model selected unavailable/duplicate IDs or exceeded selection cap"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "8a4dbb90ed65f22f0f89741226e29db81a50a770e743ea63bc846738747c5601"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\native_unknown_selection",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "fabricated_terminal_status",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison terminal status differs from execution"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "a463ca6c8906c463ba420e6f8c32fb70cde2379fd5ca12620939b5cc47f02bc6"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\fabricated_terminal_status",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "coverage_state_for_empty_category_wrong",
+      "expected": "reject",
+      "passed": true,
+      "verification": null,
+      "exception": {
+        "class": "ContractError",
+        "message": "Comparison empty-category status differs"
+      },
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "5c981c701d100021b686f37496b8bc6ebab444aa0ee35425d7b42b553ce26cb7"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\coverage_state_for_empty_category_wrong",
+      "physical_stub_calls": 1
+    },
+    {
+      "name": "terminal_selected_category_omitted",
+      "expected": "reject",
+      "passed": false,
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 0,
+        "result_sha256": "baf696c7289a6a55a29dca0daec6c55395a12c316e2f7f85e5c59e4132be0be4"
+      },
+      "exception": null,
+      "baseline_verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 1,
+        "result_sha256": "bbbad02a115b27ff32af6631c3d7b802fce7ba35ce0baab367b7b6b44c0565da"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\terminal_selected_category_omitted",
+      "physical_stub_calls": 1
+    }
+  ],
+  "behavior_probes": [
+    {
+      "name": "five_contributing_stages",
+      "passed": true,
+      "expected_calls": 5,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "completed",
+        "features": {},
+        "probability": null,
+        "claims": [
+          {
+            "category": "genetics",
+            "observation_id": "demo-genetics-1",
+            "evidence": {
+              "observation": {
+                "observation_id": "demo-genetics-1",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "genetics",
+                "source_kind": "primary",
+                "statement": "Fictional genetics observation for workflow testing; no biological finding is asserted.",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "361f4e641f1015a333b86ed835ee9f9b4869ca8a93fda5f1b353f4951f73e1f6"
+          }
+        ],
+        "selections": {
+          "genetics": [
+            "demo-genetics-1"
+          ]
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "completed"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 5,
+        "usage": {
+          "input_tokens": 50,
+          "output_tokens": 25,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 50,
+          "output_tokens": 25,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "41714766305ab148a4d49a06faa2d2741605fff83622850622c33983c42774fd",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.03200000000651926
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 5,
+        "claims": 1,
+        "result_sha256": "ed9fba647e8fefde615fe18d354f65514a4bb626cb7f02e7711ab792a242e976"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\five_contributing_stages"
+    },
+    {
+      "name": "zero_call_budget",
+      "passed": true,
+      "expected_calls": 0,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "budget_exhausted",
+        "features": {},
+        "probability": null,
+        "claims": [],
+        "selections": {
+          "genetics": []
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "budget_exhausted"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "7a977381800dd1e90d097df7f947ca518b8ced6fe3ac6057ab4c80c6bf33fc21",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 0,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.0
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 0,
+        "claims": 0,
+        "result_sha256": "02c737f9981e28c72d65eb78eab61a4ced9784cfb0092ca9e21c80f0aceec86e"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\zero_call_budget"
+    },
+    {
+      "name": "one_call_partial_chain",
+      "passed": true,
+      "expected_calls": 1,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "budget_exhausted",
+        "features": {},
+        "probability": null,
+        "claims": [],
+        "selections": {
+          "genetics": []
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "budget_exhausted"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 1,
+        "usage": {
+          "input_tokens": 10,
+          "output_tokens": 5,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 10,
+          "output_tokens": 5,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "11f0ddbf803ceee0664bfa4d125e3b9404b75fae766196f865ecfaff72b1676f",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 1,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.01600000000325963
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 1,
+        "claims": 0,
+        "result_sha256": "fe053244d410d4b6482a6b74b938572ba6d33099941def017650c0f8b9f24f24"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\one_call_partial_chain"
+    },
+    {
+      "name": "four_call_partial_chain",
+      "passed": true,
+      "expected_calls": 4,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "budget_exhausted",
+        "features": {},
+        "probability": null,
+        "claims": [],
+        "selections": {
+          "genetics": []
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "budget_exhausted"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 4,
+        "usage": {
+          "input_tokens": 40,
+          "output_tokens": 20,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 40,
+          "output_tokens": 20,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "b28c536970debf0bc08abe752f55f29245d7bfc5c49af3dc711e6e4bfa7d1f65",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 4,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.03200000000651926
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 4,
+        "claims": 0,
+        "result_sha256": "9fcaa286087775c71f319097ef6c109ca5a61296e2f3024d4f297d6661b6763b"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\four_call_partial_chain"
+    },
+    {
+      "name": "input_budget_denial",
+      "passed": true,
+      "expected_calls": 0,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "budget_exhausted",
+        "features": {},
+        "probability": null,
+        "claims": [],
+        "selections": {
+          "genetics": []
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "budget_exhausted"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "c16e4b82c9cfcabb36eb775fd9c53af24c6c7a212c396cd51301a1675a030cb1",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 1,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.0
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 0,
+        "claims": 0,
+        "result_sha256": "1dc9f7739e64288af1b8b6b6945b265579e58d5a23346ad63700a23ec7dfdf4a"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\input_budget_denial"
+    },
+    {
+      "name": "output_budget_denial",
+      "passed": true,
+      "expected_calls": 0,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "adapted_virtual_biotech",
+        "status": "budget_exhausted",
+        "features": {},
+        "probability": null,
+        "claims": [],
+        "selections": {
+          "genetics": []
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "budget_exhausted"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "bd5bc8f89bd61d420c332c84792dac309da54749961162160f96065ca2a26616",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 0,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.0
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 0,
+        "claims": 0,
+        "result_sha256": "40837a51ef9a352a44af0a65ad8ce605f5abbd1196d3957cfcf77eabbb61fa5c"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\output_budget_denial"
+    },
+    {
+      "name": "lexical_zero_model_calls",
+      "passed": true,
+      "expected_calls": 0,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "lexical",
+        "status": "completed",
+        "features": {},
+        "probability": null,
+        "claims": [
+          {
+            "category": "genetics",
+            "observation_id": "demo-genetics-1",
+            "evidence": {
+              "observation": {
+                "observation_id": "demo-genetics-1",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "genetics",
+                "source_kind": "primary",
+                "statement": "Fictional genetics observation for workflow testing; no biological finding is asserted.",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "361f4e641f1015a333b86ed835ee9f9b4869ca8a93fda5f1b353f4951f73e1f6"
+          }
+        ],
+        "selections": {
+          "genetics": [
+            "demo-genetics-1"
+          ]
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "request_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18",
+              "available_records": 1,
+              "selected_ids": [
+                "demo-genetics-1"
+              ],
+              "excluded": [],
+              "request_bytes": 5952,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6125,
+              "wire_roundtrip_sha256": "38067a5a548817da05605ba9de67c31926d2eb51241dcc45d0694534b63e1d18"
+            },
+            "status": "completed",
+            "reason": null
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 0,
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "ea8d68ace6c9c46acba973c7751b9a78572bdcfad7ec929123966298d4fc402c",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.0
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 0,
+        "claims": 1,
+        "result_sha256": "e7bca75e7b663554625fb2558142f24497f004fcf6c20d760903e8b81f9ec995"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\lexical_zero_model_calls"
+    },
+    {
+      "name": "no_literature_filters_before_any_dispatch",
+      "passed": true,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "no_literature",
+        "status": "completed",
+        "features": {},
+        "probability": null,
+        "claims": [
+          {
+            "category": "genetics",
+            "observation_id": "synthetic-genetics",
+            "evidence": {
+              "observation": {
+                "observation_id": "synthetic-genetics",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "genetics",
+                "source_kind": "primary",
+                "statement": "SYNTHETIC-GENETICS-CANARY",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "fd243f4625265284ca60a4d733a49e679f7bd7fe7574fb7fe0b6a3d9cbc4758a"
+          },
+          {
+            "category": "perturbation",
+            "observation_id": "synthetic-perturbation",
+            "evidence": {
+              "observation": {
+                "observation_id": "synthetic-perturbation",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "perturbation",
+                "source_kind": "primary",
+                "statement": "SYNTHETIC-PERTURBATION-CANARY",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "18a6e601a6ee5a287d55e93d35bb3527c610089338b7d8810e0686e4979d7899"
+          }
+        ],
+        "selections": {
+          "genetics": [
+            "synthetic-genetics"
+          ],
+          "perturbation": [
+            "synthetic-perturbation"
+          ]
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b",
+              "request_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b",
+              "available_records": 1,
+              "selected_ids": [
+                "synthetic-genetics"
+              ],
+              "excluded": [],
+              "request_bytes": 5893,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6007,
+              "wire_roundtrip_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b"
+            },
+            "status": "completed"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "4e4f87f1c41eb230964218b3f96b76c9c0396b98d81ca906ed9c79293684651e",
+              "request_sha256": "4e4f87f1c41eb230964218b3f96b76c9c0396b98d81ca906ed9c79293684651e",
+              "available_records": 1,
+              "selected_ids": [
+                "synthetic-perturbation"
+              ],
+              "excluded": [],
+              "request_bytes": 5860,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 5982,
+              "wire_roundtrip_sha256": "4e4f87f1c41eb230964218b3f96b76c9c0396b98d81ca906ed9c79293684651e"
+            },
+            "status": "completed"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "disabled_before_retrieval"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 2,
+        "usage": {
+          "input_tokens": 20,
+          "output_tokens": 10,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 20,
+          "output_tokens": 10,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.030999999988125637
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 2,
+        "claims": 2,
+        "result_sha256": "178c7e48e79c2c28c9f80e6a4d1b290b683291e0460af15547130b9008687f90"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\no_literature_filters_before_any_dispatch"
+    },
+    {
+      "name": "no_perturbation_filters_before_any_dispatch",
+      "passed": true,
+      "result": {
+        "schema_version": 1,
+        "engine_id": "science7-source-derived-role-workflow-v1",
+        "case_id": "demo-program-001",
+        "case_sha256": "0be13b88c804ec016128ce571eef23e523964e995cb844e3f92165ef64a4ab10",
+        "hypothesis_sha256": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+        "arm": "no_perturbation",
+        "status": "completed",
+        "features": {},
+        "probability": null,
+        "claims": [
+          {
+            "category": "genetics",
+            "observation_id": "synthetic-genetics",
+            "evidence": {
+              "observation": {
+                "observation_id": "synthetic-genetics",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "genetics",
+                "source_kind": "primary",
+                "statement": "SYNTHETIC-GENETICS-CANARY",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "fd243f4625265284ca60a4d733a49e679f7bd7fe7574fb7fe0b6a3d9cbc4758a"
+          },
+          {
+            "category": "literature",
+            "observation_id": "synthetic-literature",
+            "evidence": {
+              "observation": {
+                "observation_id": "synthetic-literature",
+                "target_id": "DEMO:TARGET1",
+                "indication_id": "DEMO:DISEASE1",
+                "program_id": null,
+                "category": "literature",
+                "source_kind": "primary",
+                "statement": "SYNTHETIC-LITERATURE-CANARY",
+                "status": "observed",
+                "polarity": "uncertain",
+                "mechanism_direction": "uncertain",
+                "study_id": "DEMO:STUDY-genetics",
+                "dependency_group": "demo-cohort-genetics",
+                "context": {
+                  "species": "synthetic",
+                  "ancestry": "fictional",
+                  "tissue": "fictional tissue",
+                  "disease_state": "fictional",
+                  "intervention": "fictional inhibition",
+                  "comparator": "fictional control",
+                  "cohort_ids": [
+                    "DEMO:COHORT-genetics"
+                  ]
+                },
+                "quantitative": {
+                  "effect": 0.1,
+                  "scale": "synthetic",
+                  "standard_error": 0.05,
+                  "ci_lower": 0.002,
+                  "ci_upper": 0.198,
+                  "sample_size": 100,
+                  "adjusted_p_value": 0.04
+                },
+                "method": {
+                  "code_id": "synthetic-fixture",
+                  "version": "1",
+                  "parameters": {},
+                  "qc_status": "passed",
+                  "limitations": [
+                    "Invented fixture; not a scientific calculation"
+                  ]
+                },
+                "availability": {
+                  "first_public_at": "2018-01-01",
+                  "release_public_at": "2019-01-01",
+                  "record_public_at": "2019-01-01",
+                  "annotation_public_at": "2019-01-01",
+                  "retrieved_at": "2026-10-10",
+                  "basis": "Fictional fixture availability dates",
+                  "uncertainty": "Synthetic; no historical availability is claimed",
+                  "known_public_by": null,
+                  "evidence_ref": null
+                },
+                "features": {},
+                "feature_scope": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+                "input_refs": [
+                  "demo-original-input"
+                ],
+                "computed_at": null,
+                "source_locator": {
+                  "source_id": "demo-original-input",
+                  "legacy_observation_id": "demo-genetics-1"
+                },
+                "source_metrics": {},
+                "missingness": {},
+                "publication_date": null,
+                "publication_year": null
+              },
+              "citation": {
+                "artifact_id": "demo-evidence",
+                "dataset_id": "synthetic_fixture",
+                "release_id": "fixture-v1",
+                "artifact_sha256": "67216ad09feec96783916a20429112bb7e2f6d76be2dde51ca2069d0299cf7a3",
+                "source_url": "https://example.invalid/synthetic-fixture"
+              }
+            },
+            "source_claim_sha256": "1cebcf83c3c8f5d6e37257b7b0a50dd6eb15a33719f1d99bfc199093497ddc12"
+          }
+        ],
+        "selections": {
+          "genetics": [
+            "synthetic-genetics"
+          ],
+          "literature": [
+            "synthetic-literature"
+          ]
+        },
+        "coverage": {
+          "genetics": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b",
+              "request_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b",
+              "available_records": 1,
+              "selected_ids": [
+                "synthetic-genetics"
+              ],
+              "excluded": [],
+              "request_bytes": 5893,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 6007,
+              "wire_roundtrip_sha256": "a0ebb293d52a3827ea7fad426161c831f4ecfaefefff5bb04c7aa2c8fa88f40b"
+            },
+            "status": "completed"
+          },
+          "perturbation": {
+            "available_in_collected_case_world": 1,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "disabled_before_retrieval"
+          },
+          "expression": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "modality": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "literature": {
+            "available_in_collected_case_world": 1,
+            "selected": 1,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "retrieval": {
+              "policy": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "input_request_sha256": "708fab994b1c80bc4cd5fa555c2c0da8a63458ab6d58bcfbc900f27142c2e9b6",
+              "request_sha256": "708fab994b1c80bc4cd5fa555c2c0da8a63458ab6d58bcfbc900f27142c2e9b6",
+              "available_records": 1,
+              "selected_ids": [
+                "synthetic-literature"
+              ],
+              "excluded": [],
+              "request_bytes": 5865,
+              "ranking": "literal_case_overlap_then_id",
+              "interpretation": "selected subset only; excluded records are not biological absence",
+              "logical_request_bytes": 5983,
+              "wire_roundtrip_sha256": "708fab994b1c80bc4cd5fa555c2c0da8a63458ab6d58bcfbc900f27142c2e9b6"
+            },
+            "status": "completed"
+          },
+          "clinical": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "safety": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          },
+          "pathway": {
+            "available_in_collected_case_world": 0,
+            "selected": 0,
+            "nonobserved": [],
+            "interpretation": "Collected-source scope only; missing or excluded records are not biological absence",
+            "status": "no_observed_evidence_in_collected_scope"
+          }
+        },
+        "calls": 2,
+        "usage": {
+          "input_tokens": 20,
+          "output_tokens": 10,
+          "cost_usd": 0
+        },
+        "measured_usage": {
+          "input_tokens": 20,
+          "output_tokens": 10,
+          "cost_usd": 0
+        },
+        "estimated_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "source_proofs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scientific_validation": "not_established",
+        "source_coverage": {
+          "source_completeness": "complete"
+        },
+        "configuration": {
+          "budget": {
+            "max_calls": 16,
+            "max_input_tokens": 32000,
+            "max_output_tokens": 8000,
+            "max_cost_usd": 0,
+            "max_seconds": 300,
+            "max_retries": 1
+          },
+          "retrieval": {
+            "max_records": 12,
+            "max_request_bytes": 12000,
+            "wire_format": "asof-shared-scientific-fields-v1"
+          },
+          "backend_id": "local-structured-selection-v1",
+          "backend_provenance": {
+            "kind": "explicit_local_inference",
+            "config": {
+              "schema_version": 1,
+              "endpoint": "http://127.0.0.1:55581",
+              "model_id": "synthetic-only",
+              "model_provenance": {
+                "weights_sha256": {
+                  "fixture": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "runtime_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "retrieval": {
+                "max_records": 12,
+                "max_request_bytes": 12000,
+                "wire_format": "asof-shared-scientific-fields-v1"
+              },
+              "max_output_tokens": 256,
+              "timeout_seconds": 2,
+              "seed": 123
+            },
+            "config_sha256": "1387743ea007e900874f2396c71b0937aaac2601d57c2610e320b6c623a7b12c",
+            "provider_cost_usd": 0,
+            "provenance_scope": "declared_by_local_launcher_not_a_remote_server_attestation"
+          },
+          "role_policy_sha256": "97fcd123dde75587729c82a6235f6e9d761f1d4534b1693fbd940981ccf232c2"
+        },
+        "provider_spend_usd": 0,
+        "clinical_metrics": null,
+        "elapsed_seconds": 0.01600000000325963
+      },
+      "verification": {
+        "status": "verified",
+        "byte_integrity": "passed",
+        "semantic_consistency": "passed",
+        "source_binding": "passed_against_supplied_admission",
+        "scientific_validation": "not_established",
+        "calls": 2,
+        "claims": 2,
+        "result_sha256": "35994fbcad061eacf01f6b9dad9649a825b793554068262506bfb83f2ee943d6"
+      },
+      "retained_fixture": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\no_perturbation_filters_before_any_dispatch"
+    }
+  ],
+  "probe_count": 25,
+  "failed_probes": [
+    "terminal_selected_category_omitted"
+  ],
+  "tests": {
+    "run": 25,
+    "failures": 0,
+    "errors": 0,
+    "output": "test_adapted_executes_five_real_stages_and_exact_source_claims (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_adapted_executes_five_real_stages_and_exact_source_claims) ... ok\ntest_asof_single_specialist_and_actual_ablation_dispatch (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_asof_single_specialist_and_actual_ablation_dispatch) ... ok\ntest_baselines_never_generate_features_or_call_a_model (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_baselines_never_generate_features_or_call_a_model) ... ok\ntest_corrupted_bytes_and_rehashed_source_claim_are_rejected (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_corrupted_bytes_and_rehashed_source_claim_are_rejected) ... ok\ntest_disabled_category_has_zero_backend_calls_before_retrieval (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_disabled_category_has_zero_backend_calls_before_retrieval) ... ok\ntest_malformed_and_interruption_keep_attempt_accounting (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_malformed_and_interruption_keep_attempt_accounting) ... ok\ntest_parallel_output_reservation_allows_only_one_execution (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_parallel_output_reservation_allows_only_one_execution) ... ok\ntest_rehashed_coverage_cannot_invent_source_count (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_rehashed_coverage_cannot_invent_source_count) ... ok\ntest_rehashed_quote_cannot_hide_underreservation (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_rehashed_quote_cannot_hide_underreservation) ... ok\ntest_rehashed_status_cannot_invent_budget_exhaustion (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_rehashed_status_cannot_invent_budget_exhaustion) ... ok\ntest_source_data_is_not_a_filesystem_capability (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_source_data_is_not_a_filesystem_capability) ... ok\ntest_stopped_chain_never_commits_intermediate_selections (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_stopped_chain_never_commits_intermediate_selections) ... ok\ntest_time_expiry_during_claim_commit_retains_only_reviewed_committed_prefix (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_time_expiry_during_claim_commit_retains_only_reviewed_committed_prefix) ... ok\ntest_timeout_is_durable_estimated_and_never_implicitly_repeated (tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_timeout_is_durable_estimated_and_never_implicitly_repeated) ... ok\ntest_case_reload_binds_source_proofs_and_complete_candidate_identity (tests.test_science_run_comparison.RunComparisonTests.test_case_reload_binds_source_proofs_and_complete_candidate_identity) ... ok\ntest_check_pin_rejects_digest_size_and_missing_file (tests.test_science_run_comparison.RunComparisonTests.test_check_pin_rejects_digest_size_and_missing_file) ... ok\ntest_listener_ownership_failure_stops_only_owned_process_and_forbids_repeat (tests.test_science_run_comparison.RunComparisonTests.test_listener_ownership_failure_stops_only_owned_process_and_forbids_repeat) ... ok\ntest_model_verification_detects_changed_weights_and_native_runtime (tests.test_science_run_comparison.RunComparisonTests.test_model_verification_detects_changed_weights_and_native_runtime) ... ok\ntest_nonempty_prediction_features_never_enter_real_candidate_world (tests.test_science_run_comparison.RunComparisonTests.test_nonempty_prediction_features_never_enter_real_candidate_world) ... ok\ntest_plan_fingerprint_failure_occurs_before_execution_reservation (tests.test_science_run_comparison.RunComparisonTests.test_plan_fingerprint_failure_occurs_before_execution_reservation) ... ok\ntest_plan_recipe_boundary_and_membership_changes_rejected (tests.test_science_run_comparison.RunComparisonTests.test_plan_recipe_boundary_and_membership_changes_rejected) ... ok\ntest_plan_requires_exact_source_paths_and_local_manifest_paths (tests.test_science_run_comparison.RunComparisonTests.test_plan_requires_exact_source_paths_and_local_manifest_paths) ... ok\ntest_source_world_is_all_observed_rows_with_nonobserved_states_retained (tests.test_science_run_comparison.RunComparisonTests.test_source_world_is_all_observed_rows_with_nonobserved_states_retained) ... ok\ntest_unsafe_output_and_mutated_source_or_code_archive_rejected (tests.test_science_run_comparison.RunComparisonTests.test_unsafe_output_and_mutated_source_or_code_archive_rejected) ... ok\ntest_valid_synthetic_plan_binds_complete_fixed_recipe (tests.test_science_run_comparison.RunComparisonTests.test_valid_synthetic_plan_binds_complete_fixed_recipe) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 4.100s\n\nOK\n"
+  },
+  "proofs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_workflow.py",
+      "sha256": "878d99c65ce3915f727cce9da694cf97241db89f611257f9b9f32c9293473a5f",
+      "bytes": 37979
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_comparison.py",
+      "sha256": "6b6f512cbdaa14474e9e2b8e39d47c28a7fb3ed8033982322a0c751adeeeddf2",
+      "bytes": 24501
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_workflow.py",
+      "sha256": "cea59be1024eeec0d4d56801b7748b3dbc8669780c8b96bb9739e05e4cea6037",
+      "bytes": 11856
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_run_comparison.py",
+      "sha256": "dae090ec5c043b75d14273e9a6ef7cf11113d37212f3f5b6a5a6549362e32d4f",
+      "bytes": 13789
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\probe_engine.py",
+      "sha256": "6c696ed875f235b9fa37b69b9a5a729af034e82db61ccf8a4357668712468512",
+      "bytes": 10806
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\guard-source.py",
+      "sha256": "878d99c65ce3915f727cce9da694cf97241db89f611257f9b9f32c9293473a5f",
+      "bytes": 37979
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-engine-peer-20261019\\initial-r2\\guard-tests.py",
+      "sha256": "cea59be1024eeec0d4d56801b7748b3dbc8669780c8b96bb9739e05e4cea6037",
+      "bytes": 11856
+    }
+  ],
+  "boundaries": {
+    "production_inference": 0,
+    "servers_started": 0,
+    "training": 0,
+    "downloads": 0,
+    "provider_spend_usd": 0,
+    "runtime_edits_by_peer": 0
+  }
+}

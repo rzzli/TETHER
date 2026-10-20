@@ -17,10 +17,18 @@ and a retained audit of 20 distinct original rows. The versioned
 [run registry](planning/run-registry.json) identifies the canonical artifacts and retained
 failed attempts. See the [stabilization report](planning/Stabilization Completion and Feasibility Gates.md).
 
-Task 6 now has [development comparison tools](planning/Task%206%20Development%20Comparisons%202026-10-18.md)
-for exact-request lexical/provider-score baselines and explicit evidence masks, plus
+The October 18 Task 6 [development comparison tools](planning/Task%206%20Development%20Comparisons%202026-10-18.md)
+provide exact-request lexical/provider-score baselines, explicit evidence masks and
 a pinned Virtual Biotech configuration audit. These diagnose selection behavior;
 independent scientific quality and clinical performance remain unmeasured.
+
+The current [Science 7 matched comparison](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md)
+is active after Science 1–6 passed their bounded scopes. Its six arms use ten cases,
+all 10,512 admitted observations, sparse evaluator-only AI references, a source-derived
+Virtual Biotech role adaptation and fresh workflow ablations. Source-freeze preparation
+and 536 full tests passed; local comparison execution started October 20 at 17:31:37
+UTC. No terminal results are reported at this checkpoint; evaluation/audit remain
+pending and clinical/scoring gates false.
 
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant
@@ -141,8 +149,11 @@ Python interfaces are not an OS sandbox. Dataset terms remain source-specific; A
 licenses the code, not acquired biomedical data. The download worker and the user's
 stopped periodic monitoring are independent of this milestone.
 
-Current ordered execution is stopped at Task 6's scientific comparison gate. Tasks
-1-4 passed their documented technical checks; Task 5's feasibility decision defers
-predictive genetics and training. See [TODO.md](TODO.md), the
-[execution report](planning/Ordered%20Execution%20Progress%202026-10-17.md) and the
-[local-model pilot](planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md).
+Current ordered science execution has passed Items 1–6 within their stated scopes,
+including conditional genetics defer and an evidence-backed no-fit. Item 7 remains
+active/incomplete. See [TODO.md](TODO.md), the
+[science execution report](planning/Scientific%20Prerequisites%20Execution%202026-10-18.md)
+and the [current matched-comparison checkpoint](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md).
+The [October 17 execution report](planning/Ordered%20Execution%20Progress%202026-10-17.md)
+and [local-model pilot](planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md)
+remain dated history.

@@ -4,6 +4,11 @@ The user authorized seven items in sequence, with agent expertise and public-sou
 research. File/access/permission gaps remain user-handled. The frozen design is
 `planning/protocols/science-prerequisites-v0.1.json`; TODO.md tracks current work.
 
+Current October 20 checkpoint: Items 1–6 passed their recorded bounded scopes and
+Item 7 remains active/incomplete. See [[Matched T6 Comparison Execution 2026-10-20]]
+for the fixed source world, six-arm recipe, proof schema and pending execution.
+Earlier blocked/running/next-item statements below remain explicit dated history.
+
 | Item | Status | Evidence and limits |
 |---|---|---|
 | 1. Questions/contracts | Completed | Separate advancement, dosing and clinical-success endpoints; reference/chronology rules; 262 full tests at freeze. |
@@ -12,7 +17,7 @@ research. File/access/permission gaps remain user-handled. The frozen design is
 | 4. Outcomes/power/precision | Completed bounded audit | Twelve cases/36 endpoints, two source reviews and third reconciliation; all unresolved/null. Power nonestimable; clinical qualification and fitting withheld. |
 | 5. Conditional genetics | Completed conditional defer | Fresh38-file QC, method review and independently corrected lineage guard; no predictive feature admitted. |
 | 6. Qualified training/calibration | Completed no-fit | Historical training inventory unknown, no qualified pilot classes/predictor bundle; 485 full tests and independent guard review pass. No training or calibration. |
-| 7. Supported comparisons | In progress | Actual matched comparator/workflow ablations; clinical activation conditional. |
+| 7. Supported comparisons | In progress | Six-arm source freeze and 536 full tests passed; local execution started October 20 at 17:31:37 UTC. No terminal results yet; evaluator join/audit pending and clinical gates false. |
 
 ## Completed reference work
 

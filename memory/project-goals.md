@@ -3,20 +3,42 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Project goals
 
-## Current scientific prerequisite execution — October 19
+## Current scientific prerequisite execution — October 20
 
-Science1–4 passed within their recorded scopes. Science5 also passed its conditional
+Science 1–4 passed within their recorded scopes. Science 5 also passed its conditional
 assessment, with predictive genetics explicitly deferred and G06 false. Its final
 463-test validation and independent lineage-guard correction are retained under
 `planning/review-assets/science-prerequisites-20261018/item5/`.
-Science7 is now active after Science6 passed its explicit no-fit disposition and
-485-test full validation; G07 remains false. All real probabilities remain null. The dated Task6
-development history below is preserved; it is not the current execution pointer.
+Science 7 is active/incomplete after Science 6 passed its explicit no-fit disposition
+and 485-test full validation. Its fixed development scope is six separately
+executed arms over ten fresh Science 2 cases and all 10,512 admitted observations,
+with common bounded retrieval and fifty sparse AI Q1 reference rows. The adapted
+Virtual Biotech role chain is a restricted source-derived reimplementation, not
+upstream SDK execution; no-literature/no-perturbation are fresh workflow ablations.
+
+At this October 20 documentation checkpoint, fresh source-freeze preparation passed
+and real Science 7 execution started at 17:31:37 UTC under
+`runs/science7-matched-20261020T172835Z/`. No terminal comparison results are reported.
+The latest incremental peer
+check passed 51 focused synthetic tests, including unconditional zero-call model/
+retrieval binding, all six execution-proof pins and failure-stop behavior. Earlier
+45-probe/28-test evidence predates the final engine/launcher corrections and remains
+explicitly historical. Subsequent full validation passed 536 tests with zero
+failures/errors/skips; core validation ran 536 tests with 56 expected ingestion
+skips. Required probes and packaging passed in both modes. Native completion and
+shutdown, externally recorded prediction seal, evaluation join, original-row audit
+and final reporting are pending. See
+[[Matched T6 Comparison Execution 2026-10-20]].
+
+G03/G04/G05/G06/G07 and clinical lock remain false. Prediction features remain empty,
+all real probabilities null and provider spend $0; no clinical AUROC/Brier or
+comparative scientific superiority is established. The dated Task 6 and science
+history below is preserved and does not replace the current execution pointer.
 
 ## Task 6 resumption — October 18
 

@@ -30,7 +30,12 @@ to the user. Previous task completion scopes and historical results below remain
 
 Current item: Science 7 — implement and validate the adapted comparator, matched
 end-to-end ablations and supported T6 source-reference comparisons. Clinical
-activation remains conditional and withheld. Science6 passed with an explicit
+activation remains conditional and withheld. The October20 technical checkpoint
+passes536 full tests and536 dependency-free checks with56 expected ingestion
+skips, required probes and packaging/demo. Native comparison execution is active;
+no completed comparison or clinical result is claimed. See
+`planning/Matched T6 Comparison Execution 2026-10-20.md`.
+Science6 passed with an explicit
 no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
 22 focused regressions and68 independent probes pass. G07 remains false, no model
 was trained/calibrated. The pilot's0/0 qualified classes are separate from unknown
@@ -61,6 +66,19 @@ endpoint labels before origin selection is sealed.
 Run tasks in order. Mark complete only after the task's validation passes. Stop and
 record a blocker if a task cannot be completed after reasonable attempts. Existing
 development artifacts are evidence, not independent scientific validation.
+
+### Science 7 supporting work — October 20
+
+- [x] Freeze the ten-case, six-arm recipe with the complete collected10512-record
+  source world, fixed rotation, identical ceilings and evaluator isolation.
+- [x] Implement the source-derived five-role comparator and fresh pre-retrieval
+  ablations, durable execution proofs and independent source-aware verification.
+- [x] Pass the full/core regressions, package/demo and independent corruption probes.
+- [ ] Finish and source-verify all sixty native/baseline case-arm executions.
+- [ ] Seal predictions, run the qualified Q1 development comparison and audit
+  twenty distinct original rows from final AsOf selections.
+- [ ] Retain measured results, independent acceptance and the final bounded
+  scientific disposition; update the execution register and milestone status.
 
 ### Science 3 supporting work
 
@@ -176,7 +194,7 @@ available (ten cases / 20 claims); they are not independently adjudicated gold.
 - [x] Finish and source-verify the fixed four-case wider-candidate challenge,
   then seal and verify its matched development baseline comparison. Eleven new
   requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
-- [ ] Implement and validate the adapted Virtual Biotech execution arm under
+- [x] Implement and validate the adapted Virtual Biotech execution arm under
   matched evidence, model, budget and containment rules.
 - [ ] Implement/run matched end-to-end ablations. Existing no-literature and
   no-perturbation results are post-selection masks only; they are not model reruns.

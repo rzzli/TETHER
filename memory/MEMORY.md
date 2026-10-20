@@ -1,7 +1,8 @@
 # Research memory index
 
-- [[Scientific Prerequisites Execution 2026-10-18]] — Active seven-item science execution: Items1–3 passed within stated scope; both evaluator restores independently verified; Item4 outcome/power protocol next; Items5–7 pending. Clinical/scoring gates remain unqualified. Details in [[project-goals]] and [[research-log-2026-10-18]].
-- [[research-log-2026-10-19]] — Science4 bounded audit completed: twelve cases/36 unresolved endpoints, source reconciliation and independent checks passed; power nonestimable. Science5 conditional genetics next; 445 full tests pass. Clinical gates remain false.
+- [[Matched T6 Comparison Execution 2026-10-20]] — Current Science 7 scope/checkpoint: six arms, ten cases/all 10,512 admitted observations and fifty sparse AI Q1 references. Fresh local execution started October 20 at 17:31:37 UTC; no terminal results yet. Full 536-test validation passed; evaluation/audit pending. Source-derived adaptation and fresh ablations; clinical gates false and Science 7 incomplete.
+- [[Scientific Prerequisites Execution 2026-10-18]] — Active seven-item science execution: Items 1–6 passed within recorded bounded scopes, including conditional genetics defer and no-fit; Item 7 active/incomplete. Clinical/scoring gates remain false. Dated earlier checkpoints are history; see [[project-goals]].
+- [[research-log-2026-10-19]] — Dated Science 4 audit: twelve cases/36 unresolved endpoints, source reconciliation and independent checks passed; power nonestimable and 445 tests passed at that checkpoint. Its Science 5-next pointer is superseded by the current Science 7 entry.
 
 - [[Task 6 Development Comparisons 2026-10-18]] — Validated baselines/masks, competitor configuration audit and four source-verified wider-candidate dossiers. Model/lexical sets match 11/11; 246 tests and four hosted jobs pass. Task 6 scientific/comparator gates remain open.
 - [[research-log-2026-10-18]] — Task 6 resumption, retained comparison findings and stopping decision; no independent quality or clinical prediction result.

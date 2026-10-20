@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "reviewer": "independent_peer_resumed_launcher_patch",
+  "checked_at_utc": "2026-10-20T17:29:26.148555+00:00",
+  "status": "pass_incremental_synthetic_contract_validation",
+  "scope": "Launcher proof closure and fail-stop behavior plus unconditional zero-call engine configuration bindings; no native inference or production evaluator answers.",
+  "supersedes_source_hashes_in_prior_report": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\engine-peer-validation-final.json",
+    "bytes": 21399,
+    "sha256": "8a9857dd8b4475e6a4957fff7240499613c7cb1e26f901d0338af71e2c703a8d"
+  },
+  "prior_report_limit": "Prior 45-probe/28-test artifact is retained unchanged and predates the unconditional backend/retrieval check and this launcher proof/fail-stop patch. Those 45 probes were not rerun against these exact newer hashes.",
+  "engine": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_workflow.py",
+    "bytes": 42031,
+    "sha256": "ca96269239aa447adc3e713692626ad8e4586397d62e8e94a79f08f1c6d542f7"
+  },
+  "launcher": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_comparison.py",
+    "bytes": 25911,
+    "sha256": "711aa28dc5898e734fb7f0f13f11f761928e70f741693310e5ca781c7c2c6693"
+  },
+  "tests": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_run_comparison.py",
+      "bytes": 23491,
+      "sha256": "ac3b65b6dd9dc97617c1ca103233af766a53ee271f95efe79aa78c765571def3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_workflow.py",
+      "bytes": 14379,
+      "sha256": "c940905da1cb4fbfd1254987923c20f92be3505be404490fc7cde42def6ec986"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_evaluation.py",
+      "bytes": 38819,
+      "sha256": "10b1d21012af43b50771bb7d209eeab17bb2f7dcb00ff5b64bb1681cfa80a825"
+    }
+  ],
+  "validation": {
+    "command": ".venv/Scripts/python.exe -m unittest tests.test_science_run_comparison tests.test_science_comparison_workflow tests.test_science_comparison_evaluation -q",
+    "exit_code": 0,
+    "tests_run": 51,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 35.86,
+    "counts": {
+      "engine": 18,
+      "launcher": 15,
+      "evaluator": 18
+    }
+  },
+  "new_launcher_regressions": [
+    "test_success_seal_binds_all_six_execution_files_after_shutdown",
+    "test_failed_or_interrupted_arm_stops_before_any_next_dispatch",
+    "test_prediction_seal_helper_requires_complete_proof_inventory_and_terminal_success"
+  ],
+  "unconditional_engine_regressions": [
+    "test_zero_call_baseline_still_requires_expected_backend_configuration",
+    "test_zero_call_baseline_cannot_reseal_a_different_retrieval_policy"
+  ],
+  "proof_mapping": {
+    "execution_journal": "execution/journal.jsonl",
+    "server_command": "server-command.json",
+    "model_config": "model-config.json",
+    "native_stdout": "server.stdout.log",
+    "native_stderr": "server.stderr.log",
+    "preparation_journal": "prepare/journal.jsonl"
+  },
+  "verified_behavior": [
+    "All six proof values have absolute path, byte size and SHA-256; changed native log bytes fail check_pin.",
+    "Execution proof journal includes terminal server-stopped event; prediction seal written after owned-process termination and journal close.",
+    "Missing preparation journal prevents prediction seal creation; actual preparation journal location is prepare/journal.jsonl.",
+    "Failed/interrupted arm status retains arm verification/result/report records, records arm_terminal_failure, raises and dispatches no later arm.",
+    "Failure keeps execution reservation and produces no prediction seal; calling execute again cannot repeat work.",
+    "Budget-exhausted is an accepted planned status and subsequent arms continue.",
+    "Seal helper refuses failed executions or a server not marked stopped."
+  ],
+  "boundaries": {
+    "native_inference_by_peer": 0,
+    "native_servers_started_by_peer": 0,
+    "new_data_acquisition_by_peer": 0,
+    "production_answer_files_opened_by_peer": 0,
+    "provider_spend_usd": 0
+  },
+  "limitations": [
+    "Subprocess, socket, HTTP health and arm execution were mocked in launcher flow tests; no native ownership or actual inference success is established.",
+    "The evaluator tests and engine synthetic-opener tests establish technical contracts only, not comparative scientific or clinical validity.",
+    "Root independently owns and may perform subsequent explicitly authorized preparation/execution."
+  ]
+}
