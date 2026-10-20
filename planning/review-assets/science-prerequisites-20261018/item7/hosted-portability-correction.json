@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "checked_at_utc": "2026-10-20T17:36:55.097882+00:00",
+  "status": "local_focused_pass_hosted_rerun_pending",
+  "initial_ci": {
+    "run_id": 39467046080,
+    "commit_prefix": "fb35",
+    "job": "Windows core",
+    "status": "failed",
+    "failures": 4,
+    "errors": 1,
+    "expected_ingestion_skips": 56,
+    "log": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science7-windows-core-job.log",
+      "sha256": "ca5081ba1e14a0a779d947a9fd25941b8e190ceefdb1540984abfe28583800d3",
+      "bytes": 177615
+    },
+    "commit": "fb35c9f31394832b4db049e8bbc004e9a45207c2"
+  },
+  "defect": "TemporaryDirectory returned the Windows 8.3 RUNNER~1 alias while launcher pin/containment routines correctly canonicalized to runneradmin. The fixture patched launcher.ROOT to the unresolved alias and compared canonical results against unresolved fixture paths.",
+  "observed_failures": [
+    "test_valid_synthetic_plan_binds_complete_fixed_recipe: containment ContractError before valid plan acceptance",
+    "test_check_pin_rejects_digest_size_and_missing_file: short alias versus canonical path equality",
+    "test_listener_ownership_failure_stops_only_owned_process_and_forbids_repeat: fixture containment failed before expected ownership boundary",
+    "test_model_verification_detects_changed_weights_and_native_runtime: equivalent native/weight paths used different aliases",
+    "test_success_seal_binds_all_six_execution_files_after_shutdown: equivalent absolute seal-proof paths used different aliases"
+  ],
+  "correction": {
+    "file": "tests/test_science_run_comparison.py",
+    "location": "RunComparisonTests.setUp",
+    "before": "self.root = Path(self.temp.name)",
+    "after": "self.root = Path(self.temp.name).resolve()",
+    "scope": "One test-fixture line only. Production canonicalization, containment, pinning, runtime, frozen plan and active inference unchanged.",
+    "corrected_test": {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_run_comparison.py",
+      "sha256": "4a57ffbf86b6ca09a7196c59bed2653075c9a06b3a00a89c07cbe510119e6f74",
+      "bytes": 23501
+    }
+  },
+  "validation": [
+    {
+      "mode": "full environment focused launcher",
+      "command": ".venv/Scripts/python.exe -m unittest tests.test_science_run_comparison -q",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "elapsed_seconds": 2.217,
+      "exit_code": 0
+    },
+    {
+      "mode": "dependency-free core environment focused launcher",
+      "command": "data/cache/science-core-validation-env/Scripts/python.exe -m unittest tests.test_science_run_comparison -q",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "elapsed_seconds": 2.453,
+      "exit_code": 0
+    }
+  ],
+  "limitations": "Hosted correction rerun remains pending; local passes do not substitute for hosted Windows alias-path confirmation.",
+  "boundaries": {
+    "runtime_changes": 0,
+    "frozen_plan_changes": 0,
+    "native_processes_started_by_peer": 0,
+    "model_files_opened_by_peer": 0,
+    "production_answers_opened_by_peer": 0
+  }
+}
