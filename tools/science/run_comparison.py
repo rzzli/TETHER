@@ -22,15 +22,16 @@ from asof.chrono import EvidenceStore, load_snapshot
 from asof.contracts import Case, Category, EvidenceStatus
 from asof.ingest import peak_memory_bytes
 from asof.journal import RunJournal, read_chain
-from asof.local_model import LocalSelectionBackend, NoRedirect
+from asof.local_model import NoRedirect
+from tools.science.role_backend import ROLE_SELECTION_POLICY, RoleSelectionBackend
 from asof.serde import ContractError, decode, encode, fingerprint, read_json, safe_child, sha256_file, write_json
 from asof.workflow import Budget
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PROTOCOL = ROOT/'planning/protocols/science7-matched-t6-v0.1.json'
+PROTOCOL = ROOT/'planning/protocols/science7-matched-t6-v0.2.json'
 PORT = 55581
-CODE_FILES = ('tools/science/run_comparison.py', 'tools/science/comparison_workflow.py') + tuple(
+CODE_FILES = ('tools/science/run_comparison.py', 'tools/science/comparison_workflow.py', 'tools/science/role_backend.py') + tuple(
         p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'src/asof').glob('*.py')))
 EXECUTION_PROOF_FILES = {
     'execution_journal': 'execution/journal.jsonl',
@@ -98,7 +99,7 @@ def validate_plan(plan):
     if not any(output.is_relative_to(ROOT/name) for name in ('runs', 'data/derived')):
         raise ContractError('Comparison plan output escapes the ignored project trees')
     protocol = read_json(check_pin(plan['protocol']))
-    if (protocol.get('protocol_id') != 'science7-matched-source-bounded-t6-v0.1' or
+    if (protocol.get('protocol_id') != 'science7-matched-source-bounded-t6-v0.2' or
             plan.get('schema_version') != 1 or plan.get('provider_spend_usd') != 0 or
             plan.get('evaluator_inputs_opened') is not False):
         raise ContractError('Comparison plan boundary or protocol differs')
@@ -110,6 +111,14 @@ def validate_plan(plan):
                          ('model_receipt', 'model-acquisition.json')):
         if check_pin(plan[field]).resolve() != output/name:
             raise ContractError('Comparison local manifest path differs')
+    expected_policy = protocol['role_policy']
+    policy_source = safe_child(ROOT, expected_policy['path'])
+    policy = read_json(check_pin(plan['role_policy']))
+    if (sha256_file(policy_source) != expected_policy['sha256'] or
+            plan['role_policy']['sha256'] != expected_policy['sha256'] or
+            policy.get('output_constraint_policy') != RoleSelectionBackend.output_scope_policy or
+            protocol['local_backend'].get('selection_policy') != ROLE_SELECTION_POLICY):
+        raise ContractError('Comparison frozen role-policy output constraint differs')
     if (plan['model_receipt']['sha256'] != protocol['local_backend']['acquisition_receipt_sha256'] or
             plan['original_model_receipt']['sha256'] != plan['model_receipt']['sha256']):
         raise ContractError('Comparison model receipt is not the pinned acquisition')
@@ -157,7 +166,7 @@ def prepare(output, protocol_path=PROTOCOL):
     try:
         from tools.science.comparison_workflow import default_role_policy
         protocol = read_json(Path(protocol_path))
-        if protocol['protocol_id'] != 'science7-matched-source-bounded-t6-v0.1':
+        if protocol['protocol_id'] != 'science7-matched-source-bounded-t6-v0.2':
             raise ContractError('Unexpected comparison protocol')
         bundle = safe_child(ROOT, protocol['source_bundle'])
         if sha256_file(bundle/'build-report.json') != protocol['source_build_report_sha256']:
@@ -359,7 +368,7 @@ def execute(plan_path, expected_sha256):
             for arm in scheduled['arms']:
                 for proof in plan['code']:
                     check_pin(proof)
-                backend = LocalSelectionBackend(config_path)
+                backend = RoleSelectionBackend(config_path)
                 folder = output/'arms'/case.case_id/arm
                 journal.append('arm_started', case_id=case.case_id, arm=arm)
                 result = run_case(case, store, backend, Budget(**plan['budget']), arm, folder, role_policy=policy)

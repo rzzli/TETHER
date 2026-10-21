@@ -134,17 +134,24 @@ class LocalSelectionBackend:
     def prepare_request(self, request):
         return bounded_request(request, self.policy)
 
+    def payload_for(self, request):
+        """Build the exact quoted/dispatched payload; subclasses may narrow output."""
+        return selection_payload(request, self.max_output, self.seed, self.policy.wire_format)
+
     def quote(self, request):
         if len(request_bytes(request, self.policy.wire_format)) > self.policy.max_request_bytes or len(request.evidence) > self.policy.max_records:
             raise ContractError('Unprepared local model request')
         # UTF-8 bytes include escaped delimiters, plus conservative special-token headroom.
-        prompt = selection_payload(request, self.max_output, self.seed, self.policy.wire_format)['prompt']
+        prompt = self.payload_for(request)['prompt']
         return Usage(len(prompt.encode('utf-8')) + 32, self.max_output, 0)
 
     def select(self, request):
         self.quote(request)
-        ids = tuple(item.observation_id for item in request.evidence)
-        payload = selection_payload(request, self.max_output, self.seed, self.policy.wire_format)
+        payload = self.payload_for(request)
+        output = payload['json_schema']['properties']['observation_ids']
+        # Validate the server response against the same generated ID boundary.
+        # A zero-length array schema retains a nonempty native-grammar enum.
+        ids = tuple(output['items']['enum']) if output['maxItems'] else ()
         record = {'request_sha256': fingerprint(request), 'payload_sha256': fingerprint(payload),
                   'status': 'dispatched', 'request': request, 'payload': payload}
         self.records.append(record)

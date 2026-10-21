@@ -203,11 +203,11 @@ class ComparisonEvaluationTests(unittest.TestCase):
         self.assertNotIn('auroc', result); self.assertNotIn('brier', result); self.assertNotIn('p_value', result)
 
     def test_zero_call_configuration_still_binds_model_retrieval_and_budget(self):
-        plan = {'budget': {'max_calls': 16}}
+        plan = {'budget': {'max_calls': 16},'backend':{'selection_policy':'science7-prior-stage-output-schema-v1'}}
         config = {'retrieval': {'max_records': 12}, 'model_id': 'pinned-fixture'}
         result = {'calls': 0, 'arm': 'lexical', 'configuration': {'budget': deepcopy(plan['budget']),
             'retrieval': deepcopy(config['retrieval']), 'backend_id': 'local-structured-selection-v1',
-            'backend_provenance': {'config': deepcopy(config)}}}
+            'backend_provenance': {'config': deepcopy(config),'selection_policy':'science7-prior-stage-output-schema-v1'}}}
         _configuration_binding(result, plan, config)
         for field in ('budget', 'retrieval', 'backend_id', 'backend_provenance'):
             changed = deepcopy(result); changed['configuration'][field] = 'unmatched' if field == 'backend_id' else {}
@@ -252,7 +252,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
         self.assertTrue((self.root/'original-audit/failure.json').is_file())
 
     def test_complete_synthetic_six_arm_postseal_integration_without_inference(self):
-        from asof.local_model import LocalSelectionBackend
+        from tools.science.role_backend import RoleSelectionBackend
         from asof.workflow import Budget
         from tools.science.comparison_workflow import run_case, verify_case, ARMS
         from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
@@ -272,13 +272,13 @@ class ComparisonEvaluationTests(unittest.TestCase):
             proofs[name] = pinned(path)
         proofs['role_policy'] = pinned(policy_path)
         proofs['model_receipt'] = receipt; proofs['original_model_receipt'] = receipt
-        plan = dict(proofs, root=str(folder.resolve()), arms=list(ARMS), code=fixture_code(folder), budget=encode(Budget(max_calls=50)),
+        plan = dict(proofs, backend={'selection_policy':'science7-prior-stage-output-schema-v1'},root=str(folder.resolve()), arms=list(ARMS), code=fixture_code(folder), budget=encode(Budget(max_calls=50)),
                     cases=[{'case_id': self.case.case_id, 'case': pinned(config_path), 'snapshot': pinned(policy_path)}],
                     execution_order=[{'case_id': self.case.case_id, 'arms': list(ARMS)}])
         plan_path = folder/'run-plan.json'; write_json(plan_path, plan)
         arm_rows = []
         for arm in ARMS:
-            backend = LocalSelectionBackend(config_path); backend.opener = NativeFixture()
+            backend = RoleSelectionBackend(config_path); backend.opener = NativeFixture()
             arm_path = folder/'arms'/self.case.case_id/arm
             result = run_case(self.case, self.store, backend, Budget(max_calls=50), arm, arm_path, policy)
             verification = verify_case(arm_path, self.case, self.store, config, policy)
@@ -350,7 +350,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
 
     def prepare_predictions(self):
         from asof.ingest import build_snapshot
-        from asof.local_model import LocalSelectionBackend
+        from tools.science.role_backend import RoleSelectionBackend
         from asof.workflow import Budget
         from tests.test_v02_ingest import GENES
         from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
@@ -378,7 +378,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         receipt = fixture_receipt(folder, self.config)
         config_path = folder/'model-config.json'; write_json(config_path, self.config)
         roles = synthetic_policy(); role_path = folder/'role-policy.json'; write_json(role_path, roles)
-        plan = {'root': str(folder.resolve()), 'arms': list(ARMS), 'code': fixture_code(folder), 'budget': encode(Budget(max_calls=50)),
+        plan = {'backend':{'selection_policy':'science7-prior-stage-output-schema-v1'},'root': str(folder.resolve()), 'arms': list(ARMS), 'code': fixture_code(folder), 'budget': encode(Budget(max_calls=50)),
             'execution_order': [{'case_id': self.case.case_id, 'arms': list(ARMS)}],
             'source_build': pin(bundle/'build-report.json'), 'catalog': pin(self.catalog), 'role_policy': pin(role_path),
             'candidate_world': {'maximum_total_observations_per_case': None, 'seed': None},
@@ -391,7 +391,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         plan_path = folder/'run-plan.json'; write_json(plan_path, plan)
         arms = []
         for arm in ARMS:
-            backend = LocalSelectionBackend(config_path); backend.opener = NativeFixture()
+            backend = RoleSelectionBackend(config_path); backend.opener = NativeFixture()
             arm_path = folder/'arms'/self.case.case_id/arm
             result = run_case(self.case, self.store, backend, Budget(max_calls=50), arm, arm_path, roles)
             verification = verify_case(arm_path, self.case, self.store, self.config, roles)

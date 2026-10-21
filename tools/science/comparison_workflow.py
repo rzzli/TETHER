@@ -19,10 +19,11 @@ from asof.local_model import LocalSelectionBackend, parse_selection, selection_p
 from asof.retrieval import RetrievalPolicy, bounded_request
 from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json, read_json, safe_child, sha256_file, write_json
 from asof.workflow import Budget, BudgetMeter, add_usage, over_quote
+from tools.science.role_backend import ROLE_SELECTION_POLICY, role_allowed_ids, role_selection_payload
 
 
 ROOT = Path(__file__).resolve().parents[2]
-POLICY = ROOT/'planning/review-assets/science-prerequisites-20261018/item7/adapter-role-policy.json'
+POLICY = ROOT/'planning/review-assets/science-prerequisites-20261018/item7/adapter-role-policy-r1.json'
 ARMS = ('asof', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation')
 STAGES = ('chief_of_staff', 'coordinator_delegate', 'mapped_specialist', 'scientific_reviewer', 'coordinator_synthesize')
 DEFAULT_RETRIEVAL = {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'asof-shared-scientific-fields-v1'}
@@ -48,7 +49,14 @@ def _policy(value):
         raise ContractError('Invalid source-derived role policy')
     if any(not isinstance(x, str) or not x.strip() for x in value['stage_guidance'].values()):
         raise ContractError('Role instructions must be explicit')
+    if value.get('output_constraint_policy') not in (None, 'native_json_schema_reviewed_subset_v1'):
+        raise ContractError('Unknown comparison role output constraint policy')
     return value
+
+
+def _payload(request, config, policy):
+    builder = role_selection_payload if policy.get('output_constraint_policy') else selection_payload
+    return builder(request, config['max_output_tokens'], config['seed'], config['retrieval'].get('wire_format','canonical'))
 
 
 def _stage_instructions(base, stage, category, policy):
@@ -111,6 +119,10 @@ def run_case(case, store, backend, budget, arm, output, role_policy=None):
         raise ContractError('Unsupported matched T6 arm')
     policy = _policy(role_policy if role_policy is not None else default_role_policy())
     provenance = encode(getattr(backend, 'provenance', {}))
+    if policy.get('output_constraint_policy') and (
+            getattr(backend, 'output_scope_policy', None) != policy['output_constraint_policy'] or
+            provenance.get('selection_policy') != ROLE_SELECTION_POLICY):
+        raise ContractError('Comparison backend does not enforce the declared role output scope')
     if arm not in ('lexical', 'provider_score') and store.snapshot.profile != Profile.DEMO and backend.backend_id != 'local-structured-selection-v1':
         raise ContractError('Real scientific comparison requires the pinned local backend')
     retrieval = RetrievalPolicy(**provenance.get('config', {}).get('retrieval', DEFAULT_RETRIEVAL))
@@ -274,6 +286,8 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                 configuration['backend_id'] != LocalSelectionBackend.backend_id):
             raise ContractError('Comparison expected backend/retrieval configuration differs')
     policy = _policy(read_json(output/'role-policy.json'))
+    if policy.get('output_constraint_policy') and result['configuration']['backend_provenance'].get('selection_policy') != ROLE_SELECTION_POLICY:
+        raise ContractError('Comparison native role-selection policy differs')
     if role_policy is not None and fingerprint(policy) != fingerprint(role_policy):
         raise ContractError('Comparison role policy differs')
     if (result['case_id'] != case.case_id or result['case_sha256'] != fingerprint(case) or
@@ -391,7 +405,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                 raise ContractError('Comparison denied an unplanned role')
             if backend_config is not None:
                 req=_request(chronological_bases[category],d['role'],Category(category),policy,prior)
-                payload=selection_payload(req,backend_config['max_output_tokens'],backend_config['seed'],backend_config['retrieval'].get('wire_format','canonical'))
+                payload=_payload(req,backend_config,policy)
                 if encode(quote)!=encode(Usage(len(payload['prompt'].encode('utf-8'))+32,backend_config['max_output_tokens'],0)):
                     raise ContractError('Comparison denial quote differs from actual planned request')
             trace_elapsed=elapsed
@@ -498,7 +512,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
         if backend_config is not None:
             if result['configuration']['backend_provenance'].get('config') != backend_config:
                 raise ContractError('Comparison local model configuration differs')
-            payload = selection_payload(request, backend_config['max_output_tokens'], backend_config['seed'], backend_config['retrieval'].get('wire_format', 'canonical'))
+            payload = _payload(request,backend_config,policy)
             expected_quote = Usage(len(payload['prompt'].encode('utf-8'))+32,backend_config['max_output_tokens'],0)
             if encode(expected_quote) != encode(quote):
                 raise ContractError('Comparison quote differs from bounded native request')
@@ -506,13 +520,14 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                     record.get('payload_sha256') != fingerprint(payload)):
                 raise ContractError('Comparison model payload differs')
             if record['status'] == 'completed':
-                selected, actual_usage = parse_selection(record['response'], [r.observation_id for r in request.evidence])
+                native_allowed = role_allowed_ids(request) if policy.get('output_constraint_policy') else [r.observation_id for r in request.evidence]
+                selected, actual_usage = parse_selection(record['response'], native_allowed)
                 if (over_quote(usage,quote) or account['basis']!='adapter_reported' or
                         encode(decode(Usage,record['measured_usage']))!=encode(actual_usage) or
                         fingerprint(record['response']) != record['response_sha256'] or list(selected) != record['selection'] or encode(actual_usage) != encode(usage)):
                     raise ContractError('Comparison native response/accounting differs')
                 if attempt_id not in choices:
-                    invalid_subset = role in ('scientific_reviewer','coordinator_synthesize') and bool(set(selected)-set(prior[-1]['observation_ids']))
+                    invalid_subset = not policy.get('output_constraint_policy') and role in ('scientific_reviewer','coordinator_synthesize') and bool(set(selected)-set(prior[-1]['observation_ids']))
                     if attempt_id not in call_failures or not invalid_subset or account['basis']!='adapter_reported':
                         raise ContractError('Comparison dropped a successful native selection without justified role failure')
             elif record['status'] not in ('failed','timeout'):

@@ -275,10 +275,13 @@ def _expected_config(plan):
 
 def _configuration_binding(result, plan, config):
     """Baselines and zero-call arms retain the same planned upper ceilings."""
+    from tools.science.role_backend import ROLE_SELECTION_POLICY
     actual = result.get('configuration', {})
     if (actual.get('budget') != plan['budget'] or actual.get('retrieval') != config['retrieval'] or
             actual.get('backend_id') != 'local-structured-selection-v1' or
-            actual.get('backend_provenance', {}).get('config') != config):
+            actual.get('backend_provenance', {}).get('config') != config or
+            plan.get('backend', {}).get('selection_policy') != ROLE_SELECTION_POLICY or
+            actual.get('backend_provenance', {}).get('selection_policy') != ROLE_SELECTION_POLICY):
         raise ContractError('Arm model/retrieval/budget configuration differs from the frozen plan')
 
 

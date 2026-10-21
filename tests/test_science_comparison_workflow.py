@@ -12,6 +12,7 @@ from unittest.mock import patch
 from asof.chrono import load_snapshot
 from asof.contracts import Case, Category
 from asof.local_model import LocalSelectionBackend
+from tools.science.role_backend import RoleSelectionBackend
 from asof.serde import ContractError, canonical, decode, fingerprint, parse_json, read_json, sha256_file, write_json
 from asof.workflow import Budget
 from tools.science.comparison_workflow import STAGES, run_case, verify_case, _seal
@@ -33,13 +34,14 @@ class NativeFixture:
             raise self.error
         import json
         payload = json.loads(request.data)
-        ids = payload['json_schema']['properties']['observation_ids']['items']['enum'][:self.take]
+        ids = payload['json_schema']['properties']['observation_ids']['items']['enum'][:min(self.take,payload['json_schema']['properties']['observation_ids']['maxItems'])]
         return io.BytesIO(canonical({'content': '{broken' if self.malformed else json.dumps({'observation_ids': ids}),
             'tokens_evaluated': 10, 'tokens_predicted': 5, 'truncated': False}))
 
 
 def synthetic_policy():
     return {'schema_version': 1, 'stage_order': list(STAGES), 'control_reserve_bytes': 2048,
+        'output_constraint_policy':'native_json_schema_reviewed_subset_v1',
         'stage_guidance': {s: 'Fixture role ' + s + ': select only provided source IDs.' for s in STAGES},
         'specialists': {c.value: 'fixture-specialist' for c in Category}, 'scope': 'Synthetic test only'}
 
@@ -68,7 +70,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         self.config_path = self.root/'config.json'; write_json(self.config_path,self.config)
 
     def backend(self, **options):
-        backend = LocalSelectionBackend(self.config_path)
+        backend = RoleSelectionBackend(self.config_path)
         backend.opener = NativeFixture(**options)
         return backend
 

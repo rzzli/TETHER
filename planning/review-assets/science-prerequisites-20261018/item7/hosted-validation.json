@@ -1,0 +1,34 @@
+{
+  "conclusion": "success",
+  "headSha": "2b5c536383cf98c7cf6a6870de3e38aa1df8c6e8",
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39467686432/job/118783259717",
+      "completedAt": "2026-10-20T17:38:15Z"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39467686432/job/118783260128",
+      "completedAt": "2026-10-20T17:40:29Z"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39467686432/job/118783260295",
+      "completedAt": "2026-10-20T17:39:12Z"
+    },
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39467686432/job/118783260375",
+      "completedAt": "2026-10-20T17:38:02Z"
+    }
+  ],
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39467686432",
+  "schema_version": 1,
+  "status": "all_four_hosted_jobs_passed",
+  "scope": "Technical validation; native comparison is separate and not established by CI"
+}

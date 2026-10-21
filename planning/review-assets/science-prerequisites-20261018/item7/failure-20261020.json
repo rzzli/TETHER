@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "recorded_at_utc": "2026-10-20T17:53:23.261357+00:00",
+  "status": "failed_attempt_retained_no_automatic_repeat",
+  "run_root": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z",
+  "plan_sha256": "0df1e66f64a669dabba04c0b6e8f392de9b5161a4ea3561627a392def1a3a78b",
+  "started_at_utc": "2026-10-20T17:31:37.372191+00:00",
+  "finished_at_utc": "2026-10-20T17:48:53.239097+00:00",
+  "elapsed_seconds": 1035.875,
+  "proofs": {
+    "plan": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\run-plan.json",
+      "sha256": "0df1e66f64a669dabba04c0b6e8f392de9b5161a4ea3561627a392def1a3a78b",
+      "bytes": 2950170
+    },
+    "execution_report": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\execution-report.json",
+      "sha256": "76f8e9257293ebec5502e28bff3934a1d4fc4f0a648a629cb94260a83816516f",
+      "bytes": 39134
+    },
+    "run_seal": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\seal.json",
+      "sha256": "48880822542b37bc4fbe23af11e4d2dc83746ab1c56550232d1c94e29c94d57d",
+      "bytes": 57427
+    },
+    "execution_journal": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\execution\\journal.jsonl",
+      "sha256": "0975d18b76978219ee35fa490d62dcd63c63377566a495ff4ca935926ff10316",
+      "bytes": 22135
+    },
+    "failed_result": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech\\result.json",
+      "sha256": "d474540088f8f5c2d44c57c7854dc58f9404aa43d08857be0ea8b578e9b0e9ea",
+      "bytes": 13375
+    },
+    "failed_arm_seal": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech\\seal.json",
+      "sha256": "1c9dc7e09fb3d94929f672c56ea6e359d64a6466f0f6652d621c3000d8d773c0",
+      "bytes": 947
+    },
+    "failed_journal": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech\\journal.jsonl",
+      "sha256": "695cc1451d73242f5ad84d235311cd01facf4f18fa18e43db0c575901586f55c",
+      "bytes": 92178
+    },
+    "failed_backend_execution": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech\\backend-execution.json",
+      "sha256": "c7247a49c7bfb9c608b518bc29c9a843adc1be566ff5e7492b70ba757c4d729d",
+      "bytes": 220219
+    },
+    "failed_verification": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech-verification.json",
+      "sha256": "0ca3e9597be5bbf70e77d13666e5604d3e1bc294bd473f97a1a0998c897de641",
+      "bytes": 312
+    },
+    "model_config": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\model-config.json",
+      "sha256": "ba8d6c99840bdaceb8003f5ea2c07736f18d49247f4186052d4c2fbd0cf6f58f",
+      "bytes": 985
+    },
+    "server_command": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\server-command.json",
+      "sha256": "945420f0d1888994b301a343bb4d7c10642f34ccbfd1696b49c5a18601bb93f0",
+      "bytes": 638
+    },
+    "native_stdout": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\server.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "native_stderr": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\server.stderr.log",
+      "sha256": "bc35fbf511802fa1ab139af30cd126ef5cb9c87e23af70ed3f271275ffc13e50",
+      "bytes": 56355
+    },
+    "preparation_journal": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\prepare\\journal.jsonl",
+      "sha256": "a181d400c9592c00f9d62f9cfd2d8db094dbf90ee216ad33fa057f14ca3675eb",
+      "bytes": 3905
+    },
+    "original_engine_archive": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\executed-code\\tools\\science\\comparison_workflow.py",
+      "sha256": "ca96269239aa447adc3e713692626ad8e4586397d62e8e94a79f08f1c6d542f7",
+      "bytes": 42031
+    },
+    "original_backend_archive": {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-matched-20261020T172835Z\\executed-code\\src\\asof\\local_model.py",
+      "sha256": "3be19449d62b82149536927ad72688ff2967d5a9d7a180ab4e162465db001c17",
+      "bytes": 10866
+    }
+  },
+  "execution_totals": {
+    "case_records": 5,
+    "fully_paired_cases": 4,
+    "mechanically_verified_arm_records": 28,
+    "arm_statuses": {
+      "completed": 24,
+      "budget_exhausted": 3,
+      "failed": 1
+    },
+    "physical_calls": 58,
+    "provider_spend_usd": 0,
+    "measured_usage": {
+      "input_tokens": 195038,
+      "output_tokens": 5697,
+      "cost_usd": 0
+    },
+    "qualification": "Verified includes the validly recorded failed arm; this is not 28 successful arms or a completed ten-case comparison."
+  },
+  "failure": {
+    "case_id": "lrrk2-mondo_0005180-inhibit-small_molecule",
+    "hypothesis_sha256": "4b4e5996c7baa0106335c59595e5ed7c64a6f510fc90fd1983ed66e58aab7bc4",
+    "arm": "adapted_virtual_biotech",
+    "category": "genetics",
+    "attempt_id": "genetics:coordinator_synthesize",
+    "native_record_status": "completed",
+    "workflow_status": "failed",
+    "workflow_failure_event": {
+      "details": {
+        "attempt_id": "genetics:coordinator_synthesize",
+        "error_class": "ContractError"
+      },
+      "event": "call_failed",
+      "previous_sha256": "61f52944ef01f9eda3792826e54b269cd248d06182d464da4f1e24ce68fed326",
+      "sequence": 16,
+      "sha256": "0eed756ec1d1617a383311982c3a004d77aa18ba21c35fd67e87e4211082e57c"
+    },
+    "launcher_error_class": "ContractError",
+    "launcher_error": "Comparison arm failed; retained outputs require inspection before any new run",
+    "intended_synthesis_allowed_ids": [
+      "ot25:clingen:773c458ac63c32206798152ef59dc67bffe116b5"
+    ],
+    "actual_synthesis_response_ids": [
+      "ot25:clingen:773c458ac63c32206798152ef59dc67bffe116b5",
+      "ot25:eva:168b267656a01a8de1758bc16c76909bdce1824f"
+    ],
+    "reintroduced_excluded_ids": [
+      "ot25:eva:168b267656a01a8de1758bc16c76909bdce1824f"
+    ],
+    "actual_wire_schema_ids": [
+      "ot25:clingen:773c458ac63c32206798152ef59dc67bffe116b5",
+      "ot25:eva:168b267656a01a8de1758bc16c76909bdce1824f"
+    ],
+    "complete_candidate_packet_ids": [
+      "ot25:clingen:773c458ac63c32206798152ef59dc67bffe116b5",
+      "ot25:eva:168b267656a01a8de1758bc16c76909bdce1824f"
+    ],
+    "synth_request_sha256": "5d1144b173fbdeaa807d4498324799211353ad7d67d4bfdbf57900d55fa9edf2",
+    "synth_payload_sha256": "51ef6d871de55c93d8451ee7cccecf4aec93864d7242345cadcfef5483204a4f",
+    "synth_response_sha256": "0dc87a802761a3e7646f794a029109683c5ef47e778e039a6788f520d78b1519",
+    "reviewer_request_sha256": "1c50dee47ff310428fe4fdd415ea4f06778732a727c4814246f51df78bb26fe5",
+    "reviewer_response_sha256": "50b2ec190b21bb2792dd393ef6a2468b6f7c7f5c69d30d055821510ce871e6da",
+    "reintroduced_record_source_metrics": {
+      "clinicalSignificances": [
+        "uncertain significance"
+      ],
+      "score": 0.3
+    },
+    "interpretation": "The reviewer retained one ClinGen ID. Synthesis returned that ID plus the previously removed EVA record carrying uncertain-significance annotation. Both were in the original wire-schema enum; the workflow subset guard correctly rejected reintroduction. ID-only review output does not establish why the reviewer removed that record.",
+    "claims_committed_in_failed_arm": 0,
+    "claim_commit_journal_events": 0,
+    "unreviewed_claim_committed": false,
+    "failed_arm_physical_calls": 5,
+    "failed_arm_usage": {
+      "input_tokens": 17685,
+      "output_tokens": 451,
+      "cost_usd": 0
+    }
+  },
+  "terminal_boundary": {
+    "server_stopped": true,
+    "owned_loopback_port_closed": true,
+    "predictions_seal_exists": false,
+    "evaluator_join_performed": false,
+    "production_gold_opened_in_this_review": false,
+    "next_dispatch_after_arm_terminal_failure": false,
+    "failed_outputs_modified_by_this_review": false
+  },
+  "proposed_correction": {
+    "status": "planned_not_claimed_implemented_or_validated",
+    "kind": "Response-informed engineering correction requiring a fresh code/policy/protocol freeze and new reserved execution root.",
+    "change": "Constrain the native JSON-schema output allowlist for review/synthesis to IDs in the preceding accepted proposal, retaining the complete scientific candidate packet visible to the model.",
+    "intended_invariants": [
+      "Keep complete bounded scientific candidate records visible.",
+      "Keep pinned model weights, numeric generation settings and per-case budgets unchanged, while explicitly acknowledging changed JSON-schema decoding support.",
+      "Preserve post-response subset checks as defense in depth.",
+      "Handle empty allowed sets with a valid empty-selection schema.",
+      "Bind comparison-only policy and verifier/provenance; do not silently change generic backend behavior."
+    ],
+    "validation_pending": [
+      "Focused regression and adversarial tests",
+      "Independent peer validation",
+      "Fresh source/code/policy freeze before explicit new execution"
+    ],
+    "development_exposure": "The correction is informed by this observed model response on the fixed development cases. Any future same-case run is development-exposed, not an untouched held-out benchmark. A future comparison must start all sixty arms in a fresh full run; do not pool selectively replaced arms across freezes or claim unchanged decoding behavior.",
+    "repeat_policy": "No automatic retry or reuse of this failed execution reservation. New execution requires its own explicit fresh preparation and root."
+  },
+  "scientific_limits": {
+    "Science7_complete": false,
+    "clinical_gates": false,
+    "clinical_probabilities": null,
+    "scientific_superiority_established": false,
+    "sourcecopy_or_guards_establish_biological_truth": false
+  }
+}

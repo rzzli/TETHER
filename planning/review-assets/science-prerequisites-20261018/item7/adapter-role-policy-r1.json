@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "adapter_id": "source-derived-virtual-biotech-t6-selection-v1",
+  "source_revision": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+  "source_root": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-upstream-source-20261020T054000Z",
+  "source_manifest_sha256": "f25a309f93f169fedcf6e5957dbc1946b2f2f33d6909fc85d307a23a30d0634b",
+  "source_files": [
+    {
+      "path": "src/agents/registry.py",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/registry.py",
+      "bytes": 16201,
+      "sha256": "b8eecbbc21716e0636c4e635c69852438d29ce095bd69c8169cdf6e98f66227c"
+    },
+    {
+      "path": "src/agents/cso/system_prompt.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/cso/system_prompt.md",
+      "bytes": 32018,
+      "sha256": "ce111aaf81408dc1ef0119dcde12de0e03beaada11212d270cfbbc901c0366ec"
+    },
+    {
+      "path": "src/agents/chief_of_staff/system_prompt.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/chief_of_staff/system_prompt.md",
+      "bytes": 11466,
+      "sha256": "8bcdef74c90cc045f6cbd36bcbedcbfb6432b7dab2286ddc188ef40c60aaf016"
+    },
+    {
+      "path": "src/agents/scientific_reviewer/system_prompt.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/scientific_reviewer/system_prompt.md",
+      "bytes": 10328,
+      "sha256": "0858303b50d034ed5b5b68c6a507243c20409d18e60f3dc8d8823389d5163953"
+    },
+    {
+      "path": "src/agents/target_id/system_prompts/genomics_analyst_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/target_id/system_prompts/genomics_analyst_short.md",
+      "bytes": 6080,
+      "sha256": "ddc34ab89d5f1f84d03623629c972d7c10a8bf5a1ae7d6364637d20253da0c66"
+    },
+    {
+      "path": "src/agents/target_id/system_prompts/functional_genomics_analyst_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/target_id/system_prompts/functional_genomics_analyst_short.md",
+      "bytes": 6497,
+      "sha256": "a8ddac7f120e5e015c06124b38b5bcca7668fbf1a67e539fb6dfea0fc5816cd3"
+    },
+    {
+      "path": "src/agents/target_id/system_prompts/single_cell_analyst_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/target_id/system_prompts/single_cell_analyst_short.md",
+      "bytes": 9454,
+      "sha256": "5485dce25d3ebf3ec2a3633a1871c8bfbab7efdd6a1444bf5aac816a839dbc09"
+    },
+    {
+      "path": "src/agents/modality_selection/system_prompts/target_biologist_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/modality_selection/system_prompts/target_biologist_short.md",
+      "bytes": 6334,
+      "sha256": "e2be1776d719164f75d18d4c55819ab762ea024d983500ddf00fa15904c67a71"
+    },
+    {
+      "path": "src/agents/modality_selection/system_prompts/medchem_pharmacologist_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/modality_selection/system_prompts/medchem_pharmacologist_short.md",
+      "bytes": 6267,
+      "sha256": "73c865ec6f1c745d637bf1ae172db2506a68b80ddb799d2cc2f77824a94d17a6"
+    },
+    {
+      "path": "src/agents/safety/system_prompts/bio_pathways_ppi_analyst_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/safety/system_prompts/bio_pathways_ppi_analyst_short.md",
+      "bytes": 8126,
+      "sha256": "f00ec50864bc9caf326ac971c6b2274098164301b16376ad0d2236ebbb2bcab1"
+    },
+    {
+      "path": "src/agents/safety/system_prompts/fda_safety_officer_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/safety/system_prompts/fda_safety_officer_short.md",
+      "bytes": 6159,
+      "sha256": "415e8d0d20f96b6d288ff878273a691f8687b17441082c80e49b421c35f2e54b"
+    },
+    {
+      "path": "src/agents/safety/system_prompts/clinical_trialist_short.md",
+      "url": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/src/agents/safety/system_prompts/clinical_trialist_short.md",
+      "bytes": 9528,
+      "sha256": "c0403869a6bd312a1fc56e45f3c499f7d91425ee159e8ab95a84c8dae3a8ae25"
+    }
+  ],
+  "architecture": "Rapid chief due diligence -> CSO delegation -> domain specialist -> scientific review -> CSO synthesis",
+  "stage_order": [
+    "chief_of_staff",
+    "coordinator_delegate",
+    "mapped_specialist",
+    "scientific_reviewer",
+    "coordinator_synthesize"
+  ],
+  "control_reserve_bytes": 2048,
+  "stage_guidance": {
+    "chief_of_staff": "Perform rapid source-bounded due diligence. Identify the most relevant supplied annotations for the stated hypothesis and flag scope limits through conservative selection. Your ID proposal informs CSO delegation. No browsing, competitor outcome knowledge, unprovided databases or narrative claims.",
+    "coordinator_delegate": "Act as CSO: route this category to the mapped specialist using the chief proposal. Propose supplied observation IDs needing specialist scrutiny, without answering from memory or performing new scientific analysis. Delegation is constrained to this category and supplied data.",
+    "mapped_specialist": "Act as the mapped domain specialist. Assess only the supplied annotations against the precise target/indication, intended action, modality and reported context. Keep RNA/protein, association/causation, species, study scope and uncertainty distinct. Return the relevant supplied IDs for critical review; do not infer drug efficacy.",
+    "scientific_reviewer": "Review the mapped specialist proposal for source support, logical scope, user alignment and missing context. Return only a subset of the specialist IDs that can remain as resource annotations. Do not introduce a new analysis or additional records. Empty selection is allowed.",
+    "coordinator_synthesize": "Synthesize the reviewed source-bound record selection without adding unreviewed information. Return only a subset of the scientific reviewer IDs. Preserve unknown context and withhold probabilities. Source annotation selection does not establish therapeutic efficacy."
+  },
+  "specialists": {
+    "genetics": "genomics-analyst",
+    "perturbation": "target-biologist",
+    "expression": "single-cell-analyst",
+    "modality": "target-biologist",
+    "literature": "target-biologist",
+    "clinical": "clinical-trialist",
+    "safety": "fda-safety-officer",
+    "pathway": "bio-pathways-ppi-analyst"
+  },
+  "deviations": [
+    "Source-derived reimplementation, not execution of the original SDK/orchestrator or an unmodified reproduction",
+    "Original prompts and role registry archived, but rewritten bounded role guidance is executed",
+    "Every contributing role uses the same pinned local Qwen weights/runtime, replacing original provider models including Haiku",
+    "Category-local fixed five-stage delegation replaces adaptive conversations and redelegation",
+    "Structured observation-ID selection replaces open-ended due diligence reports and scientific analyses",
+    "Original shell, filesystem, web and MCP tools are replaced by immutable admitted whole-record views and an exact ID allowlist",
+    "Chief and coordinator see the same bounded category packet; this differs from the original CSO no-direct-analysis architecture",
+    "Perturbation/literature use target-biologist in this generic source task; the upstream functional-genomics analyst is cancer-only",
+    "No clinical/known-drug/ChEMBL outcomes, trainable features or probabilities",
+    "Same per-case ceilings can exhaust before all category chains finish; intermediate unreviewed choices never become claims",
+    "Review and synthesis use hard decoder ID support derived from the preceding role; this narrows output support without dropping candidate scientific context."
+  ],
+  "original_prompt_execution": false,
+  "original_orchestrator_execution": false,
+  "provider_spend_usd": 0,
+  "scientific_validation": "not established",
+  "output_constraint_policy": "native_json_schema_reviewed_subset_v1",
+  "operational_amendment": "Response-informed correction after the retained LRRK2 synthesis scope failure; full candidate packet remains visible, decoder support is narrowed to reviewed IDs. Not an unchanged-system or held-out result."
+}

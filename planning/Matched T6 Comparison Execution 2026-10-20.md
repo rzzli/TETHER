@@ -9,20 +9,75 @@ updated: 2026-10-20
 # Matched T6 comparison execution — October 20, 2026
 
 Science 1–6 passed their recorded bounded scopes, including conditional genetics
-defer and an evidence-backed no-fit. Science 7 is active and incomplete. Fresh
-source-freeze preparation completed and real local comparison execution started
-at **2026-10-20 17:31:37 UTC** in
-`runs/science7-matched-20261020T172835Z/`. Its frozen plan SHA-256 is
-`0df1e66f64a669dabba04c0b6e8f392de9b5161a4ea3561627a392def1a3a78b`.
-Execution is active; no terminal arm/comparison results are reported here. Synthetic
-checks establish technical contracts, not successful native execution or comparative
-scientific quality.
+defer and an evidence-backed no-fit. Science 7 is active and incomplete. At the
+**October 21 UTC / October 20 Los Angeles** checkpoint, the response-informed v0.2
+review/synthesis output constraint is implemented and validated. Full validation
+passes 550 tests with zero failures, errors or skips; core validation ran 550 tests
+with 56 expected ingestion skips. Required probes and packaging/demo pass. Four
+independent adversarial tests pass against stable final source hashes; a broader
+79-test pass is retained as a pre-final snapshot.
 
-The governing recipe is `planning/protocols/science7-matched-t6-v0.1.json`.
+A fresh source freeze is underway in `runs/science7-v02-20261021T005551Z/`.
+**No new inference has started at this checkpoint.** The original v0.1 native
+attempt remains stopped and separately retained below. Neither attempt has a
+prediction seal or evaluator answer join. Synthetic checks establish technical
+contracts, not comparative scientific quality.
+
+The current governing recipe is `planning/protocols/science7-matched-t6-v0.2.json`;
+v0.1 remains the governing recipe for the preserved first attempt.
 [[Scientific Prerequisites Execution 2026-10-18]] records the ordered science work;
 its earlier running/blocked sections remain dated history. The October 18
 [[Task 6 Development Comparisons 2026-10-18]] records earlier diagnostics, including
 post-selection masks. Those diagnostics are not fresh workflow-ablation results.
+
+## Retained first-attempt failure — October 20, 17:48:53 UTC
+
+The first attempt completed source-freeze preparation and started real local
+execution at **2026-10-20 17:31:37 UTC** in
+`runs/science7-matched-20261020T172835Z/`. Its original frozen plan SHA-256 is
+`0df1e66f64a669dabba04c0b6e8f392de9b5161a4ea3561627a392def1a3a78b`.
+It **stopped with a retained failure at 17:48:53 UTC**. The owned server stopped
+and loopback port closed; no prediction seal or evaluator answer join was produced.
+
+The launcher mechanically verified 28 arm records: 24 completed, three
+budget-exhausted and one failed. Four cases finished all paired arms; the fifth
+has partial execution. Total physical calls were 58, measured usage 195,038 input
+and 5,697 output tokens, and provider spend $0. These are partial-attempt accounting
+facts, not completed ten-case comparison results.
+
+In LRRK2 genetics, the scientific reviewer retained one ClinGen ID. The synthesis
+response returned that ID plus the EVA record the reviewer had removed; that
+record carries an uncertain-significance annotation. The original decoding schema
+still allowed both supplied candidate IDs. The workflow's post-response subset
+guard correctly rejected reintroduction, committed no claims in the failed arm,
+and stopped the launcher before another dispatch. ID-only output does not explain
+why the reviewer removed that record.
+
+`planning/review-assets/science-prerequisites-20261018/item7/failure-20261020.json`
+pins the original plan, execution report/seal, failed result/journal/backend/native
+response and archived code. Failed files and the reserved execution root remain
+unchanged. No automatic repeat or selective replacement of the failed arm occurs.
+
+## Implemented v0.2 operational amendment — October 21 UTC / October 20 Los Angeles
+
+The general review/synthesis JSON-schema output allowlist is now an **implemented
+and validated, response-informed engineering correction**. It restricts returned
+IDs to the preceding accepted proposal while leaving the complete scientific
+candidate packet visible. An empty accepted proposal permits only an empty array.
+Pinned weights, numeric generation settings and resource ceilings stay fixed;
+allowed decoding support changes explicitly. No VUS-specific evidence filter was
+added. The protocol binds the corrected role-policy digest and backend provenance,
+including zero-call arms. The source verifier checks completed native responses
+against the same restricted IDs. Legacy no-constraint `verify_case` behavior and
+the generic `LocalSelectionBackend` payload contract remain supported.
+
+The v0.2 protocol records the retained failure, response-informed status, unchanged
+candidate packet and changed output support. The new source-freeze root is
+`runs/science7-v02-20261021T005551Z/`; preparation is underway without new inference
+at this checkpoint. A complete fresh sixty-case-arm execution is required. Prior
+expenditure remains separate, with no old response pooling or selective replacement
+of failed arms. Reuse of these exposed development cases cannot become an untouched
+held-out, unchanged-system or preregistered comparison claim.
 
 ## Fixed cases, source world and sparse references
 
@@ -69,7 +124,8 @@ Twelve pinned upstream source files at revision
 Virtual Biotech SDK/orchestrator, provider execution, tool stack and full scientific
 capabilities are not executed. The adaptation is not an unmodified upstream-system
 replication. Synthetic validation checked five distinct physical opener requests
-and chained feedback; native chain completion is unreported at this checkpoint.
+and chained feedback. The first native attempt exercised the chain and exposed the
+retained synthesis-veto failure above; full paired execution did not complete.
 
 All contributing model roles use the same receipt-pinned Qwen2.5-14B-Instruct GGUF
 Q4_K_M weights and native runtime. The model receives no browsing, shell, filesystem
@@ -140,12 +196,31 @@ injected synthetic opener. No native model/server or production answers were use
 by that validation. The subsequent full validation passed 536 tests with zero
 failures, errors or skips. Separate core validation ran 536 tests with 56 expected
 ingestion skips. Required probes and packaging passed in both modes. These checks
-do not establish successful completion of the active native comparison.
+predate the retained native failure and do not establish successful completion.
 
-Pending work is completion of the active owned local execution and shutdown,
-externally recorded prediction sealing, evaluator join, original-row audit, final
-resource/coverage reporting and bounded Science 7 closeout. These are requirements,
-not completed results. `TODO.md` and Science 7 remain incomplete.
+The v0.2 correction now passes 550 full tests with zero failures, errors or skips.
+Core validation ran 550 tests with 56 expected ingestion skips; required probes
+and packaging/demo pass in both modes. Independent review reproduced a verifier
+gap: a completed native response outside the newly restricted output schema could
+still be accepted under the old failed-subset exception. The fix checks completed
+responses against the new allowlist and retains that exception only under the old
+policy. Four independent adversarial regressions pass against stable final hashes,
+covering every subset of three candidate IDs, full-packet preservation, forbidden
+output rejection and legacy verification compatibility.
+
+`planning/review-assets/science-prerequisites-20261018/item7/role-constraint-peer-validation-r1.json`
+retains the final source hashes and four-test pass. Its broader 79-test pass is
+explicitly a pre-final snapshot: launcher-test newline normalization overlapped
+that run's source-hash guard, so it is not represented as a stable final-source
+run. All 79 tests passed; the final four independent tests were rerun with stable
+hashes. These tests used synthetic openers and source fixtures, with no production
+gold, native model execution or biological correctness adjudication by the peer.
+
+The first native execution remains stopped. The fresh v0.2 source freeze is
+underway with no new inference at this checkpoint. Pending work is completion of
+that preparation and full fresh execution, externally recorded prediction sealing,
+evaluator join, original-row audit, final resource/coverage reporting and bounded
+Science 7 closeout. `TODO.md` and Science 7 remain incomplete.
 
 ## Scientific boundaries retained
 

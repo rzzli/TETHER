@@ -8,7 +8,7 @@ updated: 2026-10-20
 
 # Project goals
 
-## Current scientific prerequisite execution — October 20
+## Current scientific prerequisite execution — October 21 UTC / October 20 Los Angeles
 
 Science 1–4 passed within their recorded scopes. Science 5 also passed its conditional
 assessment, with predictive genetics explicitly deferred and G06 false. Its final
@@ -21,18 +21,35 @@ with common bounded retrieval and fifty sparse AI Q1 reference rows. The adapted
 Virtual Biotech role chain is a restricted source-derived reimplementation, not
 upstream SDK execution; no-literature/no-perturbation are fresh workflow ablations.
 
-At this October 20 documentation checkpoint, fresh source-freeze preparation passed
-and real Science 7 execution started at 17:31:37 UTC under
-`runs/science7-matched-20261020T172835Z/`. No terminal comparison results are reported.
-The latest incremental peer
-check passed 51 focused synthetic tests, including unconditional zero-call model/
-retrieval binding, all six execution-proof pins and failure-stop behavior. Earlier
-45-probe/28-test evidence predates the final engine/launcher corrections and remains
-explicitly historical. Subsequent full validation passed 536 tests with zero
-failures/errors/skips; core validation ran 536 tests with 56 expected ingestion
-skips. Required probes and packaging passed in both modes. Native completion and
-shutdown, externally recorded prediction seal, evaluation join, original-row audit
-and final reporting are pending. See
+The preserved first v0.1 attempt started at October 20, 17:31:37 UTC under
+`runs/science7-matched-20261020T172835Z/`. It stopped with a retained failure at
+17:48:53 UTC: LRRK2 synthesis reintroduced one reviewer-excluded EVA ID, and the
+post-response subset guard rejected it with zero claims in the failed arm. Four
+fully paired cases, 28 mechanically verified arm records (24 completed, three
+budget-exhausted, one failed) and 58 physical calls are retained at $0. The owned
+server stopped and port closed; no prediction seal or evaluator join occurred.
+See item7/failure-20261020.json for exact original-attempt commitments.
+The response-informed v0.2 operational amendment is now implemented and validated.
+Reviewer/synthesis JSON-schema output support is restricted to the preceding
+accepted role's IDs, with the complete scientific candidate packet still visible.
+This is a general control rule; no VUS-specific evidence filter was added. The
+verifier enforces that same scope while preserving legacy no-constraint
+`verify_case` behavior. Protocol/policy and backend provenance bind the correction.
+Current full validation passes 550 tests with zero failures, errors or skips;
+core validation ran 550 tests with 56 expected ingestion skips. Required probes
+and packaging/demo pass. Four independent adversarial tests pass against stable
+final source hashes. The broader 79-test pass is explicitly a pre-final snapshot
+because launcher-test newline normalization overlapped its source-hash guard;
+see item7/role-constraint-peer-validation-r1.json. Earlier 536-test and incremental
+peer receipts remain dated history.
+
+At this October 21 UTC / October 20 Los Angeles documentation checkpoint, a fresh
+source freeze is underway in `runs/science7-v02-20261021T005551Z/`; no new inference
+has started. The new attempt must execute all sixty case-arm pairs without pooling
+v0.1 responses or selectively replacing failed arms. Reusing these exposed cases
+does not establish an untouched held-out, unchanged-system or preregistered result.
+Full fresh execution, externally recorded prediction seal, evaluation join,
+original-row audit and final reporting remain pending. See
 [[Matched T6 Comparison Execution 2026-10-20]].
 
 G03/G04/G05/G06/G07 and clinical lock remain false. Prediction features remain empty,

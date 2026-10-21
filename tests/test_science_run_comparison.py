@@ -31,12 +31,14 @@ class RunComparisonTests(unittest.TestCase):
         receipt = self.root/'receipt.json'; write_json(receipt, {'fixture': 'no native assets'})
         shutil.copyfile(receipt, output/'model-acquisition.json')
         write_json(output/'catalog-policy.json', {'fixture': 'catalog'})
-        write_json(output/'role-policy.json', {'fixture': 'policy'})
+        write_json(output/'role-policy.json', {'fixture': 'policy','output_constraint_policy':launcher.RoleSelectionBackend.output_scope_policy})
+        policy_source=self.root/'role-policy-source.json';shutil.copyfile(output/'role-policy.json',policy_source)
         arms = ['asof', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation']
-        protocol = {'protocol_id': 'science7-matched-source-bounded-t6-v0.1', 'source_bundle': 'data/derived/source',
+        protocol = {'protocol_id': 'science7-matched-source-bounded-t6-v0.2', 'source_bundle': 'data/derived/source',
             'arms': arms, 'budget_per_case_per_arm': encode(Budget()),
             'candidate_world': {'maximum_total_observations_per_case': None, 'seed': None},
-            'local_backend': {'acquisition_receipt_sha256': sha256_file(receipt)}}
+            'local_backend': {'acquisition_receipt_sha256': sha256_file(receipt),'selection_policy':launcher.ROLE_SELECTION_POLICY},
+            'role_policy':{'path':'role-policy-source.json','sha256':sha256_file(policy_source)}}
         cases = []
         for index in range(10):
             identity = 'fixture-' + str(index)
@@ -68,6 +70,36 @@ class RunComparisonTests(unittest.TestCase):
     def test_valid_synthetic_plan_binds_complete_fixed_recipe(self):
         plan, _ = self.plan_fixture()
         self.assertEqual(self.validate(plan), {'status': 'plan_valid', 'cases': 10, 'arms': 6})
+
+    def test_resealed_role_policy_cannot_disable_native_subset_constraints(self):
+        plan, output=self.plan_fixture()
+        write_json(output/'role-policy.json',{'fixture':'policy'})
+        plan['role_policy']=launcher.pin(output/'role-policy.json')
+        with self.assertRaisesRegex(ContractError,'role-policy'):
+            self.validate(plan)
+
+    def test_protocol_repin_cannot_authorize_missing_role_constraint(self):
+        plan, output=self.plan_fixture()
+        policy={'fixture':'unconstrained'}
+        write_json(output/'role-policy.json',policy)
+        write_json(self.root/'role-policy-source.json',policy)
+        protocol=read_json(Path(plan['protocol']['path']))
+        protocol['role_policy']['sha256']=sha256_file(output/'role-policy.json')
+        write_json(Path(plan['protocol']['path']),protocol)
+        plan['protocol']=launcher.pin(plan['protocol']['path'])
+        plan['role_policy']=launcher.pin(output/'role-policy.json')
+        with self.assertRaisesRegex(ContractError,'role-policy'):
+            self.validate(plan)
+
+    def test_protocol_repin_cannot_replace_native_selection_policy(self):
+        plan, _=self.plan_fixture()
+        protocol=read_json(Path(plan['protocol']['path']))
+        protocol['local_backend']['selection_policy']='unconstrained'
+        plan['backend']=deepcopy(protocol['local_backend'])
+        write_json(Path(plan['protocol']['path']),protocol)
+        plan['protocol']=launcher.pin(plan['protocol']['path'])
+        with self.assertRaisesRegex(ContractError,'role-policy'):
+            self.validate(plan)
 
     def test_plan_recipe_boundary_and_membership_changes_rejected(self):
         plan, _ = self.plan_fixture()
@@ -272,7 +304,7 @@ class RunComparisonTests(unittest.TestCase):
                 (launcher, 'validate_plan', Mock(return_value={'status': 'plan_valid'})),
                 (launcher, 'verify_model', Mock(return_value=(server, model))),
                 (launcher, '_load_case', Mock(return_value=(case, store))),
-                (launcher, 'LocalSelectionBackend', Mock()),
+                (launcher, 'RoleSelectionBackend', Mock()),
                 (launcher, '_owned_listener', Mock(return_value=True)),
                 (launcher, 'port_closed', Mock(return_value=True)),
                 (launcher, 'peak_memory_bytes', Mock(return_value=0)),

@@ -25,10 +25,18 @@ independent scientific quality and clinical performance remain unmeasured.
 The current [Science 7 matched comparison](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md)
 is active after Science 1–6 passed their bounded scopes. Its six arms use ten cases,
 all 10,512 admitted observations, sparse evaluator-only AI references, a source-derived
-Virtual Biotech role adaptation and fresh workflow ablations. Source-freeze preparation
-and 536 full tests passed; local comparison execution started October 20 at 17:31:37
-UTC. No terminal results are reported at this checkpoint; evaluation/audit remain
-pending and clinical/scoring gates false.
+Virtual Biotech role adaptation and fresh workflow ablations. The response-informed
+v0.2 review/synthesis output constraint is implemented and validated: 550 full tests
+passed with zero failures, errors or skips; core validation ran 550 tests with 56
+expected ingestion skips. Required probes and packaging passed. Four independent
+adversarial tests passed against stable final source hashes; a broader 79-test pass
+is retained as a pre-final snapshot. The first v0.1 native attempt stopped October 20 at 17:48:53
+UTC when synthesis reintroduced a reviewer-excluded ID; the guard rejected it and
+the owned server stopped. Four paired cases/28 arm records/58 calls are retained,
+with no prediction seal or evaluator join. At the October 21 UTC / October 20
+Los Angeles checkpoint, a fresh v0.2 source freeze is underway in
+`runs/science7-v02-20261021T005551Z/`; no new inference has started. Science 7
+remains incomplete and clinical gates false.
 
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant

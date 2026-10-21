@@ -30,10 +30,23 @@ to the user. Previous task completion scopes and historical results below remain
 
 Current item: Science 7 — implement and validate the adapted comparator, matched
 end-to-end ablations and supported T6 source-reference comparisons. Clinical
-activation remains conditional and withheld. The October20 technical checkpoint
-passes536 full tests and536 dependency-free checks with56 expected ingestion
-skips, required probes and packaging/demo. Native comparison execution is active;
-no completed comparison or clinical result is claimed. See
+activation remains conditional and withheld. The October 21 UTC / October 20
+Los Angeles technical checkpoint passes 550 full tests with zero failures, errors
+or skips; core validation ran 550 tests with 56 expected ingestion skips. Required
+probes and packaging/demo pass. Four independent adversarial tests pass against
+stable final source hashes; a broader 79-test pass remains a pre-final snapshot.
+The first v0.1 native attempt stopped with
+a retained LRRK2 synthesis-veto failure at October 20, 17:48:53 UTC. The workflow
+guard rejected a reviewer-excluded ID and committed no claims in the failed arm;
+the owned server stopped and port closed. Four paired cases/28 arm records/58 calls
+remain at $0, without a prediction seal or evaluator join. The general hard-output
+allowlist is implemented and validated under the response-informed v0.2 operational
+amendment. It narrows reviewer/synthesis output support while preserving the whole
+candidate packet. A fresh source freeze is underway in
+`runs/science7-v02-20261021T005551Z/`; no new inference has started at this checkpoint.
+The v0.1 outputs remain separate history; no automatic repeat or response reuse
+occurs. Science 7 stays unchecked.
+No completed comparison or clinical result is claimed. See
 `planning/Matched T6 Comparison Execution 2026-10-20.md`.
 Science6 passed with an explicit
 no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
@@ -74,6 +87,8 @@ development artifacts are evidence, not independent scientific validation.
 - [x] Implement the source-derived five-role comparator and fresh pre-retrieval
   ablations, durable execution proofs and independent source-aware verification.
 - [x] Pass the full/core regressions, package/demo and independent corruption probes.
+- [x] Implement and validate the response-informed v0.2 role-output constraint;
+  retain the v0.1 failure and start a fresh source freeze without response reuse.
 - [ ] Finish and source-verify all sixty native/baseline case-arm executions.
 - [ ] Seal predictions, run the qualified Q1 development comparison and audit
   twenty distinct original rows from final AsOf selections.
@@ -196,7 +211,9 @@ available (ten cases / 20 claims); they are not independently adjudicated gold.
   requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
 - [x] Implement and validate the adapted Virtual Biotech execution arm under
   matched evidence, model, budget and containment rules.
-- [ ] Implement/run matched end-to-end ablations. Existing no-literature and
-  no-perturbation results are post-selection masks only; they are not model reruns.
+- [ ] Complete matched end-to-end ablations across the full frozen comparison.
+  Fresh workflow ablations were implemented and partially executed in the October 20
+  attempt; the run stopped with a retained synthesis-veto failure. October 18 masks
+  remain separate historical diagnostics. Full fresh paired execution is pending.
 - [ ] Complete scientific comparisons with independent quality/clinical references
   and qualified scoring/power. These prerequisites remain unmet.
