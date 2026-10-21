@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-21T02:04:28.627510+00:00",
+  "status": "register_valid",
+  "stages": {
+    "science_1": "passed",
+    "science_2": "passed",
+    "science_3": "passed",
+    "science_4": "passed",
+    "science_5": "passed",
+    "science_6": "passed",
+    "science_7": "passed"
+  },
+  "scientific_validation": "not_inferred_from_contract_validation",
+  "register": {
+    "path": "data/derived/science-prerequisites-20261018/execution-science7-passed-v02.json",
+    "sha256": "7ded5399266845b82c21923b16a64085acb1de2d3b435a87b7f67e1f18dfcea6",
+    "bytes": 17158
+  },
+  "clinical_activation": false,
+  "qualification": "Seven bounded assessment dispositions; no whole-project or clinical-science completion claim"
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at_utc": "2026-10-21T02:05:50.435388+00:00",
+  "register_validation": {
+    "status": "register_valid",
+    "stages": {
+      "science_1": "passed",
+      "science_2": "passed",
+      "science_3": "passed",
+      "science_4": "passed",
+      "science_5": "passed",
+      "science_6": "passed",
+      "science_7": "passed"
+    },
+    "scientific_validation": "not_inferred_from_contract_validation"
+  },
+  "register": {
+    "path": "data/derived/science-prerequisites-20261018/execution-science7-passed-v02.json",
+    "sha256": "7ded5399266845b82c21923b16a64085acb1de2d3b435a87b7f67e1f18dfcea6",
+    "bytes": 17158
+  },
+  "structural_checks": {
+    "tracked_scope_files": 579,
+    "providers": 83,
+    "datasets": 178
+  },
+  "seven_assessment_checkboxes_completed": true,
+  "broader_tasks_6_to_8_still_gated": true,
+  "peer_accepted_proofs_unchanged": true,
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "670d29085b736ddbe3871a90f9a2a5e40153aeaf28104cccad52b24aa4abfb1d",
+      "bytes": 9995
+    },
+    {
+      "path": "TODO.md",
+      "sha256": "19a7d356be604c6c7bfef35b4389eea37b7fec31373bb640f4321586daedb009",
+      "bytes": 16015
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "sha256": "fadc0a234b997c67df9ecf9dda2d135e3e444f0893b6061ad0f154061d7870fc",
+      "bytes": 6962
+    },
+    {
+      "path": "memory/project-goals.md",
+      "sha256": "2a8c525ccf3d2f7776b5a360a42ae81a8f11826d256a24506c2bd70511172637",
+      "bytes": 43723
+    },
+    {
+      "path": "memory/research-log-2026-10-20.md",
+      "sha256": "3cc0eebe0db1895f78b5deeafb3f4e94902515965c061ba96215c78c28938c8d",
+      "bytes": 5164
+    },
+    {
+      "path": "planning/Matched T6 Comparison Execution 2026-10-20.md",
+      "sha256": "eb6dd59e314cfcde40121a9adfb57be4531cbd6dbaf1d8db868a4ac86ef0ca28",
+      "bytes": 21634
+    },
+    {
+      "path": "planning/Scientific Prerequisites Execution 2026-10-18.md",
+      "sha256": "b74beb7eae21dac48e1864eba2dacec3f9cd168c2b4f0ff8548f3b6dd1b20644",
+      "bytes": 21645
+    }
+  ],
+  "scientific_gates": {
+    "G03_full_historical_predictors": false,
+    "G04_outcomes": false,
+    "G05_power": false,
+    "G06_genetics": false,
+    "G07_scoring": false,
+    "clinical_locked": false
+  },
+  "scientific_validation": "not_established",
+  "tests": "Final551 full/core checks and four hosted jobs retained separately; documentation-only checks here."
+}

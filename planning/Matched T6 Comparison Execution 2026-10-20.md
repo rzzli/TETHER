@@ -8,20 +8,37 @@ updated: 2026-10-20
 
 # Matched T6 comparison execution — October 20, 2026
 
-Science 1–6 passed their recorded bounded scopes, including conditional genetics
-defer and an evidence-backed no-fit. Science 7 is active and incomplete. At the
-**October 21 UTC / October 20 Los Angeles** checkpoint, the response-informed v0.2
-review/synthesis output constraint is implemented and validated. Full validation
-passes 550 tests with zero failures, errors or skips; core validation ran 550 tests
-with 56 expected ingestion skips. Required probes and packaging/demo pass. Four
-independent adversarial tests pass against stable final source hashes; a broader
-79-test pass is retained as a pre-final snapshot.
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
 
-A fresh source freeze is underway in `runs/science7-v02-20261021T005551Z/`.
-**No new inference has started at this checkpoint.** The original v0.1 native
-attempt remains stopped and separately retained below. Neither attempt has a
-prediction seal or evaluator answer join. Synthetic checks establish technical
-contracts, not comparative scientific quality.
+The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
+53 completed and seven explicitly budget-exhausted, with no failed arm in this
+attempt. All sixty passed source-inclusive semantic verification. Predictions were
+sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
+the sparse AI Q1 references. A retained audit then checked **20 distinct original
+rows**, two final AsOf selections per case. Independent agent acceptance passed;
+this is a technical source/protocol review, not independently established biological truth.
+
+There were **114 fresh local native calls**, measured
+377,837 input and 10,538
+output tokens, and $0 provider spending. Execution took 2721.703
+seconds, excluding preparation/evaluation/audit. All real features remain empty and
+probabilities null. Final audit-correction validation passes **551 tests** with no skips;
+dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
+Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
+`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
+
+AsOf selected **all 37 offered candidates**. This run does not establish difficult
+prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
+Virtual Biotech arm is a restricted source-derived five-role reimplementation,
+not execution of its original SDK/research workflow; seven of its ten cases reached
+the common resource budget. Ablations used fresh calls after removing a category
+before retrieval; this category-local design does not test cross-category reasoning.
+
+The response-informed v0.2 correction and failed v0.1 attempt remain separate and
+fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
+58 calls and no gold join. Both attempts total 172
+physical calls at $0. No prior response was pooled into v0.2; this is exposed
+development work, not an untouched held-out or unchanged-system result.
 
 The current governing recipe is `planning/protocols/science7-matched-t6-v0.2.json`;
 v0.1 remains the governing recipe for the preserved first attempt.
@@ -72,12 +89,21 @@ against the same restricted IDs. Legacy no-constraint `verify_case` behavior and
 the generic `LocalSelectionBackend` payload contract remain supported.
 
 The v0.2 protocol records the retained failure, response-informed status, unchanged
-candidate packet and changed output support. The new source-freeze root is
-`runs/science7-v02-20261021T005551Z/`; preparation is underway without new inference
-at this checkpoint. A complete fresh sixty-case-arm execution is required. Prior
-expenditure remains separate, with no old response pooling or selective replacement
-of failed arms. Reuse of these exposed development cases cannot become an untouched
-held-out, unchanged-system or preregistered comparison claim.
+candidate packet and changed decoding support. The fresh root
+`runs/science7-v02-20261021T005551Z/` contains all sixty runs and prediction seal.
+The finite pipeline `data/derived/science7-v02-pipeline-20261021T010203Z/` completed
+paired execution, anchor commit/push and post-seal evaluation, then stopped on an
+incorrect whole-catalog identity check in the original-row audit. That failure and
+its code/seal remain retained. A new regression reproduced it; the correction
+retains both catalog digests and enforces every lineage role under the exact pinned
+execution policy. Actual used datasets differ only in evidence collection metadata,
+with unchanged access roles. Nineteen audit tests and nine independent role-denial
+probes passed, followed by 551-test full/core validation and four hosted jobs.
+An explicitly corrected audit-only recovery in a fresh directory completed all
+twenty original-row checks without inference or changing predictions/evaluation.
+The completion pointer identifies the failed original pipeline and recovery scope;
+it does not relabel the failed pipeline successful. Both are finite executions,
+not periodic monitors. See `item7/audit-catalog-correction-v02-r1.json`.
 
 ## Fixed cases, source world and sparse references
 
@@ -176,9 +202,9 @@ Evaluation remains descriptive: copied-source fidelity, reference coverage and
 dispositions, selected-set overlap, missingness and actual resources. A separate
 post-seal original-row audit targets up to two distinct final `asof` selections per
 case, without substituting unavailable claims. It requires a completed matching
-evaluation; audit execution and final coverage remain pending at this checkpoint.
+evaluation; its completed twenty-row coverage and limitations are reported below.
 
-## Validation checkpoints and remaining work
+## Validation checkpoints and final acceptance
 
 The retained initial peer reports expose chronology, duplicate-event, coverage,
 omitted-selection and reservation-accounting failures and their corrections. The
@@ -198,7 +224,7 @@ failures, errors or skips. Separate core validation ran 536 tests with 56 expect
 ingestion skips. Required probes and packaging passed in both modes. These checks
 predate the retained native failure and do not establish successful completion.
 
-The v0.2 correction now passes 550 full tests with zero failures, errors or skips.
+At the pre-inference freeze, the v0.2 role correction passed 550 full tests with zero failures, errors or skips.
 Core validation ran 550 tests with 56 expected ingestion skips; required probes
 and packaging/demo pass in both modes. Independent review reproduced a verifier
 gap: a completed native response outside the newly restricted output schema could
@@ -216,11 +242,12 @@ run. All 79 tests passed; the final four independent tests were rerun with stabl
 hashes. These tests used synthetic openers and source fixtures, with no production
 gold, native model execution or biological correctness adjudication by the peer.
 
-The first native execution remains stopped. The fresh v0.2 source freeze is
-underway with no new inference at this checkpoint. Pending work is completion of
-that preparation and full fresh execution, externally recorded prediction sealing,
-evaluator join, original-row audit, final resource/coverage reporting and bounded
-Science 7 closeout. `TODO.md` and Science 7 remain incomplete.
+The first native execution remains stopped and separately retained. Fresh v0.2
+execution and the post-seal audit are complete. The authoritative bounded closeout
+is `item7/comparison-disposition-v02.json`, independently accepted in
+`item7/final-acceptance-v02.json`. The seven-stage register is
+`data/derived/science-prerequisites-20261018/execution-science7-passed-v02.json`;
+its validator proof is `item7/execution-register-validation-v02.json`.
 
 ## Scientific boundaries retained
 
@@ -236,3 +263,67 @@ design. Source-ID copying can mechanically guarantee normalized-source fidelity;
 that does not establish biological correctness or clinical benefit. Provider spend
 remains $0; existing original inputs, downloader and the user's stopped periodic
 monitor remain unchanged.
+
+## Final descriptive results and retained proofs — October 20 Los Angeles
+
+| Arm | Calls | Claims | Completed / budget exhausted | Q1 overlap / selected | Unreviewed unknown |
+|---|---:|---:|---|---:|---:|
+| asof | 20 | 37 | 10 / 0 | 8 / 37 | 29 |
+| adapted_virtual_biotech | 65 | 17 | 3 / 7 | 5 / 17 | 12 |
+| lexical | 0 | 37 | 10 / 0 | 8 / 37 | 29 |
+| provider_score | 0 | 31 | 10 / 0 | 5 / 31 | 26 |
+| no_literature | 10 | 19 | 10 / 0 | 7 / 19 | 12 |
+| no_perturbation | 19 | 35 | 10 / 0 | 8 / 35 | 27 |
+
+Q1 overlap counts are coverage diagnostics against fifty sparse AI source-reference
+annotations, not accuracy estimates. Unreviewed selections stay unknown; a completed
+arm may abstain on an inapplicable provider-score category. More claims are not
+evidence of greater quality. All final claims match their admitted normalized source.
+
+Preparation took 309.532 seconds for 10,512 admitted observations. The frozen
+case-world references 227 distinct source-proof files / 8,358,041,003 bytes
+(normalized/raw/reference; receipt/model bytes excluded). Execution took
+2721.703 seconds; evaluation 450.718
+seconds; original-row audit 171.047 seconds. Peak Python
+memory was 333,082,624 bytes. A bounded OS sample after all
+inference observed a native peak working set of 16.580 GiB through that time;
+the final whole-process native peak and GPU memory were not instrumented and remain
+unknown. Native response timing excludes hashing, admission and server startup.
+Repeated source proof hashing generated substantial logical I/O; unique input bytes
+must not be confused with cumulative reads. Owned servers stopped and ports closed.
+
+The original-row report retains source identifiers, physical row-group/row locators,
+context, metrics, missingness and parent receipts. It checks copied annotations,
+not biological causation, direction, target utility or clinical benefit. Unknown
+context and unavailable inputs remain explicit; no biological conflict was invented
+to satisfy a reporting requirement. Dedicated conflict fixtures remain separate.
+
+Sanitized, tracked evidence is under
+`planning/review-assets/science-prerequisites-20261018/item7/`:
+
+- `prediction-boundary-v02.json`: externally recorded pre-answer seal.
+- `comparison-disposition-v02.json`: per-arm counts, coverage and scientific limits.
+- `measured-resources-v02.json`: actual usage/resources and prior-attempt accounting.
+- `final-acceptance-v02.json`: independent agent acceptance with exact input hashes.
+- `final-v02-code-validation.json` and `hosted-v02-audit-r1-validation.json`: final full/core/hosted checks; original pre-inference validation remains separate.
+- `execution-register-validation-v02.json`: seven bounded assessment dispositions.
+
+Local complete evaluator and original-row proofs are pinned by the disposition;
+they remain evaluator-only under ignored `data/benchmark/gold_evidence/`.
+
+## Remaining scientific gates and conditional project work
+
+| Gate/work | Current disposition | Required before activation |
+|---|---|---|
+| Difficult T6 prioritization | Unmeasured in this run (37/37 selected) | Separately frozen wider-candidate/source-context challenge and independent quality references; retain exposed development history. |
+| G03 historical predictors | Mapping inputs ready; predictor bundle incomplete | Per-product dated eligible biological inputs and complete annotation lineage. |
+| G04 clinical outcomes | All 36 pilot endpoints unresolved | Origin-defined program linkage, endpoint-specific source adjudication, censoring, negatives and reporting completeness; scale qualified cohort without relabeling unknowns. |
+| G05 sample size/power | Nonestimable for qualified pilot classes | Qualified class counts, measured dependency structure and justified effect/label-error assumptions. |
+| G06 genetics | Conditional defer | Resolve source digest/docs, dense regional inputs, scale, ancestry, overlap, historical lineage and mechanism alignment before derivations. |
+| G07 scoring/calibration | Explicit no-fit | Qualified non-genetic or genetic features, temporally eligible models, leakage-safe training/calibration and adequate outcomes. |
+| Locked independent clinical evaluation | Withheld | All applicable scientific gates plus actual pre-answer lock, independently qualified truth and untouched evaluation. |
+| T2–T5 and H6 | Deferred conditional branches | Their own feasibility/data/reference gates and prospective scope authorization. |
+
+All seven assessments being closed does not qualify these clinical gates, finish
+the entire project or authorize a scientific superiority claim. Original proposals,
+failed attempts, raw data, downloader and stopped periodic monitor remain preserved.

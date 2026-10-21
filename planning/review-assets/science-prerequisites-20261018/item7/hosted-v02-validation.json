@@ -1,0 +1,34 @@
+{
+  "conclusion": "success",
+  "headSha": "59374ac455133ddce8025e3207812fea9ebda46f",
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39524740624/job/118976628860",
+      "completedAt": "2026-10-21T01:01:13Z"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39524740624/job/118976629142",
+      "completedAt": "2026-10-21T01:03:02Z"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39524740624/job/118976629187",
+      "completedAt": "2026-10-21T01:04:39Z"
+    },
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39524740624/job/118976629220",
+      "completedAt": "2026-10-21T01:01:01Z"
+    }
+  ],
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39524740624",
+  "schema_version": 1,
+  "status": "all_four_hosted_jobs_passed",
+  "scope": "v0.2 technical code validation; biological and clinical validation not established"
+}

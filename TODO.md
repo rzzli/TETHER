@@ -1,6 +1,6 @@
 # Project execution checklist
 
-## Active seven-item scientific-prerequisite execution — October 18
+## Seven-item science assessment — bounded scopes completed October 20
 
 The user authorized executing the seven-item science plan in order, using delegated
 agent expertise instead of waiting for human domain input. Agent review provenance
@@ -13,7 +13,7 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
 - [x] **Science 5 — Qualify genetics as a conditional scientific branch.**
 - [x] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
-- [ ] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
+- [x] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
 
 ### Science 4 supporting work
 
@@ -28,26 +28,38 @@ to the user. Previous task completion scopes and historical results below remain
 - [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
 - [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
 
-Current item: Science 7 — implement and validate the adapted comparator, matched
-end-to-end ablations and supported T6 source-reference comparisons. Clinical
-activation remains conditional and withheld. The October 21 UTC / October 20
-Los Angeles technical checkpoint passes 550 full tests with zero failures, errors
-or skips; core validation ran 550 tests with 56 expected ingestion skips. Required
-probes and packaging/demo pass. Four independent adversarial tests pass against
-stable final source hashes; a broader 79-test pass remains a pre-final snapshot.
-The first v0.1 native attempt stopped with
-a retained LRRK2 synthesis-veto failure at October 20, 17:48:53 UTC. The workflow
-guard rejected a reviewer-excluded ID and committed no claims in the failed arm;
-the owned server stopped and port closed. Four paired cases/28 arm records/58 calls
-remain at $0, without a prediction seal or evaluator join. The general hard-output
-allowlist is implemented and validated under the response-informed v0.2 operational
-amendment. It narrows reviewer/synthesis output support while preserving the whole
-candidate packet. A fresh source freeze is underway in
-`runs/science7-v02-20261021T005551Z/`; no new inference has started at this checkpoint.
-The v0.1 outputs remain separate history; no automatic repeat or response reuse
-occurs. Science 7 stays unchecked.
-No completed comparison or clinical result is claimed. See
-`planning/Matched T6 Comparison Execution 2026-10-20.md`.
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
+
+The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
+53 completed and seven explicitly budget-exhausted, with no failed arm in this
+attempt. All sixty passed source-inclusive semantic verification. Predictions were
+sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
+the sparse AI Q1 references. A retained audit then checked **20 distinct original
+rows**, two final AsOf selections per case. Independent agent acceptance passed;
+this is a technical source/protocol review, not independently established biological truth.
+
+There were **114 fresh local native calls**, measured
+377,837 input and 10,538
+output tokens, and $0 provider spending. Execution took 2721.703
+seconds, excluding preparation/evaluation/audit. All real features remain empty and
+probabilities null. Final audit-correction validation passes **551 tests** with no skips;
+dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
+Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
+`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
+
+AsOf selected **all 37 offered candidates**. This run does not establish difficult
+prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
+Virtual Biotech arm is a restricted source-derived five-role reimplementation,
+not execution of its original SDK/research workflow; seven of its ten cases reached
+the common resource budget. Ablations used fresh calls after removing a category
+before retrieval; this category-local design does not test cross-category reasoning.
+
+The response-informed v0.2 correction and failed v0.1 attempt remain separate and
+fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
+58 calls and no gold join. Both attempts total 172
+physical calls at $0. No prior response was pooled into v0.2; this is exposed
+development work, not an untouched held-out or unchanged-system result.
+
 Science6 passed with an explicit
 no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
 22 focused regressions and68 independent probes pass. G07 remains false, no model
@@ -88,11 +100,11 @@ development artifacts are evidence, not independent scientific validation.
   ablations, durable execution proofs and independent source-aware verification.
 - [x] Pass the full/core regressions, package/demo and independent corruption probes.
 - [x] Implement and validate the response-informed v0.2 role-output constraint;
-  retain the v0.1 failure and start a fresh source freeze without response reuse.
-- [ ] Finish and source-verify all sixty native/baseline case-arm executions.
-- [ ] Seal predictions, run the qualified Q1 development comparison and audit
+  retain the v0.1 failure and complete a fresh source freeze without response reuse.
+- [x] Finish and source-verify all sixty native/baseline case-arm executions.
+- [x] Seal predictions, run the qualified Q1 development comparison and audit
   twenty distinct original rows from final AsOf selections.
-- [ ] Retain measured results, independent acceptance and the final bounded
+- [x] Retain measured results, independent acceptance and the final bounded
   scientific disposition; update the execution register and milestone status.
 
 ### Science 3 supporting work
@@ -172,7 +184,7 @@ predictive genetics and scorer training are deferred because scientific prerequi
 Tasks 1-4 are complete within their documented scope. Task 5's conditional decision
 is validated: no predictive feature derivation, training or calibration was performed.
 
-**Task 6 resumed on October 18; not completed.** The prior stop is preserved in the
+**Task 6 scientific scope remains incomplete; development execution completed October 20.** The prior stop is preserved in the
 dated execution log. Development-only baseline diagnostics and an upstream source
 compatibility audit are now implemented and validated. The fixed four-case selection
 challenge passed source-inclusive verification and matched baseline analysis. These
@@ -186,7 +198,7 @@ Biotech/baselines and scientific ablations cannot be estimated from these inputs
 AI-assisted review and source-copy fidelity cannot replace independent truth.
 
 Scientific Task 6 completion remains blocked under the user's failure rule. Tasks
-7-8 are not started. The development substeps are finished; ordered execution stops
+7-8 are not started. The development substeps and bounded seven-assessment phase are finished; clinical execution stops
 at the remaining scientific/comparator gates. See the October 18 Task 6 report.
 The original proposals and sealed outputs remain preserved. Provider spending is $0;
 no public registration, clinical success claim or locked evaluation is made.
@@ -211,9 +223,9 @@ available (ten cases / 20 claims); they are not independently adjudicated gold.
   requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
 - [x] Implement and validate the adapted Virtual Biotech execution arm under
   matched evidence, model, budget and containment rules.
-- [ ] Complete matched end-to-end ablations across the full frozen comparison.
-  Fresh workflow ablations were implemented and partially executed in the October 20
-  attempt; the run stopped with a retained synthesis-veto failure. October 18 masks
-  remain separate historical diagnostics. Full fresh paired execution is pending.
+- [x] Complete matched end-to-end ablations across the full frozen comparison.
+  Fresh v0.2 execution, all sixty source-verified arms and twenty original-row checks
+  passed. The first stopped attempt remains retained separately; October 18 masks
+  remain separate historical diagnostics. Scientific comparisons below remain gated.
 - [ ] Complete scientific comparisons with independent quality/clinical references
   and qualified scoring/power. These prerequisites remain unmet.

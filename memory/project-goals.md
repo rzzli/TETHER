@@ -10,52 +10,50 @@ updated: 2026-10-20
 
 ## Current scientific prerequisite execution — October 21 UTC / October 20 Los Angeles
 
-Science 1–4 passed within their recorded scopes. Science 5 also passed its conditional
-assessment, with predictive genetics explicitly deferred and G06 false. Its final
-463-test validation and independent lineage-guard correction are retained under
-`planning/review-assets/science-prerequisites-20261018/item5/`.
-Science 7 is active/incomplete after Science 6 passed its explicit no-fit disposition
-and 485-test full validation. Its fixed development scope is six separately
-executed arms over ten fresh Science 2 cases and all 10,512 admitted observations,
-with common bounded retrieval and fifty sparse AI Q1 reference rows. The adapted
-Virtual Biotech role chain is a restricted source-derived reimplementation, not
-upstream SDK execution; no-literature/no-perturbation are fresh workflow ablations.
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
 
-The preserved first v0.1 attempt started at October 20, 17:31:37 UTC under
-`runs/science7-matched-20261020T172835Z/`. It stopped with a retained failure at
-17:48:53 UTC: LRRK2 synthesis reintroduced one reviewer-excluded EVA ID, and the
-post-response subset guard rejected it with zero claims in the failed arm. Four
-fully paired cases, 28 mechanically verified arm records (24 completed, three
-budget-exhausted, one failed) and 58 physical calls are retained at $0. The owned
-server stopped and port closed; no prediction seal or evaluator join occurred.
-See item7/failure-20261020.json for exact original-attempt commitments.
-The response-informed v0.2 operational amendment is now implemented and validated.
-Reviewer/synthesis JSON-schema output support is restricted to the preceding
-accepted role's IDs, with the complete scientific candidate packet still visible.
-This is a general control rule; no VUS-specific evidence filter was added. The
-verifier enforces that same scope while preserving legacy no-constraint
-`verify_case` behavior. Protocol/policy and backend provenance bind the correction.
-Current full validation passes 550 tests with zero failures, errors or skips;
-core validation ran 550 tests with 56 expected ingestion skips. Required probes
-and packaging/demo pass. Four independent adversarial tests pass against stable
-final source hashes. The broader 79-test pass is explicitly a pre-final snapshot
-because launcher-test newline normalization overlapped its source-hash guard;
-see item7/role-constraint-peer-validation-r1.json. Earlier 536-test and incremental
-peer receipts remain dated history.
+The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
+53 completed and seven explicitly budget-exhausted, with no failed arm in this
+attempt. All sixty passed source-inclusive semantic verification. Predictions were
+sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
+the sparse AI Q1 references. A retained audit then checked **20 distinct original
+rows**, two final AsOf selections per case. Independent agent acceptance passed;
+this is a technical source/protocol review, not independently established biological truth.
 
-At this October 21 UTC / October 20 Los Angeles documentation checkpoint, a fresh
-source freeze is underway in `runs/science7-v02-20261021T005551Z/`; no new inference
-has started. The new attempt must execute all sixty case-arm pairs without pooling
-v0.1 responses or selectively replacing failed arms. Reusing these exposed cases
-does not establish an untouched held-out, unchanged-system or preregistered result.
-Full fresh execution, externally recorded prediction seal, evaluation join,
-original-row audit and final reporting remain pending. See
-[[Matched T6 Comparison Execution 2026-10-20]].
+There were **114 fresh local native calls**, measured
+377,837 input and 10,538
+output tokens, and $0 provider spending. Execution took 2721.703
+seconds, excluding preparation/evaluation/audit. All real features remain empty and
+probabilities null. Final audit-correction validation passes **551 tests** with no skips;
+dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
+Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
+`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
 
-G03/G04/G05/G06/G07 and clinical lock remain false. Prediction features remain empty,
-all real probabilities null and provider spend $0; no clinical AUROC/Brier or
-comparative scientific superiority is established. The dated Task 6 and science
-history below is preserved and does not replace the current execution pointer.
+AsOf selected **all 37 offered candidates**. This run does not establish difficult
+prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
+Virtual Biotech arm is a restricted source-derived five-role reimplementation,
+not execution of its original SDK/research workflow; seven of its ten cases reached
+the common resource budget. Ablations used fresh calls after removing a category
+before retrieval; this category-local design does not test cross-category reasoning.
+
+The response-informed v0.2 correction and failed v0.1 attempt remain separate and
+fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
+58 calls and no gold join. Both attempts total 172
+physical calls at $0. No prior response was pooled into v0.2; this is exposed
+development work, not an untouched held-out or unchanged-system result.
+
+Authoritative closeout: item7/comparison-disposition-v02.json and final-acceptance-v02.json.
+The post-seal original-row audit initially stopped on an incorrect whole-catalog
+identity check. Both exact catalog revisions had unchanged access roles for used
+inputs. The tested correction retains both digests and rechecks every lineage role;
+an explicit audit-only recovery passed20 rows without rerunning inference or
+changing the completed evaluation. Failed pipeline/audit outputs remain retained
+under item7/audit-catalog-correction-v02-r1.json and the completion pointer.
+The current seven-stage register is execution-science7-passed-v02.json. G03/G04/G05/
+G06/G07 and clinical lock remain false. Next scientific work requires resolving the
+historical predictors and outcome qualification before power/training/locked clinical
+testing. Difficult T6 prioritization needs a separate frozen evaluation; this run
+cannot support it. The broader tasks below remain dated history with original scope.
 
 ## Task 6 resumption — October 18
 

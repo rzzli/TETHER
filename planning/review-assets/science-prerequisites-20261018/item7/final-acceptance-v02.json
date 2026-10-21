@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "role": "independent_agent_final_technical_acceptance",
+  "created_at_utc": "2026-10-21T02:04:12.422858+00:00",
+  "unresolved_findings": [],
+  "accepted_proofs": {
+    "disposition": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\comparison-disposition-v02.json",
+      "sha256": "11b800fa493814cf827d3916e4a32445697ed773889abe0032a5c86fc8b1f211",
+      "bytes": 9970
+    },
+    "resources": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\measured-resources-v02.json",
+      "sha256": "610c828c8294d0f53f972342c4163e4dc97e76e2c269d88eff48e53c625dc581",
+      "bytes": 14023
+    },
+    "evaluation": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\evaluation\\report.json",
+      "sha256": "c1716459af327e122928b97ce38c84661814ce8e93774acc6c1b9dab39056a1a",
+      "bytes": 909148
+    },
+    "original_row_audit": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-audit-r1-20261021T015913Z\\report.json",
+      "sha256": "7152cafc212063d17e2df8a02e9bb3457a68f1545d9292fb07576207c86720d8",
+      "bytes": 210515
+    },
+    "prediction_boundary": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\prediction-boundary-v02.json",
+      "sha256": "add1d49aedc4551fadd5e9a04a0909516a4cc32af009ec0268bfded02eb5e5c4",
+      "bytes": 893
+    }
+  },
+  "completion_scope": "Supported contemporary T6 source-reference development comparison and technical audit accepted; clinical/scoring qualification withheld",
+  "checks_passed": 4249,
+  "verified_facts": {
+    "cases": 10,
+    "case_arm_runs": 60,
+    "native_calls": 114,
+    "provider_spend_usd": 0,
+    "asof_bounded_candidates_offered": 37,
+    "asof_selected": 37,
+    "asof_by_case": [
+      {
+        "case_id": "tnf-efo_0000685-inhibit-antibody",
+        "offered": 4,
+        "selected": 4
+      },
+      {
+        "case_id": "il23a-efo_0000676-inhibit-antibody",
+        "offered": 5,
+        "selected": 5
+      },
+      {
+        "case_id": "jak1-efo_0000729-inhibit-small_molecule",
+        "offered": 2,
+        "selected": 2
+      },
+      {
+        "case_id": "trem2-mondo_0004975-activate-antibody",
+        "offered": 4,
+        "selected": 4
+      },
+      {
+        "case_id": "lrrk2-mondo_0005180-inhibit-small_molecule",
+        "offered": 6,
+        "selected": 6
+      },
+      {
+        "case_id": "angptl3-efo_0004911-inhibit-antibody",
+        "offered": 2,
+        "selected": 2
+      },
+      {
+        "case_id": "apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide",
+        "offered": 2,
+        "selected": 2
+      },
+      {
+        "case_id": "sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide",
+        "offered": 3,
+        "selected": 3
+      },
+      {
+        "case_id": "kras-efo_0002618-inhibit-small_molecule",
+        "offered": 7,
+        "selected": 7
+      },
+      {
+        "case_id": "cd19-efo_0000403-antigen_directed_cell_killing-car_t",
+        "offered": 2,
+        "selected": 2
+      }
+    ],
+    "original_rows_audited": 20,
+    "distinct_physical_rows": 20,
+    "audited_rows_per_case": {
+      "tnf-efo_0000685-inhibit-antibody": 2,
+      "il23a-efo_0000676-inhibit-antibody": 2,
+      "jak1-efo_0000729-inhibit-small_molecule": 2,
+      "trem2-mondo_0004975-activate-antibody": 2,
+      "lrrk2-mondo_0005180-inhibit-small_molecule": 2,
+      "angptl3-efo_0004911-inhibit-antibody": 2,
+      "apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide": 2,
+      "sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide": 2,
+      "kras-efo_0002618-inhibit-small_molecule": 2,
+      "cd19-efo_0000403-antigen_directed_cell_killing-car_t": 2
+    },
+    "measured_usage": {
+      "input_tokens": 377837,
+      "output_tokens": 10538,
+      "cost_usd": 0
+    },
+    "estimated_usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0
+    },
+    "separate_prior_failed_attempt_calls": 58,
+    "total_expenditure_calls_with_prior_attempt": 172,
+    "arm_statuses": {
+      "asof": {
+        "completed": 10
+      },
+      "adapted_virtual_biotech": {
+        "budget_exhausted": 7,
+        "completed": 3
+      },
+      "lexical": {
+        "completed": 10
+      },
+      "provider_score": {
+        "completed": 10
+      },
+      "no_literature": {
+        "completed": 10
+      },
+      "no_perturbation": {
+        "completed": 10
+      }
+    },
+    "pre_inference_full_software_tests": 550,
+    "pre_inference_full_skips": 0,
+    "pre_inference_core_software_tests": 550,
+    "pre_inference_expected_core_skips": 56,
+    "final_full_software_tests": 551,
+    "final_full_skips": 0,
+    "final_core_software_tests": 551,
+    "final_expected_core_skips": 57,
+    "pre_inference_hosted_successful_jobs": 4,
+    "final_hosted_successful_jobs": 4,
+    "original_audit_failure_preserved": true,
+    "audit_only_recovery_model_calls": 0,
+    "prediction_anchor_commit": "aab1c56",
+    "source_reverified_arms_before_reference_join": 60
+  },
+  "resolved_review_findings": [
+    {
+      "issue": "Finalizer originally accepted status-only peer receipt without byte binding",
+      "resolution": "Finalizer now checks accepted_proofs disposition/resources/evaluation/original_row_audit/prediction_boundary exact current bytes"
+    }
+  ],
+  "proofs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\measured-resources-v02.json",
+      "sha256": "610c828c8294d0f53f972342c4163e4dc97e76e2c269d88eff48e53c625dc581",
+      "bytes": 14023
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\evaluation\\report.json",
+      "sha256": "c1716459af327e122928b97ce38c84661814ce8e93774acc6c1b9dab39056a1a",
+      "bytes": 909148
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-audit-r1-20261021T015913Z\\report.json",
+      "sha256": "7152cafc212063d17e2df8a02e9bb3457a68f1545d9292fb07576207c86720d8",
+      "bytes": 210515
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\predictions-seal.json",
+      "sha256": "8c9a01ec541ca8ab40b61978ffc81083008f1d89eebc7f378e6b8c6b04c05f87",
+      "bytes": 85289
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\run-plan.json",
+      "sha256": "912d129ec020389e7a173dbc1787003effefbd81d91df4059fbba52eab576f4a",
+      "bytes": 2950418
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\execution-report.json",
+      "sha256": "40029051e7ca4adc4b1365302265bbed0c1e20f6360376b7933646dff9ecaedd",
+      "bytes": 83664
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\science7-matched-t6-v0.2.json",
+      "sha256": "3a36e56139ea49b803251ec41f9cb5f0f307f3cd3dbbb7ac176357be39232b62",
+      "bytes": 6632
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\asof\\result.json",
+      "sha256": "5d09c04c44ff7f5db37e37410c5c49f89a10f14e7d6a0dc230872b1e0014c518",
+      "bytes": 98189
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\asof-verification.json",
+      "sha256": "cb2dab22dbbf609c6d8b148f5e6b9992f4d380515ac1f06d0429416212267524",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\adapted_virtual_biotech\\result.json",
+      "sha256": "16d576aa2324bc9e6705f12835ae7e407c323ce46b3aa09e4579140784cd0d8c",
+      "bytes": 78308
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\adapted_virtual_biotech-verification.json",
+      "sha256": "17c7332d9ec8c06a99b32a7093b3177a0a9093d30c809575f8843fa22e2ec919",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\lexical\\result.json",
+      "sha256": "a134bbb95a13231b8ae094e02d9e9e5e1ec2ff211eb60991fd6ebe31a2d88f53",
+      "bytes": 98227
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\lexical-verification.json",
+      "sha256": "fb78e9162196351ac1ffeed02d00541c9acd9dca4e4cc5989c02c4cf0099f476",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\provider_score\\result.json",
+      "sha256": "08fa4c24e8ba05617e4f352b08136aa3bffd915a2d98a78e4926409a760da45f",
+      "bytes": 98234
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\provider_score-verification.json",
+      "sha256": "3e2d0a53f82f0d5c04470b915282e3fb40b2bd4322f0052fd5291907f322ff2e",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\no_literature\\result.json",
+      "sha256": "2df89d3fc36e57a3df1c72d64cf67f00800e61c4b1f9f08e8ca5a8c5f4bdb481",
+      "bytes": 29792
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\no_literature-verification.json",
+      "sha256": "b9808f4c883a6853fcab7f0fc6a838607d59fb9547ed77110ceda0c00c5a222f",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\no_perturbation\\result.json",
+      "sha256": "5d1b6d13fb6aeec24598cb401f01ffb4eedb3dc5a069bfd53710349ceee586be",
+      "bytes": 75353
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\tnf-efo_0000685-inhibit-antibody\\no_perturbation-verification.json",
+      "sha256": "4d887caff21a727d2cf6e4dddb6b5cb5d169bc8a30af3041d1b10f8fd8f1cec9",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\adapted_virtual_biotech\\result.json",
+      "sha256": "84d9cb2a0dcb11fcc9f0c19f39de3c8e9e42b61634ad48268a4a0195434132c9",
+      "bytes": 30451
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\adapted_virtual_biotech-verification.json",
+      "sha256": "855f7c4d487eb98f298054e6e7094fe529320f5de8c1803ea6ac32e90cc4b6e3",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\lexical\\result.json",
+      "sha256": "2aa75d41025c11da4900b68109dfc69cdd85396dfb309326574a35175109fc49",
+      "bytes": 446930
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\lexical-verification.json",
+      "sha256": "487893ef77c3ebacc9702138899882d85b4565de6c0c95bc7c0c7c99782c1f4a",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\provider_score\\result.json",
+      "sha256": "7dbfc1d9ad55c0e875f2e91be24fd2bd558ea0e553775ca75dbfae2068ae8c9a",
+      "bytes": 446937
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\provider_score-verification.json",
+      "sha256": "8189a313db4f31f435a67dd704bc2d6a0bb01fe82f7f5c639e363a5645de7fd8",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\no_literature\\result.json",
+      "sha256": "f9bb3fdcbe2736522181811c033c77e323a5f3268ca5443d0f5fe753f5a549a3",
+      "bytes": 40130
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\no_literature-verification.json",
+      "sha256": "44c7c3df351c7be80c9dae456a394fd1412d225fecba911c7d6cb5811af133ac",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\no_perturbation\\result.json",
+      "sha256": "429a8ab2ca147949b32b8b23f2ff63fa51557c8a8b6e65f9b154b03db718df0d",
+      "bytes": 446856
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\no_perturbation-verification.json",
+      "sha256": "897e9f94fde14aa4efed903dc6638d3cc2d2cb378cc623175753a861772e285c",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\asof\\result.json",
+      "sha256": "e40a08a8c73363ff49728d2df3004f21bc4b4dd74a1ad19a44332f6ef1b6f794",
+      "bytes": 446872
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\il23a-efo_0000676-inhibit-antibody\\asof-verification.json",
+      "sha256": "dc2ec9c6f0a9cb82ec76181ade097bb36ddb71036349f4b24460406c41dc2e00",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\lexical\\result.json",
+      "sha256": "a5058f1779dc4291370bd61d7162165a6b9575aa93a2e454dae3f5774703e232",
+      "bytes": 55877
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\lexical-verification.json",
+      "sha256": "04580b92d688fde85f74d642c717829e90917d760cc47965bb6ffff2adcdb643",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\provider_score\\result.json",
+      "sha256": "d0f4b00577be8d3adac9c5660658b7953d98bed65a02924bfc74033e61763c94",
+      "bytes": 55898
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\provider_score-verification.json",
+      "sha256": "fa26f1f886def0de8f63d8c4ba78f154e00fa9112783047554de6165d9407894",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\no_literature\\result.json",
+      "sha256": "2cd5e709b8d7baa380412c1df591e78f52fc28806b6c382fb49eab2cd8cf9684",
+      "bytes": 6929
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\no_literature-verification.json",
+      "sha256": "879087451b6dc1713da6d7b11373bb342a4e5f6dbb0ac9c76a424df52c1088f6",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\no_perturbation\\result.json",
+      "sha256": "c42cc9758bd89f46b83a1a693f3068ba05399839218e288bf5481ea2c02546ff",
+      "bytes": 55872
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\no_perturbation-verification.json",
+      "sha256": "a7d1df655d79cd01ab92c7f0e9248b051bff8b0cbe568b35a5e68aea0c0fa0b2",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\asof\\result.json",
+      "sha256": "8e32c77ba2070065d605c4d359f54a6d63688fb8f42539c879fcba0186779bda",
+      "bytes": 55875
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\asof-verification.json",
+      "sha256": "a0bf8773ad1be1ec06358e0ea170b0883de2c15e87c0aaa5f17e80f9ffdc1294",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\adapted_virtual_biotech\\result.json",
+      "sha256": "e96e099a21ccfd6f2ba9e6fbf86d7021ec3b222c53072919348f1eef1e93e940",
+      "bytes": 55896
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\jak1-efo_0000729-inhibit-small_molecule\\adapted_virtual_biotech-verification.json",
+      "sha256": "2a359bdfc0e1ef5cdebf1eaef76bf576678dc2c70a00b4c6619a7a1655452b23",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\provider_score\\result.json",
+      "sha256": "a62f009fe29f03dce48d4deb9d58716fdff3598c2779f20c217b2d000d3fa158",
+      "bytes": 463604
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\provider_score-verification.json",
+      "sha256": "168088af4f55852374eee0379bbf6e687080295812202b94ee625adbad20a8f4",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\no_literature\\result.json",
+      "sha256": "3ef2a72892837eae3a80ae1ed9a64643676bfaafb30aedbdfc545d30631b7310",
+      "bytes": 28677
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\no_literature-verification.json",
+      "sha256": "c9243a5cbe95cb6ad903f2e2b0c2287037e626567352e98aae0a653a4e38e35b",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\no_perturbation\\result.json",
+      "sha256": "92d0ec108ccd1367a4ff154d15f126a4b03d5fe839fc8cfbeaef67844c14651a",
+      "bytes": 463547
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\no_perturbation-verification.json",
+      "sha256": "d7cd6e34e1c2b547a6c7b43df13630ba975fb9f7513a9f3c38aa762fe0684121",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\asof\\result.json",
+      "sha256": "220e0f9a24dd43c3a1f80c37e3f54933740366bb943d0caa98680aec4677d0f6",
+      "bytes": 463562
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\asof-verification.json",
+      "sha256": "ea995447dd298fe6dc406fe5a5ec9466093b2fbc62e8a04eebcfda558f3de49c",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\adapted_virtual_biotech\\result.json",
+      "sha256": "f6fad62c9d5a3f5b345a27ce6e0b776919411564f4a9657f447dd7f4801865c8",
+      "bytes": 443266
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\adapted_virtual_biotech-verification.json",
+      "sha256": "1617e714c2cb639b76e37239dec4e2aeab969618310cb355890114b004fa2e4d",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\lexical\\result.json",
+      "sha256": "ec39639c49bfd39d570545f5b414546aac00f4145d53cbc965f4c92f2f94e29e",
+      "bytes": 463597
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\trem2-mondo_0004975-activate-antibody\\lexical-verification.json",
+      "sha256": "e1fed206025295d2059ceebe211e5f848d005ce7c8d56025bb17fb3875742aa3",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\no_literature\\result.json",
+      "sha256": "d585a0960b24264e43c37f249e1198cebc26b937672b93808e50858fb4769227",
+      "bytes": 53491
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\no_literature-verification.json",
+      "sha256": "338693d6b018da7ee4d50849482b081c8bc8fe696401e0d4d1da65f23138cb3b",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\no_perturbation\\result.json",
+      "sha256": "3fe347e4fafde381826a34d1a26001ec77acf86bccbff1a56083afc1fcac24a9",
+      "bytes": 626626
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\no_perturbation-verification.json",
+      "sha256": "e5fde10ba02d7026e798c74acd59b4c714c71fadfe0501adceacaae9ccaf17b7",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\asof\\result.json",
+      "sha256": "e86b404dd8e6376e1c6df2b76604b44c9e2123ac138d07538958d8f1fdf4b567",
+      "bytes": 626629
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\asof-verification.json",
+      "sha256": "d49c13103cea7fc2c561d8681d28f60fd82f99645045f6ff2fa7e6d2c118cca9",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech\\result.json",
+      "sha256": "050332d6c4a15b12269dac6373fdb8ffa504d6f6984fa77c808aec772729d7ab",
+      "bytes": 575499
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\adapted_virtual_biotech-verification.json",
+      "sha256": "c219594a303cff7bd06dbaa7e8a1c5f04c4af73194588ca49a342a6ed547a187",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\lexical\\result.json",
+      "sha256": "3e11fbbd93b6d568dce1704c21912870363d87536b695ecff06371f0e087dcb3",
+      "bytes": 626685
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\lexical-verification.json",
+      "sha256": "e4d047324951a7edf17dcc397011365f6d8495a3748fce0943f699fff0f3846d",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\provider_score\\result.json",
+      "sha256": "a9ebdbc8167274483b39a67f4218cb0e852f3569342a563721610e74e201364e",
+      "bytes": 607039
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule\\provider_score-verification.json",
+      "sha256": "b35d2dd2c76f0ccb85d1dd7e94eab403b38193a021d3cc004d5713ee0208b803",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\no_perturbation\\result.json",
+      "sha256": "8f49aabb8518b31a0ec8e2ad2022aacd3ccb74d3bdeaff1b91cba7e86d1645e5",
+      "bytes": 38628
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\no_perturbation-verification.json",
+      "sha256": "5a7d66cb309c2ec936ef3af832ce67c0130999d7562262ff116bf1e9710e2c21",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\asof\\result.json",
+      "sha256": "59b636276ef5de29e1f56f4a926b5d7eeb11b647a5b0b41a79ebd49ea7c0183a",
+      "bytes": 38632
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\asof-verification.json",
+      "sha256": "01935838b8e7b836d674f6977a66c5ef01673bda4ab7c32cd781907c12841560",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\adapted_virtual_biotech\\result.json",
+      "sha256": "623f2cf80fa8532caaae394fcd27aca73915add248a2e637c3dd514987decb0c",
+      "bytes": 38652
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\adapted_virtual_biotech-verification.json",
+      "sha256": "705a813a717b6c1a755eaf02f140bbb566a7d4eadd0bfa5099c07780ab09da0b",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\lexical\\result.json",
+      "sha256": "56556628de42fa7b4105bcc2f717433445e0ea9fe7855e47f5e9cf3511cc4a06",
+      "bytes": 38634
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\lexical-verification.json",
+      "sha256": "25c433e1274ee8b84744d97f37685b102e299fea5963fbdec2ac355390f0cf53",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\provider_score\\result.json",
+      "sha256": "bf0aa535f19b0924b79375b956e21303f18796cee3ac0acdaee4d520fc683f67",
+      "bytes": 38655
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\provider_score-verification.json",
+      "sha256": "2e2dd61a7e894068ced28e439d494ef3cffe04c364b12c4d5fd12365a75f653c",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\no_literature\\result.json",
+      "sha256": "e12c03c4d7ad632ec87a7aa25aa9cb2da5f5e4a8f40e0adcd3d17e86e4fb0060",
+      "bytes": 6902
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\angptl3-efo_0004911-inhibit-antibody\\no_literature-verification.json",
+      "sha256": "ad1c46c61b5452fc3197595851971771e62ea3314abeb683a6d4f7b5b01c3179",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\asof\\result.json",
+      "sha256": "48e2201136c4aa53bc6afabad22a61197fa9f9361a757e26b4dc688794254d31",
+      "bytes": 85966
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\asof-verification.json",
+      "sha256": "625a3bcc75fca2d3084c119b9170b380c277dc44ba7bbbe9742b90ab4c113f31",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\adapted_virtual_biotech\\result.json",
+      "sha256": "048b784d73eda1325723789af55ea1c1db8d24a68aa47d758381cfa169815f02",
+      "bytes": 74793
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\adapted_virtual_biotech-verification.json",
+      "sha256": "faca57148b05beee9b833532f517ba5b0a1670a01579e95f63e34242a55e6a2d",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\lexical\\result.json",
+      "sha256": "33bc51c981095399ef51b13411d693be5d1a7bea6e9d7bcc106cce3835b492e9",
+      "bytes": 86004
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\lexical-verification.json",
+      "sha256": "e60fef8bee0c5791f946767747fae31ada7c8201c9ecdae6217bd211d09f998f",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\provider_score\\result.json",
+      "sha256": "315724cb881671d0118483972ff4237c4c769087e4fdf96ec531d5a1228970f0",
+      "bytes": 86011
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\provider_score-verification.json",
+      "sha256": "0f0690e37791a09051e717dab2c39692febc73c4f6b8b7a5ca42561372067ab5",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\no_literature\\result.json",
+      "sha256": "13640786ff4026f9a95883dc593d8ea3bcacbd806a551b93197867395cf0e4c7",
+      "bytes": 17454
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\no_literature-verification.json",
+      "sha256": "1a94e0fbdb20db1525341647e7dd772cba98772a06bbc2bbbacedab328b72ed3",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\no_perturbation\\result.json",
+      "sha256": "933a432695082750857550ae7c98943dd6e4854d08eeaf50475426da6026456b",
+      "bytes": 85963
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide\\no_perturbation-verification.json",
+      "sha256": "21b67251a795c9bb2410f10fceada83fa3c3a8269d49385c71b7df40ebcb6c95",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\adapted_virtual_biotech\\result.json",
+      "sha256": "49f04ba4f23acdc2e900b4ba14d667289ba088036e414a99eb392f8bb1a2fd8f",
+      "bytes": 88077
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\adapted_virtual_biotech-verification.json",
+      "sha256": "d0e7403888f0d4b2063fb7b96c8f7938f7f9d6cabf5fbb90d897bbe3f213edc6",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\lexical\\result.json",
+      "sha256": "f5aa088ea6b34254fdac9e73ad1d470ddd9b7e58b4de4d644b02f3c58b32c260",
+      "bytes": 98955
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\lexical-verification.json",
+      "sha256": "4067ea343e1f0bca0cbab9ea5fa9b5869da01b17006592ef7aff4f5df71f5bbb",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\provider_score\\result.json",
+      "sha256": "e81878a4963a309c1445af4084bd57c4ba7e21f827c6e055b3fb424f7d002825",
+      "bytes": 79643
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\provider_score-verification.json",
+      "sha256": "3be67a8e91e1dce07e46176f9584f7f880441f3bfdab6c7af6535e4119712164",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\no_literature\\result.json",
+      "sha256": "1c939dc0defc2203631b2d159982c4a045b8859fe2abeb4ed6c6d392dfc44965",
+      "bytes": 83477
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\no_literature-verification.json",
+      "sha256": "cd6dc6905630918e8f38f5794af1a83d2cc278339b66de6f954e33a9835ce063",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\no_perturbation\\result.json",
+      "sha256": "7f3e346641d683a8341adc5e834d9036ccc2509210d903b03e0c42c8f64e0c45",
+      "bytes": 98913
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\no_perturbation-verification.json",
+      "sha256": "f4b1e069a3f6b63a3556ad919c058d1a559fd5fd4cfb2dabfea5f009177e5984",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\asof\\result.json",
+      "sha256": "c026a945b5642fc9a1de503564bb6f57a85179ed8634d3fd68d25e69376b9da9",
+      "bytes": 98917
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide\\asof-verification.json",
+      "sha256": "95a4cf45c0005d5dd96bfd193d0aace32080e8399959ccc9040ef676bd492803",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\lexical\\result.json",
+      "sha256": "2a794f280929ae442e74ef0fd9f93677e55b3c3572e71f08d0490c183928015a",
+      "bytes": 122145
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\lexical-verification.json",
+      "sha256": "ee3bb4da57e13f3dfdc1fca56386b94057b430946ad9e8c148da3923bdb53b03",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\provider_score\\result.json",
+      "sha256": "56bb6b2bf61c4810e305e8764f6cfd8e58a5246d6a9db91b7f8ab2680e27971a",
+      "bytes": 102572
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\provider_score-verification.json",
+      "sha256": "c0f7a860cec23a0b5ed43d31f092f98fb4bbcbe5574aa0110f2793246b69ae70",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\no_literature\\result.json",
+      "sha256": "aa8c29350210725fde1c0b0786116bf2593dc73a73ea0d1e1b4fc91fd167af24",
+      "bytes": 58952
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\no_literature-verification.json",
+      "sha256": "a73bdfaf60591a37c71139fb04333ba04b128b8f31481c1cce3f7037e6fb2448",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\no_perturbation\\result.json",
+      "sha256": "c51ceba30648089d6e35b1d10d05a68114a0ff23569e90b7a82ffca63f719b63",
+      "bytes": 122073
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\no_perturbation-verification.json",
+      "sha256": "e15caa870c5fd08dc3b3a65cc18d5021254844ebc021d59f7671886e264a58b7",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\asof\\result.json",
+      "sha256": "4b6befa1bcee4781f8bddcbedfea9443445b8d762021fe67dca7068bbf63668e",
+      "bytes": 122088
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\asof-verification.json",
+      "sha256": "8550851a803903e4c910109f48fdc594d6dc01b48187c60d0647c1b3ce8439b2",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\adapted_virtual_biotech\\result.json",
+      "sha256": "2b509599486ca9e6ccc44ada966a3341d4b97a90face170561a0e78578391215",
+      "bytes": 71966
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\kras-efo_0002618-inhibit-small_molecule\\adapted_virtual_biotech-verification.json",
+      "sha256": "59535a554604b14e59cc969bc2b634a6b1ff0d14d25da414328a73ab258e8a40",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\provider_score\\result.json",
+      "sha256": "c87f00f1dce5c804a6502d065e8c04d1c73f6e6b6bfb8fd57a6e8d18648e35a2",
+      "bytes": 181615
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\provider_score-verification.json",
+      "sha256": "e3d0b7a38c5b365892b6f1be1eea27b53fb393380e41ebe43492f57e2233389d",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\no_literature\\result.json",
+      "sha256": "30e054c9957f67e4f463e30d0822b31221aafd8b0b617c74cbbecee10d4d6b29",
+      "bytes": 6926
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\no_literature-verification.json",
+      "sha256": "7f722c9709a5be1af34b50c3da28d4958b0cca1a08bddd197400b6ea135d1041",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\no_perturbation\\result.json",
+      "sha256": "fc91bf659478bc86f8e76778e731e3d4e2b1d72df04f908819f45fd75cef5e7e",
+      "bytes": 181590
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\no_perturbation-verification.json",
+      "sha256": "076e5821dbe00c4b4f84fd0c3ab0b59df9c539f4ae948a00b6383554976c26f8",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\asof\\result.json",
+      "sha256": "479abdf5686a9110013210b5a22745a609cfbf96c9a016e45009b3aefb0206ac",
+      "bytes": 181581
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\asof-verification.json",
+      "sha256": "f1a6eb65b871ca5a6e53a78729da28e152324c5e9fc9e8106b7c26affe330e0d",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\adapted_virtual_biotech\\result.json",
+      "sha256": "e54850e3c84aab0ca3823687d85733f9372390add6e6df9d4d37cade95549489",
+      "bytes": 171641
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\adapted_virtual_biotech-verification.json",
+      "sha256": "5aa3afa73b688930c54c1497c22356b3ec0bce7d114da40d720dfae21908b09f",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\lexical\\result.json",
+      "sha256": "c1d078ed77939b98dacdbad982a357a8d1e98ad6aa129602317e316a66883018",
+      "bytes": 181609
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\arms\\cd19-efo_0000403-antigen_directed_cell_killing-car_t\\lexical-verification.json",
+      "sha256": "e3e7cc886186ae0e3e5fb754fa1d3339c118222755bbd3e277daf4a36dc7e947",
+      "bytes": 312
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\model-acquisition.json",
+      "sha256": "cc95c56ce1f497b36d6b9ed62b22721d8af7eaccc0a8c50da91439c5b076acbf",
+      "bytes": 11163
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-audit-r1-20261021T015913Z\\original-row-audits.json",
+      "sha256": "f28e496852f7316646ea3c428b8046c2212798a2a65dbca5f42fef06142de7f2",
+      "bytes": 144629
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science2-fresh-20261018T170501Z\\build-report.json",
+      "sha256": "b3f5b4352215bd571159f190799d4ce865999d8bf3d9e51712183d55979124f3",
+      "bytes": 9691
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-v02-pipeline-20261021T010203Z\\failure.json",
+      "sha256": "c7c03f08c23d53fcd772fb6ce1473092ad86630acda19a2ff1befac9364f86cc",
+      "bytes": 393
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-v02-pipeline-20261021T010203Z\\journal.jsonl",
+      "sha256": "6413d3f612f11f68981b86f3cac83894839b89109f124bf1b8cbe2a9b8dcae23",
+      "bytes": 5303
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\original-row-audit\\failure.json",
+      "sha256": "b88fb373595c77168f96d7d6808a846f122986c3aa8affa154c15bbe885c612b",
+      "bytes": 124
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\original-row-audit\\seal.json",
+      "sha256": "e85b2bc209ddc5ee389e3f45dcfd4a7d231891873b36014514293bcc030830f9",
+      "bytes": 1846
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-audit-catalog-history.json",
+      "sha256": "5be1d257247c1f09a881a3e10d6bd8b08c6cb665be7860b138d017bb0741b105",
+      "bytes": 680
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science7-audit-catalog-regression-before.log",
+      "sha256": "f079edf2c8a257eb3604344df9b07b2247d16264a85c0c139e82f3a5e4c6f49e",
+      "bytes": 1627
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science7-audit-catalog-regression-after.log",
+      "sha256": "06a3296eb532446bfd6c82d570c5ba47ed9d16b4a98fffb0b24a9720d8a4b689",
+      "bytes": 4250
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-audit-r1-code-validation.json",
+      "sha256": "5579048bc593c5cc1f4e84cc2d1478282193eb657ee843e919e70c1548e31c0e",
+      "bytes": 471
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-audit-r1-core-validation.json",
+      "sha256": "afe9eb8f32da807e03d47f8e4aedc21e3535b138cfd2f518ab5d7f82bf4b27f2",
+      "bytes": 12631
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\audit-catalog-peer-validation-v02.json",
+      "sha256": "79b8e3a43a9229ee63f174d51629e8843a74034017fcd0ee88b289287c42c3bc",
+      "bytes": 2985
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_evaluation.py",
+      "sha256": "3d72206fa29a02b70c5e028c20fc76f83d708d321227d90b2659f5098d9f386f",
+      "bytes": 46275
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_evaluation.py",
+      "sha256": "cab9fa72896c8b2a5afcd9944a3145e0420285df9e1234f52e9dfc426a2ebf50",
+      "bytes": 40102
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\failure-20261020.json",
+      "sha256": "e814bdd67d920b384ef2c4f16f01af060d2398f4e41cdeff9959cfb20b7b1622",
+      "bytes": 10724
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\pre-inference-v02-validation.json",
+      "sha256": "804c748b9387befb78da60cfd0e548c55bedfb0f8a49ca06d1c8c9f078f0c43f",
+      "bytes": 14005
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-code-validation.json",
+      "sha256": "a533cf0f98ec29fbbe281eadf44c62897e6292da501af7ef40420bbc727d1cc6",
+      "bytes": 471
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-core-validation.json",
+      "sha256": "c4199f25dd34a9df72ceb26b0c618901f3f198c1a441dec00901e0e721165f5e",
+      "bytes": 12374
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\runs\\accept-science7-v02-peer.py",
+      "sha256": "6951f40dbf4d0aa720a2bdef82cc2d5fc165586977f397d688a5d393b464d77b",
+      "bytes": 28182
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-active-evaluation-and-audit-v02.json",
+      "sha256": "7b4a3f1b99ae7f4073229555b22576f95d4f1050f0d9e771f3b2b3082d4d244d",
+      "bytes": 1145
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\hosted-v02-validation.json",
+      "sha256": "8db8e3ef9664f7daaf9911758906fbfadee0ab4e63a49b7632ac0ca70f5aaa7f",
+      "bytes": 1301
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\summarize_science7_v02.py",
+      "sha256": "52f75173fce603e06dc7fe365bdc10b9c283568ffa0c01bb2512be1dd99252ff",
+      "bytes": 8397
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\finalize_science7_v02.py",
+      "sha256": "f1090960dea9f9707d7f6da6a8a33b04fb00cef45aa7299bb554655d48c7ca1b",
+      "bytes": 3881
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\hosted-v02-audit-r1-validation.json",
+      "sha256": "5a105638be5632af65af8496428a7ada8bf8ba88556866df006e6977e25d341a",
+      "bytes": 1385
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\audit-catalog-correction-v02-r1.json",
+      "sha256": "82595127c956f247a0a9323771a281daea1358c7556e7d372e7cf0c6eb1913ca",
+      "bytes": 4055
+    }
+  ],
+  "limits": [
+    "AsOf selected every37 bounded offered candidates; no difficult prioritization, ranking-quality or scientific superiority claim.",
+    "Fifty sparse AI-source-adjudicated Q1 references do not form a complete biological gold standard; unreviewed selections remain unknown.",
+    "Exact normalized-source copying and original-row projection fidelity do not establish therapeutic benefit, biological truth or clinical prediction.",
+    "Ten purposive cases may be dependent; no independent held-out, unchanged-system, preregistered, inferential or causal comparison is established.",
+    "Source-derived Virtual Biotech adaptation does not execute the original upstream SDK/models/tools or open-ended scientific workflow.",
+    "Same ceilings allow unequal consumption and incomplete categories; all seven adapted budget-exhausted arms remain included.",
+    "All G03/G04/G05/G06/G07 and clinical lock remain false; no training, calibration, probabilities, MR or colocalization.",
+    "This peer rechecked retained local bytes, native/journal/copy semantics and audit projections; completed evaluator/audit receipts provide original raw-source and model/runtime byte verification. No redundant bulk original/model rehash was performed.",
+    "Launcher records and archived native responses are trusted local evidence, not independent server attestation; hosted CI establishes software checks only."
+  ],
+  "no_extra_model_calls": true,
+  "no_new_data": true,
+  "no_frozen_source_modification": true
+}

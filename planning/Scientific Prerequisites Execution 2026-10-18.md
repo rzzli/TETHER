@@ -4,9 +4,9 @@ The user authorized seven items in sequence, with agent expertise and public-sou
 research. File/access/permission gaps remain user-handled. The frozen design is
 `planning/protocols/science-prerequisites-v0.1.json`; TODO.md tracks current work.
 
-Current October 21 UTC / October 20 Los Angeles checkpoint: Items 1–6 passed their recorded bounded scopes and
-Item 7 remains active/incomplete. See [[Matched T6 Comparison Execution 2026-10-20]]
-for the fixed source world, six-arm recipe, proof schema and pending execution.
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld. See
+[[Matched T6 Comparison Execution 2026-10-20]] for all sixty verified runs, the
+twenty-row original-source audit, independent acceptance and measured limits.
 Earlier blocked/running/next-item statements below remain explicit dated history.
 
 | Item | Status | Evidence and limits |
@@ -17,7 +17,7 @@ Earlier blocked/running/next-item statements below remain explicit dated history
 | 4. Outcomes/power/precision | Completed bounded audit | Twelve cases/36 endpoints, two source reviews and third reconciliation; all unresolved/null. Power nonestimable; clinical qualification and fitting withheld. |
 | 5. Conditional genetics | Completed conditional defer | Fresh38-file QC, method review and independently corrected lineage guard; no predictive feature admitted. |
 | 6. Qualified training/calibration | Completed no-fit | Historical training inventory unknown, no qualified pilot classes/predictor bundle; 485 full tests and independent guard review pass. No training or calibration. |
-| 7. Supported comparisons | In progress; v0.2 source freeze underway | Response-informed role-output correction implemented/validated: 550 full tests pass with no failures/errors/skips; core 550 tests with 56 expected skips, probes/package pass; four independent tests pass with stable final hashes and broader 79-test pass is pre-final snapshot. New root runs/science7-v02-20261021T005551Z has no new inference yet. Preserved v0.1 failure: four paired cases/28 arm records/58 calls, $0; no prediction seal or evaluator join. Clinical gates false. |
+| 7. Supported comparisons | Completed supported development scope | All60 runs source-verified (53 completed/7 budget exhausted), prediction digest anchored before answers,20 distinct original-row checks and independent agent acceptance passed.551 full tests/core57 expected skips and4 hosted jobs pass. AsOf selected37/37 offered candidates; no difficult ranking, therapeutic or clinical performance claim. Response-informed correction/prior58-call failure retained. Clinical gates false. |
 
 ## Completed reference work
 
@@ -274,3 +274,43 @@ false. Authoritative reports are item6/training-contract-r1.json and
 training-feasibility-r1.json; execution-science6-passed.json validates the closeout.
 Science7 now starts supported T6 comparisons, adapted execution and actual workflow
 ablations. Clinical AUROC/Brier remain withheld unless scientific gates qualify.
+
+## Seven-assessment closeout — October 20 Los Angeles
+
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
+
+The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
+53 completed and seven explicitly budget-exhausted, with no failed arm in this
+attempt. All sixty passed source-inclusive semantic verification. Predictions were
+sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
+the sparse AI Q1 references. A retained audit then checked **20 distinct original
+rows**, two final AsOf selections per case. Independent agent acceptance passed;
+this is a technical source/protocol review, not independently established biological truth.
+
+There were **114 fresh local native calls**, measured
+377,837 input and 10,538
+output tokens, and $0 provider spending. Execution took 2721.703
+seconds, excluding preparation/evaluation/audit. All real features remain empty and
+probabilities null. Final audit-correction validation passes **551 tests** with no skips;
+dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
+Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
+`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
+
+AsOf selected **all 37 offered candidates**. This run does not establish difficult
+prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
+Virtual Biotech arm is a restricted source-derived five-role reimplementation,
+not execution of its original SDK/research workflow; seven of its ten cases reached
+the common resource budget. Ablations used fresh calls after removing a category
+before retrieval; this category-local design does not test cross-category reasoning.
+
+The response-informed v0.2 correction and failed v0.1 attempt remain separate and
+fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
+58 calls and no gold join. Both attempts total 172
+physical calls at $0. No prior response was pooled into v0.2; this is exposed
+development work, not an untouched held-out or unchanged-system result.
+
+The active register is `data/derived/science-prerequisites-20261018/execution-science7-passed-v02.json`.
+Its seven passed statuses mean completed bounded assessments, including a genetics
+defer and scorer no-fit. The broader clinical comparison, independent locked
+evaluation and conditional T2–T5/H6 tasks remain unfinished/gated in TODO.md.
+No scientific blocker was silently converted into a qualified prerequisite.

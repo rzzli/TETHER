@@ -1,0 +1,37 @@
+{
+  "conclusion": "success",
+  "headSha": "dbdfa398fd3c0f980afda915d9177627c873f200",
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39530434541/job/118994831928",
+      "completedAt": "2026-10-21T01:59:54Z"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39530434541/job/118994832011",
+      "completedAt": "2026-10-21T02:01:01Z"
+    },
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39530434541/job/118994832150",
+      "completedAt": "2026-10-21T01:59:46Z"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39530434541/job/118994832194",
+      "completedAt": "2026-10-21T02:02:58Z"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39530434541",
+  "scope": "Corrected post-seal audit code; original pre-inference 550-test freeze retained separately."
+}

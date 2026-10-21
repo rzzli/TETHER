@@ -22,21 +22,18 @@ provide exact-request lexical/provider-score baselines, explicit evidence masks 
 a pinned Virtual Biotech configuration audit. These diagnose selection behavior;
 independent scientific quality and clinical performance remain unmeasured.
 
-The current [Science 7 matched comparison](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md)
-is active after Science 1–6 passed their bounded scopes. Its six arms use ten cases,
-all 10,512 admitted observations, sparse evaluator-only AI references, a source-derived
-Virtual Biotech role adaptation and fresh workflow ablations. The response-informed
-v0.2 review/synthesis output constraint is implemented and validated: 550 full tests
-passed with zero failures, errors or skips; core validation ran 550 tests with 56
-expected ingestion skips. Required probes and packaging passed. Four independent
-adversarial tests passed against stable final source hashes; a broader 79-test pass
-is retained as a pre-final snapshot. The first v0.1 native attempt stopped October 20 at 17:48:53
-UTC when synthesis reintroduced a reviewer-excluded ID; the guard rejected it and
-the owned server stopped. Four paired cases/28 arm records/58 calls are retained,
-with no prediction seal or evaluator join. At the October 21 UTC / October 20
-Los Angeles checkpoint, a fresh v0.2 source freeze is underway in
-`runs/science7-v02-20261021T005551Z/`; no new inference has started. Science 7
-remains incomplete and clinical gates false.
+The [Science 7 matched comparison](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md)
+completed 60 case-arm runs, source-inclusive verification and a 20-original-row audit.
+All seven bounded science assessments are closed, including genetics defer and scorer
+no-fit. The final 551-test full suite, core validation (57 expected skips), required probes,
+packaging and four hosted jobs pass. Provider spending remains $0.
+
+AsOf selected every offered candidate (37/37); this demonstrates source fidelity and
+execution controls, not ranking quality or scientific superiority. The source-derived
+Virtual Biotech adaptation exhausted its budget in seven cases. The failed first
+attempt and response-informed v0.2 correction remain disclosed. Historical predictors,
+qualified clinical outcomes, power, genetics, scoring and clinical lock remain unmet;
+all real probabilities are null. See the report's remaining-gates table and [TODO](TODO.md).
 
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant
@@ -147,8 +144,7 @@ before dispatch. Applicability mismatches abstain. Recorded selections supplied 
 Defaults remain 16 calls, 32,000 input tokens, 8,000 output tokens, $0 provider spending,
 300 seconds and one critic retry per category. An optional explicit loopback model
 adapter is available through `--local-model config.json`; the default stays offline.
-MR/colocalization computation, a trained clinical scorer and competitor execution
-remain gated. T1 has a program/endpoint
+MR/colocalization computation and a trained clinical scorer remain gated. T1 has a program/endpoint
 interface; T6 has a dossier interface. T2–T5, qualified historical clinical benchmarks, H6 reconstruction
 and locked benchmark inference remain later milestones. The separate evaluator reports
 descriptive metrics for supplied cohorts.
@@ -157,9 +153,10 @@ Python interfaces are not an OS sandbox. Dataset terms remain source-specific; A
 licenses the code, not acquired biomedical data. The download worker and the user's
 stopped periodic monitoring are independent of this milestone.
 
-Current ordered science execution has passed Items 1–6 within their stated scopes,
-including conditional genetics defer and an evidence-backed no-fit. Item 7 remains
-active/incomplete. See [TODO.md](TODO.md), the
+The seven ordered science assessments have passed within their stated scopes,
+including conditional genetics defer, an evidence-backed no-fit and supported
+development comparisons. Clinical scientific qualification remains withheld.
+See [TODO.md](TODO.md), the
 [science execution report](planning/Scientific%20Prerequisites%20Execution%202026-10-18.md)
 and the [current matched-comparison checkpoint](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md).
 The [October 17 execution report](planning/Ordered%20Execution%20Progress%202026-10-17.md)

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "bounded_read_only_observation_after_all_sixty_arms",
+  "observed_at_utc": "2026-10-21T01:44:56.390242+00:00",
+  "run_root": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z",
+  "plan_sha256": "912d129ec020389e7a173dbc1787003effefbd81d91df4059fbba52eab576f4a",
+  "verified_arm_records": 60,
+  "native_pid": 13980,
+  "processes": [
+    {
+      "Id": 13980,
+      "WorkingSet64": 17564495872,
+      "PeakWorkingSet64": 17803055104,
+      "PrivateMemorySize64": 21093707776,
+      "CPU": 133.0
+    },
+    {
+      "Id": 24948,
+      "WorkingSet64": 177586176,
+      "PeakWorkingSet64": 333082624,
+      "PrivateMemorySize64": 169123840,
+      "CPU": 710.953125
+    }
+  ],
+  "scope": "OS process peaks observed after all inference, before final source recheck and termination; not final process-lifetime or GPU telemetry.",
+  "whole_run_native_peak_memory_bytes": null,
+  "monitor_created": false
+}
