@@ -348,7 +348,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
     receipt = _Fixture.receipt
     evidence = _Fixture.evidence
 
-    def prepare_predictions(self):
+    def prepare_predictions(self, catalog_metadata_after_build=False):
         from asof.ingest import build_snapshot
         from tools.science.role_backend import RoleSelectionBackend
         from asof.workflow import Budget
@@ -366,6 +366,10 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         bundle = self.root/'bundle'
         build = build_snapshot(self.manifest, self.catalog, bundle, cases_path=case_pack,
                                cases_sha256=sha256_file(case_pack), packet_layout='bounded')
+        if catalog_metadata_after_build:
+            catalog = read_json(self.catalog)
+            catalog['review_note'] = 'Later documentation-only review; no dataset access roles changed.'
+            write_json(self.catalog, catalog)
         self.case_folder = bundle/build['cases'][0]['case_id']
         self.case = decode(Case, read_json(self.case_folder/'case.json'))
         full = load_snapshot(self.case_folder/'snapshot.json', self.case, self.catalog)
@@ -442,6 +446,16 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         self.assertTrue(all(row['archive']['path'] in sealed_paths for row in report['evaluation_code']))
         self.assertIsNone(report['clinical_metrics'])
         with self.assertRaises(FileExistsError): self.run_audit()
+
+    def test_audit_allows_explicitly_pinned_execution_catalog_after_build_metadata_update(self):
+        self.prepare_predictions(catalog_metadata_after_build=True)
+        plan = read_json(self.seal_path.parent/'run-plan.json')
+        build = read_json(Path(plan['source_build']['path']))
+        self.assertNotEqual(build['inspection']['catalog_sha256'], plan['catalog']['sha256'])
+        report = self.run_audit('later-catalog-audit')
+        self.assertEqual(2, report['audited_rows'])
+        self.assertEqual(plan['catalog']['sha256'], report['catalog_binding']['execution_policy_sha256'])
+        self.assertEqual(build['inspection']['catalog_sha256'], report['catalog_binding']['source_build_policy_sha256'])
 
     def test_audit_rejects_report_membership_selected_scope_receipt_and_raw_drift(self):
         self.prepare_predictions()

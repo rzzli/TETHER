@@ -591,9 +591,14 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
         if digest != build['case_pack']['sha256']:
             raise ContractError('Original-row audit case pack differs')
         definitions = {definition.case_id: definition for definition in definitions}
-        if (set(definitions) != {row['case_id'] for row in plan['cases']} or
-                plan['catalog']['sha256'] != build['inspection']['catalog_sha256']):
+        if set(definitions) != {row['case_id'] for row in plan['cases']}:
             raise ContractError('Original-row audit frozen case membership differs')
+        # The build and execution can pin different catalog revisions. Execution
+        # admission below enforces every source's role against the exact frozen
+        # execution policy; whole-catalog metadata changes are not case changes.
+        catalog_binding = {'source_build_policy_sha256': build['inspection']['catalog_sha256'],
+            'execution_policy_sha256': plan['catalog']['sha256'],
+            'admission_policy': 'Pinned execution catalog; all lineage nodes rechecked, including evaluator-only denial.'}
         policy = catalog_index(_open_proof(plan['catalog']))
         config, roles = _expected_config(plan), _open_proof(plan['role_policy'])
         if (evaluation.get('model_byte_verification', {}).get('status') != 'actual_model_and_runtime_bytes_verified' or
@@ -671,6 +676,7 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
             'evaluator_code_sha256': sha256_file(Path(__file__)),
             'evaluation_code': code_inventory,
             'evaluation_report_sha256': expected_evaluation_sha256, 'requested_rows': 20, 'audited_rows': len(rows),
+            'catalog_binding': catalog_binding,
             'model_byte_verification_scope': 'Requires matching completed evaluation model/runtime byte verification; launcher proofs revalidated, weights not rehashed by this audit.',
             'cases': summaries, 'selection': 'Up to two category/provider/study-spread distinct physical final asof statements per case; no substitution.',
             'source_proofs': list(source_proofs.values()), 'input_proofs': input_proofs,

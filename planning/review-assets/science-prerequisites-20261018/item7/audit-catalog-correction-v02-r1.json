@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "correction_validated_before_audit_only_recovery",
+  "recorded_at_utc": "2026-10-21T01:59:07.417554+00:00",
+  "failure": "Original-row audit incorrectly required whole build/execution catalog digests to match.",
+  "failed_pipeline": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-v02-pipeline-20261021T010203Z\\failure.json",
+    "sha256": "c7c03f08c23d53fcd772fb6ce1473092ad86630acda19a2ff1befac9364f86cc",
+    "bytes": 393
+  },
+  "failed_pipeline_journal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science7-v02-pipeline-20261021T010203Z\\journal.jsonl",
+    "sha256": "6413d3f612f11f68981b86f3cac83894839b89109f124bf1b8cbe2a9b8dcae23",
+    "bytes": 5303
+  },
+  "failed_audit": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\original-row-audit\\failure.json",
+    "sha256": "b88fb373595c77168f96d7d6808a846f122986c3aa8affa154c15bbe885c612b",
+    "bytes": 124
+  },
+  "failed_audit_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\original-row-audit\\seal.json",
+    "sha256": "e85b2bc209ddc5ee389e3f45dcfd4a7d231891873b36014514293bcc030830f9",
+    "bytes": 1846
+  },
+  "completed_evaluation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\science7-v02-comparison-20261021T014729Z\\evaluation\\report.json",
+    "sha256": "c1716459af327e122928b97ce38c84661814ce8e93774acc6c1b9dab39056a1a",
+    "bytes": 909148
+  },
+  "catalog_history": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-audit-catalog-history.json",
+    "sha256": "5be1d257247c1f09a881a3e10d6bd8b08c6cb665be7860b138d017bb0741b105",
+    "bytes": 680
+  },
+  "before_failure_log": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science7-audit-catalog-regression-before.log",
+    "sha256": "f079edf2c8a257eb3604344df9b07b2247d16264a85c0c139e82f3a5e4c6f49e",
+    "bytes": 1627
+  },
+  "focused_validation_log": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\science7-audit-catalog-regression-after.log",
+    "sha256": "06a3296eb532446bfd6c82d570c5ba47ed9d16b4a98fffb0b24a9720d8a4b689",
+    "bytes": 4250
+  },
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-audit-r1-code-validation.json",
+    "sha256": "5579048bc593c5cc1f4e84cc2d1478282193eb657ee843e919e70c1548e31c0e",
+    "bytes": 471
+  },
+  "core_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-v02-audit-r1-core-validation.json",
+    "sha256": "afe9eb8f32da807e03d47f8e4aedc21e3535b138cfd2f518ab5d7f82bf4b27f2",
+    "bytes": 12631
+  },
+  "peer_role_denial_probes": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\science-prerequisites-20261018\\item7\\audit-catalog-peer-validation-v02.json",
+    "sha256": "79b8e3a43a9229ee63f174d51629e8843a74034017fcd0ee88b289287c42c3bc",
+    "bytes": 2985
+  },
+  "corrected_code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_evaluation.py",
+    "sha256": "3d72206fa29a02b70c5e028c20fc76f83d708d321227d90b2659f5098d9f386f",
+    "bytes": 46275
+  },
+  "regressions": {
+    "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_evaluation.py",
+    "sha256": "cab9fa72896c8b2a5afcd9944a3145e0420285df9e1234f52e9dfc426a2ebf50",
+    "bytes": 40102
+  },
+  "change": "Retain both catalog hashes, require exact case membership, and enforce roles for every lineage node under the pinned execution catalog.",
+  "scope": "Post-seal audit-only correction. Original build/execution catalogs, sources, predictions and completed evaluation remain unchanged.",
+  "predictor_changed": false,
+  "model_calls_in_recovery": 0,
+  "clinical_metrics": null,
+  "failed_outputs_preserved": true,
+  "recovery_requires_fresh_output": true
+}

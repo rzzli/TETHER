@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "role": "independent_agent_synthetic_catalog_correction_review",
+  "probes_passed": 9,
+  "probes": [
+    {
+      "probe": "Pinned harmless metadata revision",
+      "expected": "pass",
+      "actual": "pass"
+    },
+    {
+      "probe": "hgnc_symbols-evaluator-only",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: hgnc_symbols"
+    },
+    {
+      "probe": "hgnc_symbols-missing-allowed-role",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: hgnc_symbols"
+    },
+    {
+      "probe": "ot_target-evaluator-only",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_target"
+    },
+    {
+      "probe": "ot_target-missing-allowed-role",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_target"
+    },
+    {
+      "probe": "ot_disease-evaluator-only",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_disease"
+    },
+    {
+      "probe": "ot_disease-missing-allowed-role",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_disease"
+    },
+    {
+      "probe": "ot_evidence-evaluator-only",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_evidence"
+    },
+    {
+      "probe": "ot_evidence-missing-allowed-role",
+      "expected": "reject",
+      "actual": "reject",
+      "reason": "Catalog denies agent access: ot_evidence"
+    }
+  ],
+  "scope": "Positive later pinned-catalog metadata revision plus evaluator-only/removed allowed-role denial on all four used lineage datasets; synthetic local source fixtures only",
+  "method": "Only trusted catalog-document projection intercepted after its real proof read; source admission and InputGraph/audit role guards execute. No production files or catalog/policy bytes changed.",
+  "catalog_history": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\science-prerequisites-20261018\\science7-audit-catalog-history.json",
+    "sha256": "5be1d257247c1f09a881a3e10d6bd8b08c6cb665be7860b138d017bb0741b105"
+  },
+  "evaluator_source_sha256": "3d72206fa29a02b70c5e028c20fc76f83d708d321227d90b2659f5098d9f386f",
+  "regression_fixture_sha256": "cab9fa72896c8b2a5afcd9944a3145e0420285df9e1234f52e9dfc426a2ebf50",
+  "runner_sha256": "77788bf83109fccfd488bf77813f7e3e611e2da5c48957c10050411687c4401c",
+  "limitations": [
+    "Synthetic parser/admission checks do not establish biological or clinical correctness.",
+    "Production catalog revisions differ in acquisition/status fields for ot_evidence; roles are unchanged. Broader unused product catalog changes are not described as global-metadata-only."
+  ],
+  "production_raw_files_read_or_hashed": false,
+  "native_model_calls": 0,
+  "production_gold_opened": false
+}
