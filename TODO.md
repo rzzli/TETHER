@@ -4,7 +4,7 @@
 
 - [x] Freeze endpoint-local risk, occurrence/decision/disclosure and negative-state rules.
 - [x] Validate origin-only screening and maturity selection, with explicit missingness and no follow-up selection.
-- [ ] Extract January2025 design/maturity information and seal a new deterministic sample before follow-up.
+- [x] Extract January2025 design/maturity information and seal a new deterministic sample before follow-up.
 - [ ] Independently verify the sample and update the plan, memory and evidence backup.
 
 

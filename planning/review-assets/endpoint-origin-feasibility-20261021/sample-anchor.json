@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "sealed_before_followup",
+  "seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-origin-feasibility-20261021\\sample-v1\\pack-freeze.json",
+    "sha256": "005db13e5d51f595fa5849d72b3d495e12cad797c20a632db511be85ba514ac6"
+  },
+  "selected_trial_ids": [
+    "NCT05967689",
+    "NCT05997277",
+    "NCT05327530",
+    "NCT04380740",
+    "NCT05953389",
+    "NCT06511726",
+    "NCT05207085",
+    "NCT06511869",
+    "NCT05900765",
+    "NCT05725902",
+    "NCT05177510",
+    "NCT06203457"
+  ],
+  "screened_trials": 128,
+  "eligible_origin_versions": 113,
+  "maturity_eligible_trials": 36,
+  "selected_trials": 12,
+  "packet_bytes": 414231,
+  "followup_sources_read": false,
+  "clinical_ready": false,
+  "clinical_labels_assigned": 0,
+  "scientific_review": "pending",
+  "independent_packet_acceptance": "pending"
+}
