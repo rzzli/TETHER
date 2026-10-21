@@ -43,6 +43,29 @@ def validate_binding(plan):
     if pack['clinical_labels_assigned']!=0 or pack['selected_distinct_trials']!=12:
         raise ContractError('Origin pilot is not unmodified pre-follow-up selection')
     check_pins(pack['files'])
+    results_phase=plan['phase']=='selected_results'
+    results_policy=None
+    if results_phase:
+        policy_pin=plan['results_policy']
+        approved=Path(__file__).resolve().parents[2]/'planning/protocols/clinical-label-readiness-v0.1.json'
+        if Path(policy_pin['path']).resolve()!=approved.resolve():
+            raise ContractError('Unapproved reported-results policy path')
+        results_policy,_=read_bound_json(approved,policy_pin['sha256'])
+        from tools.science.outcome_results import RESULT_FIELDS
+        if (results_policy.get('protocol_id')!='clinical-label-readiness-v0.1' or
+                results_policy.get('role')!='evaluation_only' or
+                results_policy.get('parent_origin_pack_sha256')!=PACK_SHA256 or
+                results_policy.get('parent_review_policy_sha256')!=POLICY_SHA256 or
+                results_policy.get('max_rows_per_trial')!=100000 or
+                results_policy.get('max_result_output_bytes_per_snapshot')!=128*1024*1024 or
+                results_policy.get('source_snapshots')!=[j['snapshot_date'] for j in plan['jobs']] or
+                results_policy.get('reported_tables')!=list(RESULT_FIELDS) or
+                any(results_policy.get(k)!=plan[k] for k in ('origin_at','horizon_at','ascertainment_at')) or
+                results_policy.get('automatic_label_assignment') is not False or
+                results_policy.get('clinical_activation') is not False):
+            raise ContractError('Reported-results policy differs from bounded no-label scope')
+        if not any(Path(p['path']).resolve()==approved.resolve() and p['sha256']==policy_pin['sha256'] for p in plan['parents']):
+            raise ContractError('Reported-results policy missing from parent closure')
     members=[]
     for pin in pack['files']:
         path=Path(pin['path'])
@@ -81,17 +104,27 @@ def validate_binding(plan):
         if audit['status']!='completed' or audit['study_id_check']['rows']!=job['expected_studies']:
             raise ContractError('Restored source audit contradicts expected inventory')
         names=[q['name'] for q in job['queries']]
-        if len(names)!=len(set(names)) or set(names)!={'studies','candidates'}:
-            raise ContractError('This milestone admits only frozen study and candidate queries')
+        expected_names={'results'} if results_phase else {'studies','candidates'}
+        if len(names)!=len(set(names)) or set(names)!=expected_names:
+                raise ContractError('Frozen query names differ from the approved extraction phase')
         from tools.science.outcome_inputs import regenerate_request, schema_from_audit, study_query
         for query in job['queries']:
             request=query['request']
-            rebuilt=regenerate_request(request)
+            if results_phase:
+                from tools.science.outcome_results import regenerate_results
+                rebuilt=regenerate_results(request)
+            else:rebuilt=regenerate_request(request)
             if rebuilt!=request or request['sql']!=Path(query['path']).read_text(encoding='utf-8'):
                 raise ContractError('Query differs from deterministic approved generator recipe')
             if request['snapshot_date']!=job['snapshot_date'] or request['source_schema']!=schema_from_audit(audit):
                 raise ContractError('Request schema/snapshot differs from its pinned actual source')
-            if query['name']=='studies':
+            if results_phase:
+                from tools.science.outcome_results import results_query
+                expected_results=results_query(members,job['snapshot_date'],schema_from_audit(audit),
+                    max_rows_per_trial=results_policy['max_rows_per_trial'])
+                if request!=expected_results:
+                    raise ContractError('Result query does not retain exact pilot membership and projection')
+            elif query['name']=='studies':
                 expected_studies=study_query(members,job['snapshot_date'],schema_from_audit(audit),max_ids=12)
                 if request!=expected_studies:
                     raise ContractError('Study query does not retain the actual twelve members')
@@ -177,11 +210,22 @@ def extract(plan_path, expected_sha256, output):
         required_code={'tools/science/outcome_extract.py','tools/science/outcome_inputs.py',
             'tools/science/ascertainment_policy.py','tools/science/origin_programs.py',
             'tools/science/reference_panel.py','src/asof/serde.py','src/asof/journal.py'}
+        if plan['phase']=='selected_results':required_code.add('tools/science/outcome_results.py')
         if not {project/p for p in required_code}<=codepaths:
             raise ContractError('Incomplete executing query/temporal/serialization code closure')
         validate_binding(plan)
         write_json(output/'effective-plan.json',plan)
         (output/'executed-runner.py').write_bytes(Path(__file__).read_bytes())
+        archived_code=[]
+        for proof in plan['executed_code']:
+            source=Path(proof['path']).resolve()
+            if not source.is_relative_to(project):raise ContractError('Executing code outside project')
+            archived=output/'executed-code'/source.relative_to(project)
+            archived.parent.mkdir(parents=True,exist_ok=True)
+            with archived.open('xb') as stream:stream.write(source.read_bytes())
+            if sha256_file(archived)!=proof['sha256']:raise ContractError('Executing code changed while archiving')
+            archived_code.append({'source':proof,'archive_path':str(archived),'sha256':proof['sha256']})
+        write_json(output/'executed-code-proofs.json',archived_code)
         results=[]
         for job in plan['jobs']:
             date=job['snapshot_date'];stage=date
@@ -243,11 +287,17 @@ def extract(plan_path, expected_sha256, output):
                     for suffix in ('first','repeat'):
                         command(name+'-'+suffix,[str(pg/'psql.exe'),'-XAtq','-v','ON_ERROR_STOP=1','-f',query['path']],env,timeout=330)
                     first=folder/(name+'-first.stdout.log');repeat=folder/(name+'-repeat.stdout.log')
+                    if plan['phase']=='selected_results' and max(first.stat().st_size,repeat.stat().st_size)>query['request']['max_output_bytes']:
+                        raise ContractError('Reported results exceed explicit output-byte bound')
                     if first.read_bytes()!=repeat.read_bytes():raise ContractError('Repeat source reads differ')
                     from tools.science.outcome_inputs import parse_jsonl, validate_study_rows, validate_candidates
                     rows=parse_jsonl(first.read_text(encoding='utf-8'))
-                    validation=(validate_study_rows(rows,query['request']) if name=='studies'
-                                else validate_candidates(rows,query['request']))
+                    if name=='results':
+                        from tools.science.outcome_results import validate_result_rows
+                        validation=validate_result_rows(rows,query['request'])
+                    else:
+                        validation=(validate_study_rows(rows,query['request']) if name=='studies'
+                                    else validate_candidates(rows,query['request']))
                     write_json(folder/(name+'-validation.json'),validation)
                     queries.append({'name':name,'path':str(first),'sha256':sha256_file(first),
                                     'bytes':first.stat().st_size,'repeat_identical':True})

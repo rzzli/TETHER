@@ -131,6 +131,13 @@ def validate_reference(reference):
 
 
 def validate_outcome(label):
+    """Validate declarations, without independently establishing clinical truth.
+
+    Legacy nonempty negative-ascertainment strings remain readable as unverified
+    declarations. New structured declarations must explicitly qualify complete
+    follow-up, its cutoff and retained source references. Neither form proves
+    scientific completeness merely by passing this contract.
+    """
     required = {'schema_version', 'case_id', 'endpoint_id', 'value', 'status', 'origin_at', 'horizon_at',
         'ascertainment_at', 'event_at', 'publicly_available_at', 'observed_until', 'source_evidence',
         'same_program_scope', 'negative_ascertainment', 'reference_level'}
@@ -156,6 +163,7 @@ def validate_outcome(label):
     available = utc(label['publicly_available_at'])
     if not origin < available <= ascertainment:
         raise ContractError('Outcome publication outside qualified ascertainment')
+    negative_status = None
     if label['value'] == 1:
         if not label['event_at'] or not origin < utc(label['event_at']) <= min(horizon, observed, available):
             raise ContractError('Positive outcome lacks an eligible occurred/public event')
@@ -166,12 +174,34 @@ def validate_outcome(label):
     else:
         if observed < horizon or available < horizon or not label['negative_ascertainment']:
             raise ContractError('Negative needs full qualified follow-up and explicit ascertainment')
+        ascertainment_declaration = label['negative_ascertainment']
+        if isinstance(ascertainment_declaration, dict):
+            if (ascertainment_declaration.get('qualified') is not True
+                    or ascertainment_declaration.get('complete') is not True
+                    or ascertainment_declaration.get('absence_of_record_used_as_negative') is not False):
+                raise ContractError('Structured negative ascertainment must explicitly qualify complete follow-up')
+            cutoff = utc(ascertainment_declaration.get('observation_cutoff'))
+            if not horizon <= cutoff <= min(observed, available, ascertainment):
+                raise ContractError('Negative ascertainment cutoff contradicts follow-up or publication')
+            evidence = ascertainment_declaration.get('source_evidence')
+            if not evidence:
+                raise ContractError('Structured negative ascertainment requires retained source evidence')
+            validate_source_refs(evidence)
+            negative_status = 'structured_declaration_valid'
+        elif isinstance(ascertainment_declaration, str) and ascertainment_declaration.strip():
+            negative_status = 'legacy_declaration_unverified'
+        else:
+            raise ContractError('Negative ascertainment requires a structured declaration or legacy nonempty string')
         if label['event_at'] is not None and utc(label['event_at']) <= horizon:
             raise ContractError('Negative contradicts an in-window event')
         if label['endpoint_id'] == 'clinical_success' and not label.get('failure_criterion_evidence'):
             raise ContractError('No recorded progression is not evidence of clinical failure')
-    return {'status': 'outcome_contract_valid', 'binary_eligible': label['reference_level'] != 'unreviewed',
+    result = {'status': 'outcome_contract_valid', 'binary_eligible': label['reference_level'] != 'unreviewed',
             'scientific_validation': label['reference_level']}
+    if negative_status is not None:
+        result.update(negative_ascertainment_status=negative_status,
+            negative_ascertainment_validation='Contract declarations do not independently verify clinical follow-up.')
+    return result
 
 
 def validate_feature_chronology(feature_origin_at, input_lineage, models=(), label_available_at=None, prediction_origin_at=None):

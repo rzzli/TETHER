@@ -129,6 +129,47 @@ class ScienceQualificationTests(unittest.TestCase):
             with self.assertRaises(ContractError): validate_outcome(doc)
         with self.assertRaises(ContractError): validate_outcome(outcome('clinical_success', 0))
 
+    def test_structured_negative_rejects_explicitly_incomplete_ascertainment(self):
+        doc = outcome(value=0)
+        doc['negative_ascertainment'] = {'qualified': False, 'complete': False,
+            'observation_cutoff': None, 'absence_of_record_used_as_negative': False}
+        with self.assertRaises(ContractError): validate_outcome(doc)
+
+    def test_structured_negative_requires_explicit_qualified_source_and_window(self):
+        valid = {'qualified': True, 'complete': True,
+            'observation_cutoff': '2026-02-01T00:00:00Z',
+            'absence_of_record_used_as_negative': False,
+            'source_evidence': reference()['source_evidence']}
+        doc = outcome(value=0); doc['negative_ascertainment'] = valid
+        result = validate_outcome(doc)
+        self.assertTrue(result['binary_eligible'])
+        self.assertEqual(result['negative_ascertainment_status'], 'structured_declaration_valid')
+        for key, value in [('qualified', False), ('qualified', 1), ('complete', False),
+                ('complete', 1), ('observation_cutoff', None),
+                ('observation_cutoff', '2025-12-31T00:00:00Z'),
+                ('observation_cutoff', '2026-03-02T00:00:00Z'),
+                ('observation_cutoff', '2026-02-02T00:00:00Z'),
+                ('absence_of_record_used_as_negative', True),
+                ('absence_of_record_used_as_negative', None),
+                ('source_evidence', []), ('source_evidence', ['unqualified string'])]:
+            with self.subTest(key=key, value=value):
+                bad = deepcopy(doc); bad['negative_ascertainment'][key] = value
+                with self.assertRaises(ContractError): validate_outcome(bad)
+        for key in valid:
+            bad = deepcopy(doc); bad['negative_ascertainment'].pop(key)
+            with self.subTest(missing=key):
+                with self.assertRaises(ContractError): validate_outcome(bad)
+
+    def test_legacy_negative_string_is_explicitly_unverified_and_other_types_rejected(self):
+        result = validate_outcome(outcome(value=0))
+        self.assertEqual(result['negative_ascertainment_status'], 'legacy_declaration_unverified')
+        self.assertEqual(result['negative_ascertainment_validation'],
+            'Contract declarations do not independently verify clinical follow-up.')
+        for bad in ('', '   ', True, 1, ['not evidence'], {}):
+            doc = outcome(value=0); doc['negative_ascertainment'] = bad
+            with self.subTest(value=bad):
+                with self.assertRaises(ContractError): validate_outcome(doc)
+
     def test_unknown_censoring_competing_events_never_binary_negative(self):
         for state in ('unresolved', 'censored', 'competing_event'):
             doc = outcome(value=0); doc['status'] = state

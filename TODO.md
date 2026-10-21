@@ -1,5 +1,17 @@
 # Project execution checklist
 
+## Clinical-label feasibility continuation — October 21
+
+The next remaining step is active. Preserve the exposed twelve-case pilot and its
+36 unresolved endpoints. This diagnostic adds reported-result inputs and tests
+qualification defects; it does not reopen a locked test or silently relax labels.
+
+- [x] Freeze a separate reported-results request for the original twelve trials.
+- [x] Validate result-table projection/linkage, temporal quarantine and negative-ascertainment guards.
+- [ ] Extract and independently verify January/April 2026 results in read-only local sessions.
+- [ ] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
+
+
 ## Seven-item science assessment — bounded scopes completed October 20
 
 The user authorized executing the seven-item science plan in order, using delegated
