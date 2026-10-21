@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "verified_bounded_phase_backup",
+  "manifest": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\science7-v02-20261021T020602Z\\manifest.json",
+    "sha256": "420e83c6879fcff3c7fcb8093f6cd9741494e15d2c0f773f16ec8b4cf8f2499f",
+    "bytes": 814619
+  },
+  "archive": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\science7-v02-20261021T020602Z\\science7-proofs-and-normalized-inputs.zip",
+    "sha256": "50385c46c52453e47a5b9afdbefe1b3fcd68f1c6d09016927946bb6e1a135f74",
+    "bytes": 23457626
+  },
+  "code_bundle": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\science7-v02-20261021T020602Z\\code.bundle",
+    "sha256": "680f72e3c4f794e9796918407880c5fbc5ae7a524c8ca90f6a0e7a12c23ff121",
+    "bytes": 2002087
+  },
+  "archived_files": 3441,
+  "CRC_and_every_entry_hash_verified": true,
+  "git_bundle_verified": true,
+  "code_bundle_head_commit": "36e00ee3547db6584eb6182ce7f3dba886ac150a",
+  "scope": "Science7 source/code/failure history, normalized inputs, reference assets and evaluation proofs. E: raw originals and weights stay in existing locations; not a full-project raw-data backup.",
+  "receipt_scope": "This receipt is written after backup verification; its own later Git commit is not claimed inside the earlier bundle."
+}
