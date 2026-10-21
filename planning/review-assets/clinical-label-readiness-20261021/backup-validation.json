@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "verified_bounded_phase_backup",
+  "created_at_utc": "2026-10-21T15:46:35.423946+00:00",
+  "scope": "New clinical-label diagnostic, selected old12 source packets/adjudication, code/tests/docs and full Git history. Original AACT dumps and portable runtime archive remain in existing locations; not a complete project/raw-data backup.",
+  "archive": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\clinical-label-readiness-20261021T154628Z\\clinical-label-readiness.zip",
+    "sha256": "6795ca5b7fa102105497760a9be10ed32db735e853eaab0dcd9ff9bf020f334e",
+    "bytes": 1483349
+  },
+  "code_bundle": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\clinical-label-readiness-20261021T154628Z\\code.bundle",
+    "sha256": "e8097aa5a97375ec98564a9ca42d83c2942e6f76113d42bc2073c331056d298a",
+    "bytes": 2014399
+  },
+  "code_bundle_head_commit": "3670aceb64fc63e55599ddd5861e38163ccb2999",
+  "CRC_and_every_entry_hash_verified": true,
+  "git_bundle_verified": true,
+  "manifest": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\clinical-label-readiness-20261021T154628Z\\manifest.json",
+    "sha256": "5785f15e018f49e9165254706508f5d51740e93e2c4dcf072af1d8590f45700d",
+    "bytes": 46448
+  },
+  "archived_files": 200,
+  "receipt_scope": "Receipt written after backup; its later Git commit is not claimed inside earlier bundle."
+}
