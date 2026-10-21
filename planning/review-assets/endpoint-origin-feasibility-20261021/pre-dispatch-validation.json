@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "passed_before_origin_design_query",
+  "at_utc": "2026-10-21T16:44:17.716234+00:00",
+  "full_tests": 597,
+  "core_tests": 597,
+  "core_expected_skips": 57,
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\endpoint-origin-feasibility-20261021-full-validation.json",
+    "sha256": "30238a44d2f799ec328a719ff0b188927a6f16a5da32ae29a1c2f50cce3e5c0e",
+    "bytes": 470
+  },
+  "core_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\endpoint-origin-feasibility-20261021-core-validation.json",
+    "sha256": "59e2512a56f356f578393018656aeb7acb585b995237bcac546b8fb8516e1e10",
+    "bytes": 12630
+  },
+  "method_acceptance": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-origin-feasibility-20261021\\protocol-method-acceptance.json",
+    "sha256": "c2bd43abf058282a1684641e7cae85cff9d83830cd929e7e4808b83e83910ab1",
+    "bytes": 3676
+  },
+  "peer_review": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-origin-feasibility-20261021\\origin-screen-peer-final.json",
+    "sha256": "ba7253c8660c957f879fe27d775d0bd05e2dceac13e8a17890a3f9de59471f53",
+    "bytes": 5472
+  },
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\endpoint-origin-feasibility-v0.1.json",
+    "sha256": "8a34bb1c596f737f3f8242c8c9975a6d3ffae14d834f79cdc1ca1b789bb27808",
+    "bytes": 7580
+  },
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-origin-feasibility-20261021\\requests\\plan.json",
+    "sha256": "1fe031faa1191e0dbe51ae89d80edf1ba90018c9f763002293bbd34e14b06a8a",
+    "bytes": 55773
+  },
+  "candidate_selection": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-origin-feasibility-20261021\\requests\\candidate-freeze.json",
+    "sha256": "ca3b7f27e7f4862e2b19d92ae4ae7c04fd489f9d86ed669341f6734d4d32f7b2",
+    "bytes": 1452805
+  },
+  "code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\outcome_extract.py",
+      "sha256": "820f2d689363d96fd7d23be1fe5ce4b131109df29a4faee202b84e8ea55c8946",
+      "bytes": 24040
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\outcome_inputs.py",
+      "sha256": "a48b4f7f76ba2e400069489e52429de20b7a7b313aa3ab8a88069f0f84a2be47",
+      "bytes": 20940
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_maturity.py",
+      "sha256": "40fa72ab943e1c28d6fd0880a57f3c09535120a408121d0a1f4c4cd4ea7d7ba7",
+      "bytes": 12019
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_review.py",
+      "sha256": "e7c344085544f2f208017bd341691fc247ce202ee4fabafdede5ca09ab42b20c",
+      "bytes": 15365
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\ascertainment_policy.py",
+      "sha256": "d64feb10c06beabcdb44ecb70b9a6fb80dab7e6474394a571b4d6d8251fc844e",
+      "bytes": 2914
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_programs.py",
+      "sha256": "6f972c1dbe2c32c8283018266806c96eb4ec627f962dc1e358201b3466877364",
+      "bytes": 32604
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\reference_panel.py",
+      "sha256": "60a80e43ea1421fa6c1108098fd85c083602bda8a46c92b10ca7c7763d7d9b41",
+      "bytes": 11827
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+      "sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+      "bytes": 9545
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+      "sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "bytes": 4961
+    }
+  ],
+  "candidate_trials": 128,
+  "final_trials": 12,
+  "origin_design_queries_performed": 0,
+  "followup_queries_performed": 0,
+  "clinical_activation": false,
+  "provider_spend_usd": 0
+}

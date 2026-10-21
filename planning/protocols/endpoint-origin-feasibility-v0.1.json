@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "protocol_id": "endpoint-origin-feasibility-v0.1",
+  "role": "evaluation_only",
+  "local_date": "2026-10-21",
+  "scope": "Origin-only development feasibility sample after explicit endpoint-local design revision; original36 labels and old protocols are preserved.",
+  "parent_origin_sha256": "8622c4896796489e0d34c9359ccdbc3a1ad0eb1778541e173e0ab34ff7cd26e8",
+  "excluded_old_pack_sha256": "5a4842f9b1751d3e0b2e50c166c5bf1786e3639741072b38b8ad264b4b8da56d",
+  "origin_at": "2025-01-01T00:00:00Z",
+  "horizon_at": "2026-01-01T00:00:00Z",
+  "ascertainment_at": "2026-04-01T00:00:00Z",
+  "original_H1": "Prespecified clinical efficacy objective met in a qualified selected trial/program scope",
+  "endpoints": {
+    "selected_trial_efficacy_decision_v1": {
+      "unit": "Selected trial, prespecified primary efficacy objective/analysis and qualified experimental regimen/population",
+      "risk_set": "That selected trial/objective has no already-achieved definitive primary efficacy decision at origin; adjudicate from eligible origin sources. Higher-phase development elsewhere does not by itself exclude it.",
+      "occurrence": "Dated formal analysis/decision on the prespecified primary efficacy objective, wholly in (origin,horizon]; clinical observation, database cutoff and first public disclosure are separate fields.",
+      "positive": "Qualified prospective trial-level primary efficacy criterion met, including comparison, population, multiplicity and final/interim decision rule where relevant.",
+      "negative": "Explicit qualified definitive decision that the same prespecified trial-level efficacy criterion failed at its fixed designated analysis, within the occurrence window. Failed interim results cannot become terminal failure when the final criterion is pending. It is an observed decision, not absence of success. Full-horizon observation is unnecessary for that fixed definitive decision, but date, rule, scope and source availability remain required.",
+      "unknown": "No qualified decision, unclear timing, patient-response categories without a trial-success rule, safety-only objective, nominal secondary p value, missing scope or unavailable authentic prospectively specified rule remains null.",
+      "clinical_success_reinterpretation": "Explicit endpoint-specific operationalization for a new exposed development sample; no retrospective relabel of the prior occurrence contract or old36."
+    },
+    "first_same_program_next_phase_registry_start_v1": {
+      "unit": "Same qualified program/regimen/population moving to an eligible higher phase",
+      "risk_set": "No qualifying same-program higher-phase actual start at or before origin within a qualified registry/source frame; unresolved prior-risk or completeness stays held.",
+      "occurrence": "Registry ACTUAL study enrollment/start interval wholly in (origin,horizon]; enrollment is separate from experimental dosing and efficacy.",
+      "negative": "Explicit complete horizon ascertainment for this same-program first-event estimand; no-record alone remains unknown."
+    },
+    "selected_trial_first_experimental_dose_v1": {
+      "unit": "First dosing of the specified experimental arm in the selected trial, not first-ever global use of the drug",
+      "risk_set": "That selected experimental arm is not already dosed at origin; pre-origin drug use in another trial does not establish this arm's first dose.",
+      "occurrence": "Direct qualified selected-arm first-dose date/interval wholly in (origin,horizon]; overall registry start or enrollment does not suffice.",
+      "negative": "Explicit complete same-arm horizon ascertainment; absence, commercial discontinuation or study completion is not automatically a negative."
+    }
+  },
+  "decision_occurrence_diagnostic": {
+    "endpoint_id": "selected_trial_prespecified_decision_occurrence_v1",
+    "value_one": "A qualified definitive selected-trial prespecified efficacy decision occurs in-window, whether successful or failed; decision polarity remains separate.",
+    "value_zero": "Only independently source-qualified complete no-decision ascertainment through the horizon for that endpoint-local risk set; this is not H1 efficacy failure.",
+    "otherwise": "Null for unknown, censored, competing or unqualified states; no-record alone is not zero.",
+    "readiness_yield": "Report qualified decisions observed / all frozen members, retaining unknowns in the denominator as unknowns. This is qualification yield, not estimated true decision incidence.",
+    "conditional_polarity": "A success fraction among qualified success+failure decisions must show every excluded unknown/censored member and ascertainment-selection limits. It is not whole-cohort success probability, model performance or training class prevalence."
+  },
+  "prespecification_evidence": "An authentic version demonstrably specified before analysis/unblinding may become evaluator-only evidence even if public after origin, provided the version/content timing qualifies by ascertainment. Do not require a successful origin-public SAP download for sampling. Historical predictor inputs and their annotations still must qualify at origin; labels and later evaluator documents cannot become predictors.",
+  "time_fields": ["clinical_observation_interval", "analysis_or_decision_interval", "first_public_disclosure_interval"],
+  "public_disclosure_diagnostic": "Record separately only; do not substitute a public posting date for H1 decision occurrence or change the horizon silently.",
+  "selection": {
+    "base_criteria": "Existing origin_review.eligibility source-only phase2/single exact historical drug/one linked experimental product/single condition/start wholly2022-2024 criteria; preserve all scientific holds.",
+    "salt": "endpoint-origin-feasibility-v0.1:20261021",
+    "candidate_trials": 128,
+    "final_trials": 12,
+    "exclude_original_twelve": true,
+    "order": "SHA256(salt NUL trial NUL NCT), then SHA256(salt NUL program NUL program_id); select one origin scope per trial before design extraction.",
+    "maturity": "From eligible January2025 version only: planned primary-completion interval wholly in calendar2025, type ESTIMATED or ANTICIPATED, and at least one recorded planned primary outcome. This is a maturity stratum, not efficacy classification or proof of an event.",
+    "scientific_review": "Review all final members' origin primary objective, regimen/population and prospective decision-rule availability; retain safety/unclear and missing-rule dispositions without replacement. No automatic clinical qualification from text keywords.",
+    "insufficient_pool": "Explicit failure; no relaxed dates/criteria, posthoc candidate expansion or replacements. Retain every screening disposition.",
+    "forbidden": "Follow-up results, outcome presence, favorable significance, future completion dates, clinical labels or model outputs cannot affect candidate or final selection."
+  },
+  "exposure": "Prior development work is known; excluding the old12 does not certify no other repository/model-training exposure. No untouched held-out, scientific truth, locked or preregistration claim.",
+  "execution": "Origin January2025 restored source only, explicit deterministic metadata projection, exact frozen requests, double identical read-only reads, source/code pins, owned lifecycle and exclusive output. No follow-up extraction in this phase.",
+  "max_output_bytes": 134217728,
+  "clinical_activation": false,
+  "provider_spend_usd": 0,
+  "model_calls": 0,
+  "automatic_labels": false
+}

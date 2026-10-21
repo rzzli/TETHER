@@ -1,5 +1,13 @@
 # Project execution checklist
 
+## Endpoint-specific origin sample — October 21
+
+- [x] Freeze endpoint-local risk, occurrence/decision/disclosure and negative-state rules.
+- [x] Validate origin-only screening and maturity selection, with explicit missingness and no follow-up selection.
+- [ ] Extract January2025 design/maturity information and seal a new deterministic sample before follow-up.
+- [ ] Independently verify the sample and update the plan, memory and evidence backup.
+
+
 ## Clinical-label feasibility continuation — October 21
 
 The reported-results diagnostic is complete; Step1 clinical qualification remains unresolved. Preserve the exposed twelve-case pilot and its
