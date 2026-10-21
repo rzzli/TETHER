@@ -35,6 +35,9 @@ def validate_binding(plan):
     if plan['phase']=='origin_screening':
         from tools.science.origin_maturity import validate_origin_binding
         return validate_origin_binding(plan)
+    if plan['phase']=='endpoint_followup':
+        from tools.science.endpoint_followup import validate_endpoint_binding
+        return validate_endpoint_binding(plan)
     policy=plan['review_policy']
     if policy['sha256']!=POLICY_SHA256:
         raise ContractError('Wrong scientific review policy')
@@ -166,7 +169,8 @@ def check_pins(pins):
 
 def validate_plan(plan):
     origin_screening=plan.get('phase')=='origin_screening'
-    expected_protocol='endpoint-origin-screen-inputs-v1' if origin_screening else 'science4-outcome-inputs-v1'
+    expected_protocol=('endpoint-origin-screen-inputs-v1' if origin_screening else
+        'endpoint-followup-inputs-v1' if plan.get('phase')=='endpoint_followup' else 'science4-outcome-inputs-v1')
     if (plan.get('schema_version')!=1 or plan.get('protocol_id')!=expected_protocol
             or plan.get('role')!='evaluation_only' or plan.get('provider_spend_usd')!=0
             or plan.get('clinical_activation') is not False):
@@ -178,7 +182,7 @@ def validate_plan(plan):
     count=128 if origin_screening else 12
     if len(ids)!=count or len(set(ids))!=count or any(not isinstance(x,str) or not re.fullmatch(r'NCT[0-9]{8}',x) for x in ids):
         raise ContractError('Extraction must retain all twelve sealed pilot members')
-    if plan.get('phase') not in ('origin_design','followup_design','selected_results','origin_screening'):
+    if plan.get('phase') not in ('origin_design','followup_design','selected_results','origin_screening','endpoint_followup'):
         raise ContractError('Unknown evaluator phase')
     jobs=plan.get('jobs',[])
     expected=['2025-01-01'] if plan['phase'] in ('origin_design','origin_screening') else ['2026-01-01','2026-04-01']
@@ -217,6 +221,7 @@ def extract(plan_path, expected_sha256, output):
             'tools/science/ascertainment_policy.py','tools/science/origin_programs.py',
             'tools/science/reference_panel.py','src/asof/serde.py','src/asof/journal.py'}
         if plan['phase']=='selected_results':required_code.add('tools/science/outcome_results.py')
+        if plan['phase']=='endpoint_followup':required_code.update(('tools/science/endpoint_followup.py','tools/science/outcome_results.py'))
         if plan['phase']=='origin_screening':required_code.update(('tools/science/origin_maturity.py','tools/science/origin_review.py'))
         if not {project/p for p in required_code}<=codepaths:
             raise ContractError('Incomplete executing query/temporal/serialization code closure')
@@ -294,7 +299,7 @@ def extract(plan_path, expected_sha256, output):
                     for suffix in ('first','repeat'):
                         command(name+'-'+suffix,[str(pg/'psql.exe'),'-XAtq','-v','ON_ERROR_STOP=1','-f',query['path']],env,timeout=330)
                     first=folder/(name+'-first.stdout.log');repeat=folder/(name+'-repeat.stdout.log')
-                    byte_limit=(128*1024*1024 if plan['phase']=='origin_screening' else query['request'].get('max_output_bytes'))
+                    byte_limit=(128*1024*1024 if plan['phase'] in ('origin_screening','endpoint_followup') else query['request'].get('max_output_bytes'))
                     if byte_limit is not None and max(first.stat().st_size,repeat.stat().st_size)>byte_limit:
                         raise ContractError('Reported results exceed explicit output-byte bound')
                     if first.read_bytes()!=repeat.read_bytes():raise ContractError('Repeat source reads differ')

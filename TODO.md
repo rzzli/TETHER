@@ -1,5 +1,14 @@
 # Project execution checklist
 
+## Endpoint-specific follow-up and adjudication — October 21
+
+- [x] Freeze same-twelve follow-up/adjudication policy and exact bounded requests.
+- [x] Validate temporal, scope, result-publication and extraction binding guards.
+- [ ] Extract January/April2026 metadata and reported results, then independently verify source records.
+- [ ] Review bounded primary sources, adjudicate all frozen endpoints and measure qualification yield/precision.
+- [ ] Retain independent acceptance, update documentation/memory and verify evidence backup.
+
+
 ## Endpoint-specific origin sample — October 21
 
 - [x] Freeze endpoint-local risk, occurrence/decision/disclosure and negative-state rules.
