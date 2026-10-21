@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "independently_verified_evaluator_pack",
+  "pack": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\review-inputs-v1\\pack-freeze.json",
+    "sha256": "f7ecf5d26642d50265a07f347343d8443e1d7cd0a353f7cfc5700a47d2a5528a"
+  },
+  "technical_peer": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\produced-review-pack-peer.json",
+    "sha256": "9c8f2fc89a9dc76dc5815cd2b42ffed3031d278f8a77cf2757b4e7d8e058bd64"
+  },
+  "selected_trials": 12,
+  "packet_bytes": 983262,
+  "held_result_payloads_included": false,
+  "clinical_labels_assigned": 0
+}
