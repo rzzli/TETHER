@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "sealed_before_evaluator_join",
+  "captured_at_utc": "2026-10-21T01:47:27.011864+00:00",
+  "prediction_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\predictions-seal.json",
+    "sha256": "8c9a01ec541ca8ab40b61978ffc81083008f1d89eebc7f378e6b8c6b04c05f87",
+    "bytes": 85289
+  },
+  "execution_report": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\execution-report.json",
+    "sha256": "40029051e7ca4adc4b1365302265bbed0c1e20f6360376b7933646dff9ecaedd",
+    "bytes": 83664
+  },
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\science7-v02-20261021T005551Z\\run-plan.json",
+    "sha256": "912d129ec020389e7a173dbc1787003effefbd81d91df4059fbba52eab576f4a",
+    "bytes": 2950418
+  },
+  "evaluator_answers_opened": false,
+  "clinical_probabilities": null
+}
