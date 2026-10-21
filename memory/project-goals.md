@@ -3,12 +3,32 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-20
+updated: 2026-10-21
 ---
 
 # Project goals
 
-## Current scientific prerequisite execution — October 21 UTC / October 20 Los Angeles
+## Current clinical-label readiness — October21
+
+The missing reported-result stage now passed for all12 original trials in both
+January/April2026 AACT snapshots:995 rows each, two trials with reported outcomes,
+all36 original labels unchanged/null. Independent terminal and AI scientific reviews
+passed their source-check scopes; no independently validated clinical truth is claimed.
+Structured-negative truthiness, integer-FK, group-code and result-date contradictions
+were corrected and tested.577 full/core tests (58 expected core skips), required
+probes/package and four hosted jobs pass at4a57dd4. Full validation needed a verified
+project-local portable PowerShell7 runtime; the original environment failure remains.
+
+Step1 remains unresolved scientifically: same-program scope, prospective trial-level
+success/failure rules, qualified event/decision times and negative ascertainment are
+missing. New results do not license changing old labels. The global higher-phase
+prior-risk gate also needs a prospective endpoint-specific design; first dosing,
+first-ever advancement and selected-trial efficacy have different risk sets. Next:
+freeze those definitions and an origin-only maturity sample before follow-up queries.
+No jump to training, numerical predictions or the later predictor step. See
+[[Clinical Label Readiness 2026-10-21]]. All clinical/scoring gates remain false.
+
+## Completed seven-assessment phase — October20 Los Angeles
 
 All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
 

@@ -25,8 +25,8 @@ independent scientific quality and clinical performance remain unmeasured.
 The [Science 7 matched comparison](planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md)
 completed 60 case-arm runs, source-inclusive verification and a 20-original-row audit.
 All seven bounded science assessments are closed, including genetics defer and scorer
-no-fit. The final 551-test full suite, core validation (57 expected skips), required probes,
-packaging and four hosted jobs pass. Provider spending remains $0.
+no-fit. Its 551-test checkpoint passed full/core validation (57 expected core skips),
+required probes, packaging and four hosted jobs. Provider spending remains $0.
 
 AsOf selected every offered candidate (37/37); this demonstrates source fidelity and
 execution controls, not ranking quality or scientific superiority. The source-derived
@@ -34,6 +34,14 @@ Virtual Biotech adaptation exhausted its budget in seven cases. The failed first
 attempt and response-informed v0.2 correction remain disclosed. Historical predictors,
 qualified clinical outcomes, power, genetics, scoring and clinical lock remain unmet;
 all real probabilities are null. See the report's remaining-gates table and [TODO](TODO.md).
+
+The October21 [clinical-label diagnostic](planning/Clinical%20Label%20Readiness%202026-10-21.md)
+completed the missing reported-result extraction for the same twelve trials across
+January/April2026:995 source rows per snapshot, two result-bearing trials, no new
+qualified labels. All36 old endpoints remain unresolved. Negative-ascertainment
+and result-linkage guards were corrected;577 full tests, core validation and four
+hosted jobs pass. Step1 now requires an explicit endpoint-specific risk/event and
+origin-only maturity design before another clinical sample. Scientific gates stay false.
 
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant

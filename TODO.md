@@ -2,15 +2,19 @@
 
 ## Clinical-label feasibility continuation — October 21
 
-The next remaining step is active. Preserve the exposed twelve-case pilot and its
+The reported-results diagnostic is complete; Step1 clinical qualification remains unresolved. Preserve the exposed twelve-case pilot and its
 36 unresolved endpoints. This diagnostic adds reported-result inputs and tests
 qualification defects; it does not reopen a locked test or silently relax labels.
 
 - [x] Freeze a separate reported-results request for the original twelve trials.
 - [x] Validate result-table projection/linkage, temporal quarantine and negative-ascertainment guards.
-- [ ] Extract and independently verify January/April 2026 results in read-only local sessions.
-- [ ] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
+- [x] Extract and independently verify January/April 2026 results in read-only local sessions.
+- [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
 
+
+Next within Step1: freeze endpoint-specific risk/event definitions and a new
+origin-only outcome-maturity sample before its follow-up queries. No retrospective
+gate waiver or label change. See planning/Clinical Label Readiness 2026-10-21.md.
 
 ## Seven-item science assessment — bounded scopes completed October 20
 

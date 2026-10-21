@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "status": "reported_results_gap_closed_clinical_label_qualification_unresolved",
+  "created_at_utc": "2026-10-21T15:42:50.718277+00:00",
+  "local_date": "2026-10-21",
+  "completed_scope": "Original-twelve reported-result extraction, contract correction, bounded primary-source recovery and source-linked readiness decision.",
+  "remaining_work_step": 1,
+  "clinical_label_feasibility_fully_resolved": false,
+  "snapshots": [
+    {
+      "snapshot_date": "2026-01-01",
+      "members": 12,
+      "table_counts": {
+        "outcomes": 38,
+        "result_groups": 180,
+        "outcome_analyses": 4,
+        "outcome_analysis_groups": 4,
+        "outcome_counts": 161,
+        "outcome_measurements": 608
+      },
+      "reported_result_rows": 995,
+      "trials_with_reported_outcomes": [
+        "NCT05064358",
+        "NCT06091956"
+      ],
+      "eligible_with_reported_outcomes": [
+        "NCT06091956"
+      ],
+      "version_status_counts": {
+        "held_unqualified_posting_date_type": 5,
+        "eligible_reconstructed_date_bound": 7
+      },
+      "validation": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\results-extraction-v1\\2026-01-01\\results-validation.json",
+        "sha256": "7d9d3dbb2bd20a3f2abf670378caacee7a2e6b58a8d83c7ad4bd1c1b0a9befa3",
+        "bytes": 1109358
+      }
+    },
+    {
+      "snapshot_date": "2026-04-01",
+      "members": 12,
+      "table_counts": {
+        "outcomes": 38,
+        "result_groups": 180,
+        "outcome_analyses": 4,
+        "outcome_analysis_groups": 4,
+        "outcome_counts": 161,
+        "outcome_measurements": 608
+      },
+      "reported_result_rows": 995,
+      "trials_with_reported_outcomes": [
+        "NCT05064358",
+        "NCT06091956"
+      ],
+      "eligible_with_reported_outcomes": [
+        "NCT05064358",
+        "NCT06091956"
+      ],
+      "version_status_counts": {
+        "eligible_reconstructed_date_bound": 12
+      },
+      "validation": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\results-extraction-v1\\2026-04-01\\results-validation.json",
+        "sha256": "e40415afde9c55d3c43f067b48f43ddbe78030c41c9ccc5c5c13954df74aa010",
+        "bytes": 2140084
+      }
+    }
+  ],
+  "source_result_rows_across_snapshots": 1990,
+  "row_count_interpretation": "Source-table occurrences in two snapshots, not distinct patients, independent observations, qualified events or registry-wide event prevalence.",
+  "old_outcomes": {
+    "members": 12,
+    "endpoint_units": 36,
+    "unresolved": 36,
+    "qualified_positive": 0,
+    "qualified_negative": 0,
+    "old_labels_changed": false
+  },
+  "overlapping_old_missingness_counts": {
+    "candidate_phase_start_scope_detail_missing": 12,
+    "global_origin_prior_risk_not_qualified": 36,
+    "full_same_program_scope_incomplete": 36,
+    "no_qualified_negative_ascertainment": 36,
+    "global_prior_risk_unqualified": 36,
+    "higher_phase_actual_start_and_scope_not_jointly_qualified": 12,
+    "qualifying_actual_next_phase_start_missing": 12,
+    "same_program_candidate_event_not_qualified": 36,
+    "direct_dosing_event_within_window_not_qualified": 12,
+    "direct_dosing_link_incomplete": 12,
+    "selected_scope_dosing_event_date_missing": 12,
+    "prespecified_primary_efficacy_rule_and_eligible_report_not_jointly_qualified": 12,
+    "origin_trial_level_success_rule_missing": 12,
+    "matching_qualified_result_missing": 12,
+    "eligible_origin_scope_missing": 3,
+    "origin_source_content_withheld_unqualified_posting_type": 3
+  },
+  "proofs": {
+    "extraction_terminal": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\terminal-validation.json",
+      "sha256": "3cb1f249e9592b87464e5c4204d0c34ef682c22950d84ed4ad02c9025fd5588a",
+      "bytes": 49007
+    },
+    "scientific_review": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\results-scientific-review.json",
+      "sha256": "00d0d9dc50644cccf0715e164bda15c601cc2b2144fe206b1390e2c547014c80",
+      "bytes": 135865
+    },
+    "contract_review": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\contract-review.json",
+      "sha256": "f9b352ef540c60aff7725de94f767466b5771577439ea1e244347706fdc2a69e",
+      "bytes": 115099
+    },
+    "source_recovery": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\source-recovery.json",
+      "sha256": "eed5b8e936b1fefdd19fc7f789015b351c34909e6a9e123defadbac9f887a06f",
+      "bytes": 36601
+    },
+    "source_recovery_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\source-recovery-validation.json",
+      "sha256": "4cbc46f1cb4bc55b6da8779c9b0f1ba65ba515cf21f2872257ecf7d0870133b2",
+      "bytes": 1367
+    },
+    "peer_regressions": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\reported-results-peer.json",
+      "sha256": "28f3054105eba3d364fd29a98de5c36255a783c8d049b19661188e3b885f72d9",
+      "bytes": 6237
+    },
+    "negative_guard_correction": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\negative-ascertainment-correction-r1.json",
+      "sha256": "3b0fb2cfc6842c030ea141ee85ac807d017bceee69509d2d2067b25b7156d99d",
+      "bytes": 2550
+    },
+    "request_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\requests\\freeze.json",
+      "sha256": "b0129e30cc426ae1670c344316959279d217086b60591e086f70c98b5908aa8b",
+      "bytes": 828
+    },
+    "extraction_report": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\results-extraction-v1\\report.json",
+      "sha256": "b4a245805517117ce71c5df151c4d2d31c9d836e35139aee7099ffe54e4e9b5d",
+      "bytes": 1947
+    },
+    "executed_code": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\clinical-label-feasibility-20261021\\results-extraction-v1\\executed-code-proofs.json",
+      "sha256": "e6a2e0b433a97a29c1cc55e188c190aa628da239a3b1caa42865714494461298",
+      "bytes": 3920
+    },
+    "old_labels": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    "full_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\clinical-label-readiness-20261021-full-r1-validation.json",
+      "sha256": "c595be51cf3a2c795d0a4af8742797d4af3ef664120f83fd148a46393427be50",
+      "bytes": 471
+    },
+    "core_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\derived\\clinical-label-readiness-20261021-core-validation.json",
+      "sha256": "b4f362d4a010d90b573b7971a8d46698a56217ee560ecf5aa8767af621ee7639",
+      "bytes": 12828
+    },
+    "hosted_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\clinical-label-readiness-20261021\\hosted-validation.json",
+      "sha256": "94573dab203ffbfc16588ccd0692f2038a1dd75edc8ef437b84c09558dd41940",
+      "bytes": 1163
+    }
+  },
+  "scientific_review_level": "ai_source_adjudicated_not_external_clinical_truth",
+  "scientific_gates": {
+    "G03_full_historical_predictors": false,
+    "G04_outcomes": false,
+    "G05_power": false,
+    "G06_genetics": false,
+    "G07_scoring": false,
+    "clinical_locked": false
+  },
+  "risk_contract_finding": "The old global higher-phase prior-risk gate is broader than selected-trial efficacy and dosing estimands. Any revision requires an explicit prospective endpoint-specific design; it is not waived on these exposed cases.",
+  "next_action": "Freeze endpoint-specific risk/event definitions and an origin-only outcome-maturity sampling design before querying follow-up on a new feasibility sample. Preserve old36 and distinguish occurrence, analysis/decision and public disclosure.",
+  "blockers": [
+    "No jointly qualified in-window event, selected-program scope and prospective trial-level success/failure rule in the old pilot.",
+    "Ten trials have no reported-result rows in these snapshots; this is not a negative or complete literature ascertainment.",
+    "No qualified negative ascertainment, class counts or powered clinical cohort; larger-cohort labelability remains unknown."
+  ],
+  "statistical_power": null,
+  "clinical_metrics": null,
+  "probabilities": null,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "source_exposure": "Exposed development diagnostic, not locked or prospectively preregistered validation.",
+  "software_validation": {
+    "full_tests": 577,
+    "full_skips": 0,
+    "core_tests": 577,
+    "expected_core_skips": 58,
+    "four_hosted_jobs": "passed"
+  }
+}

@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[Clinical Label Readiness 2026-10-21]] — Missing reported-results stage completed:12 trials/two snapshots/995 rows each/two result-bearing trials;36 old labels stillnull.577 tests/four hosted jobs pass. Clinical qualification unresolved; nextprospective endpoint-specific risk/event and origin-only maturity design.
+- [[research-log-2026-10-21]] — Clinical-label data gap closure, corrected negative/result guards, retained source recovery and explicit revise-before-scaling decision.
+
 - [[research-log-2026-10-20]] — Completed Science5/6 conditional assessments and Science7 matched development comparison; failed attempt/correction, audit, resource accounting and remaining science gates retained.
 - [[Matched T6 Comparison Execution 2026-10-20]] — Final bounded Science7 closeout:60 source-verified runs/20 distinct original-row checks,114 fresh calls/$0,551 full tests/core57 skips/four hosted jobs pass. Predictions anchored before Q1 join; independent agent acceptance passed. AsOf37/37 offered; no hard prioritization/scientific superiority. Response-informed v02 and failed prior58 calls retained; clinical gates false.
 - [[Scientific Prerequisites Execution 2026-10-18]] — All seven bounded assessment dispositions closed, including genetics defer, scorer no-fit and supported T6 development comparison. This does not qualify clinical/scoring gates or finish the broader project. See [[project-goals]].
