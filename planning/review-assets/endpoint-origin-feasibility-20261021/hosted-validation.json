@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "run_id": 39637467825,
+  "url": "https://github.com/rzzli/drug_target_agents/actions/runs/39637467825",
+  "head_commit": "5b226688dd29c0407ff2349597a5752978da625f",
+  "jobs": [
+    {
+      "name": "validate (ubuntu-latest, core)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, full)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (windows-latest, core)",
+      "conclusion": "success"
+    },
+    {
+      "name": "validate (ubuntu-latest, full)",
+      "conclusion": "success"
+    }
+  ],
+  "retained_full_response": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\endpoint-origin-hosted-validation-20261021.json",
+    "sha256": "c3e25768c65e762dc6853e572d057a379e72644c91b48005b44c3be0f26ab4e1",
+    "bytes": 7732
+  }
+}

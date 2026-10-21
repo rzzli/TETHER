@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October21 current assessment: endpoint-specific origin-only maturity sampling
+has completed (128 screened,12 sealed); follow-up adjudication and clinical
+qualification remain pending. The derived evaluator artifacts and source proofs
+do not change provider/product counts or promote historical predictors. See
+[[Endpoint-specific Origin Sample 2026-10-21]]. Earlier dated status entries below
+remain historical; the current project memory and TODO identify the next gate.
+
+
 This is the data implementation of [[AsOf Feasibility Analysis and Peer Survey]] and the revalidated scaffold approved by the user. The initial documentation deliverable was completed without dataset acquisition or analysis. On October 10 the user authorized public downloads, storage sizing and the external E: root; starter data are now collected and the core wave has started. See [[data/STORAGE_AND_DOWNLOAD_REPORT|the acquisition/storage report]] for this subsequent phase. Subsequent technical normalization and regional LD QC are documented below; no adjudicated clinical benchmark labels or validated clinical predictions have been created.
 
 The authoritative inventory, [[data/catalog/sources.json|sources.json]], contains **83 providers and 178 dataset/product records**. It covers every source family in the original proposal plus dependency data needed for identifiers, LD, temporal reconstruction, terminology, validation and optional component compatibility. The additional v0.2 product is `asof_normalized_packets`. Provider count is not study count; overlapping sources and bundles are explicitly recorded. Current implementation status is in [[Project Audit and v0.2 Completion]]; dated scaffold checks below retain their original counts.

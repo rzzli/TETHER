@@ -8,7 +8,25 @@ updated: 2026-10-21
 
 # Project goals
 
-## Current clinical-label readiness — October21
+## Current origin-only sample — October21 continuation
+
+Endpoint-local efficacy-decision, registry-advancement and arm-dosing rules are
+frozen in endpoint-origin-feasibility-v0.1. From444 eligible origin trials after
+excluding old12,128 predetermined metadata candidates were queried only in
+January2025.113 versions date-eligible;15 held;36 maturity-eligible; first12
+sealed before follow-up at005db13e5d51f595fa5849d72b3d495e12cad797c20a632db511be85ba514ac6.
+All128dispositions,12 physical source/program rows, source pointers, scope tables
+and lineage independently verified.597 full tests/core57 expected skips and four
+hosted jobs pass for5b22668. Membership anchor committed/pushed d9285f3.
+
+Clinical labels stillnull; original36 unchanged. Maturity is not an observed
+event or efficacy qualification. Next: source-qualified follow-up/adjudication
+for all frozen members, then qualification-yield and power/precision assessment.
+No historical predictor, genetics/scorer admission or clinical lock. See
+[[Endpoint-specific Origin Sample 2026-10-21]] and [[research-log-2026-10-21-origin-sample]].
+
+
+## Earlier same-day clinical-label readiness — October21
 
 The missing reported-result stage now passed for all12 original trials in both
 January/April2026 AACT snapshots:995 rows each, two trials with reported outcomes,

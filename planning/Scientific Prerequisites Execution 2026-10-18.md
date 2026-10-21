@@ -1,5 +1,14 @@
 # Scientific prerequisites: ordered execution
 
+October21 continuation within Step1: the revised endpoint-local protocol and
+new origin-only maturity sample are sealed.128 metadata candidates yielded36
+maturity-eligible trials and12 deterministic members; no follow-up or clinical
+labels. Independent technical acceptance and597 full tests pass. See
+[[Endpoint-specific Origin Sample 2026-10-21]] for source-only readiness findings
+and the separate follow-up/adjudication gate. The seven bounded assessments
+below remain completed dispositions, not proof that clinical prerequisites qualify.
+
+
 The user authorized seven items in sequence, with agent expertise and public-source
 research. File/access/permission gaps remain user-handled. The frozen design is
 `planning/protocols/science-prerequisites-v0.1.json`; TODO.md tracks current work.

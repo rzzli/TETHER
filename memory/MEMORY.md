@@ -1,5 +1,9 @@
 # Research memory index
 
+- [[research-log-2026-10-21-origin-sample]] — Endpoint-local protocol and origin-only128 screen;36 maturity-eligible,12 sealed before follow-up, independent source/packet checks passed,597 full tests/core57 expected skips. Clinical qualification open.
+- [[Endpoint-specific Origin Sample 2026-10-21]] — Frozen new membership, method/source proofs, preserved scope conflicts and readiness findings; next bounded follow-up/adjudication.
+
+
 - [[Clinical Label Readiness 2026-10-21]] — Missing reported-results stage completed:12 trials/two snapshots/995 rows each/two result-bearing trials;36 old labels stillnull.577 tests/four hosted jobs pass. Clinical qualification unresolved; nextprospective endpoint-specific risk/event and origin-only maturity design.
 - [[research-log-2026-10-21]] — Clinical-label data gap closure, corrected negative/result guards, retained source recovery and explicit revise-before-scaling decision.
 

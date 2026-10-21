@@ -20,9 +20,9 @@ qualification defects; it does not reopen a locked test or silently relax labels
 - [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
 
 
-Next within Step1: freeze endpoint-specific risk/event definitions and a new
-origin-only outcome-maturity sample before its follow-up queries. No retrospective
-gate waiver or label change. See planning/Clinical Label Readiness 2026-10-21.md.
+Next within Step1: separately freeze and execute follow-up/adjudication for the
+new twelve-member origin-only maturity sample. Preserve every member, scope hold,
+partial rule and unknown outcome. See planning/Endpoint-specific Origin Sample 2026-10-21.md.
 
 ## Seven-item science assessment — bounded scopes completed October 20
 

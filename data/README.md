@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October21: a new evaluator-only origin maturity sample is sealed under
+`data/benchmark/labels/endpoint-origin-feasibility-20261021/`. All128 requested
+January2025 metadata rows returned;113 date-eligible versions,15 explicit holds,
+36 maturity-eligible trials and12 frozen members. Follow-up remains unopened and
+labels null. See `planning/Endpoint-specific Origin Sample 2026-10-21.md`. This
+adds no new dataset acquisition or historical predictor bundle.
+
+
 October 18 science-prerequisite work adds a separate ten-case contemporary source
 reference pilot: 10,512 observations, fifty original-row audits, two blinded AI
 source reviews and third-agent adjudication. Its answers stay evaluator-only under
