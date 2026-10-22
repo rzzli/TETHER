@@ -5,7 +5,13 @@
 - [x] Freeze source projections, search queries, bounds and chronology review rules.
 - [x] Project retained registry dates and execute the bounded public-source search.
 - [x] Independently verify source identities and distinguish analysis, submission and public posting dates.
-- [ ] Reconcile the scientific disposition, update documentation/memory and verify backup.
+- [x] Reconcile the scientific disposition, update documentation/memory and verify backup.
+
+This bounded phase is closed; the broader scientific Tasks6–8 below remain open.
+The registry dates are verified, but the primary report and analysis/decision
+chronology remain unqualified. Next is a separately frozen publisher/DOI lookup
+of the numbered abstract lead, with no cutoff change or cohort activation.
+See planning/Public Chronology and Primary Report 2026-10-22.md.
 
 ## Existing-trial historical document metadata — October 22
 
