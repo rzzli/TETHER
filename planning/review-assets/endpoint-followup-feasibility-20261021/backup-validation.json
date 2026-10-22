@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "verified_bounded_phase_backup",
+  "at_utc": "2026-10-22T04:12:45.823653+00:00",
+  "scope": "Fixed-twelve follow-up, eligible reviewer packets, bounded primary original documents and receipts, AI reviews/crossreviews, canonical adjudication, code/tests/docs and Git history. Full parent frames, raw AACT dumps and runtime originals remain at existing paths; research-only pypdf package can be reinstalled from retained version/logs. Not a full project/raw-data backup or public redistribution.",
+  "archive": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\endpoint-followup-feasibility-20261022T041243Z\\endpoint-followup-feasibility.zip",
+    "sha256": "85548ece3e0f0ce06c4f192f69017649b1d481f4daa5f7dcddf7ff4955ea95f4",
+    "bytes": 18344899
+  },
+  "code_bundle": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\endpoint-followup-feasibility-20261022T041243Z\\code.bundle",
+    "sha256": "eb1ae583d2ca72c94a0daff1ab9a3ab08011a916a3c370dc253390d61354bce3",
+    "bytes": 2086140
+  },
+  "code_bundle_head_commit": "93d3e515c872c9525a1f06a195edd81e3cfc96e1",
+  "CRC_and_every_entry_hash_verified": true,
+  "git_bundle_verified": true,
+  "manifest": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\endpoint-followup-feasibility-20261022T041243Z\\manifest.json",
+    "sha256": "538d93d03433ec381bb14b095f916951fe0b2901a6b33889e636d5a2b5f464a2",
+    "bytes": 67504
+  },
+  "archived_files": 295,
+  "receipt_scope": "Written after backup; the later receipt/checklist completion commit is not in the earlier bundle."
+}
