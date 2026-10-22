@@ -1,5 +1,15 @@
 # Scientific prerequisites: ordered execution
 
+October22 latest: public chronology and bounded primary-report search are complete.
+Eight official dates distinguish January26 results submission from May5 QC and
+May29,2026 public posting after the April1 cutoff. Three searches/four page actions,
+two current reviews and independent technical reconstruction retain the secondary
+numbered abstract lead and scientific unknowns. Mapping correction and reviewer
+scope deviation are disclosed. Labels stay null; next is a separately frozen
+publisher/DOI lookup, with a revise/defer decision if insufficient. No cohort,
+training or locked clinical activation. See [[Public Chronology and Primary Report 2026-10-22]].
+Earlier next pointers below retain their dated checkpoint scope.
+
 October22 follow-on: exposed historical-document metadata validation complete.
 Both fully queried Jan/Apr2026document tables are empty for the fixed existing
 trial; recordversiondatebound passes but historicalPDFavailability does not.

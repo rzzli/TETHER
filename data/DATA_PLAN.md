@@ -1,7 +1,7 @@
 ---
 title: AsOf Full Data Requirements and Acquisition Plan
 date: 2026-10-09
-updated: 2026-10-17
+updated: 2026-10-22
 tags:
   - asof
   - data-plan
@@ -10,6 +10,16 @@ status: acquisition-started
 ---
 
 # AsOf full data requirements and acquisition plan
+
+October22 current chronology: all eight selected official API date fields now
+pass direct reconstruction after an exposed schema correction. Results were
+submitted January26,2026, met QC May5, and first posted publicly May29, after
+the April1 cutoff. Three searches/four page actions produced an unverified
+numbered abstract lead; official history opens returned shells. No historical
+source qualification, clinical-label change or catalog promotion. Next is a
+separately bounded primary-publisher/DOI lookup, preserving nulls and the cutoff
+when evidence remains insufficient. See [[Public Chronology and Primary Report 2026-10-22]].
+Earlier next pointers below retain their dated scope.
 
 October22 historical-document diagnostic: the already retained Jan/Apr2026
 NCT05997277 metadata was revalidated after declared exploratory exposure.

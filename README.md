@@ -1,5 +1,13 @@
 # AsOf target-evaluation agents
 
+The October22 [public-chronology review](planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md)
+verified eight registry dates: results submitted January26, QC-qualified May5,
+and first publicly posted May29,2026, after the April1 cutoff. Three searches
+and four page actions recovered a secondary abstract lead, without an authenticated
+primary report. Mapping and review-scope errors are preserved/disclosed; labels
+stay null. Next is a bounded publisher/DOI lookup of that lead. Earlier next-step
+statements below describe their dated checkpoints.
+
 The October22 [historical-document metadata check](planning/Existing-trial%20Document%20History%202026-10-22.md)
 verified the existing trial's January/April extraction: both document tables were
 queried and empty. Historical PDF availability remains unqualified; this is an

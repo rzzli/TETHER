@@ -3,10 +3,32 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
 # Project goals
+
+## Current public chronology review — October 22
+
+Eight selected registry dates independently match the retained official API.
+Results submitted January 26, 2026, met QC May 5 and first posted publicly May 29,
+after the April 1 cutoff. Three frozen searches and four page actions recovered
+no authenticated primary report or usable historical registry version. Item 0507
+on an author-publication page is a secondary Journal of Investigative Dermatology
+HS pilot lead, month-dated August 2026; NCT bridge, DOI and primary text remain
+unknown. Next is a separately bounded publisher lookup, with an explicit revise/
+defer decision if it cannot qualify evidence. No cutoff shift or cohort activation.
+
+Preserve the v0.1 three-key mapping failure and exposed v0.2 correction committed
+before reprojection/queries 2–3. Six checks and canonical-shape regression pass;
+old code fails that regression. Two current reviews agree on narrow chronology;
+reviewer B overread status fields, recorded in a sealed addendum and excluded
+from admitted chronology. A and technical peer used only identity/eight fields.
+29 pack pins and old36/new36 hashes verified. No runtime changes; inherited
+658-test/four-CI checkpoint. No original GET/API refresh, training, scoring,
+features or probabilities. Scientific decision/authenticity/history gates remain
+held. See [[Public Chronology and Primary Report 2026-10-22]]. Earlier entries
+are dated history, with their next pointers superseded by this one.
 
 ## Latest retained historical-document check — October22
 

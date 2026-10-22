@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "status": "passed_bounded_chronology_recovery_with_scientific_holds",
+  "at_utc": "2026-10-22T16:53:51.835210+00:00",
+  "source_pack_pins": 29,
+  "registry_fields_verified": 8,
+  "reviewers": 2,
+  "independent_technical_reconstruction": true,
+  "review_scope_deviation_disclosed": true,
+  "schema_failure_preserved": true,
+  "protected_blindness": false,
+  "independent_scientific_truth": false,
+  "primary_report_recovered": false,
+  "clinical_labels_assigned": 0,
+  "clinical_activation": false,
+  "old36_and_new36_unchanged": true,
+  "checks": [
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "data/cache/project_public_chronology_v02_20261022.py",
+        "--self-test"
+      ],
+      "result": {
+        "status": "passed",
+        "cases": 6,
+        "rejected_cases": 3,
+        "no_clinical_date_inference": true,
+        "no_network": true
+      }
+    },
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "data/benchmark/labels/public-chronology-20261022/assert-actual-format-regression.py",
+        "--helper",
+        "data/cache/project_public_chronology_v02_20261022.py"
+      ],
+      "result": {
+        "status": "passed",
+        "cases": 1,
+        "canonical_API_shape": true,
+        "canonical_date_fields": [
+          "studyFirstSubmitDate",
+          "studyFirstSubmitQcDate",
+          "studyFirstPostDateStruct",
+          "lastUpdateSubmitDate",
+          "lastUpdatePostDateStruct",
+          "resultsFirstSubmitDate",
+          "resultsFirstSubmitQcDate",
+          "resultsFirstPostDateStruct"
+        ],
+        "actual_source_values_read": false,
+        "network": 0
+      }
+    }
+  ],
+  "counters": {
+    "queries": 3,
+    "source_page_opens_including_click": 4,
+    "original_GET_attempts": 0,
+    "retries": 0,
+    "registry_API_refreshes": 0,
+    "database_queries": 0,
+    "new_cohort_sources": 0,
+    "provider_spend_usd": 0
+  },
+  "framework_checkpoint_tests": 658,
+  "framework_full_suite_rerun": false,
+  "runtime_code_changed": false,
+  "structural": {
+    "tracked_scope_files": 659,
+    "providers": 83,
+    "datasets": 178
+  },
+  "pins": [
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\source-pack.json",
+      "sha256": "6e913edf4a5376d4b592cf78c629b8bfd92555c44674329746bbdf314964e7af",
+      "bytes": 10913
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\registry-chronology-v2.json",
+      "sha256": "47730533737315e6aae50542628b248ced03c584c2d8bd89aad2600c8023dfbd",
+      "bytes": 2361
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\reconciliation.json",
+      "sha256": "1088f60ee8377c2e9fee5bfbc969c86f37b8729b72587505f3520dc401495907",
+      "bytes": 11824
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\review-a.json",
+      "sha256": "ec193546451bb03a56d071b6ed0c1e3eef193afd5d3d78a2bbdbec2bc1f43e45",
+      "bytes": 35355
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\review-b.json",
+      "sha256": "f5f02c2676a589b91f5e376fa75e01e0e81578804c5f71dd2ae635b7398566a7",
+      "bytes": 31403
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\review-b-scope-addendum.json",
+      "sha256": "5e0cdd90d00e5feb9c41c39746c2b9b8060eff7e6e9f08621c94f353cf4ffc20",
+      "bytes": 3508
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\technical-acceptance.json",
+      "sha256": "8c0d353de1ba4bd00fb3e7edbd695bc935206f2d094894add10180bb83d34732",
+      "bytes": 18383
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\request-freeze.json",
+      "sha256": "7e0b584ca54bc20e18a6c09a25461240eb83cdfb93762a859d2df70ede21dca6",
+      "bytes": 557
+    },
+    {
+      "path": "data\\benchmark\\labels\\public-chronology-20261022\\schema-amendment-freeze.json",
+      "sha256": "9f3489954424a0167ca932466424ca1659a08f2f47a77cc02be3c8b66a87f261",
+      "bytes": 906
+    },
+    {
+      "path": "README.md",
+      "sha256": "43b5d87e07c1c34eca6db7a707da0d116fdd58c673d7d86982481833feda3f94",
+      "bytes": 13797
+    },
+    {
+      "path": "data\\README.md",
+      "sha256": "3735c9e160dab13bc97f153ddc4321845083fc5a39b658c485229583bb2f648c",
+      "bytes": 19765
+    },
+    {
+      "path": "data\\DATA_PLAN.md",
+      "sha256": "f9373cf0bd56ef46c244803dba2fee5e04308c2bb36c671ff3cfe20e7b3bbef9",
+      "bytes": 71185
+    },
+    {
+      "path": "memory\\MEMORY.md",
+      "sha256": "032925dd27437ea2cdf748251b3bfacc393f35e2d351074e2e97aa4ad93ec6cb",
+      "bytes": 10512
+    },
+    {
+      "path": "memory\\project-goals.md",
+      "sha256": "e6dc7ec8f2f11e13ddff4e37aa861c36b8016e9d8c056740effedebaa598f3b0",
+      "bytes": 53054
+    },
+    {
+      "path": "memory\\research-log-2026-10-22-public-chronology.md",
+      "sha256": "34455db26256451fb7f13a5963e38f0cc245f9aa951b528b62a0ea06b3e0f2a6",
+      "bytes": 2565
+    },
+    {
+      "path": "planning\\Scientific Prerequisites Execution 2026-10-18.md",
+      "sha256": "444241fc1511da8f333858f37e14c9d93eaf38107472a6593c40447d3bfdbee6",
+      "bytes": 25377
+    },
+    {
+      "path": "planning\\Public Chronology and Primary Report 2026-10-22.md",
+      "sha256": "45f79e0eda1bdae8221e0837b56397a4757392e78f924b3922a5943650d2eb93",
+      "bytes": 8137
+    },
+    {
+      "path": "planning\\protocols\\existing-trial-public-chronology-v0.1.json",
+      "sha256": "ef9e37f2e29a47878618ae66548f4dd83791aaaa2138f432ed38471e35746046",
+      "bytes": 7328
+    },
+    {
+      "path": "planning\\protocols\\existing-trial-public-chronology-v0.2.json",
+      "sha256": "9dbc51647845ce44e3a3f52a0235e554adc3e83a7982f16d8474dd07549011f2",
+      "bytes": 9826
+    },
+    {
+      "path": "data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    {
+      "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\adjudication-v1\\normalized-outcomes.json",
+      "sha256": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398",
+      "bytes": 115371
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-full-validation.json",
+      "sha256": "796649d4123620902845d75ff69b857569a048cbf9f66f9f0f5d39a9f7ec106a",
+      "bytes": 471
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-core-validation.json",
+      "sha256": "7b3987bc1be2f02afdf5f329013ed1144838d7c4fd154b08454f6ae242da43b5",
+      "bytes": 12630
+    }
+  ]
+}

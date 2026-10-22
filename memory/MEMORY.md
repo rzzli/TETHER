@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-22-public-chronology]] — Eight registry dates verified; January submission differs from May QC/public posting after cutoff. Three searches/four opens, secondary abstract lead, preserved mapping/scope errors; labels unchanged. Next bounded publisher lookup.
+- [[Public Chronology and Primary Report 2026-10-22]] — Independent chronology/source review, exact capture limits and scientific holds; primary report and analysis/decision dates unresolved.
+
 - [[research-log-2026-10-22-document-history]] — Completed exposed local Jan/Aprdocument metadata validation: fully queried emptytables, May7,2025recordversion, no historicalPDFproof/no labels. Next public chronology/primary-report source recovery.
 - [[Existing-trial Document History 2026-10-22]] — Exactframe/repeat/row/schema checks and scientific limits; not a global-absence or untouched validation claim.
 

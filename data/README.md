@@ -1,7 +1,7 @@
 ---
 title: AsOf Data Workspace
 date: 2026-10-09
-updated: 2026-10-18
+updated: 2026-10-22
 tags:
   - asof
   - data
@@ -10,6 +10,15 @@ status: acquisition-started
 ---
 
 # AsOf data workspace
+
+October22 public-chronology review: eight selected dates from retained official
+API bytes are verified. January26 submission differs from May5 QC and May29 public
+results posting; the latter follows the April1 cutoff. Three fixed searches/four
+page actions are retained as tool representations under
+`data/benchmark/labels/public-chronology-20261022/`, alongside independent reviews,
+mapping-failure evidence and the reviewer-scope addendum. No API refresh, original
+GET or catalog/scientific-status promotion. The numbered abstract remains an
+unverified lead. See `planning/Public Chronology and Primary Report 2026-10-22.md`.
 
 October22 follow-on metadata validation: existing Jan/Apr2026 frames explicitly
 queried both document tables for NCT05997277 and returned no rows. Source/repeat,
