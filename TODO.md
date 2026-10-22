@@ -1,5 +1,12 @@
 # Project execution checklist
 
+## Existing-trial public chronology and primary report — October 22
+
+- [x] Freeze source projections, search queries, bounds and chronology review rules.
+- [ ] Project retained registry dates and execute the bounded public-source search.
+- [ ] Independently verify source identities and distinguish analysis, submission and public posting dates.
+- [ ] Reconcile the scientific disposition, update documentation/memory and verify backup.
+
 ## Existing-trial historical document metadata — October 22
 
 - [x] Freeze the exposed local projection and validate synthetic failure cases.
