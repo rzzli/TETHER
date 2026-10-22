@@ -5,7 +5,15 @@
 - [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.
 - [x] Capture bounded sources and validate the PDF original; record unrecovered DOI metadata and unperformed Crossref actual-format validation.
 - [x] Independently review trial binding, report type and chronology; retain disagreements and gaps.
-- [ ] Record the proceed/revise disposition, update documentation/memory and verify backup.
+- [x] Record the proceed/revise disposition, update documentation/memory and verify backup.
+
+Bounded lookup closed with **revise/defer clinical source readiness**. Official
+program/title/schedule are authenticated; target DOI, trial bridge, primary
+results text and analysis/decision dates remain unqualified. Stop further
+same-case expansion. Next planned scope is clinical validation design/acquisition
+feasibility reassessment; no cutoff/estimand/cohort change is enacted. Broader
+scientific Tasks6–8 remain open. See
+planning/Primary Report Lookup and Source Readiness 2026-10-22.md.
 
 ## Existing-trial public chronology and primary report — October 22
 
