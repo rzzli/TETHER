@@ -1,5 +1,14 @@
 # Project execution checklist
 
+## Exact-trial retrieval calibration and source-readiness design — October 21
+
+- [x] Freeze retrieval controls and quantify prior exact-trial search specificity.
+- [x] Implement and validate identity-bound document discovery and bounded receipt-preserving retrieval.
+- [ ] Run the frozen live controls and independently verify retrieval results.
+- [ ] Freeze the next origin-defined source-readiness study and its gate decision.
+- [ ] Update documentation, memory and verified phase backup.
+
+
 ## Endpoint-specific follow-up and adjudication — October 21
 
 - [x] Freeze same-twelve follow-up/adjudication policy and exact bounded requests.

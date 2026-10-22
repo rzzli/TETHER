@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "passed_before_live_dispatch",
+  "at_utc": "2026-10-22T04:27:47.153143+00:00",
+  "tests": [
+    {
+      "report": {
+        "path": "data\\derived\\source-readiness-20261021-full-validation.json",
+        "sha256": "61af5971152cbc2e39be474b53b1ffdedc1ed943b796efabc8db3f2d12f83cef",
+        "bytes": 471
+      },
+      "mode": "full",
+      "run": 635,
+      "skips": 0,
+      "probes_passed": true,
+      "package_demo": "passed"
+    },
+    {
+      "report": {
+        "path": "data\\derived\\source-readiness-20261021-core-validation.json",
+        "sha256": "b3a5544e359abfa699cb03b4b148135116d73d8888128864a0708335c64b3c6e",
+        "bytes": 12630
+      },
+      "mode": "core",
+      "run": 635,
+      "skips": 57,
+      "probes_passed": true,
+      "package_demo": "passed"
+    }
+  ],
+  "pins": [
+    {
+      "path": "planning\\protocols\\exact-trial-retrieval-calibration-v0.1.json",
+      "sha256": "996c07e79535b30f9124c6633bcbbbcc5d77aa68f1c6cbbc0f8667c614c7fc6b",
+      "bytes": 7088
+    },
+    {
+      "path": "tools\\science\\source_retrieval.py",
+      "sha256": "4e4907b7506d1226a187f7aef9dcf1e4184b2ece4ef0c1b0ae6d0142608a2c8b",
+      "bytes": 11261
+    },
+    {
+      "path": "tests\\test_science_source_retrieval.py",
+      "sha256": "de0143281a21e1f171dd950c6cd54529b75cba976d3ef869eebd32d97a8c4ba1",
+      "bytes": 3652
+    },
+    {
+      "path": "tests\\test_science_source_retrieval_peer.py",
+      "sha256": "faae93366f00da6f0ae2bc5b7d0010c79cf72146622c0ee5264837b4ebcd9fe9",
+      "bytes": 11176
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-readiness-20261021\\calibration-preflight-peer.json",
+      "sha256": "a4af7b7bb65d78d83be343f1b06dafea352dc83adb79c79ee8283097f2269dc6",
+      "bytes": 1881
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-readiness-20261021\\method-preflight.json",
+      "sha256": "6d41df86cc2031cf816703779d66a4be18b0fc68d44e87e8d9da3b398082e567",
+      "bytes": 5671
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-readiness-20261021\\calibration-request-freeze.json",
+      "sha256": "43fc7af351483e3e441bcf8bc862f31917bd2265aa528166d7f68c9716da8495",
+      "bytes": 2048
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-readiness-20261021\\search-specificity-peer.json",
+      "sha256": "7059520b32a2fae06f5474357876e05d2db49bbf2788d7598b020ce65ad86cce",
+      "bytes": 87766
+    },
+    {
+      "path": "data\\cache\\run_source_calibration_20261021.py",
+      "sha256": "822548b3b8c01d4cf9e12b49b7dc14a1d2e549ced2adcb2231043ddccaedb7cd",
+      "bytes": 2580
+    }
+  ],
+  "prior_search_items": 130,
+  "prior_exact_requested_id_items": 2,
+  "prior_exact_items_primary_documents": 0,
+  "live_control_attempts": 0,
+  "live_queries": 0,
+  "not_scientific_or_historical_qualification": true,
+  "provider_spend_usd": 0
+}
