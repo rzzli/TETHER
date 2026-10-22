@@ -1,5 +1,12 @@
 # Project execution checklist
 
+## Existing-trial primary-publisher and DOI lookup — October 22
+
+- [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.
+- [ ] Capture bounded publisher/DOI sources and validate actual-format metadata.
+- [ ] Independently review trial binding, report type and chronology; retain disagreements and gaps.
+- [ ] Record the proceed/revise disposition, update documentation/memory and verify backup.
+
 ## Existing-trial public chronology and primary report — October 22
 
 - [x] Freeze source projections, search queries, bounds and chronology review rules.

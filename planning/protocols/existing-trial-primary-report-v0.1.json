@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "protocol_id": "existing-trial-primary-report-v0.1",
+  "role": "evaluation_only",
+  "at_utc": "2026-10-22T22:37:49.045359+00:00",
+  "nct_id": "NCT05997277",
+  "cutoff": "2026-04-01",
+  "audit_date": "2026-10-22",
+  "lead": {
+    "source": "query3 ResearchGate generated author page excerpt only",
+    "title": "0507 A pilot study evaluating preliminary efficacy of deucravacitinib compared to placebo in the treatment of moderate-to-severe hidradenitis suppurativa (HS)",
+    "reported_month": "2026-08",
+    "reported_journal": "Journal of Investigative Dermatology",
+    "authors_in_excerpt": [
+      "M. Doroudian Tehrani",
+      "Martina Porter",
+      "Nazrin Ashina",
+      "A.B. Kimball"
+    ],
+    "primary_report_recovered": false,
+    "NCT_binding_verified": false,
+    "DOI": null,
+    "exact_publication_day": null,
+    "meaning": "Secondary lead only; no efficacy values, primary-source report date, analysis date or decision inferred. Next separate bounded publisher retrieval may test identity."
+  },
+  "pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\public-chronology-20261022\\source-notes.json",
+      "sha256": "977e9ea06f13a35ef2a43de6a19660ef78da34335a4140e540d7786706adae7b",
+      "bytes": 3875
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\public-chronology-20261022\\reconciliation.json",
+      "sha256": "1088f60ee8377c2e9fee5bfbc969c86f37b8729b72587505f3520dc401495907",
+      "bytes": 11824
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Public Chronology and Primary Report 2026-10-22.md",
+      "sha256": "45f79e0eda1bdae8221e0837b56397a4757392e78f924b3922a5943650d2eb93",
+      "bytes": 8137
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\public-chronology-20261022\\final-acceptance.json",
+      "sha256": "85ad4b5bf4c13cf50feab36f0d54e2d85d3eb5b862fa93ba2a65ec319334d8f2",
+      "bytes": 6928
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\public-chronology-20261022\\backup-validation.json",
+      "sha256": "ebc7ef4bedc97455fc204cc79f3631f28796881646c9536de49afcad295acba8",
+      "bytes": 1606
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Existing-trial Protocol Audit 2026-10-22.md",
+      "sha256": "2cd0612a05752b137c6bd0f4ec82d9730a60fb143de03084d019232f76620b03",
+      "bytes": 7528
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-protocol-audit-20261021\\reconciliation.json",
+      "sha256": "7b2ac9322a96aa448c4317a5220e5feec17f6e6a9a4821dd2ab8db7182b16123",
+      "bytes": 11526
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\source_retrieval.py",
+      "sha256": "4e4907b7506d1226a187f7aef9dcf1e4184b2ece4ef0c1b0ae6d0142608a2c8b",
+      "bytes": 11261
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+      "sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+      "bytes": 9545
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+      "sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "bytes": 4961
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\project_primary_report_20261022.py",
+      "sha256": "8186db36a49de95621403d877d0ac8ba392739551d59628d144ab2d8ecadd547",
+      "bytes": 3867
+    }
+  ],
+  "scope": "One existing exposed trial and previously reported numbered abstract lead. Authenticate primary publisher/DOI identity, report type and chronology; no new cohort, labels, predictor derivation or scoring.",
+  "identity_contract": {
+    "required": "Exact NCT in primary report or an explicit authoritative source-to-trial identifier bridge. Similar titles/authors and scope concordance alone do not establish exact binding.",
+    "comparison_context": {
+      "drug": "deucravacitinib",
+      "dose": "6mg twice daily",
+      "comparator": "placebo",
+      "population": "moderate-to-severe hidradenitis suppurativa",
+      "planned_sample": 30,
+      "treatment_weeks": 16,
+      "primary_endpoint": "baseline-to-week16 abscess/inflammatory-nodule count change"
+    },
+    "basis": "Previously source-reviewed origin/protocol; planned values are not observed enrollment or efficacy."
+  },
+  "queries": [
+    {
+      "id": "numbered_lead",
+      "q": "\"0507\" \"deucravacitinib\" \"pilot\""
+    },
+    {
+      "id": "exact_title",
+      "q": "\"A pilot study evaluating preliminary efficacy of deucravacitinib\""
+    },
+    {
+      "id": "DOI_author",
+      "q": "\"deucravacitinib\" \"Doroudian\" \"10.1016\""
+    },
+    {
+      "id": "publisher_lead",
+      "q": "\"deucravacitinib\" \"0507\"",
+      "domains": [
+        "jidonline.org",
+        "sciencedirect.com"
+      ]
+    }
+  ],
+  "bounds": {
+    "search_queries": 4,
+    "source_page_actions_including_click": 6,
+    "original_GET_attempts": 3,
+    "automatic_retries": 0,
+    "max_bytes_per_original": 16777216,
+    "max_elapsed_seconds_per_GET": 120,
+    "request_timeout_seconds": 40,
+    "registry_API_refreshes": 0,
+    "database_queries": 0,
+    "new_cohort_sources": 0
+  },
+  "web_source_selection": "At most six returned primary publisher/Crossref/NLM/institutional URLs or their explicit primary links. May open exact doi.org and api.crossref.org/works/{returned_DOI} metadata routes only when DOI is explicitly returned. Count each action even on access failure; no alternative mirror fishing or further search queries.",
+  "original_selection": "At most three single attempts to exact URLs returned/linked or the canonical Crossref exact-work endpoint for an explicitly observed DOI. Freeze URL, exact allowed hosts, expected format and cap before dispatch. Use existing bounded transport and preserve failure bytes/journal; a new unknown hash cannot pass a known-original match control. No paywall bypass or authenticated requests.",
+  "capture": "Write each request and UTC start before dispatch, full response and UTC finish after return, outcome/failure and hashes. Web response is a tool representation, not original HTTP bytes. Preserve empty/failed captures; never overwrite frozen artifacts.",
+  "allowed_local_source_access": "Prior frozen source notes, projections and reviewed scope only. No raw registry status/results refresh, other trial data, clinical-label contents or raw AACT access. Baseline label artifacts may be hashed without parsing.",
+  "source_review": [
+    "Exact DOI, title, author list, journal, item0507, report type and version",
+    "Exact NCT/authoritative bridge versus merely scope-concordant candidate",
+    "Planned versus observed sample, drug/dose/comparator/visit and primary endpoint correspondence; absent fields remain unknown",
+    "Publisher online-first, issue-month, conference presentation and DOI metadata creation/deposit separately",
+    "Analysis/data-cut/unblinding/decision dates only if explicitly stated; publication or submission is not a substitute",
+    "Source availability by cutoff versus later audit-only material; publication assertion does not authenticate historical exact bytes",
+    "Explicit formal decision rule and provenance; no automatic efficacy label from a p-value, descriptive change, termination or funding"
+  ],
+  "date_policy": "Retain day/month/year precision; never impute an exact day. Crossref created/deposited/indexed are metadata events, not first publication. Distinguish source-reported publication from historical public byte proof. Future dates remain held; report missing or conflicting publication fields explicitly.",
+  "review": "Two current-source AI reviews independently sealed before sharing ratings; third technical verifier reconstructs pins, counters, source locators and actual-format projection. Source text can expose outcomes; this is an exposed research audit, not a protected holdout or independent scientific truth. No source access outside the frozen capture by reviewers.",
+  "stop_rule": "Stop within bounds; do not repeat queries or broaden this case indefinitely. If primary identity, authentic rule or chronology remains insufficient, retain revise/defer source-readiness disposition. No cutoff relaxation and no passing earlier failed discovery controls by this lookup.",
+  "governance": {
+    "clinical_labels_assigned": 0,
+    "clinical_activation": false,
+    "features": {},
+    "probabilities": null,
+    "new_membership_sealed": false,
+    "G3_performed": false,
+    "provider_spend_usd": 0,
+    "live_framework_model_calls": 0
+  }
+}
