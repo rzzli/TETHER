@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "passed_exposed_metadata_diagnostic",
+  "at_utc": "2026-10-22T16:27:01.368707+00:00",
+  "scientific_historical_qualification": false,
+  "prospective_blindness": false,
+  "prior_exposure_disclosed": true,
+  "synthetic_cases": 6,
+  "independent_reconstruction_passed": true,
+  "framework_checkpoint_tests": 658,
+  "framework_tests_repeated_for_document_only_step": false,
+  "old36_and_new36_unchanged": true,
+  "network": 0,
+  "database": 0,
+  "new_downloads": 0,
+  "new_member_queries": 0,
+  "provider_spend_usd": 0,
+  "structural": {
+    "tracked_scope_files": 651,
+    "providers": 83,
+    "datasets": 178
+  },
+  "pins": [
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\request-freeze.json",
+      "sha256": "5d5c6b1f29ecec305b7c5483b6cdfb238037f46d941e910e8fa6ca85999c7777",
+      "bytes": 719
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\preflight-peer.json",
+      "sha256": "7d28e9c6cb3f4398634a44a9243b0ff54f229636de7a76025387f9bc99d1c22d",
+      "bytes": 12984
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\acceptance-peer.json",
+      "sha256": "3ea28b1c79c742dfdc0f841cf691c5916d2338465c58e05963f8c611e3dc0af9",
+      "bytes": 13899
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\validation-v1\\assessment.json",
+      "sha256": "c064b03cd85200228bdd08d2d1c46cc78ac2e65b6d53c4d538f78b9e94ff4032",
+      "bytes": 6279
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\validation-v1\\journal.jsonl",
+      "sha256": "8b31642f9fa4a30d95452846c9f68e16e70eab06d1e2bc4e196783b288b89c7c",
+      "bytes": 1086
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\execution-archive.json",
+      "sha256": "5f334f5583c4b46bc033a94773c9e59d3660f3c16b5cb6c0efa6bdf2de1ca33b",
+      "bytes": 2575
+    },
+    {
+      "path": "planning\\Existing-trial Document History 2026-10-22.md",
+      "sha256": "209abc682590aa81d138e2991a27e3a910db0fb4c21fc5c222a7725609062a5e",
+      "bytes": 4528
+    },
+    {
+      "path": "planning\\protocols\\existing-trial-document-history-v0.1.json",
+      "sha256": "b5ef56c3a9941111a10ebbae918d0c3ff364fdfdb37dd07e0c17f6a7e0252606",
+      "bytes": 8796
+    },
+    {
+      "path": "data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    {
+      "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\adjudication-v1\\normalized-outcomes.json",
+      "sha256": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398",
+      "bytes": 115371
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-full-validation.json",
+      "sha256": "796649d4123620902845d75ff69b857569a048cbf9f66f9f0f5d39a9f7ec106a",
+      "bytes": 471
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-core-validation.json",
+      "sha256": "7b3987bc1be2f02afdf5f329013ed1144838d7c4fd154b08454f6ae242da43b5",
+      "bytes": 12630
+    }
+  ]
+}

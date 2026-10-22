@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October22 historical-document diagnostic: the already retained Jan/Apr2026
+NCT05997277 metadata was revalidated after declared exploratory exposure.
+Both fully projected document tables contain0rows; record posting fields are
+eligible under the reconstructed date policy. This does not establish absent
+public documents or historical PDF bytes. No download/DB/source promotion.
+See [[Existing-trial Document History 2026-10-22]]; next is bounded public
+chronology/primary-report recovery, not repeated extraction of the same empty fields.
+
 October22 selected-source update: the previously listed NCT05997277 protocol/SAP
 is collected/source-linked and reviewed across20pages. Embedded endpoint/model
 provisions are supported; decision-rule completeness, authenticity and historical

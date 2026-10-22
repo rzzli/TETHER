@@ -8,6 +8,21 @@ updated: 2026-10-21
 
 # Project goals
 
+## Latest retained historical-document check — October22
+
+Afterclosingprotocolsourceaudit, frozen exposed localvalidation e27a24b checked
+NCT05997277 Jan/Apr2026metadata: bothdocuments/provided_documents fullyprojected,
+explicit0rows; bothlastupdateMay7,2025 ACTUAL, firstpostAug18,2023. Source/repeat
+hashes, rowlocators, deterministicrequests/schema anddatebounds verified. No
+newsource/DB/network;6syntheticchecks pass. Priorpeekdisclosed, technicalpeer
+independentofrootexecution butnotunexposed. HistoricalPDFavailability stillfalse;
+no no-document/no-eventnegatives, old36/new36unchanged, nextcohortinactive.
+Frameworkcheckpoint remains658tests/fourjobs; no runtimemodulechanges thisphase.
+Next meaningful science: separatelyfreeze singletrial publichistory/primaryreport
+search toseparateupload/submission/publicdisclosure andauthenticdecision/analysis
+chronology; avoidsameemptyqueryreruns/cohortexpansion/cutoffrelaxation.
+See [[Existing-trial Document History 2026-10-22]].
+
 ## Current protocol-source audit — October22
 
 NCT05997277 Prot_SAP002 collected3,658,121B SHA d269854e... andall20pages

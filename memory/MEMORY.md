@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-22-document-history]] — Completed exposed local Jan/Aprdocument metadata validation: fully queried emptytables, May7,2025recordversion, no historicalPDFproof/no labels. Next public chronology/primary-report source recovery.
+- [[Existing-trial Document History 2026-10-22]] — Exactframe/repeat/row/schema checks and scientific limits; not a global-absence or untouched validation claim.
+
 - [[research-log-2026-10-22-protocol]] — One exact protocol/SAP collected;20pages/two independent reviews/visual/source checks;658 tests/four jobs. Partial rule readiness, chronology/history held; exploratory metadata peek disclosed.
 - [[Existing-trial Protocol Audit 2026-10-22]] — Endpoint/statistical provisions, preserved document inconsistencies, source/receipt guard corrections and next historical-metadata check.
 

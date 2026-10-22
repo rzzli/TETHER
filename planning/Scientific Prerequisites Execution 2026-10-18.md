@@ -1,5 +1,11 @@
 # Scientific prerequisites: ordered execution
 
+October22 follow-on: exposed historical-document metadata validation complete.
+Both fully queried Jan/Apr2026document tables are empty for the fixed existing
+trial; recordversiondatebound passes but historicalPDFavailability does not.
+No newDB/network/download orlabels. Next is separately frozen public chronology
+andprimary-report evidence recovery. See [[Existing-trial Document History 2026-10-22]].
+
 October22: existing-trial protocol/SAP audit closed its bounded source/review scope:
 20pages, two independent reviews/visual addenda/source checks,658 tests/four hosted
 jobs pass. Endpoint/model provisions gained; complete success rule, prespecification

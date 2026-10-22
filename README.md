@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October22 [historical-document metadata check](planning/Existing-trial%20Document%20History%202026-10-22.md)
+verified the existing trial's January/April extraction: both document tables were
+queried and empty. Historical PDF availability remains unqualified; this is an
+exposed local diagnostic, not an absence claim. Public chronology and authentic
+primary-report evidence are the next scientific priority.
+
 The October22 [existing-trial protocol audit](planning/Existing-trial%20Protocol%20Audit%202026-10-22.md)
 collected and reviewed all20 pages of the selected protocol/SAP. Endpoint and
 analysis provisions are now documented; the full decision rule, prospective

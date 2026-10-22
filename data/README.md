@@ -11,6 +11,12 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October22 follow-on metadata validation: existing Jan/Apr2026 frames explicitly
+queried both document tables for NCT05997277 and returned no rows. Source/repeat,
+row and projection checks retained under `data/benchmark/labels/registry-document-history-20261022/`.
+No new data download/DB query or historical PDF qualification. See
+`planning/Existing-trial Document History 2026-10-22.md`; exploratory exposure is disclosed.
+
 October22: NCT05997277 `Prot_SAP_002.pdf` is now collected (3,658,121B), sealed,
 extracted and independently source-reviewed; it is no longer merely a lead.
 Evaluator artifacts are under `data/benchmark/labels/registry-protocol-audit-20261021/`.
