@@ -1,0 +1,24 @@
+{
+  "status": "verified_bounded_phase_backup",
+  "at_utc": "2026-10-22T16:27:48.714148+00:00",
+  "scope": "Exposed selected-trial metadata diagnostic, retained full source/repeat frames for restoration, row outputs, policies/proofs, independent checks, selected parent acceptance/backup pointers, executed code/docs and Git history. No raw dumps/results or full parent source archive; no public redistribution.",
+  "archive": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\registry-document-history-20261022T162741Z\\registry-document-history.zip",
+    "sha256": "f307b36fbc40ba83000c0bda9648101c06b4268649959d8a7365e0bdc23efcd8",
+    "bytes": 355855
+  },
+  "code_bundle": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\registry-document-history-20261022T162741Z\\code.bundle",
+    "sha256": "488fb651917ffcd7dcb16b11c6b1e81304afbe172486c6dd79c7cb3589ba753d",
+    "bytes": 2186161
+  },
+  "code_bundle_head_commit": "da20f9ed0175721734445f428dd9c17629f2131e",
+  "CRC_and_every_entry_hash_verified": true,
+  "git_bundle_verified": true,
+  "manifest": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\registry-document-history-20261022T162741Z\\manifest.json",
+    "sha256": "720fb2b309cdad4cd91a3b79ad0978fd37a83cbcfb1dd1a2ba84b35fedef7e61"
+  },
+  "archived_files": 51,
+  "receipt_scope": "Later receipt/checklist commit excluded from earlier bundle."
+}

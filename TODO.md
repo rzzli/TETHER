@@ -5,7 +5,7 @@
 - [x] Freeze the exposed local projection and validate synthetic failure cases.
 - [x] Verify source/repeat bytes, exact rows, projection coverage and posting-date eligibility.
 - [x] Independently verify the metadata and historical-availability disposition.
-- [ ] Update the plan/memory and verify a bounded evidence backup.
+- [x] Update the plan/memory and verify a bounded evidence backup.
 
 ## Existing-trial protocol/SAP audit — October 22
 
