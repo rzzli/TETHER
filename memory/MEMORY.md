@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-22-primary-report]] — Official SID poster0507 program authenticated; no target DOI/NCT bridge/results body. Four searches/one open/one GET,63 pins/source checks and independent revise/defer decision. Stop same-case lookup; reassess clinical design/acquisition feasibility.
+- [[Primary Report Lookup and Source Readiness 2026-10-22]] — Distinct program/schedule/publication/analysis chronology, preserved rotation and DOI wording corrections, actual Crossref validation unperformed and clinical gates held.
+
 - [[research-log-2026-10-22-public-chronology]] — Eight registry dates verified; January submission differs from May QC/public posting after cutoff. Three searches/four opens, secondary abstract lead, preserved mapping/scope errors; labels unchanged. Next bounded publisher lookup.
 - [[Public Chronology and Primary Report 2026-10-22]] — Independent chronology/source review, exact capture limits and scientific holds; primary report and analysis/decision dates unresolved.
 

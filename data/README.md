@@ -11,6 +11,15 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October22 primary report lookup: one official SID program original is collected
+and source-verified (317,171B;24pages). Physical page13 binds control4509282 to
+poster0507/title/schedule; it supplies no verified NCT bridge or abstract results.
+Four searches/one open/one GET, original receipt/journal, failed rotation crop,
+fresh corrected extraction, independent reviews and DOI wording clarification
+are retained under `data/benchmark/labels/primary-report-20261022/`. No target
+Crossref actual-format projection or scientific/catalog status promotion. See
+`planning/Primary Report Lookup and Source Readiness 2026-10-22.md`.
+
 October22 public-chronology review: eight selected dates from retained official
 API bytes are verified. January26 submission differs from May5 QC and May29 public
 results posting; the latter follows the April1 cutoff. Three fixed searches/four

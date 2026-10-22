@@ -1,5 +1,12 @@
 # AsOf target-evaluation agents
 
+The October22 [primary report lookup](planning/Primary%20Report%20Lookup%20and%20Source%20Readiness%202026-10-22.md)
+authenticated the official poster0507 program entry and May14 schedule. The NCT
+bridge, target DOI, primary results text and analysis/decision dates remain
+unqualified. Independent reviews recommend revise/defer; this bounded same-case
+lookup stops. Next is clinical-design/acquisition feasibility reassessment before
+more searches or cohort activation. Labels and probabilities remain null.
+
 The October22 [public-chronology review](planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md)
 verified eight registry dates: results submitted January26, QC-qualified May5,
 and first publicly posted May29,2026, after the April1 cutoff. Three searches

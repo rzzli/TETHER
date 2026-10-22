@@ -3,8 +3,8 @@
 ## Existing-trial primary-publisher and DOI lookup — October 22
 
 - [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.
-- [ ] Capture bounded publisher/DOI sources and validate actual-format metadata.
-- [ ] Independently review trial binding, report type and chronology; retain disagreements and gaps.
+- [x] Capture bounded sources and validate the PDF original; record unrecovered DOI metadata and unperformed Crossref actual-format validation.
+- [x] Independently review trial binding, report type and chronology; retain disagreements and gaps.
 - [ ] Record the proceed/revise disposition, update documentation/memory and verify backup.
 
 ## Existing-trial public chronology and primary report — October 22

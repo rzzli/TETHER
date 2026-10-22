@@ -11,6 +11,16 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October22 current source-readiness disposition: revise/defer. The bounded primary
+report lookup collected the official SID poster0507 program, but no target DOI,
+primary results text or authoritative NCT bridge. Scheduled May14 presentation,
+secondary August issue lead and February file metadata remain distinct from
+actual analysis/publication and historical public-byte proof. Four searches,
+one open and one original GET; no label/feature/catalog promotion. Same-case
+lookup stops; next is clinical-design/acquisition feasibility reassessment before
+further source search or cohort activation. See
+[[Primary Report Lookup and Source Readiness 2026-10-22]].
+
 October22 current chronology: all eight selected official API date fields now
 pass direct reconstruction after an exposed schema correction. Results were
 submitted January26,2026, met QC May5, and first posted publicly May29, after

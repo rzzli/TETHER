@@ -1,5 +1,14 @@
 # Scientific prerequisites: ordered execution
 
+October22 current: bounded primary report lookup completed with a revise/defer
+source-readiness decision. Official program/title/schedule recovered, but no
+verified trial bridge, target DOI, efficacy body or analysis/decision chronology.
+63 source pins, independent visual/source checks and unchanged labels verified.
+Stop same-case searches; reassess clinical validation design and acquisition
+feasibility before further source/cohort work. Strict efficacy and operational
+endpoints remain separate; no cutoff or estimand changes enacted. See
+[[Primary Report Lookup and Source Readiness 2026-10-22]].
+
 October22 latest: public chronology and bounded primary-report search are complete.
 Eight official dates distinguish January26 results submission from May5 QC and
 May29,2026 public posting after the April1 cutoff. Three searches/four page actions,

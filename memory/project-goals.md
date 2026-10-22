@@ -8,6 +8,33 @@ updated: 2026-10-22
 
 # Project goals
 
+## Current primary report lookup and stop decision — October 22
+
+The frozen primary publisher lookup at6e662ed used four exact searches, one page
+open and one original GET. Official SID PDF317171B/24pages authenticates control
+4509282/poster0507/title and a scheduled odd-poster session May14,2026. It does
+not bind the item to NCT05997277 or provide abstract results, target DOI, actual
+publication/presentation, formal decision rule or analysis/decision timing.
+February HTTP/PDF dates remain source metadata, not historical public-byte proof.
+April1 cutoff unchanged; no old/new36-label changes or clinical/scoring activation.
+
+Two independent current reviews recommend revise/defer; third technical check
+verifies63 pack pins,11 dependencies, source journal/hash and full page/row
+reconstruction. Failed rotated crop and fresh corrected capture are preserved.
+The overbroad no-DOI note is corrected separately: five unrelated reference DOIs
+exist, but none attributable to target report. Eight synthetic helper cases,
+20 additional technical checks and8 synthetic transport checks pass; actual
+Crossref work projection remains unperformed. No runtime/dependency changes;
+658-test/four-CI checkpoint inherited, no claim of new full-suite execution.
+
+Stop further same-case expansion. Next planned scope is clinical validation
+design/acquisition feasibility reassessment: retain strict efficacy labels with
+deferred scoring unless evidence qualifies; assess separately named operational
+endpoints prospectively without substituting them for efficacy. Failed discovery
+controls and origin-only/fresh-cohort gates remain. This does not enact endpoint,
+cutoff or cohort changes. See [[Primary Report Lookup and Source Readiness 2026-10-22]].
+Earlier next pointers below are dated history, superseded by this stop decision.
+
 ## Current public chronology review — October 22
 
 Eight selected registry dates independently match the retained official API.
