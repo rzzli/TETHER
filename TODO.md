@@ -5,7 +5,7 @@
 - [x] Freeze revised identity bridges, fresh controls and unchanged failed-control provenance.
 - [x] Implement and validate bounded candidate routing and original-byte identity checks.
 - [x] Run the precommitted controls once and independently verify gate results.
-- [ ] Record the activation decision, update project memory and verify a bounded backup.
+- [x] Record the activation decision, update project memory and verify a bounded backup.
 
 Current disposition: sponsor-poster and negative guards pass; registry-version
 and corporate-link controls fail. No cohort activation or next12 membership.
