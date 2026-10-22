@@ -1,5 +1,14 @@
 # Scientific prerequisites: ordered execution
 
+October21 latest: the new same-twelve follow-up/source assessment is complete.
+36 bounded queries,16 originals and twoAI assessments per case retain36null
+endpoint labels and12null diagnostics.616full tests/four hosted jobs and independent
+source/accounting checks pass. Scientific prerequisites remain unqualified; next
+is separately frozen source-readiness feasibility. See
+[[Endpoint-specific Follow-up Feasibility 2026-10-21]]; earlier statements below
+retain their historical phase scope.
+
+
 October21 continuation within Step1: the revised endpoint-local protocol and
 new origin-only maturity sample are sealed.128 metadata candidates yielded36
 maturity-eligible trials and12 deterministic members; no follow-up or clinical

@@ -1,5 +1,12 @@
 # AsOf target-evaluation agents
 
+The October21 [fixed-member follow-up assessment](planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md)
+completed both snapshots,36 bounded searches,16 original artifacts and AI
+cross-review. All36 new endpoint labels remain null; no training is activated.
+Source verification and616 full tests/four hosted jobs pass. Next is source-readiness
+feasibility for authentic rules, scope and decision timing.
+
+
 The October21 [endpoint-specific origin sample](planning/Endpoint-specific%20Origin%20Sample%202026-10-21.md)
 freezes separate efficacy-decision, advancement and dosing rules. An origin-only
 128-trial screen yielded36 maturity-eligible candidates; the first12 are sealed
@@ -48,7 +55,7 @@ January/April2026:995 source rows per snapshot, two result-bearing trials, no ne
 qualified labels. All36 old endpoints remain unresolved. Negative-ascertainment
 and result-linkage guards were corrected;577 full tests, core validation and four
 hosted jobs pass. The later same-day endpoint-local design and origin-only sample
-are now sealed; their follow-up/adjudication remains pending. Scientific gates stay false.
+are now sealed; the separate follow-up assessment is complete with null labels. Scientific gates stay false.
 
 The current adapter uses **normalization recipe 2.2** within the unchanged v2 contracts.
 It retains reported literature passages/sections, PMC IDs, study overviews and variant

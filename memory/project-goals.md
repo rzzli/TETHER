@@ -8,7 +8,26 @@ updated: 2026-10-21
 
 # Project goals
 
-## Current origin-only sample — October21 continuation
+## Current follow-up feasibility — October21 continuation
+
+The same12 origin-selected trials now have verified January/April2026 follow-up
+metadata/results:0reportedrows inJanuary,143inApril for safety-primaryefgartigimod.
+36targetedqueries/16originalartifacts and twoAI reviews percase retain36canonical
+endpointlabels+12occurrencediagnostics allnull. H1:9unresolved,2safetyinapplicable,
+1undefinedclinicalefficacy. Root corrected ambiguousdate/genericriskwording and
+retainedunbridgedregistered/reportprimarystructure. Old36 unchanged.
+
+616full tests/core57expectedskips and fourhostedjobs pass48b2671; source/artifact/
+packet/adjudication accounting independentlyverified. Clinicaltruthnotestablished.
+Qualificationyield0/12 is not eventincidence.10flaggeddependencycomponents are not
+effectiveN; noCI/power/training/scorer/numericfeatures/clinical lock. Nextwithin
+Step1: validate exact-trial primarysource retrieval against recoveredcontrols, then
+separatelyfreeze source-readiness feasibility for authenticrules/scope/risk/decision
+times beforeexpansion/fitting. See [[Endpoint-specific Follow-up Feasibility 2026-10-21]]
+and [[research-log-2026-10-21-followup]].
+
+
+## Earlier same-day origin-only sample — October21 continuation
 
 Endpoint-local efficacy-decision, registry-advancement and arm-dosing rules are
 frozen in endpoint-origin-feasibility-v0.1. From444 eligible origin trials after

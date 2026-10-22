@@ -5,7 +5,7 @@
 - [x] Freeze same-twelve follow-up/adjudication policy and exact bounded requests.
 - [x] Validate temporal, scope, result-publication and extraction binding guards.
 - [x] Extract January/April2026 metadata and reported results, then independently verify source records.
-- [ ] Review bounded primary sources, adjudicate all frozen endpoints and measure qualification yield/precision.
+- [x] Review bounded primary sources, adjudicate all frozen endpoints and measure qualification yield/precision.
 - [ ] Retain independent acceptance, update documentation/memory and verify evidence backup.
 
 
@@ -29,9 +29,9 @@ qualification defects; it does not reopen a locked test or silently relax labels
 - [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
 
 
-Next within Step1: separately freeze and execute follow-up/adjudication for the
-new twelve-member origin-only maturity sample. Preserve every member, scope hold,
-partial rule and unknown outcome. See planning/Endpoint-specific Origin Sample 2026-10-21.md.
+Next within Step1: validate exact-trial primary-source retrieval against recovered
+controls, then separately freeze source-readiness feasibility for authentic efficacy
+rules, scope, origin risk and decision dates. See planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md.
 
 ## Seven-item science assessment — bounded scopes completed October 20
 

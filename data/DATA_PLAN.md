@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October21 latest: fixed-twelve follow-up and bounded primary-source cross-review
+are complete;36 endpoint labels and12diagnostics remain null. This supersedes
+the follow-up-pending status in the earlier same-day origin-stage entry below.
+No predictor/scorer or dataset-wide scientific-validation status is promoted.
+See [[Endpoint-specific Follow-up Feasibility 2026-10-21]] for gate-specific
+source findings and the source-readiness feasibility priority.
+
+
 October21 current assessment: endpoint-specific origin-only maturity sampling
 has completed (128 screened,12 sealed); follow-up adjudication and clinical
 qualification remain pending. The derived evaluator artifacts and source proofs

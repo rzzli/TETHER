@@ -11,6 +11,16 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October21 follow-up: the same12 origin-selected trials now have independently
+verified January/April2026 metadata/results. January has0resultrows; April143
+for one safety-primary trial. The bounded16original-document/36search assessment
+retains36null endpoint labels plus12null diagnostics. Evaluator artifacts remain
+under `data/benchmark/labels/endpoint-followup-feasibility-20261021/`; see
+`planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md`. No scientific
+collection/validation status is promoted. Earlier origin-freeze statements below
+describe that pre-follow-up stage.
+
+
 October21: a new evaluator-only origin maturity sample is sealed under
 `data/benchmark/labels/endpoint-origin-feasibility-20261021/`. All128 requested
 January2025 metadata rows returned;113 date-eligible versions,15 explicit holds,
