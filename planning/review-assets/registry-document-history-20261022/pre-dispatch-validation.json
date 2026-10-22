@@ -1,0 +1,29 @@
+{
+  "status": "accepted_for_exposed_local_metadata_validation",
+  "clinical_activation": false,
+  "network": 0,
+  "database": 0,
+  "synthetic_cases": 6,
+  "pins": [
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\request-freeze.json",
+      "sha256": "5d5c6b1f29ecec305b7c5483b6cdfb238037f46d941e910e8fa6ca85999c7777",
+      "bytes": 719
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-document-history-20261022\\preflight-peer.json",
+      "sha256": "7d28e9c6cb3f4398634a44a9243b0ff54f229636de7a76025387f9bc99d1c22d",
+      "bytes": 12984
+    },
+    {
+      "path": "planning\\protocols\\existing-trial-document-history-v0.1.json",
+      "sha256": "b5ef56c3a9941111a10ebbae918d0c3ff364fdfdb37dd07e0c17f6a7e0252606",
+      "bytes": 8796
+    },
+    {
+      "path": "data\\cache\\run_document_history_20261022.py",
+      "sha256": "d36e5c7ea9643e506e3c33dc31ca58c4336432a6beed2a56c22c672e2ff61a26",
+      "bytes": 7264
+    }
+  ]
+}
