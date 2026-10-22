@@ -8,6 +8,21 @@ updated: 2026-10-21
 
 # Project goals
 
+## Current protocol-source audit — October22
+
+NCT05997277 Prot_SAP002 collected3,658,121B SHA d269854e... andall20pages
+sealed. Two independent currentreviews plus visualaddenda andthirdsourceverifier
+confirm embeddedprimaryANcountweek16/mixedmodel/FAS/statisticalprovisions.
+Fullprimarydecisionrule, prespecauthenticity and historicalavailability remainheld;
+minocycline/HiSCRthreshold/sourceversion tensionspreserved. Axis8partialvsunresolved
+granularityreconciledwithoutforcingrulequalification.658fulltests/core57skips/
+package/probes/all4hostedjobs pass2d6a0cc. Tenfailingjournal/recipeprobes corrected.
+OnePDFGET/0sourcesearch/$0/0frameworkcalls; no cohort/label/feature/probabilitychange.
+Rootmistakenlyrequested a two-row retainedmetadata peek beforefreezingnextrequest;
+latecorrection, exactscope/locators andexposure retained. Nooutcomes/DB/networkpeek.
+Next: frozen exposedvalidation ofexistingJan/Apr documentfields andsourcecoverage;
+no currenttimestamp→historicalproof. See [[Existing-trial Protocol Audit 2026-10-22]].
+
 ## Latest publisher-discovery assessment — October21
 
 Prospective v02 committed before dispatch atda8d147.647 full tests/core57 expected

@@ -11,6 +11,13 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October22: NCT05997277 `Prot_SAP_002.pdf` is now collected (3,658,121B), sealed,
+extracted and independently source-reviewed; it is no longer merely a lead.
+Evaluator artifacts are under `data/benchmark/labels/registry-protocol-audit-20261021/`.
+No labels or scientific eligibility are promoted. See
+`planning/Existing-trial Protocol Audit 2026-10-22.md`; earlier lead statuses below
+describe the pre-download checkpoint.
+
 October21 publisher amendment: two exact original controls recovered4,640,682B.
 The current registry lists newer document versions; those bytes remain uncollected.
 Corporate-to-investor authentication failed at a blocked redirect, so the investor

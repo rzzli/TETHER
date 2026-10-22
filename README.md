@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October22 [existing-trial protocol audit](planning/Existing-trial%20Protocol%20Audit%202026-10-22.md)
+collected and reviewed all20 pages of the selected protocol/SAP. Endpoint and
+analysis provisions are now documented; the full decision rule, prospective
+authenticity and historical availability remain unqualified.658 tests/four CI
+jobs pass. The next bounded check uses retained historical document metadata.
+
 The October21 [publisher-discovery amendment](planning/Publisher%20Discovery%20Amendment%202026-10-21.md)
 recovered two exact originals and passed the sponsor-poster control. Current
 registry version changes and a blocked corporate redirect keep cohort acquisition

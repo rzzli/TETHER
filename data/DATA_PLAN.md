@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October22 selected-source update: the previously listed NCT05997277 protocol/SAP
+is collected/source-linked and reviewed across20pages. Embedded endpoint/model
+provisions are supported; decision-rule completeness, authenticity and historical
+availability remain held. This is evaluator-only selected-source collection,
+not dataset-wide parsing/scientific validation. See
+[[Existing-trial Protocol Audit 2026-10-22]]. Next is bounded retained metadata
+validation, explicitly disclosing an earlier exploratory peek.
+
 October21 publisher-discovery amendment completed: sponsor-poster identity passes;
 frozen current-registry version and co-developer bridge controls fail. Two exact
 originals recovered; newer protocol/SAP and consent references remain uncollected

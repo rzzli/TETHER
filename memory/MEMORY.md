@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-22-protocol]] — One exact protocol/SAP collected;20pages/two independent reviews/visual/source checks;658 tests/four jobs. Partial rule readiness, chronology/history held; exploratory metadata peek disclosed.
+- [[Existing-trial Protocol Audit 2026-10-22]] — Endpoint/statistical provisions, preserved document inconsistencies, source/receipt guard corrections and next historical-metadata check.
+
 - [[research-log-2026-10-21-publisher]] — Prospective publisher amendment:647 tests; two exact originals/sponsorposter pass, current-version and corporate-link controls fail. Uncollected protocol/SAP lead; cohort stays inactive.
 - [[Publisher Discovery Amendment 2026-10-21]] — Explicit publisher-link/byte identity guards, seven corrected forgeries, real control failures and prospective existing-trial protocol priority.
 

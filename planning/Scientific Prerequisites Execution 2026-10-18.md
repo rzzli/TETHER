@@ -1,5 +1,12 @@
 # Scientific prerequisites: ordered execution
 
+October22: existing-trial protocol/SAP audit closed its bounded source/review scope:
+20pages, two independent reviews/visual addenda/source checks,658 tests/four hosted
+jobs pass. Endpoint/model provisions gained; complete success rule, prespecification
+and historical availability remain held. Next is exposed validation of already
+retained historical document metadata; source-peek sequencing error disclosed.
+No cohort activation or label change. See [[Existing-trial Protocol Audit 2026-10-22]].
+
 October21 latest: prospective publisher discovery v0.2 completed with647 full tests.
 Sponsor-poster control passed; current registry version transition and corporate
 redirect authentication controls failed. Next12 cohort remains inactive; old/new

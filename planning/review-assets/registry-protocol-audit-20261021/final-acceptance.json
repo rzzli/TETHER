@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "passed_bounded_protocol_source_audit",
+  "at_utc": "2026-10-22T16:17:51.744336+00:00",
+  "full_tests": 658,
+  "core_expected_skips": 57,
+  "hosted_jobs": 4,
+  "pdf_pages": 20,
+  "independent_current_reviews": 2,
+  "clinical_labels_assigned": 0,
+  "historical_public_availability_qualified": false,
+  "prospective_authenticity_qualified": false,
+  "complete_primary_rule_qualified": false,
+  "old36_and_new36_unchanged": true,
+  "new_member_queries": 0,
+  "provider_spend_usd": 0,
+  "study_PDF_GETs": 1,
+  "study_search_queries": 0,
+  "software_only_source": "https://pypi.org/project/pymupdf/1.26.4/",
+  "sequencing_exposure_disclosed": true,
+  "structural": {
+    "tracked_scope_files": 645,
+    "providers": 83,
+    "datasets": 178
+  },
+  "pins": [
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\source-acceptance-peer.json",
+      "sha256": "ead2310c197a22c26a05db8443a60c62cb50b6a007ae3c93592fd1c925726aa1",
+      "bytes": 11669
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\peer-page-audit.json",
+      "sha256": "1f8eee7bda05f7ff0b63de6b6448b801abc96a8cf4ba6ca2b076e1b8c9741d74",
+      "bytes": 246089
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-a.json",
+      "sha256": "b34ae6cdbaa83fbd2479217d8334f24369f3af91c627ebabaf17927461a0a03b",
+      "bytes": 57624
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-a-freeze.json",
+      "sha256": "739e866285625cf4012e8d980df41ab6f71d269625ee92c263f59145f491c2e2",
+      "bytes": 2955
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-a-visual-addendum.json",
+      "sha256": "f6957d5c34421f01f02fdd2fc3d1291c1ef0b43c334edf4f8d0294dcb37bfc1f",
+      "bytes": 8024
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-b.json",
+      "sha256": "3f51d3495d871aea34d5348f164261d3253f38a478b291da9a4360d2e779aac4",
+      "bytes": 31755
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-b-freeze.json",
+      "sha256": "05dd6458975bad2bf14021176cf58183e47b4cd90566982c73c348f0883d1852",
+      "bytes": 7482
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\review-b-visual-addendum.json",
+      "sha256": "4e64302aebd7427d055315f9f015430e3a5e14cecb54ae9401021d699137258f",
+      "bytes": 10102
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\sequencing-disclosure.json",
+      "sha256": "4aef06e847b1441259e4ebf6ea5212b29a4c0269d5d43243c880c67f2dd18e74",
+      "bytes": 5105
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\reconciliation.json",
+      "sha256": "7b2ac9322a96aa448c4317a5220e5feec17f6e6a9a4821dd2ab8db7182b16123",
+      "bytes": 11526
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\build-v1\\freeze.json",
+      "sha256": "c36fc3b2f5755668f2fb8fb06b87d575bf89915564a70bed76be056c3e4fcd4e",
+      "bytes": 6805
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\visual-v1\\freeze.json",
+      "sha256": "fefbcfcff8244c36451cbe11fbf42c8387cda5db904663ece310adcdfd2c076d",
+      "bytes": 45284
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\execution-archive.json",
+      "sha256": "7b1d0928573c83784b55725a933daa2259e1d6f27e77f154e269e275ba444944",
+      "bytes": 4164
+    },
+    {
+      "path": "planning\\Existing-trial Protocol Audit 2026-10-22.md",
+      "sha256": "2cd0612a05752b137c6bd0f4ec82d9730a60fb143de03084d019232f76620b03",
+      "bytes": 7528
+    },
+    {
+      "path": "planning\\protocols\\existing-trial-protocol-audit-v0.1.json",
+      "sha256": "43682d3c5197eb0dcc739419524090ecfda6d9c25f95d28a8d67f1c5e25c0d5e",
+      "bytes": 5933
+    },
+    {
+      "path": "data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    {
+      "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\adjudication-v1\\normalized-outcomes.json",
+      "sha256": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398",
+      "bytes": 115371
+    },
+    {
+      "path": "data\\benchmark\\labels\\registry-protocol-audit-20261021\\execution-archive.json",
+      "sha256": "7b1d0928573c83784b55725a933daa2259e1d6f27e77f154e269e275ba444944",
+      "bytes": 4164
+    },
+    {
+      "path": "planning\\review-assets\\registry-protocol-audit-20261021\\hosted-validation.json",
+      "sha256": "79f7d70d871979a4329de18a874cff9e1faccbc9b38da7a18637a0d04dec4f83",
+      "bytes": 11553
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-full-validation.json",
+      "sha256": "796649d4123620902845d75ff69b857569a048cbf9f66f9f0f5d39a9f7ec106a",
+      "bytes": 471
+    },
+    {
+      "path": "data\\derived\\registry-protocol-audit-20261021-core-validation.json",
+      "sha256": "7b3987bc1be2f02afdf5f329013ed1144838d7c4fd154b08454f6ae242da43b5",
+      "bytes": 12630
+    }
+  ]
+}
