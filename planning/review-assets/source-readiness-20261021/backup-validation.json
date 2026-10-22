@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "verified_bounded_phase_backup",
+  "at_utc": "2026-10-22T04:33:09.204809+00:00",
+  "scope": "Retrieval calibration implementation/tests, immutable controls, current-original bytes, query tool representations, specificity audit inputs, peer/method acceptance, inactive design, selected frozen parent manifests, null-label checks and Git history. Not all parent cohort/raw archives; bulk historical inputs remain in place. No public redistribution.",
+  "archive": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\source-retrieval-calibration-20261022T043301Z\\source-retrieval-calibration.zip",
+    "sha256": "39e80f6eec3ed33054a39cecb2ce85ff8446508e60fc97e4018f95781e81f115",
+    "bytes": 8395888
+  },
+  "code_bundle": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\source-retrieval-calibration-20261022T043301Z\\code.bundle",
+    "sha256": "dbacfb37aee1219885f165277718f25477f2d8c8d158ab2c07e8ca49c60bb618",
+    "bytes": 2113487
+  },
+  "code_bundle_head_commit": "08eda80d77bfaa80090ef80e79be121ad975e186",
+  "CRC_and_every_entry_hash_verified": true,
+  "git_bundle_verified": true,
+  "manifest": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\backups\\source-retrieval-calibration-20261022T043301Z\\manifest.json",
+    "sha256": "48d94a6ff17083fd5a9c9ce0c29e0c9c156de408d60b8178c59f06bf0f560194",
+    "bytes": 21384
+  },
+  "archived_files": 99,
+  "receipt_scope": "Written after backup; later receipt/checklist completion commit is not in this earlier bundle."
+}

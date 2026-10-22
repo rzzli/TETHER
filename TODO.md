@@ -6,7 +6,7 @@
 - [x] Implement and validate identity-bound document discovery and bounded receipt-preserving retrieval.
 - [x] Run the frozen live controls and independently verify retrieval results.
 - [x] Freeze the next origin-defined source-readiness study and its gate decision.
-- [ ] Update documentation, memory and verified phase backup.
+- [x] Update documentation, memory and verified phase backup.
 
 Calibration/design assessment completion does not pass the failed discovery gate.
 G1/G2A passed; G2B failed. The next12 scientific study is inactive, membership
