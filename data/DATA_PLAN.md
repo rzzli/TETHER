@@ -11,6 +11,15 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October21 retrieval calibration completed:4 exact-hash originals and structured
+registry document references passed, but the frozen sponsor discovery gate failed.
+The source-readiness feasibility protocol is retained inactive; next-member
+acquisition and membership sealing are withheld. A prospective sponsor-link
+identity amendment and fresh calibration are required before origin closure.
+Artifacts are evaluator-only under `data/benchmark/labels/source-readiness-20261021/`.
+See [[Exact-trial Retrieval Calibration 2026-10-21]]. All635 full tests pass;
+provider/product counts and scientific status are unchanged.
+
 October21 latest: fixed-twelve follow-up and bounded primary-source cross-review
 are complete;36 endpoint labels and12diagnostics remain null. This supersedes
 the follow-up-pending status in the earlier same-day origin-stage entry below.

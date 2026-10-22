@@ -1,5 +1,13 @@
 # Scientific prerequisites: ordered execution
 
+October21 current disposition: exact-trial retrieval calibration is complete.
+Four original transports and structured registry projection passed; one of two
+frozen discovery controls failed. The next12 source-readiness design remains
+inactive with null/unsealed membership. No new-member source queries or labels.
+All635 full tests/core validation pass. Next is a prospective sponsor-document
+identity/discovery amendment with fresh controls, then origin closure and source
+readiness only if calibration passes. See [[Exact-trial Retrieval Calibration 2026-10-21]].
+
 October21 latest: the new same-twelve follow-up/source assessment is complete.
 36 bounded queries,16 originals and twoAI assessments per case retain36null
 endpoint labels and12null diagnostics.616full tests/four hosted jobs and independent

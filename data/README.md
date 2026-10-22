@@ -11,6 +11,15 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October21 retrieval calibration:4 original controls (4,099,961 bytes) matched
+their frozen hashes. Structured registry document projection passed; the strict
+sponsor-report search control failed. Evaluator originals/receipts, exact query
+returns, failures and independent reviews are retained under
+`data/benchmark/labels/source-readiness-20261021/`. The next12 design is inactive,
+membership unsealed and clinical labels unchanged. See
+`planning/Exact-trial Retrieval Calibration 2026-10-21.md`. No catalog collection
+or scientific-validation status changes follow from these engineering controls.
+
 October21 follow-up: the same12 origin-selected trials now have independently
 verified January/April2026 metadata/results. January has0resultrows; April143
 for one safety-primary trial. The bounded16original-document/36search assessment

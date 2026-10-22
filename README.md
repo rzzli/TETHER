@@ -1,5 +1,12 @@
 # AsOf target-evaluation agents
 
+The October21 [retrieval calibration](planning/Exact-trial%20Retrieval%20Calibration%202026-10-21.md)
+completed four exact-hash original downloads and structured protocol/SAP projection.
+The frozen sponsor-report discovery control failed, so the next twelve-case
+source-readiness design remains inactive. No new clinical labels were assigned.
+All635 full tests and dependency-free validation pass; the retained report describes
+the blocker and the required prospective discovery amendment.
+
 The October21 [fixed-member follow-up assessment](planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md)
 completed both snapshots,36 bounded searches,16 original artifacts and AI
 cross-review. All36 new endpoint labels remain null; no training is activated.

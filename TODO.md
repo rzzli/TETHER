@@ -4,9 +4,15 @@
 
 - [x] Freeze retrieval controls and quantify prior exact-trial search specificity.
 - [x] Implement and validate identity-bound document discovery and bounded receipt-preserving retrieval.
-- [ ] Run the frozen live controls and independently verify retrieval results.
-- [ ] Freeze the next origin-defined source-readiness study and its gate decision.
+- [x] Run the frozen live controls and independently verify retrieval results.
+- [x] Freeze the next origin-defined source-readiness study and its gate decision.
 - [ ] Update documentation, memory and verified phase backup.
+
+Calibration/design assessment completion does not pass the failed discovery gate.
+G1/G2A passed; G2B failed. The next12 scientific study is inactive, membership
+unsealed and G3 unperformed. No new-member sources or labels. Next: prospectively
+amend sponsor-document identity/discovery and validate fresh controls before
+origin closure. See planning/Exact-trial Retrieval Calibration 2026-10-21.md.
 
 
 ## Endpoint-specific follow-up and adjudication — October 21
@@ -38,9 +44,10 @@ qualification defects; it does not reopen a locked test or silently relax labels
 - [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
 
 
-Next within Step1: validate exact-trial primary-source retrieval against recovered
-controls, then separately freeze source-readiness feasibility for authentic efficacy
-rules, scope, origin risk and decision dates. See planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md.
+The next-within-Step1 retrieval calibration above supersedes this earlier stage's
+next pointer. Its failed sponsor discovery gate blocks source-readiness acquisition;
+authentic efficacy rules, scope, origin risk and decision dates remain unresolved.
+See planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md.
 
 ## Seven-item science assessment — bounded scopes completed October 20
 

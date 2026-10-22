@@ -8,6 +8,22 @@ updated: 2026-10-21
 
 # Project goals
 
+## Current retrieval gate — October21 continuation
+
+Exact-trial calibration/design assessment completed:4 fixed originals recovered
+with exact frozen hashes (4,099,961 bytes), same-NCT protocol/SAP projection passed.
+Two frozen quoted searches: registry chain passed; sponsor WCLC report discovery
+failed the expected-original/allowed-host criterion despite17 exact-NCT items.
+No fallback, retry or posthoc substitution. Next12 source-readiness protocol is
+inactive, membership null/unsealed; G3 origin closure not performed. No new-member
+sources, clinical labels, numeric features, probability or live framework calls.
+All635 full tests/core57 expected skips and package/probes pass; all4 hosted jobs
+passed for712c4fb (run39722514674). Next: prospective
+sponsor/co-developer identity/link amendment and fresh controls before activation;
+preserve failed protocol. No new user files required at this checkpoint.
+See [[Exact-trial Retrieval Calibration 2026-10-21]] and
+[[research-log-2026-10-21-retrieval]]. Earlier entries below retain dated results.
+
 ## Current follow-up feasibility — October21 continuation
 
 The same12 origin-selected trials now have verified January/April2026 follow-up

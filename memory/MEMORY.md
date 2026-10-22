@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-21-retrieval]] — Exact-trial retrieval calibration complete:4 exact-hash originals/registry projection pass; sponsor discovery fails; next12 design inactive, no new labels.635 tests/core/package pass; prospective sponsor-link amendment next.
+- [[Exact-trial Retrieval Calibration 2026-10-21]] — Frozen controls, actual query returns, independent gate review, inactive source-readiness design and retained failure/backup.
+
 - [[research-log-2026-10-21-followup]] — Same12follow-up/source cross-review complete;36queries16originals;36newlabels+12diagnosticsnull;616tests/fourjobs. No-fit scientific gate; source-readiness feasibility next.
 - [[Endpoint-specific Follow-up Feasibility 2026-10-21]] — Exact source/result coverage, independent checks, retained source/risk corrections, dependence limits and no qualified clinical labels.
 
