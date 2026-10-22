@@ -1,5 +1,12 @@
 # Project execution checklist
 
+## Existing-trial protocol/SAP audit — October 21
+
+- [x] Freeze the selected registry version, bounded request and scientific review rubric.
+- [ ] Validate version/lineage guards, retrieve the one PDF and seal its extraction.
+- [ ] Complete independent protocol/SAP reviews and verify original-page evidence.
+- [ ] Record the scientific disposition, update documentation/memory and verify backup.
+
 ## Prospective sponsor-document discovery amendment — October 21
 
 - [x] Freeze revised identity bridges, fresh controls and unchanged failed-control provenance.
