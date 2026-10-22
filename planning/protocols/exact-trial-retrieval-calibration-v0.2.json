@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "protocol_id": "exact-trial-retrieval-calibration-v0.2",
+  "status": "prospective_amendment_frozen_before_dispatch",
+  "at_utc": "2026-10-22T05:12:21.368479+00:00",
+  "role": "evaluation_only",
+  "parents": [
+    {
+      "path": "planning\\protocols\\exact-trial-retrieval-calibration-v0.1.json",
+      "sha256": "996c07e79535b30f9124c6633bcbbbcc5d77aa68f1c6cbbc0f8667c614c7fc6b",
+      "bytes": 7088
+    },
+    {
+      "path": "planning\\protocols\\source-readiness-feasibility-v0.1.json",
+      "sha256": "14ce00ed437e99a5c28c22fee7a0089df1485740549f28ac8147e8d5d2fc7393",
+      "bytes": 18560
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-readiness-20261021\\calibration-assessment.json",
+      "sha256": "216ddcfc4dcfecd76ca8f3395f83d31121788a406d60123a24259303e7efab97",
+      "bytes": 1591
+    },
+    {
+      "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\source-index.json",
+      "sha256": "f31dfe1e542155c63c31569837c2c1c32d99ebb034d7e716b00b84cd326aa0a6",
+      "bytes": 51219
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-retrieval-v02-20261021\\method-proposal.json",
+      "sha256": "5d4990516d57e560b39889a8b60a110013c88d67eda661cca6960e382eb926bc",
+      "bytes": 14645
+    },
+    {
+      "path": "data\\benchmark\\labels\\source-retrieval-v02-20261021\\control-proposal-peer.json",
+      "sha256": "0411985b151cb6d5b221ca1f90eccc1df1e4e98e16f1ef32b930378a00a6e8f8",
+      "bytes": 12426
+    }
+  ],
+  "rationale": "Response-informed correction: authenticate explicit corporate-to-investor links and separate candidate discovery, exact bytes, coissued-report identity, clinical scope and historical availability. Prior failure remains failed.",
+  "controls": [
+    {
+      "control_id": "registry_consent",
+      "nct_id": "NCT05997277",
+      "canonical_url": "https://cdn.clinicaltrials.gov/large-docs/77/NCT05997277/ICF_001.pdf",
+      "original": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A03.pdf",
+        "sha256": "24df200314629d9d90cb04f8e1218c7d0b669c45bd08fb45f1756561b27a84e0",
+        "bytes": 48170
+      },
+      "text": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A03-text.txt",
+        "sha256": "a4642f6ac42a156337c4be69cbc43b8653b010d03cfbdbb7243babf158b8c8ba",
+        "bytes": 231
+      },
+      "document_kind": "informed_consent",
+      "exposure": "Earlier follow-up source pool; unused as v01 control but not a protected holdout."
+    },
+    {
+      "control_id": "sponsor_poster",
+      "nct_id": "NCT05327530",
+      "canonical_url": "https://medical.emdserono.com/content/dam/web/healthcare/biopharma/web/USMI/congress-presentations/oncology/Hoffman-Censits_SITC_2022_JAVELIN_Bladder_Medley_TiP_Poster_and_APLS_approved_09_Nov_2022.pdf",
+      "original": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A12.pdf",
+        "sha256": "3c647f0046474d4e0c77e5d24d3a7fa4daa4f474aca6e3ad8ba4362fe4c92c96",
+        "bytes": 4592512
+      },
+      "text": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A12-text.txt",
+        "sha256": "1a9b342f02b62810cf23d953032ebb3ed79583ffc28415158926c0c38e53c071",
+        "bytes": 24560
+      },
+      "document_kind": "trial_design_poster",
+      "exposure": "Earlier follow-up source pool; unused as v01 control but not a protected holdout."
+    },
+    {
+      "control_id": "codeveloper_mirror",
+      "nct_id": "NCT05967689",
+      "canonical_url": "https://taihocorporate-media-release.s3.us-west-2.amazonaws.com/documents/WCLC_Full_Data_Press_Release_Final_090925.pdf",
+      "original": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A01.pdf",
+        "sha256": "61b7166783012023e5a4cc3221f066c0993e75b29feefd504b39fd03fb8c2fcf",
+        "bytes": 187070
+      },
+      "text": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A01-text.txt",
+        "sha256": "861a08f9e24c3ea90d6e43d5697d630f6a9c279dbee3465e7de597bc1e7fed84",
+        "bytes": 14920
+      },
+      "document_kind": "sponsor_WCLC_report",
+      "exposure": "Earlier follow-up source pool; not a protected holdout. A01 mirror query is response-informed development, not independent fresh validation."
+    }
+  ],
+  "requests": {
+    "corporate_bridge": {
+      "nct_id": "NCT05967689",
+      "url": "https://www.cullinantherapeutics.com/",
+      "allowed_hosts": [
+        "www.cullinantherapeutics.com",
+        "cullinantherapeutics.com"
+      ],
+      "expected_investor_host": "investors.cullinantherapeutics.com",
+      "basis": "A01 original names co-development and corporate URL; investors subdomain is NOT authenticated by suffix alone. Require actual anchor href in fresh corporate body."
+    },
+    "registry_API": {
+      "nct_id": "NCT05997277",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT05997277",
+      "allowed_hosts": [
+        "clinicaltrials.gov"
+      ],
+      "required_document_filename": "ICF_001.pdf",
+      "purpose_negative": "Informed consent is never counted as a protocol, SAP or authentic efficacy success rule."
+    }
+  },
+  "quoted_queries": [
+    {
+      "query_id": "new_registry_consent",
+      "nct_id": "NCT05997277",
+      "q": "\"NCT05997277\" informed consent",
+      "domains": [
+        "clinicaltrials.gov"
+      ],
+      "identity_control": "registry_consent",
+      "route": "Returned exact official study resource + freshly inspected same-NCT API document reference, or returned exact expected document URL."
+    },
+    {
+      "query_id": "new_sponsor_poster",
+      "nct_id": "NCT05327530",
+      "q": "\"NCT05327530\" \"JAVELIN\" \"SITC\"",
+      "identity_control": "sponsor_poster",
+      "route": "Official EMD Serono medical congress document or first-party explicit link. Snippet NCT not required for candidate; original identity must match frozen bytes."
+    },
+    {
+      "query_id": "codeveloper_regression",
+      "nct_id": "NCT05967689",
+      "q": "\"NCT05967689\" \"World Conference on Lung Cancer\" \"Cullinan\"",
+      "identity_control": "codeveloper_mirror",
+      "route": "Explicitly authenticated co-developer/investor domain; returned original or first-party landing with explicit PDF href. Response-informed development, not fresh independent validation."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "serono_congress",
+      "host": "medical.emdserono.com",
+      "path_prefix": "/content/dam/web/healthcare/biopharma/web/USMI/congress-presentations/",
+      "required_terms": [
+        "JAVELIN"
+      ],
+      "bridge_sha256": "3c647f0046474d4e0c77e5d24d3a7fa4daa4f474aca6e3ad8ba4362fe4c92c96",
+      "bridge_proof": {
+        "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A12-text.txt",
+        "sha256": "1a9b342f02b62810cf23d953032ebb3ed79583ffc28415158926c0c38e53c071",
+        "bytes": 24560
+      }
+    },
+    {
+      "route_id": "cullinan_report",
+      "host": "investors.cullinantherapeutics.com",
+      "path_prefix": "/node/",
+      "required_terms": [
+        "zipalertinib",
+        "World Conference"
+      ],
+      "bridge_sha256": "61b7166783012023e5a4cc3221f066c0993e75b29feefd504b39fd03fb8c2fcf",
+      "bridge_proof": {
+        "path": "data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\recovery-a\\A01-text.txt",
+        "sha256": "861a08f9e24c3ea90d6e43d5697d630f6a9c279dbee3465e7de597bc1e7fed84",
+        "bytes": 14920
+      },
+      "conditional": "Disabled unless fresh corporate anchor authenticates exact investor host; A01 pin proves corporate association only."
+    }
+  ],
+  "bounds": {
+    "live_search_queries": 3,
+    "original_or_API_GET_attempts": 5,
+    "landing_opens": 3,
+    "landing_opens_per_query": 1,
+    "max_bytes_each": 16777216,
+    "max_elapsed_seconds": 120,
+    "request_timeout_seconds": 40,
+    "redirects_per_GET": 5,
+    "automatic_retries": 0,
+    "dispatch_order": "corporate bridge; registry API; three exactly frozen searches; ICF/poster/mirror original candidates once each, never automatic fallback"
+  },
+  "pass_criteria": {
+    "new_registry_control": "Exact trial API, expected ICF filename/URL, returned exact study/document result chain and matching frozen original PDF bytes. Consent remains purpose-ineligible for protocol/SAP.",
+    "new_sponsor_control": "Returned official candidate or explicit first-party link yields exact frozen A12 bytes. Host/title alone cannot pass identity.",
+    "codeveloper_control": "Actual corporate anchor authenticates exact investor host AND returned report chain yields exact original bytes OR two independently sealed source comparisons establish authenticated coissued same WCLC report. Different bytes alone never qualify as a mirror.",
+    "same_report_comparison": "For differing bytes, both reviewers must match report identity/headline, publication date, trial ID, WCLC context, cohort D population, March2025 cutoff and report observations against retained A01; preserve selected-program population conflict. No clinical label or historical qualification follows.",
+    "negative_controls": "Offline probes reject wrong-report ESMO A02 as A01 exact-original identity, unbridged investor suffix, generic guideline/background NCT mentions, forged body receipts and consent-as-protocol interpretation.",
+    "activation": "All revised control and negative gates required before drafting a separate source-readiness activation amendment. Inactive v01 is never silently changed; G3 source/row closure and sealed membership remain required before new-member access."
+  },
+  "failure": "Record every failed route and hold activation. No query rewrites, alternate positives, posthoc whitelist changes, auto retry, broadened crawl or changing old failed results.",
+  "scientific_boundary": {
+    "clinical_labels": 0,
+    "clinical_activation": false,
+    "historical_availability_qualified": false,
+    "new_member_queries": 0,
+    "features": {},
+    "probabilities": null,
+    "provider_spend_usd": 0,
+    "live_framework_calls": 0
+  }
+}

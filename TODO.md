@@ -1,5 +1,12 @@
 # Project execution checklist
 
+## Prospective sponsor-document discovery amendment — October 21
+
+- [x] Freeze revised identity bridges, fresh controls and unchanged failed-control provenance.
+- [x] Implement and validate bounded candidate routing and original-byte identity checks.
+- [ ] Run the precommitted controls once and independently verify gate results.
+- [ ] Record the activation decision, update project memory and verify a bounded backup.
+
 ## Exact-trial retrieval calibration and source-readiness design — October 21
 
 - [x] Freeze retrieval controls and quantify prior exact-trial search specificity.
