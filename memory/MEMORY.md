@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-21-publisher]] — Prospective publisher amendment:647 tests; two exact originals/sponsorposter pass, current-version and corporate-link controls fail. Uncollected protocol/SAP lead; cohort stays inactive.
+- [[Publisher Discovery Amendment 2026-10-21]] — Explicit publisher-link/byte identity guards, seven corrected forgeries, real control failures and prospective existing-trial protocol priority.
+
 - [[research-log-2026-10-21-retrieval]] — Exact-trial retrieval calibration complete:4 exact-hash originals/registry projection pass; sponsor discovery fails; next12 design inactive, no new labels.635 tests/core/package pass; prospective sponsor-link amendment next.
 - [[Exact-trial Retrieval Calibration 2026-10-21]] — Frozen controls, actual query returns, independent gate review, inactive source-readiness design and retained failure/backup.
 

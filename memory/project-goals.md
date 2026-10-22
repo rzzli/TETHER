@@ -8,6 +8,22 @@ updated: 2026-10-21
 
 # Project goals
 
+## Latest publisher-discovery assessment — October21
+
+Prospective v02 committed before dispatch atda8d147.647 full tests/core57 expected
+skips and package/probes pass;12 new tests include7 retained forgery failures now
+corrected. Two exact originalPDF controls recovered4,640,682B. Sponsorposter passes;
+registry oldICF001 originalidentity passes but fullcontrol fails because currentAPI
+listsProt_SAP002/ICF003. Corporate request blockedoutsidefrozenHTTPS redirectpolicy;
+targetnotretained, investorbridgeunverified, returnedinvestorPDFunfetched.
+4liveGETattempts/3queries/0landing/0retry/$0; oneofflineA02wrongreportreplay separate.
+All clinical/history gatesfalse, old36/new36 unchanged, next12membershipnull/G3
+unperformed. CurrentProtSAP metadata is an uncollectedlead, notprespec/historyproof.
+Next: separatelyfreeze current-version-aware registry request and existing-trial
+protocol/SAP authenticity/source audit; improve blockedredirectprovenance before
+anotherco-developerroute. No newcohortexpansion. See
+[[Publisher Discovery Amendment 2026-10-21]] and [[research-log-2026-10-21-publisher]].
+
 ## Current retrieval gate — October21 continuation
 
 Exact-trial calibration/design assessment completed:4 fixed originals recovered

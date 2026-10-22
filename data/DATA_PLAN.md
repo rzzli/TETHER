@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf full data requirements and acquisition plan
 
+October21 publisher-discovery amendment completed: sponsor-poster identity passes;
+frozen current-registry version and co-developer bridge controls fail. Two exact
+originals recovered; newer protocol/SAP and consent references remain uncollected
+metadata leads. The next cohort remains inactive. A separately frozen existing-trial
+protocol audit and version-aware retrieval are next. No historical/scientific
+qualification follows from current API dates. See
+[[Publisher Discovery Amendment 2026-10-21]] and the v0.2 inactive gate protocol.
+
 October21 retrieval calibration completed:4 exact-hash originals and structured
 registry document references passed, but the frozen sponsor discovery gate failed.
 The source-readiness feasibility protocol is retained inactive; next-member

@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "protocol_id": "source-readiness-retrieval-gate-v0.2",
+  "status": "inactive_blocked_retrieval_calibration",
+  "role": "evaluation_only",
+  "retained_at_utc": "2026-10-22T05:18:50.837247+00:00",
+  "scope": "Final gate disposition after the prospective sponsor/co-developer retrieval calibration. This retains engineering findings and uncollected source leads only; it does not modify the failed v0.1 result, inactive scientific design, cohort membership or clinical labels.",
+  "parents": {
+    "inactive_scientific_design": {
+      "path": "planning/protocols/source-readiness-feasibility-v0.1.json",
+      "sha256": "14ce00ed437e99a5c28c22fee7a0089df1485740549f28ac8147e8d5d2fc7393",
+      "bytes": 18560
+    },
+    "v01_failed_calibration": {
+      "path": "data/benchmark/labels/source-readiness-20261021/calibration-assessment.json",
+      "sha256": "216ddcfc4dcfecd76ca8f3395f83d31121788a406d60123a24259303e7efab97",
+      "bytes": 1591
+    },
+    "v02_calibration_policy": {
+      "path": "planning/protocols/exact-trial-retrieval-calibration-v0.2.json",
+      "sha256": "f8b0a9a4bc7e01cd8fc94bc5ba402b24a613075512c2d1e370f56e91680a9c42",
+      "bytes": 10433
+    },
+    "v02_request_freeze": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/request-freeze.json",
+      "sha256": "9028b7bd3d594298f43e2dcd5fc115bbdd247f25cb31b027f63229ee0d48e5c8",
+      "bytes": 3695
+    },
+    "v02_preinspection": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/inspection-v1/aggregate.json",
+      "sha256": "312524f3fa66de00f5d5ef86e96107beb066ca3337099c5c6d0f02db7a6c4606",
+      "bytes": 486
+    },
+    "v02_registry_projection": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/inspection-v1/registry_API/inspection.json",
+      "sha256": "5e34f7e31d4d625a3b95659cb754f1b8e81a2550a35ce0a1752b5adb00679df2",
+      "bytes": 3460
+    },
+    "v02_corporate_failure": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/inspection-v1/corporate_bridge/failure.json",
+      "sha256": "acb27f0f2cede5dd5aaf11a5856ddabd7a9b35a4cbac35bf284fd99fdf90ffbf",
+      "bytes": 140
+    },
+    "v02_control_aggregate": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/originals-v1/aggregate.json",
+      "sha256": "b97fdc8e7acd5d71714eecdb3222b86fb795b0c9d8aabb2fc70c96e62f118fca",
+      "bytes": 2957
+    },
+    "v02_method_preflight": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/method-preflight.json",
+      "sha256": "bd860cd8d92365d8565a605c34caa141669e5019e4c0ac40d64a2498d7a68be5",
+      "bytes": 5701
+    },
+    "v02_canonical_assessment": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/calibration-assessment.json",
+      "sha256": "c8238f084899374b8a0eb64d6f26d76bf5314164336096fc7f14e798f34811dd",
+      "bytes": 3835
+    },
+    "v02_negative_control_assessment": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/negative-control-assessment.json",
+      "sha256": "c7dd1d68d470303299299c49d9c09c531312e7a76b727c0667a95f1c54215f79",
+      "bytes": 1318
+    }
+  },
+  "source_attempt_outputs": {
+    "registry_original_identity": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/originals-v1/new_registry_consent/identity.json",
+      "sha256": "d8af5d3d4d20d22762a93947548be96de5b3f74e2969a4c3ea649293a8585d4c",
+      "bytes": 572
+    },
+    "registry_original_receipt": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/originals-v1/new_registry_consent/receipt.json",
+      "sha256": "c440c6c9093c0f9a70e51b76bf90da69d08d86e83955b669573f3a87d5d93f76",
+      "bytes": 1535
+    },
+    "poster_original_identity": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/originals-v1/new_sponsor_poster/identity.json",
+      "sha256": "35f94f9ec147c97255f37e532a837a0e2ff9523920f51460813e5ce5c38bf2b7",
+      "bytes": 572
+    },
+    "poster_original_receipt": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/originals-v1/new_sponsor_poster/receipt.json",
+      "sha256": "707dcbfa61ce3fe14fb5d0530fe40a031621e09a96aa92acb6e624bbfd9ea881",
+      "bytes": 1836
+    },
+    "query1_items": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/search-v1/query1/parsed-items.json",
+      "sha256": "d68bb0c384e7c5a12491ce6317db489ce3fd236a181d063cd25ec7fcc0b74126",
+      "bytes": 1090
+    },
+    "query2_items": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/search-v1/query2/parsed-items.json",
+      "sha256": "835ef7a86d34584fde1499602e24506edc6677e3740476de4e0dd8aeb42cc2e1",
+      "bytes": 35921
+    },
+    "query3_items": {
+      "path": "data/benchmark/labels/source-retrieval-v02-20261021/search-v1/query3/parsed-items.json",
+      "sha256": "07de111771f2ca73f10ad7e21249cc8b9f13acd5c6af2def0ea48312c2b519ca",
+      "bytes": 33638
+    }
+  },
+  "gate_results": {
+    "new_registry_control": {
+      "passed": false,
+      "exact_retained_ICF001_transport": true,
+      "same_trial_API_identity": true,
+      "current_API_lists_frozen_ICF001": false,
+      "reason": "The exact retained ICF_001.pdf remains downloadable but is not in the freshly inspected current document list. The frozen conjunction requires both the expected current link and matching original; transport alone does not pass. Do not call the older artifact invalid merely because it is not currently listed."
+    },
+    "new_sponsor_control": {
+      "passed": true,
+      "exact_retained_A12_poster_identity": true,
+      "scientific_qualification": false,
+      "reason": "The returned official EMD Serono candidate yielded exact frozen trial-design-poster bytes. Poster transport does not establish complete prospective SAP, selected-arm efficacy, formal decision date or historical public availability."
+    },
+    "codeveloper_control": {
+      "passed": false,
+      "corporate_bridge_authenticated": false,
+      "mirror_download_attempted": false,
+      "mirror_comparisons_performed": 0,
+      "reason": "The corporate request failed the frozen HTTPS-host policy. The actual rejected destination was not retained, so no destination identity or exact redirect explanation is established by this receipt. Returned investor/co-developer candidates stayed disabled without the required corporate anchor; none was fetched or accepted as a mirror."
+    },
+    "overall_retrieval_gate": false,
+    "G3_origin": null,
+    "G3_disposition": "Not performed; no source/row closure or final new-member seal in this phase.",
+    "negative_controls": {
+      "passed": true,
+      "execution": "Offline negative fixture replay and retained forged-receipt regressions; not live transport or independent scientific validation."
+    }
+  },
+  "measured_attempts": {
+    "corporate_or_API_GET_attempts": 2,
+    "original_PDF_GET_attempts": 2,
+    "direct_GET_attempts_total": 4,
+    "fresh_search_queries": 3,
+    "landing_opens": 0,
+    "automatic_retries": 0,
+    "new_member_queries": 0
+  },
+  "current_version_observation": {
+    "nct_id": "NCT05997277",
+    "current_API_http_status": 200,
+    "temporal_classification": "contemporary_only",
+    "expected_retained_old_filename": "ICF_001.pdf",
+    "current_document_filenames": [
+      "Prot_SAP_002.pdf",
+      "ICF_003.pdf"
+    ],
+    "interpretation": "Current listing drift and continued old-byte accessibility are separate observations. This is not proof that any older version was never public or that a newer version can replace a pinned historical input."
+  },
+  "uncollected_source_leads": [
+    {
+      "nct_id": "NCT05997277",
+      "filename": "Prot_SAP_002.pdf",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/77/NCT05997277/Prot_SAP_002.pdf",
+      "source_json_pointer": "/documentSection/largeDocumentModule/largeDocs/0",
+      "source_reported_date": "2024-03-22",
+      "source_reported_upload_date": "2026-02-12T16:07",
+      "reported_bytes": 3658121,
+      "label": "Study Protocol and Statistical Analysis Plan",
+      "document_type": "Prot_SAP",
+      "has_protocol": true,
+      "has_sap": true,
+      "has_icf": false,
+      "identity_basis": "linked_from_exact_registry_identificationModule.nctId",
+      "original_document_bytes_checked": false,
+      "historical_availability_qualified": false,
+      "clinical_scope_qualified": false,
+      "clinical_label_contribution": false,
+      "collection_status": "not_collected",
+      "verification_status": "current_registry_pointer_only",
+      "prespecification_qualified": false,
+      "historical_public_availability_qualified": false,
+      "reason": "The current payload reports a protocol/SAP label, document date2024-03-22 and upload2026-02-12T16:07. Neither original bytes nor authentic content, amendment history, preanalysis/unblinding chronology or public availability by April1,2026 has been verified. Do not infer prespecification or historical qualification from these displayed dates."
+    },
+    {
+      "nct_id": "NCT05997277",
+      "filename": "ICF_003.pdf",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/77/NCT05997277/ICF_003.pdf",
+      "source_json_pointer": "/documentSection/largeDocumentModule/largeDocs/1",
+      "source_reported_date": "2024-06-04",
+      "source_reported_upload_date": "2026-04-15T13:24",
+      "reported_bytes": 1156685,
+      "label": "Informed Consent Form",
+      "document_type": "ICF",
+      "has_protocol": false,
+      "has_sap": false,
+      "has_icf": true,
+      "identity_basis": "linked_from_exact_registry_identificationModule.nctId",
+      "original_document_bytes_checked": false,
+      "historical_availability_qualified": false,
+      "clinical_scope_qualified": false,
+      "clinical_label_contribution": false,
+      "collection_status": "not_collected",
+      "verification_status": "current_registry_pointer_only",
+      "prespecification_qualified": false,
+      "historical_public_availability_qualified": false,
+      "reason": "The current payload reports ICF document date2024-06-04 and upload2026-04-15T13:24. Its reported upload is after the April1,2026 ascertainment cutoff; it cannot be backdated by the earlier document date. Consent is not a protocol/SAP. No original content was collected."
+    }
+  ],
+  "next_action_priority": [
+    {
+      "order": 1,
+      "action": "Prospectively freeze current-version-aware registry identity controls. Distinguish exact old artifact still accessible, current same-trial listing presence, document type and new-version identity. A test can characterize listing drift without requiring unchanged listing or silently substituting a current document for its old pinned control. Preserve v0.2 failure as recorded.",
+      "activation": "Separate prospective engineering amendment; no new cohort access."
+    },
+    {
+      "order": 2,
+      "action": "Prepare a bounded evaluator-only protocol audit for the already-exposed NCT05997277 Prot_SAP_002.pdf lead. Freeze its exact URL, expected current reported size, allowed hosts, attempt/size/time bounds, source/receipt/provenance recording and authentic-version/prespecification/scientific-scope questions before any fetch. Keep historical public-availability uncertainty, funding-related administrative termination and every old null label unchanged until separately qualified adjudication.",
+      "activation": "Planning only here. The lead is uncollected and not authorized for automatic acquisition by this gate disposition."
+    },
+    {
+      "order": 3,
+      "action": "Diagnose corporate-host policy failure through a prospective bounded provenance amendment that records attempted redirect destinations safely. Authenticate exact corporate-to-investor anchor before enabling candidates; no wildcard or silent host-policy expansion.",
+      "activation": "Optional later engineering correction; no automatic retry or new-member request."
+    }
+  ],
+  "scientific_nonactivation": {
+    "inactive_v01_design_unchanged": true,
+    "execution_authorized": false,
+    "new_member_acquisition_authorized": false,
+    "membership": null,
+    "G3_origin_performed": false,
+    "clinical_labels_assigned": 0,
+    "clinical_activation": false,
+    "automatic_labels": false,
+    "historical_availability_qualified": false,
+    "numerical_features": {},
+    "probabilities": null,
+    "provider_spend_usd": 0,
+    "live_framework_calls": 0
+  },
+  "failure_rules": "Retain all failed/partial routes and old fixed controls. No query rewrite, positive substitution, posthoc host expansion, retry, new cohort acquisition, clinical label change or model fit from these findings.",
+  "claims": "Bounded exposed engineering calibration: one full positive control passes; two fail for distinct listing and corporate-bridge reasons. No source-retrieval recall, source nonexistence, scientific validation, clinical event incidence, historical eligibility, unseen holdout or model performance claim."
+}

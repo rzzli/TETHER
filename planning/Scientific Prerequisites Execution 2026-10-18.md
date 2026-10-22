@@ -1,5 +1,12 @@
 # Scientific prerequisites: ordered execution
 
+October21 latest: prospective publisher discovery v0.2 completed with647 full tests.
+Sponsor-poster control passed; current registry version transition and corporate
+redirect authentication controls failed. Next12 cohort remains inactive; old/new
+labels unchanged. Next bounded priority is version-aware registry handling and a
+separately frozen existing-trial protocol/SAP audit, without cohort expansion.
+See [[Publisher Discovery Amendment 2026-10-21]]. Earlier entries remain dated.
+
 October21 current disposition: exact-trial retrieval calibration is complete.
 Four original transports and structured registry projection passed; one of two
 frozen discovery controls failed. The next12 source-readiness design remains

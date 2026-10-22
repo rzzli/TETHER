@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October21 [publisher-discovery amendment](planning/Publisher%20Discovery%20Amendment%202026-10-21.md)
+recovered two exact originals and passed the sponsor-poster control. Current
+registry version changes and a blocked corporate redirect keep cohort acquisition
+inactive.647 full tests pass. A newly listed, uncollected protocol/SAP is the next
+bounded existing-trial source-review lead; clinical qualification remains open.
+
 The October21 [retrieval calibration](planning/Exact-trial%20Retrieval%20Calibration%202026-10-21.md)
 completed four exact-hash original downloads and structured protocol/SAP projection.
 The frozen sponsor-report discovery control failed, so the next twelve-case

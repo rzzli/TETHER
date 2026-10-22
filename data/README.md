@@ -11,6 +11,14 @@ status: acquisition-started
 
 # AsOf data workspace
 
+October21 publisher amendment: two exact original controls recovered4,640,682B.
+The current registry lists newer document versions; those bytes remain uncollected.
+Corporate-to-investor authentication failed at a blocked redirect, so the investor
+PDF was not fetched. Artifacts are evaluator-only under
+`data/benchmark/labels/source-retrieval-v02-20261021/`. No labels, next-member
+acquisition or catalog scientific-status promotion. See
+`planning/Publisher Discovery Amendment 2026-10-21.md`;647 full tests pass.
+
 October21 retrieval calibration:4 original controls (4,099,961 bytes) matched
 their frozen hashes. Structured registry document projection passed; the strict
 sponsor-report search control failed. Evaluator originals/receipts, exact query
