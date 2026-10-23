@@ -3,10 +3,22 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Project goals
+
+## B0 finite cycle completed — October23
+
+Final source-inclusive audit2fc4f62f... verified96/96 native envelopes for32
+origin-only selected trials. January:0appearances/17absences/15unknowns; all15
+unknowns have ESTIMATED record-version dates. Coverage53.125% fails90%, so stop
+operational prediction expansion. April:1appearance/31absences, separate sensitivity.
+No resampling, endpoint replacement, clinical activation, training or probabilities.
+760 full tests pass; original72null clinical labels remain unchanged. Next is the
+harder source-bounded T6 comparison with separately frozen top-one tasks and AI
+references before arm outputs. Broader scientific Tasks6–8 remain unfinished.
+See [[B0 Registry Content Feasibility 2026-10-22]]. Earlier entries are history.
 
 ## B0 origin membership sealed — October23
 

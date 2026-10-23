@@ -5,6 +5,16 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+The B0 workflow/transport/evaluation modules now implement the separately frozen
+source-inclusive cycle: owned read-only local servers, paired exact extracts,
+archived code/command receipts, origin-only membership reconstruction, complete
+native row locators, missingness and deterministic feasibility decisions. The
+October23 cycle completed with96/96 selected source-state pointers and760 passing
+project tests. January coverage17/32 fails90%; no operational prediction expansion,
+clinical training or probabilities are authorized. April remains a separate view.
+See `planning/B0 Registry Content Feasibility 2026-10-22.md`. The source-preparation
+paragraphs below record the earlier contract-only checkpoint, not current gaps.
+
 `registry_content` defines the new B0 snapshot-content feasibility contracts under
 `planning/protocols/registry-content-feasibility-v0.1.json`. Its SQL is explicitly
 unbound: the module has no database/network dispatch or CLI. It uses an allowlist

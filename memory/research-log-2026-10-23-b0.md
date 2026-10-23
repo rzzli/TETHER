@@ -72,3 +72,16 @@ source checks, parentpeak117866496B. Both source servers stopped/portsclosed.
 No predictive/clinical labels, model calls or spending. Evaluator native-state
 audit and decision pending;20 original evaluator tests plus2 descriptive dependence
 tests pass, fresh full760 suite running. Actual source peer review requested.
+
+## Final checkpoint: finite B0 audit complete
+
+Full760 tests/probes/package pass. Evaluator frozen atc124f53 finished with exit0,
+report2fc4f62f537f28d13aa384ba600c26baf30ce6bec168009fcc4282a828db4482.
+96/96 native state pointers and source/receipt/code ancestry pass. January0/17/15
+appearance/absence/unknown, coverage53.125%; all15unknown dates populated but
+ESTIMATED. Frozen90%/both-class rule stops prediction expansion. April1/31/0 stays
+separate. No primary replacement/resampling, clinical labels or fitting.
+Extraction287.5s/159174B per read/117866496B parent peak; PostgreSQL peak unmeasured.
+Ancestry evaluation about565s; repeated hashing logical reads are not physical I/O.
+Origin exact-key17components flag dependence only; effective sample size null.
+Next harder T6 top-one/source-bounded comparison, with pre-output AI references.

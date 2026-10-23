@@ -1,14 +1,19 @@
 # Project execution checklist
 
-## B0 source-bound execution and feasibility cycle — in progress
+## B0 source-bound execution and feasibility cycle — completed October23
 
 - [x] Implement separate B0 source-binding, owned read-only transport and origin-membership reconstruction.
 - [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
 - [x] Pass full project validation and freeze the origin execution request before dispatch.
 - [x] Execute the origin-only read and seal source-bound membership without follow-up access.
 - [x] Freeze and execute separate January/April follow-up requests for that membership.
-- [ ] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
+- [x] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
 - [ ] Continue to the harder T6 comparison design and execution under its own gates.
+
+Final source-inclusive audit verified96/96 native envelopes. January0 appearances,
+17absences and15unknowns give53.125% coverage, below90%; stop operational prediction
+expansion. April1appearance/31absences is a separate sensitivity view. All760 tests
+pass; no clinical activation. Next is the separately gated harder T6 challenge.
 
 Origin request ed82b358... was frozen after732 full tests and independent preflight.
 October23 origin read/reconstruction completed; membership2dac62ca... seals32

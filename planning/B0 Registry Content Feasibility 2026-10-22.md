@@ -137,3 +137,49 @@ The source-inclusive evaluator must still reconstruct the receipts/states,
 audit all96 selected snapshot envelopes (or explicit missing rows), report origin
 annotation dependence and apply the frozen January-only feasibility rule. No
 scientific decision or qualified clinical outcome follows merely from collection.
+
+## Final finite-cycle decision — October23
+
+The evaluator frozen at `c124f53` completed successfully. Its retained report is
+`data/benchmark/labels/registry-content-20261022/audit-v1/report.json`, SHA256
+`2fc4f62f537f28d13aa384ba600c26baf30ce6bec168009fcc4282a828db4482`.
+Full source/receipt/code ancestry replay and all96 native source-envelope pointers
+passed. No selected row was missing. The fixed decision is
+**stop_operational_prediction_expansion**.
+
+| Snapshot view | Appearance | Absent | Unknown | Observable/all selected |
+|---|---:|---:|---:|---:|
+| January2026 primary | 0 | 17 | 15 | 17/32 =53.125% |
+| April2026 sensitivity | 1 | 31 | 0 | 32/32 =100% |
+
+January fails the frozen90% coverage rule and has no observed positive class.
+All15 unknowns have populated record-version dates with type `ESTIMATED`, hence
+`unqualified_record_version_date`; they are not missing NCTs/tables. April cannot
+backfill January or become the primary endpoint after observation. No resampling,
+cutoff expansion, classifier fitting or clinical labels follows. These are exposed,
+purposive snapshot-content observations, not clinical success or registry incidence.
+
+Exact origin keys form17 connected components across32 trials; this flags possible
+dependence, not17 independent biological events or a validated effective sample
+size. Aliases and unrecorded relationships can be missed. The retained diagnostics
+leave effective sample size null.
+
+Extraction took287.5seconds including source checks; first reads total159,174bytes,
+repeated exactly. Peak Python-parent memory117,866,496bytes excludes PostgreSQL,
+whose peak was not measured. Phase workspace was1,923,203bytes before the final
+report, below5GiB. Both source servers stopped. Final ancestry verification took
+approximately565seconds (journal reservation to report timestamp), separately from
+extraction. Repeated nested hashing is costly; partial Windows process logical-read
+counters are retained but do not measure total physical disk traffic or peak memory.
+No provider spending/model calls occurred.
+
+All760 local project tests pass, including102 B0 tests; required probes, PowerShell
+syntax and packaged dependency-free demo pass. Failed/superseded preparations and
+original origin code/receipts remain unchanged. Independent source reviews check
+all selected native states; reference/acceptance pins are retained in
+`planning/review-assets/registry-content-execution-20261022/`.
+
+The next bounded phase is the harder T6 top-one selection comparison with separately
+frozen source-only task selection and sealed reference reviews before model outputs.
+Strict clinical efficacy prediction, genetics-derived scoring, locked clinical
+evaluation and conditional T2–T5/H6 remain unqualified later work.

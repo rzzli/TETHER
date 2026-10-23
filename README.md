@@ -1,5 +1,12 @@
 # AsOf target-evaluation agents
 
+The October23 [B0 feasibility audit](planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md)
+verified all96 selected snapshot-state pointers. January coverage is17/32 (53.125%),
+below the frozen90% threshold; operational prediction expansion stops. April's one
+appearance stays separate. All760 local tests pass. Next is a source-bounded harder
+T6 comparison; clinical prediction, calibration and broader scientific gates remain
+unfinished. Earlier next-step statements below describe their dated checkpoints.
+
 The October22 [primary report lookup](planning/Primary%20Report%20Lookup%20and%20Source%20Readiness%202026-10-22.md)
 authenticated the official poster0507 program entry and May14 schedule. The NCT
 bridge, target DOI, primary results text and analysis/decision dates remain
