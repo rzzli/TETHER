@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "tested_origin_request_frozen_before_dispatch",
+  "frozen_at_utc": "2026-10-23T04:27:01.846872+00:00",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\requests-origin-v1\\plan.json",
+    "sha256": "ed82b3583f70fd108ba52c96707d9f0dc59f63693acbd10784fb3f2c821078cf",
+    "bytes": 35049
+  },
+  "policy": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\registry-content-feasibility-v0.1.json",
+    "sha256": "a610586389c92f139bfa9714e0789c562f87a5d4012fdc1b409fbc7299dc75a6",
+    "bytes": 7443
+  },
+  "source_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\contracts-v1\\source-manifest.json",
+    "sha256": "ba1833116d4306ebeac5fd796e81b22943c1e72285f055d27c24b14f21d2c2b9",
+    "bytes": 16142
+  },
+  "code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\registry_content_workflow.py",
+      "sha256": "3f4d4f613aabf0a61d8c03a680923bb00bfb3afdad81bf20b13ca4fc71ae9eb8",
+      "bytes": 25602
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\registry_content_transport.py",
+      "sha256": "04f97ccf0b4da513182f9e8506fd4cb7496b80d4ee0f88a5403aff4bf5b24704",
+      "bytes": 13704
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\registry_content.py",
+      "sha256": "c18e59ffb1a677417abac10ab389288e0ae13106b59b71e4f5331e72e31aae4c",
+      "bytes": 13186
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\outcome_extract.py",
+      "sha256": "f819f9832b8e44bbf9f69c1cc61907d2fe72978e4700246692f8051a3b8aa7cb",
+      "bytes": 24481
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\outcome_inputs.py",
+      "sha256": "a48b4f7f76ba2e400069489e52429de20b7a7b313aa3ab8a88069f0f84a2be47",
+      "bytes": 20940
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_maturity.py",
+      "sha256": "40fa72ab943e1c28d6fd0880a57f3c09535120a408121d0a1f4c4cd4ea7d7ba7",
+      "bytes": 12019
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_review.py",
+      "sha256": "e7c344085544f2f208017bd341691fc247ce202ee4fabafdede5ca09ab42b20c",
+      "bytes": 15365
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\origin_programs.py",
+      "sha256": "6f972c1dbe2c32c8283018266806c96eb4ec627f962dc1e358201b3466877364",
+      "bytes": 32604
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\ascertainment_policy.py",
+      "sha256": "d64feb10c06beabcdb44ecb70b9a6fb80dab7e6474394a571b4d6d8251fc844e",
+      "bytes": 2914
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\reference_panel.py",
+      "sha256": "60a80e43ea1421fa6c1108098fd85c083602bda8a46c92b10ca7c7763d7d9b41",
+      "bytes": 11827
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+      "sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+      "bytes": 9545
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+      "sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "bytes": 4961
+    }
+  ],
+  "query": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\requests-origin-v1\\2025-01-01.sql",
+    "sha256": "c835b29fe6577ce35f09b1d87f3dd7b72391f3eb159892cd35b7383797103bbc",
+    "bytes": 3363
+  },
+  "mode": "origin",
+  "queried_trial_count": 116,
+  "selected_membership": null,
+  "followup_accessed": false,
+  "new_origin_result_rows_accessed": false,
+  "clinical_activation": false,
+  "provider_spend_usd": 0,
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\registry-content-execution-20261022\\pre-dispatch-full-validation.json",
+    "sha256": "632674f3888bf323a166dfe857bf09495c1a380c3e56f8909cd4a7255103a6c2",
+    "bytes": 471
+  },
+  "initial_failing_receipt_probes": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\b0-workflow-initial-regressions-20261022.log",
+    "sha256": "bdd6fc4e3786f6a767c17ea9a116197a50708a91fff8aa7809b8b00696b87e34",
+    "bytes": 17280
+  },
+  "additional_failing_byte_accounting_probes": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\b0-receipt-byte-count-regressions-20261022.log",
+    "sha256": "08e9fe19b1d76d8e563cdf18865ed3a22db9e3959f7f0e0a4d660fc0109d2f0b",
+    "bytes": 3888
+  },
+  "corrected_regressions": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\b0-workflow-final-regressions-20261022.log",
+    "sha256": "d18dadd3dcb377a60290145a7e357d74ff410073ef76fea74870d3dee438fe77",
+    "bytes": 13263
+  }
+}

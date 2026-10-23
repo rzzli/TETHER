@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "accepted_origin_predispatch_contract_review",
+  "reviewer": "design_reassessment independent peer agent",
+  "review_recorded_at_utc": "2026-10-23T04:27:12.7092218Z",
+  "plan": {
+    "path": "data/benchmark/labels/registry-content-20261022/requests-origin-v1/plan.json",
+    "sha256": "ed82b3583f70fd108ba52c96707d9f0dc59f63693acbd10784fb3f2c821078cf",
+    "bytes": 35049
+  },
+  "verification_scope": {
+    "distinct_file_pins_rehashed": 48,
+    "categories": {
+      "policy_and_schema_manifest": 2,
+      "original_candidate_freeze": 1,
+      "exclusion_pack_manifests": 2,
+      "origin_packets_identifier_only_inspection": 24,
+      "prior_origin_request_plan": 1,
+      "retained_origin_technical_audit": 1,
+      "prepared_sql": 1,
+      "executing_support_code": 12,
+      "postgresql_runtime_executables": 3,
+      "prepared_plan": 1
+    },
+    "prepared_journal_events_verified": 3,
+    "journal_terminal_plan_pin_matches": true,
+    "schema_reconstructed_from_technical_audit_columns": true,
+    "schema_matches_prior_origin_request": true,
+    "ctgov_schema_relations": 69,
+    "query_contract_regenerated_exactly": true,
+    "query_sql_bytes_match": true,
+    "source_restore_root_and_prior_pin_inventory_match": true
+  },
+  "selection_review": {
+    "original_ordered_candidates": 128,
+    "exclusion_pack_member_counts": [12, 12],
+    "distinct_excluded_ids": 24,
+    "candidate_overlap_per_exclusion_pack": [0, 12],
+    "origin_query_ids": 116,
+    "query_order": "Sorted identifiers for deterministic extraction only",
+    "membership_selection_order": "Original candidate order retained by membership_record; no membership has yet been selected",
+    "followup_outcomes_used": false,
+    "membership": null
+  },
+  "source_scope": {
+    "snapshot_dates": ["2025-01-01"],
+    "expected_studies_from_retained_plan_and_audit": 520688,
+    "port": 55440,
+    "followup_query_present": false,
+    "clinical_activation": false,
+    "scoring_activation": false,
+    "provider_spend_usd": 0,
+    "model_calls": 0,
+    "automatic_retries": 0
+  },
+  "receipt_and_transport_review": {
+    "origin_mode_single_job_gate": "passed",
+    "owned_file_locators_and_archived_code_checks": "passed",
+    "exact_request_and_metadata_lifecycle_checks": "passed",
+    "ordered_command_arguments_timeouts_and_finished_byte_counts": "passed",
+    "canonical_hidden_startup_helper": "reviewed; behavior preserved",
+    "source_state_reconstruction": "checked by synthetic unknown-to-absence forgery rejection",
+    "paired_read_consistency": "checked by synthetic rehashed-different-repeat rejection"
+  },
+  "peer_tests": {
+    "path": "tests/test_science_registry_content_workflow_peer.py",
+    "sha256": "bb3f83b47f6d16a49fecc9f39b9e0de01b16fb3f40581fee7f4e10d3937aebb7",
+    "tests": 13,
+    "passed": 13,
+    "failures": 0,
+    "source_plan_validation_mocked": true,
+    "real_database_or_network_dispatch": false
+  },
+  "reviewed_code": {
+    "tools/science/registry_content_workflow.py": "3f4d4f613aabf0a61d8c03a680923bb00bfb3afdad81bf20b13ca4fc71ae9eb8",
+    "tools/science/registry_content_transport.py": "04f97ccf0b4da513182f9e8506fd4cb7496b80d4ee0f88a5403aff4bf5b24704"
+  },
+  "verifier_retention": {
+    "path": "data/benchmark/labels/registry-content-20261022/peer-preflight-v1/verify_origin_preflight.py",
+    "original_execution": "Inline Python via stdin before this review artifact was written",
+    "retention": "Post-hoc copy with formatting and workspace-root resolution adapted for standalone invocation; not an acquisition-time code freeze"
+  },
+  "limits": [
+    "No database started or queried, no network used, and no new trial outcome files read by this review.",
+    "Origin packet content inspection was limited to original NCT identifiers.",
+    "Bulk raw archives, original dumps and full restore hashes were not rehashed by this peer review; prior declared pins were compared, not recertified.",
+    "The primary agent separately performed full origin lineage and source hashing; this review does not claim to have repeated those expensive checks.",
+    "Acceptance concerns prepared origin dispatch and receipt guards; it does not certify runtime success, clinical validity, qualified outcomes or sealed membership.",
+    "Real execution remains subject to full project validation and source/runtime revalidation by the source-bound runner.",
+    "The primary agent reported 732 full-suite tests and probes/packaging passed; this peer independently reran only the thirteen receipt tests recorded above."
+  ]
+}

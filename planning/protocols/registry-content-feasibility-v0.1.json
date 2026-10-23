@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "protocol_id": "registry-content-feasibility-v0.1",
+  "endpoint_id": "registry_outcome_measurement_appearance_v1",
+  "role": "evaluation_only",
+  "status": "design_frozen_execution_pending_source_bound_origin_membership",
+  "design_date": "2026-10-22",
+  "unit": "One NCT record in explicitly named AACT snapshot sources; exposed development feasibility only",
+  "source_snapshots": {
+    "origin": "2025-01-01",
+    "primary_endpoint": "2026-01-01",
+    "later_sensitivity": "2026-04-01"
+  },
+  "time_interpretation": "Snapshot-defined content states. Dates name archives, not verified midnight-public timestamps. No continuous history, exact first appearance, clinical decision time or earliest disclosure inferred.",
+  "state_rules": {
+    "present": "At least one outcome measurement links to an outcome and result group of the same NCT, with complete query/projection coverage and no source inconsistencies. Partial but internally consistent result sets count. No inference about efficacy, result completeness or primary objective.",
+    "absent_in_snapshot": "Complete successful source queries of all mandatory tables return zero outcome measurements and no conflicting source metadata. This is a source-state absence, not clinical failure or proof of no analysis/publication.",
+    "unknown": "Missing NCT, missing mandatory columns/tables, inconsistent version or result dates, conflicting posted-results evidence, duplicate source keys or orphan/conflicting linkage. Record-level unknown overrides an otherwise valid measurement. Extractor, byte-integrity, truncation or count defects stop the affected batch rather than produce absence.",
+    "mandatory_projection": {
+      "studies": ["nct_id", "last_update_posted_date", "last_update_posted_date_type", "results_first_posted_date", "results_first_posted_date_type"],
+      "outcomes": ["id", "nct_id"],
+      "result_groups": ["id", "nct_id", "outcome_id", "ctgov_group_code"],
+      "outcome_measurements": ["id", "nct_id", "outcome_id", "result_group_id", "ctgov_group_code"]
+    },
+    "date_checks": "ACTUAL full-day record version no later than source snapshot. Non-null results posting date must be ACTUAL, no later than record version or snapshot. Posting date without measurements, or measurements without a posting date, is unknown. Unstated dates are never imputed. No calendar-date-to-midnight public timestamp conversion.",
+    "group_outcome": "Null result-group outcome_id is allowed for shared groups; non-null values must reference the same measurement outcome. Non-null child/group codes must agree."
+  },
+  "selection": {
+    "candidate_source": "data/benchmark/labels/endpoint-origin-feasibility-20261021/requests/candidate-freeze.json",
+    "candidate_source_expected_sha256": "ca3b7f27e7f4862e2b19d92ae4ae7c04fd489f9d86ed669341f6734d4d32f7b2",
+    "screen_cap": 128,
+    "selected_cap": 32,
+    "order": "Original frozen 128-member origin screen order; do not rehash or rank using follow-up",
+    "exclusions": [
+      "All members of original science-origin-review-20261018T210300Z pack",
+      "All members of endpoint-origin-feasibility-20261021/sample-v1 pack"
+    ],
+    "origin_eligibility": "Qualified retained source identity/version and B0 absent_in_snapshot at origin. No requirement for old planned-maturity rule, efficacy primary objective or future results. Complete source-inclusive origin receipts/lineage must be verified before admitting membership.",
+    "screening": "Retain every member disposition, missingness and exclusions; select at most first32 origin-qualified records. If fewer qualify, retain smaller denominator. No outcome-based replacement.",
+    "membership": null,
+    "membership_sealed": false,
+    "followup_before_membership_seal": false,
+    "exposure": "Previously processed origin frame and retrospective design exposure; excludes prior followed-up pilot membership but does not establish untouched test, model-training absence or population sampling."
+  },
+  "transition": {
+    "risk_set": "Origin absent_in_snapshot only",
+    "one": "Origin absent and January endpoint present",
+    "zero": "Origin absent and January endpoint absent with complete qualified source coverage",
+    "null": "Unknown origin/endpoint or origin already present; preserve distinct risk exclusion reasons",
+    "april": "Separate later-snapshot sensitivity contrast; never backfill January or change previous clinical cutoffs",
+    "clinical_label": null,
+    "probability": null,
+    "features": {}
+  },
+  "execution_bounds": {
+    "query_attempts_per_snapshot": 2,
+    "identical_read_requirement": "Two separately executed read-only extraction transactions must agree byte-for-byte; not statistical independence or independent adjudication.",
+    "max_result_rows_per_trial": 100000,
+    "max_output_bytes_per_snapshot": 134217728,
+    "workspace_reservation_bytes": 5368709120,
+    "new_trial_web_searches": 0,
+    "new_trial_document_downloads": 0,
+    "automatic_retries": 0,
+    "provider_spend_usd": 0,
+    "model_calls": 0,
+    "sql": "Deterministically regenerated explicit allowlist, fixed NCTs, read-only repeatable-read transaction and ROLLBACK; no arbitrary SQL, LIMIT truncation or future predictor fields.",
+    "runner_requirement": "Unbound generated SQL contracts are not execution permission. A separately tested B0 entry point must verify exact archive/restore/schema/source ancestor proofs, code hashes, original candidate and both exclusion packs, origin query receipts and membership before dispatch. Do not relax old twelve-member runner guards.",
+    "failure": "Reserve fresh output, retain hash-chained attempts/progress/failures and no automatic repeated dispatch. Integrity/extractor defects stop affected batch; verified source-level unknowns permit descriptive report completion."
+  },
+  "decision_rules": {
+    "observability_minimum": 0.9,
+    "observability_denominator": "All sealed origin-qualified members, including January endpoint unknowns",
+    "rationale": "Operational workload/coverage threshold before considering larger feasibility work; not clinical qualification, a statistical significance rule or population accuracy claim.",
+    "class_balance": "Both observed states needed before any later predictive-expansion proposal; one event alone does not establish power or adequate training size.",
+    "stop": "One bounded feasibility cycle. If no eligible members, zero appearances, missing class or threshold failure, report disposition without sample enlargement, replacement, relaxed dates or case rescue searches.",
+    "pass": "At most eligibility for a separately specified larger feasibility sample; no fitting/calibration or clinical activation."
+  },
+  "statistics": "Explicit counts and denominators only for this purposive exposed audit. No registry-population CI, incidence, clinical power or effective sample size. Future sampling requires design weights where applicable, dependence-aware precision/power and missingness bounds. No model performance estimated here.",
+  "review": "Audit every selected source state, all positive/conflict records and supporting native rows. Separate source-bound AI development review from independent clinical truth.",
+  "clinical_activation": false,
+  "scoring_activation": false,
+  "previous_clinical_labels_changed": false,
+  "previous_next12_protocol_activated": false,
+  "all_project_tasks_complete": false
+}

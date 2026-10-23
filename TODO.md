@@ -1,5 +1,48 @@
 # Project execution checklist
 
+## B0 source-bound execution and feasibility cycle — in progress
+
+- [x] Implement separate B0 source-binding, owned read-only transport and origin-membership reconstruction.
+- [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
+- [x] Pass full project validation and freeze the origin execution request before dispatch.
+- [ ] Execute the origin-only read and seal source-bound membership without follow-up access.
+- [ ] Freeze and execute separate January/April follow-up requests for that membership.
+- [ ] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
+- [ ] Continue to the harder T6 comparison design and execution under its own gates.
+
+Origin request ed82b358... is frozen after732 full tests and independent preflight;
+no new B0 trial outcomes accessed yet. The strict
+clinical-efficacy study and broader scientific Tasks6–8 remain unqualified.
+
+## B0 registry-content contracts and schema preparation — October 22
+
+- [x] Freeze the separate B0 endpoint, selection bounds, operational coverage threshold and execution prerequisites.
+- [x] Implement non-dispatch SQL/state contracts and adversarial regression tests; retain independent peer tests.
+- [x] Verify the required columns in all three retained source schemas and seal unbound contracts/source references.
+- [x] Complete full validation and source review; retain the stage report and update memory.
+
+- [ ] Implement and validate the source-inclusive B0 runner, then seal origin-only membership before follow-up.
+
+Next implementation stage: source-inclusive B0 execution binding, then read-only
+origin result-state screening and membership sealing. The current contracts
+cannot dispatch queries; real membership remains null. The larger B0 feasibility
+cycle, T6 scientific comparisons and clinical evaluation remain unfinished.
+Local684-test full validation,26 contract/peer tests and independent schema review
+pass. Retained acceptance: planning/review-assets/registry-content-20261022-v2/acceptance.json.
+
+## Clinical validation design reassessment — October 22
+
+- [x] Reassess retained clinical evidence, local data readiness and endpoint-specific requirements.
+- [x] Write the separate operational-feasibility and harder-T6 roadmap with decision gates and data needs.
+- [x] Validate the plan, evidence references and unchanged clinical artifacts; update memory.
+
+Current recommendation: defer strict efficacy prediction; stop the exposed-case
+lookup chain. Next is a new B0 registry-results-content feasibility protocol and
+tested source/schema guards, followed by origin-only sampling. The plan is not an
+activated study. No new user files are needed initially. See
+planning/Clinical Validation Design and Data Feasibility Plan 2026-10-22.md.
+Earlier next pointers below are dated history. Broader Tasks 6–8 remain open.
+
 ## Existing-trial primary-publisher and DOI lookup — October 22
 
 - [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.

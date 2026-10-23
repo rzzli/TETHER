@@ -8,6 +8,41 @@ updated: 2026-10-22
 
 # Project goals
 
+## B0 contract/schema preparation — October 22
+
+New registry-content-feasibility-v0.1 policy freezes the separate snapshot-state
+endpoint,128-screen/32-selected caps and90% operational coverage rule. Pure
+non-dispatch registry_content contracts and26 regression/peer tests pass.
+Three retained schema audits match all mandatory columns; candidate/exclusion
+hashes and an independent27-file/source-template/journal review pass. Expanded
+full suite684 tests/no skips, probes, PowerShell syntax and package/demo pass.
+
+No B0 outcomes accessed or selected membership; no DB queries, model calls or
+execution authorization. Full archive/restore lineage revalidation and a new
+source-inclusive B0 runner remain outstanding before origin screening/sealing.
+Old twelve-member guards and all72 clinical labels unchanged. This completes
+contract/schema preparation, not the B0 feasibility cycle or clinical qualification.
+See [[B0 Registry Content Preparation 2026-10-22]].
+
+## Clinical design reassessment — October 22
+
+Planning assessment complete: strict efficacy prediction remains deferred. The
+recommended next step is a new, bounded B0 registry-results-content appearance
+audit using existing January2025/January2026/April2026 AACT inputs, after schema
+and source qualification and a fresh origin-only membership seal. At most32
+records from the exposed128 origin screen, excluding both followed-up pilots;
+no selected membership or new follow-up access yet. A source-state zero is not a
+clinical negative; April observations cannot backfill January. Prior next12 study
+remains inactive. Exact eligibility counts and source-state yield are unknown.
+
+No new user files or paid access needed initially. Plan endpoint-specific guards
+without making unrelated sponsor-discovery failures a registry-only prerequisite.
+After one finite feasibility cycle, prioritize harder T6 quality; operational
+prediction and prospective clinical evaluation require separate scientific gates.
+No old labels, H1–H6 meanings, cutoffs, scorer or cohort activation changed. See
+[[Clinical Validation Design and Data Feasibility Plan 2026-10-22]] and
+[[research-log-2026-10-22-design-reassessment]]. Older next pointers are history.
+
 ## Current primary report lookup and stop decision — October 22
 
 The frozen primary publisher lookup at6e662ed used four exact searches, one page

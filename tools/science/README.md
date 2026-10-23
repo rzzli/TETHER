@@ -5,6 +5,23 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+`registry_content` defines the new B0 snapshot-content feasibility contracts under
+`planning/protocols/registry-content-feasibility-v0.1.json`. Its SQL is explicitly
+unbound: the module has no database/network dispatch or CLI. It uses an allowlist
+of study dates and result identifiers/linkage, never efficacy values or stop reasons.
+Complete empty source rows can propose `absent_in_snapshot`; missing tables/NCTs
+and source conflicts propose `unknown`. Malformed projections, counts and truncation
+fail the batch. January and April contrasts remain separate and clinical labels
+stay null. Pure functions do not verify transport receipts or authorize execution.
+
+The source preparation under
+`data/benchmark/labels/registry-content-20261022/contracts-v1/` verified mandatory
+columns from retained technical audits and sealed synthetic, unexecuted SQL
+templates. No new outcome rows or database queries were accessed. Next implement
+a separately tested source-inclusive runner and origin membership seal; preserve
+the existing twelve-member extraction guards. Full archive/restore lineage must
+be revalidated before execution; schema compatibility alone does not pass it.
+
 `ascertainment_inputs` checks a user-supplied AACT ZIP before restoration. It bounds
 archive expansion, rejects unsafe member names, hashes the original and each member,
 reads every CRC, checks the exact PostgreSQL dump date with `pg_restore --list`, and

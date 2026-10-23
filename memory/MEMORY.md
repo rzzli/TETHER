@@ -1,5 +1,12 @@
 # Research memory index
 
+- [[research-log-2026-10-22-registry-content]] — B0 contract/schema stage complete:684 full tests/26 contract tests, independent27-file review. Finalization namespace-copy failure preserved; freshv2 acceptance passes. Runner/origin membership remain next.
+
+- [[B0 Registry Content Preparation 2026-10-22]] — Frozen registry-state policy, pure guards/26 contract tests, three source schemas and independent27-file review;684 full tests/package pass. No queries/membership. Next source-inclusive runner then origin sealing.
+
+- [[research-log-2026-10-22-design-reassessment]] — Clinical design reassessed: efficacy deferred; bounded local registry-content audit proposed, then harder T6. No new files needed initially; no study activation or outcome access.
+- [[Clinical Validation Design and Data Feasibility Plan 2026-10-22]] — Endpoint-specific feasibility, source-state negatives, data inventory, ordered gates, chronology, resource limits and prospective clinical route.
+
 - [[research-log-2026-10-22-primary-report]] — Official SID poster0507 program authenticated; no target DOI/NCT bridge/results body. Four searches/one open/one GET,63 pins/source checks and independent revise/defer decision. Stop same-case lookup; reassess clinical design/acquisition feasibility.
 - [[Primary Report Lookup and Source Readiness 2026-10-22]] — Distinct program/schedule/publication/analysis chronology, preserved rotation and DOI wording corrections, actual Crossref validation unperformed and clinical gates held.
 
