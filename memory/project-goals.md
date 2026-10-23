@@ -8,6 +8,22 @@ updated: 2026-10-22
 
 # Project goals
 
+## B0 origin membership sealed — October23
+
+Resumed user continuation after the frozen contract stage. New workflow/transport
+passes732 full tests and74 B0 tests; ten receipt-forgery/accounting defects were
+corrected before real dispatch. Origin request committed9e40e15, then116 NCTs read
+twice identically:101source-absent/15unknown. Full receipt reconstruction sealed32
+origin-only members, preserving128screen dispositions; membership2dac62ca... and
+anchor committed27c0b26 before follow-up preparation. No clinical labels or fitting.
+
+Origin extraction186.156s including ancestry; source lifecycle19.453s; first/read
+41109B; Python-parent peak114282496B, PostgreSQL memory unmeasured. Owned server
+stopped/55440closed. Follow-up preparation currently revalidates ancestry; no
+follow-up dispatch yet at this checkpoint. New evaluator20 tests pass; fresh full
+validation and later actual audit pending. Next finite B0 audit then hard T6.
+See [[B0 Registry Content Feasibility 2026-10-22]].
+
 ## B0 contract/schema preparation — October 22
 
 New registry-content-feasibility-v0.1 policy freezes the separate snapshot-state

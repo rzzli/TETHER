@@ -237,6 +237,19 @@ class RegistryContentWorkflowPeerTests(unittest.TestCase):
         with self.assertRaises(ContractError):
             self.verify()
 
+    def test_incomplete_conflicting_archive_alias_is_rejected(self):
+        inspection = {'archive': str(self.base / 'synthetic.zip'),
+                      'sha256': 'a' * 64, 'bytes': 10, 'archive_sha256': 'b' * 64}
+        with patch.object(flow, 'APPROVED_RAW', self.base), self.assertRaises(ContractError):
+            flow.archive_proof(inspection)
+
+    def test_boolean_alternate_archive_size_cannot_equal_integer_one(self):
+        inspection = {'archive': str(self.base / 'synthetic.zip'),
+                      'sha256': 'a' * 64, 'bytes': 1,
+                      'archive_sha256': 'a' * 64, 'archive_bytes': True}
+        with patch.object(flow, 'APPROVED_RAW', self.base), self.assertRaises(ContractError):
+            flow.archive_proof(inspection)
+
 
 if __name__ == '__main__':
     unittest.main()

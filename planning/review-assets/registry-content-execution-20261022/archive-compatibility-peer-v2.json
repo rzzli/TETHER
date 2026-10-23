@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-23",
+  "status": "accepted_for_reviewed_parser_and_verification_only_compatibility",
+  "reviewer": "design_reassessment independent peer agent",
+  "supersedes_review": "planning/review-assets/registry-content-execution-20261022/archive-compatibility-peer.json",
+  "scope": "Read-only code review and synthetic peer regression tests. No database, network, raw archive, dump, or actual trial-outcome access in this review.",
+  "reviewed_files": {
+    "tools/science/registry_content_workflow.py": "f799adc6faf77c6e2bb1716cff6a825f3e0fb3f1c30f4c62dd5dd24438e40ddc",
+    "tests/test_science_registry_content_workflow.py": "83ac1d16bf18aa59d2a465431637dbffcdcaa54a179869cfee9bfc5f9dd4a634",
+    "tests/test_science_registry_content_workflow_peer.py": "cf73952a1a1daa2b6094003c7e091d566ce8bc08e2f592b9f2e2cb53638450da"
+  },
+  "archive_parser_checks": {
+    "supported_conventions": [["sha256", "bytes"], ["archive_sha256", "archive_bytes"]],
+    "every_supplied_convention_requires_both_fields": true,
+    "each_pair_validated_before_comparison": true,
+    "digest_requires_64_lowercase_hex_characters": true,
+    "size_requires_positive_exact_int_excluding_bool": true,
+    "at_least_one_complete_pair_required": true,
+    "all_complete_pairs_must_agree": true,
+    "approved_raw_root_check_preserved": true
+  },
+  "resolved_findings": [
+    {
+      "probe": "Canonical sha256=A, bytes=10 plus conflicting archive_sha256=B with archive_bytes omitted",
+      "before": "Accepted; incomplete alternate convention ignored",
+      "after": "Rejected with ContractError",
+      "test": "test_incomplete_conflicting_archive_alias_is_rejected"
+    },
+    {
+      "probe": "Canonical sha256=A, bytes=1 plus archive_sha256=A, archive_bytes=true",
+      "before": "Accepted because boolean True compared equal to integer 1",
+      "after": "Rejected with ContractError before pair equality comparison",
+      "test": "test_boolean_alternate_archive_size_cannot_equal_integer_one"
+    }
+  ],
+  "legacy_verification_boundary": {
+    "exact_frozen_origin_plan_sha256": "ed82b3583f70fd108ba52c96707d9f0dc59f63693acbd10784fb3f2c821078cf",
+    "default_validation_remains_strict": true,
+    "allowance_requires_explicit_true_flag_and_origin_mode": true,
+    "plan_file_bytes_must_match_fixed_anchor": true,
+    "passed_plan_object_must_equal_anchored_file": true,
+    "current_source_inclusive_plan_regeneration_remains_required": true,
+    "only_code_inventory_substituted_from_exact_anchored_plan": true,
+    "runtime_and_query_pins_and_regenerated_sql_still_checked": true,
+    "origin_receipt_verifier_checks_owned_archived_code_copies_against_original_pins": true,
+    "run_uses_default_strict_validation": true,
+    "run_checks_live_code_before_archival_and_dispatch_and_after_reads": true,
+    "allowance_does_not_authorize_legacy_plan_dispatch_under_changed_code": true,
+    "old_twelve_member_runner_not_modified_by_this_review": true
+  },
+  "independent_test_run": {
+    "command": "python -c unittest discovery with src on sys.path, pattern test_science_registry_content_workflow_peer.py",
+    "tests_run": 15,
+    "passed": 15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "reviewed_file_hashes_stable_before_after": true,
+    "receipt_source_plan_admission_mocked": true,
+    "receipt_artifacts_synthetic": true
+  },
+  "limits": [
+    "This accepts the parser hardening and exact legacy verification boundary at the recorded workflow hash, not a new source binding or execution receipt.",
+    "The exact production origin plan hash is the code's fixed trust anchor; this review did not reread or rehash that actual plan or recertify its source lineage.",
+    "No raw source hashes, actual source identity, outcome states, membership, follow-up preparation, or successful dispatch are independently certified here.",
+    "The two malformed probes demonstrate parser defects and their fixes; they do not establish substitution in any real pinned source.",
+    "Parent-reported full-project validation and fresh v3 preparation are outside this peer test run and are not declared complete by this artifact.",
+    "The unchanged legacy verifier behavior was reviewed in code; this rerun covers the 15 independent receipt/parser tests, not every workflow compatibility unit test.",
+    "Any further code revision requires review against its new hash before relying on this acceptance for another freeze."
+  ]
+}

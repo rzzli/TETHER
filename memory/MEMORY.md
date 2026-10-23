@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-23-b0]] — Origin116 reads/32-member seal complete; follow-up preparation layout failure retained and compatibility correction underway. Current workflow/source states and strict next gates; no follow-up queries yet.
+
 - [[research-log-2026-10-22-registry-content]] — B0 contract/schema stage complete:684 full tests/26 contract tests, independent27-file review. Finalization namespace-copy failure preserved; freshv2 acceptance passes. Runner/origin membership remain next.
 
 - [[B0 Registry Content Preparation 2026-10-22]] — Frozen registry-state policy, pure guards/26 contract tests, three source schemas and independent27-file review;684 full tests/package pass. No queries/membership. Next source-inclusive runner then origin sealing.

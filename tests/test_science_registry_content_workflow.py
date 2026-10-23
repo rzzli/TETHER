@@ -72,6 +72,24 @@ class RegistryContentWorkflowTests(unittest.TestCase):
         with a, b, c, self.assertRaises(ContractError):
             flow.source_job(manifest, '2025-01-01', ['NCT00000001'], self.root / 'q.sql')
 
+    def test_actual_followup_archive_receipt_field_layout_is_supported(self):
+        restore, _, _, manifest = self.source_fixture()
+        inspection = restore / 'archive-inspection.json'
+        data = json.loads(inspection.read_text())
+        data['archive_sha256'] = data.pop('sha256')
+        data['archive_bytes'] = data.pop('bytes')
+        inspection.write_text(json.dumps(data))
+        prior_path = Path(manifest['prior_request_plans'][0]['path'])
+        prior = json.loads(prior_path.read_text())
+        prior['jobs'][0]['pins'] = [flow.pin(inspection) if Path(p['path']) == inspection else p
+                                   for p in prior['jobs'][0]['pins']]
+        prior_path.write_text(json.dumps(prior))
+        manifest['prior_request_plans'][0] = flow.pin(prior_path)
+        a, b, c = self.source_patches()
+        with a, b, c:
+            job = flow.source_job(manifest, '2025-01-01', ['NCT00000001'], self.root / 'q.sql')
+        self.assertEqual(6, len(job['pins']))
+
     def test_missing_dump_proof_rejected_before_query_creation(self):
         _, _, _, manifest = self.source_fixture()
         path = Path(manifest['prior_request_plans'][0]['path'])
@@ -152,6 +170,46 @@ class RegistryContentWorkflowTests(unittest.TestCase):
         actual = {**expected, 'sql': 'DELETE FROM ctgov.studies'}
         with patch.object(flow, 'build_plan', return_value=expected), self.assertRaises(ContractError):
             flow.validate_plan(actual, path)
+
+    def test_known_archived_origin_allowance_is_verification_only(self):
+        path = self.root / 'old-plan.json'
+        original = {'protocol_id': 'registry-content-execution-v0.1', 'mode': 'origin',
+                    'membership': None, 'code': [{'known': 'original'}], 'runtime_pins': [], 'jobs': []}
+        write_json(path, original)
+        expected = {**original, 'code': [{'known': 'revised'}]}
+        with patch.object(flow, 'ARCHIVED_ORIGIN_PLAN_SHA', flow.pin(path)['sha256']), \
+                patch.object(flow, 'build_plan', return_value=copy.deepcopy(expected)), \
+                patch.object(flow, 'check_pins') as checks:
+            with self.assertRaises(ContractError):
+                flow.validate_plan(original, path)  # dispatch/default remains strict
+            flow.validate_plan(original, path, allow_frozen_legacy_origin=True)
+            checks.assert_called_once_with([])
+
+    def test_legacy_allowance_cannot_bless_another_object_or_changed_plan_bytes(self):
+        path = self.root / 'old-plan.json'
+        original = {'protocol_id': 'registry-content-execution-v0.1', 'mode': 'origin',
+                    'membership': None, 'code': [{'known': 'original'}], 'runtime_pins': [], 'jobs': []}
+        write_json(path, original)
+        known = flow.pin(path)['sha256']
+        expected = {**original, 'code': [{'known': 'revised'}]}
+        with patch.object(flow, 'ARCHIVED_ORIGIN_PLAN_SHA', known), \
+                patch.object(flow, 'build_plan', return_value=copy.deepcopy(expected)):
+            forged = {**original, 'code': [{'known': 'substituted'}]}
+            with self.assertRaises(ContractError):
+                flow.validate_plan(forged, path, allow_frozen_legacy_origin=True)
+            path.write_text(path.read_text() + '\n')
+            with self.assertRaises(ContractError):
+                flow.validate_plan(original, path, allow_frozen_legacy_origin=True)
+
+    def test_archive_loader_rejects_missing_or_conflicting_identity(self):
+        with patch.object(flow, 'APPROVED_RAW', self.root):
+            valid = {'archive': str(self.root / 'x.zip'), 'sha256': 'a' * 64, 'bytes': 10}
+            for changes in ({'archive_sha256': 'b' * 64, 'archive_bytes': 10},
+                            {'archive_sha256': 'a' * 64, 'archive_bytes': 11}, {'bytes': True}):
+                with self.subTest(changes=changes), self.assertRaises(ContractError):
+                    flow.archive_proof({**valid, **changes})
+            with self.assertRaises(ContractError):
+                flow.archive_proof({'archive': str(self.root / 'x.zip')})
 
     def test_plan_output_reservation_is_exclusive(self):
         out = self.root / 'prepared'

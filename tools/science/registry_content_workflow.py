@@ -24,6 +24,9 @@ POLICY = ROOT / 'planning/protocols/registry-content-feasibility-v0.1.json'
 POLICY_SHA = 'a610586389c92f139bfa9714e0789c562f87a5d4012fdc1b409fbc7299dc75a6'
 MANIFEST = ROOT / 'data/benchmark/labels/registry-content-20261022/contracts-v1/source-manifest.json'
 MANIFEST_SHA = 'ba1833116d4306ebeac5fd796e81b22943c1e72285f055d27c24b14f21d2c2b9'
+# Exact origin plan committed before dispatch. Verification may use its archived
+# executing-code proofs after this loader evolves; new dispatch still checks live code.
+ARCHIVED_ORIGIN_PLAN_SHA = 'ed82b3583f70fd108ba52c96707d9f0dc59f63693acbd10784fb3f2c821078cf'
 APPROVED_RAW = Path('E:/projects_data/drug_target_agents_data/raw/aact_snapshots')
 CODE = ('tools/science/registry_content_workflow.py', 'tools/science/registry_content_transport.py',
         'tools/science/registry_content.py', 'tools/science/outcome_extract.py',
@@ -75,6 +78,26 @@ def load_pin(proof):
     return value
 
 
+def archive_proof(inspection):
+    """Normalize the two retained archive-receipt layouts without guessing."""
+    import re
+    pairs = []
+    for digest_key, size_key in [('sha256', 'bytes'), ('archive_sha256', 'archive_bytes')]:
+        require((digest_key in inspection) == (size_key in inspection), 'Incomplete archive identity convention')
+        if digest_key not in inspection:
+            continue
+        digest, size = inspection[digest_key], inspection[size_key]
+        require(isinstance(digest, str) and re.fullmatch('[0-9a-f]{64}', digest) and
+                type(size) is int and size > 0, 'Malformed archive digest/size')
+        pairs.append((digest, size))
+    require(bool(pairs) and all(pair == pairs[0] for pair in pairs),
+            'Missing or conflicting archive receipt identity')
+    digest, size = pairs[0]
+    raw = Path(inspection['archive']).resolve()
+    require(raw.is_relative_to(APPROVED_RAW.resolve()), 'Archive outside approved raw root')
+    return {'path': str(raw), 'sha256': digest, 'bytes': size}
+
+
 def origin_context():
     """Rebuild the old origin-only candidate lineage, not follow-up outcomes."""
     policy, _ = read_bound_json(POLICY, POLICY_SHA)
@@ -122,10 +145,7 @@ def source_job(manifest, snapshot, nct_ids, query_path):
                  'technical-audit.json', 'setup.py'):
         require(root / name in proofs, 'Missing restored-source ancestor: ' + name)
     archive = load_pin(proofs[root / 'archive-inspection.json'])
-    raw = Path(archive['archive']).resolve()
-    require(raw.is_relative_to(APPROVED_RAW.resolve()),
-            'Archive outside approved raw root')
-    raw_pin = {'path': str(raw), 'sha256': archive['sha256'], 'bytes': archive['bytes']}
+    raw_pin = archive_proof(archive)
     check_pins([raw_pin])
     dump = next(m for m in archive['members'] if m['name'] == 'postgres.dmp')
     require(dump['sha256'] == proofs[root / 'extracted/postgres.dmp']['sha256'],
@@ -193,12 +213,19 @@ def prepare(output, mode, membership=None):
         journal.close()
 
 
-def validate_plan(plan, plan_path):
+def validate_plan(plan, plan_path, *, allow_frozen_legacy_origin=False):
     require(isinstance(plan, dict) and plan.get('protocol_id') == 'registry-content-execution-v0.1',
             'Wrong B0 execution protocol')
     expected = build_plan(Path(plan_path).parent, plan.get('mode'), plan.get('membership'))
+    archived_origin = (allow_frozen_legacy_origin is True and plan.get('mode') == 'origin' and Path(plan_path).is_file() and
+                       sha256_file(Path(plan_path)) == ARCHIVED_ORIGIN_PLAN_SHA)
+    if archived_origin:
+        # Exact byte anchor, not a caller-supplied self-hash. Receipt verification
+        # separately checks all original archived code against these fixed pins.
+        require(load_pin(pin(Path(plan_path))) == plan, 'Archived origin object differs from pinned bytes')
+        expected['code'] = plan['code']
     require(plan == expected, 'B0 execution plan differs from source-inclusive regeneration')
-    check_pins(plan['runtime_pins'] + plan['code'])
+    check_pins(plan['runtime_pins'] + ([] if archived_origin else plan['code']))
     for job in plan['jobs']:
         check_pins([job['query']])
         require(Path(job['query']['path']).read_bytes() == job['query']['request']['sql'].encode('utf-8'),
@@ -215,6 +242,8 @@ def run(plan_proof, output):
     try:
         plan = load_pin(plan_proof)
         validate_plan(plan, Path(plan_proof['path']))
+        # An archived-verification allowance never authorizes executing changed code.
+        check_pins(plan['runtime_pins'] + plan['code'])
         write_json(output / 'effective-plan.json', plan)
         code_proofs = []
         for proof in plan['code']:
@@ -289,7 +318,7 @@ def verify_origin_run(origin_run):
     require(Path(report['effective_plan']['path']).resolve() == root / 'effective-plan.json',
             'Effective origin plan locator differs')
     require(load_pin(report['effective_plan']) == plan, 'Effective origin plan differs')
-    validate_plan(plan, Path(report['plan']['path']))
+    validate_plan(plan, Path(report['plan']['path']), allow_frozen_legacy_origin=True)
     code_proof = report.get('executed_code_proofs')
     require(isinstance(code_proof, dict) and Path(code_proof['path']).resolve() ==
             root / 'executed-code-proofs.json', 'Missing owned executing-code receipt')

@@ -1,6 +1,7 @@
 # B0 registry-content feasibility execution
 
-Status: **in progress; origin request frozen, new result extraction not yet run**.
+Status, updated October23: **origin extraction and membership sealing complete;
+follow-up preparation and final feasibility audit in progress**.
 
 The [design](Clinical%20Validation%20Design%20and%20Data%20Feasibility%20Plan%202026-10-22.md)
 and [B0 protocol](protocols/registry-content-feasibility-v0.1.json) define an exposed,
@@ -62,3 +63,61 @@ it did not repeat bulk archive hashes or inspect new outcomes.
 
 Clinical labels, numerical predictors, probabilities and scorer training remain
 withheld. Full project completion is not claimed.
+
+## October23 origin execution checkpoint
+
+The origin request was committed at `9e40e15` before dispatch. It completed two
+identical read-only extracts of116 NCTs:101 proposed `absent_in_snapshot`,15
+`unknown`, and no proposed present states. These are registry-content states,
+not efficacy labels or true event incidence. The complete extraction receipt,
+source/code ancestry, native bytes, command arguments/accounting and lifecycle
+were reconstructed before membership sealing.
+
+The sealed roster has32 origin-absent members. All128 screen dispositions remain:
+32selected,15origin-unknown,12excluded prior-pilot members and69eligible beyond cap.
+No follow-up was used. The membership SHA256 is
+`2dac62ca0c2b7fe37f8daa1c7da7b2b2ea7ada7e328c89830130c64cc5bf651d`;
+the [tracked membership anchor](review-assets/registry-content-execution-20261022/origin-membership-anchor.json)
+was committed at `27c0b26` before follow-up preparation.
+
+The origin first read is41,109bytes, repeated exactly. Total runner time was
+186.156seconds including source revalidation; source lifecycle/read time was
+19.453seconds. Python-parent peak memory was114,282,496bytes. PostgreSQL peak
+memory was not instrumented. The owned source server stopped cleanly and port55440
+closed. Runtime provider spending and model calls were zero.
+
+Follow-up preparation revalidates this source-bound seal and the separate
+January/April2026 archive/restore identities. No follow-up has been dispatched at
+this checkpoint. A new evaluator and20 synthetic/peer tests check source-order,
+receipt, unknown, missingness-threshold and native-envelope audit behavior; its
+full project validation and actual source acceptance remain separate checks.
+
+## Follow-up preparation correction — October23
+
+The first preparation stopped before any follow-up query: the newer archive
+inspection receipts use `archive_sha256`/`archive_bytes`, whereas the older origin
+receipt uses `sha256`/`bytes`. A real-format regression reproduced the assumption
+failure. The loader now accepts the two explicit complete layouts, rejects missing
+or conflicting identities and still verifies original archive/dump bytes. Failed
+preparation, its journal and failing test output remain untouched.
+
+The [compatibility amendment](protocols/registry-content-archive-compatibility-v0.1.json)
+preserves verification of the exact archived origin execution after that loader
+changes. Strict validation remains default; origin-receipt verification can use
+only the original byte-pinned plan and its verified archived code. New dispatch
+cannot use this exception and must match current executing-code pins. Old origin
+outputs and membership are not rewritten. A fresh follow-up request is being
+prepared;98 B0 regressions pass, including legacy-identity and strict-dispatch
+checks. No follow-up results were accessed during either preparation attempt.
+
+Before dispatch, peer review added two malformed-alias regressions. The parser
+now rejects incomplete alternate identities and validates every supplied digest/
+size type before equality (so boolean true cannot equal integer1). Both initially
+failing probes now pass. The prepared v2 request is retained as superseded before
+dispatch, with its preparation code copied unchanged. Fresh v3 request SHA256
+`1d7bbd86e96eefe3c4908dc4b58858bd5b04351e88cbf06f289884f2fe7d9ba7`
+binds the hardened code and the same membership. All100 B0 tests and758 full tests,
+required probes, PowerShell syntax and packaged demo pass. Independent preflight
+reconstructed the v3 plan, both source schemas and exact2187-byte SQL files, and
+rehashes33 named small/runtime/code proofs. Bulk source verification was performed
+by preparation and remains a runtime gate; the peer does not claim to repeat it.
