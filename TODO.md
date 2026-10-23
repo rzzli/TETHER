@@ -6,7 +6,7 @@
 - [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
 - [x] Pass full project validation and freeze the origin execution request before dispatch.
 - [x] Execute the origin-only read and seal source-bound membership without follow-up access.
-- [ ] Freeze and execute separate January/April follow-up requests for that membership.
+- [x] Freeze and execute separate January/April follow-up requests for that membership.
 - [ ] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
 - [ ] Continue to the harder T6 comparison design and execution under its own gates.
 

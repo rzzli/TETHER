@@ -1,7 +1,7 @@
 # B0 registry-content feasibility execution
 
-Status, updated October23: **origin extraction and membership sealing complete;
-follow-up preparation and final feasibility audit in progress**.
+Status, updated October23: **origin membership and both follow-up reads complete;
+final source-inclusive feasibility audit in progress**.
 
 The [design](Clinical%20Validation%20Design%20and%20Data%20Feasibility%20Plan%202026-10-22.md)
 and [B0 protocol](protocols/registry-content-feasibility-v0.1.json) define an exposed,
@@ -121,3 +121,19 @@ required probes, PowerShell syntax and packaged demo pass. Independent preflight
 reconstructed the v3 plan, both source schemas and exact2187-byte SQL files, and
 rehashes33 named small/runtime/code proofs. Bulk source verification was performed
 by preparation and remains a runtime gate; the peer does not claim to repeat it.
+
+## Follow-up execution checkpoint — October23
+
+The final follow-up request and compatibility amendment were committed at
+`0c76a90` before execution. Both snapshots completed exact paired reads for the
+same32 members. The terminal report SHA256 is
+`fe639692c0c6f1b70e874567a934c35509e862168e8448b5d257f38f46a83e58`.
+January's first read is11,373bytes and April's106,692bytes; each repeated exactly.
+Total runner elapsed time is101.344seconds, including source revalidation.
+Python-parent peak is117,866,496bytes; PostgreSQL peak remains unmeasured.
+Both owned source servers stopped and ports closed. No model calls/provider spend.
+
+The source-inclusive evaluator must still reconstruct the receipts/states,
+audit all96 selected snapshot envelopes (or explicit missing rows), report origin
+annotation dependence and apply the frozen January-only feasibility rule. No
+scientific decision or qualified clinical outcome follows merely from collection.

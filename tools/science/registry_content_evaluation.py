@@ -186,6 +186,41 @@ def audit_native_rows(members, frames):
     return audit
 
 
+def dependence_diagnostics(members, candidates):
+    """Describe exact origin-key overlap; never estimate independent sample size."""
+    indexed = {c['nct_id']: c for c in candidates}
+    require(len(indexed) == len(candidates) and set(members) <= set(indexed),
+            'Dependency context must resolve selected origin members')
+    parent = {m: m for m in members}
+    def find(value):
+        while parent[value] != value:
+            parent[value] = parent[parent[value]]
+            value = parent[value]
+        return value
+    dimensions = {}
+    for kind in ('historical_drug', 'target', 'sponsor_verbatim', 'product_verbatim'):
+        keys = {}
+        missing = 0
+        for member in members:
+            values = indexed[member]['program']['dependence_keys'].get(kind, [])
+            require(isinstance(values, list) and all(isinstance(v, str) for v in values),
+                    'Malformed origin dependency keys')
+            if not values:
+                missing += 1
+            for value in set(values):
+                keys.setdefault(value, []).append(member)
+        for group in keys.values():
+            for member in group[1:]:
+                parent[find(member)] = find(group[0])
+        dimensions[kind] = {'distinct_recorded_keys': len(keys),
+                            'keys_shared_by_multiple_trials': sum(len(v) > 1 for v in keys.values()),
+                            'members_with_missing_keys': missing}
+    return {'selected_trials': len(members), 'dimensions': dimensions,
+            'observed_joint_key_components': len({find(m) for m in members}),
+            'effective_sample_size': None,
+            'interpretation': 'Exact origin annotations flag possible dependence; aliases, shared biology and unrecorded links may be missed. Not independent events, population sampling or validated effective sample size.'}
+
+
 def evaluate(membership_proof, followup_proof, output):
     output = Path(output).resolve()
     journal = RunJournal(output, kind='build')
@@ -210,6 +245,9 @@ def evaluate(membership_proof, followup_proof, output):
         origin_result = origin_report['results'][0]
         frames['2025-01-01'] = {'source': origin_result['first'], 'states': origin_states}
         audit = audit_native_rows(membership['nct_ids'], frames)
+        candidate_frame = load_pin(membership['candidate_freeze'])
+        dependence = dependence_diagnostics(membership['nct_ids'], candidate_frame['candidates'])
+        write_json(output / 'dependence-diagnostics.json', dependence)
         write_json(output / 'native-row-audit.json', audit)
         write_json(output / 'contrasts.json', compared)
         results = origin_report['results'] + followup_report['results']
@@ -234,6 +272,7 @@ def evaluate(membership_proof, followup_proof, output):
                   'source_state_audits': len(audit), 'located_native_envelopes': sum(a['native_locator'] is not None for a in audit),
                   'contrasts': pin(output / 'contrasts.json'), 'native_row_audit': pin(output / 'native-row-audit.json'),
                   'resources': pin(output / 'resources.json'), 'decision': compared['decision'],
+                  'dependence_diagnostics': pin(output / 'dependence-diagnostics.json'),
                   'executed_code_proofs': pin(output / 'executed-code-proofs.json'),
                   'views': compared['views'], 'clinical_activation': False, 'training_allowed': False,
                   'all_project_tasks_complete': False}

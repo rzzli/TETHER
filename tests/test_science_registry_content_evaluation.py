@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 from asof.serde import ContractError, fingerprint
-from tools.science.registry_content_evaluation import audit_native_rows, compare_states
+from tools.science.registry_content_evaluation import audit_native_rows, compare_states, dependence_diagnostics
 from tools.science.registry_content_workflow import pin
 
 
@@ -110,6 +110,21 @@ class RegistryContentEvaluationTests(unittest.TestCase):
             state['state'] = 'absent_in_snapshot'
             with self.assertRaises(ContractError):
                 audit_native_rows([nct], frames)
+
+    def test_origin_dependency_keys_are_descriptive_not_independent_counts(self):
+        members = ['NCT00000001', 'NCT00000002', 'NCT00000003']
+        candidates = [{'nct_id': n, 'program': {'dependence_keys': {
+            'target': ['target:shared'] if index < 2 else [],
+            'sponsor_verbatim': ['sponsor:shared'] if index > 0 else []}}}
+            for index, n in enumerate(members)]
+        result = dependence_diagnostics(members, candidates)
+        self.assertEqual(1, result['observed_joint_key_components'])
+        self.assertEqual(1, result['dimensions']['target']['members_with_missing_keys'])
+        self.assertIsNone(result['effective_sample_size'])
+
+    def test_dependency_context_cannot_silently_drop_a_selected_member(self):
+        with self.assertRaises(ContractError):
+            dependence_diagnostics(['NCT00000001'], [])
 
 
 if __name__ == '__main__':

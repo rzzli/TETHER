@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "source_audit_recipe_frozen_before_final_evaluation",
+  "at_utc": "2026-10-23T20:15:39.921385+00:00",
+  "implementation": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\registry_content_evaluation.py",
+    "sha256": "d4d721be42cf7a61341d60bc0e0d3339aba9396e60b008bfc6126cd8fb6efbcd",
+    "bytes": 18707
+  },
+  "tests": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_registry_content_evaluation.py",
+      "sha256": "62b80abcd2ba6722ed29fa44df046a819d9a99294b565d1f6e56a8ff4533ddee",
+      "bytes": 6881
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_registry_content_evaluation_peer.py",
+      "sha256": "1598e52794208a6b7a41b04b6ca6f6eb690cdd857148bed449dc41261f96e206",
+      "bytes": 13292
+    }
+  ],
+  "membership": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\membership-v1\\membership.json",
+    "sha256": "2dac62ca0c2b7fe37f8daa1c7da7b2b2ea7ada7e328c89830130c64cc5bf651d",
+    "bytes": 59822
+  },
+  "origin_report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\extraction-origin-v1\\report.json",
+    "sha256": "32f1c86577342f7965a046b68ae61fbd8365a02b2736c803bb756daf39b46adf",
+    "bytes": 3396
+  },
+  "followup_report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\registry-content-20261022\\extraction-followup-v1\\report.json",
+    "sha256": "fe639692c0c6f1b70e874567a934c35509e862168e8448b5d257f38f46a83e58",
+    "bytes": 5463
+  },
+  "validation": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\registry-content-execution-20261022\\evaluation-full-validation.json",
+    "sha256": "f85154ad1796375756305895b05eb5ae66537bb21ea9b5eee0b29b03c49fec24",
+    "bytes": 471
+  },
+  "clinical_activation": false,
+  "training_allowed": false,
+  "selection_or_feasibility_threshold_changed": false,
+  "dependence_diagnostics_scope": "Descriptive exact origin key overlap; no effective sample size",
+  "prospective_registration_or_untouched_outcome_claim": false
+}

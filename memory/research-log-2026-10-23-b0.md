@@ -56,3 +56,19 @@ T6 top-one challenge. Proposed T6 needs a separate versioned cap1 contract share
 across baselines, role schemas, backend and verifier, exact source-only task
 selection and sealed independent AI references before model outputs. No clinical
 prediction, genetics features or T2–T5/H6 activation from operational states.
+
+## Later checkpoint: final follow-up collection completed
+
+The earlier transient process boundary above is superseded. Both parser edge
+guards were fixed and tested before dispatch. Preparedv2 was preserved as
+superseded/unused; freshv3 plan1d7bbd86... and code were frozen at0c76a90 after
+758 full tests/probes/package and independent preflight. Final source-only
+preparation and runtime replay verified the unchanged old origin receipt through
+its exact archival exception; no old file was rewritten.
+
+Actual follow-up execution completed. Reportfe639692c0c6f1b70e874567a934c35509e862168e8448b5d257f38f46a83e58;
+Jan11373B/Apr106692B first reads, each repeated identically,101.344s total including
+source checks, parentpeak117866496B. Both source servers stopped/portsclosed.
+No predictive/clinical labels, model calls or spending. Evaluator native-state
+audit and decision pending;20 original evaluator tests plus2 descriptive dependence
+tests pass, fresh full760 suite running. Actual source peer review requested.
