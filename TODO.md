@@ -5,13 +5,14 @@
 - [x] Implement separate B0 source-binding, owned read-only transport and origin-membership reconstruction.
 - [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
 - [x] Pass full project validation and freeze the origin execution request before dispatch.
-- [ ] Execute the origin-only read and seal source-bound membership without follow-up access.
+- [x] Execute the origin-only read and seal source-bound membership without follow-up access.
 - [ ] Freeze and execute separate January/April follow-up requests for that membership.
 - [ ] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
 - [ ] Continue to the harder T6 comparison design and execution under its own gates.
 
-Origin request ed82b358... is frozen after732 full tests and independent preflight;
-no new B0 trial outcomes accessed yet. The strict
+Origin request ed82b358... was frozen after732 full tests and independent preflight.
+October23 origin read/reconstruction completed; membership2dac62ca... seals32
+origin-absent trials before follow-up. All128 dispositions retained. The strict
 clinical-efficacy study and broader scientific Tasks6–8 remain unqualified.
 
 ## B0 registry-content contracts and schema preparation — October 22
@@ -21,11 +22,11 @@ clinical-efficacy study and broader scientific Tasks6–8 remain unqualified.
 - [x] Verify the required columns in all three retained source schemas and seal unbound contracts/source references.
 - [x] Complete full validation and source review; retain the stage report and update memory.
 
-- [ ] Implement and validate the source-inclusive B0 runner, then seal origin-only membership before follow-up.
+- [x] Implement and validate the source-inclusive B0 runner, then seal origin-only membership before follow-up.
 
-Next implementation stage: source-inclusive B0 execution binding, then read-only
-origin result-state screening and membership sealing. The current contracts
-cannot dispatch queries; real membership remains null. The larger B0 feasibility
+That implementation stage completed October23: the separate source-inclusive
+runner sealed32 origin members. Pure contracts themselves cannot dispatch queries.
+Next are separately frozen follow-up and the all-member audit. The larger B0 feasibility
 cycle, T6 scientific comparisons and clinical evaluation remain unfinished.
 Local684-test full validation,26 contract/peer tests and independent schema review
 pass. Retained acceptance: planning/review-assets/registry-content-20261022-v2/acceptance.json.
