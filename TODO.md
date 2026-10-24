@@ -8,15 +8,34 @@
 - [x] Execute the origin-only read and seal source-bound membership without follow-up access.
 - [x] Freeze and execute separate January/April follow-up requests for that membership.
 - [x] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
-- [ ] Continue to the harder T6 comparison design and execution under its own gates.
+- [x] Continue to the harder T6 comparison design and execution under its own gates.
 
-### Harder T6 top-one development — in progress October23
+### Harder T6 top-one development — completed October23
 
 - [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
 - [x] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
 - [x] Seal two independent AI source reviews and third-review reconciliation before inference.
-- [ ] Execute and source-verify four paired arms; seal outputs before answer join.
-- [ ] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
+- [x] Execute and source-verify four paired arms; seal outputs before answer join.
+- [x] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
+
+All32 arms verified;48 native calls; prediction seal committed before answer join.
+AsOf6/8, adapted Virtual Biotech6/8, lexical5/8, provider-score3/7 applicable
+decisions agree with the AI source reference. Three ties/two none-sufficient answers
+limit interpretation; neither model abstained. All13 distinct selected and all16
+offered original rows passed source checks.800 tests/probes/package pass.
+Retained acceptance: planning/review-assets/t6-topone-20261023/final-acceptance.json.
+
+### Remaining scientific disposition — October23
+
+- [x] Reconcile original Tasks6–8 and the conditional prospective-design branch against retained feasibility results.
+- [x] Specify the non-dispatch prospective contract, unresolved prerequisites and reopening evidence.
+- [ ] Qualify independent scientific references and clinical outcomes/predictors/power before completing original Tasks6–7.
+- [ ] Execute T2–T5/H6 only if their separate feasibility and data gates pass.
+
+See planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md.
+These open scientific tasks have no currently qualified execution package. B0
+expansion stays stopped; no new cohort, fitting, registration or model call is
+activated by a completed engineering or design milestone.
 
 See planning/Harder T6 Source Prioritization 2026-10-23.md. B0 prediction expansion
 has stopped under its fixed rule; this separate T6 development study does not
@@ -362,8 +381,9 @@ All real dossier probabilities remain null. AUROC/Brier comparisons against Virt
 Biotech/baselines and scientific ablations cannot be estimated from these inputs.
 AI-assisted review and source-copy fidelity cannot replace independent truth.
 
-Scientific Task 6 completion remains blocked under the user's failure rule. Tasks
-7-8 are not started. The development substeps and bounded seven-assessment phase are finished; clinical execution stops
+Scientific Task 6 completion remains blocked under the user's failure rule.
+Task7's source-only T6 development branch subsequently completed October23;
+its locked clinical branch and conditional Task8 remain unqualified. The development substeps and bounded seven-assessment phase are finished; clinical execution stops
 at the remaining scientific/comparator gates. See the October 18 Task 6 report.
 The original proposals and sealed outputs remain preserved. Provider spending is $0;
 no public registration, clinical success claim or locked evaluation is made.

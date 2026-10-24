@@ -116,3 +116,28 @@ Log data/cache/t6-topone-execution-20261023.log. Await terminal report and seal,
 then postseal t6_topone_evaluation.evaluate; references never model parents.
 Clinical training/probabilities withheld. Agent review usage is outside runtime
 provider/native accounting; no unqualified claim that AI review is economically free.
+
+## T6 final acceptance and remaining scientific disposition
+
+Native execution and post-seal evaluation both exited0. All32 arms completed and
+source-verified;48 native calls; owned server stopped/portclosed;2749.875seconds;
+parentpeak663756800B. Predictionseal59c4ec60... committeda31e228 before answerjoin.
+Evaluation035acb44... verified source/accounting/transcript and all13 distinct
+selected original rows. Independent blinded originalauditab583afc... passed all16
+offered rows/16locators/21files/794765685B. Full800 tests/probes/package passed.
+Closeoutacceptancec1650d23... verifies retained evidence and original72labelhashes.
+Its first attempt expected bytes on peer hash-only pins; fixed the closeout check
+without touching runtime/authoritative outputs. No new native dispatch.
+
+AsOf6/8 and adaptedVB6/8 reference agreement, lexical5/8, provider3/7 applicable.
+Reference3singletons/3ties/2none; no model abstentions on insufficient tasks.
+Models chose sameIDs7/8; adaptedworkflow40calls versusAsOf8, no inferential claim.
+Source-only AI reference and purposive5case/8task design do not establish clinical
+truth or original expert-dossier objective. Repeated full-parent source replay is
+a measured scaling concern, not permission to weaken lineage verification.
+
+Remaining Scientific Gates and Prospective Design2026-10-23 retains original
+Tasks6–8, H1–H6, the failedB0stop and a separately prospective endpoint/ascertainment/
+independence/power/predictor contract. No new trial search/cohort, featuretraining,
+probability, clinicalactivation, paidaccess or publicregistration. No exact missing
+user file established. This dated log supersedes live-handle checkpoints above.

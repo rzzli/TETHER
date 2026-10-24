@@ -1,10 +1,13 @@
 # AsOf target-evaluation agents
 
 The October23 [harder T6 challenge](planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md)
-now has eight source-frozen tasks and sealed independent AI source references.
-The four-arm local comparison is running after800 passing local tests. No final
-comparison result or clinical validation is claimed yet; earlier entries below
-record their dated checkpoints.
+is complete as a bounded development comparison:32 source-verified arms,48 native
+calls and800 passing local tests. AsOf and adapted Virtual Biotech each agree with
+the AI source reference on6/8 tasks, lexical5/8, provider-score3/7 applicable tasks.
+Three reference ties/two none-sufficient tasks limit interpretation; neither model
+abstained. All16 offered original rows passed audit. These results establish no
+clinical superiority. The [remaining scientific gates and prospective design](planning/Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md)
+keep original Tasks6–8 open. Earlier entries below are dated checkpoints.
 
 The October23 [B0 feasibility audit](planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md)
 verified all96 selected snapshot-state pointers. January coverage is17/32 (53.125%),

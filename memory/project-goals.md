@@ -8,7 +8,7 @@ updated: 2026-10-23
 
 # Project goals
 
-## Harder T6 comparison active — October23 evening
+## Harder T6 comparison complete; scientific gates remain — October23 evening
 
 800 full local tests/probes/package pass. Commit eca1dff adds guarded cap1 tasks,
 source-only references and post-seal evaluation; legacy cap3 fingerprints retained.
@@ -18,12 +18,19 @@ reviews sealed e08003c; third reconciliation/reference c827e9ce... committed6e56
 before native dispatch. References retain3singletons/3ties/2abstentions, no forced
 ranking or clinical truth. Two source reviews cover all16 candidates each.
 
-Execution started under runs/t6-topone-20261024T033651Z (October23 Pacific), current
-unified session87273/Python PID4744. On resume inspect that handle/log/report before
-any action; do not restart due to observation timeout. Source preflight is live;
-native dispatch/results not yet claimed. Next source-inclusive verification,
-prediction seal, answer join/original-row audit and retained final report/backup.
+Execution completed under runs/t6-topone-20261024T033651Z (October23 Pacific):
+32/32 arms completed and verified,48 native calls,2749.875seconds. Owned native
+server stopped and port closed. Prediction seal59c4ec60... committeda31e228 before
+answer join. Post-seal evaluator session25303 exited0; report035acb44... verifies
+all32 arms and13 distinct selected original rows. Independent original-candidate
+audit passed16/16 offered rows (reportab583afc...);21 original files/794765685bytes.
+Acceptancec1650d23... passes. AsOf6/8, adaptedVB6/8, lexical5/8, provider3/7
+applicable. Three ties/two none-sufficient references; neither model abstained.
+Earlier87273/4744 and25303/23536 handles are terminal; do not restart them.
 All numerical features empty/probabilities null; broader scientific Tasks6–8 open.
+Remaining-gate/prospective-design disposition written without new dispatch or
+clinical activation. B0 expansion stays stopped; no specific missing user file.
+See [[Remaining Scientific Gates and Prospective Design 2026-10-23]].
 See [[Harder T6 Source Prioritization 2026-10-23]]. Earlier entries are checkpoints.
 
 ## B0 finite cycle completed — October23

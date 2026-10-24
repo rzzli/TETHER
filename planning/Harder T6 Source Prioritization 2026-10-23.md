@@ -54,8 +54,8 @@ probabilities null; zero provider spending and no automatic call retries.
 - [x] Validate cap-one changes and preserve legacy behavior.
 - [x] Freeze source-only tasks/packets, screening dispositions and provenance.
 - [x] Seal two independent source reviews, reconcile and freeze references.
-- [ ] Execute four paired arms, verify sources/accounting and seal outputs.
-- [ ] Evaluate descriptive prioritization and audit originals; retain limitations.
+- [x] Execute four paired arms, verify sources/accounting and seal outputs.
+- [x] Evaluate descriptive prioritization and audit originals; retain limitations.
 
 The broader clinical study, genetics-derived scoring, T2–T5 and H6 remain
 conditional later work, with their existing qualification gates unchanged.
@@ -113,3 +113,63 @@ instrumented. This is a partial observation, not a full-system peak or proof of
 the cause of slow source replay. Repeated full-source verification is a measured
 scaling concern. Any later optimization must preserve complete lineage, eligibility
 and mutation detection; the current frozen run keeps its original checks.
+
+## Final development results — October23
+
+All32 arms completed and passed source-inclusive semantic verification. The
+48 native calls used the pinned local Qwen model; the owned native server stopped
+and its port closed. Execution elapsed2749.875seconds; measured Python-parent peak
+663,756,800bytes. Native/GPU peak was not instrumented by the launcher; the partial
+OS observation above remains separate. Sum of arm execution times was202.296seconds;
+the total also includes startup, source reconstruction, verification and cleanup.
+
+The prediction seal59c4ec60... was committed at`a31e228` before the evaluator
+opened reference answers. The evaluator independently reconstructed source-bound
+tasks, verified all32 results/accounting/transcripts and audited all13 distinct
+selected original rows. A separate agent, blinded to references and selections,
+audited all16 offered original rows,16 physical locators,21 original files and
+794,765,685bytes; no source discrepancies were found. It also verified the explicit
+request-layer applicability annotation without treating it as a raw source field.
+
+| Arm | Agreement with AI reference | Native calls | Input/output tokens | Reference context mismatches | Abstentions |
+|---|---|---|---|---|---|
+| AsOf | 6/8 | 8 | 26,777 / 449 | 1 | 0 |
+| Adapted Virtual Biotech | 6/8 | 40 | 138,334 / 2,252 | 1 | 0 |
+| Lexical | 5/8 | 0 | 0 / 0 | 0 | 0 |
+| Provider score | 3/7 applicable | 0 | 0 / 0 | 3 | 0 |
+
+One provider-score task was inapplicable and excluded from its agreement denominator.
+References have3 singleton best sets,3 ties and2 none-sufficient decisions; five
+carry high uncertainty and three moderate uncertainty. Ties count any admissible
+best candidate as agreement. Neither model abstained on the insufficient TNF and
+IL23A literature tasks. The model arms selected the same IDs on7/8 tasks and achieved
+identical aggregate agreement, despite the adapted arm using five times as many
+native calls. These are descriptive observations, not a significance test, a
+therapeutic accuracy estimate or a claim of superior full-dossier quality/cost.
+
+Retained outputs:
+
+- Run: `runs/t6-topone-20261024T033651Z/`.
+- Evaluation: `data/benchmark/labels/t6-topone-20261023/evaluation-v1/report.json`,
+  SHA256`035acb44b5b19e18a02e37e257647bff0f71e88021575025de41f894755a76fd`.
+- Independent offered-row audit: `data/benchmark/labels/t6-topone-20261023/candidate-original-audit-v1/report.json`,
+  SHA256`ab583afcc7fa54afecf5a89cdf7f4611c1a6670733c1227a6a76af923bf7ee5e`.
+- Tracked acceptance: `planning/review-assets/t6-topone-20261023/final-acceptance.json`.
+
+The closeout helper initially assumed the peer hash-only pins contained a byte
+count; that check failed before writing acceptance. It was corrected to verify the
+declared hash directly. Peer preliminary failures (system Python lacked pyarrow;
+request annotation required explicit comparison) remain retained. No source or
+scientific finding was repaired by altering a frozen run.
+
+This milestone is complete within its bounded scope. Five purposive cases/eight
+two-record tasks and source-only AI adjudication do not qualify independent
+clinical truth, the original approximately50-pair expert dossier audit, H1–H4 or
+H6. The comparator is an adapted role workflow, not the complete upstream system.
+All numerical features remain empty and probabilities null. Runtime provider
+spending is$0; AI-review/Codex usage is outside that accounting.
+
+The [remaining-gate disposition](Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md)
+preserves the conditional prospective clinical design and the open scientific
+Tasks6–8. B0 operational expansion stays stopped. No new cohort or model dispatch
+is implied by this development result.

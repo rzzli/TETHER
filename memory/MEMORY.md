@@ -1,6 +1,8 @@
 # Research memory index
 
-- [[research-log-2026-10-23-b0]] — Origin116 reads/32-member seal complete; follow-up preparation layout failure retained and compatibility correction underway. Current workflow/source states and strict next gates; no follow-up queries yet.
+- [[research-log-2026-10-23-b0]] — B0 finite audit complete,53.125% coverage stops expansion; harder T6 complete,32 verified arms/48 calls,16 original offered rows,800 tests. Scientific Tasks6–8 remain gated.
+- [[Harder T6 Source Prioritization 2026-10-23]] — Eight paired top-one tasks, source-only AI references before inference, descriptive results, original-row audits and resource limits.
+- [[Remaining Scientific Gates and Prospective Design 2026-10-23]] — Remaining original requirements, reopening evidence and non-dispatch prospective contract; no new clinical activation.
 
 - [[research-log-2026-10-22-registry-content]] — B0 contract/schema stage complete:684 full tests/26 contract tests, independent27-file review. Finalization namespace-copy failure preserved; freshv2 acceptance passes. Runner/origin membership remain next.
 

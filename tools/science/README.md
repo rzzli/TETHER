@@ -17,6 +17,12 @@ before local inference and verifies owned-process cleanup before prediction seal
 `t6_topone_evaluation` joins answers only after source-inclusive execution checks.
 Implementation/fixture tests alone do not establish actual execution or scientific
 accuracy; see `planning/Harder T6 Source Prioritization 2026-10-23.md` for status.
+The October23 execution completed32 source-verified arms/48 native calls; post-seal
+evaluation audited13 distinct selected originals and a separate audit checked all16
+offered originals.800 local tests pass. AsOf and the adapted role arm both agree
+with the AI reference on6/8 tasks; this does not establish clinical superiority.
+The remaining scientific gates/prospective design are documented separately;
+original Tasks6–8 remain open, with no new clinical activation or model dispatch.
 
 The B0 workflow/transport/evaluation modules now implement the separately frozen
 source-inclusive cycle: owned read-only local servers, paired exact extracts,
