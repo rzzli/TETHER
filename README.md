@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October24 [prospective frame preparation](planning/Prospective%20Frame%20Preparation%202026-10-24.md)
+passes834 local tests, probes and packaging. The exact source-readiness request
+and offline complete-frame guards are implemented;34 new tests also pass without
+ignored data in an isolated checkout. No trial query or clinical prediction ran.
+Exposure inventory and bounded live-source qualification are the next steps.
+
 The October23 [harder T6 challenge](planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md)
 is complete as a bounded development comparison:32 source-verified arms,48 native
 calls and800 passing local tests. AsOf and adapted Virtual Biotech each agree with

@@ -44,3 +44,24 @@ Next implemented work: exact offline request builder and complete-frame guards f
 the archived metadata. Its live query semantics remain unqualified until a separately
 sealed bounded transport step. Existing user authorization permits safe sequential
 preparation; no new human approval barrier was introduced.
+
+## October24 continuation: offline request preparation completed
+
+Revalidated worktree rather than rerunning stale source/model jobs.34 new synthetic
+tests passed, but root found ignored metadata dependence in fixture setup. Tracked
+the four small original schema responses and changed only test source lookup.
+Original reviewed test bytes retained; runtime/peer tests unchanged.34 tests then
+passed in isolated clean source copy; full834/no skips, probes, PowerShell syntax
+and wheel/dependency-free demo passed in139.047seconds.
+
+Fresh actualUTC request sealed in request-20261024T153346Z, contract3c92d09a...
+for R2026-10-24/closed2026-09-24..2026-10-23. Exact query generated offline only;
+source-dispatchfalse, live transport false, exposure inventory incomplete, Fnull.
+Source/protocol/code/receipt pins verified. Original clinical artifacts remain
+unchanged by hash-only checks. No study/member/outcome/model/provider operation.
+
+Next complete origin/membership exposure inventory and bounded source transport,
+then actual server qualification before any deterministic member/source-rule audit.
+500-record cap remains a hard stop, not a completeness claim; unknown capacity is
+not failed scientific rule availability. Do not slide the frozen date window,
+truncate frame, revive B0 or claim original scientific Tasks6–8 complete.

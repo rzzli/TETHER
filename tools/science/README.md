@@ -5,6 +5,16 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+`prospective_frame` builds a dated non-dispatch source-readiness request from the
+pinned protocol and archived official schema. `build_frame` reserves output and
+journals failures; `verify_build` checks code/source/request pins; `validate_frame`
+checks offline original-response manifests, complete terminal counts, token/ID
+uniqueness, projection/byte/time caps and deterministic all-member screening.
+It contains no HTTP client. Offline validation never qualifies live transport or
+activates a clinical cohort. The34 synthetic tests use tracked small schema
+fixtures; full834 tests and an isolated clean-checkout check pass. Actual state
+and remaining source gates: `planning/Prospective Frame Preparation 2026-10-24.md`.
+
 `t6_challenge` adds a separate source-only case/category task layer for the harder
 top-one development comparison. It preserves the legacy complete-ten-case guard,
 loads each full admitted parent world, retains every screening disposition and

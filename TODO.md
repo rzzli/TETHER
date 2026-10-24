@@ -33,7 +33,7 @@ Retained acceptance: planning/review-assets/t6-topone-20261023/final-acceptance.
 - [ ] Qualify independent scientific references and clinical outcomes/predictors/power before completing original Tasks6–7.
 - [ ] Execute T2–T5/H6 only if their separate feasibility and data gates pass.
 
-### Prospective endpoint-readiness protocol — in progress October23
+### Prospective endpoint-readiness protocol — completed October23
 
 - [x] Verify the official source-defined sampling route, endpoint/reference rules and statistical activation gates.
 - [x] Freeze a non-dispatch readiness protocol with finite bounds, source projections and pass/revise/stop rules.
@@ -45,10 +45,23 @@ See planning/Prospective Endpoint Readiness 2026-10-23.md and its versioned prot
 The old proxy simulation cannot qualify the original clinical test; Brier,
 multiplicity, training/calibration and realized analysis qualification remain open.
 
-### Prospective frame request preparation — in progress October23
+### Prospective frame request preparation — completed October24
 
-- [ ] Implement and test the exact pinned API request builder and complete-frame guards without dispatch.
-- [ ] Generate and verify a fresh source-readiness request; record unqualified server semantics and remaining acquisition gates.
+- [x] Implement and test the exact pinned API request builder and complete-frame guards without dispatch.
+- [x] Generate and verify a fresh source-readiness request; record unqualified server semantics and remaining acquisition gates.
+
+834 full tests/probes/package pass;34 new tests also pass in an isolated clean
+checkout without ignored data payloads. Small tracked public metadata fixtures
+correct the initial test-portability gap. Dated requestR=2026-10-24 covers
+2026-09-24..2026-10-23; no trial query, selected member or clinical label.
+Retained evidence: planning/review-assets/prospective-endpoint-readiness-20261023/frame-stage-acceptance.json.
+
+### Bounded prospective source qualification — pending
+
+- [ ] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
+- [ ] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
+- [ ] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
+- [ ] Audit source-rule availability only if the preceding acquisition gates pass; keep predictions and clinical activation disabled.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone

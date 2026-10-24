@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "offline_frame_request_preparation_passed",
+  "created_at_utc": "2026-10-24T15:36:25.867910+00:00",
+  "source_and_tests": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\prospective_frame.py",
+      "sha256": "763d64ab4fc53e15fd9d2e0374b06429cd98bf02a4e8f5b142b29f5e960a6b97",
+      "bytes": 25921
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_prospective_frame.py",
+      "sha256": "2e9283ed5f42613af9f88a0100eeceaec7b0db71e34c6e4862f0f55797650d17",
+      "bytes": 17265
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_prospective_frame_peer.py",
+      "sha256": "5c9ca7d2b7dfde7c80b3d4e622c47c463d5c67c273f21ff435d73b5cb559e642",
+      "bytes": 4580
+    }
+  ],
+  "independent_review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\code-review.json",
+    "sha256": "762146acfb939f7cdd3f023f05d700fe5577e166776291f98f6f2d9837e5b298",
+    "bytes": 4846
+  },
+  "review_scope_addendum": "Root corrected test portability after independent review; implementation and peer tests unchanged. Old reviewed test source retained by hash. Clean isolated 34-test run and full834 suite validate corrected test fixture setup.",
+  "reviewed_test_before_portability_fix": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\prospective-frame-tests-before-selfcontained-20261024.py",
+    "sha256": "a84b63be79a90670895b9381ed44795cb0ca5108d6d79118d05390c0b838300d",
+    "bytes": 16937
+  },
+  "metadata_fixtures": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\fixtures\\prospective-frame-metadata\\01-openapi.yaml",
+      "sha256": "ba31adaea67e6bb09ff77af5c0c11daf36d5aff7f5d6cbed89f0aab04b297aea",
+      "bytes": 80983
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\fixtures\\prospective-frame-metadata\\02-metadata.json",
+      "sha256": "31d2120be5384c2c22bed089191bfeeef675e3960da9432509b564e666b12398",
+      "bytes": 175633
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\fixtures\\prospective-frame-metadata\\03-search-areas.json",
+      "sha256": "2dce42cda2607994a69fd3ffaafe263746b5e6bf9e87da1eab942b9880fea9a1",
+      "bytes": 25359
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\fixtures\\prospective-frame-metadata\\04-version.json",
+      "sha256": "76ae8f20879824654f8daa22e138fcb0709c7ed380787f314b8cea2cafd12331",
+      "bytes": 71
+    }
+  ],
+  "clean_checkout": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\clean-checkout-validation.json",
+    "sha256": "e31b3e60b9336d695449a8a91f28b697c4c2516a921a72f1441b35181109053a",
+    "bytes": 356
+  },
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\full-validation.json",
+    "sha256": "002918eace3fc52ed78e77e5612bf32fd87cb3fe51aab1b4674bb94db2974cc6",
+    "bytes": 471
+  },
+  "request_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\request-freeze.json",
+    "sha256": "58a4dffb43f92087f1b517a1b95fe449078681dd3f110a70b3452cc3bebc5b53",
+    "bytes": 2251
+  },
+  "clinical_artifacts_unchanged_hash_only": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\adjudication-v1\\normalized-outcomes.json",
+      "sha256": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398",
+      "bytes": 115371
+    }
+  ],
+  "study_queries": 0,
+  "collected_trial_records": 0,
+  "selected_members": 0,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "clinical_probabilities": null,
+  "transport_qualified": false,
+  "clinical_activation": false,
+  "exposure_inventory_complete": false,
+  "completion_scope": "Request preparation only; not live source qualification or original scientific Tasks6-8.",
+  "next_required": "Seal exposure inventory and bounded source transport/response contract, then qualify actual query under fixed caps and current readiness date before considering any source-rule audit.",
+  "executed_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\accept_prospective_frame_stage_20261024.py",
+    "sha256": "410f9bcf5dffab1548ea7ade058948c17de4c099366b03fd3ff7744b35a539e3",
+    "bytes": 4028
+  }
+}

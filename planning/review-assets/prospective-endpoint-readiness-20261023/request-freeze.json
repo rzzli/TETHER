@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "dated_non_dispatch_request_built_and_verified",
+  "created_at_utc": "2026-10-24T15:33:46.982609+00:00",
+  "contract": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\request-20261024T153346Z\\contract.json",
+    "sha256": "3c92d09ab93c4269f74856692d5013888be78970f23eb715ca0a2c68d89fd51e",
+    "bytes": 8877
+  },
+  "request": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\request-20261024T153346Z\\request.json",
+    "sha256": "496f7bb64dd0475202954b4095c1c3b6b0bc4997cb106daaff4145b3aa694756",
+    "bytes": 1006
+  },
+  "journal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\request-20261024T153346Z\\journal.jsonl",
+    "sha256": "cb4a9da3b9337124edc1be0a7e0f031bb0a2f577c06c335c0102fbc10c1f4b8c",
+    "bytes": 1004
+  },
+  "readiness_date_R": "2026-10-24",
+  "interval_start": "2026-09-24",
+  "interval_end": "2026-10-23",
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\full-validation.json",
+    "sha256": "002918eace3fc52ed78e77e5612bf32fd87cb3fe51aab1b4674bb94db2974cc6",
+    "bytes": 471
+  },
+  "actual_study_requests": 0,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "transport_qualified": false,
+  "clinical_activation": false,
+  "remaining_technical_gates": [
+    "Complete and seal exposure inventory without reading old outcome labels.",
+    "Review and implement bounded allowlisted transport under a separately sealed request.",
+    "Test actual server filter/projection/count/pagination semantics; a candidate URL alone is not qualification.",
+    "Enforce original frame caps: over500 or incomplete enumeration stops without a partial sample.",
+    "Recheck capture UTC day equals R; expired contract cannot slide dates."
+  ],
+  "executed_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\build_prospective_request_20261024.py",
+    "sha256": "c0c51ffaa234bd2dd55d933230cc1c9a708d9abf9c026d913786d619b860df14",
+    "bytes": 2831
+  }
+}

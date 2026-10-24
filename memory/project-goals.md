@@ -3,10 +3,26 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-23
+updated: 2026-10-24
 ---
 
 # Project goals
+
+## Offline prospective frame preparation complete — October24
+
+New stdlib tools/science/prospective_frame.py and34 targeted tests validated;
+full834 tests/no skips, probes, packaging/demo pass. Independent review fixed
+request-time ceiling, immutable journal-pin handling and response array shapes.
+Root corrected ignored-metadata dependency by tracking four small schema fixtures;
+34 tests pass in isolated clean source copy with no ignored data payloads.
+
+Fresh request-20261024T153346Z built/verified: R2026-10-24, interval2026-09-24
+through2026-10-23. Contract3c92d09a...; no HTTP study query, member, label or modelcall.
+Live semantics and exposure inventory explicitly unqualified; source dispatchfalse.
+Next known-exposure inventory, bounded source transport and actual qualification
+under exact request/caps. Over500/failed pagination stops without partial sampling;
+expired R cannot slide dates. Original Tasks6–8 and clinical scientific gates open.
+See [[Prospective Frame Preparation 2026-10-24]]. Earlier entries are checkpoints.
 
 ## Prospective readiness design accepted — October23 late evening
 
