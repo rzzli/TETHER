@@ -125,3 +125,9 @@ needed; sizes/time/full count stability remain unverified, not guaranteed by the
 firstpage. Preserve failedv0.1 code/receipts and semantic no-redispatch claim. No
 new cap is enacted by this paragraph and no source call should resume against the
 failed manifest. This capacity result says nothing about authentic rule availability.
+
+Evidence backup verified at
+`E:/projects_data/drug_target_agents_data/backups/prospective-readiness-20261024T160543Z/`:
+117 ZIP entries/every SHA256/CRC and Git bundle through`1b2236e`. Raw origin
+programs, bulk datasets, model weights and database restores are excluded and
+remain at pinned paths. The later backup receipt is outside that bundle by design.

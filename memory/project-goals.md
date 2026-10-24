@@ -21,6 +21,10 @@ This is an acquisition-capacity failure, not evidence of absent clinical rules.
 Next explicit capacity-only amendment, keeping scientific frame/dates/projection/
 eligibility/exclusions/seed unchanged and preservingfailedv0.1 code/receipts.
 Original Tasks6–8 remainopen; no user file/account/permission gap established.
+Verified117-entry evidence ZIP plus Git bundle under
+E:/projects_data/drug_target_agents_data/backups/prospective-readiness-20261024T160543Z/;
+manifest5e45a247... covers1b2236e. Bulk origin inputs/models/restores excluded;
+the later backup-receipt/status commit is outside that bundle.
 
 ## Bounded source execution prepared — October24, before first call
 

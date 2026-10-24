@@ -113,3 +113,8 @@ infeasibility. Source qualification remains unfinished. Any continuation needs a
 explicit capacity-only amendment, not hotpatch/retry/windowchange. Current evidence
 suggests reviewing max5000/page500/10pages with unchanged20MiB/600s budget and
 original sampling seed, but this is not enacted or a guarantee of completecapture.
+
+Verified117-entry evidenceZIP (3,456,444bytes) and Gitbundle through1b2236e at
+E:/projects_data/drug_target_agents_data/backups/prospective-readiness-20261024T160543Z/.
+CRC/everyentrySHA/bundleverify pass, manifest5e45a24787a4113da63a826862c0c6b598d90496c3a27b639d3aa8f4379cd5e8.
+Bulk origin programs/models/restores stay atpinnedpaths; later receiptcommit excluded.
