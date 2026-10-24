@@ -17,6 +17,7 @@
 - [x] Seal two independent AI source reviews and third-review reconciliation before inference.
 - [x] Execute and source-verify four paired arms; seal outputs before answer join.
 - [x] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
+- [x] Verify the bounded evidence ZIP and Git-bundle backup on E: (367 entries, every entry hash and CRC checked).
 
 All32 arms verified;48 native calls; prediction seal committed before answer join.
 AsOf6/8, adapted Virtual Biotech6/8, lexical5/8, provider-score3/7 applicable

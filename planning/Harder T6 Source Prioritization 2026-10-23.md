@@ -173,3 +173,10 @@ The [remaining-gate disposition](Remaining%20Scientific%20Gates%20and%20Prospect
 preserves the conditional prospective clinical design and the open scientific
 Tasks6–8. B0 operational expansion stays stopped. No new cohort or model dispatch
 is implied by this development result.
+
+A bounded evidence backup is verified at
+`E:/projects_data/drug_target_agents_data/backups/t6-topone-20261024T045018Z/`:
+367 ZIP entries checked by CRC and SHA256, plus a verified Git bundle through
+commit`20bff65`. Original data/model/restore bytes remain at pinned paths and are
+excluded from this evidence backup. The later backup-receipt/status commit is not
+inside that bundle; see the tracked`backup-validation.json` receipt.

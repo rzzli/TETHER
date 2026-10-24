@@ -31,6 +31,9 @@ All numerical features empty/probabilities null; broader scientific Tasks6–8 o
 Remaining-gate/prospective-design disposition written without new dispatch or
 clinical activation. B0 expansion stays stopped; no specific missing user file.
 See [[Remaining Scientific Gates and Prospective Design 2026-10-23]].
+Verified367-entry evidence ZIP/Git bundle at E:/projects_data/drug_target_agents_data/
+backups/t6-topone-20261024T045018Z/; manifest613077ee... covers commit20bff65.
+Backup excludes raw bulk/models/restores; receipt/status commit is necessarily later.
 See [[Harder T6 Source Prioritization 2026-10-23]]. Earlier entries are checkpoints.
 
 ## B0 finite cycle completed — October23

@@ -141,3 +141,11 @@ Tasks6–8, H1–H6, the failedB0stop and a separately prospective endpoint/asce
 independence/power/predictor contract. No new trial search/cohort, featuretraining,
 probability, clinicalactivation, paidaccess or publicregistration. No exact missing
 user file established. This dated log supersedes live-handle checkpoints above.
+
+Final docs/source-pin checks passed9 local links/29 unchanged frozen code files,
+83providers/178products; no unchanged runtime tests rerun. Commit20bff65 retains
+acceptance and remaining-gate design. Verified367-entry evidenceZIP+Gitbundle at
+E:/projects_data/drug_target_agents_data/backups/t6-topone-20261024T045018Z/,
+manifest613077ee1dc6a0b6a5e9e3c20440dfd7f391c1b6e6c27cdca00ac89bf2a8c975.
+AllZIPentriesCRC/SHA and bundleverify pass; bulkraw/model/restores excluded.
+The later backup-receipt/status commit is outside that bundle by construction.
