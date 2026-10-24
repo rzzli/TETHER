@@ -91,3 +91,25 @@ forcing a unique winner. The reference freeze is retained under
 `planning/review-assets/t6-topone-20261023/reference-freeze.json`.
 All reference files precede native dispatch. AI review usage is outside the
 framework's native-call/provider accounting; $0 refers to runtime provider spending.
+
+## Resource observations during source closeout
+
+All32 arms committed and passed their arm verifier; a separate read-only check
+confirmed48 native attempts had the exact frozen scientific packet and question,
+and each arm's copied workflow code matched its pre-dispatch digest. Final source
+replay and terminal sealing remain separate requirements at this checkpoint.
+
+The ten parent worlds declare993 source-proof path occurrences, representing227
+unique files:8,358,041,003 unique bytes versus68,547,076,686 bytes when repeated
+per case. These are filesystem lengths of declared source-proof paths, not physical
+I/O measurements, total project storage, model weights or evidence completeness.
+The retained footprint and matched-science receipts are under
+`planning/review-assets/t6-topone-20261023/`.
+
+A late-run OS observation found32GB installed physical memory, about6.13million
+KiB free, native CPU working set11,100,155,904bytes and native observed peak
+14,347,210,752bytes; parent observed peak551,686,144bytes. GPU memory was not
+instrumented. This is a partial observation, not a full-system peak or proof of
+the cause of slow source replay. Repeated full-source verification is a measured
+scaling concern. Any later optimization must preserve complete lineage, eligibility
+and mutation detection; the current frozen run keeps its original checks.
