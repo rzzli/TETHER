@@ -8,6 +8,32 @@ updated: 2026-10-24
 
 # Project goals
 
+## Bounded source execution prepared — October24, before first call
+
+New prospective_transport.py passes36 tests; full870/no skips/probes/package
+and70 clean-checkout tests pass. Root review fixed short/empty-page pagination,
+optional later counts, cleanup accounting, semantic no-redispatch key and
+pre-mutation output containment. No actualHTTP before this checkpoint.
+Source-execution-20261024T155636Z/manifest25e30b6a... is frozen; exactpublic
+metadata query plus2version requests,500record/10page/20MiB/600s caps, no retry,
+no model/PDF/member/clinical activation. Next guarded cache runner
+data/cache/run_prospective_capture_20261024.py checks committed freeze before
+onecoldattempt. On resume inspect source-attempt-summary.json and execution
+journal BEFORE any dispatch; never rerun a potentially started attempt.
+
+## Named-source exposure inventory sealed — October24
+
+43,393 canonical NCT exclusions projected from16 explicit retained origin sources
+plus incidental protocol IDs;1,458,436,692bytes/31.922seconds. Source hashes and
+all first byte locators verify. No old outcome answers parsed or new trial query.
+Inventoryc63df920... is complete only for named sources, not universal exposure.
+Exposure-bound request20261024T154310Z/contract53a60efd... retains identical date/
+query bytes with all exclusions and zero selectedmembers. Old proposal immutable.
+Next source transport implementation is in progress under tools/science/
+prospective_transport.py; it has not been qualified or run against real sources.
+Do not dispatch until tests/root review and separate execution manifest are sealed.
+Original B0stop and scientific Tasks6–8 remain unchanged.
+
 ## Offline prospective frame preparation complete — October24
 
 New stdlib tools/science/prospective_frame.py and34 targeted tests validated;

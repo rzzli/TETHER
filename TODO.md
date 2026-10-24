@@ -58,10 +58,19 @@ Retained evidence: planning/review-assets/prospective-endpoint-readiness-2026102
 
 ### Bounded prospective source qualification — pending
 
-- [ ] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
-- [ ] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
+- [x] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
+- [x] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
 - [ ] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
 - [ ] Audit source-rule availability only if the preceding acquisition gates pass; keep predictions and clinical activation disabled.
+
+Named-origin exposure closure verified43,393 canonical NCT IDs from16 retained
+sources (1,458,436,692bytes scanned,31.922seconds) plus incidental protocol IDs.
+All source hashes and first byte locators checked. This is conservative exclusion
+for the named sources, not universal model-exposure or protected-holdout proof.
+The fresh exposure-bound request preserves the exact dates/query and selects no
+members. Bounded transport passes36 new tests; full870 tests/probes/package and
+70 isolated clean-checkout tests pass. Execution manifest25e30b6a... is frozen
+before the first source attempt; source-execution-freeze.json records exact scope.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone

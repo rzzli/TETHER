@@ -75,3 +75,22 @@ Evidence is retained in `planning/review-assets/prospective-endpoint-readiness-2
 `request-freeze.json` and `frame-stage-acceptance.json`. The first clean-checkout
 helper assertion mistook tracked `.gitkeep` placeholders for ignored payloads;
 the corrected check verifies payload absence, without altering scientific inputs.
+
+## Subsequent inventory checkpoint
+
+Named-origin exposure inventory now records43,393 canonical NCT identifiers.
+Its16 explicit sources total1,458,436,692bytes; projection/source-hash and all first
+byte-locator checks completed in31.922seconds. Only identifiers were extracted;
+related NCT mentions are conservatively included. No old outcome answers were
+parsed. This is closure for named retained origin sources and the protocol's
+incidental list, not universal agent/model-training exposure or holdout proof.
+
+The new`exposure-bound-request-20261024T154310Z` binds all exclusions; contract
+SHA256`53a60efdeb20bc3bf0dd8eaad0850498706902c755406b03f7253d60ba5c825c`.
+Query bytes and dates remain identical, and selected members remain zero. Evidence:
+`exposure-inventory.json` and `exposure-bound-request.json` in the tracked review
+assets directory. The initial request stays immutable.
+
+Bounded source transport is the active next implementation. It must pass synthetic
+failure/limit/ownership guards and root review before a separate source execution
+manifest is sealed. No actual study query has run at this checkpoint.

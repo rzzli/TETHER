@@ -65,3 +65,32 @@ then actual server qualification before any deterministic member/source-rule aud
 500-record cap remains a hard stop, not a completeness claim; unknown capacity is
 not failed scientific rule availability. Do not slide the frozen date window,
 truncate frame, revive B0 or claim original scientific Tasks6–8 complete.
+
+## Named-origin inventory and unchanged-query binding
+
+Explicitly inspected origin-only source-seal/manifests, avoiding outcome/review
+packets. Identifier-only byte projection scanned16 sources/1,458,436,692bytes in
+31.922seconds; all frozen source hashes matched and all first identifier locators
+were checked.43,393 canonical exclusions include related NCT mentions conservatively;
+they are not43,393 qualified programs or independent observations. Closure applies
+only to the named retained origin/program/membership sources plus incidental IDs.
+This cannot prove universal model exposure or an untouched holdout.
+
+Inventoryc63df920... (33,909,604bytes) is retained in the ignored evidence tree.
+Receipt317581b0... and bound request53a60efd... retain exact original query/dates,
+zero selectedmembers and non-dispatch status. The original preparation is preserved.
+New bounded source transport/tests are being implemented; no actualHTTP studycall.
+
+## Bounded transport validation and pre-dispatch freeze
+
+36 new transport tests pass; full870/no skips, probes, PowerShell syntax and
+package/dependency-free demo pass in171.516seconds.70 frame+transport tests pass
+in isolated clean source copy. Root review corrected empty/short continuation,
+optional latercount, close-error terminal accounting, semantic request/inventory
+no-redispatch key and output preflight before marker writes. No liveHTTP was used.
+
+Exact execution manifest25e30b6a... under source-execution-20261024T155636Z archives
+effectivepolicy/code/inputs and enables only bounded registry source qualification.
+Existing proposal remains non-dispatch/clinicalfalse. Guarded runner requires the
+freeze committed before actualsourcecall. No sample is exposed/sealed by this
+capture stage; failures must remain readable and cannot auto retry.
