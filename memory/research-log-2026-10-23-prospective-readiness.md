@@ -205,3 +205,8 @@ Next bind to actual sealed dossier bytes and reuse complete original Parquet
 receipt/row/lineage checks; then independent references and interpretation layer.
 Original scientific Tasks6-8 remain unfinished. Acceptance:
 planning/review-assets/t6-claim-audit-20261024/final-acceptance.json.
+
+Prototype backup verified on E: (27 entries, CRC/every entry SHA256 and Git
+bundle through13acaf8). Receipt: planning/review-assets/t6-claim-audit-20261024/backup-validation.json.
+Later receipt/status commit is outside the bundle. Remaining production/scientific
+gates above stay open; this is a bounded contract checkpoint.

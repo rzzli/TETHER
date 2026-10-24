@@ -142,6 +142,10 @@ its later receipt commit is outside that bundle. No bulk originals were duplicat
 
 - [x] Assess whether T6 quality is feasible independently of the stopped clinical route and inspect actual model/claim boundaries.
 - [x] Implement and validate the evaluation-only JSON atomic claim/source-audit prototype with uncertainty, citations and contextual applicability (23 new tests; production integration remains below).
+Prototype checkpoint verified on E: 27 ZIP entries, CRC/every entry SHA256 and
+Git bundle through13acaf8. Retained t6-claim-audit-20261024/backup-validation.json;
+later receipt commit is outside that bundle.
+
 - [ ] Bind claim inventories to sealed dossier bytes and extend original-source adapters beyond JSON; qualify completeness references and independent review seals.
 - [ ] Qualify an optional interpretation layer, fresh question/reference frame and paired analysis before any new model execution.
 - [ ] Execute source-qualified full dossier quality evaluation only after its own gates pass; retain the original H5 scope and AI-reference limitations.
