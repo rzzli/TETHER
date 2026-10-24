@@ -8,6 +8,20 @@ updated: 2026-10-24
 
 # Project goals
 
+## Cold source attempt stopped at capacity gate — October24 latest
+
+Execution25e30b6a... committedf5fdab8 before actualHTTP. Source-execution-
+20261024T155636Z is terminalfailed: first version71B and first study page38,595B
+bothHTTP200; source declares4,277 rows > frozen500. All100 first-page records obey
+projection/dateguards (September24). No completeframe/upperboundary/versionafter
+or source-rule qualification. No members/predictions/modelcalls/retries/spending.
+source-attempt-summary.json + source-stop-audit.json verify two terminalattempts,
+zero unresolvedcalls. Do NOT rerun guarded runner or same semanticproposal.
+This is an acquisition-capacity failure, not evidence of absent clinical rules.
+Next explicit capacity-only amendment, keeping scientific frame/dates/projection/
+eligibility/exclusions/seed unchanged and preservingfailedv0.1 code/receipts.
+Original Tasks6–8 remainopen; no user file/account/permission gap established.
+
 ## Bounded source execution prepared — October24, before first call
 
 New prospective_transport.py passes36 tests; full870/no skips/probes/package

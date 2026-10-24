@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October24 source attempt reached the public API but stopped at its frozen
+capacity gate:4,277 declared records versus500 allowed. TwoHTTP responses and
+the first100 metadata records are retained/audited; no complete frame, members or
+clinical predictions were produced.870 tests/probes/package and70 isolated tests
+pass. Next is an explicit capacity amendment; the failed attempt will not retry.
+
 The October24 [prospective frame preparation](planning/Prospective%20Frame%20Preparation%202026-10-24.md)
 passes834 local tests, probes and packaging. The exact source-readiness request
 and offline complete-frame guards are implemented;34 new tests also pass without

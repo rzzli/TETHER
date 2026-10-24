@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[Prospective Frame Preparation 2026-10-24]] — Offline exact request/complete-frame guards pass834 tests;34 clean-checkout tests, freshR2026-10-24 request, zero trial queries. Exposure inventory/live transport remain next.
+- [[Prospective Frame Preparation 2026-10-24]] — 870 tests/70 clean-checkout tests;43,393 named-source exclusions; actual cold API attempt stopped at4,277 declared records versus500 cap. Two terminalHTTP receipts, no selectedmembers; explicit capacity amendment next.
 
 - [[research-log-2026-10-23-prospective-readiness]] — Non-dispatch prospective contract, four retained official metadata GETs,14 parent pins and independent design review; exact request preparation in progress, no trial/outcome acquisition.
 - [[Prospective Endpoint Readiness 2026-10-23]] — Finite source-defined readiness design, documentary agent-reference rules, four separate gates and unresolved original clinical requirements.

@@ -72,6 +72,14 @@ members. Bounded transport passes36 new tests; full870 tests/probes/package and
 70 isolated clean-checkout tests pass. Execution manifest25e30b6a... is frozen
 before the first source attempt; source-execution-freeze.json records exact scope.
 
+October24 actual attempt stopped under the frozen500-record gate: API declared
+4,277 records; first100 metadata rows/38,595bytes retained, plus71-byte version.
+TwoHTTP200 attempts have terminal receipts and no unresolvedcalls/retries. No
+completeframe/member/source-rule audit. Sourcequalification stays unchecked.
+Source-stop-audit.json verifies the failure. Next is an explicit capacity-only
+amendment preserving interval, projection, eligibility, exclusions and sampling
+seed; no silent cap expansion or rerun of the failedv0.1 execution.
+
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone
 does not qualify trial transport, rules, membership or clinical launch.

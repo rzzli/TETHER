@@ -94,3 +94,34 @@ assets directory. The initial request stays immutable.
 Bounded source transport is the active next implementation. It must pass synthetic
 failure/limit/ownership guards and root review before a separate source execution
 manifest is sealed. No actual study query has run at this checkpoint.
+
+## Actual cold capture: frozen capacity gate failed
+
+The transport and36 synthetic tests subsequently passed; full870/no skips,
+probes, syntax and package/demo checks passed in171.516seconds.70 new frame/
+transport tests also passed in an isolated clean source copy. Source manifest
+`25e30b6a...` was committed at`f5fdab8` before the guarded one-shot runner ran.
+
+Both actual HTTP attempts returned200:71-byte version and38,595-byte firstpage.
+The source declared **4,277 records**; the first100 passed the requested nine-leaf
+projection and interval checks (all September24firstpost). The frozen500-record
+gate then stopped capture. No second page, after-version, complete-frame claim,
+selected member, source-rule PDF, model call or clinical activation followed.
+Both attempts have terminal receipts; unresolvedattempts and automaticretries are0.
+
+`source-attempt-summary.json` and`source-stop-audit.json` retain the failure,
+rawbody/manifest/journal hashes and sourcecoverage limits. This demonstrates
+accepted first-request shape, not closed upper-bound or cross-page completeness.
+An initial audit-helper mappingproxy serialization failure is retained separately;
+the corrected audit reran only local verification and made no HTTP request.
+
+The unfinished acquisition task is an **explicit capacity-only amendment**. A
+reviewable option is max5000 records/page500/10pages, keeping the30-day universe,
+interval, leaf fields, eligibility, exclusions, max12audit and20MiB/600s limits.
+The archived API documentation describes pages up to1000;500 is only a proposed
+new operating choice. Preserve the original sampling seed instead of changing
+ordering when only transport caps change. At the observed count,9 pages would be
+needed; sizes/time/full count stability remain unverified, not guaranteed by the
+firstpage. Preserve failedv0.1 code/receipts and semantic no-redispatch claim. No
+new cap is enacted by this paragraph and no source call should resume against the
+failed manifest. This capacity result says nothing about authentic rule availability.

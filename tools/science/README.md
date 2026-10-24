@@ -5,6 +5,14 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+`prospective_transport` implements a separately pinned, one-shot public source
+capture. It archives effective inputs/policy/code, streams raw receipts under hard
+deadlines, verifies incremental/final frame guards and latches semantic proposals
+against redispatch. The36 synthetic tests and full870-test suite pass. The actual
+October24 cold attempt stopped after the first page because4,277 declared records
+exceeded500; sourcequalification and member/source-rule audit remain unfinished.
+`inspect_execution` reads terminal/incomplete accounting and never restarts work.
+
 `prospective_frame` builds a dated non-dispatch source-readiness request from the
 pinned protocol and archived official schema. `build_frame` reserves output and
 journals failures; `verify_build` checks code/source/request pins; `validate_frame`

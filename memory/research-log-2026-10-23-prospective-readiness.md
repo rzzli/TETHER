@@ -94,3 +94,22 @@ effectivepolicy/code/inputs and enables only bounded registry source qualificati
 Existing proposal remains non-dispatch/clinicalfalse. Guarded runner requires the
 freeze committed before actualsourcecall. No sample is exposed/sealed by this
 capture stage; failures must remain readable and cannot auto retry.
+
+## Actual cold source result: failed capacity gate
+
+Frozenmanifest committedf5fdab8, then exactly2 publicHTTP attempts ran: version0
+71B and page1 38,595B, both200, all terminalreceipts/no unresolvedattempts. Source
+declares4,277 rows;100 returned records pass nine-leaf projection/datechecks and
+have September24firstpost. Frozen500capstops before furtherpagination, sample,
+postcaptureversion or source-rule audit. No retry/modelcall/clinicalactivation.
+source-attempt-summary.json and independent read-only source-stop-audit.json
+retain rawbody/journalhashes and explicitly unqualified complete-query semantics.
+Initial audit-helper serialization encountered immutable mappingproxy pins;
+partialJSON/failurelog preserved, pins converted to plain mappings and audit
+passed without altering source/runtime or issuing anotherHTTP request.
+
+This is measured acquisitioncapacity failure, not absentclinicalrules or scientific
+infeasibility. Source qualification remains unfinished. Any continuation needs an
+explicit capacity-only amendment, not hotpatch/retry/windowchange. Current evidence
+suggests reviewing max5000/page500/10pages with unchanged20MiB/600s budget and
+original sampling seed, but this is not enacted or a guarantee of completecapture.

@@ -1,0 +1,36 @@
+{
+  "status": "cold_source_attempt_failed_no_redispatch",
+  "error": {
+    "class": "ContractError",
+    "message": "Explicit capacity gate: source declares over frozen 500; query completeness/capacity unresolved; not scientific absence"
+  },
+  "execution_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\source-execution-20261024T155636Z\\execution.json",
+    "sha256": "25e30b6ae425148d91bbd1053a0caa598a45538c9225b3890da8db601a9d22e6",
+    "bytes": 18526
+  },
+  "journal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\source-execution-20261024T155636Z\\journal.jsonl",
+    "sha256": "b73342b376e0c017cbd4707b7faffe2d070fb060690c96690393c3a98bd81d30",
+    "bytes": 6578
+  },
+  "inspection": {
+    "last_event": "run_failed",
+    "attempts_started": [
+      0,
+      1
+    ],
+    "unresolved_attempts": [],
+    "receipt_present": false,
+    "recovery": "inspect retained evidence only; never redispatch this proposal, including failed calls"
+  },
+  "model_calls": 0,
+  "clinical_activation": false,
+  "selected_members": 0,
+  "scope": "One source qualification attempt only; failures do not establish scientific absence.",
+  "runner": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\run_prospective_capture_20261024.py",
+    "sha256": "ebe9987251cc92d1d6696c943dc08b71032212cfc8a0fe1b58625efc4fe81775",
+    "bytes": 1885
+  }
+}
