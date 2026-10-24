@@ -33,6 +33,30 @@ Retained acceptance: planning/review-assets/t6-topone-20261023/final-acceptance.
 - [ ] Qualify independent scientific references and clinical outcomes/predictors/power before completing original Tasks6–7.
 - [ ] Execute T2–T5/H6 only if their separate feasibility and data gates pass.
 
+### Prospective endpoint-readiness protocol — in progress October23
+
+- [x] Verify the official source-defined sampling route, endpoint/reference rules and statistical activation gates.
+- [x] Freeze a non-dispatch readiness protocol with finite bounds, source projections and pass/revise/stop rules.
+- [x] Validate protocol consistency and retained sources; update the scientific disposition and memory.
+
+Design acceptance verifies14 parent pins/four official metadata GETs and an
+independent statistical review. No trial list/record or outcome was acquired.
+See planning/Prospective Endpoint Readiness 2026-10-23.md and its versioned protocol.
+The old proxy simulation cannot qualify the original clinical test; Brier,
+multiplicity, training/calibration and realized analysis qualification remain open.
+
+### Prospective frame request preparation — in progress October23
+
+- [ ] Implement and test the exact pinned API request builder and complete-frame guards without dispatch.
+- [ ] Generate and verify a fresh source-readiness request; record unqualified server semantics and remaining acquisition gates.
+
+Source dispatch requires the separately sealed executable request and technical
+qualification under existing user authorization. Current schema access alone
+does not qualify trial transport, rules, membership or clinical launch.
+
+This assesses origin/source readiness only. No new trial outcomes, clinical
+predictions, cohort activation, public registration or model training are implied.
+
 See planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md.
 These open scientific tasks have no currently qualified execution package. B0
 expansion stays stopped; no new cohort, fitting, registration or model call is

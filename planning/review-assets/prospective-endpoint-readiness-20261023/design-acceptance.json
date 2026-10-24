@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "non_dispatch_design_accepted",
+  "created_at_utc": "2026-10-24T05:05:52.460815+00:00",
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\prospective-endpoint-readiness-v0.1.json",
+    "sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a",
+    "bytes": 39003
+  },
+  "review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\statistical-review.json",
+    "sha256": "9dda0b1ef164ce1f498d2c502e7c1b7694ed5856807d4691e625cc533d35a20e",
+    "bytes": 3189
+  },
+  "metadata_source_check": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\metadata-source-check.json",
+    "sha256": "4be1f8af8aa1ba200ae4a9ac207e0f2d1161d563c90ccbeb0c37ca03a309a64f",
+    "bytes": 16036
+  },
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\reports\\Prospective clinical readiness protocol.md",
+    "sha256": "65402b6b095fd6bfbcee1e1ab38d6b629ce52e4de4059c1e3b80d3a6d7eabe90",
+    "bytes": 12262
+  },
+  "planning_entry": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Prospective Endpoint Readiness 2026-10-23.md",
+    "sha256": "2eb620416f02cbf9fcb4b63a18b8b54e52585d2c13eac492cdd3a08219cabf11",
+    "bytes": 2354
+  },
+  "parent_pins_verified": 14,
+  "metadata_GETs_verified": 4,
+  "local_links_verified": 8,
+  "unchanged_clinical_artifacts_hash_only": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\cohorts\\science4-outcomes-20261019T024500Z\\adjudication\\normalized-outcomes.json",
+      "sha256": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+      "bytes": 277734
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\endpoint-followup-feasibility-20261021\\adjudication-v1\\normalized-outcomes.json",
+      "sha256": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398",
+      "bytes": 115371
+    }
+  ],
+  "study_records_acquired": 0,
+  "source_query_dispatch_permitted_by_this_receipt": false,
+  "clinical_activation": false,
+  "probabilities": null,
+  "provider_spend_usd": 0,
+  "scope": "Design acceptance only; exact request, transport/response guards and exposure inventory remain technical prerequisites. Existing user authorization covers safe subsequent preparation.",
+  "executed_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\accept_prospective_design_20261023.py",
+    "sha256": "f9882075778f890535024f15f92d807ab977ad6a1d44ad712b69678f61b439af",
+    "bytes": 5244
+  }
+}

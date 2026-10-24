@@ -8,6 +8,21 @@ updated: 2026-10-23
 
 # Project goals
 
+## Prospective readiness design accepted — October23 late evening
+
+Non-dispatch protocol prospective-endpoint-readiness-v0.1 and report accepted:
+14 parent hashes, four retained anonymous official schema/metadata GETs, blinded
+methods review and independent statistical review. No new trial records/outcomes.
+Exact list query/response contract was null at design freeze; a new stdlib request
+builder/complete-frame guard is now being implemented and tested before dispatch.
+R is readiness capture, not future clinical origin F. Two blinded agent extractions
+plus evidence-based reconciliation may qualify documentary decision references;
+agreement alone cannot establish therapeutic truth. No invented human-only gate.
+Training/calibration, H1 one-sided/Brier/multiplicity, power and clinical launch
+remain unqualified. Future test labels belong after prediction freeze, not before.
+B0 stays stopped; original Tasks6–8 remain open. No user archive request needed.
+See [[Prospective Endpoint Readiness 2026-10-23]]. Earlier entries are checkpoints.
+
 ## Harder T6 comparison complete; scientific gates remain — October23 evening
 
 800 full local tests/probes/package pass. Commit eca1dff adds guarded cap1 tasks,

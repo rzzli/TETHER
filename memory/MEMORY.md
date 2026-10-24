@@ -1,5 +1,8 @@
 # Research memory index
 
+- [[research-log-2026-10-23-prospective-readiness]] — Non-dispatch prospective contract, four retained official metadata GETs,14 parent pins and independent design review; exact request preparation in progress, no trial/outcome acquisition.
+- [[Prospective Endpoint Readiness 2026-10-23]] — Finite source-defined readiness design, documentary agent-reference rules, four separate gates and unresolved original clinical requirements.
+
 - [[research-log-2026-10-23-b0]] — B0 finite audit complete,53.125% coverage stops expansion; harder T6 complete,32 verified arms/48 calls,16 original offered rows,800 tests. Scientific Tasks6–8 remain gated.
 - [[Harder T6 Source Prioritization 2026-10-23]] — Eight paired top-one tasks, source-only AI references before inference, descriptive results, original-row audits and resource limits.
 - [[Remaining Scientific Gates and Prospective Design 2026-10-23]] — Remaining original requirements, reopening evidence and non-dispatch prospective contract; no new clinical activation.
