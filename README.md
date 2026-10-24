@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The evaluation-only [atomic claim audit prototype](docs/T6_CLAIM_AUDIT.md)
+passes23 new tests,986 full tests/probes/package and33 isolated tests. It
+verifies JSON originals/review bindings, not therapeutic truth or a full T6
+experiment. Next: sealed-dossier binding and existing original-row audit
+integration. Original scientific Tasks6–8 remain unfinished.
+
 The October24 fixed-member source-readiness assessment is complete: **0/12 joint-ready**.
 The frozen clinical route stops, with all records and uncertainty retained. Two
 sealed source reviews, third adjudication and root replay checked 180 method-field

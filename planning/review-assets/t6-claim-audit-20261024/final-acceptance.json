@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-24T21:37:23.290759+00:00",
+  "status": "bounded_JSON_atomic_claim_audit_contract_validated",
+  "code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_claim_audit.py",
+      "sha256": "9bb3915ed3b516fc69025658a7cab39105f820447cca9757515ff3f46b5d92f9",
+      "bytes": 11083
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_t6_claim_audit.py",
+      "sha256": "7fd13bb31548f6d16389dbce0b1ffbb89404313ed70722e3e6006b07e57e9e9a",
+      "bytes": 11127
+    }
+  ],
+  "validation": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-claim-audit-20261024\\full-validation.json",
+      "sha256": "efd527159827d2e96013ffb2d157cedb5435db34f70b293dbef03e2051c4de64",
+      "bytes": 460
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-claim-audit-20261024\\code-validation.json",
+      "sha256": "c797afe7fda430ccdbd4f26179fe21fd7eb6d2014056fbc5a9c429145b2837c2",
+      "bytes": 46318
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-claim-audit-20261024\\clean-checkout-validation.json",
+      "sha256": "33066df5ae69848a93481958682d39f6e808c1d7418ae392139a880dd0941d31",
+      "bytes": 393
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-claim-audit-20261024\\closeout-scope-validation.json",
+      "sha256": "ee0ba10f2cdf8a0cc1c4a019306e99220e61716565eb4fe0e9551e58625ace01",
+      "bytes": 1106
+    }
+  ],
+  "new_tests": 23,
+  "total_tests": 986,
+  "isolated_tests": 33,
+  "real_scientific_reviews_created": 0,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "clinical_predictions": null,
+  "whole_project_complete": false,
+  "remaining": [
+    "actual dossier/prediction-seal binding",
+    "existing original-source audit integration",
+    "complete claim extraction and reference coverage",
+    "review independence/sealing",
+    "bounded interpretation layer",
+    "fresh source-qualified paired study",
+    "original scientific Tasks6-8 remain unfinished"
+  ]
+}

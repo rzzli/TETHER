@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[Source Readiness Closeout and T6 Quality Next Stage 2026-10-24]] — Fixed12 source assessment stops at zero joint-ready;180 judgments/465 pointers replayed. Next atomic claim audit and interpretation qualification; scientific Tasks6–8 remain open.
+- [[Source Readiness Closeout and T6 Quality Next Stage 2026-10-24]] — Fixed12 source assessment stops at zero joint-ready;180 judgments/465 pointers replayed. JSON claim-audit prototype validated; next sealed-dossier/source integration and interpretation qualification. Scientific Tasks6–8 remain open.
 
 - [[Prospective Frame Preparation 2026-10-24]] — Explicit capacity amendment captured/replayed all4277rows; original-seed12readinessmemberssealed,236-entryverifiedbackup. Next bounded23-leaf sourcepacket/protocol availability audit, no clinicalactivation.
 

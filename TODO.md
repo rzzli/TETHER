@@ -104,12 +104,12 @@ This qualifies the reported source query, not an atomic snapshot/clinical cohort
 Verified236-entry evidenceZIP and Gitbundle through2eada8d onE:;
 capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
 
-### Fixed-member source-rule availability — closeout October24
+### Fixed-member source-rule availability — completed assessment October24; route stopped
 
 - [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
 - [x] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
 - [x] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
-- [ ] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
+- [x] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
 
 No source availability or reported outcomes may replace/reorder the sealed12.
 Source presence/QC is separate from scientific readiness; no automaticjoint_ready.
@@ -134,10 +134,15 @@ availability before old cutoffs is not an extra prospective gate. Fixed registry
 route STOP; no resampling, new clinical labels or model calls.
 See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
 
+Verified455-entry evidence ZIP and Git bundle through038c5d5 on E:.
+source-readiness-backup-validation.json records CRC/every entry hash/bundle checks;
+its later receipt commit is outside that bundle. No bulk originals were duplicated.
+
 ### Full T6/H5 audit preparation — next executable branch
 
 - [x] Assess whether T6 quality is feasible independently of the stopped clinical route and inspect actual model/claim boundaries.
-- [ ] Implement and validate an evaluation-only atomic claim/source-audit contract with uncertainty and contextual applicability.
+- [x] Implement and validate the evaluation-only JSON atomic claim/source-audit prototype with uncertainty, citations and contextual applicability (23 new tests; production integration remains below).
+- [ ] Bind claim inventories to sealed dossier bytes and extend original-source adapters beyond JSON; qualify completeness references and independent review seals.
 - [ ] Qualify an optional interpretation layer, fresh question/reference frame and paired analysis before any new model execution.
 - [ ] Execute source-qualified full dossier quality evaluation only after its own gates pass; retain the original H5 scope and AI-reference limitations.
 

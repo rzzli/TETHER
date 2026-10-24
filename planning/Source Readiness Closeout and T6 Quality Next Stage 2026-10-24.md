@@ -60,9 +60,11 @@ not change after its independent review.
 
 Root closeout independently replayed the final adjudication pins, pointer values,
 all twelve null clinical labels, fifteen fields per record and STOP disposition.
-The evidence backup is considered complete only when
-`source-readiness-backup-validation.json` records ZIP CRC, every entry SHA256 and
-Git-bundle verification on E:. Its receipt commit necessarily follows the bundle.
+The evidence backup passed ZIP CRC, every entry SHA256 and Git-bundle verification
+on E: with 455 archive entries. The bundle covers commit `038c5d5`.
+`source-readiness-backup-validation.json` retains the manifest hash and location;
+its receipt commit necessarily follows the bundle. Bulk originals remain at their
+pinned paths.
 
 ## Next planned branch: full T6/H5 quality
 
@@ -134,3 +136,37 @@ No specific missing user file or permission is established by the fixed-source
 assessment. Additional AACT snapshots alone would not resolve these scientific
 gaps. Preserve original proposals and frozen protocols; this dated document
 records the updated disposition without rewriting their ancestry.
+
+
+## First T6 preparation increment
+
+The evaluation-only `tools/science/t6_claim_audit.py` interface and its documented
+synthetic tests are implemented. This first version verifies bounded JSON original
+bytes/pointers and claim/review bindings. It keeps source entailment, citation
+support and contextual applicability separate. Unsupported is not treated as
+false, and wholly unassessable dossiers have null rather than zero fractions.
+See [T6_CLAIM_AUDIT.md](../docs/T6_CLAIM_AUDIT.md) for fields and explicit limits.
+
+Production Parquet/PDF adapter qualification, actual dossier/prediction-seal
+binding, complete claim extraction, source authenticity/chronology, independent
+review-seal enforcement and completeness reference remain separate next steps.
+The prototype does not close original T6/H5, launch interpretation generation or
+reclassify exposed development cases as held-out. No runtime module was changed.
+
+Inspection also located an existing reuse route: `reference_packets.audit_observation`
+and `SourceAudit.parquet_row` already verify physical Open Targets rows, mappings
+and archived source receipts. Integrate those complete checks rather than inventing
+a second raw-row parser or treating a normalized JSON extract as an original.
+
+
+## October24 atomic claim audit prototype validated
+
+Evaluation-only JSON original/source/claim-review contract implemented;23 new tests,
+full986/no skips/probes/package and33 isolated-checkout tests pass. Final code
+hashes unchanged throughout validation. Source entailment, citation support and
+intervention applicability remain separate; unassessable is not zero error.
+No real claim reviews, model calls, clinical labels or probabilities created.
+Next bind to actual sealed dossier bytes and reuse complete original Parquet
+receipt/row/lineage checks; then independent references and interpretation layer.
+Original scientific Tasks6-8 remain unfinished. Acceptance:
+planning/review-assets/t6-claim-audit-20261024/final-acceptance.json.

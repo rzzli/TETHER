@@ -8,6 +8,19 @@ updated: 2026-10-24
 
 # Project goals
 
+
+## October24 atomic claim audit prototype validated
+
+Evaluation-only JSON original/source/claim-review contract implemented;23 new tests,
+full986/no skips/probes/package and33 isolated-checkout tests pass. Final code
+hashes unchanged throughout validation. Source entailment, citation support and
+intervention applicability remain separate; unassessable is not zero error.
+No real claim reviews, model calls, clinical labels or probabilities created.
+Next bind to actual sealed dossier bytes and reuse complete original Parquet
+receipt/row/lineage checks; then independent references and interpretation layer.
+Original scientific Tasks6-8 remain unfinished. Acceptance:
+planning/review-assets/t6-claim-audit-20261024/final-acceptance.json.
+
 ## Source-readiness assessment closed; full T6 audit next — October24 latest
 
 Fixed12 assessed:10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,

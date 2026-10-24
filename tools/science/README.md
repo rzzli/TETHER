@@ -177,3 +177,13 @@ planning/review-assets/prospective-endpoint-readiness-20261023/source-readiness-
 Next T6/H5 branch: evaluation-only atomic claim audit, then interpretation/reference
 qualification. Selection-only development does not establish full dossier quality.
 See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
+
+
+## Atomic claim audit preparation
+
+`t6_claim_audit.audit_claims` checks evaluation-only claim/review inventories
+and byte-pinned JSON original pointers. It separates entailment, intervention
+applicability, citation support and unassessable claims; it does not establish
+therapeutic truth. Current scope is a synthetic contract prototype, not a
+production Parquet/PDF source adapter or sealed model-run evaluation.
+See [the interface and limits](../../docs/T6_CLAIM_AUDIT.md).
