@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "all_predictions_sealed_before_reference_answer_join",
+  "predictions": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\predictions-seal.json",
+    "sha256": "59c4ec605eac4f6b034c79749a64c180c31ad4b020db63a218c9f6e78372a092",
+    "bytes": 41979
+  },
+  "execution_report": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\execution-report.json",
+    "sha256": "ffb5c0d8c0d4e71cc863917e9543199e912341252e202f8d61dab43b62e482a0",
+    "bytes": 40815
+  },
+  "root_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\seal.json",
+    "sha256": "d403eed34dd98721e81ec0eb72960dc3ca12830d8c78db5d2f3e38e393f97324",
+    "bytes": 62632
+  },
+  "reference_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\t6-topone-20261023\\v1\\reference-freeze.json",
+    "sha256": "c827e9cebf5c535193ccbcb72f88b99b727bf7024cd0786f87da170c34d83ba4",
+    "bytes": 1199
+  },
+  "tasks": 8,
+  "arms": 32,
+  "native_calls": 48,
+  "statuses": [
+    "completed"
+  ],
+  "elapsed_seconds": 2749.875,
+  "provider_spend_usd": 0,
+  "server_stopped": true,
+  "port_closed": true,
+  "numerical_features": [],
+  "probabilities": null
+}
