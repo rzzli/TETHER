@@ -5,6 +5,19 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+`t6_challenge` adds a separate source-only case/category task layer for the harder
+top-one development comparison. It preserves the legacy complete-ten-case guard,
+loads each full admitted parent world, retains every screening disposition and
+offers the same bounded scientific records to four arms. Its protocol is
+`planning/protocols/t6-topone-development-v0.1.json`. The optional selection cap and
+prioritization question are explicit policy/configuration inputs; legacy defaults
+retain top-three behavior. The launcher requires sealed evaluator-only references
+before local inference and verifies owned-process cleanup before prediction sealing.
+`t6_reference` validates/seals the two source reviews and third reconciliation;
+`t6_topone_evaluation` joins answers only after source-inclusive execution checks.
+Implementation/fixture tests alone do not establish actual execution or scientific
+accuracy; see `planning/Harder T6 Source Prioritization 2026-10-23.md` for status.
+
 The B0 workflow/transport/evaluation modules now implement the separately frozen
 source-inclusive cycle: owned read-only local servers, paired exact extracts,
 archived code/command receipts, origin-only membership reconstruction, complete

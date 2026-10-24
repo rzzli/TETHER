@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from asof.local_model import LocalSelectionBackend, selection_payload
+from asof.local_model import LocalSelectionBackend, selection_payload, validate_selection_cap
 from asof.serde import ContractError, parse_json
 
 
@@ -17,8 +17,9 @@ STAGES = ('chief_of_staff', 'coordinator_delegate', 'mapped_specialist',
           'scientific_reviewer', 'coordinator_synthesize')
 
 
-def role_allowed_ids(request):
+def role_allowed_ids(request, selection_cap=3):
     """Reconstruct a bounded output scope from the immutable request alone."""
+    selection_cap = validate_selection_cap(selection_cap)
     visible = tuple(row.observation_id for row in request.evidence)
     if len(visible) != len(set(visible)):
         raise ContractError('Role request contains duplicate visible IDs')
@@ -44,7 +45,7 @@ def role_allowed_ids(request):
                 row['role'] != STAGES[index] or not isinstance(row['observation_ids'], list)):
             raise ContractError('Role feedback must retain the exact accepted stage prefix')
         ids = row['observation_ids']
-        if (any(not isinstance(identity, str) for identity in ids) or len(ids) > 3 or
+        if (any(not isinstance(identity, str) for identity in ids) or len(ids) > selection_cap or
                 len(ids) != len(set(ids)) or set(ids) - set(visible)):
             raise ContractError('Role feedback contains unavailable, duplicate or unbounded IDs')
         if index == 3 and set(ids) - set(prior[index-1]['observation_ids']):
@@ -55,14 +56,14 @@ def role_allowed_ids(request):
     return visible
 
 
-def role_selection_payload(request, maximum, seed, wire_format='canonical'):
+def role_selection_payload(request, maximum, seed, wire_format='canonical', selection_cap=3):
     """Change only the output schema; keep the complete candidate prompt intact."""
-    allowed = role_allowed_ids(request)
-    payload = selection_payload(request, maximum, seed, wire_format)
+    allowed = role_allowed_ids(request, selection_cap)
+    payload = selection_payload(request, maximum, seed, wire_format, selection_cap)
     output = payload['json_schema']['properties']['observation_ids']
     if allowed:
         output['items']['enum'] = list(allowed)
-        output['maxItems'] = min(3, len(allowed))
+        output['maxItems'] = min(selection_cap, len(allowed))
     else:
         # Empty enums are not accepted by some native JSON grammars. The visible
         # enum is unchanged and maxItems=0 permits exactly the empty array.
@@ -80,4 +81,4 @@ class RoleSelectionBackend(LocalSelectionBackend):
         self.provenance['selection_policy'] = ROLE_SELECTION_POLICY
 
     def payload_for(self, request):
-        return role_selection_payload(request, self.max_output, self.seed, self.policy.wire_format)
+        return role_selection_payload(request, self.max_output, self.seed, self.policy.wire_format, self.selection_cap)

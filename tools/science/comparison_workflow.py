@@ -15,7 +15,7 @@ import time
 from asof.agents import Selection, SpecialistRequest, Usage, make_request
 from asof.contracts import Category, EvidenceStatus, Profile
 from asof.journal import RunJournal, read_chain
-from asof.local_model import LocalSelectionBackend, parse_selection, selection_payload
+from asof.local_model import LocalSelectionBackend, parse_selection, selection_payload, validate_selection_cap
 from asof.retrieval import RetrievalPolicy, bounded_request
 from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json, read_json, safe_child, sha256_file, write_json
 from asof.workflow import Budget, BudgetMeter, add_usage, over_quote
@@ -51,12 +51,24 @@ def _policy(value):
         raise ContractError('Role instructions must be explicit')
     if value.get('output_constraint_policy') not in (None, 'native_json_schema_reviewed_subset_v1'):
         raise ContractError('Unknown comparison role output constraint policy')
+    validate_selection_cap(value.get('selection_cap', 3))
+    if 'prioritization_question' in value and (not isinstance(value['prioritization_question'], str) or
+                                             not value['prioritization_question'].strip()):
+        raise ContractError('Prioritization question must be a nonempty string')
     return value
+
+
+def _selection_cap(policy, config=None):
+    cap = validate_selection_cap(policy.get('selection_cap', 3))
+    if config is not None and validate_selection_cap(config.get('selection_cap', 3)) != cap:
+        raise ContractError('Comparison policy/backend selection cap differs')
+    return cap
 
 
 def _payload(request, config, policy):
     builder = role_selection_payload if policy.get('output_constraint_policy') else selection_payload
-    return builder(request, config['max_output_tokens'], config['seed'], config['retrieval'].get('wire_format','canonical'))
+    return builder(request, config['max_output_tokens'], config['seed'], config['retrieval'].get('wire_format','canonical'),
+                   _selection_cap(policy, config))
 
 
 def _stage_instructions(base, stage, category, policy):
@@ -66,6 +78,8 @@ def _stage_instructions(base, stage, category, policy):
 def _prepare(case, category, store, policy, retrieval):
     records = tuple(r for r in store.query(case, category) if r.observation.status == EvidenceStatus.OBSERVED)
     base = make_request(case, category, records)
+    if 'prioritization_question' in policy:
+        base = replace(base, instructions=base.instructions+'\nPrioritization question: '+policy['prioritization_question'])
     # All arms reserve the same worst-case role/control overhead, then receive the
     # exact same whole-record candidate packet. No role silently truncates fields.
     longest = max((_stage_instructions(base, s, category, policy) for s in STAGES), key=lambda x: len(x.encode('utf-8')))
@@ -78,10 +92,13 @@ def _request(base, stage, category, policy, prior):
     feedback = (json.dumps({'prior_role_choices': prior}, sort_keys=True, separators=(',', ':')), ) if prior else ()
     if len(canonical(feedback)) > policy['control_reserve_bytes']:
         raise ContractError('Role feedback exceeds frozen control reservation')
-    return replace(base, instructions=_stage_instructions(base, stage, category, policy), feedback=feedback)
+    request = replace(base, instructions=_stage_instructions(base, stage, category, policy), feedback=feedback)
+    role_allowed_ids(request, _selection_cap(policy))
+    return request
 
 
-def _baseline(request, arm):
+def _baseline(request, arm, selection_cap=3):
+    selection_cap = validate_selection_cap(selection_cap)
     if arm == 'lexical':
         tokens = set(re.findall(r'[a-z0-9_]{3,}', request.case_json.casefold()))
         rows = sorted(request.evidence, key=lambda r: (-len(tokens & set(re.findall(r'[a-z0-9_]{3,}', r.statement.casefold()))), r.observation_id))
@@ -94,7 +111,7 @@ def _baseline(request, arm):
         if any(type(s) not in (int, float) or not math.isfinite(s) for s in scores):
             return [], 'inapplicable', 'missing_or_nonfinite_provider_score'
         rows = [r for r, _ in sorted(zip(request.evidence, scores), key=lambda pair: (-pair[1], pair[0].observation_id))]
-    return [r.observation_id for r in rows[:3]], 'completed', None
+    return [r.observation_id for r in rows[:selection_cap]], 'completed', None
 
 
 def _claim(store, category, identity):
@@ -119,6 +136,7 @@ def run_case(case, store, backend, budget, arm, output, role_policy=None):
         raise ContractError('Unsupported matched T6 arm')
     policy = _policy(role_policy if role_policy is not None else default_role_policy())
     provenance = encode(getattr(backend, 'provenance', {}))
+    selection_cap = _selection_cap(policy, provenance.get('config'))
     if policy.get('output_constraint_policy') and (
             getattr(backend, 'output_scope_policy', None) != policy['output_constraint_policy'] or
             provenance.get('selection_policy') != ROLE_SELECTION_POLICY):
@@ -172,7 +190,7 @@ def run_case(case, store, backend, budget, arm, output, role_policy=None):
                 coverage['status'] = 'no_whole_records_within_budget'
                 continue
             if arm in ('lexical', 'provider_score'):
-                selected, status, reason = _baseline(base, arm)
+                selected, status, reason = _baseline(base, arm, selection_cap)
                 coverage.update(status=status, reason=reason)
                 journal.append('baseline_selection', category=category.value, arm=arm, selected=selected, status=status, reason=reason)
             else:
@@ -202,7 +220,7 @@ def run_case(case, store, backend, budget, arm, output, role_policy=None):
                         usage, measured = selection.usage, True
                         ids = list(selection.observation_ids)
                         allowed = {r.observation_id for r in request.evidence}
-                        if len(ids) > 3 or len(ids) != len(set(ids)) or set(ids)-allowed:
+                        if len(ids) > selection_cap or len(ids) != len(set(ids)) or set(ids)-allowed:
                             raise ContractError('Role selected outside the exact supplied IDs/cap')
                         if stage in ('scientific_reviewer', 'coordinator_synthesize') and set(ids)-set(prior[-1]['observation_ids']):
                             raise ContractError('Review/synthesis added an unreviewed source ID')
@@ -279,6 +297,12 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
         if p.stat().st_size != proof['bytes'] or sha256_file(p) != proof['sha256']:
             raise ContractError('Comparison output bytes differ')
     result = read_json(output/'result.json')
+    # A nondefault cap must verify its native payload even without a separately
+    # supplied expected config. This uses retained declarations, not an external
+    # configuration attestation; callers can still supply the expected config.
+    retained_config = result['configuration']['backend_provenance'].get('config')
+    if backend_config is None and retained_config is not None and retained_config.get('selection_cap', 3) != 3:
+        backend_config = retained_config
     if backend_config is not None:
         configuration = result['configuration']
         if (configuration['backend_provenance'].get('config') != backend_config or
@@ -286,6 +310,10 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                 configuration['backend_id'] != LocalSelectionBackend.backend_id):
             raise ContractError('Comparison expected backend/retrieval configuration differs')
     policy = _policy(read_json(output/'role-policy.json'))
+    selection_cap = _selection_cap(policy, result['configuration']['backend_provenance'].get('config'))
+    if (selection_cap != 3 and result['configuration']['backend_id'] == LocalSelectionBackend.backend_id and
+            backend_config is None):
+        raise ContractError('Comparison nondefault local selection cap lacks native configuration')
     if policy.get('output_constraint_policy') and result['configuration']['backend_provenance'].get('selection_policy') != ROLE_SELECTION_POLICY:
         raise ContractError('Comparison native role-selection policy differs')
     if role_policy is not None and fingerprint(policy) != fingerprint(role_policy):
@@ -373,7 +401,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
         elif kind=='baseline_selection':
             if halted or pending is not None or d['category'] not in ready or d['category'] in baseline_choices or result['arm'] not in ('lexical','provider_score'):
                 raise ContractError('Comparison baseline ordering differs')
-            computed,status,reason=_baseline(chronological_bases[d['category']],result['arm'])
+            computed,status,reason=_baseline(chronological_bases[d['category']],result['arm'],selection_cap)
             if d['arm']!=result['arm'] or d['selected']!=computed or d['status']!=status or d['reason']!=reason:
                 raise ContractError('Comparison baseline journal differs from deterministic recipe')
             baseline_choices[d['category']]=d
@@ -520,8 +548,8 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                     record.get('payload_sha256') != fingerprint(payload)):
                 raise ContractError('Comparison model payload differs')
             if record['status'] == 'completed':
-                native_allowed = role_allowed_ids(request) if policy.get('output_constraint_policy') else [r.observation_id for r in request.evidence]
-                selected, actual_usage = parse_selection(record['response'], native_allowed)
+                native_allowed = role_allowed_ids(request, selection_cap) if policy.get('output_constraint_policy') else [r.observation_id for r in request.evidence]
+                selected, actual_usage = parse_selection(record['response'], native_allowed, selection_cap)
                 if (over_quote(usage,quote) or account['basis']!='adapter_reported' or
                         encode(decode(Usage,record['measured_usage']))!=encode(actual_usage) or
                         fingerprint(record['response']) != record['response_sha256'] or list(selected) != record['selection'] or encode(actual_usage) != encode(usage)):
@@ -541,11 +569,11 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
             if encode(decode(Usage,choices[attempt_id]['usage']))!=encode(usage):
                 raise ContractError('Comparison role-reported usage differs from accounting')
             allowed = {r.observation_id for r in request.evidence}
-            if len(selected) > 3 or len(selected) != len(set(selected)) or set(selected)-allowed:
+            if len(selected) > selection_cap or len(selected) != len(set(selected)) or set(selected)-allowed:
                 raise ContractError('Comparison role selected invalid IDs')
             if role in ('scientific_reviewer', 'coordinator_synthesize') and (not prior or set(selected)-set(prior[-1]['observation_ids'])):
                 raise ContractError('Comparison bypassed critical review')
-            if backend_config is not None and list(parse_selection(record['response'], allowed)[0]) != selected:
+            if backend_config is not None and list(parse_selection(record['response'], allowed, selection_cap)[0]) != selected:
                 raise ContractError('Comparison journal/native selection differs')
             prior.append({'role': role, 'observation_ids': selected})
         summed = add_usage(summed, usage)
@@ -575,7 +603,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
         elif local_exhaustion:
             status='budget_exhausted'
         elif result['arm'] in ('lexical','provider_score'):
-            status=_baseline(base,result['arm'])[1]
+            status=_baseline(base,result['arm'],selection_cap)[1]
         else:
             stages=STAGES if result['arm']=='adapted_virtual_biotech' else ('mapped_specialist',)
             if tuple(r['role'] for r in priors.get(category,[]))!=stages:
@@ -590,7 +618,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
             raise ContractError('Comparison coverage count differs')
         if cov['status'] == 'completed':
             if result['arm'] in ('lexical', 'provider_score'):
-                computed, status, _ = _baseline(bases[category], result['arm'])
+                computed, status, _ = _baseline(bases[category], result['arm'], selection_cap)
                 if computed != selected or status != 'completed':
                     raise ContractError('Comparison baseline differs')
             else:
@@ -601,7 +629,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
         elif selected:
             roles=priors.get(category,[])
             if result['arm'] in ('lexical','provider_score'):
-                terminal=_baseline(bases[category],result['arm'])[0]
+                terminal=_baseline(bases[category],result['arm'],selection_cap)[0]
             else:
                 expected_stages=STAGES if result['arm']=='adapted_virtual_biotech' else ('mapped_specialist',)
                 if tuple(r['role'] for r in roles)!=expected_stages:
@@ -611,7 +639,7 @@ def verify_case(output, case, store, backend_config=None, role_policy=None):
                     e['event']=='wall_time_exhausted' and e['details'].get('category')==category and e['details'].get('stage')=='claim_commit' for e in events)):
                 raise ContractError('Comparison partial claim commit lacks timed source proof')
         elif cov['status']=='inapplicable':
-            if result['arm']!='provider_score' or _baseline(bases[category],result['arm'])[1:] != ('inapplicable',cov.get('reason')):
+            if result['arm']!='provider_score' or _baseline(bases[category],result['arm'],selection_cap)[1:] != ('inapplicable',cov.get('reason')):
                 raise ContractError('Comparison provider-score abstention differs')
         expected_claims += [_claim(store, Category(category), identity) for identity in selected]
     journal_claims = [e['details']['claim'] for e in events if e['event'] == 'claim_committed']

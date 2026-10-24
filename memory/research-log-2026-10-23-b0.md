@@ -85,3 +85,16 @@ Extraction287.5s/159174B per read/117866496B parent peak; PostgreSQL peak unmeas
 Ancestry evaluation about565s; repeated hashing logical reads are not physical I/O.
 Origin exact-key17components flag dependence only; effective sample size null.
 Next harder T6 top-one/source-bounded comparison, with pre-output AI references.
+
+## Harder T6 implementation checkpoint — October23 evening
+
+B0 acceptance committed9d894d1, verified230-entry evidence ZIP/Git bundle at
+E:/projects_data/drug_target_agents_data/backups/registry-content-20261023T202631Z/;
+backupreceipt committed0869164. Original72null clinical artifacts hash unchanged.
+The new T6 protocol fixes8tasks maximum/2percase,≥2 offered records, cap1 and4arms.
+40 new targeted tests pass after correcting a fixture import and lifecycle-mock
+setup; failed test logs retained. Pre-dispatch review caught question mismatch,
+config mutation timing, cleanup/seal races and outer-evaluator proof gaps; those
+guards are implemented before real native dispatch. Full validation and complete
+source task preparation are running; no new native calls or reference answers yet.
+The canonical source root is unchanged; downloader/monitor remain untouched.

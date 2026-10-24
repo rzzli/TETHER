@@ -10,6 +10,18 @@
 - [x] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
 - [ ] Continue to the harder T6 comparison design and execution under its own gates.
 
+### Harder T6 top-one development — in progress October23
+
+- [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
+- [ ] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
+- [ ] Seal two independent AI source reviews and third-review reconciliation before inference.
+- [ ] Execute and source-verify four paired arms; seal outputs before answer join.
+- [ ] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
+
+See planning/Harder T6 Source Prioritization 2026-10-23.md. B0 prediction expansion
+has stopped under its fixed rule; this separate T6 development study does not
+qualify clinical truth or close broader scientific Tasks6–8.
+
 Final source-inclusive audit verified96/96 native envelopes. January0 appearances,
 17absences and15unknowns give53.125% coverage, below90%; stop operational prediction
 expansion. April1appearance/31absences is a separate sensitivity view. All760 tests
