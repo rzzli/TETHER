@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "fixed_member_source_execution_frozen_before_dispatch",
+  "created_at_utc": "2026-10-24T20:41:34.195405+00:00",
+  "execution_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\source-products-execution-20261024T204128Z\\execution.json",
+    "sha256": "272a56caf80927603fb0cc6b1a1577ea880311821136e7c6038344beeaa63d0c",
+    "bytes": 113151
+  },
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\prospective-readiness-sources-v0.1.json",
+    "sha256": "a040d5d8a21328f142c4b08b011fbd10479f23669f9e8b9d567aeeb51381f863",
+    "bytes": 5066
+  },
+  "engine": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\readiness_sources.py",
+    "sha256": "5f0fede159304577495a05ccf4f037b207270784f750f617c4fe4ff15a1a6bcc",
+    "bytes": 46430
+  },
+  "membership_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\readiness-membership-freeze.json",
+    "sha256": "24e561b948601e6a8026973d2dc9a8e86d5dd2c9240b658b614239aca7e7c601",
+    "bytes": 1957
+  },
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\readiness-sources-full-validation-importfix-20261024.json",
+    "sha256": "abc74c37bd26c41308ff117f03e2c0563f33923c796e32453838e61105bf935a",
+    "bytes": 469
+  },
+  "clean_checkout": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\source-products-clean-checkout-validation.json",
+    "sha256": "9c64402b44e640952a671c030f6546243c56d624acb70a7f03172e2b61b3b036",
+    "bytes": 357
+  },
+  "independent_review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\source-products-engine-review.json",
+    "sha256": "27af48369075321419ad94a9dc57d24a75b2fe84d1c8cd32c68292ec96d9e12e",
+    "bytes": 8142
+  },
+  "current_tests": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_readiness_sources.py",
+      "sha256": "0f3adc1ca45226d24181082ed3d5541cdd96aa2ebb1f17ca40ad40f9bfbac943",
+      "bytes": 23785
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_readiness_sources_peer.py",
+      "sha256": "407f8e58891233e8ade54079c4700d78bac24512acd0b5da29b6cda17a7db779",
+      "bytes": 6940
+    }
+  ],
+  "reviewed_test_snapshots": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\readiness-source-tests-reviewed-before-importfix-20261024.py",
+      "sha256": "b05751ce641b04b38e7054c6febba02d96c63995b4433f215782b1624155592c",
+      "bytes": 23774
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\readiness-source-peer-reviewed-before-importfix-20261024.py",
+      "sha256": "4e4a083e052ad3c5a3c91649fe1eeb2152cbfec17b13805ab8df0cab3b511cc7",
+      "bytes": 6929
+    }
+  ],
+  "portability_correction": "Root changed fixture imports to tests package so standard discovery/clean checkout work. Runtime engine unchanged; original reviewed test bytes retained. Initial full-discovery failure preserved.",
+  "runner": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\run_readiness_sources_20261024.py",
+    "sha256": "7f5157359d6bfa2514a010230bfaf0c93c10ceb6856858ca01a42312bdc95d96",
+    "bytes": 1769
+  },
+  "source_scope": "Fixed12canonical metadata requests plus at most2listed official protocol/SAP originals each under existing globalcaps; no results/followup/search/paidaccess/models.",
+  "post_membership_queries_before_freeze": 0,
+  "clinical_activation": false,
+  "provider_spend_usd": 0
+}

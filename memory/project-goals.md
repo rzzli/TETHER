@@ -8,6 +8,28 @@ updated: 2026-10-24
 
 # Project goals
 
+## Fixed-member source execution prepared — October24, before dispatch
+
+Sourceengine5f0fede... and protocola040d5d8... independentlyreviewed;41main+
+12peer synthetic tests, full963/no skips/probes/package and163isolatedtests pass.
+Root fixed fixture imports for normalpackage discovery; oldreviewedtestbytes and
+initial912-test/two-import-error failure preserved. No runtimeenginechange.
+source-products-execution-freeze.json prepared. Next commit then guarded
+data/cache/run_readiness_sources_20261024.py once. On resume inspect
+source-products-attempt-summary.json/sourcejournal before ANYdispatch; claims
+mustneverrepeat. All12canonical IDs fixed, no reportedoutcomes/clinicalactivation.
+
+## Fixed-member source products in preparation — October24
+
+Capacity phase closed with verified236-entryZIP/Gitbundle through2eada8d at
+E:/projects_data/drug_target_agents_data/backups/prospective-capacity-20261024T164357Z/;
+manifest63f7334f... (laterstatuscommitoutsidebundle). Membership12sealed before
+anysourceRulequery. Newprospective-readiness-sources-v0.1 contract fixes23API
+leaves,≤2listedofficial protocol/SAP originals percase, typedQC/eval-onlytext,
+250MiB/1800s/48totalamendedsourceattempts inclprior11. No model/label/clinical
+activation/replacement. Newreadiness_sources.py/tests beingimplemented; independent
+protocolreview underway. No postmembershipHTTP yet. Sourcepresence is not jointready.
+
 ## Amended frame and fixed12 source members verified — October24 latest
 
 Capacitycapture9d142483... committedc20f905 completed4277unique queryrows in

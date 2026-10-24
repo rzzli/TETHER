@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "status": "accepted_offline_source_products_engine_review",
+  "created_at_utc": "2026-10-24T17:01:57.207719+00:00",
+  "pins": [
+    {
+      "path": "tools/science/readiness_sources.py",
+      "bytes": 46430,
+      "sha256": "5f0fede159304577495a05ccf4f037b207270784f750f617c4fe4ff15a1a6bcc"
+    },
+    {
+      "path": "tests/test_science_readiness_sources.py",
+      "bytes": 23774,
+      "sha256": "b05751ce641b04b38e7054c6febba02d96c63995b4433f215782b1624155592c"
+    },
+    {
+      "path": "tests/test_science_readiness_sources_peer.py",
+      "bytes": 6929,
+      "sha256": "4e4a083e052ad3c5a3c91649fe1eeb2152cbfec17b13805ab8df0cab3b511cc7"
+    },
+    {
+      "path": "planning/protocols/prospective-readiness-sources-v0.1.json",
+      "bytes": 5066,
+      "sha256": "a040d5d8a21328f142c4b08b011fbd10479f23669f9e8b9d567aeeb51381f863"
+    },
+    {
+      "path": "planning/protocols/prospective-endpoint-readiness-v0.1.json",
+      "bytes": 39003,
+      "sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a"
+    },
+    {
+      "path": "planning/review-assets/prospective-endpoint-readiness-20261023/readiness-membership-freeze.json",
+      "bytes": 1957,
+      "sha256": "24e561b948601e6a8026973d2dc9a8e86d5dd2c9240b658b614239aca7e7c601"
+    },
+    {
+      "path": "planning/review-assets/prospective-endpoint-readiness-20261023/source-products-protocol-review.json",
+      "bytes": 5166,
+      "sha256": "2fffcd652995012dc371727c3b9ea799de32010fb6076f50419d425498f2a268"
+    },
+    {
+      "path": "planning/review-assets/prospective-endpoint-readiness-20261023/capacity-capture-independent-review.json",
+      "bytes": 9341,
+      "sha256": "d7104fcc2e52691698c5d04d52896b7fccd7296d467dcc516ea6cc09405b1f07"
+    },
+    {
+      "path": "tools/science/prospective_capacity.py",
+      "bytes": 27100,
+      "sha256": "eb8b16cd4a31f5d0ec5278ee0f27fca9f44b8464ac95dcae535d1daa87688dd6"
+    },
+    {
+      "path": "tools/science/prospective_frame.py",
+      "bytes": 25921,
+      "sha256": "763d64ab4fc53e15fd9d2e0374b06429cd98bf02a4e8f5b142b29f5e960a6b97"
+    },
+    {
+      "path": "tools/science/prospective_transport.py",
+      "bytes": 25084,
+      "sha256": "bee9328dca0a45d34fcd4966f6ac65a32aa92babc6ea65a07204905f8841a745"
+    }
+  ],
+  "findings": [],
+  "corrected_findings": [
+    {
+      "issue": "Draft source execution lacked explicitR24 dispatch and same-day transport guards.",
+      "resolution": "Execute rejects expiredR beforeclaim; every attempt/stream/end and finaljob success checksR. Audit validates recordedUTC dateR and allows later offline replay.",
+      "peer_regression": "test_expired_R_denied_before_any_client_request; test_completed_source_packets_replay_after_R"
+    },
+    {
+      "issue": "Draft filename-only or unknown product metadata could become notlisted.",
+      "resolution": "Unknown product entry causes metadatahold and blocks easier-file substitution; explicit ICF-only is excluded.",
+      "peer_regression": "test_filename_only_product_is_unknown_hold; test_unknown_product_blocks_other_easier_original; test_unrecognized_type_stays_unknown"
+    },
+    {
+      "issue": "Draft phase comparison treated order reversal as drift.",
+      "resolution": "Schema/type/duplicate checks followed by order-insensitive phase set comparison.",
+      "peer_regression": "test_phase_array_order_does_not_create_drift"
+    },
+    {
+      "issue": "Draft failed transport reason could contradict receipt headers after public-chain reseal.",
+      "resolution": "Replay cross-checks failure reason against status/URL, encoding, contentlength, overflowbytes or errorclass evidence.",
+      "peer_regression": "test_failed_HTTP_reason_cannot_contradict_success_headers"
+    },
+    {
+      "issue": "Draft aggregate elapsed only checked numeric range.",
+      "resolution": "Explicit persistedjobUTC start/end; attempts bounded withinjob; elapsed must cover attemptedelapsed and recordedwallspan with stated small clock tolerance. Finaldeadline and date guards before successfulpacketoutput.",
+      "peer_regression": "test_job_elapsed_cannot_hide_recorded_wall_span"
+    }
+  ],
+  "reviewed_scope": [
+    "Exact immutablebase54da82 source schema and fixed12 membership replay ancestry checked, including1unknown member, originalseed/hashorder and all-row frame proof. No memberreplacement/rescreen selection.",
+    "Public listing constructor emits exact canonicalmemberNCT, official HTTPSendpoint,formatjson and exact23 typedleaves. Source/current text is evaluator-only; outcomes/status/stop-reason branches rejected.",
+    "Actual offline _profile verification succeeded:12members,23leaves,1screenunknown,154exactsourcepins,prior1657798bytes. No networktransport invoked.",
+    "All1or2 relevant unique originals selected, combined/protocol/SAP/filename deterministicorder. Morethan2, flag/typecontradiction, conflictingduplicatefilename, unsafe/missing relevantfilename or unknownproduct entry holds. Full listing provenance retained.",
+    "Official CDN PDFroute derives fixedNCTlast2digits and safe exactlisted literalfilename. No aliasreplacement, redirects/retries, source search, paid/access/account path or modeladapter.",
+    "Exclusive local/semantic globalclaims preserve no automaticretry across manifests and prose-only protocolreseal. Exact public execute plan is re-derived in audit; private _attempt is internal and receives no public arbitraryURL authorization.",
+    "Streamed/retained/file/declaredbytes and headers retained perattempt, including failures.2MiB listing/16MiB PDF/250MiB aggregate, priorframebytes charged,40ssocket/120srequest and1800s newjobwall caps; prior11calls +max36new=47<=48; oldfailed2calls remain separate preserved.",
+    "Missingnotlisted, unknown/conflictingmetadata, identity/phasedrift, unavailableHTTP, oversize, PDFQC and unattemptedafterglobalfailure remain distinct through packet/selection/receipt/partialjournal evidence. No negativeclinical label inferred.",
+    "Raw PDF signature/EOF/size checks yield candidatependingstewardreview only. Metadata/upload/internal dates and successfulretrieval do not establish authenticity, applicability, originrisk, prespecification, completeamendmenthistory or materialrule.",
+    "Roleevaluation_only/agent_visiblefalse/stewardpending preserved for all source text and PDFs. Clinicalactivation/modeldispatchfalse, probabilities/outcomelabelsnull, rule/originriskunknown. OriginalscientificTasks6\u20138 remain open.",
+    "Full source archive inventory, external/internalmanifest commitments, raw hashes, eventgrammar, terminalreceipts, exactrequest plan, failureevidence, counts/bytes/time and deterministicpackets compared during offlineaudit."
+  ],
+  "validation": {
+    "independent_peer_command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -p test_science_readiness_sources_peer.py -v",
+    "independent_peer_tests": 12,
+    "independent_peer_elapsed_seconds": 34.578,
+    "independent_peer_result": "OK",
+    "actual_bound_profile": "Read-only source._profile succeeded; noHTTP.",
+    "main_suite": "Implementer41-test run in progress at this review checkpoint; not claimed as passed. Full repository and clean-checkout checks remain root gates before actual source execution.",
+    "peer_setup_correction": "First strengthened peer run used shallow mappingproxy copies and two setup errors; corrected to stdlibJSON mutable events, then all12 passed. No engine change was needed for those setup errors."
+  },
+  "limits": [
+    "Review is source-only offline acceptance, not clinical/scientific reference qualification.",
+    "No actual listing/PDF availability or server23-leaf acceptance tested by this review.",
+    "Root must complete full/isolated validation, seal exact execution manifest and respect existing one-shot job accounting before actual source retrieval."
+  ],
+  "network_requests": 0,
+  "model_calls": 0,
+  "source_rule_PDF_queries": 0,
+  "old_outcome_reads": 0,
+  "no_new_human_approval_gate": true
+}

@@ -84,7 +84,7 @@ seed; no silent cap expansion or rerun of the failedv0.1 execution.
 
 - [x] Review the capacity-onlyv0.2 amendment and validate a reusable profile engine without changing v0.1 code/receipts.
 - [x] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
-- [ ] Report complete-frame or failed-gate evidence, update memory and retain a verified backup.
+- [x] Report complete-frame or failed-gate evidence, update memory and retain a verified backup.
 
 Proposed capacity is5000/page500 with the original10page/20MiB/600s bounds and
 original protocol sampling seed. No source-rule retrieval, outcome labels, model
@@ -100,6 +100,24 @@ reconstruction matched every ledger row and original-seed12candidate order:
 3994ineligible/268eligible/15unknown,0exclusions inframe. Fixed12readiness members
 are sealed (11coarse-screeneligible/1unknown); no PDFs/outcomes/modelpredictions.
 This qualifies the reported source query, not an atomic snapshot/clinical cohort.
+
+Verified236-entry evidenceZIP and Gitbundle through2eada8d onE:;
+capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
+
+### Fixed-member source-rule availability — in progress October24
+
+- [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
+- [ ] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
+- [ ] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
+- [ ] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
+
+No source availability or reported outcomes may replace/reorder the sealed12.
+Source presence/QC is separate from scientific readiness; no automaticjoint_ready.
+
+41main/12independentpeer tests pass; full963/no skips/probes/package and163
+isolatedtests pass after correcting package fixture imports. Initial failed full
+discovery is retained; runtime source engine unchanged. Exact fixedmember source
+execution is prepared beforeHTTP and requires committed freeze before dispatch.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone

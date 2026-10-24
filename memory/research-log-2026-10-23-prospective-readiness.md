@@ -140,3 +140,27 @@ evaluatorartifacts; trackedmembershipfreeze records sanitizedhashes/counts only.
 No clinicalcohort/targetprogramqualification, labels, PDFs, modelcalls orprediction.
 Next bounded23leaf per-membermetadata + protocol/SAP availabilitycontract. Source
 availability cannot itselfqualify ruleprespecification, originrisk or futurefitting.
+
+Capacity evidence backedup/verified236ZIPentries+Gitbundle through2eada8d at
+E:/projects_data/drug_target_agents_data/backups/prospective-capacity-20261024T164357Z/;
+manifest63f7334fb8b4c5f5d476be5007b39df648852ab500f69aaf63c940e8edd5c3c2,
+ZIP7,004,521bytes. Raworiginprograms/models/restores excluded; laterstatuscommit
+outsidebundle. Closedcapacityphasebefore fixedsource-product work.
+
+Newfixedmember sourcecontract prospective-readiness-sources-v0.1 preserves23leaf
+projection and12canonicalIDs. Exactcurrentper-IDAPI+official protocol/SAP PDFs
+≤2percase, eval-only/stewardpendingtext, typedQC, fixedsourcecount/byte/timecaps,
+missingness and no automaticreadiness/clinicalclaims. Development/tests and
+independentcontractreview ongoing; no newpostmembershipHTTP yet.
+
+## Fixed-member engine validation and pre-dispatch freeze
+
+Sourceengine5f0fede... reviewed with41main/12peer tests; complete actual154-pin
+profile checks12members/23leaves and prior11calls/1,657,798bytes. Fullrepository
+first failed:912 tests included2failed imports becausefixture modules imported
+top-level names under narrowPYTHONPATH. Root changed bothfixture imports to tests
+package, retained oldreviewedbytes and failedfullreport. Runtimeengineunchanged.
+Correctedfull963/no skips/probes/package passes655.281s;163tests also pass in
+isolatedclean sourcecopy with no ignoredpayloads. Sourceprotocola040d5d8... and
+exactexecutionfreeze prepared beforeHTTP; next committedfreeze thenonejob only.
+No sourceRule/PDF/model/clinicaloperation before this checkpoint.
