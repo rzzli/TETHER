@@ -131,3 +131,19 @@ Evidence backup verified at
 117 ZIP entries/every SHA256/CRC and Git bundle through`1b2236e`. Raw origin
 programs, bulk datasets, model weights and database restores are excluded and
 remain at pinned paths. The later backup receipt is outside that bundle by design.
+
+## Explicit capacity-only continuation
+
+`planning/protocols/prospective-endpoint-capacity-v0.2.json` now records the
+proposed capacity amendment: max5000/page500 only. The closed interval, source
+fields, eligibility/unknown rules,43393exclusions, max12audit and all remaining
+time/byte/retry/clinical boundaries stay fixed. Sampling is seeded with the
+originalv0.1 protocol digest; changing transport caps must not change selection
+order. The already processed100-row prefix is disclosed as same-frame origin
+metadata exposure, with no outcome/source-rule-based replacement or exclusion.
+
+A separate reusable profile engine will inherit pure source/schema/streaming
+helpers and explicitly validate these two overrides. It must preserve legacy
+modules and failedv0.1 artifacts unchanged, pass regressions and independent
+review, and bind an exact effective execution before any amended query. No
+amended source dispatch or source-rule audit has occurred at this checkpoint.

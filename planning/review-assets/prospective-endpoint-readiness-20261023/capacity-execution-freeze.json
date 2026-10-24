@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "explicit_capacity_execution_frozen_before_dispatch",
+  "created_at_utc": "2026-10-24T16:23:27.255643+00:00",
+  "execution_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\execution.json",
+    "sha256": "9d1424833f5e06ba6dc36860cd7feaca26824754f614c48d3808a0eac0ee37fc",
+    "bytes": 43927
+  },
+  "amendment": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\protocols\\prospective-endpoint-capacity-v0.2.json",
+    "sha256": "39399c7b1d124b3a2373f51d6d53ec8e82859a71a4d76899a389fd4a9d265027",
+    "bytes": 3443
+  },
+  "engine": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\prospective_capacity.py",
+    "sha256": "eb8b16cd4a31f5d0ec5278ee0f27fca9f44b8464ac95dcae535d1daa87688dd6",
+    "bytes": 27100
+  },
+  "effective_policy": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\effective-policy.json",
+    "sha256": "c1c9d2a2acd128a86a22c69368180daa51ad2c9063532939161b5f0afa1b173a",
+    "bytes": 881
+  },
+  "full_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\prospective-capacity-full-validation-20261024.json",
+    "sha256": "83a7be7399edbf65fe76ecac023b0e7e81211ab9c56ae0149468213d967e6317",
+    "bytes": 471
+  },
+  "clean_checkout": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-clean-checkout-validation.json",
+    "sha256": "9f5b041deeb2bfcadb345384eba02b0c8dddb32c625059623504d35d46eabc95",
+    "bytes": 357
+  },
+  "independent_review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-engine-review.json",
+    "sha256": "512365c2f5ae09bfc681716aa26ae27d3f7ba40c17ab80032dd0ccd69e2b8eb2",
+    "bytes": 6403
+  },
+  "sampling_seed_sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a",
+  "runner": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\run_capacity_capture_20261024.py",
+    "sha256": "b2ea9092d098c3264b702b1ae8b40a7ebd5b87f01456d1719cbb485c1ba07003",
+    "bytes": 1773
+  },
+  "source_scope": "Same scientific frame; only5000record/page500capacity change; exact committed manifest permits one amended bounded attempt.",
+  "amended_queries_before_freeze": 0,
+  "selected_members": 0,
+  "clinical_activation": false,
+  "provider_spend_usd": 0
+}

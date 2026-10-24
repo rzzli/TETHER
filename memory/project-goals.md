@@ -8,6 +8,27 @@ updated: 2026-10-24
 
 # Project goals
 
+## Amended capacity execution prepared — October24
+
+Explicitv0.2 profile39399c7b... changes onlymax5000/page500.40 newtests and
+independentprotocol/engine reviews pass; full910/no skips/probes/package and
+110 isolatedtests pass. Originalseed54da82.../window/exclusions preserved and
+legacyv0.1 modules/tests byte-identical. Offline replay afterR and semantic retry
+guard corrected before actualdispatch. Exactcapacity-execution-freeze.json is
+prepared; next commitfreeze then guarded run_capacity_capture_20261024.py ONCE.
+On resume inspect capacity-attempt-summary.json/executionjournal beforeanycall;
+do not redispatch if a claim/attempt already exists. No model/PDF/clinicalactivation.
+
+## Capacity-only amendment in progress — October24
+
+Next planned action after auditedv0.1 capacityfailure: explicit protocol
+prospective-endpoint-capacity-v0.2 proposes max5000/page500 only, with unchanged
+10pages/20MiB/600s/0retry. Preserve oldwindow/exclusions/eligibility/projection and
+original54da82... sampling seed, not newamendmenthash. Separate profile engine is
+being implemented without editing legacyframe/transport files or failed artifacts.
+Independent amendment review underway. No amendedHTTP yet; originalmanifest remains
+terminalfailed and mustnotrunagain. Fullobjective/scientificTasks6–8 remainopen.
+
 ## Cold source attempt stopped at capacity gate — October24 latest
 
 Execution25e30b6a... committedf5fdab8 before actualHTTP. Source-execution-

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "protocol_id": "prospective-endpoint-capacity-v0.2",
+  "status": "capacity_only_amendment",
+  "created_at_utc": "2026-10-24T16:13:27.281828+00:00",
+  "base_protocol": {
+    "path": "planning/protocols/prospective-endpoint-readiness-v0.1.json",
+    "sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a",
+    "bytes": 39003
+  },
+  "capacity_patch": {
+    "frame_max_records": 5000,
+    "page_size": 500
+  },
+  "sampling_seed_sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a",
+  "preserved_readiness_date_R": "2026-10-24",
+  "preserved_interval_start": "2026-09-24",
+  "preserved_interval_end": "2026-10-23",
+  "base_bound_request": {
+    "path": "planning/review-assets/prospective-endpoint-readiness-20261023/exposure-bound-request.json",
+    "sha256": "4bdbd81b428afb58be6f7aefc28cfd39982fbbd8272fc7c7d3ced8af119895a4",
+    "bytes": 2900
+  },
+  "stopped_attempt": {
+    "path": "planning/review-assets/prospective-endpoint-readiness-20261023/source-stop-audit.json",
+    "sha256": "8a0da3630bc54b726b560de8eea8689ed1f61b7473374e728b61f58ffcb77cac",
+    "bytes": 2776
+  },
+  "technical_scope": {
+    "clinical_activation": false,
+    "model_dispatch_allowed": false,
+    "source_rule_pdf_queries": 0,
+    "selected_members": 0,
+    "provider_spend_usd": 0
+  },
+  "rationale": {
+    "observed_source_reported_count": 4277,
+    "old_record_cap": 500,
+    "old_page_size": 100,
+    "first_page_records": 100,
+    "first_page_bytes": 38595,
+    "pages_if_count_unchanged": 9,
+    "first_page_extrapolated_total_bytes": 1650708.15,
+    "estimate_limit": "First-page extrapolation only; later record sizes, count stability and full enumeration remain unverified.",
+    "provider_documentation": "Archived official OpenAPI describes page sizes coerced down to1000;500 is within that documented bound, not guaranteed acceptance.",
+    "decision": "Transport workload correction only; no source-availability, outcome or power claim."
+  },
+  "invariants": {
+    "scientific_frame": "All first-posted records in the identical closed30-day interval.",
+    "projection": "Same nine leaf fields; no new source columns, clinical status or results.",
+    "eligibility": "Same treatment/interventional/phase2 or2+3/drug-or-biological criteria and unknown handling.",
+    "exclusions": "Identical43393 named-origin exclusions; no replacement based on first-page metadata.",
+    "sampling": "Same original protocol digest seed and max12; amendment digest must not seed selection.",
+    "budgets": "Keep10pages,2MiB/page,20MiB aggregate,600seconds,40second socket timeout,120second request ceiling and zero automatic retries.",
+    "legacy": "Preserve failedv0.1 code, journal, request, raw responses and no-redispatch claim unchanged."
+  },
+  "exposure_disclosure": "First100 source metadata rows were processed by the failed v0.1 enumeration. No source-rule or outcome retrieval informed this amendment; the readiness audit remains exposed development, never an untouched clinical holdout.",
+  "no_automatic_retry": true,
+  "required_validation": [
+    "Offline amendment/profile and failure regressions.",
+    "Existing v0.1 tests/bytes unchanged and verifiable.",
+    "Full suite and isolated clean-checkout tests.",
+    "Exact effective amended execution manifest committed before one new bounded source attempt."
+  ]
+}
