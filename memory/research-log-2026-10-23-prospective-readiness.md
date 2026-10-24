@@ -164,3 +164,17 @@ Correctedfull963/no skips/probes/package passes655.281s;163tests also pass in
 isolatedclean sourcecopy with no ignoredpayloads. Sourceprotocola040d5d8... and
 exactexecutionfreeze prepared beforeHTTP; next committedfreeze thenonejob only.
 No sourceRule/PDF/model/clinicaloperation before this checkpoint.
+
+## Actual fixed-source result and independent interpretations
+
+Execution272a56ca... committedeb9ef5b beforeHTTP then12canonicalAPIqueriesall200;
+58,250bytes/4.813seconds, amendedpackage23calls,0PDFs/retries/models. No protocol/
+SAP listedinobservedprojection; notglobalabsence. Rootsource-inclusive replay
+passed. A/B independentstewards openedalloriginals andcitedJSONpointer/byteproofs.
+Authoritativebase has15mandatorymethodfields (root'sinitial17countwaswrong;
+supplementalfields explicitlyadvisory). Aclassifies10partial/1efficacyinapplicable/
+1unknown; B11partial/1unknown;0jointdemonstratedboth. Referencessealedbeforethird
+review, no clinicalpositive/negativeassigned. Actualcasefindings include pairedT,
+KM/Brookmeyer-Crowley, ambiguousarmmapping, andfeasibility-only primary endpoints.
+Futureeventtimesarenotneeded beforefutureprediction. Thirdreviewmustcheck that
+currentobservedavailabilityatR isnotmistakenforan unmethistoriccutoffgate.

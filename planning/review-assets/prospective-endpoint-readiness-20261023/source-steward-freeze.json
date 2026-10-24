@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "two_independent_steward_reviews_sealed_before_reconciliation",
+  "created_at_utc": "2026-10-24T20:54:52.475704+00:00",
+  "membership_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\readiness-membership-freeze.json",
+    "sha256": "24e561b948601e6a8026973d2dc9a8e86d5dd2c9240b658b614239aca7e7c601",
+    "bytes": 1957
+  },
+  "reviews": [
+    {
+      "review": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-a-v1\\report.json",
+        "sha256": "1f5dbb57b2841f411ed36f7d705afc940115c9819d1660ade456d5ece17a382d",
+        "bytes": 454784
+      },
+      "reviewer": "A",
+      "case_count": 12,
+      "artifacts": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-a-v1\\extract.py",
+          "sha256": "7ced4cb181848c8a6310d70b107c7dd143f534991f0f7c66937a9b9f4e7b3436",
+          "bytes": 19815
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-a-v1\\inputpins.json",
+          "sha256": "23399aa72f85f1b54e1cfb54a5c240738b75b81f14ee022ce4d5ba0276dcbb36",
+          "bytes": 5565
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-a-v1\\report.json",
+          "sha256": "1f5dbb57b2841f411ed36f7d705afc940115c9819d1660ade456d5ece17a382d",
+          "bytes": 454784
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-a-v1\\report.md",
+          "sha256": "4d88804f604075ba4af61c764a9a32544c589d3ae9965a706eb1ff85daa6a434",
+          "bytes": 58864
+        }
+      ]
+    },
+    {
+      "review": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\report.json",
+        "sha256": "f23c7fb1b3e6de57e69b6a508fd0a07a549d9e5a10c9a90aa4e653e6a247eac8",
+        "bytes": 462997
+      },
+      "reviewer": "independent clinical/chronology/source-methods steward B",
+      "case_count": 12,
+      "artifacts": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\build_report.py",
+          "sha256": "62963f9102c0dc4ee75bdf6cf218b294cb796c2e1b17b7bdb187d2b31ad01981",
+          "bytes": 24401
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\input-pins.json",
+          "sha256": "5d142d47ab8a36664a688089da04e63e544944bdd20d8ad357ffdce360d69d79",
+          "bytes": 5145
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\output-pins.json",
+          "sha256": "f58b7217e3f7e02a16209f58d53ca7d31070912bcae530dc2e40abddb2d36437",
+          "bytes": 526
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\report.json",
+          "sha256": "f23c7fb1b3e6de57e69b6a508fd0a07a549d9e5a10c9a90aa4e653e6a247eac8",
+          "bytes": 462997
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\steward-b-v1\\report.md",
+          "sha256": "11733989e3da24831b677228639552f5588876bc45d6b0f9d0905b0bc488f694",
+          "bytes": 5432
+        }
+      ]
+    }
+  ],
+  "mandatory_base_fields": 15,
+  "supplemental_fields": "Advisory only, not extra readiness gates.",
+  "clinical_activation": false,
+  "clinical_labels_created": 0,
+  "source_queries_by_reviewers": 0,
+  "interpretation": "Independent source-backed interpretations require original-based third adjudication, including agreements; consensus alone is not scientific validation.",
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\seal_source_stewards_20261024.py",
+    "sha256": "eea93401a30d29abae43e172e8d26cb24b7a160f366858a773471961f8190b07",
+    "bytes": 2343
+  }
+}

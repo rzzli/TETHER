@@ -107,7 +107,7 @@ capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
 ### Fixed-member source-rule availability — in progress October24
 
 - [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
-- [ ] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
+- [x] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
 - [ ] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
 - [ ] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
 
@@ -118,6 +118,13 @@ Source presence/QC is separate from scientific readiness; no automaticjoint_read
 isolatedtests pass after correcting package fixture imports. Initial failed full
 discovery is retained; runtime source engine unchanged. Exact fixedmember source
 execution is prepared beforeHTTP and requires committed freeze before dispatch.
+
+Execution272a56ca... committedeb9ef5b before12HTTP200 listingrequests;58,250bytes/
+4.813s,0PDFs/0retries/0modelcalls. No protocol/SAP listed in observedprojection;
+otherpublicsources notsearched. Localreceipt replay passed. Twoindependent source
+stewards assessedall15mandatoryfields (extrafieldsadvisory) and bothreport0joint
+readinessdemonstrated; case-levelclassificationdifferences awaitthirdadjudication.
+source-steward-freeze.json sealsbothoriginalreviews beforethatreconciliation.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone
