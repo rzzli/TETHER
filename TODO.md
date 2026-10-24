@@ -542,3 +542,8 @@ available (ten cases / 20 claims); they are not independently adjudicated gold.
   remain separate historical diagnostics. Scientific comparisons below remain gated.
 - [ ] Complete scientific comparisons with independent quality/clinical references
   and qualified scoring/power. These prerequisites remain unmet.
+
+Native dossier/source checkpoint backed up on E: (53 entries, ZIP CRC/every
+entry SHA256 and Git bundle througha759d04 verified). Retained receipt:
+planning/review-assets/t6-dossier-binding-20261024/backup-validation.json.
+Later receipt/status commit is outside that bundle. Bulk source data excluded.

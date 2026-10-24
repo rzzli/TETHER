@@ -224,3 +224,8 @@ claim-quality judgments, model calls or clinical probabilities created. Next
 exhaustive atomic extraction/completeness, independent review seals and bounded
 interpretation qualification. Original scientific Tasks6-8 remain unfinished.
 Acceptance: planning/review-assets/t6-dossier-binding-20261024/final-acceptance.json.
+
+Native dossier/source checkpoint backed up on E: (53 entries, ZIP CRC/every
+entry SHA256 and Git bundle througha759d04 verified). Retained receipt:
+planning/review-assets/t6-dossier-binding-20261024/backup-validation.json.
+Later receipt/status commit is outside that bundle. Bulk source data excluded.
