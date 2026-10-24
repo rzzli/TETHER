@@ -1,0 +1,43 @@
+{
+  "status": "complete_capacity_frame_capture",
+  "error": null,
+  "execution_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\execution.json",
+    "sha256": "9d1424833f5e06ba6dc36860cd7feaca26824754f614c48d3808a0eac0ee37fc",
+    "bytes": 43927
+  },
+  "journal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\journal.jsonl",
+    "sha256": "e1df096021501a3b6b7aa0a350157a492421964d4ad4bae0d6966ee348f9b6e8",
+    "bytes": 36522
+  },
+  "inspection": {
+    "last_event": "execution_completed",
+    "attempts_started": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "unresolved_attempts": [],
+    "receipt_present": true,
+    "recovery": "inspect retained evidence only; never redispatch this amendment, including failed calls"
+  },
+  "selected_members": 0,
+  "clinical_activation": false,
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "scope": "Source capture only. Successful execution still requires independent receipt replay before membership.",
+  "runner": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\run_capacity_capture_20261024.py",
+    "sha256": "b2ea9092d098c3264b702b1ae8b40a7ebd5b87f01456d1719cbb485c1ba07003",
+    "bytes": 1773
+  }
+}

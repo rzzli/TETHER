@@ -118,3 +118,25 @@ Verified117-entry evidenceZIP (3,456,444bytes) and Gitbundle through1b2236e at
 E:/projects_data/drug_target_agents_data/backups/prospective-readiness-20261024T160543Z/.
 CRC/everyentrySHA/bundleverify pass, manifest5e45a24787a4113da63a826862c0c6b598d90496c3a27b639d3aa8f4379cd5e8.
 Bulk origin programs/models/restores stay atpinnedpaths; later receiptcommit excluded.
+
+## Capacity-only amendment and complete source frame
+
+Explicitamendment39399c7b... preserves scientificframe/date/columns/exclusions and
+original54da82... seed, changing onlymax5000/page500. Newreusableprofile engine
+leaveslegacy modules untouched. Independentreview fixed offline-nextdayreplay
+and prose-onlyreseal retrybypass;40new tests/fulldefault910/no skips/probes/package
+and110 isolatedtests pass. A trailingtestEOF line was normalized afterreview;
+reviewedbytes retained and AST equalityproved, no executable/runtimechange.
+
+Execution9d142483... committedc20f905 beforeHTTP. Newcapturecompleted4277unique
+rows/9pages/2versions/1,657,798bytes; sourceelapsed8.184973seconds. Rootreceipt
+replay and separate stdlib-onlyreconstruction matched everyrawrow/ledgerstate/
+candidate:3994ineligible,268eligible,15unknown;283pool,0exclusions. Priorfailed100
+prefixrows allmatchnewframe; failedoldclaim/raw/journal unchanged. No partialstitch.
+
+Fixed12readinessmembers sealedafterindependentaudit and before anysource-rule
+query:11coarsescreeneligible,1unknown. IDs/sourcephysicalJSONlocators liveinignored
+evaluatorartifacts; trackedmembershipfreeze records sanitizedhashes/counts only.
+No clinicalcohort/targetprogramqualification, labels, PDFs, modelcalls orprediction.
+Next bounded23leaf per-membermetadata + protocol/SAP availabilitycontract. Source
+availability cannot itselfqualify ruleprespecification, originrisk or futurefitting.

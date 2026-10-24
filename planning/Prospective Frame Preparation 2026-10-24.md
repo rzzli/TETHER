@@ -147,3 +147,32 @@ helpers and explicitly validate these two overrides. It must preserve legacy
 modules and failedv0.1 artifacts unchanged, pass regressions and independent
 review, and bind an exact effective execution before any amended query. No
 amended source dispatch or source-rule audit has occurred at this checkpoint.
+
+## Completed amended capture and independent replay
+
+The exact amended manifest`9d142483...` was committed at`c20f905` before dispatch.
+Nine study pages and two version responses completed in8.184973seconds of recorded
+source elapsed time, retaining1,657,798bytes. All4,277 reported query rows have
+unique canonical IDs and in-window dates; version responses match. This establishes
+complete retrieval for the reported query, not an atomic registry snapshot or
+coverage of records missing posting dates. No source-rule or clinical claim follows.
+
+Root raw-receipt replay and independent stdlib-only reconstruction matched every
+ledger row and candidate ID. Counts:3994ineligible,268eligible,15unknown; the283
+eligible-or-unknown pool has0matches to the43393exclusion inventory. The preserved
+failed100-row prefix exactly matches the new capture; no page/token stitching.
+Code tests:40newincluding8peer/full910/no skips/probes/package/110isolatedchecks.
+The main test's trailingEOF blank line was normalized; original reviewed bytes and
+AST equality remain documented, while runtime and legacy modules stay unchanged.
+
+`readiness-membership-freeze.json` now seals the original-seed first12 records
+(11coarse-screeneligible,1unknown) after independent reconstruction and before any
+per-ID/source-rule query. The ignored membership contains exact source-body hashes,
+physical JSON locators and metadata fingerprints. It creates no qualified clinical
+program, target hypothesis, outcome label or prediction. Unresolved members cannot
+be replaced based on later documents or results.
+
+Next is the separately bounded23-leaf per-member source packet and public
+protocol/SAP availability audit. Authentic material rules, scope, originrisk and
+prespecification still need source support. Conditionaltraining/scoring/clinical
+evaluation and original Tasks6–8 remain unfinished.

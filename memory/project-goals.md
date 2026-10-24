@@ -8,6 +8,19 @@ updated: 2026-10-24
 
 # Project goals
 
+## Amended frame and fixed12 source members verified — October24 latest
+
+Capacitycapture9d142483... committedc20f905 completed4277unique queryrows in
+9pages+2versionresponses,1,657,798bytes. Source-only elapsed8.184973s; no retry.
+Root replay + independent stdlibreconstruction match all4277 ledgerrows and
+12originalseedcandidates:3994ineligible/268eligible/15unknown;0inframeexclusions.
+readiness-membership-freeze.json now seals12records (11coarsescreeneligible,
+1unknown) before anyper-ID/source-rule queries. Clinical/source-rule readiness
+stillunqualified; no targetprogram mapping, outcome labels, features ormodelcalls.
+Legacyv0.1stop/code/claim unchanged. Next fixed-member23leaf source-packet contract,
+bounded public protocol/SAP availability audit under originalcaps; no replacement.
+Do not rerun anycapture. capacity-attempt-summary and independentreview are terminal.
+
 ## Amended capacity execution prepared — October24
 
 Explicitv0.2 profile39399c7b... changes onlymax5000/page500.40 newtests and

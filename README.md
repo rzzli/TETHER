@@ -1,5 +1,10 @@
 # AsOf target-evaluation agents
 
+The explicit capacity amendment completed and independently replayed all4,277
+reported registry query rows. A fixed12-record source-readiness pack is sealed;
+source-rule and clinical qualification remain pending.910 tests/probes/package
+and110 isolated tests pass. Earlier entries below record the preserved500-cap stop.
+
 The October24 source attempt reached the public API but stopped at its frozen
 capacity gate:4,277 declared records versus500 allowed. TwoHTTP responses and
 the first100 metadata records are retained/audited; no complete frame, members or

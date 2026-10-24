@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_raw_reconstruction_before_membership",
+  "created_at_utc": "2026-10-24T16:29:25.007599+00:00",
+  "method": "Stdlib JSON/hash/date/URL reconstruction; no engine/frame/transport imports or audit_capture calls. Every raw row screened independently; root ledger and candidates compared only after reconstruction.",
+  "findings": [],
+  "input_pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-execution-freeze.json",
+      "sha256": "a8bff79a1d5f638eb5c3cffee024c6bb7377774e71ec178f6bee59761a23474f",
+      "bytes": 2609
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-attempt-summary.json",
+      "sha256": "6a84c93c7f356b3d5bd30d3fb9dc86ded93f2e8b278f9d44e7224343a4491c6e",
+      "bytes": 1491
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-capture-audit.json",
+      "sha256": "427460151883c94e728f08f0c10266ada5d213e25ee7a7da85e8a7e15841e2aa",
+      "bytes": 2190
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-engine-review.json",
+      "sha256": "512365c2f5ae09bfc681716aa26ae27d3f7ba40c17ab80032dd0ccd69e2b8eb2",
+      "bytes": 6403
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\prospective-endpoint-readiness-20261023\\capacity-amendment-review.json",
+      "sha256": "ea0640ecfe97dff97fead3e0bb8b423c521f885524b58a69759a39b45e8326e6",
+      "bytes": 6497
+    }
+  ],
+  "execution_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\execution.json",
+    "sha256": "9d1424833f5e06ba6dc36860cd7feaca26824754f614c48d3808a0eac0ee37fc",
+    "bytes": 43927
+  },
+  "capture_receipt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\receipt.json",
+    "sha256": "357e9c99c88fde2c486c81b655d1c3bfa16e81f82d15ae5a9adfcc7a6f89cc55",
+    "bytes": 20568
+  },
+  "journal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\journal.jsonl",
+    "sha256": "e1df096021501a3b6b7aa0a350157a492421964d4ad4bae0d6966ee348f9b6e8",
+    "bytes": 36522
+  },
+  "root_audited_frame": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-audit-20261024T162704Z\\audited-frame.json",
+    "sha256": "8a30d7f9f83a64cd001d9707cd9f79f5344ce15bf9fdb9572eb02aeaf136af4b",
+    "bytes": 1048884
+  },
+  "independent_reconstruction": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-independent-audit-20261024\\reconstructed-frame.json",
+    "sha256": "b02e1b5f48e11e17062d0584d3e87e13205c08d7063be379cf075f9b19d57db0",
+    "bytes": 1094268
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\independent_capacity_capture_20261024.py",
+    "sha256": "7aa28116b5f52e1041468982eda9218a0ad5043614f2ab2f54ff0d7e70b3b4f5",
+    "bytes": 17401
+  },
+  "raw_bodies": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\00-response.bin",
+      "sha256": "76ae8f20879824654f8daa22e138fcb0709c7ed380787f314b8cea2cafd12331",
+      "bytes": 71
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\01-response.bin",
+      "sha256": "d01a31c60afeae2cd82910943a22bf640fd94fd666d7f0c9975c1725bc3ffca9",
+      "bytes": 195325
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\02-response.bin",
+      "sha256": "53f26072ee9fc3b82b9958c1d6d832c74dd0b8cc5457f0a34710d57bf43afde6",
+      "bytes": 192659
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\03-response.bin",
+      "sha256": "5599d595de7ef3be0cd19c7b02caf250d7036f6c2f925ef339a0174cdb3b0fa8",
+      "bytes": 193258
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\04-response.bin",
+      "sha256": "1f433c1aed41aae5f7e0181bd2fe25459401be0146cd55030dea6dad7228cf4d",
+      "bytes": 193506
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\05-response.bin",
+      "sha256": "74a2b885fda033479773fc62ee8965da7dbd599978b6728d86dfc0b26e38b9f1",
+      "bytes": 195038
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\06-response.bin",
+      "sha256": "3efc864df5b416ee4732140c14dc951a3123314998e0e10cda83e2d21a539bf0",
+      "bytes": 194715
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\07-response.bin",
+      "sha256": "1552eae4d58a16aae76d6dba7fb6496b5c27ff15118162dd899f60256efd15d6",
+      "bytes": 192052
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\08-response.bin",
+      "sha256": "b5a50963decec1e483a3242f46929405ab6d9bf8d0db79dc9874ef974d88f7a4",
+      "bytes": 192936
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\09-response.bin",
+      "sha256": "b701b75f0b5a1e5c5bff69c1cc43eab7b672dac3d7adea67c7f7a092f08dd2a3",
+      "bytes": 108167
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\prospective-endpoint-readiness-20261023\\capacity-execution-20261024T162326Z\\10-response.bin",
+      "sha256": "76ae8f20879824654f8daa22e138fcb0709c7ed380787f314b8cea2cafd12331",
+      "bytes": 71
+    }
+  ],
+  "verified": {
+    "unique_records": 4277,
+    "study_queries": 9,
+    "version_queries": 2,
+    "terminal_receipts": 11,
+    "unresolved_attempts": 0,
+    "automatic_retries": 0,
+    "retained_bytes": 1657798,
+    "elapsed_seconds": 8.184973,
+    "page_records": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      277
+    ],
+    "posted_date_min": "2026-09-24",
+    "posted_date_max": "2026-10-23",
+    "source_version": {
+      "apiVersion": "2.0.5",
+      "dataTimestamp": "2026-10-23T09:00:04"
+    },
+    "named_exclusions": 43393,
+    "frame_exposure_exclusions": 0,
+    "screen_counts": {
+      "ineligible": 3994,
+      "eligible": 268,
+      "screen_unknown": 15
+    },
+    "candidate_pool": 283,
+    "unsealed_candidates": 12,
+    "root_ledger_rows_compared": 4277,
+    "root_candidate_ids_equal": true,
+    "sampling_seed_sha256": "54da82a9dcac5c295d9f68aab818657ec131957a4166ce9d5585019051b43c0a",
+    "expected_archive_pairs": 65,
+    "original_failed_claim_preserved": true,
+    "prefix100_found": 100,
+    "prefix100_metadata_changes": 0,
+    "current_test": {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_prospective_capacity.py",
+      "sha256": "3498b5a28b9cf07f9b18bcf331c44e0f68fc0935e44bfd4aafd35aa7cef90095",
+      "bytes": 17693
+    },
+    "retained_reviewed_test": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\capacity-tests-reviewed-before-eof-format-20261024.py",
+      "sha256": "b7ac521605a2f5dc78aeccb416f1259f1c68b4177ba3bc2d691341950833bfe2",
+      "bytes": 17695
+    },
+    "test_AST_equal": true
+  },
+  "disclosure": "Original100 metadata rows are same-frame exposed enumeration; no outcomes/source-rule availability used. Readiness remains exposed development, never untouched clinical holdout.",
+  "scope": {
+    "network_requests_by_review": 0,
+    "model_calls": 0,
+    "source_rule_PDF_queries": 0,
+    "selected_members": 0,
+    "clinical_activation": false,
+    "candidate_ids_kept_in_ignored_evaluator_only_artifact": true
+  },
+  "limits": [
+    "Complete only for query-returned source-defined posted-date frame; stable versions do not prove atomic snapshot or complete clinical population.",
+    "No claim of authentic rules, clinical readiness, power, future-F origin qualification or closure of scientific Tasks6\u20138.",
+    "Membership remains unsealed; this independent pass supports root proceeding to a separate fixed-membership seal under existing authorization."
+  ]
+}

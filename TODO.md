@@ -60,7 +60,7 @@ Retained evidence: planning/review-assets/prospective-endpoint-readiness-2026102
 
 - [x] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
 - [x] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
-- [ ] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
+- [x] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
 - [ ] Audit source-rule availability only if the preceding acquisition gates pass; keep predictions and clinical activation disabled.
 
 Named-origin exposure closure verified43,393 canonical NCT IDs from16 retained
@@ -83,7 +83,7 @@ seed; no silent cap expansion or rerun of the failedv0.1 execution.
 ### Explicit source-capacity amendment — in progress October24
 
 - [x] Review the capacity-onlyv0.2 amendment and validate a reusable profile engine without changing v0.1 code/receipts.
-- [ ] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
+- [x] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
 - [ ] Report complete-frame or failed-gate evidence, update memory and retain a verified backup.
 
 Proposed capacity is5000/page500 with the original10page/20MiB/600s bounds and
@@ -93,6 +93,13 @@ calls or clinical activation are added. Source qualification remains open.
 Independent protocol/engine reviews pass;40 new synthetic tests, full910 tests/
 probes/package and110 clean-checkout tests pass. Legacyv0.1 bytes unchanged.
 An exact amended execution is prepared; no amended HTTP before its committed freeze.
+
+Amendedcapture9d142483... was committedc20f905 beforeHTTP and completed all4277
+reported query rows in9pages+2versions,1,657,798retainedbytes. Independent raw
+reconstruction matched every ledger row and original-seed12candidate order:
+3994ineligible/268eligible/15unknown,0exclusions inframe. Fixed12readiness members
+are sealed (11coarse-screeneligible/1unknown); no PDFs/outcomes/modelpredictions.
+This qualifies the reported source query, not an atomic snapshot/clinical cohort.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone

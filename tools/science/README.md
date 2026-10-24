@@ -5,6 +5,13 @@ from qualified scientific conclusions. They use the Python standard library and 
 local AsOf package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
+`prospective_capacity` applies only the reviewedv0.2 capacity override, preserving
+the oldscientific contract, seed and failedv0.1 code/claim. Exactarchive and semantic
+retry guards protect one amended attempt; `audit_capture` replays rawreceipts and
+returns unsealed candidates offline. The actual4277-row query passed independent
+reconstruction and fixed12membership sealing.40newtests/full910/110isolatedtests
+pass. Capture/audit remains evaluation-only; no clinical/source-rule inference.
+
 `prospective_transport` implements a separately pinned, one-shot public source
 capture. It archives effective inputs/policy/code, streams raw receipts under hard
 deadlines, verifies incremental/final frame guards and latches semantic proposals
