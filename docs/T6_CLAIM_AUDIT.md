@@ -106,4 +106,7 @@ receipt identity, source hash, physical row group/offset, canonical mappings,
 complete projection, preserved context and eligible lineage. The next adapter
 should reuse that complete boundary and bind its result to this audit inventory.
 A new JSON extract or a bare Parquet lookup must not replace those checks.
-The current version has not integrated that adapter.
+The separate native-v2 dossier integration now reuses that adapter; see
+[T6_DOSSIER_BINDING.md](T6_DOSSIER_BINDING.md). The standalone JSON API remains
+unchanged. Full atomic extraction, independent reviews and interpretation remain
+unqualified.

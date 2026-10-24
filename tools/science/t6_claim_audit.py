@@ -126,8 +126,14 @@ def audit_claims(manifest, review, sources, approved_roots):
     A supported source statement can be inapplicable to the proposed intervention.
     Unsupported does not mean false. Agreement cannot establish therapeutic truth.
     """
-    claims = validate_claims(manifest)
+    validate_claims(manifest)
     original_rows = resolve_sources(sources, approved_roots)
+    return _summarize_review(manifest, review, sources, original_rows)
+
+
+def _summarize_review(manifest, review, sources, original_rows):
+    """Internal judgment checks after the caller has verified original sources."""
+    claims = validate_claims(manifest)
     require(isinstance(review, dict) and type(review.get('schema_version')) is int and
             review['schema_version'] == 1 and review.get('role') == 'evaluation_only', 'Invalid audit review')
     require(review.get('claims_sha256') == fingerprint(manifest) and

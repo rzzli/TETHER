@@ -187,3 +187,12 @@ applicability, citation support and unassessable claims; it does not establish
 therapeutic truth. Current scope is a synthetic contract prototype, not a
 production Parquet/PDF source adapter or sealed model-run evaluation.
 See [the interface and limits](../../docs/T6_CLAIM_AUDIT.md).
+
+
+## Native dossier/source binding
+
+`t6_dossier_binding` binds atomic claim spans to actual sealed native v2 dossier
+bytes and replays archived receipts, canonical mappings and physical Open Targets
+rows through the existing source audit. It preserves a draft source-unit scope;
+it does not automatically assert complete atomization or scientific truth.
+See [the supported entry points and limits](../../docs/T6_DOSSIER_BINDING.md).

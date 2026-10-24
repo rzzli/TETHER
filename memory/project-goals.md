@@ -9,6 +9,20 @@ updated: 2026-10-24
 # Project goals
 
 
+## October24 native dossier/source binding validated
+
+Native v2 dossier receipt/hash/span binding and original Open Targets row adapter
+integrated without JSON-original substitution. Full1008 tests/no skips/probes/
+package and45 isolated tests pass;22 new binding regressions. A multiline CRLF
+defect was reproduced before correction; old code and failed test/guard retained.
+Corrected verifier replays the exposed IL6R development dossier:9 selected rows,
+11 input files, original binding bytes unchanged. No complete atomic inventory,
+claim-quality judgments, model calls or clinical probabilities created. Next
+exhaustive atomic extraction/completeness, independent review seals and bounded
+interpretation qualification. Original scientific Tasks6-8 remain unfinished.
+Acceptance: planning/review-assets/t6-dossier-binding-20261024/final-acceptance.json.
+
+
 ## October24 atomic claim audit prototype validated
 
 Evaluation-only JSON original/source/claim-review contract implemented;23 new tests,

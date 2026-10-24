@@ -175,3 +175,17 @@ Prototype backup verified on E: (27 entries, CRC/every entry SHA256 and Git
 bundle through13acaf8). Receipt: planning/review-assets/t6-claim-audit-20261024/backup-validation.json.
 Later receipt/status commit is outside the bundle. Remaining production/scientific
 gates above stay open; this is a bounded contract checkpoint.
+
+
+## October24 native dossier/source binding validated
+
+Native v2 dossier receipt/hash/span binding and original Open Targets row adapter
+integrated without JSON-original substitution. Full1008 tests/no skips/probes/
+package and45 isolated tests pass;22 new binding regressions. A multiline CRLF
+defect was reproduced before correction; old code and failed test/guard retained.
+Corrected verifier replays the exposed IL6R development dossier:9 selected rows,
+11 input files, original binding bytes unchanged. No complete atomic inventory,
+claim-quality judgments, model calls or clinical probabilities created. Next
+exhaustive atomic extraction/completeness, independent review seals and bounded
+interpretation qualification. Original scientific Tasks6-8 remain unfinished.
+Acceptance: planning/review-assets/t6-dossier-binding-20261024/final-acceptance.json.
