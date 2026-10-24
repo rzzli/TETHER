@@ -53,7 +53,7 @@ probabilities null; zero provider spending and no automatic call retries.
 
 - [x] Validate cap-one changes and preserve legacy behavior.
 - [x] Freeze source-only tasks/packets, screening dispositions and provenance.
-- [ ] Seal two independent source reviews, reconcile and freeze references.
+- [x] Seal two independent source reviews, reconcile and freeze references.
 - [ ] Execute four paired arms, verify sources/accounting and seal outputs.
 - [ ] Evaluate descriptive prioritization and audit originals; retain limitations.
 
@@ -81,3 +81,13 @@ TNF literature; IL23A genetics/literature; TREM2 genetics/literature; LRRK2 gene
 literature; ANGPTL3 literature. Every task offers exactly two records. A blinded
 selected-packet bundle omits unselected dispositions and prior answers. Two independent
 AI source reviewers are running; native execution has not started at this checkpoint.
+
+The two reviews were subsequently sealed at `e08003c` before third-review
+reconciliation. All16 offered candidates were reviewed by each author. The
+reconciled reference retains three singleton best sets, three ties and two
+none-sufficient answers. Differences and uncertainty are preserved rather than
+forcing a unique winner. The reference freeze is retained under
+`data/benchmark/gold_evidence/t6-topone-20261023/v1/`; its tracked receipt is
+`planning/review-assets/t6-topone-20261023/reference-freeze.json`.
+All reference files precede native dispatch. AI review usage is outside the
+framework's native-call/provider accounting; $0 refers to runtime provider spending.

@@ -14,7 +14,7 @@
 
 - [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
 - [x] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
-- [ ] Seal two independent AI source reviews and third-review reconciliation before inference.
+- [x] Seal two independent AI source reviews and third-review reconciliation before inference.
 - [ ] Execute and source-verify four paired arms; seal outputs before answer join.
 - [ ] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
 
