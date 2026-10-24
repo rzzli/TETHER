@@ -8,6 +8,20 @@ updated: 2026-10-24
 
 # Project goals
 
+## Source-readiness assessment closed; full T6 audit next — October24 latest
+
+Fixed12 assessed:10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,
+0joint-ready. Frozen registry route STOP; do not resample or redispatch. Third
+original-source adjudication575b3fd0... and root replay verify180 method judgments,
+465 pointers and35 unique hashes. Current observed public access supported forall12;
+old historical cutoffs/future realized outcomes are not extra pre-origin gates.
+Clinical labels and probabilities remain null. Full963/isolated163 tests pass.
+Next feasible branch independent of clinical labels: evaluation-only atomic claim
+audit contract, then optional interpretation boundary and fresh source/reference
+frame. Existing backend returns IDs; ledger records verbatim observations, so
+full narrative H5 is not yet implemented. Original Tasks6–8 remain unfinished.
+See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
+
 ## Twelve source packets and independent stewards sealed — October24 latest
 
 Sourceexecution272a56ca... committedeb9ef5b beforeHTTP, terminalcompleted12

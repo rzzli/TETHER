@@ -56,12 +56,12 @@ correct the initial test-portability gap. Dated requestR=2026-10-24 covers
 2026-09-24..2026-10-23; no trial query, selected member or clinical label.
 Retained evidence: planning/review-assets/prospective-endpoint-readiness-20261023/frame-stage-acceptance.json.
 
-### Bounded prospective source qualification — pending
+### Bounded prospective source qualification — assessed October24; route stopped
 
 - [x] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
 - [x] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
 - [x] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
-- [ ] Audit source-rule availability only if the preceding acquisition gates pass; keep predictions and clinical activation disabled.
+- [x] Audit source-rule availability after acquisition gates passed; retain the zero-ready STOP and keep clinical activation disabled.
 
 Named-origin exposure closure verified43,393 canonical NCT IDs from16 retained
 sources (1,458,436,692bytes scanned,31.922seconds) plus incidental protocol IDs.
@@ -80,7 +80,7 @@ Source-stop-audit.json verifies the failure. Next is an explicit capacity-only
 amendment preserving interval, projection, eligibility, exclusions and sampling
 seed; no silent cap expansion or rerun of the failedv0.1 execution.
 
-### Explicit source-capacity amendment — in progress October24
+### Explicit source-capacity amendment — completed October24
 
 - [x] Review the capacity-onlyv0.2 amendment and validate a reusable profile engine without changing v0.1 code/receipts.
 - [x] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
@@ -104,11 +104,11 @@ This qualifies the reported source query, not an atomic snapshot/clinical cohort
 Verified236-entry evidenceZIP and Gitbundle through2eada8d onE:;
 capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
 
-### Fixed-member source-rule availability — in progress October24
+### Fixed-member source-rule availability — closeout October24
 
 - [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
 - [x] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
-- [ ] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
+- [x] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
 - [ ] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
 
 No source availability or reported outcomes may replace/reorder the sealed12.
@@ -123,8 +123,23 @@ Execution272a56ca... committedeb9ef5b before12HTTP200 listingrequests;58,250byte
 4.813s,0PDFs/0retries/0modelcalls. No protocol/SAP listed in observedprojection;
 otherpublicsources notsearched. Localreceipt replay passed. Twoindependent source
 stewards assessedall15mandatoryfields (extrafieldsadvisory) and bothreport0joint
-readinessdemonstrated; case-levelclassificationdifferences awaitthirdadjudication.
+readinessdemonstrated; case-level differences subsequently resolved in the final adjudication below.
 source-steward-freeze.json sealsbothoriginalreviews beforethatreconciliation.
+
+Third adjudication and root replay pass: all12 original records,180 mandatory
+field judgments,465 original-pointer/value references and35 unique file hashes.
+Final counts10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,
+0joint-ready. Current observed public availability supported for all12; historical
+availability before old cutoffs is not an extra prospective gate. Fixed registry
+route STOP; no resampling, new clinical labels or model calls.
+See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
+
+### Full T6/H5 audit preparation — next executable branch
+
+- [x] Assess whether T6 quality is feasible independently of the stopped clinical route and inspect actual model/claim boundaries.
+- [ ] Implement and validate an evaluation-only atomic claim/source-audit contract with uncertainty and contextual applicability.
+- [ ] Qualify an optional interpretation layer, fresh question/reference frame and paired analysis before any new model execution.
+- [ ] Execute source-qualified full dossier quality evaluation only after its own gates pass; retain the original H5 scope and AI-reference limitations.
 
 Source dispatch requires the separately sealed executable request and technical
 qualification under existing user authorization. Current schema access alone

@@ -1,5 +1,16 @@
 # AsOf target-evaluation agents
 
+The October24 fixed-member source-readiness assessment is complete: **0/12 joint-ready**.
+The frozen clinical route stops, with all records and uncertainty retained. Two
+sealed source reviews, third adjudication and root replay checked 180 method-field
+judgments and 465 original-pointer references. Current public availability is
+verified; complete adopted efficacy rules and origin risk remain unqualified.
+The [closeout and next T6 stage](planning/Source%20Readiness%20Closeout%20and%20T6%20Quality%20Next%20Stage%202026-10-24.md)
+identifies the next feasible branch: atomic claim/source audit, then a separately
+qualified interpretation layer and independent dossier-quality evaluation.
+963 tests and 163 isolated-checkout tests pass; original scientific Tasks6–8 remain
+unfinished. Earlier entries below are dated checkpoints.
+
 The explicit capacity amendment completed and independently replayed all4,277
 reported registry query rows. A fixed12-record source-readiness pack is sealed;
 source-rule and clinical qualification remain pending.910 tests/probes/package
