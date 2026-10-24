@@ -98,3 +98,21 @@ config mutation timing, cleanup/seal races and outer-evaluator proof gaps; those
 guards are implemented before real native dispatch. Full validation and complete
 source task preparation are running; no new native calls or reference answers yet.
 The canonical source root is unchanged; downloader/monitor remain untouched.
+
+## T6 source/reference freeze and active execution
+
+Full800 local tests/probes/package passed. Source preparation exited0, original
+ten-case parents replayed,8tasks/5cases with2records each; all80 dispositions.
+Plan3dfa704b.../tasks6f127a12... committedbb68838. Two fresh-context source reviewers
+covered16candidates each; reviews frozene08003c before third reconciliation.
+Referencefreezec827e9ce.../adjudicationb64300f3... frozen6e56b1c before any nativecall:
+3singleton bestsets,3ties,2abstentions. Final independent code gate found no material
+remaining issue after review corrections; no runtime edits during source execution.
+
+Active source-inclusive localcomparison: runs/t6-topone-20261024T033651Z,
+session87273/PID4744; wrapperPID4152. Source preflight logical reads progressed
+36.9GB then68.6GB, not physical disk traffic. Do not restart/redispatch on resume.
+Log data/cache/t6-topone-execution-20261023.log. Await terminal report and seal,
+then postseal t6_topone_evaluation.evaluate; references never model parents.
+Clinical training/probabilities withheld. Agent review usage is outside runtime
+provider/native accounting; no unqualified claim that AI review is economically free.

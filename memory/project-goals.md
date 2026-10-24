@@ -8,6 +8,24 @@ updated: 2026-10-23
 
 # Project goals
 
+## Harder T6 comparison active — October23 evening
+
+800 full local tests/probes/package pass. Commit eca1dff adds guarded cap1 tasks,
+source-only references and post-seal evaluation; legacy cap3 fingerprints retained.
+Full source preparation passed:8tasks/5cases/2offered records each, all80 screen
+dispositions. Plan3dfa704b... and tasks6f127a12... sealed atbb68838. Independent
+reviews sealed e08003c; third reconciliation/reference c827e9ce... committed6e56b1c
+before native dispatch. References retain3singletons/3ties/2abstentions, no forced
+ranking or clinical truth. Two source reviews cover all16 candidates each.
+
+Execution started under runs/t6-topone-20261024T033651Z (October23 Pacific), current
+unified session87273/Python PID4744. On resume inspect that handle/log/report before
+any action; do not restart due to observation timeout. Source preflight is live;
+native dispatch/results not yet claimed. Next source-inclusive verification,
+prediction seal, answer join/original-row audit and retained final report/backup.
+All numerical features empty/probabilities null; broader scientific Tasks6–8 open.
+See [[Harder T6 Source Prioritization 2026-10-23]]. Earlier entries are checkpoints.
+
 ## B0 finite cycle completed — October23
 
 Final source-inclusive audit2fc4f62f... verified96/96 native envelopes for32

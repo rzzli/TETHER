@@ -1,5 +1,11 @@
 # AsOf target-evaluation agents
 
+The October23 [harder T6 challenge](planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md)
+now has eight source-frozen tasks and sealed independent AI source references.
+The four-arm local comparison is running after800 passing local tests. No final
+comparison result or clinical validation is claimed yet; earlier entries below
+record their dated checkpoints.
+
 The October23 [B0 feasibility audit](planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md)
 verified all96 selected snapshot-state pointers. January coverage is17/32 (53.125%),
 below the frozen90% threshold; operational prediction expansion stops. April's one
