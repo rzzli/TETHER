@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "single_use_local_execution_started_with_sealed_source_references",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\run-plan.json",
+    "sha256": "3dfa704b159d7be9830f001629d05c3f0d5906fdb0e57293bad605784809e378",
+    "bytes": 2948828
+  },
+  "reference": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\t6-topone-20261023\\v1\\reference-freeze.json",
+    "sha256": "c827e9cebf5c535193ccbcb72f88b99b727bf7024cd0786f87da170c34d83ba4",
+    "bytes": 1199
+  },
+  "environment": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\environment.json",
+    "sha256": "33832d7c16940ef023b1b2e156fff9b0cab1890c8ebbfe140cfd5fb02ba1467d",
+    "bytes": 291
+  },
+  "observed_at_utc": "2026-10-24T03:59:57.089308+00:00",
+  "provider_spend_usd": 0,
+  "expected_tasks": 8,
+  "expected_arms_per_task": 4,
+  "maximum_native_calls_without_failures": 48,
+  "runtime_code_commit": "eca1dff",
+  "reference_freeze_commit": "6e56b1c",
+  "live_session_at_observation": 87273,
+  "parent_python_pid_at_observation": 4744,
+  "limitations": "Operational checkpoint, not final execution or scientific success."
+}
