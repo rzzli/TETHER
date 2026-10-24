@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "status": "all_committed_arms_code_and_scientific_packet_consistency_pass",
+  "scope": "Supplemental read-only check; does not replace source-inclusive final execution/evaluation.",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\run-plan.json",
+    "sha256": "3dfa704b159d7be9830f001629d05c3f0d5906fdb0e57293bad605784809e378",
+    "bytes": 2948828
+  },
+  "tasks": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\tasks.json",
+    "sha256": "6f127a12bb96595332a7a3bc52d96075d0a3f4db73e9682196eeefa7f4ae74d1",
+    "bytes": 27583601
+  },
+  "arms": [
+    {
+      "task_id": "tnf-efo_0000685-inhibit-antibody--literature",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\asof\\result.json",
+        "sha256": "eb506c283f4f52a8ec2c6750ad88bd86aba8ede303f38d0cef54b8e1d258c4c7",
+        "bytes": 65348
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "tnf-efo_0000685-inhibit-antibody--literature",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\adapted_virtual_biotech\\result.json",
+        "sha256": "016ae0d960f255bfd76cc7cba2f0db9881bf93177a5003e2eb552778894ba4b0",
+        "bytes": 65372
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "tnf-efo_0000685-inhibit-antibody--literature",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\lexical\\result.json",
+        "sha256": "42cfd74473e9c61b02efafe7e84bc81b8e7fe84311e82990665de1e59b188e60",
+        "bytes": 65366
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "tnf-efo_0000685-inhibit-antibody--literature",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\provider_score\\result.json",
+        "sha256": "0abfd4166b7016d9a1e7f5cb5c04e207f3df733c9ce12a88ab0ad3b7a056b077",
+        "bytes": 65515
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\tnf-efo_0000685-inhibit-antibody--literature\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--genetics",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\asof\\result.json",
+        "sha256": "1f12531fee4fc24c29dcc20ce92ef3c74782d517cb70579acc347ee3d0499769",
+        "bytes": 20017
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--genetics",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\adapted_virtual_biotech\\result.json",
+        "sha256": "6470c29208db64a46518bf945883e9ad219e56b5b7bd51f58abbd59db5ada13f",
+        "bytes": 20041
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--genetics",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\lexical\\result.json",
+        "sha256": "62395ed7e59ab596883bf7e4be22d208b42c2ab42e3cbef4a6c8858e2e9a3b46",
+        "bytes": 20037
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--genetics",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\provider_score\\result.json",
+        "sha256": "32805542b35a54104e035ebfda60ad815a89b31feb5937161347c3c12196db86",
+        "bytes": 20044
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--genetics\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--literature",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\asof\\result.json",
+        "sha256": "903defc6259d0984420d862dd09ce6a851e67fdaddf5328a4e4c092d2899d5fe",
+        "bytes": 403448
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--literature",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\adapted_virtual_biotech\\result.json",
+        "sha256": "4f33a9e45ce8fddb10a88ed8726fcd5c82f640ad7f4aeecdbc41c82c69291310",
+        "bytes": 403471
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--literature",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\lexical\\result.json",
+        "sha256": "5ffd4d29c974726b53626d8906255d74dc8e61c801b0b677fa235c60636c63c9",
+        "bytes": 404010
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "il23a-efo_0000676-inhibit-antibody--literature",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\provider_score\\result.json",
+        "sha256": "7038f8049769e10272d871100c12eb1c70aae454c6e2a9ad1930fa9aa0ee1f90",
+        "bytes": 403472
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\il23a-efo_0000676-inhibit-antibody--literature\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--genetics",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\asof\\result.json",
+        "sha256": "729e77b2dc8633f09c609b87140039973f32da7167ee83290bbcbf2013c1173c",
+        "bytes": 19106
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--genetics",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\adapted_virtual_biotech\\result.json",
+        "sha256": "a6be4784ae57fb64846a7ab0e768ff69b18230c54af84569c8635a8bc9e79781",
+        "bytes": 19144
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--genetics",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\lexical\\result.json",
+        "sha256": "1b1be0bf3814e4748d6e347f1ff23d8c036d7da6b5cc8a4f30867f679f6c34d0",
+        "bytes": 19139
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--genetics",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\provider_score\\result.json",
+        "sha256": "e4c45a58994a65c61792a75d647fba2b28f76c2ff77ff8c2a14132980ddf5540",
+        "bytes": 19147
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--genetics\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--literature",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\asof\\result.json",
+        "sha256": "aef6741071bfb86269597f35c829f2d9d5b43199d454a4cabfc18574b27fe217",
+        "bytes": 431918
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--literature",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\adapted_virtual_biotech\\result.json",
+        "sha256": "521da427f727eebc3af976a23e6f0a24fd910e33bcf469b1f418c0fc363b7952",
+        "bytes": 431389
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--literature",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\lexical\\result.json",
+        "sha256": "6d7af0baf36cbe3080ba9be59289e9c8b086e63665b78e5a9299de933f319c1e",
+        "bytes": 431934
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "trem2-mondo_0004975-activate-antibody--literature",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\provider_score\\result.json",
+        "sha256": "2795a9422f8f3ccb7a18d07a6ac7fe798fb7471195bc44dd945831693c67cc72",
+        "bytes": 431942
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\trem2-mondo_0004975-activate-antibody--literature\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--genetics",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\asof\\result.json",
+        "sha256": "e535e3086946a3959293e3c486d5210f0e6e0a90c626e86b669f721d33b08cab",
+        "bytes": 23018
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--genetics",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\adapted_virtual_biotech\\result.json",
+        "sha256": "efaaa1c91c24336e0a9e4f0f847b8f350c238cb8dc912eda62ecbad59e8fe363",
+        "bytes": 23041
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--genetics",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\lexical\\result.json",
+        "sha256": "02e12e9bf39542ea1ed11a897d6d8c22a3cfc3da9c0401be420d463f1273832e",
+        "bytes": 23035
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--genetics",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\provider_score\\result.json",
+        "sha256": "bac5a888185d10c0bccf85e9f6ed1a97542b0c65f5346eeac43d075c8182e78c",
+        "bytes": 13532
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--genetics\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--literature",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\asof\\result.json",
+        "sha256": "2fe68a0ceb05d5615372ebe0a0ccf0c8b271ddcb5efe7fd2d02094e49c338a02",
+        "bytes": 569338
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--literature",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\adapted_virtual_biotech\\result.json",
+        "sha256": "936b10af9fd708c0c65157733060924052f5ef5993d82ad240d72714f968ce79",
+        "bytes": 569361
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--literature",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\lexical\\result.json",
+        "sha256": "86fc346805959137edff8ffcf510ca23e10f228cc12f334f44fd2520bdee37b9",
+        "bytes": 570424
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "lrrk2-mondo_0005180-inhibit-small_molecule--literature",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\provider_score\\result.json",
+        "sha256": "2b770c57d34d01a69363f9a8c9ecff1530635de6b5cbcb2c368b8b50b47b3b98",
+        "bytes": 570432
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\lrrk2-mondo_0005180-inhibit-small_molecule--literature\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "angptl3-efo_0004911-inhibit-antibody--literature",
+      "arm": "asof",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\asof\\result.json",
+        "sha256": "1608283be15282abbb6d7ea500382ea3e81b966ffa0600a274ce07f27fca5f5f",
+        "bytes": 28221
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\asof\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 1,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "angptl3-efo_0004911-inhibit-antibody--literature",
+      "arm": "adapted_virtual_biotech",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\adapted_virtual_biotech\\result.json",
+        "sha256": "1ae0fadd347e1cda9bdec7ff2ee1945266e15677851a4664eea724f5b5433637",
+        "bytes": 28244
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\adapted_virtual_biotech\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 5,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "angptl3-efo_0004911-inhibit-antibody--literature",
+      "arm": "lexical",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\lexical\\result.json",
+        "sha256": "1f244b355ab0929c30622bdb220467a90f094d927aa0d2c23f6ae77797dedcc0",
+        "bytes": 28240
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\lexical\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    },
+    {
+      "task_id": "angptl3-efo_0004911-inhibit-antibody--literature",
+      "arm": "provider_score",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\provider_score\\result.json",
+        "sha256": "63b3252f71d747c32585d2d2660c62545bd3c565ebb1450f32d30e3ac23da1e0",
+        "bytes": 28257
+      },
+      "executed_source": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\arms\\angptl3-efo_0004911-inhibit-antibody--literature\\provider_score\\executed-source.py",
+        "sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "bytes": 45174
+      },
+      "native_attempts": 0,
+      "shared_scientific_packet": "exact_case_category_evidence_and_question_match"
+    }
+  ],
+  "native_attempts": 48,
+  "predictions_still_require_terminal_seal": true
+}
