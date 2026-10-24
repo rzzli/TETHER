@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "source_only_tasks_verified_before_references_and_inference",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\run-plan.json",
+    "sha256": "3dfa704b159d7be9830f001629d05c3f0d5906fdb0e57293bad605784809e378",
+    "bytes": 2948828
+  },
+  "tasks": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\tasks.json",
+    "sha256": "6f127a12bb96595332a7a3bc52d96075d0a3f4db73e9682196eeefa7f4ae74d1",
+    "bytes": 27583601
+  },
+  "prepare_journal": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\prepare\\journal.jsonl",
+    "sha256": "b0fa7ac563f12d91df554c603bf02639e1e1563a3f4c78a7f7f6e44f4882f542",
+    "bytes": 1928867
+  },
+  "review_bundle": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\t6-topone-20261023\\v1\\review-bundle.json",
+    "sha256": "dc26a4ba0511b3e2bef68755a004c9f95d3349c2f4a84a27c0a93742ba6da835",
+    "bytes": 127581
+  },
+  "environment": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\t6-topone-20261024T033651Z\\environment.json",
+    "sha256": "33832d7c16940ef023b1b2e156fff9b0cab1890c8ebbfe140cfd5fb02ba1467d",
+    "bytes": 291
+  },
+  "selected_tasks": 8,
+  "screening_dispositions": 80,
+  "selected_cases": 5,
+  "provider_spend_usd": 0,
+  "native_calls": 0,
+  "reference_answers_used_for_selection": false
+}

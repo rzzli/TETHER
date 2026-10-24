@@ -13,7 +13,7 @@
 ### Harder T6 top-one development — in progress October23
 
 - [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
-- [ ] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
+- [x] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
 - [ ] Seal two independent AI source reviews and third-review reconciliation before inference.
 - [ ] Execute and source-verify four paired arms; seal outputs before answer join.
 - [ ] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.

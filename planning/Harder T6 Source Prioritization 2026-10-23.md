@@ -52,7 +52,7 @@ probabilities null; zero provider spending and no automatic call retries.
 ## Execution checklist
 
 - [x] Validate cap-one changes and preserve legacy behavior.
-- [ ] Freeze source-only tasks/packets, screening dispositions and provenance.
+- [x] Freeze source-only tasks/packets, screening dispositions and provenance.
 - [ ] Seal two independent source reviews, reconcile and freeze references.
 - [ ] Execute four paired arms, verify sources/accounting and seal outputs.
 - [ ] Evaluate descriptive prioritization and audit originals; retain limitations.
@@ -73,4 +73,11 @@ those reviews assess technical/design readiness, not biological truth.
 
 Source-only preparation is running in `runs/t6-topone-20261024T033651Z/` (October23
 Pacific). It hashes complete parent sources and preserves its live reservation.
-No selected task count, reference completion or native execution is claimed yet.
+That preparation subsequently passed full source-inclusive regeneration. The plan
+SHA256 is `3dfa704b159d7be9830f001629d05c3f0d5906fdb0e57293bad605784809e378`;
+task-manifest SHA256 is `6f127a12bb96595332a7a3bc52d96075d0a3f4db73e9682196eeefa7f4ae74d1`.
+All80 case/category dispositions are retained. Eight eligible tasks span five cases:
+TNF literature; IL23A genetics/literature; TREM2 genetics/literature; LRRK2 genetics/
+literature; ANGPTL3 literature. Every task offers exactly two records. A blinded
+selected-packet bundle omits unselected dispositions and prior answers. Two independent
+AI source reviewers are running; native execution has not started at this checkpoint.
