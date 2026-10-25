@@ -1,0 +1,22 @@
+{
+  "status": "mechanically_verified_not_scientific_qualification",
+  "inventory": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\candidate-leaf-inventory.json",
+    "sha256": "a9c18fc50ce34601ccd6613c4e570a9378d4d1f1427bbf9b241aec6633272e2c",
+    "bytes": 13574
+  },
+  "sealed_native_outputs": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\interpretation-repair-final-20261025T170618Z\\predictions-seal.json",
+    "sha256": "0828e12de0494e220aeaf4bbfd197357c52a103de680f33ac5f3caf09988777b",
+    "bytes": 3759
+  },
+  "native_calls": 2,
+  "leaf_count": 73,
+  "measured_usage": {
+    "input_tokens": 8552,
+    "output_tokens": 720,
+    "cost_usd": 0
+  },
+  "peak_memory_bytes": null,
+  "review_agent_usage_measured": false
+}

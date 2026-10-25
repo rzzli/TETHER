@@ -1,0 +1,19 @@
+{
+  "role": "evaluation_only",
+  "status": "review_agents_resumed_after_reported_retry_time",
+  "recorded_at_utc": "2026-10-25T20:36:45.892234+00:00",
+  "affected_agents": [
+    "/root/repaired_interpretation_science_a",
+    "/root/repaired_interpretation_science_b"
+  ],
+  "terminal_service_message": "You have hit your usage limit; try again at 1:27 PM.",
+  "resume_basis": "Authoritative local clock was 2026-10-25 13:35 PDT, later than stated retry time; same agents received one resume task.",
+  "candidate_outputs": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\interpretation-repair-final-20261025T170618Z\\predictions-seal.json",
+    "sha256": "0828e12de0494e220aeaf4bbfd197357c52a103de680f33ac5f3caf09988777b",
+    "bytes": 3759
+  },
+  "native_generation_repeated": false,
+  "scientific_acceptance_claimed": false,
+  "original_review_outputs_at_interruption": "No sealed review artifacts present."
+}

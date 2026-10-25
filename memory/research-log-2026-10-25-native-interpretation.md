@@ -31,3 +31,14 @@ retain complete scientific source fields. The 67 focused repair tests pass;
 independent methods, full validation, a separately frozen run and scientific
 qualification remain pending. Original Tasks6–8, full T6/H5 and clinical scoring
 remain unfinished. See [[project-goals]] and TODO.md.
+
+## Repaired execution checkpoint
+
+Full unchanged-code validation passed1122 tests, required probes and packaging;
+159 isolated-copy and67 no-site tests passed. Independent methods recheck passed
+12 probes. Prior failed preflight findings and superseded plan remain retained.
+The final frozen plan ran both requests once, at8552 input/720 output tokens and
+$0 provider spending. Both outputs passed source-inclusive semantic verification;
+the owned server stopped. Prediction seal SHA256:
+0828e12de0494e220aeaf4bbfd197357c52a103de680f33ac5f3caf09988777b.
+Scientific review is pending; this is engineering completion only.

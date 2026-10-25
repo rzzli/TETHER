@@ -1,0 +1,16 @@
+{
+  "role": "evaluation_only",
+  "status": "frozen_before_generation",
+  "instructions": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\review-instructions.md",
+    "sha256": "364ac457b11928d8b949d5766645cb65b88328bed5f41c6b8a26db6315d12b25",
+    "bytes": 2839
+  },
+  "protocol_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-final-qualification-protocol-freeze.json",
+    "sha256": "d7d2b359d20fd6b41b4a02a722fb6e5d351012d20e39fb86308e712d5e7a6ce2",
+    "bytes": 1262
+  },
+  "candidate_outputs_available": false,
+  "scientific_quality_qualified": false
+}

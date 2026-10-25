@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-repair-final-full-validation-20261025.json",
+    "sha256": "67fcdff5b657ef598f7ef0ccbba711e6e76ea94b69ddc07556b7c8f98b7cb231",
+    "bytes": 471
+  },
+  "guard": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-repair-final-code-validation-20261025.json",
+    "sha256": "8e4240f54a57e40240022a45251237ce251e04d098761c91a02a2d6cd70b57c7",
+    "bytes": 23148
+  },
+  "tests": {
+    "run": 1122,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "code_unchanged": true,
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "asof_target_agents-0.2.0-py3-none-any.whl",
+    "dependency_free_demo": "passed"
+  },
+  "scientific_quality_qualified": false
+}

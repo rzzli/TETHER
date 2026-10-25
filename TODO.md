@@ -7,8 +7,8 @@
 - [x] Freeze and execute version one; retain its terminal failure and measured usage.
 - [x] Independently review and adjudicate the retained failed response; scientific content fails.
 - [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 67 focused tests pass.
-- [ ] Pass independent repair methods review, isolated checks and full unchanged-code validation.
-- [ ] Freeze and execute a separate two-task repair plan once; stop owned server and seal outputs.
+- [x] Pass independent repair methods review, isolated checks and full unchanged-code validation (1122 full / 159 isolated / 67 no-site; 12 peer probes).
+- [x] Freeze and execute a separate two-task repair plan once; both outputs source-verified, server stopped (8552 input / 720 output tokens, $0).
 - [ ] Review every generated scientific clause and adjudicate qualification or failure.
 
 The first attempt made one native call (4347 input / 890 output tokens, $0 provider
