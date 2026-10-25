@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-25-primary-qualification]] - Three bounded primary reviews and adjudication integrated all67 scientific occurrences; source-inclusive verification passes. Scoped AI development reference accepted, all intervention applicability uncertain; next bounded interpretation/fresh paired freeze, full T6-H5/clinical Tasks6-8 unfinished.
+
 - [[research-log-2026-10-25-contextual-qualification]] - Resumed source-only adjudication and original-source replay pass:430 occurrences/398 groups. Scientific reference/validity/applicability remain unqualified; primary evidence review is next.
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests,92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.

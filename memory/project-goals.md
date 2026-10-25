@@ -1015,3 +1015,12 @@ All substantive science remains explicitly unassessable in this source-only pass
 Next qualify primary evidence for67 scientific occurrences rather than treating
 mechanical provenance as scientific validation. Full T6/H5 and Tasks6-8 stay open.
 Receipt: planning/review-assets/t6-contextual-qualification-20261025/adjudication-checkpoint.json.
+
+## Scoped primary reference accepted - October25 UTC
+
+All67 scientific occurrences now have source-bound primary-review decisions with
+explicit unknowns; original-source audit passes. Scope is AI-assisted exposed-case
+development, not complete independent science or clinical qualification. All363
+other review rows and35 clinical quarantines unchanged. Next bounded interpretation
+and a fresh paired protocol, not scorer fitting or reopening stopped clinical
+retrieval. See [[research-log-2026-10-25-primary-qualification]].

@@ -6,7 +6,16 @@
 - [x] Review primary signaling/mechanism evidence for37 scientific occurrences.
 - [x] Review primary genetic evidence for25 scientific occurrences.
 - [x] Review remaining5 scientific occurrences and independently assess applicability/context.
-- [ ] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
+- [x] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
+
+All67 primary-source judgments and43 scientific keys are integrated and source-verified.
+Scoped AI development reference accepted; complete independent science/general performance
+remain unqualified. All35 clinical rows and all363 non-scientific review rows unchanged.
+Report: reports/IL6R primary evidence qualification.md.
+Acceptance: planning/review-assets/il6r-primary-qualification-20261025/final-acceptance.json.
+
+- [ ] Qualify bounded interpretation against the pinned development reference.
+- [ ] Freeze fresh source-only questions/references/predictions before paired feasibility outputs.
 
 Research stays evaluator-only; clinical truth, probabilities and full T6/H5 remain gated.
 

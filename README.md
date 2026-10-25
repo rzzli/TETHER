@@ -1,5 +1,10 @@
 # AsOf target-evaluation agents
 
+Current research checkpoint: scoped IL6R primary development references and
+original-source verification pass. Scientific completeness, general T6/H5 and
+clinical validity remain unqualified. See [primary-reference status](docs/T6_PRIMARY_REFERENCE.md)
+and [current TODO](TODO.md). Next: bounded interpretation and fresh paired freezes.
+
 
 ## Contextual audit v2 contract checkpoint — October25 UTC
 

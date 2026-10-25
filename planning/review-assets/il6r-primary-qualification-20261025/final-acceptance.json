@@ -1,0 +1,56 @@
+{
+  "role": "evaluation_only",
+  "status": "scoped_AI_primary_reference_and_source_inclusive_integration_accepted_for_development",
+  "created_at_utc": "2026-10-25T06:51:57.169258+00:00",
+  "request": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\il6r-primary-qualification-20261025\\request.json",
+    "sha256": "ecbea06b8f12a96c19eb918f98b1e539d0be0aa4cbf53ec7f88efeba7186f2c1",
+    "bytes": 677
+  },
+  "researcher_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\il6r-primary-qualification-20261025\\researcher-freeze.json",
+    "sha256": "5c58282c6a11138913bd2d3dead97e599ebb108e700e70d41df6eb53df51fca5",
+    "bytes": 403
+  },
+  "researcher_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\il6r-primary-qualification-20261025\\researcher-validation.json",
+    "sha256": "dc855d6e76b511d2d0aef39a8d34aba9dbeff63e7bab8163a6424dd4c92b5afd",
+    "bytes": 2581
+  },
+  "final_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R primary evidence qualification\\adjudication\\final-output-pins.json",
+    "sha256": "34fb4aed557fc3ea04e412bdb98e95d354be55d7baa9aca4c88ae9997fab2f4a",
+    "bytes": 15148
+  },
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\reports\\IL6R primary evidence qualification.md",
+    "sha256": "24ea1a306b661626d7f195df0457dddea0d38cd7b61e198b5c5ac5fed80469ed",
+    "bytes": 15418
+  },
+  "source_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\il6r-primary-qualification-20261025\\source-validation-20261025T065015Z\\report.json",
+    "sha256": "68eeb82239fd1aa4a0dfa9de06f85f3e992c1981a90d489b5bb77a95879854d4",
+    "bytes": 2228
+  },
+  "scientific_occurrences": 67,
+  "scientific_proposition_keys": 43,
+  "judgments": {
+    "bounded_supported": 29,
+    "contradicted_occurrences_one_key": 3,
+    "disputed": 1,
+    "unassessable": 34
+  },
+  "all_intervention_applicability": "uncertain",
+  "non_scientific_review_rows_unchanged": 363,
+  "clinical_rows_quarantined": 35,
+  "independent_complete_scientific_reference": false,
+  "general_performance_validated": false,
+  "scientific_error_rate": null,
+  "clinical_probability": null,
+  "whole_project_complete": false,
+  "prior_code_checkpoint_tests": 1055,
+  "prior_isolated_tests": 92,
+  "tests_rerun": false,
+  "production_code_unchanged": true,
+  "next_step": "Qualify bounded interpretation against this exposed development reference, then freeze fresh source-only questions/references/predictions for a paired feasibility study. Full T6/H5 and clinical Tasks6-8 remain open."
+}
