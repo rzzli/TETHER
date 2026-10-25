@@ -8,6 +8,31 @@ updated: 2026-10-24
 
 # Project goals
 
+## Latest checkpoint — IL6R development review, October 25 UTC / October 24 Los Angeles
+
+The bounded IL6R development inventory, independent AI source reviews and source-based
+adjudication are complete. The interrupted genetics review was recovered with unchanged
+artifacts. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>)
+and sanitized receipts in `planning/review-assets/il6r-dossier-scientific-audit-20261024/`
+preserve original reviews, failed checks, recovery and report-v1 originals.
+Scientific validity is not established; there is no valid atomic-error denominator.
+Exhaustive qualified atomization/completeness, fresh blinded references, interpretation,
+full T6/H5 and original scientific Tasks 6–8 remain open. Next implement context-bearing
+propositions, attribution versus endorsement, decoded JSON with raw byte spans, grouped
+numerical bundles and dependence, with separate scientific/annotation/operational
+denominators. No fake `reviewed_complete` v1 manifest is accepted.
+
+No new native benchmark/model-adapter calls or clinical labels were produced. AI research
+and adjudication work occurred outside the framework meter; total research LLM usage/cost
+was not measured. Publication dates, source versions and retrieval dates remain separate;
+adjudication retrieval was October 25 UTC / October 24 Los Angeles. The last unchanged-code
+checkpoint remains 1008 framework tests/probes/package and 45 isolated tests; these were
+not rerun after the report. Whole-project completion remains false. Backup status is recorded separately in
+`planning/review-assets/il6r-dossier-scientific-audit-20261024/backup-validation.json`;
+the helper requires a committed clean tree. Earlier entries below
+retain their historical status and next-step wording.
+
+
 
 ## October24 native dossier/source binding validated
 

@@ -1,0 +1,480 @@
+{
+  "role": "evaluation_only",
+  "kind": "sanitized_administrative_closeout_validation",
+  "created_utc": "2026-10-25T02:08:50.234213+00:00",
+  "status": "mechanical_checks_passed_with_open_scientific_gates",
+  "acceptance": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\il6r-dossier-scientific-audit-20261024\\final-acceptance.json",
+    "bytes": 16982,
+    "sha256": "b7f269920360a5635a0ec70d3210cd010705d44e822ba5865fb450ad9e8baa85"
+  },
+  "checks": [
+    {
+      "check": "final_hash_report",
+      "passed": true
+    },
+    {
+      "check": "final_hash_adjudication.json",
+      "passed": true
+    },
+    {
+      "check": "final_hash_report_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "final_hash_report_validation.json",
+      "passed": true
+    },
+    {
+      "check": "final_hash_report_output_pins.json",
+      "passed": true
+    },
+    {
+      "check": "final_hash_report_revision_note.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_count_19",
+      "passed": true
+    },
+    {
+      "check": "frozen_review_freeze_v2.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_validation_receipt_v2.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_metadata_validation_completion.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_genetics_completion_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_translational.md",
+      "passed": true
+    },
+    {
+      "check": "frozen_translational.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_translational_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_genetics.md",
+      "passed": true
+    },
+    {
+      "check": "frozen_genetics.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_genetics_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_atomic_inventory.md",
+      "passed": true
+    },
+    {
+      "check": "frozen_atomic_inventory.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_atomic_inventory_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_atomic_inventory_validation_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_build_atomic_inventory.py",
+      "passed": true
+    },
+    {
+      "check": "frozen_review_freeze.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_validation_receipt.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_validation_container_clarification.json",
+      "passed": true
+    },
+    {
+      "check": "frozen_seal_review_metadata.py",
+      "passed": true
+    },
+    {
+      "check": "v1_copy_IL6R dossier scientific audit.md",
+      "passed": true
+    },
+    {
+      "check": "v1_copy_adjudication.json",
+      "passed": true
+    },
+    {
+      "check": "v1_copy_report_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "v1_copy_report_validation.json",
+      "passed": true
+    },
+    {
+      "check": "v1_copy_report_output_pins.json",
+      "passed": true
+    },
+    {
+      "check": "revised_IL6R dossier scientific audit.md",
+      "passed": true
+    },
+    {
+      "check": "revised_adjudication.json",
+      "passed": true
+    },
+    {
+      "check": "revised_report_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "revised_report_validation.json",
+      "passed": true
+    },
+    {
+      "check": "revised_report_output_pins.json",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_report_link_exists",
+      "passed": true
+    },
+    {
+      "check": "native_links_count_18",
+      "passed": true
+    },
+    {
+      "check": "parse_and_role_adjudication.json",
+      "passed": true
+    },
+    {
+      "check": "parse_and_role_report_input_pins.json",
+      "passed": true
+    },
+    {
+      "check": "parse_and_role_report_validation.json",
+      "passed": true
+    },
+    {
+      "check": "parse_and_role_report_output_pins.json",
+      "passed": true
+    },
+    {
+      "check": "parse_and_role_report_revision_note.json",
+      "passed": true
+    },
+    {
+      "check": "error_rate_undefined",
+      "passed": true
+    },
+    {
+      "check": "no_fake_complete",
+      "passed": true
+    },
+    {
+      "check": "open_gates_retained",
+      "passed": true
+    },
+    {
+      "check": "zero_native_calls",
+      "passed": true
+    },
+    {
+      "check": "agent_usage_nonzero_unmeasured",
+      "passed": true
+    }
+  ],
+  "status_documents": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "bytes": 39335,
+      "sha256": "9b5ca036c1497ee5b2afba07d20553138a0409659965cf1f3f1262134bbc6a34"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "bytes": 20104,
+      "sha256": "e69411edea585833d32161c544b826992f21a5a46c90845d83501622caf0183c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "bytes": 74849,
+      "sha256": "48249f52adbe65cb13fcfe751669fc94f6852cdb6fa3855135fa43600077dcf1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\MEMORY.md",
+      "bytes": 14544,
+      "sha256": "43d62cf112240905a10f02a900cb5fe0deadf26f6af46812e38abca187ccc892"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-23-prospective-readiness.md",
+      "bytes": 16471,
+      "sha256": "c3240e5c6d6c6903ae4244ee635914f89c78c4ff34a613c920d561e1a455acf3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+      "bytes": 14374,
+      "sha256": "639b8ec65c17e8e1ed8f5eb14fcf1ff637a14f50111688b6dadbebc43c7a23c7"
+    }
+  ],
+  "ignored_artifacts_and_helper_verified": true,
+  "backup_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\backup_il6r_scientific_audit_20261024.py",
+    "bytes": 5649,
+    "sha256": "ef4945ebde4e90efb16a321c632d229df016abbd7a40346b0ca57cc5b2798bab"
+  },
+  "backup_helper_syntax_valid": true,
+  "backup_helper_executed": false,
+  "production_modules_unchanged": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_claim_audit.py",
+      "bytes": 11334,
+      "sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_dossier_binding.py",
+      "bytes": 13461,
+      "sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676"
+    }
+  ],
+  "no_new_post_report_framework_tests": true,
+  "last_unchanged_code_checkpoint": "1008 framework tests/probes/package and 45 isolated tests",
+  "whole_project_complete": false,
+  "scientific_validity": "not_established",
+  "valid_atomic_error_denominator": false,
+  "new_native_benchmark_calls": 0,
+  "new_clinical_labels": 0,
+  "agent_work_outside_native_meter": true,
+  "remaining_gates": [
+    "Qualify exhaustive contextual atomic inventory and independent scope-specific evidence completeness.",
+    "Freeze fresh blinded source/reference/prediction procedures and dependence-aware paired estimands.",
+    "Qualify bounded scientific interpretation separately from quote/select and numerical features.",
+    "Run bounded paired feasibility before original full T6/H5 study; original scientific Tasks 6\u20138 remain open.",
+    "Keep the stopped clinical acquisition route stopped under its prior rule; no clinical labels or prediction qualification."
+  ],
+  "limitations": [
+    "Exposed development case; no held-out, system-blind or independent human validation claim.",
+    "Byte/source correspondence and AI adjudication do not certify scientific truth or therapeutic efficacy.",
+    "No scientifically valid complete canonical atom/completeness denominator or full T6/H5 performance result.",
+    "No new native benchmark calls or clinical labels; research-agent usage must not be reported as zero total LLM use.",
+    "Original research/proposals/protocols, reviews, failures, recovery artifacts and report-v1 originals preserved.",
+    "This closeout performs artifact validation only; no new science, source acquisition, runtime or catalog edits.",
+    "Backup is prepared only, not executed; no external ZIP or bundle verification has occurred for this phase yet."
+  ],
+  "administrative_line_endings_revision": {
+    "created_utc": "2026-10-25T02:10:33.781122+00:00",
+    "preserved_prior_receipt": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\admin-closeout-v1\\closeout-validation.json",
+      "bytes": 9968,
+      "sha256": "6340b1c029fd490c8d5a65d8cf43d34fe97a1a36b63e2be141a4e6813b3b39fe"
+    },
+    "files": [
+      {
+        "path": "TODO.md",
+        "equal_original_raw_lines_preserved": 549,
+        "new_LF_lines": 28,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+          "bytes": 39335,
+          "sha256": "9b5ca036c1497ee5b2afba07d20553138a0409659965cf1f3f1262134bbc6a34"
+        }
+      },
+      {
+        "path": "README.md",
+        "equal_original_raw_lines_preserved": 282,
+        "new_LF_lines": 24,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\README.md",
+          "bytes": 20104,
+          "sha256": "e69411edea585833d32161c544b826992f21a5a46c90845d83501622caf0183c"
+        }
+      },
+      {
+        "path": "memory/project-goals.md",
+        "equal_original_raw_lines_preserved": 948,
+        "new_LF_lines": 24,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+          "bytes": 74849,
+          "sha256": "48249f52adbe65cb13fcfe751669fc94f6852cdb6fa3855135fa43600077dcf1"
+        }
+      },
+      {
+        "path": "memory/MEMORY.md",
+        "equal_original_raw_lines_preserved": 97,
+        "new_LF_lines": 2,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\memory\\MEMORY.md",
+          "bytes": 14544,
+          "sha256": "43d62cf112240905a10f02a900cb5fe0deadf26f6af46812e38abca187ccc892"
+        }
+      },
+      {
+        "path": "memory/research-log-2026-10-23-prospective-readiness.md",
+        "equal_original_raw_lines_preserved": 231,
+        "new_LF_lines": 24,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-23-prospective-readiness.md",
+          "bytes": 16471,
+          "sha256": "c3240e5c6d6c6903ae4244ee635914f89c78c4ff34a613c920d561e1a455acf3"
+        }
+      },
+      {
+        "path": "planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+        "equal_original_raw_lines_preserved": 196,
+        "new_LF_lines": 24,
+        "status_pin": {
+          "path": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+          "bytes": 14374,
+          "sha256": "639b8ec65c17e8e1ed8f5eb14fcf1ff637a14f50111688b6dadbebc43c7a23c7"
+        }
+      }
+    ],
+    "normalized_text_unchanged": true,
+    "equal_blocks_preserve_original_line_ending_bytes": true,
+    "inserted_lines_UTF8_LF": true,
+    "backup_helper_remains_unexecuted": true
+  },
+  "background_input_provenance_alias": {
+    "receipt": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\background_input_alias_receipt.json",
+      "bytes": 29319,
+      "sha256": "caea1aa8bdba5aa13b1209c7ad182428c56bc0c73c7800ee510a018c777654b4"
+    },
+    "current_path": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+    "captured_original_pin": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+      "bytes": 12560,
+      "sha256": "cc6f6d92b3fbd89c327e73076f193439f284b10a474f9c3424f3362eccaa7258"
+    },
+    "archived_copy": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\background-input-originals\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+      "bytes": 12560,
+      "sha256": "cc6f6d92b3fbd89c327e73076f193439f284b10a474f9c3424f3362eccaa7258"
+    },
+    "git_commit": "a00ca956da14986242f18a81484c53472f8649eb",
+    "git_blob": "366a6a54e592d5596d803647601824d7f443f9f3",
+    "report_parent_pin_count": 39,
+    "current_path_matches": 38,
+    "explicit_archived_alias_matches": 1,
+    "all_report_parent_pins_validated": true,
+    "preserved_previous_acceptance": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\admin-closeout-v2\\final-acceptance.json",
+      "bytes": 13964,
+      "sha256": "5ccbd35c6d7bc6859816e08339fe11b205b602256a0847807fe51350ada8f4ef"
+    },
+    "preserved_previous_closeout_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\admin-closeout-v2\\closeout-validation.json",
+      "bytes": 12496,
+      "sha256": "07fcd3eaa2c64c7d1ec99d6af8f8111d4123b3a2dd80ac823667b30a076384aa"
+    }
+  },
+  "administrative_backup_wording_revision": {
+    "created_utc": "2026-10-25T02:13:21.384302+00:00",
+    "scope": "Only replace time-sensitive status prose with separate backup-receipt guidance; scientific files and historical background alias unchanged.",
+    "preserved_previous_acceptance": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\admin-closeout-v3\\final-acceptance.json",
+      "bytes": 15871,
+      "sha256": "847d2ecb06144ca5d35bc1b4b8d6e9f9a4d2554c743231a9e4a2d678b9bfbc36"
+    },
+    "preserved_previous_closeout_validation": {
+      "path": "D:\\Projects\\drug_target_agents\\research_notes\\IL6R dossier scientific audit\\admin-closeout-v3\\closeout-validation.json",
+      "bytes": 14403,
+      "sha256": "2448b7fdc47c29666571ca938efdf800e85df6b24a86dc4d9638aacd5e772f82"
+    },
+    "changed_status_documents": [
+      "TODO.md",
+      "README.md",
+      "memory/project-goals.md",
+      "memory/research-log-2026-10-23-prospective-readiness.md",
+      "planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md"
+    ],
+    "report_parent_checks_passed": 39,
+    "closeout_checks_rechecked": 65
+  }
+}

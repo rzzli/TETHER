@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[project-goals]] — Latest IL6R bounded development inventory/source review/adjudication complete (Oct25 UTC/Oct24 LA); recovered genetics provenance retained. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>). Atomic completeness/denominator, fresh blinded references, interpretation and full T6/H5/Tasks6–8 remain open. Next contextual propositions/attribution/decoded JSON/raw spans/numerical bundles/dependence/separate denominators. Last unchanged-code checkpoint:1008 framework/45 isolated checks, not rerun after report; native benchmark calls/clinical labels=0, agent usage outside meter, whole project incomplete.
+
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests,45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 
 - [[Source Readiness Closeout and T6 Quality Next Stage 2026-10-24]] — Fixed12 source assessment stops at zero joint-ready;180 judgments/465 pointers replayed. JSON claim-audit prototype validated; next sealed-dossier/source integration and interpretation qualification. Scientific Tasks6–8 remain open.
