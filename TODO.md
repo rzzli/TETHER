@@ -1,6 +1,16 @@
 # Project execution checklist
 
 
+## Contextual reference qualification in progress - October25 UTC
+
+- [x] Freeze development qualification procedure and unchanged source-surface inputs.
+- [ ] Validate and freeze two independently proposed contextual inventories.
+- [ ] Validate and freeze independently proposed evidence-dimension requirements.
+- [ ] Adjudicate agreements, disagreements and completeness limits; source-verify resulting references.
+
+This is exposed-case AI development review, not a fresh scientific evaluation.
+Protocol: planning/Contextual Reference Qualification 2026-10-25.md.
+
 ## Contextual audit v2 contract checkpoint — October25 UTC
 
 Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
