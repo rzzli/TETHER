@@ -1,0 +1,48 @@
+{
+  "role": "evaluation_only",
+  "status": "passed_final_source_surface_replay_unqualified_draft",
+  "created_at_utc": "2026-10-25T03:06:56.353479+00:00",
+  "original_replay": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-audit-20261025\\replay-20261025T024535Z.json",
+    "sha256": "e096d9c2ceb3698aa9e021c1e42f48b3d2568e23703d06a392cc508852467428",
+    "bytes": 2228
+  },
+  "surface": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-audit-20261025\\surface-20261025T024535Z\\surface.json",
+    "sha256": "976c0f4d67aa287f9afbe336b5a70d9658ed915c0306b3e2b7146e3a9766e1d4",
+    "bytes": 566772
+  },
+  "draft": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-audit-20261025\\surface-20261025T024535Z\\draft-inventory.json",
+    "sha256": "43341773a1ee83dd3cfaad128d93c78c82b68c9139b01c985a3421ed95203e25",
+    "bytes": 269037
+  },
+  "original_builder_code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+    "sha256": "4d29217903cc0a8d0fa469f0d0a5ab825a3a40e12759b10093a3a869a66eeb45",
+    "bytes": 35514
+  },
+  "preserved_original_code": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\t6-contextual-surface-builder-before-strictfix-20261025.py",
+    "sha256": "4d29217903cc0a8d0fa469f0d0a5ab825a3a40e12759b10093a3a869a66eeb45",
+    "bytes": 35514
+  },
+  "current_verifier": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+    "sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+    "bytes": 36436
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\verify_t6_contextual_surface_final_20261025.py",
+    "sha256": "1bd87b803846edfbb4fed09885991cf46ea0cb3ead5d6183f525af7517519cc6",
+    "bytes": 1952
+  },
+  "bytes": 43527,
+  "lines": 172,
+  "nodes": 1158,
+  "scientific_atomization": "not_performed",
+  "scientific_validity": "not_established",
+  "scientific_error_rate": null,
+  "native_model_calls": 0,
+  "clinical_labels": 0
+}

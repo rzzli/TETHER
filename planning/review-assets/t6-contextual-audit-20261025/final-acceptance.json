@@ -1,0 +1,95 @@
+{
+  "role": "evaluation_only",
+  "schema_version": 2,
+  "created_at_utc": "2026-10-25T03:10:12.922777+00:00",
+  "status": "contextual_contract_source_compiler_and_review_checks_validated",
+  "whole_project_complete": false,
+  "code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+      "bytes": 36436,
+      "sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_t6_contextual_audit.py",
+      "bytes": 29274,
+      "sha256": "a5b7bb109ea6c55e824ff07719386dd7b600dec66571a695e985d6b259ef69be"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_t6_contextual_peer.py",
+      "bytes": 2822,
+      "sha256": "7140098b4525175e03966c3d474d3e5c94f160fc6f7a72b9154d0bcdc84e79c8"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-contextual-audit-20261025\\full-validation.json",
+      "bytes": 470,
+      "sha256": "4bc226c71f571d281ca1c4395e235a6f6e8438ccb6d31e5a2e2ba8c7f4e61064"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-contextual-audit-20261025\\code-validation.json",
+      "bytes": 47390,
+      "sha256": "6201d707b5d96bd682a06513631602e0f958380f5f7532cab5f0a4f6d6fb5d33"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-contextual-audit-20261025\\final-clean-checkout-validation.json",
+      "bytes": 382,
+      "sha256": "ad77bc6e00edd0341254e4e5077d9df066a9e3007ab1a6c156cd350885daae1c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-contextual-audit-20261025\\native-development-replay.json",
+      "bytes": 2104,
+      "sha256": "720e66258a3a28036fdaaa5ed900dd1d9ae5eee92d465eed334388d356973649"
+    }
+  ],
+  "peer_before": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\contextual-contract-peer-20261025\\pins.json",
+    "bytes": 2066,
+    "sha256": "34c1fc1c0c5dbc1ee8a99b3369af7e991acef047c2db713ffe093295b03e96ea"
+  },
+  "peer_recheck": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\contextual-contract-peer-20261025\\revision-1\\pins.json",
+    "bytes": 1991,
+    "sha256": "1d4082b51eecaf2be73ff181c6179319cb533c2b6db8d53ceed3b028ec1a8df2"
+  },
+  "preserved_failures": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\t6-contextual-strict-coverage-beforefix-20261025.log",
+      "bytes": 3103,
+      "sha256": "a265960002bb45e5f328a64bce533894e1ddbfcc37ddfadcc2cd0ab8a48a90b2"
+    }
+  ],
+  "source_builder_archive": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\t6-contextual-surface-builder-before-strictfix-20261025.py",
+    "bytes": 35514,
+    "sha256": "4d29217903cc0a8d0fa469f0d0a5ab825a3a40e12759b10093a3a869a66eeb45"
+  },
+  "tests": 1055,
+  "new_tests": 47,
+  "isolated_tests": 92,
+  "real_source_rows": 9,
+  "real_dossier_bytes": 43527,
+  "real_lines": 172,
+  "surface_nodes": 1158,
+  "scientific_atomization": "not_performed",
+  "scientific_validity": "not_established",
+  "valid_scientific_error_denominator": false,
+  "scientific_error_rate": null,
+  "clinical_probability": null,
+  "new_native_model_calls": 0,
+  "new_clinical_labels": 0,
+  "limitations": [
+    "Typed representation and exact references do not establish semantic/scientific truth.",
+    "Scoped reference qualification/grouping/review mode remain attested and require independent protocol qualification.",
+    "The exposed surface is an unqualified draft, not a full T6/H5 evaluation.",
+    "AI expert review occurred outside the native framework meter; total LLM usage/cost not measured.",
+    "Current original scientific Tasks6-8 remain unfinished."
+  ],
+  "corrections": [
+    "Peer regressions: cross-record bundle provenance, lost minus sign, missing uncertainty output.",
+    "Strict coverage rejects extra non-record entries; references bind complete source-run/temporal/program context.",
+    "Reference and evaluator-parent hashes cover the same bounded bytes subsequently parsed.",
+    "Pre-fix full tests are retained but unaccepted because code changed during their execution."
+  ]
+}

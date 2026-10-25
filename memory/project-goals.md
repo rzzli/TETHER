@@ -8,6 +8,22 @@ updated: 2026-10-24
 
 # Project goals
 
+
+## Contextual audit v2 contract checkpoint — October25 UTC
+
+Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
+complete line/value dispositions, attribution, numerical bundles, scoped references,
+dependence and separate uncertainty/validity/applicability strata.47 new regressions;
+full1055 tests/no skips/probes/package and92 isolated tests pass. Peer findings and
+pre-fix failures preserved. Final code unchanged during full verification.
+Retained exposed IL6R replay covers43527 bytes/172lines/1158location nodes through
+original-source verification. Draft has no fabricated semantic atoms or scientific
+error percentage. Next qualify contextual atoms/completeness references and review
+seals before interpretation or fresh paired evaluation. Original Tasks6–8 remain open.
+Native calls/clinical labels/probabilities unchanged; AI review outside native meter.
+Acceptance: planning/review-assets/t6-contextual-audit-20261025/final-acceptance.json.
+Backup status: planning/review-assets/t6-contextual-audit-20261025/backup-validation.json.
+
 ## Latest checkpoint — IL6R development review, October 25 UTC / October 24 Los Angeles
 
 The bounded IL6R development inventory, independent AI source reviews and source-based
