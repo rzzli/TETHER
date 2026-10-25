@@ -1,0 +1,20 @@
+{
+  "role": "evaluation_only",
+  "status": "prepared_no_model_generation",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\interpretation-repair-20261025T170040Z\\run-plan.json",
+    "sha256": "9e77a4c5fcda33ef09463a32247e5d6df37bf59cc85b50882ffb8b45fb5abff9",
+    "bytes": 6816
+  },
+  "case_count": 1,
+  "source_scoped_tasks": 2,
+  "fresh_holdout": false,
+  "reference_sealed_before_candidates": true,
+  "provider_spend_usd": 0,
+  "scientific_quality": "not_evaluated",
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\prepare_local_interpretation_repair_20261025.py",
+    "sha256": "51530baafd0fcb89a5b12cda3d454ea8f6daafeffd3cc38da32282298ea690e5",
+    "bytes": 2047
+  }
+}

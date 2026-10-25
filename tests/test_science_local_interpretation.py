@@ -43,8 +43,10 @@ class LocalInterpretationTests(unittest.TestCase):
             abstention_reason=None)
 
     def native(self,wire=None,**changes):
+        payload=payload_for(self.request,self.config)
         value=dict(content=canonical(wire or self.wire).decode('utf-8'),tokens_evaluated=20,tokens_predicted=40,
-                   truncated=False,stopped_limit=False)
+                   truncated=False,stopped_limit=False,prompt=payload['prompt'],model='fixture-owned-model',
+                   generation_settings={k:payload[k] for k in ['seed','temperature','n_predict','stop','stream']})
         value.update(changes);return value
 
     def backend(self,native=None,error=None):
@@ -98,6 +100,22 @@ class LocalInterpretationTests(unittest.TestCase):
         native=self.native();native.pop('stopped_limit')
         with self.assertRaises(ContractError):parse_native(self.request,native)
 
+    def test_pinned_runtime_modern_eos_completeness_supported(self):
+        native=self.native(stop=True,stop_type='eos');native.pop('stopped_limit')
+        response,usage=parse_native(self.request,native)
+        self.assertEqual(response['claims'][0]['claim_id'],'C1');self.assertEqual(usage.output_tokens,40)
+
+    def test_modern_stop_word_must_match_requested_stop(self):
+        native=self.native(stop=True,stop_type='word',stopping_word='<|im_end|>');native.pop('stopped_limit')
+        parse_native(self.request,native)
+        native['stopping_word']='unexpected'
+        with self.assertRaises(ContractError):parse_native(self.request,native)
+
+    def test_limit_unknown_or_conflicting_completion_causes_fail(self):
+        for changes in [{'stop':True,'stop_type':'limit'}, {'stop':False,'stop_type':'eos'},
+                        {'stop':True,'stop_type':'unknown'}, {'stop':True,'stop_type':'eos','stopped_limit':True}]:
+            with self.assertRaises(ContractError):parse_native(self.request,self.native(**changes))
+
     def test_remote_and_credential_endpoints_denied(self):
         for endpoint in ['https://example.com','http://127.0.0.1.evil.test:80','http://u:p@127.0.0.1:80',
                          'http://127.0.0.1:bad','http://127.0.0.1:0']:
@@ -139,6 +157,34 @@ class LocalInterpretationTests(unittest.TestCase):
         self.assertEqual(events[-1]['event'],'build_failed')
         account=next(e for e in events if e['event']=='interpretation_accounted')
         self.assertEqual(account['details']['basis'],'conservative_quote')
+
+    def test_native_stale_prompt_is_rejected_with_measured_usage(self):
+        backend=self.backend(self.native(prompt='stale other request'))
+        with self.assertRaises(ContractError):self.run_job(backend)
+        row=read_json(self.root/'output/backend-execution.json')['attempts'][0]
+        self.assertEqual(row['status'],'rejected_native_response')
+        self.assertEqual(row['measured_usage']['output_tokens'],40)
+
+    def test_peer_modern_stop_causes_must_agree(self):
+        for changes in [dict(stopped_eos=False),dict(stopped_word=True),
+                        dict(stopping_word='unexpected'),dict(stopped_eos=1)]:
+            with self.assertRaises(ContractError):
+                parse_native(self.request,self.native(stop=True,stop_type='eos',**changes))
+
+    def test_peer_legacy_stop_causes_must_agree(self):
+        for changes in [dict(stopped_eos=True,stopped_word=True),
+                        dict(stopped_eos=True,stopping_word='unexpected'),dict(stopped_word=1)]:
+            with self.assertRaises(ContractError):parse_native(self.request,self.native(**changes))
+
+    def test_peer_native_settings_preserve_exact_json_types(self):
+        for key,value in [('stream',0),('seed',42.0),('temperature',False)]:
+            native=self.native();native['generation_settings'][key]=value
+            backend=self.backend(native)
+            with self.assertRaises(ContractError):
+                run_interpretation(self.inputs/'case.json',self.inputs/'snapshot.json',self.root/('output-'+key),
+                                   backend,observation_ids=self.ids)
+            self.assertEqual(backend.opener.calls,1)
+            self.assertEqual(backend.execution_document()['attempts'][0]['measured_usage']['output_tokens'],40)
 
     def test_verify_execution_rechecks_endpoint_policy(self):
         backend=self.backend();generated=backend.generate(self.request,30)

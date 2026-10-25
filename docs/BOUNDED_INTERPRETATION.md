@@ -119,3 +119,23 @@ premises/inferences against the pinned reference with independent AI review, and
 document unassessable content without a zero-error victory. Then freeze fresh
 questions, reference/prediction seals and paired analysis before new evaluation
 outputs. Full T6/H5 and original scientific Tasks 6–8 remain unfinished.
+
+## October25 native development outcome and repair
+
+The first native plan failed at transport validation; separate source-bound AI
+reviews also rejected its scientific interpretation. One request ran and the
+second was not dispatched. Exact quotations did not rescue unsupported biological
+strength inferred from a provider score or denial of reported mechanism context.
+The failed journal and original code remain retained.
+
+The separately frozen repair accepts the pinned runtime's modern EOS completion
+form, rejects conflicting/limited/truncated stops, and checks exact prompt and
+generation-setting echoes. It keeps lossless source fields, identifies descriptive
+provider metadata explicitly and asks for distinct source-specific scientific
+reading. Version-two development plans bind the claim cap in prepared requests.
+The current pilot uses two claims and a14200-byte prompt cap, within the unchanged
+16384-token context and shared case budget. No case-specific scientific answer
+is supplied. See the repair protocol in
+`planning/Bounded Interpretation Repair 2026-10-25.md` and current TODO.md for
+validation, execution and scientific qualification status. Older test counts above
+are dated checkpoints; they do not establish repaired scientific validity.

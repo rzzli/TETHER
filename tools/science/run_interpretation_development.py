@@ -32,11 +32,13 @@ def code_proofs():
     return [pin(p) for p in dict.fromkeys(paths)]
 
 
-def prepare(output,case,snapshot,catalog,task_specs,model_receipt,reference_seal,*,port=55585):
+def prepare(output,case,snapshot,catalog,task_specs,model_receipt,reference_seal,*,port=55585,
+            max_claims=3,max_prompt_bytes=14000):
     output=Path(output).resolve();output.mkdir(parents=True,exist_ok=False)
     journal=RunJournal(output/'preparation',kind='build')
     try:
         need(type(port) is int and 1024<=port<=65535,'Invalid development port')
+        need(type(max_claims) is int and 1<=max_claims<=4,'Invalid local claim cap')
         need(1<=len(task_specs)<=2 and len({t['task_id'] for t in task_specs})==len(task_specs),'Pilot needs one or two unique tasks')
         receipt=read_json(Path(model_receipt));need(receipt['status']=='downloaded_hash_verified_not_inference_validated',
                                                  'Pinned model acquisition is incomplete')
@@ -46,13 +48,13 @@ def prepare(output,case,snapshot,catalog,task_specs,model_receipt,reference_seal
         config=dict(schema_version=1,endpoint=f'http://127.0.0.1:{port}',model_id='Qwen/Qwen2.5-14B-Instruct-GGUF@'+receipt['revision'],
             model_provenance=dict(weights_sha256={x['name']:x['sha256'] for x in receipt['items'] if x['name'].endswith('.gguf')},
                                  runtime_sha256=runtimes[0]['sha256']),
-            max_prompt_bytes=14000,max_output_tokens=2048,timeout_seconds=300,seed=42)
+            max_prompt_bytes=max_prompt_bytes,max_output_tokens=2048,timeout_seconds=300,seed=42)
         validate_config(config);write_json(output/'model-config.json',config)
         tasks=[]
         for task in task_specs:
             need(set(task)=={'task_id','observation_ids'} and isinstance(task['task_id'],str) and
                  re.fullmatch('[a-z][a-z0-9_-]{0,63}',task['task_id']),'Invalid pilot task')
-            prepared=prepare_input(case,snapshot,catalog,max_claims=3,observation_ids=task['observation_ids'])
+            prepared=prepare_input(case,snapshot,catalog,max_claims=max_claims,observation_ids=task['observation_ids'])
             request_path=output/'preparation'/(task['task_id']+'-request.json')
             write_json(request_path,prepared.request);payload=payload_for(prepared.request,config)
             quote=Usage(len(payload['prompt'].encode('utf-8'))+32,config['max_output_tokens'],0)
@@ -62,7 +64,7 @@ def prepare(output,case,snapshot,catalog,task_specs,model_receipt,reference_seal
         for task in tasks:total=add_usage(total,decode(Usage,task['reserved']))
         need(total.input_tokens<=budget.max_input_tokens and total.output_tokens<=budget.max_output_tokens and
              len(tasks)<=budget.max_calls,'Pilot worst-case requests exceed shared case budget')
-        plan=dict(schema_version=1,role='development_execution_plan',root=str(output),
+        plan=dict(schema_version=2,role='development_execution_plan',root=str(output),max_claims=max_claims,
             created_at_utc=datetime.now(timezone.utc).isoformat(),case=pin(Path(case)),snapshot=pin(Path(snapshot)),
             catalog=pin(Path(catalog)) if catalog else None,model_receipt=pin(Path(model_receipt)),
             reference_seal=pin(Path(reference_seal)),model_config=pin(output/'model-config.json'),code=code_proofs(),
@@ -78,7 +80,8 @@ def prepare(output,case,snapshot,catalog,task_specs,model_receipt,reference_seal
 
 
 def validate_plan(plan):
-    need(isinstance(plan,dict) and type(plan['schema_version']) is int and plan['schema_version']==1 and
+    need(isinstance(plan,dict) and type(plan['schema_version']) is int and plan['schema_version']==2 and
+         type(plan['max_claims']) is int and 1<=plan['max_claims']<=4 and
          type(plan['port']) is int and 1024<=plan['port']<=65535 and
          plan['role']=='development_execution_plan' and plan['provider_spend_usd']==0 and
          plan['automatic_generation_retries'] is False and plan['evaluator_content_in_model_requests'] is False,
@@ -101,7 +104,7 @@ def validate_plan(plan):
     for task in plan['tasks']:
         need(re.fullmatch('[a-z][a-z0-9_-]{0,63}',task['task_id']) is not None,'Unsafe task ID')
         request=prepare_input(plan['case']['path'],plan['snapshot']['path'],plan['catalog']['path'] if plan['catalog'] else None,
-                              max_claims=3,observation_ids=task['observation_ids']).request
+                              max_claims=plan['max_claims'],observation_ids=task['observation_ids']).request
         need(fingerprint(request)==task['request_sha256']==fingerprint(read_json(check_pin(task['request']))) and
              fingerprint(payload_for(request,config))==task['payload_sha256'],'Frozen development request differs')
         expected=Usage(len(payload_for(request,config)['prompt'].encode('utf-8'))+32,config['max_output_tokens'],0)
@@ -149,7 +152,7 @@ def execute(plan_proof):
             task_error=None
             try:
                 report=run_interpretation(plan['case']['path'],plan['snapshot']['path'],job,backend,
-                    plan['catalog']['path'] if plan['catalog'] else None,budget=remaining,max_claims=3,
+                    plan['catalog']['path'] if plan['catalog'] else None,budget=remaining,max_claims=plan['max_claims'],
                     observation_ids=task['observation_ids'])
                 verify_interpretation(job)
                 need(report['status']=='interpretation_contract_completed_not_scientific_validation','Task abstained before generation')

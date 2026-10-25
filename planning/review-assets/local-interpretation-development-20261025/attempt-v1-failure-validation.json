@@ -1,0 +1,44 @@
+{
+  "role": "evaluation_only",
+  "created_at_utc": "2026-10-25T16:50:40.593687+00:00",
+  "status": "failed_attempt_and_scientific_rejection_verified_not_qualified",
+  "original_report": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\interpretation-development-20261025T160151Z\\execution-report.json",
+    "sha256": "419d33fd48d73a722e50baf315afc37dbea9f37e9846f902b0f73433d57e4d87",
+    "bytes": 637
+  },
+  "adjudication": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\adjudication-v1\\adjudication.json",
+    "sha256": "5293328a2c140a1b37cfa7484b007a7950ef0a8fb6e12c2d17a8444461aa9e5f",
+    "bytes": 521947
+  },
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\adjudication-v1\\report.md",
+    "sha256": "a2474a96f90c332f86fd0edbc4a5f4f60f356f8ee5e1cc8267149657c4dc0eec",
+    "bytes": 13708
+  },
+  "adjudication_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\adjudication-v1\\final-output-pins.json",
+    "sha256": "169781ae452cd8844e3788f9c349f18cebba381c5b03fb46bdba90ac252f2e00",
+    "bytes": 1610
+  },
+  "archived_input_aliases": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\archived-code-v1\\aliases.json",
+    "sha256": "f0967e0320cad48ccce386e647785aab6909c21f4fde6062ad8f9fc4f0abb454",
+    "bytes": 1459
+  },
+  "proof_occurrences_verified": 58,
+  "adjudicated_facets": 63,
+  "exact_bound_values_verified": 743,
+  "native_model_calls": 1,
+  "input_tokens": 4347,
+  "output_tokens": 890,
+  "provider_spend_usd": 0,
+  "server_stopped": true,
+  "content_decision": "fail",
+  "two_task_gate": "fail",
+  "unrun_task": "scientifically_indeterminate",
+  "scientific_error_rate": null,
+  "clinical_probability": null,
+  "whole_project_complete": false
+}

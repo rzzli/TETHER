@@ -1,16 +1,23 @@
 # Project execution checklist
 
 
-## Native interpretation development - October25
+## Native interpretation development and repair — October25
 
-- [x] Validate explicit admitted-source selection with complete available/selected/missing coverage.
-- [x] Implement lossless local output transport and exact quote materialization;58focused tests and6methods probes pass.
-- [x] Pass full validation and freeze unchanged execution code.
-- [ ] Execute two exposed-case source-scoped requests once using the pinned local model; stop owned server and seal outputs.
-- [ ] Independently review scientific inference and applicability, adjudicate, and record qualification or failure.
+- [x] Implement and validate the first native transport: 58 focused / 1113 full tests.
+- [x] Freeze and execute version one; retain its terminal failure and measured usage.
+- [x] Independently review and adjudicate the retained failed response; scientific content fails.
+- [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 66 focused tests pass.
+- [ ] Pass independent repair methods review, isolated checks and full unchanged-code validation.
+- [ ] Freeze and execute a separate two-task repair plan once; stop owned server and seal outputs.
+- [ ] Review every generated scientific clause and adjudicate qualification or failure.
 
-Plan: planning/Bounded Interpretation Development 2026-10-25.md.
-No fresh holdout or complete T6/H5/clinical qualification is claimed.
+The first attempt made one native call (4347 input / 890 output tokens, $0 provider
+spending). Its second task was not dispatched. Scientific review found unsupported
+score-to-strength interpretation and mechanism denial despite source context.
+The failed run remains unchanged. No full T6/H5 or clinical qualification is claimed.
+Original protocol: planning/Bounded Interpretation Development 2026-10-25.md.
+Repair protocol: planning/Bounded Interpretation Repair 2026-10-25.md.
+Failure closure: planning/review-assets/local-interpretation-development-20261025/attempt-v1-failure-validation.json.
 
 ## Bounded interpretation implementation - October25
 

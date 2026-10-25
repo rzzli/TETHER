@@ -69,6 +69,16 @@ class InterpretationDevelopmentTests(unittest.TestCase):
         plan=read_json(check_pin(self.prepare()));plan['budget']['max_cost_usd']=1
         with self.assertRaises(ContractError):launch.validate_plan(plan)
 
+    def test_repair_claim_cap_is_bound_into_frozen_request(self):
+        proof=self.prepare();original=read_json(check_pin(proof))
+        repaired=launch.prepare(self.root/'repair',self.inputs/'case.json',self.inputs/'snapshot.json',None,
+            [dict(task_id='fixture',observation_ids=self.ids)],original['model_receipt']['path'],
+            original['reference_seal']['path'],max_claims=2,max_prompt_bytes=14200)
+        plan=read_json(check_pin(repaired));launch.validate_plan(plan)
+        request=read_json(check_pin(plan['tasks'][0]['request']))
+        self.assertEqual(request['bounds']['max_claims'],2)
+        self.assertEqual(read_json(check_pin(plan['model_config']))['max_prompt_bytes'],14200)
+
     def test_task_timeout_and_report_failure_keep_primary_cause(self):
         proof=self.prepare();server=self.root/'fake-server.exe';server.write_bytes(b'never executed')
         class Process:
