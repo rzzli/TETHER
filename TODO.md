@@ -3,9 +3,9 @@
 
 ## Primary scientific reference qualification - October25 UTC
 
-- [ ] Review primary signaling/mechanism evidence for37 scientific occurrences.
-- [ ] Review primary genetic evidence for25 scientific occurrences.
-- [ ] Review remaining5 scientific occurrences and independently assess applicability/context.
+- [x] Review primary signaling/mechanism evidence for37 scientific occurrences.
+- [x] Review primary genetic evidence for25 scientific occurrences.
+- [x] Review remaining5 scientific occurrences and independently assess applicability/context.
 - [ ] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
 
 Research stays evaluator-only; clinical truth, probabilities and full T6/H5 remain gated.
