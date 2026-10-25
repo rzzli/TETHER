@@ -1,6 +1,15 @@
 # Project execution checklist
 
 
+## Primary scientific reference qualification - October25 UTC
+
+- [ ] Review primary signaling/mechanism evidence for37 scientific occurrences.
+- [ ] Review primary genetic evidence for25 scientific occurrences.
+- [ ] Review remaining5 scientific occurrences and independently assess applicability/context.
+- [ ] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
+
+Research stays evaluator-only; clinical truth, probabilities and full T6/H5 remain gated.
+
 ## Contextual reference qualification in progress - October25 UTC
 
 - [x] Freeze development qualification procedure and unchanged source-surface inputs.
