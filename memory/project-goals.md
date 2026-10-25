@@ -1024,3 +1024,11 @@ development, not complete independent science or clinical qualification. All363
 other review rows and35 clinical quarantines unchanged. Next bounded interpretation
 and a fresh paired protocol, not scorer fitting or reopening stopped clinical
 retrieval. See [[research-log-2026-10-25-primary-qualification]].
+
+## Interpretation contract implemented - October25
+
+Optional source-bound sidecar and offline replay pass1083full/120isolated tests
+and independent methods recheck. Original selection/scoring unchanged. Scripted
+actual-format9row replay preserves65missing inputs; no generated scientific quality
+is claimed. Next actual development interpretation qualification and fresh paired
+freezes. See [[research-log-2026-10-25-bounded-interpretation]].

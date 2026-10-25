@@ -1,5 +1,8 @@
 # AsOf target-evaluation agents
 
+Optional interpretation sidecar contract implemented and verified (1083 full tests).
+Scientific interpretation qualification remains pending. See [bounded interpretation](docs/BOUNDED_INTERPRETATION.md).
+
 Current research checkpoint: scoped IL6R primary development references and
 original-source verification pass. Scientific completeness, general T6/H5 and
 clinical validity remain unqualified. See [primary-reference status](docs/T6_PRIMARY_REFERENCE.md)

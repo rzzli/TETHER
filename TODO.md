@@ -1,6 +1,21 @@
 # Project execution checklist
 
 
+## Bounded interpretation implementation - October25
+
+- [x] Implement source-bound optional sidecar, strict response contract and one-use offline replay.
+- [x] Pass contract, lifecycle, semantic-tampering regressions and independent methods review.
+- [x] Pass full project validation with unchanged-code guard and retained evidence.
+- [ ] Qualify actual development interpretations against pinned scientific references.
+
+1083 full tests/probes/package pass with unchanged source guard;120 clean-copy and
+28 no-site-packages tests pass. Two peer verifier defects reproduced and corrected.
+Nine-observation actual-format scripted source replay passes with65missinginputs
+preserved. No generated scientific-quality qualification or new native model call.
+Acceptance: planning/review-assets/bounded-interpretation-20261025/final-acceptance.json.
+
+Contract implementation alone does not complete scientific qualification or full T6/H5.
+
 ## Primary scientific reference qualification - October25 UTC
 
 - [x] Review primary signaling/mechanism evidence for37 scientific occurrences.
