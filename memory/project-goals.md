@@ -8,6 +8,15 @@ updated: 2026-10-25
 
 # Project goals
 
+## Latest question-contract core — October25
+
+Independent scientific/methods reviews and implementation probes approve the separate
+core:38 focused,197 isolated and105 no-site tests pass; 1160 full tests/probes/package pass on unchanged code.
+Existing source inputs round-trip exactly, all65 missing inputs and legacy verifier
+compatibility retained. No new native calls. Recorded-runtime specification is
+reviewed, while exact prompt sizing/native adaptation and scientific qualification
+remain gated. See [[research-log-2026-10-25-question-core]] and TODO.md.
+
 ## Current native interpretation checkpoint — October25
 
 Version-one native development failed and remains failed; source-bound AI review

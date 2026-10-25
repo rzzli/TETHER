@@ -1,0 +1,18 @@
+{
+  "status": "narrow_core_passed",
+  "seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-interpretation-spec-review-20261025\\core-recheck\\final\\final-output-pins.json",
+    "sha256": "bbb2180f5b70567486c722cd4828df16ee99a3801a342f0bdbec972954e29745",
+    "bytes": 2052
+  },
+  "focused_tests": 38,
+  "independent_probe_groups": 7,
+  "code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\interpretation_questions.py",
+    "sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+    "bytes": 14677
+  },
+  "legacy_code_unchanged": true,
+  "runtime_approved": false,
+  "scientific_quality_qualified": false
+}

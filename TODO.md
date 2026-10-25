@@ -1,6 +1,22 @@
 # Project execution checklist
 
 
+## Question-bound interpretation core — October25
+
+- [x] Specify and bind two generic evidence-family questions into immutable source-scoped requests (38 focused tests).
+- [x] Retain independent scientific/methods specification reviews and implementation probe recheck.
+- [x] Implement reversible source views and coherent answered/partial/abstained response states; preserve legacy modules.
+- [x] Reconstruct actual source-scoped and all9-source requests exactly, retaining65 missing inputs; both old native sidecars still verify.
+- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1160 full /197 isolated /105 no-site).
+- [x] Specify/review the next durable recorded runtime and native sizing gates.
+- [ ] Implement durable v2 runtime/source-inclusive verifier, then native serialization and exact sizing before any pilot.
+- [ ] Qualify generated scientific interpretations before fresh paired evaluation.
+
+The current code is a separate core, with no runtime/model call. Actual view sizes
+are13767/12403 bytes for the selected sources and76646 bytes for all9; prompt fit
+is unapproved. The previous scientific gate remains failed. Core specification:
+planning/Question-Bound Interpretation Specification 2026-10-25.md.
+
 ## Native interpretation development and repair — October25
 
 - [x] Implement and validate the first native transport: 58 focused / 1113 full tests.
@@ -23,9 +39,10 @@ Failure closure: planning/review-assets/local-interpretation-development-2026102
 
 ## Next interpretation design — after failed qualification
 
-- [ ] Specify evidence-family questions and bind them into source-scoped requests.
-- [ ] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
-- [ ] Implement reviewed contracts/migration with meaningful regressions and full validation.
+- [x] Specify evidence-family questions and bind them into source-scoped requests.
+- [x] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
+- [x] Implement reviewed question/view/response core and archival migration boundaries with regressions/full validation.
+- [ ] Implement and validate the reviewed durable recorded runtime before native adaptation.
 - [ ] Separately freeze any later generation only after design/code qualification; no retry of failed runs.
 - [ ] Complete scientific qualification before fresh paired evaluation.
 

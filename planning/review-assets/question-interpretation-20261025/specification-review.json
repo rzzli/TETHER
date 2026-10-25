@@ -1,0 +1,40 @@
+{
+  "status": "ready_for_narrow_core_implementation",
+  "specification": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Question-Bound Interpretation Specification 2026-10-25.md",
+    "sha256": "77e01ce9ca0bb5ad901e34bad0c3f2650d041c53deee46af3c009da888a469f2",
+    "bytes": 9935
+  },
+  "reviews": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-interpretation-spec-review-20261025\\science\\final-output-pins.json",
+      "sha256": "019c94cc5388065748521bba49e60c65891e9a063de36ca9e7d7c8ddd257c7e6",
+      "bytes": 858
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-interpretation-spec-review-20261025\\methods\\final-output-pins.json",
+      "sha256": "e3c16833c643af219ec54be6a62f0184ba9e1d68b9ba15cd2f2836cea3ce3862",
+      "bytes": 1017
+    }
+  ],
+  "review_output_proofs_checked": 6,
+  "legacy_code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+      "sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+      "bytes": 27261
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\local_interpretation.py",
+      "sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+      "bytes": 20635
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_interpretation_development.py",
+      "sha256": "43feb622a0490b4c1ebf5124bfff58afe3213c7e83bd3167ab925eb958bea7f7",
+      "bytes": 15029
+    }
+  ],
+  "runtime_approved": false,
+  "scientific_qualification": false
+}

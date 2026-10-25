@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-core-full-validation-20261025.json",
+    "sha256": "72f9855dbc0e4ef494f1e52a98c5346e161c3e81ffbc95e22621c2e9ab6731c8",
+    "bytes": 470
+  },
+  "guard": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-core-code-validation-20261025.json",
+    "sha256": "366c92a13969c1229aea575c27571356eb464a923f0cc46037d8ec1b25433cff",
+    "bytes": 23350
+  },
+  "tests": {
+    "run": 1160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "asof_target_agents-0.2.0-py3-none-any.whl",
+    "dependency_free_demo": "passed"
+  },
+  "code_unchanged": true,
+  "legacy_code_unchanged": true,
+  "runtime_approved": false,
+  "scientific_qualification": false
+}

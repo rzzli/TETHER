@@ -1,0 +1,67 @@
+{
+  "status": "question_view_response_core_implemented_and_validated",
+  "evidence": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\specification-review.json",
+      "sha256": "b54934d475ebcbe6fcb31f70246b004a24b689f8a52ca886ea882f7f7ffa891d",
+      "bytes": 1599
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\core-methods-validation.json",
+      "sha256": "601ea5b0087c57c59456b9f9dc60ff80a6e926fad7080d78315141a86c9e9dbf",
+      "bytes": 676
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\actual-format-validation.json",
+      "sha256": "b10eea84b59e7242731f86d17ceb2bf5cfb7b35c763b2fa7987aa129174096d2",
+      "bytes": 1505
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\full-validation.json",
+      "sha256": "c7fb23d2d9e6c2ef958b65bc80474f33882e4caf5d4ca42574ff40a7d05f9a79",
+      "bytes": 839
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\question-core-clean-checkout-validation.json",
+      "sha256": "ea82cb805249b29000d6759f8e06dc528130d68621b72ad63b5106c5614bc034",
+      "bytes": 383
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\question-core-no-site-packages-validation.json",
+      "sha256": "c7bc57a2ce44c2fdb4ffb42c559fc0ff2c67cc7ddee4e9db8c2bdbadb76796db",
+      "bytes": 214
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-interpretation-20261025\\runtime-specification-review.json",
+      "sha256": "6ac0d490c56ea7965fcc0ed1e243d6761803fef2f1215390614e05bbce12c3c3",
+      "bytes": 1320
+    }
+  ],
+  "new_code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\interpretation_questions.py",
+    "sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+    "bytes": 14677
+  },
+  "new_tests": {
+    "path": "D:\\Projects\\drug_target_agents\\tests\\test_science_interpretation_questions.py",
+    "sha256": "bfead89f39391496f398d6066f35f3031ede4304dddf6cb7787cb6cd4dab54b4",
+    "bytes": 17996
+  },
+  "focused_tests": 38,
+  "full_tests": 1160,
+  "isolated_tests": 197,
+  "no_site_tests": 105,
+  "legacy_code_unchanged": true,
+  "legacy_source_verification": "both successful repaired native sidecars pass",
+  "clinical_labels_hash_only_unchanged": true,
+  "stopped_registry_code_unchanged": true,
+  "native_calls": 0,
+  "new_downloads": 0,
+  "core_complete": true,
+  "durable_runtime_complete": false,
+  "native_execution_approved": false,
+  "scientific_quality_qualified": false,
+  "whole_project_complete": false,
+  "next_step": "Implement reviewed durable recorded runtime and source-inclusive verifier; native rendering/exact sizing remain subsequent gates.",
+  "backup": "Pending committed checkpoint; later backup-validation.json records archive proof."
+}

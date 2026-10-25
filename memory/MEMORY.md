@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-25-question-core]] — Separate question/view/response core passes38 focused tests,197 isolated and105 no-site; 1160 full tests/probes/package pass on unchanged code. Exact original-source reconstruction, legacy compatibility and sizing retained. Next reviewed recorded runtime; native/scientific gates remain closed.
+
 - [[research-log-2026-10-25-native-interpretation]] — First native attempt retained as transport/scientific failure; one call, second unrun. Separate repair passes1122 full tests and both sealed native requests; two scientific reviews/third adjudication reject qualification. Failed version stopped; source-question/representation redesign next.
 
 - [[research-log-2026-10-25-bounded-interpretation]] - Optional source-bound sidecar/replay/lifecycle verified:1083 full tests,120 isolated,28 no-site-packages; peer accounting/code-proof defects fixed. Scripted9-observation replay is not scientific qualification; real development interpretations and full T6-H5/Tasks6-8 remain next.

@@ -1,5 +1,13 @@
 # AsOf target-evaluation agents
 
+Latest question-contract core: explicit scientific questions, a lossless source
+view and coherent response states are implemented in a separate module. All 1,160
+full tests, required probes and packaging pass on unchanged code, along with 197
+isolated tests and 105 tests without site packages. No new native call.
+See [question core](docs/QUESTION_INTERPRETATION.md) and [current TODO](TODO.md).
+The next recorded-runtime specification is reviewed; native sizing/execution and
+scientific qualification remain separate gates.
+
 Current native interpretation checkpoint (October25): repaired code passes1122 full
 project tests, required probes/package,159 isolated tests,67 no-site tests and12
 independent methods probes. Both separately frozen local generation requests
