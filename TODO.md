@@ -9,15 +9,28 @@
 - [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 67 focused tests pass.
 - [x] Pass independent repair methods review, isolated checks and full unchanged-code validation (1122 full / 159 isolated / 67 no-site; 12 peer probes).
 - [x] Freeze and execute a separate two-task repair plan once; both outputs source-verified, server stopped (8552 input / 720 output tokens, $0).
-- [ ] Review every generated scientific clause and adjudicate qualification or failure.
+- [x] Review every generated scientific clause and adjudicate qualification or failure: failed gate, retained two reviews and third adjudication.
 
 The first attempt made one native call (4347 input / 890 output tokens, $0 provider
 spending). Its second task was not dispatched. Scientific review found unsupported
 score-to-strength interpretation and mechanism denial despite source context.
-The failed run remains unchanged. No full T6/H5 or clinical qualification is claimed.
+The failed run remains unchanged. Repaired execution also fails scientific qualification:
+mechanism utility insufficient; useful genetics caution credited, unsupported structured
+intervention proposition unresolved. No full T6/H5 or clinical qualification is claimed.
 Original protocol: planning/Bounded Interpretation Development 2026-10-25.md.
 Repair protocol: planning/Bounded Interpretation Repair 2026-10-25.md.
 Failure closure: planning/review-assets/local-interpretation-development-20261025/attempt-v1-failure-validation.json.
+
+## Next interpretation design — after failed qualification
+
+- [ ] Specify evidence-family questions and bind them into source-scoped requests.
+- [ ] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
+- [ ] Implement reviewed contracts/migration with meaningful regressions and full validation.
+- [ ] Separately freeze any later generation only after design/code qualification; no retry of failed runs.
+- [ ] Complete scientific qualification before fresh paired evaluation.
+
+Current version stopped; no additional generation authorized by its failed gate.
+Ordered next scope: planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md.
 
 ## Bounded interpretation implementation - October25
 
@@ -28,8 +41,9 @@ Failure closure: planning/review-assets/local-interpretation-development-2026102
 
 1083 full tests/probes/package pass with unchanged source guard;120 clean-copy and
 28 no-site-packages tests pass. Two peer verifier defects reproduced and corrected.
-Nine-observation actual-format scripted source replay passes with65missinginputs
-preserved. No generated scientific-quality qualification or new native model call.
+At that checkpoint, nine-observation actual-format scripted replay passed with65
+missing inputs preserved and no native generation. The later native repair above
+has executed; scientific-quality qualification remains pending.
 Acceptance: planning/review-assets/bounded-interpretation-20261025/final-acceptance.json.
 
 Contract implementation alone does not complete scientific qualification or full T6/H5.

@@ -3,7 +3,7 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-24
+updated: 2026-10-25
 ---
 
 # Project goals
@@ -12,8 +12,14 @@ updated: 2026-10-24
 
 Version-one native development failed and remains failed; source-bound AI review
 also rejects its content. One request ran; the second was not dispatched. The
-separate repair passes67 focused regressions but still requires independent
-methods/full validation, a new frozen execution and scientific adjudication.
+separate repair passes1122 full tests/probes/package,159 isolated tests,67
+no-site tests and12 independent methods probes. Both new frozen requests ran
+once and passed source-inclusive verification; the owned server stopped.
+Scientific reviews and third adjudication fail the gate: mechanism utility is
+insufficient and the structured intervention proposition remains unsupported.
+Useful genetic-transfer caution is credited; ambiguous prose is not charged as
+an unequivocal denial. The version is stopped, with a source-question/representation
+redesign planned separately; no further native calls. Quality is not qualified.
 See [[research-log-2026-10-25-native-interpretation]] and TODO.md. Older checkpoint
 counts below are dated evidence, not current scientific completion.
 

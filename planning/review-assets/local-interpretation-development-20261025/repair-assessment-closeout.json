@@ -1,0 +1,73 @@
+{
+  "status": "assessment_complete_scientific_gate_failed",
+  "evidence": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-final-prepared-plan.json",
+      "sha256": "ed4b007c7d005c19c06e9f541f4bc7cc63dd6688ca51ff77650c2e16df38c0f1",
+      "bytes": 730
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-final-qualification-protocol-freeze.json",
+      "sha256": "d7d2b359d20fd6b41b4a02a722fb6e5d351012d20e39fb86308e712d5e7a6ce2",
+      "bytes": 1262
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-methods-validation.json",
+      "sha256": "6d12c915720384251e95634f4f7ac7a59fa573fd6f86e1bc9779ffca257bb945",
+      "bytes": 457
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-full-validation.json",
+      "sha256": "6cf08c427e6b14f5028dba5e7b8c7dc60d7c0714f677ec184306255cfeea6797",
+      "bytes": 821
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-native-verification.json",
+      "sha256": "4ed431c2d2353635b73b903e96ef1a1d5b390c9a41ec937844ec787a26d6e46f",
+      "bytes": 3495
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-protected-scope-validation.json",
+      "sha256": "a78a0dbfb64b080a3bfbfba6450f3924583f1db33c075820b91be121e220747a",
+      "bytes": 1104
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-candidate-inventory-validation.json",
+      "sha256": "7071e4c3f7af482cd5c3af11f71cae5b753ea66f63c98cbce5f08dc9ba3073d2",
+      "bytes": 816
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-review-bindings-validation.json",
+      "sha256": "8ccb7e8fb0022968101ca066b343700d1f2090884423f3b38f5262f97aef3edd",
+      "bytes": 1109
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-scientific-closeout-validation.json",
+      "sha256": "01f24648357b1afeb087c2e33f7c65f1796793916aa35a56996950a71ff414f1",
+      "bytes": 1159
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\attempt-v1-backup-validation.json",
+      "sha256": "9a016eab990a7cab91afce3bed0bab93e7b127fc0ab63225be449e4bf5d06eb3",
+      "bytes": 484
+    }
+  ],
+  "next_design": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Interpretation Qualification Closeout and Next Design 2026-10-25.md",
+    "sha256": "8fbc0c347947e8e0b6c2db7ce31b5e6e1163515d6f4df22d5de1378e1317e9f9",
+    "bytes": 9172
+  },
+  "code_unchanged_since_full_validation": true,
+  "full_tests": 1122,
+  "isolated_tests": 159,
+  "no_site_tests": 67,
+  "methods_probes": 12,
+  "native_calls_repair": 2,
+  "scientific_qualification": false,
+  "whole_project_complete": false,
+  "fresh_paired_evaluation_started": false,
+  "clinical_labels_hash_only_unchanged": true,
+  "registry_route_restarted": false,
+  "owned_server_stopped": true,
+  "backup": "Pending final checkpoint archive; see later repair-backup-validation.json."
+}

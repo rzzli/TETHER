@@ -1,13 +1,21 @@
 # AsOf target-evaluation agents
 
-Optional interpretation sidecar contract implemented and verified (1083 full tests).
-Scientific interpretation qualification remains pending. See [bounded interpretation](docs/BOUNDED_INTERPRETATION.md).
+Current native interpretation checkpoint (October25): repaired code passes1122 full
+project tests, required probes/package,159 isolated tests,67 no-site tests and12
+independent methods probes. Both separately frozen local generation requests
+finalized and passed source-inclusive verification; owned server stopped. Scientific
+reviews and third adjudication reject qualification: mechanism utility is insufficient
+and a structured intervention proposition remains unsupported. The failed version
+is stopped; scientific qualification remains open.
+The first native attempt and its failed scientific review remain unchanged.
+See [current TODO](TODO.md), [bounded interpretation](docs/BOUNDED_INTERPRETATION.md)
+and [closeout/next design](<planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md>).
 
-Current research checkpoint: scoped IL6R primary development references and
-original-source verification pass. Scientific completeness, general T6/H5 and
-clinical validity remain unqualified. See [primary-reference status](docs/T6_PRIMARY_REFERENCE.md)
-and [current TODO](TODO.md). Next: bounded interpretation and fresh paired freezes.
-
+Scoped IL6R primary development references are retained. Scientific completeness,
+general T6/H5 and clinical validity remain unqualified. Fresh paired evaluation
+must wait for scientific qualification. Earlier dated checkpoints below retain
+their historical validation counts and next-step wording; this paragraph and
+TODO.md describe current execution status.
 
 ## Contextual audit v2 contract checkpoint — October25 UTC
 

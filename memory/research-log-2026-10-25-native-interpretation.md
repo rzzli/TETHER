@@ -42,3 +42,21 @@ $0 provider spending. Both outputs passed source-inclusive semantic verification
 the owned server stopped. Prediction seal SHA256:
 0828e12de0494e220aeaf4bbfd197357c52a103de680f33ac5f3caf09988777b.
 Scientific review is pending; this is engineering completion only.
+
+## Final scientific closeout
+
+Both resumed independent AI reviews and third adjudication are sealed. The final
+frozen gate fails: mechanism positive utility is insufficient; MR has a useful
+genetic-to-antibody caution but its positive structured intervention proposition
+is unsupported. The adjudicator resolves a severity disagreement toward ambiguity
+rather than unequivocal source-association denial. Quotation/score restraint pass
+separately from scientific utility. All73 candidate leaves and8 clauses are bound;
+root checked34 adjudication proofs and486 exact pointer/value occurrences.
+
+Adjudication final seal SHA256:
+8132c9e93847dac97ea5d97f6d94e6f68199073b2923108846c09b8885e418e4.
+Closeout: planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md.
+The version is stopped; no new generation follows the failed gate. Next specify
+source questions, lossless scientific-first views and coherent assertions before
+any separately frozen experiment. This phase completes a failed assessment, not
+scientific qualification, fresh paired evaluation or original Tasks6–8.

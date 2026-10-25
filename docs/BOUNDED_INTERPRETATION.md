@@ -139,3 +139,12 @@ is supplied. See the repair protocol in
 `planning/Bounded Interpretation Repair 2026-10-25.md` and current TODO.md for
 validation, execution and scientific qualification status. Older test counts above
 are dated checkpoints; they do not establish repaired scientific validity.
+
+The repaired run subsequently finalized both tasks and passed source-inclusive
+verification (8552 input/720 output tokens). Two AI reviews and adjudication reject
+scientific qualification: inadequate mechanism utility and an unsupported structured
+intervention proposition remain. The genetics-transfer caution is credited and the
+broader prose-denial charge is narrowed to ambiguity. This version is stopped.
+See `planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md`
+for the retained closeout and ordered source-question/representation redesign.
+No new generation or fresh paired evaluation follows this failed gate.

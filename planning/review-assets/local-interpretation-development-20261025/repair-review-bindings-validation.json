@@ -1,0 +1,27 @@
+{
+  "status": "review_file_hashes_and_all_candidate_leaf_bindings_verified",
+  "unique_file_proofs_checked": 38,
+  "candidate_leaf_count": 73,
+  "reviewers": [
+    {
+      "reviewer": "a",
+      "candidate_leaves_exactly_bound": 73,
+      "final_output_manifest": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\reviewer-a\\final-output-pins.json",
+        "sha256": "4e655f307adcf4b13cc16359b6acfe9467275bc95a28ef1bd44022b544c8e08e",
+        "bytes": 1487
+      }
+    },
+    {
+      "reviewer": "b",
+      "candidate_leaves_exactly_bound": 73,
+      "final_output_manifest": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\reviewer-b\\final-output-pins.json",
+        "sha256": "386635115e6c607a03638272e099da7c154904410948e9cf86280bea25d17679",
+        "bytes": 1419
+      }
+    }
+  ],
+  "scientific_judgment": "Pending third adjudication; mechanical binding does not establish scientific truth.",
+  "independent_sample_count": null
+}

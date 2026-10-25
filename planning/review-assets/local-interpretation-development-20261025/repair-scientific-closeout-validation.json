@@ -1,0 +1,25 @@
+{
+  "status": "sealed_scientific_failure_verified",
+  "adjudication_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\adjudication\\final-output-pins.json",
+    "sha256": "8132c9e93847dac97ea5d97f6d94e6f68199073b2923108846c09b8885e418e4",
+    "bytes": 1460
+  },
+  "adjudication": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\adjudication\\adjudication.json",
+    "sha256": "bbb3f291952581147fcc961e71c0e6e9835d88eef97abe980fb5220abcc6994c",
+    "bytes": 316579
+  },
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\interpretation-development-review-20261025\\attempt-v2\\adjudication\\report.md",
+    "sha256": "a6cec3debd0f7a5734671c2810409e61fa73aebf6a9fe471757160d43a592d5a",
+    "bytes": 4909
+  },
+  "unique_file_proofs_checked": 34,
+  "exact_pointer_value_occurrences_checked": 486,
+  "candidate_leaves_exact": 73,
+  "clause_slices_exact": 8,
+  "scientific_gate": "fail",
+  "scientific_quality_qualified": false,
+  "no_new_native_calls": true
+}

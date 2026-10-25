@@ -1,0 +1,24 @@
+{
+  "status": "superseded_validation_intentionally_terminated_not_a_completion_gate",
+  "guard": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-repair-code-validation-20261025.json",
+    "sha256": "c8aa083aa1b5f2534bf8991b2f4fc76398406f5bec1afe2c5f84dfdac5386989",
+    "bytes": 23146
+  },
+  "partial_log": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-repair-full-validation-20261025.log",
+    "sha256": "7611d639ca9428d1ea43cc955d355aa9b485060ce44d9f10b9903e55c7377f8c",
+    "bytes": 128423
+  },
+  "process_identity": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-repair-superseded-process-20261025.json",
+    "sha256": "1ffcb67556aa5abac0432ba9e094a491e2fc3b8ab5e377c910c389be118d9867",
+    "bytes": 364
+  },
+  "reason": "Source/test corrections invalidated the in-progress guard. Verified obsolete validation process was stopped; a new full run passed1122 tests on unchanged final code.",
+  "replacement": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\repair-full-validation.json",
+    "sha256": "6cf08c427e6b14f5028dba5e7b8c7dc60d7c0714f677ec184306255cfeea6797",
+    "bytes": 821
+  }
+}
