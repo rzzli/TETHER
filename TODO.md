@@ -1,6 +1,17 @@
 # Project execution checklist
 
 
+## Native interpretation development - October25
+
+- [x] Validate explicit admitted-source selection with complete available/selected/missing coverage.
+- [x] Implement lossless local output transport and exact quote materialization;58focused tests and6methods probes pass.
+- [x] Pass full validation and freeze unchanged execution code.
+- [ ] Execute two exposed-case source-scoped requests once using the pinned local model; stop owned server and seal outputs.
+- [ ] Independently review scientific inference and applicability, adjudicate, and record qualification or failure.
+
+Plan: planning/Bounded Interpretation Development 2026-10-25.md.
+No fresh holdout or complete T6/H5/clinical qualification is claimed.
+
 ## Bounded interpretation implementation - October25
 
 - [x] Implement source-bound optional sidecar, strict response contract and one-use offline replay.

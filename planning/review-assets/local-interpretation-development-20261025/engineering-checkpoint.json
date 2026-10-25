@@ -1,0 +1,27 @@
+{
+  "role": "evaluation_only",
+  "status": "local_transport_selection_and_owned_launcher_verified_before_generation",
+  "full_tests": 1113,
+  "focused_tests": 58,
+  "clean_checkout_tests": 150,
+  "no_site_packages_tests": 58,
+  "peer_probes": 6,
+  "peer": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-methods-peer-20261025\\revision-3\\final-output-pins.json",
+    "sha256": "4716e288f6fafd4d11ba5c8c230a052f31fe9985422833c56fde062a20759f28",
+    "bytes": 3553
+  },
+  "full": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\full-validation.json",
+    "sha256": "fe83afea844c363a211f294bac73443f3d482f8985c7ce8a884399b9232c4f4b",
+    "bytes": 471
+  },
+  "guard": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\local-interpretation-development-20261025\\code-validation.json",
+    "sha256": "332db467ce8342ba98c1fc3928879969d10bed8ac117f2b407baefd37680c897",
+    "bytes": 22909
+  },
+  "scientific_quality": "not_evaluated",
+  "native_execution_status": "in_progress_under_frozen_plan",
+  "whole_project_complete": false
+}

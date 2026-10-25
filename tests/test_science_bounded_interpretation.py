@@ -119,6 +119,32 @@ class InterpretationTests(unittest.TestCase):
         response = self.response(); response['claims'] *= 20
         with self.assertRaises(ContractError): validate_response(self.prepared.request, response)
 
+    def test_explicit_selection_keeps_available_and_missingness_counts(self):
+        identities=[r['observation_id'] for r in self.prepared.request['evidence']]
+        subset=self.prepare(observation_ids=identities[:1])
+        self.assertEqual(len(subset.request['evidence']),1)
+        self.assertEqual(subset.request['coverage']['observations_available'],len(identities))
+        self.assertEqual(subset.request['coverage']['selection_scope'],'explicit_admitted_subset')
+        self.assertFalse(subset.request['coverage']['absence_claim'])
+
+    def test_foreign_and_duplicate_selection_rejected(self):
+        identity=self.prepared.request['evidence'][0]['observation_id']
+        for identities in [('foreign',),(identity,identity)]:
+            with self.assertRaises(ContractError):self.prepare(observation_ids=identities)
+
+    def test_empty_selected_subset_is_not_biological_absence(self):
+        subset=self.prepare(observation_ids=[])
+        self.assertEqual(len(subset.request['evidence']),0)
+        self.assertGreater(subset.request['coverage']['observations_available'],0)
+        self.assertFalse(subset.request['coverage']['absence_claim'])
+
+    def test_selected_run_reconstruction_and_request_fingerprint(self):
+        identity=self.prepared.request['evidence'][0]['observation_id']
+        subset=self.prepare(observation_ids=[identity]);backend=self.backend(self.response(subset.request))
+        run_interpretation(self.inputs/'case.json',self.inputs/'snapshot.json',self.root/'output',backend,
+            observation_ids=[identity])
+        self.assertTrue(verify_interpretation(self.root/'output')['source_inputs_replayed'])
+
     def test_success_is_separate_from_ledger_and_verifiable(self):
         report = self.run_job(self.backend())
         self.assertEqual(report['status'], 'interpretation_contract_completed_not_scientific_validation')

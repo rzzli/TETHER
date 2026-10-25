@@ -3,8 +3,10 @@
 `tools/science/bounded_interpretation.py` adds a repository-only experimental
 sidecar interface. It leaves `Backend.quote()`/`Backend.select()`, workflow
 execution, evidence ledgers, features, scoring and archived run semantics intact.
-It provides an offline recorded-response interpreter; it adds no live adapter,
-CLI command, network client, default runtime dependency or clinical probability.
+It provides an offline recorded-response interpreter and an explicit optional
+loopback interpreter for the separately pinned local model runtime. It adds no
+remote provider, default `asof` CLI mode, Python runtime dependency or clinical
+probability.
 
 ## Source admission and request
 
@@ -26,6 +28,11 @@ text, a 64 MiB request and a 256 KiB response. Exceeding a bound fails explicitl
 records are not silently dropped. Only a declared snapshot missing-input count is
 shown; otherwise it remains unknown. Incomplete collection cannot become a
 machine-generated biological absence declaration.
+
+An explicit `observation_ids` list can select only admitted, case-eligible,
+non-clinical-category records. Foreign and duplicate IDs fail. The request retains
+available versus selected counts and the selection scope; an empty subset is
+not biological absence. No records are dropped implicitly to satisfy a prompt cap.
 
 ## Output boundary
 
@@ -77,6 +84,31 @@ the absence of structured predictive outputs. It requires the original input
 files and matching recorded code; a hash chain is not external authentication or
 proof that a provider actually executed. Receipt integrity and mechanical
 consistency do not establish scientific quality.
+
+## Explicit local generation
+
+`tools/science/local_interpretation.py` uses only loopback HTTP, disables proxies,
+rejects redirects and has no tools or generation retries. It shares identical
+scientific fields losslessly, checking complete round-trip fingerprints. JSON
+null/absence and boolean/integer/float distinctions are retained. The model cites
+an offered source alias and original string pointer; the adapter copies its whole
+original value and exact byte span. The model still authors propositions and
+inferences, which can be wrong despite exact quotes.
+
+The local contract restricts output to at most four claims, two quotes per claim,
+1,800 characters per text and four limitations. Schema bounds are rechecked after
+generation. Prompt bytes plus output tokens and special-token margin must fit the
+16,384-token runtime context. Native completeness flags and measured usage are
+checked; malformed responses retain native bytes and measured accounting where
+valid. Exact native payloads, original response bytes, configuration, translation
+and usage are archived and reconstructed during verification.
+
+`tools/science/run_interpretation_development.py` separately freezes source-only
+requests, verifies pinned assets, owns the loopback listener and stops only its own
+process before sealing candidates. Its initial two-task development protocol is
+in `planning/Bounded Interpretation Development 2026-10-25.md`. Both tasks share
+the unchanged case-wide budget. Asset verification/startup are separate from the
+generation clock. This is an exposed development exercise, not a fresh study.
 
 ## Qualification still required
 

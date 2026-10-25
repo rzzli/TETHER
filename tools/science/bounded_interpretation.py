@@ -44,9 +44,9 @@ def checked_usage(usage):
 def dependency_paths():
     root = Path(__file__).resolve().parents[2]
     return tuple(root/'src/asof'/name for name in
-        ('agents.py','chrono.py','contracts.py','serde.py','provenance.py','workflow.py','journal.py')) + tuple(
+        ('agents.py','chrono.py','contracts.py','serde.py','provenance.py','workflow.py','journal.py','local_model.py')) + tuple(
         Path(__file__).with_name(name).resolve() for name in
-        ('run_comparison.py','t6_claim_audit.py','t6_contextual_audit.py','t6_dossier_binding.py'))
+        ('run_comparison.py','t6_claim_audit.py','t6_contextual_audit.py','t6_dossier_binding.py','local_interpretation.py'))
 
 
 @dataclass(frozen=True)
@@ -61,7 +61,8 @@ class Generated(Frozen):
     usage: Usage
 
 
-def prepare_input(case_path, snapshot_path, catalog_path=None, *, max_claims=12, max_observations=256):
+def prepare_input(case_path, snapshot_path, catalog_path=None, *, max_claims=12, max_observations=256,
+                  observation_ids=None):
     """Perform existing full v2 admission before exposing any source to an adapter."""
     need(type(max_claims) is int and 1 <= max_claims <= 64, 'Invalid claim bound')
     need(type(max_observations) is int and 1 <= max_observations <= 1024, 'Invalid evidence bound')
@@ -71,11 +72,18 @@ def prepare_input(case_path, snapshot_path, catalog_path=None, *, max_claims=12,
     case = decode(Case, read_json(case_path)); case.validate()
     need(case.task == 'T6', 'Interpretation development is T6 only')
     store = load_snapshot(snapshot_path, case, catalog_path)
+    admitted = tuple(record for category in Category if category != Category.CLINICAL
+                     for record in store.query(case, category))
+    selected = None
+    if observation_ids is not None:
+        need(isinstance(observation_ids,(list,tuple)) and all(nonempty(i) for i in observation_ids),
+             'Selection needs an explicit sequence of admitted observation IDs')
+        selected = set(observation_ids)
+        need(len(selected)==len(observation_ids) and
+             not selected-{r.observation.observation_id for r in admitted}, 'Foreign/duplicate selected observation')
     rows = []
-    for category in Category:
-        if category == Category.CLINICAL:
-            continue  # This interface does not activate clinical evaluation.
-        for record in store.query(case, category):
+    for record in admitted:
+        if selected is None or record.observation.observation_id in selected:
             observation = encode(record.observation)
             observation['features'] = {}
             rows.append(dict(observation_id=record.observation.observation_id,
@@ -97,6 +105,8 @@ def prepare_input(case_path, snapshot_path, catalog_path=None, *, max_claims=12,
             'incomplete collection, genetic proxy-to-drug effects or clinical probabilities. '
             'Generated prose does not enter the evidence ledger or scorer. Structured boundary '
             'checks do not establish truth or detect every semantic overreach.')
+    if selected is not None:
+        request['coverage'].update(observations_available=len(admitted), selection_scope='explicit_admitted_subset')
     need(len(canonical(request)) <= MAX_BYTES, 'Interpretation request exceeds 64 MiB')
     for proof in inputs:
         check_pin(proof)
@@ -104,6 +114,8 @@ def prepare_input(case_path, snapshot_path, catalog_path=None, *, max_claims=12,
         snapshot_path=str(snapshot_path), catalog_path=str(catalog_path) if catalog_path else None,
         max_claims=max_claims, max_observations=max_observations,
         effective_catalog=store.catalog_policy, source_proofs=store.source_proofs)
+    if selected is not None:
+        archive['observation_ids'] = tuple(observation_ids)
     return Prepared(request, archive)
 
 
@@ -204,17 +216,26 @@ class RecordedInterpreter:
 
 
 def run_interpretation(case_path, snapshot_path, output, backend, catalog_path=None, *, budget=None,
-                       max_claims=12, max_observations=256):
+                       max_claims=12, max_observations=256, observation_ids=None):
     """Reserve first, dispatch once, retain raw failures/accounting, never retry."""
     output = Path(output).resolve()
     for source in (case_path, snapshot_path, catalog_path):
         if source:
             need(not output.is_relative_to(Path(source).resolve().parent), 'Output must be outside input directories')
     journal = RunJournal(output, kind='build'); stage = 'preflight'
+    did_dispatch, execution_archived = False, False
+    def archive_execution():
+        nonlocal execution_archived
+        if did_dispatch and not execution_archived and callable(getattr(backend,'execution_document',None)):
+            execution_archived=True  # Never retry even a failed archive hook.
+            document=backend.execution_document()
+            need(len(canonical(document))<=MAX_BYTES,'Backend execution archive exceeds cap')
+            write_json(output/'backend-execution.json',document)
+            journal.append('interpretation_execution_archived',proof=pin(output/'backend-execution.json'))
     try:
         budget = decode(Budget, encode(budget or Budget())); meter = BudgetMeter(budget)
         prepared = prepare_input(case_path, snapshot_path, catalog_path,
-            max_claims=max_claims, max_observations=max_observations)
+            max_claims=max_claims, max_observations=max_observations, observation_ids=observation_ids)
         write_json(output/'request.json', prepared.request); write_json(output/'inputs.json', prepared.archive)
         write_json(output/'configuration.json', dict(budget=encode(budget), backend_id=backend.backend_id,
             request_sha256=fingerprint(prepared.request), automatic_retries=False,
@@ -233,6 +254,7 @@ def run_interpretation(case_path, snapshot_path, output, backend, catalog_path=N
             attempt = str(uuid.uuid4()); stage = 'dispatch'
             journal.append('interpretation_dispatch', attempt_id=attempt,
                 request_sha256=fingerprint(prepared.request), reserved=encode(quote))
+            did_dispatch=True
             accounted = False
             try:
                 generated = backend.generate(prepared.request,
@@ -262,6 +284,7 @@ def run_interpretation(case_path, snapshot_path, output, backend, catalog_path=N
                 request_sha256=fingerprint(prepared.request), hypothesis_key=prepared.request['hypothesis_key'],
                 claims=[], abstention_reason='Dispatch exceeds available budget.', features={}, clinical_probability=None)
         stage = 'finalization'
+        archive_execution()
         for proof in prepared.archive['inputs']:
             check_pin(proof)
         write_json(output/'response.json', response)
@@ -273,10 +296,16 @@ def run_interpretation(case_path, snapshot_path, output, backend, catalog_path=N
         outputs = {name: pin(output/name) for name in
             ('request.json','inputs.json','configuration.json','response.json','report.json')}
         if (output/'raw-response.txt').exists(): outputs['raw-response.txt'] = pin(output/'raw-response.txt')
+        if (output/'backend-execution.json').exists():outputs['backend-execution.json']=pin(output/'backend-execution.json')
         write_json(output/'receipt.json', dict(schema_version=1, outputs=outputs))
         journal.append('build_completed', receipt=pin(output/'receipt.json'))
         return report
     except BaseException as error:
+        try:
+            archive_execution()
+        except BaseException as archive_error:
+            journal.append('interpretation_execution_archive_failed',error_class=type(archive_error).__name__,
+                           original_error_class=type(error).__name__)
         journal.fail(error, stage)
         raise
     finally:
@@ -293,13 +322,15 @@ def verify_interpretation(output):
     need(set(receipt) == {'schema_version','outputs'} and type(receipt['schema_version']) is int and
          receipt['schema_version'] == 1, 'Invalid receipt')
     required = {'request.json','inputs.json','configuration.json','response.json','report.json'}
-    need(required <= receipt['outputs'].keys() and not receipt['outputs'].keys()-required-{'raw-response.txt'}, 'Missing/foreign outputs')
+    need(required <= receipt['outputs'].keys() and not receipt['outputs'].keys()-required-
+         {'raw-response.txt','backend-execution.json'}, 'Missing/foreign outputs')
     for name, proof in receipt['outputs'].items():
         need(check_pin(proof) == output/name, 'Output path differs from receipt')
     archive = read_json(output/'inputs.json')
     for proof in archive['inputs']: check_pin(proof)
     prepared = prepare_input(archive['case_path'], archive['snapshot_path'], archive['catalog_path'],
-        max_claims=archive['max_claims'], max_observations=archive['max_observations'])
+        max_claims=archive['max_claims'], max_observations=archive['max_observations'],
+        observation_ids=archive.get('observation_ids'))
     request, response = read_json(output/'request.json'), read_json(output/'response.json')
     need(fingerprint(request) == fingerprint(prepared.request) and
          fingerprint(archive) == fingerprint(prepared.archive), 'Archived admitted input differs')
@@ -339,8 +370,12 @@ def verify_interpretation(output):
     expected_events = ['build_reserved','interpretation_quote']
     if dispatches:
         expected_events += ['interpretation_dispatch','interpretation_accounted','interpretation_response_received']
+    if 'backend-execution.json' in receipt['outputs']:expected_events += ['interpretation_execution_archived']
     expected_events += ['build_completed']
     need([e['event'] for e in events]==expected_events, 'Unexpected interpretation event history')
+    if 'backend-execution.json' in receipt['outputs']:
+        archived=next(e for e in events if e['event']=='interpretation_execution_archived')['details']['proof']
+        need(archived==receipt['outputs']['backend-execution.json'],'Execution journal proof differs')
     if dispatches:
         d, a = dispatches[0]['details'], accounts[0]['details']
         need(d['attempt_id'] == a['attempt_id'] and d['request_sha256'] == fingerprint(request) and
@@ -361,6 +396,12 @@ def verify_interpretation(output):
                  replay['request_sha256']==fingerprint(request) and
                  fingerprint(replay['response'])==fingerprint(response) and
                  replay['usage']==report['measured_usage'], 'Archived replay input differs')
+        if provenance.get('kind')=='explicit_local_interpretation':
+            from tools.science.local_interpretation import LocalInterpreter,verify_execution
+            need(config['backend_id']==LocalInterpreter.backend_id and 'backend-execution.json' in receipt['outputs'],
+                 'Missing local execution archive')
+            verify_execution(request,read_json(output/'backend-execution.json'),provenance,response,
+                             report['measured_usage'],encode(d['reserved']))
         received = [e for e in events if e['event']=='interpretation_response_received']
         need(len(received)==1 and received[0]['details']['sha256']==receipt['outputs']['raw-response.txt']['sha256']
              and received[0]['details']['bytes']==receipt['outputs']['raw-response.txt']['bytes'], 'Raw response event differs')
