@@ -1,0 +1,54 @@
+{
+  "status": "rendering_proposal_sized_no_adapter_or_generation",
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\question-render-proposal-20261025T213920Z\\proposal.json",
+    "sha256": "37ea85ba35726e89f1569f1abfd0d6dc154f1e7e50d21030529578610da250d3",
+    "bytes": 2778
+  },
+  "checks": [
+    {
+      "task_id": "mechanism-context",
+      "source_request": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\request.json",
+        "sha256": "83963258af7ea0f5c35a4baf66b447666588e83e5aef88fc438bc69811cada2e",
+        "bytes": 19143
+      },
+      "prompt": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\question-render-proposal-20261025T213920Z\\mechanism-context-prompt.txt",
+        "sha256": "c41039e00d2cd4e995cb7dbcbb267c60a4bb0a8d4b4645bf93341722a5366668",
+        "bytes": 14149
+      },
+      "prompt_bytes": 14149,
+      "input_reservation": 14181,
+      "output_reservation": 2048,
+      "context_total": 16229,
+      "fits_prior14200": true,
+      "fits_max14304": true,
+      "remaining_at_max14304": 155,
+      "all_source_fields_reconstructed": true
+    },
+    {
+      "task_id": "mr-discovery-replication",
+      "source_request": {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mr-discovery-replication\\request.json",
+        "sha256": "7dd7de1bf701a63626f8fee5b1abcad1becc9d7b12dea9b92f0d3078cdc1381c",
+        "bytes": 17917
+      },
+      "prompt": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\question-render-proposal-20261025T213920Z\\mr-discovery-replication-prompt.txt",
+        "sha256": "161656633b352d3bdb75ba0b2c6ad90f20b333d166f26d3e38bec39ecb06b1e3",
+        "bytes": 12785
+      },
+      "prompt_bytes": 12785,
+      "input_reservation": 12817,
+      "output_reservation": 2048,
+      "context_total": 14865,
+      "fits_prior14200": true,
+      "fits_max14304": true,
+      "remaining_at_max14304": 1519,
+      "all_source_fields_reconstructed": true
+    }
+  ],
+  "native_model_calls": 0,
+  "renderer_approved": false
+}

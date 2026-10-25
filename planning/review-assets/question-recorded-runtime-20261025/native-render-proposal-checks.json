@@ -1,0 +1,25 @@
+{
+  "status": "final_prompt_body_mechanically_reconstructed_not_renderer_approval",
+  "proposal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\derived\\question-render-proposal-20261025T213920Z\\proposal.json",
+    "sha256": "37ea85ba35726e89f1569f1abfd0d6dc154f1e7e50d21030529578610da250d3",
+    "bytes": 2778
+  },
+  "checks": [
+    {
+      "task_id": "mechanism-context",
+      "final_prompt_body_reconstruction": "exact",
+      "fits_prior_cap": true,
+      "prior_cap_margin_bytes": 51
+    },
+    {
+      "task_id": "mr-discovery-replication",
+      "final_prompt_body_reconstruction": "exact",
+      "fits_prior_cap": true,
+      "prior_cap_margin_bytes": 1415
+    }
+  ],
+  "native_model_calls": 0,
+  "implementation_guard": "Prototype includes redundant global framing replacements; production renderer must omit these and test delimiter/newline strings before approval. Current retained final prompt bodies reconstruct exactly.",
+  "scientific_quality_qualified": false
+}

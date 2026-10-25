@@ -1,5 +1,12 @@
 # AsOf target-evaluation agents
 
+Latest recorded question runtime: durable execution, source-inclusive verification
+and unresolved-call inspection are implemented.38 focused tests and10 independent
+probe groups pass; two actual-source recorded fixtures verify, with no new native
+generation. Full 1198 tests/probes/package pass on unchanged code. See [runtime](docs/QUESTION_RUNTIME.md) and
+[current TODO](TODO.md). Native rendering/context fit and scientific qualification
+remain separate gates.
+
 Latest question-contract core: explicit scientific questions, a lossless source
 view and coherent response states are implemented in a separate module. All 1,160
 full tests, required probes and packaging pass on unchanged code, along with 197

@@ -8,6 +8,16 @@ updated: 2026-10-25
 
 # Project goals
 
+## Latest recorded question runtime — October25
+
+Durable recorded execution, source-inclusive verification and unresolved-call
+inspection are implemented.38 focused tests/10 independent probes and two
+actual-source recorded fixtures pass; full 1198 tests/probes/package pass on unchanged code. No new native
+generation. Package code identity, replay provenance and cascading failure handling
+were corrected after retained audit reproductions. See
+[[research-log-2026-10-25-question-recorded-runtime]] and TODO.md. Native rendering/
+exact context sizing and scientific qualification remain future gates.
+
 ## Latest question-contract core — October25
 
 Independent scientific/methods reviews and implementation probes approve the separate

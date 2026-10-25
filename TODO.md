@@ -1,6 +1,19 @@
 # Project execution checklist
 
 
+## Durable recorded question runtime — October25
+
+- [x] Implement exclusive execution, durable raw/accounting/failure records and acyclic receipts.
+- [x] Implement source-inclusive semantic verification and versioned unresolved-call inspection.
+- [x] Resolve independent audit findings with38 focused regressions and10 final probe groups.
+- [x] Execute/verify2real-source recorded fixtures; retain65 missing inputs and legacy compatibility (zero native generation).
+- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1198 full /235 isolated /143 no-site); retain checkpoint.
+- [ ] Implement/review native renderer and transport; measure exact prompt fit before any frozen pilot.
+- [ ] Independently qualify generated scientific interpretations before fresh paired evaluation.
+
+This is a recorded/synthetic execution path, not native or scientific approval.
+Docs: docs/QUESTION_RUNTIME.md. Evidence: planning/review-assets/question-recorded-runtime-20261025/.
+
 ## Question-bound interpretation core — October25
 
 - [x] Specify and bind two generic evidence-family questions into immutable source-scoped requests (38 focused tests).
@@ -9,7 +22,8 @@
 - [x] Reconstruct actual source-scoped and all9-source requests exactly, retaining65 missing inputs; both old native sidecars still verify.
 - [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1160 full /197 isolated /105 no-site).
 - [x] Specify/review the next durable recorded runtime and native sizing gates.
-- [ ] Implement durable v2 runtime/source-inclusive verifier, then native serialization and exact sizing before any pilot.
+- [x] Implement/validate durable recorded v2 runtime and source-inclusive verifier.
+- [ ] Implement native serialization/transport and exact sizing before any pilot.
 - [ ] Qualify generated scientific interpretations before fresh paired evaluation.
 
 The current code is a separate core, with no runtime/model call. Actual view sizes
@@ -42,7 +56,7 @@ Failure closure: planning/review-assets/local-interpretation-development-2026102
 - [x] Specify evidence-family questions and bind them into source-scoped requests.
 - [x] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
 - [x] Implement reviewed question/view/response core and archival migration boundaries with regressions/full validation.
-- [ ] Implement and validate the reviewed durable recorded runtime before native adaptation.
+- [x] Implement and validate the reviewed durable recorded runtime before native adaptation.
 - [ ] Separately freeze any later generation only after design/code qualification; no retry of failed runs.
 - [ ] Complete scientific qualification before fresh paired evaluation.
 

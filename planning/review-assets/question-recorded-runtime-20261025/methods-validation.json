@@ -1,0 +1,49 @@
+{
+  "status": "recorded_synthetic_runtime_gate_passed",
+  "seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-recorded-runtime-review-20261025\\final\\final-output-pins.json",
+    "sha256": "49223cc9c90b0885deab845bf7104b542eb8c098f8ef5476d6146f70d7dd2ef2",
+    "bytes": 2169
+  },
+  "focused_tests": 38,
+  "independent_probe_groups": 10,
+  "code": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\question_interpretation_runtime.py",
+    "sha256": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+    "bytes": 28229
+  },
+  "legacy_code": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+      "sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+      "bytes": 27261
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\local_interpretation.py",
+      "sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+      "bytes": 20635
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_interpretation_development.py",
+      "sha256": "43feb622a0490b4c1ebf5124bfff58afe3213c7e83bd3167ab925eb958bea7f7",
+      "bytes": 15029
+    }
+  ],
+  "question_core": {
+    "path": "D:\\Projects\\drug_target_agents\\tools\\science\\interpretation_questions.py",
+    "sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+    "bytes": 14677
+  },
+  "initial_failed_review": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-recorded-runtime-review-20261025\\methods\\final-output-pins.json",
+    "sha256": "731932f32c62d226b6b1f053381e6b4c8398f2dc6b0a8449cf75983a86978e0e",
+    "bytes": 2198
+  },
+  "failed_recheck": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-recorded-runtime-review-20261025\\recheck\\final-output-pins.json",
+    "sha256": "5a650212a01389d46efa3c156db3a05b30c24ccf2883f6fb1c5b4b5949a4804e",
+    "bytes": 2196
+  },
+  "native_approved": false,
+  "scientific_qualification": false
+}

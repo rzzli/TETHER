@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-25-question-recorded-runtime]] — Recorded execution/source-inclusive verifier and unresolved-call inspector pass38 focused tests/10 peer probes; two real-source recorded fixtures verify, no native generation. Four audit blockers fixed; full 1198 tests/probes/package pass on unchanged code.
+
 - [[research-log-2026-10-25-question-core]] — Separate question/view/response core passes38 focused tests,197 isolated and105 no-site; 1160 full tests/probes/package pass on unchanged code. Exact original-source reconstruction, legacy compatibility and sizing retained. Next reviewed recorded runtime; native/scientific gates remain closed.
 
 - [[research-log-2026-10-25-native-interpretation]] — First native attempt retained as transport/scientific failure; one call, second unrun. Separate repair passes1122 full tests and both sealed native requests; two scientific reviews/third adjudication reject qualification. Failed version stopped; source-question/representation redesign next.
