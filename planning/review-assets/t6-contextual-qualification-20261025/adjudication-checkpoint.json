@@ -1,0 +1,43 @@
+{
+  "role": "evaluation_only",
+  "created_at_utc": "2026-10-25T06:30:00.236076+00:00",
+  "status": "source_only_contextual_extraction_and_dispositions_accepted_science_reference_still_unqualified",
+  "adjudication_seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\adjudication-v1\\final-output-pins.json",
+    "sha256": "b5cea50c1262c4ec333d52a63fdc3c0c557e7730242e1e958f87e67478080a6a",
+    "bytes": 238226
+  },
+  "source_inclusive_validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\coordination\\adjudication-source-validation-20261025T062728Z\\report.json",
+    "sha256": "f67a1085d9083ffdb2976e64c46eb1d38196889cbf37c35ae71be91125246f04",
+    "bytes": 2678
+  },
+  "adjudication": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\adjudication-v1\\adjudication.json",
+    "sha256": "d09641c077d4d0e203cea9c2b7ff0ac77844e63eb548b92babe983b723698343",
+    "bytes": 430552
+  },
+  "source_report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\adjudication-v1\\adjudication.md",
+    "sha256": "65b72d18dc9916956e61ce6895d8c573026c839af95ca80a5621624fa5598e4a",
+    "bytes": 18635
+  },
+  "claims": 430,
+  "canonical_groups": 398,
+  "mined_strings": 43,
+  "mined_occurrences": 54,
+  "physical_lines": 172,
+  "provider_values": 986,
+  "mr_bundles": 4,
+  "dimensions": 14,
+  "complete_scientific_reference": false,
+  "valid_scientific_error_denominator": false,
+  "scientific_error_rate": null,
+  "clinical_probability": null,
+  "whole_project_complete": false,
+  "production_code_unchanged": true,
+  "prior_framework_tests": 1055,
+  "prior_isolated_tests": 92,
+  "tests_rerun": false,
+  "next_step": "Qualify primary-source scientific validity and applicability for67scientific occurrences; preserve unknowns and clinical quarantine."
+}

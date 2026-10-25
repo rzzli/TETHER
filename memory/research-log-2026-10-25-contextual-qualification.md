@@ -26,3 +26,21 @@ Independent adjudicator dispatch hit the service usage limit and produced no adj
 Adjudication, a corrected inventory, scoped references and a source-inclusive final review remain unfinished. Resume from the frozen proposals, not by regenerating independent drafts. Inspect all agreements and disagreements, preserve exact context and genuine missingness, and validate final outputs before changing qualification status. No new human input, account permission, source download or clinical model call is needed for the next local review.
 
 The runtime code still matches the accepted1055-test/92-clean-checkout checkpoint. This phase validated actual proposal schemas, source/location hashes and archived bytes; it did not rerun the unchanged full framework suite. Provider spending/native calls/clinical labels remain zero; AI research-agent usage was outside the native meter. Full T6/H5 and original Tasks6–8 remain incomplete.
+
+## Source-only adjudication verified - October25 UTC
+
+The interrupted adjudication resumed from the byte-frozen proposals. All43
+strings/54occurrences and172lines/986JSONvalues were reconciled into430
+contextual occurrences/398canonical groups, with4 located MR bundles and14
+evidence dimensions. Full source-inclusive audit_v2 passes against original
+receipt-bound rows. Protected clinical labels were hash-checked only and remain
+unchanged; production code still matches the1055-test/92-isolated checkpoint.
+Those suites were not rerun for research artifacts.
+
+Accepted scope: exact source-only extraction/dispositions and source attribution.
+Not accepted: a complete independent scientific reference, validated scientific
+error denominator, biological truth, intervention applicability or clinical truth.
+All substantive science remains explicitly unassessable in this source-only pass.
+Next qualify primary evidence for67 scientific occurrences rather than treating
+mechanical provenance as scientific validation. Full T6/H5 and Tasks6-8 stay open.
+Receipt: planning/review-assets/t6-contextual-qualification-20261025/adjudication-checkpoint.json.

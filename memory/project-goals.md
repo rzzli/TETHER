@@ -997,3 +997,21 @@ error denominator. Independent adjudication dispatch hit service usage limit;
 resume frozen inputs without regenerating proposals. Full qualification,
 interpretation, fresh paired T6/H5 and original Tasks6-8 remain unfinished.
 See [[research-log-2026-10-25-contextual-qualification]].
+
+## Source-only adjudication verified - October25 UTC
+
+The interrupted adjudication resumed from the byte-frozen proposals. All43
+strings/54occurrences and172lines/986JSONvalues were reconciled into430
+contextual occurrences/398canonical groups, with4 located MR bundles and14
+evidence dimensions. Full source-inclusive audit_v2 passes against original
+receipt-bound rows. Protected clinical labels were hash-checked only and remain
+unchanged; production code still matches the1055-test/92-isolated checkpoint.
+Those suites were not rerun for research artifacts.
+
+Accepted scope: exact source-only extraction/dispositions and source attribution.
+Not accepted: a complete independent scientific reference, validated scientific
+error denominator, biological truth, intervention applicability or clinical truth.
+All substantive science remains explicitly unassessable in this source-only pass.
+Next qualify primary evidence for67 scientific occurrences rather than treating
+mechanical provenance as scientific validation. Full T6/H5 and Tasks6-8 stay open.
+Receipt: planning/review-assets/t6-contextual-qualification-20261025/adjudication-checkpoint.json.

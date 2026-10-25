@@ -137,3 +137,12 @@ an evidence-dimension completeness reference, then enforce reference/prediction
 seals and qualify bounded interpretation. A fresh paired study is still required
 for the original full T6/H5 objectives; existing exposed development cases remain
 development cases. Current runtime/scorer probabilities and features are unchanged.
+
+## Development source-only checkpoint - October25 UTC
+
+The exposed IL6R surface now has a reconciled430-occurrence inventory and398
+scoped source-report groups. Source-inclusive audit passes; reviewed status
+attests extraction/dispositions only. Scientific validity/applicability and a
+complete independent scientific reference remain unqualified. The acceptance
+receipt is planning/review-assets/t6-contextual-qualification-20261025/adjudication-checkpoint.json.
+No scientific error denominator or general performance estimate follows.

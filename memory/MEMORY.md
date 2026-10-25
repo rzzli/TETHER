@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[research-log-2026-10-25-contextual-qualification]] - Two source-validated contextual proposals and 14-dimension requirements frozen; adjudication interrupted by service usage limit. Scientific qualifications and full T6/H5 remain pending.
+- [[research-log-2026-10-25-contextual-qualification]] - Resumed source-only adjudication and original-source replay pass:430 occurrences/398 groups. Scientific reference/validity/applicability remain unqualified; primary evidence review is next.
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests,92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
