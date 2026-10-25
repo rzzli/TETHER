@@ -987,3 +987,13 @@ false. Authoritative reports are item6/training-contract-r1.json and
 training-feasibility-r1.json; execution-science6-passed.json validates the closeout.
 Science7 now starts supported T6 comparisons, adapted execution and actual workflow
 ablations. Clinical AUROC/Brier remain withheld unless scientific gates qualify.
+
+## Contextual reference qualification - October25 UTC
+
+Two independent exposed-case AI inventories (198/184 proposals) and a separate
+14-dimension draft rubric are frozen and source/location checked. Both retain
+clinical quarantine, context and four numerical bundles; no valid scientific
+error denominator. Independent adjudication dispatch hit service usage limit;
+resume frozen inputs without regenerating proposals. Full qualification,
+interpretation, fresh paired T6/H5 and original Tasks6-8 remain unfinished.
+See [[research-log-2026-10-25-contextual-qualification]].

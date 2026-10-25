@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-25-contextual-qualification]] - Two source-validated contextual proposals and 14-dimension requirements frozen; adjudication interrupted by service usage limit. Scientific qualifications and full T6/H5 remain pending.
+
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests,92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
 - [[project-goals]] — Latest IL6R bounded development inventory/source review/adjudication complete (Oct25 UTC/Oct24 LA); recovered genetics provenance retained. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>). Atomic completeness/denominator, fresh blinded references, interpretation and full T6/H5/Tasks6–8 remain open. Next contextual propositions/attribution/decoded JSON/raw spans/numerical bundles/dependence/separate denominators. Last unchanged-code checkpoint:1008 framework/45 isolated checks, not rerun after report; native benchmark calls/clinical labels=0, agent usage outside meter, whole project incomplete.

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "status": "independent_development_proposals_validated_adjudication_incomplete",
+  "created_at_utc": "2026-10-25T06:18:42.450004+00:00",
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\coordination\\protocol-freeze.json",
+    "sha256": "87b0d2587d3b4042cfb8c7603c7f1200e7035f1f406d2de54cab87b6d14b71dd",
+    "bytes": 1847
+  },
+  "proposal_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\coordination\\proposals-frozen-20261025T031924Z\\report.json",
+    "sha256": "8837a591678c8e89fef07957702dcd9f37a8af7ad1664ba524caebaeb71405df",
+    "bytes": 31208
+  },
+  "source_replay": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\coordination\\source-validation-20261025T031725Z\\report.json",
+    "sha256": "e928194efaa3d4a21b6263943f03ad8075ea7ac7b17d0cc3fb0ef3515048d6f3",
+    "bytes": 1425
+  },
+  "interruption": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\coordination\\service-interruption.json",
+    "sha256": "d961c4f38e806580b050bc7920c8c8feba758657eac8e5e66a2db034b6d1b953",
+    "bytes": 734
+  },
+  "supplement": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\reviewer-a-supplement\\final-output-pins.json",
+    "sha256": "3f9682c9648fb9c0d68160785cf6bfa5215000ed9c442b835e08ef28feff44e7",
+    "bytes": 1172
+  },
+  "inventories": [
+    {
+      "reviewer": "reviewer-a",
+      "inventory": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\reviewer-a\\inventory.json",
+        "sha256": "44a04d0932fa188b3a7a01c8dcb95a16bc0fff8094e2449d8d50fbd25150c03e",
+        "bytes": 696539
+      },
+      "claims": 198,
+      "canonical_groups": 171,
+      "strata": {
+        "scientific": 59,
+        "annotation": 21,
+        "clinical_unassessable": 32,
+        "operational": 86
+      },
+      "uncertain_lines": 95,
+      "uncertain_values": 11,
+      "atomic_completeness": "not_established"
+    },
+    {
+      "reviewer": "reviewer-b",
+      "inventory": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\reviewer-b\\inventory.json",
+        "sha256": "acbbb85bd3c3345a5074dcdf22bf5a79efc62f67a6215526146cbc83aecf3709",
+        "bytes": 741329
+      },
+      "claims": 184,
+      "canonical_groups": 154,
+      "strata": {
+        "scientific": 63,
+        "annotation": 15,
+        "clinical_unassessable": 24,
+        "operational": 82
+      },
+      "uncertain_lines": 13,
+      "uncertain_values": 0,
+      "atomic_completeness": "not_established"
+    }
+  ],
+  "reference": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\t6-contextual-qualification-20261025\\completeness-independent\\revision-2\\reference.json",
+    "bytes": 65952,
+    "sha256": "89c6bf4037d84425f379e1b5fcb404d05a104494f5522c0a709d22588d4cb358"
+  },
+  "reference_dimensions": 14,
+  "reference_location_occurrences": 81,
+  "distinct_reference_nodes": 65,
+  "source_surface_bytes": 43527,
+  "source_lines": 172,
+  "source_nodes": 1158,
+  "qualification_complete": false,
+  "scientific_validity": "not_established",
+  "scientific_error_rate": null,
+  "clinical_probability": null,
+  "whole_project_complete": false,
+  "framework_code_unchanged_from": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\t6-contextual-audit-20261025\\final-acceptance.json",
+    "sha256": "ba109619d325420eaaf5447e4bec268753e1b924a2e76ba240075c6e7ff67263",
+    "bytes": 4329
+  },
+  "prior_unchanged_code_tests": 1055,
+  "clean_checkout_tests": 92,
+  "native_model_calls": 0,
+  "clinical_labels": 0,
+  "ai_agent_usage": "outside native framework meter; total tokens/cost unmeasured",
+  "next_step": "Finish source/context and split/merge adjudication; refine coarse operational fragments, quarantine clinical truth, then source-inclusive validate scoped review/reference artifacts. Do not promote proposals to qualified gold."
+}
