@@ -186,6 +186,14 @@ class LocalInterpretationTests(unittest.TestCase):
             self.assertEqual(backend.opener.calls,1)
             self.assertEqual(backend.execution_document()['attempts'][0]['measured_usage']['output_tokens'],40)
 
+    def test_actual_runtime_echo_uses_float_temperature(self):
+        native=self.native(stop=True,stop_type='eos',stopping_word='')
+        native.pop('stopped_limit');native['generation_settings']['temperature']=0.0
+        backend=self.backend(native)
+        self.run_job(backend)
+        self.assertTrue(verify_interpretation(self.root/'output')['source_inputs_replayed'])
+        self.assertIs(type(payload_for(self.request,self.config)['temperature']),float)
+
     def test_verify_execution_rechecks_endpoint_policy(self):
         backend=self.backend();generated=backend.generate(self.request,30)
         provenance=encode(backend.provenance);provenance['config']['endpoint']='http://example.com:80'

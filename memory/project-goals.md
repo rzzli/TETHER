@@ -12,7 +12,7 @@ updated: 2026-10-24
 
 Version-one native development failed and remains failed; source-bound AI review
 also rejects its content. One request ran; the second was not dispatched. The
-separate repair passes66 focused regressions but still requires independent
+separate repair passes67 focused regressions but still requires independent
 methods/full validation, a new frozen execution and scientific adjudication.
 See [[research-log-2026-10-25-native-interpretation]] and TODO.md. Older checkpoint
 counts below are dated evidence, not current scientific completion.

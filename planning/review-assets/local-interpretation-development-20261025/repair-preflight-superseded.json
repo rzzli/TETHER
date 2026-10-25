@@ -1,0 +1,23 @@
+{
+  "status": "superseded_before_generation",
+  "executable_plan": {
+    "path": "D:\\Projects\\drug_target_agents\\runs\\interpretation-repair-20261025T170040Z\\run-plan.json",
+    "sha256": "9e77a4c5fcda33ef09463a32247e5d6df37bf59cc85b50882ffb8b45fb5abff9",
+    "bytes": 6816
+  },
+  "generation_dispatched": false,
+  "reason": "Independent methods probes reproduced conflicting stop flags and JSON type conflation; subsequent actual runtime check required request temperature float0.0. Fresh code pins and validation are required.",
+  "retained_peer_findings": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-methods-peer-20261025\\repair-v2\\final-output-pins.json",
+      "sha256": "72ea784eb32b6ffff79cc0026db8e8176adb4e74e4811d21e50bc0c4bf542032",
+      "bytes": 3588
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\local-interpretation-methods-peer-20261025\\repair-v2-recheck\\final-output-pins.json",
+      "sha256": "2b0a601a6030fc2a9fff07333eaf52e03da11dccac7736495064e916da5f3ccb",
+      "bytes": 6207
+    }
+  ],
+  "old_protocol_unchanged": true
+}

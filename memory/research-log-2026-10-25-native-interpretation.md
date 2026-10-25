@@ -27,7 +27,7 @@ Original code is retained through explicit archived-code aliases.
 Separate generic repair accepts modern EOS safely, binds native echoed prompts
 and settings, explains descriptive provider metadata, and asks for source-specific
 experimental context. It injects no case-specific gold answer. Two-claim requests
-retain complete scientific source fields. The 66 focused repair tests pass;
+retain complete scientific source fields. The 67 focused repair tests pass;
 independent methods, full validation, a separately frozen run and scientific
 qualification remain pending. Original Tasks6–8, full T6/H5 and clinical scoring
 remain unfinished. See [[project-goals]] and TODO.md.

@@ -6,7 +6,7 @@
 - [x] Implement and validate the first native transport: 58 focused / 1113 full tests.
 - [x] Freeze and execute version one; retain its terminal failure and measured usage.
 - [x] Independently review and adjudicate the retained failed response; scientific content fails.
-- [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 66 focused tests pass.
+- [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 67 focused tests pass.
 - [ ] Pass independent repair methods review, isolated checks and full unchanged-code validation.
 - [ ] Freeze and execute a separate two-task repair plan once; stop owned server and seal outputs.
 - [ ] Review every generated scientific clause and adjudicate qualification or failure.

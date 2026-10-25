@@ -116,7 +116,7 @@ def payload_for(request, config):
     data=canonical(wire).decode('utf-8').replace('<|','<\\u007c')
     prompt='<|im_start|>system\n'+guide+'<|im_end|>\n<|im_start|>user\n'+data+'<|im_end|>\n<|im_start|>assistant\n'
     need(len(prompt.encode('utf-8'))<=config['max_prompt_bytes'],'Full interpretation prompt exceeds cap; no truncation')
-    return dict(prompt=prompt,n_predict=config['max_output_tokens'],temperature=0,seed=config['seed'],
+    return dict(prompt=prompt,n_predict=config['max_output_tokens'],temperature=0.0,seed=config['seed'],
         cache_prompt=False,json_schema=output_schema(request),stop=['<|im_end|>'],stream=False)
 
 
