@@ -8,7 +8,7 @@
 - [x] Rebuild both actual-source payloads without generation:14,149/12,785 bytes,26,998 input/4,096 output reservation; unchanged budgets.
 - [x] Pass276 isolated-copy and184 dependency-free tests.
 - [x] Complete full unchanged-code validation and retained acceptance:1,239 tests, required probes and dependency-free package pass.
-- [ ] Retain verified checkpoint backup.
+- [x] Retain verified checkpoint backup:59 entries, ZIP CRC/every-entry SHA256 and Git bundle throughc425225 verified; receipt in native transport review assets.
 - [ ] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
 - [ ] Execute at most one call per generic question, seal outputs, stop owned server and independently review/adjudicate every scientific assertion.
 

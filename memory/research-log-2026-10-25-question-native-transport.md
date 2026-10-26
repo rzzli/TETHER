@@ -30,7 +30,9 @@ Clean-copy276 and no-site184 tests pass. Full-project validation passes1,239 tes
 required probes and packaging on unchanged code. Legacy/core/runtime and protected
 outcome-file hash checks pass. Retained acceptance is under
 planning/review-assets/question-native-transport-20261025/; backup receipt follows
-the code checkpoint. Provider spending remains$0; independent AI review usage
+the code checkpoint:59 entries, ZIP CRC/every-entry SHA256 and Git bundle through
+c425225 verified. Manifest SHA256:a22c6fc01f0270ac9755409133fde7f0a819f9e9fc04584b6d0af6dba8fa2b85.
+Receipt/status commit follows that bundle. Provider spending remains$0; independent AI review usage
 outside the framework meter is unmeasured.
 
 No scientific prediction, clinical label access or new native generation occurs in
