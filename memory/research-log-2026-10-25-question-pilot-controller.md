@@ -83,4 +83,11 @@ but warns that the proposed nonblank regex is ignored. Pinned-converter feasibil
 review is active; generation remains blocked. No validator relaxation or extra
 native model call occurred. Broader scientific qualification and Tasks6–8 stay open.
 
+Failed-run scientific closeout and next-design checkpoint backed up88 entries
+with ZIP CRC/every-entry SHA256 and Git bundle througha487b94 verified. Manifest:
+E:/projects_data/drug_target_agents_data/backups/question-pilot-failed-20261026T042451Z/manifest.json,
+SHA256:089a3e8f449503b164ac90fc1d9903ed71241e0054f4fd86b6232ee0389cebf2.
+Later receipt/status commit is outside that bundle. Bulk datasets/model weights are
+excluded. Current production code still equals the passing1,262-test checkpoint.
+
 Related: [[research-log-2026-10-25-question-native-transport]], [[project-goals]].

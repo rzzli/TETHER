@@ -3,6 +3,7 @@
 ## Native wire repair — reviewed, generation blocked
 
 - [x] Close failed native candidate with original source/accounting checks, two independent scientific reviews and third adjudication; no response repair or retry.
+- [x] Back up failed run/reviews/adjudication/next design and diagnostics:88 entries, ZIP CRC/every-entry SHA256 and Git bundle througha487b94 verified; no further model call.
 - [x] Review generic contract repair and choose pointer-only verbatim_quote with unchanged generated assertions; record wire_version2 branch fields.
 - [ ] Prove the pinned converter enforces the chosen state/reason/quote schema. Current help-only probe warns that nonblank regex is ignored; do not dispatch with unsupported constraints.
 - [ ] Implement separately versioned wire codec, native adapter/callback and orchestrator; preserve current protected modules and failed artifacts.
