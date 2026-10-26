@@ -1,18 +1,35 @@
 # Project execution checklist
 
+## Native wire repair — reviewed, generation blocked
+
+- [x] Close failed native candidate with original source/accounting checks, two independent scientific reviews and third adjudication; no response repair or retry.
+- [x] Review generic contract repair and choose pointer-only verbatim_quote with unchanged generated assertions; record wire_version2 branch fields.
+- [ ] Prove the pinned converter enforces the chosen state/reason/quote schema. Current help-only probe warns that nonblank regex is ignored; do not dispatch with unsupported constraints.
+- [ ] Implement separately versioned wire codec, native adapter/callback and orchestrator; preserve current protected modules and failed artifacts.
+- [ ] Pass meaningful regressions, actual escaped/framed sizing, independent implementation review and full/isolated/no-site validation.
+- [ ] If every gate passes, freeze a NEW bounded two-task plan, execute at most once per task, stop server and independently adjudicate exact sealed results.
+
+Plan: planning/Question Pilot Failure Closeout and Contract Repair 2026-10-25.md.
+No new model call has followed the failed version. The source contains relevant
+mechanistic context; current failure is not explained by a missing dataset.
+
 ## Question pilot controller — in progress
 
 - [x] Implement and independently review frozen preparation, owned-server lifecycle, shared accounting and prediction sealing:23 focused tests/11 independent probe groups pass; six findings resolved.
 - [x] Pass focused, full unchanged-code, isolated and dependency-free validation; preserve failed audits:1,262 full tests/probes/package,299 isolated,207 no-site.
 - [x] Freeze a fresh real-source two-question plan with the same case/model/source subsets and reviewed scientific gates:question-development-20261026T023832Z, exact match to prior sized requests.
 - [x] Back up the qualified controller and pre-execution plan:91 entries, ZIP CRC/every-entry SHA256 and Git bundle through03f9a9e verified; receipt retained.
+- [x] Execute frozen version once and retain its failed first call:4650 input/601 output tokens, three contract violations, no second task, server stopped; raw candidate sealed without repair.
+- [x] Obtain two independently sealed scientific reviews and verify exact40-leaf coverage for each.
 - [ ] Execute once, retain exact outputs/accounting/failures, stop owned server and seal predictions before review.
-- [ ] Obtain two independent AI scientific reviews and third adjudication; retain a failure if the unchanged gate is unmet.
+- [x] Obtain two independent AI scientific reviews and third adjudication; retain failed gate.40 leaves,13 clause components,12 source-passage occurrences and all pins/spans replay. Qualified ambiguity/major omission, citation/applicability defects and insufficient usefulness remain; MR unrun.
 
 Controller methods review and full unchanged-code validation pass.299 isolated-copy
 and207 no-site tests pass on the corrected snapshot. The first full/clean attempt
-was cancelled on a peer finding and remains retained separately. No native generation
-or new scientific approval has occurred. See docs/QUESTION_PILOT.md.
+was cancelled on a peer finding and remains retained separately. The actual pilot
+then failed on its first native call; both required outputs and a success seal remain
+unmet. Two scientific reviews and third adjudication are sealed and verified. No new
+scientific approval occurred. See docs/QUESTION_PILOT.md.
 
 ## Native question transport — October25
 

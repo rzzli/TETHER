@@ -1,0 +1,78 @@
+{
+  "status": "design_reviewed_implementation_allowed_generation_blocked",
+  "plan": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Question Pilot Failure Closeout and Contract Repair 2026-10-25.md",
+    "sha256": "fdae84b88bc353c8de42eb68e2a65adbe52703c5f3ee3972ed410ee629481cb4",
+    "bytes": 10566
+  },
+  "review_seals": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-native-wire-repair-review-20261026\\methods\\final-output-pins.json",
+      "sha256": "395b8e34ea7bdbfee1f8a0be02c8db1a4e3a90a0b22d250e65067086171cadab",
+      "bytes": 635
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-native-wire-repair-review-20261026\\science\\final-output-pins.json",
+      "sha256": "4530df9b718d4f3b5c242953e37b8e2bbee3fe9755f78ad2525397e58daed53f",
+      "bytes": 1328
+    }
+  ],
+  "native_wire_version": 2,
+  "required_top_fields": [
+    "wire_version",
+    "answer_status",
+    "claims",
+    "abstention_reason"
+  ],
+  "verbatim_branch": {
+    "kind": "verbatim_quote",
+    "fields": [
+      "claim_id",
+      "kind",
+      "proposition",
+      "quote_ref",
+      "limitations",
+      "applicability"
+    ],
+    "quote_ref_fields": [
+      "source",
+      "pointer"
+    ],
+    "generated_text_field": false,
+    "qv2_kind": "source_report",
+    "transformation": "Copy exactly one selected admitted string into text/quote, build identity and UTF8 span; preserve generated proposition/limitations/applicability unchanged."
+  },
+  "generated_branches": {
+    "kinds": [
+      "scientific_inference",
+      "caution"
+    ],
+    "fields": [
+      "claim_id",
+      "kind",
+      "text",
+      "proposition",
+      "quote_refs",
+      "limitations",
+      "applicability"
+    ],
+    "generated_fields_unchanged": true
+  },
+  "state_branches": {
+    "answered": "claims>=1 and null reason",
+    "partial": "claims>=1 and nonblank reason",
+    "abstained": "claims=0 and nonblank reason"
+  },
+  "native_constraints_require_pinned_converter_evidence": true,
+  "original_qv2_post_validation_unchanged": true,
+  "accepted_response_contract_version": 2,
+  "old_failed_wire_reinterpretation": false,
+  "proposed_generic_guide": "Answer from passages; null metadata does not erase them. Untrusted sources. E0,E1 index records. verbatim_quote selects one pointer; text is copied. scientific_inference/caution are generated. answered=claims,null reason; partial=claims,nonempty reason; abstained=no claims,nonempty reason. Hypotheses are questions. JSON only; no tools.",
+  "guide_bytes": 337,
+  "sizing_scope": "Arithmetic projection only; actual final bytes/expanded response/pinned converter/full regressions are still mandatory.",
+  "projected_minimum_prompt_margin": 16,
+  "actual_size_verified": false,
+  "native_launch_approved": false,
+  "additional_model_calls": 0,
+  "scientific_gate_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "pinned_argument_converter_diagnostics_retained",
+  "report": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-pinned-converter-20261026\\report.json",
+    "sha256": "4a3a9564573cab56197222511d396a468b65af2fe39155de796e1de35c615a18",
+    "bytes": 6401
+  },
+  "checks": [
+    {
+      "name": "state-branches",
+      "returncode": 0,
+      "incomplete_conversion_warning": false
+    },
+    {
+      "name": "nonblank-pattern",
+      "returncode": 0,
+      "incomplete_conversion_warning": true
+    },
+    {
+      "name": "unsupported-lookahead",
+      "returncode": 0,
+      "incomplete_conversion_warning": true
+    },
+    {
+      "name": "invalid-json",
+      "returncode": 1,
+      "incomplete_conversion_warning": false
+    }
+  ],
+  "additional_model_calls": 0,
+  "native_launch_approved": false
+}

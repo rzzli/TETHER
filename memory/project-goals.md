@@ -16,7 +16,11 @@ full/clean validation was cancelled on the cleanup finding. Final23 focused/11
 independent probe groups, fresh299 isolated/207 no-site checks and1,262 full tests,
 required probes/package pass on unchanged code. Real-source plan
 question-development-20261026T023832Z is frozen with exact prior requests;
-no native pilot executed. See [[research-log-2026-10-25-question-pilot-controller]]
+The once-only pilot subsequently stopped after its first native call on contract
+rejection (4650/601 tokens); MR task unrun, server stopped. Candidate and two
+independent40-leaf reviews and third adjudication are sealed/verified. Usefulness
+fails; qualified specificity remains ambiguous with major omission. No new scientific
+qualification. See [[research-log-2026-10-25-question-pilot-controller]]
 and TODO. The preceding transport checkpoint remains complete and preserved.
 
 ## Latest native question transport — October25

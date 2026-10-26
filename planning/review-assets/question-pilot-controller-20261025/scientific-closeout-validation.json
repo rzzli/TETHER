@@ -1,0 +1,43 @@
+{
+  "status": "failed_scientific_closeout_coverage_and_provenance_verified",
+  "sealed_output_proofs_checked": 29,
+  "candidate_leaves": 40,
+  "each_review_leaves": 40,
+  "adjudicated_leaves": 40,
+  "clause_components": 13,
+  "source_passage_occurrences": 12,
+  "evidence_references_resolved": 16,
+  "all_values_fingerprints_and_utf8_spans_match": true,
+  "seals": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\failed-candidate-seal.json",
+      "sha256": "fc24543281d18bb8314adfe4a683d9067265b5975e221352ba5aea232b82c0b0",
+      "bytes": 6121
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\review-a\\final-output-pins.json",
+      "sha256": "b2944d74c3033b8ccd7901a18e20f260a07526c3fbe4647ef06afc2304ce1a64",
+      "bytes": 1026
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\review-b\\final-output-pins.json",
+      "sha256": "9cccabe149d79a3b075b5a9a53ab8a8e8a72c9a1a55e4b4f5fe93427a46f301a",
+      "bytes": 885
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\adjudication\\final-output-pins.json",
+      "sha256": "80342d060e010ac5b2127dbdfdbcb91dc683c941295300e76545002fd3212019",
+      "bytes": 1816
+    }
+  ],
+  "scientific_gate_passed": false,
+  "native_candidate_accepted": false,
+  "second_task_dispatched": false,
+  "whole_project_complete": false,
+  "additional_native_calls": 0,
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\validate_question_science_closeout_20261026.py",
+    "sha256": "72c235a5a202cf7859adb3e5dc06275458ca8682fead36e80414cd90197fdf89",
+    "bytes": 4565
+  }
+}

@@ -38,12 +38,49 @@ required probes/package pass on unchanged code. A helper date typo affected only
 output paths; original reports/helpers and corrected aliases are retained.
 Real-source plan question-development-20261026T023832Z is frozen with requests
 identical to prior sizing/recorded scope. Acceptance and plan metadata are under
-planning/review-assets/question-pilot-controller-20261025/. Execution is unrun;
-backup/checkpoint precedes it.91 entries, ZIP CRC/every-entry SHA256 and Git bundle
+planning/review-assets/question-pilot-controller-20261025/. At the checkpoint,
+execution was unrun; backup preceded it.91 entries, ZIP CRC/every-entry SHA256 and Git bundle
 through03f9a9e verified; manifest SHA256:
 f470346c9ada45bf6e04528cb9944776709d95cb25b4d7d713635c921cbf8423.
 The receipt/status commit follows that bundle. Next is this bounded real-source pilot,
 then two independent AI scientific reviews and third adjudication. Prior failed
 scientific gates,65 missing inputs, full T6/H5 and original Tasks6–8 remain open.
+
+## Actual once-only attempt
+
+The pilot subsequently executed one native call (4650 input/601 output tokens,
+provider$0) and failed contract validation: partial/null reason plus two paraphrased
+source_report texts. Source readmission, frozen payload/native bytes, completion
+and prompt/settings binding replayed correctly. Measured accounting is retained,
+second MR task unrun, no success receipt/predictions seal, owned server stopped and
+PID32688 independently absent. Original draft was sealed without repair at
+data/benchmark/labels/question-development-review-20261026/attempt-v1/failed-candidate-seal.json,
+SHA256:fc24543281d18bb8314adfe4a683d9067265b5975e221352ba5aea232b82c0b0.
+
+Two independent AI scientific reviews each cover all40 leaves with matching
+values/fingerprints and sealed outputs. Both credit the qualified proposals but
+flag the first citation and omitted provided mechanisms; they disagree on whether
+qualified no-specific-context prose is contradictory or ambiguous. Third
+adjudication is now sealed, SHA256:
+80342d060e010ac5b2127dbdfdbcb91dc683c941295300e76545002fd3212019.
+It accepts qualified ambiguity/major omission rather than critical unequivocal
+denial, retains citation/applicability defects, and fails usefulness. Root replay
+checks40 leaves/13 clauses/12 source-passage occurrences,16 evidence references,
+29 sealed output proofs and all decoded UTF-8 spans. MR remains unknown/unrun.
+The guide states partial needs a reason but does not define
+source_report as verbatim; native schema leaves both cross-field rules unenforced.
+This does not authorize validator relaxation, response repair or a retry of the
+failed version. Interface diagnosis is separate from scientific usefulness.
+
+Next generic wire repair was independently reviewed by scientific/methods agents:
+choose pointer-only verbatim_quote, transparently copy selected source text into
+qv2 source_report and preserve every generated proposition/limitation/applicability.
+wire_version2/disjoint state branches and all gates are recorded under
+planning/review-assets/question-wire-repair-20261026/. Projected337-byte guide has
+only16 bytes margin; actual fit unproved. Existing receipt-verified b11717 CLI
+help-only converter probe (no model path/load/generation) accepts state branches
+but warns that the proposed nonblank regex is ignored. Pinned-converter feasibility
+review is active; generation remains blocked. No validator relaxation or extra
+native model call occurred. Broader scientific qualification and Tasks6–8 stay open.
 
 Related: [[research-log-2026-10-25-question-native-transport]], [[project-goals]].

@@ -1,0 +1,23 @@
+{
+  "status": "retained_failed_attempt_verified_not_successful_run",
+  "validation": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\failure-validation.json",
+    "sha256": "c0547761ba40bc7366889c6f0b30ff7a9406746782d0663cb3ac53b930a9e2f0",
+    "bytes": 2259
+  },
+  "seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\failed-candidate-seal.json",
+    "sha256": "fc24543281d18bb8314adfe4a683d9067265b5975e221352ba5aea232b82c0b0",
+    "bytes": 6121
+  },
+  "calls": 1,
+  "measured_usage": {
+    "input_tokens": 4650,
+    "output_tokens": 601,
+    "cost_usd": 0.0
+  },
+  "server_stopped_reported": true,
+  "second_task_dispatched": false,
+  "contract_issues": 3,
+  "scientific_validation": "not_performed"
+}

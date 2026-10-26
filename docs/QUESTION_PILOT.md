@@ -6,7 +6,8 @@ full unchanged-code validation:23 focused tests/11 independent probe groups,
 Six reproduced findings were corrected; failed reviews and a cancelled initial
 validation remain retained. A report-path correction preserves original no-site
 reports without changing production code or rerunning tests. A real-source plan
-is frozen; no model has run in this controller phase yet.
+was frozen before execution. The actual attempt below remains separate from this
+mechanics qualification.
 
 Preparation reserves a fresh directory and requires exactly mechanism-context /
 mechanism-report.v1 and mr-discovery-replication / genetic-study-report.v1, in that
@@ -68,3 +69,21 @@ runs/question-development-20261026T023832Z, SHA256:
 9a8645ab86563e0d37434c4d2ec32ab6539300689db68ede02cfad8e253108b9.
 Both requests match the previously sized source scopes exactly. This freezes
 mechanics and exposed development inputs, with no new scientific qualification.
+
+## Actual attempt
+
+The frozen version stopped after the first native call (4,650 input /601 output
+tokens, $0 provider spending). It emitted partial status with no reason and two
+paraphrased source_report claims, violating the existing response contract. The
+second question was not dispatched; no success receipt/predictions seal was written.
+The owned server stopped and its PID was independently observed absent. Original
+native bytes, accounting and source admission were checked offline; the response
+was never repaired. The failed candidate seal and two40-leaf scientific reviews
+are retained under data/benchmark/labels/question-development-review-20261026/attempt-v1/.
+Third adjudication preserves proposal credit, treats qualified specificity as
+ambiguous with major omission, and retains citation/applicability and usefulness
+defects. It rejects a critical unequivocal-denial charge. Scientific qualification
+fails independently of contract rejection. All40 leaves/13 clauses/12 source
+passages and decoded UTF-8 spans replay. The native guide omits the verbatim meaning of
+source_report, and the schema leaves state/reason and report/quote constraints
+unenforced; these interface gaps are recorded separately from content quality.

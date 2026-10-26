@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[research-log-2026-10-25-question-pilot-controller]] — Pilot controller passes23 focused/11 independent groups and1,262 full tests/probes/package,299 isolated/207 no-site checks. Six findings resolved; failed reviews/cancelled initial checks/report-path correction retained. Actual two-question plan frozen, native execution pending.
+- [[research-log-2026-10-25-question-pilot-controller]] — Controller passes23 focused/11 peer groups,1,262 full tests/probes/package,299 isolated/207 no-site. Actual pilot failed first call (4650/601); MR unrun/server stopped. Candidate/two reviews/third adjudication sealed:40 leaves/13 clauses/12 source passages replay, usefulness fails. Generic contract repair under review; no new qualification.
 
 - [[research-log-2026-10-25-question-native-transport]] — Lossless renderer and loopback transport pass20/21 focused tests and7/8 independent probe groups; four failure classes corrected. Actual prompts fit14,200-byte cap; no native calls. Full1,239 tests/probes/package,276 isolated and184 no-site checks pass; legacy and protected outcome hashes unchanged.
 
@@ -18,7 +18,7 @@
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests,92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
-- [[project-goals]] — Current AsOf status: question controller passes1,262 full tests/probes/package,299 isolated/207 no-site checks; real-source two-question plan frozen, native execution pending. Prior scientific qualification remains failed; fresh paired evaluation, full T6/H5 and original Tasks6–8 remain open. AI review usage outside the framework meter is unmeasured.
+- [[project-goals]] — Current AsOf status: controller mechanics pass1,262 full tests/probes/package; actual frozen pilot failed its first call and stopped. Two reviews/third adjudication confirm insufficient utility, preserving partial credit/qualified ambiguity. Contract repair under review. Scientific qualification, fresh paired evaluation, full T6/H5 and original Tasks6–8 remain open; outside-meter AI usage unmeasured.
 
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests,45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 

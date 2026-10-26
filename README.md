@@ -1,10 +1,16 @@
 # AsOf target-evaluation agents
 
+Actual frozen question pilot: stopped after its first native call (4,650 input /
+601 output tokens) on contract rejection; second task unrun, owned server stopped.
+The unaccepted candidate, two independent AI reviews and third adjudication are
+sealed and verified; usefulness and pilot qualification fail. No successful interpretation or new
+scientific qualification is claimed. See [current TODO](TODO.md).
+
 Latest question pilot controller checkpoint:1,262 full tests/probes/package,
 299 isolated and207 no-site tests pass on unchanged code. Independent review resolves
 six findings (23 focused tests/11 probe groups). A fresh two-question real-source plan
-is frozen with the same previously sized requests; execution and scientific review
-remain pending. See [pilot controller](docs/QUESTION_PILOT.md) and [current TODO](TODO.md).
+was frozen with the same previously sized requests before the actual attempt above.
+See [pilot controller](docs/QUESTION_PILOT.md) and [current TODO](TODO.md).
 
 Latest native question transport checkpoint: lossless renderer and optional loopback
 adapter pass1,239 full tests, required probes/package,276 isolated and184 no-site
