@@ -1,0 +1,9 @@
+from pathlib import Path
+import os,subprocess,sys,json
+ROOT=Path.cwd();env=dict(os.environ,PYTHONPATH=str(ROOT/'src'))
+process=subprocess.run([sys.executable,'-S','-m','unittest','tests.test_science_question_development','tests.test_science_question_interpretation_local','tests.test_science_question_interpretation_render','tests.test_science_question_interpretation_runtime','tests.test_science_interpretation_questions','tests.test_science_bounded_interpretation','tests.test_science_local_interpretation','tests.test_science_interpretation_development','-q'],cwd=ROOT,env=env,capture_output=True,text=True)
+(ROOT/'data/cache/question-pilot-controller-v2-no-site-packages-20761025.log').write_text(process.stdout+process.stderr,encoding='utf-8')
+assert process.returncode==0,process.stderr
+assert 'Ran 207 tests' in process.stderr
+result=dict(status='passed',tests=207,site_packages_enabled=False,scope='New sidecar tests with python -S, standard library and project source only; no optional ingestion dependency required.')
+p=ROOT/'planning/review-assets/question-pilot-controller-v2-20761025/question-pilot-controller-v2-no-site-packages-validation.json';p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8');print(json.dumps(result))

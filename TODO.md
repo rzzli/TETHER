@@ -1,5 +1,19 @@
 # Project execution checklist
 
+## Question pilot controller — in progress
+
+- [x] Implement and independently review frozen preparation, owned-server lifecycle, shared accounting and prediction sealing:23 focused tests/11 independent probe groups pass; six findings resolved.
+- [x] Pass focused, full unchanged-code, isolated and dependency-free validation; preserve failed audits:1,262 full tests/probes/package,299 isolated,207 no-site.
+- [x] Freeze a fresh real-source two-question plan with the same case/model/source subsets and reviewed scientific gates:question-development-20261026T023832Z, exact match to prior sized requests.
+- [ ] Back up the qualified controller and pre-execution plan with every-entry hashes and Git bundle.
+- [ ] Execute once, retain exact outputs/accounting/failures, stop owned server and seal predictions before review.
+- [ ] Obtain two independent AI scientific reviews and third adjudication; retain a failure if the unchanged gate is unmet.
+
+Controller methods review and full unchanged-code validation pass.299 isolated-copy
+and207 no-site tests pass on the corrected snapshot. The first full/clean attempt
+was cancelled on a peer finding and remains retained separately. No native generation
+or new scientific approval has occurred. See docs/QUESTION_PILOT.md.
+
 ## Native question transport — October25
 
 - [x] Implement lossless scientific-first rendering and exact source-alias translation (20 regressions; seven independent renderer probe groups).
@@ -9,7 +23,7 @@
 - [x] Pass276 isolated-copy and184 dependency-free tests.
 - [x] Complete full unchanged-code validation and retained acceptance:1,239 tests, required probes and dependency-free package pass.
 - [x] Retain verified checkpoint backup:59 entries, ZIP CRC/every-entry SHA256 and Git bundle throughc425225 verified; receipt in native transport review assets.
-- [ ] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
+- [x] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
 - [ ] Execute at most one call per generic question, seal outputs, stop owned server and independently review/adjudicate every scientific assertion.
 
 No native generation occurred in this transport implementation. Prior scientific

@@ -1,0 +1,53 @@
+{
+  "status": "report_path_alias_corrected_originals_retained",
+  "reason": "An unscoped test-count replacement also changed the year in the helper output path. Counts/results and production code are unchanged.",
+  "entries": [
+    {
+      "tests": 205,
+      "original_report": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-20561025\\question-pilot-controller-no-site-packages-validation.json",
+        "sha256": "9719f57977162e36b93b3112f20dbcef8c39207fafc05772c00fd505a807d2e7",
+        "bytes": 214
+      },
+      "corrected_report_alias": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-20261025\\question-pilot-controller-no-site-packages-validation.json",
+        "sha256": "9719f57977162e36b93b3112f20dbcef8c39207fafc05772c00fd505a807d2e7",
+        "bytes": 214
+      },
+      "helper_as_executed": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-20261025\\helper-path-correction\\check_question_pilot_no_site_20261025.py.as-executed.txt",
+        "sha256": "c2a7e2d6220ea4660c8fb8805f72c0e9d8e4a614ad8e1102178c146d371f6d5d",
+        "bytes": 1293
+      },
+      "corrected_helper": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\check_question_pilot_no_site_20261025.py",
+        "sha256": "43847b650bd2b80b430ba21c85496a2bdeb39862b6dca577dcf405bdabc32907",
+        "bytes": 1293
+      }
+    },
+    {
+      "tests": 207,
+      "original_report": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-v2-20761025\\question-pilot-controller-v2-no-site-packages-validation.json",
+        "sha256": "1709dc547d06f1d7496a30b034f2c2915f1a2c3a461e798493f65b9d3fb13de7",
+        "bytes": 214
+      },
+      "corrected_report_alias": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-v2-20261025\\question-pilot-controller-v2-no-site-packages-validation.json",
+        "sha256": "1709dc547d06f1d7496a30b034f2c2915f1a2c3a461e798493f65b9d3fb13de7",
+        "bytes": 214
+      },
+      "helper_as_executed": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-20261025\\helper-path-correction\\check_question_pilot_v2_no_site_20261025.py.as-executed.txt",
+        "sha256": "c4f203be96134e974d3c19f0db14740597a76e290ccb2b411d72139e761456b6",
+        "bytes": 1302
+      },
+      "corrected_helper": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\check_question_pilot_v2_no_site_20261025.py",
+        "sha256": "5f11cb9813ef751ebf0d5986af1e118e2f5a1a498e6cc8e122f35cd4ff624000",
+        "bytes": 1302
+      }
+    }
+  ],
+  "tests_rerun": false
+}

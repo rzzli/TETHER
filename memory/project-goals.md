@@ -8,6 +8,17 @@ updated: 2026-10-25
 
 # Project goals
 
+## Current pilot controller — in validation
+
+New frozen controller and bundle verifier pass23 focused tests after retained
+scope/config/budget/lifecycle findings and primary-cleanup corrections. Initial
+full/clean validation was cancelled on the cleanup finding. Final23 focused/11
+independent probe groups, fresh299 isolated/207 no-site checks and1,262 full tests,
+required probes/package pass on unchanged code. Real-source plan
+question-development-20261026T023832Z is frozen with exact prior requests;
+no native pilot executed. See [[research-log-2026-10-25-question-pilot-controller]]
+and TODO. The preceding transport checkpoint remains complete and preserved.
+
 ## Latest native question transport — October25
 
 Separate renderer/transport implemented and independently reviewed with20 renderer

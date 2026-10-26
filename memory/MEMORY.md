@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-25-question-pilot-controller]] — Pilot controller passes23 focused/11 independent groups and1,262 full tests/probes/package,299 isolated/207 no-site checks. Six findings resolved; failed reviews/cancelled initial checks/report-path correction retained. Actual two-question plan frozen, native execution pending.
+
 - [[research-log-2026-10-25-question-native-transport]] — Lossless renderer and loopback transport pass20/21 focused tests and7/8 independent probe groups; four failure classes corrected. Actual prompts fit14,200-byte cap; no native calls. Full1,239 tests/probes/package,276 isolated and184 no-site checks pass; legacy and protected outcome hashes unchanged.
 
 - [[research-log-2026-10-25-question-recorded-runtime]] — Recorded execution/source-inclusive verifier and unresolved-call inspector pass38 focused tests/10 peer probes; two real-source recorded fixtures verify, no native generation. Four audit blockers fixed; full 1198 tests/probes/package pass on unchanged code.
@@ -16,7 +18,7 @@
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests,92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
-- [[project-goals]] — Latest IL6R bounded development inventory/source review/adjudication complete (Oct25 UTC/Oct24 LA); recovered genetics provenance retained. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>). Atomic completeness/denominator, fresh blinded references, interpretation and full T6/H5/Tasks6–8 remain open. Next contextual propositions/attribution/decoded JSON/raw spans/numerical bundles/dependence/separate denominators. Last unchanged-code checkpoint:1008 framework/45 isolated checks, not rerun after report; native benchmark calls/clinical labels=0, agent usage outside meter, whole project incomplete.
+- [[project-goals]] — Current AsOf status: question controller passes1,262 full tests/probes/package,299 isolated/207 no-site checks; real-source two-question plan frozen, native execution pending. Prior scientific qualification remains failed; fresh paired evaluation, full T6/H5 and original Tasks6–8 remain open. AI review usage outside the framework meter is unmeasured.
 
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests,45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 
@@ -97,7 +99,6 @@
 - [[Clinical Long Session Progress]] — Completed five-date/24-trial clinical review, complete-input ten-dossier release, 149-test verification and remaining scientific gates.
 - [[Full Cis Genetics Revision]] — Complete source-defined IL6R regional technical revision, 2,979 QC variants, source conflicts and independent LD checks; no causal inference.
 - [[Long Run Data Preflight]] — Manual AACT preparations, public-data gaps and checkpointed next-session work; no long-running task started.
-- [[project-goals]] — Current AsOf review objective, proposed scope and unresolved feasibility gates.
 - [[asof-feasibility-findings]] — Dated source/code/data findings and methodological corrections from the planning review.
 - [[research-log-2026-10-09]] — Session record, peer-survey scope, created artifacts and remaining verification.
 - [[research-log-template]] — Template for future seed-driven research sessions.
