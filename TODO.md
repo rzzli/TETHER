@@ -1,5 +1,20 @@
 # Project execution checklist
 
+## Native question transport — October25
+
+- [x] Implement lossless scientific-first rendering and exact source-alias translation (20 regressions; seven independent renderer probe groups).
+- [x] Implement optional one-use loopback transport and offline callback verification (21 regressions; eight independent final methods probe groups).
+- [x] Reproduce and fix raw/translated hash collision, concurrent dispatch, post-read byte loss and interruption masking; preserve failed reviews.
+- [x] Rebuild both actual-source payloads without generation:14,149/12,785 bytes,26,998 input/4,096 output reservation; unchanged budgets.
+- [x] Pass276 isolated-copy and184 dependency-free tests.
+- [x] Complete full unchanged-code validation and retained acceptance:1,239 tests, required probes and dependency-free package pass.
+- [ ] Retain verified checkpoint backup.
+- [ ] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
+- [ ] Execute at most one call per generic question, seal outputs, stop owned server and independently review/adjudicate every scientific assertion.
+
+No native generation occurred in this transport implementation. Prior scientific
+qualification remains failed; broader scientific Tasks6–8 are unfinished.
+Documentation: docs/QUESTION_LOCAL.md.
 
 ## Durable recorded question runtime — October25
 
@@ -8,7 +23,7 @@
 - [x] Resolve independent audit findings with38 focused regressions and10 final probe groups.
 - [x] Execute/verify2real-source recorded fixtures; retain65 missing inputs and legacy compatibility (zero native generation).
 - [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1198 full /235 isolated /143 no-site); retain checkpoint.
-- [ ] Implement/review native renderer and transport; measure exact prompt fit before any frozen pilot.
+- [x] Implement/review native renderer and transport; measure exact prompt fit before any frozen pilot.
 - [ ] Independently qualify generated scientific interpretations before fresh paired evaluation.
 
 This is a recorded/synthetic execution path, not native or scientific approval.
@@ -23,12 +38,14 @@ Docs: docs/QUESTION_RUNTIME.md. Evidence: planning/review-assets/question-record
 - [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1160 full /197 isolated /105 no-site).
 - [x] Specify/review the next durable recorded runtime and native sizing gates.
 - [x] Implement/validate durable recorded v2 runtime and source-inclusive verifier.
-- [ ] Implement native serialization/transport and exact sizing before any pilot.
+- [x] Implement native serialization/transport and exact sizing before any pilot.
 - [ ] Qualify generated scientific interpretations before fresh paired evaluation.
 
-The current code is a separate core, with no runtime/model call. Actual view sizes
-are13767/12403 bytes for the selected sources and76646 bytes for all9; prompt fit
-is unapproved. The previous scientific gate remains failed. Core specification:
+The core remains separate; recorded runtime and optional native adapter are now
+implemented in their own modules. No new native call in those stages. Actual view sizes
+are13767/12403 bytes for the selected sources and76646 bytes for all9. Selected-source
+prompt fit is now mechanically checked at14,149/12,785 complete prompt bytes; all9
+do not fit. The previous scientific gate remains failed. Core specification:
 planning/Question-Bound Interpretation Specification 2026-10-25.md.
 
 ## Native interpretation development and repair — October25

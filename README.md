@@ -1,5 +1,14 @@
 # AsOf target-evaluation agents
 
+Latest native question transport checkpoint: lossless renderer and optional loopback
+adapter pass1,239 full tests, required probes/package,276 isolated and184 no-site
+tests on unchanged code. Independent methods reviews pass after retained failure
+corrections. Both actual-source prompts fit unchanged limits. No native generation
+or scientific qualification occurred in this checkpoint. See [local adapter](docs/QUESTION_LOCAL.md),
+[acceptance](planning/review-assets/question-native-transport-20261025/acceptance.json)
+and [current TODO](TODO.md). Next is a separately frozen owned-launcher pilot and
+scientific adjudication; original Tasks6–8 remain unfinished.
+
 Latest recorded question runtime: durable execution, source-inclusive verification
 and unresolved-call inspection are implemented.38 focused tests and10 independent
 probe groups pass; two actual-source recorded fixtures verify, with no new native

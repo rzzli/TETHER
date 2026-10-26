@@ -1,0 +1,68 @@
+{
+  "status": "passed_native_renderer_and_transport_mechanics_only",
+  "created_at_utc": "2026-10-26T01:29:02.157188+00:00",
+  "full_tests": 1239,
+  "isolated_tests": 276,
+  "no_site_tests": 184,
+  "focused_renderer_tests": 20,
+  "focused_transport_tests": 21,
+  "independent_renderer_probe_groups": 7,
+  "independent_transport_probe_groups": 8,
+  "unchanged_legacy_core_runtime_and_protected_label_hashes": {
+    "tools/science/bounded_interpretation.py": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+    "tools/science/local_interpretation.py": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+    "tools/science/run_interpretation_development.py": "43feb622a0490b4c1ebf5124bfff58afe3213c7e83bd3167ab925eb958bea7f7",
+    "tools/science/interpretation_questions.py": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+    "tools/science/question_interpretation_runtime.py": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+    "data/benchmark/cohorts/science4-outcomes-20261019T024500Z/adjudication/normalized-outcomes.json": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+    "data/benchmark/labels/endpoint-followup-feasibility-20261021/adjudication-v1/normalized-outcomes.json": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398"
+  },
+  "proofs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-render-implementation-review-20261025\\methods\\final-output-pins.json",
+      "sha256": "adc1102661182b47ba1987c28637a8ccac5bead092e94f74e4bb5baa57282d53",
+      "bytes": 2225
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-native-transport-review-20261025\\final\\final-output-pins.json",
+      "sha256": "74a73cb548f81a294df217f9c560e89333dd62ed83d7cf632ee69d5ad28520aa",
+      "bytes": 321
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-native-transport-20261025\\question-native-transport-clean-checkout-validation.json",
+      "sha256": "95b2b3198ecc101b2451b20bfc594bae53dc29f6d21ffd0a5628e5a5db05c1b1",
+      "bytes": 383
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-native-transport-20261025\\question-native-transport-no-site-packages-validation.json",
+      "sha256": "189c759422ea0c4b5b5822d476c07a0985fe0765a629506f2a129a62786a433e",
+      "bytes": 214
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-native-transport-full-validation-20261025.json",
+      "sha256": "c4c8db04f79f65ec3c2b9652d112d3dd16081124a30a2800d958cba09105b15a",
+      "bytes": 471
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\question-native-transport-code-validation-20261025.json",
+      "sha256": "ca5332b1dbbd67749973e02e6c46493562a74b4e59e6d4f4e8760778aa856418",
+      "bytes": 24133
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-native-transport-20261025\\actual-format-validation.json",
+      "sha256": "79e046950e759ae6b36653c2a8b3b53f45ef7f60eeb611131cafb7dcd4bee2a1",
+      "bytes": 496
+    }
+  ],
+  "native_model_calls": 0,
+  "scientific_validation": "not_performed",
+  "prior_scientific_gate": "failed_preserved",
+  "native_pilot_executed": false,
+  "whole_project_complete": false,
+  "next_step": "Freeze separately reviewed owned-launcher two-question development plan, then execute once and scientifically adjudicate.",
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\accept_question_native_20261025.py",
+    "sha256": "1baf141daf0f882c15da21cc5f7e644f0420b105c7c601611658f2e7a7183ced",
+    "bytes": 4501
+  }
+}

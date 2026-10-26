@@ -8,6 +8,18 @@ updated: 2026-10-25
 
 # Project goals
 
+## Latest native question transport — October25
+
+Separate renderer/transport implemented and independently reviewed with20 renderer
+and21 transport tests, seven/eight peer probe groups. Atomic dispatch and durable
+native-byte/primary-exception handling corrected retained failures. Exact real-source
+prompts fit14,200-byte cap without truncation or budget change. Clean276/no-site184
+tests pass;1,239 full tests, required probes/package and unchanged-code/protected-hash
+checks pass. Acceptance is retained under question-native-transport-20261025.
+No native generation in this stage. A separately frozen owned-launcher pilot and
+scientific review remain next; no general T6/H5 or clinical qualification follows.
+See [[research-log-2026-10-25-question-native-transport]].
+
 ## Latest recorded question runtime — October25
 
 Durable recorded execution, source-inclusive verification and unresolved-call

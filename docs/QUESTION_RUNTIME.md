@@ -2,7 +2,8 @@
 
 The separate tools/science/question_interpretation_runtime.py executes and verifies
 question-contract version2 without changing any legacy interpreter module. It has
-no native model adapter, downloader or paid provider. Scientific qualification
+no built-in native model adapter, downloader or paid provider. The separate optional
+[local adapter](QUESTION_LOCAL.md) uses its explicit verifier callback. Scientific qualification
 remains failed from the previous development attempt.
 
 ## Execution and verification
@@ -39,8 +40,9 @@ The journal records reservation/preparation, quote, dispatch, raw capture, accou
 accepted response and terminal outcome. Responses are captured before JSON/contract
 validation. The response contract cap is256KiB. Raw capture keeps up to64MiB; an
 over-cap prefix is explicitly marked incomplete with original/retained byte counts
-and hashes. Such captures cannot pass successful verification. Native transport
-must independently preserve its bounded raw bytes in a later milestone.
+and hashes. Such captures cannot pass successful verification. The optional native
+transport independently preserves its bounded original bytes, separately from
+this runtime's translated response text.
 
 Reported usage and conservative unknown usage are distinct. Usage.cost_usd is
 normalized through its declared floating type; original replay bytes and scientific
@@ -73,11 +75,16 @@ source-inclusive execution/verification and correct available=9, selected=1 and
 missing=65 per request. These are scripted fixtures, not generated scientific
 answers or qualified dossiers. Original successful native sidecars still verify.
 
-Full project, isolated-copy and dependency-free validation are required before this
-stage is finalized. Native scientific-first rendering, exact escaped/framed prompt
-sizing, native transport and the next frozen pilot remain later gates. The13767-byte
+Full project, isolated-copy and dependency-free validation passed for this stage.
+Native scientific-first rendering, exact escaped/framed prompt
+sizing and optional native transport now pass their separate mechanics checkpoint;
+the next frozen pilot remains a later gate. The13767-byte
 source view has little guide/framing headroom; no field truncation or context-cap
 increase is authorized. Prior scientific failures and original Tasks6–8 remain open.
+
+The later renderer/transport checkpoint passes1,239 full tests/probes/package,
+276 isolated and184 no-site tests. Exact complete prompts measure14,149/12,785 bytes.
+No new native generation follows from those mechanics checks. See QUESTION_LOCAL.md.
 
 Reviewed specification: planning/Question-Bound Runtime and Pilot Gate 2026-10-25.md.
 Evidence: planning/review-assets/question-recorded-runtime-20261025/.
@@ -89,6 +96,6 @@ on unchanged code.38 focused runtime tests and10 independent probe groups pass.
 Both real-source recorded fixtures and both prior successful native sidecars
 source-verify. Retained failed audit versions and final correction proofs are
 under the evidence directory. Native renderer proposal is independently reviewed
-for implementation only; measured prompts fit the previous cap, but its known
-newline bug must be removed in tested production code. No scientific qualification
+for implementation only at that checkpoint. The later tested production renderer
+removes its known newline bug and preserves exact source reconstruction. No scientific qualification
 or new native generation follows this recorded checkpoint.
