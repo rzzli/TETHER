@@ -5,7 +5,7 @@
 - [x] Implement and independently review frozen preparation, owned-server lifecycle, shared accounting and prediction sealing:23 focused tests/11 independent probe groups pass; six findings resolved.
 - [x] Pass focused, full unchanged-code, isolated and dependency-free validation; preserve failed audits:1,262 full tests/probes/package,299 isolated,207 no-site.
 - [x] Freeze a fresh real-source two-question plan with the same case/model/source subsets and reviewed scientific gates:question-development-20261026T023832Z, exact match to prior sized requests.
-- [ ] Back up the qualified controller and pre-execution plan with every-entry hashes and Git bundle.
+- [x] Back up the qualified controller and pre-execution plan:91 entries, ZIP CRC/every-entry SHA256 and Git bundle through03f9a9e verified; receipt retained.
 - [ ] Execute once, retain exact outputs/accounting/failures, stop owned server and seal predictions before review.
 - [ ] Obtain two independent AI scientific reviews and third adjudication; retain a failure if the unchanged gate is unmet.
 

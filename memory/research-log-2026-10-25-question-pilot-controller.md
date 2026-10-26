@@ -39,7 +39,10 @@ output paths; original reports/helpers and corrected aliases are retained.
 Real-source plan question-development-20261026T023832Z is frozen with requests
 identical to prior sizing/recorded scope. Acceptance and plan metadata are under
 planning/review-assets/question-pilot-controller-20261025/. Execution is unrun;
-backup/checkpoint precedes it. Next is this bounded real-source pilot,
+backup/checkpoint precedes it.91 entries, ZIP CRC/every-entry SHA256 and Git bundle
+through03f9a9e verified; manifest SHA256:
+f470346c9ada45bf6e04528cb9944776709d95cb25b4d7d713635c921cbf8423.
+The receipt/status commit follows that bundle. Next is this bounded real-source pilot,
 then two independent AI scientific reviews and third adjudication. Prior failed
 scientific gates,65 missing inputs, full T6/H5 and original Tasks6–8 remain open.
 
