@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "status": "EXACT_SEALED_COVERAGE_REUSED_CURRENT_DELTA_ONLY",
+  "checked_at_utc": "2026-10-31T16:25:41.370700+00:00",
+  "existing_coverage": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\adjudication\\adjudication.json",
+    "bytes": 102624,
+    "sha256": "3e1cb1491f5a322d69b02074557134516141bc2cd1a341ee55db3784982685cf"
+  },
+  "seal": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labels\\question-development-review-20261026\\attempt-v1\\adjudication\\final-output-pins.json",
+    "bytes": 1816,
+    "sha256": "80342d060e010ac5b2127dbdfdbcb91dc683c941295300e76545002fd3212019"
+  },
+  "packet": {
+    "path": "D:\\Projects\\drug_target_agents\\docs\\expert-review-20261026\\Expert-review.html",
+    "bytes": 49936,
+    "sha256": "7f0b1da445f21bb86ed0393a5be356e862c2309825fddf7892f202bfa787813f"
+  },
+  "private_reuse_index": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\expert-intake-20261031T160538Z\\analysis\\existing-coverage-reuse-and-delta-v1.json",
+    "bytes": 7748,
+    "sha256": "921b20c864e0defad4a90b78ea978c9bf2b98057bcf6378ebb39c66cc101d541"
+  },
+  "counts": {
+    "unique_cards": 7,
+    "passage_occurrences": 12,
+    "candidate_claims": 2,
+    "original_leaves": 40,
+    "original_clauses": 13,
+    "reused_columns": 7,
+    "new_candidate_texts": 0
+  },
+  "checks": [
+    {
+      "id": "packet_exact_original_binding",
+      "passed": true
+    },
+    {
+      "id": "candidate_exact_original_binding",
+      "passed": true
+    },
+    {
+      "id": "same_sealed_candidate_json",
+      "passed": true
+    },
+    {
+      "id": "old_adjudication_seal_matches_historical_closeout",
+      "passed": true
+    },
+    {
+      "id": "sealed_output_adjudication.json",
+      "passed": true
+    },
+    {
+      "id": "sealed_output_ADJUDICATION.md",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_0",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_1",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_2",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_3",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_4",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_5",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_6",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_7",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_8",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_9",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_10",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_11",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_12",
+      "passed": true
+    },
+    {
+      "id": "sealed_input_13",
+      "passed": true
+    },
+    {
+      "id": "same_offered_view_pinned",
+      "passed": true
+    },
+    {
+      "id": "candidate_failed_unchanged",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_0",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_1",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_2",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_3",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_4",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_5",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_6",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_7",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_8",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_9",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_10",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_11",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_12",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_13",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_14",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_15",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_16",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_17",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_18",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_19",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_20",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_21",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_22",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_23",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_24",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_25",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_26",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_27",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_28",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_29",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_30",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_31",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_32",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_33",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_34",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_35",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_36",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_37",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_38",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_leaf_39",
+      "passed": true
+    },
+    {
+      "id": "same_seven_cards_two_claims",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_0",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_1",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_2",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_3",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_4",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_5",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_6",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_7",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_8",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_9",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_10",
+      "passed": true
+    },
+    {
+      "id": "offered_passage_utf8_span_11",
+      "passed": true
+    },
+    {
+      "id": "exact_card_1",
+      "passed": true
+    },
+    {
+      "id": "exact_card_2",
+      "passed": true
+    },
+    {
+      "id": "exact_card_3",
+      "passed": true
+    },
+    {
+      "id": "exact_card_4",
+      "passed": true
+    },
+    {
+      "id": "exact_card_5",
+      "passed": true
+    },
+    {
+      "id": "exact_card_6",
+      "passed": true
+    },
+    {
+      "id": "exact_card_7",
+      "passed": true
+    },
+    {
+      "id": "all_twelve_occurrences_indexed",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_text_0",
+      "passed": true
+    },
+    {
+      "id": "same_actual_citation_0",
+      "passed": true
+    },
+    {
+      "id": "same_limitation_0",
+      "passed": true
+    },
+    {
+      "id": "same_structured_fields_0",
+      "passed": true
+    },
+    {
+      "id": "same_candidate_text_1",
+      "passed": true
+    },
+    {
+      "id": "same_actual_citation_1",
+      "passed": true
+    },
+    {
+      "id": "same_limitation_1",
+      "passed": true
+    },
+    {
+      "id": "same_structured_fields_1",
+      "passed": true
+    },
+    {
+      "id": "existing_column_actual_citation",
+      "passed": true
+    },
+    {
+      "id": "existing_column_proposition_support_elsewhere",
+      "passed": true
+    },
+    {
+      "id": "existing_column_source_reported_model_manipulation_contrast_endpoint",
+      "passed": true
+    },
+    {
+      "id": "existing_column_proposal_versus_observation",
+      "passed": true
+    },
+    {
+      "id": "existing_column_intended_versus_observed_population",
+      "passed": true
+    },
+    {
+      "id": "existing_column_offered_but_omitted_fields",
+      "passed": true
+    },
+    {
+      "id": "existing_column_unknowns_and_source_limits",
+      "passed": true
+    },
+    {
+      "id": "current_feedback_evaluator_only",
+      "passed": true
+    },
+    {
+      "id": "current_credibility_evaluator_only_no_human_acceptance",
+      "passed": true
+    },
+    {
+      "id": "mixed_origin_does_not_qualify_humans",
+      "passed": true
+    },
+    {
+      "id": "private_delta_is_git_ignored",
+      "passed": true
+    }
+  ],
+  "inputs": {
+    "method": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\retain_existing_coverage_delta.py",
+      "bytes": 13567,
+      "sha256": "2a2cdd014cba294496a30a4f8b92e15ac4fe07c46143287266d9d34878fbfc34"
+    },
+    "packet_provenance": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\opus-response-20261026\\expert-packet-provenance.json",
+      "bytes": 848,
+      "sha256": "6ffcef35b00c70b50900e1affcc493b3e1b75004428f886b790abda861fd1362"
+    },
+    "historical_closeout": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\question-pilot-controller-20261025\\scientific-closeout-validation.json",
+      "bytes": 1876,
+      "sha256": "cc10ba9816e24e7633053f4c47ba14687bb463e1b144d7f6f7ecdd46c39fc974"
+    },
+    "current_feedback": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\expert-intake-20261031T160538Z\\analysis\\selection-comparison-v1.json",
+      "bytes": 8410,
+      "sha256": "4172a2195d400423f4f6c64d1350839c650a9bf6f44cc55af888f2379a3a3e94"
+    },
+    "owner_provenance": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\OWNER-PROVENANCE-NOTE-v1.json",
+      "bytes": 1417,
+      "sha256": "6f6b8bb27ffcea4bf2dcea0fe6a76a367f6a1feb342721c98714a66e3bc36842"
+    },
+    "source_credibility": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\IL6R-SOURCE-CREDIBILITY-CHECK-v1.json",
+      "bytes": 7002,
+      "sha256": "91fc6165c76657141594b54a03763ae0b662333e4de529418a15594f322f66fc"
+    }
+  },
+  "method_limits": "Existing AI adjudication is reused at exact same candidate/source pins, not promoted to independent truth. Public output contains counts/pins/checks only; full coverage and new feedback pointers remain evaluator-only. No corrected response or duplicate coverage table.",
+  "scientific_validation": false,
+  "independent_human_reference_accepted": false,
+  "protected_outcome_reads": 0,
+  "model_native_runs": 0,
+  "schema_controller_or_test_added": false
+}

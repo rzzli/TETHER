@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-31T16:16:14.385293+00:00",
+  "status": "ACCEPTED_INTAKE_AND_DESCRIPTIVE_COMPARISON_ONLY",
+  "evidence": {
+    "INTAKE-INTEGRITY-AND-ROLE-REVIEW-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\INTAKE-INTEGRITY-AND-ROLE-REVIEW-v1.json",
+      "bytes": 17576,
+      "sha256": "45202f1128ef98abc604c0a300c745a5201afd95ccfd99de5f4bce8a2242d276"
+    },
+    "RETURNED-REVIEW-COMPARISON-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\RETURNED-REVIEW-COMPARISON-v1.json",
+      "bytes": 4640,
+      "sha256": "104ce17bea29eb0fed1e6af83bcc891597e70579702be28a9a070c135ad178dd"
+    },
+    "RETURNED-REVIEW-LOCATOR-CHECK-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\RETURNED-REVIEW-LOCATOR-CHECK-v1.json",
+      "bytes": 696,
+      "sha256": "89a50a56d5d0b3493a5f425124f2b646ec42331ce36b1aefd40fa007723ebc52"
+    },
+    "IL6R-SOURCE-CREDIBILITY-CHECK-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\IL6R-SOURCE-CREDIBILITY-CHECK-v1.json",
+      "bytes": 7002,
+      "sha256": "91fc6165c76657141594b54a03763ae0b662333e4de529418a15594f322f66fc"
+    }
+  },
+  "owner_provenance": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\expert-intake-20261031\\OWNER-PROVENANCE-NOTE-v1.json",
+    "bytes": 1417,
+    "sha256": "6f6b8bb27ffcea4bf2dcea0fe6a76a367f6a1feb342721c98714a66e3bc36842"
+  },
+  "original_files": 3,
+  "original_bytes": 22693,
+  "mechanism_selections": 54,
+  "same_selection_items": 17,
+  "different_selection_items": 1,
+  "independent_integrity_checks": 95,
+  "existing_synthetic_regressions_passed": 6,
+  "role_denials": 12,
+  "role_positive_controls": 1,
+  "catalog_changed": false,
+  "runtime_source_changed": false,
+  "accepted_human_reference_count": 0,
+  "distinct_reviewer_count": null,
+  "qualification": {
+    "human_provenance": false,
+    "source_first_independence": false,
+    "adjudicated_gold": false,
+    "R07_genetics": false,
+    "HR2": false,
+    "fresh_HR3": false,
+    "locked_H5": false,
+    "clinical_validation": false,
+    "project_complete": false
+  },
+  "scientific_followup": "Focused primary-literature check supports a source-credibility concern, not a formal erratum, repaired source, human adjudication or patient effect.",
+  "provider_spend_usd": 0,
+  "model_or_native_runs": 0,
+  "next": "Use the unqualified feedback for prospective question/source-quality design; obtain traceable source-only human submissions before scientific gate acceptance. Do not replace fixed passages or repeat old model cells."
+}

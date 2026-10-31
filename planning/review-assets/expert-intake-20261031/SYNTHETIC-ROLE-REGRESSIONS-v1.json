@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "methods": [
+    "test_framework.FrameworkTests.test_catalog_label_role_cannot_be_relabeled_agent_evidence",
+    "test_framework.FrameworkTests.test_manifest_label_role_is_denied",
+    "test_v02_hardening.HardeningTests.test_missing_lineage_cycle_and_evaluator_parent_are_denied",
+    "test_science_bounded_interpretation.InterpretationTests.test_evaluator_parent_rejected_before_calls",
+    "test_science_interpretation_questions.QuestionInterpretationTests.test_evaluator_only_source_fails_existing_admission",
+    "test_science_question_interpretation_runtime.QuestionRuntimeTests.test_evaluator_parent_and_future_program_fail_before_quote"
+  ],
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "fixture_temp_root": "D:\\Projects\\drug_target_agents\\data\\cache\\expert-intake-synthetic-role-tests-20261031",
+  "log": "test_catalog_label_role_cannot_be_relabeled_agent_evidence (test_framework.FrameworkTests.test_catalog_label_role_cannot_be_relabeled_agent_evidence) ... ok\ntest_manifest_label_role_is_denied (test_framework.FrameworkTests.test_manifest_label_role_is_denied) ... ok\ntest_missing_lineage_cycle_and_evaluator_parent_are_denied (test_v02_hardening.HardeningTests.test_missing_lineage_cycle_and_evaluator_parent_are_denied) ... ok\ntest_evaluator_parent_rejected_before_calls (test_science_bounded_interpretation.InterpretationTests.test_evaluator_parent_rejected_before_calls) ... ok\ntest_evaluator_only_source_fails_existing_admission (test_science_interpretation_questions.QuestionInterpretationTests.test_evaluator_only_source_fails_existing_admission) ... ok\ntest_evaluator_parent_and_future_program_fail_before_quote (test_science_question_interpretation_runtime.QuestionRuntimeTests.test_evaluator_parent_and_future_program_fail_before_quote) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.756s\n\nOK\n",
+  "original_review_content_used": false
+}
