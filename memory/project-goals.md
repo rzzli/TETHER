@@ -13,8 +13,8 @@ updated: 2026-10-31
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Expert Returns]].
 The three supplied files are received and processed, not missing: 54 mechanism selections,
 95 integrity/549 conversion checks and six isolation regressions pass. The owner reports
-TXT origins as mixed/uncertain; one DOCX explicitly says AI-prepared/candidate-visible.
-No individual human provenance/source-first independence is qualified, and no genetics
+TXT origins as mixed/uncertain. The owner corrects the DOCX AI disclosure as a typo: human-authored without AI. Current addendum 2C reports other biomedical/evidence-review experience; 45 minutes is estimated, while source-first chronology/material scope remain unresolved.
+Human authorship for response 1 is accepted by owner attestation; source-first independence is unresolved. No genetics
 or source-feasibility exercise was returned. Existing sealed Candidate A coverage is
 reused (102 checks); primary-literature source credibility is a separate AI annotation.
 Next use the clean provenance addendum where authors can clarify; otherwise obtain

@@ -8,6 +8,10 @@ updated: 2026-10-31
 
 # Returned mechanism reviews
 
+Current owner correction: response 1 was human-authored without AI; the original AI disclosure is a typo. OWNER-PROVENANCE-NOTE-v2.json records this separately. Current addendum 2C reports other biomedical/evidence-review experience,3A independence from other answers,5B no separate first-pass record,6B an estimated 45 minutes and8A no known conflicts. Source-first viewing order (4D versus the existing Part2) and outside-material scope (7A versus the original note) remain unresolved; the owner correction resolves AI use only. Two TXT origins remain individually unverified. Original reviews and normalized choices are unchanged; independent source-only/HR2/H5 qualification remains open.
+
+## Initial intake observations retained
+
 The owner supplied three files under `docs/expert-response10312026` (one DOCX,
 two TXT; 22,693 bytes). Originals are now Git-ignored and preserved unchanged
 with exact projections/normalized data in the ignored evaluator-only intake

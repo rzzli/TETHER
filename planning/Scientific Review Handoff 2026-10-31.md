@@ -4,7 +4,7 @@
 
 ## Current returns
 
-The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The Word file discloses AI preparation/candidate exposure; the owner described the text origins as mixed or uncertain. Individual authorship and source-first independence remain unverified. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
+The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The owner confirms the Word response was human-authored without AI and identifies its AI disclosure as a typo. The two text origins remain individually unverified. The current addendum reports other biomedical/evidence-review experience and an estimated 45 minutes; source-first viewing order and outside-material scope remain unresolved. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
 
 If actual authors can clarify, use the clean [provenance addendum](../docs/expert-review-admin-20261031/Review-provenance-addendum.md). Unknown is allowed; this cannot retrospectively create blind/fresh/human status. Keep completed addenda evaluator-only alongside the preserved intake. See the [current assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for qualification limits.
 

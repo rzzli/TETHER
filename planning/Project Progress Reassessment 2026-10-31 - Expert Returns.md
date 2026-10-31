@@ -6,7 +6,7 @@ status: returns-processed-reviewer-qualification-open
 
 # Project reassessment after the returned IL6R reviews
 
-**All three supplied files have been received, preserved and compared. They provide development feedback on the same exposed IL6R mechanism exercise; they do not establish independent human references.** The Word document explicitly discloses AI preparation and candidate visibility. The owner described the origins of the two text files as “Mixed or uncertain.” Their individual authorship, expertise and independence remain unverified; this is not a conclusion that both were AI-written.
+**All three supplied files have been received, preserved and compared. They provide development feedback on the same exposed IL6R mechanism exercise; they do not establish independent human references.** The owner subsequently confirms that the Word response was human-authored without AI and that its AI disclosure was a typo. The [current provenance correction](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v2.json) supersedes the earlier authorship classification while preserving original text. Viewing order and outside-material scope remain unresolved. The owner described the origins of the two text files as “Mixed or uncertain.” Their individual authorship, expertise and independence remain unverified; this is not a conclusion that both were AI-written.
 
 This advances the [scientific-readiness checkpoint](<Project Progress Reassessment 2026-10-31 - Scientific Readiness.md>) from awaiting files to a completed technical intake with explicit qualification gaps. The files are not missing and should not be requested again. The next dependent scientific step still needs traceable references and source/capability readiness. Optional native-bank/physical14/new84 implementation remains deferred.
 
@@ -14,13 +14,13 @@ This advances the [scientific-readiness checkpoint](<Project Progress Reassessme
 
 | Submission | Format | Bytes | Provenance disposition |
 |---|---|---:|---|
-| received-01 | Word document | 15,328 | Explicit AI preparation, blank reviewer details, candidate visible during Part 1; outside material disclosed. |
+| received-01 | Word document | 15,328 | Human-authored without AI, owner-attested correction. Current addendum reports other biomedical/evidence-review experience and an estimated 45 minutes. Source-first chronology and material scope remain unresolved. |
 | received-02 | Text | 5,870 | Administrative self-report retained; individual author type and source-first independence not established. |
 | received-03 | Text | 1,495 | Selections retained; author type, expertise, confidence, timing and independence not established. |
 
 The three originals remain unchanged under the owner-supplied directory. Exact copies, text projections and detailed normalized records are stored under the ignored `data/benchmark/gold_evidence/expert-intake-20261031T160538Z/` tree. The raw response directory is now excluded from Git. Only methods, hashes, aggregate receipt/comparison facts and qualified source-analysis notes are tracked. Folder placement alone is not evaluator isolation: the intake is explicitly evaluation-only, with existing `gold_evidence`/`panel_ratings` catalog intent and no agent-visible admission. No catalog collection or scientific-validation status was promoted.
 
-The [Root acceptance](review-assets/expert-intake-20261031/EXPERT-INTAKE-ROOT-ACCEPTANCE-v1.json), `4a1df57f`, accepts preservation and descriptive comparison only. The separate [owner-provenance note](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v1.json), `6f6b8bb2`, records the clarification without rewriting originals, normalized selections or earlier reports.
+The [Root acceptance](review-assets/expert-intake-20261031/EXPERT-INTAKE-ROOT-ACCEPTANCE-v1.json), `4a1df57f`, accepts preservation and descriptive comparison only. The separate [owner-provenance note](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v1.json), `6f6b8bb2`, records the initial clarification without rewriting originals, normalized selections or earlier reports. The [subsequent owner correction](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v2.json) now governs response 1 authorship; the addendum 1B wording is preserved but superseded for that classification. Current addendum 2C replaces the earlier observed 2B expertise choice. The other two text origins remain unverified.
 
 | Validation | Result | Limit |
 |---|---|---|
@@ -64,12 +64,12 @@ The credibility difference deserves separate treatment. A focused backward citat
 | R14 | Genetics/LD/causal features and scorer/calibration conditional and unqualified. |
 | R15 | Original clinical comparisons and ablations conditional and pending. |
 | R16 | T2–T5/H6 and reproducible release separately conditional. |
-| HR1 | Reviewer matching, expertise, conflicts and individual provenance remain unqualified. |
-| HR2 | Three orientation returns technically processed; independent human source-first submissions and measured workload not established. |
+| HR1 | One response has owner-attested human authorship without AI and self-reported biomedical/evidence-review experience; remaining reviewer matching/provenance/domain coverage is open. |
+| HR2 | Three orientation returns processed, including one owner-attested human-authored file. An estimated 45 minutes is recorded; independent source-first submissions and measured workload remain unestablished. |
 | HR3 | No fresh-case source-only human references or masked ratings supplied. |
 | HR4 | Sized independent final panel/adjudication pending. |
 
-There are **zero qualified independent human source references from this intake**, not zero received files. No source-first exports or measured review times were supplied. The existing mechanism packet cannot substitute for the separate R07 genetics exercise or fresh-case HR3. The user need not disclose personal names, but anonymous identifiers cannot by themselves establish expertise, authorship or independence.
+There are **zero qualified independent human source references from this intake**, not zero received files. No source-first exports or measured review times were supplied. The new 45-minute figure is an estimate, not a measured duration; the current record acknowledges one human-authored return by owner attestation without claiming source-first/blinded qualification. The existing mechanism packet cannot substitute for the separate R07 genetics exercise or fresh-case HR3. The user need not disclose personal names, but anonymous identifiers cannot by themselves establish expertise, authorship or independence.
 
 The frozen interpretation slice's 65 missing inputs and the clinical route's 36 unqualified endpoints, 17/32 observable registry states and 0/12 joint-ready cases remain different unresolved denominators. Numerical prediction features remain empty and probabilities null. No clinical-outcome read, biomedical dataset download, native/model run, paid query, downloader or stopped-monitor change occurred. The original recognition **FAILED / INCOMPLETE_TIMEOUT** statuses remain preserved.
 

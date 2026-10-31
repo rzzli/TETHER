@@ -1,6 +1,6 @@
 # Research memory index
 
-- [[research-log-2026-10-31-expert-returns]] - Current checkpoint: three mechanism files preserved/normalized, 54 selections; 95 integrity/549 conversion checks and six selected regressions pass. One AI-disclosed/two individually unverified after owner 'Mixed or uncertain'; zero qualified human references. Existing sealed coverage reused/102 checks; source-credibility concern checked separately against primary literature. No new model, repaired answer or scientific gate acceptance.
+- [[research-log-2026-10-31-expert-returns]] - Current checkpoint: three mechanism files preserved/normalized, 54 selections; 95 integrity/549 conversion checks and six selected regressions pass. One owner-attested human-authored response without AI (corrected disclosure), two individually unverified; zero qualified independent source-only references. Existing sealed coverage reused/102 checks; source-credibility concern checked separately against primary literature. No new model, repaired answer or scientific gate acceptance.
 
 - [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]] - Current priority: actual independent reviewer submissions and source/question/capability readiness. Optional native-bank/physical14/new84 branch deferred pending demonstrated study need; Source5 43 PASS/four DEFERRED/one STATIC and C79 scopes preserved. No scientific completion or new model run. Review handoff and empty evaluator-only inbox prepared.
 
