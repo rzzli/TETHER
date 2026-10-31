@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Future strict post-validation contract, not native grammar qualification. Additionally validate source/pointer pairs against the request, equal array lengths, nonblank strings, unique claims, inference/caution limitations, and state rules. No runtime post-validator has been implemented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer_status", "claims", "unresolved", "abstention_reason"],
+  "properties": {
+    "answer_status": {"enum": ["answered", "partial", "abstained"]},
+    "abstention_reason": {"type": ["string", "null"], "minLength": 1, "maxLength": 512},
+    "unresolved": {"type": "array", "maxItems": 4, "items": {"type": "string", "minLength": 1, "maxLength": 1800}},
+    "claims": {
+      "type": "array", "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["kind", "text", "source_ids", "quote_pointers", "limitations"],
+        "properties": {
+          "kind": {"enum": ["source_report", "scientific_inference", "caution"]},
+          "text": {"type": "string", "minLength": 1, "maxLength": 1800},
+          "source_ids": {"type": "array", "minItems": 1, "maxItems": 2, "items": {"type": "string", "pattern": "^E[0-9]+$"}},
+          "quote_pointers": {"type": "array", "minItems": 1, "maxItems": 2, "items": {"type": "string", "minLength": 1, "maxLength": 512}},
+          "limitations": {"type": "array", "maxItems": 4, "items": {"type": "string", "minLength": 1, "maxLength": 1800}}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"answer_status": {"const": "abstained"}}}, "then": {"properties": {"claims": {"maxItems": 0}, "abstention_reason": {"type": "string", "minLength": 1}}}},
+    {"if": {"properties": {"answer_status": {"const": "partial"}}}, "then": {"properties": {"claims": {"minItems": 1}, "abstention_reason": {"type": "string", "minLength": 1}}}},
+    {"if": {"properties": {"answer_status": {"const": "answered"}}}, "then": {"properties": {"claims": {"minItems": 1}, "abstention_reason": {"type": "null"}}}}
+  ]
+}

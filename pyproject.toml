@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "asof-target-agents"
-version = "0.2.0"
+version = "0.3.11"
 description = "Dated evidence workflows for auditable target and clinical-program assessment"
 requires-python = ">=3.11"
 dependencies = []
@@ -20,5 +20,5 @@ asof = "asof.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-asof = ["demo/*.json", "demo/v2/*.json"]
+asof = ["demo/*.json", "demo/v2/*.json", "archive/*.json", "study/resources/*.json"]
 

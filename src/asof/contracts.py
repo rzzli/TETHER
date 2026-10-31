@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date, datetime, time, timezone
 from collections.abc import Mapping
 from enum import StrEnum
@@ -230,7 +230,7 @@ class Snapshot(Frozen):
     artifacts: tuple[Artifact, ...]
     sources: tuple[SourceNode, ...] = ()
     raw_root: str | None = None
-    coverage: Mapping[str, Any] = None
+    coverage: Mapping[str, Any] = field(default_factory=dict)
     origin_at: datetime | None = None
 
     def __post_init__(self) -> None:
@@ -292,9 +292,9 @@ class Observation(Frozen):
     feature_scope: str | None = None
     input_refs: tuple[str, ...] = ()
     computed_at: datetime | None = None
-    source_locator: Mapping[str, Any] = None
-    source_metrics: Mapping[str, Any] = None
-    missingness: Mapping[str, str] = None
+    source_locator: Mapping[str, Any] = field(default_factory=dict)
+    source_metrics: Mapping[str, Any] = field(default_factory=dict)
+    missingness: Mapping[str, str] = field(default_factory=dict)
     publication_date: date | None = None
     publication_year: int | None = None
 

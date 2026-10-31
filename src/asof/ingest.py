@@ -6,7 +6,6 @@ import hashlib
 import math
 import os
 import re
-import tempfile
 import time
 from collections import Counter
 from collections.abc import Mapping
@@ -15,6 +14,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .atomic import ensure_directory, publish_bytes
 from .contracts import (Artifact, Availability, Case, Category, EvidencePacket, EvidenceStatus,
                         Hypothesis, Method, Observation, Polarity, Profile, QuantitativeResult,
                         ScientificContext, Snapshot, SourceNode, TemporalClass)
@@ -306,22 +306,12 @@ def _archive_receipts(root, files):
         payload, node = item["receipt_bytes"], item["node"]
         relative = "manifests/receipt-archive/" + node.receipt_sha256 + ".json"
         destination = safe_child(root, relative)
-        destination.parent.mkdir(parents=True, exist_ok=True)
+        ensure_directory(destination.parent)
         if not destination.exists():
-            descriptor, temporary_name = tempfile.mkstemp(prefix=".receipt-", dir=destination.parent)
-            temporary = Path(temporary_name)
             try:
-                with os.fdopen(descriptor, "wb") as stream:
-                    stream.write(payload)
-                    stream.flush()
-                    os.fsync(stream.fileno())
-                try:
-                    # Publish complete bytes atomically without replacing an existing archive.
-                    os.link(temporary, destination)
-                except FileExistsError:
-                    pass
-            finally:
-                temporary.unlink(missing_ok=True)
+                publish_bytes(destination, payload, prefix=".receipt-")
+            except FileExistsError:
+                pass
         if destination.read_bytes() != payload:
             raise ContractError("Content-addressed receipt archive has conflicting bytes")
         item["node"] = replace(node, receipt_path=relative)

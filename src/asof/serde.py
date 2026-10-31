@@ -105,12 +105,14 @@ def decode(kind: Any, value: Any, location: str = "input") -> Any:
                 decode(Any, item, location)
         return value
     if origin in (Union, types.UnionType):
+        branch_errors = []
         for option in args:
             try:
                 return decode(option, value, location)
-            except (ContractError, ValueError, TypeError):
-                pass
-        raise ContractError(f"{location}: invalid value for {kind}")
+            except (ContractError, ValueError, TypeError) as error:
+                branch_errors.append(error)
+        raise ContractError(f"{location}: invalid value for {kind}") from ExceptionGroup(
+            f"{location}: union branch validation errors", branch_errors)
     if kind is type(None):
         if value is not None:
             raise ContractError(f"{location}: expected null")
@@ -228,6 +230,42 @@ def write_json(path: Path, value: Any, *, compact: bool = False) -> None:
         temporary.unlink(missing_ok=True)
 
 
+def _windows_path_spelling(value: str) -> str:
+    """Canonicalize only equivalent extended Win32 drive/UNC spellings.
+
+    Path.resolve may retain an extended prefix when a missing directory appears
+    concurrently. Normalize after resolution, so symlink targets still determine
+    containment. Other device namespaces are not filesystem artifact roots.
+    """
+    if value.startswith(("\\\\.\\", "\\??\\")):
+        raise ContractError("Unsupported Windows device path")
+    if not value.startswith("\\\\?\\"):
+        return value
+    tail = value[4:]
+    # Extended syntax also permits names that ordinary Win32 paths reinterpret.
+    # Those are not spelling aliases and must not be silently normalized.
+    components = tail.split("\\")
+    for index, component in enumerate(components):
+        if not component and index == len(components) - 1:
+            continue
+        if not component or component.endswith((".", " ")):
+            raise ContractError("Non-equivalent extended Windows path")
+        if ":" in component and not (index == 0 and len(component) == 2 and component[1] == ":"):
+            raise ContractError("Unsupported extended Windows path component")
+    if tail[:4].upper() == "UNC\\":
+        components = tail[4:].split("\\")
+        if len(components) < 2 or any(part in ("", ".", "..") for part in components[:2]):
+            raise ContractError("Invalid extended Windows UNC path")
+        return "\\\\" + tail[4:]
+    if len(tail) >= 3 and tail[0].isascii() and tail[0].isalpha() and tail[1:3] == ":\\":
+        return tail
+    raise ContractError("Unsupported Windows device path")
+
+
+def _windows_path_identity(path: Path) -> Path:
+    return Path(_windows_path_spelling(str(path))) if os.name == "nt" else path
+
+
 def safe_child(root: Path, relative: str) -> Path:
     """Constrain paths after resolving symlinks; reject Windows drive/ADS syntax."""
     parts = relative.replace("\\", "/").split("/")
@@ -235,8 +273,9 @@ def safe_child(root: Path, relative: str) -> Path:
         raise ContractError(f"Expected relative artifact path: {relative}")
     if any(part in ("", ".", "..") for part in parts):
         raise ContractError(f"Unsafe artifact path: {relative}")
-    resolved = root.joinpath(*parts).resolve()
-    if not resolved.is_relative_to(root.resolve()):
+    root = _windows_path_identity(root)
+    resolved = _windows_path_identity(root.joinpath(*parts).resolve())
+    if not resolved.is_relative_to(_windows_path_identity(root.resolve())):
         raise ContractError(f"Artifact escapes approved root: {relative}")
     return resolved
 

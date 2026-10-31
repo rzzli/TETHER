@@ -118,6 +118,7 @@ def dossier(result: RunResult, store: EvidenceStore) -> str:
 def write_run(output: Path, result: RunResult, store: EvidenceStore,
               model: ScorerArtifact | None, journal: RunJournal | None = None) -> str:
     # Do not overwrite existing predictions or accidentally write into a data tree.
+    store.execution_base()  # Also guards callers that bypass run_workflow.
     check_semantics(result.case, store.snapshot, result.claims, result.features, result.prediction,
                     result.coverage, result.configuration, result.status, model, store.admitted_fingerprints,
                     store.catalog_policy, store.snapshot_base, result.trace)

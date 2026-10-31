@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 import hashlib
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 from .contracts import (Case, Category, Citation, EvidencePacket, GroundedObservation,
@@ -24,8 +25,13 @@ class EvidenceStore:
     """Only the trusted runner reads paths; specialists receive immutable views."""
 
     def __init__(self, snapshot: Snapshot, records: tuple[GroundedObservation, ...],
-                 exclusions: tuple[Exclusion, ...], sources: tuple[dict, ...], policy=None):
+                 exclusions: tuple[Exclusion, ...], sources: tuple[dict, ...], policy=None,
+                 *, snapshot_base: Path | None = None):
         self.snapshot = snapshot
+        try:
+            self.snapshot_base = None if snapshot_base is None else Path(snapshot_base).resolve()
+        except (OSError, RuntimeError, TypeError, ValueError) as error:
+            raise ContractError('Invalid snapshot base') from error
         self._records = freeze({record.observation.observation_id: record for record in records})
         index = {}
         for record in self._records.values():
@@ -36,6 +42,23 @@ class EvidenceStore:
         self.exclusions = exclusions
         self.source_proofs = freeze(sources)
         self.catalog_policy = freeze(policy)
+
+    def execution_base(self) -> Path:
+        """Query-only stores are supported; execution requires an explicit live base."""
+        if self.snapshot_base is None:
+            raise ContractError('Execution requires an explicit snapshot base')
+        if getattr(self, 'archive_graph', None) is not None:
+            raise ContractError('Archive verification stores are read-only; re-admit for new execution')
+        try:
+            base = Path(self.snapshot_base)
+            if not base.is_absolute():
+                raise ContractError('Execution snapshot base must be absolute')
+            base = base.resolve()
+            if not base.is_dir():
+                raise ContractError('Execution snapshot base is not a directory')
+        except (OSError, TypeError, ValueError, RuntimeError) as error:
+            raise ContractError('Invalid execution snapshot base') from error
+        return base
 
     def query(self, case: Case, category: Category) -> tuple[GroundedObservation, ...]:
         # Exact normalized identifiers only; crosswalks belong in audited adapters.
@@ -50,6 +73,27 @@ class EvidenceStore:
             raise ContractError(f"Observation is outside approved snapshot: {observation_id}") from error
 
 
+def publication_exclusion(observation, case: Case) -> str | None:
+    """Publication precision never substitutes for eligible information lineage.
+
+    A year overlapping origin is not a known exact publication date. It remains
+    usable only through the caller's complete availability/lineage admission;
+    no January/December date is imputed. Exact future dates/years and conflicting
+    date/year metadata remain ineligible. Computation dates are a separate clock.
+    """
+    published, year = observation.publication_date, observation.publication_year
+    if year is not None and (type(year) is not int or not 1 <= year <= 9999):
+        raise ContractError('Invalid publication year')
+    if published is not None and type(published) is not date:
+        raise ContractError('Invalid publication date')
+    if published is not None and year is not None and published.year != year:
+        return 'publication_metadata_inconsistent'
+    if (published is not None and published > case.origin or
+            year is not None and year > case.origin.year):
+        return 'publication_after_origin'
+    return None
+
+
 def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, artifact_inputs=None) -> str | None:
     """The same observation gate is used for admission and semantic verification."""
     validate_observation(observation)
@@ -62,9 +106,8 @@ def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, 
     reason = graph.exclusion(observation.input_refs, case)
     if not reason and observation.source_kind != "computed":
         reason = observation.availability.exclusion(case.cutoff)
-    if not reason and (observation.publication_date is not None and observation.publication_date > case.origin or
-                       observation.publication_year is not None and observation.publication_year > case.origin.year):
-        reason = "publication_after_origin"
+    if not reason:
+        reason = publication_exclusion(observation, case)
     return reason
 
 
@@ -174,7 +217,6 @@ def admit_snapshot(snapshot: Snapshot, case: Case, root: Path, policy=None) -> E
             graph.verify(observation.input_refs, input_proofs)
         graph.verify(artifact.input_refs, input_proofs)
     result = EvidenceStore(snapshot, tuple(records), tuple(exclusions),
-                           tuple(proofs) + tuple(input_proofs.values()), policy)
-    result.snapshot_base = root
+                           tuple(proofs) + tuple(input_proofs.values()), policy, snapshot_base=root)
     return result
 

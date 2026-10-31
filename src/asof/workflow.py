@@ -108,6 +108,7 @@ def run_workflow(case: Case, store: EvidenceStore, backend: Backend,
     case.validate()
     budget = budget or Budget()
     budget.validate()
+    store.execution_base()  # Before request preparation, quotes or potentially billed calls.
     if store.snapshot.origin != case.origin or store.snapshot.origin_at != case.origin_at:
         raise ContractError("Case/store origin mismatch")
     preflight_reason = preflight_scorer(case, store.snapshot.profile, model)

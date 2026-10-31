@@ -38,3 +38,9 @@
 
 # An actual restore clone contains a nested Git repository; do not traverse it.
 /cache/remote-recovery-restore-test/
+
+# Checkpoints/restored repositories contain nested ignore files and placeholders.
+# Exclude their roots so nested rules cannot reintroduce archived payloads.
+/reference/recovery-checkpoint-*/
+/reference/recovery-restored-*/
+/cache/recovery-restore-*/

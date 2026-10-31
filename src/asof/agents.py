@@ -53,6 +53,9 @@ class Backend(Protocol):
 
     This is an interface boundary, not an OS sandbox. Implementations are trusted code.
     A future paid adapter must bound generation/retries and account for failed calls.
+    Expected transport, timeout and protocol errors normalize to ConnectionError,
+    TimeoutError or ContractError at the adapter boundary. Unexpected storage or
+    programming exceptions may terminate the run; failed calls are accounted first.
     """
 
     backend_id: str

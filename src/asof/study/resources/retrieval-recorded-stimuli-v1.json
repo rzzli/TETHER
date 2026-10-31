@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only_fixture",
+  "scope": "Invented authored transport stimuli; not model output, scientific ratings or human references",
+  "usage": {"input_tokens": 64, "output_tokens": 64, "cost_usd": 0.0},
+  "responses": {
+    "id_order_v1": {
+      "answer_status": "partial",
+      "claims": [{
+        "kind": "source_report",
+        "text": "Unrelated omega observation; context remains unknown.",
+        "source_ids": ["E0"],
+        "quote_pointers": ["/statement"],
+        "limitations": []
+      }],
+      "unresolved": ["Scientific interpretation is not tested by this recorded fixture."],
+      "abstention_reason": "Recorded transport fixture only; independent scientific assessment was not performed."
+    },
+    "literal_case_overlap_then_id_v1": {
+      "answer_status": "partial",
+      "claims": [{
+        "kind": "source_report",
+        "text": "ALPHA TEST_DISEASE: this invented source describes an association, not causality.",
+        "source_ids": ["E0"],
+        "quote_pointers": ["/statement"],
+        "limitations": []
+      }],
+      "unresolved": ["Scientific interpretation is not tested by this recorded fixture."],
+      "abstention_reason": "Recorded transport fixture only; independent scientific assessment was not performed."
+    }
+  }
+}

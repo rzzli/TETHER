@@ -5,26 +5,17 @@ import argparse
 import copy
 import json
 import os
-import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .atomic import publish_bytes
 from .serde import ContractError, encode, read_json, safe_child, sha256_file, write_json
 
 
 def write_new_json(path: Path, value) -> None:
     """Publish complete bytes atomically without replacing an existing report."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    descriptor, name = tempfile.mkstemp(prefix='.publishing-', dir=path.parent)
-    temporary = Path(name)
-    try:
-        with os.fdopen(descriptor, 'wb') as stream:
-            stream.write((json.dumps(encode(value), indent=2, ensure_ascii=False, allow_nan=False)+'\n').encode('utf-8'))
-            stream.flush()
-            os.fsync(stream.fileno())
-        os.link(temporary, path)
-    finally:
-        temporary.unlink(missing_ok=True)
+    payload = (json.dumps(encode(value), indent=2, ensure_ascii=False, allow_nan=False)+'\n').encode('utf-8')
+    publish_bytes(path, payload)
 
 
 def validate_catalog(catalog):

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "policy": "v0.2-compatibility-20261026",
+  "executing_build_profile": "recovery-r09-generation-contract-0.3.11-20261028",
+  "previous_resource_sha256": "6471821776d9baae631c209c07739ee5577fe880bc19b766b997c8dfce489da3",
+  "scope": "Version-only legacy helper delta from0.3.10; new pure v3 generation contract, unchanged legacy and v2 execution behavior.",
+  "compatibility_review": "planning/review-assets/recovery-step9-generation-contract-20261028/compatibility-profile-review.md",
+  "modules": {
+    "__init__.py": "0f79afc03e90ebdb0641e3081e7e699934a840e65c7030049c383bf496f6bec6",
+    "__main__.py": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
+    "agents.py": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+    "artifacts.py": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+    "atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+    "chrono.py": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
+    "cli.py": "ad2f44a43387c884b2af9547a246322e751e0ae1ebcc3f0506baeed5788ff5f0",
+    "contracts.py": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+    "evaluation.py": "d76ca20564a289a66ec4ac27c98aa35e0a90afbec5afef46d643e09691644eb3",
+    "features.py": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+    "ingest.py": "79575d9dd4f8163eecb2c9e2611368e3d4bd5f6f02338795c377c3fb9a75ee61",
+    "journal.py": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+    "ledger.py": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+    "local_model.py": "38090cc12d4a10a1809513ae906e4dd1084f44a66a5605c559e53a8116e5f9a4",
+    "maintenance.py": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a",
+    "provenance.py": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+    "retrieval.py": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+    "scorer.py": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+    "semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+    "serde.py": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+    "wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+    "workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6"
+  }
+}
