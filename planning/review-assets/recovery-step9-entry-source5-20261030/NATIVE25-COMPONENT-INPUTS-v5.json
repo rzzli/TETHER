@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "world_inputs": {
+    "source_map": {
+      "preflight_entry_kernel_v4": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+        "bytes": 145355,
+        "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+      },
+      "preflight_file_view_v4": {
+        "bytes": 3614,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+        "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+      },
+      "preflight_owner_ops_v4": {
+        "bytes": 39889,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+        "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+      },
+      "role_ledger_codec_v4": {
+        "bytes": 55497,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      }
+    },
+    "module_names": {
+      "codec": "role_ledger_codec_v4",
+      "file_view": "preflight_file_view_v4",
+      "kernel": "preflight_entry_kernel_v4",
+      "owner_ops": "preflight_owner_ops_v4"
+    },
+    "helpers": [
+      {
+        "bytes": 55497,
+        "declared_dependencies": [
+          "hashlib",
+          "json",
+          "math",
+          "re",
+          "struct",
+          "types"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\role_ledger_codec_v4.py",
+        "module": "role_ledger_codec_v4",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+        "source_pin": {
+          "bytes": 55497,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+          "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+        }
+      },
+      {
+        "bytes": 39889,
+        "declared_dependencies": [
+          "dataclasses",
+          "json",
+          "preflight_entry_kernel_v4",
+          "role_ledger_codec_v4",
+          "types"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\preflight_owner_ops_v4.py",
+        "module": "preflight_owner_ops_v4",
+        "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea",
+        "source_pin": {
+          "bytes": 39889,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+          "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+        }
+      },
+      {
+        "bytes": 3614,
+        "declared_dependencies": [
+          "preflight_entry_kernel_v4"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\preflight_file_view_v4.py",
+        "module": "preflight_file_view_v4",
+        "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52",
+        "source_pin": {
+          "bytes": 3614,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+          "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+        }
+      }
+    ],
+    "metadata": {
+      "bytes": 68,
+      "fictional_path": "D:\\EntrySynthetic4\\fixture-metadata.json",
+      "hex": "7b2273636f7065223a22656e7472792d6861726e657373222c226e6174697665223a66616c73657d2020202020202020202020202020202020202020202020202020200a",
+      "sha256": "7f13dffb198124f829d88cff67462b6f454ccead4642b0287973da53ff0bb708"
+    },
+    "bulk": {
+      "bytes": 2097169,
+      "fictional_path": "D:\\EntrySynthetic4\\periodic-bulk.bin",
+      "recipe": "byte_at_offset=i_mod_256; no full body allocated",
+      "sha256": "6f8b1421035dcde6d517143914932e7996c17ae9a6c30042b1142b1b8b5f0557"
+    },
+    "chunk": 1048576,
+    "baseline_geometry": {
+      "B": 3,
+      "C": 117,
+      "E": 234,
+      "M": 3,
+      "N": 5,
+      "Q": 7,
+      "R": 87,
+      "bootstrap_calls": 18,
+      "captured_bytes": 99068,
+      "early_bytes": 99000,
+      "known_bytes": 2196237,
+      "original_closes": 5,
+      "terminal_calls": 37,
+      "work_calls": 32
+    },
+    "output_key": "native25_component_fixture"
+  },
+  "empty_world_inputs": {
+    "source_map": {
+      "preflight_entry_kernel_v4": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+        "bytes": 145355,
+        "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+      },
+      "preflight_file_view_v4": {
+        "bytes": 3614,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+        "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+      },
+      "preflight_owner_ops_v4": {
+        "bytes": 39889,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+        "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+      },
+      "role_ledger_codec_v4": {
+        "bytes": 55497,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      }
+    },
+    "module_names": {
+      "codec": "role_ledger_codec_v4",
+      "file_view": "preflight_file_view_v4",
+      "kernel": "preflight_entry_kernel_v4",
+      "owner_ops": "preflight_owner_ops_v4"
+    },
+    "helpers": [
+      {
+        "bytes": 55497,
+        "declared_dependencies": [
+          "hashlib",
+          "json",
+          "math",
+          "re",
+          "struct",
+          "types"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\role_ledger_codec_v4.py",
+        "module": "role_ledger_codec_v4",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+        "source_pin": {
+          "bytes": 55497,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+          "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+        }
+      },
+      {
+        "bytes": 39889,
+        "declared_dependencies": [
+          "dataclasses",
+          "json",
+          "preflight_entry_kernel_v4",
+          "role_ledger_codec_v4",
+          "types"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\preflight_owner_ops_v4.py",
+        "module": "preflight_owner_ops_v4",
+        "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea",
+        "source_pin": {
+          "bytes": 39889,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+          "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+        }
+      },
+      {
+        "bytes": 3614,
+        "declared_dependencies": [
+          "preflight_entry_kernel_v4"
+        ],
+        "fictional_path": "D:\\EntrySynthetic4\\helpers\\preflight_file_view_v4.py",
+        "module": "preflight_file_view_v4",
+        "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52",
+        "source_pin": {
+          "bytes": 3614,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+          "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+        }
+      }
+    ],
+    "metadata": {
+      "bytes": 0,
+      "fictional_path": "D:\\EntrySynthetic4\\fixture-metadata.json",
+      "hex": "",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "bulk": {
+      "bytes": 0,
+      "fictional_path": "D:\\EntrySynthetic4\\periodic-bulk.bin",
+      "recipe": "zero-length same periodic-prefix recipe",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "chunk": 1048576,
+    "baseline_geometry": {
+      "N": 5,
+      "B": 3,
+      "M": 3,
+      "Q": 3,
+      "R": 51,
+      "C": 81,
+      "E": 234,
+      "bootstrap_calls": 18,
+      "work_calls": 28,
+      "terminal_calls": 33,
+      "known_bytes": 99000,
+      "captured_bytes": 99000,
+      "early_bytes": 99000,
+      "original_closes": 5
+    },
+    "output_key": "native25_component_fixture"
+  },
+  "source_pause": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\ENTRY-SOURCE-PAUSE-v5.json",
+    "bytes": 4167,
+    "sha256": "27d70c5388c9fb66855945c2c2bcad31871032ed7243d368d32fad886d35816f"
+  },
+  "prepared_data_only": true,
+  "no_large_stream": true,
+  "subject_imports": 0,
+  "subject_runs": 0,
+  "note": "Only helper source text and same small fictional metadata/periodic recipe. No target path was followed; no4GB digest/body or prior122 suite execution is included.",
+  "historical_parent_source4_pause": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+    "bytes": 6910,
+    "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+  },
+  "current_pre_entry_TCB": {
+    "source_generation": 5,
+    "pin": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+      "bytes": 145355,
+      "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+    },
+    "compatibility_import_name": "preflight_entry_kernel_v4"
+  },
+  "historical_baseline_fixture": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INPUTS-v2.json",
+    "bytes": 55828,
+    "sha256": "23708be2b0e78dac2ae34dba6178086f6a053efd380a6c5ce5ec8a2b7a4c26d1"
+  },
+  "historical_inherited_helper_source_pin_labels": "Nested helper.source_pin values are retained historical preparation labels. Active helper authority is the unchanged source_map plus bytes/SHA matching; no inherited Source4 kernel is current."
+}

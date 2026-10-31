@@ -1,0 +1,273 @@
+{
+  "schema_version": 5,
+  "status": "SOURCE5_SYNTHETIC_KIND_GUARD_AND_UNCHANGED_NATIVE25_ASSERTIONS_FROZEN_BEFORE_IMPORT_RUN",
+  "pins": {
+    "authoring_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE25-COMPONENT-HARNESS-AUTHORING-SCOPE-v1.json",
+      "bytes": 2026,
+      "sha256": "bf52dbb0ee5a3d9b7f29fe612b404c4ffe74d29e75a2492061a7aeb5e711b0e1"
+    },
+    "source_pause": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\ENTRY-SOURCE-PAUSE-v5.json",
+      "bytes": 4167,
+      "sha256": "27d70c5388c9fb66855945c2c2bcad31871032ed7243d368d32fad886d35816f"
+    },
+    "prior_fixture_inputs": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INPUTS-v2.json",
+      "bytes": 55828,
+      "sha256": "23708be2b0e78dac2ae34dba6178086f6a053efd380a6c5ce5ec8a2b7a4c26d1"
+    },
+    "matrix": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BRANCH-MATRIX-v2.json",
+      "bytes": 30303,
+      "sha256": "e52a6c66d8839b2e40115ff6b10f439432d29ba103614760e33f6862cd585049"
+    },
+    "cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v3.py",
+      "bytes": 23153,
+      "sha256": "43985a249068892307a6b3d77bce6f213b8d636b9ddd2dfb3261d9922de90d35"
+    },
+    "runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\run_native25_component_v5.py",
+      "bytes": 20628,
+      "sha256": "87218149f5d2c76df57cb7096129e08bd4c292283923076ea7d1b7b65318b36a"
+    },
+    "preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\prepare_native25_component_v1.py",
+      "bytes": 7699,
+      "sha256": "d3b2bb7865c48f510665bcb44336634bdca0f90700e04aeb2950510178d1347a"
+    },
+    "support": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_test_support_v4.py",
+      "bytes": 15938,
+      "sha256": "5cfec098b8e3ce3acd5eb26104bb456986467506411e1065ac12011aef500066"
+    },
+    "world": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_world_v4.py",
+      "bytes": 16022,
+      "sha256": "2c16bb8609dba2ff58f6a60386103527ba9939ab1e9238157ad72066d88d60e0"
+    },
+    "subject_preflight_entry_kernel_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+      "bytes": 145355,
+      "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+    },
+    "subject_preflight_file_view_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    },
+    "subject_preflight_owner_ops_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "subject_role_ledger_codec_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "bytes": 55497,
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    "inputs": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\NATIVE25-COMPONENT-INPUTS-v5.json",
+      "bytes": 10705,
+      "sha256": "9fac0fda427d9c11be1bf5bfcffbbc50bb7b3630416d4af29feb067a2d018454"
+    },
+    "preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v1.json",
+      "bytes": 5619,
+      "sha256": "d51b1f027bb8d74cc842e61f4c9f59ab17bcd5a633d3964508090cc02b77a8ba"
+    },
+    "successor_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\correct_native25_runner_v2.py",
+      "bytes": 10089,
+      "sha256": "f0d5c2d59c6bb2f8e5a389dac2c95d5ae4889a16efb221b177e9df98bba59fce"
+    },
+    "prior_static_hold": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-HOLD-v1.json",
+      "bytes": 7211,
+      "sha256": "8fc0f64f6214ea992ba79c2b86def2b974ed335e948314adc4b09d74934da1ef"
+    },
+    "runner_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-RUNNER-DELTA-v2.json",
+      "bytes": 1337,
+      "sha256": "df1bb54ccb096c3cc7370ed39a1bd6185978944841c852498e9a2616913faee4"
+    },
+    "callback_correction_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-CALLBACK-CORRECTION-AUTHORING-SCOPE-v3.json",
+      "bytes": 1492,
+      "sha256": "0eadd7e021d36b694c700348881c54c758ec8b82bbcd0abe57e8f5aacb0974f1"
+    },
+    "callback_correction_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\correct_native25_callbacks_v3.py",
+      "bytes": 8478,
+      "sha256": "d7d043e05baceaeca5be72935f68083eac1fc0e5e1580fd63de239715d3f6f8d"
+    },
+    "prior_frozen_cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v1.py",
+      "bytes": 23046,
+      "sha256": "4915773974d3567be5912fda56cfa478528591e92bd7043d9c99f3213de66dcd"
+    },
+    "prior_accepted_runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v2.py",
+      "bytes": 20628,
+      "sha256": "475ff8c94cbee25bbc4c870bf39b11b7ddb0306f4e091709bc3097227adae5f4"
+    },
+    "prior_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v2.json",
+      "bytes": 6162,
+      "sha256": "fd479a87b768be50d39dda27f0ad85c931753f171aeef5b4e1e37f7dc435e1e8"
+    },
+    "first_diagnostic": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v2.json",
+      "bytes": 228676,
+      "sha256": "2519c0b16193732e07f63449a1239d03de4951b367db8cfaf95b319fce4b0123"
+    },
+    "callback_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-CALLBACK-DELTA-v3.json",
+      "bytes": 3071,
+      "sha256": "b136602df4f2cdf7cd867eb167bb892e77b21151ef04428b4732aad71a22434b"
+    },
+    "callback_preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v3.json",
+      "bytes": 8667,
+      "sha256": "3d994a971d609412f441a59b3ca38e5f6b99a0b66983af12e92a7310a836ae0a"
+    },
+    "expected_code_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\prepare_native25_expected_codes_v4.py",
+      "bytes": 12292,
+      "sha256": "e9d0c84287bb6cff0ed89fcdde79d10838d85310b46fe5903c56f4002b796b87"
+    },
+    "expected_code_errata": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-EXPECTED-CODE-ERRATA-v4.json",
+      "bytes": 4823,
+      "sha256": "5f80101c1f948699df3893dd27ed50f6df4a1ff268c3d9e16373377942167b72"
+    },
+    "expected_code_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-EXPECTED-CODE-DELTA-v4.json",
+      "bytes": 2745,
+      "sha256": "99347379a9718aab6e51b45a8ba6c9004c0c1670ed4f24daa1165d3a574f6b5a"
+    },
+    "prior_callback_cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v2.py",
+      "bytes": 23102,
+      "sha256": "90cfd1e63f2db1029756f35493c4b90083de79b6240a22df42f970edda57735b"
+    },
+    "prior_callback_runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v3.py",
+      "bytes": 20628,
+      "sha256": "9ecec0188e64c857f2ca81d0c66a6fb08cee733e976cc0a529baadfd92985199"
+    },
+    "prior_callback_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v3.json",
+      "bytes": 8418,
+      "sha256": "3ec335327d414de40fe6e1c49ed726692995d629ef757c596716c80b3f26f987"
+    },
+    "first_callback_control": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v3.json",
+      "bytes": 238104,
+      "sha256": "bca943d0e85c32c6575b4e0225fd152777200041bb81a983d8ed01bb431f0892"
+    },
+    "base_native_contract": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "bytes": 43817,
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    "prior_accepted_E22": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_contract_cases_source4_v1.py",
+      "bytes": 36778,
+      "sha256": "c54681bd4b0af36915f03f728499e6b1eb52348574629f80cac703aad0b1a10d"
+    },
+    "prior_source4_acceptance": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-ROOT-ACCEPTANCE-v1.json",
+      "bytes": 5632,
+      "sha256": "43316e7aa8611aa9d9df5033778d37a7ebfc3f0d64577d2728bea3abe051f2ab"
+    },
+    "expected_code_preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v4.json",
+      "bytes": 11606,
+      "sha256": "49b43a33bc250c6d95e8ccd0a5a8a9646844cf441a06a2b54b96d750ba817b3f"
+    },
+    "historical_parent_source4_pause": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+      "bytes": 6910,
+      "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+    },
+    "historical_parent_kernel4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "historical_parent_inputs": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INPUTS-v1.json",
+      "bytes": 9770,
+      "sha256": "c02ff280b719e1cf77def5a9012592534526ae65068996959b42965ea8305a23"
+    },
+    "historical_parent_runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v4.py",
+      "bytes": 20628,
+      "sha256": "cfe114a46d89e1d7c0d6eb480da7874761eecbd7bb41c495ad0a6f6e769e094b"
+    },
+    "source5_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\ENTRY-SOURCE-DELTA-v5.json",
+      "bytes": 2133,
+      "sha256": "ceaef1ec79e6573169b10ea663a64587b19cdb46453d81751b374db58530c3e7"
+    },
+    "source5_authoring_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\KERNEL-KIND-GUARD-SUCCESSOR-AUTHORING-SCOPE-v5.json",
+      "bytes": 2283,
+      "sha256": "0201a0faeff46e5040f81eca706f9153d8d17d212c9d87f53a1df55fb0c928c8"
+    },
+    "source5_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\prepare_entry_source5_native25_v1.py",
+      "bytes": 12484,
+      "sha256": "2837a32cd7f9a61e1296345340cb412d11d367565517bc725cdd5c1d356d6ef7"
+    },
+    "historical_parent_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v4.json",
+      "bytes": 11592,
+      "sha256": "c58b3404221e4f617e61bc3c06e23db7df1a89aa84c6e2363a8fbef43b522b95"
+    },
+    "parent_41pass_2fail_control": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v4.json",
+      "bytes": 241989,
+      "sha256": "dfe90829f1f8ac9e05aaaa7ce31304422150bb286c3cecb300ac7651f61ff63d"
+    },
+    "source5_preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\NATIVE25-COMPONENT-PREPARATION-v5.json",
+      "bytes": 15725,
+      "sha256": "d40d70699d3c1e9c55db75fbae0f724e4c2708b8a3334a163d974fdc8d2602df"
+    }
+  },
+  "counts": {
+    "normative_families": 25,
+    "planned_subbranches": 48,
+    "DATA": 22,
+    "SOURCE_RUNTIME": 21,
+    "STATIC_ONLY": 1,
+    "DEFERRED": 4,
+    "executed_by_this_preparation": 0
+  },
+  "executable_branch_count": 43,
+  "unchanged_classifications": 48,
+  "current_kernel_TCB": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+    "bytes": 145355,
+    "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+  },
+  "captured_prefix_bytes": 99000,
+  "unchanged_case_pin": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v3.py",
+    "bytes": 23153,
+    "sha256": "43985a249068892307a6b3d77bce6f213b8d636b9ddd2dfb3261d9922de90d35"
+  },
+  "all_parent_actual_controls_preserved": true,
+  "separate_independent_peer_and_Root_binding_required": true,
+  "qualification": {
+    "native25_complete": false,
+    "actual_native_backend": false,
+    "native_C": false,
+    "native_input_lease": false,
+    "physical": false,
+    "RSS": false
+  }
+}

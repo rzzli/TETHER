@@ -3,14 +3,28 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-30
+updated: 2026-10-31
 ---
 
 # Project goals
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-30 - C Return Capture]].
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Component Guards]].
+Root ec290b97 / peer69d14742 accepts only Source5's exact API/axis-kind guard:
+43 executable PASS (21 runtime/22 data), four DEFERRED and one STATIC;1,493 retained-data
+checks and188 artifact hashes pass in the0.250s suite. Only the two intended failures
+change; prior31/12,38/5,41/2 and raw bits remain preserved. Full native25/entry/native
+bank/bridge/Win32/leases/physical14/new84/resources/science remain open. Next close
+the four actual bridge joins and independent positive bank/ticket oracle before source.
+AsOf0.3.11/defaultv2 retains1,774 tests/327 unchanged pins; no app-suite rerun or
+default change. Data65/labels36/states17of32/joint-ready0of12 and HR1–HR4 remain
+pending; features empty/probabilities null. $0, downloader/monitor unchanged.
+See [[research-log-2026-10-31-component-guards]]. Independent current documentation QA PASS: `SOURCE5-CURRENT-DOCS-QA-v1.json`.
+
+### Prior C-return checkpoint (retained history)
+
+Prior checkpoint: [[Project Progress Reassessment 2026-10-30 - C Return Capture]].
 Root ad4c9f0e accepts compiled layout and the one C79 fake-target component only:
 three build commands exit 0 in 1.047s; compiled peer 5796bcc6 verifies 129 checks,
 14 scalar-first stores and 19 bodies. Actual peer 1b10326d passes 399 retained-data

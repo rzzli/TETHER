@@ -1,0 +1,670 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_RESUME_METADATA_STATIC_ONLY",
+  "reviewed_at_utc": "2026-10-31T05:11:22.252654+00:00",
+  "scope": "Trusted metadata, hashes, source text and AST only. No subject import, suite replay, native or original-target operations. This report does not issue Root execution authority.",
+  "input_pins": {
+    "freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\NATIVE25-COMPONENT-FREEZE-v5.json",
+      "bytes": 15125,
+      "sha256": "afe6658f6145eaf5a69e9fb5325fc1c1b003162a1ba1e512b48657289d61ee1a"
+    },
+    "peer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\SOURCE5-NATIVE25-INDEPENDENT-STATIC-REVIEW-v1.json",
+      "bytes": 21538,
+      "sha256": "6093db538cbcaae0a656c92de5be66039c4c334e8133ca15e1a4a6ef9bfc7ae3"
+    },
+    "outline": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\NATIVE25-COMPONENT-BINDING-OUTLINE-v5.json",
+      "bytes": 1080,
+      "sha256": "39c53deb4a0549bd847c46e4a77f8a25f925a02c907edb3e39c8f9af43b7ebb5"
+    }
+  },
+  "checks": [
+    {
+      "id": "freeze_sha",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_sha",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_clear",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_authoring_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_source_pause",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_fixture_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_matrix",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_support",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_world",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_subject_preflight_entry_kernel_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_subject_preflight_file_view_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_subject_preflight_owner_ops_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_subject_role_ledger_codec_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_successor_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_static_hold",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_runner_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_callback_correction_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_callback_correction_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_frozen_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_accepted_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_first_diagnostic",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_callback_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_callback_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_expected_code_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_expected_code_errata",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_expected_code_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_callback_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_callback_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_callback_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_first_callback_control",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_base_native_contract",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_accepted_E22",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_prior_source4_acceptance",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_expected_code_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_historical_parent_source4_pause",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_historical_parent_kernel4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_historical_parent_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_historical_parent_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_source5_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_source5_authoring_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_source5_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_historical_parent_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_parent_41pass_2fail_control",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_pin_source5_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_authoring_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_source_pause",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_fixture_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_matrix",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_support",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_world",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_subject_preflight_entry_kernel_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_subject_preflight_file_view_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_subject_preflight_owner_ops_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_subject_role_ledger_codec_v4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_successor_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_static_hold",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_runner_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_callback_correction_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_callback_correction_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_frozen_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_accepted_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_first_diagnostic",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_callback_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_callback_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_expected_code_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_expected_code_errata",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_expected_code_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_callback_cases",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_callback_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_callback_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_first_callback_control",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_base_native_contract",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_accepted_E22",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_prior_source4_acceptance",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_expected_code_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_historical_parent_source4_pause",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_historical_parent_kernel4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_historical_parent_inputs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_historical_parent_runner",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_source5_delta",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_source5_authoring_scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_source5_preparer",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_historical_parent_freeze",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_parent_41pass_2fail_control",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_source5_preparation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_freeze5",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_outline5",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "peer_pin_actual_control4_review",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "freeze_47_pins",
+      "pass": true,
+      "details": 47
+    },
+    {
+      "id": "guard_once",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "reverse_whole_source_identical",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "only_call_method_changed",
+      "pass": true,
+      "details": [
+        "RawCallStore._call"
+      ]
+    },
+    {
+      "id": "244_other_functions_unchanged",
+      "pass": true,
+      "details": {
+        "definition": "Top-level functions and direct class methods, matching the independent review scope. Nested function bodies are already included in each enclosing AST and not counted again.",
+        "unchanged": 244,
+        "changed": [
+          "RawCallStore._call"
+        ]
+      }
+    },
+    {
+      "id": "world_inputs_selected_kernel",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "empty_world_inputs_selected_kernel",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "current_pre_entry_TCB",
+      "pass": true,
+      "details": {
+        "source_generation": 5,
+        "pin": {
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+          "bytes": 145355,
+          "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+        },
+        "compatibility_import_name": "preflight_entry_kernel_v4"
+      }
+    },
+    {
+      "id": "freeze_current_kernel_TCB",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "exact_geometry",
+      "pass": true,
+      "details": {
+        "DATA": 22,
+        "SOURCE_RUNTIME": 21,
+        "DEFERRED": 4,
+        "STATIC_ONLY": 1
+      }
+    },
+    {
+      "id": "43_executable_unchanged",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "output_absent_NATIVE25-COMPONENT-ATTEMPT-v5.json",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "output_absent_NATIVE25-COMPONENT-ARTIFACTS-v5",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "output_absent_NATIVE25-COMPONENT-PROOF-v5.json",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "binding_absent",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "no_other_attempt_or_proof_files",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "one_shot_guard_precedes_first_import",
+      "pass": true,
+      "details": null
+    },
+    {
+      "id": "runner_binding_scope_bounded",
+      "pass": true,
+      "details": null
+    }
+  ],
+  "summary": {
+    "checks": 118,
+    "passed": 118,
+    "failed": 0,
+    "frozen_pins": 47,
+    "peer_pins": 50
+  },
+  "remaining_before_execution": [
+    "Resolve C-return documentation QA under Root coordination.",
+    "Separate Root scope and exact binding to this freeze and static peer.",
+    "Run only the one named Source5 component attempt; preserve all outcomes, including failures."
+  ],
+  "qualification": {
+    "subject_run": false,
+    "source5_behavior_verified": false,
+    "native25_complete": false,
+    "native_C": false,
+    "physical_IO": false,
+    "science": false
+  },
+  "checker_correction": {
+    "supersedes": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\SOURCE5-RESUME-STATIC-PIN-CHECK-v1.json",
+      "bytes": 13997,
+      "sha256": "ba0b5b206685fed36ab43e4ac20d111115d3cd2d3471e152a85fb94168f99f33"
+    },
+    "v1_failures_are_checker_schema_errors_only": true,
+    "issues": [
+      "V1 counted nested functions in addition to the stated top-level/direct-method scope, giving248 instead of244.",
+      "V1 compared the structured current_pre_entry_TCB descriptor to its embedded pin instead of reading the pin member."
+    ],
+    "source_or_harness_changed": false,
+    "all_original_hash_pin_and_absence_checks_preserved": true
+  }
+}

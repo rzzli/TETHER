@@ -1,0 +1,348 @@
+{
+  "world": 1,
+  "partial": false,
+  "copied_bytes": 256,
+  "raw_rows": 1,
+  "capture_error": null,
+  "data": {
+    "schema_version": 1,
+    "scope": "entry_kernel_source_pure",
+    "phase": "FINALIZING",
+    "status": "INCOMPLETE",
+    "origin": {
+      "start": 100,
+      "now": 100,
+      "work_end": 395,
+      "hard_end": 400
+    },
+    "plan": {
+      "N": 5,
+      "B": 3,
+      "M": 3,
+      "R": 87,
+      "C": 117,
+      "E": 234
+    },
+    "files": [
+      {
+        "id": 0,
+        "spec": {
+          "path": "D:\\EntrySynthetic4\\helpers\\role_ledger_codec_v4.py",
+          "role": "captured_software",
+          "size": 55497,
+          "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+          "capture": true
+        },
+        "early": true,
+        "open_state": "reserved",
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "identity_state": "not_attempted",
+        "identity_queries": [],
+        "open_invocations": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_complete": false,
+        "actual_sha256": null,
+        "close_reserved": false,
+        "close_invocations": 0,
+        "close_return_observed": false,
+        "close_success": null,
+        "close_state": "not_attempted",
+        "capture_state": "PENDING",
+        "hash_unknown": false,
+        "copy_unknown": false,
+        "read_generation": 0
+      },
+      {
+        "id": 1,
+        "spec": {
+          "path": "D:\\EntrySynthetic4\\helpers\\preflight_owner_ops_v4.py",
+          "role": "captured_software",
+          "size": 39889,
+          "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea",
+          "capture": true
+        },
+        "early": true,
+        "open_state": "unopened",
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "identity_state": "not_attempted",
+        "identity_queries": [],
+        "open_invocations": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_complete": false,
+        "actual_sha256": null,
+        "close_reserved": false,
+        "close_invocations": 0,
+        "close_return_observed": false,
+        "close_success": null,
+        "close_state": "not_attempted",
+        "capture_state": "PENDING",
+        "hash_unknown": false,
+        "copy_unknown": false,
+        "read_generation": 0
+      },
+      {
+        "id": 2,
+        "spec": {
+          "path": "D:\\EntrySynthetic4\\helpers\\preflight_file_view_v4.py",
+          "role": "captured_software",
+          "size": 3614,
+          "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52",
+          "capture": true
+        },
+        "early": true,
+        "open_state": "unopened",
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "identity_state": "not_attempted",
+        "identity_queries": [],
+        "open_invocations": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_complete": false,
+        "actual_sha256": null,
+        "close_reserved": false,
+        "close_invocations": 0,
+        "close_return_observed": false,
+        "close_success": null,
+        "close_state": "not_attempted",
+        "capture_state": "PENDING",
+        "hash_unknown": false,
+        "copy_unknown": false,
+        "read_generation": 0
+      },
+      {
+        "id": 3,
+        "spec": {
+          "path": "D:\\EntrySynthetic4\\fixture-metadata.json",
+          "role": "captured_metadata",
+          "size": 68,
+          "sha256": "7f13dffb198124f829d88cff67462b6f454ccead4642b0287973da53ff0bb708",
+          "capture": true
+        },
+        "early": false,
+        "open_state": "unopened",
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "identity_state": "not_attempted",
+        "identity_queries": [],
+        "open_invocations": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_complete": false,
+        "actual_sha256": null,
+        "close_reserved": false,
+        "close_invocations": 0,
+        "close_return_observed": false,
+        "close_success": null,
+        "close_state": "not_attempted",
+        "capture_state": "PENDING",
+        "hash_unknown": false,
+        "copy_unknown": false,
+        "read_generation": 0
+      },
+      {
+        "id": 4,
+        "spec": {
+          "path": "D:\\EntrySynthetic4\\periodic-bulk.bin",
+          "role": "hash_only_bulk",
+          "size": 2097169,
+          "sha256": "6f8b1421035dcde6d517143914932e7996c17ae9a6c30042b1142b1b8b5f0557",
+          "capture": false
+        },
+        "early": false,
+        "open_state": "unopened",
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "identity_state": "not_attempted",
+        "identity_queries": [],
+        "open_invocations": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_complete": false,
+        "actual_sha256": null,
+        "close_reserved": false,
+        "close_invocations": 0,
+        "close_return_observed": false,
+        "close_success": null,
+        "close_state": "not_attempted",
+        "capture_state": "NOT_REQUESTED",
+        "hash_unknown": false,
+        "copy_unknown": false,
+        "read_generation": 0
+      }
+    ],
+    "calls": null,
+    "api_counters": {
+      "CreateFileW": {
+        "reserved": 1,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileType": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileInformationByHandleEx": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "GetFinalPathNameByHandleW": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileSizeEx": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "ReadFile": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      },
+      "CloseHandle": {
+        "reserved": 0,
+        "invocations": 0,
+        "scalar_returns": 0,
+        "count_values": 0,
+        "wrapper_returns": 0
+      }
+    },
+    "byte_totals": {
+      "known_read_bytes": 0,
+      "hashed_bytes": 0,
+      "captured_bytes": 0,
+      "read_count_unknown": false,
+      "early_reopens_after_claim": 0,
+      "early_rehashes_after_claim": 0,
+      "early_known_read_bytes": 0,
+      "early_hashed_bytes": 0,
+      "early_captured_bytes": 0,
+      "remaining_known_read_bytes": 0,
+      "remaining_hashed_bytes": 0,
+      "remaining_captured_bytes": 0
+    },
+    "namespace_owned": true,
+    "reservation_ready": true,
+    "entry_trace": [
+      "CORE_CREATED",
+      "PLAN_ADMITTED"
+    ],
+    "errors": {
+      "primary": null,
+      "secondary": []
+    },
+    "qualification": {
+      "FFI_registration_proven": false,
+      "production_owner_bound": false,
+      "originals_authenticated": false,
+      "real_checkers_bound": false,
+      "verification_complete": false,
+      "profile_qualified": false,
+      "runtime_authorized": false
+    },
+    "manifest_policy": {
+      "attempted": true,
+      "prepared_report": {
+        "schema_version": 1,
+        "mode": "EXECUTION",
+        "status": "EXECUTION_BASIS_VALIDATED",
+        "node_count": 21,
+        "edge_count": 24,
+        "basis_ids": [
+          "input.000",
+          "input.001",
+          "input.002",
+          "input.003",
+          "input.004"
+        ],
+        "external_anchor_ids": [
+          "root.kernel"
+        ],
+        "prior_root_ids": [],
+        "planned_ids": [],
+        "unbuilt_ids": [],
+        "binding_sha256": "732e67faeaf0ad665538f2f3e390a9c7ea0e5010ce2bf3ab56f503835480144d",
+        "envelope_sha256": "883c0df085aa57dab699ae81820b7f2a403c2e23174501ebc7f03b8781f7416f"
+      },
+      "issued_report": {
+        "schema_version": 1,
+        "mode": "EXECUTION",
+        "status": "EXECUTION_BASIS_VALIDATED",
+        "node_count": 21,
+        "edge_count": 24,
+        "basis_ids": [
+          "input.000",
+          "input.001",
+          "input.002",
+          "input.003",
+          "input.004"
+        ],
+        "external_anchor_ids": [
+          "root.kernel"
+        ],
+        "prior_root_ids": [],
+        "planned_ids": [],
+        "unbuilt_ids": [],
+        "binding_sha256": "732e67faeaf0ad665538f2f3e390a9c7ea0e5010ce2bf3ab56f503835480144d",
+        "envelope_sha256": "883c0df085aa57dab699ae81820b7f2a403c2e23174501ebc7f03b8781f7416f"
+      },
+      "execution_eligible": true,
+      "error_identity": null
+    }
+  }
+}

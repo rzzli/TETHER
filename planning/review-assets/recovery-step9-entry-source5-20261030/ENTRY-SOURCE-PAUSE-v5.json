@@ -1,0 +1,92 @@
+{
+  "schema_version": 5,
+  "status": "COHERENT_SOURCE5_KERNEL_WITH_UNCHANGED_CAPTURED_SOURCE4_HELPERS_BEFORE_IMPORT_OR_TEST",
+  "source_scope": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\KERNEL-KIND-GUARD-SUCCESSOR-AUTHORING-SCOPE-v5.json",
+    "bytes": 2283,
+    "sha256": "0201a0faeff46e5040f81eca706f9153d8d17d212c9d87f53a1df55fb0c928c8"
+  },
+  "source_delta": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\ENTRY-SOURCE-DELTA-v5.json",
+    "bytes": 2133,
+    "sha256": "ceaef1ec79e6573169b10ea663a64587b19cdb46453d81751b374db58530c3e7"
+  },
+  "sources": {
+    "kernel": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+      "bytes": 145355,
+      "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+    },
+    "owner_ops": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "file_view": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    }
+  },
+  "source_module_map": {
+    "kernel": {
+      "module": "preflight_entry_kernel_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+      "bytes": 145355,
+      "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+    },
+    "owner_ops": {
+      "module": "preflight_owner_ops_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "file_view": {
+      "module": "preflight_file_view_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    }
+  },
+  "captured_dependency": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+    "bytes": 55497,
+    "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+  },
+  "current_pre_entry_TCB": {
+    "source_generation": 5,
+    "compatibility_import_name": "preflight_entry_kernel_v4",
+    "pin": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source5-20261030\\preflight_entry_kernel_v5.py",
+      "bytes": 145355,
+      "sha256": "5dd148e4d56ad4d47e75b9e30f97f4ad38089911215b968afc1966826e6339c7"
+    }
+  },
+  "historical_parent_source4_pause": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+    "bytes": 6910,
+    "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+  },
+  "historical_parent_kernel": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_entry_kernel_v4.py",
+    "bytes": 145042,
+    "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+  },
+  "capture_prefix": {
+    "bytes": 99000,
+    "unchanged": true,
+    "ordered_modules": [
+      "role_ledger_codec_v4",
+      "preflight_owner_ops_v4",
+      "preflight_file_view_v4"
+    ]
+  },
+  "syntax_and_symtable": "PASS without subject import or execution",
+  "qualification": {
+    "synthetic_source_only": true,
+    "actual_native_backend": false,
+    "native_input_lease": false,
+    "physical": false,
+    "resources": false
+  }
+}

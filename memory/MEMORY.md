@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-component-guards]] - Root ec290b97 / actual peer69d14742 accepts only the Source5 API/axis-kind guard:43 executable PASS, four DEFERRED, one STATIC;1,493 retained-data checks/188 artifacts pass,0.250s. Prior failures and raw bytes retained. Full native25/native bank/bridge/physical/new84/resources/science/humans stay open. Next close four bridge design joins, then independent positive native expectations.327 application pins match;1,774 tests retained/no rerun. Independent current documentation QA PASS: `SOURCE5-CURRENT-DOCS-QA-v1.json`.
+
 - [[research-log-2026-10-30-c-return-capture]] - Root ad4c9f0e accepts compiled x64 layout + one C79 fake image only (compiled peer 5796bcc6; actual peer 1b10326d): 14 stores / 19 bodies, 129 artifact and 399 actual checks; 79 controls / 29,310 C checks / 47 fake targets / 17 error entries / 16 returns, run 0.172s / four files / 121,790 B. Named native25 control retains 41 PASS / two FAIL / four DEFERRED / one STATIC after independently resolved exact-code errata; 31/12 and 38/5 history preserved. Only Source5 kind-guard authoring is authorized; the new source/harness is unexecuted. No real bridge/Core lease/Win32/physical/RSS/science qualification; independent current-doc QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`.
 
 - [[research-log-2026-10-30-e08-policy]] - Root 43316e7a / branch 01e92b72 / byte 7ae5e826 accepts finite Source4 E08 integration: 122 assertions (5 + 52 + 15 + 50) pass in 13.359s; 844 artifacts / 20,134,324 B, or 846 run files / 34,330,393 B including proof/attempt. Source3 50/3 and excluded E16 preserved. Complete entry, native25, real roster/physical/new84/resources/science remain open; independent documentation QA PASS: `ENTRY-E08-CURRENT-DOCS-QA-v2.json`.
@@ -70,7 +72,7 @@
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests, 92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
-- [[project-goals]] - Current app 0.3.11/default v2, retained 1,774 tests/327 pins/ten versions. Finite compiled layout/C79 fake component accepted under ad4c9f0e; Source4 E08/122 preserved. Native25 two kind failures (Source5 authoring-only/unexecuted), real bridge/Core native bank/lease, full entry/physical/new84/resources and science/humans remain open. R01–R06 accepted; R07 technical negative; R08 no qualified fresh case; H5/clinical/genetics/calibration/comparisons/T2–T5/H6 conditional.
+- [[project-goals]] - Current app 0.3.11/default v2, retained 1,774 tests/327 pins/ten versions. Source5 API/axis-kind guard accepted under ec290b97: 43 executable PASS, four DEFERRED, one STATIC; finite C79 and Source4 E08/122 preserved. Full native25, real bridge/Core native bank/lease, full entry/physical/new84/resources and science/humans remain open. R01–R06 accepted; R07 technical negative; R08 no qualified fresh case; H5/clinical/genetics/calibration/comparisons/T2–T5/H6 conditional.
 
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests, 45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 
