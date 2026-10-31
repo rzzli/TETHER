@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "status": "ADDENDA23_AND_ORIENTATION_DOCS_PENDING_NARROW_QA",
+  "before": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 10165,
+      "sha256": "5b76060919543ab33be981198a6e2b49a34ef6a3743696c9e587b15b0d942f43"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 58183,
+      "sha256": "f1d95215103bf1adeae7c3897dc3c17fc00bc252c1227e4fee9d63d0511d184d"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44413,
+      "sha256": "32e402cc7ee371e300016a6347b1dd86ed9cc89e491111af3278b5cc45f72e5e"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35094,
+      "sha256": "48ca214ed7884f0b908006de9c283a97c55d8faf020fafeaf1c5a22227aeaff4"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 21244,
+      "sha256": "70c8e63a6c498cc48467b59d9017f6c9beb9281b30ad66e71b8c0a2d25dafdd4"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11539,
+      "sha256": "eb3a82fde41cd6e49a9d290e9fc7bd113af4fcb0c0a21b9028a6c5cbb0b1c4e9"
+    },
+    "planning/Scientific Review Handoff 2026-10-31.md": {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "bytes": 6655,
+      "sha256": "608d648ef6bb2c7c41c5a3cbd811787700ece9b7de9761838c4e4d628bddac22"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 29136,
+      "sha256": "db08c21abc7c9518b08ac980286c7189f845ac870bff5395dc4639e05ec0366f"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 125030,
+      "sha256": "d2453167d8bbc0fa23f533a52b0fa6a4023c29d5176a7337566b7bf2cf75f636"
+    },
+    "memory/research-log-2026-10-31-expert-returns.md": {
+      "path": "memory/research-log-2026-10-31-expert-returns.md",
+      "bytes": 4282,
+      "sha256": "8b2c8c460210da106792cac9d49991deced4dc38c6b0b11205d89b3439762375"
+    },
+    "planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md": {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md",
+      "bytes": 14000,
+      "sha256": "a795254585b4c41ecf2e2987259ca6c8f18ba1db7ce200c1741c42d2163a2b7f"
+    }
+  },
+  "after": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 10320,
+      "sha256": "c6ba260df637dcecd10971b9dc19b17e99be4274ef7625bd1b572f77f2520975"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 58411,
+      "sha256": "a1184f559429b4aa9571fdbe0acf7849398b64c2faff01e094ded15aa831b869"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44262,
+      "sha256": "b8a8850dc83d2104df91d2f6245c84854336c71641b04b765a2c491ccc64ebdc"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 34943,
+      "sha256": "fe5bcc83491c57bb16bc0c11502a069a4ea39cd7ed68c07de87181e68819ad97"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 21093,
+      "sha256": "7bd0a48716948c9614a78fede0c19df5a0d76b021e61dce09ebf7073806d5c82"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11388,
+      "sha256": "6bff742fadec7eafe07800380f8d9fa4ba7e853be801f812bbda34f2b024e43d"
+    },
+    "planning/Scientific Review Handoff 2026-10-31.md": {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "bytes": 6964,
+      "sha256": "1016bca63aab1d84d5e449d97b90e45657159d452ae42dddbd83c2fd25f63aad"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 29237,
+      "sha256": "08a5a6bb454fcec6fb24c6541d4d65a44cd81b3759b35ab23c88269ebdc4e303"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 125124,
+      "sha256": "4223106fa1f870e2cea9db0b70a32371a0a1bcdf6b105d08161d338c98ba38ca"
+    },
+    "memory/research-log-2026-10-31-expert-returns.md": {
+      "path": "memory/research-log-2026-10-31-expert-returns.md",
+      "bytes": 5228,
+      "sha256": "29c513e8fc09fc47f57b7ead7ef05f29d14d2c0b36fc2f0fae8e8ec7027c0a6d"
+    },
+    "planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md": {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md",
+      "bytes": 14790,
+      "sha256": "7932d57ce665b3ae5ec96930ddd9e38cbe46a84b5bda7f6c5a63e1e060718cbb"
+    },
+    "planning/Orientation Review Disposition and Next Round 2026-10-31.md": {
+      "path": "planning/Orientation Review Disposition and Next Round 2026-10-31.md",
+      "bytes": 5884,
+      "sha256": "a05722ba96b7ed50a32b523b2cc4b2abdc75d9109db5017ed253b92f7a449301"
+    }
+  },
+  "scope": "Accept declared human/AI-assisted orientation input and owner-confirmed distinctness; estimates not measurement, no fresh/blinded or genetics/H5 completion. Prior records/originals unchanged."
+}

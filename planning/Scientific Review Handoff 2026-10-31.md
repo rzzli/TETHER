@@ -1,12 +1,12 @@
 # Scientific review handoff
 
-31 October 2026 UTC. The next scientific step needs **real independent reviewer submissions**, not more C++ installation or AACT downloads. The clean exercises are already prepared. This is a coordinator checklist; send reviewers only the appropriate clean bundle, not this repository, AI judgments or internal answer guidance.
+31 October 2026. The three distinct human mechanism-orientation returns are processed; the next requested scientific input is the separate genetics-source review. The clean exercises are already prepared. This is a coordinator checklist; send reviewers only the appropriate clean bundle, not this repository, AI judgments or internal answer guidance.
 
 ## Current returns
 
-The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The owner confirms the Word response was human-authored without AI and identifies its AI disclosure as a typo. The two text origins remain individually unverified. The current addendum reports other biomedical/evidence-review experience and an estimated 45 minutes; source-first viewing order and outside-material scope remain unresolved. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
+The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The owner confirms the Word response was human-authored without AI and identifies its AI disclosure as a typo. The owner confirms three different people. R2/R3 now disclose human authorship with AI assistance, statistical genetics/epidemiology, independence, source-first order and outside sources/Claude Code. Each reviewer reports 45 minutes estimated, not measured. R1's viewing order/material scope remains unresolved, without invalidating useful orientation feedback. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
 
-If actual authors can clarify, use the clean [provenance addendum](../docs/expert-review-admin-20261031/Review-provenance-addendum.md). Unknown is allowed; this cannot retrospectively create blind/fresh/human status. Keep completed addenda evaluator-only alongside the preserved intake. See the [current assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for qualification limits.
+Authorship/disclosure collection for this orientation is complete. Keep the completed [provenance addenda](../docs/expert-review-admin-20261031/Review-provenance-addendum.md) evaluator-only; disclosures cannot retrospectively create blind/fresh status. Follow the [next-round assignment](<Orientation Review Disposition and Next Round 2026-10-31.md>): R2/R3 receive the clean genetics-source ZIP first, and candidate follow-up only after each reference returns. See the [current assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for qualification limits.
 
 ## What to send and collect
 

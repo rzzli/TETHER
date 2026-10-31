@@ -8,6 +8,10 @@ updated: 2026-10-31
 
 # Returned mechanism reviews
 
+Current update (OWNER-PROVENANCE-NOTE-v3.json): the owner confirms three different people, R1/R2/R3. R1 remains owner-confirmed without AI. R2/R3 disclose human authorship with AI assistance, statistical genetics/epidemiology, independence/source-first order, outside sources and Claude Code; no separate first-pass export. Each reviewer estimates 45 minutes; total 135 reviewer-minutes is an estimate, not measured workload or an assistance-cost bound. Authorship/disclosure intake closes for this exposed orientation; useful development feedback is accepted without certifying fresh/blinded H5. Identical addendum bytes for R2/R3 do not override owner-confirmed distinctness. Next: existing clean genetics-source packet to R2/R3, first-pass exports before candidate follow-up, assistance/context and actual timing disclosed. See planning/Orientation Review Disposition and Next Round 2026-10-31.md.
+
+## Prior clarification and intake observations
+
 Current owner correction: response 1 was human-authored without AI; the original AI disclosure is a typo. OWNER-PROVENANCE-NOTE-v2.json records this separately. Current addendum 2C reports other biomedical/evidence-review experience,3A independence from other answers,5B no separate first-pass record,6B an estimated 45 minutes and8A no known conflicts. Source-first viewing order (4D versus the existing Part2) and outside-material scope (7A versus the original note) remain unresolved; the owner correction resolves AI use only. Two TXT origins remain individually unverified. Original reviews and normalized choices are unchanged; independent source-only/HR2/H5 qualification remains open.
 
 ## Initial intake observations retained

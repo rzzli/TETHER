@@ -13,12 +13,12 @@ updated: 2026-10-31
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Expert Returns]].
 The three supplied files are received and processed, not missing: 54 mechanism selections,
 95 integrity/549 conversion checks and six isolation regressions pass. The owner reports
-TXT origins as mixed/uncertain. The owner corrects the DOCX AI disclosure as a typo: human-authored without AI. Current addendum 2C reports other biomedical/evidence-review experience; 45 minutes is estimated, while source-first chronology/material scope remain unresolved.
-Human authorship for response 1 is accepted by owner attestation; source-first independence is unresolved. No genetics
+three different people. R1 is human-authored without AI by owner correction; R2/R3 disclose human-authored work with AI assistance/outside sources (Claude Code), statistical genetics/epidemiology, independence and source-first order. All 45-minute figures are estimates, not measurements.
+Authorship/disclosure intake is complete for the exposed orientation, with assistance strata retained. No genetics
 or source-feasibility exercise was returned. Existing sealed Candidate A coverage is
 reused (102 checks); primary-literature source credibility is a separate AI annotation.
-Next use the clean provenance addendum where authors can clarify; otherwise obtain
-traceable relevant source-only references. Do not infer authorship from agreement or
+Next give R2/R3 the existing clean genetics-source ZIP, receive source-only exports, then
+release its candidate follow-up per reviewer. See planning/Orientation Review Disposition and Next Round 2026-10-31.md. Do not infer authorship from agreement or
 retrofit blind/fresh status. H5/clinical/capability/source gates remain open, optional
 native work deferred, default v2 and $0 unchanged. See [[research-log-2026-10-31-expert-returns]].
 
