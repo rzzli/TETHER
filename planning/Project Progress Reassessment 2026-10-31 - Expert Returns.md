@@ -71,7 +71,7 @@ The credibility difference deserves separate treatment. A focused backward citat
 
 There are **zero qualified independent human source references from this intake**, not zero received files. No source-first exports or measured review times were supplied. The existing mechanism packet cannot substitute for the separate R07 genetics exercise or fresh-case HR3. The user need not disclose personal names, but anonymous identifiers cannot by themselves establish expertise, authorship or independence.
 
-The frozen interpretation slice's 65 missing inputs and the clinical route's 36 unqualified endpoints, 17/32 observable registry states and 0/12 joint-ready cases remain different unresolved denominators. Numerical prediction features remain empty and probabilities null. No clinical outcome file, new dataset, native/model run, paid query, downloader or stopped-monitor change occurred. The original recognition **FAILED / INCOMPLETE_TIMEOUT** statuses remain preserved.
+The frozen interpretation slice's 65 missing inputs and the clinical route's 36 unqualified endpoints, 17/32 observable registry states and 0/12 joint-ready cases remain different unresolved denominators. Numerical prediction features remain empty and probabilities null. No clinical-outcome read, biomedical dataset download, native/model run, paid query, downloader or stopped-monitor change occurred. The original recognition **FAILED / INCOMPLETE_TIMEOUT** statuses remain preserved.
 
 ## Critical next step and ordered work
 

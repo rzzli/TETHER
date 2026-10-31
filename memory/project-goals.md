@@ -10,7 +10,21 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current priority: [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]].
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Expert Returns]].
+The three supplied files are received and processed, not missing: 54 mechanism selections,
+95 integrity/549 conversion checks and six isolation regressions pass. The owner reports
+TXT origins as mixed/uncertain; one DOCX explicitly says AI-prepared/candidate-visible.
+No individual human provenance/source-first independence is qualified, and no genetics
+or source-feasibility exercise was returned. Existing sealed Candidate A coverage is
+reused (102 checks); primary-literature source credibility is a separate AI annotation.
+Next use the clean provenance addendum where authors can clarify; otherwise obtain
+traceable relevant source-only references. Do not infer authorship from agreement or
+retrofit blind/fresh status. H5/clinical/capability/source gates remain open, optional
+native work deferred, default v2 and $0 unchanged. See [[research-log-2026-10-31-expert-returns]].
+
+### Prior scientific-readiness checkpoint (retained history)
+
+Prior priority: [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]].
 Return to the original smallest interpretable T6 comparison and its scientific prerequisites.
 R07 human assessment, fresh source/question/exposure readiness and an approved capability
 condition remain open. Use planning/Scientific Review Handoff 2026-10-31.md; source-only

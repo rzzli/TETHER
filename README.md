@@ -13,7 +13,7 @@ performance measurements.
 
 ## Current status and next step
 
-The [scientific-readiness assessment](<planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md>) is the current plan. The next dependent step needs independent reviewer submissions, qualified fresh sources and a justified capability condition. Use the [review handoff](<planning/Scientific Review Handoff 2026-10-31.md>) for the existing clean exercises and local return folders. Human submissions remain pending.
+The [expert-return assessment](<planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md>) is the current checkpoint. All three supplied files have been processed as mechanism-development feedback. One explicitly discloses AI preparation; the two text origins remain individually unverified after the owner's 'Mixed or uncertain' reply. No independent human-reference gate is passed. Use the [review handoff](<planning/Scientific Review Handoff 2026-10-31.md>) and clean [provenance addendum](docs/expert-review-admin-20261031/Review-provenance-addendum.md) for the next qualification step; do not resend the same files.
 
 - Ten canonical contemporary development dossiers and their retained source audit exist; see the [run registry](planning/run-registry.json).
 - R07's technical diagnostic is negative: six complete responses, zero frozen-contract passes. Independent human assessment and a stronger-model control remain unavailable.

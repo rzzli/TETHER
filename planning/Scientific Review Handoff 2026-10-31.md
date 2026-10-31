@@ -2,6 +2,12 @@
 
 31 October 2026 UTC. The next scientific step needs **real independent reviewer submissions**, not more C++ installation or AACT downloads. The clean exercises are already prepared. This is a coordinator checklist; send reviewers only the appropriate clean bundle, not this repository, AI judgments or internal answer guidance.
 
+## Current returns
+
+The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The Word file discloses AI preparation/candidate exposure; the owner described the text origins as mixed or uncertain. Individual authorship and source-first independence remain unverified. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
+
+If actual authors can clarify, use the clean [provenance addendum](../docs/expert-review-admin-20261031/Review-provenance-addendum.md). Unknown is allowed; this cannot retrospectively create blind/fresh/human status. Keep completed addenda evaluator-only alongside the preserved intake. See the [current assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for qualification limits.
+
 ## What to send and collect
 
 | Workstream | Relevant experience | Clean reviewer material | Required return and release order |
@@ -16,7 +22,7 @@ The [coordinator guide](../docs/Expert%20Review%20Coordinator%20Guide%202026-10-
 
 ## Where returned files belong
 
-An empty local inbox is prepared at:
+A local return inbox is available at the path below. Current responses are already preserved in the separate ignored `expert-intake-20261031T160538Z` directory; no duplicate copy is needed:
 
 ```text
 D:\Projects\drug_target_agents\data\benchmark\gold_evidence\human-review-inbox-20261031\
@@ -26,7 +32,7 @@ D:\Projects\drug_target_agents\data\benchmark\gold_evidence\human-review-inbox-2
   source-feasibility\
 ```
 
-Place the original exported JSON/PDF in the matching subfolder, or provide its existing local path. Keep originals unchanged; use pseudonymous reviewer IDs if desired. Do not paste credentials or private identifying details into chat. The inbox is ignored except for empty-folder placeholders. **Folder placement does not establish evaluator isolation:** before any future ingestion, register each response and its parents as evaluation-only and exclude them from all agent-visible manifests. No intake or answer parsing occurred in this step.
+Place the original exported JSON/PDF in the matching subfolder, or provide its existing local path. Keep originals unchanged; use pseudonymous reviewer IDs if desired. Do not paste credentials or private identifying details into chat. The inbox is ignored except for empty-folder placeholders. **Folder placement does not establish evaluator isolation:** before any future ingestion, register each response and its parents as evaluation-only and exclude them from all agent-visible manifests. The received reviews were parsed only for evaluator intake; no response has been admitted to an agent-visible manifest.
 
 For each submission retain packet version/hash, reviewer ID and relevant expertise, conflicts/prior exposure, source-only versus candidate-exposed stage, actual/self-reported time and any outside sources used. Missing fields stay unknown; do not fill answers or infer independence from a filename. QA dummy exports and AI reviews never count as human submissions.
 

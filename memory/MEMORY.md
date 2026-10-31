@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-expert-returns]] - Current checkpoint: three mechanism files preserved/normalized, 54 selections; 95 integrity/549 conversion checks and six selected regressions pass. One AI-disclosed/two individually unverified after owner 'Mixed or uncertain'; zero qualified human references. Existing sealed coverage reused/102 checks; source-credibility concern checked separately against primary literature. No new model, repaired answer or scientific gate acceptance.
+
 - [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]] - Current priority: actual independent reviewer submissions and source/question/capability readiness. Optional native-bank/physical14/new84 branch deferred pending demonstrated study need; Source5 43 PASS/four DEFERRED/one STATIC and C79 scopes preserved. No scientific completion or new model run. Review handoff and empty evaluator-only inbox prepared.
 
 - [[research-log-2026-10-31-component-guards]] - Root ec290b97 / actual peer69d14742 accepts only the Source5 API/axis-kind guard:43 executable PASS, four DEFERRED, one STATIC;1,493 retained-data checks/188 artifacts pass,0.250s. Prior failures and raw bytes retained. Full native25/native bank/bridge/physical/new84/resources/science/humans stay open. Next close four bridge design joins, then independent positive native expectations.327 application pins match;1,774 tests retained/no rerun. Independent current documentation QA PASS: `SOURCE5-CURRENT-DOCS-QA-v1.json`.
@@ -74,7 +76,7 @@
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests, 92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
-- [[project-goals]] - Current AsOf 0.3.11/default v2; scientific gates are independent human references, fresh source readiness and a justified capability condition. R01–R06 accepted, R07 technical negative/human pending; H5 and clinical/genetics/scorer/comparisons/T2–T5/H6 unfinished. Optional native-proof expansion deferred, existing failures preserved; no new spending or model run.
+- [[project-goals]] - Current AsOf 0.3.11/default v2. Three mixed/unverified-provenance mechanism returns are processed development material; independent source-only references, fresh-source and capability readiness remain open. No R07 genetics/HR3/H5 gate is passed. Optional native expansion deferred; existing failures, $0 and no new model run preserved.
 
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests, 45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 

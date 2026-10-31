@@ -9,9 +9,9 @@
 
 Current forward plan: `planning/Project Recovery and Evaluation Plan 2026-10-26.md`.
 The user has authorized execution of the sixteen-step recovery plan. Complete each gate before advancing.
-Current priority, 31 October UTC: [Scientific readiness](<planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md>). Retain Source5's accepted 43 executable PASS / four DEFERRED / one STATIC and C79 fake-component evidence. Defer further native-bank/physical14/new84 implementation pending a demonstrated scientific consumer. R07 human assessment, fresh source/reference readiness and a justified capability condition are the next scientific gates; no new model run or old-experiment replay.
+Current checkpoint, 31 October UTC: [Expert returns](<planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md>). All three supplied mechanism returns are preserved and normalized (54 selections; 95 integrity and 549 conversion checks; six selected isolation regressions pass). One explicitly AI-prepared file and two individually unverified files remain after the owner's 'Mixed or uncertain' reply. Zero independent human source references are qualified; no genetics/source-feasibility forms were returned. This is completed development intake, not missing files or scientific acceptance.
 
-Next: use the existing clean reviewer exercises and scientific review handoff to obtain actual independent submissions, qualify source/question/exposure readiness, then choose a bounded capability/design decision. Reuse packaged comparison/provenance/accounting instead of adding another controller stack. H5 and H1–H6 remain unfinished; native deferral does not pass its contracts. AsOf 0.3.11/default v2, retained 1,774 tests and 327 pins, $0, original FAILED/INCOMPLETE_TIMEOUT, empty features/null probabilities and downloader/stopped-monitor boundaries remain unchanged.
+Next: qualify author/source-first provenance where it can be established, using the clean provenance addendum; otherwise obtain traceable references for the relevant source-only exercise. Reuse the existing sealed Candidate A audit and keep source credibility separate from quotation fidelity. Preserve original responses/cards; do not vote away disagreement, request the same files again or repair prior answers. Fresh-source/capability/H5/clinical gates remain open. Optional native expansion stays deferred; unchanged v2, $0, original FAILED/INCOMPLETE_TIMEOUT and downloader/stopped-monitor boundaries remain.
 
 - [x] Freeze independent role-aware format literals/tests before source:40 bases,225 byte negatives,134 anchors;6/6 fixture checks,26 matching pins and exact-delta peer3e1ac225. Evidence: recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-ACCEPTANCE-v2.json. No subject test or live producer claim.
 
@@ -219,3 +219,8 @@ Do not reinterpret unchecked historical failed-run success gates as new executio
 - [x] Reassess next-step alignment with Opus/R01/R07 and retain the accepted Source5 milestone; defer optional native-proof expansion without weakening its contracts.
 - [x] Prepare the scientific review handoff and empty evaluator-only return inbox; no human responses are implied.
 - [ ] Receive actual independent source-only reviews and qualify source/question/capability readiness before a new scientific pilot.
+
+- [x] Preserve and normalize the three owner-supplied mechanism returns as unqualified evaluator-only development feedback: 95 integrity checks, 549 independent conversion checks and six existing isolation regressions pass. Originals/answers remain ignored.
+- [x] Reuse the exact sealed Candidate A audit instead of rebuilding it (102 checks), and retain the separate primary-literature source-credibility concern without editing cards or ratings.
+- [x] Prepare a clean blank provenance addendum; record the owner's mixed/uncertain provenance separately, with no human-reference acceptance.
+- [x] Reassess the full project after expert-return intake and validate current docs/memory; assessment: planning/Project Progress Reassessment 2026-10-31 - Expert Returns.md.
