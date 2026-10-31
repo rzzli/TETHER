@@ -3,17 +3,524 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-25
+updated: 2026-10-30
 ---
 
 # Project goals
 
-## Current pilot controller — in validation
+## Current recovery execution
+
+Current checkpoint: [[Project Progress Reassessment 2026-10-30 - C Return Capture]].
+Root ad4c9f0e accepts compiled layout and the one C79 fake-target component only:
+three build commands exit 0 in 1.047s; compiled peer 5796bcc6 verifies 129 checks,
+14 scalar-first stores and 19 bodies. Actual peer 1b10326d passes 399 retained-data
+checks for all 79 primary / 17 boundary 256-byte copies and exact counters:
+29,310 measured C checks, 116 wrapper attempts, 47 fake targets, 17 error entries /
+16 returns. The one fake-image run reports 0.172s and four files / 121,790 B,
+excluding final result construction/write from timing; these are disk bytes, not RSS.
+Source4 E08/122 remains accepted, not joined to this native C bank. Python 3.11
+headers/python311.lib existence is a prerequisite only, not ABI/bridge qualification.
+Native25 first 31 PASS/12 FAIL/four DEFERRED/one STATIC and callback-only
+38 PASS/five FAIL/four DEFERRED/one STATIC remain preserved. Independent normative
+peer cb1def1a resolves three exact-code errata; named control dfe90829 retains
+41 PASS/two FAIL/four DEFERRED/one STATIC in 0.234s with unchanged Source4 and no
+setup/evidence/audit/pin/deadline error. Next fix only the two actual API/axis-kind
+guard failures in Source5 under authoring-only scope 0201a0fa; the new source and
+selected harness are unexecuted, awaiting exact review and a separate binding. Close the real new84 source/import/consumer roster/core4 roles,
+same-Core C/Python bridge, joint physical14 reservations and held-lease child/image
+route before activation. Planned/unbuilt pins permit authoring, not execution;
+19,079 joint calls are a warning, not profile fit. Real Win32/Python conversion/
+Core native bank/lease/physical/new84/resources, complete entry/R09 and science/humans
+remain unqualified. App 0.3.11/default v2 retains 1,774 tests/327 pins/ten versions,
+without rerun/default changes; $0 and downloader/stopped monitor unchanged.
+Science gaps remain 65 missing inputs / 36 unqualified labels / 17 of 32 observable
+states / 0 of 12 joint-ready cases; features empty, probabilities null.
+See [[research-log-2026-10-30-c-return-capture]]. Independent documentation QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`.
+
+### Prior E08 checkpoint (retained history)
+
+
+Prior checkpoint: [[Project Progress Reassessment 2026-10-30 - E08 Policy]].
+Root 43316e7a / branch peer 01e92b72 / byte peer 7ae5e826 accepts the finite genuine
+Source4 E08 successor: all 122 assertions (5 corrections + 52 literals + 15 integration
++ 50 causal) pass in 13.359s, with 128 worlds / 123 entries / 119 retained Cores and
+no setup/cleanup/evidence/audit/pin/deadline errors. All 844 artifacts / 20,134,324 B
+verify; proof + attempt + artifacts total 846 files / 34,330,393 B. These are retained
+filesystem bytes, not RSS or durability. Two prepared-only reports remain unissued
+and noneligible; AUTHORING cannot dispatch; valid-policy cleanup retains the original
+hard clock. Metadata HOLD 2d4979a6 is preserved and corrected in v2 before the only run.
+Next: actual new84 source/import/consumer closure and core4 dispositions; bounded
+native25 component controls; joint physical14 census/reservations, then separate native
+bank/typed-call/physical readback and held-lease child/image qualification. Planned
+source hashes do not block authoring or grant execution. The 19,079-call warning is
+not joint admission. Source3's original 50 PASS / three DEFERRED proof and both historical E16
+exclusions are unchanged. Complete entry/R09, real roster/native25/new84/physical,
+resource fit and scientific/human gates remain pending. App 0.3.11/default v2 retains
+1,774 tests / 327 pins / ten versions; no new application-suite/default/native/model
+or original-payload operation. $0; downloader/stopped monitor and data gaps unchanged.
+See [[research-log-2026-10-30-e08-policy]]. Independent current-document QA PASS: `ENTRY-E08-CURRENT-DOCS-QA-v2.json`.
+
+Prior checkpoint: [entry contract coverage](../planning/Project%20Progress%20Reassessment%202026-10-30%20-%20Entry%20Contract%20Coverage.md).
+Root e54b6d55 / branch peer 64868e28 / byte peer 5ee5dd20 accepts 50 source/synthetic
+assertions, three explicit deferrals and zero failed/unknown across 32/53 in 9.172s.
+E32 actually streams 3,991,999,872 procedural bulk bytes with one 1 MiB buffer;
+total known 3,992,098,940 B / 3,812 reads / 3,842 calls / five once-only closes.
+All 594 artifacts verify; proof + attempt + artifacts total 596 files / 25,293,885 B.
+These are disk lengths, not RSS. Snapshot copies are not extra reads. E21's
+116 B source-known versus spy-completed gap is two committed 58 B returns before
+spy acknowledgment. Default app 0.3.11/v2, retained 1,774 application tests / 327
+pins / ten versions / $0 / data and science remain unchanged.
+Next: genuine E08 external decision/output content-pin policy. Pre-code root a055dfb3
+accepts 52 literal expectations and 15 planned integration branches; source/harness
+authoring only is authorized under 29f35d62, execution still unbound. Validation
+belongs after the original Core/clock and before opens. Roles/ready flags
+cannot declare their own trusted roots. Two historical E16 invocations stay
+excluded/deferred; native25, real roster, physical14, native/resources and science/humans remain open.
+See [[research-log-2026-10-30-entry-contract-coverage]].
+
+Prior checkpoint: [entry corrections](../planning/Project%20Progress%20Reassessment%202026-10-30%20-%20Entry%20Corrections.md).
+Root 0d9c42a2 / actual peer 5efc550f accepts five unchanged Source3 synthetic
+entry regressions in 0.203s. Source1 constructor failure6ec80005 and Source2
+four-pass/one-fail stopped-close diagnostic a1ff84a1 remain intact. The stopped
+cache stays UNOBSERVED while committed BOOL1, known wrapper return, original
+error and consumed close right are preserved; fresh cleanup remains legal.
+Actual helper prefix is 99,000 B; kernel121,192 B is separate explicit pre-entry
+trusted code. This is not real first-entry/FFI/native/physical/RSS qualification.
+Next: frozen entry32/53 suite authoring under df44dee0, then honest native25
+coverage/disposition and real roster/physical14/native/resource composition.
+App0.3.11/defaultv2, retained1,774 full tests/327 pins, $0 and data/science gaps
+remain unchanged. Human submissions still pending. See [[research-log-2026-10-30-entry-corrections]].
+
+Prior checkpoint: [large injected producer](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Large%20Injected%20Producer.md).
+Root 93eeaef9/actual peer fa6b4375/accounting 674cdf34 accepts one selected
+216-input generated SOURCE/PURE lifecycle, proof 7cefbe0e. It hashes 9,017,363,601
+bytes/captures 209, with 8,799 reads/10,095 fake calls/216 known successful closes.
+Source-stack unwind is 10.094 seconds; trusted persistence is a separate 0.359.
+Complete candidate/terminal bytes (4,373,152/4,428,448 B), all raw/query/call facts
+and first terminal remain retained/hash-rechecked. Source4 is unchanged.
+Source-generated 8,980,699 B and additional harness 14,410,009 B are separate;
+logical raw 2,832,075 B is not RSS or a 256 MiB/inference fit measurement.
+Static V2 HOLDs and detached raw-helper check deccd3d3 are not failed producer
+attempts. All earlier actual failures remain; there was no producer replay.
+Next is the full real new-84 source/import/consumer roster and exact pre-import
+Origin/class/nonce route, followed by joint14-API physical/native composition.
+Missing core4 totals 5,232,640 B; illustrative 19,079 joint calls exceed the
+original-only C16384 before directory/bootstrap/child/pipe/tail reservations.
+Maximum-capacity, real entry/FFI, physical, new84, resource/science/human gates
+remain open. See [[research-log-2026-10-29-large-injected-producer]].
+
+Prior checkpoint: [small injected producer](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Injected%20Producer.md).
+Root096f5781/peerad941fe0 accepts source4a746: actualLegacy48/48+same8(9methods),
+extensions13/13(old6+new7), purecodec4methods carried by exactbytes. Smallstream
+hashes2,097,378B/captures209B with6reads/30fakecalls/4closes; no bulkbody.
+Actualallocationaudit9d6f0240 clears independent216-file fixture preparation
+only. Large9,017,363,601B control/entry/FFI/physical/roster/new84/resources/science
+remain open. All first source/oracle/harness failures retained; no oldnative
+experiment replay. See [[research-log-2026-10-29-injected-producer]].
+
+Prior checkpoint: [independent producer literals](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Literal%20Freeze.md).
+Root8f1020bd/peer3e1ac225 accepts freezee0d636af,40bases/225negatives/134anchors;
+6fixture methods/26pins pass. First5/6 failure preserved. Concrete4modules
+and independent actual runner/legacy48adapter are authoring under9e202d81.
+No subject imports/tests at this checkpoint; coherent freeze and separate
+execution scope precede them. See [[research-log-2026-10-29-producer-literal-freeze]].
+
+Prior source-only checkpoint: [producer format schema](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Format%20Schema.md).
+Root14bc12d3/peer7828e215 accepts exact b71cd8 schema for independent literals only;
+12pins/five groups closed, d5f28/HOLD44eee preserved. Primary Python raw-slot
+assignment before packing; wire/decoded data cannot create live authority.
+<=40 semantic histories planned; no goldens/encoder/producer at schema acceptance.
+Next actual codec+role-aware producer integration must preserve old48 opaque
+identities; decoded dicts cannot substitute. Parallel roster/physical map980ba277
+records missingcore4=5232640B, joint19079 pre-directory calls beyond originalC16384.
+
+F1 payload113985546 plus live logical bits13823488=127809034; all boxed numeric/
+object/storage remains unbounded here. R07 actualmetadata context16384/offload49,
+reported model/KV/compute8148.38/3072/137.01MiB and cumulativeWS12325232640B do not
+provide GPU/per-call peaks or inference RAM/VRAM ceiling.256MiB is vocab-only.
+See [[research-log-2026-10-29-producer-format-schema]]. Full84 source/build/pack/entry/FFI/physical/masks/integrated/science/
+human gates unfinished; app0.3.11/defaultv2/1774tests/327pins and prior acceptances
+unchanged. Old FAILED/INCOMPLETE_TIMEOUT and all before evidence preserved.
+
+Raw-adoption5afb82f0 retains32 histories/nine checkpoints/320 snapshots,21 owner
+controls/19 independent methods/three peer probes and all preserved failures.
+Portable16d65f57 retains84cases/21focused methods/nine peer probes and all limits.
+Python-visible adoption cannot close native conversion gaps.
+Unicode observer743ece01 retains14author methods,6histories/36scenarios,55callback
+identity controls,22nested/type mutations,4independent probes and2rootregressions.
+Earlier graph686dcf47, codec3455f282 and other pure components retain scope. Oldv7
+--recognize journal/archive policies require new exact Unicode counterparts.
+Same-owner review69df identifies six adoption gaps; no run_once/time/registry
+reset is allowed. Original negative/timeout,65missinginputs/36unqualifiedlabels,
+17/32 primary registry states and0/12source-ready clinical cases remain. Prediction
+features stay empty, probabilities null and human reviews pending. Provider$0,
+the stopped worker and untouched downloader/monitor remain unchanged.
+Acceptance `3e80ae97...` binds source `fd655c8b...`,8author/seven independent methods,
+16literal captures/18phase checks and49independent vectors. VariablePIDreturned
+length, signed/u32/u64 fields, undefined states, source-view disagreement and
+ordinary immutability pass. Every resource qualification flag remains false.
+Actual archive/resource/source/platform/entry/engine and native binding stays open.
+Bootstrap-v2 acceptance `9f221af4...` covers22author methods/independent peer
+`d9e006e6...` and fixes foreign-reader/diagnostic alias defects. Captured-byte
+journal-v2 acceptance `23f56d8c...` covers10author/seven peer methods,30frozen
+fixtures and13terminal regressions; five former source-completeness false
+positives reject. Generic chain/v7-known-launched source scope only. Real entry,
+platform/output/engine/resource/archive/new-profile binding remains unfinished.
+The coverage analyzer retains acceptance `f895b990...`:
+Source `537a780a...` passes eight author and eight independent methods against
+fifteen literal scenarios, 272 synthetic partitions and twelve matrix cells.
+Pieces/labels are authored geometry, not tokenizer or native observations.
+Bootstrap v1 `4c5c0ee6...` has reproduced foreign-reader and nested diagnostic
+alias defects (`030ade71...`, peer HOLD `c54a9439...`). Separate v2 `d9375992...`
+passes 22 author methods and independent re-review; acceptance `9f221af4...`. Actual platform,
+engine and real evidence binding remains unfinished.
+The prior fixture freeze `e6e8419c...` remains accepted:
+84 full response documents, fourteen scalar pairs, four actual stage/payload
+instances and two unique grammars pass 84 author-side exact-byte semantic checks
+and seven structural methods after independent manual review. Independent
+post-freeze proof `739d83df...` matches every raw-byte/JSON/scalar/v3 outcome and
+four stage preparations; acceptance `b219f1f2...` is source-only. The fixed coverage population is
+68 of 78 byte-eligible cases; these are authored expectations, not measured token
+boundaries. Real verifier design `0327e908...` and conditional peer `f295bdf5...`
+permit pure injected origin/handoff interfaces, with actual platform metadata,
+output sink, closed helper loading, exact caps and evidence checkers still open.
+The old profile/external timeout and all scientific/human gates remain unchanged.
+See [[research-log-2026-10-29-r09-unicode-controls]].
+
+Accepted AsOf **0.3.11** adds a separate pure v3 direct-GBNF preparation and
+validation path. Full 1,774 tests/327 source pins, required probes/package,
+default-installed/relocated checks and ten matching preserved versions pass.
+The ten-version qualification retains seven original successes plus three
+separately declared completion successes; the first timeout stays failed.
+All 18 preparations fit and twelve original v2 fingerprints match. Native
+controller dispatch remains v2; no new generation route is activated.
+
+The alternative reference passes 162 typed cases/16 controls; five parser edges
+remain ungraded and the PowerShell failure is preserved. Optional Arrow proof
+qualifies 755 unchanged files and exactly five source-equivalent regenerated
+caches, never 760 unchanged bytes. Metadata and publication failures remain
+retained; five tested Windows publisher cases establish no-overwrite behavior.
+Acceptance SHA `491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b`.
+See [[research-log-2026-10-28-r09-generation-acceptance]]. Native document/EOG,
+typed loader, 295.922/300-second resource feasibility, fresh source-qualified
+cases and independent human reviews remain separate gates.
+
+Earlier source-only recovery basis: strict byte/chunk oracle ACCEPTED1e0890b4...,
+107fixtures/167steps/354bytes/14literal pairs/29interior cuts. Adapter4e5d36af...
+passes7methods/proof04501119...; peer37d59537... verifies all107statehashes.
+Reference1a1c1e68... separates104directCPython paths and3normativeRFC/certificate
+paths (not107APIagreement). Original96fixturecoverageHOLD and firstreference
+surrogate-timing exceptions remainpreserved; v2frozenbefore adapter. First
+checkerpublicationstr/Pathfailurea41ae302... hasunknownunretainedtestresult;
+correctedchecker0dcb3a0a passeswithoutoraclechange. ImmutableordinaryAPIsnapshots,
+freshserialization, strictrequest/error/EOFbehavior acceptedonly forfinitepure
+scope; cumulativehistorycopyingcanbequadratic, no hostilePython/nativeclaim.
+Verifiercontract7bff1438... remains SOURCE/PURE ONLY. Controller98ef68ee.../
+proof f6ddcadf... passes23synthetic methods; peer1d3b6143... and acceptance28d251f4...
+clear explicit owned-return/no-handle-failure/malformedunknown states, factory
+journaling and earlierownership/late/seal fixes. V1/4ac/limitedpeer/HOLDb61 /
+before7cd preserved. That checkpoint had no live first-clock bootstrap/file/output/
+real archive/resource/core checker and established no actual300s fit. Its then-next
+Unicode corpus and injected-interface stages are recorded in the newer shared-owner
+checkpoint above; production binding remains pending before any new model read.
+The [earlier controller reassessment](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Verifier%20Orchestration.md)
+coversallR/HR andfivenextgates; priororacleassessmentretainsitsdateddraftstate.
+Timing26a34e5b... separates153.094spre-reservation and5.562sreservation→close;
+134sauditendpointintervalisunattributed, notparserordiskcost. See the [prior oracle reassessment](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20UTF8%20Oracle.md).
+
+Preserved runtime disposition: frozen recognition profile FAILED; independent whole-check
+INCOMPLETE_TIMEOUT. Rootb6327d4a... consumed protocolb690c63b... once79.328s;
+childexit2/reaped and failure required_partial_UTF8_prefix_coverage_unavailable.
+All189bodies are separately source/metadata checked (184native+5harness), four
+fixed prefixes pass/sixEOG; two natural partialUTF8 slots unavailable. Strict
+success parser accepts111cases/two prefixes before rejection. Independent22cf3294...
+records213freshleased hashes158.656s/core400rows292.656s but whole300s gate
+unfinished; no payloadrepeat. Rootposthocb513793d... checks13files/1219events,
+rawJob andreceipt/seal hashesapproximately0.078s perretainedreport (earlierprose0.094s corrected) withoutrepairingtimeout. Peakchild/jobcommit
+64368640B; no inference/fullmask/science qualification. The consumed profile is
+stopped; see the [preserved recognition disposition](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Disposition.md)
+and [ordered next plan](../planning/R09%20Unicode%20Coverage%20and%20Verifier%20Recovery%20Plan%202026-10-29.md).
+Original frozen artifacts remain unchanged; nextsource-only coverage/verifier
+design must precede any distinct new protocol. Humanreviews remainpending.
+
+Prior sourcepeer0068a99b... clears parentv6/e190 and validatorv3/bbd98 plus50
+component methods/40mutations/15fakefixtures. Boundparentb2a/authority97e/
+protocolb690/driver71101 clear5d7c007e; metadata preparation17.578s, binding11
+methods/102vectors,driver8/25fakes. Build78a4d8c3... verifies287pins/14files/eight events, tools0/reaped
+and5.266s seal; EXE382754c8... is290304B and was unexecuted during build, then
+used in the separate negative attempt above. No further payload access or
+execution is authorized by that consumed decision. The separate phasepolicy4d5e09...
+requires exact CPU only after explicit load; old ABI807995 stays unchanged.
+See the [earlier build reassessment](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Build.md).
+Independent
+6f6d3be4... verifies one typed ABI observation:version0.7.0-dev,17defaults/31layout
+leaves,177pins/11files/17events/five rows,17self/core4/platform reports,59B/0B EOF,
+358closed leases,0.078s child/0.547s seal. Acceptance024e0536... covers only these
+queries; futureCPU/GGUF/recognition access requires a newdecision. Singleton
+controls and later full-vocabulary-mask/runtime resource qualification are
+separate. Root7e599031...'s shared policy807995...
+passes10 C++model/static tests/all73vectors,6 matcher methods and8 unbound-parent
+methods/156checks. Rootdc1050bd... separately compiles once; proof057c0fb2...
+verifies257pins/14files/eight events/tools0reaped/4.750s seal, EXE2feffe29...,
+unchanged imports/header. That EXE was unrun during build; parentf2682469.../
+protocol5e175558.../peerb3cb074c... and root50d60ad5... then bind the once-only typed
+observation. CPU/model access remained off at that checkpoint; the later
+negative recognition attempt above is separate. Application311/defaultv2 is unchanged.
+The one census is complete: independent4b628df8... verifies183pins/11files/
+17events/98rows/38query pairs,17 complete self/core4/platform reports, onlyApphelp
+previously unlisted. Child11448 exits0/reaped0.125s;68B/0B EOF, finalJob1/0empty,
+370closed leaseoutcomes and0.594s seal agree. No unknown image was opened.
+No more diagnostic census/OS tracing; old identities/image trust/causation and
+broader ABI/native/resource/scientific gates remain unqualified.
+
+Prior diagnostic v5 builds
+and its separately declared attempt reports current-run apphelp.dll at
+C:\Windows\SYSTEM32\apphelp.dll: directory=true/listed=false, full UTF16/UTF8,
+index5 and publication returned. Proofa92b9237... verifies243pins/13files/17events/
+490leases, exit2/reaped0.234s, complete939B/0B EOF, final rawJob1/0/0/empty and
+peak2166784B. It preserves rejection. No full inventory, image authenticity,
+loader-cause or target ABI result follows. The prior v2 offender remains unknown;
+proof4b2a3cd7... and all13 old outputs stay intact. Root implementation decision
+8b9ebb0c... authorizes source/pure work under design79096837.../contract5bcde648.../
+peerfd22ae46... for one64-row/2MiB metadata census with zero target queries and
+distinct status/validator/sealer. Census child28a515c2... passes16 boundary/static
+and3 focused source regressions. Root65471faf... separately authorized compile/
+link only; proof51c255ec... verifies234pins/14files/eight events and4.656s seal,
+EXE559e4e9a... recognition-disabled, unexecuted during build, subsequently used
+only by the separate census. Frozen parentv1 stays disabled. Findingsea0e0918...
+were addressed through179-static/4-dynamic acyclic binding; failed fixture/P1
+publication and permissive driver typing remain preserved. Final parent018f3c82...,
+11-method proof08d7c731..., driverc6fff0d0.../six-method proofb9397263...,
+protocol8f011fc7.../peercfc16dcc... and root5af5b393... bind the once-only result.
+Source/pure platform work is authorized; compilation/native calls remain separate.
+
+The earlier export-mapping failure and missing terminal observations stay intact
+(425a2e60...). Seven static ownership regressions,16 build checks,19 main parent
+checks,15 independent full fake fixtures and19 component checks support the new
+source/build/parent slices. Prior failed component/argv/interruption fixtures are
+retained. These checks do not establish successful target ABI or native grammar.
+No automatic repeat, SDK gate change, CPU/model access or science claim follows.
+
+The detached own-worker four-case qualification remains scoped accepted on this
+host (7f184e9b...,140pins/23files/61events/20snapshots/284leases). All actual finals
+are1/0/0/empty. Earlier Python/C++ qualification failures, the current-only conhost
+observation and the closed IOCP attempt-accounting gap remain preserved in dated
+assessments. No generic count waiver, breakaway, host whitelist or observer replay.
+Original and detached general SDK gates remain false. The closed seven-header
+graph, existing build and format-2 corpus remain preparation evidence; original
+167 documents are preserved, with one separately labeled NUL harness exclusion.
+Full R01-R16/HR status and critical next gates are retained in the latest
+planning/Project Progress Reassessment 2026-10-29 - Module Identity.md;
+the prior Console Identity/Canary/Launcher assessments preserve earlier states.
+See [[research-log-2026-10-28-r09-native-build]].
+
+Execution requirement: at each major completion retain a dated reassessment of
+all R01–R16/HR gates and critically evaluate the next major step. Maintain
+planning/Project Progress Reassessments.md; preserve earlier snapshots and keep
+the full original scope. The user has not authorized fabricated scientific
+judgments or a new periodic monitor. See [[research-log-2026-10-28-r09-duration]].
+
+R01–R06 engineering/preparation are accepted under the authorized sixteen-step
+plan. Latest accepted AsOf 0.3.11 passes 1,774 full tests with no failures/errors/skips, probes/package and installed
+recorded success/failure smoke; all 7 relocated legacy families pass guarded
+verification. Final validation pins 327 source/resource files and hashes two protected
+files without parsing or viewing their contents. All 63 historical code hashes were recovered
+as inert data; original receipts remain unchanged. The earlier R06 coverage of
+96.43% applies to its78-test study scope, not the new native code.
+
+R09 has accepted engineering slices through 0.3.11: deterministic synthetic baselines
+(0.3.2), recorded fixed-evidence mechanics (0.3.3), bounded real-source/token
+preparation (0.3.4), retrieval bridge (0.3.5), and authority-bound invented four-arm
+composition (0.3.6), collected-source recorded integration (0.3.7), and the pure
+original-path quote-ID/state interface (0.3.8), and native adapter/controller
+integration qualified with simulated transport (0.3.9), followed by the accepted
+0.3.10 duration correction and 0.3.11 pure generation contract. Original accepted reports remain preserved.
+No real model generation or scientific comparison is implied.
+
+The 0.3.8 interface passes 21 new/33 focused tests,105 external schema cases and
+twelve installed stage preparations across all three states. All seven matching
+0.3.1–0.3.7 verifiers pass. Its initial Unicode-whitespace oracle mismatch is fixed;
+cross-claim text uniqueness intentionally remains a post-validation check. It
+adds no native adapter and does not qualify native grammar support. Acceptance
+SHA b95bef8731d56fd3ff2872e18170b056e6628890b1b887f8e094cbd6e4dcef41.
+The later 0.3.9 adapter/controller now passes its complete engineering contract:
+43 new regressions, real-input six-stage/two-pure simulation in 200.016 seconds,
+24,558 input/6,144 output reservations, isolated source/model replay and guarded
+run-copy relocation (43.547/42.219 seconds). All eight matching old versions pass.
+Actual model/server calls are zero; six offline tokenizer children ran. Parent
+peak is 533,012,480 bytes; child/GPU peaks are unknown. Acceptance SHA
+8a77c2eaba83dece672330b72c518a8f16f1417c9a14498b54686ac990b7815b.
+Next qualify pinned native grammar, then separately declare any finite actual
+experiment; R07's negative stop and pending independent human science remain.
+See [[research-log-2026-10-28-r09-native-integration]].
+
+Grammar preparation now retains static approved-DLL exports and a frozen 109-case
+corpus, checked by the isolated installed Python and independent schema engine.
+Native document/EOG acceptance has not run. No toolchain was found on PATH
+or standard VS/LLVM/SDK paths initially; the owner has now installed Build Tools.
+Absolute-path discovery and a separate tiny own-source compile/run probe pass
+without restarting. The subsequent typed bridge builds and its fixed actual-DLL
+JSON round-trip passes; that bounded interoperability result is not full ABI or
+source/build equivalence.
+The public b11717 commit matches the retained runtime's build prefix. The
+converter-only header closure is verified. Actual unchanged-schema conversion
+closes negative: unsupported nonblank patterns fall back to accepting any string,
+with an explicit warning. Two native children ran, no vocabulary/model/server.
+Three focused harness regressions pass; the first zero-child NUL setup failure is
+preserved. The next separately versioned contract/resource milestone must not
+silently anchor patterns, replace the corpus or weaken acceptance/post-validation.
+Reproducible source/build equivalence and document/EOG behavior remain unqualified.
+See [[research-log-2026-10-28-r09-converter]] and
+[[research-log-2026-10-28-r09-grammar-preparation]].
+
+A later independent AI engineering audit reproduces one native relative-duration
+verification gap, without proving original execution overrun or full resealed-run
+bypass. The regression-first separately versioned 0.3.10 correction is now accepted
+under planning/review-assets/recovery-step9-native-duration-20261028/CONTRACT.md.
+Preserved 0.3.9 artifacts and its acceptance evidence are unchanged. The correction
+was completed while human scientific reviews remain pending; the toolchain is now usable.
+It passes 75 targeted native/controller tests and eight recorded regressions, with
+13 new tests. Full 1,737-test/324-pin validation, all nine older verifiers, fresh
+same-input simulation and guarded installed/relocated verification pass. Acceptance
+SHA 27f33a36fd01d48b79e1492ad6b4b185a60e4bd662bb1ee0d955e5a284079cdc.
+The simulation takes 295.922/300 seconds without actual inference. Only 4.078
+seconds remain; actual native-case feasibility is unestablished. A retained
+full-project reassessment and critical next-step review follow this completion.
+
+The 0.3.7 runner accepts explicit immutable collected-source capabilities rather
+than requiring an invented request hash. A fresh exposed IL6R run finalizes six
+scripted cells/two pure results in 157.8 seconds with 22,067 input/6,144 output
+reservations. All five literature candidates qualify; one whole record fits;
+parent availability 9/missing 65 persist. Whole-statement outputs are evaluator
+fixtures. Source-inclusive installed replay and guarded run-bundle relocation
+pass with explicit original input roots; raw inputs are not independently
+restored. All six matching 0.3.1–0.3.6 verifiers pass. No new independent peer
+review is claimed for this extension. Acceptance SHA
+5ae3bc175e7ca28e1eb969631128086af4d4c2e8161f373bfd0a280c280410e8.
+
+Owner confirms reviews remain pending. This is not a blanket engineering stop:
+the separately versioned model-backed interface and adapter now pass deterministic
+engineering qualification. Native grammar still needs qualification before any
+declared native experiment. Scientific source/question fit, fresh cases, human references
+and overall R09–R16 remain open. See [[research-log-2026-10-27-r09-collected]].
+
+The 0.3.4 preparation authenticates 27 input files/363,192,274 bytes, reconstructs
+one whole exposed IL6R Observation plus three identifier mapping rows, and exactly
+reproduces request 14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a.
+Six full-source hypothetical payloads reserve 28,241 input/6,144 output tokens;
+preparation takes 98.5 seconds. Installed source-inclusive replay passes with
+live repository code, unapproved data and dispatch denied. Eight independent
+peer tests expose/fix four defects. The first full run's test-discovery error is
+preserved; two test imports were corrected and the complete rerun passes.
+Acceptance: recovery-step9-token-aware-20261026/acceptance.json, SHA
+244debfc378129df9a1c92fa574f08d56f64042387850fad7860ab4ad69f39c1.
+Matching frozen 0.3.1/0.3.2/0.3.3 verifiers and seven legacy families still pass.
+
+The 0.3.5 bounded retrieval bridge is now accepted: 34 focused tests including
+seven independent peers, plus the full 1,616-test suite. A six-record explicitly
+invented corpus exercises ID-order and literal-case-overlap policies; every
+candidate is authenticated before ranking. Two recorded cells share one case
+budget, reserve 15,656 input/2,048 output units and declare fixture usage 128/128
+separately from actual model usage zero. Installed/restored replay and frozen
+0.3.1–0.3.4 verification pass. Acceptance SHA
+009264ed9bab681f5621aee2552a96b5dadee0deeb8b269c1e9bc727653d99f2.
+
+A fresh current-package parent also verifies the same single exposed IL6R
+record under both policies. Original request 14b7...f2d61a, parent availability 9
+and missing inputs 65 remain unchanged. No real candidate universe was expanded;
+one candidate is not a nontrivial real retrieval experiment. An old 0.3.4 parent
+is rejected by current admission before original data access. There is no
+automatic archived-verifier fallback.
+
+The 0.3.6 composition is now accepted: one policy/invented case, six recorded cells
+and two pure baselines, 14,315 input/6,144 output reservations and 192.7 seconds
+inclusive execution. The first E: attempt timed out after two partial cells, both
+verified separately; an identical 8.46 GiB D: mirror enabled one separately
+declared second attempt. All eight quotation children across both attempts remain
+accounted. No model generation or original data writes occurred. Installed and
+restored replay, seven legacy families and frozen 0.3.1–0.3.5 pass. Acceptance SHA
+eec489c6296256501578241cee9004a174444926c681351e9ceab6ca82af701c.
+
+Five existing literature records in the exposed IL6R case now pass original-row
+and eligible-ancestor admission, both unchanged retrieval policies and isolated
+installed replay. Both policies select the same one record: two candidates are
+oversized alone and no pair with the selected record fits the 12,000-byte bound.
+Parent availability 9/missing 65 stay unchanged. No source clipping, limit change,
+runtime edit, model or tokenizer call occurred. This qualifies access mechanics,
+not relevance, scientific sufficiency or policy superiority. Acceptance SHA
+77d396c051c41193771931c75697cf209db2a00e66ec3d4c0713c982b4402f6e.
+
+Whole R09 remains unfinished: real relevance/source sufficiency, fresh/source-only
+references, scientific/native qualification and reviewer coverage are unresolved.
+The older 0.3.5 four-arm manifests remain preparation only; the new 0.3.6 invented
+composition does not promote them to scientific results. Default byte semantics,
+source material and exact package proofs remain intact; token mode is an explicit
+trusted path. No new native run, budget increase, downloads or clinical prediction.
+See [[research-log-2026-10-26-r09-retrieval]],
+[[research-log-2026-10-27-r09-four-arm]], [[research-log-2026-10-26-r09-preparation]]
+and [[research-log-2026-10-27-r09-real-retrieval]] and earlier baseline history.
+
+R07 technical diagnostic is terminal NEGATIVE:6 complete HTTP/EOS responses,
+0 accepted output contracts, 14,420input/2,108output tokens, 59.391 seconds,$0provider
+spending,no retries/repair,owned server stopped. Terminal seal863bf2a9cfb8d4fd01a5223b993d87fbe2ac06992e7206d3d32ef4c712cf2d41.
+Stop this native version and batch expansion. AI development triage is unblinded
+and does not replace independent humans. Human submissions are pending; stronger
+capacity control is unavailable. The prior blanket human hold was corrected, so
+the authorized exposed/synthetic technical run was permitted. R07 scientific
+assessment remains open; do not claim all R07 or H5 complete.
+
+R08 independent preparation verified112 originals/8.22GB and scanned22.88million
+metadata rows:10,413 distinct evidence IDs, 8,573 article IDs, 1,417 shared articles.
+440 publication-year/date disagreements remain unrepaired. The preliminary frame
+is 14targets×4 intended disease concepts=56 combinations; 14 additional HP aliases
+are audit-only. Later ten-case pack already development-exposed; no fresh case
+qualified. Published VB analytic membership remains unresolved. Current HGNC/OT
+provider terms checked separately; passage sufficiency/rights and HR3 coverage
+are not established. Bounded source-only preparation is permitted, no generation.
+
+R08 fixed source-only preparation subsequently selected BTK/psoriasis and
+CTLA4/Crohn under a prospectively pinned ordering:6articles/8passage occurrences,
+7unique texts, 353words; 6raw locators/receipts replay. Two BTK entity anchors and
+one duplicate remain AI development flags, not human gold. All 6current article
+identities now checked; raw dates unchanged. Identity-only crosswalk57descriptors/
+58packets finds sharedPMID31019502 in priorIL23A material; no claim of identical
+passage/model consumption. Other5nonmatches are not fresh. Source-only14group
+form/cleanzip passes desktop/mobile/expandedlocator/export QA; human judgment and
+freshcase qualification remain pending. No replacements or candidate generation.
+
+Clean source-only genetics form/zip and separate coordinator-held candidate
+follow-up pass desktop/mobile blank/export QA. Share the source-only packet first;
+retain independent references before releasing candidates. Mechanism orientation
+is not genetics/MR expertise. No new acquisition, clinical-label content read,
+causal calculation, probability, worker/monitor change or independent scientific
+validation. R07 scientific, R08 final and R09–R16/HR1–HR4 remain unfinished. See
+[[research-log-2026-10-26-recovery-execution]], [[Project Recovery and Evaluation Plan 2026-10-26]] and TODO.
+
+## Initial review baseline (superseded by execution above)
+
+The October 26 UTC Opus response independently reviews architecture, data and
+science, and prepares a detailed recovery plan. Fresh full validation passes
+1,262 tests with no skips, required probes and installed-wheel demo verification;
+213 previous code/test pins still match. Sandbox-only hard-link/cache failures
+remain recorded; unchanged code passes outside the sandbox. No production fix,
+new model call or scientific qualification occurred.
+
+[[Project Recovery and Evaluation Plan 2026-10-26]] supersedes the automatic
+wire-repair/pilot sequence as the next priority. Establish scope/checkpoint,
+archive compatibility, correctness fixes and bounded capability diagnostics;
+prepare independent human references in parallel. Current IL6R is exposed
+development only. A clean offline HTML and nine-page fillable PDF exercise with
+18 multiple-choice items is under docs/expert-review-20261026; recruitment and
+coordinator guidance are separate. Owner handles recruitment/access/spending;
+agents prepare the work. Original H1–H4, H5 qualification, T2–T5 and H6 remain open
+under their separate gates. See [[research-log-2026-10-26-opus-response]].
+
+## Previous pilot controller checkpoint
 
 New frozen controller and bundle verifier pass23 focused tests after retained
 scope/config/budget/lifecycle findings and primary-cleanup corrections. Initial
 full/clean validation was cancelled on the cleanup finding. Final23 focused/11
-independent probe groups, fresh299 isolated/207 no-site checks and1,262 full tests,
+independent probe groups, fresh299 isolated/207 no-site checks and 1,262 full tests,
 required probes/package pass on unchanged code. Real-source plan
 question-development-20261026T023832Z is frozen with exact prior requests;
 The once-only pilot subsequently stopped after its first native call on contract
@@ -25,11 +532,11 @@ and TODO. The preceding transport checkpoint remains complete and preserved.
 
 ## Latest native question transport — October25
 
-Separate renderer/transport implemented and independently reviewed with20 renderer
-and21 transport tests, seven/eight peer probe groups. Atomic dispatch and durable
+Separate renderer/transport implemented and independently reviewed with 20 renderer
+and 21 transport tests, seven/eight peer probe groups. Atomic dispatch and durable
 native-byte/primary-exception handling corrected retained failures. Exact real-source
 prompts fit14,200-byte cap without truncation or budget change. Clean276/no-site184
-tests pass;1,239 full tests, required probes/package and unchanged-code/protected-hash
+tests pass; 1,239 full tests, required probes/package and unchanged-code/protected-hash
 checks pass. Acceptance is retained under question-native-transport-20261025.
 No native generation in this stage. A separately frozen owned-launcher pilot and
 scientific review remain next; no general T6/H5 or clinical qualification follows.
@@ -48,8 +555,8 @@ exact context sizing and scientific qualification remain future gates.
 ## Latest question-contract core — October25
 
 Independent scientific/methods reviews and implementation probes approve the separate
-core:38 focused,197 isolated and105 no-site tests pass; 1160 full tests/probes/package pass on unchanged code.
-Existing source inputs round-trip exactly, all65 missing inputs and legacy verifier
+core:38 focused, 197 isolated and 105 no-site tests pass; 1160 full tests/probes/package pass on unchanged code.
+Existing source inputs round-trip exactly, all 65 missing inputs and legacy verifier
 compatibility retained. No new native calls. Recorded-runtime specification is
 reviewed, while exact prompt sizing/native adaptation and scientific qualification
 remain gated. See [[research-log-2026-10-25-question-core]] and TODO.md.
@@ -58,8 +565,8 @@ remain gated. See [[research-log-2026-10-25-question-core]] and TODO.md.
 
 Version-one native development failed and remains failed; source-bound AI review
 also rejects its content. One request ran; the second was not dispatched. The
-separate repair passes1122 full tests/probes/package,159 isolated tests,67
-no-site tests and12 independent methods probes. Both new frozen requests ran
+separate repair passes 1122 full tests/probes/package, 159 isolated tests, 67
+no-site tests and 12 independent methods probes. Both new frozen requests ran
 once and passed source-inclusive verification; the owned server stopped.
 Scientific reviews and third adjudication fail the gate: mechanism utility is
 insufficient and the structured intervention proposition remains unsupported.
@@ -75,7 +582,7 @@ counts below are dated evidence, not current scientific completion.
 Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
 complete line/value dispositions, attribution, numerical bundles, scoped references,
 dependence and separate uncertainty/validity/applicability strata.47 new regressions;
-full1055 tests/no skips/probes/package and92 isolated tests pass. Peer findings and
+full1055 tests/no skips/probes/package and 92 isolated tests pass. Peer findings and
 pre-fix failures preserved. Final code unchanged during full verification.
 Retained exposed IL6R replay covers43527 bytes/172lines/1158location nodes through
 original-source verification. Draft has no fabricated semantic atoms or scientific
@@ -115,7 +622,7 @@ retain their historical status and next-step wording.
 
 Native v2 dossier receipt/hash/span binding and original Open Targets row adapter
 integrated without JSON-original substitution. Full1008 tests/no skips/probes/
-package and45 isolated tests pass;22 new binding regressions. A multiline CRLF
+package and 45 isolated tests pass; 22 new binding regressions. A multiline CRLF
 defect was reproduced before correction; old code and failed test/guard retained.
 Corrected verifier replays the exposed IL6R development dossier:9 selected rows,
 11 input files, original binding bytes unchanged. No complete atomic inventory,
@@ -127,8 +634,8 @@ Acceptance: planning/review-assets/t6-dossier-binding-20261024/final-acceptance.
 
 ## October24 atomic claim audit prototype validated
 
-Evaluation-only JSON original/source/claim-review contract implemented;23 new tests,
-full986/no skips/probes/package and33 isolated-checkout tests pass. Final code
+Evaluation-only JSON original/source/claim-review contract implemented; 23 new tests,
+full986/no skips/probes/package and 33 isolated-checkout tests pass. Final code
 hashes unchanged throughout validation. Source entailment, citation support and
 intervention applicability remain separate; unassessable is not zero error.
 No real claim reviews, model calls, clinical labels or probabilities created.
@@ -142,7 +649,7 @@ planning/review-assets/t6-claim-audit-20261024/final-acceptance.json.
 Fixed12 assessed:10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,
 0joint-ready. Frozen registry route STOP; do not resample or redispatch. Third
 original-source adjudication575b3fd0... and root replay verify180 method judgments,
-465 pointers and35 unique hashes. Current observed public access supported forall12;
+465 pointers and 35 unique hashes. Current observed public access supported forall12;
 old historical cutoffs/future realized outcomes are not extra pre-origin gates.
 Clinical labels and probabilities remain null. Full963/isolated163 tests pass.
 Next feasible branch independent of clinical labels: evaluation-only atomic claim
@@ -154,7 +661,7 @@ See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
 ## Twelve source packets and independent stewards sealed — October24 latest
 
 Sourceexecution272a56ca... committedeb9ef5b beforeHTTP, terminalcompleted12
-HTTP200listings/58,250bytes/4.813s;0PDFlisted/retrieved/0retries/modelcalls.
+HTTP200listings/58,250bytes/4.813s; 0PDFlisted/retrieved/0retries/modelcalls.
 Observedregistryprojection absence is NOTglobaldocumentabsence. Rootaudit passes.
 Two independentstewards readall12 originalrawrecords/15base mandatoryfields,
 preserve1screenunknown, no clinicaloutcomelabels. A1f5dbb57... andBf23c7fb1...
@@ -167,14 +674,14 @@ No moreHTTP undercompletedsourcejob. AlloriginalscientificTasks6–8 remainopen.
 
 ## Fixed-member source execution prepared — October24, before dispatch
 
-Sourceengine5f0fede... and protocola040d5d8... independentlyreviewed;41main+
-12peer synthetic tests, full963/no skips/probes/package and163isolatedtests pass.
+Sourceengine5f0fede... and protocola040d5d8... independentlyreviewed; 41main+
+12peer synthetic tests, full963/no skips/probes/package and 163isolatedtests pass.
 Root fixed fixture imports for normalpackage discovery; oldreviewedtestbytes and
 initial912-test/two-import-error failure preserved. No runtimeenginechange.
 source-products-execution-freeze.json prepared. Next commit then guarded
 data/cache/run_readiness_sources_20261024.py once. On resume inspect
 source-products-attempt-summary.json/sourcejournal before ANYdispatch; claims
-mustneverrepeat. All12canonical IDs fixed, no reportedoutcomes/clinicalactivation.
+mustneverrepeat. All 12canonical IDs fixed, no reportedoutcomes/clinicalactivation.
 
 ## Fixed-member source products in preparation — October24
 
@@ -190,9 +697,9 @@ protocolreview underway. No postmembershipHTTP yet. Sourcepresence is not jointr
 ## Amended frame and fixed12 source members verified — October24 latest
 
 Capacitycapture9d142483... committedc20f905 completed4277unique queryrows in
-9pages+2versionresponses,1,657,798bytes. Source-only elapsed8.184973s; no retry.
-Root replay + independent stdlibreconstruction match all4277 ledgerrows and
-12originalseedcandidates:3994ineligible/268eligible/15unknown;0inframeexclusions.
+9pages+2versionresponses, 1,657,798bytes. Source-only elapsed8.184973s; no retry.
+Root replay + independent stdlibreconstruction match all 4277 ledgerrows and
+12originalseedcandidates:3994ineligible/268eligible/15unknown; 0inframeexclusions.
 readiness-membership-freeze.json now seals12records (11coarsescreeneligible,
 1unknown) before anyper-ID/source-rule queries. Clinical/source-rule readiness
 stillunqualified; no targetprogram mapping, outcome labels, features ormodelcalls.
@@ -216,7 +723,7 @@ do not redispatch if a claim/attempt already exists. No model/PDF/clinicalactiva
 Next planned action after auditedv0.1 capacityfailure: explicit protocol
 prospective-endpoint-capacity-v0.2 proposes max5000/page500 only, with unchanged
 10pages/20MiB/600s/0retry. Preserve oldwindow/exclusions/eligibility/projection and
-original54da82... sampling seed, not newamendmenthash. Separate profile engine is
+original 54da82... sampling seed, not newamendmenthash. Separate profile engine is
 being implemented without editing legacyframe/transport files or failed artifacts.
 Independent amendment review underway. No amendedHTTP yet; originalmanifest remains
 terminalfailed and mustnotrunagain. Fullobjective/scientificTasks6–8 remainopen.
@@ -224,8 +731,8 @@ terminalfailed and mustnotrunagain. Fullobjective/scientificTasks6–8 remainope
 ## Cold source attempt stopped at capacity gate — October24 latest
 
 Execution25e30b6a... committedf5fdab8 before actualHTTP. Source-execution-
-20261024T155636Z is terminalfailed: first version71B and first study page38,595B
-bothHTTP200; source declares4,277 rows > frozen500. All100 first-page records obey
+20261024T155636Z is terminalfailed: first version 71B and first study page38,595B
+bothHTTP200; source declares4,277 rows > frozen500. All 100 first-page records obey
 projection/dateguards (September24). No completeframe/upperboundary/versionafter
 or source-rule qualification. No members/predictions/modelcalls/retries/spending.
 source-attempt-summary.json + source-stop-audit.json verify two terminalattempts,
@@ -241,12 +748,12 @@ the later backup-receipt/status commit is outside that bundle.
 
 ## Bounded source execution prepared — October24, before first call
 
-New prospective_transport.py passes36 tests; full870/no skips/probes/package
-and70 clean-checkout tests pass. Root review fixed short/empty-page pagination,
+New prospective_transport.py passes 36 tests; full870/no skips/probes/package
+and 70 clean-checkout tests pass. Root review fixed short/empty-page pagination,
 optional later counts, cleanup accounting, semantic no-redispatch key and
 pre-mutation output containment. No actualHTTP before this checkpoint.
 Source-execution-20261024T155636Z/manifest25e30b6a... is frozen; exactpublic
-metadata query plus2version requests,500record/10page/20MiB/600s caps, no retry,
+metadata query plus2version requests, 500record/10page/20MiB/600s caps, no retry,
 no model/PDF/member/clinical activation. Next guarded cache runner
 data/cache/run_prospective_capture_20261024.py checks committed freeze before
 onecoldattempt. On resume inspect source-attempt-summary.json and execution
@@ -255,7 +762,7 @@ journal BEFORE any dispatch; never rerun a potentially started attempt.
 ## Named-source exposure inventory sealed — October24
 
 43,393 canonical NCT exclusions projected from16 explicit retained origin sources
-plus incidental protocol IDs;1,458,436,692bytes/31.922seconds. Source hashes and
+plus incidental protocol IDs; 1,458,436,692bytes/31.922 seconds. Source hashes and
 all first byte locators verify. No old outcome answers parsed or new trial query.
 Inventoryc63df920... is complete only for named sources, not universal exposure.
 Exposure-bound request20261024T154310Z/contract53a60efd... retains identical date/
@@ -267,7 +774,7 @@ Original B0stop and scientific Tasks6–8 remain unchanged.
 
 ## Offline prospective frame preparation complete — October24
 
-New stdlib tools/science/prospective_frame.py and34 targeted tests validated;
+New stdlib tools/science/prospective_frame.py and 34 targeted tests validated;
 full834 tests/no skips, probes, packaging/demo pass. Independent review fixed
 request-time ceiling, immutable journal-pin handling and response array shapes.
 Root corrected ignored-metadata dependency by tracking four small schema fixtures;
@@ -300,21 +807,21 @@ See [[Prospective Endpoint Readiness 2026-10-23]]. Earlier entries are checkpoin
 
 800 full local tests/probes/package pass. Commit eca1dff adds guarded cap1 tasks,
 source-only references and post-seal evaluation; legacy cap3 fingerprints retained.
-Full source preparation passed:8tasks/5cases/2offered records each, all80 screen
+Full source preparation passed:8tasks/5cases/2offered records each, all 80 screen
 dispositions. Plan3dfa704b... and tasks6f127a12... sealed atbb68838. Independent
 reviews sealed e08003c; third reconciliation/reference c827e9ce... committed6e56b1c
 before native dispatch. References retain3singletons/3ties/2abstentions, no forced
-ranking or clinical truth. Two source reviews cover all16 candidates each.
+ranking or clinical truth. Two source reviews cover all 16 candidates each.
 
 Execution completed under runs/t6-topone-20261024T033651Z (October23 Pacific):
-32/32 arms completed and verified,48 native calls,2749.875seconds. Owned native
+32/32 arms completed and verified, 48 native calls, 2749.875 seconds. Owned native
 server stopped and port closed. Prediction seal59c4ec60... committeda31e228 before
 answer join. Post-seal evaluator session25303 exited0; report035acb44... verifies
-all32 arms and13 distinct selected original rows. Independent original-candidate
-audit passed16/16 offered rows (reportab583afc...);21 original files/794765685bytes.
-Acceptancec1650d23... passes. AsOf6/8, adaptedVB6/8, lexical5/8, provider3/7
+all 32 arms and 13 distinct selected original rows. Independent original-candidate
+audit passed16/16 offered rows (reportab583afc...); 21 original files/794765685bytes.
+Acceptancec1650d23... passes. AsOf 6/8, adaptedVB6/8, lexical5/8, provider3/7
 applicable. Three ties/two none-sufficient references; neither model abstained.
-Earlier87273/4744 and25303/23536 handles are terminal; do not restart them.
+Earlier87273/4744 and 25303/23536 handles are terminal; do not restart them.
 All numerical features empty/probabilities null; broader scientific Tasks6–8 open.
 Remaining-gate/prospective-design disposition written without new dispatch or
 clinical activation. B0 expansion stays stopped; no specific missing user file.
@@ -327,11 +834,11 @@ See [[Harder T6 Source Prioritization 2026-10-23]]. Earlier entries are checkpoi
 ## B0 finite cycle completed — October23
 
 Final source-inclusive audit2fc4f62f... verified96/96 native envelopes for32
-origin-only selected trials. January:0appearances/17absences/15unknowns; all15
+origin-only selected trials. January:0appearances/17absences/15unknowns; all 15
 unknowns have ESTIMATED record-version dates. Coverage53.125% fails90%, so stop
 operational prediction expansion. April:1appearance/31absences, separate sensitivity.
 No resampling, endpoint replacement, clinical activation, training or probabilities.
-760 full tests pass; original72null clinical labels remain unchanged. Next is the
+760 full tests pass; original 72null clinical labels remain unchanged. Next is the
 harder source-bounded T6 comparison with separately frozen top-one tasks and AI
 references before arm outputs. Broader scientific Tasks6–8 remain unfinished.
 See [[B0 Registry Content Feasibility 2026-10-22]]. Earlier entries are history.
@@ -339,14 +846,14 @@ See [[B0 Registry Content Feasibility 2026-10-22]]. Earlier entries are history.
 ## B0 origin membership sealed — October23
 
 Resumed user continuation after the frozen contract stage. New workflow/transport
-passes732 full tests and74 B0 tests; ten receipt-forgery/accounting defects were
+passes 732 full tests and 74 B0 tests; ten receipt-forgery/accounting defects were
 corrected before real dispatch. Origin request committed9e40e15, then116 NCTs read
 twice identically:101source-absent/15unknown. Full receipt reconstruction sealed32
 origin-only members, preserving128screen dispositions; membership2dac62ca... and
 anchor committed27c0b26 before follow-up preparation. No clinical labels or fitting.
 
 Origin extraction186.156s including ancestry; source lifecycle19.453s; first/read
-41109B; Python-parent peak114282496B, PostgreSQL memory unmeasured. Owned server
+41109B; Python-parent peak 114282496B, PostgreSQL memory unmeasured. Owned server
 stopped/55440closed. Follow-up preparation currently revalidates ancestry; no
 follow-up dispatch yet at this checkpoint. New evaluator20 tests pass; fresh full
 validation and later actual audit pending. Next finite B0 audit then hard T6.
@@ -355,8 +862,8 @@ See [[B0 Registry Content Feasibility 2026-10-22]].
 ## B0 contract/schema preparation — October 22
 
 New registry-content-feasibility-v0.1 policy freezes the separate snapshot-state
-endpoint,128-screen/32-selected caps and90% operational coverage rule. Pure
-non-dispatch registry_content contracts and26 regression/peer tests pass.
+endpoint, 128-screen/32-selected caps and 90% operational coverage rule. Pure
+non-dispatch registry_content contracts and 26 regression/peer tests pass.
 Three retained schema audits match all mandatory columns; candidate/exclusion
 hashes and an independent27-file/source-template/journal review pass. Expanded
 full suite684 tests/no skips, probes, PowerShell syntax and package/demo pass.
@@ -364,7 +871,7 @@ full suite684 tests/no skips, probes, PowerShell syntax and package/demo pass.
 No B0 outcomes accessed or selected membership; no DB queries, model calls or
 execution authorization. Full archive/restore lineage revalidation and a new
 source-inclusive B0 runner remain outstanding before origin screening/sealing.
-Old twelve-member guards and all72 clinical labels unchanged. This completes
+Old twelve-member guards and all 72 clinical labels unchanged. This completes
 contract/schema preparation, not the B0 feasibility cycle or clinical qualification.
 See [[B0 Registry Content Preparation 2026-10-22]].
 
@@ -373,7 +880,7 @@ See [[B0 Registry Content Preparation 2026-10-22]].
 Planning assessment complete: strict efficacy prediction remains deferred. The
 recommended next step is a new, bounded B0 registry-results-content appearance
 audit using existing January2025/January2026/April2026 AACT inputs, after schema
-and source qualification and a fresh origin-only membership seal. At most32
+and source qualification and a fresh origin-only membership seal. At most 32
 records from the exposed128 origin screen, excluding both followed-up pilots;
 no selected membership or new follow-up access yet. A source-state zero is not a
 clinical negative; April observations cannot backfill January. Prior next12 study
@@ -389,20 +896,20 @@ No old labels, H1–H6 meanings, cutoffs, scorer or cohort activation changed. S
 
 ## Current primary report lookup and stop decision — October 22
 
-The frozen primary publisher lookup at6e662ed used four exact searches, one page
+The frozen primary publisher lookup at 6e662ed used four exact searches, one page
 open and one original GET. Official SID PDF317171B/24pages authenticates control
-4509282/poster0507/title and a scheduled odd-poster session May14,2026. It does
+4509282/poster0507/title and a scheduled odd-poster session May14, 2026. It does
 not bind the item to NCT05997277 or provide abstract results, target DOI, actual
 publication/presentation, formal decision rule or analysis/decision timing.
 February HTTP/PDF dates remain source metadata, not historical public-byte proof.
 April1 cutoff unchanged; no old/new36-label changes or clinical/scoring activation.
 
 Two independent current reviews recommend revise/defer; third technical check
-verifies63 pack pins,11 dependencies, source journal/hash and full page/row
+verifies63 pack pins, 11 dependencies, source journal/hash and full page/row
 reconstruction. Failed rotated crop and fresh corrected capture are preserved.
 The overbroad no-DOI note is corrected separately: five unrelated reference DOIs
 exist, but none attributable to target report. Eight synthetic helper cases,
-20 additional technical checks and8 synthetic transport checks pass; actual
+20 additional technical checks and 8 synthetic transport checks pass; actual
 Crossref work projection remains unperformed. No runtime/dependency changes;
 658-test/four-CI checkpoint inherited, no claim of new full-suite execution.
 
@@ -440,9 +947,9 @@ are dated history, with their next pointers superseded by this one.
 
 Afterclosingprotocolsourceaudit, frozen exposed localvalidation e27a24b checked
 NCT05997277 Jan/Apr2026metadata: bothdocuments/provided_documents fullyprojected,
-explicit0rows; bothlastupdateMay7,2025 ACTUAL, firstpostAug18,2023. Source/repeat
+explicit0rows; bothlastupdateMay7, 2025 ACTUAL, firstpostAug18, 2023. Source/repeat
 hashes, rowlocators, deterministicrequests/schema anddatebounds verified. No
-newsource/DB/network;6syntheticchecks pass. Priorpeekdisclosed, technicalpeer
+newsource/DB/network; 6syntheticchecks pass. Priorpeekdisclosed, technicalpeer
 independentofrootexecution butnotunexposed. HistoricalPDFavailability stillfalse;
 no no-document/no-eventnegatives, old36/new36unchanged, nextcohortinactive.
 Frameworkcheckpoint remains658tests/fourjobs; no runtimemodulechanges thisphase.
@@ -459,7 +966,7 @@ confirm embeddedprimaryANcountweek16/mixedmodel/FAS/statisticalprovisions.
 Fullprimarydecisionrule, prespecauthenticity and historicalavailability remainheld;
 minocycline/HiSCRthreshold/sourceversion tensionspreserved. Axis8partialvsunresolved
 granularityreconciledwithoutforcingrulequalification.658fulltests/core57skips/
-package/probes/all4hostedjobs pass2d6a0cc. Tenfailingjournal/recipeprobes corrected.
+package/probes/all 4hostedjobs pass2d6a0cc. Tenfailingjournal/recipeprobes corrected.
 OnePDFGET/0sourcesearch/$0/0frameworkcalls; no cohort/label/feature/probabilitychange.
 Rootmistakenlyrequested a two-row retainedmetadata peek beforefreezingnextrequest;
 latecorrection, exactscope/locators andexposure retained. Nooutcomes/DB/networkpeek.
@@ -469,7 +976,7 @@ no currenttimestamp→historicalproof. See [[Existing-trial Protocol Audit 2026-
 ## Latest publisher-discovery assessment — October21
 
 Prospective v02 committed before dispatch atda8d147.647 full tests/core57 expected
-skips and package/probes pass;12 new tests include7 retained forgery failures now
+skips and package/probes pass; 12 new tests include7 retained forgery failures now
 corrected. Two exact originalPDF controls recovered4,640,682B. Sponsorposter passes;
 registry oldICF001 originalidentity passes but fullcontrol fails because currentAPI
 listsProt_SAP002/ICF003. Corporate request blockedoutsidefrozenHTTPS redirectpolicy;
@@ -491,7 +998,7 @@ failed the expected-original/allowed-host criterion despite17 exact-NCT items.
 No fallback, retry or posthoc substitution. Next12 source-readiness protocol is
 inactive, membership null/unsealed; G3 origin closure not performed. No new-member
 sources, clinical labels, numeric features, probability or live framework calls.
-All635 full tests/core57 expected skips and package/probes pass; all4 hosted jobs
+All 635 full tests/core57 expected skips and package/probes pass; all 4 hosted jobs
 passed for712c4fb (run39722514674). Next: prospective
 sponsor/co-developer identity/link amendment and fresh controls before activation;
 preserve failed protocol. No new user files required at this checkpoint.
@@ -501,9 +1008,9 @@ See [[Exact-trial Retrieval Calibration 2026-10-21]] and
 ## Current follow-up feasibility — October21 continuation
 
 The same12 origin-selected trials now have verified January/April2026 follow-up
-metadata/results:0reportedrows inJanuary,143inApril for safety-primaryefgartigimod.
+metadata/results:0reportedrows inJanuary, 143inApril for safety-primaryefgartigimod.
 36targetedqueries/16originalartifacts and twoAI reviews percase retain36canonical
-endpointlabels+12occurrencediagnostics allnull. H1:9unresolved,2safetyinapplicable,
+endpointlabels+12occurrencediagnostics allnull. H1:9unresolved, 2safetyinapplicable,
 1undefinedclinicalefficacy. Root corrected ambiguousdate/genericriskwording and
 retainedunbridgedregistered/reportprimarystructure. Old36 unchanged.
 
@@ -522,13 +1029,13 @@ and [[research-log-2026-10-21-followup]].
 Endpoint-local efficacy-decision, registry-advancement and arm-dosing rules are
 frozen in endpoint-origin-feasibility-v0.1. From444 eligible origin trials after
 excluding old12,128 predetermined metadata candidates were queried only in
-January2025.113 versions date-eligible;15 held;36 maturity-eligible; first12
-sealed before follow-up at005db13e5d51f595fa5849d72b3d495e12cad797c20a632db511be85ba514ac6.
-All128dispositions,12 physical source/program rows, source pointers, scope tables
+January2025.113 versions date-eligible; 15 held; 36 maturity-eligible; first12
+sealed before follow-up at 005db13e5d51f595fa5849d72b3d495e12cad797c20a632db511be85ba514ac6.
+All 128dispositions, 12 physical source/program rows, source pointers, scope tables
 and lineage independently verified.597 full tests/core57 expected skips and four
 hosted jobs pass for5b22668. Membership anchor committed/pushed d9285f3.
 
-Clinical labels stillnull; original36 unchanged. Maturity is not an observed
+Clinical labels stillnull; original 36 unchanged. Maturity is not an observed
 event or efficacy qualification. Next: source-qualified follow-up/adjudication
 for all frozen members, then qualification-yield and power/precision assessment.
 No historical predictor, genetics/scorer admission or clinical lock. See
@@ -537,14 +1044,14 @@ No historical predictor, genetics/scorer admission or clinical lock. See
 
 ## Earlier same-day clinical-label readiness — October21
 
-The missing reported-result stage now passed for all12 original trials in both
+The missing reported-result stage now passed for all 12 original trials in both
 January/April2026 AACT snapshots:995 rows each, two trials with reported outcomes,
-all36 original labels unchanged/null. Independent terminal and AI scientific reviews
+all 36 original labels unchanged/null. Independent terminal and AI scientific reviews
 passed their source-check scopes; no independently validated clinical truth is claimed.
 Structured-negative truthiness, integer-FK, group-code and result-date contradictions
 were corrected and tested.577 full/core tests (58 expected core skips), required
-probes/package and four hosted jobs pass at4a57dd4. Full validation needed a verified
-project-local portable PowerShell7 runtime; the original environment failure remains.
+probes/package and four hosted jobs pass at 4a57dd4. Full validation needed a verified
+project-local portable PowerShell 7 runtime; the original environment failure remains.
 
 Step1 remains unresolved scientifically: same-program scope, prospective trial-level
 success/failure rules, qualified event/decision times and negative ascertainment are
@@ -953,14 +1460,14 @@ Execution 2026-10-18.md. Original H1 clinical success, registry advancement and
 verified dosing remain distinct; real probabilities remain null.
 
 Item3 supporting work: OT24.09 four-product historical mapping qualification
-passed (805 originals,115,821 projected rows); origin-only reconstructed exploratory
+passed (805 originals, 115,821 projected rows); origin-only reconstructed exploratory
 universe sealed (61,541 conditional scopes, not qualified independent programs).
-All363 full tests and core validation passed after source-ancestry hardening.
+All 363 full tests and core validation passed after source-ancestry hardening.
 January2026 technical restoration and independent terminal acceptance passed:
-52 tables,563,840 studies,55,380,326 rows;394 evidence files and1,648 ancestor
+52 tables, 563,840 studies, 55,380,326 rows; 394 evidence files and 1,648 ancestor
 commitments reverified. Empty cohort output, owned server stopped and port55437
-closed. Batch41.27minutes;23,709,068,263 retained bytes; peak memory uninstrumented.
-All four hosted Windows/Linux jobs passed at67cde1e. Exact original acquisition
+closed. Batch41.27minutes; 23,709,068,263 retained bytes; peak memory uninstrumented.
+All four hosted Windows/Linux jobs passed at 67cde1e. Exact original acquisition
 code/test recovery matched old freeze hashes and has a verified E: backup; recovery
 is post-hoc, not an automatic acquisition-time archive.
 April2026 AACT remains a real authenticated-file gap requested from the user at
@@ -969,7 +1476,7 @@ Science3 is blocked/incomplete; ordered execution stops at that permitted except
 Strict complete,clinical-ready and locked flags remain false. Items4–7 are not started.
 
 April-delivery resumption later October18: user supplied the requested archive.
-Exact dumpdate2026-04-01,ZIP6bc8662e...04b8c3,2,420,893,767bytes;all5CRCs/memberhashes
+Exact dumpdate2026-04-01,ZIP6bc8662e...04b8c3, 2,420,893,767bytes;all 5CRCs/memberhashes
 and repeatedfullZIPhash passed. Prior blockedcheckpoint remains historical atb30cf15.
 Fresh evaluator-only technicalrestore is running onownedport55438 withliteralempty
 cohort SQL. Pre-label input-scope amendment adopts an explicit conservative civil-date
@@ -989,13 +1496,13 @@ zero labels. The amended bounded input-readiness task passed; historical predict
 features, reporting completeness, clinical outcomes/power/scoring remain unqualified.
 Source report: planning/review-assets/science-prerequisites-20261018/item3/source-readiness-report.json.
 Active register: data/derived/science-prerequisites-20261018/execution-science3-passed.json.
-402 full tests, core with52 expected skips, four hosted jobs passed at195d7d6.
+402 full tests, core with 52 expected skips, four hosted jobs passed at 195d7d6.
 Science4 starts with a frozen evaluator extraction/review protocol; Science5–7 pending.
 
 ### October19: Science4 bounded audit complete; Science5 active
 
 All three source extracts independently passed. The verified r1 pack has30 eligible
-source payloads and6 held payloads excluded; all12 members remain. Two blinded
+source payloads and 6 held payloads excluded; all 12 members remain. Two blinded
 source/Internet reviews and fresh third reconciliation produced36 unresolved/null
 endpoint records, with substantive timeframe, population, regimen and source-access
 corrections retained. Independent source/contract/feasibility checks pass.
@@ -1012,16 +1519,16 @@ See [[research-log-2026-10-19]] and item4/outcome-feasibility-report.json.
 ## Science5 conditional branch completed — October19
 
 Fresh verification covered38 retained files/93,166,905bytes and reproduced the
-2,979-by-503 dosage selection and4,096 LD values. BLUEPRINT naive-monocyte RNA
+2,979-by-503 dosage selection and 4,096 LD values. BLUEPRINT naive-monocyte RNA
 and RA susceptibility cannot stand in for protein blockade or clinical response.
-The3,968 shared-statistic inventory and2,979 LD subset remain distinct; dense ABF
+The 3,968 shared-statistic inventory and 2,979 LD subset remain distinct; dense ABF
 cannot silently inherit LD-only exclusions. Source digest/documentation discrepancies,
 unknown overlap/scales and exact January2025 information availability remain held.
 
 Independent peer review exposed anonymous/evaluator-only historical ancestors being
-accepted as plan-ready. Corrected declaration checks and18 regressions pass;16
-independent probes and60 never-admit cases pass. Original bytes and reproductions
-are retained. All463 full tests, core validation with52 expected skips, required
+accepted as plan-ready. Corrected declaration checks and 18 regressions pass; 16
+independent probes and 60 never-admit cases pass. Original bytes and reproductions
+are retained. All 463 full tests, core validation with 52 expected skips, required
 probes and packaging/demo pass. The guard never admits a feature or certifies
 source payloads. No MR, colocalization, numerical prediction feature or fit occurred.
 
@@ -1042,8 +1549,8 @@ The declaration guard now checks every information-bearing model asset and
 contradictory source-role declarations. Later non-scientific runtime and genuinely
 old-input computations remain permitted. Original failures/drafts and an explicitly
 post-hoc exact code recovery are retained. No fitting was ever authorized.
-Independent review passes22 regressions and68 probes;485 full tests, core validation
-with52 expected skips, probes and packaging/demo pass. G07 and clinical lock remain
+Independent review passes 22 regressions and 68 probes; 485 full tests, core validation
+with 52 expected skips, probes and packaging/demo pass. G07 and clinical lock remain
 false. Authoritative reports are item6/training-contract-r1.json and
 training-feasibility-r1.json; execution-science6-passed.json validates the closeout.
 Science7 now starts supported T6 comparisons, adapted execution and actual workflow
@@ -1061,12 +1568,12 @@ See [[research-log-2026-10-25-contextual-qualification]].
 
 ## Source-only adjudication verified - October25 UTC
 
-The interrupted adjudication resumed from the byte-frozen proposals. All43
-strings/54occurrences and172lines/986JSONvalues were reconciled into430
-contextual occurrences/398canonical groups, with4 located MR bundles and14
+The interrupted adjudication resumed from the byte-frozen proposals. All 43
+strings/54occurrences and 172lines/986JSONvalues were reconciled into430
+contextual occurrences/398canonical groups, with 4 located MR bundles and 14
 evidence dimensions. Full source-inclusive audit_v2 passes against original
 receipt-bound rows. Protected clinical labels were hash-checked only and remain
-unchanged; production code still matches the1055-test/92-isolated checkpoint.
+unchanged; production code still matches the 1055-test/92-isolated checkpoint.
 Those suites were not rerun for research artifacts.
 
 Accepted scope: exact source-only extraction/dispositions and source attribution.
@@ -1079,10 +1586,10 @@ Receipt: planning/review-assets/t6-contextual-qualification-20261025/adjudicatio
 
 ## Scoped primary reference accepted - October25 UTC
 
-All67 scientific occurrences now have source-bound primary-review decisions with
+All 67 scientific occurrences now have source-bound primary-review decisions with
 explicit unknowns; original-source audit passes. Scope is AI-assisted exposed-case
-development, not complete independent science or clinical qualification. All363
-other review rows and35 clinical quarantines unchanged. Next bounded interpretation
+development, not complete independent science or clinical qualification. All 363
+other review rows and 35 clinical quarantines unchanged. Next bounded interpretation
 and a fresh paired protocol, not scorer fitting or reopening stopped clinical
 retrieval. See [[research-log-2026-10-25-primary-qualification]].
 

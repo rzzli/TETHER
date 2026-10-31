@@ -1,0 +1,96 @@
+---
+title: Project Progress Reassessment 2026-10-30 - E08 Policy
+date: 2026-10-30
+tags:
+  - project/recovery
+  - r09
+status: accepted-component-documentation-qa-passed
+---
+
+# Project reassessment after E08 entry policy
+
+30 October 2026 UTC. **The separately versioned Source4 entry successor completes the finite E08 external decision/output content-pin policy gate in source/synthetic scope. The complete entry gate, native25, R09 and the scientific project remain open.** [Root acceptance](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-ROOT-ACCEPTANCE-v1.json), SHA `43316e7a`, accepts the first once-only run after independent branch and byte reviews.
+
+This assessment follows [[Project Progress Reassessment 2026-10-30 - Entry Contract Coverage]]. That Source3 checkpoint remains **50 PASS / three DEFERRED**. Its E08 result was not rewritten; the new implementation and actual-object tests belong to Source4. Both historical E16 factory invocations remain excluded and unexecuted. This closeout performs no source execution, new original-resource collection or application-suite rerun.
+
+## What was accepted
+
+The [first actual proof](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-PROOF-v1.json), SHA `f1c1e980`, records **122 passed assertion dispatches: 5 correction regressions + 52 policy literals + 15 genuine integration branches + 50 preserved causal branches**. There are zero failed, deferred, unreached or deadline-unknown dispatches in this selected suite. These assertions include expected refusals; 122 passes do not mean 122 successful entries or scientific evaluations.
+
+The [independent branch/source review](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-BRANCH-SOURCE-ACTUAL-REVIEW-v1.json), `01e92b72`, checks branch classification, genuine objects and source binding. The [independent byte review](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-BYTE-INDEPENDENT-ACTUAL-REVIEW-v1.json), `7ae5e826`, checks retained bytes, raw snapshots, query witnesses and policy data. Their scopes are complementary; neither reran the producer.
+
+| Observation | Accepted result | Interpretation |
+|---|---:|---|
+| Policy literal outcomes | 42 exact refusals / 10 exact reports | Six EXECUTION metadata reports are followed by separate `INVALID_INPUT` plan refusals; four AUTHORING reports return without executable plans. Every literal has zero output/original/compiler callbacks. |
+| Integration coverage | 10 named / 15 actual branches | Original ordering, authoring barrier, same-Core handoff, immutability/foreign objects, once-only observations, interrupted report issuance and later cleanup. |
+| Fixture worlds / ordinary entry attempts / retained Cores | 128 / 123 / 119 | Pre-entry and partial-construction cases are not fabricated complete states. |
+| Available identity comparisons | 63 / 63 true | Missing comparisons remain explicitly unavailable. |
+| Policy attempts / prepared / issued reports | 119 / 72 / 70 | Issued reports comprise 64 EXECUTION and six AUTHORING observations across the whole suite. |
+| Prepared-only reports | 2 | Actual immutable report returns survive late clock or allocation failure; both remain noneligible and unissued. |
+| Reported suite elapsed | 13.359 seconds | One original cooperative 60-second timer includes setup/source activity and per-world evidence copies. |
+| Setup / cleanup / evidence / audit / pin / deadline errors | 0 | Final proof writing and interpreter startup/exit are outside the reported elapsed or unmeasured. |
+
+The genuine entry creates its sole original clock/Origin, nonce, Core, Registry and raw store before policy work. A separately supplied immutable binding selects current IDs, roots and ordered input basis; envelope data cannot approve itself. Validation rejects cycles and direct or transitive current decision/output ancestry of static inputs or consumers, including nonbasis nodes and acyclic forbidden graphs.
+
+AUTHORING preserves planned/unbuilt null pins and reasons but returns before FileSpec admission, output callbacks, original opens, helper compilation or continuation. EXECUTION validates metadata and the independent actual FileSpec basis, then still requires all existing live file/hash/identity/lease/output gates. The actual returned report is retained before the final original-clock eligibility step. A prepared successful status is data, not a gate. After timely issuance, an unrelated later work error does not erase known close rights: the tested fresh close is permitted at 396 and blocked at the original hard end 400, without healing stopped calls.
+
+The [coherent source pause](review-assets/recovery-step9-entry-source4-20261030/ENTRY-SOURCE-PAUSE-v4.json), `c38df4b3`, remains unchanged: Kernel4 is **145,042 bytes**, SHA `e389db4e`, and its actual captured codec/Ops/FileView helper prefix is **99,000 bytes**. The kernel is an explicit pre-entry TCB dependency, not a captured helper. Ops/FileView change only their kernel import; the pure codec4 bytes and profile caps remain unchanged. The selected external binding and interpreter/launcher are still trusted prerequisites, not authenticated by their own metadata report.
+
+## Evidence, streaming and resource limits
+
+All **844 retained artifact hashes / 20,134,324 bytes** match. Of these, **72 files / 3,121,169 bytes** copy complete source-generated immutable artifacts; **772 files / 17,013,155 bytes** are other harness evidence. Including the **14,195,595-byte proof** and **474-byte attempt record**, the run retains **846 files / 34,330,393 bytes**, excluding bindings, source and review artifacts. These are retained and hash-rechecked filesystem bytes, with ordinary close; no crash-durability or `FlushFileBuffers` guarantee follows.
+
+The byte review reconstructs **4,562 canonical reservations**, including **4,561 registered raw rows** and one explicitly missing E05 registration. **74 immutable snapshots** retain **4,583 raw-row copies / 18,332 axes**. All **312 query witnesses / 854,672 bytes** agree with their snapshot descriptors. All **66 complete snapshot projections** agree; eight partial snapshot copies remain explicit. Copies overlap the same facts and are not additional reads or dispatches. Native and Python delivery, committed/staged/unobserved facts, wrapper returns, count/error definedness and integer/float clock bits remain distinct.
+
+All 119 policy observations agree with their retained metadata. The 72 prepared and 70 issued reports reconstruct the exact 12 data fields and canonical binding/envelope digests; all 74 snapshot policy copies agree, including both late prepared-only outcomes. The ten successful literal report values also equal their unchanged pre-code expectations.
+
+Source4's E32 separately streams **3,991,999,872 procedural bulk bytes** through one 1 MiB buffer. The selected set totals **3,992,098,940 known/hashed bytes**, with **99,068 captured helper/metadata bytes**, **3,812 reads / 3,842 fake original7 calls / five once-only closes**. It retains no bulk capture assembly/blob, and its genuine active context refuses bulk byte access and returns `NATIVE_ROUTE_UNAVAILABLE`. This is generated periodic data, not an original model/data payload read or inference. The 13.359 seconds covers the whole suite, not isolated E32 timing or real-drive throughput.
+
+The [author accounting review](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-ACCOUNTING-RESOURCE-REVIEW-v1.json), `56f92e00`, supplies resource interpretation rather than independent correctness acceptance. Globally there are 4,561 synthetic original7 callbacks, 3,921 reads and 105 close attempts; negative/unknown outcomes prevent treating all attempts as known successes. Two E21 committed 58-byte counts precede spy delivery completion, explaining the retained 116-byte difference. Logical raw counters omit separate raw banks, snapshots, generated storage, policy graphs/reports, boxed Python objects and harness worlds. File lengths, cross-world sums and these counters are **not RSS, commit peaks, 256 MiB child fit, VRAM/KV or integrated inference capacity**. Harness filesystem copies do not qualify the subject physical14 writer, flush, readback or closure protocol.
+
+One metadata defect was caught before execution. [The preserved v1 HOLD](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-INDEPENDENT-STATIC-HOLD-v1.json), `2d4979a6`, identified an unused current `kernel_tcb` field still pointing to Source3. Named [v2 metadata](review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-FREEZE-v2.json), `cf4d6aac`, names the actual Source4 TCB and explicitly labels the inherited Source3 reference. Source, runner, assertions, 52 goldens and branch geometry were unchanged. Final peer `fe105a5b` preceded scope `7e1caa16` and binding `9787b72d`. This was a preparation HOLD, not a source failure; no subject ran against v1 metadata. Source1/Source2 failures and all earlier assessments remain preserved.
+
+## Full recovery status
+
+| Item | Current status and remaining requirement |
+|---|---|
+| R01 | Accepted scope, governance and exposure boundaries. |
+| R02 | Accepted tested checkpoint and restoration inventory. |
+| R03 | Accepted scoped archive compatibility/relocation; complete host/raw/model restoration remains separate. |
+| R04 | Accepted reproduced application correctness fixes. |
+| R05 | Accepted bounded diagnostic preparation; stronger-model scientific sufficiency unresolved. |
+| R06 | Accepted reusable infrastructure slice. |
+| R07 | Technical diagnostic closed negative; independent human assessment pending. |
+| R08 | Partial source/exposure preparation; no scientifically qualified fresh case. |
+| R09 | Finite Source4 E08 integration and 122 assertions accepted in source/synthetic scope. Complete entry, native25, real roster/consumers, native/physical/new84 and integrated resources remain open; historical E16 calls remain excluded. |
+| R10 | Timed independent human development pilot pending qualified cases, mechanics and reviewers. |
+| R11 | Estimand, power, amended H5 protocol, preregistration and analysis freeze pending. |
+| R12 | Locked H5 evaluation/report pending protocol, mechanics and final independent panel. |
+| R13 | Alternative clinical outcome source conditional and unqualified. |
+| R14 | Regional genetics/compatible LD, causal features, predictors and scorer/calibration conditional and unqualified. |
+| R15 | Original clinical comparisons and ablations conditional and pending. |
+| R16 | Individually gated T2–T5/H6 extensions and reproducible release pending. |
+| HR1 | Human recruitment, domain matching, conflicts and exposure records pending. |
+| HR2 | Two independent orientation submissions and measured workload pending. |
+| HR3 | Fresh source-only references, reviewer coverage and masked ratings pending. |
+| HR4 | Sized final panel and independent adjudication pending. |
+
+AsOf remains **0.3.11/default v2**, with retained acceptance of **1,774 full application tests, 327 pins and ten preserved-version qualifications**. No application suite was rerun or default integration made. The installed C++ toolchain works without restart, but this milestone ran no C++ compiler, SDK, FFI, native child or model. Python helpers were compiled in memory through the declared closed loader. The original native profile remains **FAILED**, and its independent whole-verification remains **INCOMPLETE_TIMEOUT**.
+
+The retained science gaps are unchanged: **65 missing inputs, 36 unqualified endpoint labels, 17/32 observable registry states and 0/12 jointly source-ready clinical cases**. Features remain empty, probabilities null and independent human reviews pending. Agent engineering reviews do not replace human scientific submissions. Provider spending remains **$0**; no new installation, download or original payload read was introduced. The downloader and stopped periodic monitor remain untouched.
+
+## Critical next major stage: the operational real route
+
+E08 is no longer the missing policy implementation for this successor. The next task must carry the actual entry and producer toward the selected real new84 route, rather than treating another tiny synthetic green result as final acceptance. The [staged 48-node manifest](review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json) is a useful declared basis, not a complete execution roster. The [native raw/bulk contract](review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json) and [effective compatibility addendum](review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json) freeze boundaries, not implemented positive native capabilities.
+
+Post-checkpoint source-only update: the [source-authoring scope](review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-SOURCE-AUTHORING-SCOPE-v1.json) `76064321` produced the preserved `preflight_file14_raw_v1.h` / `.c` and [source design](review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-SOURCE-DESIGN-v1.md). The [first static review](review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-SOURCE-REVIEW-v1.json) `64e89ff6` retained one requested-zero initializer HOLD. The named `preflight_file14_raw_v2.c` (8,811 bytes, `ab117f5b`) adds only the 16-byte positive-request guard; [exact delta review](review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-SOURCE-REVIEW-v2.json) `91fc029b` clears that source mismatch. This is static source evidence only: no C compiler/build, SDK, FFI or native execution, compiled ABI, genuine kernel ticket/bank/lifetime or physical qualification. Native25 preparation is not executed coverage. Source4 and accepted E08 evidence remain unchanged.
+
+1. **Close the selected source/import/consumer route.** Identify the actual new84 entry kernel, adapters, parser/checker dependencies, shim, typed wrapper, parent/child, build recipe, pack and physical sink. Resolve core4 dispositions and transitive native consumers; the historical four DLL sizes total 5,232,640 bytes but their roles are not granted by an old descriptor. Separate captured Python/parser bytes from native hash-only bulk consumption. A path plus digest is not a held-lease native input. Keep source/build/run descriptor stages explicit: planned source and unbuilt images/pack may have null pins and reasons during authoring; only a closed externally selected execution basis may proceed. Future binary hashes must not circularly block writing their own source. Acceptance requires a prospective exact resource vector, explicit missing entries and a concrete route for every consumer, not wholesale inheritance of the historical software roster.
+2. **Exercise the finite native25 component contract honestly.** Use actual issued objects for reachable source/data/refusal branches and preserve separate runtime, data-only, static and deferred classifications. Synthetic14 record/search controls are available; qualified native launch/lease/path-lifetime and before-Python ABI capture are not. Missing positive capability issuers must stay deferred or refused, never replaced by fake brands or booleans. Acceptance of this bounded gate precedes native-wrapper qualification and can proceed alongside real-route source preparation; it does not by itself complete entry or physical execution.
+3. **Freeze the joint physical14 census, representation and reservations.** Count bootstrap/original, ancestor/search, namespace/generated writer, flush/readback, child/pipes, report and cleanup actors together. Keep complete call/query/diagnostic/report retention and actual byte lifetimes. The retained illustrative **19,079 calls = 13,482 historical original calls + 5,597 owned physical calls**, before additional directories/new bootstrap, already exceed the original-only **16,384** limit. It is a warning, not a joint admission or a reason for an arbitrary cap lift. Unknown actor coverage or unresolved writer/readback costs block that physical profile; they need not block separately scoped source authoring. Acceptance needs a versioned exact schema/census and justified operational bounds for the actual selected roster.
+4. **Qualify native carriers and physical operations under separate scopes.** The production raw bank must be the same canonical store from entry, fixed before its first reservation; copying Python cells into a later native bank cannot qualify the conversion boundary. Preserve committed, staged-uncommitted and unobserved raw bits, original clock observations and wrapper returns without claiming an atomic OS return. A tiny harmless owned D fixture may first qualify the typed original7 and physical publication/readback path after its own source/build/runtime decision. Then qualify genuine held-lease native bulk, child/image binding and path lifetime. Content pins, data reports and Source4's unavailable-route refusals cannot substitute for those capabilities.
+5. **Compose the new84 run and measure the complete case before application integration.** Bind the final parent/child/pack and actual archive/journal/resource/Unicode consumers to their new source format. Preserve 84 full documents, four stage instances, two grammars, the six explicit harness exclusions and actual vocabulary/document/EOG coverage; do not reuse the consumed189 pack as the future84 binding. Full-vocabulary masking and complete startup/preparation/hash/native/cleanup/verification costs need their own evidence under the unchanged declared budgets. Only then consider a minimal versioned application change with installed/relocated replay and probability withholding. A source/pure policy pass, fast generated stream or coefficients-only estimate cannot establish this operational fit.
+
+Stop admission on an unknown required resource/root, prohibited dependency, incomplete execution closure, lost original error/raw observation, failed live lease/identity, exhausted original budget or incomplete writer/readback. Retain the first result; do not drop required nodes, promote a planned image, reset clocks or relabel deferrals to obtain a pass. There is no current installation/restart or user-permission blocker to the next bounded source/metadata work; native/model/physical execution still needs its concrete separate scope.
+
+R08 and HR1–HR3 remain prerequisites to R10; R11's sized protocol/power/analysis freeze precedes locked R12 and HR4. Clinical/genetics/scoring/comparison/T2–T5/H6 gates remain conditional. Independent documentation QA passes in `ENTRY-E08-CURRENT-DOCS-QA-v2.json`; only its separate reassessment TODO is closed.

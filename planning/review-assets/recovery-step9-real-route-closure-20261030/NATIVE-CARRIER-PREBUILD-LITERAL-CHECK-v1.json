@@ -1,0 +1,632 @@
+{
+  "activity": "Only fixed JSON/struct/hash data framing and exact source text comparison. No C preprocessing, compiler, SDK, FFI, fake-target or subject execution.",
+  "checker": {
+    "bytes": 6249,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\check_native_carrier_prebuild_literals_v1.py",
+    "sha256": "83094affbd7fb8f8a081e6c2a3c81525f6835105c69d80a8480bde97994883cc"
+  },
+  "checks": [
+    {
+      "name": "exact_counts",
+      "passed": true
+    },
+    {
+      "name": "79_unique_IDs",
+      "passed": true
+    },
+    {
+      "name": "A01_handle/initialized",
+      "passed": true
+    },
+    {
+      "name": "A01_handle/normal",
+      "passed": true
+    },
+    {
+      "name": "A01_handle/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A01_null/initialized",
+      "passed": true
+    },
+    {
+      "name": "A01_null/normal",
+      "passed": true
+    },
+    {
+      "name": "A01_null/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A01_invalid/initialized",
+      "passed": true
+    },
+    {
+      "name": "A01_invalid/normal",
+      "passed": true
+    },
+    {
+      "name": "A01_invalid/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A02_disk/initialized",
+      "passed": true
+    },
+    {
+      "name": "A02_disk/normal",
+      "passed": true
+    },
+    {
+      "name": "A02_disk/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A02_unknown_error0/initialized",
+      "passed": true
+    },
+    {
+      "name": "A02_unknown_error0/normal",
+      "passed": true
+    },
+    {
+      "name": "A02_unknown_error0/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A02_raw2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A02_raw2/normal",
+      "passed": true
+    },
+    {
+      "name": "A02_raw2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A03_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A03_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A03_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A03_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A03_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A03_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A03_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A03_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A03_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A04_length2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A04_length2/normal",
+      "passed": true
+    },
+    {
+      "name": "A04_length2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A04_zero/initialized",
+      "passed": true
+    },
+    {
+      "name": "A04_zero/normal",
+      "passed": true
+    },
+    {
+      "name": "A04_zero/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A04_required4101/initialized",
+      "passed": true
+    },
+    {
+      "name": "A04_required4101/normal",
+      "passed": true
+    },
+    {
+      "name": "A04_required4101/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A05_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A05_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A05_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A05_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A05_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A05_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A05_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A05_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A05_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A06_false_count0/initialized",
+      "passed": true
+    },
+    {
+      "name": "A06_false_count0/normal",
+      "passed": true
+    },
+    {
+      "name": "A06_false_count0/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A06_bool2_count16/initialized",
+      "passed": true
+    },
+    {
+      "name": "A06_bool2_count16/normal",
+      "passed": true
+    },
+    {
+      "name": "A06_bool2_count16/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A06_bool_minus1_count17/initialized",
+      "passed": true
+    },
+    {
+      "name": "A06_bool_minus1_count17/normal",
+      "passed": true
+    },
+    {
+      "name": "A06_bool_minus1_count17/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A07_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A07_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A07_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A07_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A07_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A07_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A07_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A07_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A07_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A08_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A08_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A08_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A08_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A08_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A08_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A08_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A08_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A08_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A09_handle/initialized",
+      "passed": true
+    },
+    {
+      "name": "A09_handle/normal",
+      "passed": true
+    },
+    {
+      "name": "A09_handle/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A09_null/initialized",
+      "passed": true
+    },
+    {
+      "name": "A09_null/normal",
+      "passed": true
+    },
+    {
+      "name": "A09_null/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A09_invalid/initialized",
+      "passed": true
+    },
+    {
+      "name": "A09_invalid/normal",
+      "passed": true
+    },
+    {
+      "name": "A09_invalid/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A10_end_error18/initialized",
+      "passed": true
+    },
+    {
+      "name": "A10_end_error18/normal",
+      "passed": true
+    },
+    {
+      "name": "A10_end_error18/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A10_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A10_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A10_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A10_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A10_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A10_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A11_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A11_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A11_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A11_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A11_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A11_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A11_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A11_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A11_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A12_exists/initialized",
+      "passed": true
+    },
+    {
+      "name": "A12_exists/normal",
+      "passed": true
+    },
+    {
+      "name": "A12_exists/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A12_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A12_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A12_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A12_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A12_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A12_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count0/initialized",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count0/normal",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count0/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A13_bool2_count16/initialized",
+      "passed": true
+    },
+    {
+      "name": "A13_bool2_count16/normal",
+      "passed": true
+    },
+    {
+      "name": "A13_bool2_count16/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A13_bool_minus1_count17/initialized",
+      "passed": true
+    },
+    {
+      "name": "A13_bool_minus1_count17/normal",
+      "passed": true
+    },
+    {
+      "name": "A13_bool_minus1_count17/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A14_false/initialized",
+      "passed": true
+    },
+    {
+      "name": "A14_false/normal",
+      "passed": true
+    },
+    {
+      "name": "A14_false/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A14_bool2/initialized",
+      "passed": true
+    },
+    {
+      "name": "A14_bool2/normal",
+      "passed": true
+    },
+    {
+      "name": "A14_bool2/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A14_bool_minus1/initialized",
+      "passed": true
+    },
+    {
+      "name": "A14_bool_minus1/normal",
+      "passed": true
+    },
+    {
+      "name": "A14_bool_minus1/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A06_true_count0/initialized",
+      "passed": true
+    },
+    {
+      "name": "A06_true_count0/normal",
+      "passed": true
+    },
+    {
+      "name": "A06_true_count0/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A13_true_count0/initialized",
+      "passed": true
+    },
+    {
+      "name": "A13_true_count0/normal",
+      "passed": true
+    },
+    {
+      "name": "A13_true_count0/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A06_false_unchanged_scratch/initialized",
+      "passed": true
+    },
+    {
+      "name": "A06_false_unchanged_scratch/normal",
+      "passed": true
+    },
+    {
+      "name": "A06_false_unchanged_scratch/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count7/initialized",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count7/normal",
+      "passed": true
+    },
+    {
+      "name": "A13_false_count7/error_boundary",
+      "passed": true
+    },
+    {
+      "name": "partial_initialized",
+      "passed": true
+    },
+    {
+      "name": "partial_escaped",
+      "passed": true
+    },
+    {
+      "name": "malformed_literal_lengths",
+      "passed": true
+    },
+    {
+      "name": "initializer_all_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "zero_requests_negative_not_returned_count",
+      "passed": true
+    },
+    {
+      "name": "79_116_47_17_16_17",
+      "passed": true
+    },
+    {
+      "name": "publish_finish_and14wrappers_exact",
+      "passed": true
+    },
+    {
+      "name": "header_exact",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "checks": 148,
+    "failed": 0,
+    "passed": 148
+  },
+  "initial_tooling_note": "Initial inline metadata checker failed to parse its own missing-space ternaries before any checks or subject work. This explicit saved helper corrects that display/checker syntax; no source/test artifact changed.",
+  "inputs": [
+    {
+      "bytes": 128574,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    {
+      "bytes": 23473,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    },
+    {
+      "bytes": 9822,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v3.c",
+      "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+    },
+    {
+      "bytes": 7391,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    }
+  ],
+  "schema_version": 1,
+  "status": "PASS"
+}

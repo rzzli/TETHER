@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_AUTHORIZED_INDEPENDENT_TEST_AUTHORING_ONLY",
+  "subject": "preflight_file14_raw_v1.c and .h; named correction successors only after retained concrete review findings",
+  "basis": "Native contract16aae7f0, numeric layout4cf7a07f, compatibility08e80ef5 and source authoring scope76064321",
+  "allowed": [
+    "Independently write a finite C fake-target harness and literal expected-case matrix before any subject build or execution.",
+    "Exercise all14 exact WINAPI signatures using only own-source fake functions and preallocated cells/buffers.",
+    "Plan assertions for exact raw scalar bits, full immutable row copies, stage/commit/epoch, partial LastError observation, count/error independence, frame arguments, repeat refusal and malformed inputs.",
+    "Use the source only to connect interfaces; derive expectations from the retained contracts and API table, not from observed execution.",
+    "Retain explicit compiler/ABI/publication/lifetime/resource exclusions and enumerate deferred branches."
+  ],
+  "forbidden": [
+    "No compiler, linker, SDK/Win32 invocation, native/FFI/subject execution or original-target read.",
+    "No installation, download, model, live path/handle, source-issued ticket/lease/child capability or current Source4 change.",
+    "No expected outcome chosen or relaxed after observing a subject result."
+  ],
+  "outputs": ["native_carrier_fake_tests_v1.c", "NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json", "NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json"],
+  "next_gate": "Independent source and coherent test review, exact freeze and separate Root build scope. Build artifacts/disassembly require review before any test executable run.",
+  "provider_spend_usd": 0
+}

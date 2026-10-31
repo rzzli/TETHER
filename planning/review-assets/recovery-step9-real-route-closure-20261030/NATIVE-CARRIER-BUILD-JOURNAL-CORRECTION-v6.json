@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "NAMED_JOURNAL_ACKNOWLEDGMENT_CORRECTION_NOT_EXECUTED",
+  "before": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v5.py",
+    "bytes": 13430,
+    "sha256": "a7b50c609af910b9af568b4d07c1fee90669d51b994003ca860b137bc471025e"
+  },
+  "after": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v6.py",
+    "bytes": 14331,
+    "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+  },
+  "finding": "Same independentD1 persistence batch: prior emit advanced tip before write/close, allowing an unacknowledged row to appear final and a later append to reuse its sequence against the wrong persisted prefix.",
+  "correction": "Prepare hash/count first; acknowledge only after successful full ordinary write and close. Failed/partial append latches journal_complete=false and stops all subsequent appends; report last acknowledged tip/count separately. No chain repair, retry, flush/durability or process-tree claim.",
+  "subprocess_function_AST_unchanged": true,
+  "activity": {
+    "C_builds": 0,
+    "native_runs": 0,
+    "original_target_reads": 0
+  }
+}

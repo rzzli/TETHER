@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "status": "PASS_AUTHOR_DOCUMENT_CHECK_ONLY",
+  "scope": "Named current-only documentation update after independently resolved normative code control. Author self-check, not independent documentation QA. No subject execution/import/build/target read.",
+  "authoring_record": {
+    "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/C-RETURN-CURRENT-DOCS-AUTHORING-v2.json",
+    "bytes": 6057,
+    "sha256": "c88ee505a45f963a5125b9e37f32a2ce0fbb1a99a064670a9fdb368e3f68a1da"
+  },
+  "actual_control_peer": {
+    "path": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-INDEPENDENT-ACTUAL-CONTROL-v4.json",
+    "bytes": 27423,
+    "sha256": "27e061831086d70364bb6f8e00e5c49fa0bf7f281b2e70d00d432542f7e584ac"
+  },
+  "counts": {
+    "documents": 10,
+    "status_rows": 20,
+    "ordered_next_stages": 5,
+    "new_assessment_local_links": 20,
+    "checks": 63,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "check": "coherent v2 authored pin README.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin TODO.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin planning/Recovery Status and Next Gates 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin memory/project-goals.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "check": "coherent v2 authored pin memory/research-log-2026-10-30-c-return-capture.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged preserved_v1_authoring",
+      "passed": true
+    },
+    {
+      "check": "unchanged preserved_v1_author_check",
+      "passed": true
+    },
+    {
+      "check": "bound new evidence normative_peer",
+      "passed": true
+    },
+    {
+      "check": "bound new evidence expected_code_errata",
+      "passed": true
+    },
+    {
+      "check": "bound new evidence control4_actual",
+      "passed": true
+    },
+    {
+      "check": "bound new evidence source5_authoring_only",
+      "passed": true
+    },
+    {
+      "check": "exact20 status rows",
+      "passed": true
+    },
+    {
+      "check": "exact five ordered next stages",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-ROOT-ACCEPTANCE-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link Project Progress Reassessment 2026-10-30 - E08 Policy.md",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link ../data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link ../data/cache/r09-native-carrier-component-run-20261030T061649Z/run-result.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-BINDINGS-CORRECTION-v4.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v2.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v3.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/NATIVE25-EXPECTED-CODE-ERRATA-v4.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v4.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-native25-component-20261030/KERNEL-KIND-GUARD-SUCCESSOR-AUTHORING-SCOPE-v5.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "passed": true
+    },
+    {
+      "check": "new assessment local link review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint README.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next README.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint TODO.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next TODO.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint planning/Recovery Status and Next Gates 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next planning/Recovery Status and Next Gates 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 checkpoint planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "passed": true
+    },
+    {
+      "check": "current v2 next planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "passed": true
+    },
+    {
+      "check": "only finite C79 component checked",
+      "passed": true
+    },
+    {
+      "check": "independent QA remains unticked",
+      "passed": true
+    },
+    {
+      "check": "native25 and complete entry remain unticked",
+      "passed": true
+    },
+    {
+      "check": "assessment QA status pending",
+      "passed": true
+    },
+    {
+      "check": "both original diagnostic histories retained",
+      "passed": true
+    },
+    {
+      "check": "new named control4 actual current",
+      "passed": true
+    },
+    {
+      "check": "specific resolved normative codes retained",
+      "passed": true
+    },
+    {
+      "check": "Source5 authoring only, unexecuted",
+      "passed": true
+    },
+    {
+      "check": "science gaps unchanged",
+      "passed": true
+    },
+    {
+      "check": "v2 memory status memory/project-goals.md",
+      "passed": true
+    },
+    {
+      "check": "v2 memory status memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "check": "v2 memory status memory/research-log-2026-10-30-c-return-capture.md",
+      "passed": true
+    },
+    {
+      "check": "latest independent actual control review anchor",
+      "passed": true
+    }
+  ],
+  "documents": [
+    {
+      "path": "README.md",
+      "bytes": 39094,
+      "sha256": "b588f67f3ebd541a70ca5c6f57f381a56d6de651140f8097ad99d3e5cfb4897c"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 56764,
+      "sha256": "2699ab007bce6533bd50164036287002fefa6c34e8e2dcb0c8bbbf021761b648"
+    },
+    {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44892,
+      "sha256": "e8184f17e407588b1f603935ecdfee4815c42c355b7f439b0d60fd8302b1fce4"
+    },
+    {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35573,
+      "sha256": "e142d2c40eb71588d8dd89d032c53c1f054ae57b100dbd20364bce7025832040"
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 20433,
+      "sha256": "280bd3fb5b470269b5f2592f9f74004103279cd3b70ef483c6ad8df14ded5560"
+    },
+    {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 12018,
+      "sha256": "6d3146da97a838e0b6394d42630d6201777ba94279e28580421d4f8dd8a25791"
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "bytes": 16677,
+      "sha256": "a6728683deba8d1b9c4b39defed2edc28fdf6596632864ff96c988d617930666"
+    },
+    {
+      "path": "memory/project-goals.md",
+      "bytes": 121801,
+      "sha256": "5446ed6f8ae03e53d14728a73580f61c37634b2d4112978796ec80277ce8f0e4"
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "bytes": 27666,
+      "sha256": "dfce284d7a498af5a0f54538abc4607efe042b84eb997fe297a2dfa32d4fee74"
+    },
+    {
+      "path": "memory/research-log-2026-10-30-c-return-capture.md",
+      "bytes": 5308,
+      "sha256": "2b3189b2733689088bfe39814e726300677b9f93eed81142ccca87afec306eb0"
+    }
+  ]
+}

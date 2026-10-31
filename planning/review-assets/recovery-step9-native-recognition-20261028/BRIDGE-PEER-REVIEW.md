@@ -1,0 +1,18 @@
+# Public-C bridge: independent draft text review
+
+AI engineering review, 2026-10-28T17:16:38.161460+00:00. No remaining material blocker was found in the exact draft source and design within this review's scope. This clears text for the next separately reviewed build-preparation gate; it authorizes neither compilation nor target execution. It is not a human scientific review.
+
+- [Source](D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-native-recognition-20261028/typed_public_c_recognizer.cpp), SHA256 `3f7e13ec7695bd5257e3e58d627ae71c1a2cdcaea7dbec8aad869424a0f5188b`, 47,485 bytes.
+- [Design](D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-native-recognition-20261028/BRIDGE-DRAFT-DESIGN.md), SHA256 `2bb222d6830a52513fab88c1db29b0d5b7cc093d5357ff224f3d3a42b2f8431b`, 19,551 bytes.
+
+Three issues identified during the unfrozen draft review were corrected before these hashes: failure-marker creation is independently attempted when a JSONL write/cap fails (source 153–158); the same CPU registry/device pointers, singleton counts, names and type are checked before and after backend initialization (302–328); and defaults/effective boolean fields use JSON booleans (210). These are static corrections, not executed regression results.
+
+The final source was read for typed public signatures/layout assumptions, exact read leases and load order, module policies, ABI observation limits, explicit CPU initialization, vocabulary-only overrides, pack/group bindings, token/piece sizing, roundtrip, native mask/EOG semantics, prefix/accounting and cleanup/failure publication. Token/piece buffers use one bounded retry after a negative required size and protect INT32_MIN before wide negation. Full used-piece bytes must reproduce the original document. Fresh samplers accept only admitted non-EOG tokens; every enumerated EOG is apply-tested, never accepted. First mismatch stops the batch, and absent required natural-prefix coverage prevents success.
+
+ABI-only execution may observe an unknown bounded nonempty printable version; recognition requires a newly bound nonempty exact version from a reviewed ABI report. It remains disabled until a separately reviewed header/build enables it. The pack's source groups preserve the distinction between the original 167 wires, 18 prospectively created serializations of unchanged authored abstention dictionaries, and four independent byte guards. The latter serializations are neither recovered historical raw wire nor model-generated answers. All counts and bytes still require prospective pack qualification.
+
+The child has fixed token/input/output/time checks but no OS memory/job enforcement. Future parent controls must be effective before target loading, retain interruption/write/native-abort failures, prevent automatic retry or budget increases, and independently verify the resulting records. Build/link/static-import qualification, exact generated header, actual ABI, CPU/module behavior and recognition outcomes remain untested. Exact source headers do not prove release build correspondence. Module checks cannot undo prior DLL initialization or prove zero GPU API calls; whole-shard hashing intentionally reads weight-file bytes.
+
+No compiler, target DLL, GGUF parser, tokenizer, model, network request or proposed bridge executable was run by this review. No source, design, frozen corpus, runtime or protected payload was changed. No further source acquisition is proposed.
+
+[Structured checks and limits](D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-native-recognition-20261028/BRIDGE-PEER-REVIEW.json).

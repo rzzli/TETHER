@@ -1,0 +1,457 @@
+{
+  "activity": {
+    "original_target_reads": 0,
+    "reviewer_C_or_image_runs": 0,
+    "reviewer_compiler_or_SDK_runs": 0,
+    "reviewer_native_or_FFI_calls": 0,
+    "source_or_build_artifact_edits": 0
+  },
+  "artifact_check": {
+    "bytes": 34701,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-BUILD-ARTIFACT-CHECK-v1.json",
+    "sha256": "4364276975190e1df0f66aa18fc48fcffa3555482818c97b2a12a6c8c9fe0787"
+  },
+  "artifact_checker": {
+    "bytes": 13528,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\check_native_carrier_build_artifacts_v1.py",
+    "sha256": "a10ffed6e5c9d7e93b748a5a8b48a52c10c9bed68b3badf0d52145b3ac348203"
+  },
+  "artifact_integrity": {
+    "all_inventory_hashes_match": true,
+    "assembly_listing": {
+      "bytes": 82192,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\carrier.asm",
+      "sha256": "40dee161b7ab4100e6aa061e948abda6f0452265d0d4883c7788f071cbed1c8f"
+    },
+    "carrier_object": {
+      "bytes": 24559,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\carrier.obj",
+      "sha256": "51485b929857980a4e7b63080e9c7ea2beaf6dc0f5f0d7ca6f31488458d12eb0"
+    },
+    "exact_directory_inventory": true,
+    "exe": {
+      "bytes": 163328,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\native-carrier-fake-tests.exe",
+      "sha256": "4eef5fc52eac8868e963dad15e92e2101a7fda428cc6ddb8412076aaf8eeebbd"
+    },
+    "including_build_result_bytes": 346903,
+    "including_build_result_files": 12,
+    "inventory_bytes": 339767,
+    "inventory_files": 11,
+    "journal": {
+      "bytes": 5984,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\build-journal.jsonl",
+      "sha256": "df05cd22ce83bdcb2bb88c217da949ab942985beeb514e131f008f28d1cf3c98"
+    },
+    "test_object": {
+      "bytes": 63645,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\tests.obj",
+      "sha256": "a7b7567006aa803c99f9b3b90f86b87280b5646146cfd652b50df2dac19ad618"
+    }
+  },
+  "binding": {
+    "bytes": 4949,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-COMPONENT-BUILD-BINDING-v1.json",
+    "sha256": "2ccdf0fa6543ffa42bfe7c2edc059e639a62869d0ea62e91e1f483b92567b6db"
+  },
+  "build_result": {
+    "bytes": 7136,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\build-result.json",
+    "sha256": "9275174036dfab54a50fea143cd3d547e5dbadd5e41af559d95b4eacbfc4fa8e"
+  },
+  "checks": {
+    "artifact_bytes": 339767,
+    "artifacts": 11,
+    "checks": 129,
+    "failed": 0,
+    "listing_instruction_bytes_matched_to_object": 3524,
+    "passed": 129,
+    "wrappers": 14
+  },
+  "compiled_layout": {
+    "assertion_basis": "Exact unchanged public header is included by both successful /TC/std:c11/W4/WX compilations. Its35 explicit field offsets and13 width/size/alignment typedef assertions therefore hold for this selected compiler/SDK configuration, conditional on the declared toolchain.",
+    "layout": "128B header plus four32B axes at128/160/192/224, total256B aligned16; HANDLE/pointer64,BOOL/LONG/DWORD32,WCHAR16, query structures8/36/592. This is not the distinct ROLE1 wire cell or a genuine KernelSnapshot.",
+    "offset_assertions": 35,
+    "qualified_for_selected_build": true,
+    "size_alignment_assertions": 13,
+    "target": "AMD64 COFF and PE32+ image, machine0x8664"
+  },
+  "execution_scope": {
+    "bytes": 1599,
+    "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-COMPONENT-BUILD-SCOPE-v1.json",
+    "sha256": "a222ab706b2734ddea10ac7e047903fd09ea776796fbd31899a1aa5e8a055a69"
+  },
+  "first_actual_build": {
+    "all_main_exits_observed": true,
+    "all_output_complete": true,
+    "all_primary_cleanup_inventory_errors_absent": true,
+    "all_returncodes": 0,
+    "command_labels": [
+      "compile-carrier",
+      "compile-tests",
+      "link-tests"
+    ],
+    "commands": 3,
+    "elapsed_seconds": 1.047000000020489,
+    "generated_image_dispatches": 0,
+    "journal_acknowledged_rows": 8,
+    "journal_complete": true,
+    "journal_rows": 8,
+    "status": "BUILT_NOT_EXECUTED"
+  },
+  "journal_review": "All eight retained UTF8 JSON rows have exact sequence/hash-prefix links, monotone elapsed values and final acknowledged tip59809e520f14b9ac95c4f1cbd8528dfe053593222839d2b789b9e8dc5a55daf5. Reserved/returned rows reconcile exactly with three command results. Prepared no-execution event is not an image-run result. Ordinary append/close is not flush/crash durability.",
+  "machine_byte_binding": {
+    "listing_instruction_bytes_matched_to_COFF": 3524,
+    "method": "Every parsed listing instruction in14 wrappers plus initialize/begin/metadata_valid/publish/finish matches exact COFF section bytes. Each body has one linkedPE.text match at every non-REL32 byte. Only linker-displacement fields are masked; known helper displacements are separately resolved to their matched RVAs. This is byte analysis, not code execution.",
+    "no_full_image_claim": "No independent semantic audit of all statically linked CRT/platform code or runtime loader behavior is claimed.",
+    "relevant_function_bodies": 19,
+    "resolved_known_local_helper_calls": 47,
+    "unique_linked_image_matches": 19
+  },
+  "ordering_findings": [
+    "All14 typed API targets use their exact function-table positions0..104 by8. LastError uses112. Two HANDLE wrappers store64 bits fromRAX; the other12 store32 bits fromEAX. Raw BOOL2/-1/0 and DWORD values are not normalized before the store.",
+    "For every target return, the only instruction before scalar payload store is a register-only LEA. The first application memory store is directly to cell+128; the subsequent call is publish. There is no intervening helper/API/clock/Python call or return-value stack spill on these selected paths.",
+    "publish is exactly mov1; stage DWORD ataxis+16; memory XCHG ataxis+20; ret. No opaque helper or Windows call occurs there. Native scalar facts are retained before later error/count work.",
+    "finish writes/publishes independent definedness, then conditionally calls the prebound LastError pointer. Its returnedDWORD stores directly atcell+192 before publication. Count copies from preallocated scratch+64 to count payload+160 before publication.",
+    "RAW_EXIT bit8 is written before phase2 XCHG atheader+72; conversion remains separate. Partial-axis/phase facts are not whole-cell atomic transactions or successful-caller facts.",
+    "No stack-cookie callback, formatter, clock or Python conversion call appears in the carrier post-target-return interval. Future reader/acquire and genuine ticket/bank/argument lifetime are still absent."
+  ],
+  "prebuild_review": {
+    "bytes": 12589,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-PREBUILD-REVIEW-v2.json",
+    "sha256": "1c1a07fc5165f9dde83d3d1b62620939796d0fac1a14c55b20d26a7b2e100f6a"
+  },
+  "qualification": {
+    "NativeInput_or_child": false,
+    "actual_C_fake_tests": false,
+    "actual_Win32_file_behavior": false,
+    "argument_or_path_lifetime": false,
+    "compiled_layout_selected_configuration": true,
+    "complete_physical14": false,
+    "full_real_roster": false,
+    "genuine_ticket": false,
+    "local_compiled_return_store_ordering": true,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false,
+    "whole_Core_bank_binding": false
+  },
+  "remaining_gate": "OS separately reviews the runtime helper. Root may consider a distinct once-only fake-target image binding only after both lanes clear; no image execution authority is created here. Frozen79 controls remain unexecuted at this artifact checkpoint.",
+  "schema_version": 1,
+  "scope": "Independent retained actual build/artifact review. Read own new outputs and selected own-source metadata only; no image execution, compiler/SDK invocation or old experiment replay.",
+  "source_binding": {
+    "driver": "Driver6/e182ff25",
+    "header": "Header1/7460f598",
+    "oracle": "90ac93b1",
+    "own_input_pins_rechecked": [
+      {
+        "pin": {
+          "bytes": 9822,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v3.c",
+          "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+        },
+        "role": "source"
+      },
+      {
+        "pin": {
+          "bytes": 7391,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+          "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+        },
+        "role": "header"
+      },
+      {
+        "pin": {
+          "bytes": 23473,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+          "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+        },
+        "role": "tests"
+      },
+      {
+        "pin": {
+          "bytes": 128574,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+          "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+        },
+        "role": "expectations"
+      },
+      {
+        "pin": {
+          "bytes": 7108,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json",
+          "sha256": "31c1a5b4b1b8463b926c9201d7d074970647a66f229b8c4a67651c0115f33274"
+        },
+        "role": "test_preparation"
+      },
+      {
+        "pin": {
+          "bytes": 2353,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json",
+          "sha256": "5e93aec96202a9610bd7473eda39ea635502940218dd025c21da53f93c9b458a"
+        },
+        "role": "phase_clarification"
+      },
+      {
+        "pin": {
+          "bytes": 14331,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v6.py",
+          "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+        },
+        "role": "driver"
+      },
+      {
+        "pin": {
+          "bytes": 8502,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-BUILD-DRIVER-FAKE-REGRESSIONS-v2.json",
+          "sha256": "83d903163cae7a29101fd02c8fde88fa9d93d998562ba0bc883130a681bdebcd"
+        },
+        "role": "cleanup_fake_regressions"
+      },
+      {
+        "pin": {
+          "bytes": 3101,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-BUILD-JOURNAL-FAKE-REGRESSIONS-v1.json",
+          "sha256": "dc22c68810b728e919ae0ab7dff529b945e6007b0d1890b4970c4f92c1393c85"
+        },
+        "role": "journal_fake_regressions"
+      },
+      {
+        "pin": {
+          "bytes": 6534,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-PREBUILD-REVIEW-v1.json",
+          "sha256": "9579c406e57332c312475df1e9c70146bcf0f786195f039d9256a211a217990f"
+        },
+        "role": "first_prebuild_hold"
+      },
+      {
+        "pin": {
+          "bytes": 12589,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-PREBUILD-REVIEW-v2.json",
+          "sha256": "1c1a07fc5165f9dde83d3d1b62620939796d0fac1a14c55b20d26a7b2e100f6a"
+        },
+        "role": "independent_review"
+      },
+      {
+        "pin": {
+          "bytes": 7107,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-BUILD-PREPARATION-v2.json",
+          "sha256": "95e5ff0b4759e84bfd62a086b077c8d8b572f98c31ec6204e129534fb512fb07"
+        },
+        "role": "preparation"
+      },
+      {
+        "pin": {
+          "bytes": 1599,
+          "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-COMPONENT-BUILD-SCOPE-v1.json",
+          "sha256": "a222ab706b2734ddea10ac7e047903fd09ea776796fbd31899a1aa5e8a055a69"
+        },
+        "role": "root_scope"
+      }
+    ],
+    "source": "C3/49f7fd88",
+    "tests": "Frozen79/34b3617e",
+    "toolchain_limit": "Compiler/linker/SDK remain explicitly selected trusted prerequisites. No installed compiler/SDK binary or original target was opened/rehashed by this reviewer; this is not complete toolchain restoration/authentication.",
+    "unchanged_own_input_count": 13
+  },
+  "status": "CLEAR_COMPILED_LAYOUT_AND_ORDERING_ONLY",
+  "timing_limit": "1.047s is the driver declared build interval after input checks/exclusive reservation through post-inventory eligibility. Interpreter/preflight and final report construction/write are excluded. It is not whole-process, file/child/model, resource or production300-second fit.",
+  "wrappers": [
+    {
+      "api": 1,
+      "function": "pf14_create_file",
+      "function_table_slot": "QWORD PTR [rdi]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 5552,
+      "publish_offset": 147,
+      "scalar_store": "mov QWORD PTR [rsi+128], rax",
+      "scalar_store_offset": 140,
+      "target_call": "call QWORD PTR [rdi]",
+      "target_call_offset": 131
+    },
+    {
+      "api": 2,
+      "function": "pf14_get_type",
+      "function_table_slot": "QWORD PTR [rdi+8]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 7072,
+      "publish_offset": 71,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 65,
+      "target_call": "call rax",
+      "target_call_offset": 56
+    },
+    {
+      "api": 3,
+      "function": "pf14_get_information",
+      "function_table_slot": "QWORD PTR [rdi+16]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6560,
+      "publish_offset": 98,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 92,
+      "target_call": "call rax",
+      "target_call_offset": 83
+    },
+    {
+      "api": 4,
+      "function": "pf14_get_path",
+      "function_table_slot": "QWORD PTR [rdi+24]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6736,
+      "publish_offset": 96,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 90,
+      "target_call": "call rax",
+      "target_call_offset": 81
+    },
+    {
+      "api": 5,
+      "function": "pf14_get_size",
+      "function_table_slot": "QWORD PTR [rdi+32]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6912,
+      "publish_offset": 87,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 81,
+      "target_call": "call rax",
+      "target_call_offset": 72
+    },
+    {
+      "api": 6,
+      "function": "pf14_read",
+      "function_table_slot": "QWORD PTR [rdi+40]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 7648,
+      "publish_offset": 104,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 98,
+      "target_call": "call rax",
+      "target_call_offset": 89
+    },
+    {
+      "api": 7,
+      "function": "pf14_close",
+      "function_table_slot": "QWORD PTR [rdi+48]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 5248,
+      "publish_offset": 71,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 65,
+      "target_call": "call rax",
+      "target_call_offset": 56
+    },
+    {
+      "api": 8,
+      "function": "pf14_get_attributes",
+      "function_table_slot": "QWORD PTR [rdi+56]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6400,
+      "publish_offset": 88,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 82,
+      "target_call": "call QWORD PTR [rdi+56]",
+      "target_call_offset": 72
+    },
+    {
+      "api": 9,
+      "function": "pf14_find_first",
+      "function_table_slot": "QWORD PTR [rdi+64]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 5920,
+      "publish_offset": 112,
+      "scalar_store": "mov QWORD PTR [rsi+128], rax",
+      "scalar_store_offset": 105,
+      "target_call": "call QWORD PTR [rdi+64]",
+      "target_call_offset": 95
+    },
+    {
+      "api": 10,
+      "function": "pf14_find_next",
+      "function_table_slot": "QWORD PTR [rdi+72]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6096,
+      "publish_offset": 87,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 81,
+      "target_call": "call rax",
+      "target_call_offset": 72
+    },
+    {
+      "api": 11,
+      "function": "pf14_find_close",
+      "function_table_slot": "QWORD PTR [rdi+80]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 5776,
+      "publish_offset": 71,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 65,
+      "target_call": "call rax",
+      "target_call_offset": 56
+    },
+    {
+      "api": 12,
+      "function": "pf14_create_directory",
+      "function_table_slot": "QWORD PTR [rdi+88]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 5392,
+      "publish_offset": 82,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 76,
+      "target_call": "call QWORD PTR [rdi+88]",
+      "target_call_offset": 66
+    },
+    {
+      "api": 13,
+      "function": "pf14_write",
+      "function_table_slot": "QWORD PTR [rdi+96]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 7824,
+      "publish_offset": 104,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 98,
+      "target_call": "call rax",
+      "target_call_offset": 89
+    },
+    {
+      "api": 14,
+      "function": "pf14_flush",
+      "function_table_slot": "QWORD PTR [rdi+104]",
+      "intervening_register_only": [
+        "lea rcx, QWORD PTR [rsi+128]"
+      ],
+      "linked_image_RVA": 6256,
+      "publish_offset": 71,
+      "scalar_store": "mov DWORD PTR [rsi+128], eax",
+      "scalar_store_offset": 65,
+      "target_call": "call rax",
+      "target_call_offset": 56
+    }
+  ]
+}

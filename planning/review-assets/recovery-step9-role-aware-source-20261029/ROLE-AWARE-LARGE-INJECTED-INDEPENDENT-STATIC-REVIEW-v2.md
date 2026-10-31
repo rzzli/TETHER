@@ -1,0 +1,7 @@
+The frozen large helper V2 has one remaining static preparation blocker: its compact log records completion of scalar/count hook calls, while source4 may retain the first raw assignment before that hook raises. A pre-candidate failure can have no generated ledger and a prospective snapshot with `calls=None`, so the persisted evidence then lacks complete canonical raw call observations.
+
+Keep the current bytes. A narrow successor should label those completion bits accurately and stream the existing canonical invoked/raw/definedness/wrapper/clock facts to a bounded sidecar after subject unwind. Unsupported or unavailable facts must stay explicitly unknown. This requires no source work, refreeze, owner reset, new fault family or reference replay.
+
+The positive path is statically consistent: independently derived dispatch order and requests, complete file/call/module tuples, all 648 query frames and all path/name pool bytes, exact header/previous-ledger binding and genuine cached artifact identities. Actual wrapper returns are checked separately from prepared return instrumentation. Source4 APIs and active-state lookup ordering agree with the helper.
+
+Root's pin/order/prepared-return draft issues and OS's partial-setup/first-terminal retention issues are addressed in V2. This review imported, compiled and executed no helper or subject. All large behavior, memory/time fit, physical output, real entry/FFI, full real roster, distinct84 and scientific claims remain unqualified. Exact pins and the one blocker are retained in the companion JSON.

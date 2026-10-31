@@ -1,0 +1,143 @@
+{
+  "assumptions": [
+    "MSVC Windowsx64 little-endian SDK types/calling convention/offset assertions must be proved by later build and independent artifact/disassembly review.",
+    "Targetframe pointers/handle bits/cell flags are trusted internal test preconditions; no NativeDispatchTicket/lease/capability issuer is present.",
+    "Same-thread LastError callback copies are quiescent observations; no concurrent acquire visibility, OS-return atomicity or process-kill durability is proved.",
+    "Cells are fresh per logical control; deliberate repeat uses the same already-entered cell and must not invoke its fake target.",
+    "Outer once-only executable deadline/exit/stdout retention belongs to a separately frozen Root runtime driver; callback-free hangs are not bounded by these C assertions."
+  ],
+  "authoring_scope": {
+    "bytes": 1740,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-TEST-PREPARATION-SCOPE-v1.json",
+    "sha256": "003316fc25d011ec9fab6fd4584a64abeb5a1da5f156d38afa543bd8ced61ed1"
+  },
+  "basis": {
+    "compatibility": {
+      "bytes": 9184,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "sha256": "08e80ef53ee512a63c5585059176d19bba8c0d48c21b9db0f9976628f3da64e5"
+    },
+    "contract": {
+      "bytes": 43817,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    "layout": {
+      "bytes": 4511,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-CONTRACT-FREEZE-v1.json",
+      "sha256": "4cf7a07f219e47c61abb4505c2dfe37f4a6aa47b92c3c9412483ac6412c891d2"
+    },
+    "partial_phase": {
+      "bytes": 2353,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json",
+      "sha256": "5e93aec96202a9610bd7473eda39ea635502940218dd025c21da53f93c9b458a"
+    },
+    "public_header": {
+      "bytes": 7391,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    }
+  },
+  "bounded_storage": {
+    "RSS": "NOT_MEASURED_OR_QUALIFIED",
+    "cell_array_bytes": 20224,
+    "distinct_cells": 79,
+    "fixed_count_request": 16,
+    "largest_temporary_snapshot_scratch_bytes": 784,
+    "misaligned_guard_bytes": 272,
+    "one_aligned_frame_bytes": 8202,
+    "one_immutable_write_slice_bytes": 16,
+    "partial_and_final_snapshot_arrays_bytes": 512
+  },
+  "candidate_subject": {
+    "header": {
+      "bytes": 7391,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    },
+    "source": {
+      "bytes": 9822,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v3.c",
+      "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+    },
+    "source_selection": "Root-authored named v3 is a candidate pin only. Coherent independent source/test/driver freeze and separate build/execute scopes are mandatory; no source behavior observed."
+  },
+  "counts": {
+    "initializer_negatives": 10,
+    "interrupted_error_transport": 1,
+    "malformed_wrappers": 22,
+    "named_controls": 79,
+    "semantic": 46
+  },
+  "deferred": [
+    "Native before-Python conversion/exception identity and actual Kernel RawCallStore bank integration",
+    "Genuine same-Core ticket/actor/profile/target issuing and buffer-lifetime security",
+    "Real Windows file/search/namespace/flush/readback rights and path lifetime",
+    "Held-lease native bulk/child/image, joint14 capacity/roster/new84/resource/scientific authority"
+  ],
+  "expectations": {
+    "bytes": 128574,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+    "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+  },
+  "first_results": {
+    "actual_case_outcomes": "NOT_EXECUTED",
+    "builds": 0,
+    "runs": 0
+  },
+  "next": "Native exact coherent source/header/test/oracle/phase/driver peer, then separate Root pinned build scope and independent artifact review before one executable run.",
+  "output": {
+    "meaning": "Trusted future harness stdout, not producerphysical14 publication. No actual output exists.",
+    "normal_case_record_bytes": 57006,
+    "partial_copy_field": "error_boundary_copy256_hex or explicitnull",
+    "per_case_records": 79,
+    "quiescent_copy_field": "cell_copy256_hex",
+    "stderr_diagnostic_records_max": 16,
+    "stdout_with_reserved_summary_max_bytes": 58030
+  },
+  "planned_invocations": {
+    "actual_fake_target_calls": 47,
+    "actual_measured_invocations": 0,
+    "controlled_nonreturn_escapes": 1,
+    "distinct_preallocated_cells": 79,
+    "error_boundary_copies": 17,
+    "error_callback_entries": 17,
+    "error_callback_normal_returns": 16,
+    "healthy_initializer_calls": 69,
+    "initializer_attempts": 79,
+    "normal_count_commits": 10,
+    "normal_wrapper_returns": 115,
+    "rejected_initializer_calls": 10,
+    "wrapper_attempts": 116
+  },
+  "preserved_subjects": [
+    {
+      "bytes": 8795,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.c",
+      "sha256": "a462fac861faf4149a36763c30f74441ac0df049a37c7a2e2e557828913188bc"
+    },
+    {
+      "bytes": 8811,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v2.c",
+      "sha256": "ab117f5bd8c8411c7f3a7c451e7576c4acf858a9477d2f728136a75f053e7fc0"
+    }
+  ],
+  "qualification": false,
+  "schema_version": 1,
+  "static_framing_checks": {
+    "C_source_has_no_real_file_calls_by_test_design": true,
+    "all14_api_ids": true,
+    "case_group_counts": true,
+    "case_ids_unique": true,
+    "checked_C_body_by_compiler": false,
+    "independent_256byte_literal_lengths": true,
+    "positive_requests_even_when_count0": true,
+    "requested0_negative_api6_and13": true
+  },
+  "status": "FROZEN_FAKE_TEST_SOURCE_AND_ORACLE_NO_BUILD_OR_EXECUTION",
+  "test_source": {
+    "bytes": 23473,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+    "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+  }
+}

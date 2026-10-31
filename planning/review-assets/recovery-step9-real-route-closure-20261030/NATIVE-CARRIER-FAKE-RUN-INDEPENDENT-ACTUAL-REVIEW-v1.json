@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_ACTUAL_79_FAKE_TARGET_COMPONENT_ONLY",
+  "scope": "Independent retained-byte/counter/journal/image-integrity review; no subject import, replay, build or native dispatch by reviewer.",
+  "inputs": {
+    "scope": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "bytes": 3941,
+      "sha256": "8899d56436e44890cbee30be0d7e487c24db8b87794bad27ae3b3af58d108fa4"
+    },
+    "binding": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json",
+      "bytes": 3025,
+      "sha256": "b2e6d7ca65a9b2aa6dcf1fda3c33c0f99713f472fd7d21af2a90323f8cb7123f"
+    },
+    "actual_result": {
+      "path": "data/cache/r09-native-carrier-component-run-20261030T061649Z/run-result.json",
+      "bytes": 63161,
+      "sha256": "6167028f2285fbf491a79e73bbb07ae143b77dd4161f2e3f4e5e9935f3fc259c"
+    },
+    "independent_checker": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/check_native_carrier_fake_run_v1.py",
+      "bytes": 16504,
+      "sha256": "cd92f57798a3affb777c0b84822a5fc347d980a7f77710d96e0220a8ef04fc7f"
+    },
+    "driver": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/run_native_carrier_fake_tests_v4.py",
+      "bytes": 9844,
+      "sha256": "1ca55b9c8855e4898d018f3e4a145b5f619c0e627595295b22f8752561adb76c"
+    },
+    "command_executor": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/build_native_carrier_component_v6.py",
+      "bytes": 14331,
+      "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+    },
+    "expectations": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "bytes": 128574,
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    "tests": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/native_carrier_fake_tests_v1.c",
+      "bytes": 23473,
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    },
+    "preparation": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json",
+      "bytes": 7108,
+      "sha256": "31c1a5b4b1b8463b926c9201d7d074970647a66f229b8c4a67651c0115f33274"
+    },
+    "phase": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json",
+      "bytes": 2353,
+      "sha256": "5e93aec96202a9610bd7473eda39ea635502940218dd025c21da53f93c9b458a"
+    },
+    "image": {
+      "path": "data/cache/r09-native-carrier-component-build-20261030T055706Z/native-carrier-fake-tests.exe",
+      "bytes": 163328,
+      "sha256": "4eef5fc52eac8868e963dad15e92e2101a7fda428cc6ddb8412076aaf8eeebbd"
+    },
+    "build_result": {
+      "path": "data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json",
+      "bytes": 7136,
+      "sha256": "9275174036dfab54a50fea143cd3d547e5dbadd5e41af559d95b4eacbfc4fa8e"
+    },
+    "artifact_peer": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "bytes": 19754,
+      "sha256": "5796bcc69efd666491baf3fdbc04b96c509f8c772173817370c3ca4b341d9cb4"
+    },
+    "runtime_peer": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "bytes": 6349,
+      "sha256": "5bd681cbb9af82f7c182e4a412c5af93c02fbc2813282e169d1f33a35b11c64b"
+    },
+    "root_scope": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "bytes": 3941,
+      "sha256": "8899d56436e44890cbee30be0d7e487c24db8b87794bad27ae3b3af58d108fa4"
+    },
+    "build_binding": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-COMPONENT-BUILD-BINDING-v1.json",
+      "bytes": 4949,
+      "sha256": "2ccdf0fa6543ffa42bfe7c2edc059e639a62869d0ea62e91e1f483b92567b6db"
+    },
+    "built_source": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v3.c",
+      "bytes": 9822,
+      "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+    },
+    "built_header": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.h",
+      "bytes": 7391,
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    },
+    "built_tests": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/native_carrier_fake_tests_v1.c",
+      "bytes": 23473,
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    }
+  },
+  "checks": {
+    "performed": 399,
+    "failed": 0,
+    "failures": []
+  },
+  "actual": {
+    "frozen_group_counts": [
+      46,
+      22,
+      10,
+      1
+    ],
+    "ordered_PASS_controls": 79,
+    "matched_full256B_primary_copies": 79,
+    "matched_full256B_error_boundary_copies": 17,
+    "explicit_absent_boundary_copies": 62,
+    "compared_raw_payload_bytes": 24576,
+    "interleaved_compared_payload_sha256": "9e4fcf7865e4d3c80e3214686312047384c39e33b65384c0850627d54e832514",
+    "summary": {
+      "cases": 79,
+      "checks": 29310,
+      "failures": 0,
+      "initializer_attempts": 79,
+      "wrapper_attempts": 116,
+      "fake_targets": 47,
+      "error_entries": 17,
+      "error_returns": 16,
+      "partial_copies": 17
+    },
+    "counter_meaning": "29,310 is the image's measured CHECK invocation count, copied exactly in stdout/report; exact data bytes and operation counters independently match the pre-run oracle. Wrapper attempts include rejected repeats/malformed wrappers; 47 targets are own-source fakes. Error entries17 versus returns16 includes one controlled setjmp/longjmp escape.",
+    "command": {
+      "label": "native-fake-tests",
+      "argv": [
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\native-carrier-fake-tests.exe"
+      ],
+      "pid": 35000,
+      "returncode": 0,
+      "stdout_bytes": 57264,
+      "stderr_bytes": 0,
+      "output_complete": true,
+      "primary_error": null,
+      "cleanup_errors": [],
+      "kill_attempted": false,
+      "kill_acknowledged": false,
+      "main_exit_observed": true
+    },
+    "elapsed_seconds": 0.1720000000204891,
+    "one_image_no_retry_evidence": "One retained command and one dispatch/return journal pair under an exclusive one-use output reservation. No build command or second image dispatch is present in this attempt; not OS-wide process attestation.",
+    "journal": {
+      "events": 4,
+      "complete": true,
+      "acknowledged_events": 4,
+      "tip_sha256": "6b362d153b6762b1f41a1af1967dab3bb400b3894341c623dae0d3d93c40b315",
+      "kinds": [
+        "run_reserved",
+        "dispatch_reserved",
+        "dispatch_returned_or_failed",
+        "run_prepared_status"
+      ]
+    }
+  },
+  "accounting": {
+    "artifact_inventory": [
+      {
+        "path": "data/cache/r09-native-carrier-component-run-20261030T061649Z/native-fake-tests.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "data/cache/r09-native-carrier-component-run-20261030T061649Z/native-fake-tests.stdout",
+        "bytes": 57264,
+        "sha256": "de22f415d94ccc4d8ee085edd520267e2d5c0e3edd9996b133e491037054d6b2"
+      },
+      {
+        "path": "data/cache/r09-native-carrier-component-run-20261030T061649Z/run-journal.jsonl",
+        "bytes": 1365,
+        "sha256": "216d240612fbaf3e76048082db4fc3e877d5e3fb0481a73a0e85b423e05f3d39"
+      }
+    ],
+    "inventory_files": 3,
+    "inventory_content_bytes": 58629,
+    "result_bytes": 63161,
+    "run_files_including_result": 4,
+    "run_content_bytes_including_result": 121790,
+    "raw_copy_payload_primary_bytes": 20224,
+    "raw_copy_payload_boundary_bytes": 4352,
+    "copies": "Primary/boundary snapshots are 24,576 logical bytes serialized as hex inside stdout and duplicated as case values in run-result JSON. This is not 79 live Core rows, retained original file reads, Source4 generated ledgers or process memory.",
+    "excluded": "Build files, pre-run bindings/scopes, checker/review files and prior evidence; no additive RAM/RSS/commit/working-set estimate."
+  },
+  "timing_and_persistence": {
+    "budget_seconds": 60,
+    "known_main_cleanup_reserve_seconds": 2,
+    "included": "Helper timer after pinned-input checks and exclusive output reservation through image/pipe work, known-main cleanup, grading, artifact inventory and final eligibility check.",
+    "excluded": "Python/CRT/startup before timer, final report construction/write and failure-only diagnostic tail. Final result write elapsed is unmeasured; not production first-entry, whole-process, child120/work117/owner300 proof.",
+    "writes": "Ordinary retained harness filesystem writes; no FlushFileBuffers, crash durability or physical producer output qualification."
+  },
+  "qualification": {
+    "compiled_C_fake_target_component": true,
+    "actual_Win32_file_target_conformance": false,
+    "same_Core_ticket_and_native_bank_integration": false,
+    "native_input_child_image_path_lease": false,
+    "physical14_profile": false,
+    "native25_component_upgrade": false,
+    "full_new84_roster": false,
+    "inference_or_scientific_result": false,
+    "RSS_or_resource_fit": false,
+    "boundary": "Fixed fake14 function targets and trusted own-source error callback on one compiled x64 image. Volatile/store ordering and actual ABI artifact evidence remain the separately pinned build peer; no atomic OS-return, asynchronous interruption, real LastError, live lease or native model-consumption guarantee follows."
+  },
+  "activity": {
+    "subject_imports": 0,
+    "image_runs": 0,
+    "build_replays": 0,
+    "original_or_model_payload_reads": 0,
+    "allowed_activity": "Trusted Python retained JSON/text/hash comparisons only; image read only for unchanged SHA256."
+  }
+}

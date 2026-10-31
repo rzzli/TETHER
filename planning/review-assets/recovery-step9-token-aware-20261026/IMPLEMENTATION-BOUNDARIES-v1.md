@@ -1,0 +1,13 @@
+# Concrete dependency boundaries for peer review
+
+Read-only inspection after CONTRACT-v1 drafting identified the following existing APIs. This note clarifies implementation scope without editing the prospective contract or accepted code.
+
+- `asof.chrono.load_snapshot` decodes a v2 snapshot and invokes `admit_snapshot`; `admit_snapshot` requires effective catalog for real data, constructs InputGraph, rejects ineligible artifacts before reading, hashes the exact parsed packet bytes, applies observation eligibility and complete parent proofs, and builds EvidenceStore. This is the scientific admission kernel to reuse; quote_choices/bind_question alone are not admission.
+- `tools.science.bounded_interpretation.prepare_input` is the current request compiler. It calls case.validate/load_snapshot, excludes clinical-category records, supports explicit admitted observation IDs, verifies pins, emits admission fingerprints/coverage and bound original case. A packaged preparation implementation needs a reviewed pure extraction of these rules and source pin parity, not a mutable tools import in a wheel.
+- The legacy compiler sets observation.features={} unconditionally. A source-complete initial new preparation route must reject nonempty scientific features (with a clear unsupported-input reason) instead of silently dropping them; exact exposed14b7 reconstruction already has empty features. Broader derived-feature support would be a separate contract change.
+- `asof.study.diagnostic_codec.bind_question` already packages question binding/structural validation. It can bind an admitted source request, but never authorizes a caller-supplied record.
+- `asof.study.process.OwnedServer` requires a host, port and listener ownership callbacks. It must not be repurposed by inventing a server for the tokenizer. Reuse its caller-owned-process/cleanup conventions with a small bounded one-shot stdin/stdout child helper; no port/controller stack.
+- `asof.study.proofs.capture_file` and package proof functions provide stable hash/code closure machinery, while `_no_links` rejects path aliases/reparse points. InputGraph's existing paths and temporal rules remain required. A wrapper must enforce explicitly approved roots before kernel construction, not first open data and then check provenance.
+- `StudySession._capacity` remains an existing byte+32 policy. New offline token quotation does not automatically satisfy that policy, activate native generation or alter historical replay.
+
+All implementation remains pending parent authorization and independent review; no source, test or resource edits were made for this contract.

@@ -1,0 +1,12 @@
+{
+  "actual_source": {
+    "bytes": 8811,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v2.c",
+    "sha256": "ab117f5bd8c8411c7f3a7c451e7576c4acf858a9477d2f728136a75f053e7fc0"
+  },
+  "assumption": "The first exact matcher incorrectly expected requested==0 before buffer_id==UINT32_MAX; actualRoot source inserts it after the buffer check. Both are within the same guard.",
+  "correction": "Inspect exact unified text delta, then match the actual16-byte insertion; no source was changed.",
+  "source_failure": false,
+  "status": "METADATA_MATCHER_ASSUMPTION_FAILED_BEFORE_PUBLICATION",
+  "subject_calls": 0
+}

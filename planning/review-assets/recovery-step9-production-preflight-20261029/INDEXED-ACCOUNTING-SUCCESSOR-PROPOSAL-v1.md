@@ -1,0 +1,13 @@
+# Indexed accounting successor — design only
+
+Choose a separate coherent V3 module set under every existing N4/4KiB/16KiB/68-generation/C92/E224 limit, public DATA and48-history oracle. Preserve one owner/Origin/registry and the full canonical raw-call list. This proposal authorizes no implementation or subject invocation.
+
+Use canonical list[ordinal] is record for raw-hook membership; exact-path/file-id lookup; pre-invoke open/close pointers; per-file reserved-read quota and known-byte contribution caches. Do not create another authoritative ledger. First valid scalar/count cells are stored before cache/state/aux work. A defined Read pair contributes its exact count once, including zero; an undefined pair stays pending/None.
+
+Index registration follows canonical append but precedes invocation. Its failure therefore leaves a reserved unentered call, with no raw facts or unknown read tail. Contributions have private pending/applying/committed watermarks. Multiple assignments are not assumed atomic: any interrupted index/fold, including an error after helper return, retains the same original error and raw cells and quarantines further work. Failed folding is not retried. Normal identical facts are idempotent; a postcommit failure never causes a second increment. No public hook or ready flag is added.
+
+Work read_known uses only healthy derived totals. After failure it refuses rather than returning a stale cache or scanning inside the read loop. A named O(N+r) canonical projection supplies snapshot/packet/negative-cleanup facts and the existing healthy consistency gate. Repeated reports never heal caches or clear the fault. Known handles/close outcomes come directly from pre-registered canonical raw records, so a later cache/display error cannot erase ownership. Legal once-only cleanup still observes the original hardclock; unknown handles/returns remain unknown.
+
+Grammar will freeze four clean access-count controls plus reserved-index and count-fold fault families before code. CountingList is the real registry list from construction; ordinary direct indexing is allowed, while hidden scans/copies/base-list bypass are not. V2 baselines must show actual scans and actual functional fault observations, not missing future methods. The accepted48+8+16 controls remain unchanged. Exact private fields, helper signatures, ordering, methods and stop criteria are in [the JSON proposal](INDEXED-ACCOUNTING-SUCCESSOR-PROPOSAL-v1.json).
+
+Full-roster/streaming/query storage/output protocols, larger caps, self-hosting, real first-entry/class adoption, real FFI/physical publication and all real qualification remain separate later gates. The old actual profile remains failed and its timed verifier incomplete.

@@ -1,0 +1,800 @@
+# Project execution checklist
+
+## Project review and recovery plan — October 26 UTC
+
+- [x] Digest the full Opus review and independently examine engineering, data/science, evaluation and expert-review requirements.
+- [x] Retain reproducible correctness probes and a fresh passing full validation: 1,262 tests, no skips, required probes and wheel/demo verification.
+- [x] Write the independent review and detailed recovery plan with dependencies, acceptance criteria and stop conditions.
+- [x] Prepare a separate shareable expert exercise, recruitment brief and internal coordinator guide; validate blank PDF fields and offline HTML interaction.
+
+Current forward plan: `planning/Project Recovery and Evaluation Plan 2026-10-26.md`.
+This review request prepares the next phase; it does not execute the steps below.
+The prior automatic wire-repair/pilot sequence is superseded as the next action.
+Original failed runs and historical checklist entries remain preserved.
+
+- [ ] R01 Record scope, claims, resource boundaries and governance decisions.
+- [ ] R02 Preserve a tested current-state checkpoint and restoration inventory.
+- [ ] R03 Prove archive compatibility and relocation before changing pinned code.
+- [ ] R04 Fix reproduced chronology, backend-error, payload-cap and store-construction boundaries.
+- [ ] R05 Prepare a bounded matched capacity/interface diagnostic; no automatic spending.
+- [ ] R06 Extract only reusable infrastructure needed for the next study.
+- [ ] R07 Execute and independently assess the bounded diagnostic if its gates pass.
+- [ ] R08 Select fresh cases and qualify their source/temporal/exposure feasibility.
+- [ ] R09 Implement minimal interpretation and honestly adapted comparator arms.
+- [ ] R10 Complete the timed independent human development pilot.
+- [ ] R11 Size and freeze the amended H5 protocol and analysis.
+- [ ] R12 Run and report the locked H5 study if prerequisites pass.
+- [ ] R13 Conditionally qualify an alternative clinical outcome source.
+- [ ] R14 Conditionally qualify predictors, optional causal genetics and scorer/calibration.
+- [ ] R15 Conditionally run original clinical comparisons and ablations.
+- [ ] R16 Evaluate individually gated T2–T5/H6 branches and prepare a reproducible release.
+
+Separate human workstream: owner arranges reviewers; agents prepare/coordinate.
+
+- [ ] HR1 Recruit domain-matched reviewers and record conflicts/exposure.
+- [ ] HR2 Obtain two independent IL6R orientation submissions and measure workload.
+- [ ] HR3 Obtain source-only references and masked ratings for fresh development cases.
+- [ ] HR4 Arrange the sized final panel and independent adjudication.
+
+Share only `docs/expert-review-20261026/` reviewer files. Keep the coordinator
+guide, prior AI judgments and completed responses separate. No scientific gate
+or original project hypothesis is marked complete by these planning deliverables.
+
+## Native wire repair — reviewed, generation blocked
+
+- [x] Close failed native candidate with original source/accounting checks, two independent scientific reviews and third adjudication; no response repair or retry.
+- [x] Back up failed run/reviews/adjudication/next design and diagnostics:88 entries, ZIP CRC/every-entry SHA256 and Git bundle througha487b94 verified; no further model call.
+- [x] Review generic contract repair and choose pointer-only verbatim_quote with unchanged generated assertions; record wire_version2 branch fields.
+- [ ] Prove the pinned converter enforces the chosen state/reason/quote schema. Current help-only probe warns that nonblank regex is ignored; do not dispatch with unsupported constraints.
+- [ ] Implement separately versioned wire codec, native adapter/callback and orchestrator; preserve current protected modules and failed artifacts.
+- [ ] Pass meaningful regressions, actual escaped/framed sizing, independent implementation review and full/isolated/no-site validation.
+- [ ] If every gate passes, freeze a NEW bounded two-task plan, execute at most once per task, stop server and independently adjudicate exact sealed results.
+
+Plan: planning/Question Pilot Failure Closeout and Contract Repair 2026-10-25.md.
+No new model call has followed the failed version. The source contains relevant
+mechanistic context; current failure is not explained by a missing dataset.
+
+## Question pilot controller — in progress
+
+- [x] Implement and independently review frozen preparation, owned-server lifecycle, shared accounting and prediction sealing:23 focused tests/11 independent probe groups pass; six findings resolved.
+- [x] Pass focused, full unchanged-code, isolated and dependency-free validation; preserve failed audits:1,262 full tests/probes/package,299 isolated,207 no-site.
+- [x] Freeze a fresh real-source two-question plan with the same case/model/source subsets and reviewed scientific gates:question-development-20261026T023832Z, exact match to prior sized requests.
+- [x] Back up the qualified controller and pre-execution plan:91 entries, ZIP CRC/every-entry SHA256 and Git bundle through03f9a9e verified; receipt retained.
+- [x] Execute frozen version once and retain its failed first call:4650 input/601 output tokens, three contract violations, no second task, server stopped; raw candidate sealed without repair.
+- [x] Obtain two independently sealed scientific reviews and verify exact40-leaf coverage for each.
+- [ ] Execute once, retain exact outputs/accounting/failures, stop owned server and seal predictions before review.
+- [x] Obtain two independent AI scientific reviews and third adjudication; retain failed gate.40 leaves,13 clause components,12 source-passage occurrences and all pins/spans replay. Qualified ambiguity/major omission, citation/applicability defects and insufficient usefulness remain; MR unrun.
+
+Controller methods review and full unchanged-code validation pass.299 isolated-copy
+and207 no-site tests pass on the corrected snapshot. The first full/clean attempt
+was cancelled on a peer finding and remains retained separately. The actual pilot
+then failed on its first native call; both required outputs and a success seal remain
+unmet. Two scientific reviews and third adjudication are sealed and verified. No new
+scientific approval occurred. See docs/QUESTION_PILOT.md.
+
+## Native question transport — October25
+
+- [x] Implement lossless scientific-first rendering and exact source-alias translation (20 regressions; seven independent renderer probe groups).
+- [x] Implement optional one-use loopback transport and offline callback verification (21 regressions; eight independent final methods probe groups).
+- [x] Reproduce and fix raw/translated hash collision, concurrent dispatch, post-read byte loss and interruption masking; preserve failed reviews.
+- [x] Rebuild both actual-source payloads without generation:14,149/12,785 bytes,26,998 input/4,096 output reservation; unchanged budgets.
+- [x] Pass276 isolated-copy and184 dependency-free tests.
+- [x] Complete full unchanged-code validation and retained acceptance:1,239 tests, required probes and dependency-free package pass.
+- [x] Retain verified checkpoint backup:59 entries, ZIP CRC/every-entry SHA256 and Git bundle throughc425225 verified; receipt in native transport review assets.
+- [x] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
+- [ ] Execute at most one call per generic question, seal outputs, stop owned server and independently review/adjudicate every scientific assertion.
+
+No native generation occurred in this transport implementation. Prior scientific
+qualification remains failed; broader scientific Tasks6–8 are unfinished.
+Documentation: docs/QUESTION_LOCAL.md.
+
+## Durable recorded question runtime — October25
+
+- [x] Implement exclusive execution, durable raw/accounting/failure records and acyclic receipts.
+- [x] Implement source-inclusive semantic verification and versioned unresolved-call inspection.
+- [x] Resolve independent audit findings with38 focused regressions and10 final probe groups.
+- [x] Execute/verify2real-source recorded fixtures; retain65 missing inputs and legacy compatibility (zero native generation).
+- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1198 full /235 isolated /143 no-site); retain checkpoint.
+- [x] Implement/review native renderer and transport; measure exact prompt fit before any frozen pilot.
+- [ ] Independently qualify generated scientific interpretations before fresh paired evaluation.
+
+This is a recorded/synthetic execution path, not native or scientific approval.
+Docs: docs/QUESTION_RUNTIME.md. Evidence: planning/review-assets/question-recorded-runtime-20261025/.
+
+## Question-bound interpretation core — October25
+
+- [x] Specify and bind two generic evidence-family questions into immutable source-scoped requests (38 focused tests).
+- [x] Retain independent scientific/methods specification reviews and implementation probe recheck.
+- [x] Implement reversible source views and coherent answered/partial/abstained response states; preserve legacy modules.
+- [x] Reconstruct actual source-scoped and all9-source requests exactly, retaining65 missing inputs; both old native sidecars still verify.
+- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1160 full /197 isolated /105 no-site).
+- [x] Specify/review the next durable recorded runtime and native sizing gates.
+- [x] Implement/validate durable recorded v2 runtime and source-inclusive verifier.
+- [x] Implement native serialization/transport and exact sizing before any pilot.
+- [ ] Qualify generated scientific interpretations before fresh paired evaluation.
+
+The core remains separate; recorded runtime and optional native adapter are now
+implemented in their own modules. No new native call in those stages. Actual view sizes
+are13767/12403 bytes for the selected sources and76646 bytes for all9. Selected-source
+prompt fit is now mechanically checked at14,149/12,785 complete prompt bytes; all9
+do not fit. The previous scientific gate remains failed. Core specification:
+planning/Question-Bound Interpretation Specification 2026-10-25.md.
+
+## Native interpretation development and repair — October25
+
+- [x] Implement and validate the first native transport: 58 focused / 1113 full tests.
+- [x] Freeze and execute version one; retain its terminal failure and measured usage.
+- [x] Independently review and adjudicate the retained failed response; scientific content fails.
+- [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 67 focused tests pass.
+- [x] Pass independent repair methods review, isolated checks and full unchanged-code validation (1122 full / 159 isolated / 67 no-site; 12 peer probes).
+- [x] Freeze and execute a separate two-task repair plan once; both outputs source-verified, server stopped (8552 input / 720 output tokens, $0).
+- [x] Review every generated scientific clause and adjudicate qualification or failure: failed gate, retained two reviews and third adjudication.
+
+The first attempt made one native call (4347 input / 890 output tokens, $0 provider
+spending). Its second task was not dispatched. Scientific review found unsupported
+score-to-strength interpretation and mechanism denial despite source context.
+The failed run remains unchanged. Repaired execution also fails scientific qualification:
+mechanism utility insufficient; useful genetics caution credited, unsupported structured
+intervention proposition unresolved. No full T6/H5 or clinical qualification is claimed.
+Original protocol: planning/Bounded Interpretation Development 2026-10-25.md.
+Repair protocol: planning/Bounded Interpretation Repair 2026-10-25.md.
+Failure closure: planning/review-assets/local-interpretation-development-20261025/attempt-v1-failure-validation.json.
+
+## Next interpretation design — after failed qualification
+
+- [x] Specify evidence-family questions and bind them into source-scoped requests.
+- [x] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
+- [x] Implement reviewed question/view/response core and archival migration boundaries with regressions/full validation.
+- [x] Implement and validate the reviewed durable recorded runtime before native adaptation.
+- [ ] Separately freeze any later generation only after design/code qualification; no retry of failed runs.
+- [ ] Complete scientific qualification before fresh paired evaluation.
+
+Current version stopped; no additional generation authorized by its failed gate.
+Ordered next scope: planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md.
+
+## Bounded interpretation implementation - October25
+
+- [x] Implement source-bound optional sidecar, strict response contract and one-use offline replay.
+- [x] Pass contract, lifecycle, semantic-tampering regressions and independent methods review.
+- [x] Pass full project validation with unchanged-code guard and retained evidence.
+- [ ] Qualify actual development interpretations against pinned scientific references.
+
+1083 full tests/probes/package pass with unchanged source guard;120 clean-copy and
+28 no-site-packages tests pass. Two peer verifier defects reproduced and corrected.
+At that checkpoint, nine-observation actual-format scripted replay passed with65
+missing inputs preserved and no native generation. The later native repair above
+has executed; scientific-quality qualification remains pending.
+Acceptance: planning/review-assets/bounded-interpretation-20261025/final-acceptance.json.
+
+Contract implementation alone does not complete scientific qualification or full T6/H5.
+
+## Primary scientific reference qualification - October25 UTC
+
+- [x] Review primary signaling/mechanism evidence for37 scientific occurrences.
+- [x] Review primary genetic evidence for25 scientific occurrences.
+- [x] Review remaining5 scientific occurrences and independently assess applicability/context.
+- [x] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
+
+All67 primary-source judgments and43 scientific keys are integrated and source-verified.
+Scoped AI development reference accepted; complete independent science/general performance
+remain unqualified. All35 clinical rows and all363 non-scientific review rows unchanged.
+Report: reports/IL6R primary evidence qualification.md.
+Acceptance: planning/review-assets/il6r-primary-qualification-20261025/final-acceptance.json.
+
+- [ ] Qualify bounded interpretation against the pinned development reference.
+- [ ] Freeze fresh source-only questions/references/predictions before paired feasibility outputs.
+
+Research stays evaluator-only; clinical truth, probabilities and full T6/H5 remain gated.
+
+## Contextual reference qualification in progress - October25 UTC
+
+- [x] Freeze development qualification procedure and unchanged source-surface inputs.
+- [x] Validate and freeze two independently proposed contextual inventories.
+- [x] Validate and freeze independently proposed evidence-dimension requirements.
+- [x] Adjudicate agreements, disagreements and completeness limits; source-verify resulting references.
+
+Both proposals and the 14-dimension draft rubric are frozen and validated.
+Initial adjudication dispatch hit a service usage limit; retained interruption is historical.
+Resumed source-only adjudication/source replay pass (430 occurrences/398 groups).
+Scientific truth/applicability and a complete independent scientific reference remain pending.
+Next: qualify primary-source evidence for67 scientific occurrences, preserving unknowns.
+Progress receipt: planning/review-assets/t6-contextual-qualification-20261025/progress-validation.json.
+
+This is exposed-case AI development review, not a fresh scientific evaluation.
+Protocol: planning/Contextual Reference Qualification 2026-10-25.md.
+
+## Contextual audit v2 contract checkpoint — October25 UTC
+
+Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
+complete line/value dispositions, attribution, numerical bundles, scoped references,
+dependence and separate uncertainty/validity/applicability strata.47 new regressions;
+full1055 tests/no skips/probes/package and92 isolated tests pass. Peer findings and
+pre-fix failures preserved. Final code unchanged during full verification.
+Retained exposed IL6R replay covers43527 bytes/172lines/1158location nodes through
+original-source verification. Draft has no fabricated semantic atoms or scientific
+error percentage. Next qualify contextual atoms/completeness references and review
+seals before interpretation or fresh paired evaluation. Original Tasks6–8 remain open.
+Native calls/clinical labels/probabilities unchanged; AI review outside native meter.
+Acceptance: planning/review-assets/t6-contextual-audit-20261025/final-acceptance.json.
+Backup status: planning/review-assets/t6-contextual-audit-20261025/backup-validation.json.
+
+- [x] Implement and validate the contextual audit v2 representation/source compiler.
+- [ ] Qualify complete contextual atom and evidence-dimension references.
+- [ ] Enforce independent reference/prediction freezes and qualify bounded interpretation before full T6/H5.
+
+## Latest checkpoint — IL6R development review, October 25 UTC / October 24 Los Angeles
+
+The bounded IL6R development inventory, independent AI source reviews and source-based
+adjudication are complete. The interrupted genetics review was recovered with unchanged
+artifacts. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>)
+and sanitized receipts in `planning/review-assets/il6r-dossier-scientific-audit-20261024/`
+preserve original reviews, failed checks, recovery and report-v1 originals.
+Scientific validity is not established; there is no valid atomic-error denominator.
+Exhaustive qualified atomization/completeness, fresh blinded references, interpretation,
+full T6/H5 and original scientific Tasks 6–8 remain open. Next implement context-bearing
+propositions, attribution versus endorsement, decoded JSON with raw byte spans, grouped
+numerical bundles and dependence, with separate scientific/annotation/operational
+denominators. No fake `reviewed_complete` v1 manifest is accepted.
+
+No new native benchmark/model-adapter calls or clinical labels were produced. AI research
+and adjudication work occurred outside the framework meter; total research LLM usage/cost
+was not measured. Publication dates, source versions and retrieval dates remain separate;
+adjudication retrieval was October 25 UTC / October 24 Los Angeles. The last unchanged-code
+checkpoint remains 1008 framework tests/probes/package and 45 isolated tests; these were
+not rerun after the report. Whole-project completion remains false. Backup status is recorded separately in
+`planning/review-assets/il6r-dossier-scientific-audit-20261024/backup-validation.json`;
+the helper requires a committed clean tree. Earlier entries below
+retain their historical status and next-step wording.
+
+- [x] Complete bounded IL6R development inventory/source review/adjudication checkpoint.
+- [ ] Qualify exhaustive contextual atoms and independent completeness references.
+- [ ] Qualify interpretation, fresh blinded references and full T6/H5; original Tasks 6–8 remain open.
+
+
+## B0 source-bound execution and feasibility cycle — completed October23
+
+- [x] Implement separate B0 source-binding, owned read-only transport and origin-membership reconstruction.
+- [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
+- [x] Pass full project validation and freeze the origin execution request before dispatch.
+- [x] Execute the origin-only read and seal source-bound membership without follow-up access.
+- [x] Freeze and execute separate January/April follow-up requests for that membership.
+- [x] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
+- [x] Continue to the harder T6 comparison design and execution under its own gates.
+
+### Harder T6 top-one development — completed October23
+
+- [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
+- [x] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
+- [x] Seal two independent AI source reviews and third-review reconciliation before inference.
+- [x] Execute and source-verify four paired arms; seal outputs before answer join.
+- [x] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
+- [x] Verify the bounded evidence ZIP and Git-bundle backup on E: (367 entries, every entry hash and CRC checked).
+
+All32 arms verified;48 native calls; prediction seal committed before answer join.
+AsOf6/8, adapted Virtual Biotech6/8, lexical5/8, provider-score3/7 applicable
+decisions agree with the AI source reference. Three ties/two none-sufficient answers
+limit interpretation; neither model abstained. All13 distinct selected and all16
+offered original rows passed source checks.800 tests/probes/package pass.
+Retained acceptance: planning/review-assets/t6-topone-20261023/final-acceptance.json.
+
+### Remaining scientific disposition — October23
+
+- [x] Reconcile original Tasks6–8 and the conditional prospective-design branch against retained feasibility results.
+- [x] Specify the non-dispatch prospective contract, unresolved prerequisites and reopening evidence.
+- [ ] Qualify independent scientific references and clinical outcomes/predictors/power before completing original Tasks6–7.
+- [ ] Execute T2–T5/H6 only if their separate feasibility and data gates pass.
+
+### Prospective endpoint-readiness protocol — completed October23
+
+- [x] Verify the official source-defined sampling route, endpoint/reference rules and statistical activation gates.
+- [x] Freeze a non-dispatch readiness protocol with finite bounds, source projections and pass/revise/stop rules.
+- [x] Validate protocol consistency and retained sources; update the scientific disposition and memory.
+
+Design acceptance verifies14 parent pins/four official metadata GETs and an
+independent statistical review. No trial list/record or outcome was acquired.
+See planning/Prospective Endpoint Readiness 2026-10-23.md and its versioned protocol.
+The old proxy simulation cannot qualify the original clinical test; Brier,
+multiplicity, training/calibration and realized analysis qualification remain open.
+
+### Prospective frame request preparation — completed October24
+
+- [x] Implement and test the exact pinned API request builder and complete-frame guards without dispatch.
+- [x] Generate and verify a fresh source-readiness request; record unqualified server semantics and remaining acquisition gates.
+
+834 full tests/probes/package pass;34 new tests also pass in an isolated clean
+checkout without ignored data payloads. Small tracked public metadata fixtures
+correct the initial test-portability gap. Dated requestR=2026-10-24 covers
+2026-09-24..2026-10-23; no trial query, selected member or clinical label.
+Retained evidence: planning/review-assets/prospective-endpoint-readiness-20261023/frame-stage-acceptance.json.
+
+### Bounded prospective source qualification — assessed October24; route stopped
+
+- [x] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
+- [x] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
+- [x] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
+- [x] Audit source-rule availability after acquisition gates passed; retain the zero-ready STOP and keep clinical activation disabled.
+
+Named-origin exposure closure verified43,393 canonical NCT IDs from16 retained
+sources (1,458,436,692bytes scanned,31.922seconds) plus incidental protocol IDs.
+All source hashes and first byte locators checked. This is conservative exclusion
+for the named sources, not universal model-exposure or protected-holdout proof.
+The fresh exposure-bound request preserves the exact dates/query and selects no
+members. Bounded transport passes36 new tests; full870 tests/probes/package and
+70 isolated clean-checkout tests pass. Execution manifest25e30b6a... is frozen
+before the first source attempt; source-execution-freeze.json records exact scope.
+
+October24 actual attempt stopped under the frozen500-record gate: API declared
+4,277 records; first100 metadata rows/38,595bytes retained, plus71-byte version.
+TwoHTTP200 attempts have terminal receipts and no unresolvedcalls/retries. No
+completeframe/member/source-rule audit. Sourcequalification stays unchecked.
+Source-stop-audit.json verifies the failure. Next is an explicit capacity-only
+amendment preserving interval, projection, eligibility, exclusions and sampling
+seed; no silent cap expansion or rerun of the failedv0.1 execution.
+
+### Explicit source-capacity amendment — completed October24
+
+- [x] Review the capacity-onlyv0.2 amendment and validate a reusable profile engine without changing v0.1 code/receipts.
+- [x] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
+- [x] Report complete-frame or failed-gate evidence, update memory and retain a verified backup.
+
+Proposed capacity is5000/page500 with the original10page/20MiB/600s bounds and
+original protocol sampling seed. No source-rule retrieval, outcome labels, model
+calls or clinical activation are added. Source qualification remains open.
+
+Independent protocol/engine reviews pass;40 new synthetic tests, full910 tests/
+probes/package and110 clean-checkout tests pass. Legacyv0.1 bytes unchanged.
+An exact amended execution is prepared; no amended HTTP before its committed freeze.
+
+Amendedcapture9d142483... was committedc20f905 beforeHTTP and completed all4277
+reported query rows in9pages+2versions,1,657,798retainedbytes. Independent raw
+reconstruction matched every ledger row and original-seed12candidate order:
+3994ineligible/268eligible/15unknown,0exclusions inframe. Fixed12readiness members
+are sealed (11coarse-screeneligible/1unknown); no PDFs/outcomes/modelpredictions.
+This qualifies the reported source query, not an atomic snapshot/clinical cohort.
+
+Verified236-entry evidenceZIP and Gitbundle through2eada8d onE:;
+capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
+
+### Fixed-member source-rule availability — completed assessment October24; route stopped
+
+- [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
+- [x] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
+- [x] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
+- [x] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
+
+No source availability or reported outcomes may replace/reorder the sealed12.
+Source presence/QC is separate from scientific readiness; no automaticjoint_ready.
+
+41main/12independentpeer tests pass; full963/no skips/probes/package and163
+isolatedtests pass after correcting package fixture imports. Initial failed full
+discovery is retained; runtime source engine unchanged. Exact fixedmember source
+execution is prepared beforeHTTP and requires committed freeze before dispatch.
+
+Execution272a56ca... committedeb9ef5b before12HTTP200 listingrequests;58,250bytes/
+4.813s,0PDFs/0retries/0modelcalls. No protocol/SAP listed in observedprojection;
+otherpublicsources notsearched. Localreceipt replay passed. Twoindependent source
+stewards assessedall15mandatoryfields (extrafieldsadvisory) and bothreport0joint
+readinessdemonstrated; case-level differences subsequently resolved in the final adjudication below.
+source-steward-freeze.json sealsbothoriginalreviews beforethatreconciliation.
+
+Third adjudication and root replay pass: all12 original records,180 mandatory
+field judgments,465 original-pointer/value references and35 unique file hashes.
+Final counts10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,
+0joint-ready. Current observed public availability supported for all12; historical
+availability before old cutoffs is not an extra prospective gate. Fixed registry
+route STOP; no resampling, new clinical labels or model calls.
+See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
+
+Verified455-entry evidence ZIP and Git bundle through038c5d5 on E:.
+source-readiness-backup-validation.json records CRC/every entry hash/bundle checks;
+its later receipt commit is outside that bundle. No bulk originals were duplicated.
+
+### Full T6/H5 audit preparation — next executable branch
+
+- [x] Assess whether T6 quality is feasible independently of the stopped clinical route and inspect actual model/claim boundaries.
+- [x] Implement and validate the evaluation-only JSON atomic claim/source-audit prototype with uncertainty, citations and contextual applicability (23 new tests; production integration remains below).
+
+Prototype checkpoint verified on E: 27 ZIP entries, CRC/every entry SHA256 and
+Git bundle through13acaf8. Retained t6-claim-audit-20261024/backup-validation.json;
+later receipt commit is outside that bundle.
+
+- [x] Implement native v2 sealed-dossier/span binding and complete original Open Targets adapter replay; pass22 new tests and a nine-record/eleven-input development check.
+- [ ] Qualify exhaustive whole-dossier atomic extraction, unsupported-claim dispositions and completeness references.
+- [ ] Seal independent blinded claim reviews and third adjudication under a frozen quality protocol.
+- [ ] Qualify an optional interpretation layer, fresh question/reference frame and paired analysis before any new model execution.
+- [ ] Execute source-qualified full dossier quality evaluation only after its own gates pass; retain the original H5 scope and AI-reference limitations.
+
+Source dispatch requires the separately sealed executable request and technical
+qualification under existing user authorization. Current schema access alone
+does not qualify trial transport, rules, membership or clinical launch.
+
+This assesses origin/source readiness only. No new trial outcomes, clinical
+predictions, cohort activation, public registration or model training are implied.
+
+See planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md.
+These open scientific tasks have no currently qualified execution package. B0
+expansion stays stopped; no new cohort, fitting, registration or model call is
+activated by a completed engineering or design milestone.
+
+See planning/Harder T6 Source Prioritization 2026-10-23.md. B0 prediction expansion
+has stopped under its fixed rule; this separate T6 development study does not
+qualify clinical truth or close broader scientific Tasks6–8.
+
+Final source-inclusive audit verified96/96 native envelopes. January0 appearances,
+17absences and15unknowns give53.125% coverage, below90%; stop operational prediction
+expansion. April1appearance/31absences is a separate sensitivity view. All760 tests
+pass; no clinical activation. Next is the separately gated harder T6 challenge.
+
+Origin request ed82b358... was frozen after732 full tests and independent preflight.
+October23 origin read/reconstruction completed; membership2dac62ca... seals32
+origin-absent trials before follow-up. All128 dispositions retained. The strict
+clinical-efficacy study and broader scientific Tasks6–8 remain unqualified.
+
+## B0 registry-content contracts and schema preparation — October 22
+
+- [x] Freeze the separate B0 endpoint, selection bounds, operational coverage threshold and execution prerequisites.
+- [x] Implement non-dispatch SQL/state contracts and adversarial regression tests; retain independent peer tests.
+- [x] Verify the required columns in all three retained source schemas and seal unbound contracts/source references.
+- [x] Complete full validation and source review; retain the stage report and update memory.
+
+- [x] Implement and validate the source-inclusive B0 runner, then seal origin-only membership before follow-up.
+
+That implementation stage completed October23: the separate source-inclusive
+runner sealed32 origin members. Pure contracts themselves cannot dispatch queries.
+Next are separately frozen follow-up and the all-member audit. The larger B0 feasibility
+cycle, T6 scientific comparisons and clinical evaluation remain unfinished.
+Local684-test full validation,26 contract/peer tests and independent schema review
+pass. Retained acceptance: planning/review-assets/registry-content-20261022-v2/acceptance.json.
+
+## Clinical validation design reassessment — October 22
+
+- [x] Reassess retained clinical evidence, local data readiness and endpoint-specific requirements.
+- [x] Write the separate operational-feasibility and harder-T6 roadmap with decision gates and data needs.
+- [x] Validate the plan, evidence references and unchanged clinical artifacts; update memory.
+
+Current recommendation: defer strict efficacy prediction; stop the exposed-case
+lookup chain. Next is a new B0 registry-results-content feasibility protocol and
+tested source/schema guards, followed by origin-only sampling. The plan is not an
+activated study. No new user files are needed initially. See
+planning/Clinical Validation Design and Data Feasibility Plan 2026-10-22.md.
+Earlier next pointers below are dated history. Broader Tasks 6–8 remain open.
+
+## Existing-trial primary-publisher and DOI lookup — October 22
+
+- [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.
+- [x] Capture bounded sources and validate the PDF original; record unrecovered DOI metadata and unperformed Crossref actual-format validation.
+- [x] Independently review trial binding, report type and chronology; retain disagreements and gaps.
+- [x] Record the proceed/revise disposition, update documentation/memory and verify backup.
+
+Bounded lookup closed with **revise/defer clinical source readiness**. Official
+program/title/schedule are authenticated; target DOI, trial bridge, primary
+results text and analysis/decision dates remain unqualified. Stop further
+same-case expansion. Next planned scope is clinical validation design/acquisition
+feasibility reassessment; no cutoff/estimand/cohort change is enacted. Broader
+scientific Tasks6–8 remain open. See
+planning/Primary Report Lookup and Source Readiness 2026-10-22.md.
+
+## Existing-trial public chronology and primary report — October 22
+
+- [x] Freeze source projections, search queries, bounds and chronology review rules.
+- [x] Project retained registry dates and execute the bounded public-source search.
+- [x] Independently verify source identities and distinguish analysis, submission and public posting dates.
+- [x] Reconcile the scientific disposition, update documentation/memory and verify backup.
+
+This bounded phase is closed; the broader scientific Tasks6–8 below remain open.
+The registry dates are verified, but the primary report and analysis/decision
+chronology remain unqualified. Next is a separately frozen publisher/DOI lookup
+of the numbered abstract lead, with no cutoff change or cohort activation.
+See planning/Public Chronology and Primary Report 2026-10-22.md.
+
+## Existing-trial historical document metadata — October 22
+
+- [x] Freeze the exposed local projection and validate synthetic failure cases.
+- [x] Verify source/repeat bytes, exact rows, projection coverage and posting-date eligibility.
+- [x] Independently verify the metadata and historical-availability disposition.
+- [x] Update the plan/memory and verify a bounded evidence backup.
+
+## Existing-trial protocol/SAP audit — October 22
+
+- [x] Freeze the selected registry version, bounded request and scientific review rubric.
+- [x] Validate version/lineage guards, retrieve the one PDF and seal its extraction.
+- [x] Complete independent protocol/SAP reviews and verify original-page evidence.
+- [x] Record the scientific disposition, update documentation/memory and verify backup.
+
+## Prospective sponsor-document discovery amendment — October 21
+
+- [x] Freeze revised identity bridges, fresh controls and unchanged failed-control provenance.
+- [x] Implement and validate bounded candidate routing and original-byte identity checks.
+- [x] Run the precommitted controls once and independently verify gate results.
+- [x] Record the activation decision, update project memory and verify a bounded backup.
+
+Current disposition: sponsor-poster and negative guards pass; registry-version
+and corporate-link controls fail. No cohort activation or next12 membership.
+Next bounded work is a prospectively frozen, version-aware registry request and
+existing-trial protocol/SAP audit; newer files remain uncollected metadata leads.
+See planning/Publisher Discovery Amendment 2026-10-21.md.
+
+## Exact-trial retrieval calibration and source-readiness design — October 21
+
+- [x] Freeze retrieval controls and quantify prior exact-trial search specificity.
+- [x] Implement and validate identity-bound document discovery and bounded receipt-preserving retrieval.
+- [x] Run the frozen live controls and independently verify retrieval results.
+- [x] Freeze the next origin-defined source-readiness study and its gate decision.
+- [x] Update documentation, memory and verified phase backup.
+
+Calibration/design assessment completion does not pass the failed discovery gate.
+G1/G2A passed; G2B failed. The next12 scientific study is inactive, membership
+unsealed and G3 unperformed. No new-member sources or labels. Next: prospectively
+amend sponsor-document identity/discovery and validate fresh controls before
+origin closure. See planning/Exact-trial Retrieval Calibration 2026-10-21.md.
+
+
+## Endpoint-specific follow-up and adjudication — October 21
+
+- [x] Freeze same-twelve follow-up/adjudication policy and exact bounded requests.
+- [x] Validate temporal, scope, result-publication and extraction binding guards.
+- [x] Extract January/April2026 metadata and reported results, then independently verify source records.
+- [x] Review bounded primary sources, adjudicate all frozen endpoints and measure qualification yield/precision.
+- [x] Retain independent acceptance, update documentation/memory and verify evidence backup.
+
+
+## Endpoint-specific origin sample — October 21
+
+- [x] Freeze endpoint-local risk, occurrence/decision/disclosure and negative-state rules.
+- [x] Validate origin-only screening and maturity selection, with explicit missingness and no follow-up selection.
+- [x] Extract January2025 design/maturity information and seal a new deterministic sample before follow-up.
+- [x] Independently verify the sample and update the plan, memory and evidence backup.
+
+
+## Clinical-label feasibility continuation — October 21
+
+The reported-results diagnostic is complete; Step1 clinical qualification remains unresolved. Preserve the exposed twelve-case pilot and its
+36 unresolved endpoints. This diagnostic adds reported-result inputs and tests
+qualification defects; it does not reopen a locked test or silently relax labels.
+
+- [x] Freeze a separate reported-results request for the original twelve trials.
+- [x] Validate result-table projection/linkage, temporal quarantine and negative-ascertainment guards.
+- [x] Extract and independently verify January/April 2026 results in read-only local sessions.
+- [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
+
+
+The next-within-Step1 retrieval calibration above supersedes this earlier stage's
+next pointer. Its failed sponsor discovery gate blocks source-readiness acquisition;
+authentic efficacy rules, scope, origin risk and decision dates remain unresolved.
+See planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md.
+
+## Seven-item science assessment — bounded scopes completed October 20
+
+The user authorized executing the seven-item science plan in order, using delegated
+agent expertise instead of waiting for human domain input. Agent review provenance
+and validation limits must stay explicit. File/access/permission gaps are escalated
+to the user. Previous task completion scopes and historical results below remain.
+
+- [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
+- [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
+- [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
+- [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
+- [x] **Science 5 — Qualify genetics as a conditional scientific branch.**
+- [x] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
+- [x] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
+
+### Science 4 supporting work
+
+- [x] Freeze the evaluator-only review procedure, source-only aliases and explicit
+  pre-query candidate-cap amendment; preserve all twelve origin members.
+- [x] Validate generated queries, request/source binding, row/lineage checks and
+  process ownership: 436 full tests pass; core passes with 52 expected skips.
+- [x] Extract and independently verify origin-only design metadata: all twelve
+  present, eleven reconstructed-date eligible, one estimated-posting hold retained;
+  seal the child before follow-up queries. Owned server stopped/port closed.
+- [x] Finish and verify January/April follow-up extraction and eligible review packets.
+- [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
+- [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
+
+All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
+
+The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
+53 completed and seven explicitly budget-exhausted, with no failed arm in this
+attempt. All sixty passed source-inclusive semantic verification. Predictions were
+sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
+the sparse AI Q1 references. A retained audit then checked **20 distinct original
+rows**, two final AsOf selections per case. Independent agent acceptance passed;
+this is a technical source/protocol review, not independently established biological truth.
+
+There were **114 fresh local native calls**, measured
+377,837 input and 10,538
+output tokens, and $0 provider spending. Execution took 2721.703
+seconds, excluding preparation/evaluation/audit. All real features remain empty and
+probabilities null. Final audit-correction validation passes **551 tests** with no skips;
+dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
+Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
+`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
+
+AsOf selected **all 37 offered candidates**. This run does not establish difficult
+prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
+Virtual Biotech arm is a restricted source-derived five-role reimplementation,
+not execution of its original SDK/research workflow; seven of its ten cases reached
+the common resource budget. Ablations used fresh calls after removing a category
+before retrieval; this category-local design does not test cross-category reasoning.
+
+The response-informed v0.2 correction and failed v0.1 attempt remain separate and
+fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
+58 calls and no gold join. Both attempts total 172
+physical calls at $0. No prior response was pooled into v0.2; this is exposed
+development work, not an untouched held-out or unchanged-system result.
+
+Science6 passed with an explicit
+no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
+22 focused regressions and68 independent probes pass. G07 remains false, no model
+was trained/calibrated. The pilot's0/0 qualified classes are separate from unknown
+historical training-inventory size. See item6/training-feasibility-r1.json.
+Science5 passed its bounded assessment with predictive genetics deferred:
+38 files rehashed, method-specific contracts reviewed, historical-lineage guard
+corrected and independently retested. All463 full tests, core checks (52 expected
+skips), probes and packaging/demo passed. G06 remains false; no MR/colocalization or
+prediction features were produced. See item5/genetics-disposition.json.
+Science4 completed its frozen
+twelve-case audit: all36 outcomes remain unresolved/null; qualified classes absent,
+so power/calibration are nonestimable and clinical fitting remains withheld.
+This is an audit completion, not G04 outcome qualification or a powered clinical set.
+Science 3 passed bounded input readiness: both evaluator snapshots independently
+verified; source coverage and twelve-case origin review retained. This does not
+qualify historical predictors, clinical outcomes, reporting completeness or scoring.
+January 2026 restoration and independent terminal acceptance passed. The Windows
+temporary-path test assertion was corrected;
+all four hosted Windows/Linux core/full jobs passed at c52b2ff. Original failed CI
+and corrected-test proofs are retained separately. Science 1 passed 262 full tests;
+Science 2 passed 326 full
+tests, 50 original-row/reference checks and 30 literature-question adjudications.
+Core validation passed with 52 expected ingestion skips. See planning/Scientific
+Prerequisites Execution 2026-10-18.md. Do not mark a conditional defer, AI-assisted reference or
+technical receipt as independently validated clinical science. Do not open later
+endpoint labels before origin selection is sealed.
+
+Run tasks in order. Mark complete only after the task's validation passes. Stop and
+record a blocker if a task cannot be completed after reasonable attempts. Existing
+development artifacts are evidence, not independent scientific validation.
+
+### Science 7 supporting work — October 20
+
+- [x] Freeze the ten-case, six-arm recipe with the complete collected10512-record
+  source world, fixed rotation, identical ceilings and evaluator isolation.
+- [x] Implement the source-derived five-role comparator and fresh pre-retrieval
+  ablations, durable execution proofs and independent source-aware verification.
+- [x] Pass the full/core regressions, package/demo and independent corruption probes.
+- [x] Implement and validate the response-informed v0.2 role-output constraint;
+  retain the v0.1 failure and complete a fresh source freeze without response reuse.
+- [x] Finish and source-verify all sixty native/baseline case-arm executions.
+- [x] Seal predictions, run the qualified Q1 development comparison and audit
+  twenty distinct original rows from final AsOf selections.
+- [x] Retain measured results, independent acceptance and the final bounded
+  scientific disposition; update the execution register and milestone status.
+
+### Science 3 supporting work
+
+- [x] Qualify four historical OT24.09 mapping products and complete source ancestry.
+- [x] Seal the origin-only reconstructed exploratory universe and mapping revision;
+  audit all 61,541 scope memberships and preserve unresolved scientific equivalence.
+- [x] Validate the origin/endpoint gates and integrity corrections: 363 full tests,
+  dependency-free validation, original corruption probes and 1,648 ancestor checks.
+- [x] Validate the April archive/cutoff gates, independent verifier and source-only
+  pilot sampler: 402 full tests, required probes, package/demo and core checks
+  (52 expected ingestion skips). All four hosted Windows/Linux jobs passed at195d7d6.
+- [x] Complete January 2026 technical restoration and independent audit: 52 tables,
+  563,840 studies, 55,380,326 rows, 394 retained evidence files and 1,648 ancestor
+  commitments verified; empty cohort output; owned server stopped and port closed.
+- [x] Receive and qualify April 1, 2026 AACT archive: 2,420,893,767 bytes,
+  SHA256 `6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3`;
+  exact TOC date and all five CRC/member checks passed. Ancillary schema.png is empty;
+  archived HTML is integrity-checked only, not adopted as scientific documentation.
+- [x] Complete April technical restoration and independent terminal verification:
+  52 tables,578,527 studies,56,751,088 rows;394 evidence files,all5archive members
+  and1,648 ancestors verified;emptycohort and stoppedownedserver/closedport.
+- [x] Finalize source-coverage/cutoff and origin-review disposition under the frozen
+  pre-label amendment; preserve all unresolved clinical/scoring gates.
+
+Science 3 is complete within its amended input-readiness scope. The prior file/access
+blocker is resolved. The earlier blocked checkpoint remains preserved in Git and its
+verified E: backup. Independent source-review validation checked 12 cases, 20 prior
+rows and 752 source pointers. Nine are discovery candidates; all twelve retain
+unknown global prior risk and unresolved clinical linkage. No labels were assigned.
+Full/core checks passed (402 tests, 52 expected core skips), and all four hosted jobs
+passed at 195d7d6. See item3/source-readiness-report.json and its register validation.
+
+- [x] **Task 1 — Build registry-scale cohorts and audit transition labels.** Verify
+  the sealed v0.4 milestone, freeze the condition/scope sensitivity rules, and finish
+  the prior-risk and regimen/population audit. Validate source lineage and regressions.
+- [x] **Task 2 — Measure sample size, statistical power and clinical feasibility.**
+  Use measured dependencies and explicit label-error/effect-size assumptions; retain
+  simulations and a proceed/revise decision without claiming observed model accuracy.
+- [x] **Task 3 — Finalize model chronology, evaluation windows and preregistration.**
+  Verify model versions/cutoffs and matching historical origin/endpoint data; complete
+  a defensible frozen evaluation protocol before treating a set as locked. Completed
+  as a local protocol; public filing and clinical activation remain gated.
+- [x] **Task 4 — Build bounded retrieval and the model-backed specialist.** Preserve
+  the default budget and $0 provider-spending boundary; validate offline/replay behavior.
+- [x] **Task 5 — If feasible, validate genetics features and train/calibrate scoring.**
+  Scientific derivations, leakage-safe cohorts and calibration data must qualify first.
+  Feasibility assessed: defer derivation/training; required qualifications are unmet.
+- [ ] **Task 6 — Compare Virtual Biotech, simple baselines and ablations.** Verify
+  compatible data/model chronology and comparable budgets and retain evaluation outputs.
+- [ ] **Task 7 — Run independent T6 quality and locked clinical evaluations.**
+  Independent review and an actually locked, temporally eligible cohort are required.
+- [ ] **Task 8 — Conditionally extend T2-T5 and H6.** Proceed only after their
+  prespecified feasibility and data gates pass; document any unmet condition explicitly.
+
+## Current execution
+
+Task 1 passed source/scope validation and the full 194-test suite. Its evidence is
+in `planning/Ordered Execution Progress 2026-10-17.md` and
+`planning/review-assets/ordered-execution-20261017/`.
+Task 2 passed corrected small-sample null validation, all 120 scenario checks and
+201 full-suite tests. Its clinical feasibility decision is revise before training;
+these are conditional simulations, not clinical performance or validated labels.
+Task 3 passed 208 full-suite tests and proof/hash validation. A local development
+protocol and gated 2025-2026 clinical design are frozen; no public registration or
+locked clinical set is claimed.
+Task 4 passed 229 full-suite tests, four hosted Windows/Linux jobs, ten original
+source-verified local-model dossiers and three source-verified lossless-wire dossiers.
+The response-truncation guard and exact offline replay passed. The final transport
+probe fits 66 versus 22 candidates without dropping scientific fields. Owned servers
+are stopped; all probabilities remain null.
+Task 5 passed its conditional feasibility assessment: technical QC revalidated, while
+predictive genetics and scorer training are deferred because scientific prerequisites fail.
+
+## Validation and blockers
+
+Tasks 1-4 are complete within their documented scope. Task 5's conditional decision
+is validated: no predictive feature derivation, training or calibration was performed.
+
+**Task 6 scientific scope remains incomplete; development execution completed October 20.** The prior stop is preserved in the
+dated execution log. Development-only baseline diagnostics and an upstream source
+compatibility audit are now implemented and validated. The fixed four-case selection
+challenge passed source-inclusive verification and matched baseline analysis. These
+technical comparisons do not require clinical labels or claim scientific quality.
+
+There is no independently qualified clinical
+reference, no adjudicated negatives/censoring, no validated predictive feature set or
+trained/calibrated scorer, and current proxy-size power does not meet the target.
+All real dossier probabilities remain null. AUROC/Brier comparisons against Virtual
+Biotech/baselines and scientific ablations cannot be estimated from these inputs.
+AI-assisted review and source-copy fidelity cannot replace independent truth.
+
+Scientific Task 6 completion remains blocked under the user's failure rule.
+Task7's source-only T6 development branch subsequently completed October23;
+its locked clinical branch and conditional Task8 remain unqualified. The development substeps and bounded seven-assessment phase are finished; clinical execution stops
+at the remaining scientific/comparator gates. See the October 18 Task 6 report.
+The original proposals and sealed outputs remain preserved. Provider spending is $0;
+no public registration, clinical success claim or locked evaluation is made.
+
+## Task 6 resumption checks — October 18
+
+Review clarification: the adapted offline comparator and matched end-to-end
+ablation implementation can proceed without qualified outcome labels. Scientific
+metrics remain gated separately. Existing AI-assisted development assessments are
+available (ten cases / 20 claims); they are not independently adjudicated gold.
+
+- [x] Implement and validate paired lexical/provider-score baselines, an uncapped
+  extractive reference and explicit deterministic evidence masks; 246 full-suite
+  tests, required probes, packaging and four hosted CI jobs passed.
+- [x] Reverify and compare all 29 archived requests, keeping the ten-case canonical
+  and three-case wire diagnostics separate. All selected every offered candidate;
+  none had to prioritize more than three IDs.
+- [x] Audit and archive pinned Virtual Biotech configuration/source and local
+  directory presence without SDK initialization, credentials or provider calls.
+- [x] Finish and source-verify the fixed four-case wider-candidate challenge,
+  then seal and verify its matched development baseline comparison. Eleven new
+  requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
+- [x] Implement and validate the adapted Virtual Biotech execution arm under
+  matched evidence, model, budget and containment rules.
+- [x] Complete matched end-to-end ablations across the full frozen comparison.
+  Fresh v0.2 execution, all sixty source-verified arms and twenty original-row checks
+  passed. The first stopped attempt remains retained separately; October 18 masks
+  remain separate historical diagnostics. Scientific comparisons below remain gated.
+- [ ] Complete scientific comparisons with independent quality/clinical references
+  and qualified scoring/power. These prerequisites remain unmet.
+
+Native dossier/source checkpoint backed up on E: (53 entries, ZIP CRC/every
+entry SHA256 and Git bundle througha759d04 verified). Retained receipt:
+planning/review-assets/t6-dossier-binding-20261024/backup-validation.json.
+Later receipt/status commit is outside that bundle. Bulk source data excluded.

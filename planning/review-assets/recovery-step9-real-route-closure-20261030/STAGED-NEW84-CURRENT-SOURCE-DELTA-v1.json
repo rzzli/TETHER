@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "STAGED_SOURCE_DELTA_NOT_AN_EXECUTION_MANIFEST",
+  "frozen_staged_manifest": {
+    "path": "planning/review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+    "bytes": 94200,
+    "sha256": "2aad403db06d5388bf9a8e8fb674bf2a26f8ad90a437f2db51e1e19f17ff80a9"
+  },
+  "resource_count": 48,
+  "preserved_state_counts": {
+    "EXISTING_PINNED_REFERENCE": 27,
+    "PLANNED_SOURCE": 16,
+    "UNBUILT": 3,
+    "UNRESOLVED": 2
+  },
+  "source_replacements": [
+    {
+      "staged_id": "PLANNED_ENTRY_KERNEL",
+      "preserved_staged_state": "PLANNED_SOURCE",
+      "source": {
+        "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_entry_kernel_v4.py",
+        "bytes": 145042,
+        "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+      },
+      "current_source_status": "accepted_source_pure_preentry_TCB",
+      "top_level_imports": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "math",
+        "re",
+        "struct",
+        "types"
+      ],
+      "execution_admission": false
+    },
+    {
+      "staged_id": "PLANNED_OWNER_OPS",
+      "preserved_staged_state": "PLANNED_SOURCE",
+      "source": {
+        "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_owner_ops_v4.py",
+        "bytes": 39889,
+        "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+      },
+      "current_source_status": "accepted_source_pure_captured_software",
+      "top_level_imports": [
+        "dataclasses",
+        "types",
+        "json",
+        "preflight_entry_kernel_v4",
+        "role_ledger_codec_v4"
+      ],
+      "execution_admission": false
+    },
+    {
+      "staged_id": "PLANNED_FILE_VIEW",
+      "preserved_staged_state": "PLANNED_SOURCE",
+      "source": {
+        "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_file_view_v4.py",
+        "bytes": 3614,
+        "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+      },
+      "current_source_status": "accepted_source_pure_captured_software",
+      "top_level_imports": [
+        "preflight_entry_kernel_v4"
+      ],
+      "execution_admission": false
+    }
+  ],
+  "acceptance": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-ROOT-ACCEPTANCE-v1.json",
+    "bytes": 5632,
+    "sha256": "43316e7aa8611aa9d9df5033778d37a7ebfc3f0d64577d2728bea3abe051f2ab"
+  },
+  "native_candidate": {
+    "staged_id": "PLANNED_RAW_SHIM",
+    "status": "SOURCE_TEXT_EXISTS_REVIEW_PENDING_NOT_BUILT",
+    "files": [
+      {
+        "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.h",
+        "bytes": 7391,
+        "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+      },
+      {
+        "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.c",
+        "bytes": 8795,
+        "sha256": "a462fac861faf4149a36763c30f74441ac0df049a37c7a2e2e557828913188bc"
+      }
+    ],
+    "source_scope": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-SOURCE-AUTHORING-SCOPE-v1.json",
+      "bytes": 2690,
+      "sha256": "76064321529a2406b9d6f1d5bce2b02ffe53a3887a03fe1cb1d468d86cd0df2c"
+    },
+    "native_or_kernel_binding": false
+  },
+  "dependency_gaps": [
+    {
+      "module": "bisect",
+      "consumer": "unicode_piece_analyzer_v1",
+      "disposition": "Required captured-consumer dependency is outside Kernel4's seven trusted standard-library names; versioned explicit selection/admission required."
+    },
+    {
+      "module": "datetime",
+      "consumer": "Old archive/journal references if selected",
+      "disposition": "Not automatically selected. Distinct84 policy successors still required; their exact imports must be closed prospectively."
+    }
+  ],
+  "gap_review": {
+    "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NEXT-REAL-ROUTE-GAP-REVIEW-v1.json",
+    "bytes": 27099,
+    "sha256": "529863c52146618fd5699706bc73043ab1ec84ba9f21bb91b36702afa995d80b"
+  },
+  "unresolved": {
+    "full_runtime_roster": null,
+    "full_runtime_module_rules": null,
+    "genuine_native_ticket_bridge": null,
+    "held_path_lifetime": null,
+    "full14_physical_profile": null,
+    "joint_actor_census": null,
+    "new84_parent_child_build_pack": null,
+    "resource_fit": null
+  },
+  "qualification": {
+    "metadata_only": true,
+    "source_imports": 0,
+    "original_target_reads": 0,
+    "C_SDK_or_native_calls": 0,
+    "execution_admission": false,
+    "roster_complete": false,
+    "physical": false,
+    "scientific": false
+  },
+  "preservation": "The48-node manifest and accepted Source4 bytes are unchanged. This delta records current source existence and retained scoped acceptance; no planned node is promoted to a live input or inferred authentic from its state label."
+}

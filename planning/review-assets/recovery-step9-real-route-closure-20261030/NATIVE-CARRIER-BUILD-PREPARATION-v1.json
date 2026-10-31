@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "PREPARATION_NOT_A_BUILD_BINDING",
+  "purpose": "Compile the reviewed internal C14 component and independent fake-target harness using the already installed tools, retaining object/listing/image artifacts before any image execution.",
+  "driver": "build_native_carrier_component_v1.py",
+  "required_before_binding": [
+    "Retain and resolve the first independent C/header source review with named successors for any corrections.",
+    "Freeze the independent literal expectations and C fake-target tests before observing a subject result.",
+    "Independently review exact source/header/tests/build driver and this preparation; no subject execution during that review.",
+    "Pin selected source/header/tests/expectations/reviews/driver, installed compiler/linker, toolchain probe and filtered build environment in a separate Root binding."
+  ],
+  "proposed_build": {
+    "driver_budget_seconds": 60,
+    "clock_scope": "Timer starts after exact input checks and exclusive output reservation. Interpreter startup, preflight and final report write are excluded; no production295/300-second clock or full-process fit claim.",
+    "compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+    "linker": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+    "SDK": "Existing Windows SDK10.0.26100.0, MSVC14.51.36231 and UCRT; external trusted build prerequisites, no complete fresh header/source restoration or attestation claim.",
+    "raw_component": "C11 x64 /O2 /Ob0 /Oi /MT /W4 /WX /GL- /GS- with machine/source assembly listing. Raw component omits stack-cookie callbacks; source has no variable-sized stack data. Exact compiled ordering remains to review.",
+    "test_harness": "Separate own-source C11 translation unit; same flags except /GS; fake targets only, no model/clinical files.",
+    "link": "x64 console, no incremental link; own objects plus standard installed CRT/kernel32 toolchain dependencies.",
+    "output": "Fresh exclusive data/cache/r09-native-carrier-component-build-* directory under D:; ordinary trusted-harness evidence writes, not production physical14 publication.",
+    "commands": "Exactly compile-carrier, compile-tests, link-tests. No resulting executable dispatch in this phase.",
+    "failure": "Retain first command result, stdout/stderr, chained journal and terminal report. No retry or source edit in-place. Known subprocesses killed/reaped on failure; OS-wide descendant behavior is not attested."
+  },
+  "post_build_gate": "Independently review complete layout assertions, object/listing/linked-image hashes and exact fourteen post-return scalar store/error transport/publication paths. Only then may Root bind one separate fake-target execution; passing compilation is not a native/ABI behavior result.",
+  "excluded": "No real fourteen-port targets, original payloads, live kernel ticket/lease/child/path binding, model execution, old native replay, cap/default/downloader/monitor changes or scientific claim.",
+  "provider_spend_usd": 0
+}

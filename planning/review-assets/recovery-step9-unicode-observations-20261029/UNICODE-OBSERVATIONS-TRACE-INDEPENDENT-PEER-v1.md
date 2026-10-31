@@ -1,0 +1,7 @@
+# Unicode observation literal-trace peer v1
+
+One finite coverage gap remains before validator implementation: none of the four complete bases or 36 overlays supplies a coherent mixed-EOG result. The membership-conflict base has two known-false EOG admissions, not a disagreement. Add a whole-case negative or literal overlay whose exact closed union reports mixed EOG booleans, native_member/matches null, valid geometry retained for all78 native-byte cases, known membership77, and clean terminal failure. Keep population and the original failed experiment unchanged.
+
+Independent pinned-data inspection otherwise agrees on all four full histories: 84 source-linked cases, global117 byte-piece identities, 15 setup bodies/vectors, per-case and selected-prefix API arithmetic, publication lag, independent UTF8 interval geometry, population summaries/selectors, final cleanup and failure identity references. The positive has191 rows/U3; negatives retain all84 cases with unavailable, known conflict or QC-unknown axes distinct. Every overlay materializes to its declared bytes/digest. Malformed overlay expectations were inspected as authored test inputs, not evaluated by a new validator.
+
+This is a fixture/source-format peer check only. No observe/require-complete API exists in this review; no untrusted-input parser, source/owner authentication, runtime file, native vocabulary, model or SDK call was evaluated. All qualification and runtime flags remain false. Preserve v1 and correct the missing fixture in a separate successor after root's finite-batch decision.

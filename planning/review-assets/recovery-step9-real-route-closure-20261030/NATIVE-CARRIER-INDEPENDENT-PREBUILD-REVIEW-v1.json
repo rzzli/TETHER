@@ -1,0 +1,86 @@
+{
+  "activity": {
+    "SDK_or_FFI_calls": 0,
+    "driver_execution": 0,
+    "original_target_reads": 0,
+    "source_edits": 0,
+    "subject_builds": 0,
+    "subject_runs": 0
+  },
+  "driver_other_checks": "Exact Root binding/pin verification, fresh output reservation under data/cache, shell=False fixed3commands, filtered CL environment, build-only image nonexecution and explicit timing/resource caveats are appropriate. Final binding/preparation must select corrected source/driver/test/review pins.",
+  "excluded_authority": [
+    "No ordinary-caller security or genuine Kernel NativeDispatchTicket",
+    "No actual same-bank/lifetime/NativeInput/child/path qualification",
+    "No complete physical14 profile/fit or new84/native/model/scientific claim"
+  ],
+  "findings": [
+    {
+      "cause": "After communicate raises original timeout/KI/etc, unprotected process.kill() and unbounded second communicate() may raise or hang before stdout/stderr/result-row retention. Cleanup can replace the original failure; inherited open pipes can leave unbounded waiting.",
+      "file": "build_native_carrier_component_v1.py",
+      "function": "main.run",
+      "id": "D1",
+      "immutable_first_result": "V1 driver and this static HOLD are preserved; there has been no actual driver_main, compiler, SDK or native outcome.",
+      "kind": "STATIC_FAILURE_RETENTION_AND_BOUNDEDNESS_DEFECT_NOT_EXECUTED",
+      "required": "Named successor must retain original exception/first output prefixes separately, bound cleanup within the unchanged declared build budget and preserve cleanup errors/unreaped or unknown output state. No exit0 healing, no process-tree/Job framework requirement."
+    }
+  ],
+  "language_lifetime_review": "Relevant cell/frame/counter/escape state is static/global; automatic values used after longjmp are not modified between setjmp and jump, or are rewritten before use. Source-only analysis finds no additional material typed callback/argument/count/oracle join defect. Alignment negative controls and size/offset assertions remain target-MSVC build/machine-code qualification, not portable ABI proof.",
+  "phase_verdict": "ENTERED1 may retain scalar+definition commits while error/count remain uncommitted. RAW_EXIT_PREPARED2 means all applicable publications and exitmetadata prepared, not target return/caller return/API success. Partial LastError longjmp expects phase1/RAW_EXITflagclear/conversion0; existing commits remain known.",
+  "pins": {
+    "NATIVE-CARRIER-BUILD-PREPARATION-v1.json": {
+      "bytes": 3177,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-BUILD-PREPARATION-v1.json",
+      "sha256": "a42b3845b635de1a4e69d3fbf95df85a7a89eb12899ca4f395501819a0d911ec"
+    },
+    "NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json": {
+      "bytes": 128574,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    "NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json": {
+      "bytes": 7108,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json",
+      "sha256": "31c1a5b4b1b8463b926c9201d7d074970647a66f229b8c4a67651c0115f33274"
+    },
+    "NATIVE-CARRIER-METADATA-CORRECTION-v3.json": {
+      "bytes": 2414,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-METADATA-CORRECTION-v3.json",
+      "sha256": "4aeb5db86e607edc18cfec54a9f94ccc1a9e6c962685d1eb85809ea0c2bfc904"
+    },
+    "NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json": {
+      "bytes": 2353,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json",
+      "sha256": "5e93aec96202a9610bd7473eda39ea635502940218dd025c21da53f93c9b458a"
+    },
+    "NATIVE-CARRIER-PREBUILD-LITERAL-CHECK-v1.json": {
+      "bytes": 13150,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-PREBUILD-LITERAL-CHECK-v1.json",
+      "sha256": "50909caba76dcc6ec370e29f382088021647054f3c084ac21c49e8ab486ef25d"
+    },
+    "build_native_carrier_component_v1.py": {
+      "bytes": 7208,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v1.py",
+      "sha256": "fba958559262597e5b86d7d054af1e35b47405d3ecaee2c5aa99025456d3b225"
+    },
+    "native_carrier_fake_tests_v1.c": {
+      "bytes": 23473,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    },
+    "preflight_file14_raw_v1.h": {
+      "bytes": 7391,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    },
+    "preflight_file14_raw_v3.c": {
+      "bytes": 9822,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v3.c",
+      "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+    }
+  },
+  "schema_version": 1,
+  "scope": "First coherent finite prebuild source/header/test/oracle/phase/driver review. No C compiler,SDK,preprocessor,FFI,native or test executable invoked.",
+  "source_verdict": "V3 closes Root C2-C4: common initializer/fresh-invocation metadata validity, fixed query minima, absent fields/unknown flags/close-consumed flags and already-entered phase precedence. Header unchanged; publish/finish/macros and all14 wrapper bodies byte-equalV2.",
+  "status": "HOLD_BUILD_DRIVER_FIRST_ERROR_AND_UNBOUNDED_CLEANUP",
+  "test_oracle_verdict": "79 planned controls=46semantic+22malformed+10initializer-negative+one LastError escape. Pure metadata byte checker148/148 passed; initialized/normal/partial256B literals preserve rawwidths/highzeros/definedness/count/phase. Planned79inits/116wrappers/47fake targets/17error entries/16returns. None observed executed."
+}

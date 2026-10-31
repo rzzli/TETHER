@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "NAMED_TERMINAL_PERSISTENCE_CORRECTION_NOT_EXECUTED",
+  "before": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v4.py",
+    "bytes": 11675,
+    "sha256": "a0641dc6cff79514a0d641290e30b15e8be5dc2b06411d561396c1b9b9c9e291"
+  },
+  "after": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v5.py",
+    "bytes": 13430,
+    "sha256": "a7b50c609af910b9af568b4d07c1fee90669d51b994003ca860b137bc471025e"
+  },
+  "findings": [
+    "Independent same-D1 batch: prepared-success emit failure could retain terminal BUILT and return0 despite caught failure.",
+    "Root final control-flow review: inventory/read failures and final report-write failures also need explicit failed disposition, partial retention and no false zero exit."
+  ],
+  "correction": "Main catch always setsBUILD_FAILED; inventory is protected with first failure preserved and partial-inventory flag; final report-write failure emits readable failure when possible and returns1. Subprocess function/three commands/source/header/oracles unchanged.",
+  "subprocess_function_AST_unchanged": true,
+  "qualification": "Trusted-helper source correction only; no C build/native/image/original action."
+}

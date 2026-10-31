@@ -1,0 +1,3736 @@
+{
+  "activity": {
+    "application_tests": 0,
+    "builds": 0,
+    "native_dispatches": 0,
+    "original_model_payload_reads": 0,
+    "source_imports": 0,
+    "subject_calls": 0
+  },
+  "authorized_edits": [
+    {
+      "new": "status: accepted-component-documentation-qa-passed",
+      "old": "status: accepted-component-documentation-qa-pending",
+      "path": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md"
+    },
+    {
+      "new": "The separate reassessment/current-document QA passes in `C-RETURN-CURRENT-DOCS-QA-v2.json`; only its own TODO item is checked.",
+      "old": "The separate reassessment/current-document QA item remains **unticked pending independent peer QA**.",
+      "path": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md"
+    },
+    {
+      "new": "- [x] Reassess all R01\u2013R16/HR1\u2013HR4 after C return capture and pass independent current-document/memory QA. Assessment: planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md; independent documentation QA PASS: C-RETURN-CURRENT-DOCS-QA-v2.json.",
+      "old": "- [ ] Reassess all R01\u2013R16/HR1\u2013HR4 after C return capture and pass independent current-document/memory QA. Assessment: planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md; documentation QA pending, do not tick before the independent peer.",
+      "path": "TODO.md"
+    },
+    {
+      "new": "independent current-doc QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`.",
+      "old": "independent current-doc QA pending.",
+      "path": "memory/MEMORY.md"
+    },
+    {
+      "new": "Independent documentation QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`.",
+      "old": "Independent documentation QA remains pending and unticked.",
+      "path": "memory/project-goals.md"
+    },
+    {
+      "new": "independent reassessment\nand current-document QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`.",
+      "old": "independent reassessment\nand current-document QA remain pending and unticked.",
+      "path": "memory/research-log-2026-10-30-c-return-capture.md"
+    },
+    {
+      "new": "| R09 compiled raw-carrier layout and C79 fake component accepted | [30 October UTC C-return-capture snapshot](<Project Progress Reassessment 2026-10-30 - C Return Capture.md>) | Root ad4c9f0e / compiled peer 5796bcc6 / actual peer 1b10326d: 14 store paths and 19 bodies, 129 artifact checks; one fake image, 79 controls / 29,310 C checks / 399 independent actual checks pass. Run 0.172s, four files / 121,790 B. Named native25 expected-code control is 41 PASS/two FAIL/four DEFERRED/one STATIC; only actual API/axis-kind guards remain, with Source5 authoring-only/unexecuted. Real bridge/Win32/Core lease/physical/new84/resource/science gates stay open; independent documentation QA PASS: `C-RETURN-CURRENT-DOCS-QA-v2.json`. |",
+      "old": "| R09 compiled raw-carrier layout and C79 fake component accepted | [30 October UTC C-return-capture snapshot](<Project Progress Reassessment 2026-10-30 - C Return Capture.md>) | Root ad4c9f0e / compiled peer 5796bcc6 / actual peer 1b10326d: 14 store paths and 19 bodies, 129 artifact checks; one fake image, 79 controls / 29,310 C checks / 399 independent actual checks pass. Run 0.172s, four files / 121,790 B. Named native25 expected-code control is 41 PASS/two FAIL/four DEFERRED/one STATIC; only actual API/axis-kind guards remain, with Source5 authoring-only/unexecuted. Real bridge/Win32/Core lease/physical/new84/resource/science gates stay open; independent documentation QA pending. |",
+      "path": "planning/Project Progress Reassessments.md"
+    }
+  ],
+  "broken_links": [],
+  "checker": {
+    "bytes": 17511,
+    "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/check_c_return_current_docs_v2.py",
+    "sha256": "2bda2169cee78bee3a756ced9f87b62ec12431cac6a8977d0ced9414a747391a"
+  },
+  "checks": [
+    {
+      "detail": null,
+      "name": "exact_authoring_v3",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "exact_ten_doc_set",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "preserved_failed_QA_pin",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "preserved_failed_QA_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "only_five_authorized_summary_additions",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/README.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/TODO.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning/Recovery Status and Next Gates 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/memory/project-goals.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/memory/research-log-2026-10-30-c-return-capture.md",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "root_acceptance_pin",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\build-result.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/data\\cache\\r09-native-carrier-component-run-20261030T061649Z\\run-result.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-RUN-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-PREBUILD-REVIEW-v2.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-COMPONENT-BUILD-SCOPE-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-COMPONENT-BUILD-BINDING-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v3.c",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\preflight_file14_raw_v1.h",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_pin/planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "fourteen_root_references",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/builds",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/build_commands",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/build_exits",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/generated_image_dispatches",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/fake_controls_passed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/C_assertions_passed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/initializer_attempts",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/wrapper_attempts",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/fake_target_calls",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/last_error_entries",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/last_error_normal_returns",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/partial_boundary_copies",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/primary_cell_copies",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/raw_cell_payload_bytes",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/build_journal_acknowledgments",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/run_journal_acknowledgments",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/artifact_review_checks",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/actual_review_checks",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/build_inventory_files",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/build_inventory_bytes",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/run_files_including_result",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_actual/run_bytes_including_result",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "accepted_timing",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "compiled_fake_only_qualification",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "preserved_app_spend_monitor",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_control_hash",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_peer_hash",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_current_counts",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_current_retention_clean",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_history_pin2",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "native25_history_pin3",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "source5_prepared_pin",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "source5_no_result_claim",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_assessment_frontmatter_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_assessment_final_QA_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_C_return_pending_checkbox",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_TODO_QA_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_current_MEMORY_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_current_goals_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_current_log_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_current_C_index_row",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "one_current_C_index_QA_status",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "TODO.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "TODO.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "TODO.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessments.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessments.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessments.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/project-goals.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/project-goals.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/project-goals.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/MEMORY.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/MEMORY.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/MEMORY.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/research-log-2026-10-30-c-return-capture.md/UTF8",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/research-log-2026-10-30-c-return-capture.md/accepted_C_metrics",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/research-log-2026-10-30-c-return-capture.md/native25_current_not_complete",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "TODO.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "TODO.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessments.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Progress Reassessments.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/current_scope",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/next_and_history",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/MEMORY.md/current_log_link",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "memory/project-goals.md/current_log_link",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "exact_twenty_status_rows",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R01",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R02",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R03",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R04",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R05",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R06",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R07",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R08",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R09",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R10",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R11",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R12",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R13",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R14",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R15",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/R16",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/HR1",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/HR2",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/HR3",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "status/HR4",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "five_exact_ordered_next_stages",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/C_acceptance_vs_runtime",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/raw_layout_and_counts",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/retained_build_and_run_bytes",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/qualification_limits",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/native25_history_and_specific_errata",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/Source5_not_accepted",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/preserved_failures_and_no_hidden_replay",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/application_science_humans",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "assessment/physical_and_execution_boundaries",
+      "passed": true
+    },
+    {
+      "detail": {
+        "broken": [],
+        "outside_not_followed": []
+      },
+      "name": "all_local_Markdown_and_wikilinks",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "only_single_checkbox_TODO_changed",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md/unchanged_by_QA",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Project Recovery and Evaluation Plan 2026-10-26.md/unchanged_by_QA",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "planning/Recovery Status and Next Gates 2026-10-26.md/unchanged_by_QA",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "name": "README.md/unchanged_by_QA",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "checks": 154,
+    "documents": 10,
+    "failed": 0,
+    "local_links": 439,
+    "markdown_links": 232,
+    "ordered_next_stages": 5,
+    "passed": 154,
+    "status_rows": 20,
+    "wikilinks": 207
+  },
+  "documents_before": {
+    "README.md": {
+      "bytes": 39190,
+      "path": "README.md",
+      "sha256": "86629db2a727e13f095c080c9bf80ee53609e8fc9ac34e31865711cde772dd0e"
+    },
+    "TODO.md": {
+      "bytes": 56764,
+      "path": "TODO.md",
+      "sha256": "2699ab007bce6533bd50164036287002fefa6c34e8e2dcb0c8bbbf021761b648"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 27713,
+      "path": "memory/MEMORY.md",
+      "sha256": "dc4568621ea8e9739f39a16ad88586dd50c8dda9eff21edabc2e630aa311e062"
+    },
+    "memory/project-goals.md": {
+      "bytes": 121801,
+      "path": "memory/project-goals.md",
+      "sha256": "5446ed6f8ae03e53d14728a73580f61c37634b2d4112978796ec80277ce8f0e4"
+    },
+    "memory/research-log-2026-10-30-c-return-capture.md": {
+      "bytes": 5308,
+      "path": "memory/research-log-2026-10-30-c-return-capture.md",
+      "sha256": "2b3189b2733689088bfe39814e726300677b9f93eed81142ccca87afec306eb0"
+    },
+    "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md": {
+      "bytes": 16677,
+      "path": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "sha256": "a6728683deba8d1b9c4b39defed2edc28fdf6596632864ff96c988d617930666"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 20433,
+      "path": "planning/Project Progress Reassessments.md",
+      "sha256": "280bd3fb5b470269b5f2592f9f74004103279cd3b70ef483c6ad8df14ded5560"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 44988,
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "c28e9dab5805d5f2f9fc703fc3247d2e76ad5c1138114b2e4cb63d64160302f3"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 12114,
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "sha256": "b40cc8a9aca9e0aaa4bbfa36d91b056e4e22c07990ed7bb606d27138e153de74"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 35669,
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "43138459173ba3c794a9c6c80417ec0461f0d29f3b09295b18510836ec5d1db7"
+    }
+  },
+  "documents_final": {
+    "README.md": {
+      "bytes": 39190,
+      "path": "README.md",
+      "sha256": "86629db2a727e13f095c080c9bf80ee53609e8fc9ac34e31865711cde772dd0e"
+    },
+    "TODO.md": {
+      "bytes": 56766,
+      "path": "TODO.md",
+      "sha256": "e75ee0c94b9f8460cf67a3998fdbaf31e29d59f225c4e2d5a41ff47fa1623944"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 27746,
+      "path": "memory/MEMORY.md",
+      "sha256": "66f6bb4920bed94e61e131b374f15f7720cafc95155f7f8d221c181cfdb9976d"
+    },
+    "memory/project-goals.md": {
+      "bytes": 121813,
+      "path": "memory/project-goals.md",
+      "sha256": "7939d37cd49f04d9be18cb4f984e1c1a026075c8f91fe8dff1c89057b56c0310"
+    },
+    "memory/research-log-2026-10-30-c-return-capture.md": {
+      "bytes": 5321,
+      "path": "memory/research-log-2026-10-30-c-return-capture.md",
+      "sha256": "e3d2f7ab19541006e176bd0a53b561694b4570b2735d6489a11c9a4abf5c3de7"
+    },
+    "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md": {
+      "bytes": 16702,
+      "path": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "sha256": "0632cae38b70dfe884163b42aaecf4f7ac0382b575084bc624c625cd95a00923"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 20466,
+      "path": "planning/Project Progress Reassessments.md",
+      "sha256": "98ee88d8d24c96136ffd92f404989b3905aae140eb6892cc6ee92a04dc5c4d49"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 44988,
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "c28e9dab5805d5f2f9fc703fc3247d2e76ad5c1138114b2e4cb63d64160302f3"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 12114,
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "sha256": "b40cc8a9aca9e0aaa4bbfa36d91b056e4e22c07990ed7bb606d27138e153de74"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 35669,
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "43138459173ba3c794a9c6c80417ec0461f0d29f3b09295b18510836ec5d1db7"
+    }
+  },
+  "edit_limits": "Only the C-return reassessment checkbox and current QA-status phrases/frontmatter in this assessment, C-return index row, MEMORY/project-goals/new C-return log. No other TODO/history/source change.",
+  "evidence": {
+    "acceptance": {
+      "bytes": 7045,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-ROOT-ACCEPTANCE-v1.json",
+      "sha256": "ad4c9f0ece7296ac658ecec175caee028883562fd1905da4b58a4fc9952972e1"
+    },
+    "actual_fake_review": {
+      "bytes": 10362,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+      "sha256": "1b10326d2e368708d876f67ba1f6e6a5eed47f2756766fa881d98fd83c67f33b"
+    },
+    "authoring": {
+      "bytes": 6558,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/C-RETURN-CURRENT-DOCS-AUTHORING-v3.json",
+      "sha256": "4aff2516d3d8f91bf35c5ed2b839919934ad678aafd8621491e0bdf5531794d9"
+    },
+    "build_binding": {
+      "bytes": 4949,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-COMPONENT-BUILD-BINDING-v1.json",
+      "sha256": "2ccdf0fa6543ffa42bfe7c2edc059e639a62869d0ea62e91e1f483b92567b6db"
+    },
+    "build_result": {
+      "bytes": 7136,
+      "path": "data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json",
+      "sha256": "9275174036dfab54a50fea143cd3d547e5dbadd5e41af559d95b4eacbfc4fa8e"
+    },
+    "build_scope": {
+      "bytes": 1599,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-COMPONENT-BUILD-SCOPE-v1.json",
+      "sha256": "a222ab706b2734ddea10ac7e047903fd09ea776796fbd31899a1aa5e8a055a69"
+    },
+    "compiled_artifact_review": {
+      "bytes": 19754,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "sha256": "5796bcc69efd666491baf3fdbc04b96c509f8c772173817370c3ca4b341d9cb4"
+    },
+    "current_native25_actual": {
+      "bytes": 241989,
+      "path": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v4.json",
+      "sha256": "dfe90829f1f8ac9e05aaaa7ce31304422150bb286c3cecb300ac7651f61ff63d"
+    },
+    "current_native25_actual_peer": {
+      "bytes": 27423,
+      "path": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-INDEPENDENT-ACTUAL-CONTROL-v4.json",
+      "sha256": "27e061831086d70364bb6f8e00e5c49fa0bf7f281b2e70d00d432542f7e584ac"
+    },
+    "expectations": {
+      "bytes": 128574,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    "header": {
+      "bytes": 7391,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    },
+    "prebuild_review": {
+      "bytes": 12589,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-PREBUILD-REVIEW-v2.json",
+      "sha256": "1c1a07fc5165f9dde83d3d1b62620939796d0fac1a14c55b20d26a7b2e100f6a"
+    },
+    "preserved_native25_control2": {
+      "bytes": 228676,
+      "path": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v2.json",
+      "sha256": "2519c0b16193732e07f63449a1239d03de4951b367db8cfaf95b319fce4b0123"
+    },
+    "preserved_native25_control3": {
+      "bytes": 238104,
+      "path": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v3.json",
+      "sha256": "bca943d0e85c32c6575b4e0225fd152777200041bb81a983d8ed01bb431f0892"
+    },
+    "run_binding": {
+      "bytes": 3025,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json",
+      "sha256": "b2e6d7ca65a9b2aa6dcf1fda3c33c0f99713f472fd7d21af2a90323f8cb7123f"
+    },
+    "run_result": {
+      "bytes": 63161,
+      "path": "data/cache/r09-native-carrier-component-run-20261030T061649Z/run-result.json",
+      "sha256": "6167028f2285fbf491a79e73bbb07ae143b77dd4161f2e3f4e5e9935f3fc259c"
+    },
+    "run_scope": {
+      "bytes": 3941,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "sha256": "8899d56436e44890cbee30be0d7e487c24db8b87794bad27ae3b3af58d108fa4"
+    },
+    "runtime_static_review": {
+      "bytes": 6349,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "sha256": "5bd681cbb9af82f7c182e4a412c5af93c02fbc2813282e169d1f33a35b11c64b"
+    },
+    "source": {
+      "bytes": 9822,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v3.c",
+      "sha256": "49f7fd887fa393dcca721831225755f92670ce7eed60ef463bf9dc702c3f4da2"
+    },
+    "source5_unexecuted_pause": {
+      "bytes": 4167,
+      "path": "planning/review-assets/recovery-step9-entry-source5-20261030/ENTRY-SOURCE-PAUSE-v5.json",
+      "sha256": "27d70c5388c9fb66855945c2c2bcad31871032ed7243d368d32fad886d35816f"
+    },
+    "tests": {
+      "bytes": 23473,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/native_carrier_fake_tests_v1.c",
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    }
+  },
+  "links": [
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/INTERPRETATION_GENERATION.md",
+      "target": "docs/INTERPRETATION_GENERATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "target": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md",
+      "target": "planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "target": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V3-RESULT-VERIFICATION.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V3-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-29 - Module Census.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-ABI-RESULT-VERIFICATION-v1.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-ABI-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.md",
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessments.md",
+      "target": "<planning/Project Progress Reassessments.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "target": "<planning/Project Recovery and Evaluation Plan 2026-10-26.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "target": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/source-feasibility.md",
+      "target": "planning/review-assets/recovery-step8-20261026/source-feasibility.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md",
+      "target": "planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "target": "planning/review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "target": "<planning/Recovery Status and Next Gates 2026-10-26.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-20261026/Expert-review-share.zip",
+      "target": "docs/expert-review-20261026/Expert-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-genetics-20261026/Expert-source-review-share.zip",
+      "target": "docs/expert-review-genetics-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip",
+      "target": "docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "target": "planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "target": "planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/QUESTION_PILOT.md",
+      "target": "docs/QUESTION_PILOT.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/QUESTION_LOCAL.md",
+      "target": "docs/QUESTION_LOCAL.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/question-native-transport-20261025/acceptance.json",
+      "target": "planning/review-assets/question-native-transport-20261025/acceptance.json"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/QUESTION_RUNTIME.md",
+      "target": "docs/QUESTION_RUNTIME.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/QUESTION_INTERPRETATION.md",
+      "target": "docs/QUESTION_INTERPRETATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "docs/BOUNDED_INTERPRETATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md",
+      "target": "<planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "reports/IL6R dossier scientific audit.md",
+      "target": "<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/T6_DOSSIER_BINDING.md",
+      "target": "docs/T6_DOSSIER_BINDING.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/T6_CLAIM_AUDIT.md",
+      "target": "docs/T6_CLAIM_AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+      "target": "planning/Source%20Readiness%20Closeout%20and%20T6%20Quality%20Next%20Stage%202026-10-24.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Prospective Frame Preparation 2026-10-24.md",
+      "target": "planning/Prospective%20Frame%20Preparation%202026-10-24.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Harder T6 Source Prioritization 2026-10-23.md",
+      "target": "planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md",
+      "target": "planning/Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/B0 Registry Content Feasibility 2026-10-22.md",
+      "target": "planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Primary Report Lookup and Source Readiness 2026-10-22.md",
+      "target": "planning/Primary%20Report%20Lookup%20and%20Source%20Readiness%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Public Chronology and Primary Report 2026-10-22.md",
+      "target": "planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Existing-trial Document History 2026-10-22.md",
+      "target": "planning/Existing-trial%20Document%20History%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Existing-trial Protocol Audit 2026-10-22.md",
+      "target": "planning/Existing-trial%20Protocol%20Audit%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Publisher Discovery Amendment 2026-10-21.md",
+      "target": "planning/Publisher%20Discovery%20Amendment%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Exact-trial Retrieval Calibration 2026-10-21.md",
+      "target": "planning/Exact-trial%20Retrieval%20Calibration%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md",
+      "target": "planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Endpoint-specific Origin Sample 2026-10-21.md",
+      "target": "planning/Endpoint-specific%20Origin%20Sample%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/V02_MIGRATION.md",
+      "target": "docs/V02_MIGRATION.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "docs/FRAMEWORK.md",
+      "target": "docs/FRAMEWORK.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/run-registry.json",
+      "target": "planning/run-registry.json"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Stabilization Completion and Feasibility Gates.md",
+      "target": "planning/Stabilization Completion and Feasibility Gates.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Task 6 Development Comparisons 2026-10-18.md",
+      "target": "planning/Task%206%20Development%20Comparisons%202026-10-18.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Matched T6 Comparison Execution 2026-10-20.md",
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Clinical Label Readiness 2026-10-21.md",
+      "target": "planning/Clinical%20Label%20Readiness%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Context Revision Completion.md",
+      "target": "planning/Context Revision Completion.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Clinical Long Session Progress.md",
+      "target": "planning/Clinical Long Session Progress.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/registry-sizing-20261017/README.md",
+      "target": "planning/review-assets/registry-sizing-20261017/README.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Scientific Prerequisites Execution 2026-10-18.md",
+      "target": "planning/Scientific%20Prerequisites%20Execution%202026-10-18.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Matched T6 Comparison Execution 2026-10-20.md",
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Ordered Execution Progress 2026-10-17.md",
+      "target": "planning/Ordered%20Execution%20Progress%202026-10-17.md"
+    },
+    {
+      "document": "README.md",
+      "kind": "markdown",
+      "resolved": "planning/Local Model Specialist Pilot 2026-10-17.md",
+      "target": "planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md"
+    },
+    {
+      "document": "TODO.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "TODO.md",
+      "kind": "markdown",
+      "resolved": "docs/history/TODO-before-recovery-20261026.md",
+      "target": "docs/history/TODO-before-recovery-20261026.md"
+    },
+    {
+      "document": "TODO.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md",
+      "target": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Generation.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - R09 Generation.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Detached Launch.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Identity.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Module Identity.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Module Census.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md",
+      "target": "review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Typed ABI.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md",
+      "target": "review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessments.md",
+      "target": "<Project Progress Reassessments.md>"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "target": "review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md",
+      "target": "review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "target": "review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-retrieval-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "target": "review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "TODO.md",
+      "target": "../TODO.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/Opus_20261026T050236Z_review.md",
+      "target": "../docs/Opus_20261026T050236Z_review.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/Independent Project Review 2026-10-26.md",
+      "target": "../docs/Independent%20Project%20Review%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step7-20261026/gate-correction.md",
+      "target": "review-assets/recovery-step7-20261026/gate-correction.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "target": "review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/bounded-source-qualification.md",
+      "target": "review-assets/recovery-step8-20261026/bounded-source-qualification.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "target": "Recovery%20Status%20and%20Next%20Gates%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/Expert Review Coordinator Guide 2026-10-26.md",
+      "target": "../docs/Expert%20Review%20Coordinator%20Guide%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessments.md",
+      "target": "Project%20Progress%20Reassessments.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "target": "Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/Independent Project Review 2026-10-26.md",
+      "target": "../docs/Independent%20Project%20Review%202026-10-26.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Launcher.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Launcher.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Canary.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Console Identity.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Console Identity.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Detached Launch.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Module Census.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Typed ABI.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Build.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Build.md>"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "target": "review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "target": "review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/source-feasibility.md",
+      "target": "review-assets/recovery-step8-20261026/source-feasibility.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md",
+      "target": "review-assets/recovery-step8-20261026/date-and-review-addendum.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/bounded-source-qualification.md",
+      "target": "review-assets/recovery-step8-20261026/bounded-source-qualification.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/metadata-followup-v1.md",
+      "target": "review-assets/recovery-step8-20261026/metadata-followup-v1.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md",
+      "target": "review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-20261026/Expert-review-share.zip",
+      "target": "../docs/expert-review-20261026/Expert-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-genetics-20261026/Expert-source-review-share.zip",
+      "target": "../docs/expert-review-genetics-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip",
+      "target": "../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md",
+      "target": "review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md",
+      "target": "review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-comparison-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-comparison-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md",
+      "target": "review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-token-aware-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../docs/SOURCE_AND_TOKEN_PREPARATION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md",
+      "target": "review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-retrieval-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md",
+      "target": "review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "target": "review-assets/recovery-step9-four-arm-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "target": "review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../docs/INTERPRETATION_INTERFACE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "target": "review-assets/recovery-step9-native-integration-20261027/CONTRACT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md",
+      "target": "review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md",
+      "target": "review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md",
+      "target": "review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-duration-20261028/CONTRACT.md",
+      "target": "review-assets/recovery-step9-native-duration-20261028/CONTRACT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "target": "review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "target": "review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Duration.md",
+      "target": "Project%20Progress%20Reassessment%202026-10-28%20-%20R09%20Duration.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessments.md",
+      "target": "Project%20Progress%20Reassessments.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json",
+      "target": "review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md",
+      "target": "review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md",
+      "target": "review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Integration.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - R09 Integration.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Duration.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - R09 Duration.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Converter.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - R09 Converter.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - R09 Generation.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - R09 Generation.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Build.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Build.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Launcher.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Launcher.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Native Canary.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Console Identity.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Console Identity.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - Detached Launch.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - ABI Export Failure.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - ABI Export Failure.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-28 - ABI Module Policy.md",
+      "target": "<Project Progress Reassessment 2026-10-28 - ABI Module Policy.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Identity.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Module Identity.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Module Census.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Typed ABI.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Recognition Build.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Recognition Build.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Recognition Disposition.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Recognition Disposition.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Unicode Controls.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Unicode Controls.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Unicode Coverage Analyzer.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Unicode Coverage Analyzer.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Verifier Byte Checks.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Verifier Byte Checks.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Resource Byte Decoder.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Resource Byte Decoder.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Captured Archive Checker.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Captured Archive Checker.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Portable File Ports.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Portable File Ports.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Indexed Accounting.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Indexed Accounting.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Admission Envelope.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Admission Envelope.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Producer Storage Design.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Producer Storage Design.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Producer Format Schema.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Producer Format Schema.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Injected Producer.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "target": "<Project Progress Reassessment 2026-10-29 - Large Injected Producer.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - Entry Corrections.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - E08 Policy.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - E08 Policy.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md",
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.md",
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.md"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json",
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - C Return Capture.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-ROOT-ACCEPTANCE-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-ROOT-ACCEPTANCE-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - E08 Policy.md",
+      "target": "<Project Progress Reassessment 2026-10-30 - E08 Policy.md>"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json",
+      "target": "../data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "data/cache/r09-native-carrier-component-run-20261030T061649Z/run-result.json",
+      "target": "../data/cache/r09-native-carrier-component-run-20261030T061649Z/run-result.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-INDEPENDENT-ACTUAL-REVIEW-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-SCOPE-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-RUN-BINDING-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-BINDINGS-CORRECTION-v4.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-BINDINGS-CORRECTION-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "target": "review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v2.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v2.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v3.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v3.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-INDEPENDENT-STATIC-REVIEW-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-EXPECTED-CODE-ERRATA-v4.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/NATIVE25-EXPECTED-CODE-ERRATA-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v4.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/NATIVE25-COMPONENT-PROOF-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-native25-component-20261030/KERNEL-KIND-GUARD-SUCCESSOR-AUTHORING-SCOPE-v5.json",
+      "target": "review-assets/recovery-step9-native25-component-20261030/KERNEL-KIND-GUARD-SUCCESSOR-AUTHORING-SCOPE-v5.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+      "target": "review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "target": "review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "kind": "markdown",
+      "resolved": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "target": "review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-30%20-%20Entry%20Contract%20Coverage.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-30%20-%20Entry%20Corrections.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Large%20Injected%20Producer.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Injected%20Producer.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Literal%20Freeze.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Producer Format Schema.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Format%20Schema.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Verifier%20Orchestration.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20UTF8%20Oracle.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Recognition Disposition.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Disposition.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "target": "../planning/R09%20Unicode%20Coverage%20and%20Verifier%20Recovery%20Plan%202026-10-29.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "planning/Project Progress Reassessment 2026-10-29 - Recognition Build.md",
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Build.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "markdown",
+      "resolved": "reports/IL6R dossier scientific audit.md",
+      "target": "<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "Project Progress Reassessment 2026-10-30 - C Return Capture"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-c-return-capture.md",
+      "target": "research-log-2026-10-30-c-return-capture"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - E08 Policy.md",
+      "target": "Project Progress Reassessment 2026-10-30 - E08 Policy"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-e08-policy.md",
+      "target": "research-log-2026-10-30-e08-policy"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-entry-contract-coverage.md",
+      "target": "research-log-2026-10-30-entry-contract-coverage"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-entry-corrections.md",
+      "target": "research-log-2026-10-30-entry-corrections"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-large-injected-producer.md",
+      "target": "research-log-2026-10-29-large-injected-producer"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-injected-producer.md",
+      "target": "research-log-2026-10-29-injected-producer"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-producer-literal-freeze.md",
+      "target": "research-log-2026-10-29-producer-literal-freeze"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-producer-format-schema.md",
+      "target": "research-log-2026-10-29-producer-format-schema"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-r09-unicode-controls.md",
+      "target": "research-log-2026-10-29-r09-unicode-controls"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-generation-acceptance.md",
+      "target": "research-log-2026-10-28-r09-generation-acceptance"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-build.md",
+      "target": "research-log-2026-10-28-r09-native-build"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-duration.md",
+      "target": "research-log-2026-10-28-r09-duration"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-integration.md",
+      "target": "research-log-2026-10-28-r09-native-integration"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-converter.md",
+      "target": "research-log-2026-10-28-r09-converter"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-grammar-preparation.md",
+      "target": "research-log-2026-10-28-r09-grammar-preparation"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-collected.md",
+      "target": "research-log-2026-10-27-r09-collected"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-r09-retrieval.md",
+      "target": "research-log-2026-10-26-r09-retrieval"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-four-arm.md",
+      "target": "research-log-2026-10-27-r09-four-arm"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-r09-preparation.md",
+      "target": "research-log-2026-10-26-r09-preparation"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-real-retrieval.md",
+      "target": "research-log-2026-10-27-r09-real-retrieval"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-recovery-execution.md",
+      "target": "research-log-2026-10-26-recovery-execution"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "target": "Project Recovery and Evaluation Plan 2026-10-26"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "target": "Project Recovery and Evaluation Plan 2026-10-26"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-opus-response.md",
+      "target": "research-log-2026-10-26-opus-response"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-pilot-controller.md",
+      "target": "research-log-2026-10-25-question-pilot-controller"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-native-transport.md",
+      "target": "research-log-2026-10-25-question-native-transport"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-recorded-runtime.md",
+      "target": "research-log-2026-10-25-question-recorded-runtime"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-core.md",
+      "target": "research-log-2026-10-25-question-core"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-native-interpretation.md",
+      "target": "research-log-2026-10-25-native-interpretation"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Prospective Frame Preparation 2026-10-24.md",
+      "target": "Prospective Frame Preparation 2026-10-24"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Prospective Endpoint Readiness 2026-10-23.md",
+      "target": "Prospective Endpoint Readiness 2026-10-23"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md",
+      "target": "Remaining Scientific Gates and Prospective Design 2026-10-23"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Harder T6 Source Prioritization 2026-10-23.md",
+      "target": "Harder T6 Source Prioritization 2026-10-23"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/B0 Registry Content Feasibility 2026-10-22.md",
+      "target": "B0 Registry Content Feasibility 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/B0 Registry Content Feasibility 2026-10-22.md",
+      "target": "B0 Registry Content Feasibility 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/B0 Registry Content Preparation 2026-10-22.md",
+      "target": "B0 Registry Content Preparation 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Validation Design and Data Feasibility Plan 2026-10-22.md",
+      "target": "Clinical Validation Design and Data Feasibility Plan 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-design-reassessment.md",
+      "target": "research-log-2026-10-22-design-reassessment"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Primary Report Lookup and Source Readiness 2026-10-22.md",
+      "target": "Primary Report Lookup and Source Readiness 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Public Chronology and Primary Report 2026-10-22.md",
+      "target": "Public Chronology and Primary Report 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Existing-trial Document History 2026-10-22.md",
+      "target": "Existing-trial Document History 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Existing-trial Protocol Audit 2026-10-22.md",
+      "target": "Existing-trial Protocol Audit 2026-10-22"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Publisher Discovery Amendment 2026-10-21.md",
+      "target": "Publisher Discovery Amendment 2026-10-21"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-publisher.md",
+      "target": "research-log-2026-10-21-publisher"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Exact-trial Retrieval Calibration 2026-10-21.md",
+      "target": "Exact-trial Retrieval Calibration 2026-10-21"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-retrieval.md",
+      "target": "research-log-2026-10-21-retrieval"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md",
+      "target": "Endpoint-specific Follow-up Feasibility 2026-10-21"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-followup.md",
+      "target": "research-log-2026-10-21-followup"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Endpoint-specific Origin Sample 2026-10-21.md",
+      "target": "Endpoint-specific Origin Sample 2026-10-21"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-origin-sample.md",
+      "target": "research-log-2026-10-21-origin-sample"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Label Readiness 2026-10-21.md",
+      "target": "Clinical Label Readiness 2026-10-21"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Task 6 Development Comparisons 2026-10-18.md",
+      "target": "Task 6 Development Comparisons 2026-10-18"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Ordered Execution Progress 2026-10-17.md",
+      "target": "Ordered Execution Progress 2026-10-17"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Evaluation Chronology and Local Preregistration 2026-10-17.md",
+      "target": "Evaluation Chronology and Local Preregistration 2026-10-17"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Registry-scale Cohort and Label Audit v0.4.md",
+      "target": "Registry-scale Cohort and Label Audit v0.4"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Updated Project Plan 2026-10-17.md",
+      "target": "Updated Project Plan 2026-10-17"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Program Advancement Rules v0.3.md",
+      "target": "Program Advancement Rules v0.3"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Phase 3 Linkage Follow-up.md",
+      "target": "Phase 3 Linkage Follow-up"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Program and Outcome Feasibility.md",
+      "target": "Program and Outcome Feasibility"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Updated Project Plan 2026-10-17.md",
+      "target": "Updated Project Plan 2026-10-17"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Long Session Progress.md",
+      "target": "Clinical Long Session Progress"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Long Run Data Preflight.md",
+      "target": "Long Run Data Preflight"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/AACT January 2025 Follow-up.md",
+      "target": "AACT January 2025 Follow-up"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical and Genetics Feasibility Pilot.md",
+      "target": "Clinical and Genetics Feasibility Pilot"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/AACT Historical Restoration.md",
+      "target": "AACT Historical Restoration"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Context Revision Completion.md",
+      "target": "Context Revision Completion"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/AI Assisted Review Completion.md",
+      "target": "AI Assisted Review Completion"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Feasibility Gate Decision.md",
+      "target": "Feasibility Gate Decision"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-15.md",
+      "target": "research-log-2026-10-15"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Stabilization Completion and Feasibility Gates.md",
+      "target": "Stabilization Completion and Feasibility Gates"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Feasibility Gate Decision.md",
+      "target": "Feasibility Gate Decision"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Feasibility Gate Decision.md",
+      "target": "Feasibility Gate Decision"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Full Repository Review and Verified Findings_claude10112026.md",
+      "target": "Full Repository Review and Verified Findings_claude10112026"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Revised Next Stage Plan after Repository Review.md",
+      "target": "Revised Next Stage Plan after Repository Review"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Audit and v0.2 Completion.md",
+      "target": "Project Audit and v0.2 Completion"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "docs/FRAMEWORK.md",
+      "target": "docs/FRAMEWORK"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "docs/V02_MIGRATION.md",
+      "target": "docs/V02_MIGRATION"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/AsOf Feasibility Analysis and Peer Survey.md",
+      "target": "AsOf Feasibility Analysis and Peer Survey"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "README.md",
+      "target": "README"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "docs/FRAMEWORK.md",
+      "target": "docs/FRAMEWORK"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "planning/Framework Code Review and Next Stage Plan.md",
+      "target": "Framework Code Review and Next Stage Plan"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/framework-code-review.md",
+      "target": "framework-code-review"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/asof-feasibility-findings.md",
+      "target": "asof-feasibility-findings"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-09.md",
+      "target": "research-log-2026-10-09"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "data/README.md",
+      "target": "data/README|the data workspace"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "data/DATA_PLAN.md",
+      "target": "data/DATA_PLAN|the full data plan"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/data-acquisition-plan.md",
+      "target": "data-acquisition-plan"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-10.md",
+      "target": "research-log-2026-10-10"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "data/STORAGE_AND_DOWNLOAD_REPORT.md",
+      "target": "data/STORAGE_AND_DOWNLOAD_REPORT"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/data-acquisition-plan.md",
+      "target": "data-acquisition-plan"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-10.md",
+      "target": "research-log-2026-10-10"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-19.md",
+      "target": "research-log-2026-10-19"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-contextual-qualification.md",
+      "target": "research-log-2026-10-25-contextual-qualification"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-primary-qualification.md",
+      "target": "research-log-2026-10-25-primary-qualification"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-bounded-interpretation.md",
+      "target": "research-log-2026-10-25-bounded-interpretation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-c-return-capture.md",
+      "target": "research-log-2026-10-30-c-return-capture"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-e08-policy.md",
+      "target": "research-log-2026-10-30-e08-policy"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-entry-contract-coverage.md",
+      "target": "research-log-2026-10-30-entry-contract-coverage"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-entry-corrections.md",
+      "target": "research-log-2026-10-30-entry-corrections"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-large-injected-producer.md",
+      "target": "research-log-2026-10-29-large-injected-producer"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-injected-producer.md",
+      "target": "research-log-2026-10-29-injected-producer"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-producer-literal-freeze.md",
+      "target": "research-log-2026-10-29-producer-literal-freeze"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-producer-format-schema.md",
+      "target": "research-log-2026-10-29-producer-format-schema"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-producer-storage-design.md",
+      "target": "research-log-2026-10-29-producer-storage-design"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-admission-envelope.md",
+      "target": "research-log-2026-10-29-admission-envelope"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-29-r09-unicode-controls.md",
+      "target": "research-log-2026-10-29-r09-unicode-controls"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-build.md",
+      "target": "research-log-2026-10-28-r09-native-build"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-sources.md",
+      "target": "research-log-2026-10-28-r09-native-sources"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-generation-acceptance.md",
+      "target": "research-log-2026-10-28-r09-generation-acceptance"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-generation.md",
+      "target": "research-log-2026-10-28-r09-generation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-converter.md",
+      "target": "research-log-2026-10-28-r09-converter"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-duration.md",
+      "target": "research-log-2026-10-28-r09-duration"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-grammar-preparation.md",
+      "target": "research-log-2026-10-28-r09-grammar-preparation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-integration.md",
+      "target": "research-log-2026-10-28-r09-native-integration"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-28-r09-native-component.md",
+      "target": "research-log-2026-10-28-r09-native-component"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-interface.md",
+      "target": "research-log-2026-10-27-r09-interface"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-collected.md",
+      "target": "research-log-2026-10-27-r09-collected"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-real-retrieval.md",
+      "target": "research-log-2026-10-27-r09-real-retrieval"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-27-r09-four-arm.md",
+      "target": "research-log-2026-10-27-r09-four-arm"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-r09-retrieval.md",
+      "target": "research-log-2026-10-26-r09-retrieval"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-r09-preparation.md",
+      "target": "research-log-2026-10-26-r09-preparation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-r09-baselines.md",
+      "target": "research-log-2026-10-26-r09-baselines"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-recovery-execution.md",
+      "target": "research-log-2026-10-26-recovery-execution"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-26-opus-response.md",
+      "target": "research-log-2026-10-26-opus-response"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-pilot-controller.md",
+      "target": "research-log-2026-10-25-question-pilot-controller"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-native-transport.md",
+      "target": "research-log-2026-10-25-question-native-transport"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-recorded-runtime.md",
+      "target": "research-log-2026-10-25-question-recorded-runtime"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-question-core.md",
+      "target": "research-log-2026-10-25-question-core"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-native-interpretation.md",
+      "target": "research-log-2026-10-25-native-interpretation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-bounded-interpretation.md",
+      "target": "research-log-2026-10-25-bounded-interpretation"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-primary-qualification.md",
+      "target": "research-log-2026-10-25-primary-qualification"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-25-contextual-qualification.md",
+      "target": "research-log-2026-10-25-contextual-qualification"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "docs/T6_CONTEXTUAL_AUDIT.md",
+      "target": "T6_CONTEXTUAL_AUDIT"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/project-goals.md",
+      "target": "project-goals"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "docs/T6_DOSSIER_BINDING.md",
+      "target": "T6_DOSSIER_BINDING"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md",
+      "target": "Source Readiness Closeout and T6 Quality Next Stage 2026-10-24"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Prospective Frame Preparation 2026-10-24.md",
+      "target": "Prospective Frame Preparation 2026-10-24"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-23-prospective-readiness.md",
+      "target": "research-log-2026-10-23-prospective-readiness"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Prospective Endpoint Readiness 2026-10-23.md",
+      "target": "Prospective Endpoint Readiness 2026-10-23"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-23-b0.md",
+      "target": "research-log-2026-10-23-b0"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Harder T6 Source Prioritization 2026-10-23.md",
+      "target": "Harder T6 Source Prioritization 2026-10-23"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md",
+      "target": "Remaining Scientific Gates and Prospective Design 2026-10-23"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-registry-content.md",
+      "target": "research-log-2026-10-22-registry-content"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/B0 Registry Content Preparation 2026-10-22.md",
+      "target": "B0 Registry Content Preparation 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-design-reassessment.md",
+      "target": "research-log-2026-10-22-design-reassessment"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Validation Design and Data Feasibility Plan 2026-10-22.md",
+      "target": "Clinical Validation Design and Data Feasibility Plan 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-primary-report.md",
+      "target": "research-log-2026-10-22-primary-report"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Primary Report Lookup and Source Readiness 2026-10-22.md",
+      "target": "Primary Report Lookup and Source Readiness 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-public-chronology.md",
+      "target": "research-log-2026-10-22-public-chronology"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Public Chronology and Primary Report 2026-10-22.md",
+      "target": "Public Chronology and Primary Report 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-document-history.md",
+      "target": "research-log-2026-10-22-document-history"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Existing-trial Document History 2026-10-22.md",
+      "target": "Existing-trial Document History 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-22-protocol.md",
+      "target": "research-log-2026-10-22-protocol"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Existing-trial Protocol Audit 2026-10-22.md",
+      "target": "Existing-trial Protocol Audit 2026-10-22"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-publisher.md",
+      "target": "research-log-2026-10-21-publisher"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Publisher Discovery Amendment 2026-10-21.md",
+      "target": "Publisher Discovery Amendment 2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-retrieval.md",
+      "target": "research-log-2026-10-21-retrieval"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Exact-trial Retrieval Calibration 2026-10-21.md",
+      "target": "Exact-trial Retrieval Calibration 2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-followup.md",
+      "target": "research-log-2026-10-21-followup"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md",
+      "target": "Endpoint-specific Follow-up Feasibility 2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21-origin-sample.md",
+      "target": "research-log-2026-10-21-origin-sample"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Endpoint-specific Origin Sample 2026-10-21.md",
+      "target": "Endpoint-specific Origin Sample 2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Label Readiness 2026-10-21.md",
+      "target": "Clinical Label Readiness 2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-21.md",
+      "target": "research-log-2026-10-21"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-20.md",
+      "target": "research-log-2026-10-20"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Matched T6 Comparison Execution 2026-10-20.md",
+      "target": "Matched T6 Comparison Execution 2026-10-20"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Scientific Prerequisites Execution 2026-10-18.md",
+      "target": "Scientific Prerequisites Execution 2026-10-18"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/project-goals.md",
+      "target": "project-goals"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-19.md",
+      "target": "research-log-2026-10-19"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Task 6 Development Comparisons 2026-10-18.md",
+      "target": "Task 6 Development Comparisons 2026-10-18"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-18.md",
+      "target": "research-log-2026-10-18"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Updated Project Plan 2026-10-17.md",
+      "target": "Updated Project Plan 2026-10-17"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Local Model Specialist Pilot 2026-10-17.md",
+      "target": "Local Model Specialist Pilot 2026-10-17"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Evaluation Chronology and Local Preregistration 2026-10-17.md",
+      "target": "Evaluation Chronology and Local Preregistration 2026-10-17"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Ordered Execution Progress 2026-10-17.md",
+      "target": "Ordered Execution Progress 2026-10-17"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Claude Review and Plan_claude10172026.md",
+      "target": "Claude Review and Plan_claude10172026"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17-claude-review.md",
+      "target": "research-log-2026-10-17-claude-review"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Program Advancement Rules v0.3.md",
+      "target": "Program Advancement Rules v0.3"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17-advancement-rules.md",
+      "target": "research-log-2026-10-17-advancement-rules"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Phase 3 Linkage Follow-up.md",
+      "target": "Phase 3 Linkage Follow-up"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17-phase3-linkage.md",
+      "target": "research-log-2026-10-17-phase3-linkage"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Program and Outcome Feasibility.md",
+      "target": "Program and Outcome Feasibility"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17-program-feasibility.md",
+      "target": "research-log-2026-10-17-program-feasibility"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17-planning.md",
+      "target": "research-log-2026-10-17-planning"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical Long Session Progress.md",
+      "target": "Clinical Long Session Progress"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Full Cis Genetics Revision.md",
+      "target": "Full Cis Genetics Revision"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Long Run Data Preflight.md",
+      "target": "Long Run Data Preflight"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/asof-feasibility-findings.md",
+      "target": "asof-feasibility-findings"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-09.md",
+      "target": "research-log-2026-10-09"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-template.md",
+      "target": "research-log-template"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/data-acquisition-plan.md",
+      "target": "data-acquisition-plan"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-10.md",
+      "target": "research-log-2026-10-10"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/framework-code-review.md",
+      "target": "framework-code-review"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-11.md",
+      "target": "research-log-2026-10-11"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-12.md",
+      "target": "research-log-2026-10-12"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-15.md",
+      "target": "research-log-2026-10-15"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-16.md",
+      "target": "research-log-2026-10-16"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/AACT Historical Restoration.md",
+      "target": "AACT Historical Restoration"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/Clinical and Genetics Feasibility Pilot.md",
+      "target": "Clinical and Genetics Feasibility Pilot"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "planning/AACT January 2025 Follow-up.md",
+      "target": "AACT January 2025 Follow-up"
+    },
+    {
+      "document": "memory/MEMORY.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-17.md",
+      "target": "research-log-2026-10-17"
+    },
+    {
+      "document": "memory/research-log-2026-10-30-c-return-capture.md",
+      "kind": "wiki",
+      "resolved": "memory/research-log-2026-10-30-e08-policy.md",
+      "target": "research-log-2026-10-30-e08-policy"
+    },
+    {
+      "document": "memory/research-log-2026-10-30-c-return-capture.md",
+      "kind": "wiki",
+      "resolved": "planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "target": "Project Progress Reassessment 2026-10-30 - C Return Capture"
+    },
+    {
+      "document": "memory/research-log-2026-10-30-c-return-capture.md",
+      "kind": "wiki",
+      "resolved": "memory/project-goals.md",
+      "target": "project-goals"
+    },
+    {
+      "document": "memory/research-log-2026-10-30-c-return-capture.md",
+      "kind": "wiki",
+      "resolved": "memory/MEMORY.md",
+      "target": "MEMORY"
+    }
+  ],
+  "local_link_method": "Percent-decoded document/root paths and unique Obsidian vault basename fallback;aliases/headings stripped. Existence only, no render or linked payload-content read.",
+  "next_stages": [
+    [
+      "1",
+      "Correct the two remaining native25 API/axis-kind guards."
+    ],
+    [
+      "2",
+      "Close the actual new84 source/import/consumer and bridge design."
+    ],
+    [
+      "3",
+      "Qualify the same-Core native bridge and bounded original7 boundary."
+    ],
+    [
+      "4",
+      "Freeze and qualify joint physical14 operations and genuine held leases."
+    ],
+    [
+      "5",
+      "Compose and measure the complete new84 route before application/scientific advancement."
+    ]
+  ],
+  "qualification": "Documentation-only reconciliation. Accepted compiled C79 fake behavior and Source4 E08 stay scoped; Source5 unexecuted, native25 two failures plus deferred branches, real/native/physical/resources/science/humans open.",
+  "schema_version": 1,
+  "scope": "Ten current docs at C-return checkpoint,20R/HR states,five ordered next stages,local Markdown/wiki link existence and authorized QA-status closeout only.",
+  "status": "PASS_TEN_CURRENT_DOCS_C_RETURN_CAPTURE",
+  "status_rows": {
+    "HR1": "Human recruitment, domain matching, conflicts and exposure records pending.",
+    "HR2": "Two independent orientation submissions and measured workload pending.",
+    "HR3": "Fresh source-only references, reviewer coverage and masked ratings pending.",
+    "HR4": "Sized final panel and independent adjudication pending.",
+    "R01": "Accepted scope, governance and exposure boundaries.",
+    "R02": "Accepted tested checkpoint and restoration inventory.",
+    "R03": "Accepted scoped archive compatibility/relocation; complete host/raw/model restoration remains separate.",
+    "R04": "Accepted reproduced application correctness fixes.",
+    "R05": "Accepted bounded diagnostic preparation; stronger-model scientific sufficiency unresolved.",
+    "R06": "Accepted reusable infrastructure slice.",
+    "R07": "Technical diagnostic closed negative; independent human assessment pending.",
+    "R08": "Partial source/exposure preparation; no scientifically qualified fresh case.",
+    "R09": "Compiled layout and C79 fake component accepted; Source4 E08/122 preserved. Native25, full entry/native bridge, real roster/consumers, held leases, physical14/new84 and integrated resources remain open.",
+    "R10": "Timed independent human development pilot pending qualified cases, mechanics and reviewers.",
+    "R11": "Estimand, power, amended H5 protocol, preregistration and analysis freeze pending.",
+    "R12": "Locked H5 evaluation/report pending protocol, mechanics and final independent panel.",
+    "R13": "Alternative clinical outcome source conditional and unqualified.",
+    "R14": "Regional genetics/compatible LD, causal features, predictors and scorer/calibration conditional and unqualified.",
+    "R15": "Original clinical comparisons and ablations conditional and pending.",
+    "R16": "Individually gated T2\u2013T5/H6 extensions and reproducible release pending."
+  }
+}

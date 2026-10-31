@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_PREFREEZE_PHASE_MEANING_NO_EXECUTION_OBSERVED",
+  "basis": "Contract16aae7f0 distinguishes committed raw axes, prepared native exit, conversion and actual Python return. Layout4cf7 provides three native-exit phases but does not grant completed-call authority from ENTERED or a lone flag.",
+  "clarification": {
+    "NOT_ENTERED_0": "No native target invocation entered for this reserved component cell.",
+    "ENTERED_1": "The once-only invocation has entered. Any subset of raw axes may be unobserved, staged or committed; do not infer completed native wrapper exit or caller return.",
+    "RAW_EXIT_PREPARED_2": "All intended applicable raw-axis publications and the raw wrapper exit metadata have been prepared. This is not the instant the target API returns, Python conversion, caller-observed wrapper return, successful API semantics or publication of a live capability.",
+    "controlled_LastError_escape": "A fake error transport escaping after scalar and error-definition publication but before its own return retains those two committed axes. Error-value and count remain uncommitted, native_exit_phase remains ENTERED1, RAW_EXIT bit stays clear and conversion_phase remains NOT_STARTED0. The harness copies this partial cell as data.",
+    "flags": "RAW_EXIT flag is separate metadata. Interruption between setting that flag and publishing phase2 may retain flag set with phase1. Never promote phase or missing axes from a flag, target side effect, initialized scratch, elapsed time or diagnostic.",
+    "atomicity": "Each axis commit and the separate phase transition are distinct observations. No whole-cell atomic transaction, OS-return atomicity, cross-process survival or implicit fault recovery is claimed. Readers require the future reviewed acquire/quiescent bridge."
+  },
+  "change_boundary": "Prospective clarification for the independent fake-target oracle before source build or execution. It changes no frozen contract, layout, source, expected scientific output or prior result. A peer must check coherence before build binding.",
+  "activity": {"subject_builds": 0, "subject_runs": 0, "SDK_or_FFI_calls": 0, "original_target_reads": 0},
+  "qualification": "Internal return-publication component only; no same-Core ticket, lease, path lifetime, physical14 or resource qualification."
+}

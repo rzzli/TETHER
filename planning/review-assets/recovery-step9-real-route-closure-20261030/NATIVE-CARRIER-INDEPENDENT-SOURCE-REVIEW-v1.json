@@ -1,0 +1,143 @@
+{
+  "activity": {
+    "SDK_or_FFI_calls": 0,
+    "compiler_or_build_calls": 0,
+    "native_or_original_calls": 0,
+    "official_docs_read_only": true,
+    "source_edits": 0,
+    "source_imports": 0
+  },
+  "basis": [
+    {
+      "bytes": 2690,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-SOURCE-AUTHORING-SCOPE-v1.json",
+      "sha256": "76064321529a2406b9d6f1d5bce2b02ffe53a3887a03fe1cb1d468d86cd0df2c"
+    },
+    {
+      "bytes": 43817,
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    {
+      "bytes": 4511,
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-CONTRACT-FREEZE-v1.json",
+      "sha256": "4cf7a07f219e47c61abb4505c2dfe37f4a6aa47b92c3c9412483ac6412c891d2"
+    },
+    {
+      "bytes": 9184,
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "sha256": "08e80ef53ee512a63c5585059176d19bba8c0d48c21b9db0f9976628f3da64e5"
+    }
+  ],
+  "findings": [
+    {
+      "file": "preflight_file14_raw_v1.c",
+      "id": "C1",
+      "kind": "STATIC_CONTRACT_CONTRADICTION_NOT_RUNTIME_REPRODUCED",
+      "line": 31,
+      "narrow_correction": "PreserveV1 and create a named successor adding requested>0 for applicableAPI6/13 in the initializer. Keep zero actual returned COUNT32 valid and independent; do not change count/zero or per-API raw semantics.",
+      "observed_source": "The guard enforces flag applicability, absent=>zero and requested<=capacity, but never rejects requested==0 when the requested flag is present for ReadFile/WriteFile.",
+      "requirement": "Frozen numeric contract4cf7 typed_defaults.unused_metadata: requested0 iff REQUESTED_PRESENT false.",
+      "severity": "bounded initializer contract correctness",
+      "source_deduction": "Every written reject condition is false, so initialization reaches PF14_OK with REQUESTED_PRESENT=true/requested0. This conclusion is from text only; it is not an executed C result.",
+      "test_boundary": "Independent fake-target preparation should assert present request0 refusal for both6/13 with zero target dispatch, alongside existing absent-field/capacity controls. Build/execution remains separately authorized.",
+      "witness": {
+        "actor_id": 1,
+        "api_id": 6,
+        "buffer_capacity": 16,
+        "buffer_generation": 1,
+        "buffer_id": 0,
+        "flags": 3,
+        "generation": 1,
+        "input_handle_bits": 101,
+        "ordinal": 0,
+        "precondition": "valid16-byte aligned cell; genuine ordinary initializer, no forged/edited cell",
+        "requested": 0,
+        "target_generation": 1,
+        "target_kind": 1,
+        "target_ordinal": 0
+      }
+    }
+  ],
+  "finite_checks": [
+    {
+      "area": "layout",
+      "result": "Source declarations and exhaustive offsets match128-byte header+four32-byte axes=256B, alignment16, native pointer/HANDLE64,BOOL/LONG/DWORD32,WCHAR16 and query8/36/592. Assertions are authored, not compiled proof."
+    },
+    {
+      "area": "typed signatures",
+      "result": "Fourteen WINAPI pointer types/wrappers match frozen API table. Exact FileAttributeTagInfo/8B,4101WCHAR/flags0,Standard0/36B,Basic1/NameMatch0/filterNULL/flags0/592B,CreateDirectory securityNULL,synchronous Read/Write overlappedNULL and exact header count scratch are explicit."
+    },
+    {
+      "area": "first scalar store",
+      "result": "BOOL/DWORD/HANDLE macros assign the direct target return to volatile native-width scalar payload before publish/finish. BOOL2/-1/0 and HANDLE0/INVALID retain raw bits. Source ordering alone does not prove final machine instructions under compiler instrumentation."
+    },
+    {
+      "area": "error and count",
+      "result": "BOOL/DWORD0 and HANDLEINVALID select exact useful error branches. Definition commits independently before LastError; success commitsFalse without stale error probe. Count scratch is A5-patterned before call, copied/committed only forAPI6/13 after return/error work. Raw FALSE/count0 remains raw data, not defined progress."
+    },
+    {
+      "area": "publication",
+      "result": "Aligned32-bit stage/commit fields use declared MSVC interlocked intrinsics. Source intends payload\u2192stage\u2192full-barrier commit and separate RAW_EXIT_PREPARED; acquire/quiescent reader and exact compiler/ABI qualification remain missing, as documented."
+    },
+    {
+      "area": "once only and flags",
+      "result": "Structural begin checks original empty axes/layout/scratch and a once-only native-exit CAS. Reusing an unchanged completed cell cannot dispatch again. Initializer rejects unknown initial flagbits, mismatched handle/request applicability and missing/extraneous close-consumed bits. It is a trusted initializer, not an adversarial caller or reuse/lifetime security boundary."
+    },
+    {
+      "area": "scope",
+      "result": "No loader,Python conversion,query capture,clock,cap change or authority issuer is added. Query buffers remain caller-owned/uncommitted. PF14_OK reports component completion and does not mean API success or publication eligibility."
+    }
+  ],
+  "missing_architectural_preconditions": [
+    "same preallocated Core-owned native bank and genuine reserved ticket/ref/epoch",
+    "actual active argument/query/buffer bounds and lifetime issuer",
+    "positive file/search close-right and NativeInput/child/image/path-lifetime capabilities",
+    "qualified compiler/emitted instruction/acquire-reader/ABI and fake-return evidence",
+    "complete14actor physical ledger/census/readback/tail and real-roster admission"
+  ],
+  "no_additional_blocker": "Those missing architectural items remain explicit future joins, not demands for a general framework or barriers to reviewing/build-testing this isolated internal component under later scopes.",
+  "official_documentation": [
+    {
+      "title": "InterlockedExchange",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-interlockedexchange",
+      "verified": "Microsoft documents32-bit atomic exchange and a full memory barrier. This does not prove emitted code, acquire-reader lifetime or LastError-preserving compiler options."
+    },
+    {
+      "title": "Last-Error Code",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/last-error-code",
+      "verified": "Microsoft documents thread-local last error and per-function useful-error conditions. The component must preserve same-thread useful transport before unrelated error-altering calls."
+    }
+  ],
+  "qualification": {
+    "build": false,
+    "first_native_return": false,
+    "full14profile": false,
+    "live_kernel_ticket": false,
+    "native": false,
+    "ordinary_caller_security": false,
+    "physical": false,
+    "resource_fit": false,
+    "source_review_only": true
+  },
+  "schema_version": 1,
+  "scope": "First exact source/header/design review only. No compiler,SDK,preprocessor,native or subject execution.",
+  "sources": [
+    {
+      "bytes": 7391,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.h",
+      "sha256": "7460f59849b6c8a7f800b61e3eb6d4b70f1e16ac15dabed12f0ceadb48ccbf50"
+    },
+    {
+      "bytes": 8795,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/preflight_file14_raw_v1.c",
+      "sha256": "a462fac861faf4149a36763c30f74441ac0df049a37c7a2e2e557828913188bc"
+    },
+    {
+      "bytes": 3764,
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-SOURCE-DESIGN-v1.md",
+      "sha256": "46428f1cbb99aa25e5bf8b9875413a149dc457a3fab0fc5fe1c16c1a2a363a87"
+    }
+  ],
+  "status": "HOLD_ONE_INITIALIZER_DOMAIN_MISMATCH"
+}

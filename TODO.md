@@ -1,760 +1,214 @@
 # Project execution checklist
 
-## Native wire repair — reviewed, generation blocked
-
-- [x] Close failed native candidate with original source/accounting checks, two independent scientific reviews and third adjudication; no response repair or retry.
-- [x] Back up failed run/reviews/adjudication/next design and diagnostics:88 entries, ZIP CRC/every-entry SHA256 and Git bundle througha487b94 verified; no further model call.
-- [x] Review generic contract repair and choose pointer-only verbatim_quote with unchanged generated assertions; record wire_version2 branch fields.
-- [ ] Prove the pinned converter enforces the chosen state/reason/quote schema. Current help-only probe warns that nonblank regex is ignored; do not dispatch with unsupported constraints.
-- [ ] Implement separately versioned wire codec, native adapter/callback and orchestrator; preserve current protected modules and failed artifacts.
-- [ ] Pass meaningful regressions, actual escaped/framed sizing, independent implementation review and full/isolated/no-site validation.
-- [ ] If every gate passes, freeze a NEW bounded two-task plan, execute at most once per task, stop server and independently adjudicate exact sealed results.
-
-Plan: planning/Question Pilot Failure Closeout and Contract Repair 2026-10-25.md.
-No new model call has followed the failed version. The source contains relevant
-mechanistic context; current failure is not explained by a missing dataset.
-
-## Question pilot controller — in progress
-
-- [x] Implement and independently review frozen preparation, owned-server lifecycle, shared accounting and prediction sealing:23 focused tests/11 independent probe groups pass; six findings resolved.
-- [x] Pass focused, full unchanged-code, isolated and dependency-free validation; preserve failed audits:1,262 full tests/probes/package,299 isolated,207 no-site.
-- [x] Freeze a fresh real-source two-question plan with the same case/model/source subsets and reviewed scientific gates:question-development-20261026T023832Z, exact match to prior sized requests.
-- [x] Back up the qualified controller and pre-execution plan:91 entries, ZIP CRC/every-entry SHA256 and Git bundle through03f9a9e verified; receipt retained.
-- [x] Execute frozen version once and retain its failed first call:4650 input/601 output tokens, three contract violations, no second task, server stopped; raw candidate sealed without repair.
-- [x] Obtain two independently sealed scientific reviews and verify exact40-leaf coverage for each.
-- [ ] Execute once, retain exact outputs/accounting/failures, stop owned server and seal predictions before review.
-- [x] Obtain two independent AI scientific reviews and third adjudication; retain failed gate.40 leaves,13 clause components,12 source-passage occurrences and all pins/spans replay. Qualified ambiguity/major omission, citation/applicability defects and insufficient usefulness remain; MR unrun.
-
-Controller methods review and full unchanged-code validation pass.299 isolated-copy
-and207 no-site tests pass on the corrected snapshot. The first full/clean attempt
-was cancelled on a peer finding and remains retained separately. The actual pilot
-then failed on its first native call; both required outputs and a success seal remain
-unmet. Two scientific reviews and third adjudication are sealed and verified. No new
-scientific approval occurred. See docs/QUESTION_PILOT.md.
-
-## Native question transport — October25
-
-- [x] Implement lossless scientific-first rendering and exact source-alias translation (20 regressions; seven independent renderer probe groups).
-- [x] Implement optional one-use loopback transport and offline callback verification (21 regressions; eight independent final methods probe groups).
-- [x] Reproduce and fix raw/translated hash collision, concurrent dispatch, post-read byte loss and interruption masking; preserve failed reviews.
-- [x] Rebuild both actual-source payloads without generation:14,149/12,785 bytes,26,998 input/4,096 output reservation; unchanged budgets.
-- [x] Pass276 isolated-copy and184 dependency-free tests.
-- [x] Complete full unchanged-code validation and retained acceptance:1,239 tests, required probes and dependency-free package pass.
-- [x] Retain verified checkpoint backup:59 entries, ZIP CRC/every-entry SHA256 and Git bundle throughc425225 verified; receipt in native transport review assets.
-- [x] Freeze a separate owned-launcher development pilot only after all preceding gates pass.
-- [ ] Execute at most one call per generic question, seal outputs, stop owned server and independently review/adjudicate every scientific assertion.
-
-No native generation occurred in this transport implementation. Prior scientific
-qualification remains failed; broader scientific Tasks6–8 are unfinished.
-Documentation: docs/QUESTION_LOCAL.md.
-
-## Durable recorded question runtime — October25
-
-- [x] Implement exclusive execution, durable raw/accounting/failure records and acyclic receipts.
-- [x] Implement source-inclusive semantic verification and versioned unresolved-call inspection.
-- [x] Resolve independent audit findings with38 focused regressions and10 final probe groups.
-- [x] Execute/verify2real-source recorded fixtures; retain65 missing inputs and legacy compatibility (zero native generation).
-- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1198 full /235 isolated /143 no-site); retain checkpoint.
-- [x] Implement/review native renderer and transport; measure exact prompt fit before any frozen pilot.
-- [ ] Independently qualify generated scientific interpretations before fresh paired evaluation.
-
-This is a recorded/synthetic execution path, not native or scientific approval.
-Docs: docs/QUESTION_RUNTIME.md. Evidence: planning/review-assets/question-recorded-runtime-20261025/.
-
-## Question-bound interpretation core — October25
-
-- [x] Specify and bind two generic evidence-family questions into immutable source-scoped requests (38 focused tests).
-- [x] Retain independent scientific/methods specification reviews and implementation probe recheck.
-- [x] Implement reversible source views and coherent answered/partial/abstained response states; preserve legacy modules.
-- [x] Reconstruct actual source-scoped and all9-source requests exactly, retaining65 missing inputs; both old native sidecars still verify.
-- [x] Pass full unchanged-code, isolated-copy and dependency-free validation (1160 full /197 isolated /105 no-site).
-- [x] Specify/review the next durable recorded runtime and native sizing gates.
-- [x] Implement/validate durable recorded v2 runtime and source-inclusive verifier.
-- [x] Implement native serialization/transport and exact sizing before any pilot.
-- [ ] Qualify generated scientific interpretations before fresh paired evaluation.
-
-The core remains separate; recorded runtime and optional native adapter are now
-implemented in their own modules. No new native call in those stages. Actual view sizes
-are13767/12403 bytes for the selected sources and76646 bytes for all9. Selected-source
-prompt fit is now mechanically checked at14,149/12,785 complete prompt bytes; all9
-do not fit. The previous scientific gate remains failed. Core specification:
-planning/Question-Bound Interpretation Specification 2026-10-25.md.
-
-## Native interpretation development and repair — October25
-
-- [x] Implement and validate the first native transport: 58 focused / 1113 full tests.
-- [x] Freeze and execute version one; retain its terminal failure and measured usage.
-- [x] Independently review and adjudicate the retained failed response; scientific content fails.
-- [x] Implement a separate repair with modern EOS, consistent stop causes and typed prompt/settings binding; 67 focused tests pass.
-- [x] Pass independent repair methods review, isolated checks and full unchanged-code validation (1122 full / 159 isolated / 67 no-site; 12 peer probes).
-- [x] Freeze and execute a separate two-task repair plan once; both outputs source-verified, server stopped (8552 input / 720 output tokens, $0).
-- [x] Review every generated scientific clause and adjudicate qualification or failure: failed gate, retained two reviews and third adjudication.
-
-The first attempt made one native call (4347 input / 890 output tokens, $0 provider
-spending). Its second task was not dispatched. Scientific review found unsupported
-score-to-strength interpretation and mechanism denial despite source context.
-The failed run remains unchanged. Repaired execution also fails scientific qualification:
-mechanism utility insufficient; useful genetics caution credited, unsupported structured
-intervention proposition unresolved. No full T6/H5 or clinical qualification is claimed.
-Original protocol: planning/Bounded Interpretation Development 2026-10-25.md.
-Repair protocol: planning/Bounded Interpretation Repair 2026-10-25.md.
-Failure closure: planning/review-assets/local-interpretation-development-20261025/attempt-v1-failure-validation.json.
-
-## Next interpretation design — after failed qualification
-
-- [x] Specify evidence-family questions and bind them into source-scoped requests.
-- [x] Independently review a lossless scientific-first view and coherent assertion/abstention specification.
-- [x] Implement reviewed question/view/response core and archival migration boundaries with regressions/full validation.
-- [x] Implement and validate the reviewed durable recorded runtime before native adaptation.
-- [ ] Separately freeze any later generation only after design/code qualification; no retry of failed runs.
-- [ ] Complete scientific qualification before fresh paired evaluation.
-
-Current version stopped; no additional generation authorized by its failed gate.
-Ordered next scope: planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md.
-
-## Bounded interpretation implementation - October25
-
-- [x] Implement source-bound optional sidecar, strict response contract and one-use offline replay.
-- [x] Pass contract, lifecycle, semantic-tampering regressions and independent methods review.
-- [x] Pass full project validation with unchanged-code guard and retained evidence.
-- [ ] Qualify actual development interpretations against pinned scientific references.
-
-1083 full tests/probes/package pass with unchanged source guard;120 clean-copy and
-28 no-site-packages tests pass. Two peer verifier defects reproduced and corrected.
-At that checkpoint, nine-observation actual-format scripted replay passed with65
-missing inputs preserved and no native generation. The later native repair above
-has executed; scientific-quality qualification remains pending.
-Acceptance: planning/review-assets/bounded-interpretation-20261025/final-acceptance.json.
-
-Contract implementation alone does not complete scientific qualification or full T6/H5.
-
-## Primary scientific reference qualification - October25 UTC
-
-- [x] Review primary signaling/mechanism evidence for37 scientific occurrences.
-- [x] Review primary genetic evidence for25 scientific occurrences.
-- [x] Review remaining5 scientific occurrences and independently assess applicability/context.
-- [x] Adjudicate primary-source judgments, bind scoped references and source-verify final review.
-
-All67 primary-source judgments and43 scientific keys are integrated and source-verified.
-Scoped AI development reference accepted; complete independent science/general performance
-remain unqualified. All35 clinical rows and all363 non-scientific review rows unchanged.
-Report: reports/IL6R primary evidence qualification.md.
-Acceptance: planning/review-assets/il6r-primary-qualification-20261025/final-acceptance.json.
-
-- [ ] Qualify bounded interpretation against the pinned development reference.
-- [ ] Freeze fresh source-only questions/references/predictions before paired feasibility outputs.
-
-Research stays evaluator-only; clinical truth, probabilities and full T6/H5 remain gated.
-
-## Contextual reference qualification in progress - October25 UTC
-
-- [x] Freeze development qualification procedure and unchanged source-surface inputs.
-- [x] Validate and freeze two independently proposed contextual inventories.
-- [x] Validate and freeze independently proposed evidence-dimension requirements.
-- [x] Adjudicate agreements, disagreements and completeness limits; source-verify resulting references.
-
-Both proposals and the 14-dimension draft rubric are frozen and validated.
-Initial adjudication dispatch hit a service usage limit; retained interruption is historical.
-Resumed source-only adjudication/source replay pass (430 occurrences/398 groups).
-Scientific truth/applicability and a complete independent scientific reference remain pending.
-Next: qualify primary-source evidence for67 scientific occurrences, preserving unknowns.
-Progress receipt: planning/review-assets/t6-contextual-qualification-20261025/progress-validation.json.
-
-This is exposed-case AI development review, not a fresh scientific evaluation.
-Protocol: planning/Contextual Reference Qualification 2026-10-25.md.
-
-## Contextual audit v2 contract checkpoint — October25 UTC
-
-Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
-complete line/value dispositions, attribution, numerical bundles, scoped references,
-dependence and separate uncertainty/validity/applicability strata.47 new regressions;
-full1055 tests/no skips/probes/package and92 isolated tests pass. Peer findings and
-pre-fix failures preserved. Final code unchanged during full verification.
-Retained exposed IL6R replay covers43527 bytes/172lines/1158location nodes through
-original-source verification. Draft has no fabricated semantic atoms or scientific
-error percentage. Next qualify contextual atoms/completeness references and review
-seals before interpretation or fresh paired evaluation. Original Tasks6–8 remain open.
-Native calls/clinical labels/probabilities unchanged; AI review outside native meter.
-Acceptance: planning/review-assets/t6-contextual-audit-20261025/final-acceptance.json.
-Backup status: planning/review-assets/t6-contextual-audit-20261025/backup-validation.json.
-
-- [x] Implement and validate the contextual audit v2 representation/source compiler.
-- [ ] Qualify complete contextual atom and evidence-dimension references.
-- [ ] Enforce independent reference/prediction freezes and qualify bounded interpretation before full T6/H5.
-
-## Latest checkpoint — IL6R development review, October 25 UTC / October 24 Los Angeles
-
-The bounded IL6R development inventory, independent AI source reviews and source-based
-adjudication are complete. The interrupted genetics review was recovered with unchanged
-artifacts. [Evaluator-only report](<D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md>)
-and sanitized receipts in `planning/review-assets/il6r-dossier-scientific-audit-20261024/`
-preserve original reviews, failed checks, recovery and report-v1 originals.
-Scientific validity is not established; there is no valid atomic-error denominator.
-Exhaustive qualified atomization/completeness, fresh blinded references, interpretation,
-full T6/H5 and original scientific Tasks 6–8 remain open. Next implement context-bearing
-propositions, attribution versus endorsement, decoded JSON with raw byte spans, grouped
-numerical bundles and dependence, with separate scientific/annotation/operational
-denominators. No fake `reviewed_complete` v1 manifest is accepted.
-
-No new native benchmark/model-adapter calls or clinical labels were produced. AI research
-and adjudication work occurred outside the framework meter; total research LLM usage/cost
-was not measured. Publication dates, source versions and retrieval dates remain separate;
-adjudication retrieval was October 25 UTC / October 24 Los Angeles. The last unchanged-code
-checkpoint remains 1008 framework tests/probes/package and 45 isolated tests; these were
-not rerun after the report. Whole-project completion remains false. Backup status is recorded separately in
-`planning/review-assets/il6r-dossier-scientific-audit-20261024/backup-validation.json`;
-the helper requires a committed clean tree. Earlier entries below
-retain their historical status and next-step wording.
-
-- [x] Complete bounded IL6R development inventory/source review/adjudication checkpoint.
-- [ ] Qualify exhaustive contextual atoms and independent completeness references.
-- [ ] Qualify interpretation, fresh blinded references and full T6/H5; original Tasks 6–8 remain open.
-
-
-## B0 source-bound execution and feasibility cycle — completed October23
-
-- [x] Implement separate B0 source-binding, owned read-only transport and origin-membership reconstruction.
-- [x] Add lifecycle/source/receipt regressions and correct ten independently reproduced receipt-accounting defects; all74 B0 tests pass.
-- [x] Pass full project validation and freeze the origin execution request before dispatch.
-- [x] Execute the origin-only read and seal source-bound membership without follow-up access.
-- [x] Freeze and execute separate January/April follow-up requests for that membership.
-- [x] Audit every selected source state, measure resources/missingness and apply the fixed feasibility decision.
-- [x] Continue to the harder T6 comparison design and execution under its own gates.
-
-### Harder T6 top-one development — completed October23
-
-- [x] Validate configurable cap-one enforcement and unchanged legacy cap-three behavior.
-- [x] Freeze source-only case/category tasks, exact packets, all dispositions and lineage.
-- [x] Seal two independent AI source reviews and third-review reconciliation before inference.
-- [x] Execute and source-verify four paired arms; seal outputs before answer join.
-- [x] Evaluate descriptive prioritization, original-row fidelity and resource limits; update status.
-- [x] Verify the bounded evidence ZIP and Git-bundle backup on E: (367 entries, every entry hash and CRC checked).
-
-All32 arms verified;48 native calls; prediction seal committed before answer join.
-AsOf6/8, adapted Virtual Biotech6/8, lexical5/8, provider-score3/7 applicable
-decisions agree with the AI source reference. Three ties/two none-sufficient answers
-limit interpretation; neither model abstained. All13 distinct selected and all16
-offered original rows passed source checks.800 tests/probes/package pass.
-Retained acceptance: planning/review-assets/t6-topone-20261023/final-acceptance.json.
-
-### Remaining scientific disposition — October23
-
-- [x] Reconcile original Tasks6–8 and the conditional prospective-design branch against retained feasibility results.
-- [x] Specify the non-dispatch prospective contract, unresolved prerequisites and reopening evidence.
-- [ ] Qualify independent scientific references and clinical outcomes/predictors/power before completing original Tasks6–7.
-- [ ] Execute T2–T5/H6 only if their separate feasibility and data gates pass.
-
-### Prospective endpoint-readiness protocol — completed October23
-
-- [x] Verify the official source-defined sampling route, endpoint/reference rules and statistical activation gates.
-- [x] Freeze a non-dispatch readiness protocol with finite bounds, source projections and pass/revise/stop rules.
-- [x] Validate protocol consistency and retained sources; update the scientific disposition and memory.
-
-Design acceptance verifies14 parent pins/four official metadata GETs and an
-independent statistical review. No trial list/record or outcome was acquired.
-See planning/Prospective Endpoint Readiness 2026-10-23.md and its versioned protocol.
-The old proxy simulation cannot qualify the original clinical test; Brier,
-multiplicity, training/calibration and realized analysis qualification remain open.
-
-### Prospective frame request preparation — completed October24
-
-- [x] Implement and test the exact pinned API request builder and complete-frame guards without dispatch.
-- [x] Generate and verify a fresh source-readiness request; record unqualified server semantics and remaining acquisition gates.
-
-834 full tests/probes/package pass;34 new tests also pass in an isolated clean
-checkout without ignored data payloads. Small tracked public metadata fixtures
-correct the initial test-portability gap. Dated requestR=2026-10-24 covers
-2026-09-24..2026-10-23; no trial query, selected member or clinical label.
-Retained evidence: planning/review-assets/prospective-endpoint-readiness-20261023/frame-stage-acceptance.json.
-
-### Bounded prospective source qualification — assessed October24; route stopped
-
-- [x] Seal the known-exposure inventory from retained origin/membership manifests without reading old outcome labels.
-- [x] Implement and validate bounded allowlisted transport and durable source receipts under the frozen request/caps.
-- [x] Qualify actual server semantics and complete-frame retrieval, or retain a specific failed gate; do not truncate, silently increase caps or change dates.
-- [x] Audit source-rule availability after acquisition gates passed; retain the zero-ready STOP and keep clinical activation disabled.
-
-Named-origin exposure closure verified43,393 canonical NCT IDs from16 retained
-sources (1,458,436,692bytes scanned,31.922seconds) plus incidental protocol IDs.
-All source hashes and first byte locators checked. This is conservative exclusion
-for the named sources, not universal model-exposure or protected-holdout proof.
-The fresh exposure-bound request preserves the exact dates/query and selects no
-members. Bounded transport passes36 new tests; full870 tests/probes/package and
-70 isolated clean-checkout tests pass. Execution manifest25e30b6a... is frozen
-before the first source attempt; source-execution-freeze.json records exact scope.
-
-October24 actual attempt stopped under the frozen500-record gate: API declared
-4,277 records; first100 metadata rows/38,595bytes retained, plus71-byte version.
-TwoHTTP200 attempts have terminal receipts and no unresolvedcalls/retries. No
-completeframe/member/source-rule audit. Sourcequalification stays unchecked.
-Source-stop-audit.json verifies the failure. Next is an explicit capacity-only
-amendment preserving interval, projection, eligibility, exclusions and sampling
-seed; no silent cap expansion or rerun of the failedv0.1 execution.
-
-### Explicit source-capacity amendment — completed October24
-
-- [x] Review the capacity-onlyv0.2 amendment and validate a reusable profile engine without changing v0.1 code/receipts.
-- [x] Freeze and execute one amended bounded capture; independently replay all raw receipts before any candidate membership is exposed.
-- [x] Report complete-frame or failed-gate evidence, update memory and retain a verified backup.
-
-Proposed capacity is5000/page500 with the original10page/20MiB/600s bounds and
-original protocol sampling seed. No source-rule retrieval, outcome labels, model
-calls or clinical activation are added. Source qualification remains open.
-
-Independent protocol/engine reviews pass;40 new synthetic tests, full910 tests/
-probes/package and110 clean-checkout tests pass. Legacyv0.1 bytes unchanged.
-An exact amended execution is prepared; no amended HTTP before its committed freeze.
-
-Amendedcapture9d142483... was committedc20f905 beforeHTTP and completed all4277
-reported query rows in9pages+2versions,1,657,798retainedbytes. Independent raw
-reconstruction matched every ledger row and original-seed12candidate order:
-3994ineligible/268eligible/15unknown,0exclusions inframe. Fixed12readiness members
-are sealed (11coarse-screeneligible/1unknown); no PDFs/outcomes/modelpredictions.
-This qualifies the reported source query, not an atomic snapshot/clinical cohort.
-
-Verified236-entry evidenceZIP and Gitbundle through2eada8d onE:;
-capacity-backup-validation.json retains everyentrySHA/CRC/bundleverification.
-
-### Fixed-member source-rule availability — completed assessment October24; route stopped
-
-- [x] Validate the exact23-leaf source-packet/PDF contract and bounded transport with source text held evaluator-only.
-- [x] Freeze and execute the fixed12 source requests/files within the original limits; preserve everymissing/failed/ambiguous case.
-- [x] Independently audit originals and adjudicate documentary rule/scope/prespecification/origin-risk availability without inventing clinical labels.
-- [x] Report the readiness decision, retained resource/coverage evidence and remaining scientific gates; verify backup.
-
-No source availability or reported outcomes may replace/reorder the sealed12.
-Source presence/QC is separate from scientific readiness; no automaticjoint_ready.
-
-41main/12independentpeer tests pass; full963/no skips/probes/package and163
-isolatedtests pass after correcting package fixture imports. Initial failed full
-discovery is retained; runtime source engine unchanged. Exact fixedmember source
-execution is prepared beforeHTTP and requires committed freeze before dispatch.
-
-Execution272a56ca... committedeb9ef5b before12HTTP200 listingrequests;58,250bytes/
-4.813s,0PDFs/0retries/0modelcalls. No protocol/SAP listed in observedprojection;
-otherpublicsources notsearched. Localreceipt replay passed. Twoindependent source
-stewards assessedall15mandatoryfields (extrafieldsadvisory) and bothreport0joint
-readinessdemonstrated; case-level differences subsequently resolved in the final adjudication below.
-source-steward-freeze.json sealsbothoriginalreviews beforethatreconciliation.
-
-Third adjudication and root replay pass: all12 original records,180 mandatory
-field judgments,465 original-pointer/value references and35 unique file hashes.
-Final counts10partial efficacy/1listed-primary efficacy-inapplicable/1unknown,
-0joint-ready. Current observed public availability supported for all12; historical
-availability before old cutoffs is not an extra prospective gate. Fixed registry
-route STOP; no resampling, new clinical labels or model calls.
-See planning/Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md.
-
-Verified455-entry evidence ZIP and Git bundle through038c5d5 on E:.
-source-readiness-backup-validation.json records CRC/every entry hash/bundle checks;
-its later receipt commit is outside that bundle. No bulk originals were duplicated.
-
-### Full T6/H5 audit preparation — next executable branch
-
-- [x] Assess whether T6 quality is feasible independently of the stopped clinical route and inspect actual model/claim boundaries.
-- [x] Implement and validate the evaluation-only JSON atomic claim/source-audit prototype with uncertainty, citations and contextual applicability (23 new tests; production integration remains below).
-
-Prototype checkpoint verified on E: 27 ZIP entries, CRC/every entry SHA256 and
-Git bundle through13acaf8. Retained t6-claim-audit-20261024/backup-validation.json;
-later receipt commit is outside that bundle.
-
-- [x] Implement native v2 sealed-dossier/span binding and complete original Open Targets adapter replay; pass22 new tests and a nine-record/eleven-input development check.
-- [ ] Qualify exhaustive whole-dossier atomic extraction, unsupported-claim dispositions and completeness references.
-- [ ] Seal independent blinded claim reviews and third adjudication under a frozen quality protocol.
-- [ ] Qualify an optional interpretation layer, fresh question/reference frame and paired analysis before any new model execution.
-- [ ] Execute source-qualified full dossier quality evaluation only after its own gates pass; retain the original H5 scope and AI-reference limitations.
-
-Source dispatch requires the separately sealed executable request and technical
-qualification under existing user authorization. Current schema access alone
-does not qualify trial transport, rules, membership or clinical launch.
-
-This assesses origin/source readiness only. No new trial outcomes, clinical
-predictions, cohort activation, public registration or model training are implied.
-
-See planning/Remaining Scientific Gates and Prospective Design 2026-10-23.md.
-These open scientific tasks have no currently qualified execution package. B0
-expansion stays stopped; no new cohort, fitting, registration or model call is
-activated by a completed engineering or design milestone.
-
-See planning/Harder T6 Source Prioritization 2026-10-23.md. B0 prediction expansion
-has stopped under its fixed rule; this separate T6 development study does not
-qualify clinical truth or close broader scientific Tasks6–8.
-
-Final source-inclusive audit verified96/96 native envelopes. January0 appearances,
-17absences and15unknowns give53.125% coverage, below90%; stop operational prediction
-expansion. April1appearance/31absences is a separate sensitivity view. All760 tests
-pass; no clinical activation. Next is the separately gated harder T6 challenge.
-
-Origin request ed82b358... was frozen after732 full tests and independent preflight.
-October23 origin read/reconstruction completed; membership2dac62ca... seals32
-origin-absent trials before follow-up. All128 dispositions retained. The strict
-clinical-efficacy study and broader scientific Tasks6–8 remain unqualified.
-
-## B0 registry-content contracts and schema preparation — October 22
-
-- [x] Freeze the separate B0 endpoint, selection bounds, operational coverage threshold and execution prerequisites.
-- [x] Implement non-dispatch SQL/state contracts and adversarial regression tests; retain independent peer tests.
-- [x] Verify the required columns in all three retained source schemas and seal unbound contracts/source references.
-- [x] Complete full validation and source review; retain the stage report and update memory.
-
-- [x] Implement and validate the source-inclusive B0 runner, then seal origin-only membership before follow-up.
-
-That implementation stage completed October23: the separate source-inclusive
-runner sealed32 origin members. Pure contracts themselves cannot dispatch queries.
-Next are separately frozen follow-up and the all-member audit. The larger B0 feasibility
-cycle, T6 scientific comparisons and clinical evaluation remain unfinished.
-Local684-test full validation,26 contract/peer tests and independent schema review
-pass. Retained acceptance: planning/review-assets/registry-content-20261022-v2/acceptance.json.
-
-## Clinical validation design reassessment — October 22
-
-- [x] Reassess retained clinical evidence, local data readiness and endpoint-specific requirements.
-- [x] Write the separate operational-feasibility and harder-T6 roadmap with decision gates and data needs.
-- [x] Validate the plan, evidence references and unchanged clinical artifacts; update memory.
-
-Current recommendation: defer strict efficacy prediction; stop the exposed-case
-lookup chain. Next is a new B0 registry-results-content feasibility protocol and
-tested source/schema guards, followed by origin-only sampling. The plan is not an
-activated study. No new user files are needed initially. See
-planning/Clinical Validation Design and Data Feasibility Plan 2026-10-22.md.
-Earlier next pointers below are dated history. Broader Tasks 6–8 remain open.
-
-## Existing-trial primary-publisher and DOI lookup — October 22
-
-- [x] Freeze the exact lead, source rules, queries, request bounds and identity/date checks.
-- [x] Capture bounded sources and validate the PDF original; record unrecovered DOI metadata and unperformed Crossref actual-format validation.
-- [x] Independently review trial binding, report type and chronology; retain disagreements and gaps.
-- [x] Record the proceed/revise disposition, update documentation/memory and verify backup.
-
-Bounded lookup closed with **revise/defer clinical source readiness**. Official
-program/title/schedule are authenticated; target DOI, trial bridge, primary
-results text and analysis/decision dates remain unqualified. Stop further
-same-case expansion. Next planned scope is clinical validation design/acquisition
-feasibility reassessment; no cutoff/estimand/cohort change is enacted. Broader
-scientific Tasks6–8 remain open. See
-planning/Primary Report Lookup and Source Readiness 2026-10-22.md.
-
-## Existing-trial public chronology and primary report — October 22
-
-- [x] Freeze source projections, search queries, bounds and chronology review rules.
-- [x] Project retained registry dates and execute the bounded public-source search.
-- [x] Independently verify source identities and distinguish analysis, submission and public posting dates.
-- [x] Reconcile the scientific disposition, update documentation/memory and verify backup.
-
-This bounded phase is closed; the broader scientific Tasks6–8 below remain open.
-The registry dates are verified, but the primary report and analysis/decision
-chronology remain unqualified. Next is a separately frozen publisher/DOI lookup
-of the numbered abstract lead, with no cutoff change or cohort activation.
-See planning/Public Chronology and Primary Report 2026-10-22.md.
-
-## Existing-trial historical document metadata — October 22
-
-- [x] Freeze the exposed local projection and validate synthetic failure cases.
-- [x] Verify source/repeat bytes, exact rows, projection coverage and posting-date eligibility.
-- [x] Independently verify the metadata and historical-availability disposition.
-- [x] Update the plan/memory and verify a bounded evidence backup.
-
-## Existing-trial protocol/SAP audit — October 22
-
-- [x] Freeze the selected registry version, bounded request and scientific review rubric.
-- [x] Validate version/lineage guards, retrieve the one PDF and seal its extraction.
-- [x] Complete independent protocol/SAP reviews and verify original-page evidence.
-- [x] Record the scientific disposition, update documentation/memory and verify backup.
-
-## Prospective sponsor-document discovery amendment — October 21
-
-- [x] Freeze revised identity bridges, fresh controls and unchanged failed-control provenance.
-- [x] Implement and validate bounded candidate routing and original-byte identity checks.
-- [x] Run the precommitted controls once and independently verify gate results.
-- [x] Record the activation decision, update project memory and verify a bounded backup.
-
-Current disposition: sponsor-poster and negative guards pass; registry-version
-and corporate-link controls fail. No cohort activation or next12 membership.
-Next bounded work is a prospectively frozen, version-aware registry request and
-existing-trial protocol/SAP audit; newer files remain uncollected metadata leads.
-See planning/Publisher Discovery Amendment 2026-10-21.md.
-
-## Exact-trial retrieval calibration and source-readiness design — October 21
-
-- [x] Freeze retrieval controls and quantify prior exact-trial search specificity.
-- [x] Implement and validate identity-bound document discovery and bounded receipt-preserving retrieval.
-- [x] Run the frozen live controls and independently verify retrieval results.
-- [x] Freeze the next origin-defined source-readiness study and its gate decision.
-- [x] Update documentation, memory and verified phase backup.
-
-Calibration/design assessment completion does not pass the failed discovery gate.
-G1/G2A passed; G2B failed. The next12 scientific study is inactive, membership
-unsealed and G3 unperformed. No new-member sources or labels. Next: prospectively
-amend sponsor-document identity/discovery and validate fresh controls before
-origin closure. See planning/Exact-trial Retrieval Calibration 2026-10-21.md.
-
-
-## Endpoint-specific follow-up and adjudication — October 21
-
-- [x] Freeze same-twelve follow-up/adjudication policy and exact bounded requests.
-- [x] Validate temporal, scope, result-publication and extraction binding guards.
-- [x] Extract January/April2026 metadata and reported results, then independently verify source records.
-- [x] Review bounded primary sources, adjudicate all frozen endpoints and measure qualification yield/precision.
-- [x] Retain independent acceptance, update documentation/memory and verify evidence backup.
-
-
-## Endpoint-specific origin sample — October 21
-
-- [x] Freeze endpoint-local risk, occurrence/decision/disclosure and negative-state rules.
-- [x] Validate origin-only screening and maturity selection, with explicit missingness and no follow-up selection.
-- [x] Extract January2025 design/maturity information and seal a new deterministic sample before follow-up.
-- [x] Independently verify the sample and update the plan, memory and evidence backup.
-
-
-## Clinical-label feasibility continuation — October 21
-
-The reported-results diagnostic is complete; Step1 clinical qualification remains unresolved. Preserve the exposed twelve-case pilot and its
-36 unresolved endpoints. This diagnostic adds reported-result inputs and tests
-qualification defects; it does not reopen a locked test or silently relax labels.
-
-- [x] Freeze a separate reported-results request for the original twelve trials.
-- [x] Validate result-table projection/linkage, temporal quarantine and negative-ascertainment guards.
-- [x] Extract and independently verify January/April 2026 results in read-only local sessions.
-- [x] Reconcile source recovery, measure remaining label blockers and record the proceed/revise decision.
-
-
-The next-within-Step1 retrieval calibration above supersedes this earlier stage's
-next pointer. Its failed sponsor discovery gate blocks source-readiness acquisition;
-authentic efficacy rules, scope, origin risk and decision dates remain unresolved.
-See planning/Endpoint-specific Follow-up Feasibility 2026-10-21.md.
-
-## Seven-item science assessment — bounded scopes completed October 20
-
-The user authorized executing the seven-item science plan in order, using delegated
-agent expertise instead of waiting for human domain input. Agent review provenance
-and validation limits must stay explicit. File/access/permission gaps are escalated
-to the user. Previous task completion scopes and historical results below remain.
-
-- [x] **Science 1 — Freeze scientific questions, endpoint/reference contracts and qualification rules.**
-- [x] **Science 2 — Build/version-match the T6 reference set and fresh blinded pilot.**
-- [x] **Science 3 — Qualify historical clinical inputs, seal origin programs and restore endpoint/ascertainment data.**
-- [x] **Science 4 — Adjudicate outcomes and repeat dependence-aware power/precision assessment.**
-- [x] **Science 5 — Qualify genetics as a conditional scientific branch.**
-- [x] **Science 6 — Train/calibrate only after feature, label, chronology and sample-size qualification.**
-- [x] **Science 7 — Freeze/activate supported scientific comparisons and real ablations.**
-
-### Science 4 supporting work
-
-- [x] Freeze the evaluator-only review procedure, source-only aliases and explicit
-  pre-query candidate-cap amendment; preserve all twelve origin members.
-- [x] Validate generated queries, request/source binding, row/lineage checks and
-  process ownership: 436 full tests pass; core passes with 52 expected skips.
-- [x] Extract and independently verify origin-only design metadata: all twelve
-  present, eleven reconstructed-date eligible, one estimated-posting hold retained;
-  seal the child before follow-up queries. Owned server stopped/port closed.
-- [x] Finish and verify January/April follow-up extraction and eligible review packets.
-- [x] Complete two blinded source/Internet assessments, reconciliation and endpoint contracts.
-- [x] Retain dependence-aware count, power/precision and proceed/no-fit disposition.
-
-All seven bounded science assessments are complete; clinical scientific qualification remains withheld.
-
-The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
-53 completed and seven explicitly budget-exhausted, with no failed arm in this
-attempt. All sixty passed source-inclusive semantic verification. Predictions were
-sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
-the sparse AI Q1 references. A retained audit then checked **20 distinct original
-rows**, two final AsOf selections per case. Independent agent acceptance passed;
-this is a technical source/protocol review, not independently established biological truth.
-
-There were **114 fresh local native calls**, measured
-377,837 input and 10,538
-output tokens, and $0 provider spending. Execution took 2721.703
-seconds, excluding preparation/evaluation/audit. All real features remain empty and
-probabilities null. Final audit-correction validation passes **551 tests** with no skips;
-dependency-free core validation runs 551 tests with 57 expected optional-ingestion skips.
-Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
-`dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
-
-AsOf selected **all 37 offered candidates**. This run does not establish difficult
-prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
-Virtual Biotech arm is a restricted source-derived five-role reimplementation,
-not execution of its original SDK/research workflow; seven of its ten cases reached
-the common resource budget. Ablations used fresh calls after removing a category
-before retrieval; this category-local design does not test cross-category reasoning.
-
-The response-informed v0.2 correction and failed v0.1 attempt remain separate and
-fully retained: 28 prior arm records, including one rejected synthesis-veto failure,
-58 calls and no gold join. Both attempts total 172
-physical calls at $0. No prior response was pooled into v0.2; this is exposed
-development work, not an untouched held-out or unchanged-system result.
-
-Science6 passed with an explicit
-no-fit: 485 full tests, core checks (52 expected skips), probes and packaging/demo;
-22 focused regressions and68 independent probes pass. G07 remains false, no model
-was trained/calibrated. The pilot's0/0 qualified classes are separate from unknown
-historical training-inventory size. See item6/training-feasibility-r1.json.
-Science5 passed its bounded assessment with predictive genetics deferred:
-38 files rehashed, method-specific contracts reviewed, historical-lineage guard
-corrected and independently retested. All463 full tests, core checks (52 expected
-skips), probes and packaging/demo passed. G06 remains false; no MR/colocalization or
-prediction features were produced. See item5/genetics-disposition.json.
-Science4 completed its frozen
-twelve-case audit: all36 outcomes remain unresolved/null; qualified classes absent,
-so power/calibration are nonestimable and clinical fitting remains withheld.
-This is an audit completion, not G04 outcome qualification or a powered clinical set.
-Science 3 passed bounded input readiness: both evaluator snapshots independently
-verified; source coverage and twelve-case origin review retained. This does not
-qualify historical predictors, clinical outcomes, reporting completeness or scoring.
-January 2026 restoration and independent terminal acceptance passed. The Windows
-temporary-path test assertion was corrected;
-all four hosted Windows/Linux core/full jobs passed at c52b2ff. Original failed CI
-and corrected-test proofs are retained separately. Science 1 passed 262 full tests;
-Science 2 passed 326 full
-tests, 50 original-row/reference checks and 30 literature-question adjudications.
-Core validation passed with 52 expected ingestion skips. See planning/Scientific
-Prerequisites Execution 2026-10-18.md. Do not mark a conditional defer, AI-assisted reference or
-technical receipt as independently validated clinical science. Do not open later
-endpoint labels before origin selection is sealed.
-
-Run tasks in order. Mark complete only after the task's validation passes. Stop and
-record a blocker if a task cannot be completed after reasonable attempts. Existing
-development artifacts are evidence, not independent scientific validation.
-
-### Science 7 supporting work — October 20
-
-- [x] Freeze the ten-case, six-arm recipe with the complete collected10512-record
-  source world, fixed rotation, identical ceilings and evaluator isolation.
-- [x] Implement the source-derived five-role comparator and fresh pre-retrieval
-  ablations, durable execution proofs and independent source-aware verification.
-- [x] Pass the full/core regressions, package/demo and independent corruption probes.
-- [x] Implement and validate the response-informed v0.2 role-output constraint;
-  retain the v0.1 failure and complete a fresh source freeze without response reuse.
-- [x] Finish and source-verify all sixty native/baseline case-arm executions.
-- [x] Seal predictions, run the qualified Q1 development comparison and audit
-  twenty distinct original rows from final AsOf selections.
-- [x] Retain measured results, independent acceptance and the final bounded
-  scientific disposition; update the execution register and milestone status.
-
-### Science 3 supporting work
-
-- [x] Qualify four historical OT24.09 mapping products and complete source ancestry.
-- [x] Seal the origin-only reconstructed exploratory universe and mapping revision;
-  audit all 61,541 scope memberships and preserve unresolved scientific equivalence.
-- [x] Validate the origin/endpoint gates and integrity corrections: 363 full tests,
-  dependency-free validation, original corruption probes and 1,648 ancestor checks.
-- [x] Validate the April archive/cutoff gates, independent verifier and source-only
-  pilot sampler: 402 full tests, required probes, package/demo and core checks
-  (52 expected ingestion skips). All four hosted Windows/Linux jobs passed at195d7d6.
-- [x] Complete January 2026 technical restoration and independent audit: 52 tables,
-  563,840 studies, 55,380,326 rows, 394 retained evidence files and 1,648 ancestor
-  commitments verified; empty cohort output; owned server stopped and port closed.
-- [x] Receive and qualify April 1, 2026 AACT archive: 2,420,893,767 bytes,
-  SHA256 `6bc8662e096868bcad15446a264541f13ed4ba7e5ece5daae311f8d7fb04b8c3`;
-  exact TOC date and all five CRC/member checks passed. Ancillary schema.png is empty;
-  archived HTML is integrity-checked only, not adopted as scientific documentation.
-- [x] Complete April technical restoration and independent terminal verification:
-  52 tables,578,527 studies,56,751,088 rows;394 evidence files,all5archive members
-  and1,648 ancestors verified;emptycohort and stoppedownedserver/closedport.
-- [x] Finalize source-coverage/cutoff and origin-review disposition under the frozen
-  pre-label amendment; preserve all unresolved clinical/scoring gates.
-
-Science 3 is complete within its amended input-readiness scope. The prior file/access
-blocker is resolved. The earlier blocked checkpoint remains preserved in Git and its
-verified E: backup. Independent source-review validation checked 12 cases, 20 prior
-rows and 752 source pointers. Nine are discovery candidates; all twelve retain
-unknown global prior risk and unresolved clinical linkage. No labels were assigned.
-Full/core checks passed (402 tests, 52 expected core skips), and all four hosted jobs
-passed at 195d7d6. See item3/source-readiness-report.json and its register validation.
-
-- [x] **Task 1 — Build registry-scale cohorts and audit transition labels.** Verify
-  the sealed v0.4 milestone, freeze the condition/scope sensitivity rules, and finish
-  the prior-risk and regimen/population audit. Validate source lineage and regressions.
-- [x] **Task 2 — Measure sample size, statistical power and clinical feasibility.**
-  Use measured dependencies and explicit label-error/effect-size assumptions; retain
-  simulations and a proceed/revise decision without claiming observed model accuracy.
-- [x] **Task 3 — Finalize model chronology, evaluation windows and preregistration.**
-  Verify model versions/cutoffs and matching historical origin/endpoint data; complete
-  a defensible frozen evaluation protocol before treating a set as locked. Completed
-  as a local protocol; public filing and clinical activation remain gated.
-- [x] **Task 4 — Build bounded retrieval and the model-backed specialist.** Preserve
-  the default budget and $0 provider-spending boundary; validate offline/replay behavior.
-- [x] **Task 5 — If feasible, validate genetics features and train/calibrate scoring.**
-  Scientific derivations, leakage-safe cohorts and calibration data must qualify first.
-  Feasibility assessed: defer derivation/training; required qualifications are unmet.
-- [ ] **Task 6 — Compare Virtual Biotech, simple baselines and ablations.** Verify
-  compatible data/model chronology and comparable budgets and retain evaluation outputs.
-- [ ] **Task 7 — Run independent T6 quality and locked clinical evaluations.**
-  Independent review and an actually locked, temporally eligible cohort are required.
-- [ ] **Task 8 — Conditionally extend T2-T5 and H6.** Proceed only after their
-  prespecified feasibility and data gates pass; document any unmet condition explicitly.
-
-## Current execution
-
-Task 1 passed source/scope validation and the full 194-test suite. Its evidence is
-in `planning/Ordered Execution Progress 2026-10-17.md` and
-`planning/review-assets/ordered-execution-20261017/`.
-Task 2 passed corrected small-sample null validation, all 120 scenario checks and
-201 full-suite tests. Its clinical feasibility decision is revise before training;
-these are conditional simulations, not clinical performance or validated labels.
-Task 3 passed 208 full-suite tests and proof/hash validation. A local development
-protocol and gated 2025-2026 clinical design are frozen; no public registration or
-locked clinical set is claimed.
-Task 4 passed 229 full-suite tests, four hosted Windows/Linux jobs, ten original
-source-verified local-model dossiers and three source-verified lossless-wire dossiers.
-The response-truncation guard and exact offline replay passed. The final transport
-probe fits 66 versus 22 candidates without dropping scientific fields. Owned servers
-are stopped; all probabilities remain null.
-Task 5 passed its conditional feasibility assessment: technical QC revalidated, while
-predictive genetics and scorer training are deferred because scientific prerequisites fail.
-
-## Validation and blockers
-
-Tasks 1-4 are complete within their documented scope. Task 5's conditional decision
-is validated: no predictive feature derivation, training or calibration was performed.
-
-**Task 6 scientific scope remains incomplete; development execution completed October 20.** The prior stop is preserved in the
-dated execution log. Development-only baseline diagnostics and an upstream source
-compatibility audit are now implemented and validated. The fixed four-case selection
-challenge passed source-inclusive verification and matched baseline analysis. These
-technical comparisons do not require clinical labels or claim scientific quality.
-
-There is no independently qualified clinical
-reference, no adjudicated negatives/censoring, no validated predictive feature set or
-trained/calibrated scorer, and current proxy-size power does not meet the target.
-All real dossier probabilities remain null. AUROC/Brier comparisons against Virtual
-Biotech/baselines and scientific ablations cannot be estimated from these inputs.
-AI-assisted review and source-copy fidelity cannot replace independent truth.
-
-Scientific Task 6 completion remains blocked under the user's failure rule.
-Task7's source-only T6 development branch subsequently completed October23;
-its locked clinical branch and conditional Task8 remain unqualified. The development substeps and bounded seven-assessment phase are finished; clinical execution stops
-at the remaining scientific/comparator gates. See the October 18 Task 6 report.
-The original proposals and sealed outputs remain preserved. Provider spending is $0;
-no public registration, clinical success claim or locked evaluation is made.
-
-## Task 6 resumption checks — October 18
-
-Review clarification: the adapted offline comparator and matched end-to-end
-ablation implementation can proceed without qualified outcome labels. Scientific
-metrics remain gated separately. Existing AI-assisted development assessments are
-available (ten cases / 20 claims); they are not independently adjudicated gold.
-
-- [x] Implement and validate paired lexical/provider-score baselines, an uncapped
-  extractive reference and explicit deterministic evidence masks; 246 full-suite
-  tests, required probes, packaging and four hosted CI jobs passed.
-- [x] Reverify and compare all 29 archived requests, keeping the ten-case canonical
-  and three-case wire diagnostics separate. All selected every offered candidate;
-  none had to prioritize more than three IDs.
-- [x] Audit and archive pinned Virtual Biotech configuration/source and local
-  directory presence without SDK initialization, credentials or provider calls.
-- [x] Finish and source-verify the fixed four-case wider-candidate challenge,
-  then seal and verify its matched development baseline comparison. Eleven new
-  requests; model/lexical sets agree 11/11, model/provider-score sets agree 8/11.
-- [x] Implement and validate the adapted Virtual Biotech execution arm under
-  matched evidence, model, budget and containment rules.
-- [x] Complete matched end-to-end ablations across the full frozen comparison.
-  Fresh v0.2 execution, all sixty source-verified arms and twenty original-row checks
-  passed. The first stopped attempt remains retained separately; October 18 masks
-  remain separate historical diagnostics. Scientific comparisons below remain gated.
-- [ ] Complete scientific comparisons with independent quality/clinical references
-  and qualified scoring/power. These prerequisites remain unmet.
-
-Native dossier/source checkpoint backed up on E: (53 entries, ZIP CRC/every
-entry SHA256 and Git bundle througha759d04 verified). Retained receipt:
-planning/review-assets/t6-dossier-binding-20261024/backup-validation.json.
-Later receipt/status commit is outside that bundle. Bulk source data excluded.
+## Project review and recovery plan — October 26 UTC
+
+- [x] Digest the full Opus review and independently examine engineering, data/science, evaluation and expert-review requirements.
+- [x] Retain reproducible correctness probes and a fresh passing full validation: 1,262 tests, no skips, required probes and wheel/demo verification.
+- [x] Write the independent review and detailed recovery plan with dependencies, acceptance criteria and stop conditions.
+- [x] Prepare a separate shareable expert exercise, recruitment brief and internal coordinator guide; validate blank PDF fields and offline HTML interaction.
+
+Current forward plan: `planning/Project Recovery and Evaluation Plan 2026-10-26.md`.
+The user has authorized execution of the sixteen-step recovery plan. Complete each gate before advancing.
+Current checkpoint, 30 October UTC: [C return capture](<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>) is accepted only for the compiled x64 raw-carrier layout and one own-source fake-target component run (root ad4c9f0e; compiled peer 5796bcc6; actual peer 1b10326d). All 79 controls / 29,310 measured C checks pass; 79 primary and 17 boundary cells match, with 47 fake calls and 17 error entries / 16 returns. The run reports 0.172s and four retained files / 121,790 B. This does not qualify real Win32, the Python conversion bridge, same-Core native bank/leases, physical14 or resources. Source4 E08's accepted 122 assertions remain unchanged. Native25's named expected-code control retains 41 PASS / two FAIL / four DEFERRED / one STATIC; only the two actual API/axis-kind guards remain. Source5 guard authoring is authorized only; the new source/harness is unexecuted. Complete entry, native25, R09 and science remain open.
+
+Next: correct only the two remaining native25 API/axis-kind guard defects in the separately named Source5 successor, then obtain exact peer review and a separate execution binding. Independent normative errata resolved the three specific-code expectations; the named unchanged-Source4 control is 41 PASS / two FAIL / four DEFERRED / one STATIC. Preserve the 31/12 and callback-only 38/5 diagnostics and every trailing assertion. Close the actual new84 source/import/consumer roster and core4 roles, same-Core C/Python bridge, joint physical14 reservations and genuine held-lease child/image route before activation. Planned/unbuilt descriptors permit authoring, not execution; 19,079 joint calls are not profile fit. AsOf 0.3.11/default v2 retains 1,774 tests/327 pins without rerun. Resource/human/scientific gates, original FAILED/INCOMPLETE_TIMEOUT and historical E16 exclusions remain; $0 and downloader/stopped monitor unchanged.
+
+- [x] Freeze independent role-aware format literals/tests before source:40 bases,225 byte negatives,134 anchors;6/6 fixture checks,26 matching pins and exact-delta peer3e1ac225. Evidence: recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-ACCEPTANCE-v2.json. No subject test or live producer claim.
+
+Oracle107fixtures/167steps, controller23methods,84full-response fixtures and supplied-piece analyzer f895b990 retain source/pure acceptance. Corrected injected bootstrap interfaces9f221af4 pass22author methods/independent re-review; captured-byte journal23f56d8c passes ten author/seven peer methods,30frozen fixtures/13terminal regressions. Seven reproduced earlier defects remain preserved. Real entry/platform/resource/archive/profile/engine binding and complete prospective native protocol remain unfinished. Original actual profile remains FAILED and whole-verification INCOMPLETE_TIMEOUT; no repeat. Resources and scientific/human gates stay open.
+At each major completion, retain a dated project-wide progress reassessment and
+critical current review of the next major step. See `planning/Project Progress Reassessments.md`.
+The prior automatic wire-repair/pilot sequence is superseded as the next action.
+Original failed runs and historical checklist entries remain preserved.
+
+- [x] R01 Record scope, claims, resource boundaries and governance decisions. Evidence: planning/decisions/2026-10-26-phase-scope.md and exposure register.
+- [x] R02 Preserve a tested current-state checkpoint and restoration inventory. Evidence: recovery-step2-20261026/completion.json; all 63 historical code hashes recovered.
+- [x] R03 Prove archive compatibility and relocation before changing pinned code. Evidence: recovery-step3-20261026/acceptance.json; 7 installed guarded replays, 1,307 full tests.
+- [x] R04 Fix reproduced chronology, backend-error, payload-cap and store-construction boundaries. Evidence: recovery-step4-20261026/acceptance.json; 1,357 full tests/no skips, probes/package and 7 installed archive replays pass.
+- [x] R05 Prepare a bounded matched capacity/interface diagnostic; no automatic spending. Evidence: recovery-step5-20261026/acceptance.json; 3 source-matched requests/6 bounded payloads; stronger-model capacity and human review remain unresolved.
+- [x] R06 Extract only reusable infrastructure needed for the next study. Evidence: recovery-step6-20261026/acceptance.json; 0.3.0 installed smoke, 78 study tests, 1,435 full tests/no skips, probes/package and 7 legacy replays pass.
+- [ ] R07 Execute and independently assess the bounded diagnostic if its gates pass. Technical experiment closed NEGATIVE: 6 once-only complete responses, 0 accepted contracts, sealed/verified; stop native expansion. Independent human assessment remains open. See recovery-step7-20261026/DISPOSITION.md.
+- [x] R07 technical execution, terminal verification, resource/accounting audit and negative disposition. Evidence: recovery-step7-20261026/technical-closeout.json; 1,485 full tests/no skips and 7 installed legacy replays pass.
+- [ ] R07 independent human scientific assessment; do not replace with AI development triage.
+- [ ] R08 Select fresh cases and qualify their source/temporal/exposure feasibility. Exposure/source preparation may proceed under its own R01 dependency; reviewer coverage/HR3 and final readiness remain gated. No fresh model generation.
+- [x] R08 scoped metadata source/receipt validation and date follow-up: 112 files/8.22 GB, 14 locator replays, 440 date disagreements explicitly retained. See source-feasibility.md and date-and-review-addendum.md.
+- [x] R08 exposure v4 and identity-only article crosswalk: 20 exposed hypotheses/18 targets; 56 intended combinations, 31 conservative mapping overlaps and 25 nonmatches; PMID31019502 shared with prior material. No fresh case qualified.
+- [x] R08 fixed two-context source-only preparation and clean expert form: 6 articles/8 passage occurrences; original hashes/locators, no replacements, 14 question groups and desktop/mobile export QA. Scientific sufficiency remains unqualified.
+- [ ] R09 Implement minimal interpretation and honestly adapted comparator arms.
+- [x] R09 deterministic engineering slice: pure synthetic extraction/lexical selection, exact quotes, recompute verification, neutral views and bounded artifact publication. Evidence: recovery-step9-20261026/acceptance.json; 1,519 full tests/no skips, 7 installed legacy replays, restored synthetic bundle and frozen0.3.1 R07 verification pass.
+- [ ] R09 real retrieval quality/source sufficiency and scientific/native qualification remain open. Five-record real access mechanics and invented authority-aware recorded execution are accepted separately; no real-case generation.
+- [x] R09 fixed-evidence recorded contract: 4 arms, 12 scripted cells and 4 pure results, source-ID history proofs and shared budgets/deadlines. Evidence: recovery-step9-comparison-20261026/acceptance.json; 1,536 full tests/no skips, installed guards and restored comparison pass. No runtime model generation or science result.
+- [x] R09 real-input sizing and single lossless trial retained; pinned offline tokenizer then matched all 6 archived native controls. Full exposed real schedule: 28,241 CLI tokens with margins <32,000; current byte policy/allowlist unchanged.
+- [x] R09 trusted token-aware preparation and source-inclusive reconstruction: one exposed IL6R request, whole original row plus three mapping rows, six exact hypothetical quotes and installed read-only replay. Evidence: recovery-step9-token-aware-20261026/acceptance.json; 1,582 full tests/no failures/errors/skips, 297 unchanged pins, seven installed legacy families and frozen prior verifiers pass. No model generation.
+- [x] R09 anchored retrieval-to-interpretation bridge: every ranking candidate qualified, two policies, six-record invented corpus and two recorded cells under one case budget; fresh current-parent check on the same single exposed IL6R record. Evidence: recovery-step9-retrieval-20261026/acceptance.json; 1,616 full tests/no failures/errors/skips, 305 unchanged pins, installed/restored replay and prior matching verifiers pass. Four-arm access manifests are preparation only.
+- [x] R09 single-policy authority-bound invented four-arm recorded composition, explicit exact-token admission and retained failure/replay checks. Evidence: recovery-step9-four-arm-20261026/acceptance.json; 1,646 full tests/no failures/errors/skips, 312 unchanged pins, seven installed legacy families, matching frozen 0.3.1–0.3.5 verifiers and restored replay. The first E: attempt timed out after two cells; an identical local D: mirror allowed the separately declared second attempt to finalize in 192.7 seconds. No model generation. See docs/AUTHORITY_FOUR_ARM_COMPARISON.md. Scientific and human gates remain pending.
+- [x] R09 finite sizing gate for the six unchanged invented-source payloads: byte reservation 47,753 exceeds 32,000; pinned CLI reservation 14,315 fits, with 6,144 output tokens. See recovery-step9-four-arm-20261026/TOKEN-QUOTE-RESULT-v2.json. This authorizes neither model generation nor reuse of old package proofs for future execution.
+- [x] R09 qualify bounded real retrieval over all five existing literature records in the exposed IL6R case, preserving whole-record proofs and missingness. Evidence: recovery-step9-real-retrieval-20261027/acceptance.json; all five original rows and both policies replay from an isolated installed package. Both select the same one record; byte exclusions and lack of scientific/policy-quality validation remain explicit. No runtime change or generation.
+- [x] R09 connect receipt-verified collected inputs to the four-arm recorded runner. Evidence: recovery-step9-collected-composition-20261027/acceptance.json; 0.3.7 passes 1,660 full tests/314 unchanged pins, seven installed legacy families, six matching preserved versions and source-inclusive installed/relocated replay. Real-input recorded execution takes 157.8 seconds; six scripted cells/two pure results, no model generation. Human references were not prerequisites for this integration; scientific/native holds remain.
+- [x] R09 separately version the interpretation interface and qualify its connected adapter with deterministic fixtures. Accepted 0.3.8/0.3.9 align quote references, states, limits and schema without repairing R07. This does not qualify native grammar or actual inference.
+- [x] R09 pure 0.3.8 interpretation interface: original-path quote IDs, aligned states/schema, exact materialized quotes and unchanged generated text. Evidence: recovery-step9-interface-20261027/acceptance.json; 1,681 full tests/316 unchanged pins, 21 new/33 focused codec tests, 105-case external schema oracle, twelve installed stage preparations, seven legacy families and seven matching old verifiers pass. No native adapter or generation.
+- [x] R09 model-backed adapter/controller engineering integration: accepted 0.3.9 passes 1,724 full tests/324 unchanged pins, seven installed legacy families and eight matching old study verifiers. Actual-format source/CLI simulation finalizes six stages/two pure results in 200.0 seconds; installed source/model replay and guarded run-copy relocation pass. Failure, interruption, concurrent output and actual lineage regressions pass. See recovery-step9-native-integration-20261027/acceptance.json and CLOSEOUT.md. No actual model/server ran; no scientific acceptance.
+- [x] R09 duration consistency correction: accepted 0.3.10 passes 1,737 full tests/324 unchanged pins, all nine old matching verifiers, fresh source-linked simulation and installed/relocated replay. Thirteen regression-first tests and eight installed duration cases pass. Simulation takes 295.922/300 seconds without actual inference; native integrated feasibility remains unestablished. Original 0.3.9 is preserved. See recovery-step9-native-duration-20261028/acceptance.json and RESOURCE-RISK-NOTE.md.
+- [ ] R09 qualify actual native document/EOG behavior for the separate direct-v3 grammar before any finite model experiment. The unchanged-schema converter is closed negative and must not be rerun or repaired. See recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md and NEXT-GATE-CRITICAL-REVIEW.md. Human/source/freshness gates remain separate.
+- [x] R09 grammar preparation: static hash-bound b11717 export inspection and frozen 109-case corpus pass; installed Python/independent schema oracle agree except documented uniqueness semantics. Source commit matches the retained runtime build prefix; eight capped references plus five converter references are verified. This preparation did not run native document/EOG tests; later converter disposition is recorded separately below.
+- [x] R09 finish scoped source preparation: 22 new fixed-commit references/1,242,387 bytes and 207 output hashes verify. SOURCE-QUALIFICATION.json (ace2041e...) retains header, loader, CPU and token limits. The first typed public-C bridge passed static review; later PE inspection found its ABI OpenMP allowlist incompatible with core imports before any compile/run. A separately preserved revision is in preparation.
+
+- [x] R09 complete the once-only v3 OS accounting diagnostic:53 pins,14 files,eight journal events,five raw SDK/PID snapshots and owned cleanup verify. Old active2 was not reproduced; no universal/native containment is claimed. Failed preworker v2 and held v1 remain intact.
+- [x] R09 correct and independently source-review the hard-disabled SDK launcher journal/evidence/lease findings: v3 passes33 pure checks and peer review; its original native flag remains false. This is source/fake-API evidence only.
+- [x] R09 qualify the exact own-C++ detached job-at-creation path on this host before the separate target ABI gate. Proof7f184e9b... verifies140pins/23files/61events/20raw snapshots/284leases and all four once-only cases. Actual final totals are1/0/0/empty in every case; captures, timeout125 and suspended/no-resume abort125 pass. SDK3bf is a literal-only flag fork with both gates false. Scope is exact worker/policy/host; no universal containment, target ABI or scientific acceptance. All old failures/unknown identities and closed observer gap stay preserved; no breakaway/host whitelist/IOCP replay.
+- [x] R09 retain and independently verify the first fixed target-ABI negative result. Proof425a2e60... verifies147pins/13files/13events/298leases. Child exit2/reaped reports required_export_missing before version/default observations; no final Job snapshot or module inventory exists, and stdout EOF remains unobserved. These limitations remain explicit. No rerun, CPU DLL or model access.
+- [x] R09 qualify the fixed typed version/default/layout boundary after module-policy review. Independent6f6d3be4... verifies177pins/11files/17events/five rows, observed0.7.0-dev,17defaults/31layout leaves,17self/core4/platform reports, exit0/reaped0.078s,59B/0B EOF,358closed lease outcomes and0.547s seal. Root acceptance024e0536... is scoped to these queries; broader ABI/CPU/model/vocabulary/grammar/science remain unqualified. Old failures/unknown identities stay; no second diagnostic census or automatic repeat.
+- [x] R09 regression-test and build the separate corrected bridge v4 without executing it. Seven static export-owner tests reproduce v3's defect;16 focused build checks pass. Proof48535ac5... verifies194pins/14files/eight journal events, both compiler/linker exits0/reaped and terminal seal4.125s. Source2f340355.../EXEc5df7b62... preserve the old pin header, recognition=false and unknown version. Compile-handle control and context-manager lease closure do not establish descendant containment or individual-handle attestation. The fresh ABI gate remains incomplete.
+- [x] R09 retain and independently verify the corrected ABI attempt's negative result. Proof4b2a3cd7... verifies202pins/13files/17events/408leases; child exit2/reaped0.234s, both captureEOF, final rawJob1/0/0/empty, measured peak2166784B and204 completed rechecks agree. New terminal observations are complete; module identity/inventory/version/defaults remain unavailable. No accepted ABI result or automatic repeat.
+- [x] R09 implement, source-review and compile the separate bounded rejection-diagnostic bridge v5. Eleven model/static, seven owner-map and17 build checks pass; no compiled-formatter claim from those tests. Actual build proof5878717f... verifies204pins/14files/eight events, both tools0/reaped and4.219s; sourcec2b80250.../EXEa7b4a102... preserve header/policy/allowlist. No result execution during build. The subsequent runtime observation is verified separately below; old unknown identities stay unknown.
+- [x] R09 observe and independently verify the bounded current-run module rejection. Proofa92b9237... verifies243pins/13files/17events/490leases, exit2/reaped0.234s, complete939B/0B streamEOF, finalJob1/0/0/empty and peak2166784B. Numeric UTF16/UTF8 and publication states agree on untruncated apphelp.dll/System32 metadata; oldv2 identity remains unknown. Policy and rejection unchanged; no full inventory, image-file verification or target ABI acceptance.
+- [x] R09 design and independently review one finite post-core4 self-module census. Design79096837.../contract5bcde648.../peerfd22ae46... bind64 modules/2MiB/zero explicit target queries, raw-before-classification, same16 policy, distinct census validator/status and status-only sealer proof. Root8b9ebb0c... authorizes source/pure work only; no census has executed.
+- [x] R09 implement/source-pure-validate the census child/parent/parser/sealer and independently verify its once-only observation. Proof4b628df8... checks183pins/11files/17events/98rows/38query pairs,17 complete reports, exit0/reaped0.125s,68B/0B EOF, finalJob1/0empty,370 lease closes and0.594s seal. Old source/fixture/preparation/driver failures remain preserved. Unknown image stays unopened; no ABI/scientific eligibility follows.
+- [x] R09 compile and independently verify the census-capable helper without executing it during build. Proof51c255ec... verifies234 pins/14 files/eight events, compiler/linker exit0/reaped and terminal seal4.656s. Source28a515c2... produces EXE559e4e9a...; same recognition-disabled header and16-name policy. The separately authorized one-time census is verified above; binding/preparation corrections retain their failures.
+- [x] R09 implement/test the separately versioned ABI-only trusted-platform policy across child, data-only parent, contract and protocol. Policy807995... preserves exact self/core4/protected-native precedence,64-module cap and no reported-platform image reads. Source/pure/build and the once-only typed observation are independently verified. Trust is declared host context, not image authentication; CPU/model eligibility stays false.
+- [x] R09 source/pure-review and independently verify the trusted-platform helper build. Childdbf76b19 passes10 model/static tests/all73 shared vectors, matcher6methods/73vectors, unbound parent8methods/156checks; policyfingerprint807995... is shared. Build21checks pass after preserved metadata-pin failure. Rootdc1050bd... compiles once; proof057c0fb2... verifies257pins/14files/eight events, both tools0/reaped, unchanged imports/header and4.750s seal. EXE2feffe29... was unexecuted during build; subsequent separately authorized ABI observation is verified above. Accepted311 is unchanged.
+- [ ] R09 qualify recognition-mode CPU/vocabulary/document/EOG behavior through a separate shared policy/header/source/build/nine-argument parent/protocol. Preserve all corpus groups/raw-NUL harness exclusion/six prefixes and strict cleanup/resource bounds; current ABI-only policy rejects CPU. Singleton conformance does not qualify the full-vocabulary mask or integrated300-second case; no implicit model/inference authority.
+- [x] R09 build and independently verify the own C++ harmless fixture matching the bridge's `/MD /W4 /WX` settings. A source conversion warning caused the retained compiler-only v2 failure; the separately reviewed one-line fix compiles/links in2.922s. Verification7f51e860... checks237pins/14files/eight journal events, both owned tool exits0/reaped, source/PE/imports and post-cleanup seal. The build stage does not execute OwnEXE66560B/SHA0100ee60...; its subsequent failed qualification is recorded above. All16 pure build checks pass; old failed build and unexecuted preparations remain intact.
+- [ ] R09 resolve the Windows Job accounting anomaly before qualifying native containment. The initial own-source probe satisfies its assertions, but independent review finds active2 with limit1 in two snapshots. Preserve it and use a separately declared finite PID/identity diagnostic; do not infer cause or claim isolation. Later v3 diagnostic independently verifies five consistent0/1/0 snapshots with only its owned PID; the old cause remains unresolved and target execution still requires fresh SDK-launcher qualification. See JOB-ACCOUNTING-DISPOSITION.md.
+- [x] R09 independently verify the corrected format-2 diagnostic pack: all 113 pins, 189 document bindings, four grammars and six prefixes pass. Original 167 wire documents/pure44+123 remain intact; 166 native byte-front candidates plus one exact NUL harness exclusion stay separate from 18 new authored serializations/four byte guards. Only three bytes differ from the preserved first pack. Evidence: recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.json. No native conformance claim.
+- [x] R09 compile/link and independently verify the recognition-disabled public-C bridge. Two owned tool processes exit0;193 input pins,12 output files,eight journal events,x64 object/executable and static imports pass. EXE SHA9f955aec... was not run during this build; its subsequent first ABI failure remains recorded above. Evidence: recovery-step9-native-recognition-20261028/BUILD-RESULT-VERIFICATION.json.
+- [x] R09 qualify the fixed runtime protocol and typed ABI-only observation on the separately qualified detached path. Protocol5e175558.../root50d60ad5... execute once; independent6f6d3be4... and acceptance024e0536... pass in scope. Historical accounting causes remain unresolved; current path passes its retained checks. Build alone grants no native/vocabulary/model authority.
+- [x] Reassess all R01-R16/HR1-HR4 at the typed native build checkpoint: planning/Project Progress Reassessment 2026-10-28 - Native Build.md;12 local links and all20 status rows pass QA.327 current runtime/source hashes and two protected hash-only checks match. Native/scientific/whole-project gates stay open.
+- [x] Reassess all R01-R16/HR1-HR4 at the terminal Python-worker launcher disposition: planning/Project Progress Reassessment 2026-10-28 - Native Launcher.md;all20 status rows/local links/UTF-8 pass QA. Both failed attempts remain preserved;166 inputs/17 files/30 events/336 lease records verify for v4. The scoped resources result passes, overflow cause is unresolved, sleep/abort and target ABI remain held. A separately reviewed `/MD` compiled-worker test is in preparation.
+- [x] Reassess all R01-R16/HR1-HR4 after the own-C++ terminal canary failure: planning/Project Progress Reassessment 2026-10-28 - Native Canary.md;20 rows/six next steps/14 links/UTF-8 and evidence references pass QAe25f41db.... The verified237-pin build and135-pin failed qualification remain separate; next is one bounded IOCP/PID observer, not another qualification retry or ABI run.
+- [x] Complete and independently verify the once-only IOCP observation:176pins/12files/49events/eight snapshots/ten PID queries/356lease records pass proof25c648a1.... This run records a current conhost path/member before termination; it stays negative and identifies no old unknown PID retrospectively. Late queue-attempt gap70f52 is preserved and forbids future reuse without a new corrected version. No target ABI or model ran.
+- [x] Reassess all R01-R16/HR1-HR4 at console identity: planning/Project Progress Reassessment 2026-10-28 - Console Identity.md;20 rows/six next steps/12 links/UTF-8/source references pass QAf6a770de.... Next is separately reviewed DETACHED0x0008040C with the same fixture/controls and prospective resource-only policy387d; no generic count waiver, breakaway or host whitelist.
+- [x] Reassess all R01-R16/HR1-HR4 after the first target-ABI negative result: planning/Project Progress Reassessment 2026-10-28 - ABI Export Failure.md;20 rows/six gates/12 links and exact evidence checks pass QA5ea04b02.... No typed/final-Job/complete-capture result is invented. Next is regression-first per-DLL ownership and negative-path correction, then separate build/ABI qualification; all science/human gates remain open.
+- [x] Reassess all R01-R16/HR1-HR4 after the corrected ABI module-policy rejection: planning/Project Progress Reassessment 2026-10-28 - ABI Module Policy.md;20 rows/six gates/13 links/UTF-8 and exact terminal-observation evidence pass QA893561a0.... Next is bounded actual rejected-module identity, preserving policy and unknowns; static candidates cannot identify the offender. All native/scientific/human gates remain pending.
+- [x] Reassess all R01-R16/HR1-HR4 after current-run module identity: planning/Project Progress Reassessment 2026-10-29 - Module Identity.md;20 rows/six gates/15 links/UTF-8 and exact diagnostic evidence pass QAecf51eb3.... Next is finite policy evidence and disposition; no automatic allowlist expansion or rerun, and scientific/human gates remain open.
+- [x] Reassess all R01-R16/HR1-HR4 after the single complete census: planning/Project Progress Reassessment 2026-10-29 - Module Census.md;20 rows/six gates/11 links/UTF-8 and exact proof/policy anchors pass QAefcb6c72.... Source-only trusted-platform policy is selected; no second diagnostic census, target ABI or scientific completion. New parent/platform implementation remains separately gated.
+- [x] Reassess all R01-R16/HR1-HR4 after the fixed typed ABI observation: planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md;20 rows/six gates/14 links/UTF-8 and exact verification/acceptance anchors pass QA64e4fd05.... A root QA phrase-only mismatch is preserved separately without changing the document. Version0.7.0-dev and the fixed typed boundary pass; CPU/vocabulary/EOG/grammar/masking/resources and human/scientific gates remain open.
+- [x] R09 public-header source prerequisite: two fixed-commit reference batches retain 20 files/1,216,591 bytes; independent checks verify both receipts, worker ownership and all output hashes. Seven public headers/thirteen repository include edges now close without missing references. Loader/token reviews preserve explicit-init, byte-roundtrip, EOG, memory and source/binary limits; no native/model execution. Evidence: recovery-step9-native-recognition-20261028/HEADER-CLOSURE-FOLLOWUP.md and FOLLOWUP-RESULT-VERIFICATION.md. The two CPU-registration references are now retained and reviewed in SOURCE-QUALIFICATION.md; actual ABI/recognition and resource gates remain pending.
+- [x] R09 owner-installed C++ toolchain usability: scoped environment, compile/link and own-source x64 SDK/STL probe pass without restarting. No llama DLL, model or server loaded. Exact tools, versions, hashes and preserved initial harness failure are retained in recovery-step9-native-grammar-20261028/TOOLCHAIN-LOCAL-PROBE-v2.json. This does not qualify actual DLL ABI or grammar.
+- [x] R09 recognition-enabled validator build only: independent78a4d8c3 verifies287pins/77,496,944B,14files/eight events, tools exit0/reaped and5.266s seal; EXE382754c8 is290,304B. No result execution or CPU/GGUF/pack payload reads in this build. Source/parent/runtime conformance remains separate.
+- [x] R09 corrected recognition parent/parser source gate: independent0068a99b clears parentv6/e190 and validatorv3/bbd98;50latest component methods include40mutations/15fake lifecycle fixtures. All three e23f findings and before-failure proofs retained. Root38a52f76 permits metadata-only acyclic binding, no payload/runtime execution.
+- [x] Reassess R01–R16/HR1–HR4 at recognition-build completion: planning/Project Progress Reassessment 2026-10-29 - Recognition Build.md. Full masking, integrated300s feasibility, scientific readiness and independent human review remain open.
+- [x] R09 validate and retain the fixed actual-DLL ABI/converter diagnostic. Independent read-only verification passes 48 output hashes, 150 external pins, both child/module records and 14 journal events. Round-trip passes; unchanged-schema conversion closes NEGATIVE with explicit unsupported-pattern fallback warnings. Two native children, no vocabulary/model/server. Three focused harness regressions pass; the earlier zero-child NUL failure remains preserved. See recovery-step9-native-grammar-20261028/RESULT-VERIFICATION.json and DISPOSITION.md. Completion of this diagnostic does not satisfy grammar conformance.
+- [ ] R09 finish actual native qualification of the separately versioned v3 contract: close typed headers/loader, actual-vocabulary document/EOG and full-case resource gates before declaring model execution. No anchor-only repair, corpus replacement, automatic retry or R07 restart.
+- [x] R09 pure v3 generation contract accepted as 0.3.11: 1,774 full tests/327 pins, probes/package, installed/relocated checks, 18 preparations and twelve unchanged v2 fingerprints pass. Ten matching preserved versions qualify through seven retained plus three declared completion successes; the first timeout stays failed. Schema scope is 162 typed cases/16 controls plus five ungraded parsing edges; the PowerShell failure is preserved. Exactly five optional Arrow caches have independently verified source derivations and 755 copied files match. Acceptance SHA491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b. See recovery-step9-generation-contract-20261028/acceptance.json and CLOSEOUT.md. Native/EOG and science remain unqualified; default dispatch stays v2.
+- [x] Reassess full project at the accepted R09 integration checkpoint and critically review the next major gate. Evidence: planning/Project Progress Reassessment 2026-10-28 - R09 Integration.md; all R01–R16/HR states and 31 local links checked. Later dated duration, converter and generation assessments preserve subsequent states.
+- [x] Reassess full project after 0.3.10 major completion: planning/Project Progress Reassessment 2026-10-28 - R09 Duration.md verifies accepted evidence, all R01–R16/HR states and 18 local links. It highlights four seconds of margin without inference and the next actual-DLL converter gate's explicit negative/stop conditions.
+- [x] Reassess full project after the actual-DLL converter diagnostic: planning/Project Progress Reassessment 2026-10-28 - R09 Converter.md passes all R01–R16/HR checks and 12 local links; 48 output hashes and 324 pins match. It records the negative conversion and critical next contract/resource gate. No scientific or whole-project completion is claimed.
+- [x] Reassess full project after pure 0.3.11 acceptance: planning/Project Progress Reassessment 2026-10-28 - R09 Generation.md; 22 local links, all R01–R16/HR1–HR4 rows and seven ordered next gates pass QA. Engineering acceptance remains separate from native/resource/scientific readiness; previous snapshots and failures are preserved.
+- [ ] R10 Complete the timed independent human development pilot.
+- [ ] R11 Size and freeze the amended H5 protocol and analysis.
+- [ ] R12 Run and report the locked H5 study if prerequisites pass.
+- [ ] R13 Conditionally qualify an alternative clinical outcome source.
+- [ ] R14 Conditionally qualify predictors, optional causal genetics and scorer/calibration.
+- [ ] R15 Conditionally run original clinical comparisons and ablations.
+- [ ] R16 Evaluate individually gated T2–T5/H6 branches and prepare a reproducible release.
+
+Separate human workstream: owner arranges reviewers; agents prepare/coordinate.
+Owner confirmed on October 26 that reviews are still pending. AI ratings do not
+complete these items. The mechanism orientation packet does not qualify a
+genetics/MR reviewer for the separate real genetic question.
+
+- [ ] HR1 Recruit domain-matched reviewers and record conflicts/exposure.
+- [ ] HR2 Obtain two independent IL6R orientation submissions and measure workload.
+- [ ] HR3 Obtain source-only references and masked ratings for fresh development cases.
+- [ ] HR4 Arrange the sized final panel and independent adjudication.
+
+Share the clean mechanism orientation bundle in `docs/expert-review-20261026/`,
+or the separate source-only genetics bundle in `docs/expert-review-genetics-20261026/`.
+The source-feasibility bundle in `docs/expert-review-source-feasibility-20261026/`
+is for the two fixed development contexts and does not complete HR3. Keep the candidate-follow-up
+folder coordinator-held until each source reference is submitted. Keep internal
+guides, mask keys, prior AI judgments and completed responses separate. Both new
+genetics forms pass desktop/mobile blank/export QA; no human response is implied.
+No scientific gate or original project hypothesis is completed by preparation.
+
+
+## Preserved history
+
+The prior checklist, failed gates and dated accomplishments are preserved byte for byte in
+[TODO before recovery](docs/history/TODO-before-recovery-20261026.md).
+Do not reinterpret unchecked historical failed-run success gates as new execution instructions.
+
+- [x] R09 consume the exact frozen recognition experiment once and retain its NEGATIVE disposition: rootb6327d4a/protocolb690c63b/driver71101d74,79.328s, childexit2. Separate all189body checks/184native+5harness/four fixed prefixes from two unavailable naturalUTF8 slots and the strict111case/two-prefix subset. No full conformance pass or repeat.
+- [x] Record independent22cf3294 partial checks and original whole-verification INCOMPLETE_TIMEOUT; later archive-onlyb513793d checks13files/1219events without resetting that gate. No extra payload pass, inference or scientific acceptance.
+- [x] Reassess all R01–R16/HR1–HR4 at recognition disposition and write the ten-step Unicode coverage/verifier recovery plan. UTF8/local-link/status/evidence QA passes; remaining gates stay pending.
+- [x] R09 specify/review source-only Unicode byte-chunk coverage and deterministic verifier control flow: oracle acceptance1e0890b4 and controller28d251f4. Concrete platform/source/clock/resource integration and a distinct actual protocol remain separate pending items; consumed profile and expired verification stay failed.
+
+## R09 source-only Unicode and verifier recovery — 29 October UTC
+
+- [x] Freeze distinct 84-case full-v3-response corpus before tokenizer/runtime implementation: 14 scalar pairs, four stage/payload instances, two unique grammars; 84 author-side exact-byte semantic checks, seven structural methods and independent manual precheck. Freeze e6e8419c; independent post-freeze reference remains separate.
+- [x] Review concrete verifier design and clarify missing metadata/output APIs and Python-visible return ordering. Peer f295bdf5 supports pure injected origin/handoff interfaces only; platform closure and real checkers remain pending.
+- [x] Complete independent frozen-corpus semantics: 84 exact-byte outcomes, four stage preparations and fourteen raw/ASCII pairs; proof739d83df and source-only acceptance b219f1f2. Native membership remains unobserved.
+- [x] Freeze synthetic piece-ledger vectors and implement/review the pure coverage analyzer: contract05c214, source537a780a, author8methods/proof34c7886a, independent8methods/272partitions/12matrixcells/proofe3a45f48, scoped acceptance f895b990. No native/tokenizer/row-fit qualification.
+- [x] Independently review/bootstrap-v2 fixes: source d9375992/22author methods, independent peer d9e006e6/two after probes, acceptance9f221af4. Original foreign reader and diagnostic aliases/before030ade/2982/HOLDc54a preserved. Pure injected interface only.
+- [x] Implement/review captured-byte journal-v2: source d6c2f8ef,10author/seven peer methods,30frozen fixtures/13terminal regressions, acceptance23f56d8c. Allfive former terminal false positives reject; originalHOLDd7b6 preserved. Generic chain and known-launchedv7 only, no resource/profile/live qualification.
+- [x] Freeze/review raw-resource byte/phase primitive: sourcefd655c8b,8author/seven peer methods,16captures/18phases/29author mutations/49independent vectors, acceptance3e80ae97. VariablePIDreturnedlength/undefined/source-view/non-atomic cases tested; resourceFalse, no actualOS/provenance qualification.
+- [x] Accept exact Unicode framing preparation79a61e59 and archive-v3 source/fixture preparation629216db; literal examples retain nonqualification scopes.
+- [x] Implement/review corrected in-memory Unicode pack codec8ff0d622, acceptance3455f282:11author/11peer methods,3focused regression methods,720independentUnicodeError identity probes, all84records/37766B independent reconstruction. V1callbackwrapping evidencef0d6 preserved; no runtimepackFILE/native/source-original qualification.
+- [x] Accept file-port design-v2 preparation after independent review d6c03181; root fixture scope0253bda8 authorizes finite simulated call/clock/ownership vectors only. No port implementation, ctypes/SDK construction or live file qualification.
+- [x] Freeze/review file-port preparation:84 authored cases/16 families/15 signed-BOOL controls; ten fake-interchange checks, independent peerc8a46dde and root scope6410dd07. Derived-plan/selector defects and root BOOL-domain review are preserved. Expected port outcomes remain authored; no actual port or FFI qualification.
+- [x] Implement/review injected portable file logic b7785bd6, acceptance16d65f57:84published cases/21focused methods/9independent probes pass. Actual rawFFI, production origin/source adoption and real file qualification remain separate.
+- [x] Resolve first65/84 batch with identity-before-content, unreturned-write and read-admission/malformed-count source guards, exact13script/18case corrections and immutable primary. Publishedproof246baec6/corebcc8a865/peer56b57f3c pass; all before sources/fixtures/proofs preserved without weaker clocks/hooks.
+- [x] Close/review Unicode observation design-v2 edacdc2b: elapsed samples, terminal failure ordering and external runtime context are explicit; independent peerb815af21. Root scope6ecc93d9 permits fictional complete trace fixtures only. Prior review384385f3 and root pin-typo failure are preserved.
+- [x] Freeze/review six complete fictional Unicode histories,36 literal scenarios/11 callback families; positive191rows/U3. Mixed-EOG and nonpopulation-QCunknown additions resolve coverage gaps; native rejection68 already covered. Peerf6a3c504/root scopeea802f31 accepts preparation only; priorv1/HOLDa22e3d70 preserved.
+- [x] Implement/review Unicode observer-v2 source47c7cc1f, acceptance743ece01:14author methods,6full histories/36scenarios,33observe+22strict callback identity controls,22nested/type mutations,4independent probes and2root regressions. Typed consistency only; full source/owner/resource/profile/native qualification remains separate.
+- [x] Correct/review observer's four guards: bounded integer errors, phase-aware terminal deltas including in-flight prefix partials, early marker presence and final post-freeze callback. Peer eb6aad83/rootafter628834ca; preserve source58d6 and all dba9/e6eb/5ebd/b39b/4530 evidence.
+- [x] Correct/review archive checker v3 source90ba49a9:13author/7independent methods and all32 frozen projections pass; acceptance686dcf47. Preserve v2 HOLD1a48b0e0, fully rebound before/after evidence and callback/LF fixes. Captured graph only; no actual archive/source/owner/resource/profile qualification.
+- [ ] Freeze/review exact new Unicode framing/source/event policy and literal vectors before pure pack/parser/bridge implementation; real first-clock/platform/archive/full-resource/profile integration remains open.
+- [ ] Implement/review same-origin bootstrap handoff, injected ownership and real captured-byte checkers; qualify exact platform source/roles/caps separately.
+- [x] Review the concrete raw-adoption/same-owner seam design055db993/f2d57dee with independent seven-group peer7de66b42. Root3b1a273a permits literal fixture preparation only; actual FFI/entry/continuation stays unqualified.
+- [x] Freeze/review raw-adoption preparation b4b6670c/09f79b6a/bb83204d:32histories across14fault families+success,256steps/45records/9checkpoints,6shape checks, wholepeer9dd25010/subsetbe3d0634. Known-zero and handoff-owned/readiness corrections preserve all earlier candidates. Root e20b47ff permits portable core source only.
+- [x] Implement/review the portable adoption/reconciliation and same-object handoff core, sourcef4fcae07/acceptance5afb82f0: all32 histories/nine checkpoints/320 snapshots, 21 owner controls, 19 independent methods and three peer probes pass. Preserve v1/v2, same-regression before failures, HOLDs and exact one-field fixture correction; actual FFI/first-entry/production continuation remains unqualified.
+- [x] Close/review the [shared-owner design](planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md),90fc021a, and unchanged209B input cohorteb5147d2, independent peersba12adb9/40adfa21. Rootba6328a7 checks11pins and permits literal preparation only; preserve originaled72/68ed five-finding HOLD. One canonical owner, seven injected read-only original APIs, five fictional output kinds and joint pre-open admission are fixed. This design acceptance clears preparation only; subsequent entries record the literal and implementation gates.
+- [x] Freeze/review the shared-owner public DATA50ee2d7a/peer3b32ba1b and 48 literal histories across14groups: schema34c3df05/fixturee12d6485/proofc76a7913/freeze69dd02e7; eight data-only checks and exactpeer2d4fb217 pass. Preserve v2/two-pointHOLD472105; v3 adds45final-status memberships and17independent read-request checks with all previous schedules/frames/checks unchanged. Root4db8622f checks12direct/15freeze pins and authorizes only three inactive source files plus actual synthetic tests; that authorization did not itself accept behavior; the following entry records the later scoped acceptance.
+- [x] Implement/review the small fictional canonical shared-owner continuation and non-owning views, acceptance `7e0d9484` / peer `13b1e793`: all 48 histories plus eight focused regressions, 12 author plus four supplemental controls, 372 strict snapshots, 518 simulated calls and 34 in-memory toy executions pass. Five source boundaries are corrected; original failures and the retrospective eight-regression chronology remain preserved. Actual first-entry/FFI/full-roster/source/physical output/new-parent/resource/profile/native and scientific/human gates stay open.
+- [x] Freeze/review the bounded indexed-accounting design `7e2b1b5b` plus append envelope `147dc128` and six pre-code controls; exact peer `4f5d8553` clears preparation. Accepted-V2 before proof `24da94c6` retains four actual scan-cost failures, two functional passes and zero errors. Preserve the first freeze/proof and two-point harness HOLD `50eff232`. Root `7683b6f6` verifies ten pins and authorizes only the indexed source/pure successor with all existing caps, public DATA and 48-history oracle unchanged.
+- [x] Implement and independently verify the indexed-only V3 successor: root `e318006d`, peer `e238e2a6`, final freeze `2be26673`. First run passes frozen six controls plus unchanged 48 histories/eight regressions and separate 16 author controls; zero hot global scans, 18 one-pass reports, five quarantine checks. All runtime caps and broader qualifications stay unchanged.
+- [x] Reassess all R01-R16/HR1-HR4 after indexed accounting; retain Project Progress Reassessment 2026-10-29 - Indexed Accounting.md, exact acceptance evidence and current-document QA.
+- [x] Freeze and independently review the finite role-aware admission-calculator contract and 30 pre-code vectors: proposal `038611da`, clarification `57ff21a8`, freeze `5478b014`, peer `50efc9ae`; seven structural checks pass. Root `30644e8c` verifies 12 inputs and authorizes only the standalone source/pure calculator and unchanged tests.
+- [x] Implement/review the standalone role-aware metadata calculator and declared storage/output arithmetic: root `64d26ee8`, peer `8029e92a`, freeze `23d63277`. Nine independent methods (original30 plus five focused), eight author controls and18 original check stops pass. Three findings and the F2 correction regression are fixed with pre-fix evidence retained; no runtime/cap/role activation.
+- [x] Reassess all R01-R16/HR1-HR4 after the admission envelope; retain Project Progress Reassessment 2026-10-29 - Admission Envelope.md and current-document QA.
+- [ ] Select/qualify the concrete producer/role/storage/serialization representation and exact future roster; freeze finite pre-code controls before any operational profile or physical activation.
+- [x] Review concrete prospective producer/storage design and F1 byte-lifetime closure: root `d3fee3d6`, peer `98729d86`, index `e7b68001`. Fourteen artifact caps40139776B, conservative named payload113985546B; original-input/generated-byte pools separate. This is design only; exact schema/source/fullroster/physical/resource gates remain open.
+- [x] Reassess all R01-R16/HR1-HR4 after producer storage design; retain Project Progress Reassessment 2026-10-29 - Producer Storage Design.md and current-document QA.
+- [x] Freeze and independently review the exact offset/enum/raw-fact/checker/legacy schema: b71cd8f4, peer7828e215, root14bc12d3 verifies12pins. Five pre-golden groups closed; original d5f28/HOLD44eee preserved. This authorizes independent literals only, not source or runtime.
+- [x] Reassess all R01-R16/HR1-HR4 after producer format schema; retain Project Progress Reassessment 2026-10-29 - Producer Format Schema.md and current-document QA.
+- [x] Complete the selected 216-input injected producer control: root 93eeaef9/peer fa6b4375/accounting 674cdf34, proof 7cefbe0e. One actual generated lifecycle hashes 9,017,363,601 bytes/captures 209 bytes in 10.094 seconds, with 8,799 reads/10,095 calls/216 known closes and complete retained ledgers. This is not maximum-capacity, real-roster, production, physical, resource or scientific qualification.
+- [ ] Complete broader role-aware producer qualification with the actual new-84 source/import/consumer roster, true entry/Origin, real FFI, joint physical writer/readback and integrated resource/native gates; selected fictional control acceptance does not close this item.
+- [x] Recover and independently validate all213 retained historical descriptor rows without accessing their targets: basis `3a7e00e9`, root check `3bf0b342`. HistoricalP213/9,017,363,392B; exact Q/R/C are137753/141161/142439 at64KiB,8796/12204/13482 at1MiB,2356/5764/7042 at4MiB. This is scale evidence, not the new84 roster, fresh eligibility or measured fit.
+- [ ] Complete source/metadata production preflight and review indexed accounting, query/call-ledger storage, role/capture/output budgets and the actual first-entry route before any cap lift or physical activation; `3038edd7` / independent `97024275` are source-only warnings, not actual runtime or full-roster fit.
+- [ ] Bind the future Unicode parent to separately reviewed journal/archive/resource policies; accepted known-launched v7 `--recognize` checkers do not establish the new format or full composition.
+
+- [x] Preserve the failed frozen native profile and original independent-verification timeout; no repeated original payload pass or native call.
+- [x] Freeze strict UTF8 specification/corpus before reference and adapter: v2 has107fixtures/167steps/354bytes/29interior cuts;5structural checks/manualreview pass; freeze285a46b3.
+- [x] Validate the independent pure oracle/API/harness in finite scope:7methods/proof04501119, all107statehashes match peer37d59537, acceptance1e0890b4. Reference104CPython-direct +3RFC/certificate; failedversions remain. Compiled/vendor/DLL behavior stays unqualified.
+- [x] Retain full R01–R16/HR1–HR4 oracle reassessment and critical next-gate review with validated local links/status/evidence.
+- [x] Finish SOURCE/PURE verifier orchestration:23synthetic methods/prooff6ddcadf, peer1d3b6143, acceptance28d251f4; ownership/factory-journal fixes and prior failures retained. No live bootstrap/file/output/real evidence checker or actual300s fit qualification.
+- [ ] Preregister any distinct future actual-vocabulary Unicode coverage protocol after source gates; preserve old failures and no favorable-token/fixture replacement.
+- [ ] Complete separately gated full-vocabulary masks, integrated resources, minimal application integration and scientific/human prerequisites.
+
+- [x] Retain full R01–R16/HR1–HR4 verifier-controller reassessment with five critical next gates; document/link/evidence checks pass independently of runtime acceptance.
+- [ ] Freeze a distinct finite Unicode control corpus/protocol and concrete real first-clock/authority/file/output/archive/journal/resource/core verifier bindings before any new actual read or execution.
+- [x] Reassess all R01-R16/HR1-HR4 after the independent literal freeze; retain Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md and current-document QA.
+- [x] Implement and validate the concrete small injected codec/owner/ports/controller: root096f5781/peerad941fe0; codec4methods carried by exact byte identity, actual48/48+SAME8 and13/13 indexed/new producer methods; small2,097,378B stream/209B capture. Preserve all first failures; no production or science qualification.
+- [x] Reassess all R01-R16/HR1-HR4 after the injected producer small gate; retain Project Progress Reassessment 2026-10-29 - Injected Producer.md and current-document QA.
+- [x] Prepare and validate the independent large-stream reference: proof1a3e47ec/rootcheck5f557e17; 198 prefix hashes from3,991,999,872 generated bytes in1.578s, all216 fictional descriptors and Q8799/R12255/C13551/E1496 checked. No producer run or real-file qualification follows from this reference.
+- [x] Reassess all R01-R16/HR1-HR4 after the selected large injected producer; retain Project Progress Reassessment 2026-10-29 - Large Injected Producer.md and pass independent ten-current-document QA before closing this checkbox.
+- [x] Prepare and validate the staged real new84 resource/import/consumer graph: manifest2aad403d/rootcheck03a18be7,48 unique resources/eight import edges/19 selected review-asset pins; planned and unbuilt outputs stay explicit. Metadata only, no execution admission; parallel entry/native contract pins remain pending.
+- [x] Freeze the canonical entry-kernel/non-owning OwnerOps/FileView seam: base9e65fec6/addendum0a573776,32 controls/53 branches; independent cross-contract09cb0580 and root source scope0c1c08e4. Source4 and selected216 acceptance preserved; no new subject execution yet.
+- [x] Freeze native raw-cell and held-lease bulk-consumer contracts: base16aae7f0/layout4cf7a07f/addendum08e80ef5,25 pre-code cases; field layout/API coverage and shared interfaces reviewed. Joint actor census, native serialization/physical admission and resource fit stay unresolved; no cap lift.
+- [ ] Implement and validate the complete entry/operations/file-view route. Finite Source4 E08 integration is accepted under root 43316e7a; Source3's five corrections and original 50-pass/three-defer history remain unchanged. Both historical E16 invocations stay excluded; native25 remains incomplete after its retained 31/12 and 38/5 diagnostics and named 41-pass/two-fail expected-code control; Source5 guard work is authoring-only and unexecuted. Real roster/consumers, first-entry/native capture, full physical14 output/readback, new84 runtime, resources and science remain pending.
+- [x] Retain the first Source1 diagnostic entry result: one original clock, constructor INVALID_INPUT, zero original/helper dispatches, unchanged pins/audit clean. Deeper journal/cache checks are explicitly NOT_REACHED, not claimed reproduced; Source1 files preserved.
+- [x] Retain and independently verify the first Source2 five-regression diagnostic: four PASS/one stopped-close cache FAIL, five genuine entry worlds, 0.219s, no setup/cleanup/evidence/audit/pin errors. Proof a1ff84a1 and actual review973114a9 preserve the failure; Source2 remains unaccepted and unchanged.
+- [x] Validate and independently accept the five unchanged Source3 correction regressions: five PASS in0.203s, exact helper prefix99000B, committed raw facts and original errors preserved, no stopped-call cache healing or duplicate close. Proof ca6baf67 / actual peer5efc550f / root0d9c42a2. Source/synthetic scope only.
+- [x] Execute the first frozen 32-control/53-branch Source3 suite and independently audit its retained result: 50 PASS, three explicit DEFERRED, zero FAIL/unreached/deadline-unknown in 9.172s; first proof5c193cdb, branch peer64868e28, byte peer5ee5dd20 and scoped root e54b6d55. This does not complete all branch requirements.
+- [x] Close the finite E08 external decision/output content-pin policy in the genuine Source4 entry: root 43316e7a / branch peer 01e92b72 / byte peer 7ae5e826; all 52 frozen policy outcomes and 15 integration branches pass. Metadata success is separate from full entry admission; no real/native/physical/scientific qualification.
+- [x] Freeze and independently accept E08 contract/pre-code expectations: 24 stable pins, 52 unchanged literal rows (10 expected data reports/42 expected refusals), and 10 named/15 planned integration branches. Peer faaba85e / root a055dfb3. This is metadata preparation, with zero subject executions.
+- [x] Implement and separately validate the entry-integrated E08 successor and actual-object harness: first proof f1c1e980 passes 122 assertions (5 + 52 + 15 + 50) in 13.359s under coherent pause c38df4b3, corrected metadata cf4d6aac, peer fe105a5b and Root scope/binding 7e1caa16/9787b72d. All first metadata HOLDs, Source3 history and frozen goldens preserved; whole entry remains pending.
+- [x] Retain the explicit exclusion/defer disposition of both historical E16 invocations in root e54b6d55 and the entry-coverage assessment; preserve their actual closed-loader/API checks without claiming literal historical execution or pass.
+- [ ] Qualify native25 component coverage with runtime/data/static/deferred distinctions; native/physical/qualified-lease branches remain separately gated.
+- [x] Reassess all R01–R16/HR1–HR4 after entry corrections and validate current docs/memory. Draft: planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md; independent documentation QA PASS: ENTRY-SOURCE3-CURRENT-DOCS-QA-v1.json.
+- [x] Reassess all R01–R16/HR1–HR4 after entry contract coverage and validate current docs/memory. Assessment: planning/Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md; independent documentation QA PASS: ENTRY-CONTRACT-COVERAGE-CURRENT-DOCS-QA-v1.json.
+- [x] Reassess all R01–R16/HR1–HR4 after E08 entry policy and validate current docs/memory. Assessment: planning/Project Progress Reassessment 2026-10-30 - E08 Policy.md; independent documentation QA PASS: ENTRY-E08-CURRENT-DOCS-QA-v2.json.
+- [x] Qualify only the compiled Windows x64 raw-carrier layout and the once-only 79-control own-source fake-target component: root ad4c9f0e, compiled peer 5796bcc6 (129 checks / 14 store paths / 19 bodies), actual peer 1b10326d (399 checks), 29,310 measured C checks / 47 fake targets / 17 error entries / 16 returns; four run files / 121,790 B. No real Win32/Python bridge/same-Core native bank/lease/physical14/native25/resource/scientific qualification.
+- [x] Reassess all R01–R16/HR1–HR4 after C return capture and pass independent current-document/memory QA. Assessment: planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md; independent documentation QA PASS: C-RETURN-CURRENT-DOCS-QA-v2.json.

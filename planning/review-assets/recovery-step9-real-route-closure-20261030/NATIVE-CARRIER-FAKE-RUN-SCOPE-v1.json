@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_AUTHORIZED_ONE_MODEL_FREE_C_FAKE_TARGET_RUN",
+  "created_at_utc": "20261030T061649Z",
+  "budget_seconds": 60,
+  "cleanup_reserve_inside_budget_seconds": 2,
+  "inputs": {
+    "driver": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\run_native_carrier_fake_tests_v4.py",
+      "bytes": 9844,
+      "sha256": "1ca55b9c8855e4898d018f3e4a145b5f619c0e627595295b22f8752561adb76c"
+    },
+    "command_executor": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v6.py",
+      "bytes": 14331,
+      "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+    },
+    "expectations": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "bytes": 128574,
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    "tests": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\native_carrier_fake_tests_v1.c",
+      "bytes": 23473,
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    },
+    "preparation": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json",
+      "bytes": 7108,
+      "sha256": "31c1a5b4b1b8463b926c9201d7d074970647a66f229b8c4a67651c0115f33274"
+    },
+    "phase": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-PARTIAL-PHASE-CLARIFICATION-v1.json",
+      "bytes": 2353,
+      "sha256": "5e93aec96202a9610bd7473eda39ea635502940218dd025c21da53f93c9b458a"
+    },
+    "image": {
+      "path": "data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\native-carrier-fake-tests.exe",
+      "bytes": 163328,
+      "sha256": "4eef5fc52eac8868e963dad15e92e2101a7fda428cc6ddb8412076aaf8eeebbd"
+    },
+    "build_result": {
+      "path": "data\\cache\\r09-native-carrier-component-build-20261030T055706Z\\build-result.json",
+      "bytes": 7136,
+      "sha256": "9275174036dfab54a50fea143cd3d547e5dbadd5e41af559d95b4eacbfc4fa8e"
+    },
+    "artifact_peer": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-INDEPENDENT-BUILD-ARTIFACT-REVIEW-v1.json",
+      "bytes": 19754,
+      "sha256": "5796bcc69efd666491baf3fdbc04b96c509f8c772173817370c3ca4b341d9cb4"
+    },
+    "runtime_peer": {
+      "path": "planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "bytes": 6349,
+      "sha256": "5bd681cbb9af82f7c182e4a412c5af93c02fbc2813282e169d1f33a35b11c64b"
+    }
+  },
+  "expected_controls": 79,
+  "expected_wrapper_attempts": 116,
+  "expected_fake_target_calls": 47,
+  "expected_error_entries": 17,
+  "expected_error_returns": 16,
+  "output_relative": "data/cache/r09-native-carrier-component-run-20261030T061649Z",
+  "authority": "User-authorized framework correctness work and installed toolchain; both independent artifact/ordering and runtime-helper reviews clear before this binding.",
+  "boundary": "Exactly one own-source compiled image, fixed fake14 API target functions, preallocated cells and buffers, full256B oracle comparison. Standard executable/CRT/pipe startup is external test TCB, not qualified physical14 activity.",
+  "exclusions": "No model/clinical/original payload, real fourteen-port target, old native experiment replay, same-Core ticket/bank/lease/path lifetime, physical14/new84/inference/scientific qualification or cap/default/downloader/monitor change.",
+  "first_result": "Exclusive output reservation and no retry. Preserve original errors/raw output/acknowledged journal/first grade; failed tests remain failed until separately named corrections and review.",
+  "provider_spend_usd": 0
+}

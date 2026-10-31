@@ -1,0 +1,34 @@
+# Console host and Job counters: bounded source analysis v1
+
+The retained diagnostic supports a second **currently queried Job member whose image pathname was conhost.exe** before termination. Microsoft's console design explains why a hidden console host is plausible even with CREATE_NO_WINDOW. I found no formal API documentation explaining an exception that admits that host despite ActiveProcessLimit=1. No host allowlist, total2 allowance, old-incident attribution or further attempt follows from this research.
+
+The independent actual-result verification `25c648a168c5d836acb44e080ba8c4219c2d38068d15174ab35a92701d5beec5` records main PID19276 and secondary PID24584. Their same-handle PID checks and current exact-Job membership were true, and both zero-time waits were nonsignaled before the explicit stop. The secondary creation FILETIME was 99,773 ticks, about 9.98 ms, after the main creation time. Raw samples changed from total1/active1 to total2/active2 before termination, then active0 immediately after the explicit Job termination returned. Cap was not reached and stdout retained zero bytes. The case stopped on the strict counter finding and remains negative. The reported pathname was not opened or hashed; historical notification identity, parent PID and the kernel creation/admission path remain unproven.
+
+## What the primary sources support
+
+The frozen SDK already uses flags `0x08080404`: suspended, CREATE_NO_WINDOW, extended startup info and Unicode environment. The own worker is linked `/SUBSYSTEM:CONSOLE`, `/MD`, `/MANIFEST:NO`; its pinned PE header independently decodes to subsystem3. Its overflow branch has no explicit child-process call or AllocConsole/AttachConsole call. Those are source/static facts, not a complete runtime-library call trace.
+
+CREATE_NO_WINDOW controls running a console application without a visible console window. It is distinct from DETACHED_PROCESS; the documentation does not promise absence of a console-host process. [Microsoft process-creation flags](https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags).
+
+Microsoft's Terminal design describes kernelbase initialization launching inbox conhost when a command-line client has no attached console server, then considering visibility/delegation. It explicitly retains inbox hosting for applications with no window. This supplies a mechanism consistent with the observed path; it does not attest to the installed binary or prove this run's exact internal path. [Microsoft console-host design](https://github.com/microsoft/terminal/blob/main/doc/specs/%23492%20-%20Default%20Terminal/spec.md).
+
+Console allocation follows application subsystem and launch policy. CONSOLE requests console support; WINDOWS does not require it. CRT startup precedes user entry, while /MD selects runtime linkage. These facts do not establish that the CRT explicitly spawned the host, or justify changing to /MT. [Console creation](https://learn.microsoft.com/en-us/windows/console/creation-of-a-console), [subsystem selection](https://learn.microsoft.com/en-us/cpp/build/reference/subsystem-specify-subsystem?view=msvc-170), [CRT startup](https://learn.microsoft.com/en-us/cpp/c-runtime-library/crt-initialization?view=msvc-170), [runtime linkage](https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170).
+
+The public Job API documents a simultaneous active-process limit and failed associations when it is exceeded. Ordinary child association rules explain why a descendant can join a Job in general; they do not document this host-specific admission under limit1. The exact exception/mechanism remains unresolved. [Active-process limit](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information), [Job membership rules](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects).
+
+A Microsoft-hosted Q&A contains an external-staff moderator's firsthand reproduction of conhost joining under CREATE_NO_WINDOW despite limit1, with different results under DETACHED_PROCESS. The author explicitly lacked documentation for the exemption. This is corroborating empirical testimony, not a normative Microsoft guarantee; it cannot identify the historical unknown PID. [Q&A report](https://learn.microsoft.com/en-us/answers/questions/6034784/windows-job-object-reports-activeprocesses-1-after).
+
+## Source alternatives, with no attempt authorized
+
+| Alternative | Relevant change and limit |
+|---|---|
+| Explicit detached-console launch policy | Smallest prospective change: replace CREATE_NO_WINDOW with DETACHED_PROCESS, yielding flags `0x0008040C`, while keeping the same EXE, JOB_LIST, suspension, limits, pipes and cleanup. Console detachment is not Job breakaway. Do not add CREATE_BREAKAWAY_FROM_JOB. Requires a separately frozen parent route, accurate flag journaling and fresh harmless evidence. |
+| Inherit the parent's console | Remove the forced hidden-console policy only when an existing parent console is an established precondition. The current parent's full console context is not established, so this is environment dependent. |
+| GUI subsystem worker | Rebuild as WINDOWS with a reviewed entry/argument contract. This changes the executable/startup architecture and is larger than a parent flag change. |
+| CUI detached manifest | Microsoft documents consoleAllocationPolicy=detached on Windows11 24H2/build26100+. It keeps CUI shell behavior while skipping allocation, but requires a new manifest/executable policy; the current build suppresses its manifest. |
+
+Explicit redirected standard handles have a separate process-table role from a visible console. This supports preserving the existing three-handle pipe/NUL interface in a prospective detached policy, but actual capture/EOF/cleanup behavior still needs qualification. [Standard handles](https://learn.microsoft.com/en-us/windows/console/getstdhandle), [detached allocation manifest](https://learn.microsoft.com/en-us/windows/console/console-allocation-policy).
+
+If a future CLI exposes console policy, the frozen protocol should select the exact reviewed policy/flags rather than accept arbitrary creation flags. Preserve the frozen SDK source and disabled ABI gate; a new version or narrowly proved creation-method copy must report the flags actually dispatched. No default-policy/environment experiment or rebuild is authorized here.
+
+Before any future observer reuse, also fix the separately retained queue pre-dispatch accounting gap. The consumed v1 has nine normal returns with no observed interruption; that does not prove its budget under unknown-return failures. See NATIVE-JOB-IOCP-V1-POST-REVIEW-WARNING.json (`f0840e3d5e0ca82c42092853e75d81839f9064fb52f9952d99405c53a846fdc0`). No source/helper/API/compiler/worker was executed for this research, and no conhost binary was opened or hashed.

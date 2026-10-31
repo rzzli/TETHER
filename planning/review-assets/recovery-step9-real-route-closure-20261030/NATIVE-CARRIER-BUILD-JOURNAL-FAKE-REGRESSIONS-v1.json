@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v6.py",
+    "bytes": 14331,
+    "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+  },
+  "cases": [
+    {
+      "id": "normal",
+      "outcome": "PASS",
+      "failure": null,
+      "state": {
+        "previous": "c7cb5ed55598fff309de365acbe904f0169dba74b83968635bc9efc2a71806e8",
+        "complete": true,
+        "acked": 2,
+        "events": [
+          {
+            "sequence": 0,
+            "previous_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "elapsed_seconds": 0,
+            "kind": "first",
+            "number": 1
+          },
+          {
+            "sequence": 1,
+            "previous_sha256": "cd3fbc42a0ed9b4753489b9efb0e39e87325ea9f638b41081c5b31506bb9e845",
+            "elapsed_seconds": 0,
+            "kind": "second",
+            "number": 2
+          }
+        ]
+      },
+      "open_attempts": 2,
+      "close_attempts": 2,
+      "raw_fake_bytes_hex": "7b22656c61707365645f7365636f6e6473223a302c226b696e64223a226669727374222c226e756d626572223a312c2270726576696f75735f736861323536223a2230303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030222c2273657175656e6365223a307d0a7b22656c61707365645f7365636f6e6473223a302c226b696e64223a227365636f6e64222c226e756d626572223a322c2270726576696f75735f736861323536223a2263643366626334326130656439623437353334383962396566623065333965383733323565613966363338623431303831633562333135303662623965383435222c2273657175656e6365223a317d0a"
+    },
+    {
+      "id": "partial_write",
+      "outcome": "PASS",
+      "failure": null,
+      "state": {
+        "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+        "complete": false,
+        "acked": 0,
+        "events": []
+      },
+      "open_attempts": 1,
+      "close_attempts": 1,
+      "raw_fake_bytes_hex": "7b22656c617073"
+    },
+    {
+      "id": "close_failure",
+      "outcome": "PASS",
+      "failure": null,
+      "state": {
+        "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+        "complete": false,
+        "acked": 0,
+        "events": []
+      },
+      "open_attempts": 1,
+      "close_attempts": 1,
+      "raw_fake_bytes_hex": "7b22656c61707365645f7365636f6e6473223a302c226b696e64223a226669727374222c226e756d626572223a312c2270726576696f75735f736861323536223a2230303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030222c2273657175656e6365223a307d0a"
+    }
+  ],
+  "scope": "Root-author fixed fake emitter controls, exact source fragment only; fake bytes are not filesystem flush/durability. No C subject/driver main/compiler/native/original call.",
+  "actual_process_spawns": 0,
+  "C_builds": 0,
+  "native_runs": 0
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_STATIC_ONE_FAKE_RUN_HELPER_ONLY",
+  "scope": "Independent runtime helper/grader/journal/deadline review only. Native compiled14-function ASM/signature/artifact peer is separate; Root alone binds any image dispatch.",
+  "inputs": {
+    "runtime_v4": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/run_native_carrier_fake_tests_v4.py",
+      "bytes": 9844,
+      "sha256": "1ca55b9c8855e4898d018f3e4a145b5f619c0e627595295b22f8752561adb76c"
+    },
+    "preserved_v3": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/run_native_carrier_fake_tests_v3.py",
+      "bytes": 9788,
+      "sha256": "d4dd3d59e701d710d82db986851527cb3e12420b9f53a724a13675fb2bbc6c64"
+    },
+    "preserved_first_static_HOLD": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-INDEPENDENT-STATIC-HOLD-v3.json",
+      "bytes": 1023,
+      "sha256": "62521dc4cfda36b35d1def0a1d2b549bdc51713a103b45628ecb39b2731f2f43"
+    },
+    "checked_Driver6": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/build_native_carrier_component_v6.py",
+      "bytes": 14331,
+      "sha256": "e182ff2503103a7b77ca888f0f2c572600859def6d501476e661784f55a8c16b"
+    },
+    "frozen_oracle": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-EXPECTATIONS-v1.json",
+      "bytes": 128574,
+      "sha256": "90ac93b1c763722353ae7de6388eabf46fc7acfb087d84390fb168c97b36b883"
+    },
+    "frozen_C79_source": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/native_carrier_fake_tests_v1.c",
+      "bytes": 23473,
+      "sha256": "34b3617eb2aad8ab07eb0fb9ea0dd69ba8f2a8b3f37fd704cc6a76629cbe82dc"
+    },
+    "frozen_test_preparation": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-FAKE-TEST-PREPARATION-v1.json",
+      "bytes": 7108,
+      "sha256": "31c1a5b4b1b8463b926c9201d7d074970647a66f229b8c4a67651c0115f33274"
+    },
+    "actual_build_report": {
+      "path": "data/cache/r09-native-carrier-component-build-20261030T055706Z/build-result.json",
+      "bytes": 7136,
+      "sha256": "9275174036dfab54a50fea143cd3d547e5dbadd5e41af559d95b4eacbfc4fa8e"
+    },
+    "named_v4_correction": {
+      "path": "planning/review-assets/recovery-step9-real-route-closure-20261030/NATIVE-CARRIER-RUNTIME-BINDINGS-CORRECTION-v4.json",
+      "bytes": 1180,
+      "sha256": "9d0569c4a9f5400def31082fffa99ad3d4d5b6acc6c55bfe6d2d7f61f86503ee"
+    }
+  },
+  "checks": {
+    "v3_to_v4_exact_added_bytes": 56,
+    "v4_missing_nonlocals": [],
+    "AST_only": true,
+    "remaining_material_blockers": [],
+    "groups": [
+      46,
+      22,
+      10,
+      1
+    ],
+    "ordered_unique_cases": 79,
+    "complete_cells": 79,
+    "additional_error_boundary_cells": 17,
+    "cell_bytes": 256,
+    "metadata_helper_note": "An initial check assumed the added assignments were on the combined initialization line. Actual exact named correction adds a separate line; format assumption corrected without subject execution."
+  },
+  "grading": [
+    "Requires80 JSON records,79 case rows and1summary. Exact ordered case IDs/PASS/fourkeys and complete256B normal/escaped and applicable boundary bytes match frozen expectations; absent boundary must be null.",
+    "Exact nonbool integer counters:cases79/failures0/initializer79/wrapper116/targets47/errorentries17/errorreturns16/partialcopies17. checks is measured positive integer, not a fixed oracle total.",
+    "Process failure and grading failure remain distinct. A truncated/malformed stdout may leave no parsed cases even when raw prefix exists: retained stdout/first-error prefixes remain evidence; do not interpret empty parsed list as zero target work."
+  ],
+  "executor": [
+    "Extracts only exact Driver6 nested run AST. Synthetic factory retains primary_dispatch_error=None for its nonlocal; namespace supplies start/time/subprocess/environment/out/results/emit. No build main/compiler is invoked.",
+    "One absolute pinned fake-image argv, shellFalse. Work starts only with >2seconds left of60, communicate uses remainingminus2, then known-main kill/reap uses at most remaining2. Original error, cleanup errors, first-prefix files, completeness and observed exit remain separate.",
+    "No OS-wide descendant, noncooperative whole-process or actual Kernel ticket/lease guarantee."
+  ],
+  "journal": [
+    "Fresh exact approved output directory is exclusive one-shot consumption; no implicit retry after partial setup.",
+    "V4 binds completeTrue/count0. Tip/count advance only after full append and close return; unknown append/event-retention tail latches incomplete and forbids further append/repair. Known ACK tip/count and in-memory event length are distinct.",
+    "Ordinary writes are not flush/crash durability. Failure/report-write branches preserve failed status and print explicit report failure; no late success."
+  ],
+  "timing": [
+    "Input checks and directory reservation precede the60-second timer. Image work/cleanup and post-inventory eligibility use that original helper timer; no subsequent command follows failed veto.",
+    "Final report construction/write, startup and failure-only diagnostic tail excluded/unmeasured. Not a canonical production first clock or300/120/117 scientific budget proof."
+  ],
+  "build_metadata": {
+    "status": "BUILT_NOT_EXECUTED",
+    "build_elapsed_seconds": 1.047000000020489,
+    "compiler_linker_commands": 3,
+    "returncodes": [
+      0,
+      0,
+      0
+    ],
+    "fake_image_dispatches": 0,
+    "reported_artifact_files": 11,
+    "reported_artifact_content_bytes": 339767,
+    "meaning": "Build-only metadata. Compiler/linker processes occurred in separate build scope; the fake image was not run at this review. Byte lengths/declared buffers are not RSS/commit/native target/inference capacity."
+  },
+  "next": "After both exact peers, Root may separately bind one fake-image run; no automatic dispatch is performed by this review.",
+  "activity": {
+    "runtime_source_imports": 0,
+    "C_or_SDK_or_image_actions": 0,
+    "build_replays": 0,
+    "image_runs": 0,
+    "original_or_model_reads": 0,
+    "trusted_metadata_AST_only": true
+  },
+  "qualification": false
+}

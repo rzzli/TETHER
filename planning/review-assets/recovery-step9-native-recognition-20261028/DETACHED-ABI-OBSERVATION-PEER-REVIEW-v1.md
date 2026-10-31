@@ -1,0 +1,11 @@
+# Fixed detached ABI observation v1: exact source-only clearance
+
+**CLEAR for frozen source/protocol/pure evidence; root separately decides one nonautomatic attempt.** Helper97544efa; protocoldc7de124. All147 pins match, prospective output is absent. PURE/CHECKER select mainv2, whose helper/checker hashes match10573c36/73c31. Preserved mainv1 is provenance only. Adversarial proof2a7745 matches all seven final validator ASTs; final binding158b74 is additionally pinned here.
+
+Exact EXE9f955, runtime core4 including libomp, finite System32 candidates16 and disabled detached SDK3bf remain bound. All27 Windows bindings match the qualified facade. No old193-pin collector/execute_draft, CPU DLL, compiler, harmless-worker EXE, model payload or IOCP route is used. Launch is exact argc4/--abi/JOB_LIST/three stdio/flags0x8040C with strict generic total1, finite caps and inherited owned cleanup. Exactly two target functions are explicitly called; wider symbol resolution and DLL-initializer effects are disclosed.
+
+Parent validates exact typed17 defaults, all x64 layout fields/offsets, version1..255 ASCII, five complete JSONL events, module paths/names, claims/caps/EOF/exit0 and strict final Job state. Both artifact entries are safe/regular checked; both reparse negatives are retained. Unknown attempts stay consumed. Primary, final-recheck-close, publication, original-lease-close and after-seal failures retain independent evidence and veto success.
+
+Reviewed11 main lifecycle tests plus9 adversarial methods/230 vectors. Independently verified all seven synthetic lifecycle output universes, receipt/seal hashes, raw snapshot bytes/decoded counts/PIDs, creation flags and journal chains. The after-seal fixture preserves its earlier successful serialized seal and is correctly vetoed by its later authoritative marker. No material blocker remains.
+
+Module inventory is self-reported before version/default queries: no post-query/global/final initializer attestation is claimed. No actual helper/API/compiler/child/target/model ran during review; no CPU DLL or GGUF payload was read. Any successful future result means ABI observations retained pending independent acceptance, not model recognition, historical causality, scientific validation or universal containment. Root must rehash and separately decide this exact single attempt.

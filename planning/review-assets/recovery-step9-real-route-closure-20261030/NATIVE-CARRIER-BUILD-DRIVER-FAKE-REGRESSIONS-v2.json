@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\build_native_carrier_component_v3.py",
+    "bytes": 10757,
+    "sha256": "2d0b0ad29ab13ea9a82b01d28238a87c3e4c4eefbacf1a1eff5f0916cb92d3db"
+  },
+  "authorization": "Root finite trusted-helper fake regression only; original user-authorized correctness work. No C subject or driver main/build binding is executed.",
+  "cases": [
+    {
+      "id": "timeout_kill_and_reap_fail",
+      "outcome": "PASS",
+      "failure": null,
+      "fake_spawn_count": 1,
+      "communicate_timeouts": [
+        58.0,
+        2.0
+      ],
+      "kill_calls": 1,
+      "primary_error": {
+        "type": "TimeoutExpired",
+        "message": "Command '['fake-compiler']' timed out after 58 seconds"
+      },
+      "results": [
+        {
+          "label": "timeout_kill_and_reap_fail",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": null,
+          "stdout_bytes": 6,
+          "stderr_bytes": 2,
+          "output_complete": false,
+          "primary_error": {
+            "type": "TimeoutExpired",
+            "message": "Command '['fake-compiler']' timed out after 58 seconds"
+          },
+          "cleanup_errors": [
+            {
+              "stage": "kill",
+              "type": "OSError",
+              "message": "fixed kill failure"
+            },
+            {
+              "stage": "bounded_reap",
+              "type": "TimeoutExpired",
+              "message": "Command '['fake-compiler']' timed out after 2 seconds"
+            }
+          ],
+          "kill_attempted": true,
+          "kill_acknowledged": false,
+          "main_exit_observed": false
+        }
+      ],
+      "events": [
+        {
+          "kind": "dispatch_reserved",
+          "label": "timeout_kill_and_reap_fail",
+          "argv": [
+            "fake-compiler"
+          ]
+        },
+        {
+          "kind": "dispatch_returned_or_failed",
+          "label": "timeout_kill_and_reap_fail",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": null,
+          "stdout_bytes": 6,
+          "stderr_bytes": 2,
+          "output_complete": false,
+          "primary_error": {
+            "type": "TimeoutExpired",
+            "message": "Command '['fake-compiler']' timed out after 58 seconds"
+          },
+          "cleanup_errors": [
+            {
+              "stage": "kill",
+              "type": "OSError",
+              "message": "fixed kill failure"
+            },
+            {
+              "stage": "bounded_reap",
+              "type": "TimeoutExpired",
+              "message": "Command '['fake-compiler']' timed out after 2 seconds"
+            }
+          ],
+          "kill_attempted": true,
+          "kill_acknowledged": false,
+          "main_exit_observed": false
+        }
+      ]
+    },
+    {
+      "id": "interrupt_cleanup_exit0_not_healed",
+      "outcome": "PASS",
+      "failure": null,
+      "fake_spawn_count": 1,
+      "communicate_timeouts": [
+        58.0,
+        2.0
+      ],
+      "kill_calls": 1,
+      "primary_error": {
+        "type": "KeyboardInterrupt",
+        "message": "fixed interruption"
+      },
+      "results": [
+        {
+          "label": "interrupt_cleanup_exit0_not_healed",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 3,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": {
+            "type": "KeyboardInterrupt",
+            "message": "fixed interruption"
+          },
+          "cleanup_errors": [],
+          "kill_attempted": true,
+          "kill_acknowledged": true,
+          "main_exit_observed": true
+        }
+      ],
+      "events": [
+        {
+          "kind": "dispatch_reserved",
+          "label": "interrupt_cleanup_exit0_not_healed",
+          "argv": [
+            "fake-compiler"
+          ]
+        },
+        {
+          "kind": "dispatch_returned_or_failed",
+          "label": "interrupt_cleanup_exit0_not_healed",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 3,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": {
+            "type": "KeyboardInterrupt",
+            "message": "fixed interruption"
+          },
+          "cleanup_errors": [],
+          "kill_attempted": true,
+          "kill_acknowledged": true,
+          "main_exit_observed": true
+        }
+      ]
+    },
+    {
+      "id": "ordinary_success",
+      "outcome": "PASS",
+      "failure": null,
+      "fake_spawn_count": 1,
+      "communicate_timeouts": [
+        58.0
+      ],
+      "kill_calls": 0,
+      "primary_error": null,
+      "results": [
+        {
+          "label": "ordinary_success",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 2,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": null,
+          "cleanup_errors": [],
+          "kill_attempted": false,
+          "kill_acknowledged": false,
+          "main_exit_observed": true
+        }
+      ],
+      "events": [
+        {
+          "kind": "dispatch_reserved",
+          "label": "ordinary_success",
+          "argv": [
+            "fake-compiler"
+          ]
+        },
+        {
+          "kind": "dispatch_returned_or_failed",
+          "label": "ordinary_success",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 2,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": null,
+          "cleanup_errors": [],
+          "kill_attempted": false,
+          "kill_acknowledged": false,
+          "main_exit_observed": true
+        }
+      ]
+    },
+    {
+      "id": "slow_spawn_preserves_original_deadline",
+      "outcome": "PASS",
+      "failure": null,
+      "fake_spawn_count": 1,
+      "communicate_timeouts": [
+        1.5
+      ],
+      "kill_calls": 1,
+      "primary_error": {
+        "type": "TimeoutError",
+        "message": "Build work deadline after process creation: slow_spawn_preserves_original_deadline"
+      },
+      "results": [
+        {
+          "label": "slow_spawn_preserves_original_deadline",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 4,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": {
+            "type": "TimeoutError",
+            "message": "Build work deadline after process creation: slow_spawn_preserves_original_deadline"
+          },
+          "cleanup_errors": [],
+          "kill_attempted": true,
+          "kill_acknowledged": true,
+          "main_exit_observed": true
+        }
+      ],
+      "events": [
+        {
+          "kind": "dispatch_reserved",
+          "label": "slow_spawn_preserves_original_deadline",
+          "argv": [
+            "fake-compiler"
+          ]
+        },
+        {
+          "kind": "dispatch_returned_or_failed",
+          "label": "slow_spawn_preserves_original_deadline",
+          "argv": [
+            "fake-compiler"
+          ],
+          "pid": 111,
+          "returncode": 0,
+          "stdout_bytes": 4,
+          "stderr_bytes": 0,
+          "output_complete": true,
+          "primary_error": {
+            "type": "TimeoutError",
+            "message": "Build work deadline after process creation: slow_spawn_preserves_original_deadline"
+          },
+          "cleanup_errors": [],
+          "kill_attempted": true,
+          "kill_acknowledged": true,
+          "main_exit_observed": true
+        }
+      ]
+    }
+  ],
+  "scope": "Four fixed fake process controls, real ordinary harness evidence writes; no OS process/SDK/compiler/native behavior or physical profile is qualified.",
+  "actual_process_spawns": 0,
+  "C_builds": 0,
+  "C_subject_runs": 0,
+  "original_target_reads": 0
+}

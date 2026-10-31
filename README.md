@@ -1,5 +1,164 @@
 # AsOf target-evaluation agents
 
+The **C++ tools work without a restart**. The earlier verified validator ran
+once; its profile failed because two
+required partial-UTF-8 coverage slots were unavailable. All 189 retained case
+bodies were separately checked; four fixed prefix controls passed. The original
+independent whole-verification gate remains incomplete after its 300-second cap.
+A separate metadata-only archive audit passes without repairing either gate.
+Subsequent source-only recovery accepts a strict byte/chunk oracle across107
+fixtures/167steps and a verifier controller with23synthetic test methods.
+Independent review confirms both limited scopes. A distinct source-only corpus
+now freezes 84 full v3 response documents across four stage instances and two
+unique grammars; seven structural methods and independent exact-byte/semantic
+checks for all 84 documents pass. The pure supplied-piece analyzer also passes
+eight author and eight independent methods, including 272 synthetic partitions.
+Corrected injected verifier interfaces pass 22 author methods and independent
+re-review; the captured-byte journal checker passes ten author/seven peer methods.
+The Job-byte/phase primitive passes eight author/seven peer methods. The corrected
+in-memory pack codec passes eleven author/eleven peer methods, including 720
+callback identity probes. The corrected captured-graph checker now passes thirteen
+author methods, all 32 fixtures and seven independent methods (acceptance686dcf47).
+The corrected Unicode observation validator passes fourteen author methods, four
+independent terminal/data probes and two root regressions (acceptance743ece01).
+Injected portable file handling now passes 84 published cases, 21 focused methods
+and nine independent probes (acceptance16d65f57). The portable raw-adoption core
+now passes 32 histories, nine checkpoints and 320 snapshots, with 21 owner-control
+methods, 19 independent driver methods and three peer probes (acceptance5afb82f0).
+The three retained v2 counterexamples pass on v3.
+
+Current checkpoint, 30 October UTC: [C return capture](<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>) is accepted only for the compiled x64 raw-carrier layout and one own-source fake-target component run (root ad4c9f0e; compiled peer 5796bcc6; actual peer 1b10326d). Independent compiled-artifact review passes 129 checks and actual-run review passes 399 checks. All 79 controls / 29,310 measured C checks pass; 79 primary and 17 boundary cells match, with 47 fake calls and 17 error entries / 16 returns. The run reports 0.172s and four retained files / 121,790 B. This does not qualify real Win32, the Python conversion bridge, same-Core native bank/leases, physical14 or resources. Source4 E08's accepted 122 assertions remain unchanged. Native25's named expected-code control retains 41 PASS / two FAIL / four DEFERRED / one STATIC; only the two actual API/axis-kind guards remain. Source5 guard authoring is authorized only; the new source/harness is unexecuted. Complete entry, native25, R09 and science remain open.
+
+Next: correct only the two remaining native25 API/axis-kind guard defects in the separately named Source5 successor, then obtain exact peer review and a separate execution binding. Independent normative errata resolved the three specific-code expectations; the named unchanged-Source4 control is 41 PASS / two FAIL / four DEFERRED / one STATIC. Preserve the 31/12 and callback-only 38/5 diagnostics and every trailing assertion. Close the actual new84 source/import/consumer roster and core4 roles, same-Core C/Python bridge, joint physical14 reservations and genuine held-lease child/image route before activation. Planned/unbuilt descriptors permit authoring, not execution; 19,079 joint calls are not profile fit. AsOf 0.3.11/default v2 retains 1,774 tests/327 pins without rerun. Resource/human/scientific gates, original FAILED/INCOMPLETE_TIMEOUT and historical E16 exclusions remain; $0 and downloader/stopped monitor unchanged.
+No retry occurred. Accepted AsOf 0.3.11/default v2 remains unchanged. The following
+dated checkpoint descriptions retain earlier scopes and their historical limits.
+
+Retained accepted recovery — October 28 UTC: AsOf **0.3.11** passed **1,774 full
+tests without failures, errors or skips**, required probes and package/demo
+checks. All **327** source/resource pins and two protected hash-only checks match.
+The new [pure generation contract](docs/INTERPRETATION_GENERATION.md) builds a
+bounded direct grammar and validates responses offline. It preserves the original
+v2 route and twelve v2 payload fingerprints; v3 is **not wired into dispatch**.
+
+The dependency-free installed wheel passes seven guarded legacy families, twelve
+v3 stage preparations, 36 state validations and 74 rejection cases. Its plain-JSON
+artifact relocation passes; this does not introduce a native/dossier receipt
+family. All ten preserved 0.3.1–0.3.10 matching verifiers qualify through seven
+retained successes plus three separately declared completion successes. The
+original timeout remains failed. The optional `ingest` extra retains Arrow
+21.0.0: 755 copied files match and exactly five generated caches have separately
+verified source-equivalent derivations. See the [acceptance](planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json)
+and [closeout](planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md).
+
+The C++ tools work without restarting. The prior actual-DLL JSON fixture passes,
+but unchanged-schema conversion closed **negative** with permissive-pattern
+warnings. That result is preserved. Pure grammar checks do not establish actual
+native document/EOG acceptance, decoding cost or scientific quality. The prior
+[0.3.10 simulation](planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md)
+used **295.922/300 seconds without real inference**. The fixed typed boundary
+passes below; mode-specific vocabulary/EOG and resources remain unqualified.
+
+The [diagnostic bridge build](planning/review-assets/recovery-step9-native-recognition-20261028/TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.md)
+passes compile/link and independent artifact verification. Its once-only
+[diagnostic observation](planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V3-RESULT-VERIFICATION.md)
+reports `apphelp.dll` at `C:\Windows\SYSTEM32\apphelp.dll`, then preserves the
+module-policy rejection. The directory matches; the basename is outside the
+16-name policy. All243 inputs/13 files/17 events/490 lease records, complete EOF
+and final Job1/0/0/empty verify. Module-image authenticity, a full inventory and
+the reason it loaded remain unverified. The previous run's rejected identity
+stays unknown. The [census-capable helper build](planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.md)
+now independently verifies: 234 pins, 14 files, eight journal events and a
+4.656-second successful compile/link. A separately authorized [single census](planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.md)
+then verifies183pins/11files/17events and17 complete reports: self/core4 plus
+12 System32 reports, with Apphelp the sole previously unlisted basename. Its
+0.125-second child exits0/reaped; captures, accounting and370 lease outcomes
+verify. No reported unknown image was opened. The [census reassessment](<planning/Project Progress Reassessment 2026-10-29 - Module Census.md>)
+records the finite census/policy checkpoint; no further diagnostic census is
+planned. Model and grammar qualification remain separate.
+Its separately reviewed [platform-helper build](planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md)
+now verifies257pins/14files/eight events and a4.750-second compile/link seal.
+Its separately authorized [typed ABI observation](planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-ABI-RESULT-VERIFICATION-v1.md)
+now verifies version **0.7.0-dev**, all17 defaults/31 layout leaves,177pins/11files/
+17events and358closed lease outcomes. The [typed-ABI reassessment](<planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md>)
+details that fixed scope and the next mode-specific CPU/vocabulary/document/EOG
+gate. No model, grammar or scientific qualification is established; accepted
+application behavior remains unchanged.
+
+The [first failed probe](planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md)
+and all source revisions remain preserved. Earlier review missed five functions
+assigned to the wrong DLL and incomplete negative-exit observations. Static
+regressions and the separate corrected build/parent address those defects; they
+do not establish successful ABI qualification.
+
+The [detached-launch checkpoint](<planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md>)
+passes all four own-worker cases on the exact worker/policy/host. Earlier launcher
+and observer failures remain preserved; the closed observer will not be reused.
+This scoped pass does not establish target DLL or scientific qualification.
+The [format-2 pack](planning/review-assets/recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.md)
+preserves source bytes and distinguishes one NUL harness case. Native document/EOG,
+resource and independent scientific gates remain open.
+
+See the [current full-project reassessment](<planning/Project Progress Reassessment 2026-10-30 - C Return Capture.md>),
+[assessment index](<planning/Project Progress Reassessments.md>),
+[recovery plan](<planning/Project Recovery and Evaluation Plan 2026-10-26.md>) and
+[current TODO](TODO.md). R09 as a whole and the later scientific milestones remain
+open. No clinical probability or independent scientific validation is established.
+
+Scope is contemporary T6 feasibility. R01–R06 engineering/preparation are accepted.
+The once-only R07 diagnostic returned six complete responses and **zero accepted
+output contracts**. Original responses, accounting and failures are sealed and
+verified; the owned server stopped. This native version and batch expansion are
+stopped. The [negative disposition](planning/review-assets/recovery-step7-20261026/DISPOSITION.md)
+separates this operational result from pending human scientific assessment.
+There was no retry or repair. Provider spending remains $0; stronger-model capacity
+is unresolved. No clinical prediction or independent scientific validation is claimed.
+
+R08 preparation freshly verified 112 local originals / 8.22 GB and replayed metadata
+locators. The later ten-case pack was already development-exposed; no fresh case
+is qualified. Date disagreements, publication overlap, bounded passage sufficiency
+and reviewer coverage remain explicit. See [source feasibility](planning/review-assets/recovery-step8-20261026/source-feasibility.md)
+and its [date/terms addendum](planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md).
+The [exposure v4 report](planning/review-assets/recovery-step8-20261026/exposure-v4-report.md)
+records 20 previously exposed hypotheses / 18 targets. Of 56 intended preliminary
+combinations, 31 are conservatively quarantined for Virtual Biotech mapping
+overlap; the other 25 are not certified fresh. A fixed two-context source check
+also found shared article identity with prior development material. See
+[current status and next gates](<planning/Recovery Status and Next Gates 2026-10-26.md>).
+Human submissions are pending. The [mechanism orientation packet](docs/expert-review-20261026/Expert-review-share.zip)
+and [source-only genetics packet](docs/expert-review-genetics-20261026/Expert-source-review-share.zip)
+are separate from coordinator-held candidate ratings and AI interpretations.
+The [source-feasibility form](docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip)
+supports the two fixed development contexts, with no candidates or answer key.
+R09's deterministic and recorded fixed-evidence engineering slices are accepted.
+The 0.3.4 source admission and token-aware preparation passed on one already
+exposed IL6R input, including original-row replay and installed read-only checks.
+The later 0.3.5 bridge passes 34 retrieval tests and full/installed acceptance;
+305 source/resource pins stayed unchanged. It exercises a six-record invented
+corpus and the same one real record, preserving nine available observations and
+65 missing inputs. The separately accepted 0.3.6 invented four-arm composition
+reserves 14,315 input/6,144 output tokens. Its first E: attempt timed out after
+two scripted cells; an identical 8.46 GiB D: asset mirror enabled the declared
+second attempt to finalize in 192.7 seconds. Both attempts are retained. The
+older 0.3.5 four-arm manifests remain preparation only. A subsequent
+[five-record real retrieval check](planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
+reconstructs every original row and passes installed replay. Both unchanged
+policies select the same one record under the byte bound; scientific sufficiency,
+ranking quality and native qualification remain unfinished.
+The [0.3.7 collected-source integration](planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md)
+connects that subset to recorded execution using fresh current-version proofs.
+Its outputs copy whole source statements as evaluator fixtures; they are not
+generated scientific answers. Five candidates, one selected record, nine available
+observations and 65 missing inputs remain explicit. Source/question fit is
+unqualified; features stay empty and probabilities null.
+Pinned offline tokenization matches all six prior R07 controls; the full exposed
+real prompt schedule measures 28,241 tokens including margins, within 32,000.
+The default byte-based runtime policy remains unchanged; an explicit trusted
+token-proof path is available for the new recorded composition. R07
+scientific assessment, R08 final qualification and the full R09–R16 remain open.
+
+The checkpoint reports below are retained history; their former next actions are
+superseded by the current recovery plan.
+
 Actual frozen question pilot: stopped after its first native call (4,650 input /
 601 output tokens) on contract rejection; second task unrun, owned server stopped.
 The unaccepted candidate, two independent AI reviews and third adjudication are
@@ -7,13 +166,13 @@ sealed and verified; usefulness and pilot qualification fail. No successful inte
 scientific qualification is claimed. See [current TODO](TODO.md).
 
 Latest question pilot controller checkpoint:1,262 full tests/probes/package,
-299 isolated and207 no-site tests pass on unchanged code. Independent review resolves
+299 isolated and 207 no-site tests pass on unchanged code. Independent review resolves
 six findings (23 focused tests/11 probe groups). A fresh two-question real-source plan
 was frozen with the same previously sized requests before the actual attempt above.
 See [pilot controller](docs/QUESTION_PILOT.md) and [current TODO](TODO.md).
 
 Latest native question transport checkpoint: lossless renderer and optional loopback
-adapter pass1,239 full tests, required probes/package,276 isolated and184 no-site
+adapter pass1,239 full tests, required probes/package, 276 isolated and 184 no-site
 tests on unchanged code. Independent methods reviews pass after retained failure
 corrections. Both actual-source prompts fit unchanged limits. No native generation
 or scientific qualification occurred in this checkpoint. See [local adapter](docs/QUESTION_LOCAL.md),
@@ -22,7 +181,7 @@ and [current TODO](TODO.md). Next is a separately frozen owned-launcher pilot an
 scientific adjudication; original Tasks6–8 remain unfinished.
 
 Latest recorded question runtime: durable execution, source-inclusive verification
-and unresolved-call inspection are implemented.38 focused tests and10 independent
+and unresolved-call inspection are implemented.38 focused tests and 10 independent
 probe groups pass; two actual-source recorded fixtures verify, with no new native
 generation. Full 1198 tests/probes/package pass on unchanged code. See [runtime](docs/QUESTION_RUNTIME.md) and
 [current TODO](TODO.md). Native rendering/context fit and scientific qualification
@@ -36,8 +195,8 @@ See [question core](docs/QUESTION_INTERPRETATION.md) and [current TODO](TODO.md)
 The next recorded-runtime specification is reviewed; native sizing/execution and
 scientific qualification remain separate gates.
 
-Current native interpretation checkpoint (October25): repaired code passes1122 full
-project tests, required probes/package,159 isolated tests,67 no-site tests and12
+Current native interpretation checkpoint (October25): repaired code passes 1122 full
+project tests, required probes/package, 159 isolated tests, 67 no-site tests and 12
 independent methods probes. Both separately frozen local generation requests
 finalized and passed source-inclusive verification; owned server stopped. Scientific
 reviews and third adjudication reject qualification: mechanism utility is insufficient
@@ -58,7 +217,7 @@ TODO.md describe current execution status.
 Implemented evaluator-only contextual propositions and raw/decoded JSON locations,
 complete line/value dispositions, attribution, numerical bundles, scoped references,
 dependence and separate uncertainty/validity/applicability strata.47 new regressions;
-full1055 tests/no skips/probes/package and92 isolated tests pass. Peer findings and
+full1055 tests/no skips/probes/package and 92 isolated tests pass. Peer findings and
 pre-fix failures preserved. Final code unchanged during full verification.
 Retained exposed IL6R replay covers43527 bytes/172lines/1158location nodes through
 original-source verification. Draft has no fabricated semantic atoms or scientific
@@ -94,13 +253,13 @@ retain their historical status and next-step wording.
 
 
 [Native dossier/source binding](docs/T6_DOSSIER_BINDING.md) now replays sealed
-v2 outputs and original Open Targets rows. Full1008 tests/probes/package and45
+v2 outputs and original Open Targets rows. Full1008 tests/probes/package and 45
 isolated tests pass; the exposed IL6R nine-row development replay passes.
 Next: exhaustive atomic extraction, completeness references and independent
 review seals. Scientific Tasks6–8 remain unfinished.
 
 The evaluation-only [atomic claim audit prototype](docs/T6_CLAIM_AUDIT.md)
-passes23 new tests,986 full tests/probes/package and33 isolated tests. It
+passes 23 new tests, 986 full tests/probes/package and 33 isolated tests. It
 verifies JSON originals/review bindings, not therapeutic truth or a full T6
 experiment. Next: sealed-dossier binding and existing original-row audit
 integration. Original scientific Tasks6–8 remain unfinished.
@@ -116,36 +275,36 @@ qualified interpretation layer and independent dossier-quality evaluation.
 963 tests and 163 isolated-checkout tests pass; original scientific Tasks6–8 remain
 unfinished. Earlier entries below are dated checkpoints.
 
-The explicit capacity amendment completed and independently replayed all4,277
+The explicit capacity amendment completed and independently replayed all 4,277
 reported registry query rows. A fixed12-record source-readiness pack is sealed;
 source-rule and clinical qualification remain pending.910 tests/probes/package
-and110 isolated tests pass. Earlier entries below record the preserved500-cap stop.
+and 110 isolated tests pass. Earlier entries below record the preserved500-cap stop.
 
 The October24 source attempt reached the public API but stopped at its frozen
 capacity gate:4,277 declared records versus500 allowed. TwoHTTP responses and
 the first100 metadata records are retained/audited; no complete frame, members or
-clinical predictions were produced.870 tests/probes/package and70 isolated tests
+clinical predictions were produced.870 tests/probes/package and 70 isolated tests
 pass. Next is an explicit capacity amendment; the failed attempt will not retry.
 
 The October24 [prospective frame preparation](planning/Prospective%20Frame%20Preparation%202026-10-24.md)
-passes834 local tests, probes and packaging. The exact source-readiness request
-and offline complete-frame guards are implemented;34 new tests also pass without
+passes 834 local tests, probes and packaging. The exact source-readiness request
+and offline complete-frame guards are implemented; 34 new tests also pass without
 ignored data in an isolated checkout. No trial query or clinical prediction ran.
 Exposure inventory and bounded live-source qualification are the next steps.
 
 The October23 [harder T6 challenge](planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md)
-is complete as a bounded development comparison:32 source-verified arms,48 native
-calls and800 passing local tests. AsOf and adapted Virtual Biotech each agree with
+is complete as a bounded development comparison:32 source-verified arms, 48 native
+calls and 800 passing local tests. AsOf and adapted Virtual Biotech each agree with
 the AI source reference on6/8 tasks, lexical5/8, provider-score3/7 applicable tasks.
 Three reference ties/two none-sufficient tasks limit interpretation; neither model
-abstained. All16 offered original rows passed audit. These results establish no
+abstained. All 16 offered original rows passed audit. These results establish no
 clinical superiority. The [remaining scientific gates and prospective design](planning/Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md)
 keep original Tasks6–8 open. Earlier entries below are dated checkpoints.
 
 The October23 [B0 feasibility audit](planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md)
-verified all96 selected snapshot-state pointers. January coverage is17/32 (53.125%),
+verified all 96 selected snapshot-state pointers. January coverage is 17/32 (53.125%),
 below the frozen90% threshold; operational prediction expansion stops. April's one
-appearance stays separate. All760 local tests pass. Next is a source-bounded harder
+appearance stays separate. All 760 local tests pass. Next is a source-bounded harder
 T6 comparison; clinical prediction, calibration and broader scientific gates remain
 unfinished. Earlier next-step statements below describe their dated checkpoints.
 
@@ -158,7 +317,7 @@ more searches or cohort activation. Labels and probabilities remain null.
 
 The October22 [public-chronology review](planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md)
 verified eight registry dates: results submitted January26, QC-qualified May5,
-and first publicly posted May29,2026, after the April1 cutoff. Three searches
+and first publicly posted May29, 2026, after the April1 cutoff. Three searches
 and four page actions recovered a secondary abstract lead, without an authenticated
 primary report. Mapping and review-scope errors are preserved/disclosed; labels
 stay null. Next is a bounded publisher/DOI lookup of that lead. Earlier next-step
@@ -171,7 +330,7 @@ exposed local diagnostic, not an absence claim. Public chronology and authentic
 primary-report evidence are the next scientific priority.
 
 The October22 [existing-trial protocol audit](planning/Existing-trial%20Protocol%20Audit%202026-10-22.md)
-collected and reviewed all20 pages of the selected protocol/SAP. Endpoint and
+collected and reviewed all 20 pages of the selected protocol/SAP. Endpoint and
 analysis provisions are now documented; the full decision rule, prospective
 authenticity and historical availability remain unqualified.658 tests/four CI
 jobs pass. The next bounded check uses retained historical document metadata.
@@ -186,13 +345,13 @@ The October21 [retrieval calibration](planning/Exact-trial%20Retrieval%20Calibra
 completed four exact-hash original downloads and structured protocol/SAP projection.
 The frozen sponsor-report discovery control failed, so the next twelve-case
 source-readiness design remains inactive. No new clinical labels were assigned.
-All635 full tests and dependency-free validation pass; the retained report describes
+All 635 full tests and dependency-free validation pass; the retained report describes
 the blocker and the required prospective discovery amendment.
 
 The October21 [fixed-member follow-up assessment](planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md)
-completed both snapshots,36 bounded searches,16 original artifacts and AI
-cross-review. All36 new endpoint labels remain null; no training is activated.
-Source verification and616 full tests/four hosted jobs pass. Next is source-readiness
+completed both snapshots, 36 bounded searches, 16 original artifacts and AI
+cross-review. All 36 new endpoint labels remain null; no training is activated.
+Source verification and 616 full tests/four hosted jobs pass. Next is source-readiness
 feasibility for authentic rules, scope and decision timing.
 
 
@@ -241,8 +400,8 @@ all real probabilities are null. See the report's remaining-gates table and [TOD
 The October21 [clinical-label diagnostic](planning/Clinical%20Label%20Readiness%202026-10-21.md)
 completed the missing reported-result extraction for the same twelve trials across
 January/April2026:995 source rows per snapshot, two result-bearing trials, no new
-qualified labels. All36 old endpoints remain unresolved. Negative-ascertainment
-and result-linkage guards were corrected;577 full tests, core validation and four
+qualified labels. All 36 old endpoints remain unresolved. Negative-ascertainment
+and result-linkage guards were corrected; 577 full tests, core validation and four
 hosted jobs pass. The later same-day endpoint-local design and origin-only sample
 are now sealed; the separate follow-up assessment is complete with null labels. Scientific gates stay false.
 
