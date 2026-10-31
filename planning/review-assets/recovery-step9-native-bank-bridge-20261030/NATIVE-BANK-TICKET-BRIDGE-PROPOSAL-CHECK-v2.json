@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "name": "unchanged_basis/native_contract",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/native_compatibility",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/entry_contract",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/entry_compatibility",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/kernel5",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/kernel5_pause",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/kernel5_scope",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/owner_ops",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/file_view",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/codec",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/C3_source",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/C_header",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/C_acceptance",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/C_compiled_peer",
+      "passed": true
+    },
+    {
+      "name": "unchanged_basis/C_actual_peer",
+      "passed": true
+    },
+    {
+      "name": "preserved_HOLD",
+      "passed": true
+    },
+    {
+      "name": "SDK_metadata_pin",
+      "passed": true
+    },
+    {
+      "name": "source5_observation_pin",
+      "passed": true
+    },
+    {
+      "name": "exact_forty_unique_case_requirements",
+      "passed": true
+    },
+    {
+      "name": "fixed_struct_payload_arithmetic",
+      "passed": true
+    },
+    {
+      "name": "all_planned_hashes_unknown",
+      "passed": true
+    },
+    {
+      "name": "all_four_joins_and_five_clarifications",
+      "passed": true
+    },
+    {
+      "name": "explicit_optional_deferral_and_scoped_status",
+      "passed": true
+    },
+    {
+      "name": "no_unfinished_author_draft_marker",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "checks": 24,
+    "failed": 0,
+    "planned_nodes": 9,
+    "required_cases": 40,
+    "source_basis_pins": 15
+  },
+  "helper": {
+    "bytes": 17130,
+    "path": "planning/review-assets/recovery-step9-native-bank-bridge-20261030/retain_native_bridge_proposal_v2.py",
+    "sha256": "dc9a84c386072f0026118b4a2e4175e267f04505e00a7b40ba062d272297e0d5"
+  },
+  "proposal": {
+    "bytes": 23438,
+    "path": "planning/review-assets/recovery-step9-native-bank-bridge-20261030/NATIVE-BANK-TICKET-BRIDGE-PROPOSAL-v2.json",
+    "sha256": "2a81fc93f4916b3224bf83f689fd635a224ea29014acdda85f14a4075c173dd7"
+  },
+  "qualification": "Author metadata arithmetic/pins only; no independent design clearance, literal freeze, implementation, import, build or runtime",
+  "readable": {
+    "bytes": 37578,
+    "path": "planning/review-assets/recovery-step9-native-bank-bridge-20261030/NATIVE-BANK-TICKET-BRIDGE-PROPOSAL-v2.md",
+    "sha256": "caff07357e56520a863b2298d87a7619b885b4673701f86aa72e257059e59cfb"
+  },
+  "schema_version": 2,
+  "status": "PASS_AUTHOR_METADATA_CHECK_ONLY_OPTIONAL_DEFERRED"
+}

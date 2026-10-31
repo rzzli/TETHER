@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED_FINITE_SOURCE_GATE_ROOT_REVIEW_REQUIRED",
+  "basis": {
+    "path": "planning/review-assets/recovery-step9-native-bank-bridge-20261030/NATIVE-BANK-TICKET-BRIDGE-BASIS-v1.json",
+    "bytes": 7558,
+    "sha256": "b7bd8b0c72c7ea51fb377d7924a0292e791eab6e9d14dcfa2ff9c5d52be709c5"
+  },
+  "readable_proposal": {
+    "path": "planning/review-assets/recovery-step9-native-bank-bridge-20261030/NATIVE-BANK-TICKET-BRIDGE-PROPOSAL-v1.md",
+    "bytes": 16860,
+    "sha256": "66a87326a89499994709ea398fa474fc865bdac01fb06f75e3e498253d38fe68"
+  },
+  "selected_choices": {
+    "sources": [
+      "one named kernel successor of exact Kernel5",
+      "one CPython3.11 x64 extension over exact C3 source/header",
+      "independent compiled fake-target test source and build recipes, planned/unbuilt"
+    ],
+    "new_service": false,
+    "backend_selection": "Exact prebound NativeRawBackend before entry; same RawCallStore facade bound to original Core/Origin/nonce/Registry; arena payload allocated once after admission before earliest reserve. No synthetic canonical bytearray or migration in native mode.",
+    "ordinary_surface": "state.reserve_call(api,actor,target_ref,requested=None,buffer_ref=None)",
+    "native_surface": [
+      "backend.bind_core(core,origin,nonce,registry,store)->NativeArena",
+      "arena.allocate(C)",
+      "arena.register(call_ref,canonical_metadata)",
+      "backend.prepare_ticket(call_ref,typed_args)->NativeDispatchTicket",
+      "backend.invoke_reserved(ticket,args)->kernel.RawCallView"
+    ],
+    "targets": "Separate fixed fake-only and owned-D-only build bindings; only original7 and BOOTSTRAP/ORIGINAL dispatch, no Python supplied function pointers or runtime mode switch.",
+    "call_policy": "GIL-held synchronous serial target; private consumed ticket; native entered/exit authoritative, conversion prepared and actual Python return separate.",
+    "views": "No writable native bank buffer/address; copied quiescent RawCallView/KernelSnapshot from same bank. Typed refusal for staged/uncommitted information and partial captures; no healing.",
+    "lifetime": "Strong exact Core/ref/exporter references and GC participation; never destruct/GC-close handles outside canonical rights.",
+    "output": "Existing14 producer artifact universe unchanged; native states remain in source snapshots and separately labeled bounded harness evidence, no artifact15/wire upgrade."
+  },
+  "proposed_fixture": {
+    "scope": "After independently frozen source/build/fake-bridge tests and a separate Root owned-D execution binding; no preparation performed now.",
+    "profile": "Existing PROFILE_ORIGINAL7_1M, not legacy N4",
+    "files": [
+      {
+        "role": "captured_software",
+        "bytes": 55497,
+        "source_pin": "codec"
+      },
+      {
+        "role": "captured_software",
+        "bytes": 39889,
+        "source_pin": "owner_ops"
+      },
+      {
+        "role": "captured_software",
+        "bytes": 3614,
+        "source_pin": "file_view"
+      },
+      {
+        "role": "captured_metadata",
+        "bytes": 68,
+        "sha256": null,
+        "reason": "Independent invented metadata bytes/hash must be frozen before preparation."
+      }
+    ],
+    "N": 4,
+    "B": 3,
+    "M": 3,
+    "Q": 4,
+    "R": 68,
+    "C": 92,
+    "E": 228,
+    "helper_prefix_bytes": 99000,
+    "captured_total_bytes": 99068,
+    "normal_one_read_each_original7_calls": 28,
+    "normal_close_attempts": 4,
+    "native_cells_bytes": 23552,
+    "retained_view_raw_copy_upper_bytes": 23552,
+    "maximum_retained_complete_snapshots": 2,
+    "snapshot_raw_copy_upper_bytes": 47104,
+    "one_row_copy_transient_bytes": 256,
+    "read_buffer_bytes": 1048576,
+    "query_scratch_bytes": 8202,
+    "complete_query_witness_bytes": 32872,
+    "serial_WCHAR_path_workspace_bytes": 8194,
+    "private_tickets_upper_count": 92,
+    "ticket_struct_and_boxed_memory_bytes": null,
+    "memory_meaning": "Known payload terms only; allocator/GC/ticket/boxed/native stack and existing generated store live costs additionally unknown/unmeasured. No cap lift or resource fit."
+  },
+  "future_precode_test_requirements": [
+    "actual same-Core/store bank from earliest bootstrap reservation, not migrated/copied authority",
+    "exact type/ref/epoch/API/actor/buffer and prepared-versus-consumed ticket rules; foreign/replay/alias refusal",
+    "all original7 shapes with raw scalar/count/error/definedness preserved; expected kind mismatch refusal",
+    "preinvoke allocation failure yields no native target entry; canonical prepared/unregistered rows retained",
+    "postcommit converter/signal/factory failure retains original exception/known handle or count and no caller return fabrication",
+    "stopped-cache and failed-fold nonhealing with fresh once-only close under original hard clock",
+    "pinned buffer/quarantined generation, immutable original query frames and no initialized-zero inference",
+    "quiescent copy/partial snapshot/no refresh/no native wire or lease authority",
+    "extension fake build and separate owned-D build/disassembly/image/runtime pins; first result retained"
+  ],
+  "pending_engineering": [
+    "exact independent pre-code literals and harness",
+    "kernel/native adapter and private ticket implementation",
+    "complete selected Python3.11 header/library/CRT/extension ABI/build closure",
+    "native allocation/GC/buffer/first-store compiled review",
+    "separate model-free fake-bridge execution then separate owned-D original7 qualification",
+    "external bounded harness failure/known-main containment; no synchronous OS-stall/graceful termination guarantee"
+  ],
+  "genuine_owner_blockers_identified": [],
+  "future_binary_hashes_block_source_authoring": false,
+  "qualification": {
+    "implemented": false,
+    "imported_or_built": false,
+    "actual_original7": false,
+    "same_Core_native_bank_qualified": false,
+    "positive_NativeInput": false,
+    "child_or_path_lifetime": false,
+    "physical14_or_joint19079_admitted": false,
+    "native_wire_serialization": false,
+    "RSS_or_inference_fit": false,
+    "new84_or_science": false
+  }
+}

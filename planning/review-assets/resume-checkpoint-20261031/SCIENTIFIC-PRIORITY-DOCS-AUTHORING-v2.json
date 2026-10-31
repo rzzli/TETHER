@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "status": "PRIORITY_DOCUMENTATION_AUTHORED_PENDING_FINAL_QA",
+  "baseline_commit": "ceab32f",
+  "documents_before": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 38573,
+      "sha256": "bf6cc3646f3b57728a79f0ede0c3a43e447c9dc3c1586ef4e4bb17a5c1a1c36c"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 56578,
+      "sha256": "27fe18249745f8f25b6ade124555278848d5d4ee8c440872625cb1d005c49e12"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44371,
+      "sha256": "5fa29c178f234e304f5f5cbac0ef48ea679b81403a4699bf4a1bb397d299980d"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35052,
+      "sha256": "6b7160352ea1451714419abd71aa20ba6be25c862610afc3a881686b85887e9b"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 20411,
+      "sha256": "60a3ebce53fa5a7a96c0adbe8aa1f0d484bd52b8e2d9d93280d946d553615b11"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11497,
+      "sha256": "fabf3cd0c80c80b20cfcb5b4e889c628453daaf5571860da3a4f6b0d2b28509e"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 28318,
+      "sha256": "ea4ece32abe4077385ce0afcdb445cdf7e895a348a0318607619a7210ba6a31e"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 122832,
+      "sha256": "200b55bc55a0480a8a378ad8e42238f1ad6665bc3f653a48d8e1ee05b8e87657"
+    }
+  },
+  "documents_final": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 9772,
+      "sha256": "5e368c22cd1ea940d364abc7e81592dbaef6efbe5250fcee0ac631b6c8d00b1a"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 56853,
+      "sha256": "6c67c97158f3e097c9595313c3a90e7a283aa763c74a4db8e16fea19e476becc"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44092,
+      "sha256": "8d74eaed4571a5ae792f205ba895d0a335c73c4af8cb9dbbf3cd70af15c36eb2"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 34773,
+      "sha256": "f8ebeb98ba467bd88e4df04e121055b9a1144f3670e70a709b17733f49750da9"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 20488,
+      "sha256": "89b651adfd85e2f72e98f2114ad9050bd58f57b7931c58d102684d446b6629d1"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11218,
+      "sha256": "9dd3f987a4de1819bb20f78cdddcb507aa2cb6ac862b7a135d6fce572f6abfc4"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 28636,
+      "sha256": "8a3938a6a4d2f20a0c8170e9da57d7392c265e90c34e23756581ee4c9fdaa9d4"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 123786,
+      "sha256": "1ba3cdf6f4d71407e0701ce626b751e8c60e7367742dd3ae90ba7d4ab0f6b3b1"
+    },
+    "planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md": {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md",
+      "bytes": 11237,
+      "sha256": "14716b086e850511c168349db5810bec883c7a0a1cf4bc8403c3642e9bd08343"
+    },
+    "planning/Scientific Review Handoff 2026-10-31.md": {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "bytes": 5299,
+      "sha256": "6a7f9d0458f859b926e66cb80980ff5fc594f3f74084e92c9b8f8edfd885c999"
+    }
+  },
+  "archived_readme": {
+    "path": "docs/history/README-before-scientific-priority-20261031.md",
+    "bytes": 38573,
+    "sha256": "bf6cc3646f3b57728a79f0ede0c3a43e447c9dc3c1586ef4e4bb17a5c1a1c36c"
+  },
+  "original_readme_preserved": true,
+  "first_attempt": {
+    "helper": {
+      "path": "planning/review-assets/resume-checkpoint-20261031/update_scientific_priority_docs_v1.py",
+      "bytes": 12637,
+      "sha256": "87e0cae3b608fec09e1fe8bc70652cdc96617a8eac98edc4c5482ca1a3c0fc25"
+    },
+    "failure": "Expected CRLF current-section marker; actual inserted header is LF in mixed-newline memory. Stopped after7 current-doc edits, before memory-goals/inbox/report. No source or subject operation.",
+    "correction": "Named V2 accepts exactly one observed LF/CRLF marker, preserves remaining bytes, completes memory/inbox/report only. V1 not replayed; first edited docs not rewritten."
+  },
+  "inbox_contains_human_submissions": false,
+  "source_or_runtime_changes": false,
+  "project_complete": false,
+  "provider_spend_usd": 0,
+  "scope": "Prospective scientific priority/handoff; no old acceptance, native contract or failure amended. README history preserved byte for byte; operative usage retained."
+}

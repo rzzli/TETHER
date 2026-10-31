@@ -10,7 +10,20 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Component Guards]].
+Current priority: [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]].
+Return to the original smallest interpretable T6 comparison and its scientific prerequisites.
+R07 human assessment, fresh source/question/exposure readiness and an approved capability
+condition remain open. Use planning/Scientific Review Handoff 2026-10-31.md; source-only
+human submissions must precede candidate exposure. Agents cannot replace those submissions.
+Optional native-bank/physical14/new84 implementation is deferred pending a demonstrated
+study consumer/defect and finite plan; its strict contracts and unqualified states remain.
+Source5 43 executable PASS/four DEFERRED/one STATIC and C79 are retained component results.
+No new model/old-cell replay, download, spending, default change or monitor restart.
+Scientific H5/H1–H6 and HR1–HR4 remain open; next dependent work is externally gated.
+
+### Prior component-guard checkpoint (retained history)
+
+Prior checkpoint: [[Project Progress Reassessment 2026-10-31 - Component Guards]].
 Root ec290b97 / peer69d14742 accepts only Source5's exact API/axis-kind guard:
 43 executable PASS (21 runtime/22 data), four DEFERRED and one STATIC;1,493 retained-data
 checks and188 artifact hashes pass in the0.250s suite. Only the two intended failures

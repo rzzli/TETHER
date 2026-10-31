@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "status": "PASS_DOCUMENTATION_AND_HANDOFF_ONLY",
+  "reviewed_at_utc": "2026-10-31T05:35:12.004468+00:00",
+  "reviewer": "/root/bridge_design_peer",
+  "scope": "Independent source/metadata/documentation QA only. No test, model, native, compiler, intake or original/protected payload run/read.",
+  "authoring": {
+    "path": "planning/review-assets/resume-checkpoint-20261031/SCIENTIFIC-PRIORITY-DOCS-AUTHORING-v3.json",
+    "bytes": 7988,
+    "sha256": "ed311d2afa7ac3ec2a39317a1e19e34a54287db3f539312b0c5a3bc57ffe4de2"
+  },
+  "prior_authoring": {
+    "path": "planning/review-assets/resume-checkpoint-20261031/SCIENTIFIC-PRIORITY-DOCS-AUTHORING-v2.json",
+    "bytes": 5270,
+    "sha256": "9d809bacb726f3afaff62bd0d2efee0e5da68ae5742212018b3164f004c592d6"
+  },
+  "basis": [
+    {
+      "path": "docs/Opus_20261026T050236Z_review.md",
+      "bytes": 45922,
+      "sha256": "56e5aaddfdadf3ce1b6b97a00ac28bf42b89b1a07a56a62f723a9385293e8a47"
+    },
+    {
+      "path": "planning/decisions/2026-10-26-phase-scope.md",
+      "bytes": 8629,
+      "sha256": "df6ac935e7143d950ece3cb977f1b92aafb3b92ab257115ff7bcb32ba80aa864"
+    },
+    {
+      "path": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "bytes": 4256,
+      "sha256": "2bfcf3cbc4da0e825e11795e271cbb5d857cda573dd80041055acbea872e4f77"
+    },
+    {
+      "path": "planning/review-assets/resume-checkpoint-20261031/R09-STRATEGIC-PRIORITY-REVIEW-v2.json",
+      "bytes": 28618,
+      "sha256": "6f45b37b508e63527a5effb5e9aff022b2c27b82c865c3ac623401e11cdc05e6"
+    },
+    {
+      "path": "planning/review-assets/resume-checkpoint-20261031/R09-STRATEGIC-PRIORITY-REVIEW-v2.md",
+      "bytes": 18223,
+      "sha256": "b4130fcd0e6c7c449855fbbc3823a3c5402fd606e6fdf0adfaf03ee6a9890ad2"
+    }
+  ],
+  "checks": [
+    {
+      "id": "ten_authoring_pins_match",
+      "passed": true
+    },
+    {
+      "id": "all_327_accepted_source_pins_match",
+      "passed": true
+    },
+    {
+      "id": "archived_README_equals_git_ceab32f",
+      "passed": true
+    },
+    {
+      "id": "four_operational_README_blocks_preserved",
+      "passed": true
+    },
+    {
+      "id": "all_20_status_rows_present_and_individually_reviewed",
+      "passed": true
+    },
+    {
+      "id": "five_scientific_gates_match_Opus_R01_R07_and_strategic_V2",
+      "passed": true
+    },
+    {
+      "id": "no_new_model_or_native_expansion_authority",
+      "passed": true
+    },
+    {
+      "id": "optional_native_contracts_deferred_not_weakened_or_passed",
+      "passed": true
+    },
+    {
+      "id": "unknown_calls_budget_lineage_failure_and_claim_rules_preserved",
+      "passed": true
+    },
+    {
+      "id": "R07_R08_R09_scientific_and_HR_gates_still_open",
+      "passed": true
+    },
+    {
+      "id": "no_human_submission_or_superiority_fabricated",
+      "passed": true
+    },
+    {
+      "id": "source_before_candidate_mandatory_and_exposed_references_disqualified",
+      "passed": true
+    },
+    {
+      "id": "historical_CI_distinct_from_current_unpushed_unqualified_commits",
+      "passed": true
+    },
+    {
+      "id": "all_local_Markdown_and_wiki_targets_exist",
+      "passed": true
+    },
+    {
+      "id": "four_empty_placeholders_only_no_responses",
+      "passed": true
+    },
+    {
+      "id": "eight_hypothetical_response_paths_ignored_without_creation",
+      "passed": true
+    },
+    {
+      "id": "placeholder_exceptions_versionable",
+      "passed": true
+    },
+    {
+      "id": "folder_isolation_not_claimed_future_ancestor_role_required",
+      "passed": true
+    },
+    {
+      "id": "author_V1_failure_and_named_V2_recovery_preserved_not_replayed",
+      "passed": true
+    },
+    {
+      "id": "old_native_FAILED_and_whole_INCOMPLETE_TIMEOUT_preserved",
+      "passed": true
+    },
+    {
+      "id": "R08_prior_identity_followup_reconciled_not_newly_unresolved",
+      "passed": true
+    },
+    {
+      "id": "no_runtime_or_data_ignore_change",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "checks": 22,
+    "failed": 0,
+    "current_docs": 10,
+    "status_rows": 20,
+    "next_scientific_gates": 5,
+    "local_Markdown_links": 175,
+    "wiki_links": 208,
+    "accepted_source_pins": 327,
+    "empty_placeholders": 4,
+    "hypothetical_response_ignore_checks": 8,
+    "responses_created_or_ingested": 0
+  },
+  "status_rows": [
+    {
+      "id": "R01",
+      "state": "Accepted scope/governance; original hypotheses and reopening gates retained."
+    },
+    {
+      "id": "R02",
+      "state": "Accepted checkpoint/restoration inventory; timestamped local source/docs/evidence checkpoints now retained."
+    },
+    {
+      "id": "R03",
+      "state": "Scoped archive/relocation compatibility accepted; full host/raw/model restoration remains separate."
+    },
+    {
+      "id": "R04",
+      "state": "Reproduced application correctness fixes accepted."
+    },
+    {
+      "id": "R05",
+      "state": "Bounded diagnostic preparation accepted; stronger-model capability condition unavailable in the scoped approved inventory."
+    },
+    {
+      "id": "R06",
+      "state": "Reusable infrastructure slice accepted."
+    },
+    {
+      "id": "R07",
+      "state": "Technical experiment negative: six complete responses, zero frozen-contract passes. Independent human assessment pending; capacity effect unidentifiable."
+    },
+    {
+      "id": "R08",
+      "state": "Source/exposure preparation completed within its bounds; no qualified fresh case. Domain matching, source sufficiency and independent judgments remain open."
+    },
+    {
+      "id": "R09",
+      "state": "Recorded/preparation mechanics and bounded component corrections accepted. Scientific interpretation unqualified; optional native-proof expansion deferred."
+    },
+    {
+      "id": "R10",
+      "state": "Timed independent human development pilot blocked on references, case readiness and a justified execution design."
+    },
+    {
+      "id": "R11",
+      "state": "H5 estimand, size/power, preregistration and analysis freeze pending pilot evidence."
+    },
+    {
+      "id": "R12",
+      "state": "Locked H5 evaluation and report pending its protocol and independent panel."
+    },
+    {
+      "id": "R13",
+      "state": "Alternative clinical outcome source conditional and unqualified."
+    },
+    {
+      "id": "R14",
+      "state": "Genetics/LD/causal features, predictors and scorer/calibration conditional and unqualified."
+    },
+    {
+      "id": "R15",
+      "state": "Clinical comparator/ablation evaluation conditional and pending."
+    },
+    {
+      "id": "R16",
+      "state": "T2–T5/H6 extensions and reproducible release separately conditional."
+    },
+    {
+      "id": "HR1",
+      "state": "Relevant reviewers, conflicts/exposure and domain coverage pending."
+    },
+    {
+      "id": "HR2",
+      "state": "Independent orientation/source-only submissions and measured workload pending."
+    },
+    {
+      "id": "HR3",
+      "state": "Fresh source-only references and masked ratings pending."
+    },
+    {
+      "id": "HR4",
+      "state": "Sized final panel and independent adjudication pending."
+    }
+  ],
+  "next_scientific_gates": [
+    {
+      "order": 1,
+      "gate": "Obtain the actual independent submissions."
+    },
+    {
+      "order": 2,
+      "gate": "Decide source and question feasibility."
+    },
+    {
+      "order": 3,
+      "gate": "Resolve the capability/design decision within authorized resources."
+    },
+    {
+      "order": 4,
+      "gate": "If the gates pass, prepare the smallest fixed-evidence development comparison."
+    },
+    {
+      "order": 5,
+      "gate": "Size and lock H5; reopen other hypotheses only with their own evidence."
+    }
+  ],
+  "findings_resolved": [
+    {
+      "finding": "Handoff mechanism reference allowed source-first only where practical",
+      "correction": "Source-only-before-candidate now mandatory; exposed references labeled and excluded from independent source-only count.",
+      "preserved_in_authoring_successor": "v3"
+    },
+    {
+      "finding": "README historical hosted-CI wording could imply current HEAD qualification",
+      "correction": "Older checkpoint CI distinguished from current unpushed/unqualified commits.",
+      "preserved_in_authoring_successor": "v3"
+    }
+  ],
+  "accepted_source": {
+    "acceptance": {
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "bytes": 597934,
+      "sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b"
+    },
+    "matches": 327,
+    "mismatches": 0,
+    "sorted_actual_and_expected_rows_sha256": "3b235670c7db0e3960df3a10e2fea89fee30b62024cd019a56ca531def5b0f24",
+    "retained_tests": 1774,
+    "tests_rerun": false
+  },
+  "archived_readme": {
+    "path": "docs/history/README-before-scientific-priority-20261031.md",
+    "bytes": 38573,
+    "sha256": "bf6cc3646f3b57728a79f0ede0c3a43e447c9dc3c1586ef4e4bb17a5c1a1c36c"
+  },
+  "documents_final": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 9835,
+      "sha256": "533a58fb9f98c79122bcbb1305f9393d1554c4fbf9d1a7ce40426dd146c0f169"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 56853,
+      "sha256": "fb798d4b652687896797db1a4f39fc31c85e4d928b0193ed398b1088a8f8413d"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44092,
+      "sha256": "8d74eaed4571a5ae792f205ba895d0a335c73c4af8cb9dbbf3cd70af15c36eb2"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 34773,
+      "sha256": "f8ebeb98ba467bd88e4df04e121055b9a1144f3670e70a709b17733f49750da9"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 20488,
+      "sha256": "89b651adfd85e2f72e98f2114ad9050bd58f57b7931c58d102684d446b6629d1"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11218,
+      "sha256": "9dd3f987a4de1819bb20f78cdddcb507aa2cb6ac862b7a135d6fce572f6abfc4"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 28636,
+      "sha256": "8a3938a6a4d2f20a0c8170e9da57d7392c265e90c34e23756581ee4c9fdaa9d4"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 123786,
+      "sha256": "1ba3cdf6f4d71407e0701ce626b751e8c60e7367742dd3ae90ba7d4ab0f6b3b1"
+    },
+    "planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md": {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Scientific Readiness.md",
+      "bytes": 11237,
+      "sha256": "14716b086e850511c168349db5810bec883c7a0a1cf4bc8403c3642e9bd08343"
+    },
+    "planning/Scientific Review Handoff 2026-10-31.md": {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "bytes": 5420,
+      "sha256": "0f3f9f8df26f9f860b347348c557c24279fd3f3725aec0829cc27add1dc0a633"
+    }
+  },
+  "inbox": {
+    "placeholders": [
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/mechanism/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-source/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-followup/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/source-feasibility/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "ignore_checks": [
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/mechanism/.gitkeep",
+        "ignored": false,
+        "exists": true
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/mechanism/__qa_hypothetical_response.json",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/mechanism/__qa_hypothetical_response.pdf",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-source/.gitkeep",
+        "ignored": false,
+        "exists": true
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-source/__qa_hypothetical_response.json",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-source/__qa_hypothetical_response.pdf",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-followup/.gitkeep",
+        "ignored": false,
+        "exists": true
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-followup/__qa_hypothetical_response.json",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/genetics-followup/__qa_hypothetical_response.pdf",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/source-feasibility/.gitkeep",
+        "ignored": false,
+        "exists": true
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/source-feasibility/__qa_hypothetical_response.json",
+        "ignored": true,
+        "exists": false
+      },
+      {
+        "path": "data/benchmark/gold_evidence/human-review-inbox-20261031/source-feasibility/__qa_hypothetical_response.pdf",
+        "ignored": true,
+        "exists": false
+      }
+    ],
+    "folder_placement_is_evaluator_isolation": false,
+    "future_responses_require_evaluation_only_ancestor_roles_and_manifest_exclusion": true,
+    "human_submissions": 0
+  },
+  "todo_mutation": {
+    "only_two_new_preparation_items_checked": true,
+    "character_changes": 2,
+    "actual_independent_review_receipt_still_pending": true,
+    "before_sha256": "6c67c97158f3e097c9595313c3a90e7a283aa763c74a4db8e16fea19e476becc",
+    "after_sha256": "fb798d4b652687896797db1a4f39fc31c85e4d928b0193ed398b1088a8f8413d"
+  },
+  "failure_history": {
+    "authoring_V1_parse_marker_failure": {
+      "helper": {
+        "path": "planning/review-assets/resume-checkpoint-20261031/update_scientific_priority_docs_v1.py",
+        "bytes": 12637,
+        "sha256": "87e0cae3b608fec09e1fe8bc70652cdc96617a8eac98edc4c5482ca1a3c0fc25"
+      },
+      "failure": "Expected CRLF current-section marker; actual inserted header is LF in mixed-newline memory. Stopped after7 current-doc edits, before memory-goals/inbox/report. No source or subject operation.",
+      "correction": "Named V2 accepts exactly one observed LF/CRLF marker, preserves remaining bytes, completes memory/inbox/report only. V1 not replayed; first edited docs not rewritten."
+    },
+    "named_recovery_helper": {
+      "path": "planning/review-assets/resume-checkpoint-20261031/finish_scientific_priority_docs_v2.py",
+      "bytes": 5086,
+      "sha256": "29d707ef8daf0f75f8640e4a18c5a9fe073d0ff4eb7eef3bfacae39d374019e2"
+    },
+    "helpers_rerun": false,
+    "QA_inline_helper_initial_failure": "One metadata-helper SyntaxError at equality followed by not, before execution or any file write; parenthesized boolean expression corrected in the next metadata-only check. No subject/helper/native replay."
+  },
+  "qualification": {
+    "R07_to_R16_scientific_complete": false,
+    "human_gates_complete": false,
+    "native_bank_or_physical14_or_new84_qualified": false,
+    "scientific_superiority_established": false,
+    "project_complete": false,
+    "provider_spend_usd": 0
+  }
+}
