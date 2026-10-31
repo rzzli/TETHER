@@ -1,0 +1,389 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "evidence_freeze": {
+    "bytes": 11604,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-EVIDENCE-FREEZE-v2.json",
+    "sha256": "071cb83afb207185715fe7df3d1403dbad765041c64ae33d8e96c9df56a2a4af"
+  },
+  "frozen_phase_pins_rehashed": 28,
+  "independent_AST_review": {
+    "added_readonly_methods": 3,
+    "all_other_module_AST_equal_after_only_version_import_and_authorized_body_slot_normalization": true,
+    "changed_methods": 5,
+    "controller_methods_unchanged": 4,
+    "removed_methods": 0,
+    "sources": [
+      {
+        "added_methods": [
+          "Continuation.__setattr__",
+          "Continuation.owner",
+          "SharedOwner.origin"
+        ],
+        "all_other_normalized_AST_equal": true,
+        "changed_methods": [
+          "Continuation.__init__",
+          "CapturedLoader.load",
+          "SharedOwner.__init__",
+          "SharedOwner._finish"
+        ],
+        "new": "shared_owner_v2.py",
+        "old": "shared_owner_v1.py",
+        "removed_methods": [],
+        "unchanged_methods": 89
+      },
+      {
+        "added_methods": [],
+        "all_other_normalized_AST_equal": true,
+        "changed_methods": [
+          "FilePortView._call"
+        ],
+        "new": "shared_file_ports_v2.py",
+        "old": "shared_file_ports_v1.py",
+        "removed_methods": [],
+        "unchanged_methods": 14
+      },
+      {
+        "added_methods": [],
+        "all_other_normalized_AST_equal": true,
+        "changed_methods": [],
+        "new": "continue_verification_v2.py",
+        "old": "continue_verification_v1.py",
+        "removed_methods": [],
+        "unchanged_methods": 4
+      }
+    ],
+    "unchanged_author_test_methods": 12,
+    "unchanged_methods": 107,
+    "unchanged_supplement_test_methods": 4
+  },
+  "inputs": {
+    "SHARED-OWNER-ADJACENT-IDENTITY-RETURN-AFTER-v2.json": {
+      "bytes": 2973,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ADJACENT-IDENTITY-RETURN-AFTER-v2.json",
+      "sha256": "fa5981c865a4ac3fb5925e8927e637306c53e8d21e35cbda77a444d708257e93"
+    },
+    "SHARED-OWNER-ADJACENT-IDENTITY-RETURN-BEFORE-v1.json": {
+      "bytes": 2912,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ADJACENT-IDENTITY-RETURN-BEFORE-v1.json",
+      "sha256": "cdd0c42dc330c4a81feffcca5ab548c244c47f7b88b45e309c2dabd57ae23147"
+    },
+    "SHARED-OWNER-AUTHOR-CONTROLS-PURE-PROOF-v2.json": {
+      "bytes": 1802,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-CONTROLS-PURE-PROOF-v2.json",
+      "sha256": "59240694c2153b4691ad113e69ebd16431511ebed92869e19fc2e793078e301f"
+    },
+    "SHARED-OWNER-AUTHOR-DELTA-BINDING-v2.json": {
+      "bytes": 4680,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-DELTA-BINDING-v2.json",
+      "sha256": "266c67860a008181c2b89b33303d0131cba491615f033d47976c52ce0e99f765"
+    },
+    "SHARED-OWNER-AUTHOR-DELTA-FIRST-ASSERTION-FAILURE-v2.json": {
+      "bytes": 777,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-DELTA-FIRST-ASSERTION-FAILURE-v2.json",
+      "sha256": "59033886a30955a87c01facffae00dda65cc8008c3ea83b0aa303f88f1ed4fff"
+    },
+    "SHARED-OWNER-AUTHOR-SUPPLEMENT-PURE-PROOF-v2.json": {
+      "bytes": 1033,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-SUPPLEMENT-PURE-PROOF-v2.json",
+      "sha256": "6532cf40eb19359c9dfdbcba4257413d9a77a512e84ddd87ac0e010907f5e1cf"
+    },
+    "SHARED-OWNER-CONTINUATION-OWNER-BEFORE-v1.json": {
+      "bytes": 1938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-CONTINUATION-OWNER-BEFORE-v1.json",
+      "sha256": "8c27fdb9e1748399d577e3c4095d7dd1586309a0ff667eb74b471a50c22b0733"
+    },
+    "SHARED-OWNER-FIVE-REGRESSIONS-BEFORE-v2.json": {
+      "bytes": 98063,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-FIVE-REGRESSIONS-BEFORE-v2.json",
+      "sha256": "44eddebb07ef0a1e9a9c463881c67b585ca086febe173e914da1a5e790c63e4e"
+    },
+    "SHARED-OWNER-INTEGRATION-ACTUAL-EVIDENCE-FREEZE-v2.json": {
+      "bytes": 11604,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-EVIDENCE-FREEZE-v2.json",
+      "sha256": "071cb83afb207185715fe7df3d1403dbad765041c64ae33d8e96c9df56a2a4af"
+    },
+    "SHARED-OWNER-INTEGRATION-ACTUAL-FIRST-PROOF-v1.json": {
+      "bytes": 4931434,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-FIRST-PROOF-v1.json",
+      "sha256": "5a104017dfd925f46b11aa15b4a53355a407a8fa0afce6b83c01ec5ae9ccd577"
+    },
+    "SHARED-OWNER-INTEGRATION-ACTUAL-PROOF-v2.json": {
+      "bytes": 5024279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-PROOF-v2.json",
+      "sha256": "14d78f96fbdb20e2c40e1884c278704f9da93b02c46cd502df87cf1f756698e3"
+    },
+    "SHARED-OWNER-INTEGRATION-FIXTURE-FREEZE-v3.json": {
+      "bytes": 7511,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-FREEZE-v3.json",
+      "sha256": "69dd02e73654094ec746ff710f49efd6259f5fa1785616e66f5e5d97d2da428e"
+    },
+    "SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 13345,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+    },
+    "SHARED-OWNER-INTEGRATION-FIXTURES-v3.json": {
+      "bytes": 312462,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+      "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+    },
+    "SHARED-OWNER-LATE-SEAL-FIRST-FINDING-v1.json": {
+      "bytes": 4244,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-LATE-SEAL-FIRST-FINDING-v1.json",
+      "sha256": "5cdc13ecec8f376aa23d101f7abf45747f60f6a8ec1e737cb482149db6848f0e"
+    },
+    "SHARED-OWNER-LITERAL-INDEPENDENT-PEER-v3.json": {
+      "bytes": 6435,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-LITERAL-INDEPENDENT-PEER-v3.json",
+      "sha256": "2d4fb217584d588d5343ec38a3b19b587dbf727091fd4c7bf9f8e727ea2d6e02"
+    },
+    "SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json": {
+      "bytes": 37533,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    },
+    "SHARED-OWNER-ROOT-CORRECTION-SCOPE-v2.json": {
+      "bytes": 5687,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-CORRECTION-SCOPE-v2.json",
+      "sha256": "298d42f4ab955513a1fe6a8a8cfdd70428199918d25e1147151d9c0fb3f37b48"
+    },
+    "SHARED-OWNER-SNAPSHOT-VALIDATOR-INDEPENDENT-PEER-v1.json": {
+      "bytes": 7281,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SNAPSHOT-VALIDATOR-INDEPENDENT-PEER-v1.json",
+      "sha256": "5d01dbf90f220c50ad5bf9d6a7e140ceaefbc62dd4d8da194271db347a2585fd"
+    },
+    "SHARED-OWNER-SNAPSHOT-VALIDATOR-PURE-PROBES-FIRST-v1.json": {
+      "bytes": 105110,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SNAPSHOT-VALIDATOR-PURE-PROBES-FIRST-v1.json",
+      "sha256": "43799e0cd5aa704cb3477657936a04795426927f9341fc14c45621066b05d13f"
+    },
+    "SHARED-OWNER-SOURCE-INDEPENDENT-HOLD-v1.json": {
+      "bytes": 15693,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-HOLD-v1.json",
+      "sha256": "66b588bf4f077d7d876be73a6a7db6ded99c1bd7b688f03da1091e8472c72845"
+    },
+    "SHARED-OWNER-SOURCE-PAUSE-v2.json": {
+      "bytes": 2113,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-PAUSE-v2.json",
+      "sha256": "2e8511699985dc84d944aa710a8d4d4b30f7df2d924aa86ceaa236dfc9d42629"
+    },
+    "SHARED-OWNER-WRAPPER-RETURN-BEFORE-v1.json": {
+      "bytes": 1212,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-WRAPPER-RETURN-BEFORE-v1.json",
+      "sha256": "8f602d769a2a68a79628b57f689e9e051667764be84f442f506e0e30e56dc8e7"
+    },
+    "check_shared_owner_author_controls_v1.py": {
+      "bytes": 12610,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_author_controls_v1.py",
+      "sha256": "f8a65c46200937b9928eb5cdfb2ebf9cce1d37a8d97392e615af5bc26581e8a7"
+    },
+    "check_shared_owner_author_controls_v2.py": {
+      "bytes": 12610,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_author_controls_v2.py",
+      "sha256": "34e506bf24274ab19fded2322bd5aed4696b62a22d0d7155148ceff91f8fb56b"
+    },
+    "check_shared_owner_author_supplement_v1.py": {
+      "bytes": 4089,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_author_supplement_v1.py",
+      "sha256": "1764b4f7ffe02c8f3ea113d6eac594affcf855317dfe78d3e3e693204095e0f6"
+    },
+    "check_shared_owner_author_supplement_v2.py": {
+      "bytes": 4089,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_author_supplement_v2.py",
+      "sha256": "4a36c6e17618ba27ea61346af705cd22387dc1b49040bfadcbdc437477b83830"
+    },
+    "check_shared_owner_five_before_v2.py": {
+      "bytes": 363,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_five_before_v2.py",
+      "sha256": "ec5acf9a7b1621b448c8d099450d8273d33ad6f630bfb99cd0c6e63b8073ac33"
+    },
+    "check_shared_owner_integration_actual_v2.py": {
+      "bytes": 363,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_integration_actual_v2.py",
+      "sha256": "f34df47026b19aaaa3695d2514e238bd29bb82c431059c6f246d25ceb56a175a"
+    },
+    "continue_verification_v1.py": {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v1.py",
+      "sha256": "7f52397a8293ae133f019ede1da78881814eb547b026768f072a34e4a4cf8eb2"
+    },
+    "continue_verification_v2.py": {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v2.py",
+      "sha256": "1d05a7398fe215cae987a76ab3960e0dc3730b89fad79caca64c466bac1f4b2f"
+    },
+    "freeze_shared_owner_actual_evidence_v2.py": {
+      "bytes": 5230,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\freeze_shared_owner_actual_evidence_v2.py",
+      "sha256": "7baa6291a284a0120624407671186696378e4ed3fa4f32e2d3703adf1090b7ed"
+    },
+    "probe_shared_owner_adjacent_identity_return_peer_v2.py": {
+      "bytes": 11588,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\probe_shared_owner_adjacent_identity_return_peer_v2.py",
+      "sha256": "5b1193f54b75e5d6026edfe4779569e82efdc92323bb1e0a857c3fb44314e8c9"
+    },
+    "shared_file_ports_v1.py": {
+      "bytes": 10636,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v1.py",
+      "sha256": "d80f980c771e11ba0116aa3a1a8e526015ce43cafeacc6cf8bc2890f86b4c900"
+    },
+    "shared_file_ports_v2.py": {
+      "bytes": 10595,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v2.py",
+      "sha256": "a224bfb9e9f33bf2f6b9329f0b337d0076bdab418083d05deb3f59b52722a059"
+    },
+    "shared_owner_actual_suite_runner_v2.py": {
+      "bytes": 7183,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_actual_suite_runner_v2.py",
+      "sha256": "464fb378cac36e14ca89c3f934b0ec46d7eea0d1534a626f641968424eb60e89"
+    },
+    "shared_owner_five_regressions_v2.py": {
+      "bytes": 8106,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_five_regressions_v2.py",
+      "sha256": "8fc70bcfa3a12ffd4bcae0c5fd3ba6c856960f4044bef3856d5f19537fc4367d"
+    },
+    "shared_owner_fixture_driver_v1.py": {
+      "bytes": 31582,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_fixture_driver_v1.py",
+      "sha256": "33cc4283e95c82b3fc293b36b0e8eeadf30f4233a7e54fd1d9f77db7c15639ae"
+    },
+    "shared_owner_fixture_driver_v2.py": {
+      "bytes": 31603,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_fixture_driver_v2.py",
+      "sha256": "a97ae3ca57ce6f1b97e5a382a4051714242621c11b3d1756262f1f8025c8f566"
+    },
+    "shared_owner_snapshot_validator_v1.py": {
+      "bytes": 26053,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_snapshot_validator_v1.py",
+      "sha256": "afa71df1ebba3eb7da83890b6e86675597894600cd593578b34f5f1a12cefefc"
+    },
+    "shared_owner_v1.py": {
+      "bytes": 36450,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v1.py",
+      "sha256": "76384e02282b1ce2437b9ff342913297f58ea0858752308724bef912b9e2643b"
+    },
+    "shared_owner_v2.py": {
+      "bytes": 36956,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v2.py",
+      "sha256": "0ecb8c02e3a8016f2de3a69650b34776de312ffca6f37ded85a31eba9c50c24b"
+    }
+  },
+  "material_blockers": [],
+  "old_original_or_payload_operations": 0,
+  "originals_authenticated": false,
+  "prior_hold": {
+    "bytes": 15693,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-HOLD-v1.json",
+    "sha256": "66b588bf4f077d7d876be73a6a7db6ded99c1bd7b688f03da1091e8472c72845"
+  },
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "provenance_and_limits": [
+    "The consolidated shared8 module was authored AFTER v2 source existed and retrospectively run on unchanged v1, then v2. It is not claimed preregistered/pre-fix authored; original functional witnesses and first48 failure preceded fixes.",
+    "This reviewer read source/AST and retained proofs, independently reran only the same two previously demonstrated Origin/compiler counterexamples, and did not replay the complete48 or author16 suites.",
+    "Fresh captured v2 module maps are explicit, with no old-name module/source-cache fallback. Driver's only logic delta adds a stricter stopped monitor after raise_exception plus normal binding return; frozen e12 expected cases are unchanged.",
+    "The proof's372 snapshots are strictly validated full-history captures; its9 focused observation records are separate. Counts are not claimed disjoint tests or real system measurements.",
+    "The 141B marker modules really execute only inside the synthetic suite's closed in-memory compiler. Fixture-only branded factories/checkers remain separate from those toy helper modules. The late compiler returns an opaque value and earns no source acceptance.",
+    "Source public read-only property tests concern ordinary assignment, not hostile private/object.__setattr__ manipulation.",
+    "Eight-record output ceiling is slack around five named fictional kinds. Serialized seven-key rows/tip prove retained synthetic ACK-prefix bytes, not persisted hash-chain/native journal format or physical durability.",
+    "Publication8193/repeated-kind refusal is not isolated exercised coverage; all-produced-packet cap/once-kind checks remain structural/SinkSpy only. Compound admission controls do not establish isolated per-cap guards.",
+    "N4 scaling/performance, full raw-memory fit, a full original roster and real first-clock/bootstrap/FFI/checker qualification remain deferred, not silently upgraded by this bounded prototype clearance."
+  ],
+  "real_checkers_bound": false,
+  "recorded_at_utc": "2026-10-29 16:56:25 UTC",
+  "resolved_findings": [
+    {
+      "correction": "Normal invoke return now stores wrapper_return=True and wrapper_state=returned unconditionally; stopped/original error remains separate.",
+      "evidence": "Same focused wrapper assertion and unchanged old author control pass.",
+      "id": "F1"
+    },
+    {
+      "correction": "Continuation has one private issuer slot, read-only owner property and assignment refusal.",
+      "evidence": "Distinct genuine-owner assignment regression rejects without mutation or foreign dispatch.",
+      "id": "F2"
+    },
+    {
+      "correction": "Four terminal ACK fields project their callback record's acknowledged fact after try_action; no late fact can mint a positive gate.",
+      "evidence": "Separate candidate/cleanup/receipt/seal hard400 controls retain known ACK, fail completion and record no later sink call.",
+      "id": "F3"
+    },
+    {
+      "correction": "SharedOwner stores its original Origin privately and exposes only a getter.",
+      "evidence": "Independent same counterexample now raises AttributeError, retains100/395/400 and ends REFUSED/pureFalse; other owner has0dispatch/output.",
+      "id": "F4"
+    },
+    {
+      "correction": "Compiler name enters known-return order immediately after observed compiler return; postclock/live checks still precede acceptance/cache.",
+      "evidence": "Independent same counterexample retains returned name with acceptedFalse/notcached/originaldeadline; shared focused test also passes.",
+      "id": "F5"
+    }
+  ],
+  "retained_test_evidence": {
+    "author_unchanged_controls": 16,
+    "independent_full_suite": {
+      "audit_denials": 0,
+      "errors": 0,
+      "failures": 0,
+      "focused_assertion_methods": 8,
+      "focused_observation_records": 9,
+      "frozen_histories": 48,
+      "full48_fake_dispatches": 518,
+      "full48_inmemory_marker_execs": 34,
+      "histories_matched": 48,
+      "methods": 9,
+      "proof": {
+        "bytes": 5024279,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-PROOF-v2.json",
+        "sha256": "14d78f96fbdb20e2c40e1884c278704f9da93b02c46cd502df87cf1f756698e3"
+      },
+      "strictly_validated_history_snapshots": 372
+    },
+    "retrospective_same_assertions": {
+      "chronology": "Retrospective unchanged-v1 focused replay performed after v2 source existed; no pre-implementation-test claim.",
+      "errors": 0,
+      "failures": 8,
+      "methods": 8,
+      "proof": {
+        "bytes": 98063,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-FIVE-REGRESSIONS-BEFORE-v2.json",
+        "sha256": "44eddebb07ef0a1e9a9c463881c67b585ca086febe173e914da1a5e790c63e4e"
+      }
+    },
+    "reviewer_same_two_after": {
+      "bytes": 2973,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ADJACENT-IDENTITY-RETURN-AFTER-v2.json",
+      "sha256": "fa5981c865a4ac3fb5925e8927e637306c53e8d21e35cbda77a444d708257e93"
+    }
+  },
+  "reviewer": "native_039_acceptance_audit",
+  "root_correction_scope": {
+    "bytes": 5687,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-CORRECTION-SCOPE-v2.json",
+    "sha256": "298d42f4ab955513a1fe6a8a8cfdd70428199918d25e1147151d9c0fb3f37b48"
+  },
+  "runtime_authorized": false,
+  "schema_or_fixture_changes_by_reviewer": 0,
+  "schema_version": 1,
+  "source_pins": [
+    {
+      "bytes": 36956,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v2.py",
+      "sha256": "0ecb8c02e3a8016f2de3a69650b34776de312ffca6f37ded85a31eba9c50c24b"
+    },
+    {
+      "bytes": 10595,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v2.py",
+      "sha256": "a224bfb9e9f33bf2f6b9329f0b337d0076bdab418083d05deb3f59b52722a059"
+    },
+    {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v2.py",
+      "sha256": "1d05a7398fe215cae987a76ab3960e0dc3730b89fad79caca64c466bac1f4b2f"
+    }
+  ],
+  "status": "CLEAR_SOURCE_PURE_INJECTED_SHARED_OWNER_V2",
+  "subject_source_changes_by_reviewer": 0,
+  "verification_complete": false,
+  "whole_project_accepted": false
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T22:54:23.114783+00:00",
+  "status": "CLEAR_exact_source_protocol_pure_evidence_only_root_separately_decides_one_nonautomatic_attempt",
+  "execution_authorized_by_review": false,
+  "actual_ABI_observation_established": false,
+  "anchors": {
+    "run_detached_abi_observation_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v1.py",
+      "bytes": 30370,
+      "sha256": "97544efa7e181e2a33d494c0923e3547b4f98f7903c6e0e1db024999736b6437"
+    },
+    "DETACHED-ABI-OBSERVATION-PROTOCOL-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v1.json",
+      "bytes": 40286,
+      "sha256": "dc7de124b9f64a5cce688f91857d960e27549fa2df9c27fd667517da4c980672"
+    },
+    "DETACHED-ABI-OBSERVATION-PURE-CHECKS-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PURE-CHECKS-v2.json",
+      "bytes": 601,
+      "sha256": "10573c36afdf5e3af1350a093b1cc4111be0e0be145105cb8e3f4995006d8277"
+    },
+    "check_detached_abi_observation_v2.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_observation_v2.py",
+      "bytes": 12649,
+      "sha256": "73c31e617b21ca24464a881c29c060b85aa044c504ca49f0399298698c9816de"
+    },
+    "DETACHED-ABI-RESULTS-ADVERSARIAL-PROOF-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-RESULTS-ADVERSARIAL-PROOF-v1.json",
+      "bytes": 29258,
+      "sha256": "2a7745f95468e11bc5f0206ce3e83be49fc57d474306ac05aee4a82dd9006587"
+    },
+    "check_detached_abi_results_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_results_v1.py",
+      "bytes": 16971,
+      "sha256": "a2136bc58fa853bcb4471a797bbce1b75395bfb6ca4ac90da235694f27517fe0"
+    },
+    "DETACHED-ABI-EXECUTION-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v1.json",
+      "bytes": 11723,
+      "sha256": "2be3241b97ca3a4f0f237ebb6cbcff4884366f37d10303608c09366c4e709457"
+    },
+    "DETACHED-ABI-EXECUTION-CHECKLIST-v1.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CHECKLIST-v1.md",
+      "bytes": 6570,
+      "sha256": "eea8e52dbc55215039fa5ee78305a0ac823c2d008a1626a961b8c5d78e415806"
+    },
+    "detached_parent_launch_draft_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "bytes": 53085,
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    },
+    "DETACHED-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.json",
+      "bytes": 18583,
+      "sha256": "7f184e9b4d04019c6fba3bc661dabe241b7ef6a2a0ee8c713711eeeae12eb961"
+    },
+    "DETACHED-ABI-RESULTS-FINAL-SOURCE-BINDING-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-RESULTS-FINAL-SOURCE-BINDING-v1.json",
+      "bytes": 2233,
+      "sha256": "158b74d3fa72169e1ecd50c152c0df4813ac9af2755989164647e4bdc04d85e3"
+    }
+  },
+  "input_count": 147,
+  "prospective_output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v1-20261028T225049Z",
+  "checks": {
+    "all147pins_match": true,
+    "canonical_protocol": true,
+    "prospective_output_absent": true,
+    "main_v2_constants_and_proof_checker_bound": true,
+    "seven_adversarial_component_ASTs_match": true,
+    "all230declared_vectors_pass": true,
+    "all27typed_bindings_equal_qualified_facade": true,
+    "SDKs_unchanged_and_disabled": true,
+    "no_old_prepare_config_or_execute_draft": true,
+    "no_IOCP_route": true,
+    "exact_ARGC4_mode_runtime_output": true,
+    "exact_EXE9f955_and_runtime4_and_System32_16": true,
+    "no_CPU_DLL_compiler_workerEXE_model_payload_inputs": true,
+    "strict_generic_total1_no_resource_allowance": true,
+    "raw_bytes_retained_before_check": true,
+    "strict_defaults_layouts_modules_version_JSON_validators": true,
+    "artifact_entry_safe_regular_checks": true,
+    "unknown_attempt_and_ownership_paths_retained": true,
+    "primary_plus_recheck_close_retry_publication_late_afterseal_failures_retained": true,
+    "seven_lifecycle_fixture_universes_receipt_seal_hashes_and_journal_chains_verified": true
+  },
+  "evidence": {
+    "main_tests": 11,
+    "independent_adversarial_tests": 9,
+    "independent_adversarial_vectors": 230,
+    "old_v1_main_proof_is_preserved_provenance_only": true,
+    "final_source_binding_asset_pinned_for_root": true
+  },
+  "explicit_call_scope": {
+    "runtime_DLLs": [
+      "libomp.dll",
+      "ggml-base.dll",
+      "ggml.dll",
+      "llama.dll"
+    ],
+    "target_invocations": [
+      "llama_version",
+      "llama_model_default_params"
+    ],
+    "wider_symbols_resolved_not_invoked": true,
+    "initializer_effects_instrumented": false
+  },
+  "fixtures": [
+    {
+      "name": "after-seal",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\after-seal",
+      "files": 12,
+      "journal_events": 14,
+      "raw_snapshots": 4,
+      "journal_tip_sha256": "a47347e48a2399780edf1fa5a12fcc516be580ca034fbc56bbf674aa849b8257",
+      "serialized_seal_status": "ABI_observations_retained_independent_qualification_pending",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "after-seal-failure.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\after-seal\\terminal-seal.json",
+        "bytes": 1969,
+        "sha256": "07cc633c78919ccdcffccaed556d077db81e41afe7c186c35957615d9a65c896"
+      }
+    },
+    {
+      "name": "counter-recheck",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\counter-recheck",
+      "files": 12,
+      "journal_events": 13,
+      "raw_snapshots": 3,
+      "journal_tip_sha256": "9a80da8e072ce32f6a8d681ec479feb1bbcc91179607b06ba0907dffe15ec978",
+      "serialized_seal_status": "failed",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "failure.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\counter-recheck\\terminal-seal.json",
+        "bytes": 2255,
+        "sha256": "eea01d8364a94e8ccb884dfc53201caa66d6cca02f073a49d99c29e0867663a9"
+      }
+    },
+    {
+      "name": "late",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\late",
+      "files": 12,
+      "journal_events": 14,
+      "raw_snapshots": 4,
+      "journal_tip_sha256": "e1ea2af0f45b981a891dbd20971af6a7c78de49d657e82e5532cf2647f8a9127",
+      "serialized_seal_status": "failed",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "late-failure.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\late\\terminal-seal.json",
+        "bytes": 2235,
+        "sha256": "4d782f27b4bf387104a7813b304feab97a091b59cb0698d3e9c047e50e866c9c"
+      }
+    },
+    {
+      "name": "ordinary",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\ordinary",
+      "files": 11,
+      "journal_events": 14,
+      "raw_snapshots": 4,
+      "journal_tip_sha256": "c8e84f7cfcc422a33e144e5db5e083236b05289e5e9a49c6dec15b4c44fa4f3c",
+      "serialized_seal_status": "ABI_observations_retained_independent_qualification_pending",
+      "effective_status": "ABI_observations_retained_independent_qualification_pending",
+      "authoritative_markers": [],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\ordinary\\terminal-seal.json",
+        "bytes": 1980,
+        "sha256": "1b4108a6e87788f03757b1345cd860959f8f67363a53211cb733e19e656d6904"
+      }
+    },
+    {
+      "name": "report-fault",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\report-fault",
+      "files": 11,
+      "journal_events": 13,
+      "raw_snapshots": 3,
+      "journal_tip_sha256": "2387998e6f8a2346f83e9a808170b0fa03a83b61b45bfd3c678313ed15abe9db",
+      "serialized_seal_status": "failed",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "failure.json",
+        "terminal-publication-error.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\report-fault\\terminal-seal.json",
+        "bytes": 1943,
+        "sha256": "5e593b7c4648743e5051c9ab8a68a891982fb5f37be185052040cc29c3ccc00f"
+      }
+    },
+    {
+      "name": "resume-fault",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\resume-fault",
+      "files": 12,
+      "journal_events": 11,
+      "raw_snapshots": 2,
+      "journal_tip_sha256": "4d567edcd90b0dd70732096930a89e9678bd1f95f094202f9799b8ba6d02f62b",
+      "serialized_seal_status": "failed",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "failure.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\resume-fault\\terminal-seal.json",
+        "bytes": 2247,
+        "sha256": "4962530ec221717bc9a14c785d2eadfa195af858aaa005e3f0cc3b1592e045ae"
+      }
+    },
+    {
+      "name": "timeout",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\timeout",
+      "files": 12,
+      "journal_events": 13,
+      "raw_snapshots": 3,
+      "journal_tip_sha256": "df6d7d7122ce6c125d053ab1fe5f6da6f57f3ccef3b20c16a1f9a47d74df2ada",
+      "serialized_seal_status": "failed",
+      "effective_status": "failed",
+      "authoritative_markers": [
+        "failure.json"
+      ],
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-fixed-ABI-pure-1793227847085867100\\timeout\\terminal-seal.json",
+        "bytes": 2233,
+        "sha256": "311ae7f6af05b3eec1d4d2f895a8b2a1545c4cff6939e9d4ca5af2078448bb51"
+      }
+    }
+  ],
+  "material_findings": [],
+  "resolved_findings": [
+    "Both child artifact entries now safe(output=True) and regular-file checked before stat/read; both reparse negatives retained"
+  ],
+  "limitations": [
+    "Module inventory is self-reported before the two explicit queries; there is no post-query, final/global initializer or loader attestation.",
+    "DLL/CRT/OpenMP initialization may execute other native code or have effects; source call policy is not an instrumented universal zero-effects claim.",
+    "Current expected version is empty and observations remain independent-ABI-acceptance pending; no guessed API version or CLI-prefix substitute.",
+    "Fixed binary header contains unused CPU/GGUF metadata; exact --abi path does not lease/load/read it.",
+    "No actual ABI/target call was made in this review; harmless host/source qualification does not establish target correctness or universal containment.",
+    "Prior negatives, historical unidentified PID and closed IOCP accounting gap remain unchanged."
+  ],
+  "activity": {
+    "author_helpers_executed": 0,
+    "Windows_API_or_compiler_or_child_or_target_or_model_calls": 0,
+    "CPU_DLL_or_GGUF_payload_reads": 0,
+    "own_Python_used_for_file_hash_JSON_AST_and_review_artifacts_only": true
+  }
+}

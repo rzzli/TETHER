@@ -1,0 +1,2116 @@
+{
+  "activity": {
+    "CPU_GGUF_oldpack_reads": 0,
+    "bridge_pack_parent_runtime_implementations": 0,
+    "target_native_SDK_tokenizer_compiler_calls": 0
+  },
+  "author": {
+    "bytes": 16750,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\author_unicode_wire_design_v2.py",
+    "sha256": "0ec81954db616cdf074c536e65870f949430d2a3ee9912bed0d4f70443290389"
+  },
+  "basis": {
+    "UNICODE-CONTROL-CONTRACT-v2.json": {
+      "bytes": 9809,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+      "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+    },
+    "UNICODE-CONTROL-CORPUS-v1.json": {
+      "bytes": 233438,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+      "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+    },
+    "UNICODE-CONTROL-FIXTURE-FREEZE-v1.json": {
+      "bytes": 8211,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-FIXTURE-FREEZE-v1.json",
+      "sha256": "e6e8419c0ad37db007263de0a57e0ce66a20f7481f35686427076ea36c7106b3"
+    },
+    "UNICODE-CONTROL-INDEPENDENT-SEMANTIC-PROOF-v1.json": {
+      "bytes": 43153,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-INDEPENDENT-SEMANTIC-PROOF-v1.json",
+      "sha256": "739d83dff80490175a6b18e0a4e40b209d752e6eef9bcc39a762fd098333e057"
+    },
+    "UNICODE-CONTROL-SCOPED-ACCEPTANCE-v1.json": {
+      "bytes": 2657,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-SCOPED-ACCEPTANCE-v1.json",
+      "sha256": "b219f1f28d2ed9a790b1d811c3834afb6872a085f9798efece52ca4737be5567"
+    },
+    "UNICODE-CONTROL-STAGES-v1.json": {
+      "bytes": 227662,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+      "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+    },
+    "UNICODE-PIECE-ANALYZER-CONTRACT-v1.json": {
+      "bytes": 8506,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-CONTRACT-v1.json",
+      "sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6"
+    },
+    "UNICODE-PIECE-ANALYZER-INDEPENDENT-PEER-v1.json": {
+      "bytes": 6834,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-INDEPENDENT-PEER-v1.json",
+      "sha256": "e3a45f48c7f8217f632e36acfcb1b60612667c76c809e42e95f7e182cc6bcf8b"
+    },
+    "UNICODE-PIECE-ANALYZER-SCOPED-ACCEPTANCE-v2.json": {
+      "bytes": 1978,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-SCOPED-ACCEPTANCE-v2.json",
+      "sha256": "f895b990247a6c2bfd287c55cdf4015f58f2d995e1dab17d922ff14f5a246140"
+    },
+    "unicode_piece_analyzer_v1.py": {
+      "bytes": 10137,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\unicode_piece_analyzer_v1.py",
+      "sha256": "537a780a3d2d3b95d5fe4976cd8a073cf528db908badf3edf3e861e729ff8f9d"
+    }
+  },
+  "correction_basis": "Root/OS bounded design batch: fixed per-row footer cap, exactsetup schema/vectors, native outcome vsgeometryQC separation; source/pure design only.",
+  "preserved_proposal": {
+    "bytes": 51022,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v1.json",
+    "sha256": "e7219e813562423ab9b71f39073be486c62ebf8357551f7b79c8956a2ef13302"
+  },
+  "recorded_at_utc": "2026-10-29T08:41:35.172172+00:00",
+  "schema_version": 1,
+  "semantic_contract": {
+    "API_accounting": {
+      "after_cases_and_prefix_exact_delta": {
+        "batch": "Exact totalattempts=returns and every per-API value equals setup+all recorded per-case/prefix deltas+cleanup; sampler init/free=78+U only if all documentQCok. Last state no owned/unknown releases, exceptions0.",
+        "cleanup": "After all samplers knownreleased, model_free1 thenbackend_free1; no further version/defaults/registry/vocab/tokenizer/sampler work. Unknown dependencies block unsafe downstream release.",
+        "coverage_and_selection": "Zero native delta. All84 case writes witnessed; declared counts/geometry independent of native membership.",
+        "normal": "No native delta after batch; no new original-input/payload reads by child after its known leases are closed.",
+        "prefix": "One new sampler/init/free for each UNIQUEselected pair only; zero tokenize/piece delta. Replay original take_tokens. Apply/accept formula same as document withN=take_tokens; expected result requires all prefix tokens admitted+everyEOGfalse."
+      },
+      "attempts": "Reserve before API entry and token work before loops; count return/ownership/seen results immediately before deadline/logging. Never infer a return or retry a pending creation/free.",
+      "derived_counts": "Let D=sum document N, P=sum unique selected take_tokens, A=document+prefix ordinary attempts, R=ordinary accepted, Z=number of samplers reaching all-token completion, E=observed EOGcount. tokenize<=156; piece<=2D; sampler init/free=78+U when allQCgood; accept=R<=D+P; apply=A+Z*E<=D+P+(78+U)*E; EOGenumeration=nv.",
+      "document_tokenizer": "At most2calls per78eligible docs; false/false add-special/parse-special. Retry only the initial negative required-size convention, once, within per-case cap; record changed/invalid sizing as unknown QC.",
+      "hard_caps": {
+        "ggml_backend_dev_count": 2,
+        "ggml_backend_dev_get": 2,
+        "ggml_backend_dev_name": 2,
+        "ggml_backend_dev_type": 2,
+        "ggml_backend_load": 1,
+        "ggml_backend_reg_count": 2,
+        "ggml_backend_reg_dev_count": 3,
+        "ggml_backend_reg_dev_get": 3,
+        "ggml_backend_reg_get": 2,
+        "ggml_backend_reg_name": 2,
+        "llama_backend_free": 1,
+        "llama_backend_init": 1,
+        "llama_model_default_params": 1,
+        "llama_model_free": 1,
+        "llama_model_get_vocab": 1,
+        "llama_model_load_from_splits": 1,
+        "llama_sampler_accept": 1000000,
+        "llama_sampler_apply": 1013184,
+        "llama_sampler_free": 206,
+        "llama_sampler_init_grammar": 206,
+        "llama_token_to_piece": 2000000,
+        "llama_tokenize": 412,
+        "llama_version": 1,
+        "llama_vocab_is_eog": 262144,
+        "llama_vocab_n_tokens": 1
+      },
+      "interrupted_or_deadline": "No new work after interruption/work cutoff. Mandatory safe known-owned cleanup may bypass cooperative work tick but stays under external120s/caps; nonreturn/late cleanup veto complete profile.",
+      "names": [
+        "ggml_backend_dev_count",
+        "ggml_backend_dev_get",
+        "ggml_backend_dev_name",
+        "ggml_backend_dev_type",
+        "ggml_backend_load",
+        "ggml_backend_reg_count",
+        "ggml_backend_reg_dev_count",
+        "ggml_backend_reg_dev_get",
+        "ggml_backend_reg_get",
+        "ggml_backend_reg_name",
+        "llama_backend_free",
+        "llama_backend_init",
+        "llama_model_default_params",
+        "llama_model_free",
+        "llama_model_get_vocab",
+        "llama_model_load_from_splits",
+        "llama_sampler_accept",
+        "llama_sampler_apply",
+        "llama_sampler_free",
+        "llama_sampler_init_grammar",
+        "llama_token_to_piece",
+        "llama_tokenize",
+        "llama_version",
+        "llama_vocab_is_eog",
+        "llama_vocab_n_tokens"
+      ],
+      "per_case_exact_delta": {
+        "QC_ok_tokenizer": "For N>=1, tokenize=1 ifN==1 else2; piece=N+count(piece_byte_length>1) with capacity1 initial call and exactlyone required-size retry. Other capacities/retries are forbidden.",
+        "QC_unknown": "Retain explicit finite failure/partial known counters, not a successful delta formula or zero. If a critical native return/ownership is unknown, stop further native work and leave tail unknown.",
+        "before_case": "Exact prior cumulative counts; sets current_case_index=i, computed=i/written=i, strata prefix counts from frozen cases0..i-1; no API dispatch yet.",
+        "case_snapshot": "Computed increments only when case body computed, before publication; result-written excludes current row. Parent commits its validated counters only after all body/schema/accounting checks pass.",
+        "grammar_observation": "Sampler init1 and known once-free1. If first ordinary rejection at r: apply=r+1, accept=r, completion_EOG null. Otherwise apply=N+E,accept=N and exact allEOG vector, including disagreement. No EOG accepts.",
+        "harness_case": "Zero native delta, ledger null, native observation null, exact declared reason. Computed=i+1/written=i at current case row; witness write only later."
+      },
+      "pieces": "At most2calls per original document token with counted bytes and bounded returned size<=B; no per-prefix piece/tokenizer calls.",
+      "positive_fixed_profile_upper_bounds": {
+        "ggml_backend_dev_count": 2,
+        "ggml_backend_dev_get": 2,
+        "ggml_backend_dev_name": 2,
+        "ggml_backend_dev_type": 2,
+        "ggml_backend_load": 1,
+        "ggml_backend_reg_count": 2,
+        "ggml_backend_reg_dev_count": 3,
+        "ggml_backend_reg_dev_get": 3,
+        "ggml_backend_reg_get": 2,
+        "ggml_backend_reg_name": 2,
+        "llama_backend_free": 1,
+        "llama_backend_init": 1,
+        "llama_model_default_params": 1,
+        "llama_model_free": 1,
+        "llama_model_get_vocab": 1,
+        "llama_model_load_from_splits": 1,
+        "llama_sampler_accept": 69108,
+        "llama_sampler_apply": 74356,
+        "llama_sampler_free": 82,
+        "llama_sampler_init_grammar": 82,
+        "llama_token_to_piece": 124520,
+        "llama_tokenize": 156,
+        "llama_version": 1,
+        "llama_vocab_is_eog": 262144,
+        "llama_vocab_n_tokens": 1
+      },
+      "positive_fixed_profile_upper_sum": 530477,
+      "sampler_expectation": "78+U only for complete allQCgood run, U unique selected boundaries<=4. Never copy old190 or treat known unavailable classes as observed prefix rejections.",
+      "scope": "Explicit own bridge export calls only, not DLL-internal/OS/GPU/I/O/inference absence.",
+      "singleton": "Apply to one ordinary candidate then accept only admitted ordinary IDs; stop that sampler at first rejection but retain entire precomputed ledger. If all admitted, query every EOG on unchanged state, never accept EOG.",
+      "stage_schedule": "The complete15row cumulative25API vectors above are normative, including every zero. A source claim contradicting its vector rejects even when counters are monotone and under caps. Variable nv is resolved ONLY from the observed vocabulary_count row.",
+      "total_hard_attempt_cap": 4276181,
+      "unknown_cleanup": "Unknown sampler init/free blocks dependent model/backend cleanup; unknown model load/free blocks backend teardown. Clear actionable owned pointer at once-only release reservation; retain primary+secondary failures. No automatic retry."
+    },
+    "bounds": {
+      "EOG": 64,
+      "active_processes": 1,
+      "actual_cases": 84,
+      "actual_document_token_cap_sum": 62260,
+      "actual_eligible_bytes": 14941,
+      "actual_max_N": 1712,
+      "actual_max_document_bytes": 420,
+      "actual_total_token_work_upper": 69108,
+      "child_cleanup_reserved_seconds": 2,
+      "children": 1,
+      "cooperative_work_ms": 117000,
+      "document_bytes": 1024,
+      "final_work_cutoff_seconds": 295,
+      "general_total_token_work_upper": 412800,
+      "grammar_bytes": 65536,
+      "hard_token_work_cap": 1000000,
+      "maximum_N": 4128,
+      "module_reports": 64,
+      "owner_finalization_reserved_seconds": 5,
+      "owner_seconds": 300,
+      "pack_bytes": 20971520,
+      "parent_child_work_cutoff_seconds": 118,
+      "per_case_N": "min65536,4B+32",
+      "process_and_job_commit_bytes": 268435456,
+      "profile_cases": 96,
+      "stage_instances": 4,
+      "stream_bytes_each": 65536,
+      "unique_grammars": 2,
+      "vocabulary": 262144,
+      "whole_child_seconds": 120
+    },
+    "case_row": {
+      "QC": "Token/piece GEOMETRY ONLY: exact status/reason, ok+nullreason, declared harness_ineligible+exactreason, or unknown+finite identifier reason<=64. Ordinary-token rejection, EOG rejection or mixed EOG does not discard a valid ledger or change coverage population/counts. Native ownership/nonreturn/shape faults independently stop further unsafe work.",
+      "authored_expected": "Exact4keys native_member/generation_member/semantic_eligible/coverage_population; first three bool|null, last strictbool; copied frozen values are expectations, never admission.",
+      "body_keys": [
+        "case_ordinal",
+        "case_id",
+        "stage_instance_id",
+        "grammar_sha256",
+        "raw_sha256",
+        "raw_bytes",
+        "authored_expected",
+        "QC",
+        "observation",
+        "ledger",
+        "compact_analysis",
+        "matches_authored_native_expectation"
+      ],
+      "compact_analysis": "Exact counts4/matrix4x3/zero_piece_count, independently reconstructible from full ledger and frozen raw bytes; all null for declared harness or unexpected QCunknown.",
+      "event": "unicode_case_result",
+      "ledger": "Exact three arrays token_ids/piece_byte_lengths/piece_hex; equal N, strict IDs0..nv-1 excluding EOG, canonical lowercase even hex incl empty, lengths match and sum/concat exactly raw. All original empty pieces/indices retained. Null for harness/failedQC; no clipping/repair.",
+      "matches_authored_native_expectation": "Strictbool iff native_member observed bool; otherwise null. Parent recomputes from immutable frozen source, not this field.",
+      "native_observation_failure": "Mixed EOG is observation.status native_EOG_disagreement, native_member/matches null; retain QCok/fullarrays/geometry if those checks passed. Overall profile fails. Native token rejection is known nativefalse and still retains the full precomputed token/piece ledger.",
+      "observation": "Exact7keys from sizing template. native_member is true for all ordinary admitted+all EOG admitted; false for an ordinary-token rejection or all ordinary admitted+all EOG rejected; null for mixed EOG/unknown observation. Rejection span indexes the retained ORIGINAL ledger. EOG results retain all sorted observed IDs/admitted strictbools whenever the full-token point is reached.",
+      "strict_parent_commit": "Commit case/native/harness/stratum validated counters only after complete row schema, reference, accounting and body checks pass."
+    },
+    "corpus": {
+      "authored_native_members": 69,
+      "authored_native_nonmembers": 9,
+      "case_order": "No reorder/filter/replacement/adaptive corpus. Every authored expectation is retained separately from observed membership/QC.",
+      "cases": 84,
+      "corpus_sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c",
+      "coverage_population": 68,
+      "harness": "One raw-NUL and five invalid-UTF8 controls: exact declared reason, ledger null/native_member null; zero per-document native calls. No synthetic false membership.",
+      "harness_ineligible": 6,
+      "native_byte_eligible": 78,
+      "stage_instances": 4,
+      "stages_sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a",
+      "strata": [
+        {
+          "cases": 4,
+          "name": "stage_source_report"
+        },
+        {
+          "cases": 42,
+          "name": "scalar_field_grid"
+        },
+        {
+          "cases": 14,
+          "name": "ASCII_escape_counterparts"
+        },
+        {
+          "cases": 8,
+          "name": "mixed_normalization_escape"
+        },
+        {
+          "cases": 10,
+          "name": "grammar_semantic_JSON_controls"
+        },
+        {
+          "cases": 6,
+          "name": "byte_harness_guards"
+        }
+      ],
+      "unique_grammars": 2
+    },
+    "coverage": {
+      "all_case_ledgers": "Eligible nonpopulation cases also retain full arrays and geometry; six declared exclusions have null measurements and known population contribution0 by declaration.",
+      "analyzer_contract_sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6",
+      "classes": [
+        "pending_width2",
+        "pending_width3",
+        "pending_width4",
+        "same_piece_complete_scalar_then_pending"
+      ],
+      "compact_summary_keys": [
+        "coverage_complete",
+        "all_case_QC_complete",
+        "counts",
+        "matrix",
+        "known_counts_lower_bound",
+        "known_matrix_lower_bound",
+        "unknown_population_ordinals",
+        "selectors",
+        "selected_prefixes",
+        "required_available"
+      ],
+      "geometry": "Exact accepted analyzer intervals/matrix units, including wholly-contained complete scalar within same piece; all boundaries reconstructible, not serialized as thousands of objects.",
+      "population": "Frozen native_byte_eligible AND generation_member AND semantic_eligible; never observed membership/QC as a filter.",
+      "selected_prefix": "Use ORIGINAL token IDs through the selected piece, including empty tokens. Fresh sampler, no retokenization. Success requires all ordinary prefix tokens admitted then every EOG rejected; ordinary rejection is a failed observed prefix, not an excuse to select another boundary. Geometry selection remains unchanged by all grammar outcomes.",
+      "selected_prefix_body_keys": [
+        "selection_index",
+        "case_ordinal",
+        "token_ordinal",
+        "take_tokens",
+        "byte_cut",
+        "classes",
+        "pending_interval",
+        "piece_interval",
+        "complete_widths",
+        "witnesses",
+        "prefix_sha256",
+        "observation",
+        "matches_expected"
+      ],
+      "selected_witnesses": "Earliest contained scalar interval per distinct width1..4, sorted; classes/witnesses recomputed independently, not trusted child eligibility.",
+      "selector": "First(case ordinal,original token ordinal) per class across all declared population, class-priority order as above; de-duplicate equal pair, preserve all class references, at most4.",
+      "unavailable": "Known count0 -> required_available false; missing any required class fails profile after complete safe data collection. No alternative/adaptive corpus or second tokenization.",
+      "unknown": "Any population QCunknown makes complete counts/matrix/selectors/selected_prefixes/required_available null; known lower bounds stay distinct. Excluded QCunknown still makes whole profile negative.",
+      "whole_corpus": "Evaluate all84 once before selection; retain every case outcome and all counts. Safe membership mismatch does not remove it or stop the remaining safe scan."
+    },
+    "event_order": {
+      "after_cases": [
+        "unicode_coverage_summary",
+        "unicode_selection_plan",
+        "unicode_selected_prefix_result[0..U-1]",
+        "unicode_cleanup_returned",
+        "unicode_batch_returned",
+        "child_normal_completion"
+      ],
+      "batch_body_keys": [
+        "cases_computed",
+        "case_results_written",
+        "stratum_computed",
+        "stratum_results_written",
+        "native_case_results",
+        "harness_dispositions",
+        "selected_prefixes_computed",
+        "selected_prefix_results_written",
+        "required_available",
+        "all_case_QC_complete",
+        "all_expected_membership_outcomes_match",
+        "total_token_work_reserved",
+        "module_policy_id",
+        "module_policy_sha256",
+        "module_policy_phase",
+        "modules",
+        "scientific_validation"
+      ],
+      "batch_success": "84/84, six exact strata,78 known membership outcomes and6 exact harness dispositions; required availability/allQC/all matches true; U prefix results pass; all calls returned/no owned or unknown release; cleanup observed. Still observation status only, never scientific/profile authority.",
+      "before_case_body_keys": [
+        "case_ordinal",
+        "case_id",
+        "stage_instance_id",
+        "grammar_sha256",
+        "raw_sha256",
+        "raw_bytes",
+        "declared_native_byte_eligible"
+      ],
+      "cleanup_body_keys": [
+        "sampler_init_returns",
+        "sampler_free_returns",
+        "samplers_owned",
+        "sampler_release_unknown",
+        "model_free_return_observed",
+        "backend_free_return_observed",
+        "cleanup_failed"
+      ],
+      "complete_success_row_positions": "Setup rows0..14; before_case15+2i/result16+2i fori0..83; coverage183; selection184; prefix185..184+U; cleanup185+U; batch186+U; normal187+U. Complete row count188+U<=192. Reserved profile envelopes276rows remain unchanged; failure after late publication still consumes an existing footer slot.",
+      "coverage_body": "The exact compact_summary_keys above plus case_counts{expected84,computed84,written84,native78,harness6,population68}; each count exactint and source-linked.",
+      "failure_body": "primary_failure_id is SHA256 of canonical{pid,reason_code,error_class,elapsed_ms,row_sequence_reserved}. error_class/reason_code are finite ASCII enums, diagnostic_file is literal failure.json or null, profile_qualification is literal not_established. Common bounded native snapshot is still present. Max8192 inclLF.",
+      "failure_body_keys": [
+        "primary_failure_id",
+        "error_class",
+        "reason_code",
+        "diagnostic_file",
+        "profile_qualification"
+      ],
+      "failure_marker": "Separate<=65536 UTF8 JSON object contains the same primary identity and bounded raw module diagnostic when relevant. Failure JSONL is attempted first; marker records its actual reserved/attempted/return/unknown publication outcome and exact row SHA only if fully known. Marker attempt is independent even if JSONL failed. No future marker digest in the earlier row; no hash cycle.",
+      "normal_completion_body_keys": [
+        "status",
+        "elapsed_ms"
+      ],
+      "normal_completion_status": "unicode_controls_observations_complete_independent_qualification_pending",
+      "ordinary_failure": "A pre-completion failure prevents a complete-success batch/normal sequence. A later publication/commit/cleanup fault can occur after complete-looking rows; any failure marker, parent failure or missing/failed terminal seal vetoes qualification. Do not rewrite earlier rows.",
+      "per_case": "For each ordinal0..83: unicode_before_case then unicode_case_result. No prefix row interleaving before all84 case results.",
+      "selection_plan_body": "Exact selectors/selected_prefixes from compact summary; parent recomputes before any selected-prefix acceptance; U exact de-duplicated count0..4.",
+      "setup_body_schemas": {
+        "all_vocabulary_ids_EOG_enumerated": {
+          "exact_body_keys": [
+            "vocabulary_count",
+            "EOG_ids",
+            "EOG_JSON_sha256",
+            "module_policy_id",
+            "module_policy_sha256",
+            "module_policy_phase",
+            "modules"
+          ],
+          "fields": {
+            "EOG_JSON_sha256": "SHA256 of exact compact EOG ID JSON array",
+            "EOG_ids": "Sorted unique1..64 strictints0..nv-1, source enumerates EVERY id0..nv-1 exactlyonce",
+            "module_policy_id": {
+              "const": "trusted-System32-recognition-v1"
+            },
+            "module_policy_phase": "Expected event-derived pre_cpu or post_cpu constant; parent supplies trusted phase to matcher.",
+            "module_policy_sha256": {
+              "const": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713"
+            },
+            "modules": "Array1..64 exact{name,path} reports; exact pre/post matcher required, no reported-path filesystem operations. Entire serialized setup row<=8192 or explicit row-cap failure.",
+            "vocabulary_count": "Strictint nv1..262144"
+          }
+        },
+        "backend_init_returned_exact_CPU_identity_rechecked": {
+          "exact_body_keys": [
+            "module_policy_id",
+            "module_policy_sha256",
+            "module_policy_phase",
+            "modules"
+          ],
+          "fields": {
+            "module_policy_id": {
+              "const": "trusted-System32-recognition-v1"
+            },
+            "module_policy_phase": "Expected event-derived pre_cpu or post_cpu constant; parent supplies trusted phase to matcher.",
+            "module_policy_sha256": {
+              "const": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713"
+            },
+            "modules": "Array1..64 exact{name,path} reports; exact pre/post matcher required, no reported-path filesystem operations. Entire serialized setup row<=8192 or explicit row-cap failure."
+          }
+        },
+        "before_exact_shard_hash": {
+          "exact_body_keys": [
+            "index",
+            "path",
+            "expected_bytes"
+          ],
+          "fields": {
+            "expected_bytes": "Exact descriptor byte count, strict uint64",
+            "index": "Exact int0,1,2 according to fixed occurrence order",
+            "path": "Exact known parent-bound descriptor path, not reported platform path"
+          }
+        },
+        "before_explicit_required_OpenMP_dependency_load": {
+          "exact_body_keys": [
+            "dependency_native_initialization_possible"
+          ],
+          "fields": {
+            "dependency_native_initialization_possible": {
+              "const": true
+            }
+          }
+        },
+        "before_model_load_from_three_explicit_splits": {
+          "exact_body_keys": [
+            "effective_params",
+            "empty_devices_array_nonnull",
+            "cooperative_deadline_not_interruptible_native_call"
+          ],
+          "fields": {
+            "cooperative_deadline_not_interruptible_native_call": {
+              "const": true
+            },
+            "effective_params": {
+              "exact_typed_value": {
+                "check_tensors": false,
+                "devices_null": false,
+                "kv_overrides_null": true,
+                "lazy_mode": 0,
+                "load_mode": 0,
+                "load_mtp": false,
+                "main_gpu": -1,
+                "n_gpu_layers": 0,
+                "no_alloc": true,
+                "no_host": false,
+                "progress_callback_null": true,
+                "progress_userdata_null": true,
+                "split_mode": 0,
+                "tensor_buft_overrides_null": true,
+                "tensor_split_null": true,
+                "use_extra_bufts": false,
+                "vocab_only": true
+              }
+            },
+            "empty_devices_array_nonnull": {
+              "const": true
+            }
+          }
+        },
+        "cpu_registry_verified_before_llama_backend_init": {
+          "exact_body_keys": [
+            "registry_count",
+            "device_count",
+            "registry_name",
+            "device_name",
+            "module_policy_id",
+            "module_policy_sha256",
+            "module_policy_phase",
+            "modules"
+          ],
+          "fields": {
+            "device_count": {
+              "const": 1
+            },
+            "device_name": {
+              "const": "CPU"
+            },
+            "module_policy_id": {
+              "const": "trusted-System32-recognition-v1"
+            },
+            "module_policy_phase": "Expected event-derived pre_cpu or post_cpu constant; parent supplies trusted phase to matcher.",
+            "module_policy_sha256": {
+              "const": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713"
+            },
+            "modules": "Array1..64 exact{name,path} reports; exact pre/post matcher required, no reported-path filesystem operations. Entire serialized setup row<=8192 or explicit row-cap failure.",
+            "registry_count": {
+              "const": 1
+            },
+            "registry_name": {
+              "const": "CPU"
+            }
+          }
+        },
+        "exact_core_modules_loaded_exports_resolved": {
+          "exact_body_keys": [
+            "module_policy_id",
+            "module_policy_sha256",
+            "module_policy_phase",
+            "modules",
+            "layouts"
+          ],
+          "fields": {
+            "layouts": {
+              "exact_typed_value": {
+                "array_offsets": {
+                  "data": 0,
+                  "selected": 16,
+                  "size": 8,
+                  "sorted": 24
+                },
+                "bool_size": 1,
+                "candidate_offsets": {
+                  "id": 0,
+                  "logit": 4,
+                  "p": 8
+                },
+                "model_offsets": {
+                  "check_tensors": 73,
+                  "devices": 0,
+                  "kv_overrides": 64,
+                  "lazy_mode": 28,
+                  "load_mode": 24,
+                  "load_mtp": 77,
+                  "main_gpu": 32,
+                  "n_gpu_layers": 16,
+                  "no_alloc": 76,
+                  "no_host": 75,
+                  "progress_callback": 48,
+                  "progress_callback_user_data": 56,
+                  "split_mode": 20,
+                  "tensor_buft_overrides": 8,
+                  "tensor_split": 40,
+                  "use_extra_bufts": 74,
+                  "vocab_only": 72
+                },
+                "model_params_align": 8,
+                "model_params_size": 80,
+                "pointer": 8,
+                "token_array_size": 32,
+                "token_data_size": 12,
+                "token_size": 4
+              }
+            },
+            "module_policy_id": {
+              "const": "trusted-System32-recognition-v1"
+            },
+            "module_policy_phase": "Expected event-derived pre_cpu or post_cpu constant; parent supplies trusted phase to matcher.",
+            "module_policy_sha256": {
+              "const": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713"
+            },
+            "modules": "Array1..64 exact{name,path} reports; exact pre/post matcher required, no reported-path filesystem operations. Entire serialized setup row<=8192 or explicit row-cap failure."
+          }
+        },
+        "exact_shard_hash_returned": {
+          "exact_body_keys": [
+            "index",
+            "bytes",
+            "sha256"
+          ],
+          "fields": {
+            "bytes": "Exact descriptor byte count, strictuint64",
+            "index": "Same fixed index",
+            "sha256": "Exact descriptor lower64hex"
+          }
+        },
+        "three_exact_shards_hash_verified_and_read_leased": {
+          "exact_body_keys": [
+            "weight_file_hash_reads",
+            "tensor_weight_allocation_claim"
+          ],
+          "fields": {
+            "tensor_weight_allocation_claim": {
+              "const": false
+            },
+            "weight_file_hash_reads": {
+              "const": true
+            }
+          }
+        },
+        "typed_version_and_defaults_observed": {
+          "exact_body_keys": [
+            "version",
+            "defaults",
+            "no_backend_or_model_call_so_far"
+          ],
+          "fields": {
+            "defaults": {
+              "exact_typed_value": {
+                "check_tensors": false,
+                "devices_null": true,
+                "kv_overrides_null": true,
+                "lazy_mode": 1,
+                "load_mode": -1,
+                "load_mtp": false,
+                "main_gpu": 0,
+                "n_gpu_layers": -1,
+                "no_alloc": false,
+                "no_host": false,
+                "progress_callback_null": true,
+                "progress_userdata_null": true,
+                "split_mode": 1,
+                "tensor_buft_overrides_null": true,
+                "tensor_split_null": true,
+                "use_extra_bufts": true,
+                "vocab_only": false
+              }
+            },
+            "no_backend_or_model_call_so_far": {
+              "const": true
+            },
+            "version": {
+              "const": "0.7.0-dev"
+            }
+          }
+        },
+        "unicode_pack_verified_before_backend_or_model": {
+          "exact_body_keys": [
+            "pack_sha256",
+            "wire_semantics_sha256",
+            "corpus_sha256",
+            "stages_sha256",
+            "cases",
+            "stage_instances",
+            "unique_grammars",
+            "coverage_classes"
+          ],
+          "fields": {
+            "cases": {
+              "const": 84
+            },
+            "corpus_sha256": {
+              "const": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+            },
+            "coverage_classes": {
+              "const": 4
+            },
+            "pack_sha256": "Exact future bound newpack SHA256; lower64hex",
+            "stage_instances": {
+              "const": 4
+            },
+            "stages_sha256": {
+              "const": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+            },
+            "unique_grammars": {
+              "const": 2
+            },
+            "wire_semantics_sha256": "Exact current semantic fingerprint"
+          }
+        }
+      },
+      "setup_events": [
+        {
+          "body_selectors": {},
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 0,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 0,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "before_explicit_required_OpenMP_dependency_load"
+        },
+        {
+          "body_selectors": {
+            "module_policy_phase": "pre_cpu"
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 0,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 0,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "exact_core_modules_loaded_exports_resolved"
+        },
+        {
+          "body_selectors": {},
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "typed_version_and_defaults_observed"
+        },
+        {
+          "body_selectors": {},
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "unicode_pack_verified_before_backend_or_model"
+        },
+        {
+          "body_selectors": {
+            "index": 0
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "before_exact_shard_hash"
+        },
+        {
+          "body_selectors": {
+            "index": 0
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "exact_shard_hash_returned"
+        },
+        {
+          "body_selectors": {
+            "index": 1
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "before_exact_shard_hash"
+        },
+        {
+          "body_selectors": {
+            "index": 1
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "exact_shard_hash_returned"
+        },
+        {
+          "body_selectors": {
+            "index": 2
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "before_exact_shard_hash"
+        },
+        {
+          "body_selectors": {
+            "index": 2
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "exact_shard_hash_returned"
+        },
+        {
+          "body_selectors": {},
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 0,
+            "ggml_backend_dev_get": 0,
+            "ggml_backend_dev_name": 0,
+            "ggml_backend_dev_type": 0,
+            "ggml_backend_load": 0,
+            "ggml_backend_reg_count": 0,
+            "ggml_backend_reg_dev_count": 0,
+            "ggml_backend_reg_dev_get": 0,
+            "ggml_backend_reg_get": 0,
+            "ggml_backend_reg_name": 0,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "three_exact_shards_hash_verified_and_read_leased"
+        },
+        {
+          "body_selectors": {
+            "module_policy_phase": "post_cpu"
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 1,
+            "ggml_backend_dev_get": 1,
+            "ggml_backend_dev_name": 1,
+            "ggml_backend_dev_type": 1,
+            "ggml_backend_load": 1,
+            "ggml_backend_reg_count": 1,
+            "ggml_backend_reg_dev_count": 2,
+            "ggml_backend_reg_dev_get": 2,
+            "ggml_backend_reg_get": 1,
+            "ggml_backend_reg_name": 1,
+            "llama_backend_free": 0,
+            "llama_backend_init": 0,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "cpu_registry_verified_before_llama_backend_init"
+        },
+        {
+          "body_selectors": {
+            "module_policy_phase": "post_cpu"
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 2,
+            "ggml_backend_dev_get": 2,
+            "ggml_backend_dev_name": 2,
+            "ggml_backend_dev_type": 2,
+            "ggml_backend_load": 1,
+            "ggml_backend_reg_count": 2,
+            "ggml_backend_reg_dev_count": 3,
+            "ggml_backend_reg_dev_get": 3,
+            "ggml_backend_reg_get": 2,
+            "ggml_backend_reg_name": 2,
+            "llama_backend_free": 0,
+            "llama_backend_init": 1,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "backend_init_returned_exact_CPU_identity_rechecked"
+        },
+        {
+          "body_selectors": {},
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 2,
+            "ggml_backend_dev_get": 2,
+            "ggml_backend_dev_name": 2,
+            "ggml_backend_dev_type": 2,
+            "ggml_backend_load": 1,
+            "ggml_backend_reg_count": 2,
+            "ggml_backend_reg_dev_count": 3,
+            "ggml_backend_reg_dev_get": 3,
+            "ggml_backend_reg_get": 2,
+            "ggml_backend_reg_name": 2,
+            "llama_backend_free": 0,
+            "llama_backend_init": 1,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 0,
+            "llama_model_load_from_splits": 0,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": 0,
+            "llama_vocab_n_tokens": 0
+          },
+          "event": "before_model_load_from_three_explicit_splits"
+        },
+        {
+          "body_selectors": {
+            "module_policy_phase": "post_cpu"
+          },
+          "cumulative_attempted_equals_returned": {
+            "ggml_backend_dev_count": 2,
+            "ggml_backend_dev_get": 2,
+            "ggml_backend_dev_name": 2,
+            "ggml_backend_dev_type": 2,
+            "ggml_backend_load": 1,
+            "ggml_backend_reg_count": 2,
+            "ggml_backend_reg_dev_count": 3,
+            "ggml_backend_reg_dev_get": 3,
+            "ggml_backend_reg_get": 2,
+            "ggml_backend_reg_name": 2,
+            "llama_backend_free": 0,
+            "llama_backend_init": 1,
+            "llama_model_default_params": 1,
+            "llama_model_free": 0,
+            "llama_model_get_vocab": 1,
+            "llama_model_load_from_splits": 1,
+            "llama_sampler_accept": 0,
+            "llama_sampler_apply": 0,
+            "llama_sampler_free": 0,
+            "llama_sampler_init_grammar": 0,
+            "llama_token_to_piece": 0,
+            "llama_tokenize": 0,
+            "llama_version": 1,
+            "llama_vocab_is_eog": "observed vocabulary_count nv",
+            "llama_vocab_n_tokens": 1
+          },
+          "event": "all_vocabulary_ids_EOG_enumerated"
+        }
+      ],
+      "setup_scalar_state_rules": {
+        "CPU_before_init": "cpu load return/nonNull true; backend/model ownedfalse, init/load/free counters0. Exact CPU identity2-level source vector above.",
+        "EOG_enumerated": "model load return/nonNull/modelownedtrue; borrowed vocabulary nonNull; EOG_ids_examined nv, last_EOG_id nv-1, all attempted=returned, coverage_state not_computed.",
+        "all_setup_rows": "exceptions0; cases computed/written0; both six-stratum arrays all0; selected computed/written0; token_work0; no sampler init/free or ownership.",
+        "backend_returned_and_before_model": "backend init returned/ownedtrue; model load/free counters0 and modelownedfalse.",
+        "through_typed_defaults_and_shards": "CPU/backend/model/load/free attempted and returned0; owned/return flagsfalse, coverage_state not_computed."
+      },
+      "typed_constant_rules": "All embedded expected defaults/layout/effective objects compare recursively with EXACT types (bool cannot equal1). Future EXE/pin paths stay unbound; these are typed source expectations, not execution authority."
+    },
+    "execution_authorized": false,
+    "framing": {
+      "common_row_keys": [
+        "schema_version",
+        "row_sequence",
+        "event",
+        "elapsed_ms",
+        "wire_semantics_sha256",
+        "native_call_contract_sha256",
+        "native_call_counters",
+        "native_call_scope",
+        "unrecorded_killed_tail",
+        "native_state",
+        "body"
+      ],
+      "encoding": "Strict scalar UTF8, no BOM; one compact JSON object per ASCII LF. No CRLF/blank/incomplete/duplicate-key/nonfinite rows.",
+      "maximum_JSONL_bytes": 8388608,
+      "native_state_count": 45,
+      "native_state_fields": {
+        "EOG_ids_examined": {
+          "strict_int_range": [
+            0,
+            262144
+          ]
+        },
+        "backend_free_attempted": "strict bool",
+        "backend_free_return_observed": "strict bool",
+        "backend_init_return_observed": "strict bool",
+        "backend_owned": "strict bool",
+        "backend_release_unknown": "strict bool",
+        "case_results_written": {
+          "strict_int_range": [
+            0,
+            84
+          ]
+        },
+        "cases_computed": {
+          "strict_int_range": [
+            0,
+            84
+          ]
+        },
+        "cleanup_failed": "strict bool",
+        "coverage_state": [
+          "not_computed",
+          "complete_available",
+          "complete_unavailable",
+          "unknown"
+        ],
+        "cpu_load_return_observed": "strict bool",
+        "cpu_registry_nonnull": "strict bool",
+        "current_case_index": {
+          "strict_int_range": [
+            -1,
+            83
+          ]
+        },
+        "current_selected_prefix_index": {
+          "strict_int_range": [
+            -1,
+            3
+          ]
+        },
+        "exceptions": {
+          "strict_int_range": [
+            0,
+            4276181
+          ]
+        },
+        "last_EOG_id": {
+          "strict_int_range": [
+            -1,
+            262143
+          ]
+        },
+        "last_EOG_returned": "strict bool",
+        "last_EOG_value": "strict bool",
+        "last_apply_logit_kind": {
+          "strict_int_range": [
+            0,
+            3
+          ]
+        },
+        "last_apply_return_observed": "strict bool",
+        "last_apply_shape_valid": "strict bool",
+        "last_attempt": [
+          null,
+          "ggml_backend_dev_count",
+          "ggml_backend_dev_get",
+          "ggml_backend_dev_name",
+          "ggml_backend_dev_type",
+          "ggml_backend_load",
+          "ggml_backend_reg_count",
+          "ggml_backend_reg_dev_count",
+          "ggml_backend_reg_dev_get",
+          "ggml_backend_reg_get",
+          "ggml_backend_reg_name",
+          "llama_backend_free",
+          "llama_backend_init",
+          "llama_model_default_params",
+          "llama_model_free",
+          "llama_model_get_vocab",
+          "llama_model_load_from_splits",
+          "llama_sampler_accept",
+          "llama_sampler_apply",
+          "llama_sampler_free",
+          "llama_sampler_init_grammar",
+          "llama_token_to_piece",
+          "llama_tokenize",
+          "llama_version",
+          "llama_vocab_is_eog",
+          "llama_vocab_n_tokens"
+        ],
+        "last_piece_return": {
+          "strict_int_range": [
+            -2147483648,
+            2147483647
+          ]
+        },
+        "last_pointer_nonnull": "strict bool",
+        "last_return": [
+          null,
+          "ggml_backend_dev_count",
+          "ggml_backend_dev_get",
+          "ggml_backend_dev_name",
+          "ggml_backend_dev_type",
+          "ggml_backend_load",
+          "ggml_backend_reg_count",
+          "ggml_backend_reg_dev_count",
+          "ggml_backend_reg_dev_get",
+          "ggml_backend_reg_get",
+          "ggml_backend_reg_name",
+          "llama_backend_free",
+          "llama_backend_init",
+          "llama_model_default_params",
+          "llama_model_free",
+          "llama_model_get_vocab",
+          "llama_model_load_from_splits",
+          "llama_sampler_accept",
+          "llama_sampler_apply",
+          "llama_sampler_free",
+          "llama_sampler_init_grammar",
+          "llama_token_to_piece",
+          "llama_tokenize",
+          "llama_version",
+          "llama_vocab_is_eog",
+          "llama_vocab_n_tokens"
+        ],
+        "last_return_kind": {
+          "strict_int_range": [
+            0,
+            4
+          ]
+        },
+        "last_scalar": {
+          "strict_int_range": [
+            -9223372036854775808,
+            9223372036854775807
+          ]
+        },
+        "last_tokenize_return": {
+          "strict_int_range": [
+            -2147483648,
+            2147483647
+          ]
+        },
+        "model_free_attempted": "strict bool",
+        "model_free_return_observed": "strict bool",
+        "model_load_return_observed": "strict bool",
+        "model_owned": "strict bool",
+        "model_release_unknown": "strict bool",
+        "model_return_nonnull": "strict bool",
+        "sampler_free_returned_nonnull": {
+          "strict_int_range": [
+            0,
+            82
+          ]
+        },
+        "sampler_nonnull_returns": {
+          "strict_int_range": [
+            0,
+            82
+          ]
+        },
+        "sampler_release_unknown": {
+          "strict_int_range": [
+            0,
+            82
+          ]
+        },
+        "samplers_owned": {
+          "strict_int_range": [
+            0,
+            82
+          ]
+        },
+        "selected_prefix_results_written": {
+          "strict_int_range": [
+            0,
+            4
+          ]
+        },
+        "selected_prefixes_computed": {
+          "strict_int_range": [
+            0,
+            4
+          ]
+        },
+        "stratum_computed": "exact six strict uint0..84 values in frozen stratum order",
+        "stratum_results_written": "exact six strict uint0..84 values in frozen stratum order",
+        "token_work_reserved": {
+          "strict_int_range": [
+            0,
+            1000000
+          ]
+        },
+        "total_attempted": {
+          "strict_int_range": [
+            0,
+            4276181
+          ]
+        },
+        "total_returned": {
+          "strict_int_range": [
+            0,
+            4276181
+          ]
+        }
+      },
+      "ordering": "Contiguous exact int row_sequence starts0; no bool counters; closed root/body key sets by event; no ready/verified qualification fields.",
+      "row_bytes_including_LF": 65536,
+      "schema_version_note": "Wire version1 remains prospective; v1 proposal was never implemented. This corrected design is separately retained v2.",
+      "setup_row_bytes_including_LF": 8192,
+      "snapshot_semantics": "Attempted/returned/state captured before post-call checks; current row excludes its own acknowledged-write increment. Next/final row witnesses it; failed/killed tails unknown.",
+      "strict_string_identifiers": "Reason/status/event enum tokens use only ASCII letters/digits/underscore, and case/stage IDs use the fixed pack-ID grammar. Free exception text is never an unbounded status/reason."
+    },
+    "mode": {
+      "argc": 9,
+      "argv": [
+        "EXE",
+        "--unicode-controls",
+        "RUNTIME_DIRECTORY",
+        "EXCLUSIVE_CHILD_OUTPUT",
+        "NEW_UNICODE_PACK",
+        "PINNED_CPU_BASENAME",
+        "SHARD0",
+        "SHARD1",
+        "SHARD2"
+      ],
+      "effective_params": "Exact separately bound accepted recognition overrides; vocab_only/no_alloc/load0/lazy0, explicit three shards, no inference context",
+      "expected_llama_version": "0.7.0-dev",
+      "name": "--unicode-controls"
+    },
+    "module_policy": {
+      "ABI_preserved": "807995 semantic boundary unchanged",
+      "module_events": {
+        "all_vocabulary_ids_EOG_enumerated": "post_cpu",
+        "backend_init_returned_exact_CPU_identity_rechecked": "post_cpu",
+        "cpu_registry_verified_before_llama_backend_init": "post_cpu",
+        "exact_core_modules_loaded_exports_resolved": "pre_cpu",
+        "unicode_batch_returned": "post_cpu"
+      },
+      "post_cpu": "self+core4+the one exact eligible pinned CPU exactly once",
+      "pre_cpu": "self+core4 exactly once; CPU forbidden",
+      "recognition_id": "trusted-System32-recognition-v1",
+      "recognition_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+      "trusted_platform": "Lexical metadata context only, never image authenticity or an authority flag. No reported-platform image opens."
+    },
+    "old_external_verification": "INCOMPLETE_TIMEOUT unchanged",
+    "original_profile": "FAILED/consumed unchanged",
+    "pack": {
+      "ID": "u32 byte length then ASCII [A-Za-z0-9][A-Za-z0-9_./-]{0,127}; stage IDs length<=64; exact frozen IDs still required.",
+      "case_record": [
+        "ID",
+        "u32 ordinal0..83",
+        "u32 stage index0..3",
+        "u32 stratum index0..5",
+        "32-byte raw SHA256",
+        "u32 document length1..1024",
+        "exact raw bytes",
+        "six u32 ternary expectations in fixed order: project_JSON_parse,Unicode_scalar_JSON,complete_v3_semantic_validation,generation_grammar_membership,native_membership,JSON_syntax; false0,true1,null2",
+        "u32 native-byte eligibility false0/true1",
+        "u32 harness kind eligible0/invalid_UTF8_1/raw_NUL_2",
+        "u32 token cap min65536,4B+32"
+      ],
+      "exact_future_pack_sha256": null,
+      "grammar_record": [
+        "ID grammar/0 or grammar/1",
+        "32-byte grammar SHA256",
+        "u32 length1..65536",
+        "exact original grammar UTF8 bytes without NUL"
+      ],
+      "header": [
+        [
+          "magic",
+          "8 raw bytes R09NU01 followed by NUL"
+        ],
+        [
+          "version",
+          "u32le exact1"
+        ],
+        [
+          "wire_semantics_sha256",
+          "32 raw digest bytes"
+        ],
+        [
+          "corpus_sha256",
+          "32 raw digest bytes"
+        ],
+        [
+          "stages_sha256",
+          "32 raw digest bytes"
+        ],
+        [
+          "profile_contract_sha256",
+          "32 raw digest bytes"
+        ],
+        [
+          "analyzer_contract_sha256",
+          "32 raw digest bytes"
+        ],
+        [
+          "stage_count",
+          "u32le exact4"
+        ],
+        [
+          "grammar_count",
+          "u32le exact2"
+        ],
+        [
+          "case_count",
+          "u32le exact84"
+        ],
+        [
+          "class_count",
+          "u32le exact4"
+        ],
+        [
+          "grammars",
+          "two records in first frozen-stage hash appearance order"
+        ],
+        [
+          "stages",
+          "four records in frozen stage order"
+        ],
+        [
+          "cases",
+          "84 records in exact frozen ordinal order; no prefix records or runtime-selected subset"
+        ]
+      ],
+      "independent_roundtrip_required": true,
+      "integers": "Unsigned exact u32 little endian unless specified; reject overflow/truncation/count mismatch before allocation.",
+      "maximum_bytes": 20971520,
+      "stage_record": [
+        "ID exact frozen stage ID",
+        "32-byte request SHA256",
+        "32-byte payload SHA256",
+        "u32 grammar index0..1"
+      ],
+      "strictness": "Exact frozen raw bytes/stage/grammar/dimensions and complete consumption; no trailing bytes/duplicate IDs. No observed token IDs or selected cuts in pack."
+    },
+    "parent_verifier": {
+      "execute_signature": "execute(config,protocol_sha256,*,owner_started=trusted_original_start)",
+      "forbidden": "No second census/OS tracing, old189 repair/replay, full-vocabulary mask, model inference/context/server, extra corpus/tokenization search or scientific/human acceptance.",
+      "future_positive_status": "unicode_controls_observations_retained_independent_qualification_pending",
+      "gate_separation": "New versioned captured-byte archive/journal/resource/case checker required. Generic chain-only pass and earlier known-launched v7 policy are not this new Unicode policy.",
+      "immutable_source": "Use owner-local captured bytes/live leases/source-map context, never serialized already_verified flags or cross-run caches.",
+      "owner_budget": "No timing fit inferred from smaller corpus or static calls. Whole independent verification has its own single300s incl imports/preflight/finalseal; no merge of postdeadline checks.",
+      "preparation": "Metadata/software-only bounded60s; zero payload stat/lstat/open/hash or constructors. Exact future pack/build/EXE and authority remain unbound here.",
+      "role_binding": "Acyclic exact software static roster+4dynamic source/evidence records+5payload descriptors(CPU,threeGGUF,newpack), disjoint canonical path roles before reads. No inherited oldEXE or current-proof cycles.",
+      "runtime": "Single first owner clock before driver/helper import/validation/hash; live original-path leases and source-inclusive initial/child/final whole-shard hashing still mandatory. Final bulk hashing ends by owner_end-5.",
+      "strict_result": "Recompute every row/source binding/stage schedule, all case body checks before acceptance counters, pure analyzer geometry/globalselectors and all selected-prefix outcomes; no five-rowABI success route.",
+      "terminal": "Required post-original-lease cleanup artifact and terminal seal bind earlier receipts/primary+late errors; missing seal/unknown outcome/incomplete stage is unqualified. Source negative stays negative."
+    },
+    "profile_id": "actual-v3-fullresponse-unicode-controls-v1",
+    "review_gates": [
+      "Review this exact design/schema/arithmetic before any bridge/pack/parent implementation",
+      "Literal new pack/row/partial/failure fixtures before adapters; exact stage-delta and max-overhead source/pure regressions",
+      "Separately bound C++/header/pack/source ports/parent/real checker origin and resource proofs; source-only does not qualify platform APIs",
+      "Independent compiler-only build verification, metadata-only acyclic preparation, exact peer/root decision before any payload or target run"
+    ],
+    "schema_version": 1,
+    "scientific_validation": "not_established",
+    "scope": "Distinct model-specific vocabulary/document/EOG observation design. No scientific or full-mask qualification.",
+    "wire_id": "unicode-controls-singleton-wire-v1",
+    "wire_size": {
+      "JSONL_buckets": {
+        "before_case": {
+          "bytes_each": 8192,
+          "rows": 96
+        },
+        "case": {
+          "bytes_each": 65536,
+          "rows": 96
+        },
+        "footer": {
+          "bytes_each": 8192,
+          "max_rows": 16,
+          "maximum_bytes": 131072
+        },
+        "selected": {
+          "bytes_each": 65536,
+          "rows": 4
+        },
+        "setup": {
+          "bytes_each": 8192,
+          "rows": 64
+        }
+      },
+      "actual_case_bound_bytes": 30060,
+      "attempt_file_bytes": 4096,
+      "attempt_scope": "attempt.json<=4096 is a separate file, not an additional JSONL row. Any attempt/failure copied into JSONL consumes an existing setup/footer row with its exact row cap. No277th row.",
+      "case_arrays": "IDs<=7N+1; lengths<=B+2N+1 because positive decimal digits<=length and zero consumesone; hex<=2B+3N+1; total<=12N+3B+3 forN>=1. Null/failedQC rows have bounded overhead only.",
+      "envelope_scope": "Conservative independent field-size maxima with finite identifier/enum spellings, including false rather than null. Mutually inconsistent counter/observation values are permitted only in this mathematical sizing envelope; it is not a valid trace or measured outcome.",
+      "failure_JSONL_bytes": 8192,
+      "failure_body": "Closed small primary-failure tag/identity plus bounded snapshot and a fixed failure.json filename; large module-rejection diagnostic metadata appears only in the separate<=65536-byte marker.",
+      "failure_marker_file_bytes": 65536,
+      "fixed84_JSONL_rows": 252,
+      "fixed84_reserved_JSONL_bytes": 7110656,
+      "fixed_case_sizing_envelope": {
+        "body": {
+          "QC": {
+            "reason": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "status": "harness_ineligible"
+          },
+          "authored_expected": {
+            "coverage_population": false,
+            "generation_member": false,
+            "native_member": false,
+            "semantic_eligible": false
+          },
+          "case_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "case_ordinal": 83,
+          "compact_analysis": {
+            "counts": {
+              "pending_width2": 4128,
+              "pending_width3": 4128,
+              "pending_width4": 4128,
+              "same_piece_complete_scalar_then_pending": 4128
+            },
+            "matrix": [
+              [
+                4128,
+                4128,
+                4128
+              ],
+              [
+                4128,
+                4128,
+                4128
+              ],
+              [
+                4128,
+                4128,
+                4128
+              ],
+              [
+                4128,
+                4128,
+                4128
+              ]
+            ],
+            "zero_piece_count": 4128
+          },
+          "grammar_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "ledger": {
+            "piece_byte_lengths": [],
+            "piece_hex": [],
+            "token_ids": []
+          },
+          "matches_authored_native_expectation": false,
+          "observation": {
+            "all_input_tokens_admitted": false,
+            "completion_EOG": [
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              },
+              {
+                "admitted": false,
+                "id": 262143
+              }
+            ],
+            "first_rejected_byte_end": 1024,
+            "first_rejected_byte_start": 1024,
+            "first_rejected_token_index": 4127,
+            "native_member": false,
+            "status": "native_EOG_disagreement"
+          },
+          "raw_bytes": 1024,
+          "raw_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "stage_instance_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        "elapsed_ms": 120000,
+        "event": "unicode_case_result",
+        "native_call_contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+        "native_call_counters": {
+          "ggml_backend_dev_count": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_dev_get": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_dev_name": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_dev_type": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_load": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "ggml_backend_reg_count": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_reg_dev_count": {
+            "attempted": 3,
+            "returned": 3
+          },
+          "ggml_backend_reg_dev_get": {
+            "attempted": 3,
+            "returned": 3
+          },
+          "ggml_backend_reg_get": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "ggml_backend_reg_name": {
+            "attempted": 2,
+            "returned": 2
+          },
+          "llama_backend_free": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_backend_init": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_model_default_params": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_model_free": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_model_get_vocab": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_model_load_from_splits": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_sampler_accept": {
+            "attempted": 1000000,
+            "returned": 1000000
+          },
+          "llama_sampler_apply": {
+            "attempted": 1013184,
+            "returned": 1013184
+          },
+          "llama_sampler_free": {
+            "attempted": 206,
+            "returned": 206
+          },
+          "llama_sampler_init_grammar": {
+            "attempted": 206,
+            "returned": 206
+          },
+          "llama_token_to_piece": {
+            "attempted": 2000000,
+            "returned": 2000000
+          },
+          "llama_tokenize": {
+            "attempted": 412,
+            "returned": 412
+          },
+          "llama_version": {
+            "attempted": 1,
+            "returned": 1
+          },
+          "llama_vocab_is_eog": {
+            "attempted": 262144,
+            "returned": 262144
+          },
+          "llama_vocab_n_tokens": {
+            "attempted": 1,
+            "returned": 1
+          }
+        },
+        "native_call_scope": "explicit_bridge_export_calls_only",
+        "native_state": {
+          "EOG_ids_examined": 262144,
+          "backend_free_attempted": false,
+          "backend_free_return_observed": false,
+          "backend_init_return_observed": false,
+          "backend_owned": false,
+          "backend_release_unknown": false,
+          "case_results_written": 84,
+          "cases_computed": 84,
+          "cleanup_failed": false,
+          "coverage_state": "complete_unavailable",
+          "cpu_load_return_observed": false,
+          "cpu_registry_nonnull": false,
+          "current_case_index": -1,
+          "current_selected_prefix_index": -1,
+          "exceptions": 4276181,
+          "last_EOG_id": 262143,
+          "last_EOG_returned": false,
+          "last_EOG_value": false,
+          "last_apply_logit_kind": 0,
+          "last_apply_return_observed": false,
+          "last_apply_shape_valid": false,
+          "last_attempt": "llama_model_load_from_splits",
+          "last_piece_return": -2147483648,
+          "last_pointer_nonnull": false,
+          "last_return": "llama_model_load_from_splits",
+          "last_return_kind": 0,
+          "last_scalar": -9223372036854775808,
+          "last_tokenize_return": -2147483648,
+          "model_free_attempted": false,
+          "model_free_return_observed": false,
+          "model_load_return_observed": false,
+          "model_owned": false,
+          "model_release_unknown": false,
+          "model_return_nonnull": false,
+          "sampler_free_returned_nonnull": 82,
+          "sampler_nonnull_returns": 82,
+          "sampler_release_unknown": 82,
+          "samplers_owned": 82,
+          "selected_prefix_results_written": 0,
+          "selected_prefixes_computed": 0,
+          "stratum_computed": [
+            84,
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "stratum_results_written": [
+            84,
+            84,
+            84,
+            84,
+            84,
+            84
+          ],
+          "token_work_reserved": 1000000,
+          "total_attempted": 4276181,
+          "total_returned": 4276181
+        },
+        "row_sequence": 275,
+        "schema_version": 1,
+        "unrecorded_killed_tail": "unknown_since_last_acknowledged_snapshot",
+        "wire_semantics_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      "footer_pool": "Exactly the frozen per-row bound: <=16 actual footer/global JSONL rows, EACH<=8192 including LF. Failure JSONL is one ofthose rows, not a64KiB pooled exception. Independent failure.json<=65536 is a separate file.",
+      "maximum_JSONL_rows": 276,
+      "maximum_case_row_bytes": 60864,
+      "maximum_reserved_JSONL_bytes": 7995392,
+      "measured_fixed_case_bytes_including_LF_excluding_three_arrays": 6408,
+      "reserve": "Frozen8192 fixed overhead plus64 punctuation/LF margin absorbs the arrays constant3; do not add3 twice.",
+      "row_admission": "Compute exact serialized bytes/caps and reserve before writing; no clipping, token dropping or favorable omission. Module/report failure metadata must fit its explicit bucket or fail with bounded marker; no universal path-size fit claim.",
+      "structured_all_artifact_ceiling": 8388608,
+      "structured_all_artifact_reserved_bytes": 8065024
+    }
+  },
+  "semantic_sha256": "9a313df2dca6632a0863f547322e1aeced26346a3ab709686f07c16623c714e3",
+  "source_format_read": {
+    "CPU_GGUF_oldpack_paths_opened": false,
+    "declared_fixed_ABI_acceptance_sha256": "024e053664ba45dbda59096ea3a11ab4351fc52fc6f06300af045bc152d2991b",
+    "fields": [
+      "expected_defaults",
+      "expected_layouts",
+      "effective_params"
+    ],
+    "fresh_original_source_qualification": false,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json"
+  },
+  "status": "CORRECTED_DESIGN_FOR_REVIEW_NO_IMPLEMENTATION_AUTHORITY"
+}

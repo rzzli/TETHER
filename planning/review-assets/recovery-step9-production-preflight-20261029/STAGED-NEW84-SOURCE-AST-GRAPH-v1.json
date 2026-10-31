@@ -1,0 +1,795 @@
+{
+  "activity": {
+    "embedded_target_operations": 0,
+    "source_AST_parses": 13,
+    "source_execution": 0,
+    "source_imports": 0
+  },
+  "external_boundary": "Every import not among the13 exact selected references remains an externally trusted interpreter/stdlib prerequisite, not automatically captured or recursively discovered. This report does not certify dynamic runtime closure, first-entry identity or source provenance.",
+  "modules": [
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 2,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 3,
+          "module": "role_owner_v4",
+          "names": [
+            "SharedOwner",
+            "SharedOwnerError",
+            "Continuation",
+            "CapturedContext",
+            "CHECKS",
+            "GATES"
+          ],
+          "scope": "SELECTED_SOURCE"
+        }
+      ],
+      "module": "continue_role_verification_v4",
+      "top_level_definitions": [
+        "Request",
+        "TestAuthority",
+        "TestCheckerPorts",
+        "TestObservation",
+        "TestAuthorityFactory",
+        "TestCheckerFactory",
+        "test_factories",
+        "continue_once"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 7,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "struct",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "role_owner_v4",
+          "names": [
+            "SharedOwner",
+            "SharedOwnerError",
+            "FileSpec",
+            "FileRecordRef",
+            "CallRef",
+            "CallState",
+            "UNOBSERVED",
+            "INVALID",
+            "APIS",
+            "uint",
+            "signed_bool",
+            "usable",
+            "path_key",
+            "sha"
+          ],
+          "scope": "SELECTED_SOURCE"
+        }
+      ],
+      "module": "role_file_ports_v4",
+      "top_level_definitions": [
+        "AdoptionHooks",
+        "FilePortView"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 2,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 3,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 4,
+          "module": "math",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 5,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 6,
+          "module": "struct",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 7,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "role_ledger_codec_v4",
+      "top_level_definitions": [
+        "FormatError",
+        "require",
+        "integer",
+        "keys",
+        "enum_id",
+        "enum_name",
+        "flags_bits",
+        "flags_value",
+        "_capture",
+        "_FrozenList",
+        "_freeze",
+        "_thaw",
+        "DecodedLedger",
+        "clock_bits",
+        "clock_atom",
+        "atom_bits",
+        "atom_value",
+        "_api",
+        "_atomtag",
+        "_probe",
+        "_optional",
+        "path_key",
+        "_row_keys",
+        "_check_widths",
+        "validate_value",
+        "_put",
+        "_layout_write",
+        "_layout_read",
+        "_pack_file",
+        "_pack_call",
+        "_pack_module",
+        "_pack_diag",
+        "ByteChunks",
+        "pack_row_tuple_into",
+        "build_ledger",
+        "encode_ledger",
+        "_unpack_file",
+        "_unpack_call",
+        "_unpack_module",
+        "_unpack_diag",
+        "decode_ledger",
+        "iter_checked_records"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 7,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "math",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 11,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 12,
+          "module": "struct",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 13,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 14,
+          "module": "role_ledger_codec_v4",
+          "names": [],
+          "scope": "SELECTED_SOURCE"
+        }
+      ],
+      "module": "role_owner_v4",
+      "top_level_definitions": [
+        "SharedOwnerError",
+        "uint",
+        "finite",
+        "usable",
+        "signed_bool",
+        "sha",
+        "need",
+        "path_key",
+        "freeze",
+        "thaw",
+        "atom",
+        "callback_record",
+        "FileSpec",
+        "ModuleRule",
+        "LegacySnapshot",
+        "ProducerSnapshot",
+        "ProducerProfile",
+        "GeneratedArtifactBytes",
+        "CaptureNotRequested",
+        "_DiagnosticGuard",
+        "_ClockCarrier",
+        "Origin",
+        "FileRecordRef",
+        "BufferRef",
+        "FileState",
+        "Registry",
+        "CallState",
+        "CallRef",
+        "CapturedContext",
+        "TestHooks",
+        "HandoffToken",
+        "Continuation",
+        "CapturedLoader",
+        "_Rows",
+        "_same_typed",
+        "_clock_atom",
+        "_utf8_prefix",
+        "SharedOwner",
+        "start_injected",
+        "project_legacy"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 2,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 3,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 4,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 5,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 6,
+          "module": "struct",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "unicode_pack_codec_v2",
+      "top_level_definitions": [
+        "CodecError",
+        "_need",
+        "_check",
+        "_hash",
+        "_canonical",
+        "_json",
+        "_id",
+        "_digest",
+        "_ternary",
+        "_grammar_bytes",
+        "SourceBytes",
+        "Grammar",
+        "Stage",
+        "Case",
+        "ValidatedProfile",
+        "DecodedPack",
+        "make_profile",
+        "_profile",
+        "encode",
+        "decode"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 7,
+          "module": "bisect",
+          "names": [
+            "bisect_left"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "strict_utf8_oracle_v1",
+          "names": [
+            "StrictUtf8Oracle"
+          ],
+          "scope": "SELECTED_SOURCE"
+        }
+      ],
+      "module": "unicode_piece_analyzer_v1",
+      "top_level_definitions": [
+        "_require",
+        "_freeze",
+        "_thaw",
+        "Analysis",
+        "_counts",
+        "_matrix",
+        "_validate_inputs",
+        "_raw_intervals",
+        "_geometry",
+        "_case_result",
+        "analyze"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 6,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 7,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "unicode_pack_codec_v2",
+          "names": [],
+          "scope": "SELECTED_SOURCE"
+        },
+        {
+          "level": 0,
+          "line": 11,
+          "module": "unicode_piece_analyzer_v1",
+          "names": [],
+          "scope": "SELECTED_SOURCE"
+        },
+        {
+          "level": 0,
+          "line": 12,
+          "module": "recognition_module_policy_v1",
+          "names": [],
+          "scope": "SELECTED_SOURCE"
+        },
+        {
+          "level": 0,
+          "line": 13,
+          "module": "unicode_observation_tables_v1",
+          "names": [
+            "TABLES",
+            "SOURCE_PINS"
+          ],
+          "scope": "SELECTED_SOURCE"
+        }
+      ],
+      "module": "unicode_observations_v2",
+      "top_level_definitions": [
+        "_freeze",
+        "_thaw",
+        "_same",
+        "_uint",
+        "_digest",
+        "_canonical",
+        "_ternary",
+        "ShardDescriptor",
+        "ObservationBindings",
+        "Observation",
+        "ObservationError",
+        "_issue",
+        "_Reader",
+        "observe",
+        "require_complete_success"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 2,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "unicode_observation_tables_v1",
+      "top_level_definitions": [
+        "_freeze"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 6,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 7,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "struct",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "captured_job_bytes_v1",
+      "top_level_definitions": [
+        "_uint32",
+        "_export_fields",
+        "DecodedQuery",
+        "DecodedJobSnapshot",
+        "SnapshotPhaseCheck",
+        "_query",
+        "decode_job_snapshot",
+        "check_snapshot_phase"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 6,
+          "module": "dataclasses",
+          "names": [
+            "dataclass"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 7,
+          "module": "datetime",
+          "names": [
+            "datetime"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "math",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 11,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 12,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "captured_archive_v3",
+      "top_level_definitions": [
+        "_scalar",
+        "MetadataPin",
+        "DynamicPin",
+        "CapturedArchive",
+        "ArchiveBindings",
+        "_freeze",
+        "_thaw",
+        "CapturedArchiveResult",
+        "_Bad",
+        "_need",
+        "_uint",
+        "_number",
+        "_hex",
+        "_same",
+        "_canonical",
+        "_shape",
+        "_text",
+        "_path",
+        "_locator",
+        "_pin",
+        "_utc",
+        "_Analysis",
+        "_declared",
+        "_marker",
+        "_headers",
+        "_run_graph",
+        "check_archive"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 6,
+          "module": "datetime",
+          "names": [
+            "datetime"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 7,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 8,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 9,
+          "module": "math",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 10,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 11,
+          "module": "types",
+          "names": [
+            "MappingProxyType"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "captured_journal_v2",
+      "top_level_definitions": [
+        "CapturedJournalError",
+        "need",
+        "uint",
+        "positive",
+        "digest",
+        "exact",
+        "freeze",
+        "canonical",
+        "_json",
+        "_depth",
+        "_parse",
+        "check_chain",
+        "_copy_bindings",
+        "_shape",
+        "_utc",
+        "_path_key",
+        "_job_limits",
+        "check_native_v7"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 7,
+          "module": "dataclasses",
+          "names": [
+            "dataclass",
+            "replace"
+          ],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "strict_utf8_oracle_v1",
+      "top_level_definitions": [
+        "EncodingError",
+        "Snapshot",
+        "_continuation_error",
+        "_scalar",
+        "StrictUtf8Oracle"
+      ]
+    },
+    {
+      "dynamic_calls": [],
+      "imports": [
+        {
+          "level": 0,
+          "line": 2,
+          "module": "hashlib",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 3,
+          "module": "json",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        },
+        {
+          "level": 0,
+          "line": 4,
+          "module": "re",
+          "names": [],
+          "scope": "EXTERNAL_INTERPRETER_PREREQUISITE"
+        }
+      ],
+      "module": "recognition_module_policy_v1",
+      "top_level_definitions": [
+        "ModulePolicyError",
+        "fail",
+        "scalar_length",
+        "fold",
+        "component",
+        "canonical_path",
+        "canonical_name",
+        "match_modules"
+      ]
+    }
+  ],
+  "read_list_sha256": "10d719862671807dfbea556e53cf94da32a6816fa14fd5598b778135bea8b08f",
+  "schema_version": 1,
+  "status": "STATIC_DECLARED_IMPORTS_ONLY_NOT_RUNTIME_CLOSURE"
+}

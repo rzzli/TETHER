@@ -1,0 +1,294 @@
+test_concurrent_generate_is_consumed_once (tests.test_study_native_interpretation.NativeInterpretationTests.test_concurrent_generate_is_consumed_once) ... ok
+test_configuration_downgrade_and_wrong_provenance_rejected (tests.test_study_native_interpretation.NativeInterpretationTests.test_configuration_downgrade_and_wrong_provenance_rejected) ... ERROR
+test_expired_parent_and_invalid_owner_have_zero_http_calls (tests.test_study_native_interpretation.NativeInterpretationTests.test_expired_parent_and_invalid_owner_have_zero_http_calls) ... ERROR
+test_native_model_echo_and_semantic_state_cannot_be_repaired (tests.test_study_native_interpretation.NativeInterpretationTests.test_native_model_echo_and_semantic_state_cannot_be_repaired) ... ERROR
+test_no_quotable_strings_fail_before_schema_or_dispatch (tests.test_study_native_interpretation.NativeInterpretationTests.test_no_quotable_strings_fail_before_schema_or_dispatch) ... ERROR
+test_over_quote_usage_is_retained_as_failure (tests.test_study_native_interpretation.NativeInterpretationTests.test_over_quote_usage_is_retained_as_failure) ... ERROR
+test_partial_transport_bytes_and_interruption_are_retained (tests.test_study_native_interpretation.NativeInterpretationTests.test_partial_transport_bytes_and_interruption_are_retained) ... ERROR
+test_quote_exhaustion_has_zero_http_and_no_second_attempt (tests.test_study_native_interpretation.NativeInterpretationTests.test_quote_exhaustion_has_zero_http_and_no_second_attempt) ... ERROR
+test_quote_work_cannot_reset_caller_deadline (tests.test_study_native_interpretation.NativeInterpretationTests.test_quote_work_cannot_reset_caller_deadline) ... ERROR
+test_study_session_accounting_and_readonly_replay (tests.test_study_native_interpretation.NativeInterpretationTests.test_study_session_accounting_and_readonly_replay) ... ERROR
+test_success_reuses_transport_and_binds_native_bytes_and_usage (tests.test_study_native_interpretation.NativeInterpretationTests.test_success_reuses_transport_and_binds_native_bytes_and_usage) ... ERROR
+test_wrong_payload_and_stage_are_rejected_before_http (tests.test_study_native_interpretation.NativeInterpretationTests.test_wrong_payload_and_stage_are_rejected_before_http) ... ERROR
+test_wrong_token_model_is_rejected_before_http (tests.test_study_native_interpretation.NativeInterpretationTests.test_wrong_token_model_is_rejected_before_http) ... ERROR
+
+======================================================================
+ERROR: test_configuration_downgrade_and_wrong_provenance_rejected (tests.test_study_native_interpretation.NativeInterpretationTests.test_configuration_downgrade_and_wrong_provenance_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_expired_parent_and_invalid_owner_have_zero_http_calls (tests.test_study_native_interpretation.NativeInterpretationTests.test_expired_parent_and_invalid_owner_have_zero_http_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_native_model_echo_and_semantic_state_cannot_be_repaired (tests.test_study_native_interpretation.NativeInterpretationTests.test_native_model_echo_and_semantic_state_cannot_be_repaired)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_no_quotable_strings_fail_before_schema_or_dispatch (tests.test_study_native_interpretation.NativeInterpretationTests.test_no_quotable_strings_fail_before_schema_or_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_over_quote_usage_is_retained_as_failure (tests.test_study_native_interpretation.NativeInterpretationTests.test_over_quote_usage_is_retained_as_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_partial_transport_bytes_and_interruption_are_retained (tests.test_study_native_interpretation.NativeInterpretationTests.test_partial_transport_bytes_and_interruption_are_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_quote_exhaustion_has_zero_http_and_no_second_attempt (tests.test_study_native_interpretation.NativeInterpretationTests.test_quote_exhaustion_has_zero_http_and_no_second_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_quote_work_cannot_reset_caller_deadline (tests.test_study_native_interpretation.NativeInterpretationTests.test_quote_work_cannot_reset_caller_deadline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_study_session_accounting_and_readonly_replay (tests.test_study_native_interpretation.NativeInterpretationTests.test_study_session_accounting_and_readonly_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_success_reuses_transport_and_binds_native_bytes_and_usage (tests.test_study_native_interpretation.NativeInterpretationTests.test_success_reuses_transport_and_binds_native_bytes_and_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_wrong_payload_and_stage_are_rejected_before_http (tests.test_study_native_interpretation.NativeInterpretationTests.test_wrong_payload_and_stage_are_rejected_before_http)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+======================================================================
+ERROR: test_wrong_token_model_is_rejected_before_http (tests.test_study_native_interpretation.NativeInterpretationTests.test_wrong_token_model_is_rejected_before_http)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 131, in _validate_spec
+    _need(
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 66, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Tokenizer specification/authority differs
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_interpretation.py", line 68, in setUp
+    quoted=tok.tokenize_prompt(self.payload['prompt'],spec,time.monotonic()+60,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 452, in tokenize_prompt
+    spec = _validate_spec(spec)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\tokenization.py", line 138, in _validate_spec
+    raise ContractError("Invalid tokenizer specification") from error
+asof.serde.ContractError: Invalid tokenizer specification
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.390s
+
+FAILED (errors=12)

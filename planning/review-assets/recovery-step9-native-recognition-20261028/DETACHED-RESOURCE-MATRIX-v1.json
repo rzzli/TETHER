@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "helper_sha256": "6be0634f9bc9ea89eff1e54cbb963c355853eacc9ad9bbe63496b2f1aa50fea9",
+  "checker_sha256": "d0c61cb1ee3a808957358aeb38f46d27f80fe1ba3590b9928d2dd8176a3f4da3",
+  "rows": [
+    {
+      "total": 1,
+      "terminated": 0,
+      "accepted": true
+    },
+    {
+      "total": 1,
+      "terminated": 1,
+      "accepted": false
+    },
+    {
+      "total": 1,
+      "terminated": 7,
+      "accepted": false
+    },
+    {
+      "total": 1,
+      "terminated": 4294967295,
+      "accepted": false
+    },
+    {
+      "total": 2,
+      "terminated": 0,
+      "accepted": true
+    },
+    {
+      "total": 2,
+      "terminated": 1,
+      "accepted": false
+    },
+    {
+      "total": 2,
+      "terminated": 7,
+      "accepted": false
+    },
+    {
+      "total": 2,
+      "terminated": 4294967295,
+      "accepted": false
+    }
+  ],
+  "actual_children": 0,
+  "real_sdk_constructions": 0,
+  "scope": "Raw and decoded fields agree; final resources predicate only"
+}

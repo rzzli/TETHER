@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "status": "installed_source_inclusive_real_retrieval_verified",
+  "isolated": true,
+  "installed_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-real-retrieval-wheel-20261027\\environment",
+  "version": "0.3.6",
+  "pyarrow_version": "21.0.0",
+  "guards": {
+    "live_code": [],
+    "unapproved_source": [],
+    "imports": [],
+    "dispatch": []
+  },
+  "results": [
+    {
+      "strategy": "id_order_v1",
+      "result": {
+        "status": "verified",
+        "request_sha256": "ef433762058ae62886a9c1f63243e9a8aba4d120826212f03ffb3968327bedb5",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 5,
+          "raw_qualified_candidates": 5,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:33fa583c68da688b017cb8c99a1bce21811d9034"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:33fa583c68da688b017cb8c99a1bce21811d9034"
+          ],
+          "excluded": [
+            {
+              "observation_id": "ot25:europepmc:2b5e5760cfcece00269aacf431193dcfae896661",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:8029657b5a5ec3be8e06e0dd4e2b317d1322aad0",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:b0254e4e0ef8705b1a4cf612bb81cbb4785c523c",
+              "reason": "whole_record_exceeds_byte_cap"
+            }
+          ],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0,
+        "scientific_answer_status": "not_attempted"
+      }
+    },
+    {
+      "strategy": "literal_case_overlap_then_id_v1",
+      "result": {
+        "status": "verified",
+        "request_sha256": "ef433762058ae62886a9c1f63243e9a8aba4d120826212f03ffb3968327bedb5",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 5,
+          "raw_qualified_candidates": 5,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:33fa583c68da688b017cb8c99a1bce21811d9034"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:33fa583c68da688b017cb8c99a1bce21811d9034"
+          ],
+          "excluded": [
+            {
+              "observation_id": "ot25:europepmc:2b5e5760cfcece00269aacf431193dcfae896661",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:8029657b5a5ec3be8e06e0dd4e2b317d1322aad0",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732",
+              "reason": "whole_record_exceeds_byte_cap"
+            },
+            {
+              "observation_id": "ot25:europepmc:b0254e4e0ef8705b1a4cf612bb81cbb4785c523c",
+              "reason": "whole_record_exceeds_byte_cap"
+            }
+          ],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0,
+        "scientific_answer_status": "not_attempted"
+      }
+    }
+  ],
+  "elapsed_seconds": 13.202999999979511,
+  "model_calls": 0,
+  "tokenizer_calls": 0,
+  "network_calls": 0,
+  "archived_code_executed": false,
+  "scientific_validation": "not_attempted"
+}

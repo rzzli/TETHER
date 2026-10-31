@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "HOLD_before_profile_freeze_for_bounded_ledger_clarifications",
+  "profile_sha256": "88c55e0f64099053711caac53c67216a169343567fee55c30b1084c76654b945",
+  "review_kind": "Read-only manual prospective profile/actual v3 source review; no corpus semantic execution or implementation",
+  "aligned": [
+    "All documents are full responses from actual accepted v3 preparation; four real synthetic stage/payload instances and duplicate GBNF hashes are separately represented. No easier string grammar.",
+    "Fourteen fixed scalar/encoding strata and explicit field/context mapping are independent of observed token merges;42cases are not falsely presented as a full three-field by three-context factorial.",
+    "Raw and ASCII-escaped forms remain distinct byte representations with paired identical decoded responses; UTF8/strictJSON/semantic/generation membership are separate dimensions.",
+    "Coverage population is predetermined expected eligibility, not observed native success; first(case,token) selection occurs after wholecorpus counts, multi-class selections de-duplicate and incomplete prefixes are not retokenized.",
+    "Mixed coverage requires an entire complete scalar interval within the same finalpiece before its pending scalar, excluding mere completion of a scalar started in a priorpiece.",
+    "Old189case profile stays failed; all unavailable classes, unknown counts, case mismatches and missingrecords veto this separate engineering experiment."
+  ],
+  "findings": [
+    {
+      "id": "harness_ineligible_ledger_domain",
+      "severity": "freeze_clarification_required",
+      "finding": "Unconditional token/piece arrays and concatenation==raw wording conflicts with six predeclared rawNUL/malformedUTF8 harness dispositions, whose native membership is null and which must not be tokenized.",
+      "requested_contract": "Define a typed null ledger and zero native token/piece/sampler calls for declared byte-harness ineligibility; retain exact bytes/hash/harness outcome and exclusion reason. Define known zero coverage for declared excluded cases separately from unknown coverage caused by unexpected QC failure. Unexpected failure cannot be converted into a favorable exclusion."
+    },
+    {
+      "id": "complete_width_matrix_count_unit",
+      "severity": "freeze_clarification_required",
+      "finding": "Full complete-width by pending-width matrix is required, but the counting unit for multiple contained scalars in one qualifying piece is not yet specified.",
+      "requested_contract": "Count each boundary once for each distinct complete scalar width wholly contained before the pending scalar; repeated scalars of one width do not multiply the cell. Retain contained-width set/representative interval evidence. Matrix sum can exceed mixed-boundary total when one boundary witnesses more than one width; state this explicitly."
+    }
+  ],
+  "expected_semantic_review_after_freeze": [
+    "Independently use actual v3 raw-byte postvalidator with exact stage payload, not a repaired/reconstructed json.loads object, for all expected semantic outcomes.",
+    "For duplicate-name/lonesurrogate/rawnewline controls, distinguish reference JSON parseability from strict project parse success; null unavailable decoded-stage values rather than inserting a repaired stage response.",
+    "Raw-vs-ASCIIescape pair identity must include exact decoded fullresponse and matching target field, plus per-wire raw multibyte/width and escape statistics. ASCIIescape spellings are not raw multibyte witnesses.",
+    "Verify all84 case IDs, stage/grammar/payload bindings, byte caps/hashes and fixed mapping without token or model access."
+  ],
+  "conditional_cap_arithmetic_review": {
+    "actual_cases": 84,
+    "profile_max_cases": 96,
+    "max_document_bytes": 1024,
+    "max_tokens_per_case": 4128,
+    "array_bound": "12N+3B+constant is conservative using at most six digits per vocabulary ID, sum(piece_lengths)=B, and hex payload2B; it is not three independent per-element worst cases.",
+    "declared_case_row_bound_at_maximum": 60864,
+    "row_cap": 65536,
+    "declared_JSONL_total": 7995392,
+    "JSONL_cap": 8388608,
+    "declared_rows": 276,
+    "token_work_bound": 412800,
+    "token_work_cap": 1000000,
+    "qualification_limit": "Arithmetic is conditional on exact eventual schema fitting the reserved overhead and per-event caps. Source/row-size checks are still required; no runtime/resource-fit or all-possible-module-path guarantee."
+  },
+  "preserved_native_limits": "117s cooperative/120s wholechild/300s owner/256MiB; no compiler, pack, native/controller/bridge implementation or execution authorized by review",
+  "activity": {"corpus_semantic_validation_before_freeze": 0, "token_or_oldpack_reads": 0, "CPU_GGUF_model_operations": 0, "native_or_compiler_calls": 0, "source_changes_outside_new_review_assets": 0}
+}

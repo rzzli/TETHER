@@ -1,0 +1,113 @@
+{
+  "FFI_registration_qualified": false,
+  "SDK_or_launcher_constructions": 0,
+  "actual_Win32_FFI_calls": 0,
+  "audit_denials": [],
+  "checker": {
+    "bytes": 9257,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_file_ports_peer_v2.py",
+    "sha256": "5cdf735242e734bc5638d999da25d427885da51e78e7021bdcee7ab901afd44d"
+  },
+  "errors": [],
+  "old_original_payload_operations": 0,
+  "originals_authenticated": false,
+  "outcomes": [
+    {
+      "details": {
+        "close_calls": 1,
+        "content_calls": 0,
+        "raw_boolean_not_authority": true
+      },
+      "id": "caught_identity_failure_blocks_read",
+      "passed": true
+    },
+    {
+      "details": {
+        "close_calls": 1,
+        "content_calls": 0,
+        "raw_boolean_not_authority": true
+      },
+      "id": "caught_identity_failure_blocks_write",
+      "passed": true
+    },
+    {
+      "details": {
+        "identity_boolean_rejected": true,
+        "read_calls": 0
+      },
+      "id": "seed_without_capability_is_not_identity",
+      "passed": true
+    },
+    {
+      "details": {
+        "captured": 3,
+        "harness_only": true,
+        "hashed": 3,
+        "known": 3
+      },
+      "id": "explicit_pristine_harness_assumption",
+      "passed": true
+    },
+    {
+      "details": {
+        "foreign_owner_nonce_rejected": true,
+        "read_calls": 0
+      },
+      "id": "foreign_harness_identity_cannot_transfer",
+      "passed": true
+    },
+    {
+      "details": {
+        "known": 0,
+        "original_exception_identity": true,
+        "unknown": true,
+        "write_attempts": 1,
+        "write_returns": 0
+      },
+      "id": "entered_write_nonreturn_is_unknown",
+      "passed": true
+    },
+    {
+      "details": {
+        "cleanup_close": 1,
+        "known": 0,
+        "read_attempts": 0,
+        "unknown": false
+      },
+      "id": "read_preadmission_cutoff_is_known_no_call",
+      "passed": true
+    },
+    {
+      "details": {
+        "known": 0,
+        "posthard_API_calls": 0,
+        "unknown": false,
+        "write_attempts": 0
+      },
+      "id": "write_preadmission_hard_cutoff_is_known_no_call",
+      "passed": true
+    },
+    {
+      "details": {
+        "known": 0,
+        "returned_malformed_BOOL_retained": true,
+        "unknown": true
+      },
+      "id": "entered_malformed_read_count_stays_unknown",
+      "passed": true
+    }
+  ],
+  "probes": 9,
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T12:54:16.056767+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Python fake behavior of portable primitives only. Harness identity is a fictional precondition, not observed four-query proof. Actual FFI raw-registration and production owner integration remain pending.",
+  "source": {
+    "bytes": 34590,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+    "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+  },
+  "status": "passed"
+}

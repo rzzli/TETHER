@@ -1,0 +1,109 @@
+{
+  "SDK_native_payload_operations": 0,
+  "actual_directory_complete": false,
+  "actual_old_archive_replays": 0,
+  "author_evidence": {
+    "all32_frozen_projection_cases": true,
+    "methods": 13,
+    "source_and_input_pins_current": true,
+    "status": "passed"
+  },
+  "changed_ASTs": [
+    "Expr",
+    "_number",
+    "_run_graph"
+  ],
+  "conclusions": [
+    "Conditional nullable close_success now admits the exact already-closed/unattempted source shape, without inventing a close return or relaxing all outcomes. Author eight null-condition/type controls reviewed.",
+    "Nonnegative integer predicate avoids float conversion; invalid huge periodic interval becomes inconsistent captured data. Strict bool and finite-float domains remain.",
+    "No broad exception catch added. Existing callback identity and exact-one-LF corrections are unchanged; _Analysis and check_archive are AST-identical to v2.",
+    "All32 original synthetic projections and all qualification-false flags preserved; full source/resource/owner/archive provenance remains unproved."
+  ],
+  "implementation_or_runtime_permission": "Review grants no live adapter or profile authority; root controls separately scoped acceptance/integration.",
+  "independent_after": {
+    "methods": 7,
+    "probes": {
+      "bytes": 11560,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-AFTER-PROBES-v3.json",
+      "sha256": "6f730defe059db4635d04ea4851f422fd0e6b62af09ca6f2df27123a68c76f96"
+    },
+    "same_bounded_vectors_as_before": true,
+    "status": "passed"
+  },
+  "inputs": {
+    "ARCHIVE-CHECKER-CORRECTION-ROOT-DECISION-v3.json": {
+      "bytes": 2858,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\ARCHIVE-CHECKER-CORRECTION-ROOT-DECISION-v3.json",
+      "sha256": "59c32bec1cb2e32f92ce90a1f6f21aa36b81f380c763738e940d399fd077ff33"
+    },
+    "CAPTURED-ARCHIVE-CHECKER-FREEZE-v3.json": {
+      "bytes": 7490,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-ARCHIVE-CHECKER-FREEZE-v3.json",
+      "sha256": "43041bffa8058a25ca16fe79e4bce375e29c5d1b17ea236d89ffdc25a0b3ac29"
+    },
+    "CAPTURED-ARCHIVE-EFFECTIVE-V3-v3.md": {
+      "bytes": 2454,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-ARCHIVE-EFFECTIVE-V3-v3.md",
+      "sha256": "bd015b3c32ce3bdb451216f15662ebf47f6c8e4e746ecac397b93f0f221a99a1"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-CONTRACT-v3.json": {
+      "bytes": 29094,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-CONTRACT-v3.json",
+      "sha256": "ce077d5bfd2e12bd5de7a84d17094572a15286e0cb44bdc224513206f305e3d2"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json": {
+      "bytes": 1716151,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json",
+      "sha256": "3e75447d4d3a01c56833d089bf23dab52e5e53bc49a9ea33e9de689eef9b5dcd"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-AFTER-PROBES-v3.json": {
+      "bytes": 11560,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-AFTER-PROBES-v3.json",
+      "sha256": "6f730defe059db4635d04ea4851f422fd0e6b62af09ca6f2df27123a68c76f96"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 6551,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json",
+      "sha256": "1a48b0e0e19ed873fb99c19f3a7d865f3243168cdc8831a8a598844b38f513de"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PROBES-v3.json": {
+      "bytes": 10061,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PROBES-v3.json",
+      "sha256": "05b44dab09818ef89894c8483c0f05e2ec7ba7619465ac7f82d0a27ca7eec549"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v3.json": {
+      "bytes": 111837,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v3.json",
+      "sha256": "cfde0f81ae458c9d76a4cd29cb68ef8ba532e8f4be01c71d3ce96a67c552b8c9"
+    },
+    "captured_archive_v3.py": {
+      "bytes": 36212,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\captured_archive_v3.py",
+      "sha256": "90ba49a96713b6178320f04e68affee084abfb77588551b22140330309cd7d9b"
+    },
+    "check_captured_archive_peer_after_v3.py": {
+      "bytes": 11201,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\check_captured_archive_peer_after_v3.py",
+      "sha256": "b3a9b9d0740e04693e3e6e569def58cc3a96ab8434f4de910fba81d01be452cd"
+    },
+    "check_captured_archive_v3.py": {
+      "bytes": 23512,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\check_captured_archive_v3.py",
+      "sha256": "e6df7bd2272e56b5c7278d5b2901ad7f4d7d34f44a74ee4c28fe40e6b917e599"
+    }
+  },
+  "originals_authenticated": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:14:30.445068+00:00",
+  "resolved_hold": {
+    "bytes": 6551,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json",
+    "sha256": "1a48b0e0e19ed873fb99c19f3a7d865f3243168cdc8831a8a598844b38f513de"
+  },
+  "reviewer": "/root/os_accounting_peer",
+  "schema_version": 1,
+  "scope": "Only source/pure new synthetic captured metadata. No actual old archive capture/replay, original source closure/hash qualification, filesystem/file port, payload, SDK, native or compiler operation.",
+  "source_qualified": false,
+  "status": "CLEAR_SOURCE_PURE_NARROW_V3_SUCCESSOR",
+  "unchanged_top_level_ASTs": 57
+}

@@ -1,0 +1,14 @@
+test_token_adapter_cannot_be_verified_as_a_legacy_configuration (tests.test_study_token_capacity.TokenCapacityTests.test_token_adapter_cannot_be_verified_as_a_legacy_configuration) ... FAIL
+
+======================================================================
+FAIL: test_token_adapter_cannot_be_verified_as_a_legacy_configuration (tests.test_study_token_capacity.TokenCapacityTests.test_token_adapter_cannot_be_verified_as_a_legacy_configuration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_token_capacity.py", line 157, in test_token_adapter_cannot_be_verified_as_a_legacy_configuration
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 2.047s
+
+FAILED (failures=1)

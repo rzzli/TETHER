@@ -1,0 +1,101 @@
+{
+  "findings": [
+    "The finally path invokes the bound terminal component once before Owner.cleanup; observer construction/call failures are caught and do not suppress unchanged cleanup.",
+    "Observed nonzero exit remains the primary failure. Capture/Job predicate/peak/publication outcomes are separately retained without replacing that primary.",
+    "Success requires observed exit0, terminal complete, strict child artifact validation, reaped child, clean owned cleanup and later lease/terminal sealing.",
+    "Component complete requires observed creation+exit, both physical pipe EOFs without truncation, successful raw Job publication, strict generic finished predicate, returned limits/peaks and no terminal errors.",
+    "Unknown creation or missing observed exit retains pre_cleanup_creation_or_exit_unconfirmed scope and no final predicate; no PID opening/recovery or new cleanup authority is introduced.",
+    "Capture admission is bounded by250ms/64polls and the existing work deadline. Snapshot reservation precedes dispatch. Late returned bounded bytes/raw responses remain retained without renewed API admission or success.",
+    "The existing failed recheck close record, primary failure, terminal-publication supplement and unconditional SDK post-lease sealer connection remain present. Full-parent fault fixtures must bind this final path before clearance."
+  ],
+  "pending_before_final_clearance": [
+    "Bind independently verified new bridge executable/build/source/header and new fixed contract/checklist; draft currently retains old EXE and NEW_BUILD_PROOF=None.",
+    "Read final full-parent fake lifecycle evidence covering negative and success ordering, incomplete/unexpected terminal outcome, unknown creation, primary+late/recheck-close and publication/seal veto.",
+    "Verify final collector roles, all pins, final source/protocol hashes and exact no-retry root decision boundary."
+  ],
+  "retained_component_tests": {
+    "covers": [
+      "nonzero primary/EOF/rawJob/peaks",
+      "independent pipe/query/publication errors",
+      "raw before failed predicate",
+      "unknown creation",
+      "expired cutoff",
+      "64poll bound",
+      "late returned read/raw retention",
+      "cap/interrupt/deadline negatives"
+    ],
+    "scope": "Read retained checker/proof only; not rerun by this reviewer",
+    "status": "passed",
+    "tests": 19
+  },
+  "retained_evidence": [
+    {
+      "bytes": 5028,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-PARENT-FAILURE-OBSERVATION-DESIGN-v2.md",
+      "sha256": "61aa13b316532cf0fcd3d887f137023899f591588e2cfa6f196167822eb3efdf"
+    },
+    {
+      "bytes": 2062,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-DESIGN-v3.md",
+      "sha256": "432050d13871a544aa80aa6563a35f5ca53494970bd8aeac90c9182f7a900633"
+    },
+    {
+      "bytes": 1377,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v3.json",
+      "sha256": "999447824c2c3b22b08a4d2991cb16c4773e1f271a1c42912b5230c2ba6ed637"
+    },
+    {
+      "bytes": 17386,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_terminal_component_v3.py",
+      "sha256": "90db30fe0f97ad6a1e80ff3e1c83584e2c077aef73f8c46d7156f8cacaf0a9ee"
+    },
+    {
+      "bytes": 2984,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-REGRESSION-DISPOSITION-v3.json",
+      "sha256": "3a032daf2bf62242c69b8162087d407e26957f92a5e82f75ff82ac2cdc5d684e"
+    }
+  ],
+  "reviewer": "os_accounting_peer",
+  "schema_version": 1,
+  "scope": {
+    "actual_SDK_API_calls": 0,
+    "compiler_or_child_calls": 0,
+    "original_failed_ABI_final_observations": "remain unavailable; no retrospective inference",
+    "runtime_permission": false,
+    "source_only": true,
+    "target_DLL_or_CPU_GGUF_reads": 0
+  },
+  "source_facts": {
+    "component_AST_sha256": "8814173271f4c21fed92f2f55b6c6c2a0131e7cdf746fdda2cf125a098a9abf5",
+    "execution_AST_sha256": "4ca5fbab63658335cff089f682e6668c6a350cb9cadfac88586ba120995f54ca",
+    "observer_before_unchanged_cleanup": true,
+    "owner_cleanup_call_sites": 1,
+    "terminal_observer_call_sites": 1,
+    "typed_API_constructor_AST_unchanged": true,
+    "typed_validator_AST_unchanged": {
+      "exact": true,
+      "json_value": true,
+      "runtime_pins": true,
+      "validate_child_artifacts": true,
+      "validate_modules": true
+    }
+  },
+  "sources": [
+    {
+      "bytes": 33282,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v2.py",
+      "sha256": "d92297033bea4897434d1e5187efc148d010ccdb7422e23c6ff35e60711f8a4c"
+    },
+    {
+      "bytes": 10524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+      "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+    },
+    {
+      "bytes": 53085,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    }
+  ],
+  "status": "preliminary_source_review_no_integration_body_blocker_final_bindings_pending"
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T16:22:51.645994+00:00",
+  "decision": "authorize_once_only_v3_fixed_twelve_public_source_fetch_after_identity_and_fixture_qualification",
+  "approved_inputs": {
+    "fetch_native_references_v3.py": "f923e3bd31b5bc970f9428baef75a89a9075dd0a8c509a059b1975880387bc0f",
+    "SOURCE-TEXT-PROTOCOL-v3.json": "8b07e457c183093c0deeff95a82959519f3a2a49239aa4595839e3d731f85158",
+    "INCOMPLETE-RECEIPT-SUPPLEMENT-v3.json": "15cb6a04076fd142940e2f6d7b6316f7b896dc4fd1e0c0f2ad3555b3b1b6ecdc",
+    "check_incomplete_receipt_after_identity_v3.py": "9c5a4ba1cfc58b3867adb68d718b706d3e64accf4b6014e4d1a06cf0d2a6b231",
+    "SOURCE-FETCH-PEER-PRECHECK-v3.json": "ff95f1b1d9d4986c218930808d6c7582b96389a2306b55638a09019c947c0179",
+    "SOURCE-FETCH-PEER-SUPPLEMENT-CLEARANCE-v3.json": "20df09403f1e6cb1c56b6b0e5fb173099e74b93d00d4cadfccda96c0711152a5",
+    "PYTHON-DIRECT-WORKER-TIMEOUT.json": "63a39f568d531c29e1327a00422ee6e7bddd86df41167597ed4c2a287ec67017"
+  },
+  "pinned_files": 139,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-source-20261028T161554Z",
+  "limits": {
+    "aggregate_retained_body_bytes": 4194304,
+    "aggregate_seconds": 300,
+    "attempts_per_url": 1,
+    "file_body_bytes": 1048576,
+    "finalization_reserve_seconds": 30,
+    "maximum_children": 12,
+    "maximum_concurrent_requests": 1,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 65536,
+    "whole_child_seconds": 20
+  },
+  "source_scope": "12 exact-commit public UTF8 files; no redirect/proxy/credential/crawl/retry",
+  "process_transport": "canonical pinned base worker plus controlled accepted venv context; strict PID and PPID",
+  "base_executable_sha256": "d2ec5b9401b6471874373fe3e4329da1da85014d98f8abedd4e0f02ffdaa21a1",
+  "supplement_disposition": "Original wrong-path fixture remains preserved; new fixture proves incomplete receipt after valid worker identity; held precheck resolved only through bound peer supplement",
+  "prior_attempt_disposition": "v1 unexecuted/rejected; v2 failed before its urllib/request code and remains failed; new v3 output is exclusive",
+  "no_model_dataset_build_native_vocabulary_or_server_authorized": true,
+  "provider_spending_usd": 0,
+  "scientific_case_budget_seconds_unchanged": 300,
+  "entire_project_complete": false
+}

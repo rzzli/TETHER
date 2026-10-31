@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "recorded_at_utc": "2026-10-26T18:04:10.729620+00:00",
+  "status": "complete_with_confirmed_article_overlap_no_freshness_claim",
+  "artifact_proofs": [
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/method.json",
+      "sha256": "acb906d7e17091ce6bdc30a200efe199ac69d665633b3ca9bf13a710a670b555",
+      "bytes": 15898
+    },
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/crosswalk.py",
+      "sha256": "312376b979bcff92ff3bccdf2d2d4c35b6cbc405d47c1c4e6cacefdad742611b",
+      "bytes": 8773
+    },
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/crosswalk-report.json",
+      "sha256": "52ca4b13da3ecc4048cea24bc9bd6c44d2a4af58782fd86ca17650e737491ccb",
+      "bytes": 42498
+    },
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/overlap-anchor.json",
+      "sha256": "2f5e2b55f1feafae81286413352e4ab73fe930a12c73fc2811681168f1344706",
+      "bytes": 2899
+    },
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md",
+      "sha256": "cf4f1dbd8690a89a618d8eabc47a594bc91db6166db1b109cb887744cacb7349",
+      "bytes": 4568
+    }
+  ],
+  "source_packet_count": 58,
+  "source_descriptor_count": 57,
+  "fixed_article_count": 6,
+  "matched_article_ids": [
+    "31019502"
+  ],
+  "negative_match_ids_not_fresh": [
+    "40571861",
+    "32697884",
+    "35784333",
+    "15059373",
+    "22284131"
+  ],
+  "protected_outcome_contents_read": false,
+  "raw_ancestors_followed": false,
+  "model_calls": 0,
+  "network_requests": 0
+}

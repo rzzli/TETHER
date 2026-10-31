@@ -1,0 +1,165 @@
+{
+  "capture_error": null,
+  "copied_native_bytes": 0,
+  "data": {
+    "api_counters": {
+      "CloseHandle": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "CreateFileW": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileInformationByHandleEx": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileSizeEx": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "GetFileType": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "GetFinalPathNameByHandleW": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      },
+      "ReadFile": {
+        "count_values": 0,
+        "invocations": 0,
+        "reserved": 0,
+        "scalar_returns": 0,
+        "wrapper_returns": 0
+      }
+    },
+    "byte_totals": {
+      "captured_bytes": 0,
+      "early_captured_bytes": 0,
+      "early_hashed_bytes": 0,
+      "early_known_read_bytes": 0,
+      "early_rehashes_after_claim": 0,
+      "early_reopens_after_claim": 0,
+      "hashed_bytes": 0,
+      "known_read_bytes": 0,
+      "read_count_unknown": false,
+      "remaining_captured_bytes": 0,
+      "remaining_hashed_bytes": 0,
+      "remaining_known_read_bytes": 0
+    },
+    "calls": null,
+    "entry_trace": [
+      "CORE_CREATED"
+    ],
+    "errors": {
+      "primary": {
+        "args_repr": [
+          "'independent policy prepared issuance interruption'"
+        ],
+        "class_name": "MemoryError",
+        "format_failed": false,
+        "identity": {
+          "identity": "opaque_0",
+          "tag": "OPAQUE_IDENTITY_DATA_ONLY",
+          "type": "object"
+        },
+        "message": "independent policy prepared issuance interruption",
+        "phase": "entry"
+      },
+      "secondary": []
+    },
+    "files": [],
+    "manifest_policy": {
+      "attempted": true,
+      "error_identity": {
+        "identity": "opaque_0",
+        "tag": "OPAQUE_IDENTITY_DATA_ONLY",
+        "type": "object"
+      },
+      "execution_eligible": false,
+      "issued_report": null,
+      "prepared_report": {
+        "basis_ids": [
+          "input.000",
+          "input.001",
+          "input.002",
+          "input.003",
+          "input.004"
+        ],
+        "binding_sha256": "15d74f266b18ab09366b85dfdc291e4e93cae9511d487d2d7cd3a8ab2dedaab4",
+        "edge_count": 24,
+        "envelope_sha256": "45964c486d265f2f5be651fe90f5b5e6b08b7bffc07da50b421fec8382c85b84",
+        "external_anchor_ids": [
+          "root.kernel"
+        ],
+        "mode": "EXECUTION",
+        "node_count": 21,
+        "planned_ids": [],
+        "prior_root_ids": [],
+        "schema_version": 1,
+        "status": "EXECUTION_BASIS_VALIDATED",
+        "unbuilt_ids": []
+      }
+    },
+    "namespace_owned": false,
+    "origin": {
+      "hard_end": 400,
+      "now": 100,
+      "start": 100,
+      "work_end": 395
+    },
+    "phase": "CORE_CREATED",
+    "plan": null,
+    "qualification": {
+      "FFI_registration_proven": false,
+      "originals_authenticated": false,
+      "production_owner_bound": false,
+      "profile_qualified": false,
+      "real_checkers_bound": false,
+      "runtime_authorized": false,
+      "verification_complete": false
+    },
+    "reservation_ready": false,
+    "schema_version": 1,
+    "scope": "entry_kernel_source_pure",
+    "status": "INCOMPLETE"
+  },
+  "genuine_source_snapshot": true,
+  "immutable_raw_artifacts": [
+    {
+      "bytes": 0,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-ARTIFACTS-v1\\dispatch-067-world-01.first_wrapper_observed.native-rows.bin",
+      "semantics": "ALREADY_COPIED_IMMUTABLE_KERNEL_SNAPSHOT_ROWS",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-ARTIFACTS-v1\\dispatch-067-world-01.first_wrapper_observed.native-rows.jsonl",
+      "semantics": "CACHED_IMMUTABLE_SNAPSHOT_FACTS_NOT_LATEST_BANK",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "label": "first_wrapper_observed",
+  "partial_capture": false,
+  "raw_call_count": 0
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decided_at": "2026-10-28T20:30:27.825593+00:00",
+  "decision": "execute_exact_harmless_v4_once",
+  "inputs_verified": 166,
+  "reviewed_pins": {
+    "qualify_harmless_launcher_v4.py": "1a85332d4a4cf96960bdbea1f3105bfb444d229710bcb8a07f4d811e1aa57ca3",
+    "HARMLESS-LAUNCHER-QUALIFICATION-PROTOCOL-v4.json": "43dd462a3701c4abddc1196e345460277f85ac1e84d120154902d33ad95289f8",
+    "HARMLESS-LAUNCHER-PEER-REVIEW-v4.json": "da375f017ee8bed00bb6c90fc84c9294cf397c53e884904d6319872564792e64",
+    "HARMLESS-LAUNCHER-QUALIFICATION-DESIGN-v4.md": "9caf8d4b885f57c5c91bb76d1f3814859149fb6347e406dca3db021f993a49e8"
+  },
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v4-20261028T202617Z",
+  "scope": "Four own harmless Python workers only; exact resource-role lifetime-count correction; unchanged generic/ABI total1. No ABI EXE, target DLL, GGUF, model or inference.",
+  "automatic_retry": false,
+  "prior_failed_v3_preserved": true,
+  "original_sdk_enabled": false,
+  "source_review_does_not_establish_actual_qualification": true
+}

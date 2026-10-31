@@ -1,0 +1,127 @@
+{
+  "created_at_utc": "2026-10-26T06:25:08.009213+00:00",
+  "head": "cc0042c5e8a83d86c8718a2e2a6762fc24a26390",
+  "tracked_inventory": {
+    "src/": {
+      "tracked_files": 34,
+      "python_files": 21,
+      "python_lines": 3946,
+      "functions": 131,
+      "classes": 56
+    },
+    "tools/": {
+      "tracked_files": 107,
+      "python_files": 97,
+      "python_lines": 20974,
+      "functions": 689,
+      "classes": 20
+    },
+    "tests/": {
+      "tracked_files": 111,
+      "python_files": 95,
+      "python_lines": 17089,
+      "functions": 1736,
+      "classes": 140
+    },
+    "planning/": {
+      "tracked_files": 573,
+      "python_files": 22,
+      "python_lines": 1782,
+      "functions": 38,
+      "classes": 1
+    },
+    "docs/": {
+      "tracked_files": 12,
+      "python_files": 0,
+      "python_lines": 0,
+      "functions": 0,
+      "classes": 0
+    },
+    "memory/": {
+      "tracked_files": 42,
+      "python_files": 0,
+      "python_lines": 0,
+      "functions": 0,
+      "classes": 0
+    },
+    "data/": {
+      "tracked_files": 72,
+      "python_files": 0,
+      "python_lines": 0,
+      "functions": 0,
+      "classes": 0
+    }
+  },
+  "unchanged_tested_code": {
+    "pins_checked": 213,
+    "mismatches": [],
+    "prior_guard_sha256": "a4dc2d1e0db36ed0de55678eb2cb2b7102bcfc152104b073f15038bbaab1a58b"
+  },
+  "catalog": {
+    "providers": 83,
+    "datasets": 178,
+    "review_date": "2026-10-09"
+  },
+  "canonical_registry_pins": [
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/pilot-report.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/source-review.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/cd276-efo_0003060-delivery_antigen-adc/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/osmr-efo_0000729-inhibit-antibody/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/erbb2-efo_0000305-inhibit-antibody/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/erbb2-efo_0000305-delivery_antigen-adc/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-inhibit-antibody/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-reduce_expression-sirna/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/il6r-efo_0000685-inhibit-antibody/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/glp1r-mondo_0005148-activate-peptide/receipt.json",
+      "matches": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/scn9a-efo_0005762-inhibit-small_molecule/receipt.json",
+      "matches": true
+    }
+  ],
+  "protected_payload_hashes_only": {
+    "data/benchmark/cohorts/science4-outcomes-20261019T024500Z/adjudication/normalized-outcomes.json": true,
+    "data/benchmark/labels/endpoint-followup-feasibility-20261021/adjudication-v1/normalized-outcomes.json": true
+  },
+  "limitations": [
+    "AST inventory is coverage of structure, not line-by-line correctness proof",
+    "Clinical payloads hashed only; no label contents inspected",
+    "Canonical receipt hashes checked here; source-inclusive verification is separate",
+    "No bulk original re-download or full data-inventory rehash"
+  ],
+  "provider_spend_usd": 0,
+  "model_calls": 0
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_date_utc": "2026-10-27",
+  "status": "awaiting_independent_references_and_frame_decisions",
+  "latest_owner_confirmation": "Reviews are still pending",
+  "independent_submission_paths_supplied": [],
+  "bounded_engineering_checks_complete": false,
+  "real_four_arm_model_experiment_activated": false,
+  "scientific_gate_passed": false,
+  "entire_R09_complete": false,
+  "required_inputs": [
+    "Independent source-only references and domain-matched judgments, with candidate exposure/conflicts recorded",
+    "Source/question sufficiency and acceptable-omission decisions for a qualified development frame",
+    "A separately declared model-quality experiment satisfying the retained R07 stop rules"
+  ],
+  "downstream_steps_still_gated": [
+    "R07 scientific assessment",
+    "R08 final readiness",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "conditional_steps_unchanged": [
+    "R13",
+    "R14",
+    "R15",
+    "R16"
+  ],
+  "AI_development_triage_counts_as_independent_human_evidence": false,
+  "automatic_native_restart_authorized": false,
+  "goal_complete": false,
+  "engineering_scope_correction": "The former invented-only runner was an unfinished engineering item. It is corrected by accepted 0.3.7 collected-source integration; model-backed interface/adapter qualification remains.",
+  "latest_engineering_acceptance": "planning/review-assets/recovery-step9-collected-composition-20261027/acceptance.json",
+  "human_reviews": "pending",
+  "remaining_engineering": [
+    "Separately versioned model-backed interface and deterministic adapter qualification"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "verified_partial_cells_not_completed_case",
+  "failed_attempt": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-four-arm-qualified-20261027T211935Z",
+  "whole_case_accepted": false,
+  "accepted_cells": [
+    {
+      "cell": 0,
+      "receipt_sha256": "78827c129daf7856e31e2a3dde2f704d66ae4fb953a94f1f5fb3a4057ac3ce4d",
+      "verification": {
+        "status": "verified_study_cell",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "consumer_contract": "verified",
+        "scientific_validation": "not_established",
+        "run_id": "c97f7f15-da31-497f-a398-51c7e05d08ac"
+      },
+      "token_count": 2330,
+      "reserved_input": 2362,
+      "quotation_seconds": 17.79700000002049,
+      "tokenizer_child_seconds": 0.5
+    },
+    {
+      "cell": 1,
+      "receipt_sha256": "194387640c122df1bfc5d2660b43a41cf565a989deed525a7ebdaf9a82780626",
+      "verification": {
+        "status": "verified_study_cell",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "consumer_contract": "verified",
+        "scientific_validation": "not_established",
+        "run_id": "b5563407-42d9-40be-bab5-bf507067bac4"
+      },
+      "token_count": 2324,
+      "reserved_input": 2356,
+      "quotation_seconds": 17.609000000054948,
+      "tokenizer_child_seconds": 0.34399999992456287
+    }
+  ],
+  "prior_tokenizer_children": 2,
+  "new_tokenizer_children": 0,
+  "actual_model_calls": 0,
+  "provider_spend_usd": 0,
+  "elapsed_seconds": 1.547000000020489,
+  "failure_report_sha256": "fc87c38c8cb28034074d9314ffd7b3cf0d4105f0daac33c096e1d0a409247435",
+  "scientific_validation": "not_established"
+}

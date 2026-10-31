@@ -1,0 +1,52 @@
+{
+  "fixture_only": true,
+  "no_model_or_network_calls": true,
+  "C1": {
+    "same_year_exclusion": null,
+    "later_exact_date_exclusion": "publication_after_origin",
+    "qualification": "Synthetic fixture with independently eligible old availability; proves permissive year gate, not a real leakage event."
+  },
+  "C2": {
+    "URLError": {
+      "status": "failed",
+      "calls": 1,
+      "estimated_input_tokens": 0,
+      "categories": {
+        "genetics": "failed",
+        "perturbation": "not_run",
+        "expression": "not_run",
+        "modality": "not_run",
+        "literature": "not_run",
+        "clinical": "not_run",
+        "safety": "not_run",
+        "pathway": "not_run"
+      }
+    },
+    "TimeoutError": {
+      "status": "partial",
+      "calls": 8,
+      "estimated_input_tokens": 0,
+      "categories": {
+        "genetics": "failed",
+        "perturbation": "failed",
+        "expression": "failed",
+        "modality": "failed",
+        "literature": "failed",
+        "clinical": "failed",
+        "safety": "failed",
+        "pathway": "failed"
+      }
+    },
+    "missing_content_error": "KeyError"
+  },
+  "C3": {
+    "accepted_request_bytes": 20183,
+    "retrieval_policy_bytes": 64000,
+    "payload_error": "Escaped local prompt exceeds its byte cap"
+  },
+  "C7": {
+    "has_snapshot_base": false,
+    "write_error_class": "AttributeError",
+    "write_error": "'EvidenceStore' object has no attribute 'snapshot_base'"
+  }
+}

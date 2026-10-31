@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_EXACT_ENTRY32_53_HARNESS_PREPARATION_V2_STATIC_ONLY",
+  "reviewer": "grammar_toolchain_requirements",
+  "freeze": {
+    "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/ENTRY-CONTRACT-SUITE-FREEZE-v2.json",
+    "bytes": 5381,
+    "sha256": "2116ed80a148a8df9b81c65cd785e1db8666d276a7cda464d567736bc9ee4694"
+  },
+  "preparation": {
+    "bytes": 6406,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-PREPARATION-v2.json",
+    "sha256": "91624464eebc28f32617ac018b3c62b209899c9611704f9fae4c02d1184a9eb0"
+  },
+  "inputs": {
+    "bytes": 27127,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-INPUTS-v2.json",
+    "sha256": "722636e395b69c9a19e64dee7c1e38843fcffebce090b40c84841ccc8df4840e"
+  },
+  "outline": {
+    "bytes": 4410,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-BINDING-OUTLINE-v2.json",
+    "sha256": "5222a23a30a8ac6c61e2c331e3570bb8a693092aa2c39a403b4763b5b5d24b0c"
+  },
+  "harness": {
+    "cases": {
+      "bytes": 36778,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\entry_contract_cases_v2.py",
+      "sha256": "d084ef7563b92730f3220a8af5550cbdc35a619784d9e1282bf9e34d70b18d3a"
+    },
+    "runner": {
+      "bytes": 20263,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\run_entry_contract_suite_v2.py",
+      "sha256": "cbaa75873d6f5d3fdace3d91f753d18e1bf3f4ed95e7004b195d64bf3865b792"
+    },
+    "support": {
+      "bytes": 15938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\entry_independent_test_support_v3.py",
+      "sha256": "e9ebf09775b1fe31dee3fda50d42ee57ae8f4c4fa3c1c9c4b0cf96be79913536"
+    },
+    "world": {
+      "bytes": 11981,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\entry_independent_world_v3.py",
+      "sha256": "c81526ed32e30ae4ded4177739a64ec8b0d3dacf0b233b2c7dc19e262edb0d8a"
+    }
+  },
+  "source_pause": {
+    "bytes": 4114,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE-PAUSE-v3.json",
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "preserved_first_freeze": {
+    "bytes": 4766,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-FREEZE-v1.json",
+    "sha256": "aae7d55d9df9c9352916d00bd5a8cc9a3650c7c3e2645e0cdcaa3072c48762f4"
+  },
+  "chronology": {
+    "bytes": 2038,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-ASSERTION-REFINEMENT-CHRONOLOGY-v2.json",
+    "sha256": "7f2c5c87d76ede8343d0337289ae43c0d3c93e62cd276d8d2bb7232402d11f91"
+  },
+  "scaffold_successor_delta": {
+    "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/ENTRY-CONTRACT-SCAFFOLD-SUCCESSOR-DELTA-v2.json",
+    "bytes": 3113,
+    "sha256": "099019f398ff0f85f59979ddded3115a1cf89b18fa5b4a1b2659fc5e654ccae9"
+  },
+  "material_blockers": [],
+  "counts": {
+    "named_controls": 32,
+    "ordered_literal_branches": 53,
+    "coverage_classes": {
+      "GENUINE_SOURCE_RUNTIME": 47,
+      "PARTIAL_RUNTIME_DEFERRED_MANIFEST_POLICY": 1,
+      "PARTIAL_RUNTIME_DEFERRED_HISTORICAL_REFERENCE": 2,
+      "STATIC_METADATA_ONLY": 1,
+      "GENUINE_RUNTIME_PLUS_STATIC_LINEAGE": 1,
+      "CONDITIONAL_GENUINE_PROCEDURAL_LARGE_STREAM": 1
+    },
+    "actual_helper_bytes": 99000,
+    "actual_pre_entry_kernel_bytes": 121192
+  },
+  "exact_delta": {
+    "changed_case_function_asts": [
+      "E17",
+      "E21"
+    ],
+    "all_other_case_functions_equal": true,
+    "runner_byte_identical_after_only_output_and_case_module_names": true,
+    "source3_unchanged": true
+  },
+  "reviewed_groups": [
+    "All 32 case functions and 53 ordered branches match the predeclared cdfe expansion; no case, variant or expected refusal is dropped. E17/E21 add the already-required after-cleanup original-error, unchanged-cache and no-read-retry assertions; other function ASTs are unchanged from restored v1.",
+    "E05 uses actual canonical-list append-after-commit instrumentation through trusted Registry construction, retaining the reserved/uninvoked missing-registration row. E22 BOOL0 catches the actual semantic refusal, then checks native BOOL0 and the consumed once-close right; BOOL-1 returns normally. Python None/int0 remain distinct in genuine delivery facts while native bits0 is NULL.",
+    "Genuine Source3 entry/Origin/Registry/ref/context/continuation/helper namespaces are used. Actual helper bodies and full bootstrap geometry are independently frozen; no old owner construction, decoder brand, numerical start reset or prefix stripping occurs.",
+    "One prospective 60-second cooperative timer includes trusted setup and per-world retention, with pre/post calls and post-branch/final late veto. Audits remain active over subject calls/source stack; finally checks do not mask the original callback error. No callback-free hard timeout or resource fit is claimed.",
+    "First action/source, cleanup and evidence errors stay separate. Wrapper-observed immutable snapshots and separately cached genuine source final are retained distinctly, including post-call gate-veto cases. Existing immutable native rows and latest canonical bank rows use separate streaming artifacts; missing registration and partial capture are explicit, never a fabricated zero row or a healed cache. Complete generated bytes and actual query frames are copied outside ACTIVE with hashes.",
+    "E08 retains the actual DAG refusal but labels unavailable external decision/output policy DEFERRED. E16 historical Source4 branches retain closed-loader/API-negative evidence but defer actual old-source invocation. E29 is STATIC_METADATA_ONLY; E30 combines actual continuation with frozen static lineage. These classes cannot become whole-entry acceptance.",
+    "E31 decodes genuine generated bytes through the exact captured codec and verifies that decoded structures cannot attach/project/mint authority. E32 requires an explicit Root boolean: false yields a stated defer; true streams the declared periodic 3,991,999,872 bytes through the actual one-buffer source path, checks independent pinned digest and a genuine active full context, then verifies capture/native-route refusal. No descriptor-only or early-context substitute is used.",
+    "The E32 reference is retained independent generated-prefix metadata, not a historical target payload. Small and large geometries, actual call evidence and the original-only C16384 versus joint 19,079 warning remain distinct. Positive native leases, physical14, full real roster, native25 and scientific/resource/production first-entry gates remain pending.",
+    "Expected deferred branches remain DEFERRED, not PASS. Runner completion with explicit defers never sets complete_entry_gate; actual failures, cleanup/evidence errors, audit, pin changes or deadline stops produce an incomplete result. Fresh exclusive v2 attempt/proof/artifact paths preserve all prior preparations."
+  ],
+  "independent_metadata_checks": {
+    "every_direct_freeze_harness_source_pin_verified": true,
+    "historical_provenance_pins_verified": true,
+    "branch_expansion_exact": true,
+    "large_geometry": {
+      "B": 3,
+      "C": 3922,
+      "E": 234,
+      "M": 3,
+      "N": 5,
+      "Q": 3812,
+      "R": 3892,
+      "bootstrap_calls": 18,
+      "captured_bytes": 99068,
+      "early_bytes": 99000,
+      "known_bytes": 3992098940,
+      "original_closes": 5,
+      "terminal_calls": 3842,
+      "work_calls": 3837
+    },
+    "large_reference_checkpoint_verified": true,
+    "toy_blob_sizes": [
+      58,
+      83
+    ],
+    "no_toy_execution": true
+  },
+  "chronology_statement": "V1 metadata froze exact case47b7 before the final E17/E21 cleanup refinements were communicated. That original case and freeze were restored/preserved; named case2 d084 and fresh scaffold v2 were frozen after explicit ready handshake. No subject import, test, source failure or replay occurred in this authoring overlap.",
+  "activity": {
+    "subject_imports": 0,
+    "harness_imports": 0,
+    "subject_tests": 0,
+    "harness_execution": 0,
+    "source_edits": 0,
+    "reviewed_harness_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "limitations": "Static harness preparation clearance only. The reviewer-authored Ops2 lineage is not independently accepted by this record. Root must bind before the first actual 53-branch run, and any actual result needs a separate evidence review; no full entry/native/physical/scientific acceptance follows from this peer."
+}

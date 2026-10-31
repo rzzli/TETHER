@@ -1,0 +1,2014 @@
+{
+  "actual_legacy_fake_dispatches": 0,
+  "actual_marker_module_execs": 0,
+  "actual_target_API_calls": 0,
+  "audit_denials": [],
+  "audit_policy": "Source ACTIVE boundaries plus exact subject filename frames cover getters/callbacks; no unexpected filesystem/network/native/import events. Trusted test reporting is outside subject activity.",
+  "callback_free_hang_bound": "UNKNOWN_NO_OWNED_OUTER_WATCHDOG",
+  "clocks": "One original real60s cooperative extension suite deadline uses entry/loop/projector checks and the common post-suite veto; codec facade forwarding is NOT executed in this phase. Original synthetic100/395/400 owner monitors remain unchanged.",
+  "codec": null,
+  "codec_forwarding": null,
+  "common_post_suite_late_veto": false,
+  "dependencies": {
+    "combined_source_oracle_peer": {
+      "bytes": 6505,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-CORRECTION-INDEPENDENT-REVIEW-v2.json",
+      "sha256": "2e3c90ab67d643d7fa96962e7f5a75982f9ac4ab08936732b32047e9685a26c7"
+    },
+    "finite_source4_test2_peer": {
+      "bytes": 5829,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-SOURCE4-TEST2-INDEPENDENT-STATIC-REVIEW-v1.json",
+      "sha256": "e68f706ffcab97c02e201eb27593991ee4f1b30a5fa4f2d62c976237cacf8216"
+    },
+    "first_v1_codec_failure": {
+      "bytes": 9571,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v4.json",
+      "sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa"
+    },
+    "fixture_schema": {
+      "bytes": 13345,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+    },
+    "fixtures": {
+      "bytes": 312462,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+      "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+    },
+    "format_schema": {
+      "bytes": 89573,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    "independent_packet_guard_localization": {
+      "bytes": 76830,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LEGACY-PACKET-GUARD-INDEPENDENT-REVIEW-v1.json",
+      "sha256": "6c1ce5076d73c1f583f41f75d60f0b64160c3f839e29dab7c541f39e8d46ad9e"
+    },
+    "indexed_precode_test_source": {
+      "bytes": 14210,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v2.py",
+      "sha256": "d76e1a2d7c70a9a42fa70c5f4989f08f2e291e79f12fa53b454250998c74bf5b"
+    },
+    "legacy_observation_schema": {
+      "bytes": 37533,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    },
+    "literal_contract": {
+      "bytes": 6562,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-CORPUS-TEST-CONTRACT-v3.json",
+      "sha256": "510d02f456b49ea795caf3a6f10655c8224cfb4bea6b6c3b2bb56d8fb947f8b7"
+    },
+    "literal_corpus": {
+      "bytes": 1044112,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-CORPUS-v3.json",
+      "sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7"
+    },
+    "literal_freeze": {
+      "bytes": 4096,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-FREEZE-v3.json",
+      "sha256": "8daa9a4dbc234c1edfe14694869c03fa3d5df7e9c15472d63673a09ff9cd5a2c"
+    },
+    "native_extension_localization": {
+      "bytes": 6522,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-FIRST-INDEPENDENT-LOCALIZATION-v1.json",
+      "sha256": "321524454289ad0202672d359228fee5591e2946566fb5ca70cda8e5c3488bd8"
+    },
+    "native_packet_guard_localization": {
+      "bytes": 6256,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LEGACY-FIRST-INDEPENDENT-LOCALIZATION-v3.json",
+      "sha256": "2b9e2ab7a35fcbe495301336d5bb33cd881245d5750e158f6a647f363c3b60a7"
+    },
+    "normative_oracle_choice": {
+      "bytes": 2867,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-RESERVATION-ORACLE-CORRECTION-v3.json",
+      "sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a"
+    },
+    "packet_alias_adapter_delta": {
+      "bytes": 480,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PACKET-ALIAS-ADAPTER-DELTA-v2.json",
+      "sha256": "663540784086051aeb9af5ebd8465909e21ea86e45b6d4076866f2ae89a3f8fc"
+    },
+    "packet_alias_root_choice": {
+      "bytes": 2517,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PACKET-ALIAS-HARNESS-CORRECTION-v2.json",
+      "sha256": "02bac72d6f9d45c49ddb88cd3b4d97ece4fd24eba6a6f0d72ab39f239f2a3afa"
+    },
+    "passing_source4_legacy_gate": {
+      "bytes": 9690627,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v8.json",
+      "sha256": "f53e3db06b69337d2a8ce4b34fe851dab1338806bfe9aba0bba7b89261f22c6f"
+    },
+    "permitted_static_source_index": {
+      "bytes": 8265,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-SOURCE-BINDING-v3.json",
+      "sha256": "55910e6d1f062a56bd2333b97d2b9192b3703c70cdbf1841387ae8244e44fdbc"
+    },
+    "preserved_literal_v2_acceptance": {
+      "bytes": 2267,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-ACCEPTANCE-v2.json",
+      "sha256": "8f1020bd0b5a1c97c26080bbaaa263395cd3cfa354c6fa64afb6929eae9f090d"
+    },
+    "preserved_literal_v2_peer": {
+      "bytes": 7222,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-INDEPENDENT-REVIEW-v2.json",
+      "sha256": "3e1ac2257e59aa415d2494cac7d6aa8bc6b74179234629d2c0ba0141aca48549"
+    },
+    "preserved_runner3_peer": {
+      "bytes": 5230,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-RUNNER-INDEPENDENT-STATIC-REVIEW-v3.json",
+      "sha256": "c4f0b97739c6704170163571c6443be8242a8b6e857ed0103645d81f2c7e27cd"
+    },
+    "representability_root_choice": {
+      "bytes": 2943,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-REPRESENTABILITY-AND-OBSERVATION-CORRECTION-v4.json",
+      "sha256": "73d80d6fa424b5135d8519f7952b86797ea69465407781fe5ba80507b02a28e9"
+    },
+    "retained_first_extensions": {
+      "bytes": 67839,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v4.json",
+      "sha256": "ca8b142d6e9a96dcc7ea0518b3571e87617fda66953e3ae09830c2c276791e98"
+    },
+    "retained_first_legacy_failure": {
+      "bytes": 9795303,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v6.json",
+      "sha256": "dc02853ad550319d50c8361aa073aa0d4ba4ee8577d3b2bc99dc6bf318565a84"
+    },
+    "retained_source3_codec_pass": {
+      "bytes": 12769,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v6.json",
+      "sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b"
+    },
+    "retained_v2_disjoint_tail": {
+      "bytes": 182204,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-DISJOINT-TAIL-PROOF-v1.json",
+      "sha256": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97"
+    },
+    "retained_v2_failure_localization": {
+      "bytes": 3277,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-V2-FAILURE-LOCALIZATION-v1.json",
+      "sha256": "7d460d49b0c98279281914fd51d590b09f34b41e77ad15be27ff3122a5060327"
+    },
+    "retained_v2_first_codec": {
+      "bytes": 21111,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v5.json",
+      "sha256": "8184541d030cf578918859509963085c70b3eb7cfb0715ec9901714a982ba968"
+    },
+    "root_source4_codec_carry": {
+      "bytes": 665,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-V4-ROOT-PIN-CHECK-v1.json",
+      "sha256": "119c42381de0c577eea2d2b9b3db547706b0af63df5b70826f6d45269897045b"
+    },
+    "small_stream_recipe": {
+      "bytes": 978,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-SMALL-VIRTUAL-STREAM-RECIPE-v1.json",
+      "sha256": "7f16167cd93c08d015d5d516a51aad86392e438a8df8d2eeed4262a18cf885d5"
+    },
+    "synthetic_cohort": {
+      "bytes": 4876,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+      "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+    }
+  },
+  "elapsed_seconds": 0.2029999999795109,
+  "errors": [],
+  "execution_stage": "EXTENSIONS_CONFORMANCE",
+  "extensions_conformance_started": true,
+  "extensions_result_returned": true,
+  "failures": [],
+  "genuine_projector_calls": 25,
+  "hard_wall_time_guard": false,
+  "harness_unchanged": {
+    "codec_tests": true,
+    "extension_tests": true,
+    "indexed6_adapter": true,
+    "legacy_adapter": true,
+    "same8_adapter": true,
+    "snapshot_validator": true
+  },
+  "histories_executed": 0,
+  "histories_matched": 0,
+  "indexed6_observations": [
+    {
+      "actual": 103,
+      "canonical_records": 18,
+      "expected": 103,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 1,
+        "iterated_items": 0,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "handle",
+      "window": "clean_hot"
+    },
+    {
+      "actual": 68,
+      "canonical_records": 18,
+      "expected": 68,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 0,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "read_known",
+      "window": "clean_hot"
+    },
+    {
+      "canonical_records": 18,
+      "foreign_genuine_ref_rejected": true,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 1,
+        "iterated_items": 0,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "ref_membership",
+      "window": "clean_hot"
+    },
+    {
+      "actual": "actual_canonical_state",
+      "canonical_records": 17,
+      "expected": null,
+      "metrics": {
+        "append_calls": 1,
+        "direct_index_items": 4,
+        "iterated_items": 0,
+        "len_calls": 6,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "read_admission",
+      "window": "clean_hot"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_canonical_append_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_before_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "fold_before_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "fold_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 58,
+        "early_captured_bytes": 58,
+        "early_hashed_bytes": 58,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 58,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": false,
+        "wrapper_return_observed": true,
+        "wrapper_state": "returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "healthy_identical_count_replay",
+      "primary": null,
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 0,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 0,
+        "read_count_unknown": true,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "partial_scalar",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 0,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 0,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 0
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": true,
+        "wrapper_state": "returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "defined_zero",
+      "primary": "SharedOwnerError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    }
+  ],
+  "legacy_runs": [],
+  "legacy_snapshot_count": 0,
+  "method_outcomes": [
+    {
+      "status": "PASS",
+      "test": "test_01_clean_handle_no_global_scan (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_01_clean_handle_no_global_scan)"
+    },
+    {
+      "status": "PASS",
+      "test": "test_02_clean_known_bytes_no_global_scan (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_02_clean_known_bytes_no_global_scan)"
+    },
+    {
+      "status": "PASS",
+      "test": "test_03_real_ref_guard_no_membership_scan (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_03_real_ref_guard_no_membership_scan)"
+    },
+    {
+      "status": "PASS",
+      "test": "test_04_real_read_admission_no_global_quota_scan (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_04_real_read_admission_no_global_quota_scan)"
+    },
+    {
+      "status": "PASS",
+      "test": "test_05_reserved_index_failure_raw_unentered_and_cleanup (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_05_reserved_index_failure_raw_unentered_and_cleanup)"
+    },
+    {
+      "status": "PASS",
+      "test": "test_06_count_fold_raw_first_before_after_and_healthy_replay (role_aware_exact_indexed6_adapter_v1.make_tests.<locals>.Controls.test_06_count_fold_raw_first_before_after_and_healthy_replay)"
+    },
+    {
+      "status": "PASS",
+      "test": "test01_captured_empty_bulk_empty_and_typed_no_bytes (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test01_captured_empty_bulk_empty_and_typed_no_bytes)"
+    },
+    {
+      "status": "PASS",
+      "test": "test02_first_NULL_and_unencodable_raw_object_survive (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test02_first_NULL_and_unencodable_raw_object_survive)"
+    },
+    {
+      "status": "PASS",
+      "test": "test03_independent_error_definition_and_value_first_slots (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test03_independent_error_definition_and_value_first_slots)"
+    },
+    {
+      "status": "PASS",
+      "test": "test04_actual_packing_failure_preserves_canonical_facts (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test04_actual_packing_failure_preserves_canonical_facts)"
+    },
+    {
+      "status": "PASS",
+      "test": "test05_actual_diagnostic_borrow_release_and_formatter_identity (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test05_actual_diagnostic_borrow_release_and_formatter_identity)"
+    },
+    {
+      "status": "PASS",
+      "test": "test06_genuine_immutable_artifacts_full_consumer_and_foreign_refusal (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test06_genuine_immutable_artifacts_full_consumer_and_foreign_refusal)"
+    },
+    {
+      "status": "PASS",
+      "test": "test07_small_real_multichunk_hash_only_stream_and_209_capture (role_aware_actual_producer_extensions_v2.make_tests.<locals>.ProducerExtensions.test07_small_real_multichunk_hash_only_stream_and_209_capture)"
+    }
+  ],
+  "methods": 13,
+  "module_policy": "Fresh fixed four-module map only. Old shared_owner_v1 dictionary keys are HARNESS-ONLY roles referencing actual new module objects; no old owner code/import/cache alias.",
+  "original_or_payload_operations": 0,
+  "phase": "EXTENSIONS_FIRST",
+  "producer_extension_observations": [
+    {
+      "actual_original_dispatches": 26,
+      "actual_sink_callbacks": 65,
+      "bulk": 0,
+      "captured": 141,
+      "name": "capture_zero_vs_not_requested",
+      "original_primary_class": null,
+      "read_calls": 2,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 1,
+      "actual_sink_callbacks": 3,
+      "guessed_close": false,
+      "name": "first_null",
+      "original_primary_class": "RuntimeError",
+      "raw_object_identity_retained": true,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 1,
+      "actual_sink_callbacks": 3,
+      "guessed_close": false,
+      "name": "first_unencodable_object",
+      "original_primary_class": "SharedOwnerError",
+      "raw_object_identity_retained": true,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 6,
+      "actual_sink_callbacks": 7,
+      "definition_observed": true,
+      "error_value_observed": false,
+      "name": "definition_first",
+      "original_primary_class": "MemoryError",
+      "raw_count_zero_undefined": true,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 6,
+      "actual_sink_callbacks": 7,
+      "definition_observed": false,
+      "error_value_observed": true,
+      "name": "value_first",
+      "original_primary_class": "MemoryError",
+      "raw_count_zero_undefined": true,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 21,
+      "actual_sink_callbacks": 51,
+      "captured": 209,
+      "hashed": 209,
+      "known": 209,
+      "name": "packing_failed_after_first_raw_facts",
+      "original_primary_class": "MemoryError",
+      "packing_attempts": 1,
+      "real_qualification": false,
+      "retry_or_eligible_bytes": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 0,
+      "actual_sink_callbacks": 0,
+      "borrowed": 0,
+      "capacity": 506,
+      "committed_after_failure": 1,
+      "name": "diagnostic_reusable_guards",
+      "nested_successful_entries": 16384,
+      "original_primary_class": "RuntimeError",
+      "outer_successful_guard_operations": 16384,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 0,
+      "actual_sink_callbacks": 0,
+      "borrowed": 0,
+      "committed": 2,
+      "name": "formatter_original_identity",
+      "original_primary_class": "BadText",
+      "primary_is_original": true,
+      "real_qualification": false,
+      "secondary_formatter_is_original": true,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 21,
+      "actual_sink_callbacks": 59,
+      "consumption": [
+        {
+          "complete_passes": 1,
+          "counts": {
+            "calls": 18,
+            "files": 3,
+            "header": 1,
+            "module_edges": 1,
+            "module_names": 1,
+            "modules": 2,
+            "paths": 1,
+            "queries": 1
+          },
+          "exhausted": true,
+          "kind": "candidate-ledger.bin",
+          "phase": "CANDIDATE",
+          "pool_bytes": {
+            "module_names": 23,
+            "paths": 132,
+            "queries": 24654
+          },
+          "raw_bytes": 34411,
+          "sha256": "90bf36b67c303776b34a9afdd649641eba1d0bb6b7bf0b5e931de7148fa573e0"
+        },
+        {
+          "complete_passes": 1,
+          "counts": {
+            "calls": 21,
+            "files": 3,
+            "header": 1,
+            "module_edges": 1,
+            "module_names": 1,
+            "modules": 2,
+            "paths": 1,
+            "queries": 1
+          },
+          "exhausted": true,
+          "kind": "terminal-ledger.bin",
+          "phase": "TERMINAL",
+          "pool_bytes": {
+            "module_names": 23,
+            "paths": 132,
+            "queries": 24654
+          },
+          "raw_bytes": 35179,
+          "sha256": "a511e3fb7231fbd719f1f8bf73c86b0a7ac7aaf67f25464ddf693ce3a1e7232d"
+        }
+      ],
+      "name": "actual_generated_bytes_and_full_consumer",
+      "original_primary_class": null,
+      "postfinal_consumer_refused": true,
+      "real_qualification": false,
+      "violations": []
+    },
+    {
+      "actual_original_dispatches": 0,
+      "actual_sink_callbacks": 0,
+      "name": "foreign_genuine_artifact_refused",
+      "no_gate_or_dispatch": true,
+      "original_primary_class": "SharedOwnerError",
+      "real_qualification": false,
+      "violations": [],
+      "wrong_owner": true
+    },
+    {
+      "actual_original_dispatches": 30,
+      "actual_sink_callbacks": 65,
+      "bulk": 2097169,
+      "captured": 209,
+      "closures": 4,
+      "consumption": [
+        {
+          "complete_passes": 1,
+          "counts": {
+            "calls": 26,
+            "files": 4,
+            "header": 1,
+            "module_edges": 1,
+            "module_names": 1,
+            "modules": 2,
+            "paths": 1,
+            "queries": 1
+          },
+          "exhausted": true,
+          "kind": "candidate-ledger.bin",
+          "phase": "CANDIDATE",
+          "pool_bytes": {
+            "module_names": 23,
+            "paths": 158,
+            "queries": 32872
+          },
+          "raw_bytes": 44959,
+          "sha256": "eb207770edda3e121b7ddb5fc64da0487d01dbb9ff0e78631b7e4ca7824d761c"
+        },
+        {
+          "complete_passes": 1,
+          "counts": {
+            "calls": 30,
+            "files": 4,
+            "header": 1,
+            "module_edges": 1,
+            "module_names": 1,
+            "modules": 2,
+            "paths": 1,
+            "queries": 1
+          },
+          "exhausted": true,
+          "kind": "terminal-ledger.bin",
+          "phase": "TERMINAL",
+          "pool_bytes": {
+            "module_names": 23,
+            "paths": 158,
+            "queries": 32872
+          },
+          "raw_bytes": 45983,
+          "sha256": "1c6586b9eb9a5952716d41b3b9669722e08319784815ffb9dc1b6385e18e0c1d"
+        }
+      ],
+      "name": "small_actual_1MiB_periodic_stream",
+      "original_calls": 30,
+      "original_primary_class": null,
+      "reads": 6,
+      "real_qualification": false,
+      "recipe": "periodic00..ff reset perfile;256B seed thenactualbuffer doubling; no wholebulk body",
+      "reference_preparation_seconds": 0.0,
+      "violations": [],
+      "virtual_bytes": 2097378
+    }
+  ],
+  "projector_observations": [
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    },
+    {
+      "actual_producer_snapshot": true,
+      "actual_projector": true,
+      "owner_clock_resampled": false,
+      "same_owner_token_resolution_external": true
+    }
+  ],
+  "qualification": {
+    "full_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "runner": {
+    "bytes": 13912,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_extensions_v5.py",
+    "sha256": "8c471b7d8e5caafc8e0c1b863c5310c5a7fd978e12320b9a2f0c660e86f4638e"
+  },
+  "same8_observations": [],
+  "schema_version": 1,
+  "scope": "Actual NEW four-module SOURCE/PURE only, if explicitly authorized. No real source/entry/FFI/physical/native/profile/scientific qualification.",
+  "source_binding": {
+    "bytes": 16028,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-SOURCE-BINDING-v5.json",
+    "sha256": "44f8b0b59cc3b68db88fa34744efe6a48ae777599e671d51938345e02f82cf60"
+  },
+  "source_pins": {
+    "continue_role_verification_v4": {
+      "bytes": 4273,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\continue_role_verification_v4.py",
+      "sha256": "403adec1f4389eb29d08b14f8da24989c8cdde50f20882629ed1a5cbb81292f7"
+    },
+    "role_file_ports_v4": {
+      "bytes": 21279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_file_ports_v4.py",
+      "sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7"
+    },
+    "role_ledger_codec_v4": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    "role_owner_v4": {
+      "bytes": 77221,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_owner_v4.py",
+      "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"
+    }
+  },
+  "source_unchanged": {
+    "continue_role_verification_v4": true,
+    "role_file_ports_v4": true,
+    "role_ledger_codec_v4": true,
+    "role_owner_v4": true
+  },
+  "status": "PASS"
+}

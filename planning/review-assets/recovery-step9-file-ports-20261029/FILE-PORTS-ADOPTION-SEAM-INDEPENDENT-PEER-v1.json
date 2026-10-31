@@ -1,0 +1,208 @@
+{
+  "FFI_registration_proven": false,
+  "actual_FFI_API_calls": 0,
+  "author": {
+    "bytes": 18694,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\author_file_port_adoption_seam_design_v1.py",
+    "sha256": "4a5b8a1773ea147b97d703179d735f1cece2c4131a049831a3c9f023abcf5f55"
+  },
+  "authorization_basis": "Root assigned design-only independent peer after portable source-scoped acceptance 16d65f572019a86b466d684f5c67b330140de85362829abad7a19330ee4d318a; no implementation or live binding authority.",
+  "design": {
+    "bytes": 20299,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ADOPTION-SEAM-DESIGN-v1.json",
+    "sha256": "055db993a35f173d19a01c52c3b88515d97d3752d7dd409e1273b55f63c15cd6"
+  },
+  "design_author": "/root/grammar_toolchain_requirements",
+  "freeze": {
+    "bytes": 2944,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ADOPTION-SEAM-FREEZE-v1.json",
+    "sha256": "f2d57dee6454c04dc2d3416e411b9c2a6bc69aab79db0ad131ec5be7fe769046"
+  },
+  "freeze_author": {
+    "bytes": 1849,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\freeze_file_port_adoption_seam_design_v1.py",
+    "sha256": "1b8201540c163fe151aff0e790bf5c62568da953345e9d4eb58b1c220799a33b"
+  },
+  "implementation_authorized_by_review": false,
+  "inspection_groups": [
+    {
+      "finding": "Logical reservation/entry, FFI invocation reservation, scalar return, count definedness, and portable-wrapper return remain separate. Unknown C entry or return is not converted into a measured zero, while a retained native scalar is not erased by a wrapper exception.",
+      "id": "raw_return_axes",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "Preallocated owner/Origin/nonce/slot/ordinal records precede invocation. Usable handle/search/namespace effects and function-specific known read/write counts are adopted before error copying, RawReturn allocation, callbacks, clocks, hashing or immutable copying. Partial fields and original buffer lifetime are retained; return counters reconcile once by ordinal.",
+      "id": "ownership_and_counts",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "CreateFile/FindFirst INVALID remains the documented known-no-handle case; unexpected NULL is unknown and creates no guessed close right. File/search closers stay distinct, with one reservation and no retry after false, unknown, late or wrapper-failed close.",
+      "id": "sentinels_and_closers",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "Real identity requires all four same-handle owner-bound query records and current-clock admission. Harness seeds, copied flags and caught identity failures grant no content authority. Namespace ownership is retained separately from readiness, including partial output slots before acknowledgment failure.",
+      "id": "identity_and_namespace",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "Ten mappings cover portable slots, early-source captures, immutable source context, source-bound port, loader, engine entry, events and finalization. Exact Origin/nonce/registry/output ownership survives a one-use handoff; numeric old t0, run_once, a new _Owner, source recapture and duplicated cleanup rights are expressly rejected.",
+      "id": "continuation",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "The same original 295-second work/300-second hard clock continues. Known late raw facts remain retained without renewed work; cleanup stops at the hard boundary. Existing primary object/phase persists and raw API facts stay distinct from later Python exception precedence.",
+      "id": "deadlines_and_primary",
+      "verdict": "consistent"
+    },
+    {
+      "finding": "The design keeps the existing 14 exports and caps, 14 proposed fault expectations, and no new discovery or loader fallback. Joint roster/event fit, literal record schemas/fixtures, actual FFI conversion/adoption, first-entry provenance, complete checker/sink integration and profile qualification remain pending; no assumed 256/2048 fit is asserted.",
+      "id": "finite_scope_and_next_gate",
+      "verdict": "consistent"
+    }
+  ],
+  "material_blockers": [],
+  "metadata_assertions_and_AST_parses_only": true,
+  "next_required_gates": [
+    "Freeze literal typed adoption-record and fault fixtures before source implementation; include scalar-return/wrapper-failure and partial-count/buffer cases without copying expected authority flags.",
+    "Root must separately authorize any source successors; same-owner integration must retain the original clock, registry, live early sources, captured loader, event sequence and exactly-once cleanup.",
+    "Derive the actual joint roster, buffers, call/event/output reservations before originals; existing prototype ceilings alone are not a fit certificate.",
+    "Actual FFI binding and native-to-Python conversion/interruption behavior remain separate unqualified boundaries. Python object adoption cannot establish atomic native-return registration.",
+    "New Unicode journal/archive policy and complete production checker/owner/sink integration remain separate; old v7 policies are not retargeted by this design."
+  ],
+  "old_payload_operations": 0,
+  "old_source_closure_operations": 0,
+  "originals_authenticated": false,
+  "portable_scoped_acceptance": {
+    "bytes": 4238,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-SCOPED-ACCEPTANCE-v2.json",
+    "sha256": "16d65f572019a86b466d684f5c67b330140de85362829abad7a19330ee4d318a"
+  },
+  "prior_gap": {
+    "bytes": 2519,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\ENGINE-CONTINUATION-INTEGRATION-GAP-v1.json",
+    "sha256": "69dfb4a49ba608840b35b7663607bd31fdac22bfbb7ab1dded259d70c98d1bf3"
+  },
+  "prior_portable_source_peer": {
+    "bytes": 8755,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-SOURCE-INDEPENDENT-PEER-v2.json",
+    "sha256": "56b57f3ce0f08770b8bbf16698adc64d6560e19d14e04239a976d0d09694132d"
+  },
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T13:07:43.211466+00:00",
+  "retention_source": {
+    "bytes": 10571,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\retain_file_port_adoption_seam_peer_v1.py",
+    "sha256": "9281dd3e5fc767c9b8f66789cc992a9b19158922a6bad9f04100f8949b9aeb22"
+  },
+  "review_scope": "Independent finite source-text/design review against three accepted NEW pure components and the retained continuation gap. No reviewed helper or author script imported/executed, no source closure qualification, no old archive replay.",
+  "reviewed_helper_imports_or_executions": 0,
+  "reviewer": "/root/native_039_acceptance_audit",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "semantic_test_replays": 0,
+  "source_ast_inventory": [
+    {
+      "classes": [
+        "PortError",
+        "RawReturn",
+        "FileSpec",
+        "EntrySpec",
+        "Origin",
+        "Observation",
+        "_IdentityWitness",
+        "HarnessIdentityPrecondition",
+        "Slot",
+        "PortableOwner"
+      ],
+      "source": {
+        "bytes": 34590,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+        "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+      },
+      "top_level_functions": [
+        "need",
+        "uint",
+        "raw_BOOL",
+        "path_key",
+        "begin_injected",
+        "_freeze",
+        "_thaw"
+      ]
+    },
+    {
+      "classes": [
+        "WorkExpired",
+        "Origin",
+        "SourceClaim",
+        "IdentityReturn",
+        "LeaseSlot",
+        "CapturedSources",
+        "BootstrapOwner",
+        "Handoff",
+        "EngineContinuation",
+        "ModuleRule",
+        "CapturedLoader"
+      ],
+      "source": {
+        "bytes": 22010,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v2.py",
+        "sha256": "d937599212133ee7c036ee863b8c751885ffe60f7d657ec1ed5e506bf90c74eb"
+      },
+      "top_level_functions": [
+        "need",
+        "_copy_diagnostics",
+        "source_key",
+        "source_claim",
+        "start_injected"
+      ]
+    },
+    {
+      "classes": [
+        "VerificationError",
+        "Deadline",
+        "FileSpec",
+        "Request",
+        "Authority",
+        "OpenReturn",
+        "OpenFailure",
+        "ReadReturn",
+        "CheckObservation",
+        "CheckerPorts",
+        "CapturedContext",
+        "_Proof",
+        "_Lease",
+        "_Owner"
+      ],
+      "source": {
+        "bytes": 24716,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+        "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+      },
+      "top_level_functions": [
+        "require",
+        "path_key",
+        "run_once"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 34590,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+      "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+    },
+    {
+      "bytes": 22010,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v2.py",
+      "sha256": "d937599212133ee7c036ee863b8c751885ffe60f7d657ec1ed5e506bf90c74eb"
+    },
+    {
+      "bytes": 24716,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+      "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+    }
+  ],
+  "status": "CLEAR_DESIGN_FOR_LITERAL_FIXTURE_PREPARATION_ONLY"
+}

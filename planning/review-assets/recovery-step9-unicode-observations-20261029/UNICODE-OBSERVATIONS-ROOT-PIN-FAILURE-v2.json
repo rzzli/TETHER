@@ -1,0 +1,15 @@
+{
+  "actual_contract_sha256": "edacdc2bddbceab5735699ee9d973f89bad46b64713b193fe43ab80ed989101f",
+  "correction": "Separately named helper corrects only the literal pin and adds a 64-hex length assertion. The failed helper is retained unchanged.",
+  "design_source_or_fixture_changed": false,
+  "expected_typo": "dacdc2bddbceab5735699ee9d973f89bad46b64713b193fe43ab80ed989101f",
+  "failed_helper": {
+    "bytes": 3255,
+    "sha256": "07606a4f80f0014ea15337bbef4b6b38dda2a4311cc358788db5504a0c10cfb9"
+  },
+  "failure": "Root transcribed 63 hex characters, omitting the first e of the contract SHA. Exact hash assertion stopped the helper with exit1; no approval record was published.",
+  "recorded_at_utc": "2026-10-29T11:19:40.739391+00:00",
+  "runtime_operations": 0,
+  "schema_version": 1,
+  "status": "ROOT_APPROVAL_HELPER_STOPPED_BEFORE_PUBLICATION"
+}

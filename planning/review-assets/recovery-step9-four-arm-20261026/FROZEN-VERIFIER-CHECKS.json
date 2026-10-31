@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "status": "passed_all_five_matching_installed_verifiers",
+  "reviewed_at_utc": "2026-10-26T23:11:29.825684+00:00",
+  "current_source_version_under_test": "0.3.6",
+  "verification_only": true,
+  "records": [
+    {
+      "version": "031",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.json"
+      ],
+      "report": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.json",
+      "log": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.log",
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.json"
+      ],
+      "version_check_argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "-c",
+        "from importlib.metadata import version; assert version('asof-target-agents') == '0.3.1'; print(version('asof-target-agents'))"
+      ],
+      "powershell_command": "& 'D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe' -I -c 'from importlib.metadata import version; assert version(''asof-target-agents'') == ''0.3.1''; print(version(''asof-target-agents''))'\nif ($LASTEXITCODE -ne 0) { throw 'Frozen package version mismatch' }\n& 'D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe' -I 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py' 'D:/Projects/drug_target_agents' 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.json' *> 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.log'\nWrite-Output ('frozen-031 exit=' + $LASTEXITCODE)\nif ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.log' -Tail 15; exit $LASTEXITCODE }",
+      "exit_code": 0,
+      "version_check_exit_code": 0,
+      "report_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.json",
+        "sha256": "d758f946e19e925f5797571f136cae7f93e32474a9ae7690b75bbbebb5d4760e",
+        "bytes": 977
+      },
+      "helper_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py",
+        "sha256": "6dff899eb75ec49e2a2f0027068ba7ed7e3cdbe7a2967ebe2037b01a71cf9361",
+        "bytes": 3651
+      },
+      "log_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-031-AFTER.log",
+        "sha256": "d758f946e19e925f5797571f136cae7f93e32474a9ae7690b75bbbebb5d4760e",
+        "bytes": 977
+      },
+      "python_pin": {
+        "path": "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+        "bytes": 46592
+      },
+      "status": "passed_frozen_installed_verifier_without_live_source",
+      "guards": {
+        "source_reads": [],
+        "archived_execution": [],
+        "repository_imports": [],
+        "dispatch": []
+      },
+      "elapsed_seconds": 10.10899999999674
+    },
+    {
+      "version": "032",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-baseline-restored-20261026",
+        "D:/Projects/drug_target_agents/data/cache/frozen-032-relocation-after-036-20261026",
+        "2905efda200e259a57b8950050cbec94a4acfc534e1b7c18a1d157e321b356a2",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.json"
+      ],
+      "report": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.json",
+      "log": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.log",
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-baseline-restored-20261026",
+        "D:/Projects/drug_target_agents/data/cache/frozen-032-relocation-after-036-20261026",
+        "2905efda200e259a57b8950050cbec94a4acfc534e1b7c18a1d157e321b356a2",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.json"
+      ],
+      "version_check_argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "-c",
+        "from importlib.metadata import version; assert version('asof-target-agents') == '0.3.2'; print(version('asof-target-agents'))"
+      ],
+      "powershell_command": "& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe' -I -c 'from importlib.metadata import version; assert version(''asof-target-agents'') == ''0.3.2''; print(version(''asof-target-agents''))'\nif ($LASTEXITCODE -ne 0) { throw 'Frozen package version mismatch' }\n& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe' -I 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py' 'D:/Projects/drug_target_agents' 'D:/Projects/drug_target_agents/data/reference/recovery-r09-baseline-restored-20261026' 'D:/Projects/drug_target_agents/data/cache/frozen-032-relocation-after-036-20261026' '2905efda200e259a57b8950050cbec94a4acfc534e1b7c18a1d157e321b356a2' 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.json' *> 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.log'\nWrite-Output ('frozen-032 exit=' + $LASTEXITCODE)\nif ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.log' -Tail 15; exit $LASTEXITCODE }",
+      "exit_code": 0,
+      "version_check_exit_code": 0,
+      "report_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.json",
+        "sha256": "15506e2b6ead7d900855b7d725763ef71fe53cda6430bc6d2980568a9b88885a",
+        "bytes": 1009
+      },
+      "helper_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py",
+        "sha256": "045405f728ab70d19b923aac959274610b6259f7ee86695f1bed448f7927ff17",
+        "bytes": 2797
+      },
+      "log_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-032-AFTER.log",
+        "sha256": "15506e2b6ead7d900855b7d725763ef71fe53cda6430bc6d2980568a9b88885a",
+        "bytes": 1009
+      },
+      "python_pin": {
+        "path": "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+        "bytes": 46592
+      },
+      "status": "passed_synthetic_bundle_relocation",
+      "guards": {
+        "forbidden_reads": [],
+        "imports": [],
+        "dispatch": []
+      },
+      "elapsed_seconds": 0.42199999996228144
+    },
+    {
+      "version": "033",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-comparison-restored-20261026",
+        "D:/Projects/drug_target_agents/data/cache/frozen-033-relocation-after-036-20261026",
+        "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.json"
+      ],
+      "report": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.json",
+      "log": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.log",
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-comparison-restored-20261026",
+        "D:/Projects/drug_target_agents/data/cache/frozen-033-relocation-after-036-20261026",
+        "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.json"
+      ],
+      "version_check_argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "-c",
+        "from importlib.metadata import version; assert version('asof-target-agents') == '0.3.3'; print(version('asof-target-agents'))"
+      ],
+      "powershell_command": "& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe' -I -c 'from importlib.metadata import version; assert version(''asof-target-agents'') == ''0.3.3''; print(version(''asof-target-agents''))'\nif ($LASTEXITCODE -ne 0) { throw 'Frozen package version mismatch' }\n& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe' -I 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py' 'D:/Projects/drug_target_agents' 'D:/Projects/drug_target_agents/data/reference/recovery-r09-comparison-restored-20261026' 'D:/Projects/drug_target_agents/data/cache/frozen-033-relocation-after-036-20261026' '438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9' 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.json' *> 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.log'\nWrite-Output ('frozen-033 exit=' + $LASTEXITCODE)\nif ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.log' -Tail 15; exit $LASTEXITCODE }",
+      "exit_code": 0,
+      "version_check_exit_code": 0,
+      "report_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.json",
+        "sha256": "4bc6cc3c974a116540806b3034e39e89ccbe54f4eb571f7e8817e5f80b110ab3",
+        "bytes": 1114
+      },
+      "helper_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py",
+        "sha256": "79a01b10c93d64a9c157c521e3d2fed81752e5b5b6aa5906ae29fcad0658999b",
+        "bytes": 3042
+      },
+      "log_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-033-AFTER.log",
+        "sha256": "4bc6cc3c974a116540806b3034e39e89ccbe54f4eb571f7e8817e5f80b110ab3",
+        "bytes": 1114
+      },
+      "python_pin": {
+        "path": "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+        "bytes": 46592
+      },
+      "status": "passed_recorded_comparison_relocation",
+      "guards": {
+        "forbidden_reads": [],
+        "imports": [],
+        "dispatch": []
+      },
+      "elapsed_seconds": 15.51600000000326
+    },
+    {
+      "version": "034",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.json"
+      ],
+      "report": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.json",
+      "log": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.log",
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.json"
+      ],
+      "version_check_argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+        "-I",
+        "-c",
+        "from importlib.metadata import version; assert version('asof-target-agents') == '0.3.4'; print(version('asof-target-agents'))"
+      ],
+      "powershell_command": "& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe' -I -c 'from importlib.metadata import version; assert version(''asof-target-agents'') == ''0.3.4''; print(version(''asof-target-agents''))'\nif ($LASTEXITCODE -ne 0) { throw 'Frozen package version mismatch' }\n& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe' -I 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py' 'D:/Projects/drug_target_agents' 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.json' *> 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.log'\nWrite-Output ('frozen-034 exit=' + $LASTEXITCODE)\nif ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.log' -Tail 15; exit $LASTEXITCODE }",
+      "exit_code": 0,
+      "version_check_exit_code": 0,
+      "report_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.json",
+        "sha256": "efa9c926649fce53c6475627493d7943e3ffd47b6812cf10c06d2150bb2a7b7b",
+        "bytes": 930
+      },
+      "helper_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py",
+        "sha256": "06943d3a186075e84c8c67f90abde351abe85b1c72aa72503a69108a1c01b6b5",
+        "bytes": 4266
+      },
+      "log_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-034-AFTER.log",
+        "sha256": "c7c7055d1238104d6e928f9eece74bdc31be6f56c36c8babf18060238cd0206d",
+        "bytes": 837
+      },
+      "python_pin": {
+        "path": "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+        "bytes": 46592
+      },
+      "status": "passed_installed_source_and_token_replay",
+      "guards": {
+        "live_code": [],
+        "unapproved_source": [],
+        "imports": [],
+        "dispatch": []
+      },
+      "elapsed_seconds": 4.5
+    },
+    {
+      "version": "035",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.json"
+      ],
+      "report": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.json",
+      "log": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.log",
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.json"
+      ],
+      "version_check_argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "-c",
+        "from importlib.metadata import version; assert version('asof-target-agents') == '0.3.5'; print(version('asof-target-agents'))"
+      ],
+      "powershell_command": "& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe' -I -c 'from importlib.metadata import version; assert version(''asof-target-agents'') == ''0.3.5''; print(version(''asof-target-agents''))'\nif ($LASTEXITCODE -ne 0) { throw 'Frozen package version mismatch' }\n& 'D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe' -I 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py' 'D:/Projects/drug_target_agents' 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.json' *> 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.log'\nWrite-Output ('frozen-035 exit=' + $LASTEXITCODE)\nif ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath 'D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.log' -Tail 15; exit $LASTEXITCODE }",
+      "exit_code": 0,
+      "version_check_exit_code": 0,
+      "report_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.json",
+        "sha256": "85a3c82dac307e26c573d417bfd33f9e049a9657b58a880491f806a25b47d2e1",
+        "bytes": 1394
+      },
+      "helper_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py",
+        "sha256": "b0c695c9a67bf32be60f1c3451222b0ddfdf975543feebee4e3ece817deafe2a",
+        "bytes": 2517
+      },
+      "log_pin": {
+        "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-035-AFTER.log",
+        "sha256": "a4b4544753d3ccde07a2953d528de36f20b758d95515f0988bc7222ab7aacfe3",
+        "bytes": 100
+      },
+      "python_pin": {
+        "path": "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+        "bytes": 46592
+      },
+      "status": "passed",
+      "guards": {
+        "reads": [],
+        "imports": [],
+        "dispatch": []
+      },
+      "elapsed_seconds": 6.5939999999827705
+    }
+  ],
+  "actual_new_model_calls": 0,
+  "new_tokenizer_children": 0,
+  "new_server_processes": 0,
+  "network_calls": 0,
+  "existing_worker_and_monitor": "untouched",
+  "scientific_validation": "not_established",
+  "notes": [
+    "Each interpreter version was checked before invoking its reviewed helper with -I. No current asof runtime was imported.",
+    "Version0.3.2 and0.3.3 helpers first verify/copy the prior restored bundle, then install original-root/live-source/import/dispatch guards for fresh relocated replay. Guards do not claim the copy phase itself was sandboxed.",
+    "Version0.3.4 replays the exact approved source authority (27 files) and six retained token receipts using pyarrow21.0.0; no tokenization process is run.",
+    "Guard arrays report prohibited attempts, not an exhaustive OS-level read/execute audit. Matching installed verifier semantics and byte proofs are retained; no archived executable import is requested.",
+    "0.3.1 technical terminal acceptance remains separate from scientific acceptance; no new model interpretation or outcome analysis occurred."
+  ]
+}

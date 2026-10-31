@@ -1,0 +1,36 @@
+{
+  "census_limit": "Exactly the one declared post-core current-process census. Afterward choose policy or stop the native gate; do not add loader traces, baseline runs, repeated censuses or compatibility forensics.",
+  "current_authority": {
+    "actual_API_or_child_calls": 0,
+    "additional_OS_diagnostics": false,
+    "new_image_reads": false,
+    "policy_change": false
+  },
+  "minimum_next_decision": [
+    "Read the one complete, durable, untruncated census as a bounded consistency check; keep eligibility false in the census result.",
+    "If only declared self/core4 plus System32 platform context appears, select one policy and its assumptions before any next ABI run; platform-context policy is the proportional option when OS trust is accepted, finite pins remain an optional reproducibility requirement.",
+    "If census is incomplete or shows unexpected protected native/outside-platform modules, retain the failed gate rather than expanding OS diagnostics or broadening the list opportunistically.",
+    "Any chosen policy must be prospectively identical across child guard/header, parent validator, contract/input rules and protocol, with wrong-path/native-namespace/failure-vector review and separate root launch decision.",
+    "The next native objective stays the two typed version/default observations and later separately gated grammar correctness, with strict resource/Job/no-model/no-CPU controls; previous failures remain unchanged."
+  ],
+  "note": "This scope addendum narrows the earlier future-eligibility discussion: basic finite pins may support reproducibility, but broad publisher authentication and shim/load-cause evidence are not prerequisites to an explicit trusted-platform assumption.",
+  "objective": "Evidence proportionate to typed ABI/grammar correctness; no general OS authentication or shim-causation project.",
+  "options": [
+    {
+      "benefit": "Explicit current-host module/pin reproducibility; strongest continuity with existing finite list.",
+      "cost": "Additional finite path/hash pins and coordinated header/parent changes; Windows startup/API-host variation may make names brittle.",
+      "minimum": "Use the complete census set once, review all additions together, and only if needed perform one separately approved basic static pin batch. No recursive OS dependency/authentication exercise.",
+      "name": "finite_reviewed_extra_System32_set"
+    },
+    {
+      "benefit": "More proportionate when the trusted Windows host is already an assumption and the goal is core4 ABI/grammar behavior; avoids one-name-at-a-time OS retries.",
+      "boundary": "Accept only normalized reported canonical-System32 DLL paths as platform context; exact self/core4 paths/pins remain, protected ggml/llama/CPU application namespaces and wrong-path core/libomp remain rejected, and all other outside-System32 modules remain rejected.",
+      "limits": "Reported directory/name membership does not authenticate an image, prove unshimmed calls, explain a load or guarantee later/lifetime closure. No universal containment or zero-initializer-effects claim.",
+      "minimum": "A complete census showing the declared self/core and platform-only boundary, followed by an explicit root acceptance of the host-OS trust assumption and coordinated source/parent/contract/protocol policy. No per-platform-DLL publisher/loaded-byte authentication is required for this narrower goal.",
+      "name": "System32_as_explicit_platform_context"
+    }
+  ],
+  "recorded_at_utc": "2026-10-29T00:57:57.948922+00:00",
+  "schema_version": 1,
+  "status": "prospective_scope_comparison_no_policy_change"
+}

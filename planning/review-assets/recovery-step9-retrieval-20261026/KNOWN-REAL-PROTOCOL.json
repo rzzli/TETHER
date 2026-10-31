@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "status": "prospective_before_execution",
+  "scope": "Current-package source parent plus retrieval on the same one exposed IL6R original record; no universe expansion",
+  "source_authority_sha256": "8a98d96c14193e5298384f90982ae30943de6927de80654c6b99eed9ae7f027a",
+  "expected_parent_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "candidate_ids": ["ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"],
+  "strategies": ["id_order_v1", "literal_case_overlap_then_id_v1"],
+  "policy": "Existing fixed max2 whole records / 12000 canonical request bytes; no adjustment after observation",
+  "preparation_seconds": 300,
+  "post_run_verification_seconds": 300,
+  "generation_calls": 0,
+  "tokenizer_calls": 0,
+  "network_calls": 0,
+  "provider_spend_usd": 0,
+  "failure": "Stop and retain; no source substitution, clipping, fallback, policy change or automatic repeat",
+  "interpretation": "One-record source/adapter qualification only; not nontrivial real retrieval, scientific validation or case freshness"
+}

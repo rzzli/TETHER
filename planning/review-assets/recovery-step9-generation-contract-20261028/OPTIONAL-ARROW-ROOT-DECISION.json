@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T15:03:03.606402+00:00",
+  "decision": "approve_exact_five_optional_cache_derivations_and_prepare_narrow_acceptance_v4",
+  "amendment_sha256": "369c8e019535114a7304bca11a9550ca10127b5d195cd4d40b56daaaa25ba92f",
+  "derivation_sha256": "22462459f61495c2107a495eb64c9871f6e2f9015d2a6c24d6b1441b4b4406fd",
+  "independent_review_sha256": "53f96fc28eec3296ca9183dcda8f7c1e8b54739faa4e4eab71f9a85c11e93e85",
+  "representation_probe_sha256": "621dbfa08a498f8fca475b0c5af2e238aa010a47f5431b14d8ad93081002d90a",
+  "serialization_note_sha256": "459a22a3f6524aeec6f3dbcd37381fa0d178b3a742aea268e885021b57693752",
+  "original_copy_files": 760,
+  "unchanged_files_required": 755,
+  "exact_qualified_cache_modules": [
+    "__init__",
+    "_generated_version",
+    "ipc",
+    "types",
+    "util"
+  ],
+  "blanket_cache_exception": false,
+  "source_runtime_wheel_or_environment_changes_authorized": false,
+  "all_other_acceptance_gates_unchanged": true,
+  "original_failed_attempts_preserved": true,
+  "native_conformance": "unverified",
+  "entire_project_complete": false
+}

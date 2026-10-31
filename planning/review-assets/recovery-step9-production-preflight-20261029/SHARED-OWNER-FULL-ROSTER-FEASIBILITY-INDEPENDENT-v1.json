@@ -1,0 +1,193 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "aggregate_basis": {
+    "all_files_positive_established": false,
+    "bytes": 9017363392,
+    "files": 213,
+    "origin": "Root-supplied retained aggregate only; no manifest/original requalification",
+    "per_file_size_vector_available": false,
+    "roles_and_capture_classes_available": false
+  },
+  "arithmetic": {
+    "ceil_aggregate_chunks": 137595,
+    "chunk_bytes": 65536,
+    "conditional_all_213_positive": {
+      "A": [
+        137595,
+        137807
+      ],
+      "C": [
+        142281,
+        142493
+      ],
+      "R": [
+        141003,
+        141215
+      ],
+      "qualification": "Conditional reservation arithmetic only; actual reads/returns/short counts unknown"
+    },
+    "definitions": {
+      "A": "sum ceil(si/65536) over positive files",
+      "C": "6N+R if every file uses the same open/four-query/once-close policy",
+      "P": "number of positive-byte files, unknown1..213",
+      "R": "A+16P reservation capacity, not measured calls"
+    },
+    "general_positive_file_bounds": {
+      "A_max_formula": "floor((total-P)/65536)+P",
+      "A_min": 137595,
+      "P_range": [
+        1,
+        213
+      ],
+      "R_max_formula": "137594+17P",
+      "R_min_formula": "137595+16P",
+      "proof": "ceil(si/q)=1+floor((si-1)/q); sum floors<=floor((total-P)/q). Also total<=q*A. Remainder3008>=P for every P<=213, so the displayed simplified upper bound holds."
+    },
+    "query_policy": {
+      "complete213_retained_frames_bytes": 1750434,
+      "current_raw_cap_bytes": 131072,
+      "frame_bytes_per_file": 8218,
+      "qualification": "Only if all213 complete the same four identity queries and existing retention is carried over; no physical memory measurement",
+      "work_buffers_bytes": 73738
+    },
+    "quotient": 137594,
+    "remainder": 3008
+  },
+  "cap_lift_supported": false,
+  "cheapest_safe_next_stage": [
+    "Freeze a finite source-only admission/index/storage/serialization proposal before implementing a larger roster or real entry. Preserve the current N4 acceptance and its exact oracle.",
+    "Specify canonical per-file/API/byte counters and indexed call identity so a successful read does not repeatedly scan all prior records; prove same facts/unknowns/once cleanup in the existing bounded synthetic domain before any cap growth.",
+    "Prospectively declare hash-only versus captured roles, exact metadata descriptors, per-role size/capture limits, buffer lifetime/retention and bounded observation storage. No current original/CPU/GGUF/pack access follows from that design.",
+    "Close a scalable packet/Snapshot/journal schema and all row/count/byte budgets without silent truncation, then give a finite literal/fake preparation set. Do not reuse old189 runtime checker policy by swapping bindings.",
+    "Only after independent design/source review should root separately authorize an actual same-Origin bootstrap/typed file binding qualification. No human/tool roundtrips or new timer windows can be excluded from its original300s owner clock."
+  ],
+  "current_N4_acceptance_reopened": false,
+  "empirical_time_or_memory_fit_established": false,
+  "findings": [
+    {
+      "fact": "The current exact plan admits <=4 files, <=4096 bytes per file, <=16384 aggregate, capture=True for every file, B/M<=2, R<=68/C<=92/E<=224.",
+      "id": "S1",
+      "implication": "The retained213/9GB aggregate is not an admissible current plan. Merely lifting N/R/C is not a production migration.",
+      "kind": "declared_admission_barrier_not_new_N4_bug",
+      "location": {
+        "line": 254,
+        "source": "shared_owner_v2.py"
+      }
+    },
+    {
+      "conditional_full_roster": {
+        "all_capture_assembly_bytes": 9017363392,
+        "assemblies_plus_final_blobs_if_policy_carried_over": 18034726784,
+        "current_raw_pool_bytes": 131072,
+        "query_frames_bytes": 1750434,
+        "query_frames_plus_work_buffers_bytes": 1824172
+      },
+      "fact": "FileState allocates a full-size bytearray assembly for every admitted file; completed bytes(file.assembly) blobs are additionally retained. Three immutable identity query frames per complete file remain on CallState.",
+      "id": "S2",
+      "implication": "Current guards prevent these full-scale allocations. A future design must separate hash-only originals from finite captured sources/metadata and account retained/query/capture/log state before any cap change; the payload numbers do not measure physical RSS.",
+      "kind": "retention_representation_barrier_not_empirical_memory_claim",
+      "location": {
+        "line": 114,
+        "source": "shared_owner_v2.py"
+      }
+    },
+    {
+      "conditional_lower_bound": {
+        "formula": "Q(Q-1)/2, since the ith read sees at least i-1 prior read records",
+        "minimum_successful_max64KiB_reads": 137595,
+        "one_quota_pass_element_visits_at_least": 9466123215
+      },
+      "fact": "Each ReadFile quota check builds previous by scanning the entire global call list. read_known, handle and canonical CallState membership also scan that list; snapshot/packet repeatedly rescan it per file.",
+      "id": "S3",
+      "implication": "A complete 64KiB policy at this size incurs quadratic list traversal even before extra scans/short reads. Indexed canonical records and incremental per-file/API/byte totals need source-only design and parity tests. This is no measured time or300s fit estimate.",
+      "kind": "source_algorithmic_cost_lower_bound_not_walltime",
+      "location": {
+        "line": 47,
+        "source": "shared_file_ports_v2.py"
+      }
+    },
+    {
+      "fact": "Every compact packet serializes original_closures for every file. Even the shortest boolean/null value lengths with actual IDs0..212 yield a14588-byte array alone.",
+      "id": "S4",
+      "implication": "The fixed8192 packet fails for213 files before any other keys, digests, links or LF. A prospectively closed aggregate/partitioned publication contract is needed; never silently trim original states or simply relax bytes.",
+      "kind": "fixed_packet_representation_barrier",
+      "location": {
+        "line": 350,
+        "source": "shared_owner_v2.py"
+      },
+      "minimal_array_bytes": 14588,
+      "packet_cap_bytes": 8192
+    },
+    {
+      "fact": "The raw hook validates generation<=68 for both read and query buffers; three successful query frame calls per file advance the reused query generation. Full213 completion would require639 query generations. Public Snapshot helper/literals are also finite N4/C92/E224 domains.",
+      "id": "S5",
+      "implication": "A future larger admission requires an exact generation/record/schema/cap derivation, not only larger loop capacities. Existing accepted N4 behavior is consistent with its declared bounds.",
+      "kind": "finite_generation_and_snapshot_domain",
+      "location": {
+        "line": 27,
+        "source": "shared_file_ports_v2.py"
+      }
+    },
+    {
+      "fact": "start_injected samples the supplied synthetic clock before setup, after its module was loaded. File binding uses injected Python hooks; sink and factory/checker brands are fictional. Real C-return conversion/storage and production first-entry/checker binding remain absent.",
+      "id": "S6",
+      "implication": "Neither index arithmetic nor passing toy histories qualifies actual Win32 APIs, original bytes/identity, imports before t0, physical durability, native source closure, or a production profile.",
+      "kind": "trust_and_origin_scope_limit",
+      "location": {
+        "line": 423,
+        "source": "shared_owner_v2.py"
+      }
+    }
+  ],
+  "implementation_changes": 0,
+  "inputs": {
+    "SHARED-OWNER-SCOPED-ACCEPTANCE-v2.json": {
+      "bytes": 5460,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SCOPED-ACCEPTANCE-v2.json",
+      "sha256": "7e0d94849d5ba9da358167a9d103b44fa6ae25acc8e5bed646d2839162220344"
+    },
+    "SHARED-OWNER-SOURCE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 22354,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-PEER-v2.json",
+      "sha256": "13b1e793e5275efa74ee0e0b98a8fd944d9ca5675657c1ccc1d888c0bc79453d"
+    },
+    "continue_verification_v2.py": {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v2.py",
+      "sha256": "1d05a7398fe215cae987a76ab3960e0dc3730b89fad79caca64c466bac1f4b2f"
+    },
+    "shared_file_ports_v2.py": {
+      "bytes": 10595,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v2.py",
+      "sha256": "a224bfb9e9f33bf2f6b9329f0b337d0076bdab418083d05deb3f59b52722a059"
+    },
+    "shared_owner_v2.py": {
+      "bytes": 36956,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v2.py",
+      "sha256": "0ecb8c02e3a8016f2de3a69650b34776de312ffca6f37ded85a31eba9c50c24b"
+    }
+  },
+  "observed_run_cost_or_throughput": null,
+  "old_original_or_payload_operations": 0,
+  "originals_authenticated": false,
+  "preserved_negative_evidence": "The original recognition profile remains failed and its whole external verification timed out. This analysis does not rerun it, repair its two unavailable slots, merge post-hoc passes, or infer new token/model behavior.",
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "real_checkers_bound": false,
+  "recorded_at_utc": "2026-10-29 17:05:38 UTC",
+  "retained_aggregate_requalified": false,
+  "reviewed_subject_modules_executed": 0,
+  "reviewer": "native_039_acceptance_audit",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "source_test_repeats": 0,
+  "status": "SOURCE_METADATA_FULL_ROSTER_FEASIBILITY_ONLY",
+  "stop_criteria": [
+    "No exact role/size/capture vector and complete joint admission/storage/output bounds: no production cap lift or original opens.",
+    "Any required retained fact cannot fit the declared representation/cap: reject prospectively, never trim or relabel unknown as zero.",
+    "No reviewed real first-entry/raw capture/once-close/checker binding: no production verification claim.",
+    "Any proposed300s fit rests only on this aggregate, synthetic elapsed time or unmeasured throughput: gate remains unpassed."
+  ],
+  "verification_complete": false
+}

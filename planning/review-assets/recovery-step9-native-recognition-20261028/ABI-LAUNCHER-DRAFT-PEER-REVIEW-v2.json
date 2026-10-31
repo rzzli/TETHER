@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "review_id": "abi-launcher-v2-disabled-draft-independent-source-peer-20261028",
+  "recorded_at_utc": "2026-10-28T19:32:19.528103+00:00",
+  "status": "HOLD_source_v2_original_three_findings_addressed_one_late_cleanup_persistence_gap",
+  "execution_authorized_by_this_review": false,
+  "harmless_worker_qualification_authorized": false,
+  "reviewer_executed_or_imported_helper": false,
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft_v2.py",
+      "bytes": 48592,
+      "sha256": "b129c2a67c7b0bc44eb337ca63ad79a6c05067ad7a249986deb68b7591c6373c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-EXECUTION-DESIGN-v2.md",
+      "bytes": 8793,
+      "sha256": "213a583fcf0044939b28edc2e3f919250df37ebf84546b6bf75126382c24da28"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_abi_parent_launch_draft_v2.py",
+      "bytes": 24071,
+      "sha256": "766d4e784fbc59d14b4120c9dceb22b2c52fbfcbb6c0a96d57ed28282491aabb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-V2-PURE-CHECKS.json",
+      "bytes": 613,
+      "sha256": "34d1ab206e3a474a11b2418120d35dbe628fd5c4d2c8710a3a65e47b0eded9f3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-V2-PURE-CHECKS.log",
+      "bytes": 4240,
+      "sha256": "04f575e989dbb7c5c562054a80a0c1c0a0fd9eb9676ba0de03b4185b79d67352"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-DRAFT-PREPARATION-v2.json",
+      "bytes": 7272,
+      "sha256": "11f89def0293c79b3a0ff4b7e25eadb248f9cdf614b0e0f487b12bfa724fc532"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-LAUNCHER-DRAFT-PEER-REVIEW.json",
+      "bytes": 12238,
+      "sha256": "e5f3a4afe7722148db1d80b3104318b5a17c63225539804152a163fbfacd4318"
+    }
+  ],
+  "cleared_original_findings": [
+    {
+      "id": "unsupported_installed_journal_kind",
+      "resolved": true,
+      "source_lines": [
+        232,
+        258,
+        762
+      ],
+      "finding": "Exclusive outer reservation and supported accepted kind=build are inside the protected failure path. Existing output is not adopted. Real installed journal/read_chain success and an injected constructor failure marker are retained in pure fixtures."
+    },
+    {
+      "id": "accounting_observation_lost_before_assertion",
+      "resolved": true,
+      "source_lines": [
+        335,
+        354,
+        561,
+        573
+      ],
+      "finding": "Both fixed raw SDK buffers, API ok/error/return-length fields, complete counters/header counts/capped PIDs and monotonic bounds are captured; named observations are journaled before validity assertions. The before-resume fake active2/PIDs20,99 is durably retained and no resume event appears. Sampling is capped40 with0.9s period; running-or-finished consistency avoids forcing a fast child active."
+    },
+    {
+      "id": "failed_lease_close_replaces_primary_and_loses_ownership",
+      "resolved": true,
+      "source_lines": [
+        460,
+        482
+      ],
+      "finding": "Initial read-lease handle ownership is registered before validation; primary validation and independent close errors coexist. Failed close remains tracked for final cleanup. A fake combined failure fixture exercises the original primary exception and ownership record."
+    }
+  ],
+  "material_findings_remaining": [
+    {
+      "id": "late_cleanup_failure_not_persisted_when_primary_failure_exists",
+      "priority": 2,
+      "source_lines": [
+        845,
+        882
+      ],
+      "finding": "parent-report.json and receipt.json are written before final original-lease closes. Failed final closes mutate only in-memory ownership records. The sole durable post-close marker write is conditional on failure.json being absent. If an earlier primary failure already created failure.json, a new late CloseHandle failure is never persisted: the report predates it and the existing marker contains only the primary failure. Thus cleanup failure is not explicit in the retained artifacts for that case.",
+      "requested_change": "In a separately preserved correction, always retain bounded post-lease cleanup outcomes in an exclusive terminal artifact or failure supplement, regardless of an existing primary marker. Preserve the primary failure and old receipt; bind report/receipt/journal authority as applicable. Add a pure preexisting-primary-failure plus late-close-failure fixture."
+    }
+  ],
+  "other_reviewed_changes": [
+    {
+      "id": "creation_time_JOB_LIST",
+      "source_lines": [
+        204,
+        209,
+        368,
+        406
+      ],
+      "finding": "Public local SDK constants2/13 plus input0x20000 match HANDLE_LIST0x20002 and JOB_LIST0x2000D. Attribute list count2 and both ctypes arrays survive through CreateProcessW and deletion. Only three stdio handles are inherited; Job is a distinct, noninherited handle created with null security attributes and excluded from that list. No AssignProcessToJobObject method/binding or manual fallback remains."
+    },
+    {
+      "id": "before_resume_order_and_unknown_outcomes",
+      "source_lines": [
+        526,
+        590,
+        599,
+        600
+      ],
+      "finding": "Still CREATE_SUSPENDED; raw observation, exact membership, configured limits and returned PID/thread/image/creation identity precede the single ResumeThread requiring previous count1. Real API attempt reservation/observed return distinguish unknown creation. Unknown creation attempts terminate only the owned Job even without observed process handle; unknown resume is not zero execution."
+    },
+    {
+      "id": "unchanged_finite_mechanics",
+      "finding": "All11 public structure classes are AST-identical to ec26. Original explicit UTF16 argv/environment,64KiB single-reader Peek/Read capture,256MiB process/Job commit,active1,no-breakaway flags and independent owned launch cleanup remain. Source stays hard-disabled in constructor/orchestration and CLI; no enabled/native protocol exists."
+    }
+  ],
+  "independent_checks": {
+    "all20_metadata_pins_rehashed_and_match": true,
+    "all193_original_build_pins_rehashed_and_match": true,
+    "source_design_metadata_frozen_hashes_match": true,
+    "retained_pure_tests_reported_passed": 30,
+    "retained_failures_errors_skips": 0,
+    "reviewer_test_reruns": 0,
+    "unchanged_public_structure_classes_AST": 11,
+    "retained_fixture_journals_rehashed_and_chain_validated": 2,
+    "retained_fake_raw_accounting_and_PID_buffers_decoded": true,
+    "retained_injected_constructor_failure_marker_valid": true,
+    "old_ec26_source_design_19test_record_and_HOLD_unchanged": true
+  },
+  "retained_fixture_evidence": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v2-pure-ntkwxd8n\\attempt\\execution\\journal.jsonl",
+      "bytes": 3887,
+      "sha256": "c8a2b94fc908c0368c2849408f3b91530f1e11734a23f66e96253ad19a882193",
+      "classification": "retained pure fake-SDK or journal-integration fixture; not OS result",
+      "events": 7,
+      "hash_chain_valid": true,
+      "raw_samples": 2
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v2-pure-9m8woy5f\\attempt\\execution\\journal.jsonl",
+      "bytes": 532,
+      "sha256": "cd924cbd7e50cfe8528c4daa0a6abf2b05e5e2e5a6a29fa2f8eb31018be1a1fd",
+      "classification": "retained pure fake-SDK or journal-integration fixture; not OS result",
+      "events": 2,
+      "hash_chain_valid": true,
+      "raw_samples": 0
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v2-pure-ota1boym\\attempt\\failure.json",
+      "bytes": 171,
+      "sha256": "3d288a1cdc7cfe328e45aa9e59377303d67ddbd54c894ef05f78e579cc6918d6",
+      "classification": "injected constructor failure fixture; not OS result"
+    }
+  ],
+  "limitations": [
+    "Source/fake clearance is distinct from actual Windows API/inheritance/Job/resource/pipe/timeout/cleanup qualification. Full orchestration remains unperformed.",
+    "Creation-time JOB_LIST removes the old successful-Create/manual-Assign interval by design. It does not prove universal recovery during an unreturned OS call or prove reaping of an unobserved process.",
+    "Raw queries remain non-atomic; inconsistent observations stop with retained values and do not establish an original anomaly cause.",
+    "Original active2 remains unexplained; the separate actual v3 sleep-worker result did not qualify JOB_LIST creation or native target execution.",
+    "Source remains disabled. Fresh same-path harmless success/resource/overflow/timeout/abort/failure qualification and a new frozen enabled helper/protocol/root decision are required before any ABI target run."
+  ],
+  "activity": {
+    "helper_or_checker_imports_or_executions": 0,
+    "pure_test_reruns": 0,
+    "Windows_API_calls": 0,
+    "child_dispatches": 0,
+    "compiler_calls": 0,
+    "target_DLL_loads": 0,
+    "GGUF_model_tokenizer_server_calls": 0,
+    "network_requests": 0,
+    "author_source_or_existing_artifact_mutations": 0
+  },
+  "disposition": "Keep exact b129 v2 frozen and unexecuted. Original three findings are addressed; HOLD remains for one final lease-cleanup evidence gap. No harmless-worker/ABI/native execution is authorized."
+}

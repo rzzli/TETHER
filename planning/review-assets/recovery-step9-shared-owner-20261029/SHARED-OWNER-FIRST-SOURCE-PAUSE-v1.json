@@ -1,0 +1,28 @@
+{
+  "full_histories_executed": 0,
+  "qualification_flags_all_false": true,
+  "real_API_calls": 0,
+  "recorded_at_utc": "2026-10-29T16:29:52.283560+00:00",
+  "root_scope_sha256": "4db8622f185edb1488a0066205b6248f0eb37b539e0806d04d748f277ea8e6ee",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "bytes": 36450,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v1.py",
+      "sha256": "76384e02282b1ce2437b9ff342913297f58ea0858752308724bef912b9e2643b"
+    },
+    {
+      "bytes": 10636,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v1.py",
+      "sha256": "d80f980c771e11ba0116aa3a1a8e526015ce43cafeacc6cf8bc2890f86b4c900"
+    },
+    {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v1.py",
+      "sha256": "7f52397a8293ae133f019ede1da78881814eb547b026768f072a34e4a4cf8eb2"
+    }
+  ],
+  "status": "FIRST_THREE_FILE_SOURCE_PAUSE_BEFORE_ANY_IMPORT_OR_FULL_TEST",
+  "subject_imports": 0,
+  "syntax_only": true
+}

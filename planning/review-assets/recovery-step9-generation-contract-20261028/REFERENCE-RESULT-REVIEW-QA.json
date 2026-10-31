@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at_utc": "2026-10-28T06:03:25.858342+00:00",
+  "review_sha256": "204cd71f8c2eda56c0a26d31a9ffd1822ef435c16658f6612d8e6148466036e2",
+  "verification_sha256": "3303dbd2c7b0b43f1bfc2226e6b817b7e49433cc32bc0fb6276453c25d872636",
+  "links": [
+    {
+      "label": "verification record",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\REFERENCE-RESULT-VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "label": "parent receipt",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-jsonschema-reference-parent-20261028\\receipt.json",
+      "exists": true
+    },
+    {
+      "label": "child result",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-jsonschema-reference-batch-20261028\\REFERENCE-BATCH-RESULT.json",
+      "exists": true
+    }
+  ],
+  "parent_receipted_outputs_unchanged": 5,
+  "reference_engine_imports": 0,
+  "schema_validations": 0,
+  "native_target_calls": 0,
+  "model_calls": 0,
+  "network_calls": 0
+}

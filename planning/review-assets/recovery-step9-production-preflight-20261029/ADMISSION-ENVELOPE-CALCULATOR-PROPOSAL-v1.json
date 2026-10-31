@@ -1,0 +1,246 @@
+{
+  "activity": {
+    "original_payload_reads": 0,
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "target_API_calls": 0
+  },
+  "all_real_qualification_flags_false": true,
+  "api": {
+    "check": "Required callable, return ignored. Invoked for bounded-work cancellation only; every BaseException propagates unchanged by identity outside metadata-error catches. Invalid noncallable interface raises TypeError. It is not a clock or authority.",
+    "function": "analyze_admission(metadata, *, check) -> EnvelopeReport",
+    "report": [
+      "to_dict() -> detached ordinary containers",
+      "to_json_bytes() -> retained immutable canonical UTF8 bytes"
+    ],
+    "scope": "One pure metadata calculation. No source/stream/output/file callbacks, filesystem discovery, owner/Origin construction, runtime activation or actual roster authentication."
+  },
+  "capture_contract": {
+    "captured_metadata": "Captured immutable bytes required for declared byte-consuming checker use; not importable.",
+    "captured_software": "Captured immutable bytes required and declared importable graph member. Assembly+immutable capture counted separately.",
+    "hash_only_bulk": "No assembly/capture bytes; contributes full size to streaming hash read reservation and full call retention. Not a loader or checker-byte source. This classifies metadata only; existing V3 runtime still requires capture=True and does not implement this path.",
+    "invariants": [
+      "No extension or size heuristic changes role.",
+      "Every file contributes to query witnesses and canonical call retention.",
+      "All future actual inputs still require separately qualified original leases/hashes; metadata declarations never substitute."
+    ]
+  },
+  "constants": {
+    "chunk_bytes": 65536,
+    "current_runtime_packet_cap": 8192,
+    "current_runtime_reference": "N4/file4096/capture16384/generation68/C92/E224 remains unchanged. Metadata analysis may report conditional numbers outside these bounds but issues no executable runtime admission.",
+    "event_row_bytes": 1024,
+    "packet_kind_count": 5,
+    "query_frame_bytes_per_file": 8218,
+    "query_work_bytes": 8202
+  },
+  "deferred": [
+    "All implementation until explicit root scope",
+    "Any active runtime cap/role/streaming/output changes",
+    "Actual input roster, original access, source qualification, entry/FFI/physical output/resource/profile/native/science"
+  ],
+  "detached_input": "After initial check, perform bounded closed-shape/type/length capture into immutable tuples/proxies before subsequent check callbacks. No callbacks during this finite structural snapshot; reject list/key/string/integer bounds before copying/encoding. Semantic validation/arithmetic/encoding use only that snapshot. Callbacks may mutate caller originals later without changing this calculation. No concurrent-hostile-Python atomicity claim.",
+  "formulae": {
+    "aggregate_only": "If files=None and aggregate N_a,S_a known: if S_a=0, Rrange=[0,0], Crange=[6N_a,6N_a]; if S_a>0 require N_a>0, Pmax=min(N_a,S_a), Qmin=ceil(S_a/65536), Rrange=[Qmin+16,floor((S_a-Pmax)/65536)+17Pmax], Crange=Rrange+6N_a. For213/9017363392: R[137611,141215], C[138889,142493]. All exact per-file/role terms remain None.",
+    "capture": "S_cap=sum sizes of captured_software+captured_metadata; S_bulk=sum hash_only_bulk sizes.",
+    "exact_vector": "N=len(files), total_bytes=sum(size), positive_files=P=count(size>0), B=len(early_ids), M=len(modules). B/M remain None until their declarations bind to known vector.",
+    "logical": "logical_call_bytes=C*call_record_bytes (full retained records, no tail dropping); index_bytes=N*file_index_bytes+M*module_index_bytes; hash_state_bytes=N*hash_state_bytes coefficient (conservative retained state per file).",
+    "memory": "peak_declared_memory_bytes=raw_payload_bytes+immutable_capture_bytes+transient_bytes+logical_call_bytes+index_bytes+hash_state_bytes+2J+5Pkt+report_copies*V. 2J counts retained rows and join workspace; five packet buffers counted once; report copies include their output byte buffer, so do not add V again. transient_bytes excludes all these named buffers and must cover other declared copy/encoding workspace. This is logical payload only, never RSS.",
+    "output": "J=1024E retained serialized journal rows. journal_bytes=J; packet_bound_bytes=Pkt; output_reserved_bytes=J+5Pkt+V. All five packet kinds share this conservative bound. V is one prospective full canonical report; its physical transport/universe is unselected, not a new current runtime output kind.",
+    "overflow": "Every sum/product must be checked against2^63-1 before size-based allocation/encoding. Overflow refuses; no float coercion. Calculator allocates at most metadata-sized arrays, never C call records or derived byte pools.",
+    "packet": "For canonical ordinal i=0..N-1 (NOT metadata ID), closures=[{file_id:i,invoked:false,return_observed:false,success:false}]; all false is the longest bool sizing state, not a valid complete observation union. Digests=[{file_id:i,size:declared_size,sha256:declared_sha256}]. closure_array_bound_bytes and digest_array_bytes are exact canonical JSON lengths of those arrays with no LF. Pkt=packet_overhead_bytes+both lengths. Overhead is a declared unselected bound for all other current-shaped packet fields/links; no producer/layout proof.",
+    "raw": "query_witness_bytes=8218N; work_buffer_bytes=65536+8202; raw_payload_bytes=work+query+S_cap (retained assemblies); immutable_capture_bytes=S_cap.",
+    "reads": "Q=sum((size+65535)//65536); R=Q+16P; C=6N+R; E=6N+2B+2M+192. Exact terms require their inputs; never infer missing file/role/graph vectors from aggregate.",
+    "report": "V=report_base_bytes+C*report_call_bytes+N*report_file_bytes+E*report_event_bytes; canonical_report_bytes=V. These are declared serialization/payload bounds, not actual report observations."
+  },
+  "limit_comparisons": {
+    "max_bulk_file_bytes": "each hash_only_bulk size",
+    "max_calls": "C",
+    "max_captured_bytes": "captured_bytes",
+    "max_declared_memory_bytes": "peak_declared_memory_bytes",
+    "max_events": "E",
+    "max_files": "N",
+    "max_metadata_file_bytes": "each captured_metadata size",
+    "max_output_bytes": "output_reserved_bytes",
+    "max_packet_bytes": "packet_bound_bytes (NOT substituted8192)",
+    "max_raw_payload_bytes": "raw_payload_bytes",
+    "max_report_bytes": "canonical_report_bytes",
+    "max_software_file_bytes": "each captured_software size"
+  },
+  "precode": "Grammar freezes <=30 explicit metadata-only vectors/test module before implementation, including discriminating mixed-role equality and12 isolated cap-1 clones. Native independently reviews schema/arithmetic/unknown/refusal/immutability/callback boundaries. No streaming/runtime histories.",
+  "recorded_at_utc": "2026-10-29T18:18:49.876788+00:00",
+  "request": {
+    "aggregate": "exact {files,bytes}, each None or exact integer; files0..256, bytes0..2^63-1. Optional hints when vector supplied: any nonnull mismatch refuses; nulls do not cause unknowns then. With files=None, hints support only aggregate ranges, never per-file terms/positive envelope.",
+    "early_ids": "None or exact unique list of metadata IDs; when vector known its set equals captured_software IDs; order retained",
+    "exact_keys": [
+      "schema_version",
+      "files",
+      "early_ids",
+      "modules",
+      "aggregate",
+      "limits",
+      "representation"
+    ],
+    "file": {
+      "id": "exact nonbool int0..N-1; unique permutation, not required to equal list position",
+      "path": "exact str; char length<=4096 before strict UTF16 encoding;1..4096 UTF16 units; scalar text; same existing C/D DOS absolute lexical policy, slash mapping+ASCII case only; no UNC/device-prefix/relative/dot/trailing-dotspace/illegal/control/device-stem aliases. No E: widening, filesystem lookup, Unicode normalization or authenticity claim.",
+      "role": [
+        "captured_software",
+        "captured_metadata",
+        "hash_only_bulk"
+      ],
+      "sha256": "exact lowercase64 ASCII hex; syntax/metadata only, no source hash checked",
+      "size": "exact int0..2^63-1, bool forbidden"
+    },
+    "files": "None (unknown vector) or exact list0..256 of exact {id,path,role,size,sha256}",
+    "limits": {
+      "domain": "Every field is None or exact nonbool integer0..2^63-1; max_files additionally<=256. These are declared arithmetic limits, not active runtime caps.",
+      "exact_keys": [
+        "max_files",
+        "max_software_file_bytes",
+        "max_metadata_file_bytes",
+        "max_bulk_file_bytes",
+        "max_captured_bytes",
+        "max_raw_payload_bytes",
+        "max_calls",
+        "max_events",
+        "max_packet_bytes",
+        "max_output_bytes",
+        "max_report_bytes",
+        "max_declared_memory_bytes"
+      ]
+    },
+    "module": {
+      "dependencies": "exact list0..256 of unique declared module names; closed and acyclic; package parents of dotted names must be declared package=True",
+      "file_id": "metadata ID; exactly one module per captured_software file, no captured_metadata/bulk module",
+      "name": "unique ASCII dotted Python identifier,1..128 chars, case-sensitive",
+      "package": "exact bool; declared graph only, actual source imports not inspected"
+    },
+    "modules": "None or exact list0..256 of {name,file_id,dependencies,package}",
+    "representation": {
+      "domain": "Every field is None or exact strictly-positive nonbool integer1..2^31-1; report_copies1..8. Zero coefficients refuse, including required record/state/report/overhead terms. Multiplication by absent structure count may naturally yield0.",
+      "exact_keys": [
+        "call_record_bytes",
+        "file_index_bytes",
+        "module_index_bytes",
+        "hash_state_bytes",
+        "transient_bytes",
+        "report_base_bytes",
+        "report_call_bytes",
+        "report_file_bytes",
+        "report_event_bytes",
+        "report_copies",
+        "packet_overhead_bytes"
+      ],
+      "units": "Declared logical payload upper terms only. No measured Python/native RSS/layout/timing claim, and no proven producer representation is inferred. Unknown coefficients prevent WITHIN status."
+    },
+    "schema_version": "exact int1, excluding bool"
+  },
+  "result": {
+    "derived": {
+      "domains": "First5 are constants. Others int|None except aggregate ranges [int,int]|None. With files=None exact N/total/P/B/M/Q/R/C/E and role-dependent terms stay None; no positive status. With known vector, absent optional aggregate hints do not create unknowns.",
+      "exact_keys": [
+        "chunk_bytes",
+        "query_frame_bytes_per_file",
+        "event_row_bytes",
+        "packet_kind_count",
+        "current_runtime_packet_cap",
+        "N",
+        "total_bytes",
+        "positive_files",
+        "B",
+        "M",
+        "Q",
+        "R",
+        "C",
+        "E",
+        "captured_bytes",
+        "hash_only_bytes",
+        "query_witness_bytes",
+        "work_buffer_bytes",
+        "raw_payload_bytes",
+        "immutable_capture_bytes",
+        "logical_call_bytes",
+        "index_bytes",
+        "hash_state_bytes",
+        "journal_bytes",
+        "canonical_report_bytes",
+        "closure_array_bound_bytes",
+        "digest_array_bytes",
+        "packet_bound_bytes",
+        "output_reserved_bytes",
+        "peak_declared_memory_bytes",
+        "aggregate_R_range",
+        "aggregate_C_range"
+      ]
+    },
+    "encoding": "UTF8 json.dumps(sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False) with exactly one LF. Report bytes precomputed during calculation, immutable; to_dict returns detached containers. Check callback exceptions are never translated into data refusal.",
+    "exact_keys": [
+      "schema_version",
+      "status",
+      "derived",
+      "unknowns",
+      "violations",
+      "qualification"
+    ],
+    "precedence": "Malformed/schema/domain/graph/aggregate mismatch first; else any known cap exceedance, even with other unknowns; else any unknown; else WITHIN_DECLARED_BOUNDS_ONLY. No status is runtime permission.",
+    "qualification": {
+      "FFI_registration_proven": false,
+      "originals_authenticated": false,
+      "production_owner_bound": false,
+      "profile_qualified": false,
+      "real_checkers_bound": false,
+      "runtime_authorized": false,
+      "verification_complete": false
+    },
+    "schema_version": 1,
+    "statuses": [
+      "REFUSED_INVALID_METADATA",
+      "EXCEEDS_DECLARED_BOUNDS",
+      "INDETERMINATE",
+      "WITHIN_DECLARED_BOUNDS_ONLY"
+    ],
+    "unknowns": "Sorted unique strings: files,early_ids,modules; every null limits.KEY/representation.KEY; aggregate.files/aggregate.bytes only when files=None and those hints are null. Other dependency unknowns are represented by the missing source field, not fabricated0.",
+    "violations": {
+      "cap_codes": [
+        "MAX_FILES",
+        "MAX_SOFTWARE_FILE_BYTES",
+        "MAX_METADATA_FILE_BYTES",
+        "MAX_BULK_FILE_BYTES",
+        "MAX_CAPTURED_BYTES",
+        "MAX_RAW_PAYLOAD_BYTES",
+        "MAX_CALLS",
+        "MAX_EVENTS",
+        "MAX_PACKET_BYTES",
+        "MAX_OUTPUT_BYTES",
+        "MAX_REPORT_BYTES",
+        "MAX_DECLARED_MEMORY_BYTES"
+      ],
+      "exact_item_keys": [
+        "code",
+        "file_id",
+        "required",
+        "limit"
+      ],
+      "file_id": "canonical list ordinal for per-role cap violations, else None",
+      "invalid_codes": [
+        "SCHEMA_KEYS",
+        "TYPE_DOMAIN",
+        "INTEGER_DOMAIN",
+        "ROLE",
+        "PATH_IDENTITY",
+        "DUPLICATE_PATH",
+        "FILE_IDS",
+        "DIGEST_FORMAT",
+        "MODULE_GRAPH",
+        "MODULE_BINDING",
+        "AGGREGATE_MISMATCH",
+        "ARITHMETIC_OVERFLOW"
+      ],
+      "order": "Stable sort by code then file_id(None=-1); all known cap violations retained. Invalid metadata returns one deterministic earliest schema/domain validation violation; derived constants retained, other derived fields None, unknowns[].",
+      "required_and_limit": "exact int|None; malformed refusals use None and do not echo unsafe values"
+    }
+  },
+  "schema_version": 1,
+  "status": "CALCULATOR_ONLY_DESIGN_CANDIDATE_NOT_IMPLEMENTATION_AUTHORITY"
+}

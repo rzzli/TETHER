@@ -1,0 +1,111 @@
+{
+  "actual_target_API_calls": 0,
+  "application_changed": false,
+  "application_tests_rerun": false,
+  "chronology": "Original30 and strict tests predate V1. Four focused controls predate V2; the F2 metaclass control predates V3. Initial UTF16 bootstrap failure, corrected original30 pass, author7/8, four V1 failures, V2 eight-method pass, metaclass failure and all source versions remain preserved. Final source/test expectations unchanged during final replay.",
+  "fixed": [
+    "Bounded dictionary cardinality before key traversal/copy.",
+    "Exact numeric types reject subclasses as TYPE_DOMAIN without producer equality/coercion hooks; bool and other numeric codes preserved.",
+    "Declared graph/binding precedes aggregate consistency and sum overflow."
+  ],
+  "inputs": {
+    "ADMISSION-ENVELOPE-ACTUAL-EVIDENCE-FREEZE-v3.json": {
+      "bytes": 24811,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ACTUAL-EVIDENCE-FREEZE-v3.json",
+      "sha256": "23d63277955322f5f72e838a40b9fd9440c37ae1439cd13f299c70fd0b8d6a18"
+    },
+    "ADMISSION-ENVELOPE-AUTHOR-PROOF-v3.json": {
+      "bytes": 1771,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-AUTHOR-PROOF-v3.json",
+      "sha256": "e05425e0679d64adaa3c420bb3fc9d83987b44a0d99a40486933bae45b03ead3"
+    },
+    "ADMISSION-ENVELOPE-F2-METACLASS-BEFORE-v1.json": {
+      "bytes": 6152,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-F2-METACLASS-BEFORE-v1.json",
+      "sha256": "c4c84c6a5b17fae8a0509dcbaf89d83e3e8ef972687636bb3ef460cefa9e8dee"
+    },
+    "ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v4.json": {
+      "bytes": 42128,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v4.json",
+      "sha256": "5ba8af6c77ddf3f7e23bb377589abcc348a7fb91a59a5766c409672a640d94cf"
+    },
+    "ADMISSION-ENVELOPE-INDEPENDENT-REGRESSION-BEFORE-v1.json": {
+      "bytes": 15493,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-REGRESSION-BEFORE-v1.json",
+      "sha256": "8a02fb18aed5469637e11ff990dacad35e5e4472b3d7ae217c45756ab286be05"
+    },
+    "ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json": {
+      "bytes": 84160,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json",
+      "sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-PEER-v3.json": {
+      "bytes": 30720,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-PEER-v3.json",
+      "sha256": "8029e92a1a07448591a6662d88ddaf353ada3f2177662d07c82966143bb73e39"
+    },
+    "accept_admission_envelope_component_v3.py": {
+      "bytes": 8019,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\accept_admission_envelope_component_v3.py",
+      "sha256": "1c5bb171c965dee805c79ce06e8298d7fa48fa784dd593e435981c6d055c739e"
+    },
+    "admission_envelope_f2_metaclass_regression_v1.py": {
+      "bytes": 1561,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_f2_metaclass_regression_v1.py",
+      "sha256": "d158e3db6f2ebc4aedcfc168d2dcd9ffb383047c850e10c842c8855ca4990f93"
+    },
+    "admission_envelope_independent_tests_v1.py": {
+      "bytes": 9524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py",
+      "sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc"
+    },
+    "admission_envelope_regressions_v1.py": {
+      "bytes": 4512,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_regressions_v1.py",
+      "sha256": "5644882f8d67c0121b4967538d3af9eedf200266792bdb0d07b08e0392171e34"
+    },
+    "admission_envelope_v3.py": {
+      "bytes": 17145,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v3.py",
+      "sha256": "24889920f1f0d4e6f26130c053adde9cdf7f9e006a250f9f9bae274e61ac0501"
+    }
+  },
+  "limits": [
+    "WITHIN_DECLARED_BOUNDS_ONLY is conditional arithmetic, not actual source authenticity, operational admission, implemented storage/streaming/output, measured RSS/time or full-roster fit.",
+    "The mixed-role baseline R69/C93 exceeds unchanged runtime R68/C92. No existing runtime cap or role support changes.",
+    "Paths retain bounded C/D lexical identity; metadata digest syntax is not actual hash verification. No original filesystem discovery or payload pass occurred.",
+    "No application/default change, original experiment replay, model/native/compiler invocation, new data download or provider spending."
+  ],
+  "next": "Select and qualify the actual role-aware producer/storage/serialization representation and exact future roster before using any declared envelope to propose runtime admission.",
+  "original_payload_operations": 0,
+  "provider_spending": 0,
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "recorded_at_utc": "2026-10-29T19:03:10.908031+00:00",
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "Deterministic seven-key metadata API,32 derived fields,four nonauthorizing statuses,12 declared limits and11 logical coefficients. Explicit nulls remain unresolved. Pure source arithmetic/immutability/cancellation only.",
+  "status": "ACCEPTED_STANDALONE_V3_METADATA_ENVELOPE_CALCULATOR_SOURCE_PURE_ONLY",
+  "validation": {
+    "additional_F2_methods": 1,
+    "author_analyze_calls": 50,
+    "author_methods": 8,
+    "focused_methods": 4,
+    "getter_calls": 113,
+    "independent_analyze_calls": 59,
+    "independent_check_calls": 488,
+    "independent_limit_boundaries": 12,
+    "independent_methods": 9,
+    "original_check_exception_stops": 18,
+    "original_metadata_vectors": 30,
+    "pure_seconds": 0.0470000000204891
+  },
+  "verified_evidence_freeze_pins": 55
+}

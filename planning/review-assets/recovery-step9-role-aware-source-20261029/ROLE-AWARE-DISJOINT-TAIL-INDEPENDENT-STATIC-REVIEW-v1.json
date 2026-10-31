@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_EXACT_DISJOINT_TAIL_HELPER_STATIC_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "helper": {"bytes": 11932, "sha256": "d252526d4a6ce4bff0844754c2840906b0bf4faab810676849e40a50269ce1bf"},
+  "binding": {"bytes": 5923, "sha256": "0f46b7f5bd5f88c1197a6fd4304a5a1b2d2e14bd18b8736aa5218eed51cb1b4f"},
+  "preparation": {"bytes": 20270, "sha256": "8991cfb1c2398160f1f695ae0c0eb6f0291d4c58704e943278af508b3402b4f3"},
+  "root_scope": "ad679f4a4555e3456f808d1b8b47a4570eedab4bd8d2dea10efd93a9df117e25",
+  "source_pause": "ddc92af0f11b94652ad90a34fbbcd4b428c8a01566dcf09e8ec750ead89fed6f",
+  "prior_result": "8184541d030cf578918859509963085c70b3eb7cfb0715ec9901714a982ba968",
+  "prior_localization": "7d460d49b0c98279281914fd51d590b09f34b41e77ad15be27ff3122a5060327",
+  "static_checks": [
+    "Fixed START100/STOP225 and binding equality constrain exactly125 predeclared negative indices. No0..99 case, V1 module, positive-base decode, legacy phase or T.run invocation occurs.",
+    "The exact current four-V2 map/load order, source pause, source/execution scopes, corpus, schema, frozen mutation helper and common facade are pinned before source definition. Loader/audit behavior is reused without weakening.",
+    "Base raw decompression and T.raw_mutation are data handling only. Each resulting negative raw length and SHA256 is checked against the frozen mutation before forwarding. Source receives raw bytes and one case-independent callback, not IDs or expected codes.",
+    "Every row starts with unknown outcome and a fixed index. At most one actual decode is forwarded for each attempted row, with a global125-call cap and before/after live forwarding statistics. Preforward deadline refusal remains distinguishable from actual source entry.",
+    "Each FormatError refusal records code, offset/path surface validity and exact required-code agreement. Wrong codes continue for finite batch collection. Unexpected accepts remain explicit failures.",
+    "Deadline, interruption and audit-stop paths preserve known partial observations and an unknown suffix. Unknown rejection and unknown correctness counts remain distinct; no missing row becomes success or zero work.",
+    "One original started+30 cooperative deadline includes bootstrap and the original facade checks. Post-loop and final late vetoes prevent complete/all-match claims after observed lateness. No hard callback-free hang guarantee is claimed.",
+    "COMPLETE_TAIL_DIAGNOSTIC_RETAINED means the diagnostic collected all outcomes, not that they match. all_tail_outcomes_match is separate, and a matching tail cannot repair the earlier failed conformance. Exclusive attempt/proof paths forbid replay."
+  ],
+  "method": "Read exact helper and binding text/metadata and verify their hashes. No imports, compilation, AST parsing, subject probes or helper execution.",
+  "activities": {"helper_or_subject_imports": 0, "helper_or_subject_runs": 0, "source_harness_or_oracle_edits": 0, "original_native_or_physical_operations": 0},
+  "pending": "Root's single authorized diagnostic execution, then finite source correction decision. This record does not execute or qualify the tail.",
+  "qualification": {"source_behavior": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

@@ -1,0 +1,1910 @@
+{
+  "activity": {
+    "native_SDK_compiler_IO": 0,
+    "original_or_payload_operations": 0,
+    "subject_imports": 0,
+    "subject_tests": 0
+  },
+  "api": {
+    "cancellation": "First check before structural capture; bounded exact-builtin detached capture with no callbacks/custom container traversal; check after capture, during bounded decode/hash steps, and after immutable bytes/report preparation before return. Every check exception propagates by identity. No clock or authority is supplied by check.",
+    "decode_ledger": "decode_ledger(raw: exact bytes, *, check)->immutable DecodedLedger",
+    "decoded_getters": [
+      "to_dict(): detached ordinary copy",
+      "to_bytes(): exact original immutable bytes; cache-only"
+    ],
+    "encode_ledger": "encode_ledger(value: exact builtin closed dict, *, check)->exact bytes",
+    "fragment_entry": "Same encode_ledger/decode_ledger public APIs, header.profile UNQUALIFIED_FRAGMENT. No private API or fake complete profile.",
+    "projection": "project_legacy(snapshot: exact same-owner source-issued ProducerSnapshot, *, check)->immutable LegacySnapshot. This is a PRODUCER-adapter, not pure decoder API; dict and DecodedLedger refuse.",
+    "value_shape": {
+      "atoms": "Exact keys tag/value. Raw tags UNOBSERVED,NULL,HANDLE,BOOL,DWORD,COUNT32; clocks UNOBSERVED,I64,F64. Unobserved/null value None, other value exact declared builtin scalar. No inferred tag from falsey value.",
+      "exact_keys": [
+        "header",
+        "files",
+        "calls",
+        "queries",
+        "paths",
+        "modules",
+        "module_names",
+        "module_edges",
+        "diagnostics"
+      ],
+      "header_keys": [
+        "profile",
+        "phase",
+        "status",
+        "origin_data_id",
+        "ledger_sequence",
+        "start_clock",
+        "latest_clock",
+        "freeze_clock",
+        "previous_ledger_sha256",
+        "reserved_R",
+        "reserved_C",
+        "reserved_E",
+        "early_count",
+        "read_chunk",
+        "flags"
+      ],
+      "pools": "queries/paths/module_names exact bytes; module_edges exact tuple of module ordinals; arrays exact lists. Expected/actual digests bytes32 or None, optional ordinals None. Null/absent typed values must match flags. Reserved fields are absent from value and emitted zero.",
+      "table_input": "Each record has EXACT nonreserved layout keys. Enums use exact named strings, flags use a closed dict of every named bit->exact bool. raw_scalar_bits is supplied as scalar_atom; raw_count as count_atom; raw_error as error_atom; input_handle_bits as input_handle_atom; both clock-bit fields as typed clock atoms. All other layout names unchanged. Offsets/lengths/digests in section descriptors/header are derived, never caller-ready claims."
+    }
+  },
+  "apis": [
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 1,
+      "name": "CreateFileW",
+      "query_frame_bytes": 0,
+      "scalar": "HANDLE",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 2,
+      "name": "GetFileType",
+      "query_frame_bytes": 0,
+      "scalar": "DWORD",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 3,
+      "name": "GetFileInformationByHandleEx",
+      "query_frame_bytes": 8,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 4,
+      "name": "GetFinalPathNameByHandleW",
+      "query_frame_bytes": 8202,
+      "scalar": "DWORD",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 5,
+      "name": "GetFileSizeEx",
+      "query_frame_bytes": 8,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": true,
+      "fragment_allowed": true,
+      "id": 6,
+      "name": "ReadFile",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 7,
+      "name": "CloseHandle",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 8,
+      "name": "GetFileAttributesExW",
+      "query_frame_bytes": 36,
+      "scalar": "BOOL",
+      "target": "ANCESTOR"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 9,
+      "name": "FindFirstFileExW",
+      "query_frame_bytes": 592,
+      "scalar": "HANDLE",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 10,
+      "name": "FindNextFileW",
+      "query_frame_bytes": 592,
+      "scalar": "BOOL",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 11,
+      "name": "FindClose",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 12,
+      "name": "CreateDirectoryW",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "NAMESPACE"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": true,
+      "fragment_allowed": true,
+      "id": 13,
+      "name": "WriteFile",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "GENERATED"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 14,
+      "name": "FlushFileBuffers",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "GENERATED"
+    }
+  ],
+  "authoring_activity": {
+    "encoder_implementation": false,
+    "oversized_initial_shell_command": "Windows launcher error206 before process creation; no data or subject read/execution from that attempt. Retained data-author helper writes specification only.",
+    "under_test_source_imports": 0,
+    "under_test_source_runs": 0
+  },
+  "basis": [
+    {
+      "bytes": 5500,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-DESIGN-ACCEPTANCE-v2.json",
+      "sha256": "d3fee3d6e91b272267075f2b6df93e32e8a026e1f464ba8c0e3b072c155d7d64"
+    },
+    {
+      "bytes": 28502,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+      "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+    },
+    {
+      "bytes": 4294,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-F1-DESIGN-ADDENDUM-v2.json",
+      "sha256": "b1405e2d9f349a109a70647936c1d7a861923b26e8390dc7b56886e2427abedc"
+    },
+    {
+      "bytes": 16676,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-PRECODE-SCHEMA-QUESTIONS-v1.json",
+      "sha256": "c0fe88dc391abe64987d29c0c4fad75fb44174468637e680886f508e5160b1d7"
+    },
+    {
+      "bytes": 37533,
+      "path": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    }
+  ],
+  "call_record": {
+    "bytes": 256,
+    "fields": [
+      {
+        "bytes": 4,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "file_id",
+        "offset": 4,
+        "type": "u16"
+      },
+      {
+        "bytes": 1,
+        "name": "api",
+        "offset": 6,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "record_version",
+        "offset": 7,
+        "type": "u8"
+      },
+      {
+        "bytes": 8,
+        "name": "fact_flags",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "requested",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "buffer_id",
+        "offset": 20,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 22,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "generation",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_written",
+        "offset": 28,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "raw_scalar_bits",
+        "offset": 32,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "raw_count",
+        "offset": 40,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "raw_error",
+        "offset": 44,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_contribution",
+        "offset": 48,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_contribution",
+        "offset": 56,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "known_count_contribution",
+        "offset": 64,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "query_offset",
+        "offset": 72,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "query_length",
+        "offset": 76,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "input_handle_bits",
+        "offset": 80,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "pre_dispatch_clock_bits",
+        "offset": 88,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "post_binding_clock_bits",
+        "offset": 96,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 4,
+        "name": "error_id",
+        "offset": 104,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_id",
+        "offset": 108,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_zero",
+        "offset": 110,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "fold_state",
+        "offset": 112,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_state",
+        "offset": 116,
+        "type": "u32"
+      },
+      {
+        "bytes": 136,
+        "name": "reserved_zero_tail",
+        "offset": 120,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "clocks": {
+    "authority": "Header samples are data, not proof of true first entry/class/nonce continuity. Real trustedkernel/origin adoption and outer watchdog remain pending.",
+    "narrowed_domain": "Versioned successor accepts signed64 int or finitebinary64. Start+295/+300 must stay same-type representable finite and strictlygreater before first dispatch, elseCLOCK_DOMAIN. Nondecreasing compare uses exact original typed values. Unsupported value stays source canonical but prevents issuance. Old48 is in-domain; this does not claim compatibility with arbitrary huge historical Python ints.",
+    "sites": "Start is original first-entry returned sample; latest last observed owner sample at snapshot capture; freeze final returned preissuance sample. Pre_dispatch sampled after canonical reservation before enteredAPI; post_binding sampled after normal binding return before deadline check. Attempt flag reserved before sampling; returned raw clock slot assigned before validation/deadline. Clockthrow=attempted/no returned sample. Late returned values retained and veto eligibility.",
+    "tags": "UNOBSERVED0/bits0; I64 tag1 exact signed64 two-complement; F64 tag2 exact finite IEEE754bits including negativezero. Header clock_tags low2start,next2latest,next2freeze,top2zero. Call tags bits32..35. No bool/subclass, tag3, integer-to-float conversion or rounded big integer."
+  },
+  "diagnostic_record": {
+    "bytes": 1024,
+    "fields": [
+      {
+        "bytes": 4,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u32"
+      },
+      {
+        "bytes": 1,
+        "name": "state",
+        "offset": 4,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "flags",
+        "offset": 5,
+        "type": "u8"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 6,
+        "type": "u16"
+      },
+      {
+        "bytes": 8,
+        "name": "opaque_identity_id",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "call_ordinal",
+        "offset": 16,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "secondary_of",
+        "offset": 20,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 2,
+        "name": "class_bytes",
+        "offset": 24,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "message_bytes",
+        "offset": 26,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "args_bytes",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 8,
+        "name": "clock_bits",
+        "offset": 32,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 1,
+        "name": "clock_tag",
+        "offset": 40,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "severity",
+        "offset": 41,
+        "type": "u8"
+      },
+      {
+        "bytes": 86,
+        "name": "reserved_header",
+        "offset": 42,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 96,
+        "name": "class_utf8",
+        "offset": 128,
+        "type": "fixed96"
+      },
+      {
+        "bytes": 512,
+        "name": "message_utf8",
+        "offset": 224,
+        "type": "fixed512"
+      },
+      {
+        "bytes": 256,
+        "name": "args_utf8",
+        "offset": 736,
+        "type": "fixed256"
+      },
+      {
+        "bytes": 32,
+        "name": "reserved_zero_tail",
+        "offset": 992,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "diagnostics": {
+    "args_encoding": "args_utf8 is canonical JSON array of at most8 immutable repr strings, not arbitrary text. It must fit256 UTF8 bytes including brackets/escapes; choose bounded valid string prefixes and set ARGS_TRUNCATED if any reduction/removal is required. Never cut raw JSON mid-token. Emptyfallback is literal[]. Exact decoded array is retained in ProducerSnapshot; legacy projection refuses if truncation makes the source legacy metadata unrepresentable. class/message remain valid UTF8 prefix fields.",
+    "borrow": "D=2*(N+E+32)<=5056; one serial operation borrows TWO free slots before dispatch. Nested source helpers share this guard. Normal success releases both uncommitted borrows only after last throwablepostcheck/unwind. No permanent2*C consumption. Latch original exception reference before formatting.",
+    "commit": "New original commits one ordinal; identitydedup byis returns existing ordinal. Formatter failure commits second original object with literal fallback, no recursiveformat. Committed metadata immutable and neverreused; owner primary/secondary getters remain originalobjects. Unfilled/borrowed slots notserialized. One failed formatter cannot rewrite primary.",
+    "operation_debits": "Each source operation has one pre-reserved guard shared by nested helpers. Normal guard exits after postclock/check and any required reconcile/hash/copy step, releasing only unused slots. The source must count actual remaining close/journal/terminal operations; no caller-declared ready/debit flag. If a capacity invariant fails, the original capacity error latches in the protected terminal reserve and future work stops; unattempted optional publication is refused before dispatch. Actual native/physical cleanup behavior remains gated.",
+    "proof_limit": "The source implementation must debit these guardedoperation counts and prove bounds with meaningful faultcontrols before qualification. Exception graphs/objectheaders remain unknownheap beyond1024B encoded metadata.",
+    "protected": "Healthy firstwork guard borrows2, leaving D-2=2*(N+E+31) protected. First workfailure commits<=2 and stopsnewwork. Remaining <=N closes +E remaining journal/callbackdispatches +31 otherterminal/check/format operations, <=2 fresherrors each, fit that reserve. No recursion/unbounded hooks. Cleanup guard borrows2; nonmandatorypublications must preserve2*remaining mandatoryclose attempts. Repeated sameerror uses no newslot. Unexpected exhaustion marks internalincomplete and cannot silently drop errors or use successful-call leakage to suppress owned mandatorycleanup.",
+    "record": "Only stateCOMMITTED/FORMAT_FALLBACK wire records. opaque_identity_id=ordinal+1 is DATA, notPythonobjectid/token. Optional parent/call0xffffffff. Payload validUTF8 prefixes96/512/256, lengths checked/zero remainder. Flags bit0class-truncated/1message/2args/3format-failed, otherszero. Phase enumerated. args bounded metadata text notobjects. Diagnosticclock copies known sample, neverresamples. Partialformat remains private/unissued."
+  },
+  "enums": {
+    "artifact": {
+      "candidate-ledger.bin": 1,
+      "candidate.json": 5,
+      "child/attempt.json": 11,
+      "child/failure.json": 12,
+      "child/result.partial.jsonl": 10,
+      "cleanup.json": 6,
+      "failure.json": 7,
+      "journal.jsonl": 3,
+      "producer-report.json": 4,
+      "receipt.json": 8,
+      "seal.json": 9,
+      "stderr.bin": 14,
+      "stdout.bin": 13,
+      "terminal-ledger.bin": 2
+    },
+    "artifact_state": {
+      "BUILDING": 1,
+      "ISSUED": 3,
+      "RESERVED": 0,
+      "UNISSUED_PARTIAL": 2,
+      "UNKNOWN_RETURN": 4
+    },
+    "buffer": {
+      "DEFINED": 3,
+      "INCOMPLETE_UNKNOWN": 4,
+      "NOT_APPLICABLE": 0,
+      "RAW_RETAINED": 2,
+      "RESERVED": 1
+    },
+    "call_flags_bits": {
+      "ACCOUNTING_FAULT": 15,
+      "BUFFER_DATA_OBSERVED": 14,
+      "BUFFER_PRESENT": 38,
+      "CAPTURE_REQUESTED": 29,
+      "CLOSE_RIGHT_CONSUMED": 16,
+      "COPY_ATTEMPTED": 27,
+      "COPY_RETURN_OBSERVED": 28,
+      "COUNT_AUX_ACK": 8,
+      "COUNT_DEFINED": 4,
+      "COUNT_DOMAIN_VALID": 19,
+      "COUNT_OBSERVED": 3,
+      "ERROR_DEFINED": 6,
+      "ERROR_DEFINITION_OBSERVED": 31,
+      "ERROR_DOMAIN_VALID": 20,
+      "ERROR_OBSERVED": 5,
+      "HASH_ATTEMPTED": 25,
+      "HASH_RETURN_OBSERVED": 26,
+      "IDENTITY_VERIFIED_AT_DISPATCH": 17,
+      "INPUT_HANDLE_PRESENT": 36,
+      "INVOKED": 0,
+      "MALFORMED_RAW": 30,
+      "POST_CLOCK_ATTEMPTED": 22,
+      "POST_CLOCK_RETURN_OBSERVED": 24,
+      "PRE_CLOCK_ATTEMPTED": 21,
+      "PRE_CLOCK_RETURN_OBSERVED": 23,
+      "QUERY_CAPTURE_OBSERVED": 12,
+      "QUERY_DEFINED": 13,
+      "QUERY_SPAN_PRESENT": 39,
+      "REQUESTED_PRESENT": 37,
+      "RIGHT_TRANSFER_ACK": 9,
+      "SCALAR_AUX_ACK": 7,
+      "SCALAR_DOMAIN_VALID": 18,
+      "SCALAR_NULL": 2,
+      "SCALAR_OBSERVED": 1,
+      "STOPPED": 11,
+      "WRAPPER_RETURNED": 10
+    },
+    "capture": {
+      "COMPLETE": 2,
+      "FAILED": 3,
+      "NOT_REQUESTED": 0,
+      "PENDING": 1
+    },
+    "clock": {
+      "F64": 2,
+      "I64": 1,
+      "UNOBSERVED": 0
+    },
+    "close": {
+      "ENTERED_RETURN_UNKNOWN": 2,
+      "NOT_ATTEMPTED": 0,
+      "NOT_DISPATCHED_DEADLINE": 5,
+      "RESERVED": 1,
+      "RETURNED_FAILURE": 4,
+      "RETURNED_SUCCESS": 3
+    },
+    "diagnostic_flags_bits": {
+      "ARGS_TRUNCATED": 2,
+      "CLASS_TRUNCATED": 0,
+      "FORMAT_FAILED": 3,
+      "MESSAGE_TRUNCATED": 1
+    },
+    "diagnostic_state": {
+      "COMMITTED": 2,
+      "FORMAT_FALLBACK": 3
+    },
+    "file_flags_bits": {
+      "ACTUAL_DIGEST_PRESENT": 1,
+      "ASSEMBLY_RETAINED": 13,
+      "BLOB_ISSUED": 14,
+      "CAPTURE_COMPLETE": 5,
+      "CAPTURE_REQUESTED": 2,
+      "CLOSE_RESERVED": 9,
+      "CLOSE_SUCCESS_KNOWN": 11,
+      "CLOSE_SUCCESS_TRUE": 12,
+      "COPY_UNKNOWN": 8,
+      "EARLY": 10,
+      "EXPECTED_DIGEST_PRESENT": 0,
+      "EXPECTED_SIZE_PRESENT": 15,
+      "HASH_ATTEMPTED": 3,
+      "HASH_COMPLETE": 4,
+      "HASH_UNKNOWN": 7,
+      "READ_UNKNOWN": 6
+    },
+    "fold": {
+      "COMMITTED": 2,
+      "COMMITTING": 1,
+      "FAILED_AFTER_COMMIT": 4,
+      "FAILED_BEFORE_COMMIT": 3,
+      "PENDING": 0
+    },
+    "header_flags_bits": {
+      "ACCOUNTING_FAULT": 3,
+      "CLOCK_INVALID": 5,
+      "COPY_UNKNOWN": 2,
+      "HASH_UNKNOWN": 1,
+      "PREVIOUS_LEDGER_PRESENT": 6,
+      "PRIMARY_PRESENT": 4,
+      "READ_UNKNOWN": 0
+    },
+    "identity": {
+      "IN_PROGRESS": 1,
+      "NOT_ATTEMPTED": 0,
+      "REFUSED": 3,
+      "UNKNOWN": 4,
+      "VERIFIED": 2
+    },
+    "module_flags": {
+      "ACCEPTED": 2,
+      "CACHED": 3,
+      "PACKAGE": 0,
+      "RETURN_OBSERVED": 1
+    },
+    "open": {
+      "ENTERED_RETURN_UNKNOWN": 2,
+      "KNOWN_FAILURE_NO_HANDLE": 4,
+      "OWNED": 3,
+      "OWNERSHIP_UNKNOWN": 5,
+      "RESERVED": 1,
+      "UNOPENED": 0
+    },
+    "phase": {
+      "CANDIDATE": 1,
+      "FRAGMENT": 0,
+      "TERMINAL": 2
+    },
+    "phase_code": {
+      "RawReturn_allocation": 5,
+      "admit_plan": 18,
+      "admit_reconcile": 38,
+      "after_count_before_aux": 6,
+      "after_scalar_before_aux": 2,
+      "after_scalar_before_right_transfer": 3,
+      "archive": 40,
+      "authority_factory": 36,
+      "before_final_ack": 46,
+      "bind_ports": 15,
+      "bind_test_compiler": 17,
+      "bind_test_hooks": 16,
+      "binding_invoke": 0,
+      "buffer_copy": 7,
+      "canonical_reconcile": 48,
+      "capture_early": 20,
+      "checker_factory": 37,
+      "claim_continuation": 22,
+      "cleanup_publication": 13,
+      "close_wrapper": 12,
+      "consistency": 44,
+      "continue_once": 24,
+      "copy_bytes": 45,
+      "core": 43,
+      "diagnostic_format": 34,
+      "encoding": 49,
+      "entry": 14,
+      "error_copy": 4,
+      "final_clock": 35,
+      "finalize": 25,
+      "fragment": 53,
+      "freeze": 50,
+      "generated_checker": 51,
+      "handoff": 11,
+      "hash_remaining": 39,
+      "hash_update": 8,
+      "identity_query": 10,
+      "issue_continuation": 21,
+      "journal": 41,
+      "journal_append": 26,
+      "journal_close": 27,
+      "legacy_projection": 52,
+      "load_source": 23,
+      "original_close": 33,
+      "post_call_clock": 9,
+      "pre_dispatch": 1,
+      "publish_candidate": 28,
+      "publish_cleanup": 29,
+      "publish_failure": 30,
+      "publish_receipt": 31,
+      "publish_seal": 32,
+      "reserve_output": 19,
+      "resources": 42,
+      "source_admission": 47
+    },
+    "profile": {
+      "ORIGINAL7_N4": 1,
+      "ORIGINAL7_PROSPECTIVE": 2,
+      "UNQUALIFIED_FRAGMENT": 0
+    },
+    "role": {
+      "CAPTURED_METADATA": 2,
+      "CAPTURED_SOFTWARE": 1,
+      "HASH_ONLY_BULK": 3,
+      "NONE_FRAGMENT_ONLY": 0
+    },
+    "severity": {
+      "FORMATTER_FAILURE": 3,
+      "PRIMARY": 1,
+      "SECONDARY": 2
+    },
+    "status": {
+      "INCOMPLETE": 3,
+      "OBSERVED_COMPLETE": 1,
+      "OBSERVED_NEGATIVE": 2
+    },
+    "target": {
+      "ANCESTOR": 2,
+      "GENERATED": 4,
+      "NAMESPACE": 5,
+      "ORIGINAL": 1,
+      "SEARCH": 3
+    },
+    "wrapper": {
+      "NOT_RETURNED": 0,
+      "RAISED": 2,
+      "RETURNED": 1
+    }
+  },
+  "file_record": {
+    "bytes": 256,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 1,
+        "name": "role",
+        "offset": 2,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "capture_state",
+        "offset": 3,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "target_class",
+        "offset": 4,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "open_state",
+        "offset": 5,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "identity_state",
+        "offset": 6,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "close_state",
+        "offset": 7,
+        "type": "u8"
+      },
+      {
+        "bytes": 8,
+        "name": "flags",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "descriptor_id",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "path_offset",
+        "offset": 20,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "path_bytes",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_utf16_units",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 8,
+        "name": "expected_size",
+        "offset": 32,
+        "type": "u64"
+      },
+      {
+        "bytes": 32,
+        "name": "expected_sha256",
+        "offset": 40,
+        "type": "digest32"
+      },
+      {
+        "bytes": 32,
+        "name": "actual_sha256",
+        "offset": 72,
+        "type": "digest32"
+      },
+      {
+        "bytes": 4,
+        "name": "open_ordinal",
+        "offset": 104,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "close_ordinal",
+        "offset": 108,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 8,
+        "name": "known_read_bytes",
+        "offset": 112,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_bytes",
+        "offset": 120,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_bytes",
+        "offset": 128,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "query_offset",
+        "offset": 136,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "query_length",
+        "offset": 140,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "first_diagnostic",
+        "offset": 144,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "read_reservations",
+        "offset": 148,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "read_invocations",
+        "offset": 152,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "captured_blob_length",
+        "offset": 156,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "early_ordinal",
+        "offset": 160,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "path_id",
+        "offset": 162,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "read_generation",
+        "offset": 164,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "module_ordinal",
+        "offset": 168,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 86,
+        "name": "reserved_zero_tail",
+        "offset": 170,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "files_modules": {
+    "capture": "Capturedroles requesttrue and PENDING/COMPLETE/FAILED. COMPLETE requires actual immutable blob issued,length=size,copied=size,hashcomplete/matching expected. Zero captured issues actualb-empty. Hashonly NOT_REQUESTED,requestfalse,capturecompletefalse,copied0,blobabsent,noassembly/copyunknown. FAILED plus COPY_UNKNOWN distinguishes uncertain tail. Digest alone never byteevidence.",
+    "files": "Ordinal/path_id equalposition, descriptorid permutation. Expected digest/size present for originalprofiles, actual digest separatepresence. Absent digest allzero only flagfalse. Open/close absent0xffffffff; early/moduleabsent0xffff. File/header totals equal canonical rawcontribution sums. blobissued and complete are sourceobservations, not decoder-created bytecapabilities.",
+    "identity": "Wire IDs never ownerbrands. All numericdomains exactbuiltins checked by typeidentity before comparisons; no metaclass/coercion. File identityverified requires fourquery API rawfacts, correctsize/path/attrs/type and original-clock acceptance sourcefact; data alone does not authenticate filesystem.",
+    "modules": "ASCII dotted identifiers<=512B, uniquenames/sourcepaths, capturedsoftware source for accepted module. Ordered unique dependencyordinals/no self/cycle/unlistedimports. Pools packed no gaps. PACKAGE/RETURN_OBSERVED/ACCEPTED/CACHED onlybits0..3. CACHED=>ACCEPTED=>RETURN_OBSERVED. Attempt/returnorders independentlycontiguous optional0xffff; knownlatereturned unaccepted/notcached valid. Totalcachehits<=M and load+cacheobservations<=2M, no unbounded retainednames. Refuse before capoverflow; sourceproposal must separately demonstrate48parity."
+  },
+  "fixture_plan": {
+    "codec_only": [
+      "independentliteral header/section/record bytes for all14typedAPIatoms incl2/-1/0,NULL/HANDLE0/INVALID,count0definedundefined",
+      "tinycandidate/terminal observedcomplete/negative/partial and API8..14fragments",
+      "I64above2^53/negative0/finiteF64late andinvalidclocktypes/bits",
+      "eachreservedbyte/unknownenum/flag/length/span/hash/truncation/trailing/duplicate mutation",
+      "role/capture/zero/path/query/diag/module refs and syntheticmaxmetadata shape",
+      "independentliteral decodefields/encodebytes, notencoderdecoderagreementalone"
+    ],
+    "maximum_histories": 40,
+    "producer_only_pending": [
+      "faultafter firstslotassignment before flags/cache/pack keepsknown0/NULL/count and quarantines",
+      ">=16384 successful fictionaloperations releaseunfilledDslots; firstfault/protectedcleanup/formatteroriginalidentity",
+      "genuine issuedbytes/nonaliasing/freezeunissued/actualfullbyteconsumer",
+      "actualsource N4legacy48+8+16+externalidentity/hashonlygetterrefusal"
+    ],
+    "scope": "Independentliteral corpus/testcontract freezes BEFORE encoder source scope. Livecontrols waitgenuineproducersource, notfixturestubs."
+  },
+  "flag_state_rules": {
+    "additional_exact_relations": [
+      "SCALAR_DOMAIN_VALID/COUNT_DOMAIN_VALID/ERROR_DOMAIN_VALID equal recomputed atom domain validity when observed, false when absent. MALFORMED_RAW iff a retained representable atom violates the API type (NULL for nonHANDLE); that requires STOPPED and INCOMPLETE. Unsupported objects cannot be encoded.",
+      "PRE/POST clock return-observed equals typed clock tag!=UNOBSERVED and implies its attempted bit. POST attempted implies WRAPPER_RETURNED. Unreturned attempted clock does not become zero. No tag without returned bit.",
+      "HASH/COPY return-observed implies its attempted bit. These bits only on originalRead6; copy only if captured role. Hash/copy contribution requires countdefined, observedbufferdata with written>=count and matching generation. A failed opaque update cannot claim its tailzero; fileunknown flag records it.",
+      "QUERY_CAPTURE_OBSERVED requires API-specific full frame bytes and query-span-present with exact offset/length. QUERY_DEFINED implies captureobserved and valid successful raw API result, but does NOT imply acceptable path/size/reparse semantics. Negative identity may retain a fully defined malformed/unexpected frame.",
+      "BUFFER_DATA_OBSERVED requires invoked+bufferpresent, written<=requested forRead/Write or<=framecapacity. Observed empty write can have written0; absent data must have written0. No hash/copy from unobserved data.",
+      "RIGHT_TRANSFER_ACK only CreateFile1 or fragmentFindFirst9 and observed usableHANDLE; raw owned handle remains canonical even ACKabsent. CLOSE_RIGHT_CONSUMED only CloseHandle7/fragmentFindClose11, can be true on a reserved-but-unentered close. It never grants a second attempt.",
+      "IDENTITY_VERIFIED_AT_DISPATCH required for entered originalRead; not required for cleanupClose of a handle whose identity failed. CAPTURE_REQUESTED equals the declared file role for all original calls. Fragments with NONE role set itfalse.",
+      "File CLOSE_SUCCESS_KNOWN iff closeordinal refers to an invoked observed validBOOL; CLOSE_SUCCESS_TRUE iff known and nonzero. Known failure maps RETURNED_FAILURE, known success RETURNED_SUCCESS. Unknown or unentered never maps knownfalse/success.",
+      "Header unknown flags equal OR of file read/hash/copy unknown axes; primary/accounting/clockinvalid are snapshot facts and require INCOMPLETE/NEGATIVE, never OBSERVED_COMPLETE. OBSERVED_COMPLETE is structural observation completeness only and all exported qualification bits remainfalse."
+    ],
+    "aux": "scalaraux requires scalarobserved, countaux requires countobserved. righttransfer requires observed usableHANDLE and same canonical owned right; missing ACK does not erase owned rawhandle. No ack alone creates ownership.",
+    "bits": "Call bits0..31 named bool;32..33 preclock tag/34..35 postclock tag;36..39 named input/request/buffer/query presence;40..63zero. File0..15 named/16..63zero. Header0..6 named/7..31zero. Module0..3 and diagnostic0..3 only; every other bit zero.",
+    "close": "Consumed reservation precedes once-onlyclose dispatch. Known success from invoked observed validBOOL!=0, even later wrapper raises. FailedBOOL0 is failedcleanup, not contradiction. Unreturned/unentered has nullable success; no retry after consumed attempt. Source cell open handle remains canonical cleanup authority through fold/cache failure.",
+    "contributions": "Only originalRead carries known/hash/copy amounts. Known=rawdefinedcount else0. Hash/copy=count only if its opaque return fact was observed; otherwise lowerbound0 and fileHASH_UNKNOWN/COPY_UNKNOWN if operation attempted. Hash-only copy flags/contributionfalse0. Captured copy requires countdefined and returns; <=defined count, file totals canonical sum once. Undefined/read nonreturn keeps unknown tail, notzero.",
+    "fold": "PENDING/COMMITTING/COMMITTED/FAILED_BEFORE/FAILED_AFTER closed. Failed phases require ACCOUNTING_FAULT+STOPPED. Raw-defined count remains known even if contribution cache update interrupted. Identical duplicate facts idempotent; conflicting store refuses and never overwrites first. Canonical report may derive once from slots; it never heals failed cache or resumes work.",
+    "invoked": "Unentered record: no scalar/count/error/aux/contribution, no read_unknown; optional attempted/returned preclock allowed. Entered/no scalar is returnunknown, notzero. No raw fact before entered. Reserved quota may be consumed before entered without APIattempt.",
+    "wrapper": "WRAPPER_RETURNED is normal binding return, independent of STOPPED. Returned+stopped legal/monotone; wrapperstate RETURNED iff flagtrue; RAISED iff invoked+stopped+notreturned; otherwise NOT_RETURNED. Late/raise never erases known raw atoms/normal return."
+  },
+  "framing": {
+    "counts": "Original profiles:1<=N<=bound; file/path ordinals0..N-1; descriptor IDs unique permutation0..N-1. Calls exact reserved prefix0..used_C-1, used_C<=reserved_C. Modules0..M-1. Committed diagnostics exact prefix; borrowed/unfilled slots not serialized.",
+    "formulas": "Both profiles require R=sum(ceil(size/chunk)+16 for positive originals), C=6N+R, E=6N+2B+2M+192. Exact integer divmod, no float ceiling. All recorded reservations/debits within these bounds. Prospective profile is not activated or certified by64KiB calculator.",
+    "fragment": "Profile0/phaseFRAGMENT/statusINCOMPLETE: file_count1/call_count1/M0, R=C=E=0, qualification0, one typed target descriptor roleNONE_FRAGMENT_ONLY, expected-size/digest absent, one raw call ordinal0. API1..14 allowed; query section length is exactly its API frame0/8/36/592/8202. No complete-ledger checker accepts profile0; no physical capacity or owner authority follows.",
+    "header": "4096 bytes, descriptors at256..767 ID order1..8; all other reserved bytes zero. Header_bytes4096/section_count8/module_count_repeat==module_count/path_policy1/qualification_bits0. magic/version/schema/enums/counts must match.",
+    "previous": "Candidate phase sequence1 and PREVIOUS_LEDGER_PRESENT=false/payloadzero. Terminal sequence2 and flagtrue iff an issued candidate exists; its payload is the exact SHA256(candidate bytes), including the hypothetical allzero digest. Without candidate flagfalse/payloadzero. Fragment sequence0/flagfalse. Manifest agrees; no SHA(empty) fallback, selfhash or wire owner token.",
+    "profile1": "ORIGINAL7_N4: N<=4/file<=4096/captured<=16384/chunk65536/R<=68/C<=92/E<=224/B<=2/M<=2. These are new-format invariant fixtures; unchanged accepted legacy source/caps remain separate.",
+    "profile2": "ORIGINAL7_PROSPECTIVE: N<=256/M<=128/B<=128/captured-file<=8388608/captured sum<=33554432/chunk1048576/C<=16384/E<=2240/D<=5056. Exact complete descriptor/module graph required, never aggregate-only/null resources.",
+    "scalar_encoding": "u8/u16/u32/u64 unsigned little endian with checked exact range; optional_u16 absent0xffff/optional_u32 absent0xffffffff. Absent digest32 allzero only when presence flagfalse. Reserved fields and unused high bits must be zero, never observed evidence.",
+    "sections": "First offset4096; exact contiguous order, offset[i+1]=offset[i]+length[i], including empty sections. No gaps/overlap/wrap/padding/trailing bytes. total_bytes equals final end and len(raw). Checked sums/products and capacities before slicing/allocation; full maximum14800384. Every descriptor SHA256 covers exact section; empty uses SHA256(empty)."
+  },
+  "generated": {
+    "artifact_caps": [
+      {
+        "kind": "candidate-ledger.bin",
+        "maximum_bytes": 14800384,
+        "membership_rule": "conditional: accepted work prefix before original closes; absent/unissued on failure"
+      },
+      {
+        "kind": "terminal-ledger.bin",
+        "maximum_bytes": 14800384,
+        "membership_rule": "conditional: final observed original-close/unknown facts; failure may leave absent/unissued"
+      },
+      {
+        "kind": "journal.jsonl",
+        "maximum_bytes": 2293760,
+        "membership_rule": "owned namespace only; complete or bounded observed prefix, never reconstructed success"
+      },
+      {
+        "kind": "producer-report.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional compact report; no full-table duplication"
+      },
+      {
+        "kind": "candidate.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional normal candidate"
+      },
+      {
+        "kind": "cleanup.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional observed finalization/close report"
+      },
+      {
+        "kind": "failure.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional owner failure; distinct from child failure marker"
+      },
+      {
+        "kind": "receipt.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "only after required gates and known closures/journal close"
+      },
+      {
+        "kind": "seal.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "only after receipt and required terminal gates"
+      },
+      {
+        "kind": "child/result.partial.jsonl",
+        "maximum_bytes": 7995392,
+        "membership_rule": "new84 structured trace; bounded partial allowed, completion never implied"
+      },
+      {
+        "kind": "child/attempt.json",
+        "maximum_bytes": 4096,
+        "membership_rule": "new84 child attempt metadata"
+      },
+      {
+        "kind": "child/failure.json",
+        "maximum_bytes": 65536,
+        "membership_rule": "conditional independent child failure marker"
+      },
+      {
+        "kind": "stdout.bin",
+        "maximum_bytes": 65536,
+        "membership_rule": "child stdout capture; independent from structured files"
+      },
+      {
+        "kind": "stderr.bin",
+        "maximum_bytes": 65536,
+        "membership_rule": "child stderr capture; independent from structured files"
+      }
+    ],
+    "assembly_max": 14800384,
+    "checker": "Source-boundchecker receives exact source-issued bytescontext for sameowner/kind/phase, validatesactualobjectlength/caps and consumes/decodes/hashes ALL bytes under checkcallback, then source-issued observation boundto exactcontext/bytes. Manifest/iterator/digest/count/readyflag cannot substitute. Requiredartifact set and semantic gate dependon actualconsumer graph, stillmissing.",
+    "input": "Inputcontext keeps all specs/digests/roles, but blobs onlycompleted capturedsubset. bytes_for(hashonly) raisesCaptureNotRequested without reread/promotion. Digest-onlyobservation cannot satisfy byte/AST/PE/parser gate evenif getterrefusal caught. Generatedcontext links exactinputcontext/earlycontext; no secondowner or mirroredregistry.",
+    "issued": "Same-owner source-issued GeneratedArtifactBytes carries owner/origin/nonce/registryrefs outsidewire,kind,phase,ACTUAL exactbytes,length/hash. Candidate/terminal distinct immutableobjects neveraliasedlivecells/assemblies/eachother. Decoder cannot mintthisbrand.",
+    "physical": "Known immutable storebytes and callbackACK do NOT prove physicalWrite/Flush/Close/readback; full14APIreservation and implementation remainsunqualified.",
+    "store_bytes": 40139776,
+    "transitions": "RESERVED->BUILDING->ISSUED aftercomplete freeze/hash/validation/originalclock. Failedfreeze->UNISSUED_PARTIAL discard; unknownreturn/release->UNKNOWN_RETURN quarantineoneassembly, nosecondbuild/retry. Knownlatereturn retainedinobservation/ineligible. Store slot notfileexistence."
+  },
+  "header": {
+    "bytes": 4096,
+    "fields": [
+      {
+        "bytes": 8,
+        "name": "magic",
+        "offset": 0,
+        "type": "ascii8"
+      },
+      {
+        "bytes": 2,
+        "name": "format_version",
+        "offset": 8,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "value_schema_version",
+        "offset": 10,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "profile",
+        "offset": 12,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 14,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "status",
+        "offset": 16,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "header_bytes",
+        "offset": 18,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "section_count",
+        "offset": 20,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "file_count",
+        "offset": 22,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "call_count",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "module_count",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "diagnostic_count",
+        "offset": 30,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "edge_count",
+        "offset": 32,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "flags",
+        "offset": 36,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "total_bytes",
+        "offset": 40,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_input_bytes",
+        "offset": 48,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "known_read_bytes",
+        "offset": 56,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_bytes",
+        "offset": 64,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "copied_bytes",
+        "offset": 72,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "origin_data_id",
+        "offset": 80,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "ledger_sequence",
+        "offset": 88,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "start_clock_bits",
+        "offset": 96,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "latest_clock_bits",
+        "offset": 104,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "freeze_clock_bits",
+        "offset": 112,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 1,
+        "name": "clock_tags",
+        "offset": 120,
+        "type": "u8"
+      },
+      {
+        "bytes": 7,
+        "name": "reserved_121_127",
+        "offset": 121,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 32,
+        "name": "previous_ledger_sha256",
+        "offset": 128,
+        "type": "digest32"
+      },
+      {
+        "bytes": 8,
+        "name": "qualification_bits",
+        "offset": 160,
+        "type": "u64_must_be_zero"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_R",
+        "offset": 168,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_C",
+        "offset": 172,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_E",
+        "offset": 176,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "early_count",
+        "offset": 180,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "module_count_repeat",
+        "offset": 182,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "read_chunk",
+        "offset": 184,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_policy",
+        "offset": 188,
+        "type": "u16"
+      },
+      {
+        "bytes": 66,
+        "name": "reserved_to_descriptors",
+        "offset": 190,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 512,
+        "name": "section_descriptors",
+        "offset": 256,
+        "type": "8x64"
+      },
+      {
+        "bytes": 3328,
+        "name": "reserved_zero_tail",
+        "offset": 768,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "identity": {
+    "endianness": "little",
+    "format_id": "ROLE_AWARE_LEDGER_1",
+    "format_version": 1,
+    "integer_input": "Exact builtin int only; bool/subclasses refused by type identity before comparison. No coercion/metaclass equality.",
+    "magic_hex": "5241504c45444731",
+    "meaning": "Decoded data has no source/owner/physical authority; format support is not active dispatch scope.",
+    "value_schema": 2
+  },
+  "legacy_projection": {
+    "atoms": "UNOBSERVED->tagUNOBSERVED/valueNone; observedNULL->NULL/None; HANDLE0->HANDLE/0; signedBOOL2/-1 and rawCOUNT0+definedness unchanged. Knownwrapperreturn+stopped, lateknownACK and knownloaderreturned names preserved.",
+    "diagnostic_limits": "The producer retains already-issued immutable diagnostic metadata and genuine tokens. Projection requires its actual class/message/args metadata to fit pinned legacy limits without substitution; otherwise LEGACY_NOT_REPRESENTABLE. It never invents an8-element args list from a single formatted string or recomputes str/repr from a mutated exception. Packed args canonical JSON preserves list boundaries; truncation is explicit.",
+    "diagnostics": "Diagnostic.identity keeps exactopaque tokenobject from sourcesnapshot; owner.exception_for_token(token) returns actualoriginalexception. No BaseExceptionleaf in immutablemetadata, no laterargs mutation changesissueddiagnostic. Packedordinal is onlydata, never token. Identityassertions remainEXTERNAL actualis checks.",
+    "fields": "Validate complete actual successorSnapshot against new schema first; every pinned50ee key is copied from actualsourceobservations. Calls/counters/flags/stage/loader/journal/terminal/origin/callback facts unchanged. Omit only explicitnewrole/capturestate/store fields. Never fabricatecapturecomplete, dropcalls, normalizeBOOL, resampleclock, changestatus or recategorizeunknown.",
+    "identities": [
+      "Continuation.owner is canonicalowner",
+      "Origin/nonce/registry/sink/loader/journal sameobjects",
+      "fullctx.early_context is originalearlyctx",
+      "early immutable byteobjects identicalinfullcontext",
+      "file/call refs canonical before/aftercontinue/close",
+      "observation.context exactownerissuedcontext",
+      "diagnostictoken resolves originalgetterobject"
+    ],
+    "input": "EXACT same-owner source-issued ProducerSnapshot; genuineopaque tokens/refleaves alreadyissuedby owner. Dict/DecodedLedger/plainstructural projection refused beforecomparison. DecodeddiagnosticIDs neverminttokens. This API belongsproducer adapter aftersourceauthorization.",
+    "proof_scope": "Unchanged48+8+16 actualproducerintegration afterfuture source; purecodecliterals onlyprove data/refusal, notownercontinuity.",
+    "reference": {
+      "bytes": 37533,
+      "path": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    },
+    "representability": "Only N4/allcapture/size<=4096/sum<=16384/M<=2/B<=2/existing7API/lifecycle/legacyenum domain. Hashonly/profile2/newtarget/unknownnewphase refusesLEGACY_NOT_REPRESENTABLE. An oldrefusal remainsactualrefusal; newprofile cannot upgradesuccess.",
+    "roles": {
+      "artifact": "CAPTURED_METADATA",
+      "owner_metadata": "CAPTURED_METADATA",
+      "software": "CAPTURED_SOFTWARE"
+    }
+  },
+  "live_first_fact": {
+    "FFI_limit": "Application ordering only after native-to-Python conversion; not an atomic no-allocation OS guarantee. Interruption before directslotassignment remainsunknown. Real wrapper/entry/conversion window pending. Legacy injected hooks test their deliveryboundary only.",
+    "additional_live_payload_bytes": 13823488,
+    "additional_live_payload_terms": {
+      "call_primitive_payload": 4456448,
+      "call_slot_refs": 4456448,
+      "exception_identity_refs": 40448,
+      "file_primitive_payload": 59392,
+      "file_slot_refs": 59392,
+      "module_dependency_refs_and_integer_payload": 262144,
+      "module_name_unicode_payload": 262144,
+      "module_primitive_payload": 14336,
+      "module_slot_refs": 14336,
+      "original_path_unicode_payload": 4198400
+    },
+    "algorithm": [
+      "Retain returned raw object with one direct slotassignment when previousslot isUNOBSERVED, before typechecking/cache/fold/format/clock/packing. If already observed preservefirst and validate identicalduplicate afterward.",
+      "Observedness is slotisnotUNOBSERVED, not a laterboolflag; interruption afterassignment retains0/None even if ACK/flag writes neverhappen.",
+      "Only afterfirststore validate exacttype/domain and reconcile. Error-definition is its own sentinel-or-bool atom; missingdefinition ispending, notfalse.",
+      "Any cache/encoding fault latches originalobject/quarantineswork, keeps canonicalfacts and oncecleanup. Reporting derives rawknown contribution in one coldlinearpass; no healing/retry.",
+      "Hash/copy return is also sentinel-or-original returnslot, registered before contributioncounter; no-return keeps unknownoperation tail.",
+      "Encoder snapshots canonical sourcefields and independently derives flags; partialpacking never mutates sourcecell or issues eligible bytes."
+    ],
+    "authority": "Canonical PREALLOCATED PYTHON SLOTS; encoded256B cells are DERIVED, not first-fact authority. Allocate/bind RawCarrier to canonicalowner/call/registry/buffer before invoke. Its scalar/count/error/error-definition/clock/opaque-return slots start as uniqueUNOBSERVED. No packed byte/flag is used to determine whether raw0/NULL was observed.",
+    "budget": "Keep prior113985546 encoded/named reserve unchanged conservatively, ADD explicit live references/primitive/stringpayload rather than call encodedcells livePythonfacts.8B references assume64bit runtime; per-slot primitivepayload conservatively<=8B for in-domainfields, aliases charged more thanonce. Originalpath Unicodepayload4*4100*N, names4*512*M and edge refs+integers explicitlyseparate from wirepools. PyObject/slotcontainerheaders/dict/allocator/exception/module graphs and malformedobjectpayload are UNKNOWNRSS, neverzero. Unencodableraw prevents admission. No256MiBfit follows.",
+    "combined_conservative_named_payload_bytes": 127809034,
+    "commit_mechanism": "RawCarrier is a fixed source-owned __slots__ class with ordinary builtin member slots and no custom __setattr__, property/descriptor hook, weakref callback or destructor on the commit fields. The unique global UNOBSERVED sentinel stays strongly referenced. The commit operation is the ordinary member reference assignment, retaining the exact returned object; it does not call a user coercion/encoder or create a tuple/dict/packed record. This is an application-level commit point, not an OS/FFI atomic-return guarantee. Duplicate/conflicting observations are checked only after the first slot is safely present.",
+    "first_error": "The first original exception is assigned to the owner primary slot before diagnostics, wrapper-state formatting or other throwable observation work. Source entry barriers consult that canonical slot/accounting-fault reference, not a later serialized stopped flag. Same original object rethrows do not consume another diagnostic. Malformed raw objects remain referenced but can make bounded serialization unavailable, which is an explicit incomplete condition.",
+    "ports": [
+      "reserve_call(api,file_ref,requested,buffer_ref)->source-issued CallLease/RawCarrier before invocation",
+      "trusted binding writes converted rawvalue directly in boundcarrier before reconcile; no rawhandle transfer from serializeddata",
+      "AdoptionHooks.reconcile(call_ref) validates/folds; legacy store_scalar/count/error pure-injected shim obeys same first-slot law after its foreign-ref precondition",
+      "owner.snapshot()->same-owner ProducerSnapshot with immutable diagnostics and genuine opaque refs",
+      "owner.freeze_generated(kind)->source-issued GeneratedArtifactBytes onceperkind",
+      "owner.generated_bytes(kind)->actual exact immutable bytes onlyifeligible",
+      "project_legacy(ProducerSnapshot)->strict capture-only LegacySnapshot"
+    ],
+    "slot_fields": {
+      "call": [
+        "owner",
+        "ordinal",
+        "api",
+        "file",
+        "requested",
+        "buffer",
+        "generation",
+        "scalar_fact",
+        "count_fact",
+        "error_fact",
+        "error_definition_fact",
+        "pre_clock_fact",
+        "post_clock_fact",
+        "invoked",
+        "scalar_aux_ack",
+        "count_aux_ack",
+        "right_transfer_ack",
+        "wrapper_return_fact",
+        "wrapper_raise_fact",
+        "stopped",
+        "buffer_state",
+        "buffer_written",
+        "query_bytes_ref",
+        "reservation_fold",
+        "read_fold_phase",
+        "read_contribution",
+        "hash_attempted",
+        "hash_return_fact",
+        "copy_attempted",
+        "copy_return_fact",
+        "hashed_contribution",
+        "captured_contribution",
+        "ref",
+        "diagnostic_id"
+      ],
+      "file": [
+        "owner",
+        "ordinal",
+        "spec_ref",
+        "path_ref",
+        "role",
+        "size",
+        "expected_digest_ref",
+        "actual_digest_ref",
+        "early_ordinal",
+        "open_call_ref",
+        "close_call_ref",
+        "identity_query_refs",
+        "identity_witness_ref",
+        "hash_state_ref",
+        "assembly_ref",
+        "blob_ref",
+        "known_count",
+        "hashed_count",
+        "captured_count",
+        "read_reservations",
+        "capture_state",
+        "open_state",
+        "identity_state",
+        "close_state",
+        "close_reserved",
+        "read_unknown",
+        "hash_unknown",
+        "copy_unknown",
+        "ref"
+      ],
+      "module": [
+        "owner",
+        "ordinal",
+        "file_ref",
+        "name_ref",
+        "dependencies_ref",
+        "package",
+        "attempt_order",
+        "return_order",
+        "accepted",
+        "cached",
+        "cache_hit_count",
+        "diagnostic_id",
+        "compiled_object_ref",
+        "ref"
+      ]
+    }
+  },
+  "memory_scope": "256MiB belongs vocabulary-only/new84 harness ceiling, not inferenceRAM/VRAM/KVfit. Fullmodelinference allocation/deployment remains separatelyundeclared/unqualified.",
+  "module_record": {
+    "bytes": 64,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "file_ordinal",
+        "offset": 2,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "flags",
+        "offset": 4,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "dependency_count",
+        "offset": 6,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "name_offset",
+        "offset": 8,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "name_length",
+        "offset": 12,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_14",
+        "offset": 14,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 4,
+        "name": "edge_offset",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "first_diagnostic",
+        "offset": 20,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 2,
+        "name": "attempt_order",
+        "offset": 24,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "return_order",
+        "offset": 26,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "cache_hit_count",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 32,
+        "name": "reserved_zero_tail",
+        "offset": 32,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "publication": {
+    "DAG": "candidateledger->candidate preclose; closes->terminalledger->cleanup/report; failureprejournalclose ifallowed; consumedjournalclose forbidsappend regardlessACK. receipt references prior terminal/cleanup/report/journal, seal priorreceipt/pins. Currentpacket/report selfrefnull; noforward/cyclic/selfhash. FinalACK in-memory afteroriginalfinalclock; postsealerror noadditionalwrites.",
+    "artifact_exact_keys": [
+      "kind",
+      "state",
+      "attempted",
+      "return_observed",
+      "eligible",
+      "bytes",
+      "sha256",
+      "phase"
+    ],
+    "elapsed": "Typed clockatom latest-start onlyifrepresentable else null+incomplete; no newclock orfloatcoercion. Data gates exactorderedsubset of pinned requiredgateorder, not realauthority. Everyqualification boolfalse; profilepass nevercomes from decode.",
+    "encoding": "Exact canonicalUTF8JSON sortkeys/separatorscomma-colon/ensure_asciiTrue/allow_nanFalse plus ONE LF; no BOM/extrakeys/duplicatekeys/alternatewhitespace/trailingLF. Enumstrings exact. Ref bytes/hash nulluntilknowncomplete. Actual packets/report<=8192 beforeissuance; full file/callarrays forbidden.",
+    "membership": "14 registry slots, each atmostoneattempt and oneeligiblebytesobject; reservation!=fileexistence. candidate-ledger/candidate onlynormalacceptedwork; terminal/cleanup/failure maynegative/incomplete. Childattempt precedesobservedchildtrace; childfailure conditionalnegative, streamsindependent. receipt/seal onlyallrequiredgates+knownclosures+journalclose. Missing/unknownmandatoryartifact or failuremarker vetoespass.",
+    "nested": {
+      "counts": [
+        "N",
+        "used_C",
+        "M",
+        "used_E"
+      ],
+      "diagnostic_counts": [
+        "committed",
+        "primary",
+        "secondary",
+        "formatter"
+      ],
+      "ledger_refs": [
+        "candidate",
+        "terminal"
+      ],
+      "links": [
+        "journal",
+        "producer_report",
+        "cleanup",
+        "receipt"
+      ],
+      "qualification": [
+        "originals",
+        "real_entry",
+        "real_FFI",
+        "physical_IO",
+        "new84_runtime",
+        "resource_fit",
+        "scientific"
+      ],
+      "totals": [
+        "known_read_bytes",
+        "hashed_bytes",
+        "copied_bytes",
+        "captured_input_bytes",
+        "generated_bytes",
+        "read_unknown",
+        "hash_unknown",
+        "copy_unknown"
+      ]
+    },
+    "nested_rules": {
+      "artifacts": "Exactly fourteen entries in enum order; each has closed fields. bytes/hash null before completed known bytes; eligible only ISSUED with actual source-bound store object. A known late returned full snapshot may retain bytes/hash but eligiblefalse and UNKNOWN_RETURN/UNISSUED state; it does not satisfy a gate.",
+      "counts": "All four exact integer fields, nonnegative within header/event bounds.",
+      "diagnostic_counts": "Four exact nonnegative ints; committed=primary+secondary, primary0or1, formatter<=secondary.",
+      "gates": "Exact ordered prefix of pinned required_gate_order, strings only. Decoder validates spelling/order but cannot mint their source authority.",
+      "qualification": "Seven exactbool fields, each false in encoded format. No caller can set themtrue to issue runtime permission.",
+      "reference": "Exactly kind/phase/bytes/sha256. Enumkind, phase, positive exact bytecount<=artifactcap, lower64hex SHA. Reference object nullable as whole; never partial numeric/hash ready claim.",
+      "totals": "Exact nonnegative integer byte fields, three exactbool unknown axes. They are source-observed lower bounds when unknown; no default0 tail."
+    },
+    "packet_exact_keys": [
+      "schema_version",
+      "kind",
+      "scope",
+      "status",
+      "elapsed",
+      "totals",
+      "gates",
+      "ledger_refs",
+      "links",
+      "diagnostic_counts",
+      "qualification"
+    ],
+    "reference_exact_keys": [
+      "kind",
+      "phase",
+      "bytes",
+      "sha256"
+    ],
+    "report_exact_keys": [
+      "schema_version",
+      "format_id",
+      "profile",
+      "phase",
+      "status",
+      "counts",
+      "totals",
+      "ledger_refs",
+      "artifacts",
+      "diagnostic_counts",
+      "qualification"
+    ]
+  },
+  "qualification": {
+    "encoder_implemented": false,
+    "full_roster_admitted": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "producer_implemented": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "schema_design_only": true,
+    "scientific": false
+  },
+  "query_paths": {
+    "interpretation": "Attrs <II attributes/reparse_tag; verified original nondirectory/nonreparse. Finalframe4101 UTF16LE units; returnedDWORD n1..4100 and unitn NUL. All8202 raw bytes retained, tail not presumed defined. Size <q nonnegative==expected. Fragment attrs36/Find592 rawbytes cannot prove original identity.",
+    "lifetime": "Original UTF8 pool<=3*4100*N retained once; final raw UTF16 stays in query frame. One128KiB comparison workspace, no second retained decodedfinalpath pool. Query/read generation reuse only after complete required capture/hash/copy; failed/unknown copy quarantines current buffer. Uninitialized memory never gets QUERY_DEFINED.",
+    "path_policy": "Original strictUTF8 validscalars/noNUL, C/D absolute, <=4096 UTF16 units. ASCII casefold/slash key only; reject dot/dotdot/empty components, reservedDOS, trailingdot/space, forbidden controls/chars per pinned legacy path_key. Preserve original spelling. Final comparison strips native leading\\?\\ only; never open reportedpath. Original paths packed in file order with exact no-gap owned spans; byte and UTF16 counts recompute. Fragment targetlabel boundedUTF8 may contain searchwildcard and is not admitted original.",
+    "spans": "Original filef span8218*f: attrs8@+0, finalpath8202@+8, size8@+8210. Full frames retained. API2 noframe. Per-call spans exactly its own file/API. Fragment frame starts0 with exact API size. Missing capture has flagsfalse/length0/offset0 and reserved zero storage, never observed zeros. No frame alias across calls/files."
+  },
+  "question_answers": {
+    "Q1": "header/sections/framing/publication",
+    "Q10": "legacy_projection",
+    "Q2": "live_first_fact",
+    "Q3": "apis/raw_atoms",
+    "Q4": "flag_state_rules",
+    "Q5": "clocks",
+    "Q6": "query_paths",
+    "Q7": "diagnostics",
+    "Q8": "files_modules",
+    "Q9": "generated"
+  },
+  "raw_atoms": {
+    "applicability": "IDs1/9 HANDLE; IDs2/4 DWORD; all others BOOL. Count only6/13. COUNT_DEFINED iff invoked, valid observed nonzero signedBOOL and observed exactCOUNT32<=requested. This preserves known returned counts even when buffer capture/copy is missing; hashing/copying additionally requires observed bufferdata/written>=count. Failed/unknown scalar leaves observed raw count undefined, even0. Error DWORD may be observed for any enteredAPI; definition has its own sentinel-or-bool observation. ERROR_DEFINED requires definitionobserved and failurebranch. Undefined raw values are retained, never used as a known result.",
+    "domains": "HANDLE unsigned64 or observedNULL. INVALID_HANDLE=18446744073709551615 means known failure/no handle; HANDLE0 or NULL is ownership-unknown/no guessed close. DWORD/COUNT32 unsigned32 with high32 zero. BOOL exact signed32 represented low32 two-complement/high32zero; every nonzero2/-1 succeeds,0 fails. Raw NULL for BOOL/DWORD is retainable malformed negative only: MALFORMED_RAW,domain-validfalse,STOPPED,statusINCOMPLETE.",
+    "inputs": "INPUT_HANDLE_PRESENT only APIs2..7/10..11/13..14; absent bits0 versus presentHANDLE0 distinct. REQUESTED_PRESENT onlyRead/Write; absent requested0, present known0 legal fragment only. BUFFER_PRESENT requires buffer_id0read/1query/2write/3control, generation and buffer_written in capacity; absent ID0xffff/generation0/written0. Original Read requested1..min(chunk,remaining); fragment requestDWORD may be0 and never allocates that payload. QUERY_SPAN_PRESENT only applicable query APIs, exact owning frame offset/size.",
+    "presence": "UNOBSERVED=>observedfalse/nullfalse/bits0; NULL=>observedtrue/nulltrue/bits0; HANDLE0=>observedtrue/nullfalse/bits0. Count/error observed0 uses presence=true/value0. Presence derives from canonical sentinel identity, never aux flags.",
+    "scope": "APIs8..14 only fragments. FindClose only search, CloseHandle only file; target_class table is exact. Their scopes do not enter7-original C/query8218N arithmetic.",
+    "unsupported": "Raw malformed object/out-of-width integer is retained in canonical source slot, stops work and cannot issue a lossless ledger. Encoder refuses UNENCODABLE_RAW instead of wrap/clamp/default. A bounded failure diagnostic is not exact replacement raw facts. No decoder can invent a successful original from malformed record."
+  },
+  "schema_version": 1,
+  "section_descriptor": {
+    "bytes": 64,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "id",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "record_size",
+        "offset": 2,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "count",
+        "offset": 4,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "offset",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "length",
+        "offset": 16,
+        "type": "u64"
+      },
+      {
+        "bytes": 32,
+        "name": "sha256",
+        "offset": 24,
+        "type": "digest32"
+      },
+      {
+        "bytes": 4,
+        "name": "flags",
+        "offset": 56,
+        "type": "u32_must_be_zero"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_zero_tail",
+        "offset": 60,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": 1,
+      "length": "256*N",
+      "name": "files",
+      "record_bytes": 256
+    },
+    {
+      "id": 2,
+      "length": "256*used_C",
+      "name": "calls",
+      "record_bytes": 256
+    },
+    {
+      "id": 3,
+      "length": "8218*N; fragment exact applicable frame size",
+      "name": "queries",
+      "record_bytes": 8218
+    },
+    {
+      "id": 4,
+      "length": "sum original UTF8 bytes",
+      "name": "paths",
+      "record_bytes": 1
+    },
+    {
+      "id": 5,
+      "length": "64*M",
+      "name": "modules",
+      "record_bytes": 64
+    },
+    {
+      "id": 6,
+      "length": "sum ASCII name bytes",
+      "name": "module_names",
+      "record_bytes": 1
+    },
+    {
+      "id": 7,
+      "length": "2*edge_count",
+      "name": "module_edges",
+      "record_bytes": 2
+    },
+    {
+      "id": 8,
+      "length": "1024*committed_D",
+      "name": "diagnostics",
+      "record_bytes": 1024
+    }
+  ],
+  "status": "COMPLETE_SCHEMA_DATA_ONLY_PENDING_INDEPENDENT_PEER",
+  "validation": {
+    "error": "FormatError firstcode/offset/path only. Checkexceptions neverwrapped. Invalidcomplete cannot fallbackfragment/legacy. No decodedready/sourceauthentication.",
+    "error_codes": {
+      "ATOM_DOMAIN": 12,
+      "CLOCK_DOMAIN": 18,
+      "DIAGNOSTIC_LAYOUT": 19,
+      "ENUM_DOMAIN": 11,
+      "INTEGER_DOMAIN": 3,
+      "LEGACY_NOT_REPRESENTABLE": 22,
+      "MAGIC_VERSION": 6,
+      "MODULE_GRAPH": 16,
+      "OVERFLOW": 5,
+      "PATH_DOMAIN": 15,
+      "QUERY_SPAN": 14,
+      "REFERENCE_DOMAIN": 20,
+      "RESERVED_NONZERO": 7,
+      "ROLE_CAPTURE": 17,
+      "SCHEMA_KEYS": 2,
+      "SECTION_DIGEST": 9,
+      "SECTION_LAYOUT": 8,
+      "SIZE_CAP": 4,
+      "STATE_CONTRADICTION": 13,
+      "TRAILING_BYTES": 10,
+      "TYPE_DOMAIN": 1,
+      "UNENCODABLE_RAW": 21,
+      "UNISSUED_ARTIFACT": 23
+    },
+    "order": [
+      "exactbuiltin/containercardinality detachedcapture",
+      "header/version/profile/reserved/count/checkedsize",
+      "sectionorder/length/hash/completeconsumption",
+      "fieldenum/width/typedraw/clock/flag",
+      "file/path/queryspan",
+      "modulegraph/roles/loadorder",
+      "callordinal/API/state/count/contribution/close",
+      "canonicalfile/header sums and diagnostics",
+      "phase/previouspins/manifestmembership/DAG",
+      "immutableoutput thenfinalcheck"
+    ]
+  },
+  "value_api_details": {
+    "call_exact_keys": [
+      "ordinal",
+      "file_id",
+      "api",
+      "record_version",
+      "flags",
+      "requested",
+      "buffer_id",
+      "phase",
+      "generation",
+      "buffer_written",
+      "scalar_atom",
+      "count_atom",
+      "error_atom",
+      "hashed_contribution",
+      "captured_contribution",
+      "known_count_contribution",
+      "query_offset",
+      "query_length",
+      "input_handle_atom",
+      "pre_dispatch_clock",
+      "post_binding_clock",
+      "error_id",
+      "path_id",
+      "fold_state",
+      "buffer_state"
+    ],
+    "diagnostics": "Every nonreserved diagnosticlayout key exactly; state/severity/phase namedstrings, flags closedbooldict, class_utf8/message_utf8 exact validUTF8 bytes of declaredlength, args_utf8 exact canonicalJSON bytes; zero field padding is encoderderived, not input. clock_bits supplied as clock_atom; clock_tag derived. Optionalrefs None/int.",
+    "files": "Every nonreserved file layout key exactly; enum fields namedstrings, flags closed booldict, expected/actual digests None orbytes32. Optional integer fields None or exactint. No convenience keys.",
+    "flags": "Every named boolean bit supplied as exactbool and cross-validated, clock tags derived from clockatoms; no raw integer flagword in valueAPI.",
+    "header": "The exact keys in api.value_shape.header_keys; enums namedstrings and flags closedbooldict. Clock fields typedatoms; previous_ledger_sha256 bytes32 orNone matching presence flag. Header derived counts/total/sectiondigests not accepted as caller authority.",
+    "modules": "Every nonreserved modulelayout key exactly; flags closed booldict, optional orders/diagnostic None orint. Pools carry names/edges.",
+    "record_version": 1
+  }
+}

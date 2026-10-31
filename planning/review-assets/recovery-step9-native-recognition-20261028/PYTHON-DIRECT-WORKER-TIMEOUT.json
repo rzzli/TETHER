@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T16:13:16.059769+00:00",
+  "status": "passed_direct_worker_identity_and_forced_timeout",
+  "helper_sha256": "752844ce6c36aa598fc49527467345c32287bcf81fa036f76e53b1d90fbdcd19",
+  "parent_pid": 38280,
+  "launched_pid": 13808,
+  "worker": {
+    "pid": 13808,
+    "ppid": 38280,
+    "executable": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "base_executable": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+    "prefix": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment",
+    "version": "0.3.11",
+    "isolated": true,
+    "dont_write_bytecode": true
+  },
+  "base_executable": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+  "base_executable_sha256": "d2ec5b9401b6471874373fe3e4329da1da85014d98f8abedd4e0f02ffdaa21a1",
+  "controlled_venv_launcher": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+  "child_flags": [
+    "-I",
+    "-B"
+  ],
+  "timed_out": true,
+  "killed_owned_actual_worker": true,
+  "actual_worker_equals_launched_pid": true,
+  "handle_reaped": true,
+  "returncode": 1,
+  "elapsed_seconds": 1.0310000000754371,
+  "http_requests": 0,
+  "asof_code_imports": 0,
+  "native_target_or_model_calls": 0,
+  "scope": "One print-and-sleep worker using the proposed exact interpreter transport",
+  "limitation": "Not a general process-tree/job containment or HTTP/loader conformance proof"
+}

@@ -1,0 +1,10 @@
+test_all_arms_source_and_usage_replay_without_recorded_consumption (tests.test_study_native_composition.NativeCompositionTests.test_all_arms_source_and_usage_replay_without_recorded_consumption) ... ok
+test_history_is_same_arm_accepted_quote_sources (tests.test_study_native_composition.NativeCompositionTests.test_history_is_same_arm_accepted_quote_sources) ... ok
+test_native_roots_required_and_original_locations_are_metadata (tests.test_study_native_composition.NativeCompositionTests.test_native_roots_required_and_original_locations_are_metadata) ... ok
+test_run_relocation_uses_logical_case_parent (tests.test_study_native_composition.NativeCompositionTests.test_run_relocation_uses_logical_case_parent) ... ok
+test_shutdown_and_existing_output_prevent_duplicate_dispatch (tests.test_study_native_composition.NativeCompositionTests.test_shutdown_and_existing_output_prevent_duplicate_dispatch) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 116.803s
+
+OK

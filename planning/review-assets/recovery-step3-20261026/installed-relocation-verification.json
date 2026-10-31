@@ -1,0 +1,169 @@
+{
+  "status": "passed",
+  "installed_module": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-archive-wheel-20261026\\environment\\Lib\\site-packages\\asof\\archive\\core.py",
+  "isolated_mode": true,
+  "verifier_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-archive-wheel-20261026\\environment",
+  "results": [
+    {
+      "run_id": "legacy_v1",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "unavailable_legacy_v1",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 1,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 13,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "6eeb92cc6543d8f5c886933e51dbf9c6e4ab376e578f8bff847989451b238f12",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 27
+      },
+      "elapsed_seconds": 0.5309999999590218
+    },
+    {
+      "run_id": "core_v2",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 2,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 16,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "6eeb92cc6543d8f5c886933e51dbf9c6e4ab376e578f8bff847989451b238f12",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 37
+      },
+      "elapsed_seconds": 0.6880000000237487
+    },
+    {
+      "run_id": "local_selection_recorded",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "6eeb92cc6543d8f5c886933e51dbf9c6e4ab376e578f8bff847989451b238f12",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 2.25
+    },
+    {
+      "run_id": "local_selection_native",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "6eeb92cc6543d8f5c886933e51dbf9c6e4ab376e578f8bff847989451b238f12",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 3.7959999999729916
+    },
+    {
+      "run_id": "bounded_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "interpretation_integrity_and_structure_verified",
+        "source_inputs_replayed": true,
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "code_closure_scope": "historical_declared_dependencies; no execution attestation",
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 2.1410000000032596
+    },
+    {
+      "run_id": "question_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "question_run_source_and_mechanical_consistency_verified",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "source_admission": "replayed",
+        "adapter_verification": "exact_recorded_replay_not_model_execution",
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 2.9839999999967404
+    },
+    {
+      "run_id": "question_latest_failed",
+      "status": "passed",
+      "result": {
+        "schema_version": 2,
+        "kind": "question_interpretation",
+        "last_event": "build_failed",
+        "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+        "durable_events": 9,
+        "calls": 1,
+        "unresolved_attempts": [],
+        "measured_usage": {
+          "input_tokens": 4650,
+          "output_tokens": 601,
+          "cost_usd": 0.0
+        },
+        "estimated_upper_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "receipt_present": false,
+        "failure": {
+          "schema_version": 2,
+          "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+          "stage": "response_validation",
+          "error_class": "ContractError",
+          "secondary_failures": [],
+          "qualification": "Failure fallback, not a successful receipt or execution attestation"
+        },
+        "recovery_action": "inspect only; never repeat inference",
+        "status": "terminal_failure_inspected_not_success",
+        "source_admission": "replayed",
+        "scientific_validation": "not_performed",
+        "archived_code_executed": false
+      },
+      "elapsed_seconds": 2.922000000020489
+    }
+  ],
+  "elapsed_seconds": 15.311999999976251,
+  "peak_working_set_bytes": 57524224,
+  "original_root_access_attempts": [],
+  "archived_execution_attempts": [],
+  "repository_tools_import_attempts": [],
+  "network_or_child_attempts": [],
+  "receipt_bytes_rewritten": false,
+  "historical_program_execution": "not_performed",
+  "scientific_validation": "not_established"
+}

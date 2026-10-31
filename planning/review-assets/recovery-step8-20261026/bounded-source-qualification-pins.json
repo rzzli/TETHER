@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "original_feasibility_pins_unchanged": true,
+  "files": {
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\020db7f1cd3abd2452d22efeb0cce9d8d69ab03f.json": {
+      "sha256": "dce47ff67ffcbe27dea3a6884451be88f7d8ae7e9bd29932a2a19f1731ad66c9",
+      "bytes": 3197
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\0bdff5eb46a8df1453249728aaf9fce0db192eca.json": {
+      "sha256": "0a9eb9b8a59bb81f396a23b385838f5bc67e42810ead39335487d9d28c4ae808",
+      "bytes": 4041
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\15a8188e8d2c7c65ef76da3a9b6dfdb31cc5d22e.json": {
+      "sha256": "5e0808d4fd6616d8fc5c25c3fd8be17fc1ac574fb2d9ea4c5c455c75aa6b3645",
+      "bytes": 3404
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\18770602aad6af40c4cd20ea5eac63069a56eb26.json": {
+      "sha256": "339ef41a28bfae1c76349d2a62a79dd3ef741cbe32bc26c1f27846d520d73dfa",
+      "bytes": 3155
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\1d5382c5036594cb06ef2cef9629827a6090c9ca.json": {
+      "sha256": "7ce100b009dfb78698b279a69e0df13386af5c00b7edbebdba64c3a3815d7aec",
+      "bytes": 3312
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\251521cd416a17c4d6ff1ed154e73059b24160f8.json": {
+      "sha256": "30b01b2f24c1d913c09a0a1241892789d38a4556bf1a7562f2fa0995993d8863",
+      "bytes": 3169
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\offset-checks.json": {
+      "sha256": "731ed7d33bb0de39e259d16dc51c83c8ddf6824faae4cb337834028a7c6e8571",
+      "bytes": 1278
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\source-qualification.json": {
+      "sha256": "305dffb35183b2f4973818dd70f10a957fa30a65649fc8c6de5858648aad8a5a",
+      "bytes": 16481
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\bounded-source-plan-v1.json": {
+      "sha256": "bf23203020e88c591512c64b81bfedf733b641bbf6b61f7c8e10a3f89992cdc2",
+      "bytes": 8750
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\bounded-source-plan-v1.sha256": {
+      "sha256": "e1b9993de54e654a17336986ae9cf1a7ba2d4771a4e314681f8c76b1031a8a40",
+      "bytes": 66
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\prepare_bounded_plan.py": {
+      "sha256": "cdba89623fdb759fc96a58438ac429e95c99c98fda73ac64e1ee757319cbbf8c",
+      "bytes": 4314
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\read_bounded_sources.py": {
+      "sha256": "0370696fff12a1f6c39eb1ccadc981783482c51452465f09711eea9790af1024",
+      "bytes": 5039
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\bounded-source-qualification.md": {
+      "sha256": "f696fd0cc15b7892c1caa9e984f23a4e970fa9d6fea5f0aac8443d9085e82ab5",
+      "bytes": 9850
+    },
+    "data\\cache\\recovery-step8-bounded-sources-20261026\\article-metadata-status.json": {
+      "sha256": "23761828039b7fb0a68bb78260925733316d85d189fcd78b461430fe645abd73",
+      "bytes": 6179
+    }
+  }
+}

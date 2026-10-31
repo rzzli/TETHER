@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "ONE_NAMED_PRE_CODE_LITERAL_CORRECTION_AUTHORIZED",
+  "preserve": {
+    "corpus_v1_sha256": "16899fd5481e8bb63790dc9314acb8553af3eec65a81dc14ac6ce5cbeba56232",
+    "test_v1_sha256": "8c4f5d138b01f4dd97bebd349b44ec92ac1658468f6ec502c6305da6b24453c8",
+    "structure_proof_v1_sha256": "5279908d8af849e994afbf9bf69bbf58db01bf7b8182023da16ead628b9651cc",
+    "self_review_v1_sha256": "484537edd281af6e36996928027a593c1ca08e790304a7503951833a4e462948"
+  },
+  "scope": "Fixture author, literals, tests, contract, provenance and structural proof successors only; no subject exists or has run.",
+  "finite_batch": [
+    "Use SHA256(empty) for expected and actual digests of the four complete empty-file occurrences across three bases; apply declared zero-size descriptor rule to shape-only data. Recompute dependent section hashes, raw pins and the terminal previous-candidate pin.",
+    "Keep a pristine independent pre-encode value copy in test01. Assert caller value and decoded value both equal that pristine value.",
+    "Change the existing failed WriteFile fragment13 observed undefined COUNT32 from7 to0, retaining observedness and undefinedness.",
+    "Use observed input HANDLE0 with PRESENT=true in existing Flush fragment14, preserving distinction from unobserved input."
+  ],
+  "counts": {"base_values": 40, "byte_negatives": 225, "anchors": 134},
+  "schema_change": false,
+  "new_family": false,
+  "source_implementation_authorized": false,
+  "next": "Retain corrected structural proof and exact independent peer review; root then authorizes the concrete four-module producer slice35484f8a. No codec-only completion or decoded ownership substitute."
+}

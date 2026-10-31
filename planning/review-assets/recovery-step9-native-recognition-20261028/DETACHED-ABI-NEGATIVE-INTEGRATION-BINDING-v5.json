@@ -1,0 +1,80 @@
+{
+  "SDK": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "activity": {
+    "GGUF_or_protected_payload_reads": 0,
+    "actual_children": 0,
+    "native_loads": 0,
+    "real_SDK_constructions": 0
+  },
+  "checked_at_utc": "2026-10-29T00:07:04.963567+00:00",
+  "checker": {
+    "bytes": 21945,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v5.py",
+    "sha256": "6eb013d80239c255467642f147ccc75111fbe7a077e92fb255394b64c734295e"
+  },
+  "component": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  },
+  "diagnostic_vectors": [
+    {
+      "ABI_observations_present": false,
+      "case": "diagnostic-context-2",
+      "status": "failed",
+      "untrusted_true_predicates_did_not_authorize": true
+    },
+    {
+      "ABI_observations_present": false,
+      "case": "diagnostic-context-0",
+      "status": "failed",
+      "untrusted_true_predicates_did_not_authorize": true
+    }
+  ],
+  "final_contract": {
+    "bytes": 20387,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v5.json",
+    "sha256": "9ba9e22e5051e316bb18cc6677478b293b3be58d33c14818e85e09447cffb116"
+  },
+  "fixture_chains_recomputed": 17,
+  "fixture_events_recomputed": 260,
+  "fixture_files_rehashed": 199,
+  "fixtures": 17,
+  "helper": {
+    "bytes": 43541,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v5.py",
+    "sha256": "7a3ecd755bb4f0d060b09cb6619ec0f6579f4c6b2f3ac837f1f653c9021bfce4"
+  },
+  "proof": {
+    "bytes": 68300,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v5.json",
+    "sha256": "e01cf6971331b94a52ab1393718f711369befbef9f6d9fb69636bae811a62275"
+  },
+  "schema_version": 1,
+  "scope": "Own synthetic file evidence and final source binding only; no actual ABI/diagnostic execution or policy expansion. Parent source and all frozen historical proofs unchanged.",
+  "status": "passed_readonly_binding_of_pure_lifecycle_evidence",
+  "unchanged_function_ASTs": {
+    "abi_argv": "40cb02066e75fa2dc9d6c3e7cd054cbd3495a2510e9362f0d85402bc30642aa1",
+    "api_class": "0f24b22f28a513e707247c16b5d1857577b0042ab62c8a5f5cf36a2ebbe3f6d1",
+    "exact": "076fa98b41d264684bb8a15daafd55ac83d37b1ccdfec00a28b7b10cb23c9318",
+    "execute": "90faafc02456eb365e68c070df77f9d09bbca970d52f09e310c4338f3c588999",
+    "json_value": "b31065421c704f1fe283da8f27d12f305e3d0beeb5f5df049cc71886e57f15ce",
+    "runtime_pins": "51da1b0879a8598ae5ea81e0e5114aa896604e19523d9daec3bdd616e9a772aa",
+    "sha": "82daf9a8840800fa4b1f26786e43bbffb24afd53ebb2d272f3678319873cd50c",
+    "terminal_observer": "07e1d33b3cfdbbaae31a6ab205349e7396434a22c2b252d04c791ad8b558b9be",
+    "validate_child_artifacts": "f5beaeb4e0b3abfda60064ae5b09f8ed0266a805575cf2b1210a3bbc235c9853",
+    "validate_modules": "40a2f125e56a9af4892a1705cd3599aa91424973deb1a72f56489b3d33a0f463"
+  },
+  "unchanged_success_wire_sections": [
+    "expected_defaults",
+    "expected_layouts",
+    "child_artifacts",
+    "version_policy",
+    "runtime_pins",
+    "System32_candidate_names"
+  ]
+}

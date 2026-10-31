@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "known_single_real_record_retrieval_verified",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-retrieval-known-real-20261026T215340Z",
+  "guards": {
+    "original_data": [],
+    "dispatch": []
+  },
+  "model_calls": 0,
+  "tokenizer_calls": 0,
+  "real_universe_expansion": false,
+  "scientific_validation": "not_performed",
+  "source_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "source_parent_receipt_sha256": "c5d934e7c9af034d3d60f026e4a10aeeca8a037e81f0338be408c6fb5bceea19",
+  "authority_sha256": "d86c8d27d37e6ed07e5e774977af4ae20ac24701d352661c2de1871ccfaf7972",
+  "declared_real_candidates": 1,
+  "results": [
+    {
+      "strategy": "id_order_v1",
+      "result": {
+        "receipt_sha256": "119320dc1f0328dbd48bda6f4b652c009b9a77c305bdc6903b274e9e9a1e703b",
+        "authority_sha256": "d86c8d27d37e6ed07e5e774977af4ae20ac24701d352661c2de1871ccfaf7972",
+        "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 1,
+          "raw_qualified_candidates": 1,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "excluded": [],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0
+      },
+      "replay": {
+        "status": "verified",
+        "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 1,
+          "raw_qualified_candidates": 1,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "excluded": [],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0,
+        "scientific_answer_status": "not_attempted"
+      }
+    },
+    {
+      "strategy": "literal_case_overlap_then_id_v1",
+      "result": {
+        "receipt_sha256": "249102a0320da8450b0635cd622587660586f7e8ba111e926e4bcba4ed8bcacc",
+        "authority_sha256": "d86c8d27d37e6ed07e5e774977af4ae20ac24701d352661c2de1871ccfaf7972",
+        "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 1,
+          "raw_qualified_candidates": 1,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "excluded": [],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0
+      },
+      "replay": {
+        "status": "verified",
+        "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+        "coverage": {
+          "status": "selected_subset",
+          "declared_candidates": 1,
+          "raw_qualified_candidates": 1,
+          "structurally_authenticated_candidates": 0,
+          "selected_count": 1,
+          "selected_rank_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "compiled_source_ids": [
+            "ot25:europepmc:91c27fcc680f479e627123e76c5b74c0adc88732"
+          ],
+          "excluded": [],
+          "parent_observations_available": 9,
+          "missing_input_count": 65,
+          "missing_count_basis": "snapshot_declaration",
+          "absence_claim": false,
+          "scientific_answer_status": "not_attempted"
+        },
+        "model_calls": 0,
+        "scientific_answer_status": "not_attempted"
+      }
+    }
+  ],
+  "preparation_seconds": 11.75,
+  "verification_seconds": 9.563000000023749,
+  "nontrivial_real_retrieval_demonstrated": false
+}

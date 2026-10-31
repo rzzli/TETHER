@@ -1,0 +1,80 @@
+{
+  "actual_API_calls": 0,
+  "clarifications_sent": [
+    {
+      "id": "COUNT_DOMAIN",
+      "issue": "COUNT32 is described but raw_count domain and requested/cap/prepared-buffer relationship are not machine-closed per API. A general fact atom must not let HANDLE/NULL or count on an unrelated API count as a valid count observation.",
+      "paths": [
+        "first_fact_atom.API_domains",
+        "closed_steps.count",
+        "call_record_fields.requested",
+        "first_fact_atom.count_defined"
+      ],
+      "requested": "Explicit raw_count/count-operation domain UNOBSERVED/COUNT32 only for ReadFile/WriteFile, exact bounded request/buffer or prepared immutable slice size; unused requested/count fields null/UNOBSERVED by API."
+    },
+    {
+      "id": "ONCE_AND_INCREMENTAL_FOLD",
+      "issue": "Repeated reserve/invoke policy and first-fact ordering relative to invocation reservation are not fully explicit; unique reconciled ordinal must not freeze later first-count knowledge.",
+      "paths": [
+        "step_rules.reserve",
+        "step_rules.invoke",
+        "step_rules.scalar_count",
+        "counter_rules"
+      ],
+      "requested": "At-most-one reserve and invoke per ordinal; no observed scalar/count without prior reserved invocation. Explicit duplicate rejection vs identical repeated fact/reconcile idempotence. Add a scalar-first reconcile, then newly observed count and repeated reconcile literal: uniqueordinal1, scalar1, count1, bytes once."
+    },
+    {
+      "id": "CLOSE_AND_BUFFER_DOMAINS",
+      "issue": "close_success has no explicit nullable domain in exact field list; generation/hex capacity checks and no-mutation-on-rejection should be stated at the buffer boundary.",
+      "paths": [
+        "expected_slot_exact_keys.close_success",
+        "buffer_rule",
+        "closed_steps.buffer_write",
+        "closed_steps.reuse_buffer"
+      ],
+      "requested": "close_success=null when return unobserved, bool only after observed signed32 BOOL; verify generation and size before buffer mutation, retain original bytes/generation after rejected reuse."
+    }
+  ],
+  "clear_in_draft": [
+    "Dedicated UNOBSERVED atom is distinct from observed NULL/HANDLE0/BOOL0. Nonzero signed32 BOOL success is retained without raw normalization.",
+    "A non-UNOBSERVED raw scalar/count is authoritative even when scalar_aux_ack/count_aux_ack/right_transfer_ack isFalse. Wrapper return is a different axis.",
+    "Raw COUNT32 cell observation is not count-defined. Read/write bytes require nonzero BOOL+COUNT32+range; false BOOL with initialized0 is not known0.",
+    "Same current ordinal folds known facts once, buffers stay owner-held through copy/hash failure, and the residual C-to-first-Python-store gap is explicitly unproved."
+  ],
+  "inputs": {
+    "ADOPTION-FIXTURE-SCHEMA-DRAFT-v1.json": {
+      "bytes": 12230,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-DRAFT-v1.json",
+      "sha256": "ca2234165ee5a115b4d5b2acccec30b87b8a47baf7f3fc17bb2bd5cce8885623"
+    },
+    "FILE-PORTS-ADOPTION-ROOT-FIXTURE-SCOPE-v1.json": {
+      "bytes": 3074,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ADOPTION-ROOT-FIXTURE-SCOPE-v1.json",
+      "sha256": "3b1a273a71bad198367f3d06c20f875e050c57c867b1ee9d05c3a68476244811"
+    },
+    "FILE-PORTS-ADOPTION-SEAM-DESIGN-v1.json": {
+      "bytes": 20299,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ADOPTION-SEAM-DESIGN-v1.json",
+      "sha256": "055db993a35f173d19a01c52c3b88515d97d3752d7dd409e1273b55f63c15cd6"
+    },
+    "FILE-PORTS-ADOPTION-SEAM-INDEPENDENT-PEER-v1.json": {
+      "bytes": 10332,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ADOPTION-SEAM-INDEPENDENT-PEER-v1.json",
+      "sha256": "7de66b427cb72c9ea6a631ce40dc328b087469f47307b866eb115060dc99eb85"
+    }
+  },
+  "old_payload_or_source_closure_operations": 0,
+  "pending": "These are finite draft closure requests sent to author/root before literal freeze; this record is neither whole-fixture clearance nor a source/FFI/production decision.",
+  "portable_imports_or_executions": 0,
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "runtime_authorized": false
+  },
+  "recorded_at_utc": "2026-10-29T13:28:16.256765+00:00",
+  "schema_version": 1,
+  "scope": "Read-only schema/domain review of raw first facts, counters, ordinal reconciliation and retained buffers only. Native owns later whole-fixture/same-owner review. No literal vectors, implementation, ports or native/source-closure operations were executed.",
+  "status": "EARLY_FINITE_SUBSET_CLARIFICATIONS_BEFORE_LITERAL_FREEZE"
+}

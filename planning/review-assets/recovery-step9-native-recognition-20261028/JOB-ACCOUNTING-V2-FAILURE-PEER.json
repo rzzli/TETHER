@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "review_id": "job-accounting-v2-failure-independent-peer-20261028",
+  "recorded_at_utc": "2026-10-28T18:53:09.235399+00:00",
+  "status": "VERIFIED_FAILED_v2_before_child_dispatch_no_accounting_observations",
+  "scope": "Independent source and retained OS-only diagnostic artifact inspection; no helper imports or execution, Windows API calls, native DLLs, compiler, GGUF/model reads or network",
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\probe_job_accounting_v2.py",
+      "bytes": 30891,
+      "sha256": "a6c91bea13a42b9c53b2c5296ff6d2bba687e34da062f1b599fc8e3ad51dff1d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\JOB-ACCOUNTING-DIAGNOSTIC-PROTOCOL-v2.json",
+      "bytes": 13606,
+      "sha256": "01aeec348630d0b1adfc76fd41ffc696e41e01e61f27cba9de84d970ba767243"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\JOB-ACCOUNTING-DIAGNOSTIC-PEER-REVIEW-v2.json",
+      "bytes": 6568,
+      "sha256": "d106afb2cf4ff8f639dcbc6c727ba894e540ad2ed584ab4b2783042982b81d81"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\JOB-ACCOUNTING-ROOT-DECISION-v2.json",
+      "bytes": 1467,
+      "sha256": "45df20332041a810b6522ce21bb8a70cfb90ad67bc3333cfc662f0a1a87e9eb7"
+    },
+    {
+      "path": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\Lib\\ctypes\\__init__.py",
+      "bytes": 17844,
+      "sha256": "608671c6b49e5e027e3348fcf492718c33f69f919d99f4ff170522c40bd4c550"
+    }
+  ],
+  "retained_cache_files": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z\\effective-protocol.json",
+      "bytes": 13606,
+      "sha256": "01aeec348630d0b1adfc76fd41ffc696e41e01e61f27cba9de84d970ba767243"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z\\failure.json",
+      "bytes": 147,
+      "sha256": "5ab244ce6c9cde42b66f1826bab4d7f25ff71a7e875fec180bb9e8d978a41a5c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z\\journal.jsonl",
+      "bytes": 495,
+      "sha256": "1c967b4fc9a0626989718360fb37b0d03cc8bf9e9e6b9b48f0bd53cc6effb870"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z\\receipt.json",
+      "bytes": 602,
+      "sha256": "ac3abd8bc67ae99ca163baecf897b8441a35ce156a607dd3c918ed87cad80564"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z\\report.json",
+      "bytes": 722,
+      "sha256": "c4ccabc40c749f4bbfc160309fd7d9b88b690eae3541653c5218eead2c96b51f"
+    }
+  ],
+  "verified": {
+    "cache_file_count": 5,
+    "worker_files": 0,
+    "helper_hash_matches_expected": true,
+    "protocol_hash_matches_expected": true,
+    "effective_protocol_identical": true,
+    "current_pins_rehashed": 34,
+    "all_current_pins_match": true,
+    "original_v1_pins": 27,
+    "all_original_v1_pins_preserved": true,
+    "original_probe_file_universe_preserved": 16,
+    "receipt_output_pins_match": true,
+    "journal_records": 2,
+    "journal_hash_chain_and_tip_valid": true,
+    "authoritative_failure": true,
+    "status": "failed",
+    "child_dispatches": 0,
+    "snapshots": 0,
+    "cleanup_errors": [],
+    "reported_gguf_reads": 0,
+    "reported_target_native_calls": 0,
+    "reported_network_requests": 0
+  },
+  "failure": {
+    "error": "Only current-process and exact system kernel32 loads",
+    "error_class": "RuntimeError"
+  },
+  "source_explanation": {
+    "classification": "Source-supported explanation; the artifact does not record the rejected audit argument or a stack trace",
+    "guard_install_helper_line": 301,
+    "api_entry_helper_line": 365,
+    "ctypes_import_helper_line": 257,
+    "guard_helper_lines": [
+      126,
+      135
+    ],
+    "stdlib_libraryloader_lines": [
+      440,
+      448
+    ],
+    "stdlib_import_startup_line": 473,
+    "first_job_call_helper_line": 366,
+    "explanation": "The parent installs its audit guard before api() imports ctypes. Local ctypes.__init__ line473 resolves windll.kernel32.GetLastError through LibraryLoader, whose __getattr__ passes the bare name kernel32 to WinDLL. The v2 guard permits only None or exact System32/kernel32.dll and therefore rejects this normal import request before api() returns and before the CreateJobObjectW call site. This explains the recorded error consistently with zero dispatches and no snapshots."
+  },
+  "preservation": {
+    "all_source_protocol_original_and_failed_cache_inputs_untouched": true,
+    "earlier_v2_static_clearance_sha256": "d106afb2cf4ff8f639dcbc6c727ba894e540ad2ed584ab4b2783042982b81d81",
+    "earlier_static_review_limitation": "The prior static CLEAR is preserved as written. It missed the standard-library ctypes import-startup path; it is not evidence of successful OS accounting."
+  },
+  "conclusions": [
+    "The v2 attempt is consumed and failed; no restart or overwrite is authorized by this review.",
+    "No Job accounting or PID-list observation exists in this attempt.",
+    "This does not explain the original active_process_limit=1 versus observed active2 discrepancy.",
+    "A minimally corrected v3 needs separate source review and a separate root execution decision; source clearance itself grants no runtime permission."
+  ],
+  "activity": {
+    "own_python_read_hash_validation_only": true,
+    "diagnostic_helper_imports_or_executions": 0,
+    "windows_api_calls": 0,
+    "child_dispatches": 0,
+    "native_target_dll_loads": 0,
+    "compiler_calls": 0,
+    "gguf_model_tokenizer_server_calls": 0,
+    "network_requests": 0,
+    "author_source_mutations": 0,
+    "prior_artifact_mutations": 0
+  }
+}

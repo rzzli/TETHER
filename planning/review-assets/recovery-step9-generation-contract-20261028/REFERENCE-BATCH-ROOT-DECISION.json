@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T05:57:27.557210+00:00",
+  "decision": "root_approved_once_only_independent_reference_batch",
+  "protocol_sha256": "ded441d4a32d099d44fa240f75168cc581be1981ff73fcbd0e40acc043959aed",
+  "review": "Complete helpers reviewed by root and independent AI engineering peer; post-copy296fileprotocol and exact limits/argv/input anchors checked",
+  "original_cases": 109,
+  "extension_cases": 58,
+  "typed_expectations": 162,
+  "parse_edge_observations": 5,
+  "additional_unicode_controls": 16,
+  "reference_python_children": 1,
+  "package_native_dependency": "Verified cached rpds CPython3.11 extension; import not yet qualified",
+  "llama_native_calls_authorized": 0,
+  "model_calls_authorized": 0,
+  "new_downloads_authorized": 0,
+  "default_runtime_dependencies_changed": false,
+  "powershell_retry_authorized": false,
+  "corpus_changes_authorized": false
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_STATIC_CODE_PREPARATION_ONLY",
+  "material_blockers": [],
+  "scope": "Exact finite V3 raw-observation sidecar, labels and failed-prefix ordinal delta; prior positive byte-consumer and source4 API checks carried only after exact text equality. No producer execution authority.",
+  "pins": {
+    "run_role_aware_large_injected_v3.py": "b97792ab1c8a60167947943d482b11f164f335a72abaee4463138edc8710afc3",
+    "ROLE-AWARE-LARGE-CODE-PROTOCOL-v3.json": "be3cdcec599a5f15f2ce029c53caea4f3941230d12693bba24b9b722f60e3e7d",
+    "ROLE-AWARE-LARGE-RAW-SIDECAR-FORMAT-v1.json": "62fb60c268e2fc4c31bbed43c1c29f0fb7d71468b69d9f991bc78a338bb305e9",
+    "ROLE-AWARE-LARGE-CODE-FREEZE-v3.json": "35bc6bf182f0457f10d26ce49b53486e4ea6a5456155fce552dab5f0b28df8cf",
+    "ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-STATIC-REVIEW-v2.json": "4e260ec2fa80cd70b1ca45a3fe925a88831b8c15f57a544a2ae319d452c6d7f4",
+    "run_role_aware_large_injected_v2.py": "852767c3a0a66cf9a601eb53f259fa57e16b82d962c16dd81baf9fd442da1601",
+    "ROLE-AWARE-LARGE-CODE-FREEZE-v2.json": "7e0081e1d7686e1b501fead7aa13d2c40bfc926b944a06d7c60c85f414af9b31",
+    "ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03",
+    "ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929",
+    "ROLE-AWARE-LARGE-HARNESS-RAW-SIDECAR-CHECK-v3.json": "deccd3d3089c71bf485de98936eb5ecb51732e124d17e11d00f00d0cfee1b944"
+  },
+  "resolved_findings": [
+    {
+      "id": "F1_FAILED_PREFIX_CANONICAL_RAW_FACTS",
+      "resolution": "persist_canonical_raw reads the existing canonical registry._calls list by reference after the subject stack has unwound. It streams every existing ordinal, including reserved/uninvoked rows, with owner and ordinal checks. No owner method, source work, renewed clock, refreeze, new owner, bulk-buffer export or whole-call dictionary list is introduced.",
+      "raw_axes": "UNOBSERVED and observed NULL remain distinct. Exact bool, bounded signed/unsigned integer, FLOAT64 bits, bounded text/bytes and explicitly observed-unencodable values remain separate. Raw scalar/count/error/error-definition/input-handle, wrapper/stop, close-right, auxiliary acknowledgement, reservation/read/hash/copy folds and actual helper-return atoms, clock attempted/raw values, buffer state/generation and retained query observedness are recorded directly from existing slots. Observed hash/copy None returns do not become unobserved.",
+      "query_evidence": "Existing immutable c.query_bytes are streamed as a separate binary artifact with per-row offset/length/hash, bounded per frame and aggregate. No mutable read-buffer reconstruction or query-pool copy is used.",
+      "failure_semantics": "Spy flags now describe scalar/count hook completion and prepared return only. Read dispatch attempts, helper-completed deliveries/bytes, scripted close attempts and known canonical successful scalar close returns are separately named. Unsupported raw values stay explicit unknown and veto PASS; sidecar failure retains partial exclusive artifacts/progress and vetoes PASS."
+    },
+    {
+      "id": "FAILED_PREFIX_ORDINAL_LINKAGE",
+      "resolution": "Compact dispatch rows retain the actual canonical ordinal. A known failed prefix may have reserved-but-uninvoked rows before legal cleanup; only failed-prefix CloseHandle may have a canonical ordinal above its dispatch index. Positive dispatch ordinal equality, independent file/API/order/arguments and once-close checks remain strict. The all-record sidecar preserves the intervening reservations."
+    }
+  ],
+  "exact_positive_text_equal_v2_to_v3": {
+    "World.consume": true,
+    "World.check_header": true,
+    "World.check_call": true,
+    "World.verify_final": true,
+    "World.setup": true,
+    "World.compiler": true,
+    "World.handler": true,
+    "World.run": true
+  },
+  "carried_static_positive_evidence": "The previous review's independent descriptor-derived calls and full seven argument dictionaries; exact file/call/module/edge comparisons; all 648 query frames and full path/name pools; actual source scalar/count/error/definedness and wrapper/clock distinctions; exact header, original clock bits, candidate/terminal phase/digest link, genuine cached artifact identity and live checker; actual source4 interface/lifecycle compatibility remain unchanged. These are static checks, not actual large observations.",
+  "bounds": {
+    "canonical_rows_max": 13551,
+    "encoded_row_bytes_max": 4096,
+    "canonical_raw_jsonl_bytes_max": 55504896,
+    "retained_query_bytes_max": 1775088,
+    "representation": "One row dictionary and encoded row at a time, plus references to existing immutable query bytes. Trusted harness disk persistence occurs after source unwind and is separate from the producer's artifact universe and unqualified physical publication implementation. These bounds do not establish heap/RSS or deadline fit."
+  },
+  "reported_root_harness_only_check": {
+    "status": "PASS_HARNESS_RAW_SIDECAR_ONLY",
+    "raw_atom_controls": 12,
+    "detached_records": 3,
+    "source": "Pinned Root report only, read as metadata; this reviewer did not repeat its extraction or execution.",
+    "separation": "Detached reserved/uninvoked, NULL/zero/error-definition false and opaque-unknown rows exercise the actual extracted helper functions; no source4 import, owner construction, producer dispatch, large run or native operation is claimed."
+  },
+  "preservation": "Unexecuted V1 draft, frozen V2 and its HOLD, source4 small-gate artifacts and first failures/passes, and the separately completed reference proof remain preserved. Source4 and all positive expected values are unchanged. Fresh V3 binding/attempt/proof/evidence names do not authorize execution themselves.",
+  "reviewer_activity": {
+    "method": "Bounded new UTF-8 source/metadata inspection; SHA256 verification and exact function-text comparisons using stdlib data handling; new review artifacts only.",
+    "helper_or_source_imports": 0,
+    "compiles_or_AST_parses": 0,
+    "producer_runs": 0,
+    "subject_tests_or_probes": 0,
+    "original_or_model_target_operations": 0,
+    "reviewed_artifact_edits": 0,
+    "minor_metadata_lookup": "An initial guessed sidecar metadata filename was absent; the exact filename was then read from the frozen manifest. No subject action was involved."
+  },
+  "decision": "No material blocker remains in this finite static preparation scope. Root must separately bind and authorize the first concrete large producer run; retain any first actual failure or timeout without replay for favorable timing. This does not qualify actual large behavior, resource fit, physical output/readback, real first entry/FFI, a complete operational roster, the distinct84 protocol or scientific results.",
+  "qualification": {
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

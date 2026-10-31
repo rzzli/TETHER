@@ -1,0 +1,75 @@
+{
+  "actual_API_calls": 0,
+  "checker_sha256": "c0e09b8bdece8d6a742b70cb0f89fca21a627e6d1a9953432d6b4cee6916286b",
+  "elapsed": 0.03100000007543713,
+  "methods": 12,
+  "persisted_complete_pack": false,
+  "qualification_all_false": true,
+  "results": [
+    {
+      "method": "t01_descriptor_domains",
+      "passed": true
+    },
+    {
+      "method": "t02_raw_numeric_domains",
+      "passed": true
+    },
+    {
+      "method": "t03_invalid_backward_clock",
+      "passed": true
+    },
+    {
+      "method": "t04_firstfacts_wrapper_later_stop",
+      "passed": true
+    },
+    {
+      "method": "t05_original_error_and_formatting",
+      "passed": true
+    },
+    {
+      "method": "t06_detached_snapshots_and_refs",
+      "passed": true
+    },
+    {
+      "method": "t07_inflight_and_postfinal",
+      "passed": true
+    },
+    {
+      "method": "t08_one_buffer_and_capacity",
+      "passed": true
+    },
+    {
+      "method": "t09_actual_inmemory_loader",
+      "passed": true
+    },
+    {
+      "method": "t10_canonical_owner_and_closers",
+      "passed": true
+    },
+    {
+      "method": "t11_branded_checkers_and_negative",
+      "passed": true
+    },
+    {
+      "method": "t12_publication_structural_and_rows",
+      "passed": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "pure_shared_owner_author_controls_not_production_or_profile",
+  "source_pins": [
+    {
+      "name": "shared_owner_v3.py",
+      "sha256": "d8ee1e135a9e9d4b5c197eacb287f9e0fcb8c145d8baef154aa8faa7a68fca31"
+    },
+    {
+      "name": "shared_file_ports_v3.py",
+      "sha256": "8ecabef93656867fa443d26ef8826b359029f79d33c220cbc1a41734f80c0f49"
+    },
+    {
+      "name": "continue_verification_v3.py",
+      "sha256": "16ff0a3463d7d97f068fb38b709addfdfa43944490c015329e4470fad314a47e"
+    }
+  ],
+  "status": "PASS"
+}

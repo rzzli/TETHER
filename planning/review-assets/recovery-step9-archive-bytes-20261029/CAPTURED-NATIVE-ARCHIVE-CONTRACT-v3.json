@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_CORRECTED_SOURCE_FORMAT_CONTRACT_LITERAL_FIXTURE_PREPARATION_ONLY_CHECKER_IMPLEMENTATION_HELD",
+  "component_id": "captured-native-recognition-v7-archive-v1",
+  "scope": "Pure analysis of explicitly supplied immutable bytes and a finite declared binding context. Match the retained native-v7 receipt/seal/archive formats without replaying an old run, authenticating original files, scanning a directory, qualifying source or granting any profile pass.",
+  "source_format_basis": [
+    {
+      "path": "../recovery-step9-native-recognition-20261028/run_recognition_observation_v7.py",
+      "symbols": [
+        "configuration",
+        "authority",
+        "build_output_record",
+        "execute"
+      ],
+      "retained_source_identity": "b2aafdd98b797f181d4d718b5edab75a4dad4e16a735cbf719baa5c58cb54b09",
+      "fresh_original_source_qualification": false
+    },
+    {
+      "path": "../recovery-step9-native-recognition-20261028/recognition_status_seal_v1.py",
+      "symbols": [
+        "make_sealer",
+        "seal_post_lease_cleanup"
+      ],
+      "scope": "Early receipt, post-lease cleanup, two late-failure variants, terminal map and post-seal veto."
+    },
+    {
+      "path": "../recovery-step9-native-recognition-20261028/detached_parent_launch_draft_v1.py",
+      "symbols": [
+        "file_pin",
+        "write_new",
+        "reserve_parent_journal"
+      ],
+      "scope": "Three-field absolute metadata pins and canonical JSON plus LF."
+    },
+    {
+      "path": "../recovery-step9-native-recognition-20261028/recognition_runtime_roles_v2.py",
+      "symbols": [
+        "strict_pin",
+        "collision_key"
+      ],
+      "scope": "Exact three-field pins; conservative lexical DOS path collision identity, no filesystem resolution."
+    },
+    {
+      "path": "../recovery-step9-native-recognition-20261028/typed_public_c_recognizer_recognition_v2.cpp",
+      "symbols": [
+        "Output::Output",
+        "Output::commit",
+        "Output::failure"
+      ],
+      "scope": "Attempt claim, mutually exclusive partial/final result paths and independent child failure marker."
+    },
+    {
+      "path": "../../../src/asof/journal.py",
+      "symbols": [
+        "RunJournal"
+      ],
+      "scope": "journal.jsonl is a captured graph leaf. Chain/source-order checking is separately bound; the archive checker will not replace it."
+    }
+  ],
+  "API": {
+    "proposed": "check_archive(captured: CapturedArchive, bindings: ArchiveBindings, *, check: callable) -> CapturedArchiveResult",
+    "captured": "Ordinary frozen data type containing exactly protocol_bytes:bytes|None, authority_bytes:bytes|None, run_files:tuple[(relative_locator:str,raw:bytes),...]. Exact bytes only, no streams/handles/paths/read callbacks. Duplicate/colliding locators reject before indexing.",
+    "bindings": "Ordinary frozen finite data context: policy_id, run_root, protocol_pin, authority_pin, helper_pin, static_software_pins, four labelled dynamic_pins, five payload_descriptors. All pins are strict three-field metadata. Context origin is explicitly unproven here; no ready/verified/hash_complete flags accepted.",
+    "known_policy": "Only component_id above; no caller-supplied artifact allowlist, status vocabulary, recursive ancestor resolver, evaluator or path-opener.",
+    "clock": "Use only the required trusted caller check callback, before/after each <=65536-byte in-memory hash block and bounded JSON/edge/reference step. No new numeric start/deadline/clock or owner reset. Callback exceptions propagate with no successful result; no whole-process preemption guarantee.",
+    "result": "Deeply immutable summary with fresh detached to_dict(): captured_graph_status, terminal_captured_universe_matches, early_receipt_membership_status, declared_binding_consistency, source_terminal_disposition, failure_vetoes, missing_nodes, issues, bounded node/edge counts and per-node byte digests. Always profile_qualified=False, originals_authenticated=False, actual_directory_complete=False, source_qualified=False.",
+    "typing_limit": "Exact data types provide an ordinary interface boundary, not hostile Python isolation, authentic handoff provenance or execution authority. A self-consistent fabricated archive remains only a self-consistent captured archive."
+  },
+  "limits": {
+    "maximum_run_files_before_policy_rejection": 64,
+    "maximum_total_captured_bytes": 33554432,
+    "maximum_technical_JSON_bytes_each": 2097152,
+    "maximum_parent_report_bytes": 4194304,
+    "maximum_other_parent_JSON_bytes_each": 2097152,
+    "maximum_journal_bytes": 8388608,
+    "maximum_child_result_bytes": 8388608,
+    "maximum_stream_bytes_each": 65536,
+    "maximum_child_marker_bytes_each": 65536,
+    "maximum_JSON_nesting": 32,
+    "maximum_aggregate_JSON_nodes": 100000,
+    "maximum_declared_input_pins": 256,
+    "maximum_graph_edges": 4096,
+    "bound_meaning": "These are prospective checker admission bounds, not claims about old emitter guarantees or proof that every source failure fits. Exceeded limits yield incomplete/rejected captured evidence, never truncation-and-pass."
+  },
+  "JSON_and_pins": {
+    "parent_JSON": "Require exact UTF8, one terminal LF, no BOM/CRLF, duplicate keys, nonfinite values or unpaired surrogates; canonical sorted compact ensure_ascii=False serialization followed by LF, matching write_new/canonical. Reject bool in integer/byte/version fields.",
+    "authority_JSON": "Same canonical-byte rule. Authority/software/path metadata is data only, not a reason to open a named file.",
+    "child_markers": "Native attempt/failure objects use strict UTF8 JSON with one terminal LF but source member order is not sorted. Parse only the declared small marker fields needed for branch/failure checks; byte-hash result/partial bodies without interpreting native results.",
+    "opaque_leaves": "execution/journal.jsonl, stdout.bin, stderr.bin and child result bodies are captured byte leaves. Only the two journal header records used by parent/protocol binding are parsed here; whole-chain/content/resource/profile meanings are delegated to distinct versioned checkers.",
+    "pin": "Exact object keys path,bytes,sha256; path scalar string, bytes exact int0..2^63-1 neverbool, sha256 lowercase64hex. Map entries are exactly bytes,sha256 and are recomputed from the named supplied bytes, not trusted by status flags.",
+    "absolute_metadata": "Use the retained conservative lexical DOS grammar: scalar Unicode drive-absolute path, ASCII case/slash collision key, no empty/dot/dotdot/trailing-dot/trailing-space/control/DEL/illegal-or-tilde components. Compare pin.path exactly against its predeclared expected path after collision checks; do not resolve aliases or perform filesystem operations."
+  },
+  "relative_locator_policy": {
+    "grammar": "Exact source spellings below, POSIX / separators only. Before lookup reject empty, absolute/drive/UNC/device forms, backslash, colon, NUL/controls/DEL, empty/dot/dotdot components, trailing dot/space and ASCII case/slash aliases. Maximum256 characters. No normalization, URI decoding, PurePath/Path.resolve, directory traversal or opening the locator.",
+    "root_files": [
+      "parent-reservation.json",
+      "effective-protocol.json",
+      "parent-report.json",
+      "stdout.bin",
+      "stderr.bin",
+      "receipt.json",
+      "post-lease-cleanup.json",
+      "terminal-seal.json",
+      "failure.json",
+      "late-failure.json",
+      "after-seal-failure.json",
+      "terminal-publication-error.json",
+      "journal-close-error.json"
+    ],
+    "child_files": [
+      "execution/child/attempt.json",
+      "execution/child/result.jsonl",
+      "execution/child/result.partial.jsonl",
+      "execution/child/failure.json"
+    ],
+    "unknown_file": "Reject as unsupported source artifact, not silently omit. A future output format needs a separately reviewed policy version.",
+    "absolute_run_pin": "An absolute receipt/cleanup/seal reference is permitted only for its exact allowed locator: expected path = bindings.run_root + backslash + locator with / replaced by backslash. Check exact anchored string and strict pin schema BEFORE selecting supplied bytes. No arbitrary metadata path enters run_files.",
+    "execution_files": [
+      "execution/journal.jsonl"
+    ]
+  },
+  "source_documents": {
+    "configuration": {
+      "exact_keys": [
+        "schema_version",
+        "kind",
+        "mode",
+        "helper",
+        "executable",
+        "software_inputs",
+        "payload_inputs",
+        "inputs",
+        "output",
+        "argv",
+        "command_line",
+        "environment",
+        "limits",
+        "creation_flags",
+        "maximum_attempts",
+        "automatic_retry",
+        "module_policy_id",
+        "module_policy_sha256",
+        "expected_version",
+        "expected_pack_sha256",
+        "contract_sha256",
+        "parent_seconds",
+        "child_seconds",
+        "cooperative_work_ms",
+        "full_vocabulary_mask",
+        "inference",
+        "scientific_validation",
+        "execution_authorized_by_preparation",
+        "hash_pass_policy",
+        "periodic_job_seconds",
+        "original_SDK_general_gate"
+      ],
+      "selected_fixed_values": {
+        "schema_version": 1,
+        "kind": "detached_singleton_recognition_observation_v1",
+        "mode": "--recognize",
+        "creation_flags": 525324,
+        "maximum_attempts": 1,
+        "automatic_retry": false,
+        "module_policy_id": "trusted-System32-recognition-v1",
+        "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+        "expected_version": "0.7.0-dev",
+        "contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+        "parent_seconds": 300,
+        "child_seconds": 120,
+        "cooperative_work_ms": 117000,
+        "full_vocabulary_mask": false,
+        "inference": false,
+        "scientific_validation": "not_established",
+        "execution_authorized_by_preparation": false,
+        "original_SDK_general_gate": false
+      },
+      "limits": {
+        "parent_seconds": 300,
+        "child_seconds": 120,
+        "child_cleanup_reserved_seconds": 2,
+        "finalization_reserved_seconds": 5,
+        "process_and_job_commit_bytes": 268435456,
+        "active_processes": 1,
+        "maximum_children": 1,
+        "stream_bytes": 65536,
+        "maximum_job_snapshots": 40,
+        "job_pid_capacity": 16,
+        "attempt_bytes": 4096,
+        "result_bytes": 8388608,
+        "row_bytes": 65536
+      },
+      "hash_pass_policy": {
+        "driver_model_passes": 0,
+        "parent_initial": 1,
+        "child": 1,
+        "parent_final": 1,
+        "external_verifier_separately_timed": true
+      },
+      "projection_limit": "Compare types exactly, including bool/int distinction. These source-declared caps/mode claims are metadata, not proof of observed enforcement or permission to read inputs. Check nine argv values and executable/pack/CPU/ordered-shard references against declared context; command-line/environment are captured source strings, not executed. Detailed trusted command-line, runtime/platform and owner authority remain separate bindings."
+    },
+    "authority": {
+      "exact_keys": [
+        "schema_version",
+        "status",
+        "mode",
+        "execution_authorized",
+        "runtime_qualified",
+        "executable",
+        "verified_build",
+        "source",
+        "compiled_source_copy",
+        "runtime_pin_header",
+        "execution_contract",
+        "expected_pack_metadata",
+        "module_policy_id",
+        "module_policy_sha256",
+        "software_inputs",
+        "payload_descriptors",
+        "closure_scope",
+        "dynamic_dependencies"
+      ],
+      "dynamic_dependency_labels": [
+        "current_parent",
+        "current_authority",
+        "current_binding_checker",
+        "current_binding_proof"
+      ],
+      "unexpanded_fields": "Source/header/build/executable/contract/metadata pins must agree with direct declared static records. No checker follows verified_build or source paths to inspect further bytes; external leaf validity and source closure are pending."
+    },
+    "early_receipt": {
+      "file": "receipt.json",
+      "exact_keys": [
+        "schema_version",
+        "status",
+        "outputs",
+        "protocol_sha256",
+        "failure_veto"
+      ],
+      "status": [
+        "failed",
+        "recognition_observations_retained_independent_qualification_pending"
+      ],
+      "meaning": "Written after report/journal, before original lease cleanup. Its output map excludes itself and all later cleanup/seal artifacts. A success-like early status is not final.",
+      "links": "Validate every declared relative output against supplied raw bytes. A complete normal receipt requires parent-reservation.json,effective-protocol.json,parent-report.json,execution/journal.jsonl. All supplied stream and child artifacts must be mapped because the retained source writes them before receipt. Early reservation/journal-initialization failures can publish a negative receipt without all these nodes: classify incomplete source branch, never completed positive. Never infer absent actual files from a supplied map.",
+      "conditional_membership": "Exclude receipt,post-lease-cleanup,terminal-seal,late-failure,after-seal-failure,terminal-publication-error,journal-close-error. Root failure.json must be included if the early report records failed+primary failure; a later root failure with a positive early report must be excluded. In either case preserve the separate negative disposition. Unknown/unprovable source timing is explicit incomplete, never repaired."
+    },
+    "post_lease_cleanup": {
+      "file": "post-lease-cleanup.json",
+      "exact_keys": [
+        "schema_version",
+        "status",
+        "earlier_status",
+        "primary_failure",
+        "primary_failure_marker",
+        "earlier_receipt",
+        "parent_elapsed_after_leases_seconds",
+        "parent_deadline_exceeded",
+        "close_errors",
+        "outcomes"
+      ],
+      "status": [
+        "failed",
+        "close_outcomes_retained"
+      ],
+      "links": "earlier_receipt pins supplied receipt or is null if absent; primary_failure_marker pins supplied root failure at cleanup time or is null. Link values must agree with the seal. Match elapsed as finite nonnegative number and booleans strictly, without trusting elapsed as owner-clock proof.",
+      "limit": "outcomes/close_errors remain bounded source records, not proof that all live handles were known or all cleanup succeeded. Full lease return/cleanup semantics are separately pending. Prior close errors can coexist with a successful sealer retry and close_outcomes_retained status; do not erase them."
+    },
+    "terminal_seal": {
+      "file": "terminal-seal.json",
+      "exact_keys": [
+        "schema_version",
+        "status",
+        "required",
+        "earlier_receipt",
+        "cleanup_artifact",
+        "primary_failure_marker",
+        "late_failure_marker",
+        "outputs",
+        "parent_elapsed_before_terminal_seal_seconds",
+        "failure_veto"
+      ],
+      "status": [
+        "failed",
+        "recognition_observations_retained_independent_qualification_pending"
+      ],
+      "links": "required exactTrue. cleanup_artifact pins post-lease-cleanup; earlier_receipt/primary_failure_marker agree with cleanup. Normal late-failure must be pinned and mapped; a post-terminal exception supplement may leave late_failure_marker null and be absent from the older map. Every declared outputs entry matches supplied bytes.",
+      "captured_universe": "For the normal terminal-publication branch, outputs keys equal ALL supplied run-file locators except terminal-seal.json and after-seal-failure.json. Exception-variant late-failure.json created by the enclosing post-terminal exception handler is separately permitted absent from this older map; it yields negative/incomplete terminal publication evidence, never a positive complete terminal branch. Any other omitted/extra member is rejected. Closure is only over supplied capture, never an actual directory scan.",
+      "self_exclusion": "The seal does not hash itself. Self-map entries or receipt-to-future cleanup/seal edges reject explicitly; do not rely on finding an impossible cryptographic fixed point."
+    },
+    "late_failure": {
+      "file": "late-failure.json",
+      "normal_variant": "schema_version1,authoritativeTrue,automatic_retryFalse,phase post_receipt_lease_cleanup,error_class LeaseCleanupOrParentDeadline,primary_failure,primary_failure_marker,cleanup_artifact,close_errors,parent_deadline_exceeded. Pins must match captured cleanup and original marker.",
+      "exception_variant": "authoritativeTrue,automatic_retryFalse,phase post_lease_cleanup_or_terminal_sealing,error_class,error,primary_failure,primary_failure_marker,close_outcomes. This may exist without a complete cleanup/receipt/seal OR be added after retained terminal bytes if the post-seal check/after-seal publication raises. It is always negative/incomplete; absent terminal-map membership is allowed only for this explicit supplement branch and establishes no successful terminal return or exact chronology."
+    },
+    "after_seal_failure": {
+      "file": "after-seal-failure.json",
+      "exact_keys": [
+        "authoritative",
+        "automatic_retry",
+        "error_class",
+        "terminal_seal"
+      ],
+      "meaning": "authoritativeTrue,automatic_retryFalse,error_class ParentDeadlineAfterTerminalSeal; terminal_seal pins supplied seal. The on-disk seal can retain the positive observation literal because only the returned in-memory status changed afterward. This file always vetoes that positive disposition."
+    },
+    "report_and_other_markers": "parent-report.json is source-variable: validate the bounded required status/failure/automatic_retry and selected reference projection, not an invented closed full-report schema. terminal-publication-error.json and journal-close-error.json are authoritative negative supplements emitted after or instead of a normal early receipt. Any source primary/secondary failure remains negative even if later publication or retry succeeds.",
+    "child_branch": "attempt.json when present must retain schema_version1,mode --recognize,status claimed_before_native_load,draftTrue. Final result and partial result are mutually exclusive in this emitter. Child failure.json or partial result vetoes profile eligibility regardless of zero/unknown exit. A finalized child result can coexist with later parent failure. Empty child captures on early source failure remain unknown/not-created, never completed.",
+    "parent_reservation": {
+      "file": "parent-reservation.json",
+      "exact_keys": [
+        "owner_pid",
+        "created_at_utc",
+        "status"
+      ],
+      "status": "reserved_before_journal_or_native_API",
+      "owner_pid": "Exact int1..2^32-1, neverbool; equal to first build_reserved.details.owner_pid.",
+      "created_at_utc": "Source datetime.now(timezone.utc).isoformat() string: valid UTC date/time with +00:00, optional six-digit fractional seconds. Both reservation timestamps are retained; do not require equality or infer monotonic chronology from wall-clock order.",
+      "membership": "Normal receipt and terminal maps include this root file. Missing/malformed reservation or missing initialized journal is incomplete even if a negative receipt/seal exists; no manufactured default owner.",
+      "source_limit": "The metadata status is not an exclusive ownership capability or actual process identity proof."
+    },
+    "journal_binding_headers": {
+      "file": "execution/journal.jsonl",
+      "first_record": "First complete canonical LF row has exactly sequence,event,details,previous_sha256,sha256; sequence exactint0,event build_reserved,previous_sha256 null. details exactly run_id,owner_pid,created_at_utc; canonical lowercase UUID and valid source UTC string, positive exactu32 PID matching parent-reservation.",
+      "second_record": "Second complete canonical LF row has sequence exactint1,event detached_recognition_attempt_reserved,details exactly protocol_sha256 and limits. Protocol digest and strict typed limit object equal captured technical config; previous_sha256 matches actual first-row fingerprint.",
+      "local_hashes": "Recompute first/second canonical record hashes excluding sha256 before trusting these local header references. No other journal row is interpreted; no complete chain/source-order claim follows.",
+      "partial_prefix": "Missing/partial first or second LF row prevents complete normal header binding. Retain incomplete/negative source state, never default owner/protocol/limits or accept serialized ready flags."
+    }
+  },
+  "metadata_DAG": {
+    "nodes": "Captured technical protocol/authority, captured run files, and at most256 exact declared input metadata leaves. Leaf pins are NOT opened or recursively expanded. No old build proof/receipt ancestor is automatically revalidated.",
+    "protocol_effective_binding": "Require protocol captured digest/size matches its external expected pin, effective-protocol raw bytes identical including LF, receipt.protocol_sha256 equal to that digest, and config.output equal to bindings.run_root. Equality of two captured copies alone is not original authority.",
+    "authority_binding": "Require authority captured digest/size matches expected authority pin; exact source authority top-level keys, schema1,mode --recognize,execution_authorizedFalse,runtime_qualifiedFalse, source status verified_build_software_and_descriptor_basis_not_execution_permission. Validate matching source/header/build/policy/contract/executable pin references as declarations only.",
+    "static_dynamic": "authority.software_inputs equals the finite expected static roster without aliases or duplicates. Exclude all four current dynamic paths, protocol/preparation/run outputs and all payload descriptors from that static roster. Protocol software_inputs is exactly static plus four separately labelled dynamic pins: current_parent,current_authority,current_binding_checker,current_binding_proof. The current authority pin matches the captured authority bytes and current parent matches helper_pin. No future current-parent or authority hash is embedded in static authority.",
+    "payload_metadata": "Protocol inputs are exactly its software roster plus CPU,three ordered model,pack descriptors from the authority/context, with no duplicate/collision. Compare only recorded strings/sizes/digests and role separation. Do not stat/open/hash CPU/GGUF/pack, reported platform modules, or any other declared input. No descriptor equality is a fresh payload hash pass.",
+    "bounded_graph": "Build only the finite allowed direct edges above; iterative bounded cycle check rejects dangling,cross-root,self,future-phase and cyclic links. Do not recursively walk declaration paths or fetch ancestors. Missing permitted nodes produce explicit incomplete graph; malformed supplied edges reject.",
+    "source_policy_limit": "The retained v7 kind/module IDs/counter/old189-profile references are FORMAT CONTEXT, not a successful old gate or future Unicode policy. New Unicode wire/parent/archive formats require a separate version."
+  },
+  "conditional_disposition": {
+    "positive_observation_archive": "May report source_positive_observations_pending only with required parent-reservation,early receipt,cleanup,terminal,report,effective protocol,execution/journal,streams and finalized child attempt/result present, matching declared maps/status/header references, no failure or partial markers, and no contradictory captured report failure. This remains profile_qualifiedFalse; no result semantics,resource checks,original authority or actual owner proof follows.",
+    "negative": "Presence of ANY known root/child failure supplement, child partial result, source failed status, report primary/secondary failure or cleanup error/deadline yields source_negative. Malformed known failure-marker bytes still veto; authoritativeFalse/readyTrue cannot disable a filename veto and also make that document malformed.",
+    "incomplete": "Missing receipt/cleanup/seal, incomplete capture, source unsupported prefix or unprovable conditional timing is explicitly unresolved/incomplete even with a valid earlier map. Missing evidence is never normalized to successful empty state.",
+    "orthogonality": "A source-negative archive may have a completely consistent captured graph; captured integrity and run outcome are separate fields. Conversely a positive status label cannot override a malformed graph or negative marker. No generic passed/ready flag is consumed or emitted as profile permission."
+  },
+  "literal_fixture_plan_before_code": [
+    "Complete actual-shaped source-positive graph with synthetic technical pins, report/journal/streams/attempt/final result, early receipt, cleanup and terminal; output profileFalse.",
+    "Consistent source-negative child failure+partial with root primary marker before receipt; negative graph remains consistent.",
+    "Positive early receipt followed by root terminal-publication failure, failed cleanup/seal; root failure absent from the earlier receipt map but present in terminal map.",
+    "Positive on-disk terminal seal plus valid after-seal-failure pin; negative despite unchanged seal status.",
+    "Primary failure plus prior lease-close error and successful sealer retry; preserve both, never promote to success.",
+    "Missing seal/receipt, exception-variant late marker and early/prelaunch prefix; explicit incomplete negative captures.",
+    "Digest/size mismatch; bool byte count/schema version; duplicate JSON keys/nonfinite; wrong status/unknown fields in closed schemas.",
+    "Absolute/traversal/backslash/noncanonical/case-collision output locator and full pin outside declared run root; reject before lookup and never perform path operations.",
+    "Seal self-entry, receipt future cleanup/seal edge, cycle/dangling edge, missing/extra terminal captured member, omitted stream/child receipt member.",
+    "Static/dynamic/payload/current-protocol/output dependency collision; authority self/current-parent hash cycle; no recursive leaf reads.",
+    "Attempt wrong mode, final+partial conflict, child failure after dishonest zero exit, positive label plus malformed failure marker.",
+    "All byte/file/node/edge/nesting caps plus callback stop at hash/parse/edge boundaries; no truncated graph pass.",
+    "Retained positive terminal bytes followed by exception-variant late-failure after simulated after-seal publication failure; older map excludes the supplement, source negative/incomplete and no terminal-return claim.",
+    "Exact root parent-reservation plus execution/journal.jsonl first build_reserved and second protocol/limits references; reject unsupported root journal.jsonl, wrong owner/status/time schema/protocol/limits, bool IDs and missing prefix while preserving early negative initialization branches."
+  ],
+  "explicit_pending_bindings": [
+    "Original path admission, original still-live leases, same-handle identity/attributes, fresh source/software/payload hashes and source loading.",
+    "Captured bytes actually originate from one exclusive owned output; actual directory census/conditional file absence and owner return are not established here.",
+    "Root decision and once-only execution authority, exact source/helper/checker closure, trusted first-clock provenance and owner/work/hard deadline completion.",
+    "Journal byte chain plus source phase/reference policy, raw resource/limits/peaks, physical EOF/capture accounting, known exit/reap/cleanup completeness.",
+    "Child row/native call counters/UTF8 analyzer/profile semantic predicates; all future Unicode-policy/pack/adapter/runtime qualification.",
+    "Scientific validation and inference quality; none follows from archive consistency."
+  ],
+  "authorization_now": {
+    "source_format_reads": true,
+    "design_and_contract": true,
+    "fixture_or_checker_code": false,
+    "old_run_replay": false,
+    "fresh_original_source_qualification": false,
+    "directory_scan": false,
+    "CPU_GGUF_pack_operations": false,
+    "SDK_OS_target_compiler_calls": false,
+    "execution_authorized": false,
+    "literal_fixture_framing_preparation": true
+  },
+  "revision": 3,
+  "predecessor_contract_sha256": "e77f8510d7aa41ea2fdbb7abdc8e9b1337f3abb846705df69414af2a018161cb",
+  "corrected_design_finding": "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-DESIGN-REVIEW-v1.json c5ab4221f43e9c284e0447cbf716bb8a3649c2daaf21ae3620eb05ac5b5c9c55"
+}

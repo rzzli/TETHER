@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "verified_v2_failed_pre_dispatch_at_guarded_ctypes_bootstrap",
+  "helper_sha256": "a6c91bea13a42b9c53b2c5296ff6d2bba687e34da062f1b599fc8e3ad51dff1d",
+  "protocol_sha256": "01aeec348630d0b1adfc76fd41ffc696e41e01e61f27cba9de84d970ba767243",
+  "failed_output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v2-20261028T184111Z",
+  "failed_artifacts": {
+    "effective-protocol.json": {
+      "sha256": "01aeec348630d0b1adfc76fd41ffc696e41e01e61f27cba9de84d970ba767243",
+      "bytes": 13606
+    },
+    "failure.json": {
+      "sha256": "5ab244ce6c9cde42b66f1826bab4d7f25ff71a7e875fec180bb9e8d978a41a5c",
+      "bytes": 147
+    },
+    "journal.jsonl": {
+      "sha256": "1c967b4fc9a0626989718360fb37b0d03cc8bf9e9e6b9b48f0bd53cc6effb870",
+      "bytes": 495
+    },
+    "receipt.json": {
+      "sha256": "ac3abd8bc67ae99ca163baecf897b8441a35ce156a607dd3c918ed87cad80564",
+      "bytes": 602
+    },
+    "report.json": {
+      "sha256": "c4ccabc40c749f4bbfc160309fd7d9b88b690eae3541653c5218eead2c96b51f",
+      "bytes": 722
+    }
+  },
+  "receipt_outputs_checked": 3,
+  "journal_events": 2,
+  "journal_tip_sha256": "377317e582ace20f0d06ab0dc5edfe21047587d2e1776e2e0e551f3707ab10ed",
+  "observed_dispatches": 0,
+  "snapshots": 0,
+  "worker_pid_present": false,
+  "authoritative_failure": true,
+  "source_basis": {
+    "path": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\Lib\\ctypes\\__init__.py",
+    "sha256": "608671c6b49e5e027e3348fcf492718c33f69f919d99f4ff170522c40bd4c550",
+    "physical_line": 473,
+    "text": "GetLastError = windll.kernel32.GetLastError"
+  },
+  "diagnosis": "V2 installs its guard before api imports ctypes. Pinned ctypes bootstrap accesses windll.kernel32.GetLastError, producing a literal kernel32 load request which v2 permits only as None or exact full System32 path. The standard bootstrap request is rejected before Job setup and worker dispatch.",
+  "scope_correction": "Permit only exact literal kernel32 for nonpreparing/nonworker parent; then independently confirm the cached kernel32 module path equals the expected System32 path before any Job call. No other basename is permitted.",
+  "guard_accounting_caveat": "guards.denied=[] does not imply no rejection: the ctypes branch raises via need without appending that list. Failure message/source ordering establish this rejected bootstrap.",
+  "pre_finalization_elapsed_seconds": 0.03100000007543713,
+  "root_full_elapsed_reported_seconds": 0.047,
+  "limitations": [
+    "No retry or Windows API reprobe was performed.",
+    "This is standard-library bootstrap compatibility, not an observed Job-limit failure or native target/model failure.",
+    "The prior active-process accounting anomaly remains unresolved; no data was obtained from this failed attempt."
+  ],
+  "activity": {
+    "new_worker_dispatches": 0,
+    "windows_job_api_calls": 0,
+    "network_requests": 0,
+    "target_dll_or_model_calls": 0,
+    "gguf_reads": 0
+  }
+}

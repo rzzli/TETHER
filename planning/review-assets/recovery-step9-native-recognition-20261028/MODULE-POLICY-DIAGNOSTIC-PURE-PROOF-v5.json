@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+    "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+  },
+  "checker_sha256": "10ca668ccf5f9dc792da41eee3babf9785dcf8fc5f0d477595234c8311254af3",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "maximum_modelled_bytes": {
+    "fields": 23738,
+    "row": 23774,
+    "failure": 23928,
+    "stdout": 23790
+  },
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+      "bytes": 53407,
+      "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v4.cpp",
+      "bytes": 49559,
+      "sha256": "2f34035545c6d7bd742b8932a95449aeb76ebc48084e8dc170cbea6b740794ae"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-preparation-v4-20261028T231155Z\\recognizer_runtime_pins.hpp",
+      "bytes": 2468,
+      "sha256": "dee857596074375218a3c3f8d11130f4066fbfb07b7ae08e454f1f12306a1784"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_policy_diagnostics_v5.py",
+      "bytes": 14685,
+      "sha256": "10ca668ccf5f9dc792da41eee3babf9785dcf8fc5f0d477595234c8311254af3"
+    }
+  ],
+  "scope": "Independent intended-format model plus static source checks; C++ formatter was not compiled or executed",
+  "activity": {
+    "CPP_executions": 0,
+    "compiler_calls": 0,
+    "target_API_calls": 0,
+    "DLL_loads": 0,
+    "unknown_image_reads": 0,
+    "model_reads": 0,
+    "network": 0
+  }
+}

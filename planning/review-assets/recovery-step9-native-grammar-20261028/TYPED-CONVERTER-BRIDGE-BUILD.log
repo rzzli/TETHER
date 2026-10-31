@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\build_typed_converter_bridge.py", line 249, in <module>
+    run('compile-link-only', [compiler, '/nologo', '/Bv', '/std:c++17', '/MD', '/O2', '/DNDEBUG', '/D_ITERATOR_DEBUG_LEVEL=0',
+  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\build_typed_converter_bridge.py", line 182, in run
+    assert result.returncode == 0, (label, result.returncode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('compile-link-only', 2)

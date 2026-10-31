@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "FIRST_FAILURE_LOCALIZED_WITH_FIXTURE_CLASSIFICATION_CONFLICT",
+  "reviewer": "native_039_acceptance_audit",
+  "method": "Static inspection of the retained first actual proof, frozen fixture metadata, schema and source text. No V1 rerun or subject probe.",
+  "first_actual_proof": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v4.json",
+    "bytes": 9571,
+    "sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa"
+  },
+  "observed_source_lifecycle_failure": {
+    "source_sha256": "e57b93f54c9199762f3b703da37424e5a42ee4082e3e023369620fb17a74d5c4",
+    "source": "role_ledger_codec_v1.py:28",
+    "fact": "FormatError.__setattr__ rejects every attribute assignment. While unittest was recording the refusal-code assertion, its traceback cleanup assigned value.__traceback__, and source raised TypeError('immutable FormatError'). This aborted T.run before its structured result returned.",
+    "bounded_requirement": "Exception lifecycle bookkeeping must work while the public code/offset/path values remain fixed. This is a source exception-surface issue, not an audit or codec-preload setup denial."
+  },
+  "exact_refusal_code_conflict": {
+    "corpus_sha256": "55e01082063f23128780cf47f6f8275f360a7e896e400fa4b1271cd081a5581c",
+    "case_index_zero_based": 3,
+    "case_id": "reserved_01_0",
+    "base": "n4_hash_failure_terminal",
+    "raw_bytes": 16182,
+    "mutation": {
+      "offset": 168,
+      "hex": "01",
+      "rehash_sections": false,
+      "sha256": "6e56381f98d9a802f6e1dd4adc5dcdbff03ae1ef33099690fa921f07e775942f"
+    },
+    "frozen_required_code": "RESERVED_NONZERO",
+    "actual_source_code_in_traceback": "STATE_CONTRADICTION",
+    "actual_source_site": "validate_value at role_ledger_codec_v1.py:224 recomputes the original-profile R/C/E reservations.",
+    "normative_layout_fact": "Schema b71 declares reserved_R at168, reserved_C at172 and reserved_E at176 as u32 live reservation values. They obey framing.formulas and are not zero padding. Fragment-only zero reservation rules remain distinct.",
+    "author_selector_cause": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-producer-20261029/author_role_ledger_literals_v2.py",
+      "bytes": 37250,
+      "sha256": "02b24d02bd52293c666ed0c7ed8d07a58d50a4287b94d17cc0a645b89038ddc7",
+      "line": 474,
+      "expression": "f['name'].startswith('reserved')",
+      "effect": "The region selector includes the actual R/C/E reservation fields among zero-padding regions and assigns their mutations RESERVED_NONZERO."
+    },
+    "same_finite_affected_ids": [
+      "reserved_01_0", "reserved_01_1", "reserved_01_2",
+      "reserved_02_0", "reserved_02_1", "reserved_02_2",
+      "reserved_03_0", "reserved_03_1", "reserved_03_2"
+    ],
+    "interpretation": "The observed mutation was rejected. This evidence does not show invalid acceptance. It exposes a refusal-code conflict between the frozen oracle and the live reservation-field semantics; root must choose the explicit finite correction before source or fixture changes. Valid nonzero reservations must never be treated as zero padding."
+  },
+  "known_retained_counts": {
+    "actual_four_subject_imports_completed": true,
+    "actual_encode_calls": 39,
+    "actual_decode_calls": 44,
+    "facade_attempts": 83,
+    "actual_source_check_sites": 1288,
+    "actual_source_returns": 78,
+    "actual_source_exceptions": 5,
+    "audit_denials": 0,
+    "source_unchanged": true,
+    "elapsed_seconds": 0.18799999996554106
+  },
+  "not_recovered_from_aborted_run": {
+    "structured_codec_result": null,
+    "complete_method_outcomes": "UNKNOWN",
+    "complete_remaining_mutation_outcomes": "UNKNOWN",
+    "complete_type_and_callback_results": "UNKNOWN",
+    "legacy48_behavior": "NOT_ADVANCED"
+  },
+  "separate_static_owner_hold": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-STATIC-REVIEW-v1.json",
+    "sha256": "f8f6eca094e394da251f00cf3d51a3cf879ddc71a0ff7895205cd234787f564b",
+    "runtime_reproduced_by_this_proof": false
+  },
+  "activities": {
+    "subject_imports_or_execution_by_reviewer": 0,
+    "V1_replays_or_probes": 0,
+    "source_harness_fixture_edits": 0,
+    "original_native_or_physical_operations": 0
+  },
+  "qualification": {
+    "source_accepted": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "actual_helper_bytes": 99000,
+  "checker": {
+    "bytes": 4370,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\check_entry_source3_static_delta_v1.py",
+    "sha256": "39751729415994772defdde99cb9053c7d42cacf9d992b03ea3238b172daeb93"
+  },
+  "correction": "Both healthy-cache and reconcile entries reject only the current stopped call before any repair, rethrowing the retained primary object or typed RAW_RETURN_UNKNOWN fallback. A fresh nonstopped CloseHandle under an earlier owner error retains its cleanup path. No other behavior changed.",
+  "five_assertion_ASTs_unchanged": true,
+  "geometry": {
+    "B": 3,
+    "C": 117,
+    "E": 234,
+    "M": 3,
+    "N": 5,
+    "Q": 7,
+    "R": 87,
+    "bootstrap_calls": 18,
+    "captured_bytes": 99068,
+    "early_bytes": 99000,
+    "known_bytes": 2196237,
+    "original_closes": 5,
+    "terminal_calls": 37,
+    "work_calls": 32
+  },
+  "limitations": [
+    "Static clearance only; five-test Source3 result pending Root binding/execution.",
+    "Full32/53/native25 and all real-entry/native/physical/full-roster/new84/resource/science qualifications remain pending."
+  ],
+  "material_blockers": [],
+  "regression_freeze": {
+    "bytes": 2926,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-FREEZE-v1.json",
+    "sha256": "fb8987fffc4074e9884b7e168a95c6e28c72be8f874d56ffce39c0306ae0d5f2"
+  },
+  "schema_version": 1,
+  "source2_actual_hold": {
+    "bytes": 5742,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-INDEPENDENT-ACTUAL-REVIEW-v2.json",
+    "sha256": "973114a9d54861e9e7ba4441c4085d5d97362c5fd2a87276add2ce7b1a1e4c2e"
+  },
+  "source_imports": 0,
+  "source_pause": {
+    "bytes": 4114,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE-PAUSE-v3.json",
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "sources": {
+    "preflight_entry_kernel": {
+      "all_other_AST_equal_after_namespace": true,
+      "exact_behavior_delta": [
+        "KernelState._cache_committed_fact",
+        "KernelState._reconcile_native"
+      ],
+      "pin": {
+        "bytes": 121192,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+        "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+      }
+    },
+    "preflight_file_view": {
+      "all_other_AST_equal_after_namespace": true,
+      "exact_behavior_delta": [],
+      "pin": {
+        "bytes": 3614,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+        "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+      }
+    },
+    "preflight_owner_ops": {
+      "all_other_AST_equal_after_namespace": true,
+      "exact_behavior_delta": [],
+      "pin": {
+        "bytes": 39889,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+        "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+      }
+    }
+  },
+  "status": "CLEAR_STATIC_SOURCE3_TWO_GUARD_AND_UNCHANGED_FIVE_CHECK_PREPARATION_ONLY",
+  "subject_runs": 0
+}

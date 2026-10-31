@@ -1,0 +1,68 @@
+{
+  "activity": {
+    "SDK_or_target_API_calls": 0,
+    "children": 0,
+    "reported_image_opens": 0
+  },
+  "checker": {
+    "bytes": 10464,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_census_validation_v1.py",
+    "sha256": "963b0062159e8bdc7b666008cf04c20aee72e81dccca55125e54cab3961494a3"
+  },
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "fixture_source": {
+    "bytes": 7117,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\census_fixture_v1.py",
+    "sha256": "84f2fc20d6cf58bd949133b25cbb79722a6bb389052ff6a15568eba49b3fdca0"
+  },
+  "schema_version": 1,
+  "scope": "Pure wire/count/completeness/byte-reserve validation; no native formatting or census result",
+  "source": {
+    "bytes": 17312,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_validation_v1.py",
+    "sha256": "f5b8b4496018bfa66473bb694c99c3588a49bbb1060b814196f1ba80b32b95db"
+  },
+  "status": "passed",
+  "tests": 11,
+  "vector_labels": [
+    "metadata-error",
+    "metadata-clipping",
+    "metadata-unterminated",
+    "metadata-length",
+    "metadata-prefix",
+    "complete-6",
+    "complete-64",
+    "missing-or-failed-snapshot-close",
+    "missing-or-failed-snapshot-close",
+    "footer-ABI_eligibility_established",
+    "footer-target_C_queries",
+    "footer-Api_constructed",
+    "footer-all_prior_rows_durable",
+    "footer-snapshot_close_returned",
+    "footer-pid",
+    "lossless-optional-conversion",
+    "lossless-optional-conversion",
+    "decoded-wire-mismatch",
+    "forged-byte-counter",
+    "duplicate-JSON-key",
+    "missing-required-core-with-forged-all-one-counts",
+    "ledger-id",
+    "ledger-ordinal",
+    "ledger-time",
+    "ledger-counter",
+    "ledger-natural-error",
+    "snapshot-ERROR_BAD_LENGTH-no-retry",
+    "65th-return-counter-stop-is-not-natural",
+    "row-cap",
+    "data-consumes-terminal-reserve",
+    "all-child-2MiB-cap"
+  ],
+  "vectors": 31,
+  "wire": {
+    "bytes": 9717,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+    "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+  }
+}

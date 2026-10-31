@@ -1,0 +1,56 @@
+--- admission_envelope_v1.py
++++ admission_envelope_v2.py
+@@ -31,6 +31,7 @@
+ 
+ def _object(value, keys):
+     _need(type(value) is dict, 'TYPE_DOMAIN')
++    _need(len(value) == len(keys), 'SCHEMA_KEYS')
+     _need(all(type(key) is str for key in value), 'TYPE_DOMAIN')
+     _need(set(value) == set(keys), 'SCHEMA_KEYS')
+     return value
+@@ -39,6 +40,7 @@
+ def _integer(value, maximum=MAX, minimum=0, nullable=False):
+     if value is None and nullable:
+         return None
++    _need(type(value) in (int, bool, float, str, type(None)), 'TYPE_DOMAIN')
+     _need(type(value) is int and minimum <= value <= maximum, 'INTEGER_DOMAIN')
+     return value
+ 
+@@ -182,15 +184,6 @@
+                 software_ids.add(item['id'])
+             yield
+         derived['N'] = len(files)
+-        derived['total_bytes'] = _add(*(item['size'] for item in files))
+-        derived['positive_files'] = sum(1 for item in files if item['size'] > 0)
+-        if early is not None:
+-            _need(len(set(early)) == len(early) and set(early) == software_ids, 'MODULE_BINDING')
+-            derived['B'] = len(early)
+-        for key, observed in (('files', derived['N']), ('bytes', derived['total_bytes'])):
+-            _need(aggregate[key] is None or aggregate[key] == observed, 'AGGREGATE_MISMATCH')
+-    if early is not None:
+-        _need(len(set(early)) == len(early), 'MODULE_BINDING')
+     if modules is not None:
+         by_name = {}
+         for item in modules:
+@@ -220,6 +213,21 @@
+             bindings = [item['file_id'] for item in modules]
+             _need(len(set(bindings)) == len(bindings) and set(bindings) == software_ids, 'MODULE_BINDING')
+             derived['M'] = len(modules)
++    if early is not None:
++        _need(len(set(early)) == len(early), 'MODULE_BINDING')
++        if files is not None:
++            _need(set(early) == software_ids, 'MODULE_BINDING')
++            derived['B'] = len(early)
++    if files is not None:
++        _need(aggregate['files'] is None or aggregate['files'] == len(files), 'AGGREGATE_MISMATCH')
++        if aggregate['bytes'] is not None:
++            compared = 0
++            for item in files:
++                _need(item['size'] <= aggregate['bytes'] - compared, 'AGGREGATE_MISMATCH')
++                compared += item['size']
++            _need(compared == aggregate['bytes'], 'AGGREGATE_MISMATCH')
++        derived['total_bytes'] = _add(*(item['size'] for item in files))
++        derived['positive_files'] = sum(1 for item in files if item['size'] > 0)
+     if files is None:
+         n, size = aggregate['files'], aggregate['bytes']
+         _need(n != 0 or size in (None, 0), 'AGGREGATE_MISMATCH')

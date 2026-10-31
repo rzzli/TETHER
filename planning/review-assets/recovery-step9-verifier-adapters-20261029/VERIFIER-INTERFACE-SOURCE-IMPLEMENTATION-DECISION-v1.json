@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T07:41:50.442526+00:00",
+  "status": "ROOT_APPROVED_SOURCE_PURE_ORIGIN_HANDOFF_INJECTED_INTERFACES_ONLY",
+  "bindings": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-ADAPTER-DESIGN-CONTRACT-v1.json",
+      "bytes": 23356,
+      "sha256": "0327e9088f1dc1dce09f8806c5d0cf642c4700c7893385fc44e6cf58390993ef"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-ADAPTER-PLATFORM-CLARIFICATION-v1.json",
+      "bytes": 14034,
+      "sha256": "4aae6c09e16c34174b75012593202ab9b35206fa3007103fdd9fc57d29338631"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-ADAPTER-INDEPENDENT-DESIGN-REVIEW-v1.json",
+      "bytes": 7761,
+      "sha256": "f295bdf574cef1b5879f3d8d78ced3396e066a80d7eaa688a43d4d60ace6704f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\ROOT-DESIGN-REVIEW-v1.md",
+      "bytes": 2641,
+      "sha256": "99da074806f52b1344802264c64cbf92c40990ad78d9f6944ed521353b162a08"
+    }
+  ],
+  "approval": "Root explicitly approved next SOURCE/PURE ONLY origin/handoff + injected ownership interfaces after clarification and Native conditional review.",
+  "scope": [
+    "original t0 survives one-time owner continuation",
+    "source-loading interface without cache/path fallback",
+    "early lease/read/hash-known separation",
+    "synthetic bytes and fake ports/clocks/sinks only"
+  ],
+  "pending": [
+    "real first-clock entry bootstrap activation",
+    "all filesystem/ctypes/SDK/platform/sink calls",
+    "exact live authority/roster/call budgets",
+    "real archive/resource/core checker binding",
+    "runtime protocol and eligibility"
+  ],
+  "planned_source": "verifier_bootstrap_interfaces_v1.py",
+  "planned_checker": "check_verifier_bootstrap_interfaces_v1.py",
+  "old_original_or_payload_operations": 0,
+  "original_failed_gate_unchanged": true,
+  "citation_only_preservation": "Reviewed clarificationv1 restored exactly4aae/9b5; citation-expanded copies preserved separately asv2. Normative source scope unchanged."
+}

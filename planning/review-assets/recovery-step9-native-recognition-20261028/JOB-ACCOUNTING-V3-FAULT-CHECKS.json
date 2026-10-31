@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "status": "passed_exact_parent_bootstrap_and_module_path_pure_fixtures",
+  "helper_sha256": "d5f23f471adc9d4ee293d2bee27a3d85443b578a4a116e50ce53ccd235920e49",
+  "fixture_sha256": "9a6209d8820014c64ad37f783ef1caa8912ec042b4f92a2bd613ce05db7456b1",
+  "cases": [
+    {
+      "name": "parent_current_process",
+      "passed": true,
+      "expected_allowed": true
+    },
+    {
+      "name": "parent_exact_literal",
+      "passed": true,
+      "expected_allowed": true
+    },
+    {
+      "name": "parent_exact_system_path",
+      "passed": true,
+      "expected_allowed": true
+    },
+    {
+      "name": "parent_other_basename",
+      "passed": true,
+      "expected_allowed": false
+    },
+    {
+      "name": "parent_target_basename",
+      "passed": true,
+      "expected_allowed": false
+    },
+    {
+      "name": "parent_suffix_alias",
+      "passed": true,
+      "expected_allowed": false
+    },
+    {
+      "name": "parent_case_alias",
+      "passed": true,
+      "expected_allowed": false
+    },
+    {
+      "name": "parent_other_full_path",
+      "passed": true,
+      "expected_allowed": false
+    },
+    {
+      "name": "preparation_rejects_none",
+      "passed": true
+    },
+    {
+      "name": "preparation_rejects_literal",
+      "passed": true
+    },
+    {
+      "name": "preparation_rejects_full",
+      "passed": true
+    },
+    {
+      "name": "worker_rejects_none",
+      "passed": true
+    },
+    {
+      "name": "worker_rejects_literal",
+      "passed": true
+    },
+    {
+      "name": "worker_rejects_full",
+      "passed": true
+    },
+    {
+      "name": "mock_exact_module_path_accepted",
+      "passed": true
+    },
+    {
+      "name": "mock_other_module_rejected",
+      "passed": true
+    },
+    {
+      "name": "mock_zero_length_rejected",
+      "passed": true
+    },
+    {
+      "name": "mock_truncation_rejected",
+      "passed": true
+    },
+    {
+      "name": "mock_inconsistent_length_rejected",
+      "passed": true
+    },
+    {
+      "name": "mock_relative_path_rejected",
+      "passed": true
+    }
+  ],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-v3-pure-checks-1793213796080500500",
+  "actual_children": 0,
+  "network_requests": 0,
+  "windows_api_calls": 0,
+  "actual_ctypes_loads": 0,
+  "actual_forbidden_events": [],
+  "captured_audit_closures_invoked_directly": true,
+  "unchanged_v2_functions": [
+    "drain_capture",
+    "publish_marker",
+    "worker",
+    "safe",
+    "environment"
+  ],
+  "unchanged_limits_and_stages": true,
+  "prior_six_pure_checks_sha256": "46134073f2759ad02994317aa69cefde31a31bd79c32cc694d95303e317e62cc",
+  "scope": "Direct calls to captured audit-hook closures and mocked path-reader callbacks; never import ctypes or load fixture files."
+}

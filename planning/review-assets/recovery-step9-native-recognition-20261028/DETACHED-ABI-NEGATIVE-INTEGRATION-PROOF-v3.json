@@ -1,0 +1,52 @@
+{
+  "activity": {
+    "CPU_DLL_GGUF_or_protected_reads": 0,
+    "children_or_target_DLL_calls": 0,
+    "real_SDK_constructors_or_API_calls": 0
+  },
+  "checker": {
+    "bytes": 18064,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v3.py",
+    "sha256": "b6df23077ba960ef82075dea21a70fa112fbfed9de1216206681fe8cec78e496"
+  },
+  "component": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  },
+  "denied_real_operations": [],
+  "elapsed_seconds": 0.2970000000204891,
+  "errors": [
+    "test_all_independent_observation_faults_preserve_primary_and_cleanup (__main__.IntegrationTests.test_all_independent_observation_faults_preserve_primary_and_cleanup) (fault='drain')",
+    "test_all_independent_observation_faults_preserve_primary_and_cleanup (__main__.IntegrationTests.test_all_independent_observation_faults_preserve_primary_and_cleanup) (fault='snapshot')",
+    "test_all_independent_observation_faults_preserve_primary_and_cleanup (__main__.IntegrationTests.test_all_independent_observation_faults_preserve_primary_and_cleanup) (fault='peaks')",
+    "test_all_independent_observation_faults_preserve_primary_and_cleanup (__main__.IntegrationTests.test_all_independent_observation_faults_preserve_primary_and_cleanup) (fault='counter')",
+    "test_all_independent_observation_faults_preserve_primary_and_cleanup (__main__.IntegrationTests.test_all_independent_observation_faults_preserve_primary_and_cleanup) (fault='raw_publication')",
+    "test_nonzero_terminal_records_precede_owned_close_and_primary_survives (__main__.IntegrationTests.test_nonzero_terminal_records_precede_owned_close_and_primary_survives)",
+    "test_original_lease_failure_creates_late_veto_preserving_primary (__main__.IntegrationTests.test_original_lease_failure_creates_late_veto_preserving_primary)",
+    "test_preexisting_interrupts_admit_no_terminal_API (__main__.IntegrationTests.test_preexisting_interrupts_admit_no_terminal_API) (error='KeyboardInterrupt')",
+    "test_preexisting_interrupts_admit_no_terminal_API (__main__.IntegrationTests.test_preexisting_interrupts_admit_no_terminal_API) (error='SystemExit')",
+    "test_recheck_failed_close_then_sealer_retry_success_retains_both (__main__.IntegrationTests.test_recheck_failed_close_then_sealer_retry_success_retains_both)",
+    "test_success_and_after_seal_veto (__main__.IntegrationTests.test_success_and_after_seal_veto)",
+    "test_terminal_publication_preserves_primary_plus_secondary (__main__.IntegrationTests.test_terminal_publication_preserves_primary_plus_secondary)",
+    "test_unknown_creation_and_deadline_never_claim_final_state (__main__.IntegrationTests.test_unknown_creation_and_deadline_never_claim_final_state) (fault='unknown_creation')",
+    "test_unknown_creation_and_deadline_never_claim_final_state (__main__.IntegrationTests.test_unknown_creation_and_deadline_never_claim_final_state) (fault='deadline')"
+  ],
+  "execute_AST_sha256": "fa7bae24eea9c052e546180f3067eeb4433e300f541e0cd7c510ab2236b32890",
+  "failures": [],
+  "fixtures": [],
+  "qualified_SDK_source": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "schema_version": 1,
+  "scope": "Independent execute-AST + terminal component + original SDK pure owner/sealer with fake API; role/authority inputs are synthetic, strict result parser uses retained contract shape",
+  "source": {
+    "bytes": 39092,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v3.py",
+    "sha256": "89a2096ed5ae97b6f4174120e996f6faf12913adaa75749ac9e9618345ff5a48"
+  },
+  "status": "failed",
+  "tests": 8
+}

@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "source_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v3.cpp",
+  "source_sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4",
+  "required": {
+    "LLAMA_APIS": [
+      "llama_version",
+      "llama_model_default_params",
+      "llama_backend_init",
+      "llama_backend_free",
+      "llama_model_load_from_splits",
+      "llama_model_free",
+      "llama_model_get_vocab",
+      "llama_vocab_n_tokens",
+      "llama_vocab_is_eog",
+      "llama_tokenize",
+      "llama_token_to_piece",
+      "llama_sampler_init_grammar",
+      "llama_sampler_apply",
+      "llama_sampler_accept",
+      "llama_sampler_free"
+    ],
+    "GGML_APIS": [
+      "ggml_backend_load",
+      "ggml_backend_reg_count",
+      "ggml_backend_reg_get",
+      "ggml_backend_reg_name",
+      "ggml_backend_reg_dev_count",
+      "ggml_backend_reg_dev_get",
+      "ggml_backend_dev_count",
+      "ggml_backend_dev_get",
+      "ggml_backend_dev_name",
+      "ggml_backend_dev_type"
+    ]
+  },
+  "records": {
+    "llama.dll": {
+      "pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+        "bytes": 3581952,
+        "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d"
+      },
+      "named_export_count": 282,
+      "required_exports": {
+        "llama_version": {
+          "ordinal": 257,
+          "rva": 1105568,
+          "forwarder": null
+        },
+        "llama_model_default_params": {
+          "ordinal": 107,
+          "rva": 2238240,
+          "forwarder": null
+        },
+        "llama_backend_init": {
+          "ordinal": 41,
+          "rva": 1105584,
+          "forwarder": null
+        },
+        "llama_backend_free": {
+          "ordinal": 40,
+          "rva": 1105776,
+          "forwarder": null
+        },
+        "llama_model_load_from_splits": {
+          "ordinal": 120,
+          "rva": 1112080,
+          "forwarder": null
+        },
+        "llama_model_free": {
+          "ordinal": 109,
+          "rva": 2238336,
+          "forwarder": null
+        },
+        "llama_model_get_vocab": {
+          "ordinal": 111,
+          "rva": 2238288,
+          "forwarder": null
+        },
+        "llama_vocab_n_tokens": {
+          "ordinal": 278,
+          "rva": 2513232,
+          "forwarder": null
+        },
+        "llama_vocab_is_eog": {
+          "ordinal": 276,
+          "rva": 2513664,
+          "forwarder": null
+        },
+        "llama_tokenize": {
+          "ordinal": 256,
+          "rva": 2514896,
+          "forwarder": null
+        },
+        "llama_token_to_piece": {
+          "ordinal": 255,
+          "rva": 2514912,
+          "forwarder": null
+        },
+        "llama_sampler_init_grammar": {
+          "ordinal": 186,
+          "rva": 2372800,
+          "forwarder": null
+        },
+        "llama_sampler_apply": {
+          "ordinal": 171,
+          "rva": 2367440,
+          "forwarder": null
+        },
+        "llama_sampler_accept": {
+          "ordinal": 170,
+          "rva": 2367408,
+          "forwarder": null
+        },
+        "llama_sampler_free": {
+          "ordinal": 180,
+          "rva": 2367664,
+          "forwarder": null
+        },
+        "ggml_backend_load": null,
+        "ggml_backend_reg_count": null,
+        "ggml_backend_reg_get": null,
+        "ggml_backend_reg_name": null,
+        "ggml_backend_reg_dev_count": null,
+        "ggml_backend_reg_dev_get": null,
+        "ggml_backend_dev_count": null,
+        "ggml_backend_dev_get": null,
+        "ggml_backend_dev_name": null,
+        "ggml_backend_dev_type": null
+      },
+      "version_named_exports": [
+        "llama_version"
+      ]
+    },
+    "ggml.dll": {
+      "pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+        "bytes": 78848,
+        "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba"
+      },
+      "named_export_count": 16,
+      "required_exports": {
+        "llama_version": null,
+        "llama_model_default_params": null,
+        "llama_backend_init": null,
+        "llama_backend_free": null,
+        "llama_model_load_from_splits": null,
+        "llama_model_free": null,
+        "llama_model_get_vocab": null,
+        "llama_vocab_n_tokens": null,
+        "llama_vocab_is_eog": null,
+        "llama_tokenize": null,
+        "llama_token_to_piece": null,
+        "llama_sampler_init_grammar": null,
+        "llama_sampler_apply": null,
+        "llama_sampler_accept": null,
+        "llama_sampler_free": null,
+        "ggml_backend_load": {
+          "ordinal": 9,
+          "rva": 8496,
+          "forwarder": null
+        },
+        "ggml_backend_reg_count": {
+          "ordinal": 13,
+          "rva": 5776,
+          "forwarder": null
+        },
+        "ggml_backend_reg_get": {
+          "ordinal": 14,
+          "rva": 5920,
+          "forwarder": null
+        },
+        "ggml_backend_reg_name": null,
+        "ggml_backend_reg_dev_count": null,
+        "ggml_backend_reg_dev_get": null,
+        "ggml_backend_dev_count": {
+          "ordinal": 3,
+          "rva": 6576,
+          "forwarder": null
+        },
+        "ggml_backend_dev_get": {
+          "ordinal": 4,
+          "rva": 6720,
+          "forwarder": null
+        },
+        "ggml_backend_dev_name": null,
+        "ggml_backend_dev_type": null
+      },
+      "version_named_exports": []
+    },
+    "ggml-base.dll": {
+      "pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+        "bytes": 803840,
+        "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3"
+      },
+      "named_export_count": 689,
+      "required_exports": {
+        "llama_version": null,
+        "llama_model_default_params": null,
+        "llama_backend_init": null,
+        "llama_backend_free": null,
+        "llama_model_load_from_splits": null,
+        "llama_model_free": null,
+        "llama_model_get_vocab": null,
+        "llama_vocab_n_tokens": null,
+        "llama_vocab_is_eog": null,
+        "llama_tokenize": null,
+        "llama_token_to_piece": null,
+        "llama_sampler_init_grammar": null,
+        "llama_sampler_apply": null,
+        "llama_sampler_accept": null,
+        "llama_sampler_free": null,
+        "ggml_backend_load": null,
+        "ggml_backend_reg_count": null,
+        "ggml_backend_reg_get": null,
+        "ggml_backend_reg_name": {
+          "ordinal": 129,
+          "rva": 130672,
+          "forwarder": null
+        },
+        "ggml_backend_reg_dev_count": {
+          "ordinal": 126,
+          "rva": 130736,
+          "forwarder": null
+        },
+        "ggml_backend_reg_dev_get": {
+          "ordinal": 127,
+          "rva": 130800,
+          "forwarder": null
+        },
+        "ggml_backend_dev_count": null,
+        "ggml_backend_dev_get": null,
+        "ggml_backend_dev_name": {
+          "ordinal": 93,
+          "rva": 130096,
+          "forwarder": null
+        },
+        "ggml_backend_dev_type": {
+          "ordinal": 97,
+          "rva": 130272,
+          "forwarder": null
+        }
+      },
+      "version_named_exports": [
+        "ggml_version",
+        "gguf_get_version"
+      ]
+    },
+    "libomp.dll": {
+      "pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+        "bytes": 768000,
+        "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+      },
+      "named_export_count": 756,
+      "required_exports": {
+        "llama_version": null,
+        "llama_model_default_params": null,
+        "llama_backend_init": null,
+        "llama_backend_free": null,
+        "llama_model_load_from_splits": null,
+        "llama_model_free": null,
+        "llama_model_get_vocab": null,
+        "llama_vocab_n_tokens": null,
+        "llama_vocab_is_eog": null,
+        "llama_tokenize": null,
+        "llama_token_to_piece": null,
+        "llama_sampler_init_grammar": null,
+        "llama_sampler_apply": null,
+        "llama_sampler_accept": null,
+        "llama_sampler_free": null,
+        "ggml_backend_load": null,
+        "ggml_backend_reg_count": null,
+        "ggml_backend_reg_get": null,
+        "ggml_backend_reg_name": null,
+        "ggml_backend_reg_dev_count": null,
+        "ggml_backend_reg_dev_get": null,
+        "ggml_backend_dev_count": null,
+        "ggml_backend_dev_get": null,
+        "ggml_backend_dev_name": null,
+        "ggml_backend_dev_type": null
+      },
+      "version_named_exports": []
+    }
+  },
+  "activity": {
+    "DLL_loads": 0,
+    "SDK_API_calls": 0,
+    "compiler_or_child_execution": 0,
+    "CPU_DLL_or_GGUF_reads": 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "actual_API_calls": 0,
+  "binding_inputs": {
+    "bytes": 59745,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-BINDING-INPUTS-DRAFT-v1.json",
+    "sha256": "3c9f1c84571f740affa7f9730b4afe7c88c4d9724669557d3202b122dd1aa2c3"
+  },
+  "checker": {
+    "bytes": 4649,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_literal_drafts_v1.py",
+    "sha256": "60bcbb2aaa368c7d9055c2f031f7ba5b9bbe8f45215617fa62fe00e71a80ead4"
+  },
+  "errors": [],
+  "failures": [],
+  "fake_dispatches": 0,
+  "fixture_behavior_qualified": false,
+  "methods": 4,
+  "roster": {
+    "bytes": 14377,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-HISTORY-ROSTER-DRAFT-v1.json",
+    "sha256": "ec53fce7dbb317bb284b0c8924eac4655b28c04df86166178b4538191cb0850a"
+  },
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Draft literal metadata/framing only; final public snapshot/schema and concrete histories remain unfrozen, no transition interpreter or fake/native binding or source helper run.",
+  "status": "draft_framing_passed",
+  "toy_helpers_executed": false,
+  "under_test_sources_imported": false
+}

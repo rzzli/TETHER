@@ -1,0 +1,815 @@
+{
+  "actual_API_calls": 0,
+  "added_checks": [
+    {
+      "checks": [],
+      "id": "baseline_consistent"
+    },
+    {
+      "checks": [],
+      "id": "baseline_core_negative"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "work_cutoff_before_stage"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "hard_cutoff_before_cleanup"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "foreign_origin"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "foreign_nonce"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "foreign_registry"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "foreign_port"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "copied_continuation_dict"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "repeated_continuation_claim"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_role_changed"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_capture_changed"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_hash_changed"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "canonical_path_alias"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_closed_success"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_closed_failure"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "early_close_unobserved"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "compile_original_failure"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "undeclared_source_import"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "cache_return_after_early_close"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "open_scalar_then_KI"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "open_scalar_then_SE"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "open_scalar_unobserved"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "open_observed_NULL"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "open_observed_INVALID"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "read_count_then_deadline"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "read_hash_KI"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "read_copy_MemoryError"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "read_defined_zero"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "read_false_observed_zero"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "wrapper_return_then_later_stop"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "injected_source_error_class"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "reservation_foreign_ack"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "reservation_unreturned"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "owned_append_original_failure"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "checker_factory_unbranded"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "checker_foreign_context"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "checker_return_late"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "original_close_false"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "original_close_unreturned"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "seal_ack_late"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "postseal_no_new_output"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "preopen_roster_bounds"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "forged_derived_caps"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.1.arguments.requested",
+          "relation": "eq",
+          "value": 58
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.2.arguments.requested",
+          "relation": "eq",
+          "value": 57
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.3.arguments.requested",
+          "relation": "eq",
+          "value": 56
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.4.arguments.requested",
+          "relation": "eq",
+          "value": 55
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.5.arguments.requested",
+          "relation": "eq",
+          "value": 54
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.6.arguments.requested",
+          "relation": "eq",
+          "value": 53
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.7.arguments.requested",
+          "relation": "eq",
+          "value": 52
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.8.arguments.requested",
+          "relation": "eq",
+          "value": 51
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.9.arguments.requested",
+          "relation": "eq",
+          "value": 50
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.10.arguments.requested",
+          "relation": "eq",
+          "value": 49
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.11.arguments.requested",
+          "relation": "eq",
+          "value": 48
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.12.arguments.requested",
+          "relation": "eq",
+          "value": 47
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.13.arguments.requested",
+          "relation": "eq",
+          "value": 46
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.14.arguments.requested",
+          "relation": "eq",
+          "value": 45
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.15.arguments.requested",
+          "relation": "eq",
+          "value": 44
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.16.arguments.requested",
+          "relation": "eq",
+          "value": 43
+        },
+        {
+          "at": "final",
+          "path": "$binding.ReadFile.0.17.arguments.requested",
+          "relation": "eq",
+          "value": 42
+        }
+      ],
+      "id": "short_read_attempt_exhaustion"
+    },
+    {
+      "checks": [],
+      "id": "publication_attempt_or_size_cap"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "snapshot_and_exception_mutation"
+    },
+    {
+      "checks": [
+        {
+          "at": "final",
+          "path": "status",
+          "relation": "one_of",
+          "value": [
+            "REFUSED",
+            "INCOMPLETE"
+          ]
+        }
+      ],
+      "id": "foreign_diagnostic_and_nonowning_view"
+    }
+  ],
+  "all48_schedules_actions_frames_unchanged": true,
+  "all_prior_checks_retained": true,
+  "author": {
+    "bytes": 5896,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\close_shared_owner_literal_controls_v3.py",
+    "sha256": "c142efe895c22b12cf281344e58977f5362060b759765f84dca3ed3d6cdb64ff"
+  },
+  "changed_schema_fields": [
+    "binding_override_rule",
+    "check_paths",
+    "check_relations",
+    "expected_comparison",
+    "step_error_policy"
+  ],
+  "fake_dispatches": 0,
+  "fixture": {
+    "bytes": 312462,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+    "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+  },
+  "independent_requested_checks_added": 17,
+  "preserved_fixture": {
+    "bytes": 300833,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v2.json",
+    "sha256": "45b17a6c737d6dbd914557f698a74ed92bf18077a0d2b86864cec63b72d037c5"
+  },
+  "preserved_freeze": {
+    "bytes": 6005,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-FREEZE-v2.json",
+    "sha256": "a9c6786736279d90cbe3d7a15d32780f0579916c7ccec7266150c61b3d225bb9"
+  },
+  "preserved_schema": {
+    "bytes": 11212,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v2.json",
+    "sha256": "7ea6cb057c749e54a4fa557345ce00076fbd9b6b911eb7d767d9666fd7ddb0c8"
+  },
+  "requested_values": [
+    58,
+    57,
+    56,
+    55,
+    54,
+    53,
+    52,
+    51,
+    50,
+    49,
+    48,
+    47,
+    46,
+    45,
+    44,
+    43,
+    42
+  ],
+  "reverse_cases_exact": true,
+  "schema": {
+    "bytes": 13345,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+    "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+  },
+  "schema_version": 1,
+  "scope": "Two closed literal/harness clarifications only. No source API/field, history, step, action, raw fact, input byte or frame changes.",
+  "source_implementation": false,
+  "status": "passed",
+  "status_checks_added": 45
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_DESIGN_CLARIFICATION_PENDING_PEER_NO_PLATFORM_IMPLEMENTATION",
+  "base_contract_sha256_from_frozen_record": "0327e9088f1dc1dce09f8806c5d0cf642c4700c7893385fc44e6cf58390993ef",
+  "base_files_unchanged": true,
+  "scope": "Resolve API-census and application-level return-order ambiguity before any source implementation. A prospective API list is not runtime or live-adapter authority.",
+  "six_stream_APIs_are_not_complete_platform_adapter": true,
+  "pending_platform_stages": {
+    "stream_identity_read_close": "Six named APIs in the base contract remain source references; typed live implementation/review/qualification is absent.",
+    "ancestor_and_run_root_metadata": "Separate pending platform stage, described below. It cannot be supplied by the six stream APIs or by an unreviewed Path/os wrapper.",
+    "output_namespace_write_flush_publish": "Separate pending platform stage. CreateDirectoryW/CreateFileW/WriteFile/FlushFileBuffers/CloseHandle or equivalent exact reviewed operations and publication semantics still need a finite binding/call/ownership census before any real sink implementation. No hidden high-level filesystem fallback is authorized."
+  },
+  "proposed_metadata_APIs": [
+    {
+      "API": "GetFileAttributesExW",
+      "signature": "BOOL(LPCWSTR, GET_FILEEX_INFO_LEVELS, LPVOID)",
+      "configuration": "GetFileExInfoStandard with preallocated WIN32_FILE_ATTRIBUTE_DATA; exact admitted ancestor or admitted scan-directory path only",
+      "ownership": "No handle returned; reserve the call/record first, retain BOOL/error/raw output status before clock or conversion. Output buffer is undefined on failure and cannot prove safe ancestry.",
+      "acceptance": "Require known directory and no FILE_ATTRIBUTE_REPARSE_POINT for required ancestors/directories; missing/failure/unknown remains incomplete or a source contradiction. This is an observation, not race-proof or permanent authentication.",
+      "call_cap_proposal": "One call for each unique admitted ancestor U<=1024, plus at most8 directory checks per scan for at most2 scans: total<=1040. Exact U is computed before any metadata call; reject a roster that cannot fit."
+    },
+    {
+      "API": "FindFirstFileExW",
+      "signature": "HANDLE(LPCWSTR, FINDEX_INFO_LEVELS, LPVOID, FINDEX_SEARCH_OPS, LPVOID, DWORD)",
+      "configuration": "Only literal admitted_run_directory + wildcard star; FindExInfoBasic, FileExSearchNameMatch, NULL search filter and flags0. Constants/layout are pending SDK-source verification before implementation.",
+      "ownership": "Preallocated search slot records the valid returned search handle before interpreting the first result or checking time. INVALID_HANDLE_VALUE transfers no handle; failed result data is undefined. Search slots have kind=file_search and closer=FindClose, never CloseHandle.",
+      "call_cap_proposal": "At most8 explicitly admitted directories per scan and2 scans: <=16 calls. No search outside the exact terminated run root; no recursion into unknown/reparse directories."
+    },
+    {
+      "API": "FindNextFileW",
+      "signature": "BOOL(HANDLE, LPWIN32_FIND_DATAW)",
+      "configuration": "Only an observed owned active search slot from this owner. Fixed preallocated result slots retain each returned row without overwriting late evidence.",
+      "ownership": "Returns no new handle. Record success/known result or failure/error before post-call clock; a false return makes the output buffer undefined. Only observed ERROR_NO_MORE_FILES is natural end after an established search.",
+      "call_cap_proposal": "Per scan: <=64 admitted non-dot entries, <=16 dot entries across8 directories, and1 overflow witness =><=81 successful record slots; allow at most8 terminal end calls =><=89 FindNext attempts per scan, <=178 overall. Stop at an overflow/error/unknown/deadline; no retry or cap increase."
+    },
+    {
+      "API": "FindClose",
+      "signature": "BOOL(HANDLE)",
+      "configuration": "Exactly the registered source-bound search-handle closer, one reservation/attempt per owned search slot",
+      "ownership": "Retain returned success/failure/unknown before time/logging. Never retry an uncertain close and never route this handle through CloseHandle. Known/unknown close failure vetoes complete verification.",
+      "call_cap_proposal": "At most one close per successful FindFirstFileExW: <=16. No new cleanup dispatch after original hard cutoff."
+    }
+  ],
+  "scan_policy": {
+    "maximum_scans": 2,
+    "maximum_directories_per_scan": 8,
+    "maximum_depth": 4,
+    "maximum_non_dot_entries_per_scan": 64,
+    "maximum_dot_entries_per_scan": 16,
+    "overflow_witness_slots": 1,
+    "selection": "The finite allowed directory/conditional artifact roster comes from the frozen source contract, never directory contents, reported image paths or child authority claims.",
+    "order": "Retain OS return order and raw metadata; only after complete enumeration sort a separate canonical comparison index. OS ordering is not presumed stable or canonical.",
+    "dot_entries": "Ignore literal dot and dot-dot for traversal only, after counting/bounding their observed records. Do not use alternate/8.3 names as locators.",
+    "empty_directory": "An invalid initial handle with ERROR_FILE_NOT_FOUND is not an established iterator with natural end. A future implementation must have an explicit source-bound empty-directory rule and contemporaneous known-directory attributes, or conservatively mark it incomplete; this case is pending review and cannot be silently treated as complete.",
+    "reparse_and_unknown": "Retain metadata, reject reparse/unknown name/type/directory/unterminated name/alias/over-cap observation before opening or traversing that entry. Successful enumeration is not physical file identity; the existing handle-based checks and fresh hash remain required.",
+    "stability": "The second scan compares the same bounded run-root universe before work completion. Two matching scans are not an atomic snapshot or proof against hostile concurrent namespace mutation.",
+    "event_budget": "Use bounded stage/search reservation and return events, not per-entry journal events. Exact actual directory count and bootstrap stages must fit the existing64 fixed events, or admission holds before any metadata dispatch; do not assume 6*N+64+128 still fits without that check."
+  },
+  "proposed_sink_API_census_pending_implementation": {
+    "CreateDirectoryW": "BOOL(LPCWSTR, LPSECURITY_ATTRIBUTES); exactly one fixed new verifier directory under an already approved existing parent. Known TRUE grants namespace ownership before clock/allocation; existing/failed/unknown creates no write authority. No recursive parent creation.",
+    "CreateFileW": "Existing typed function, distinct output use: GENERIC_WRITE, share0, CREATE_NEW, noninheritable, FILE_ATTRIBUTE_NORMAL, exact fixed owner basename only. Register valid raw output handle in a preallocated slot before write/flush/clock work; never replace an existing file.",
+    "WriteFile": "BOOL(HANDLE,LPCVOID,DWORD,LPDWORD,LPOVERLAPPED), synchronous only. Reserve the attempt, retain known successful short-write count before clock/slicing/digest work. Continue successful partial writes under the same finite cap; never retry a failed/unreturned write or reset an offset to conceal its tail.",
+    "FlushFileBuffers": "BOOL(HANDLE); one known acknowledgment per bounded record plus at most one final flush per file. A failed/late/unknown flush prevents completion.",
+    "CloseHandle": "Existing typed stream closer, exactly once per owned output slot; retain returned success/failure/unknown before post-call clock. Search slots remain FindClose-only.",
+    "publication": "No rename/delete API is proposed: CREATE_NEW artifacts can remain partial on failure, and missing/malformed/failed seal or any veto prevents eligibility. No in-place repair, replacement or hidden filesystem wrapper.",
+    "fixed_basenames": ["reservation.json", "journal.jsonl", "verification-candidate.json", "original-lease-cleanup.json", "receipt.json", "terminal-seal.json", "failure.json", "late-failure.json", "after-seal-failure.json"],
+    "prospective_bounds": {
+      "files_maximum": 9,
+      "journal_records_maximum": 2048,
+      "journal_bytes_maximum": 8388608,
+      "journal_row_bytes_maximum": 65536,
+      "candidate_cleanup_receipt_seal_bytes_each": 2097152,
+      "reservation_and_each_veto_bytes": 8192,
+      "aggregate_output_bytes_maximum": 16809984,
+      "write_chunk_bytes": 65536,
+      "per_file_WriteFile_cap": "record_cap + ceil(byte_cap/65536) +16 short-write headroom; record_cap=2048 for journal and1 otherwise",
+      "all_WriteFile_cap": 2460,
+      "all_FlushFileBuffers_cap": 2065,
+      "CreateDirectoryW_cap": 1,
+      "output_CreateFileW_cap": 9,
+      "output_CloseHandle_cap": 9,
+      "rule": "Preflight exact future roster/event/report worst-case byte reservations against these proposals before originals open. Exhaustion is incomplete, never silently shortened, retried or raised. These are proposed sink-only caps, not changes to native target counters."
+    },
+    "deadline": "No sink native operation starts after the original hard cutoff. The pure engine's failure callback may return an in-memory veto instead of a late file write. Known output closes and final acknowledgment remain necessary for completion."
+  },
+  "finite_loader_clarification": {
+    "own_modules": "An exact own-module plus dependency map is frozen before invocation. Own/helper names always resolve to this invocation's leased, hash-bound captured bytes and freshly compiled module objects.",
+    "no_cache_fallback": "Do not accept an own-helper object merely because its name already exists in sys.modules. No default importlib, runpy, path finder, package discovery, linecache, inspect or traceback source-path fallback supplies own source.",
+    "stdlib": "The explicit approved standard-library whitelist and module-object binding rules freeze with the loader source. Its setup happens after the origin and is charged to it; it is a disclosed interpreter/platform trust context, not new whole-stdlib authentication.",
+    "relative_imports": "Resolve only through the frozen own package/module map and approved exact dependency relationships. Missing, additional, foreign cached or unresolved-relative modules fail closed rather than reading a path.",
+    "proof_boundary": "Fresh source hashes/live leases/current invocation identity are mandatory; neither a cached module nor serialized validated flag completes a source gate."
+  },
+  "application_return_order_limit": {
+    "normative": "Immediately means earliest application-level assignments after ctypes returns/converts a result into Python-visible values. Preallocated slots remove avoidable application allocations before registration; they do not make the OS-to-Python transition atomic or allocation-free.",
+    "handle_rule": "After a Python-visible valid handle exists, assign it and its owned/observed state to the preexisting slot before int conversion, dictionary construction, identity calls, clocks, logging or other deliberate application allocations.",
+    "read_rule": "The corresponding known-count rule begins when success/count are Python-visible. A failure while conversion/return observation is incomplete preserves unknown state, not zero bytes or a no-side-effect claim.",
+    "gap": "A native operation may have acquired a resource even if Python never observes its return. Such an unknown outcome cannot be guessed closed or used as positive evidence; no universal cleanup guarantee is claimed.",
+    "fake_scope": "Injected tests can prove the deliberate application ordering after a returned observation and preservation of unknown gaps. They cannot prove atomic native/ctypes delivery or absence of mid-call process death."
+  },
+  "primary_references": [
+    {"title": "GetFileAttributesExW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileattributesexw", "supports": "Path attribute query and no-handle BOOL result; symbolic-link attributes concern the link."},
+    {"title": "FindFirstFileExW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findfirstfileexw", "supports": "Initial search handle/result; invalid-handle failure; no sorted order; FindClose ownership; metadata freshness limitation."},
+    {"title": "FindNextFileW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findnextfilew", "supports": "Continuation, undefined failed output, ERROR_NO_MORE_FILES and unspecified order."},
+    {"title": "FindClose", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findclose", "supports": "Search handles use FindClose; the handle is not reusable after its call."},
+    {"title": "WIN32_FIND_DATAW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw", "supports": "Name/attribute/reparse fields and basic-info alternate-name behavior; layout still needs exact installed SDK proof."},
+    {"title": "CreateDirectoryW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createdirectoryw", "supports": "Creates the final directory and reports failure for an existing directory; no recursive parent creation."},
+    {"title": "CreateFileW", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew", "supports": "Output handle, access/sharing and CREATE_NEW contract."},
+    {"title": "WriteFile", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile", "supports": "Synchronous buffer/returned-byte-count interface."},
+    {"title": "FlushFileBuffers", "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers", "supports": "Write-handle flush acknowledgment; per-record flushing may be costly and has no guaranteed time fit."}
+  ],
+  "future_profile_notice": "Native reports Unicode fixture e6e8419c0ad37db007263de0a57e0ce66a20f7481f35686427076ea36c7106b3 and contract65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d frozen after the base design. This message-provided notice is not a fresh check or executable checker binding; child wire/decoder/native pack/runtime remain absent and separately held.",
+  "next_gate": "Root and Native independent review before source implementation. The contemplated next scope is only trusted-origin BootstrapHandoff and pure injected ownership/metadata interfaces; all real platform bindings, file/sink calls, loader activation and live qualification stay held.",
+  "current_operations": "Design authoring and official documentation reads only. No old original rehash, CPU/GGUF/pack operation, SDK construction, platform adapter invocation or target runtime."
+}

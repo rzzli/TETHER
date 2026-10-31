@@ -1,0 +1,38 @@
+{
+  "inputs": {
+    "UNICODE-OBSERVATIONS-DESIGN-CONTRACT-v2.json": {
+      "bytes": 25381,
+      "sha256": "edacdc2bddbceab5735699ee9d973f89bad46b64713b193fe43ab80ed989101f"
+    },
+    "UNICODE-OBSERVATIONS-DESIGN-FREEZE-v2.json": {
+      "bytes": 1838,
+      "sha256": "75093a117a4b196111bf1a5a6b2b555840413c2f0d12a483fee643b799f046f4"
+    },
+    "UNICODE-OBSERVATIONS-INDEPENDENT-DESIGN-REVIEW-v2.json": {
+      "bytes": 4363,
+      "sha256": "b815af2189b4bb03b521bd1539082507783f62c99369c19e3eb8c4a607c20950"
+    }
+  },
+  "native_or_model_operations_authorized": false,
+  "next_gate": "Independent finite trace-fixture review followed by a separate root decision for a pure callback-bounded observation validator. Source/parent/resource/clock/provenance qualification remains external.",
+  "old_negative_and_timeout_unchanged": true,
+  "old_original_or_archive_operations_authorized": false,
+  "originals_authenticated": false,
+  "pack_file_creation_authorized": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:19:41.159721+00:00",
+  "required": [
+    "All fifteen setup occurrences, 84 exact source before/result pairs, coverage/selection, deduplicated original-token prefixes, cleanup/batch/normal schedule",
+    "At least one complete fictional positive trace with all required geometry classes; synthetic one-byte pieces alone cannot establish mixed coverage",
+    "Explicit fictional PID/runtime/model descriptors, token IDs/pieces, native outcomes, counters and times; no actual observation claim",
+    "Source-fixed coverage population, independently recomputed geometry and original-token prefix identity",
+    "Negative, unavailable, conflict and partial/failure histories with exact independently authored expected projections and bounded fault locations",
+    "Strict elapsed samples and terminal-failure grammar from v2; no success from marker presence, unknown cleanup or missing rows",
+    "Freeze literal trace bytes, source references, all caps and expectations before source-validator implementation"
+  ],
+  "root_scope": "Author and independently review literal synthetic positive, complete-negative and partial/fault JSONL histories from the exact 84-case profile before any observation validator implementation.",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "status": "DESIGN_V2_ACCEPTED_FOR_FICTIONAL_COMPLETE_TRACE_FIXTURES_ONLY",
+  "validator_implementation_authorized": false
+}

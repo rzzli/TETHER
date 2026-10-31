@@ -1,0 +1,143 @@
+{
+  "activity": {
+    "Windows_API_calls": 0,
+    "child_or_model_runs": 0,
+    "helper_imports": 0,
+    "probe_runs": 0,
+    "protected_payload_reads": 0,
+    "protocol_edits": 0,
+    "source_edits": 0,
+    "web_browsing": "Official Microsoft documentation only"
+  },
+  "interpretation": {
+    "Active0_empty_PID_list_only_supports_final_drained_observation": true,
+    "Total2_does_not_itself_prove_live_or_running_child": true,
+    "TotalTerminated0_kept_as_observed_not_universal_rule": true,
+    "WinError1816_does_not_uniquely_identify_active_process_limit": true,
+    "failed_limit_association_can_increment_TotalProcesses": true,
+    "original_unplanned_active2_cause": "unresolved; no retrospective attribution"
+  },
+  "local_refs": [
+    {
+      "bytes": 5304,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/harmless_launch_worker.py",
+      "sha256": "dc388b9a83d11d76ed30403658ee31f8cbf91276ffeafca1b6f91f9b49eb9811"
+    },
+    {
+      "bytes": 36712,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-LAUNCHER-QUALIFICATION-PROTOCOL-v3.json",
+      "sha256": "eb2c1844c325dc02f8ff6546ea963e908ec8676bad36eae370d94fcc2a6e649b"
+    },
+    {
+      "bytes": 28698,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/qualify_harmless_launcher_v3.py",
+      "sha256": "6d0c11778d4f759e7be4bc81eca94aac48d7ef0bfe7dd02a26ecc4cce265eb91"
+    },
+    {
+      "bytes": 572,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/JOB-ACCOUNTING-DISPOSITION.json",
+      "sha256": "24f57970097f44c7460624f56c4b6f3487a2c78b20c5b499675b32afb5cb4964"
+    },
+    {
+      "bytes": 16735,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/JOB-ACCOUNTING-V3-RESULT-VERIFICATION.json",
+      "sha256": "fd38eceb4d732fe3697c79715d93d59d21c6741137cbb5708172138976d78288"
+    }
+  ],
+  "optional_distinguishing_design": {
+    "claim_limit": "Distinguish recorded failed creation/association accounting from observed user-code entry; never infer universal nonexecution from counters/endpoints",
+    "execution_authorized": false,
+    "guard": "no retries, no breakaway, no active-limit increase",
+    "intended_descendant_attempts": 1,
+    "only_if_additional_diagnosis_needed": true,
+    "owned_jobs": 1,
+    "owned_main_workers": 1,
+    "steps": [
+      "Atomic before-attempt worker marker and parent raw baseline",
+      "One protocol-bound descendant attempt; atomic result with API outcome/error/returned PID-handle availability",
+      "Parent named raw accounting/PID sample after result then final bounded drain; cap sampling and all cleanup under existing parent deadline",
+      "Optional separately versioned descendant first-entry nonce marker would positively reveal user-code entry; absence alone is not proof",
+      "Any successful spawn or first-entry marker is a negative limit-test result and triggers owned-Job termination/reap"
+    ]
+  },
+  "recommended_prospective_correction": {
+    "final_Total_policy": "require exactly2; reject1,3,missing/malformed or role mismatch",
+    "final_expectation": {
+      "ActiveProcesses": 0,
+      "TotalProcesses": 2,
+      "TotalTerminatedProcesses": 0,
+      "pids": []
+    },
+    "generic_ABI_Total_policy": "unchanged exactly1",
+    "original_attempt": "preserve original failed qualification unchanged; prospective qualification requires separate exact root decision",
+    "prerequisites": [
+      "Exact frozen worker/protocol/mode and owned identity",
+      "Initially Total1 Active1 only owned worker PID with active limit1 and no breakaway",
+      "Exactly one intended descendant attempt, rejectedTrue, winerror1816, matching complete marker/record",
+      "Owned worker waited/reaped and terminal raw buffers valid"
+    ],
+    "scope": "resources harmless_after_wait only; no generic or ABI change"
+  },
+  "recorded_at_utc": "2026-10-28T20:22:43.055327+00:00",
+  "reported_actual_observations": {
+    "after_wait": {
+      "ActiveProcesses": 0,
+      "TotalProcesses": 2,
+      "TotalTerminatedProcesses": 0,
+      "pids": []
+    },
+    "basis": "Root report; separate peer independently verifies actual raw artifacts",
+    "before_and_running": {
+      "ActiveProcesses": 1,
+      "TotalProcesses": 1,
+      "pids": "only owned worker PID"
+    },
+    "worker": {
+      "descendant_spawn_attempts": 1,
+      "rejected": true,
+      "winerror": 1816
+    }
+  },
+  "review_type": "AI primary-document/source semantics analysis; no experiment or actual-output verification",
+  "schema_version": 1,
+  "source_worker_shape": {
+    "descendant_argv": "canonical base Python -I -B -c raise SystemExit(0)",
+    "memory_request_bytes": 402653184,
+    "one_descendant_Popen": true,
+    "resources_lines": "89-116",
+    "retry": false,
+    "usercode_entry_marker_in_original_descendant": false
+  },
+  "sources": [
+    {
+      "fields": [
+        "TotalProcesses",
+        "ActiveProcesses",
+        "TotalTerminatedProcesses"
+      ],
+      "support": "Lifetime total includes failed limit associations; active count can transiently increase until exit/references release; terminated is separately defined",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_accounting_information"
+    },
+    {
+      "field": "ActiveProcessLimit",
+      "support": "Exceeding active limit terminates the candidate and fails its association",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information"
+    },
+    {
+      "section": "Remarks",
+      "support": "Active process limit can reject association and terminate specified process",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/jobapi2/nf-jobapi2-assignprocesstojobobject"
+    },
+    {
+      "field": "ERROR_NOT_ENOUGH_QUOTA1816",
+      "support": "1816 is a general quota failure, not a unique identification of the active-process limit",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/system-error-codes--1700-3999-"
+    },
+    {
+      "section": "Managing Processes in Jobs and Resource Accounting",
+      "support": "CreateProcess descendants inherit Job by default without breakaway; endpoints are not complete lifetime execution census",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects"
+    }
+  ],
+  "status": "documented_failed_association_lifetime_accounting_consistent_role_specific_design_only"
+}

@@ -1,0 +1,256 @@
+{
+  "actual_legacy_fake_dispatches": 0,
+  "actual_marker_module_execs": 0,
+  "actual_target_API_calls": 0,
+  "audit_denials": [],
+  "audit_policy": "Source ACTIVE boundaries plus exact subject filename frames cover getters/callbacks; no unexpected filesystem/network/native/import events. Trusted test reporting is outside subject activity.",
+  "callback_free_hang_bound": "UNKNOWN_NO_OWNED_OUTER_WATCHDOG",
+  "clocks": "One original real60s cooperative suite deadline is checked around actual codec calls/original callbacks and after the suite. Original callback exceptions/False returns remain unchanged. Every genuine owner retains original synthetic100/395/400 clock; readonly negative projection does not resample it.",
+  "codec": {
+    "counts": {
+      "callback_exception_cases": 66,
+      "caller_mutation_cases": 1,
+      "check_calls": 2669,
+      "decode_calls": 301,
+      "encode_calls": 86,
+      "getter_calls": 158,
+      "subject_methods": 4,
+      "unique_bases": 40,
+      "unique_byte_negatives": 225,
+      "value_refusal_cases": 15
+    },
+    "errors": [],
+    "failures": [],
+    "methods": 4,
+    "observed_valid_check_sites": {
+      "decode": 12,
+      "encode": 15
+    },
+    "qualification": {
+      "full_roster": false,
+      "new84_runtime": false,
+      "physical_IO": false,
+      "real_FFI": false,
+      "real_entry": false,
+      "resource_fit": false,
+      "scientific": false
+    },
+    "status": "PASS",
+    "transcript": "test01_literal_encode_decode_and_anchors (role_aware_independent_frozen_codec_tests_v2.run.<locals>.Tests.test01_literal_encode_decode_and_anchors) ... ok\ntest02_byte_negative_expansions (role_aware_independent_frozen_codec_tests_v2.run.<locals>.Tests.test02_byte_negative_expansions) ... ok\ntest03_strict_types_and_detached_mutation (role_aware_independent_frozen_codec_tests_v2.run.<locals>.Tests.test03_strict_types_and_detached_mutation) ... ok\ntest04_callback_identity_and_cached_getters (role_aware_independent_frozen_codec_tests_v2.run.<locals>.Tests.test04_callback_identity_and_cached_getters) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.135s\n\nOK\n"
+  },
+  "codec_conformance_started": true,
+  "codec_count_observation": {
+    "complete": true,
+    "counts": {
+      "callback_exception_cases": 66,
+      "caller_mutation_cases": 1,
+      "check_calls": 2669,
+      "decode_calls": 301,
+      "encode_calls": 86,
+      "getter_calls": 158,
+      "subject_methods": 4,
+      "unique_bases": 40,
+      "unique_byte_negatives": 225,
+      "value_refusal_cases": 15
+    },
+    "coverage_note": "Counter capture is complete; full case coverage is not inferred from declared totals when the test result fails.",
+    "declared_not_executed_fields": [
+      "unique_bases",
+      "unique_byte_negatives",
+      "subject_methods"
+    ],
+    "reason": "exact frozen T.run returned measured counters"
+  },
+  "codec_forwarding": {
+    "actual_decode_calls": 301,
+    "actual_encode_calls": 86,
+    "actual_source_check_sites": 2669,
+    "actual_source_exceptions": 307,
+    "actual_source_returns": 80,
+    "facade_attempts": 387,
+    "late_seen": false,
+    "original_callback_calls": 2669,
+    "original_callback_exceptions": 66,
+    "original_callback_returns": 2603,
+    "post_suite_late_veto": false,
+    "postcall_late_vetoes": 0,
+    "preforward_deadline_refusals": 0
+  },
+  "codec_result_returned": true,
+  "common_post_suite_late_veto": false,
+  "dependencies": {
+    "combined_source_oracle_peer": {
+      "bytes": 6505,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-CORRECTION-INDEPENDENT-REVIEW-v2.json",
+      "sha256": "2e3c90ab67d643d7fa96962e7f5a75982f9ac4ab08936732b32047e9685a26c7"
+    },
+    "finite_count_order_peer": {
+      "bytes": 4957,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-COUNT-ORDER-INDEPENDENT-REVIEW-v3.json",
+      "sha256": "3ffcb1dd52668c1de83ef9ea2b79593061a0886766314e0fe593eb0ba6d62251"
+    },
+    "first_v1_codec_failure": {
+      "bytes": 9571,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v4.json",
+      "sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa"
+    },
+    "fixture_schema": {
+      "bytes": 13345,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+    },
+    "fixtures": {
+      "bytes": 312462,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+      "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+    },
+    "format_schema": {
+      "bytes": 89573,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    "legacy_observation_schema": {
+      "bytes": 37533,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    },
+    "literal_contract": {
+      "bytes": 6562,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-CORPUS-TEST-CONTRACT-v3.json",
+      "sha256": "510d02f456b49ea795caf3a6f10655c8224cfb4bea6b6c3b2bb56d8fb947f8b7"
+    },
+    "literal_corpus": {
+      "bytes": 1044112,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-CORPUS-v3.json",
+      "sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7"
+    },
+    "literal_freeze": {
+      "bytes": 4096,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-FREEZE-v3.json",
+      "sha256": "8daa9a4dbc234c1edfe14694869c03fa3d5df7e9c15472d63673a09ff9cd5a2c"
+    },
+    "normative_oracle_choice": {
+      "bytes": 2867,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-RESERVATION-ORACLE-CORRECTION-v3.json",
+      "sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a"
+    },
+    "permitted_static_source_index": {
+      "bytes": 8265,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-SOURCE-BINDING-v3.json",
+      "sha256": "55910e6d1f062a56bd2333b97d2b9192b3703c70cdbf1841387ae8244e44fdbc"
+    },
+    "preserved_literal_v2_acceptance": {
+      "bytes": 2267,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-ACCEPTANCE-v2.json",
+      "sha256": "8f1020bd0b5a1c97c26080bbaaa263395cd3cfa354c6fa64afb6929eae9f090d"
+    },
+    "preserved_literal_v2_peer": {
+      "bytes": 7222,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-INDEPENDENT-REVIEW-v2.json",
+      "sha256": "3e1ac2257e59aa415d2494cac7d6aa8bc6b74179234629d2c0ba0141aca48549"
+    },
+    "retained_disjoint_tail": {
+      "bytes": 182204,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-DISJOINT-TAIL-PROOF-v1.json",
+      "sha256": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97"
+    },
+    "retained_v2_disjoint_tail": {
+      "bytes": 182204,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-DISJOINT-TAIL-PROOF-v1.json",
+      "sha256": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97"
+    },
+    "retained_v2_failure_localization": {
+      "bytes": 3277,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-V2-FAILURE-LOCALIZATION-v1.json",
+      "sha256": "7d460d49b0c98279281914fd51d590b09f34b41e77ad15be27ff3122a5060327"
+    },
+    "retained_v2_first_codec": {
+      "bytes": 21111,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v5.json",
+      "sha256": "8184541d030cf578918859509963085c70b3eb7cfb0715ec9901714a982ba968"
+    },
+    "root_v3_pin_check": {
+      "bytes": 325,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-V3-ROOT-PIN-CHECK-v1.json",
+      "sha256": "496b8c7e37b42bda354f288efdb3ed86a7b0878b89e0027fb92af4e3fdca6cb1"
+    },
+    "synthetic_cohort": {
+      "bytes": 4876,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+      "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+    }
+  },
+  "elapsed_seconds": 0.18799999996554106,
+  "errors": [],
+  "execution_stage": "CODEC_CONFORMANCE",
+  "failures": [],
+  "genuine_projector_calls": 0,
+  "hard_wall_time_guard": false,
+  "harness_unchanged": {
+    "codec_tests": true,
+    "legacy_adapter": true,
+    "same8_adapter": true,
+    "snapshot_validator": true
+  },
+  "histories_executed": 0,
+  "histories_matched": 0,
+  "legacy_runs": [],
+  "legacy_snapshot_count": 0,
+  "method_outcomes": [],
+  "methods": 4,
+  "module_policy": "Fresh fixed four-module map only. Old shared_owner_v1 dictionary keys are HARNESS-ONLY roles referencing actual new module objects; no old owner code/import/cache alias.",
+  "original_or_payload_operations": 0,
+  "phase": "CODEC_FIRST",
+  "projector_observations": [],
+  "qualification": {
+    "full_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "runner": {
+    "bytes": 18096,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v6.py",
+    "sha256": "1c2a9e5a9dbe372e25d6537f6714276b1f2100169e61284fda1e6b152f636018"
+  },
+  "same8_observations": [],
+  "schema_version": 1,
+  "scope": "Actual NEW four-module SOURCE/PURE only, if explicitly authorized. No real source/entry/FFI/physical/native/profile/scientific qualification.",
+  "source_binding": {
+    "bytes": 12045,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-SOURCE-BINDING-v6.json",
+    "sha256": "1244fd156b46ce0a4c3af867935a49217610fc6a8e217d5dd9d37c4421023685"
+  },
+  "source_pins": {
+    "continue_role_verification_v3": {
+      "bytes": 4273,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\continue_role_verification_v3.py",
+      "sha256": "8051d6de8df6f6a33fabc1d36ae1194e8f35e39d7494d6b16195befc70b66ce7"
+    },
+    "role_file_ports_v3": {
+      "bytes": 21279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_file_ports_v3.py",
+      "sha256": "777ae88eec38719d5f4597e19e2681791f74b94ebcbe343ffc88aeb81e7be32d"
+    },
+    "role_ledger_codec_v3": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v3.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    "role_owner_v3": {
+      "bytes": 76176,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_owner_v3.py",
+      "sha256": "7fa4acd6a6059530429e26958c8ddcd76bcb91b1cb0fd57900286bf43643e339"
+    }
+  },
+  "source_unchanged": {
+    "continue_role_verification_v3": true,
+    "role_file_ports_v3": true,
+    "role_ledger_codec_v3": true,
+    "role_owner_v3": true
+  },
+  "status": "PASS"
+}

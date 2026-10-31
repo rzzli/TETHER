@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "helper_sha256": "eaa8ffbb08ec328eb0f73b122599189366f10646582fdca4250f77d0ece18ca8",
+  "checker_sha256": "ed705f40f117c0edadb484e93e37d78f23392d9d74615e227cf8bbc74f09dbf9",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "actual_children": 0,
+  "real_sdk_constructions": 0,
+  "denied_real_operations": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-job-iocp-pure-1793224270528278700",
+  "scope": "Synthetic queue/SDK/worker/timers with real accepted journals and role-specific terminal sealing"
+}

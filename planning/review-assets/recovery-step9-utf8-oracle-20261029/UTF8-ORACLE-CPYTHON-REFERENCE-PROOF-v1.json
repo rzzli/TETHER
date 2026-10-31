@@ -1,0 +1,1253 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "freeze_sha256": "285a46b3b7ac00cf7bbb0b262242ffc04f2c3049e4b7cf541dbcfdf0080f1eac",
+  "spec_sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a",
+  "corpus_sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d",
+  "checker_sha256": "a075f211436f3694c9da078260b835dc48223d7a0d4753bfb2ee4af011119737",
+  "CPython_version": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "interpreter": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+  "elapsed_seconds": 0.015000000013969839,
+  "budget_seconds": 20,
+  "fixtures": 107,
+  "steps": 167,
+  "supplied_bytes": 354,
+  "checked_interiorcuts": 29,
+  "cases": [
+    {
+      "id": "ascii/empty_final",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "a6e6bb45676f2dceb1f606b2a963aa25956270277da56ebb0b07b4e7730dc32b",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/ordinary",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "c1c81c30b9a82d9c8c19f988a68909a9e9c0f61d736d334ba40542950c664769",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/raw_nul",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "697c61318626de1cc22e854bbe9e9a04f2f12389e7f84fd622a4f5fc83e927f8",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/control_edges",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "902804b87dacf910f9dfd9a145d7d49d9da332a56226dfaffa5087bda29f22f4",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/json_escape_bmp",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "40227cbe80487a1eb627daa7a72d459005b05c313c024cc2f27888cd811d4646",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/json_escape_surrogate_pair",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "7f610f505b1272035fdc00a0475fc410ff61ae2ce7366d42bfd7dde2eabcdc20",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/json_escape_lone_surrogate",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6ce274ed64f7e09cfcd9c1cd0fba5d0652c01341d08deff02511d48d99b9e379",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/json_backslash_prefix",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6f3b9c6be9894087ae2f292c2f5c708ba133bf1dfba2fddd9b139a8211f30a4e",
+      "codec_rejections": []
+    },
+    {
+      "id": "ascii/json_object_prefix",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "4967cd0a40f297bceb5b2d2533de03a2e7ba86b15a7fdef6e9dad5a724a835f6",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/cent",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "be30907ff74caa1c6334201ca45bd6aa1868857720a2d27e878f5e458837fbd2",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/cent/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "4910de3ed743a9602e040f3a5f63bb80c9b50ae041c87004b8587911d5cfb323",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/two_byte_max",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "92b874d8e5ac9a0cffdf920d0b0bb8360d3e99d5ac460f24a054465d8f98e599",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/two_byte_max/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "73d02979da03d32ea95114e241b16f105acc173ae7df5d3db2a11add7c8d7bf1",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/three_byte_min",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d7b1700054685fd82d8a79efe5bfc6ccc874cd34c15b2ed11d6369e28c2c07ec",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/three_byte_min/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "0872f24021a8665d9a3baf9b0d83764c9e77a5cf9e769390f64209aad7c97a98",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/three_byte_min/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "870f9050ca014827f8bcb9ba8427a5c0ad971681030dc8edebb34333f8ae2e06",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/euro",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "011e772cc78f13f813664574a8de2359fd46b57e4323edee6eb0c6e545bb9c1f",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/euro/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "ea264a486c10824ab9dbfa4782b3a24d7ec1d847507b8e784898ca22473f9372",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/euro/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "21f671da16c192736fa9c323cffb4be2406e4fed872760b906fd932dfa49e292",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/before_surrogates",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "c9157e04f6b58d97c046b7c39c69285de7cb051b12b72d3ac666fb5a62d4ed34",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/before_surrogates/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "210a5ce214ae2ba85ebf4b5314768ec11b500f76f99e46383ec7a1bc3267edfe",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/before_surrogates/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "3b40a1c5b28249fb92c04050c6e7a718daa1363a99bdae2a04a0c9bca6095b07",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/after_surrogates",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "4aa3edb377eaf8cc40e9d5411c3e9d61bd56fb3808d1e723e45026a961ee207c",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/after_surrogates/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "5921a5fb8c33399497897f4c7390683422e695d18ca7aaac8047fcf022f720e0",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/after_surrogates/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d0a414c595b8f75fd91fd969a1548fe3f6fd7421bbd4b4b395b13482bec5f752",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/noncharacter_fdd0",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "5086a19d74411ad68f83b6d79d0cdd8084bad9a840274c02812d72354ad72437",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/noncharacter_fdd0/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6b2247c192037766a96085c8139d987880404737bf5f20df514eedb0c3da6cc1",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/noncharacter_fdd0/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "b06ef10c8f40c6ac61e1fa7d3e990aedae79acade1c0380c89f7703f1fb3a3f8",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/bom",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "03377d1b6fc6641c85b4d999802277cfe84795e3811d48a8131e5298b313e5aa",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/bom/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "2cb23c11202738e06aa3027bc0398bdc7f29994b95439b014202044e8a6e3fda",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/bom/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "1f335edb1615e3a3a8bb2b3aecb9b90049fb1d536f2ab8da9fc413385e58fb77",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/bmp_max",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e922d11816691c463e732eb06eae27fbb14467971aec9033590101043412289a",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/bmp_max/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "c061b783b8cb55369a6a90ad3572d3a7e9680d105d80c67e5db380062af0e44a",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/bmp_max/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "8dcdfdc5c75fd2b34d9af053d775f12bc4905cc47cde65b446940b8743db9dbe",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/four_byte_min",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "9a093fdff5705b907cad2831dd57f1a49532af9a5556fee6eb42dae22d3ec2f0",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_byte_min/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "5fd77277e590e5179fcb76b81e9784d346c7eec0e375d4cf9ce51021bd88ba8f",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_byte_min/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "9a3db08adc5de876f865b8c73a699be02fd22418a018f9940c0239fb7b9d9334",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_byte_min/3",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "0b897634b9106aa446fe04a530310bc740b493441b3c0ae2a85c24764bcce1ec",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/grinning_face",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "592184e960aa4dca548b1960d094b765523fdb87a681eb577eaabc603bd5c961",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/grinning_face/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e79b2d69faafc8bda841013f8146e252b26bf6a3b17630c741a241a66141053e",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/grinning_face/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "2f65c6c7cd9381db255126f9261428ce09bb78759af1b17b5b7c14edfb3cfb7c",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/grinning_face/3",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d5dfa5108787bcb3e21a59e2b38fd804821d2609fda4f09ce2a848616558eec9",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/scalar_max",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "1157f8087084a7b848edcb62a1ad43e5d700e7356a95e5f26de9d690bcfde3f3",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/scalar_max/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "817c8a1a7b2560d63e6a73ddd84e089a4cc0a3280bdc2474d15eb539ac61dcef",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/scalar_max/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "bc6910fb4f68d245169a1c50c74d9409a4df6c58ad9231bcbcacf8a5eddeb90a",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/scalar_max/3",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "8de2d1d02eb02f9df6e9a72976c1d68716bf32cc19affe6bfad551fac232f4bc",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/two_byte_min",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "792d3bae37f8aa10de0145f2065f52d04e4bb395ae38aeb1fc96b594bcb8a972",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/two_byte_min/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "0e02c5ba32d3db2b21b358a939d2ab315d13aca9fdbc6454a685db5419f073ac",
+      "codec_rejections": []
+    },
+    {
+      "id": "scalar/four_middle_lead",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "ed036264afe9b1fad15ecef445f066c16fccbad6e25e2e1bdaab7de7af665256",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_middle_lead/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "52b701ebb35b37ec6469fe66720704599ca548665965714c63aed4a8b8902ede",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_middle_lead/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "ea70fb7bc2cbbaeedab03fb06b1b0cbe22663e7a8d313420f882f7fd91dfec99",
+      "codec_rejections": []
+    },
+    {
+      "id": "interior/four_middle_lead/3",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "c12a8cac5a2cf7dd3cf49829b0c2ce715101ec73de701ef98488e688a61e21ba",
+      "codec_rejections": []
+    },
+    {
+      "id": "multichunk/cent",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "4910de3ed743a9602e040f3a5f63bb80c9b50ae041c87004b8587911d5cfb323",
+      "codec_rejections": []
+    },
+    {
+      "id": "multichunk/euro",
+      "steps": 3,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "f17ef7e25da6ee7b49edbc7c2de96b0034564a8ff6d8f450dcb53c044855f87e",
+      "codec_rejections": []
+    },
+    {
+      "id": "multichunk/grinning_face",
+      "steps": 4,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "90e104992f7d16a2b31904b749bf6de74887351f2780a1eb0640ba9b7f432d52",
+      "codec_rejections": []
+    },
+    {
+      "id": "multichunk/empty_while_pending",
+      "steps": 5,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "5a76c544ef660bdc2a866f33f3ea5c54199553720b454a503d79879b9f6bddc4",
+      "codec_rejections": []
+    },
+    {
+      "id": "mixed/ascii_then_partial_euro",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "10b84115d9ef305aabf9bff2738076b33dba5903cb40c2b679bf3f51d25fe0d1",
+      "codec_rejections": []
+    },
+    {
+      "id": "mixed/complete_two_then_partial_four",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "806101dccf2db9099b8e133f63df8d19c6d63705dc734152946f85d5dbe1ec03",
+      "codec_rejections": []
+    },
+    {
+      "id": "mixed/three_widths_three_chunks",
+      "steps": 3,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d83d6e8b4321aa7d3bfd3937d8785b1ed96da51705a90c87251b0d7713fc892d",
+      "codec_rejections": []
+    },
+    {
+      "id": "mixed/nul_does_not_terminate",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "64d3192a309f5c4da73bb8d77349204d8ce6d6502c7151fcedf71d8d70c0d6f3",
+      "codec_rejections": []
+    },
+    {
+      "id": "mixed/bom_is_not_removed",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6ab93af410ede20d5790e89ccd8ad88b23e6613f773aad0fb4262d544a5afdad",
+      "codec_rejections": []
+    },
+    {
+      "id": "eof/same_chunk/cent/1",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "58c566a91344f8504e70fa45bfedd1c03e7b1e121d78d55b7df92c85d42b6655",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/cent/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "9c79416265230574d94328417236c15f8b9413c0440579bcfd8f033e2474254a",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/same_chunk/euro/1",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "64e5c1abab60c73ae5597f25eca94b3d9756e61bcf5b2eca7b12abd125da4b8d",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/euro/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "682edef00895e2452fdd7c3e2472d5706599b80a21ddd0ea612f3e7b3bf071c0",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/same_chunk/euro/2",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "7ecf3827e166dedb2d58d9504b5a64038182275094f4157f73cae6fb1fa602e4",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/euro/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6fb5fb1e6ac6a73e97706adb6e9f4fa436560665e05d6c63eede286f1074a50c",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/same_chunk/grinning_face/1",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "764a2903f2a233352f8282754a415d154812c11dc4bc242efb6603f83214ca5d",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/grinning_face/1",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "4bed811d13eacde05867dc4cbf29a435c5f06de7b6cd9608f967c3544ae0cd9c",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/same_chunk/grinning_face/2",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "780b974f2a20fa41dcd596056aafdd295b9db6dcc0689147196d1f1d7f021a3b",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/grinning_face/2",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "bf010ac42fa260799cfe02f23d864fd0730d21b0b6519d69d8dd936874c53b5d",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/same_chunk/grinning_face/3",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e8df2d50ce949605c1eb429d5b79a0def79b7a263e6fbc5f8d8fdb8e5ebd4e3c",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/empty_final/grinning_face/3",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "68464fa248a204f2f9178fcd4948396c7f0d4155a33ac99bd0a0d17ffc778d3f",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/stray_80",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "91c6dea2eabe22eab772edadc37c89b465e7a4139522a2fb7d200b6524b1a6a9",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/stray_bf",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "9fbaf657369acd85ae26f32c500e1013df0ef14bec83375ed9df5b167c7bc02d",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/overlong_lead_c0",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "10a4914b6c9bcbc905eba26b14a3ba17922f6f767383e584603877dbb06a5c00",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/overlong_lead_c1",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e70ff99b5421a1b5ac9125b9fe4459755d74019242e65ea2734862ec31fb901b",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/lead_f5",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e40fc5bf68e5b04c216d37ade703cdd9fe4b386e8aae95b9789c983b0ff28270",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/lead_f8",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "58891ef333b5b279b78e389db6473dcee3261b22621ff72225533b96e6afb67d",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/lead_ff",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "81fd223a08eddf694870ae304d4c1e6d26ce0a70ae289aa5ed209d885f3875ac",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/two_ascii_continuation",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "a1b11a3b687dc15839fd6be7b41c51d7b67b5c7e2f7deb0d5b6fb43e17680ff6",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/two_new_lead",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "91a249fa7018041703eb46cce3586e6f76742c67acd3825cc0adb00889eee71e",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/three_ascii_second",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d1d5b81a08c8d8ca018a9712f278bd4b1e915930185b8601fc35abfc68e58ce6",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/three_ascii_third",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "024b65cb0750c95461f7bfebeb416496587e05a57a65d59c0c44bb69e67b0f95",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/four_ascii_second",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "c619ace03c711a5d1af6fbc241493079fd33de06d89d549b02f76215b77a394a",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/four_ascii_third",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "d7ea991e1c3b802fed7997591b8e8eacfc39dc1a5ef788f475536656f25a3d6f",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/four_ascii_fourth",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "856a3e73a16132149917f77505af1c5f7455b4dce683bf7a8b06fbebddd6aa9c",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/three_overlong_low",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "fa6dc5661d7e85be3a7dc92041dd35eee07032b7bddf88eeaf05d40e3334151b",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/three_overlong_high",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "06a24dd64bfe9c7b28b083b1588b01c18ef09e6cbee88ba0ad590576ed772d9b",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/four_overlong_low",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "1efd59c429184dfdefe729ad8ddd91dc6be589d390c5a9ae1ada088e46cb42cf",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/four_overlong_high",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6402e498834dae5d8e0f17b876f91046b2344c4fc0963acbcfc4c83fb582e03b",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/out_of_range_low",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "786d0717a9f652debe9c0ab31be423f0892b586a315af6286e57a17296bc3179",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/out_of_range_high",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "469403fbda0f8d15d7d233e8011a1354548173ff49e972cfaeec221431f438e8",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/nul_is_not_continuation",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "3797c89f9ac5b495decdf9564adf464629bfcdb802f66eac0a0e5876112e8a0a",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/del_is_not_continuation",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "11e9fd7fa7d2bc10ac97098c6ed9110372b05b2a3e6dfc3b830f3deb00e15089",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/valid_prefix_committed",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "3e9a90a10f96cd4779fac3f69fd00504ea24e05e250ced5c389dbfc7313e68c7",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "invalid/valid_scalar_then_stray",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "ce6e492579c09ffce46f3df1c6f817ce78a3b0044b10a1530b527831e7b64972",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "eof/valid_prefix_committed",
+      "steps": 1,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "459248441143dc7faa7cdd57289cc9adcf04d36c1d1d0f19171ec1f866b50527",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "empty_final",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "unexpected end of data",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "absorbing/pending_error_later_valid_bytes_ignored",
+      "steps": 3,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "a849a07ad44079f8a6fc2921be1424c9458050b295733a068d064c75d3ea822e",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "absorbing/boundary_error_empty_final",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "fbe3cade44ab2ffc50a43e6e170f2d769daaac566550bf6450e419f46d82f7cb",
+      "codec_rejections": [
+        {
+          "step": 0,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid start byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "mixed/middle_bom_is_not_removed",
+      "steps": 3,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "b544f893787e6f7b08708075ff3c3600cc1a376f43dedc62087a28efd2fc2fef",
+      "codec_rejections": []
+    },
+    {
+      "id": "split_restricted/overlong_three",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "e29785dc6be59c74f00080bdedd6fa26a535af4a7fb3ae850f7a68ca24f7e05d",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "split_restricted/overlong_four",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "2722e0fac1ee0b5b6bbfa82c2a28a28443291791f000fba6b46547e47bad79b5",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    },
+    {
+      "id": "split_restricted/out_of_range",
+      "steps": 2,
+      "matched": true,
+      "mismatched_steps": [],
+      "observed_states_sha256": "6e07247cb0cb7a5cb17b693cc1752f7172fed8b1ee6c93bc6271c43608515424",
+      "codec_rejections": [
+        {
+          "step": 1,
+          "call": "one_byte",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_offsets_not_used": true
+        }
+      ]
+    }
+  ],
+  "mismatches": [],
+  "exceptions": [
+    {
+      "id": "invalid/surrogate_low",
+      "error_class": "RuntimeError",
+      "error": "Codec rejected a byte allowed by the independent RFC table"
+    },
+    {
+      "id": "invalid/surrogate_high",
+      "error_class": "RuntimeError",
+      "error": "Codec rejected a byte allowed by the independent RFC table"
+    },
+    {
+      "id": "split_restricted/surrogate",
+      "error_class": "RuntimeError",
+      "error": "Codec rejected a byte allowed by the independent RFC table"
+    }
+  ],
+  "pinned_metadata": {
+    "UTF8-ORACLE-CORPUS-v2.json": {
+      "bytes": 154021,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v2.json",
+      "sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d"
+    },
+    "UTF8-ORACLE-GENERATION-PROVENANCE-v2.json": {
+      "bytes": 1442,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-GENERATION-PROVENANCE-v2.json",
+      "sha256": "22aa695081ed6338ad68ac2c2ac3c9a6f7c6d8bd85b134fa0e5ae6704c8c23fa"
+    },
+    "UTF8-ORACLE-MANUAL-PRECHECK-v2.json": {
+      "bytes": 1849,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-MANUAL-PRECHECK-v2.json",
+      "sha256": "a1a8a9dd407ce3ada77a55de0cdad00d95ac8afdc9108132542e9db861a7bfc8"
+    },
+    "UTF8-ORACLE-SPEC-v2.md": {
+      "bytes": 9826,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v2.md",
+      "sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a"
+    },
+    "UTF8-ORACLE-STRUCTURAL-CHECKS-v2.json": {
+      "bytes": 1890,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-STRUCTURAL-CHECKS-v2.json",
+      "sha256": "2f28621a9ac28e2c9aaf2f3054bb255f6f6a1127d3d51151059d4d5c858d0eaf"
+    },
+    "author_utf8_oracle_corpus_v2.py": {
+      "bytes": 15439,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\author_utf8_oracle_corpus_v2.py",
+      "sha256": "a844f88aefa2cb1fad3be52f8de7d11884e6485edfc046259a9c20c654dd2a79"
+    },
+    "check_utf8_oracle_structure_v2.py": {
+      "bytes": 11460,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\check_utf8_oracle_structure_v2.py",
+      "sha256": "cb3eac67c530f01679268b9f9d278966bac7ecfd9db4dc98ba2eda4b243f436a"
+    }
+  },
+  "codec_reference": "CPython strictutf-8 single-byte feeds and empty final requests; successful prefix/pre-call pending state only",
+  "chosen_contract": "RFC-table first-error classification plus explicitly specified consumption/absorbing-tail policy; not inferred from codec posterror state",
+  "no_postexception_codec_state_or_recovery": true,
+  "adapter_API_type_afterfinal_immutability": "Not executed: no production adapter exists; these chosen wrapper rules remain a later independent gate",
+  "vendor_algorithm_or_DLL_equivalence": "Not tested or claimed",
+  "audit_denials": [],
+  "actual_adapter_imports": 0,
+  "target_API_calls": 0,
+  "vendor_extractions": 0,
+  "compiler_calls": 0,
+  "CPU_GGUF_oldpack_operations": 0,
+  "scientific_or_native_qualification": false
+}

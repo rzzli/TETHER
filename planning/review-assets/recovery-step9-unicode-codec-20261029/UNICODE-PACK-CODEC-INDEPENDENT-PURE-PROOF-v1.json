@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\unicode_pack_codec_v1.py",
+    "bytes": 16663,
+    "sha256": "c2e579f9a5f0e485d4af1fe5bfeaed75c62debffb5f779391b294d740f1f5b40"
+  },
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\check_unicode_pack_codec_peer_v1.py",
+    "bytes": 16971,
+    "sha256": "a2f420af10f33743f846f557296780dbbc22089661b9aa3eb4cb84899cf97ae5"
+  },
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\unicode_pack_codec_v1.py",
+      "bytes": 16663,
+      "sha256": "c2e579f9a5f0e485d4af1fe5bfeaed75c62debffb5f779391b294d740f1f5b40"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\check_unicode_pack_codec_peer_v1.py",
+      "bytes": 16971,
+      "sha256": "a2f420af10f33743f846f557296780dbbc22089661b9aa3eb4cb84899cf97ae5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-PURE-PROOF-v1.json",
+      "bytes": 6568,
+      "sha256": "7b03e75956a905566be264b7d35f8fee05503d524de609a0f383b4c1160f74bf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\check_unicode_pack_codec_v1.py",
+      "bytes": 15299,
+      "sha256": "26301721139c8186b63a131db20d65ec3545454942c5ee22200dc2260a0e1f57"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-FREEZE-v1.json",
+      "bytes": 2450,
+      "sha256": "8f7e6ec47dd43a21bb27be66d5a5bf38b9326187609f88e36044d877a72b4eb1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+      "bytes": 86124,
+      "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-CONTRACT-v1.json",
+      "bytes": 16995,
+      "sha256": "4c4645f53c878e03cf1f0eaec575b3dcf1dcc006375aadc0080819393e4c3d24"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+      "bytes": 233438,
+      "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+      "bytes": 227662,
+      "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+      "bytes": 9809,
+      "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-CONTRACT-v1.json",
+      "bytes": 8506,
+      "sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6"
+    }
+  ],
+  "inputs_unchanged": true,
+  "methods": 8,
+  "counts": {
+    "source_fields": 24,
+    "record_fields": 672,
+    "negative_mutations": 54,
+    "callback_stops": 36
+  },
+  "failures": 0,
+  "errors": 0,
+  "failure_details": [],
+  "elapsed_seconds": 0.125,
+  "maximum_seconds": 20,
+  "independent_in_memory_pack": {
+    "bytes": 37766,
+    "sha256": "d2537df43e7e6e8113c4e08f0536c2e3a698bd274963ab71a4efced4fa32c8ab",
+    "persisted": false
+  },
+  "independent_field_encoding": "Explicit source/wire reconstruction with int.to_bytes, independent of codec encode/struct writer; all84 source records inspected.",
+  "complete_runtime_pack_files_written": 0,
+  "profile_qualified": false,
+  "originals_authenticated": false,
+  "runtime_authorized": false,
+  "source_closure_qualification": false,
+  "SDK_native_compiler_operations": 0,
+  "CPU_GGUF_oldpack_operations": 0,
+  "hostile_Python_security_claim": false
+}

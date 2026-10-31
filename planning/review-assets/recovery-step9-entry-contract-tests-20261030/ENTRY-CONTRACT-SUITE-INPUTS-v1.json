@@ -1,0 +1,754 @@
+{
+  "baseline_geometry": {
+    "B": 3,
+    "C": 117,
+    "E": 234,
+    "M": 3,
+    "N": 5,
+    "Q": 7,
+    "R": 87,
+    "bootstrap_calls": 18,
+    "captured_bytes": 99068,
+    "early_bytes": 99000,
+    "known_bytes": 2196237,
+    "original_closes": 5,
+    "terminal_calls": 37,
+    "work_calls": 32
+  },
+  "baseline_input": {
+    "bytes": 5539,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-ACTUAL-HELPER-INPUTS-v1.json",
+    "sha256": "a528efaa504524de6dc2223526e4d7b4d5218689570a5cfdad108b8039bd4bf1"
+  },
+  "branches": [
+    {
+      "branch": "E01",
+      "case": "E01",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E02",
+      "case": "E02",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E03",
+      "case": "E03",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E04/extra_started",
+      "case": "E04",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "extra_started"
+    },
+    {
+      "branch": "E04/extra_t0",
+      "case": "E04",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "extra_t0"
+    },
+    {
+      "branch": "E04/public_Origin",
+      "case": "E04",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "public_Origin"
+    },
+    {
+      "branch": "E05",
+      "case": "E05",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E06",
+      "case": "E06",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E07",
+      "case": "E07",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E08",
+      "case": "E08",
+      "coverage_class": "PARTIAL_RUNTIME_DEFERRED_MANIFEST_POLICY",
+      "variant": null
+    },
+    {
+      "branch": "E09",
+      "case": "E09",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E10",
+      "case": "E10",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E11",
+      "case": "E11",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E12/Origin_rebound",
+      "case": "E12",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "Origin_rebound"
+    },
+    {
+      "branch": "E12/Ops_attach_rebound",
+      "case": "E12",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "Ops_attach_rebound"
+    },
+    {
+      "branch": "E13",
+      "case": "E13",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E14",
+      "case": "E14",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E15/open_unknown",
+      "case": "E15",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "open_unknown"
+    },
+    {
+      "branch": "E15/close_unknown",
+      "case": "E15",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "close_unknown"
+    },
+    {
+      "branch": "E15/capture_incomplete",
+      "case": "E15",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "capture_incomplete"
+    },
+    {
+      "branch": "E16/foreign_attach",
+      "case": "E16",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "foreign_attach"
+    },
+    {
+      "branch": "E16/Source4_constructor",
+      "case": "E16",
+      "coverage_class": "PARTIAL_RUNTIME_DEFERRED_HISTORICAL_REFERENCE",
+      "variant": "Source4_constructor"
+    },
+    {
+      "branch": "E16/Source4_start_injected",
+      "case": "E16",
+      "coverage_class": "PARTIAL_RUNTIME_DEFERRED_HISTORICAL_REFERENCE",
+      "variant": "Source4_start_injected"
+    },
+    {
+      "branch": "E17",
+      "case": "E17",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E18",
+      "case": "E18",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E19/count0",
+      "case": "E19",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "count0"
+    },
+    {
+      "branch": "E19/count_UNOBSERVED",
+      "case": "E19",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "count_UNOBSERVED"
+    },
+    {
+      "branch": "E20/definition_before_code",
+      "case": "E20",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "definition_before_code"
+    },
+    {
+      "branch": "E20/code_before_definition",
+      "case": "E20",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "code_before_definition"
+    },
+    {
+      "branch": "E20/false_definition_with_code",
+      "case": "E20",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "false_definition_with_code"
+    },
+    {
+      "branch": "E21/before_commit",
+      "case": "E21",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "before_commit"
+    },
+    {
+      "branch": "E21/after_commit",
+      "case": "E21",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "after_commit"
+    },
+    {
+      "branch": "E22/handle_UNOBSERVED",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "handle_UNOBSERVED"
+    },
+    {
+      "branch": "E22/handle_NULL",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "handle_NULL"
+    },
+    {
+      "branch": "E22/handle0",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "handle0"
+    },
+    {
+      "branch": "E22/handle_INVALID",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "handle_INVALID"
+    },
+    {
+      "branch": "E22/handle77",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "handle77"
+    },
+    {
+      "branch": "E22/BOOL0",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "BOOL0"
+    },
+    {
+      "branch": "E22/BOOLminus1",
+      "case": "E22",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "BOOLminus1"
+    },
+    {
+      "branch": "E23",
+      "case": "E23",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E24",
+      "case": "E24",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E25/backward",
+      "case": "E25",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "backward"
+    },
+    {
+      "branch": "E25/nonfinite",
+      "case": "E25",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "nonfinite"
+    },
+    {
+      "branch": "E25/provider_exception",
+      "case": "E25",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "provider_exception"
+    },
+    {
+      "branch": "E25/int64_deadline_overflow",
+      "case": "E25",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "int64_deadline_overflow"
+    },
+    {
+      "branch": "E25/F64_no_strict_deadline_increase",
+      "case": "E25",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": "F64_no_strict_deadline_increase"
+    },
+    {
+      "branch": "E26",
+      "case": "E26",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E27",
+      "case": "E27",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E28",
+      "case": "E28",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E29",
+      "case": "E29",
+      "coverage_class": "STATIC_METADATA_ONLY",
+      "variant": null
+    },
+    {
+      "branch": "E30",
+      "case": "E30",
+      "coverage_class": "GENUINE_RUNTIME_PLUS_STATIC_LINEAGE",
+      "variant": null
+    },
+    {
+      "branch": "E31",
+      "case": "E31",
+      "coverage_class": "GENUINE_SOURCE_RUNTIME",
+      "variant": null
+    },
+    {
+      "branch": "E32",
+      "case": "E32",
+      "coverage_class": "CONDITIONAL_GENUINE_PROCEDURAL_LARGE_STREAM",
+      "variant": null
+    }
+  ],
+  "bulk": {
+    "bytes": 2097169,
+    "fictional_path": "D:\\EntrySynthetic3\\periodic-bulk.bin",
+    "recipe": "byte_at_offset=i_mod_256; no full body allocated",
+    "sha256": "6f8b1421035dcde6d517143914932e7996c17ae9a6c30042b1142b1b8b5f0557"
+  },
+  "chunk": 1048576,
+  "helpers": [
+    {
+      "bytes": 55497,
+      "declared_dependencies": [
+        "hashlib",
+        "json",
+        "math",
+        "re",
+        "struct",
+        "types"
+      ],
+      "fictional_path": "D:\\EntrySynthetic3\\helpers\\role_ledger_codec_v4.py",
+      "module": "role_ledger_codec_v4",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+      "source_pin": {
+        "bytes": 55497,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      }
+    },
+    {
+      "bytes": 39889,
+      "declared_dependencies": [
+        "dataclasses",
+        "json",
+        "preflight_entry_kernel_v3",
+        "role_ledger_codec_v4",
+        "types"
+      ],
+      "fictional_path": "D:\\EntrySynthetic3\\helpers\\preflight_owner_ops_v3.py",
+      "module": "preflight_owner_ops_v3",
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7",
+      "source_pin": {
+        "bytes": 39889,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+        "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+      }
+    },
+    {
+      "bytes": 3614,
+      "declared_dependencies": [
+        "preflight_entry_kernel_v3"
+      ],
+      "fictional_path": "D:\\EntrySynthetic3\\helpers\\preflight_file_view_v3.py",
+      "module": "preflight_file_view_v3",
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6",
+      "source_pin": {
+        "bytes": 3614,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+        "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+      }
+    }
+  ],
+  "joint_physical_call_warning": 19079,
+  "kernel_tcb": {
+    "captured_as_helper": false,
+    "pin": {
+      "bytes": 121192,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    }
+  },
+  "large_geometry": {
+    "B": 3,
+    "C": 3922,
+    "E": 234,
+    "M": 3,
+    "N": 5,
+    "Q": 3812,
+    "R": 3892,
+    "bootstrap_calls": 18,
+    "captured_bytes": 99068,
+    "early_bytes": 99000,
+    "known_bytes": 3992098940,
+    "original_closes": 5,
+    "terminal_calls": 3842,
+    "work_calls": 3837
+  },
+  "large_reference": {
+    "bytes": 84696,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+    "sha256": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+  },
+  "large_stream_execution_authorized": false,
+  "metadata": {
+    "bytes": 68,
+    "fictional_path": "D:\\EntrySynthetic3\\fixture-metadata.json",
+    "hex": "7b2273636f7065223a22656e7472792d6861726e657373222c226e6174697665223a66616c73657d2020202020202020202020202020202020202020202020202020200a",
+    "sha256": "7f13dffb198124f829d88cff67462b6f454ccead4642b0287973da53ff0bb708"
+  },
+  "module_names": {
+    "codec": "role_ledger_codec_v4",
+    "file_view": "preflight_file_view_v3",
+    "kernel": "preflight_entry_kernel_v3",
+    "owner_ops": "preflight_owner_ops_v3"
+  },
+  "old_source_runtime_fallback": false,
+  "output_key": "ENTRY_SYNTHETIC_SOURCE3_REGRESSIONS",
+  "prior_fixture_metadata_pin": {
+    "bytes": 5546,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-ACTUAL-HELPER-INPUTS-v1.json",
+    "sha256": "ba549a8558740c182920d244ff66b3d4665106219a2820c1b21fb6f10d234bf5"
+  },
+  "qualification": {
+    "native": false,
+    "new84": false,
+    "physical": false,
+    "real_first_entry": false
+  },
+  "schema_version": 1,
+  "scope": "ENTRY32_53_FROZEN_TEST_INPUTS_NO_PRODUCER_AUTHORITY",
+  "source1_replay": false,
+  "source2_replay": false,
+  "source_map": {
+    "preflight_entry_kernel_v3": {
+      "bytes": 121192,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "preflight_file_view_v3": {
+      "bytes": 3614,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    },
+    "preflight_owner_ops_v3": {
+      "bytes": 39889,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "role_ledger_codec_v4": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    }
+  },
+  "source_pause": {
+    "bytes": 4114,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE-PAUSE-v3.json",
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "staged_4GB_digest": "5321e7c0efc028f133e7a6690e5c5bdf0344dded80904eb416fddb7ed0c2b1fb",
+  "static_metadata": {
+    "actual_source_imports_exclude_old_owner": true,
+    "authored_source3_pins": {
+      "preflight_entry_kernel_v3": {
+        "bytes": 121192,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+        "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+      },
+      "preflight_file_view_v3": {
+        "bytes": 3614,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+        "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+      },
+      "preflight_owner_ops_v3": {
+        "bytes": 39889,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+        "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+      }
+    },
+    "historical_baseline_pins": [
+      {
+        "bytes": 2985,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json",
+        "sha256": "096f5781b0c5d92208fcbd6a0da21528939f668be62ccd573c433ae7517b7445"
+      },
+      {
+        "bytes": 9690627,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v8.json",
+        "sha256": "f53e3db06b69337d2a8ce4b34fe851dab1338806bfe9aba0bba7b89261f22c6f"
+      },
+      {
+        "bytes": 66266,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v5.json",
+        "sha256": "cd0caf2efce5e8899c6275d1f82df7c0a63b4f7713e4e5235f48e2ee0bf125ae"
+      }
+    ],
+    "historical_baseline_scope": "Accepted Source4 legacy48/SAME8/indexed6 metadata and proof hashes retained; no proof body parse, source import or replay.",
+    "historical_baselines_retained": true,
+    "planned_unbuilt_nodes": [
+      {
+        "reason": "Preallocated native first-fact carrier layout/per-API14 semantics contract before implementation; raw store precedes Python conversion without an atomic OS-return/interruption guarantee.",
+        "resource_id": "PLANNED_RAW_SHIM",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Typed wrapper consumes canonical raw refs; wrapper return, raw scalar/count/error-definedness and ownership remain independent.",
+        "resource_id": "PLANNED_TYPED_FILE_WRAPPER",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Native built output absent; compiler/linker/ABI/build recipe and resulting descriptor remain unbuilt and unqualified.",
+        "resource_id": "PLANNED_RAW_SHIM_IMAGE",
+        "sha256": null,
+        "state": "UNBUILT"
+      },
+      {
+        "reason": "Actual CREATE_NEW/partial write/flush/close/reopen/readback source and source-issued comparison witness remain missing; synthetic sink ACK is not physical proof.",
+        "resource_id": "PLANNED_PHYSICAL_SINK",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Exact new84 argv/child-origin output/Job/pipe/EOF/cleanup/final-clock ownership and typed genuine consumer contexts remain unauthored; do not use old --recognize parent.",
+        "resource_id": "PLANNED_NEW84_PARENT",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Distinct84 native child C++ source absent; bind84/78/6/68/4stage/2grammar, ABI0.7.0-dev/module policy, exact token/API/resource bounds before build.",
+        "resource_id": "PLANNED_NEW84_NATIVE_CPP",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Distinct84 executable absent. No old189 EXE/self pin is substituted; future build records actual bytes/version/layout/imports before execution manifest.",
+        "resource_id": "PLANNED_NATIVE_CHILD_IMAGE",
+        "sha256": null,
+        "state": "UNBUILT"
+      },
+      {
+        "reason": "Concrete build source/toolchain/source closure absent. Runtime descriptors and child image hashes are null until a separately authorized actual build.",
+        "resource_id": "PLANNED_NEW84_BUILD_RECIPE",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Deterministic pure encode source exists, but an owned physical pack builder/writer and same-owner descriptor issuance are absent; no pack creation authorized.",
+        "resource_id": "PLANNED_NEW84_PACK_BUILDER",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Physical file absent; logical37766-byte pure proof is expected content only, never a file pin or freshness/admission. Old259867-byte189 pack is excluded.",
+        "resource_id": "PHYSICAL_NEW84_PACK",
+        "sha256": null,
+        "state": "UNBUILT"
+      },
+      {
+        "reason": "Disjoint exact Unicode parent/archive graph policy needed; old native-v7 nine-argv/locator/event semantics cannot qualify a new format via changed binding.",
+        "resource_id": "PLANNED_NEW84_ARCHIVE",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Disjoint exact Unicode stage/terminal/record-reference policy needed; old check_native_v7 and generic chain success are not new84 completeness.",
+        "resource_id": "PLANNED_NEW84_JOURNAL",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Genuine owner/captured/generated/native-child observations bound to exact source consumers; source4 TestAuthority/TestChecker factories are fictional only.",
+        "resource_id": "PLANNED_GENUINE_CHECKER_FACTORY",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Actual child/Job/pipe captures and raw48/136 query provenance/return lengths/ownership/limit/deadline/EOF/reap facts remain missing; pure decoder alone is insufficient.",
+        "resource_id": "PLANNED_JOB_PIPE_BINDING",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "Complete profile for directory/search/writer/readback/child/tail actors is absent. Current complete wire is APIs1..7; APIs8..14 fragments confer no complete physical policy.",
+        "resource_id": "PLANNED_PHYSICAL_LEDGER_PROFILE",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      },
+      {
+        "reason": "No selected genuine PE/content parser source; image capture roles remain unresolved. Existing pure module matcher compares supplied metadata and does not parse/authenticate PE bytes.",
+        "resource_id": "UNRESOLVED_PE_CONTENT_PARSER",
+        "sha256": null,
+        "state": "UNRESOLVED"
+      },
+      {
+        "reason": "Exact interpreter/stdlib/native-extension/bootstrap initialization trust and preapplication boundary must be fixed; no automatic capture/inheritance or filesystem discovery.",
+        "resource_id": "EXTERNAL_TRUSTED_INTERPRETER",
+        "sha256": null,
+        "state": "UNRESOLVED"
+      },
+      {
+        "reason": "Optional future split only, not required for initial three-source slice; continue_once initially resides in OwnerOps.",
+        "resource_id": "PLANNED_CONTINUATION_SPLIT_OPTIONAL",
+        "sha256": null,
+        "state": "PLANNED_SOURCE"
+      }
+    ],
+    "provenance": [
+      {
+        "bytes": 94200,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+        "sha256": "2aad403db06d5388bf9a8e8fb674bf2a26f8ad90a437f2db51e1e19f17ff80a9"
+      },
+      {
+        "bytes": 2352,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE3-CORRECTION-AUTHORING-SCOPE-v1.json",
+        "sha256": "92efd17643ecaf7ed0d303225fe9616d5fa921cce48c365a904a0b9d49381b0b"
+      },
+      {
+        "bytes": 3568,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-FIVE-REGRESSION-ROOT-ACCEPTANCE-v1.json",
+        "sha256": "0d9c42a2f8c3575f4706ce43d189e56a680ed26eb9ef60737e9453d7b2bd4fb4"
+      },
+      {
+        "bytes": 7244,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\ENTRY-SOURCE1-SMOKE-PROOF-v1.json",
+        "sha256": "6ec80005b91a664c6016b2beed48a74f41239827a08d8b112c45f2b9ab5865a3"
+      },
+      {
+        "bytes": 337633,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-PROOF-v2.json",
+        "sha256": "a1ff84a198834c4fb5660f79693a65539c9e365d97209b03dfc972764268c459"
+      },
+      {
+        "bytes": 2985,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json",
+        "sha256": "096f5781b0c5d92208fcbd6a0da21528939f668be62ccd573c433ae7517b7445"
+      },
+      {
+        "bytes": 9690627,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v8.json",
+        "sha256": "f53e3db06b69337d2a8ce4b34fe851dab1338806bfe9aba0bba7b89261f22c6f"
+      },
+      {
+        "bytes": 66266,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v5.json",
+        "sha256": "cd0caf2efce5e8899c6275d1f82df7c0a63b4f7713e4e5235f48e2ee0bf125ae"
+      }
+    ],
+    "retained_plan_scope": "Original staged declarations retained as metadata; authored Source3 files are pinned separately, not called unbuilt.",
+    "runtime_admission_authorized": false,
+    "semantics": "HARNESS_METADATA_ONLY_NOT_PRODUCER_OR_NATIVE_AUTHORITY",
+    "source_authoring_authorized": true,
+    "source_import_AST": {
+      "preflight_entry_kernel_v3": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "math",
+        "re",
+        "struct",
+        "types"
+      ],
+      "preflight_file_view_v3": [
+        "preflight_entry_kernel_v3"
+      ],
+      "preflight_owner_ops_v3": [
+        "dataclasses",
+        "json",
+        "preflight_entry_kernel_v3",
+        "role_ledger_codec_v4",
+        "types"
+      ],
+      "role_ledger_codec_v4": [
+        "hashlib",
+        "json",
+        "math",
+        "re",
+        "struct",
+        "types"
+      ]
+    }
+  },
+  "subject_imports": 0,
+  "subject_runs": 0,
+  "toy_expected_result": 18,
+  "toy_geometry": {
+    "B": 5,
+    "C": 163,
+    "E": 254,
+    "M": 5,
+    "N": 7,
+    "Q": 9,
+    "R": 121,
+    "bootstrap_calls": 30,
+    "captured_bytes": 99209,
+    "early_bytes": 99141,
+    "known_bytes": 2196378,
+    "original_closes": 7,
+    "terminal_calls": 51,
+    "work_calls": 44
+  },
+  "toy_modules": [
+    {
+      "bytes": 58,
+      "declared_dependencies": [],
+      "fictional_path": "D:\\EntryContractSynthetic\\entry_extra_leaf_v1.py",
+      "hex": "646566206d61726b657228293a0a2020202072657475726e2031370a23202020202020202020202020202020202020202020202020202020200a",
+      "module": "entry_extra_leaf_v1",
+      "sha256": "58f34ab2d20c88e9dc865cc490b326f7d1f72a70a837a1c82f9a43d15c112ed8"
+    },
+    {
+      "bytes": 83,
+      "declared_dependencies": [
+        "entry_extra_leaf_v1"
+      ],
+      "fictional_path": "D:\\EntryContractSynthetic\\entry_extra_entry_v1.py",
+      "hex": "66726f6d20656e7472795f65787472615f6c6561665f763120696d706f7274206d61726b65720a0a6465662072756e28293a0a2020202072657475726e206d61726b657228292b310a2320202020202020200a",
+      "module": "entry_extra_entry_v1",
+      "sha256": "54a8f79cd918d5072bf481933955cfedce9247e5c7fd45b37b4251dde3a00fe4"
+    }
+  ]
+}

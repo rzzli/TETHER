@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "PRESERVED_FIRST_LITERAL_PREPARATION_WITH_TWO_SELF_REVIEW_ITEMS",
+  "scope": "Fixture data and future test-source inspection only; no target codec/producer exists or was run.",
+  "corpus_sha256": "16899fd5481e8bb63790dc9314acb8553af3eec65a81dc14ac6ce5cbeba56232",
+  "contract_sha256": "523cb5e3d2e2afe1efb72e7f1220e418ef81a011353289a2fc0b51719321620d",
+  "test_source_sha256": "8c4f5d138b01f4dd97bebd349b44ec92ac1658468f6ec502c6305da6b24453c8",
+  "first_data_proof": {
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-STRUCTURE-PROOF-v1.json",
+    "sha256": "5279908d8af849e994afbf9bf69bbf58db01bf7b8182023da16ead628b9651cc",
+    "methods": 6,
+    "passed": 5,
+    "failed": 1,
+    "errors": 0,
+    "verified": {"bases": 40, "sections": 320, "byte_negatives": 225, "anchors": 134}
+  },
+  "items": [
+    {
+      "id": "KNOWN_EMPTY_DIGEST",
+      "kind": "REPRODUCED_LITERAL_FIDELITY_ERROR",
+      "evidence": "The fixture-only test06 records four complete empty-file occurrences whose expected and actual digests use the generic invented descriptor hash. A complete known-empty file must instead carry SHA256(empty).",
+      "affected_complete_values": [
+        ["n4_candidate_captured", 0],
+        ["n4_terminal_captured", 0],
+        ["prospective_mixed_roles", 0],
+        ["prospective_mixed_roles", 1]
+      ],
+      "expected_digest_hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "proposed_correction": "In a named fixture author successor, use SHA256(empty) whenever the declared expected size is exact0, retaining all states/actions/case IDs. Recompute dependent section/raw/candidate-link hashes. Apply the same declared descriptor rule to shape-only zero-size metadata without turning that invalid layout into a positive history."
+    },
+    {
+      "id": "UNTOUCHED_CALLER_VALUE_ASSERTION",
+      "kind": "STATIC_PRE_CODE_TEST_CLOSURE",
+      "evidence": "test01 compares decoded data with the same local value object passed to encode. Exact raw goldens already guard byte output, but a separate pristine expected copy is needed to grade caller-input preservation directly.",
+      "proposed_correction": "Keep an independent deep copy of the frozen literal before encode; assert the caller object and decoded object both retain that value. Do not derive expected values from codec output, weaken the raw byte assertion, or add a test family."
+    }
+  ],
+  "future_test_count_projection": {
+    "methods": 4,
+    "base_histories": 40,
+    "byte_negative_expansions": 225,
+    "value_type_refusals": 15,
+    "callback_exception_invocations": 66,
+    "callback_exception_families": 11,
+    "callback_sites_per_entrypoint": 3,
+    "codec_entrypoints": 2,
+    "predicted_entrypoint_invocations": 387,
+    "predicted_getter_calls": 158,
+    "actual_callback_calls": "Must be measured in the future actual-source run; no constant or absent callback is assumed.",
+    "actual_subject_invocations_now": 0
+  },
+  "correction_state": "V1 files stay unchanged. Wait for Native's complete finite preparation batch and Root's one named successor choice.",
+  "qualification": {
+    "codec_implemented": false,
+    "producer_implemented": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

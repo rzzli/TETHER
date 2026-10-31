@@ -1,0 +1,158 @@
+{
+  "status": "passed",
+  "coverage_method": "CPython 3.11 stdlib trace executable-line coverage; not branch coverage",
+  "tests": 78,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "unchanged_study_sources": true,
+  "files": [
+    {
+      "path": "src/asof/study/__init__.py",
+      "executable_lines": 1,
+      "covered_lines": 0,
+      "missed_lines": [
+        0
+      ],
+      "covered_percent": 0.0
+    },
+    {
+      "path": "src/asof/study/__main__.py",
+      "executable_lines": 99,
+      "covered_lines": 90,
+      "missed_lines": [
+        0,
+        96,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        121
+      ],
+      "covered_percent": 90.91
+    },
+    {
+      "path": "src/asof/study/diagnostic.py",
+      "executable_lines": 193,
+      "covered_lines": 191,
+      "missed_lines": [
+        0,
+        258
+      ],
+      "covered_percent": 98.96
+    },
+    {
+      "path": "src/asof/study/diagnostic_codec.py",
+      "executable_lines": 717,
+      "covered_lines": 697,
+      "missed_lines": [
+        0,
+        64,
+        65,
+        66,
+        68,
+        72,
+        73,
+        189,
+        244,
+        245,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        586,
+        587,
+        588,
+        690
+      ],
+      "covered_percent": 97.21
+    },
+    {
+      "path": "src/asof/study/diagnostic_resources.py",
+      "executable_lines": 19,
+      "covered_lines": 18,
+      "missed_lines": [
+        0
+      ],
+      "covered_percent": 94.74
+    },
+    {
+      "path": "src/asof/study/process.py",
+      "executable_lines": 222,
+      "covered_lines": 207,
+      "missed_lines": [
+        0,
+        33,
+        34,
+        61,
+        93,
+        148,
+        156,
+        157,
+        160,
+        161,
+        174,
+        194,
+        232,
+        255,
+        263
+      ],
+      "covered_percent": 93.24
+    },
+    {
+      "path": "src/asof/study/proofs.py",
+      "executable_lines": 158,
+      "covered_lines": 155,
+      "missed_lines": [
+        0,
+        183,
+        184
+      ],
+      "covered_percent": 98.1
+    },
+    {
+      "path": "src/asof/study/recorded.py",
+      "executable_lines": 85,
+      "covered_lines": 84,
+      "missed_lines": [
+        0
+      ],
+      "covered_percent": 98.82
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "executable_lines": 581,
+      "covered_lines": 559,
+      "missed_lines": [
+        0,
+        84,
+        98,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        346,
+        347,
+        403,
+        404,
+        405,
+        408,
+        501,
+        509,
+        510,
+        511,
+        512,
+        513
+      ],
+      "covered_percent": 96.21
+    }
+  ],
+  "native_model_calls": 0
+}

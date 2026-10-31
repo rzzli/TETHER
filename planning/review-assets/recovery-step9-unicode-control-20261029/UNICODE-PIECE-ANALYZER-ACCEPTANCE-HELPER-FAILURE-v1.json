@@ -1,0 +1,12 @@
+{
+  "source_sha256": "88b8142e8adc8746d163f163f9378a11e2a0817c0a0844abb2a8d5d121fa4881",
+  "reason": "Peer proof uses integer zero failure/error counts; v1 helper expected empty lists.",
+  "recorded_at_utc": "2026-10-29T08:06:29.6525654Z",
+  "native_or_original_payload_activity": false,
+  "source": "accept_unicode_piece_analyzer_v1.py",
+  "tests_repeated": false,
+  "schema_version": 1,
+  "status": "ROOT_ACCEPTANCE_HELPER_SCHEMA_MISMATCH_NO_ACCEPTANCE_WRITTEN",
+  "error": "AssertionError",
+  "correction": "Separate v2 helper checks exact int zero counts, preserving pinned analyzer/author/peer sources and proofs."
+}

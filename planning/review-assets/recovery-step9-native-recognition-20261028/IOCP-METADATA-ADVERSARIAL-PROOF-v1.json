@@ -1,0 +1,25 @@
+{
+  "activity": {
+    "DLL_loads": 0,
+    "children": 0,
+    "network": 0,
+    "path_string_file_opens": 0,
+    "real_SDK_calls": 0
+  },
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_iocp_metadata_adversarial_v1.py",
+    "sha256": "e36b086a06022da2e9fc8568121b807b99a70740ff47dea87c12c38bc9443139"
+  },
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "recorded_at_utc": "2026-10-28T21:42:50.211575+00:00",
+  "schema_version": 1,
+  "scope": "Focused adversarial pure AST-extracted metadata/ownership checks; not native qualification",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\diagnose_native_job_iocp_v1.py",
+    "sha256": "54e00582c6acba5142f56001ac451f89e04a64c11dabe78abfa2b46ce5781fa1"
+  },
+  "status": "passed",
+  "tests": 12
+}

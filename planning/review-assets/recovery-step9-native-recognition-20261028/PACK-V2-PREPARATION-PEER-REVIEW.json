@@ -1,0 +1,670 @@
+{
+  "activity": {
+    "GGUF_reads": 0,
+    "compile": 0,
+    "helper_executions": 0,
+    "native": 0,
+    "network": 0,
+    "oracle_executions": 0
+  },
+  "blocking_findings": [],
+  "bridge": {
+    "bytes": 49260,
+    "path": "planning/review-assets/recovery-step9-native-recognition-20261028/typed_public_c_recognizer_v3.cpp",
+    "sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4"
+  },
+  "design": {
+    "bytes": 24281,
+    "path": "planning/review-assets/recovery-step9-native-recognition-20261028/BRIDGE-DRAFT-DESIGN-v3.md",
+    "sha256": "d94671e7d885d0c8929d68848631c27dc810730d5fed19c2520def2e1b024ceb"
+  },
+  "format_review": {
+    "case_field_order": [
+      "id",
+      "source_group",
+      "grammar_index",
+      "expected_kind",
+      "sha256",
+      "document_bytes"
+    ],
+    "group0_primary_exception": "primary/161 only; exact SHA and sole NUL at169; pure=false remains separate",
+    "group1": "newly canonical serialized authored abstention; native expected1",
+    "group2": "independent byte guards expected2/3",
+    "integer_format": "little-endian unsigned32",
+    "magic_hex": "5230394e43303200",
+    "trailing_bytes_rejected": true,
+    "version": 2
+  },
+  "limits": [
+    "Text/pin review does not execute or qualify prospective v2 pack; root exact-hash decision required.",
+    "Original v1 pack and its native-eligibility HOLD remain unchanged.",
+    "Prospective pure oracle replay cannot establish native membership, token-piece identity, EOG or runtime fit.",
+    "Accepted installed asof module is preloaded before trusted own-source oracle import; external caller owns environment/process deadline.",
+    "Four byte guards and sole primary raw-NUL are harness outcomes, never native grammar nonmembers.",
+    "Two natural token-boundary prefixes remain unknown until actual tokenization.",
+    "No scientific validity, clinical probability or biological entailment asserted."
+  ],
+  "old113_input_pins": [
+    {
+      "bytes": 48930,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/NATIVE-CORPUS-PROPOSAL.json",
+      "sha256": "1fca71287d74592581743d5aa3869612dde01afb5e5cb52e350be3b64a7eebca"
+    },
+    {
+      "bytes": 1103161,
+      "path": "data/cache/r09-native-grammar-corpus-20261028/cases.json",
+      "sha256": "01286d35689c7005ea67fa817c4b4098cecd05c4233c3949e7ec744bc5f5d97a"
+    },
+    {
+      "bytes": 26319,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/extension-cases.json",
+      "sha256": "b2d9fe648105fb7ebeb9e4592e22fab98ce903fb6b0fc7bb3a96ce871e0b6020"
+    },
+    {
+      "bytes": 17120,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/FROZEN-INPUTS.json",
+      "sha256": "1b80e365e42b28fe237c22fc35e215d1a0410729203a77255fc628309a9da414"
+    },
+    {
+      "bytes": 88561,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/FUTURE-NATIVE-CORPUS-MANIFEST.json",
+      "sha256": "43aa4b18d3d9c7393198d0eaa93095999d1ef54f0d2757ffe6265c7d95a26e4a"
+    },
+    {
+      "bytes": 597934,
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b"
+    },
+    {
+      "bytes": 6558,
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.json",
+      "sha256": "92141df6a9ad8f3e67df6715d4c2f8bbdbba11b06daa9d1e852b3fec2598a05b"
+    },
+    {
+      "bytes": 93138,
+      "path": "data/cache/r09-jsonschema-reference-batch-20261028/REFERENCE-BATCH-RESULT.json",
+      "sha256": "1fa0be7bb260e95e200902311af3c0d18ae31014dd904609ba35ff7ca948e164"
+    },
+    {
+      "bytes": 16981,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/report.json",
+      "sha256": "a2af762049dd5fc4b62f71d1b1f88c34aca4280140515b1e5e0955b894d174a7"
+    },
+    {
+      "bytes": 7327,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/receipt.json",
+      "sha256": "1b68e94d6c03723b7008c42f51e2c54e8597fcf28be47c81b3a992e29be43d4f"
+    },
+    {
+      "bytes": 17065,
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/PREPARATION-QUALIFICATION.json",
+      "sha256": "153df69656964d093217c74773e4065f926a5d702c10f5372c4b6ae2ac4d0cd7"
+    },
+    {
+      "bytes": 40435,
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/INSTALLED-DEFAULT.log",
+      "sha256": "e26ed2a040234bdc5995471755b4e8d2a1c1c378f166e08b00b60eaa48c1c2bb"
+    },
+    {
+      "bytes": 21319,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/VOCAB-TOKEN-REVIEW.md",
+      "sha256": "84b7f38e2a3cae4aeacc395fb4dc5ce6f63135d39abeb2d410a3dc638bedd311"
+    },
+    {
+      "bytes": 13612,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/VOCAB-TOKEN-REVIEW.json",
+      "sha256": "96ac60204fe05cc0530d593a5e201cf4ecb5e0d42f0fce3d47d4200b0eaa0da5"
+    },
+    {
+      "bytes": 5823,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/variants/synthetic-context/grammar.gbnf",
+      "sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407"
+    },
+    {
+      "bytes": 5753,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/variants/synthetic-known-literal-v1/grammar.gbnf",
+      "sha256": "7438f2f51e75ddd72536ed74166d6a02fa12eee422197ed021306c5e265ddeae"
+    },
+    {
+      "bytes": 1989,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_ascii_1800.json",
+      "sha256": "0aa014dd734e1581e3d881909343c0640bfdb1010c59ee60b16c0aee47cad219"
+    },
+    {
+      "bytes": 7389,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_astral_raw_1800.json",
+      "sha256": "9055d33f041a4d2908209ac3e7a7974ea24c5e01768ccc14b944d752f94d325d"
+    },
+    {
+      "bytes": 21789,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_astral_escaped_1800.json",
+      "sha256": "43d6d1f56c4b6b0b6fe0806c009f529c4064acc5d27c14baf9e46d0d11c2a90d"
+    },
+    {
+      "bytes": 1990,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_ascii_1801.json",
+      "sha256": "f76de6c09c3118be31919dc85ce2528e8f56e011f7a6bcace83792b7f00ba9de"
+    },
+    {
+      "bytes": 7393,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_astral_raw_1801.json",
+      "sha256": "9888fa1c43908ca867b8b3765f49d7b0da8409f81867ab8fcae10d19623f95a3"
+    },
+    {
+      "bytes": 21801,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/text_astral_escaped_1801.json",
+      "sha256": "962252694689b52ec2fd5bb3522593ee7ca3d3f3c1a6d164eb81cdbf8f8a100e"
+    },
+    {
+      "bytes": 1989,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/nonblank_at_end_1800.json",
+      "sha256": "e4e1899c81514ebecd53614a71f5ce21e27d431dfac7732f32fb3699e632eb6a"
+    },
+    {
+      "bytes": 1989,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/nonblank_at_start_1800.json",
+      "sha256": "91578d210bb32159510eafdeca7d856e167572234afcd3859a4fcc5a854b1a9b"
+    },
+    {
+      "bytes": 1989,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/nonblank_at_middle_1800.json",
+      "sha256": "41e728c4f7750a9b0f50abd54f2f409f2e7bcc7e9b5ac0b5384257334513534c"
+    },
+    {
+      "bytes": 1989,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/all_blank_1800.json",
+      "sha256": "8a7b8e18593cb572e8069e057cadaf0934c2a367062e7e900a10d914a40d64b0"
+    },
+    {
+      "bytes": 1990,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/nonblank_after_1800_spaces.json",
+      "sha256": "3ffac91b4cf2f2131253a1e54f785037c50cff471c92d778ce671989e1dba51f"
+    },
+    {
+      "bytes": 1990,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/nonblank_before_1800_spaces.json",
+      "sha256": "2f53b6eab5b27d620d104a39d352e3a9c8bd89c5b0676e1a03cb631c6a04516c"
+    },
+    {
+      "bytes": 717,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_ascii_512.json",
+      "sha256": "4771275ba02b46824e9c60980fd65c7aa82a22cef2d05718a81a9d1db1a60e40"
+    },
+    {
+      "bytes": 2253,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_astral_raw_512.json",
+      "sha256": "9333dfc9d71b505eb8f2281fc07f1c8e9613976f93d48c61db95cd55216b727e"
+    },
+    {
+      "bytes": 6349,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_astral_escaped_512.json",
+      "sha256": "5fba034ad1d95fe6dc33fefa4bbba033c31c18f15d55535659ec2d85c4167a88"
+    },
+    {
+      "bytes": 718,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_ascii_513.json",
+      "sha256": "eb21ecc1dff781bdb9633adc71b0e57de70f0ef2c31ea840545de9658d636d80"
+    },
+    {
+      "bytes": 2257,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_astral_raw_513.json",
+      "sha256": "ed1223a5e19898f90ba0dd5764500da5ec6de5495536d9c47dd67560a11dd83a"
+    },
+    {
+      "bytes": 6361,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/reason_astral_escaped_513.json",
+      "sha256": "a5d752be61095b9867a5b91550b602af86e5340e0cc44051d585d0b8338a121b"
+    },
+    {
+      "bytes": 193,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/bmp_raw.json",
+      "sha256": "a7ab4de34d101769e195148b9675d370bb1df5f60880344fe9ebadca54b8dace"
+    },
+    {
+      "bytes": 201,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/bmp_escaped.json",
+      "sha256": "c5a0f6cc744eea5a66e11984f13f8defc099116f5a3c714c1869cee3697ba428"
+    },
+    {
+      "bytes": 199,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/controls_short.json",
+      "sha256": "6f817e66bd7edb922b8b9bdfa1a435ba46195a26ebfd2f80a31cb769342991d5"
+    },
+    {
+      "bytes": 207,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/controls_unicode.json",
+      "sha256": "34c14ae2550058a0dea5e97f57dd3e7116c594dc9b2469d42adedf21063a6ea3"
+    },
+    {
+      "bytes": 199,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/noncharacters_raw.json",
+      "sha256": "6f3e1133afe3999160c9b86e3fa31876ea034b293b862fe474471fcfcc85828e"
+    },
+    {
+      "bytes": 213,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/noncharacters_escaped.json",
+      "sha256": "9fbca3b54ce2ed1f1064324721020b39caf9065097af5ae9c4605142ae523e11"
+    },
+    {
+      "bytes": 192,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/zero_width_only.json",
+      "sha256": "f732e1ee2399fbedd1336ead8d3367797f46dbbdd3c27d9b9067a65d6c547bcf"
+    },
+    {
+      "bytes": 192,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/bom_only.json",
+      "sha256": "ce26262a5c27110ace0ff68213ca261bc0ea40dfcf481cf635378a40b8b3fc2b"
+    },
+    {
+      "bytes": 2889,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/combining_boundary_1800.json",
+      "sha256": "933585de933f27a4946039037efaf2edc7686e25b1df60236a133305889ad926"
+    },
+    {
+      "bytes": 2892,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/combining_over_1800.json",
+      "sha256": "4aa5e1d19f7f28c12a51d6f341331282b35fd969356fa03c38eeb388b4128511"
+    },
+    {
+      "bytes": 283,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/all_strip_whitespace.json",
+      "sha256": "b2accfe00581f897c570748932185255b8fcad61b19b1a5f31c308ac2b58d771"
+    },
+    {
+      "bytes": 284,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/strip_whitespace_with_nonblank.json",
+      "sha256": "8a06288a601ce567524775ebe92e54dd65b1db286fbc30aad227f0ee84e3a121"
+    },
+    {
+      "bytes": 190,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/less_than_raw.json",
+      "sha256": "0d7bebe0f1c6c91cb13bb552ddbe5c4279f1c716b21f8529a51c1d920e563624"
+    },
+    {
+      "bytes": 195,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/less_than_escaped.json",
+      "sha256": "d1c52d6d14f19e148de621e26b969904f1b77aa3899663b1e7e2564bb8101c77"
+    },
+    {
+      "bytes": 212,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/runtime_delimiter_raw.json",
+      "sha256": "764521087bc130b36578d0986583d4cf4a3722cd05c1a303512a5b96c45af50c"
+    },
+    {
+      "bytes": 222,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/runtime_delimiter_escaped.json",
+      "sha256": "8ef816f41d88c09f951bd026e69a3438aeda2ee353e2868ca11934fcb408ac40"
+    },
+    {
+      "bytes": 195,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/less_than_uppercase_escape.json",
+      "sha256": "a10a8f7da346e00a29dac37b86bc86ac0db1f1ea877565500b4d2076e055ab30"
+    },
+    {
+      "bytes": 201,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/astral_uppercase_pair.json",
+      "sha256": "c518e48e8745a776f8a3bfef596b4bc152fbfa9c0b976906661d7dfa2159fd9b"
+    },
+    {
+      "bytes": 195,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/bmp_uppercase_escape.json",
+      "sha256": "853bea979a00ae2fe8647453bf000b925a0eb85ab363e9a0203842c5357b3155"
+    },
+    {
+      "bytes": 191,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/quote_escape.json",
+      "sha256": "1d635937d472e906eb8739d298212af24aa0159bba3004c2398fd5d68195d8d1"
+    },
+    {
+      "bytes": 191,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/backslash_escape.json",
+      "sha256": "ba63bffb2a538cf593920e6817f60958bd44236aa7849f033e04099666803568"
+    },
+    {
+      "bytes": 191,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/solidus_escape.json",
+      "sha256": "2757c8e85a88802452b9307704be4cc7773d5ceb449e9c850c3c44f03f96ac2b"
+    },
+    {
+      "bytes": 213,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/refs_Q0_Q1.json",
+      "sha256": "d0454b5f6656d9d733b9068962321de4022ba7985a187d0d53b1443ddbbd1603"
+    },
+    {
+      "bytes": 213,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/refs_Q1_Q0.json",
+      "sha256": "7a9e9de1bbba52f369e89d091145cf99c0cc38a886c869954439c855fcad1e2e"
+    },
+    {
+      "bytes": 213,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/duplicate_refs.json",
+      "sha256": "dd7ec67328421465c7796f7311afb8d11526bd70c0e8ea8c12c6e24326a6b957"
+    },
+    {
+      "bytes": 336,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/duplicate_claim_text_post_only.json",
+      "sha256": "b30a80d02e50c10c4da3e6d3d943541400fdbda43100f628dcf5317cdc38a0f6"
+    },
+    {
+      "bytes": 195,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/unpaired_surrogate_high.json",
+      "sha256": "d52f04a8b725550cf5a5aed2d2d84ba4b8db97ab40d5cbc2ebb8271e2009fbaa"
+    },
+    {
+      "bytes": 195,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/unpaired_surrogate_low.json",
+      "sha256": "c67bcdd7c30eab1d8922ea701234b081d10969d5370b500d9b9cf5a7916a637b"
+    },
+    {
+      "bytes": 201,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/unpaired_surrogate_reversed.json",
+      "sha256": "baf9169391a0e07106e76ac57031486bb28af06c1787705d9f73759eccfccb5d"
+    },
+    {
+      "bytes": 210,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/trailing_json_value.json",
+      "sha256": "01265566f8525a864e32fddba37e55a3a5073bdddbb970db5afa27d681e3c442"
+    },
+    {
+      "bytes": 210,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/trailing_whitespace.json",
+      "sha256": "36b423f7c70b1db9309f21531a88db1e42007d5f07817fbc24e40cb4cf74fdef"
+    },
+    {
+      "bytes": 210,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/leading_whitespace.json",
+      "sha256": "a3248c62e16b2f7352a49b550b82198d31a285a15297a66c6c2efa27d0ecfca7"
+    },
+    {
+      "bytes": 235,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/duplicate_root_key.json",
+      "sha256": "ddeb2b6895a30e662edf6e87e422e481964cc1925914b04f3b0aa0b97fcd5085"
+    },
+    {
+      "bytes": 225,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/duplicate_claim_key.json",
+      "sha256": "1261d8f2fa06b83f91b2c62af429c30ecea1e5220c6b1bb4d298aa8ea515d9c1"
+    },
+    {
+      "bytes": 190,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/raw_control_invalid_json.json",
+      "sha256": "8414c3ed0614d67fa5b8c152438a2f2eb71f534a7ba1a1658c386f642349b308"
+    },
+    {
+      "bytes": 208,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/alternative_root_key_order.json",
+      "sha256": "6882a17273b2a5b088a0b142051c9f6ef865533bf245184db8097e78df8cb016"
+    },
+    {
+      "bytes": 245,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/known_literal_exact_safe.json",
+      "sha256": "b255a74290203466704a0f6856b7beb70d1c291d8003fe6eb1c5162e21f181d5"
+    },
+    {
+      "bytes": 235,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/known_literal_raw_less_than.json",
+      "sha256": "d60dafdd4b62232a8a321362d29652e0643701910653a93ea39c27201500d77c"
+    },
+    {
+      "bytes": 292,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/known_literal_ascii_escaped.json",
+      "sha256": "5f6a6da5d282f16524c0d42812c92f47302f389d66fe49ab7ff7a8b120d34bbd"
+    },
+    {
+      "bytes": 245,
+      "path": "data/cache/r09-generation-corpus-extension-v1-20261028/documents/known_literal_wrong_reference.json",
+      "sha256": "588c9f77744aa8f1d13ea6202d5a30709aae3a28662bb1eba07b1e5967bce428"
+    },
+    {
+      "bytes": 36885,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/asof_interpretation/00-asof_interpretation/preparation.json",
+      "sha256": "90401bd4c03491763376cd14b946960944aa42f1d0e07b22c57a6ac5e3cdc2b1"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/asof_interpretation/00-asof_interpretation/response-fixture.json",
+      "sha256": "8260f081f7d3a36ce110d31bc984448d41fe7539123564c66297f90883c4ae02"
+    },
+    {
+      "bytes": 36896,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/00-chief_of_staff/preparation.json",
+      "sha256": "e45c1eff70939db738dafd99bab6259338a3d530e70a68f2f42c8bdaf9b4c8d4"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/00-chief_of_staff/response-fixture.json",
+      "sha256": "63917b75d652b11cb490128e904e92555f10ae11d0bd1366214467f11fd785df"
+    },
+    {
+      "bytes": 37040,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/01-coordinator_delegate/preparation.json",
+      "sha256": "12ce5c13eaa9dbad3991e3b0de672f0fb24adc00a170592d323e5983c12c41a8"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/01-coordinator_delegate/response-fixture.json",
+      "sha256": "c26adc6b5f4bd99efbaf9993cf1536b38dc325f239deb66db550a64e9604126a"
+    },
+    {
+      "bytes": 37171,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/02-mapped_specialist/preparation.json",
+      "sha256": "37ada34a479b86d7b3f75a21a5f78a58cf7b85370ac1bec92a4fb1988b1f2724"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/02-mapped_specialist/response-fixture.json",
+      "sha256": "36041c1b280d02f16dabc543311431a600bf969df425d5224aba6a6e2c04caaa"
+    },
+    {
+      "bytes": 37296,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/03-scientific_reviewer/preparation.json",
+      "sha256": "ca17b2933f3e5547dbedfba35b2eae67c0c016d48ba461f5a1b97f804e51cf17"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/03-scientific_reviewer/response-fixture.json",
+      "sha256": "b50f9cd764de7f90e205bba9e8fd64c857beb6412cba1181975fb9ae46766af7"
+    },
+    {
+      "bytes": 37429,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/preparation.json",
+      "sha256": "974b654b39e249c9e8b031392ec4b407f75b0c958f907c61c2a57bde1ba8351e"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-context/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/response-fixture.json",
+      "sha256": "a33b131a9c1b6d6afa05529d5beb218e969df96c15180cd2db10b8f5edb71c73"
+    },
+    {
+      "bytes": 33517,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/asof_interpretation/00-asof_interpretation/preparation.json",
+      "sha256": "6961b8fc417079bffa5e5851b1f6c2eb578532fd4096f25ce0aa87b7873f868d"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/asof_interpretation/00-asof_interpretation/response-fixture.json",
+      "sha256": "bb9f840cb9f3e4ebb25cd5bf355d217a6b66de3f686e63689ea072c81a95ada8"
+    },
+    {
+      "bytes": 33528,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/00-chief_of_staff/preparation.json",
+      "sha256": "5180075406bd6aa3eda99b4c3a2e32e32fd2d9ad308eb70f5369ddbfda3e93db"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/00-chief_of_staff/response-fixture.json",
+      "sha256": "a3693269763ba681c4169befdeb8d353de117cc257d4d3b5c76aac9ce677009a"
+    },
+    {
+      "bytes": 33660,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/01-coordinator_delegate/preparation.json",
+      "sha256": "c04d2a07c5f8f20abcba4ed68e34d11b5484c5f3575eb9468b2a7fb80b299b56"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/01-coordinator_delegate/response-fixture.json",
+      "sha256": "fe12cf3b16a186fa4ac429289bd139d570255c5a55fdbd446eda616bd439c663"
+    },
+    {
+      "bytes": 33779,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/02-mapped_specialist/preparation.json",
+      "sha256": "aaf3ffa70515dc8db8641b42498616793a6f3cf7e66e02d140746fd81095644a"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/02-mapped_specialist/response-fixture.json",
+      "sha256": "39ebb0e4dd0cb6fa6965f8d088209e9b956721634831737ef266aba92423cf75"
+    },
+    {
+      "bytes": 33892,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/03-scientific_reviewer/preparation.json",
+      "sha256": "f9dd4e1dfcf0d00027183f9198aeabd8b8ea42009bf31df44df3069e2d94b93f"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/03-scientific_reviewer/response-fixture.json",
+      "sha256": "98ba7ccfbc9b193a20cade0bc3c97a164d6fd40c167ee36929def8848ae32e79"
+    },
+    {
+      "bytes": 34013,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/preparation.json",
+      "sha256": "642577543418b7f91f40acfad449fe8b320dbd84a99542c1514b74e0da1c0498"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/synthetic-orientation/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/response-fixture.json",
+      "sha256": "145ac92e7a241a83ff164dbc53fb585f2091836dc57bfb603f10f678c1edcabe"
+    },
+    {
+      "bytes": 50248,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/asof_interpretation/00-asof_interpretation/preparation.json",
+      "sha256": "53e7dd9f6203a78044a817737a15802e5b8c15a535d5620d069f2a9a43487709"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/asof_interpretation/00-asof_interpretation/response-fixture.json",
+      "sha256": "d6ada56ed4334914a87694f109f88b55fac02b8e5d8b7049bcaaf99654548cf4"
+    },
+    {
+      "bytes": 50259,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/00-chief_of_staff/preparation.json",
+      "sha256": "4f4f8c3feac8f97cceffefebf6688ee0401afa769ff4cb0ebb9d9954090a7874"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/00-chief_of_staff/response-fixture.json",
+      "sha256": "031a13ece82616e393cb735b11aebf1b947b8c1865332a62580fc98cbfc759af"
+    },
+    {
+      "bytes": 50391,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/01-coordinator_delegate/preparation.json",
+      "sha256": "d553945ac7fd1cad3bd2d7fed4a261da3a200f8c0379b6fc181e3a1c25ae85da"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/01-coordinator_delegate/response-fixture.json",
+      "sha256": "0aee5d32039e51976d60b27d0a0502f6359df71effd1c17b222c62d4c8ce36ce"
+    },
+    {
+      "bytes": 50510,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/02-mapped_specialist/preparation.json",
+      "sha256": "073213736480719ffa0e6b21a14b4e7acd8db780f1edebf7652d03bcff4ce5af"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/02-mapped_specialist/response-fixture.json",
+      "sha256": "584357df858e1ccf1c8951552ff3bced023daa6b21728db43e5054a5a84a1820"
+    },
+    {
+      "bytes": 50623,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/03-scientific_reviewer/preparation.json",
+      "sha256": "c425514a70655205b341e641d972691b3d60ec9dbf220474497ee5068d03348d"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/03-scientific_reviewer/response-fixture.json",
+      "sha256": "fe992df881fbf0a47af8bb1a446c52c84a2a888418a548c1fc0761f92ebbfa37"
+    },
+    {
+      "bytes": 50744,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/preparation.json",
+      "sha256": "fbaba1324490126e42e4014b307c93b881b164ca70a43fbd9beb209694304bcd"
+    },
+    {
+      "bytes": 1016,
+      "path": "data/cache/r09-generation-preparation-20261028T052637Z/exposed-IL6R-RA/adapted_virtual_biotech_interpretation/04-coordinator_synthesize/response-fixture.json",
+      "sha256": "7671b5ecfc4e831d2fd057093a80630c4f3d5f200bdc5a4b199cacf7985a81c4"
+    },
+    {
+      "bytes": 4040,
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/finite_gbnf_oracle.py",
+      "sha256": "f59671fc66f55425e36d81e779501f9902b180248674688360d5a7fe5b68fa7d"
+    },
+    {
+      "bytes": 98836,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/PACK-RESULT-VERIFICATION.json",
+      "sha256": "42037e2b5c39c0074a8f6e43ebbda77bf5ffd1ef5b5026ea44e1617d94920afb"
+    },
+    {
+      "bytes": 259867,
+      "path": "data/cache/r09-native-recognition-pack-20261028T172212Z/recognition.pack",
+      "sha256": "0c28da7444c1837ac5099b5312b864a4d17cd9dafb5176c3452b2f229ae4e0f5"
+    }
+  ],
+  "recorded_at_utc": "2026-10-28T18:35:42.404749+00:00",
+  "reference_pins": [
+    {
+      "bytes": 2373,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/BRIDGE-V3-PEER-REVIEW.json",
+      "sha256": "c3cdb7b9f00011231566b33e568e9488633f108b917fdc2a86d855b906e68494"
+    },
+    {
+      "bytes": 36739,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/build_public_c_bridge.py",
+      "sha256": "733a47bb8c047e129560c0c68dd63d97cf09c95c23b3cabd105df7791927c09c"
+    },
+    {
+      "bytes": 78846,
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/BUILD-PROTOCOL.json",
+      "sha256": "5c6086e48ca9fb3b3f1f61a2eea780e64f1392bbdc819216e37b09935acc345e"
+    }
+  ],
+  "review_type": "AI engineering static peer review; not scientific or native conformance",
+  "reviewed_preparer": {
+    "bytes": 17138,
+    "path": "planning/review-assets/recovery-step9-native-recognition-20261028/prepare_recognition_pack_v2.py",
+    "sha256": "a6d071f433d2d08b09c562fa23e93663852490455706ef4a9f448d4fefedb411"
+  },
+  "schema_version": 1,
+  "source_binding_checks": {
+    "all_original167_wires_preserved": true,
+    "canonical_serialization_of_original167": false,
+    "independent_guards": 4,
+    "new_authored_serializations": 18,
+    "original_pack_bytes": 259867,
+    "original_pack_records": 189,
+    "original_pure": {
+      "members": 44,
+      "nonmembers": 123
+    },
+    "prefix_slots": 6,
+    "prospective_native_byte_front": {
+      "cases": 166,
+      "members": 44,
+      "nonmembers": 122
+    },
+    "sole_primary_harness_disposition": [
+      {
+        "id": "extension/raw_control_invalid_json",
+        "index": 161,
+        "offsets": [
+          169
+        ],
+        "pure": false,
+        "sha256": "8414c3ed0614d67fa5b8c152438a2f2eb71f534a7ba1a1658c386f642349b308"
+      }
+    ],
+    "unchanged_receipt_bound_wrappers": 36
+  },
+  "status": "clear_for_separately_authorized_pure_v2_preparation_only"
+}

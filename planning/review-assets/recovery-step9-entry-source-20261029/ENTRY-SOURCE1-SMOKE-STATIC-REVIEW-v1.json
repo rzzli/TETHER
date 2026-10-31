@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "STATIC_CLEAR_SINGLE_ENTRY_SMOKE_PREPARATION_ONLY_PENDING_ROOT_EXECUTION_BINDING",
+  "freeze": {
+    "path": "planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-INITIAL-REGRESSION-FREEZE-v1.json",
+    "bytes": 2637,
+    "sha256": "4fc87eec8904b341d3abdfc538d682cdfb149cf8ec3bc161d9b836c2ca0f639f"
+  },
+  "verified_inputs": {
+    "regressions": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/entry_initial_regressions_v1.py",
+      "bytes": 4392,
+      "sha256": "f93c1946257e4f8cfc01e210c274cbcfa0abee1ddf22d72f4bc766325b1b96b6"
+    },
+    "runner": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/run_entry_source1_smoke_v1.py",
+      "bytes": 7949,
+      "sha256": "6e454c6bf6cfc4d33071c901f3b34aabfa1348a837ca1fe5e7a1fb5aed9ca020"
+    },
+    "support": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/entry_independent_test_support_v1.py",
+      "bytes": 15938,
+      "sha256": "d62234c447095caea6ba96d84579f0d332dc69aa4deed24235de6850c90ac03d"
+    },
+    "world": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/entry_independent_world_v1.py",
+      "bytes": 11981,
+      "sha256": "e4b9aacfc7a18617a8baddffb2a247d2017aac4406d006acb4ea813f8340989b"
+    },
+    "inputs": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-ACTUAL-HELPER-INPUTS-v1.json",
+      "bytes": 5176,
+      "sha256": "10d0d0dd66ab858e3e893f8c8ca096f5d5cf8cdd5fe21f75c1bc10dc0301c605"
+    },
+    "preparation": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-INITIAL-REGRESSION-PREPARATION-v1.json",
+      "bytes": 4590,
+      "sha256": "88ee40834682483046ad053a0cedbaac63a0e5ca7e04f672f0f705ea941f567c"
+    },
+    "source_pause": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-SOURCE-PAUSE-v1.json",
+      "bytes": 5271,
+      "sha256": "5594746b7d9687a7a386f4188564726f8ab000f1ec4ba38e557b7696373687fb"
+    }
+  },
+  "scope": "Finite source-text review of runner/support/world/regressions constructors, original first-entry attempt, audit and first-proof retention. No full32/53 review, no subject import or execution. The subject itself remains on the retained three-defect HOLD.",
+  "findings": [],
+  "checked": [
+    {
+      "area": "exact_constructors_and_entry",
+      "result": "PASS_STATIC",
+      "detail": "World supplies exact EntryAttempt, SyntheticRawBackend(invoke_reserved callback), SyntheticOutputBackend(reserve,append,close_journal,publish), PreboundServices positional9 fields and EntryPlan positional8 fields, then calls K.entry once with executing_module=the actual fresh kernel object. These match frozen Kernel88ff. The known primitive invoke/invoke_reserved guard defect is reached without a harness alias."
+    },
+    {
+      "area": "one_attempt_and_stop",
+      "result": "PASS_STATIC",
+      "detail": "Runner invokes only T.test01_valid_entry. World.enter rethrows the original entry failure and takes attempt.state directly, without fabricating a partial Core. No cleanup runs on failed construction; checks02/03 remain NOT_REACHED. The deeper patch in test03 is a function body that is not invoked by this runner."
+    },
+    {
+      "area": "first_clock_and_trusted_setup",
+      "result": "PASS_STATIC",
+      "detail": "The new kernel definitions and trusted stdlib/UTF16 prerequisite load are explicit pre-entry setup; helpers stay byte data. ControlledClock has original100 with no reset/retry. Source entry owns first application sample. One real cooperative60-second runner deadline starts before binding/setup and remains separate from synthetic owner time."
+    },
+    {
+      "area": "closed_source_loader_and_audit",
+      "result": "PASS_STATIC",
+      "detail": "ExactLoader loads fresh pinned kernel bytes only, with an explicit stdlib map and registered actual source filename. CallGate ACTIVE/stack-aware audit rejects source open/import/ctypes/subprocess/socket/os operations. UTF-16-LE is preloaded in trusted support. Helper compiler remains uncalled on the expected constructor failure; it never supplies an old owner or replaces the source importer."
+    },
+    {
+      "area": "input_paths_and_prefix",
+      "result": "PASS_STATIC",
+      "detail": "Physical reads are limited to exact new source/harness/scope metadata and the accepted pure codec pin. All five source-target paths are invented D:\\EntrySynthetic labels; VirtualOriginals never opens them. Frozen geometry is N5/B3/M3/Q7/R87/C117/E234 with98641 actual helper bytes and98709 captured bytes; none of this prefix is claimed executed after F3."
+    },
+    {
+      "area": "failure_and_proof_retention",
+      "result": "PASS_STATIC",
+      "detail": "Exclusive xb attempt is saved before subject import, existing attempt/proof refuses replay, and exclusive proof records entry_error separately from setup_error. Error serialization retains type/code/args/traceback metadata without invoking str/repr on arbitrary values. Post-unwind source/harness hashes, clock/output/original counters, audit denials and deadline status are recorded. Expected constructor failure is a material source failure/test01 FAIL, not source acceptance."
+    }
+  ],
+  "expected_first_outcome": "One ordinary entry call reaches the frozen F3 constructor mismatch, preserving start100 and KernelRefusal(INVALID_INPUT) in EntryAttempt; no Core returned, no output/original/helper callbacks. This is a static expectation, not a measured result.",
+  "execution": {
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "harness_runs": 0,
+    "source_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "limits": [
+    "Static clearance applies only to the single Source1 smoke preparation. Root must separately freeze/bind/authorize its actual execution.",
+    "No hard callback-free-hang guarantee; the60-second gate is cooperative.",
+    "No positive F1/F2 or full32/53/native25 coverage; their downstream checks remain unexecuted.",
+    "No physical/native/real-entry/full-roster/resource/science qualification."
+  ]
+}

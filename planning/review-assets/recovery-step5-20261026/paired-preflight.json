@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "status": "paired_no_dispatch_preparation_passed_runtime_postvalidator_pending",
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "cases": [
+    {
+      "case_id": "exposed-il6r-genetics",
+      "basis": "previously_exposed_real_request",
+      "request": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\exposed-il6r-genetics-request.json",
+        "bytes": 12149,
+        "sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a"
+      },
+      "semantic_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+      "matched_request_and_evidence": true,
+      "arms": [
+        {
+          "arm": "A",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\exposed-il6r-genetics-A-prompt.txt",
+            "bytes": 12785,
+            "sha256": "192abb07fcbea285458ce68b2614b0f153cdef17b53e29eea9c3a4dbfb4804f4"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\exposed-il6r-genetics-A-payload.json",
+            "bytes": 16702,
+            "sha256": "00bfc6e31a3b506cf81813ad4cf7367b2d943402aba7ba078eb59df994a9ac01"
+          },
+          "roundtrip_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+          "evidence_sha256": "9370926e4baff969acc64a8c8b3cec42587d497e9cdae22866e14bb2e8985819",
+          "reserved_input_tokens": 12817,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "existing_complex"
+        },
+        {
+          "arm": "B",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\exposed-il6r-genetics-B-prompt.txt",
+            "bytes": 13347,
+            "sha256": "d697158a34148b09b7bee6a8e4488a7d636d51a86aadc6bf6bed33e27723f53d"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\exposed-il6r-genetics-B-payload.json",
+            "bytes": 14428,
+            "sha256": "7c01dc7604edd1a0b5e4151bdfb8fa0ac7bb58c733da840a44c391acfaf7af93"
+          },
+          "roundtrip_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+          "evidence_sha256": "9370926e4baff969acc64a8c8b3cec42587d497e9cdae22866e14bb2e8985819",
+          "reserved_input_tokens": 13379,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "generic_object_requires_post_validation"
+        }
+      ]
+    },
+    {
+      "case_id": "synthetic-orientation",
+      "basis": "synthetic_structure_only_not_admitted",
+      "request": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-orientation-request.json",
+        "bytes": 3323,
+        "sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219"
+      },
+      "semantic_request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "matched_request_and_evidence": true,
+      "arms": [
+        {
+          "arm": "A",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-orientation-A-prompt.txt",
+            "bytes": 3987,
+            "sha256": "0ebe06d0dd1351a15fffcc7b5707cb7ffc1cf1d28ff779ff91398e15a76b6c43"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-orientation-A-payload.json",
+            "bytes": 6624,
+            "sha256": "a3d1a3173de9b145885100e4524aa8d7102ea31ccc8b9b4bda2442a6c54b5bfb"
+          },
+          "roundtrip_request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+          "evidence_sha256": "33da6d004816bb74314e3d8aaa2db615334d3cfac5ebe3ed6a222a7204430adf",
+          "reserved_input_tokens": 4019,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "existing_complex"
+        },
+        {
+          "arm": "B",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-orientation-B-prompt.txt",
+            "bytes": 4549,
+            "sha256": "747b1a6fa92e071a95f762cd6171eb4dafac22902935925c95cc788e5cf94b4e"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-orientation-B-payload.json",
+            "bytes": 4938,
+            "sha256": "889accf2f5ea8a5829110f136f7037224c3f6e2d42c0da1bf08ccfffc0789386"
+          },
+          "roundtrip_request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+          "evidence_sha256": "33da6d004816bb74314e3d8aaa2db615334d3cfac5ebe3ed6a222a7204430adf",
+          "reserved_input_tokens": 4581,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "generic_object_requires_post_validation"
+        }
+      ]
+    },
+    {
+      "case_id": "synthetic-context",
+      "basis": "synthetic_structure_only_not_admitted",
+      "request": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-context-request.json",
+        "bytes": 3769,
+        "sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221"
+      },
+      "semantic_request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "matched_request_and_evidence": true,
+      "arms": [
+        {
+          "arm": "A",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-context-A-prompt.txt",
+            "bytes": 4564,
+            "sha256": "f8dfce0be739aeef7166050eeea8afcb1231b34a719b5703de69af0bff140d96"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-context-A-payload.json",
+            "bytes": 7264,
+            "sha256": "363093c098ba9cadc1126e9f4b2a613222bfaf750e46f143fb5b5887e164bac3"
+          },
+          "roundtrip_request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+          "evidence_sha256": "c0d34750302c2d60a550a868d74b22ff3e09c1ce4277811415df678da72e3fec",
+          "reserved_input_tokens": 4596,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "existing_complex"
+        },
+        {
+          "arm": "B",
+          "prompt": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-context-B-prompt.txt",
+            "bytes": 5126,
+            "sha256": "29a317a2cf520873d1cbac11d0458fc615a0f4cce7fc822092d9291e3bf8241f"
+          },
+          "http_payload": {
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\synthetic-context-B-payload.json",
+            "bytes": 5573,
+            "sha256": "d7f096d81e30439e2628a3f05b1e630bd43ca6a9432d523fa1cdd618a1122d44"
+          },
+          "roundtrip_request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+          "evidence_sha256": "c0d34750302c2d60a550a868d74b22ff3e09c1ce4277811415df678da72e3fec",
+          "reserved_input_tokens": 5158,
+          "reserved_output_tokens": 2048,
+          "max_seconds": 150,
+          "native_schema": "generic_object_requires_post_validation"
+        }
+      ]
+    }
+  ],
+  "evaluator_reference": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\evaluator-only-synthetic-references.json",
+    "bytes": 279,
+    "sha256": "cdcd2f4046367d685bec4fedc8cc5a06b59701e5e8a135eb901d3ac1ec7e6bf6"
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step5-payloads-20261026\\prepare-code.py",
+    "bytes": 7914,
+    "sha256": "4914a7575c961d72fa95c4813524707d619f59cc68df8f1fce430d7a6b9e7553"
+  },
+  "limitations": [
+    "No synthetic real-source admission claimed",
+    "Simplified strict response post-validator/runtime adapter not implemented",
+    "Generic object native schema does not enforce response semantics",
+    "Stronger control unavailable; capacity unresolved",
+    "Human scientific review unavailable",
+    "No inference or GPU fit/latency validation"
+  ]
+}

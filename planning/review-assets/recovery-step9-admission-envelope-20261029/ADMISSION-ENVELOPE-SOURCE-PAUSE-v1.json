@@ -1,0 +1,25 @@
+{
+  "actual_target_API_calls": 0,
+  "clarification_sha256": "57ff21a8955de95f61fa059543e33c1ace52726efbc36b286a52310af5addf97",
+  "original_payload_reads": 0,
+  "preparation_peer_sha256": "50efc9ae2e8f931f97fdd18e16601ccd80c351e9eb4d3e61b69db9498269e05c",
+  "proposal_sha256": "038611daa69c5749def12d64dedc0b9afebdbfba2aff7d0e93981551e08d2cb8",
+  "recorded_at_utc": "2026-10-29T18:37:11.538578+00:00",
+  "root_scope_sha256": "30644e8c0b59356b7dda2f9fde30f366fec80638945d051dc4c5baed1e8f74c3",
+  "runtime_or_application_changes": false,
+  "schema_version": 1,
+  "scope": "Pure detached metadata arithmetic only; no streaming, cap lift or runtime admission",
+  "source": {
+    "bytes": 16761,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v1.py",
+    "sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242"
+  },
+  "status": "FIRST_SOURCE_PAUSE_BEFORE_IMPORT_OR_TEST",
+  "subject_imports": 0,
+  "subject_tests": 0,
+  "trusted_imports": [
+    "json",
+    "re",
+    "types"
+  ]
+}

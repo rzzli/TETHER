@@ -1,0 +1,3354 @@
+[
+  {
+    "kind": "legacy_v1",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified",
+    "files": [
+      {
+        "name": "dossier.md",
+        "sha256": "fc7f8451d4dbb391c61bc2bf642621cb69248d21884cdf4c030d778d4ec80aa8",
+        "bytes": 6655
+      },
+      {
+        "name": "features.json",
+        "sha256": "5c1b24824049d510ccf6356a35d54353cfb49044537b0d1c7fbf05d15e1b6250",
+        "bytes": 1861
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "7ba6555653708ba5eb81705b81b148f9d5e56883e1d6316266ad27cc7ff26c00",
+        "bytes": 4843
+      },
+      {
+        "name": "ledger.json",
+        "sha256": "18780cc020611fbfd8de5223f91c37ecc29d89eeff6192bcb929bdc96057375f",
+        "bytes": 23149
+      },
+      {
+        "name": "prediction.json",
+        "sha256": "64edf096e46dccbb39beb21ee07f97742743b1766d78c937998d331f75dad474",
+        "bytes": 2033
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "575beba2b50f88a5c9f8587384433b6d16c8a3290d37c408d55d0defbad2f2ca",
+        "bytes": 2261
+      },
+      {
+        "name": "run.json",
+        "sha256": "1656ee34794f8f87fa8255b18a3930c81b69f61b8672229cd5cdf6a5befa3d8b",
+        "bytes": 3284
+      },
+      {
+        "name": "trace.jsonl",
+        "sha256": "591b4564da56617130036b75a0c853a1cc89a87d80f3bbd8b2515e8413df6bea",
+        "bytes": 9604
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\evidence.json",
+        "expected_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "exists": true,
+        "bytes": 20001,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified\\evidence.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified\\future.json",
+        "expected_sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "exists": false,
+        "bytes": null,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified\\future.json",
+        "resolution": "Embedded relative snapshot member; not necessarily required/admitted. Resolve against archived source_root or snapshot directory, never assume run directory."
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\evidence.json",
+        "expected_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "exists": true,
+        "bytes": 20001,
+        "observed_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "575beba2b50f88a5c9f8587384433b6d16c8a3290d37c408d55d0defbad2f2ca",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 7,
+        "source_artifacts_checked": 1,
+        "trace_events": 27,
+        "receipt_sha256": "575beba2b50f88a5c9f8587384433b6d16c8a3290d37c408d55d0defbad2f2ca",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 0,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": false,
+        "semantic_consistency": "unavailable_legacy_v1",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    "verification_seconds": 0.0470000000204891,
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified\\future.json",
+        "expected_sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "exists": false,
+        "bytes": null,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\framework-v0.1-verified\\future.json",
+        "resolution": "Embedded relative snapshot member; not necessarily required/admitted. Resolve against archived source_root or snapshot directory, never assume run directory."
+      }
+    ]
+  },
+  {
+    "kind": "core_v2",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo",
+    "files": [
+      {
+        "name": "dossier.md",
+        "sha256": "c95b90d65b598030a75c75002871a3fac0042863c9bf71166e123310f8f5348b",
+        "bytes": 6786
+      },
+      {
+        "name": "features.json",
+        "sha256": "93425e628ecb2af867f0cdf5dfcc3c50d764054f8a4fe4cc370e534ff7a924a2",
+        "bytes": 2014
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "c7dc6769f4ed898fc06c7893949f5a3f40b8bad5a5855ec5418403ff92fffd05",
+        "bytes": 8409
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "aa7645800418f1709bfd589a0f8be028538e42b94abcc16c9bd5d9d302a6a3ef",
+        "bytes": 31705
+      },
+      {
+        "name": "ledger.json",
+        "sha256": "76e14e7e89f7fc6d86b0d65680795645d48ddb026e9fa05e92b80f94001d0461",
+        "bytes": 28300
+      },
+      {
+        "name": "prediction.json",
+        "sha256": "b3bc8848c55d3d49f1ebf4c1cc92ecb01171c1752fcb5c32fa348474cfd686d6",
+        "bytes": 1944
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "8bee15863a3c0df4aedbd9b4de59e44bae7be4280e151dbd71395cef9ee91e4b",
+        "bytes": 3906
+      },
+      {
+        "name": "request.json",
+        "sha256": "e2c88583370c3b1443f7a078845f5e693575e2170366f4d8bb8d838806dc625a",
+        "bytes": 7035
+      },
+      {
+        "name": "run.json",
+        "sha256": "bc8aa06e858584da162bee69fe9d194f83a2f981969dd0c5aec06ff1ced20751",
+        "bytes": 3958
+      },
+      {
+        "name": "trace.jsonl",
+        "sha256": "aa7645800418f1709bfd589a0f8be028538e42b94abcc16c9bd5d9d302a6a3ef",
+        "bytes": 31705
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\v2\\evidence.json",
+        "expected_sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+        "exists": true,
+        "bytes": 23098,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\evidence.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\future.json",
+        "expected_sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "exists": false,
+        "bytes": null,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\future.json",
+        "resolution": "Embedded relative snapshot member; not necessarily required/admitted. Resolve against archived source_root or snapshot directory, never assume run directory."
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\v2\\raw-inputs.json",
+        "expected_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "exists": true,
+        "bytes": 20001,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\raw-inputs.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\v2\\evidence.json",
+        "expected_sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+        "exists": true,
+        "bytes": 23098,
+        "observed_sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\v2\\raw-inputs.json",
+        "expected_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "exists": true,
+        "bytes": 20001,
+        "observed_sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "8bee15863a3c0df4aedbd9b4de59e44bae7be4280e151dbd71395cef9ee91e4b",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 37,
+        "receipt_sha256": "8bee15863a3c0df4aedbd9b4de59e44bae7be4280e151dbd71395cef9ee91e4b",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 0,
+        "unsealed_auxiliary_outputs": [
+          "request.json"
+        ],
+        "code_matches_current": false,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    "verification_seconds": 0.1720000000204891,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 37,
+      "terminal_event": "finalize"
+    },
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\future.json",
+        "expected_sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "exists": false,
+        "bytes": null,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\v02-core-demo\\future.json",
+        "resolution": "Embedded relative snapshot member; not necessarily required/admitted. Resolve against archived source_root or snapshot directory, never assume run directory."
+      }
+    ]
+  },
+  {
+    "kind": "local_selection_recorded",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z",
+    "files": [
+      {
+        "name": "dossier.md",
+        "sha256": "f1009715ea9e7abb4e501855dc02dd2207cda4b133f5fda32a131170bb8ffe5a",
+        "bytes": 12021
+      },
+      {
+        "name": "features.json",
+        "sha256": "51d7eb032f9ae891cf063c694cf702aa000e6f3305a06e08e79132bb29a703bd",
+        "bytes": 1748
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "b8903aacd8fe16da1388c0f673fd91a39494456dc1c8c11b58fbc0bbe243f31f",
+        "bytes": 1307425
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "39ee04da6352d39cb814eb1c0a2ba1fbf2fadff569b007f63a7ee778cd0bb79e",
+        "bytes": 29798
+      },
+      {
+        "name": "ledger.json",
+        "sha256": "3f07a5a69f488570c9cc31dbf31e37a497199da464140618fab57440248dc820",
+        "bytes": 29024
+      },
+      {
+        "name": "prediction.json",
+        "sha256": "9dd4f052de5dd87e703eb29490f5d55941a825af5f65a08b2da66d5da055ce7d",
+        "bytes": 369
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "1e74c04e70a65510817d5ab127bc8c6b6c04fa2a81a5629244f1ebd05a5cd3f3",
+        "bytes": 18259
+      },
+      {
+        "name": "replay.json",
+        "sha256": "2f23584d909c4f567157ca667af65a54e25158f99a0a1e56812d4f0713bd9c2f",
+        "bytes": 1291
+      },
+      {
+        "name": "request.json",
+        "sha256": "ce0bc58f96e93aa71d93af697a32578ec265a50165f53b32acdeff5e222001d6",
+        "bytes": 373
+      },
+      {
+        "name": "run.json",
+        "sha256": "355eef194c3e95ab1d47f8fc696690b669cb349177b2e0e74d2e694b2ee66150",
+        "bytes": 20834
+      },
+      {
+        "name": "trace.jsonl",
+        "sha256": "39ee04da6352d39cb814eb1c0a2ba1fbf2fadff569b007f63a7ee778cd0bb79e",
+        "bytes": 29798
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\literature-coverage-20261017T082208Z\\osmr-efo_0000729-inhibit-antibody\\evidence.json",
+        "expected_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "exists": true,
+        "bytes": 86360,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\evidence.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "exists": true,
+        "bytes": 81216250,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "expected_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "exists": true,
+        "bytes": 81269516,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "expected_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "exists": true,
+        "bytes": 7852176,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "expected_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "exists": true,
+        "bytes": 778,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "exists": true,
+        "bytes": 258226,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "expected_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "exists": true,
+        "bytes": 259498,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "expected_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "exists": true,
+        "bytes": 81545559,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "expected_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "exists": true,
+        "bytes": 1803742,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "expected_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "exists": true,
+        "bytes": 841,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "exists": true,
+        "bytes": 1799308,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "expected_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "exists": true,
+        "bytes": 841,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "exists": true,
+        "bytes": 256075,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "expected_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "exists": true,
+        "bytes": 249736,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "expected_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "exists": true,
+        "bytes": 252110,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "expected_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "exists": true,
+        "bytes": 250288,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "expected_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "exists": true,
+        "bytes": 81433302,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "expected_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "exists": true,
+        "bytes": 81348269,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "expected_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "exists": true,
+        "bytes": 255873,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "expected_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "exists": true,
+        "bytes": 246462,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "expected_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\local-model-replay-osmr-20261018T034716Z\\replay.json",
+        "expected_sha256": "2f23584d909c4f567157ca667af65a54e25158f99a0a1e56812d4f0713bd9c2f",
+        "exists": true,
+        "bytes": 1291,
+        "observed_sha256": "2f23584d909c4f567157ca667af65a54e25158f99a0a1e56812d4f0713bd9c2f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\literature-coverage-20261017T082208Z\\osmr-efo_0000729-inhibit-antibody\\evidence.json",
+        "expected_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "exists": true,
+        "bytes": 86360,
+        "observed_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "exists": true,
+        "bytes": 7852176,
+        "observed_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "expected_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "exists": true,
+        "bytes": 778,
+        "observed_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "exists": true,
+        "bytes": 246462,
+        "observed_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "expected_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "exists": true,
+        "bytes": 249736,
+        "observed_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "expected_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "exists": true,
+        "bytes": 250288,
+        "observed_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "expected_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "exists": true,
+        "bytes": 252110,
+        "observed_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "expected_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "exists": true,
+        "bytes": 255873,
+        "observed_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "expected_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "exists": true,
+        "bytes": 256075,
+        "observed_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "expected_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "exists": true,
+        "bytes": 258226,
+        "observed_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "expected_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "exists": true,
+        "bytes": 259498,
+        "observed_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "expected_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "exists": true,
+        "bytes": 1803742,
+        "observed_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "expected_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "exists": true,
+        "bytes": 1799308,
+        "observed_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "expected_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "exists": true,
+        "bytes": 81545559,
+        "observed_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "expected_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "exists": true,
+        "bytes": 81433302,
+        "observed_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "expected_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "exists": true,
+        "bytes": 81269516,
+        "observed_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "expected_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "exists": true,
+        "bytes": 81348269,
+        "observed_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "expected_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "exists": true,
+        "bytes": 81216250,
+        "observed_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "expected_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "1e74c04e70a65510817d5ab127bc8c6b6c04fa2a81a5629244f1ebd05a5cd3f3",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 19,
+        "trace_events": 19,
+        "receipt_sha256": "1e74c04e70a65510817d5ab127bc8c6b6c04fa2a81a5629244f1ebd05a5cd3f3",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": false,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    "verification_seconds": 11.84399999998277,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 19,
+      "terminal_event": "finalize"
+    },
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": []
+  },
+  {
+    "kind": "local_selection_native",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody",
+    "files": [
+      {
+        "name": "backend-execution.json",
+        "sha256": "e304c495e2a58305feb4bd65ea4b2a371a26284f2f56843023232fdf846ee4dd",
+        "bytes": 96194
+      },
+      {
+        "name": "dossier.md",
+        "sha256": "8e697512664f66de768b3184c0ec29256596289881823bafdf27840ab79453c6",
+        "bytes": 12017
+      },
+      {
+        "name": "features.json",
+        "sha256": "51d7eb032f9ae891cf063c694cf702aa000e6f3305a06e08e79132bb29a703bd",
+        "bytes": 1748
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "2328e0f215f1320cf5a396c222204c21b735dfde5ee0977e1b60c0eabab6f111",
+        "bytes": 1306748
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "9d73a68168ec7292545b099f0d878b1a7f31180dd649310d194078dcea555030",
+        "bytes": 29686
+      },
+      {
+        "name": "ledger.json",
+        "sha256": "3f07a5a69f488570c9cc31dbf31e37a497199da464140618fab57440248dc820",
+        "bytes": 29024
+      },
+      {
+        "name": "prediction.json",
+        "sha256": "9dd4f052de5dd87e703eb29490f5d55941a825af5f65a08b2da66d5da055ce7d",
+        "bytes": 369
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "cae0dad24a2ec831492ea58a7ac4b41ed7a643de612040ca1d482b637b0e17a0",
+        "bytes": 18357
+      },
+      {
+        "name": "request.json",
+        "sha256": "1e5924e757431d459fc299a3f19805063cbd09a42bcebc6950c43a787fe92b64",
+        "bytes": 1305840
+      },
+      {
+        "name": "run.json",
+        "sha256": "ac432fbe24b781e8fb82f847693aaae28cdcfbc65c11c574ef428c2bd6ebaa34",
+        "bytes": 20822
+      },
+      {
+        "name": "trace.jsonl",
+        "sha256": "9d73a68168ec7292545b099f0d878b1a7f31180dd649310d194078dcea555030",
+        "bytes": 29686
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\literature-coverage-20261017T082208Z\\osmr-efo_0000729-inhibit-antibody\\evidence.json",
+        "expected_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "exists": true,
+        "bytes": 86360,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\evidence.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "exists": true,
+        "bytes": 81216250,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "expected_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "exists": true,
+        "bytes": 81269516,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "expected_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "exists": true,
+        "bytes": 7852176,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "expected_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "exists": true,
+        "bytes": 778,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "exists": true,
+        "bytes": 258226,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "expected_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "exists": true,
+        "bytes": 259498,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "expected_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "exists": true,
+        "bytes": 81545559,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "expected_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "exists": true,
+        "bytes": 1803742,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "expected_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "exists": true,
+        "bytes": 841,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "exists": true,
+        "bytes": 1799308,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "expected_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "exists": true,
+        "bytes": 841,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "exists": true,
+        "bytes": 256075,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "expected_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "exists": true,
+        "bytes": 249736,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "expected_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "exists": true,
+        "bytes": 252110,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "expected_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "exists": true,
+        "bytes": 250288,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "expected_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "exists": true,
+        "bytes": 81433302,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "expected_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "exists": true,
+        "bytes": 81348269,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "expected_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "exists": true,
+        "bytes": 925,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "exists": true,
+        "bytes": 255873,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "expected_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "exists": true,
+        "bytes": 246462,
+        "unresolved_candidate_path": "D:\\Projects\\drug_target_agents\\runs\\local-model-pilot-20261018T033050Z\\osmr-efo_0000729-inhibit-antibody\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "expected_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "exists": true,
+        "bytes": 836,
+        "unresolved_candidate_path": "manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "resolution": "Matched existing absolute proof by exact expected hash; not a claim that run-relative resolution is valid.",
+        "observed_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\literature-coverage-20261017T082208Z\\osmr-efo_0000729-inhibit-antibody\\evidence.json",
+        "expected_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "exists": true,
+        "bytes": 86360,
+        "observed_sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "exists": true,
+        "bytes": 7852176,
+        "observed_sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652.json",
+        "expected_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "exists": true,
+        "bytes": 778,
+        "observed_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00089-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "exists": true,
+        "bytes": 246462,
+        "observed_sha256": "cdfa2376bd12246b525b5d84d8d850cb7918fac73431c645f2649cea5747a199",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b.json",
+        "expected_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "65e4334bfb43c184ed3e0f3e9a4409dde27bd6a2cb58776dfd0b910433f1783b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00056-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "exists": true,
+        "bytes": 249736,
+        "observed_sha256": "35f15d7c0f5fa320d64f522cbb1fb0bf06d17cd646a216777b2643a2cf127fd8",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f.json",
+        "expected_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c06482ef4dc2eeab27250f08fa0b368f254238a85437ef44dc31f876fabef23f",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "exists": true,
+        "bytes": 250288,
+        "observed_sha256": "2270c55e1e92f89f224e7190787a73ce3746d3eb4249d7902d6fae9255c93167",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2.json",
+        "expected_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "976dc71b4c133df860e59a39cbbd3be4b80fb3c52f7d18c1e145c2c212361ec2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "exists": true,
+        "bytes": 252110,
+        "observed_sha256": "1141dbfcc514c20ed7a5f39cb009e78f5bf471e0987202b7ce20247ef426ffc1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0.json",
+        "expected_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "ff219ac7f8d986ecfe035c369727925aecac994234ea105020156ebfe7983de0",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00081-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "exists": true,
+        "bytes": 255873,
+        "observed_sha256": "580de0963361478f602e263d7f1425824a0048d7dcdb16b00f07ffd87f62cd55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe.json",
+        "expected_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c615da55330aac756d5a4ae9b2f53a4b7afa46d4fd939beb89fc4538f44284fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00068-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "exists": true,
+        "bytes": 256075,
+        "observed_sha256": "bd62e7c82fd7762d6de03fa11fd750f849930108980021172852313270995015",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42.json",
+        "expected_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "a0ed2687ecf3c4683aafbfdf84c7809e3cd8eb498aae00aad228cb4495337a42",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00016-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "exists": true,
+        "bytes": 258226,
+        "observed_sha256": "9859d9f9df67e30cd0afe9c2c98eb7a8090226b1442d3920983799cbb6e9ef73",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1.json",
+        "expected_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "c57b1c5b4675b0e2374357f17562c3a98d3f53bf0c6cc2f563ce68163ef735a1",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=expression_atlas\\part-00057-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "exists": true,
+        "bytes": 259498,
+        "observed_sha256": "cad0e72505b67e6ef313dfad52cdb251ad3d0597aed8e64a26a7dfbb91e12d08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606.json",
+        "expected_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "exists": true,
+        "bytes": 836,
+        "observed_sha256": "8fafba93a36a0733a3b629c9d60f1bcc7df95e87687355ba5eb5a557d8da3606",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00098-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "exists": true,
+        "bytes": 1803742,
+        "observed_sha256": "61a48d260c17ecc4489cdcdf9ae7b63e3a1a238654580b90ebf83f2403a37af2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a.json",
+        "expected_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "54500fb0f5624773dbe75963ba8b52659847116e292e2772fbba9bf32c336f9a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00015-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "exists": true,
+        "bytes": 1799308,
+        "observed_sha256": "eadb266d47334c1f35840fe7b02ebfb1af15e48c89db704f09f9cdbcbeacd08d",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e.json",
+        "expected_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "18692c4aabfbd3a323a953a38a27962d0d9b21283e904366e035953da42d873e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00020-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "exists": true,
+        "bytes": 81545559,
+        "observed_sha256": "ba48d9da61c03aa35a309c3e6c741ec8094f1b7b5c4cb08c48c12bf7d4f3549a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924.json",
+        "expected_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "de5c017c1853ada345f23787faa27bb769f857fe711df294a11c1ae70a84b924",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00039-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "exists": true,
+        "bytes": 81433302,
+        "observed_sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c.json",
+        "expected_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "exists": true,
+        "bytes": 81269516,
+        "observed_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3.json",
+        "expected_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "3a227b48b6ff0469d7e0f5d6d2d1871a38207d5dae27a57e8cb592480447d5f3",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00095-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "exists": true,
+        "bytes": 81348269,
+        "observed_sha256": "d5d487563864f54f57e718bb3a9f8fd798c58dbabc1b84636f6d4385194e446e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb.json",
+        "expected_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "36b4ac3490b0caee58a46f6386ff7ec986ec67a3ca58532b82fdde0be81b4cdb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\supplemental-20261017T064802Z\\europepmc\\part-00097-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "exists": true,
+        "bytes": 81216250,
+        "observed_sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692.json",
+        "expected_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "exists": true,
+        "bytes": 925,
+        "observed_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "cae0dad24a2ec831492ea58a7ac4b41ed7a643de612040ca1d482b637b0e17a0",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 19,
+        "trace_events": 19,
+        "receipt_sha256": "cae0dad24a2ec831492ea58a7ac4b41ed7a643de612040ca1d482b637b0e17a0",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 2,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": false,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    "verification_seconds": 1.3440000000409782,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 19,
+      "terminal_event": "finalize"
+    },
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": []
+  },
+  {
+    "kind": "bounded_interpretation_recorded",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z",
+    "files": [
+      {
+        "name": "configuration.json",
+        "sha256": "b022c26a1601dacd106d9a9297aab41b7f25602457af22dac5f658be5df55fb4",
+        "bytes": 8168
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "d65740da2747f8342262d70700fb58c9521c7ccfb90247fe540b3765c2442461",
+        "bytes": 1639168
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "caf616bafb593ece2e93cdb8e1ec0876ce0771d0706da8cdec4e6349d5812b51",
+        "bytes": 2306
+      },
+      {
+        "name": "raw-response.txt",
+        "sha256": "7178de24d07736b542ff1c80428c411760dc0834da59d395606deb5645b2d201",
+        "bytes": 1646
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "b655ff56aa9219236d66ed402241824de5f3930c00f330da70a5cb3cff4b5d00",
+        "bytes": 1585
+      },
+      {
+        "name": "report.json",
+        "sha256": "5fa61654f7764dffb42681cd2678ec82f9aa0f4c666af2f221289f01d74a436a",
+        "bytes": 630
+      },
+      {
+        "name": "request.json",
+        "sha256": "e13ebed67b45421e596ff706189f082efbec9ae5d74c45b8a8d9d0d0d99ee2ff",
+        "bytes": 106554
+      },
+      {
+        "name": "response.json",
+        "sha256": "9eae4b4876893175f56d9474908c63b568bd3bf490c3dfb007bf83c15376c2ae",
+        "bytes": 2028
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+        "expected_sha256": "7a10762d815a80e013a34dae82c1f31c06ddc5185dc277c3672437174f85059d",
+        "exists": true,
+        "bytes": 27261,
+        "observed_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "hash_matches": false
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\bounded-interpretation-inputs-20261025T071440Z\\replay.json",
+        "expected_sha256": "6485711504ec0399d6294b5c41a1835b88dd4a75fe8f8c8f77444602d3e3754d",
+        "exists": true,
+        "bytes": 2334,
+        "observed_sha256": "6485711504ec0399d6294b5c41a1835b88dd4a75fe8f8c8f77444602d3e3754d",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\agents.py",
+        "expected_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "exists": true,
+        "bytes": 7148,
+        "observed_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\chrono.py",
+        "expected_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "exists": true,
+        "bytes": 9814,
+        "observed_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\contracts.py",
+        "expected_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "exists": true,
+        "bytes": 14577,
+        "observed_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+        "expected_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "exists": true,
+        "bytes": 9545,
+        "observed_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\provenance.py",
+        "expected_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "exists": true,
+        "bytes": 7167,
+        "observed_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\workflow.py",
+        "expected_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "exists": true,
+        "bytes": 13095,
+        "observed_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+        "expected_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "exists": true,
+        "bytes": 4961,
+        "observed_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_comparison.py",
+        "expected_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "exists": true,
+        "bytes": 26581,
+        "observed_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_claim_audit.py",
+        "expected_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "exists": true,
+        "bytes": 11334,
+        "observed_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+        "expected_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "exists": true,
+        "bytes": 36436,
+        "observed_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_dossier_binding.py",
+        "expected_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "exists": true,
+        "bytes": 13461,
+        "observed_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\case.json",
+        "expected_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "exists": true,
+        "bytes": 1078,
+        "observed_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\snapshot.json",
+        "expected_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "exists": true,
+        "bytes": 19200,
+        "observed_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\bounded-interpretation-inputs-20261025T071440Z\\effective-catalog.json",
+        "expected_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "exists": true,
+        "bytes": 1572874,
+        "observed_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\evidence.json",
+        "expected_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "exists": true,
+        "bytes": 64410,
+        "observed_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "exists": true,
+        "bytes": 1795495,
+        "observed_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe.json",
+        "expected_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "exists": true,
+        "bytes": 7669776,
+        "observed_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb.json",
+        "expected_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "exists": true,
+        "bytes": 778,
+        "observed_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00066-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "exists": true,
+        "bytes": 1806123,
+        "observed_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30.json",
+        "expected_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00002-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "exists": true,
+        "bytes": 1815980,
+        "observed_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af.json",
+        "expected_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00019-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "exists": true,
+        "bytes": 1814930,
+        "observed_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a.json",
+        "expected_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00050-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "exists": true,
+        "bytes": 80864809,
+        "observed_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32.json",
+        "expected_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "exists": true,
+        "bytes": 81063892,
+        "observed_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd.json",
+        "expected_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00059-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "exists": true,
+        "bytes": 81164972,
+        "observed_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74.json",
+        "expected_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00011-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "exists": true,
+        "bytes": 81008805,
+        "observed_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c.json",
+        "expected_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\request.json",
+        "expected_sha256": "e13ebed67b45421e596ff706189f082efbec9ae5d74c45b8a8d9d0d0d99ee2ff",
+        "exists": true,
+        "bytes": 106554,
+        "observed_sha256": "e13ebed67b45421e596ff706189f082efbec9ae5d74c45b8a8d9d0d0d99ee2ff",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\inputs.json",
+        "expected_sha256": "d65740da2747f8342262d70700fb58c9521c7ccfb90247fe540b3765c2442461",
+        "exists": true,
+        "bytes": 1639168,
+        "observed_sha256": "d65740da2747f8342262d70700fb58c9521c7ccfb90247fe540b3765c2442461",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\configuration.json",
+        "expected_sha256": "b022c26a1601dacd106d9a9297aab41b7f25602457af22dac5f658be5df55fb4",
+        "exists": true,
+        "bytes": 8168,
+        "observed_sha256": "b022c26a1601dacd106d9a9297aab41b7f25602457af22dac5f658be5df55fb4",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\response.json",
+        "expected_sha256": "9eae4b4876893175f56d9474908c63b568bd3bf490c3dfb007bf83c15376c2ae",
+        "exists": true,
+        "bytes": 2028,
+        "observed_sha256": "9eae4b4876893175f56d9474908c63b568bd3bf490c3dfb007bf83c15376c2ae",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\report.json",
+        "expected_sha256": "5fa61654f7764dffb42681cd2678ec82f9aa0f4c666af2f221289f01d74a436a",
+        "exists": true,
+        "bytes": 630,
+        "observed_sha256": "5fa61654f7764dffb42681cd2678ec82f9aa0f4c666af2f221289f01d74a436a",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\bounded-interpretation-contract-20261025T071440Z\\raw-response.txt",
+        "expected_sha256": "7178de24d07736b542ff1c80428c411760dc0834da59d395606deb5645b2d201",
+        "exists": true,
+        "bytes": 1646,
+        "observed_sha256": "7178de24d07736b542ff1c80428c411760dc0834da59d395606deb5645b2d201",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "b655ff56aa9219236d66ed402241824de5f3930c00f330da70a5cb3cff4b5d00",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": false,
+      "error_class": "ContractError",
+      "message": "Comparison pinned bytes changed: D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py"
+    },
+    "verification_seconds": 0.9849999999860302,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 6,
+      "terminal_event": "build_completed"
+    },
+    "mismatched_existing_proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+        "expected_sha256": "7a10762d815a80e013a34dae82c1f31c06ddc5185dc277c3672437174f85059d",
+        "exists": true,
+        "bytes": 27261,
+        "observed_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "hash_matches": false
+      }
+    ],
+    "unresolved_relative_members": [],
+    "recoverable_old_code": {
+      "git_commit": "d574a7b7f9a30be67b4bd30127e4d116036a5a1b",
+      "path": "tools/science/bounded_interpretation.py",
+      "sha256": "7a10762d815a80e013a34dae82c1f31c06ddc5185dc277c3672437174f85059d",
+      "qualification": "Blob bytes match; executing full old closure and relocation remains untested."
+    }
+  },
+  {
+    "kind": "question_interpretation_recorded",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context",
+    "files": [
+      {
+        "name": "configuration.json",
+        "sha256": "2e2d4a95a01c3f823788f9c96a27d779f110441c98b3afc2d8bfd8e705fb8257",
+        "bytes": 8540
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "da389792c2c22578cecb73c6328559510a1d604b3c495c9786ec72662a36cc21",
+        "bytes": 1696967
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "4338926ec52dcfd8b3d89e3365f768b4c0c95f347b48db68913f0aa503bc2aee",
+        "bytes": 3481
+      },
+      {
+        "name": "raw-response.txt",
+        "sha256": "3aa20e3b1a02e95f3d854338aa5b11ea99b435a2819a6198e03699ab7a242a48",
+        "bytes": 488
+      },
+      {
+        "name": "receipt.json",
+        "sha256": "a828bb2d73c77fd753a76e8e82f199710e6d4212f1f4a2bd756f0f1671f66d5c",
+        "bytes": 2332
+      },
+      {
+        "name": "report.json",
+        "sha256": "8e65e2097329d6b0124602091c9bc83965de169d156a31673feec2972f406e6f",
+        "bytes": 619
+      },
+      {
+        "name": "request.json",
+        "sha256": "83963258af7ea0f5c35a4baf66b447666588e83e5aef88fc438bc69811cada2e",
+        "bytes": 19143
+      },
+      {
+        "name": "response.json",
+        "sha256": "f7c7c8c9eb8b0dc325c68738ee22c95afad198f37b3942b5dd2bdc0198721946",
+        "bytes": 530
+      },
+      {
+        "name": "scientific-view.json",
+        "sha256": "f7850477ff411aff42b7ab85a798b960e1207025ec2d2fa4298ec35975f8f9af",
+        "bytes": 18301
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\__init__.py",
+        "expected_sha256": "38fca4d9d245bbf0e29ae24cb936607bd7fc9edac0ac1846a6d1374f4925f739",
+        "exists": true,
+        "bytes": 83,
+        "observed_sha256": "38fca4d9d245bbf0e29ae24cb936607bd7fc9edac0ac1846a6d1374f4925f739",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\agents.py",
+        "expected_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "exists": true,
+        "bytes": 7148,
+        "observed_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py",
+        "expected_sha256": "554a6d9d259b2870e73ed19283cdf71f064dccfdf1419668c0d49e936f2e3472",
+        "exists": true,
+        "bytes": 18876,
+        "observed_sha256": "554a6d9d259b2870e73ed19283cdf71f064dccfdf1419668c0d49e936f2e3472",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\chrono.py",
+        "expected_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "exists": true,
+        "bytes": 9814,
+        "observed_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\contracts.py",
+        "expected_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "exists": true,
+        "bytes": 14577,
+        "observed_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\features.py",
+        "expected_sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+        "exists": true,
+        "bytes": 3665,
+        "observed_sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\ingest.py",
+        "expected_sha256": "67e6d3e3ce61657358dae39dcfc14bfee729746bde4747c5c00e4ffa4c9d5bbf",
+        "exists": true,
+        "bytes": 45145,
+        "observed_sha256": "67e6d3e3ce61657358dae39dcfc14bfee729746bde4747c5c00e4ffa4c9d5bbf",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+        "expected_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "exists": true,
+        "bytes": 4961,
+        "observed_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\ledger.py",
+        "expected_sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+        "exists": true,
+        "bytes": 2023,
+        "observed_sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py",
+        "expected_sha256": "7003d7c4187d3d4f19e1f1351d1b5c5064c618f20a0a79057707178314082b2b",
+        "exists": true,
+        "bytes": 12253,
+        "observed_sha256": "7003d7c4187d3d4f19e1f1351d1b5c5064c618f20a0a79057707178314082b2b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\provenance.py",
+        "expected_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "exists": true,
+        "bytes": 7167,
+        "observed_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\retrieval.py",
+        "expected_sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+        "exists": true,
+        "bytes": 4320,
+        "observed_sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\scorer.py",
+        "expected_sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+        "exists": true,
+        "bytes": 7624,
+        "observed_sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\semantics.py",
+        "expected_sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+        "exists": true,
+        "bytes": 9468,
+        "observed_sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+        "expected_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "exists": true,
+        "bytes": 9545,
+        "observed_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\wire.py",
+        "expected_sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+        "exists": true,
+        "bytes": 6081,
+        "observed_sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\workflow.py",
+        "expected_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "exists": true,
+        "bytes": 13095,
+        "observed_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\framework\\run_pilot.py",
+        "expected_sha256": "cd2046198ae3d2930a35cd1fbfb66f22a7cdcbfaed7b13d8e9c8af2f09832f0f",
+        "exists": true,
+        "bytes": 21342,
+        "observed_sha256": "cd2046198ae3d2930a35cd1fbfb66f22a7cdcbfaed7b13d8e9c8af2f09832f0f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\__init__.py",
+        "expected_sha256": "4a5db57a6b3b564dc9dc2ea7fa8344f1703d13fec40d930e88bbe670fa744917",
+        "exists": true,
+        "bytes": 83,
+        "observed_sha256": "4a5db57a6b3b564dc9dc2ea7fa8344f1703d13fec40d930e88bbe670fa744917",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+        "expected_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "exists": true,
+        "bytes": 27261,
+        "observed_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_workflow.py",
+        "expected_sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "exists": true,
+        "bytes": 45174,
+        "observed_sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\interpretation_questions.py",
+        "expected_sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+        "exists": true,
+        "bytes": 14677,
+        "observed_sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\local_interpretation.py",
+        "expected_sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+        "exists": true,
+        "bytes": 20635,
+        "observed_sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\question_interpretation_runtime.py",
+        "expected_sha256": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+        "exists": true,
+        "bytes": 28229,
+        "observed_sha256": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\reference_packets.py",
+        "expected_sha256": "628271db8f048d5529706e96d1ea63a58e740799c1230f2eefdecdeebef36863",
+        "exists": true,
+        "bytes": 29137,
+        "observed_sha256": "628271db8f048d5529706e96d1ea63a58e740799c1230f2eefdecdeebef36863",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\role_backend.py",
+        "expected_sha256": "a49a3d5ca00783278b89d3bbab0c9fb75397635ca9b44bc8e160eb2db5b10d4f",
+        "exists": true,
+        "bytes": 4367,
+        "observed_sha256": "a49a3d5ca00783278b89d3bbab0c9fb75397635ca9b44bc8e160eb2db5b10d4f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_comparison.py",
+        "expected_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "exists": true,
+        "bytes": 26581,
+        "observed_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_claim_audit.py",
+        "expected_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "exists": true,
+        "bytes": 11334,
+        "observed_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+        "expected_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "exists": true,
+        "bytes": 36436,
+        "observed_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_dossier_binding.py",
+        "expected_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "exists": true,
+        "bytes": 13461,
+        "observed_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\case.json",
+        "expected_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "exists": true,
+        "bytes": 1078,
+        "observed_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\snapshot.json",
+        "expected_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "exists": true,
+        "bytes": 19200,
+        "observed_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\bounded-interpretation-inputs-20261025T071440Z\\effective-catalog.json",
+        "expected_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "exists": true,
+        "bytes": 1572874,
+        "observed_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\evidence.json",
+        "expected_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "exists": true,
+        "bytes": 64410,
+        "observed_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "exists": true,
+        "bytes": 1795495,
+        "observed_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe.json",
+        "expected_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "exists": true,
+        "bytes": 7669776,
+        "observed_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb.json",
+        "expected_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "exists": true,
+        "bytes": 778,
+        "observed_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00066-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "exists": true,
+        "bytes": 1806123,
+        "observed_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30.json",
+        "expected_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00002-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "exists": true,
+        "bytes": 1815980,
+        "observed_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af.json",
+        "expected_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00019-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "exists": true,
+        "bytes": 1814930,
+        "observed_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a.json",
+        "expected_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00050-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "exists": true,
+        "bytes": 80864809,
+        "observed_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32.json",
+        "expected_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "exists": true,
+        "bytes": 81063892,
+        "observed_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd.json",
+        "expected_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00059-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "exists": true,
+        "bytes": 81164972,
+        "observed_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74.json",
+        "expected_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00011-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "exists": true,
+        "bytes": 81008805,
+        "observed_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c.json",
+        "expected_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\request.json",
+        "expected_sha256": "83963258af7ea0f5c35a4baf66b447666588e83e5aef88fc438bc69811cada2e",
+        "exists": true,
+        "bytes": 19143,
+        "observed_sha256": "83963258af7ea0f5c35a4baf66b447666588e83e5aef88fc438bc69811cada2e",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\inputs.json",
+        "expected_sha256": "da389792c2c22578cecb73c6328559510a1d604b3c495c9786ec72662a36cc21",
+        "exists": true,
+        "bytes": 1696967,
+        "observed_sha256": "da389792c2c22578cecb73c6328559510a1d604b3c495c9786ec72662a36cc21",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\scientific-view.json",
+        "expected_sha256": "f7850477ff411aff42b7ab85a798b960e1207025ec2d2fa4298ec35975f8f9af",
+        "exists": true,
+        "bytes": 18301,
+        "observed_sha256": "f7850477ff411aff42b7ab85a798b960e1207025ec2d2fa4298ec35975f8f9af",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\configuration.json",
+        "expected_sha256": "2e2d4a95a01c3f823788f9c96a27d779f110441c98b3afc2d8bfd8e705fb8257",
+        "exists": true,
+        "bytes": 8540,
+        "observed_sha256": "2e2d4a95a01c3f823788f9c96a27d779f110441c98b3afc2d8bfd8e705fb8257",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\response.json",
+        "expected_sha256": "f7c7c8c9eb8b0dc325c68738ee22c95afad198f37b3942b5dd2bdc0198721946",
+        "exists": true,
+        "bytes": 530,
+        "observed_sha256": "f7c7c8c9eb8b0dc325c68738ee22c95afad198f37b3942b5dd2bdc0198721946",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\report.json",
+        "expected_sha256": "8e65e2097329d6b0124602091c9bc83965de169d156a31673feec2972f406e6f",
+        "exists": true,
+        "bytes": 619,
+        "observed_sha256": "8e65e2097329d6b0124602091c9bc83965de169d156a31673feec2972f406e6f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\journal.jsonl",
+        "expected_sha256": "4338926ec52dcfd8b3d89e3365f768b4c0c95f347b48db68913f0aa503bc2aee",
+        "exists": true,
+        "bytes": 3481,
+        "observed_sha256": "4338926ec52dcfd8b3d89e3365f768b4c0c95f347b48db68913f0aa503bc2aee",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\runs\\question-recorded-20261025T213442Z\\mechanism-context\\raw-response.txt",
+        "expected_sha256": "3aa20e3b1a02e95f3d854338aa5b11ea99b435a2819a6198e03699ab7a242a48",
+        "exists": true,
+        "bytes": 488,
+        "observed_sha256": "3aa20e3b1a02e95f3d854338aa5b11ea99b435a2819a6198e03699ab7a242a48",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": "a828bb2d73c77fd753a76e8e82f199710e6d4212f1f4a2bd756f0f1671f66d5c",
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "status": "question_run_source_and_mechanical_consistency_verified",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "source_admission": "replayed",
+        "adapter_verification": "exact_recorded_replay_not_model_execution",
+        "scientific_validation": "not_performed",
+        "clinical_probability": null
+      }
+    },
+    "verification_seconds": 1.3439999999827705,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 9,
+      "terminal_event": "build_completed"
+    },
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": []
+  },
+  {
+    "kind": "question_latest_failed",
+    "path": "D:\\Projects\\drug_target_agents\\runs\\question-development-20261026T023832Z\\tasks\\mechanism-context",
+    "files": [
+      {
+        "name": "backend-execution.json",
+        "sha256": "88179088150650ac4288e9874bfe3760464d2cc36eff800a7c8a0442988b9ba8",
+        "bytes": 88432
+      },
+      {
+        "name": "configuration.json",
+        "sha256": "217c187976f7e9d8369226b6189f955b1c7fe25532f3b41261357635e39a5487",
+        "bytes": 9958
+      },
+      {
+        "name": "failure.json",
+        "sha256": "9cea344fe0ab0486a1f7e3fe7b4b32a7e95fdb31b83c1b0c86958854da696ee3",
+        "bytes": 264
+      },
+      {
+        "name": "inputs.json",
+        "sha256": "da389792c2c22578cecb73c6328559510a1d604b3c495c9786ec72662a36cc21",
+        "bytes": 1696967
+      },
+      {
+        "name": "journal.jsonl",
+        "sha256": "24b60d9ce547cb0fd8b476e766741ddeacad1b1a3b3fe8fc8d8cb6115db0319e",
+        "bytes": 3471
+      },
+      {
+        "name": "raw-response.txt",
+        "sha256": "20fce51a45e8f26b54f03f60f26734c57d6c984f23463d6e678b42b625c32c06",
+        "bytes": 53
+      },
+      {
+        "name": "request.json",
+        "sha256": "83963258af7ea0f5c35a4baf66b447666588e83e5aef88fc438bc69811cada2e",
+        "bytes": 19143
+      },
+      {
+        "name": "scientific-view.json",
+        "sha256": "f7850477ff411aff42b7ab85a798b960e1207025ec2d2fa4298ec35975f8f9af",
+        "bytes": 18301
+      }
+    ],
+    "proofs": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\__init__.py",
+        "expected_sha256": "38fca4d9d245bbf0e29ae24cb936607bd7fc9edac0ac1846a6d1374f4925f739",
+        "exists": true,
+        "bytes": 83,
+        "observed_sha256": "38fca4d9d245bbf0e29ae24cb936607bd7fc9edac0ac1846a6d1374f4925f739",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\agents.py",
+        "expected_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "exists": true,
+        "bytes": 7148,
+        "observed_sha256": "fe9b8d80685a6958d7507bb2a71c2b10892243cee991a5647741d3d418743ff6",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py",
+        "expected_sha256": "554a6d9d259b2870e73ed19283cdf71f064dccfdf1419668c0d49e936f2e3472",
+        "exists": true,
+        "bytes": 18876,
+        "observed_sha256": "554a6d9d259b2870e73ed19283cdf71f064dccfdf1419668c0d49e936f2e3472",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\chrono.py",
+        "expected_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "exists": true,
+        "bytes": 9814,
+        "observed_sha256": "9a08a1c980d72bfc4285a1630bae4643ae749ba2546e356259c20713f253c7fc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\contracts.py",
+        "expected_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "exists": true,
+        "bytes": 14577,
+        "observed_sha256": "bfe4501ec63b4148743eee8f05f4a21a32e540d2ec74351fc858112f0034da69",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\features.py",
+        "expected_sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+        "exists": true,
+        "bytes": 3665,
+        "observed_sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\ingest.py",
+        "expected_sha256": "67e6d3e3ce61657358dae39dcfc14bfee729746bde4747c5c00e4ffa4c9d5bbf",
+        "exists": true,
+        "bytes": 45145,
+        "observed_sha256": "67e6d3e3ce61657358dae39dcfc14bfee729746bde4747c5c00e4ffa4c9d5bbf",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\journal.py",
+        "expected_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "exists": true,
+        "bytes": 4961,
+        "observed_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\ledger.py",
+        "expected_sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+        "exists": true,
+        "bytes": 2023,
+        "observed_sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py",
+        "expected_sha256": "7003d7c4187d3d4f19e1f1351d1b5c5064c618f20a0a79057707178314082b2b",
+        "exists": true,
+        "bytes": 12253,
+        "observed_sha256": "7003d7c4187d3d4f19e1f1351d1b5c5064c618f20a0a79057707178314082b2b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\provenance.py",
+        "expected_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "exists": true,
+        "bytes": 7167,
+        "observed_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\retrieval.py",
+        "expected_sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+        "exists": true,
+        "bytes": 4320,
+        "observed_sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\scorer.py",
+        "expected_sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+        "exists": true,
+        "bytes": 7624,
+        "observed_sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\semantics.py",
+        "expected_sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+        "exists": true,
+        "bytes": 9468,
+        "observed_sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+        "expected_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "exists": true,
+        "bytes": 9545,
+        "observed_sha256": "95ea3ae80e6962c3bb9dce04b9407387a26ef72787cbf0debae0e4293ce53030",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\wire.py",
+        "expected_sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+        "exists": true,
+        "bytes": 6081,
+        "observed_sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\workflow.py",
+        "expected_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "exists": true,
+        "bytes": 13095,
+        "observed_sha256": "09ce68ededc58f2f17d77a150fe4e7a09408abd239b2bcf136eea6c008c7489c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\framework\\run_pilot.py",
+        "expected_sha256": "cd2046198ae3d2930a35cd1fbfb66f22a7cdcbfaed7b13d8e9c8af2f09832f0f",
+        "exists": true,
+        "bytes": 21342,
+        "observed_sha256": "cd2046198ae3d2930a35cd1fbfb66f22a7cdcbfaed7b13d8e9c8af2f09832f0f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\__init__.py",
+        "expected_sha256": "4a5db57a6b3b564dc9dc2ea7fa8344f1703d13fec40d930e88bbe670fa744917",
+        "exists": true,
+        "bytes": 83,
+        "observed_sha256": "4a5db57a6b3b564dc9dc2ea7fa8344f1703d13fec40d930e88bbe670fa744917",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\bounded_interpretation.py",
+        "expected_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "exists": true,
+        "bytes": 27261,
+        "observed_sha256": "f2ee548739467d871121cdd537710fcca44001425678de71ccc43e63341efa88",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\comparison_workflow.py",
+        "expected_sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "exists": true,
+        "bytes": 45174,
+        "observed_sha256": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\interpretation_questions.py",
+        "expected_sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+        "exists": true,
+        "bytes": 14677,
+        "observed_sha256": "83bd1e1f9610f786372e097121f5a892d344929039939b82f0090fd07b76531e",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\local_interpretation.py",
+        "expected_sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+        "exists": true,
+        "bytes": 20635,
+        "observed_sha256": "0d8bef26d0c368df56a3ea747100a9d891c0bff604290fca89cb0730b5db9fac",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\question_interpretation_local.py",
+        "expected_sha256": "b5ea30af5e426f7fa757eb3d54f7c8e71bf690d7ff2ae3b4c130d351022f5a27",
+        "exists": true,
+        "bytes": 10947,
+        "observed_sha256": "b5ea30af5e426f7fa757eb3d54f7c8e71bf690d7ff2ae3b4c130d351022f5a27",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\question_interpretation_render.py",
+        "expected_sha256": "5dc8deb2ca54be97af15c06c506fe6a7564581e049afdcb73d9432343909a429",
+        "exists": true,
+        "bytes": 9927,
+        "observed_sha256": "5dc8deb2ca54be97af15c06c506fe6a7564581e049afdcb73d9432343909a429",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\question_interpretation_runtime.py",
+        "expected_sha256": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+        "exists": true,
+        "bytes": 28229,
+        "observed_sha256": "be89dde43e72103f0208eba4480762e6fdd98fe41db50243f8926d0bd435ac03",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\reference_packets.py",
+        "expected_sha256": "628271db8f048d5529706e96d1ea63a58e740799c1230f2eefdecdeebef36863",
+        "exists": true,
+        "bytes": 29137,
+        "observed_sha256": "628271db8f048d5529706e96d1ea63a58e740799c1230f2eefdecdeebef36863",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\role_backend.py",
+        "expected_sha256": "a49a3d5ca00783278b89d3bbab0c9fb75397635ca9b44bc8e160eb2db5b10d4f",
+        "exists": true,
+        "bytes": 4367,
+        "observed_sha256": "a49a3d5ca00783278b89d3bbab0c9fb75397635ca9b44bc8e160eb2db5b10d4f",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_comparison.py",
+        "expected_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "exists": true,
+        "bytes": 26581,
+        "observed_sha256": "92cc66b58c4916a6f478a909224f73b8f95f97f764f8cb830bf745a23cfd98f1",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\run_question_development.py",
+        "expected_sha256": "02ff0ff37ea02052c88e9df16b22f253261362f3e8a9332b5658f80f6be9a5eb",
+        "exists": true,
+        "bytes": 28587,
+        "observed_sha256": "02ff0ff37ea02052c88e9df16b22f253261362f3e8a9332b5658f80f6be9a5eb",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_claim_audit.py",
+        "expected_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "exists": true,
+        "bytes": 11334,
+        "observed_sha256": "840f263ac7c6e032f2c35b08da110e528ad1c46c9cb7ed887a89aa13fad5f287",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_contextual_audit.py",
+        "expected_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "exists": true,
+        "bytes": 36436,
+        "observed_sha256": "9b100b5f572ea02a385a54d45b0f4b8523497eff6610aec12b8fb9e863cda05c",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\tools\\science\\t6_dossier_binding.py",
+        "expected_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "exists": true,
+        "bytes": 13461,
+        "observed_sha256": "b2befbc36fc3280336c34049918d7342fd515cb8bd4f65e0dc782fc3a14fc676",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\case.json",
+        "expected_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "exists": true,
+        "bytes": 1078,
+        "observed_sha256": "37fa7e33b45d7884f7160f14067c1168c56736e4cbfba7fe4da58a8c4a1a6f88",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\snapshot.json",
+        "expected_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "exists": true,
+        "bytes": 19200,
+        "observed_sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\bounded-interpretation-inputs-20261025T071440Z\\effective-catalog.json",
+        "expected_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "exists": true,
+        "bytes": 1572874,
+        "observed_sha256": "a54c5c83a170ed4fed40926613159ae3e0bd343a11948c592f9ff01699180dcc",
+        "hash_matches": true
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\derived\\context-revision-20261016T055518Z\\il6r-efo_0000685-inhibit-antibody\\evidence.json",
+        "expected_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "exists": true,
+        "bytes": 64410,
+        "observed_sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "exists": true,
+        "bytes": 1795495,
+        "observed_sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe.json",
+        "expected_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+        "expected_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "exists": true,
+        "bytes": 5545555,
+        "observed_sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+        "expected_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "exists": true,
+        "bytes": 677,
+        "observed_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\target\\part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+        "expected_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "exists": true,
+        "bytes": 7669776,
+        "observed_sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb.json",
+        "expected_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "exists": true,
+        "bytes": 778,
+        "observed_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\reference\\hgnc_symbols\\snapshot_2026-10-10\\hgnc_complete_set.txt",
+        "expected_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "exists": true,
+        "bytes": 16973159,
+        "observed_sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076.json",
+        "expected_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "exists": true,
+        "bytes": 755,
+        "observed_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00066-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "exists": true,
+        "bytes": 1806123,
+        "observed_sha256": "c1acc179f6a5157165eea8f4708ae3e714db8c6ea2d5656c2fec8342897759ba",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30.json",
+        "expected_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "0a1171723878cf7c4f9109382698db87a8fa28817d4e09ccd5cc3fe04183ab30",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00002-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "exists": true,
+        "bytes": 1815980,
+        "observed_sha256": "eb57d0db545490a8abf6e24d01205bffad279d141b9aeaed48b51f160d992d7a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af.json",
+        "expected_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "8ad8e1fc82ab73c207f09fe7cbe20154642a2f31145fef2d46f31f5f88e6f2af",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00019-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "exists": true,
+        "bytes": 1814930,
+        "observed_sha256": "81af6d3ea04fe11d4e83bf8018825fb3a7e9193caa53d6d68a8a7a6b4c4ee9ff",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a.json",
+        "expected_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "exists": true,
+        "bytes": 841,
+        "observed_sha256": "30c75de2f46ba567af49761c39103c36a4833b347f25d3ea5b9033da709dfe8a",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00050-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "exists": true,
+        "bytes": 80864809,
+        "observed_sha256": "55ba8567a82913f7db70b08fb5dedcb4b8f883dafc183dcfb01e86f76f65d89e",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32.json",
+        "expected_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "1967579c94b33e30acda0f3ac435ccad6ad9f256b92eb20d451f405f30166f32",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00058-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "exists": true,
+        "bytes": 81063892,
+        "observed_sha256": "f0ff9d21cfbfa941a7dace9b114b417e406ce6a87fe4c8ea4b8ace7d03c35a08",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd.json",
+        "expected_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "d6a59e98bcd7a0f17cf162a9bf33a14d6c62c7ad383829c4c27ab4ed362720bd",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00059-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "exists": true,
+        "bytes": 81164972,
+        "observed_sha256": "f19161cbcdf637df10bd2c5c74229af578956efb4adc1b1f5c2bc2819c0724fe",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74.json",
+        "expected_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "43e30d2dd372e1d8d30efe4377181f5bd8bdb1453bce9cac29c4fb138a249d74",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=europepmc\\part-00011-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+        "expected_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "exists": true,
+        "bytes": 81008805,
+        "observed_sha256": "75f152d9980652d94543c2ef9c63bdbbde40fa6cd1269d5a5496caeb1e592690",
+        "hash_matches": true
+      },
+      {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c.json",
+        "expected_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "exists": true,
+        "bytes": 824,
+        "observed_sha256": "8ff672c664894a0d2e7cbb46ca5f8a91f81f26e892561fef2dba56842195e50c",
+        "hash_matches": true
+      }
+    ],
+    "observed_receipt_sha256": null,
+    "anchor_basis": "Fresh observed bytes; use previously published anchor for independent authenticity, not self-anchor.",
+    "verification": {
+      "completed": true,
+      "result": {
+        "schema_version": 2,
+        "kind": "question_interpretation",
+        "last_event": "build_failed",
+        "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+        "durable_events": 9,
+        "calls": 1,
+        "unresolved_attempts": [],
+        "measured_usage": {
+          "input_tokens": 4650,
+          "output_tokens": 601,
+          "cost_usd": 0.0
+        },
+        "estimated_upper_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "receipt_present": false,
+        "failure": {
+          "schema_version": 2,
+          "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+          "stage": "response_validation",
+          "error_class": "ContractError",
+          "secondary_failures": [],
+          "qualification": "Failure fallback, not a successful receipt or execution attestation"
+        },
+        "recovery_action": "inspect only; never automatically repeat calls"
+      }
+    },
+    "verification_seconds": 0.01600000000325963,
+    "journal": {
+      "hash_chain_valid": true,
+      "events": 9,
+      "terminal_event": "build_failed"
+    },
+    "mismatched_existing_proofs": [],
+    "unresolved_relative_members": []
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T08:42:47.142313+00:00",
+  "status": "DESIGN_REVISION_REQUIRED_BEFORE_LITERAL_FRAMING_FIXTURE_FREEZE",
+  "scope": "Independent design/data arithmetic review only; no bridge, pack builder, row implementation or runtime authority.",
+  "proposal": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v1.json",
+    "bytes": 51022,
+    "sha256": "e7219e813562423ab9b71f39073be486c62ebf8357551f7b79c8956a2ef13302"
+  },
+  "freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-FREEZE-v1.json",
+    "bytes": 974,
+    "sha256": "0a5464de53f47fd98e1785aa9b152ba1c89a4bf5c24076bb4762e53d69374347"
+  },
+  "semantic_sha256": "778d21d3fd70e72574750a8f4f63dc3184ce62a62e13728d57ec980afb16269c",
+  "basis": {
+    "UNICODE-CONTROL-CONTRACT-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+      "bytes": 9809,
+      "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+    },
+    "UNICODE-CONTROL-CORPUS-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+      "bytes": 233438,
+      "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+    },
+    "UNICODE-CONTROL-STAGES-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+      "bytes": 227662,
+      "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+    },
+    "UNICODE-CONTROL-FIXTURE-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-FIXTURE-FREEZE-v1.json",
+      "bytes": 8211,
+      "sha256": "e6e8419c0ad37db007263de0a57e0ce66a20f7481f35686427076ea36c7106b3"
+    },
+    "UNICODE-PIECE-ANALYZER-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-CONTRACT-v1.json",
+      "bytes": 8506,
+      "sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6"
+    },
+    "UNICODE-PIECE-ANALYZER-SCOPED-ACCEPTANCE-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-SCOPED-ACCEPTANCE-v2.json",
+      "bytes": 1978,
+      "sha256": "f895b990247a6c2bfd287c55cdf4015f58f2d995e1dab17d922ff14f5a246140"
+    },
+    "unicode_piece_analyzer_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\unicode_piece_analyzer_v1.py",
+      "bytes": 10137,
+      "sha256": "537a780a3d2d3b95d5fe4976cd8a073cf528db908badf3edf3e861e729ff8f9d"
+    }
+  },
+  "recorder": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\record_unicode_wire_peer_v2.py",
+    "bytes": 9061,
+    "sha256": "3811a7798faacae9c86a2101747af499440fd05f2807873dc74da138d061db81"
+  },
+  "material_findings": [
+    {
+      "id": "footer_per_row_budget",
+      "location": "semantic_contract.wire_size.footer_pool / JSONL_buckets.footer",
+      "problem": "Proposal permits one65536-byte failureJSONL row by pooling8units, but frozen profile reserves16actualfooterROWS each<=8192. Aggregate fit does not satisfy the per-row constraint.",
+      "required": "FailureJSONL<=8192 includingLF; keep separate failureFILE<=65536 and16actualfooter rows each<=8192. Do not relabel rows as byteunits."
+    },
+    {
+      "id": "closed_stage_schemas_and_deltas",
+      "location": "semantic_contract.event_order.setup_bodies / API_accounting.stage_schedule",
+      "problem": "Existing typed payloads and exact source-derived setup counter deltas are deferred to a future implementation, so the proposed closed wire cannot yet determine setup row bodies/accounting at literal framing freeze.",
+      "required": "Embed exact closed per-stage body schemas, finite observation enums and cumulative25API/state transition vectors before fixtures. Monotonic/global ceilings alone are insufficient."
+    },
+    {
+      "id": "geometry_QC_vs_native_observation",
+      "location": "semantic_contract.case_row.observation / ledger / compact_analysis",
+      "problem": "Mixed observed EOG results force QCunknown and nullledger/counts even when token-piece geometry is fully valid. This couples geometry/population completeness to measured grammar behavior, unlike accepted analyzer537a.",
+      "required": "Retain valid ledger/geometry QC/counts. Report native_EOG_disagreement/native_memberNull/matchesNull separately, making profile negative while preserving known geometry. Unknown native ownership/nonreturn still stops unsafe work."
+    }
+  ],
+  "clarifications": [
+    {
+      "id": "sizing_field_maximum",
+      "measured_template_excluding_arrays": 6407,
+      "false_member_variant": 6408,
+      "effect": "Nonblocking within8192, but6407is exacttemplate size rather than strictfieldmax; use longest valid type/finite enum and label mathematical envelope, not trace."
+    },
+    {
+      "id": "null_API_name_sentinel",
+      "location": "semantic_contract.framing.native_state_fields.last_attempt / last_return",
+      "requirement": "Represent actualJSONnull, not literalstringnull, in the finite API-name/null grammar before fixtures."
+    }
+  ],
+  "checked_arithmetic": {
+    "profile_counts": {
+      "cases": 84,
+      "eligible": 78,
+      "harness": 6,
+      "population": 68,
+      "stage_instances": 4,
+      "unique_grammars": 2,
+      "authored_members": 69,
+      "authored_nonmembers": 9
+    },
+    "eligible_bytes": 14941,
+    "largest_document": 420,
+    "document_token_cap_sum": 62260,
+    "unique_prefix_token_upper": 6848,
+    "total_token_work_upper": 69108,
+    "sampler_upper": 82,
+    "tokenize_upper": 156,
+    "piece_upper": 124520,
+    "apply_upper": 74356,
+    "hard_API_caps_sum": 4276181,
+    "positive_upper_sum": 530477,
+    "case_row_maximum": 60864,
+    "actual_largest_case_bound": 30060,
+    "reserved_JSONL_bytes": 7995392,
+    "fixed84_JSONL_bytes": 7110656,
+    "all_artifact_bytes": 8065024,
+    "pack_fixed_header_bytes": 188
+  },
+  "otherwise_consistent": [
+    "84full cases/78native/6harness/68fixedpopulation, fourstages/twogrammars and independent expectation dimensions",
+    "Full tokenID/length/hex arrays, preservedzero ordinals, wholecorpus first-case/token selection and de-dup<=4",
+    "Unknown versus knownzero, selected originaltoken prefix with no re-tokenization and failed mismatch retention",
+    "Existing25API/45state and117/120/300s/256MiB/token/pack/row ceilings; no time/memory fit established",
+    "Acyclic source authority and immutable captured-context intent; new Unicode journal/resource/core gates remain future work"
+  ],
+  "activity": {
+    "new_design_and_metadata_only": true,
+    "old_original_source_qualification_or_hashes": 0,
+    "CPU_GGUF_oldpack_reads": 0,
+    "native_model_SDK_compiler_OS_calls": 0,
+    "actual_new_profile_pack_or_bridge_or_parent_implementation": false
+  },
+  "execution_authorized": false,
+  "current_or_future_profile_qualified": false,
+  "old_negative_and_external_timeout_unchanged": true
+}

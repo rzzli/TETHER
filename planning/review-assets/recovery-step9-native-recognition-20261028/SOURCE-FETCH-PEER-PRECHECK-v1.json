@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "rejected_unexecuted_parent_interruption_gap",
+  "helper_sha256": "49d1208f858ec0fa56b64e4fd946a4cb736b68ce12d226e8e442865ca426dcfd",
+  "protocol_sha256": "5ce8d0cc2314f640d80b16c5d6e2f1309c6d36eefb8fb63306b0db35332a4ae4",
+  "pinned_files_checked": 111,
+  "pin_mismatches": [],
+  "fixed_paths": 12,
+  "no_network_fault": {
+    "record_sha256": "7cc5aa68d88950a8c9b6371e20e3273c73608bbb1c96a863ebde7b9d92bdf7a3",
+    "fixture_sha256": "6a54a86084303db8beb47033253b4ee5ff0ea0ca4acd1d21cc759d4506ad0552",
+    "journal_events": 2,
+    "journal_sha256": "568ed4b8929801e6defc6573c003c4b74a49c90f592360e2f54d99c82df62c79",
+    "actual_children": 0,
+    "actual_network_requests": 0,
+    "remaining_not_dispatched": 11,
+    "unknown_receipt_retained": true
+  },
+  "blocking_findings": [
+    {
+      "id": "parent_interruption_ignored",
+      "location": "run_child except/finally and collect qualification predicate",
+      "finding": "An owned child can finish with returncode 0 while parent attempt records error_class/interrupted; collect ignores these fields and can qualify the source and continue.",
+      "required_change": "A separately frozen helper/protocol must reject any recorded parent error or interruption; retain otherwise-successful interrupted-attempt fixture proving no subsequent dispatch."
+    }
+  ],
+  "other_reviewed_controls": [
+    "exact host/commit/path list; no redirect/proxy/authentication handlers",
+    "per-file1MiB and aggregate4MiB retained-body reservations; incomplete receipt stops remaining requests",
+    "exclusive output and attempts; lstat/reparse/resolved containment checks",
+    "fixed isolated child argv, sanitized environment and EOF stdin pipe",
+    "bounded two-stream capture; owned process kill/reap and full-process cap check",
+    "fsynced partial progress/attempt/journal; failure marker vetoes prior clean report/receipt",
+    "post-receipt and post-lease aggregate deadline checks"
+  ],
+  "limitations": [
+    "Read-only source/pin review, not fetch execution or runtime attestation.",
+    "Retained body accounting is not measured network transfer.",
+    "A new root decision and exact v2 peer review remain required before requests."
+  ],
+  "activity": {
+    "network_requests": 0,
+    "fetch_children": 0,
+    "helper_imports_or_execution": 0,
+    "native_calls": 0,
+    "gguf_reads": 0
+  }
+}

@@ -1,0 +1,989 @@
+{
+  "ABI_and_layout": {
+    "axis": [
+      {
+        "bytes": 8,
+        "name": "payload_bits",
+        "offset": 0,
+        "type": "u64 storage; low nativewidth bytes written first"
+      },
+      {
+        "bytes": 4,
+        "name": "epoch",
+        "offset": 8,
+        "type": "u32 preinitialized call generation"
+      },
+      {
+        "bytes": 2,
+        "name": "kind",
+        "offset": 12,
+        "type": "u16 preinitialized"
+      },
+      {
+        "bytes": 1,
+        "name": "width",
+        "offset": 14,
+        "type": "u8 preinitialized1/4/8"
+      },
+      {
+        "bytes": 1,
+        "name": "reserved15",
+        "offset": 15,
+        "type": "zero"
+      },
+      {
+        "bytes": 4,
+        "name": "stage_hint",
+        "offset": 16,
+        "type": "u32 EMPTY0/STAGED1"
+      },
+      {
+        "bytes": 4,
+        "name": "commit",
+        "offset": 20,
+        "type": "aligned atomicu32 EMPTY0/COMMITTED1"
+      },
+      {
+        "bytes": 8,
+        "name": "reserved24",
+        "offset": 24,
+        "type": "zero"
+      }
+    ],
+    "axis_bytes": 32,
+    "axis_kind": {
+      "BOOL32_BITS": 2,
+      "COUNT32": 4,
+      "DEFINEDNESS": 5,
+      "DWORD32": 3,
+      "HANDLE64": 1
+    },
+    "axis_offsets": {
+      "count": 160,
+      "error_definition": 224,
+      "error_value": 192,
+      "scalar": 128
+    },
+    "header": [
+      {
+        "bytes": 2,
+        "name": "schema",
+        "offset": 0,
+        "type": "u16=1"
+      },
+      {
+        "bytes": 2,
+        "name": "slot_bytes",
+        "offset": 2,
+        "type": "u16=256"
+      },
+      {
+        "bytes": 4,
+        "name": "ordinal",
+        "offset": 4,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "generation",
+        "offset": 8,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "api_id",
+        "offset": 12,
+        "type": "u16:1..14"
+      },
+      {
+        "bytes": 1,
+        "name": "actor_id",
+        "offset": 14,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "target_kind",
+        "offset": 15,
+        "type": "u8"
+      },
+      {
+        "bytes": 4,
+        "name": "target_ordinal",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "requested",
+        "offset": 20,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "predeclared_flags",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved28",
+        "offset": 28,
+        "type": "zero"
+      },
+      {
+        "bytes": 8,
+        "name": "target_generation",
+        "offset": 32,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "input_handle_bits",
+        "offset": 40,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_id",
+        "offset": 48,
+        "type": "u32 optional0xffffffff"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_generation",
+        "offset": 52,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_capacity",
+        "offset": 56,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "query_capture_state",
+        "offset": 60,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "count_out_scratch",
+        "offset": 64,
+        "type": "u32 rawcontents; never itself observedness"
+      },
+      {
+        "bytes": 4,
+        "name": "count_scratch_initial_pattern",
+        "offset": 68,
+        "type": "u32=0xa5a5a5a5"
+      },
+      {
+        "bytes": 4,
+        "name": "native_exit_phase",
+        "offset": 72,
+        "type": "u32:NOT_ENTERED/ENTERED/RAW_EXIT_PREPARED"
+      },
+      {
+        "bytes": 4,
+        "name": "conversion_phase",
+        "offset": 76,
+        "type": "u32:NOT_STARTED/ENTERED/OBJECT_PREPARED/FAILED"
+      },
+      {
+        "bytes": 48,
+        "name": "reserved80",
+        "offset": 80,
+        "type": "zero"
+      }
+    ],
+    "header_bytes": 128,
+    "native_axis_count": 4,
+    "reserved": "All specified padding/unused high payload bytes zero before dispatch; nonzero padding/layout/epoch mismatch refuses interpretation. This layout is NOT ROLE_AWARE_LEDGER_1 wire256B and never inherits its authenticity.",
+    "size_proof_required": "Future C static assertions and compiler/disassembly/ABI review must prove offsets,sizeof,alignment,native-width stores and supported release/acquire primitive; no implementation exists here.",
+    "slot_alignment": 16,
+    "slot_bytes": 256,
+    "target": "PLANNED Windows x64 little-endian WINAPI; HANDLE64,BOOL signed32,DWORD unsigned32,WCHAR16. These are required declarations, not installed SDK/image/ABI proof."
+  },
+  "acceptance_layers": [
+    "Contract/independent pre-code literals first, no source implementation now",
+    "Root may authorize kernel/OwnerOps/FileView source-only batch; synthetic backend stays visibly source-pure",
+    "Native shim source/build/ABI/disassembly and independently controlled fake-C-return tests require separate scope",
+    "Any harmless real-file/native qualification and physical full14/child/path-lifetime route needs separate root scope and complete joint plan",
+    "Only then can a distinct complete execution roster grant an actual role; no historic/model/new84/scientific run follows from this contract"
+  ],
+  "activity": {
+    "C_or_CPP_implementation_files": 0,
+    "cap_changes": 0,
+    "compiler_SDK_ctypes_Win32_native_actions": 0,
+    "model_or_child_runs": 0,
+    "original_target_stat_open_hash": 0,
+    "primary_doc_reads": true,
+    "subject_imports_or_execution": 0
+  },
+  "actor_domains": {
+    "actor_ids": {
+      "ANCESTOR_METADATA": 4,
+      "BOOTSTRAP": 0,
+      "NAMESPACE": 6,
+      "ORIGINAL": 1,
+      "OUTPUT": 2,
+      "READBACK": 3,
+      "SEARCH": 5,
+      "TERMINAL_TAIL": 7
+    },
+    "budget": "Do not charge child operations to parent WriteFile or assume original-only C16384 covers outputs. Historical13482+illustrative5597=19079 before ancestry/bootstrap/child/pipe/tail is a warning only. Full14capacity stays null/UNRESOLVED; no cap lift or source4profile change.",
+    "full14": "APIs8..14 and generated/readback/search/namespace/tail actors are PLANNED. Their enum/layout availability or fragment decoding does not authorize complete physical ledger dispatch. A full actor-profile/census/schema and real binding qualification must exist before runtime use.",
+    "original7": "APIs1..7 retain original-profile domain only. Original inputs use fixed OPEN_EXISTING/read/share-read/reparse inspection semantics from accepted contract; immutable-snapshot capture/native use remains separately qualified.",
+    "outside_file14": [
+      "Child create/Job assignment/query/termination/reap",
+      "Pipe ownership/read/EOF and capture",
+      "Native library/model load and loaded-image policy",
+      "External watchdog/first-process startup"
+    ]
+  },
+  "bounded_representation": {
+    "RSS": "Unknown/unmeasured; no256MiB/inference-fit claim.",
+    "clock_storage": "Kernel-owned typed clock/wrapper cells budget separately; native slot has no duplicate clock domain.",
+    "full14_capacity": null,
+    "meaning": "4,194,304 is exact planned native cell-array payload, not total resident memory and not an admitted joint physical profile. Header/axes are preallocated before dispatch under original admission. Kernel Python views/indices/buffers/captured32MiB/generatedstore/diagnostics/stack/native allocator/OS state are additional.",
+    "no_automatic_growth": true,
+    "original7_reference_capacity": 16384,
+    "planned_native_payload_bytes_at_that_capacity": 4194304,
+    "raw_query_retention": "Original full frames8218 per original open remain complete. Extra output/readback/search/ancestor frames need their own admitted actor bounds;36/592 frames do not fit by silently reusing original pool."
+  },
+  "clock_and_buffer_axes": {
+    "Python_wrapper": "Kernel wrapper/clock/hash/copy/fold metadata remains the same canonical Registry record but is not mislabeled as native-return atomicity. Existing source4first-visible algorithms may be reused in a named successor only.",
+    "buffers": "One owner-owned read buffer1MiB for prospective original profile and query scratch8202; byte consumers see scoped readonly views only after defined completed synchronous data. Query frame capture is a separate knowncopy axis; failed/unknown copy retains/quarantines its buffer generation. No whole bulk allocation or zero-frame inference. NativeRead/Write overlappedNULL only; pipes/device/asynchronous inputs are not silently covered.",
+    "clock": "Native bank is clock-free. Kernel Origin owns the exact prebound monotonic provider, seconds unit, exact nonbool signedI64 or finiteF64 samples, first-start/+295/+300 and percall pre/post first-Python-visible cells. No native calibration, second timebase or reset. Bad/backward/unrepresentable provider invalidates dispatch; reliable now>=295 blocks work,>=300 all I/O."
+  },
+  "documentation": {
+    "access": "Read-only primary Microsoft Learn pages; no installed headers/SDK/native action. All statements below distinguish documented API facts from application qualification requirements.",
+    "documented_summary": {
+      "CreateFileW": "Sharing controls compatibility of opens; omitted write/delete sharing rejects conflicting access under documented semantics. This alone is not an immutable snapshot or native-consumer qualification. INVALID is documented failure.",
+      "Find": "FindFirst failure yieldsINVALID with indeterminate data; FindNext0/error18 is natural end only for an existing search handle.",
+      "Flush": "Flush result alone cannot prove the entire producer write/hash/readback/close/tail chain.",
+      "GetFileType": "UNKNOWN0 may be successful with NO_ERROR0 or a failure; capture the documented probe but never accept nondisk as original identity.",
+      "GetLastError": "Last-error belongs to the calling thread; each API specifies when it is useful. Some success paths change it and others do not; capture immediately on the useful branch. Zero is a value, not absence.",
+      "ReadFile_WriteFile": "For synchronous calls, out-count receives the count and is initialized to zero before work/error checking. This profile still requires valid nonzeroBOOL and bounded committed count for byte progress."
+    },
+    "not_documented_or_not_qualified": [
+      "Atomic native return-to-memory capture across arbitrary interruption",
+      "Fresh authentication of current loaded images or any original target",
+      "Universal content/path immutability from FILE_SHARE_READ alone",
+      "Actual C/Python ABI layout/lock-free publication behavior on selected build",
+      "Native-child/model consumption policy or joint resource fit"
+    ],
+    "sources": {
+      "CloseHandle": "https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle",
+      "CreateDirectoryW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createdirectoryw",
+      "CreateFileW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+      "FindClose": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findclose",
+      "FindFirstFileExW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findfirstfileexw",
+      "FindNextFileW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findnextfilew",
+      "FlushFileBuffers": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers",
+      "GetFileAttributesExW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileattributesexw",
+      "GetFileInformationByHandleEx": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getfileinformationbyhandleex",
+      "GetFileSizeEx": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesizeex",
+      "GetFileType": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfiletype",
+      "GetFinalPathNameByHandleW": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlew",
+      "GetLastError": "https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror",
+      "ReadFile": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile",
+      "WriteFile": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile",
+      "types": "https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types"
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 7741,
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/REAL-ROSTER-ENTRY-ROOT-WORK-ORDER-v2.json",
+      "sha256": "ff167063d17830d61460c97b2f903904a53a141af5e7795bb6872483a45ab267"
+    },
+    {
+      "bytes": 15180,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "sha256": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929"
+    },
+    {
+      "bytes": 2942,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-ROOT-ACCEPTANCE-v3.json",
+      "sha256": "93eeaef97a34bc07d99e00dc4c0cb84b24cee4fd8a19cde7342301579e7872e0"
+    },
+    {
+      "bytes": 15150,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/DISTINCT84-INTEGRATION-AND-PHYSICAL-RESERVATION-MAP-v1.md",
+      "sha256": "980ba27777b2e31ce284bf5b0e8f15331ecb8fb3ecd3c58771c1828a07341572"
+    },
+    {
+      "bytes": 9023,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/PROSPECTIVE-NEW84-KNOWN-RESOURCE-SUBSET-v1.json",
+      "sha256": "458a289c807dc2db6082a1f74b7f3dbda131ad660d2541de8372630b516d72f9"
+    }
+  ],
+  "native_bulk_lease": {
+    "Python_consumers": "Python imports/JSON/PE or other byte parsers require actual same-owner captured bytes. Hash-only.bytes_for remains CaptureNotRequested, including empty bulk distinct from captureempty. MultiGB shards are never promoted under8MiB/file32MiB capture limits. A future bounded-region byte protocol is a distinct explicit change, not included here.",
+    "borrow_and_close": "Borrow does not transfer kernel close rights. The sole Registry retains rights; no lease.release method closes/reopens a handle. Unknown child/native completion prevents success and remains in owned cleanup/budget. No newcall after hard deadline and no close-right revival.",
+    "core4": "Historical sizes803840/78848/768000/3581952 total5232640 are descriptor facts only. PE/content consumers must choose actual captured bytes; module loading needs its qualified native input/image route. Extensions alone choose neither.",
+    "current_route": "UNIMPLEMENTED_NATIVE_CONSUMER",
+    "factory": "request_native_inputs(state,file_refs,consumer_binding,launch_binding)->NativeInputSet or typed refusal. There is no public constructor accepting ready=True, PID/hash/path strings or arbitrary handle integers. Until real route is qualified it ALWAYS refuses NATIVE_ROUTE_UNAVAILABLE. Pure tests may model identity/refusal but never issue a genuine native capability.",
+    "failure_states": [
+      "NATIVE_ROUTE_UNAVAILABLE",
+      "FOREIGN_NATIVE_BINDING",
+      "FOREIGN_LAUNCH_BINDING",
+      "LEASE_NOT_LIVE",
+      "NATIVE_PATH_LIFETIME_UNKNOWN",
+      "IMAGE_POLICY_UNQUALIFIED",
+      "CLOCK_INVALID_OR_EXPIRED",
+      "JOINT_PLAN_UNRESOLVED"
+    ],
+    "identity_requirements": [
+      "Exact KernelState/Origin/nonce/Registry, canonical FileRef/NativeStore generation and actual committed usable handle",
+      "Same live original lease/right, successful strict identity queries, completed accepted hash and no raw/count/copy/clock unknown",
+      "Exact selected native consumer/image/module-policy source and separately frozen child/parent/protocol/build descriptors",
+      "Genuine same-owner child/Job/launch capability and exact ordered shard/self/runtime/core identities; numericalPID/classname equality is insufficient",
+      "Qualified physical file/path-lifetime mechanism valid across native open/use and child completion; samehandle observations/read sharing alone do not prove universal immutability"
+    ],
+    "path_lifetime": "GetFileType/attrs/finalpath/size and a no-write/no-delete sharing request are necessary recorded observations for the selected plan, not proof that content/path cannot change through every filesystem/mapping/ancestor mechanism. The missing physical path-lifetime policy must be explicitly implemented/qualified; unknown lifetime refuses.",
+    "route_to_freeze_later": "HELD_CANONICAL_PATH_CHILD_V1 is a PLANNED candidate matching the distinct84 nine-argv path protocol, not an implemented route. Parent retains original leases through all native consumption and owned-child completion/cleanup. NativeInputSet carries only approved exact paths privately to its bound child adapter. No hidden argv/handle-inheritance change, reopen/hash pass or nativepath fallback is authorized. An inherited-handle route would require its own native/child protocol and cannot be assumed.",
+    "staging": "PLANNED_SOURCE/UNBUILT nodes allow source authoring after contract approval without requiring future binary/model output hashes. They never authorize original access or native execution.",
+    "types": "Planned NativeInputLease and NativeInputSet are private source-issued capabilities, not decoded data or copied descriptors. ChildLaunchBinding/NativeConsumerBinding/PathLifetimeBinding are genuine future owner-bound objects, currently UNBUILT/UNQUALIFIED."
+  },
+  "native_commit_protocol": {
+    "before_call": "Registry reserves slot and buffer/generation; all kinds/widths/epochs preinitialized, commit0/stage0. Native function pointer and args are prebound before invocation. Count scratch is initialized but its bits are not a count observation. Close right is consumed in kernel ledger before dispatch; no retry even for unknown/later failure.",
+    "conversion": "Native RAW_EXIT_PREPARED and conversion OBJECT_PREPARED are only prepared facts. Actual Python caller return lives in separate kernel first-visible cell. Conversion failure leaves all prior committed native axes intact and latches the same original exception before diagnostic formatting.",
+    "count": "Only ReadFile/WriteFile have count axis. The API writes a preallocated DWORD scratch; after scalar publication wrapper copies its actual contents into count.payload and commits before Python conversion. Committed count is raw postcall out-buffer content, not by itself defined byte progress. If native call has not returned/commit is absent, initialized or changed scratch stays unobserved/undefined.",
+    "error": "Raw last-error DWORD and legality/definedness are independent axes. Last-error is captured on the SAME calling thread immediately after useful documented return, with no intervening Win32/Python helper. Ordinary memory stores/fences are required not to alter it. Normal failure path can commit legalityTrue before the error transport returns; reverse partial observation is representable too. Success/nondocumented branch commitsFalse without reading stale last-error. A DWORD0 never means UNOBSERVED or automatically undefined.",
+    "error_transport": "GetLastError is named internal error transport, not an invented15th file port. Its actual wrapper work and trust/census belong to the future actor plan; no FormatMessage/SetLastError or other implicit export is added.",
+    "interruption_limit": "No atomic capture from OS return through CPU scheduling/SEH/process kill/ABI into memory is promised. Interrupted-before-commit remains unknown even if the OS completed. Release/acquire is a planned publication mechanism, not a proof against process termination or malicious native code. No pure stub/test brand qualifies native-first behavior.",
+    "linearization": "COMMITTED requires expected epoch/kind/width, payload then release commit, read with acquire after quiescence. Before commit raw payload bits are retained as provisional bytes but value authority remains UNKNOWN. Interruption after payload but before stage may still show UNOBSERVED with changed bits; NEVER promote those bits by guessing. Staged state is not a native-ready capability.",
+    "no_reuse": "One epoch per reserved call and one native dispatch; cells never overwritten/recycled in-session. Repeated reads/same-fact reconciliation are idempotent and do not doublefold; conflicting commit or stale/foreign ref stops work.",
+    "scalar_first": "After the target API returns, the FIRST intended application data store is the direct native-width result into scalar.payload, before error transport, Python/C API allocation, bool/count normalization, format packing or clock callback. For BOOL/DWORD write native32 bits into the prezeroed lowword, preserving2/-1/0; HANDLE writes64 bits. Only then stage_hint is set and aligned release commit publishes the axis.",
+    "states": [
+      "UNOBSERVED",
+      "STAGED_UNCOMMITTED",
+      "COMMITTED"
+    ]
+  },
+  "per_API": [
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 1,
+      "last_error_probe": "raw==0xffffffffffffffff",
+      "name": "CreateFileW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+      "right_kind": "FILE",
+      "scalar_kind": "HANDLE64",
+      "semantics": "usable nonzero/nonINVALID handle; zero is unexpected nativeNULL/ownership unknown",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 2,
+      "last_error_probe": "raw==0",
+      "name": "GetFileType",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfiletype",
+      "right_kind": "NONE",
+      "scalar_kind": "DWORD32",
+      "semantics": "identity accepts only FILE_TYPE_DISK1; UNKNOWN0 probe can validly return NO_ERROR0",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 8,
+      "id": 3,
+      "last_error_probe": "raw==0",
+      "name": "GetFileInformationByHandleEx",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getfileinformationbyhandleex",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "FileAttributeTagInfo9; buffer defined only on nonzero rawBOOL",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 8202,
+      "id": 4,
+      "last_error_probe": "raw==0",
+      "name": "GetFinalPathNameByHandleW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlew",
+      "right_kind": "NONE",
+      "scalar_kind": "DWORD32",
+      "semantics": "fixed4101WCHAR flags0; accept1..4100 and terminator at returned index; >=4101 is insufficient buffer, no resize/retry",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 8,
+      "id": 5,
+      "last_error_probe": "raw==0",
+      "name": "GetFileSizeEx",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesizeex",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "signed64 size frame valid only on nonzero rawBOOL, then nonnegative/exact descriptor check",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": true,
+      "frame_bytes": 0,
+      "id": 6,
+      "last_error_probe": "raw==0",
+      "name": "ReadFile",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "synchronous only; nonzero BOOL plus committedDWORDcount<=request yields defined count, zero count is known zero not progress",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": true,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 7,
+      "last_error_probe": "raw==0",
+      "name": "CloseHandle",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle",
+      "right_kind": "FILE",
+      "scalar_kind": "BOOL32",
+      "semantics": "close right consumed before dispatch; committed signed32 nonzero success remains known after conversion/wrapper/clock failure; no retry",
+      "target_domain": "ORIGINAL/GENERATED"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 36,
+      "id": 8,
+      "last_error_probe": "raw==0",
+      "name": "GetFileAttributesExW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileattributesexw",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "GetFileExInfoStandard0; selected ancestry metadata only; no discovery/leaf admission",
+      "target_domain": "ANCESTOR"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 592,
+      "id": 9,
+      "last_error_probe": "raw==0xffffffffffffffff",
+      "name": "FindFirstFileExW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findfirstfileexw",
+      "right_kind": "SEARCH",
+      "scalar_kind": "HANDLE64",
+      "semantics": "Basic1/NameMatch0; initialINVALID is failure including no matches, not established-iterator EOF; raw frame indeterminate on failure",
+      "target_domain": "SEARCH"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 592,
+      "id": 10,
+      "last_error_probe": "raw==0",
+      "name": "FindNextFileW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findnextfilew",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "requires genuine established search; zero with committed defined error18 means natural end, otherwise negative/unknown; failed buffer indeterminate",
+      "target_domain": "SEARCH"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 11,
+      "last_error_probe": "raw==0",
+      "name": "FindClose",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findclose",
+      "right_kind": "SEARCH",
+      "scalar_kind": "BOOL32",
+      "semantics": "only search right; consume once, never CloseHandle for search and never repeat after false/unknown",
+      "target_domain": "SEARCH"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 12,
+      "last_error_probe": "raw==0",
+      "name": "CreateDirectoryW",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createdirectoryw",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "nonzero creates namespace ownership; false/ERROR_ALREADY_EXISTS gives no ownership; final path component only, no recursive fallback",
+      "target_domain": "NAMESPACE"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": true,
+      "frame_bytes": 0,
+      "id": 13,
+      "last_error_probe": "raw==0",
+      "name": "WriteFile",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "synchronous only; actual immutable source slice remains valid; nonzero BOOL+committed in-rangeDWORD defines known-written count; zero/unknown is not progress",
+      "target_domain": "GENERATED"
+    },
+    {
+      "complete_original7": false,
+      "count_axis_applicable": false,
+      "frame_bytes": 0,
+      "id": 14,
+      "last_error_probe": "raw==0",
+      "name": "FlushFileBuffers",
+      "official_source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers",
+      "right_kind": "NONE",
+      "scalar_kind": "BOOL32",
+      "semantics": "generated file with GENERIC_WRITE; nonzero BOOL is known flush result but not complete publication without other required close/readback/tail facts",
+      "target_domain": "GENERATED"
+    }
+  ],
+  "per_API_rules": {
+    "BOOL": "All signed32 nonzero values indicate documented success where applicable; never normalize2/-1 to1/bool.",
+    "GetFileType": "DWORD0 is an error-probe condition, not proof of failure: docs permit a valid unknown type with NO_ERROR0. Identity still requires DISK1.",
+    "GetFinalPathName": "A returned required length>=capacity is retained scalar refusal, not a second buffer-size probe or automatic last-error semantic.",
+    "HANDLE": "Native pointer bits0 are nativeNULL; they cannot be distinguished as two physical values corresponding to PythonNone versus injectedint0. RawCallView retains actualbits and classifies unexpectedNULL separately from UNOBSERVED and INVALID. Existing Python injectedNULL/HANDLE0 distinction remains in its own backend and is not a native success proof.",
+    "count_defined": "For this synchronous file profile: committed valid nonzeroBOOL, committedCOUNT32 and0<=count<=requested plus completed valid buffer are required. Read/write FALSE with rawoutcount0 remains undefined progress even though docs initialize the out parameter. TRUE/count0 is known zero, not a positive loop step. No partial write/read count is inferred from clock or wrapper return.",
+    "error_definition": "UNOBSERVED/False/True is independent of raw_error observation. True means documented useful error-word capture branch, not word!=0 or a failure marker byitself.",
+    "ownership": "Only kernel can derive rights from committed usableHANDLE and actual target/actor; nativeNULL/INVALID/unreturned/staged raw cannot mint a close right. FILE uses CloseHandle; SEARCH uses FindClose; correct closer consumed once even on false/unknown/late result."
+  },
+  "planned_public_surface": [
+    {
+      "api": "kernel.reserve_call(state,target_ref,api_id,actor_id,requested=None,buffer_ref=None)->RawCallRef",
+      "semantics": "One joint ledger reserves/debits before entry; native calls unavailable unless actual source-issued native binding/profile exists. Target/ref types are exact and kernel-issued."
+    },
+    {
+      "api": "native.prepare_ticket(raw_call_ref,typed_args)->NativeDispatchTicket",
+      "semantics": "Opaque native extension ticket ties fixed function pointer, existing cell/buffer/address/epoch and input handles; no raw pointer or caller ready flag exposed."
+    },
+    {
+      "api": "native.invoke_reserved(ticket,args)->RawCallView",
+      "semantics": "One dispatch only; writes native first axes before Python conversion. Returned view is readonly over SAME bank, never a second canonical raw store. C prepared-return is not caller-observed return."
+    },
+    {
+      "api": "kernel.observe_python_return(raw_call_ref,returned_object_or_original_exception)",
+      "semantics": "Kernel records first Python-visible wrapper-return/exception separately, after native bridge return/conversion. Committed native axes survive original KI/SE/Memory/conversion failures."
+    },
+    {
+      "api": "kernel.raw_call_view(raw_call_ref)->RawCallView",
+      "semantics": "Quiescent readonly view of original cells and kernel clock/wrapper facts; metadata copies are data-only; no setter/commit method is public to ordinary Python callers."
+    }
+  ],
+  "precode_vectors": {
+    "cases": [
+      {
+        "expected": {
+          "known_value": null,
+          "owner_right": false,
+          "state": "UNOBSERVED"
+        },
+        "id": "N01_unobserved_zero",
+        "input": {
+          "native_entered": false,
+          "scalar": {
+            "bits": 0,
+            "commit": 0,
+            "stage": 0
+          }
+        }
+      },
+      {
+        "expected": {
+          "known_value": null,
+          "progress": 0,
+          "raw_bits_retained": 101,
+          "state": "STAGED_UNCOMMITTED"
+        },
+        "id": "N02_payload_written_commit_missing",
+        "input": {
+          "native_entered": true,
+          "scalar": {
+            "bits": 101,
+            "commit": 0,
+            "stage": 1
+          }
+        }
+      },
+      {
+        "expected": {
+          "owner_right": false,
+          "raw_bits_retained": 101,
+          "raw_value_authority": "UNKNOWN",
+          "state": "UNOBSERVED"
+        },
+        "id": "N03_payload_before_stage_interrupted",
+        "input": {
+          "native_entered": true,
+          "scalar": {
+            "bits": 101,
+            "commit": 0,
+            "stage": 0
+          }
+        }
+      },
+      {
+        "expected": {
+          "ownership": "UNKNOWN_OR_REFUSED",
+          "raw": "NATIVE_NULL",
+          "state": "COMMITTED",
+          "usable_handle": false
+        },
+        "id": "N04_committed_native_NULL",
+        "input": {
+          "api": 1,
+          "scalar": {
+            "bits": 0,
+            "commit": 1,
+            "stage": 1
+          }
+        }
+      },
+      {
+        "expected": {
+          "decoded_signed_values": [
+            2,
+            -1,
+            0
+          ],
+          "nonzero_success": [
+            true,
+            true,
+            false
+          ],
+          "normalize_to1": false
+        },
+        "id": "N05_signed_noncanonical_BOOL",
+        "input": {
+          "api": 6,
+          "scalar_bits": [
+            2,
+            4294967295,
+            0
+          ],
+          "width": 4
+        }
+      },
+      {
+        "expected": {
+          "count_defined": true,
+          "known_count": 0,
+          "progress": 0,
+          "remaining_nonzero": "READ_PROGRESS_INCOMPLETE"
+        },
+        "id": "N06_true_count_zero",
+        "input": {
+          "api": 6,
+          "count": 0,
+          "count_committed": true,
+          "requested": 16,
+          "scalar": 1
+        }
+      },
+      {
+        "expected": {
+          "count_defined": false,
+          "error_value_defined": true,
+          "error_word_zero_is_not_unknown": true,
+          "progress": 0,
+          "raw_count": 0
+        },
+        "id": "N07_false_count_zero",
+        "input": {
+          "api": 6,
+          "count": 0,
+          "count_committed": true,
+          "error": 0,
+          "error_definition": true,
+          "scalar": 0
+        }
+      },
+      {
+        "expected": {
+          "definition": "UNOBSERVED",
+          "raw_error": 0,
+          "usable_error_classification": false
+        },
+        "id": "N08_error_value_before_definition",
+        "input": {
+          "definition_commit": 0,
+          "error": 0,
+          "error_commit": 1
+        }
+      },
+      {
+        "expected": {
+          "definition": true,
+          "error_value_unknown": true,
+          "raw_error": "UNOBSERVED"
+        },
+        "id": "N09_definition_before_error_return",
+        "input": {
+          "definition": true,
+          "definition_commit": 1,
+          "error_commit": 0
+        }
+      },
+      {
+        "expected": {
+          "close_right": "kernel ledger only; once",
+          "ownership_raw_known": true,
+          "primary_identity": "sameMemoryError",
+          "python_wrapper_returned": false
+        },
+        "id": "N10_conversion_fault_after_handle",
+        "input": {
+          "api": 1,
+          "conversion_exception": "originalMemoryError",
+          "scalar": 101,
+          "scalar_commit": 1
+        }
+      },
+      {
+        "expected": {
+          "known_close_success": true,
+          "primary_identity": "sameKI",
+          "right_consumed": true,
+          "second_close_attempts": 0
+        },
+        "id": "N11_close_known_then_wrapper_fault",
+        "input": {
+          "api": 7,
+          "scalar": 2,
+          "scalar_commit": 1,
+          "wrapper_exception": "originalKI"
+        }
+      },
+      {
+        "expected": {
+          "known_close_success": false,
+          "retry": false,
+          "right_consumed": true
+        },
+        "id": "N12_close_false",
+        "input": {
+          "api": 7,
+          "error": 5,
+          "error_definition": true,
+          "scalar": 0,
+          "scalar_commit": 1
+        }
+      },
+      {
+        "expected": {
+          "count_defined": false,
+          "progress": 0,
+          "raw_count_retained": 4294967295,
+          "refuse": "COUNT_RANGE"
+        },
+        "id": "N13_count_range_not_coerced",
+        "input": {
+          "api": 6,
+          "count": 4294967295,
+          "requested": 1048576,
+          "scalar": -1
+        }
+      },
+      {
+        "expected": {
+          "native_dispatches": 0,
+          "refuse": "FOREIGN_RAW_REF"
+        },
+        "id": "N14_foreign_or_stale_ref",
+        "input": {
+          "foreign_state_or_generation": true,
+          "same_ordinal": 4
+        }
+      },
+      {
+        "expected": {
+          "conflict": "NATIVE_CELL_CONFLICT",
+          "identical_observation": "idempotent read/no doublefold",
+          "native_retry": false
+        },
+        "id": "N15_duplicate_and_conflicting_commit",
+        "input": {
+          "same_axis_replay": "identical then conflicting"
+        }
+      },
+      {
+        "expected": {
+          "all_native_at300": false,
+          "cleanup_at299": "only known owned right",
+          "new_origin": false,
+          "new_work_at295": false
+        },
+        "id": "N16_clock_cutoffs",
+        "input": {
+          "cleanup_now": 299,
+          "hard_now": 300,
+          "origin_start": 0,
+          "work_now": 295
+        }
+      },
+      {
+        "expected": {
+          "query_defined": false,
+          "scalar_retained": 0,
+          "zero_frame_not_evidence": true
+        },
+        "id": "N17_query_unknown",
+        "input": {
+          "api": 3,
+          "frame_zero_initialized": true,
+          "scalar": 0
+        }
+      },
+      {
+        "expected": {
+          "frame_defined": false,
+          "natural_end": false,
+          "search_right": false
+        },
+        "id": "N18_initial_find_failure",
+        "input": {
+          "api": 9,
+          "error": 2,
+          "error_definition": true,
+          "scalar_bits": 18446744073709551615
+        }
+      },
+      {
+        "expected": {
+          "closer": "FindClose once",
+          "frame_defined": false,
+          "natural_end": true
+        },
+        "id": "N19_established_find_end",
+        "input": {
+          "api": 10,
+          "error": 18,
+          "error_definition": true,
+          "live_search_ref": true,
+          "scalar": 0
+        }
+      },
+      {
+        "expected": {
+          "native_dispatches": 0,
+          "refuse": "WRONG_CLOSER"
+        },
+        "id": "N20_wrong_search_closer",
+        "input": {
+          "api": 7,
+          "target": "SEARCH"
+        }
+      },
+      {
+        "expected": {
+          "native_dispatches": 0,
+          "refuse": "ACTOR_PROFILE_UNQUALIFIED"
+        },
+        "id": "N21_full14_unqualified",
+        "input": {
+          "api": 13,
+          "profile": "ORIGINAL7_ONLY"
+        }
+      },
+      {
+        "expected": {
+          "capture_promotion": false,
+          "native_model_calls": 0,
+          "refuse": "NATIVE_ROUTE_UNAVAILABLE"
+        },
+        "id": "N22_bulk_route_unavailable",
+        "input": {
+          "hash_complete": true,
+          "path_and_digest_known": true,
+          "route": "UNIMPLEMENTED_NATIVE_CONSUMER",
+          "share_mode": 1
+        }
+      },
+      {
+        "expected": {
+          "bulk_allocation": 0,
+          "bytes_refusal": "CAPTURE_NOT_REQUESTED",
+          "launch_refusal": "FOREIGN_LAUNCH_BINDING"
+        },
+        "id": "N23_bulk_bytes_and_foreign_launch",
+        "input": {
+          "bulk_bytes_for": true,
+          "equal_value_foreign_launch_binding": true
+        }
+      },
+      {
+        "expected": {
+          "native_model_calls": 0,
+          "refuse": "LEASE_NOT_LIVE_OR_PATH_UNKNOWN",
+          "reopen": false
+        },
+        "id": "N24_dead_lease_or_path_unknown",
+        "input": {
+          "file_close_consumed": true,
+          "path_lifetime": "UNKNOWN"
+        }
+      },
+      {
+        "expected": {
+          "grow_to19079": false,
+          "model_or_original_calls": 0,
+          "refuse_before_dispatch": true
+        },
+        "id": "N25_capacity_or_layout_guard",
+        "input": {
+          "call_capacity": "exhausted or wrong offset/alignment",
+          "joint14_capacity": null
+        }
+      }
+    ],
+    "count": 25,
+    "scope": "Finite normative input/expected-state cases for later independent frozen literals. IDs are harness-only. No native or subject test has run; staged-layout controls can be modeled as data but do not qualify native execution. Positive genuine native leases require later separate ABI/build/live route qualification."
+  },
+  "qualification": {
+    "atomic_OS_return_capture": false,
+    "full_real_roster": false,
+    "native_before_conversion_qualified": false,
+    "native_bulk_consumption": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "schema_version": 1,
+  "scope": "One planned native raw-cell/bulk-input interface. Text/data only. Source4 first-Python-visible evidence remains unchanged; no C implementation/compiler/SDK/native construction, live file/model/child or original-target operation.",
+  "shared_types": {
+    "adoption": "Grammar claim_operations(KernelContinuation,attach_callable) returns StateView over same state; FileView attaches only to StateView and existing kernel port/sink facades. No replacement raw_port,Origin,Registry or Source4 constructor.",
+    "backend": "RawCallStore backend identity is fixed before its first reservation. Production native bank must be that same canonical store from earliest bootstrap I/O; no Python-first bank copied/replaced after helper verification. The next source-pure batch can use an explicitly synthetic backend and gains no native qualification.",
+    "defined_only_in_kernel": [
+      "KernelState",
+      "Origin",
+      "Registry",
+      "RawCallStore",
+      "RawCallRef",
+      "RawCallView",
+      "KernelContinuation",
+      "StateView"
+    ],
+    "identity": "Every store/ref/view/ticket binds exact KernelState,Origin,nonce,Registry,store identity and generation. Equal IDs/numbers/classnames, copied dictionaries and serialized data never mint authority. Closed map supplies the actual executing kernel namespace."
+  },
+  "source_nodes": {
+    "kernel": "preflight_entry_kernel_v1.py exact executing namespace from Grammar ENTRY_SEAM",
+    "native": "preflight_file14_raw_v1.c PLANNED_SOURCE, binaryUNBUILT/null",
+    "native_consumer_parent_child": "PLANNED/UNBUILT; exact new84 source/build/physical-path binding remains missing",
+    "owner_ops": "preflight_owner_ops_v1.py and preflight_file_view_v1.py are non-owning code over that kernel state",
+    "python_view": "preflight_file14_view_v1.py PLANNED_SOURCE"
+  },
+  "status": "FROZEN_PLANNED_NATIVE_INPUT_CONTRACT_NO_IMPLEMENTATION_OR_EXECUTION"
+}

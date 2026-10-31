@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T22:32:26.521310+00:00",
+  "status": "failed_before_OS_child_creation_no_retry",
+  "failure_file_sha256": "56a8d2e7513c0c19eb017750555ad8d8bb54687fc149061055875b0f8e7fe164",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-four-arm-tokenquotes-20261026T223135Z",
+  "retained_child": {
+    "elapsed_seconds": 0.0,
+    "exit_code": null,
+    "overflow": false,
+    "pid": null,
+    "started": false,
+    "stderr_bytes": 0,
+    "stdin_bytes_written": 0,
+    "stdout_bytes": 0
+  },
+  "tokenizer_attempts_authorized": 0,
+  "actual_tokenizer_processes": 0,
+  "generation_calls": 0,
+  "server_startups": 0,
+  "source_pins_rechecked": 305,
+  "source_pin_mismatches": [],
+  "cause": "Planning-only audit guard compared Windows-rendered commandline against list argv and rejected before CreateProcess",
+  "proposed_prospective_correction": "Compare audit args[1] exactly with subprocess.list2cmdline(approved_argv), require executable audit field None or exact approved executable, and fixed approved cwd. Requires separate root authorization before new experiment.",
+  "rerun_performed": false
+}

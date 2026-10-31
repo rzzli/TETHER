@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T19:09:27.144503+00:00",
+  "role": "evaluation_only",
+  "status": "scoped_engineering_peer_tests_pass_full_validation_pending",
+  "code_and_scope_proofs": [
+    {
+      "path": "src/asof/study/fixed_evidence.py",
+      "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10",
+      "bytes": 18519
+    },
+    {
+      "path": "src/asof/study/fixed_evidence_smoke.py",
+      "sha256": "c2647cdf12261e7fe1f4744947ccd79401aee045282846030be2f67ae6e9c9ab",
+      "bytes": 29110
+    },
+    {
+      "path": "src/asof/study/resources/fixed-evidence-plan-v1.json",
+      "sha256": "33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52",
+      "bytes": 3868
+    },
+    {
+      "path": "tests/test_study_fixed_evidence_peer.py",
+      "sha256": "a18089fc0c8e9517b5c4fe5bf730c1f06eba41f2ebc1add51974d7e359de4dfd",
+      "bytes": 15530
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PLAN-v2.json",
+      "sha256": "33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52",
+      "bytes": 3868
+    }
+  ],
+  "evidence": [
+    {
+      "path": "data/cache/recovery-step9-comparison-peer-tests/before-boundary-fixes.txt",
+      "sha256": "7fa417af00236ca7adca9fc3e1eebfdea1f0fae0a2505187ae5770b0119aab66",
+      "bytes": 3130
+    },
+    {
+      "path": "data/cache/recovery-step9-comparison-peer-tests/before-deadline-replay-v2.txt",
+      "sha256": "5be1db08a704172eb5b3df4fdcbc5ca95c080dca4b54cb98d93532610fa9c6da",
+      "bytes": 935
+    },
+    {
+      "path": "data/cache/recovery-step9-comparison-peer-tests/after-boundary-fixes.txt",
+      "sha256": "ff760cd6aa9891fb728cdfb3b1420ed6254e4684323501d379c99c37fc39432c",
+      "bytes": 1678
+    },
+    {
+      "path": "data/cache/recovery-step9-comparison-peer-tests/history-authorization-after.txt",
+      "sha256": "c876afc65762cb179c3a6a63a460d891e945fb4a2ad24455a684b0d1d0e30a4b",
+      "bytes": 525
+    }
+  ],
+  "test_execution": [
+    {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 23.144
+    },
+    {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 1.098
+    }
+  ],
+  "distinct_peer_tests_passed": 10,
+  "ruff": "format/check passed for peer test file",
+  "reproduced_before_fix": [
+    {
+      "finding": "Wrong predecessor identity reached recursive verifier before rejection",
+      "probe": "Assertion spy on recursive verify_study; no claim that an actual RecursionError was observed",
+      "corrected": "Check expected fixture/arm/integer stage index/run identity before recursive verification; retain recursion guard."
+    },
+    {
+      "finding": "Parent expired during document preparation but one recorded generate still began",
+      "probe": "Fake monotonic clock advanced to301 before child construction under300-second shared limit",
+      "corrected": "Post-preparation/construction checks, child deadline aligned to parent via session.started, and final recorded consumption deadline guard."
+    },
+    {
+      "finding": "Resealed internally valid stage timing contradicted next shared allocation but parent verification accepted",
+      "probe": "AsOf stage elapsed exceeded allocation gap; child report/journal/receipt and parent journals/summary/receipt rehashed; individual child verification passed",
+      "corrected": "Subtract previous reported cell elapsed from next allowed allocation and include final cell elapsed in fixture footer bound."
+    }
+  ],
+  "proactive_hardening_not_claimed_as_before_failure": [
+    "Parent stage_accepted event required before a valid predecessor can supply history.",
+    "Exact internal scripted document required; another schema-valid recorded document is insufficient.",
+    "Root/journal linked ancestry rejected before direct journal reads."
+  ],
+  "other_verified_properties": [
+    "Same prompts despite different outer run identities; exact preflight31715/28503 shared input reservations retained.",
+    "Rehashed evaluator source metadata and invented history rejected.",
+    "Authored Unicode/markup remains unchanged while original source quotes are materialized separately.",
+    "Fixture result and copied quotation are not mislabeled scientific validation.",
+    "No real source inputs or native transport introduced."
+  ],
+  "limits": [
+    "Tests use invented sources and scripted transport, not scientific references or actual model performance.",
+    "Full suite, package checks and installed historical guards remain root acceptance work.",
+    "Real-source admission, end-to-end retrieval, qualified case/reference gates and wholeR09 remain open.",
+    "Native grammar support and future model output fit remain unverified."
+  ],
+  "source_or_helper_edits_by_peer": false,
+  "clinical_label_or_human_answer_reads": false,
+  "actual_model_calls": 0
+}

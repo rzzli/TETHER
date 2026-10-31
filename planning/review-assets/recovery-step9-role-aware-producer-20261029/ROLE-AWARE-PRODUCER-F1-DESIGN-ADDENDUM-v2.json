@@ -1,0 +1,122 @@
+{
+  "activity": {
+    "native_or_physical_IO": 0,
+    "original_or_payload_operations": 0,
+    "subject_imports": 0,
+    "tests": 0
+  },
+  "artifact_caps": [
+    {
+      "kind": "candidate-ledger.bin",
+      "maximum_bytes": 14800384,
+      "membership_rule": "conditional: accepted work prefix before original closes; absent/unissued on failure"
+    },
+    {
+      "kind": "terminal-ledger.bin",
+      "maximum_bytes": 14800384,
+      "membership_rule": "conditional: final observed original-close/unknown facts; failure may leave absent/unissued"
+    },
+    {
+      "kind": "journal.jsonl",
+      "maximum_bytes": 2293760,
+      "membership_rule": "owned namespace only; complete or bounded observed prefix, never reconstructed success"
+    },
+    {
+      "kind": "producer-report.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "conditional compact report; no full-table duplication"
+    },
+    {
+      "kind": "candidate.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "conditional normal candidate"
+    },
+    {
+      "kind": "cleanup.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "conditional observed finalization/close report"
+    },
+    {
+      "kind": "failure.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "conditional owner failure; distinct from child failure marker"
+    },
+    {
+      "kind": "receipt.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "only after required gates and known closures/journal close"
+    },
+    {
+      "kind": "seal.json",
+      "maximum_bytes": 8192,
+      "membership_rule": "only after receipt and required terminal gates"
+    },
+    {
+      "kind": "child/result.partial.jsonl",
+      "maximum_bytes": 7995392,
+      "membership_rule": "new84 structured trace; bounded partial allowed, completion never implied"
+    },
+    {
+      "kind": "child/attempt.json",
+      "maximum_bytes": 4096,
+      "membership_rule": "new84 child attempt metadata"
+    },
+    {
+      "kind": "child/failure.json",
+      "maximum_bytes": 65536,
+      "membership_rule": "conditional independent child failure marker"
+    },
+    {
+      "kind": "stdout.bin",
+      "maximum_bytes": 65536,
+      "membership_rule": "child stdout capture; independent from structured files"
+    },
+    {
+      "kind": "stderr.bin",
+      "maximum_bytes": 65536,
+      "membership_rule": "child stderr capture; independent from structured files"
+    }
+  ],
+  "change_family": "F1 phase lifetime and actual byte consumption only",
+  "generated_store_bytes": 40139776,
+  "healthy_output_phase_bytes": 105596938,
+  "hold": {
+    "bytes": 8986,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v1.json",
+    "sha256": "f06480b0efee0a74a0897e891bd07ce1acd9ad612b81dec1beebc2096cdf3972"
+  },
+  "independent_capture_stream_bytes": 131072,
+  "named_payload_conservative_bytes": 113985546,
+  "named_retained_payload_terms": {
+    "canonical_evidence_tables": 14800384,
+    "generated_immutable_store": 40139776,
+    "hash_or_slice_transient": 1048576,
+    "immutable_capture": 33554432,
+    "one_capture_assembly": 8388608,
+    "one_generated_artifact_assembly": 14800384,
+    "path_comparison_workspace": 131072,
+    "query_work_buffer": 8202,
+    "read_buffer": 1048576,
+    "serializer_work": 65536
+  },
+  "pending": [
+    "exact enum/offset and literal format freeze",
+    "actual future roster/module graph and consumer binding",
+    "source implementation and pure invariant qualification",
+    "physical output writer/readback reservation and real first-entry/FFI",
+    "actual RSS/clock/256MiB qualification"
+  ],
+  "preserved_proposal": {
+    "bytes": 19901,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v1.json",
+    "sha256": "cce5dbedd166ff58e2182deb2ada8afcf5a165a6c0413e9245f4490d987e7512"
+  },
+  "schema_version": 2,
+  "status": "F1_only_design_addendum_no_source_authority",
+  "structured_child_bytes": 8065024,
+  "successor": {
+    "bytes": 28502,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+    "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+  }
+}

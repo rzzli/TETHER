@@ -1,0 +1,299 @@
+{
+  "architecture_evidence": {
+    "new_gguf_reads": 0,
+    "new_weight_hashes": 0,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\MODEL-ARCHITECTURE-EVIDENCE.json",
+    "sha256": "596d0e6f8353a82d273f93156efd3fe06685f14ca9d08d3da05f70b8ebec5bf7"
+  },
+  "bounded_limitations": [
+    "Custom ggml_context_ptr/gguf_context_ptr alias definitions remain uninspected; no transitive private compile-closure expansion proposed",
+    "Metadata/vocabulary memory and timing remain unmeasured for this bridge",
+    "No universal ABI or OS I/O claim",
+    "Architecture observation is archived metadata, not fresh GGUF parse",
+    "Actual release build flags/import/module identity and CPU implementation checks pending"
+  ],
+  "document": {
+    "checked_existing_local_links": 6,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DELEGATED-LOADER-REVIEW.md",
+    "sha256": "f856b86e7b2a3ff4d407e1c76a529ca8367c90b1720c750efc5abf24da8aa9ac"
+  },
+  "executed": {
+    "compilers": 0,
+    "dll_loads": 0,
+    "fetches": 0,
+    "gguf_parser_calls": 0,
+    "model_calls": 0,
+    "server_calls": 0,
+    "tokenizer_calls": 0
+  },
+  "execution_authorized": false,
+  "findings": [
+    {
+      "detail": "Allocates n_tensors*tensor_overhead and descriptor metadata; blob allocation/read is inside !no_alloc",
+      "id": "DL01",
+      "limits": [
+        "Not zero OS weight I/O",
+        "Not a small-memory sandbox"
+      ],
+      "lines": [
+        822,
+        928
+      ],
+      "result": "no_alloc_parser_skips_explicit_tensor_blob_read",
+      "source": "ggml/src/gguf.cpp"
+    },
+    {
+      "detail": "Offsets plus tensor byte size compared to cached file size; no payload read",
+      "id": "DL02",
+      "lines": [
+        32,
+        48
+      ],
+      "result": "tensor_weight_constructor_is_metadata_bounds_check",
+      "source": "src/llama-model-loader.h"
+    },
+    {
+      "cleanup_lines": [
+        178,
+        181
+      ],
+      "detail": "Normal owned fclose shown; exceptional constructor/parser paths not universally leak-free",
+      "id": "DL03",
+      "lines": [
+        87,
+        95
+      ],
+      "result": "windows_named_file_constructor_opens_and_sizes_without_explicit_payload_read",
+      "source": "src/llama-mmap.cpp"
+    },
+    {
+      "detail": "No backend discovery in this body; context allocation occurs after first-call timing initialization",
+      "id": "DL04",
+      "lines": [
+        1622,
+        1661
+      ],
+      "result": "ggml_init_first_call_self_initializes_timing_only",
+      "source": "ggml/src/ggml.c"
+    },
+    {
+      "id": "DL05",
+      "lines": [
+        506,
+        515
+      ],
+      "other_evidence": [
+        {
+          "lines": [
+            3,
+            53
+          ],
+          "source": "src/models/qwen2.cpp"
+        },
+        {
+          "lines": [
+            3816,
+            3822
+          ],
+          "source": "prior:src/llama-model.cpp"
+        },
+        {
+          "lines": [
+            1357,
+            1379
+          ],
+          "source": "prior:src/llama-model.cpp"
+        }
+      ],
+      "result": "qwen2_constructor_only_delegates_and_vocab_only_skips_arch_hparams",
+      "source": "src/models/models.h"
+    },
+    {
+      "id": "DL06",
+      "limit": "No universal leak-free library claim; process containment remains boundary",
+      "lines": [
+        118,
+        132
+      ],
+      "other_evidence": [
+        {
+          "lines": [
+            16,
+            18
+          ],
+          "source": "src/llama-mmap.h"
+        },
+        {
+          "lines": [
+            1017,
+            1034
+          ],
+          "source": "ggml/src/gguf.cpp"
+        },
+        {
+          "lines": [
+            1674,
+            1683
+          ],
+          "source": "ggml/src/ggml.c"
+        }
+      ],
+      "result": "normal_file_and_gguf_ggml_free_bodies_resolved_but_custom_aliases_not_closed",
+      "source": "src/llama-model-loader.h"
+    },
+    {
+      "id": "DL07",
+      "limit": "Two exact-commit source behavior references and build/module policy remain pending; no execution authorization",
+      "lines": [
+        122,
+        134
+      ],
+      "other_evidence": [
+        {
+          "lines": [
+            119,
+            174
+          ],
+          "source": "prior:ggml/src/ggml-backend-reg.cpp"
+        },
+        {
+          "lines": [
+            220,
+            261
+          ],
+          "source": "prior:ggml/src/ggml-backend-reg.cpp"
+        }
+      ],
+      "result": "recommend_explicit_pinned_cpu_then_public_initializer",
+      "source": "prior:src/llama.cpp"
+    }
+  ],
+  "followup_receipt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\receipt.json",
+    "sha256": "6e479bdaf3a0cf58b3afd1869c2317b9799e7dfa2e92c1fc9332730e7a7f86e9"
+  },
+  "new_receipt_bound_files": 8,
+  "new_semantically_reviewed_files": 7,
+  "new_source_batch_bytes": 490241,
+  "original_sources_or_reviews_modified": false,
+  "preserved_previous_review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\LOADER-BACKEND-REVIEW.json",
+    "prior_reviewed_source_pins_rechecked": 10,
+    "sha256": "fe20e7528601fd16df122b04ceb4caab7f785ac448863eaa5b9ad17f876aaaba"
+  },
+  "proposed_initialization": {
+    "condition": "Static compiled registrations and OS dependency/module initialization are separate from post-load registry checks",
+    "forbidden": [
+      "ggml_backend_load_all",
+      "ggml_backend_load_all_from_path",
+      "ggml_backend_init_best",
+      "ambient backend discovery",
+      "GPU or RPC fallback",
+      "inference or context creation"
+    ],
+    "order": [
+      "Load approved exact modules under module policy",
+      "ggml_backend_load exact pinned CPU path",
+      "Require returned provider and sole registry to match approved CPU implementation",
+      "llama_backend_init once with nonempty registry",
+      "Typed default params plus conservative vocabulary-only overrides",
+      "Explicit ordered three-shard load",
+      "No context/graph/decode; bounded recognizer only",
+      "Free samplers then model then paired backend free and owned process exit"
+    ],
+    "selected": "explicit_pinned_CPU_backend_then_once_llama_backend_init",
+    "unselected_alternative": "Omit backend_init/free under an explicit narrow source-based lifecycle deviation; technically plausible metadata route but not selected because public header says call once"
+  },
+  "recorded_at_utc": "2026-10-28T16:54:49.965303+00:00",
+  "remaining_source_prerequisites": [
+    {
+      "basis": "Retained backend-reg.cpp3,221,518; exact library load, symbols, release behavior",
+      "fetched": false,
+      "repository_path": "ggml/src/ggml-backend-dl.h"
+    },
+    {
+      "basis": "CPU registration/initializer implementation for ggml_backend_cpu_reg; candidate path unverified",
+      "fetched": false,
+      "remote_location_verified": false,
+      "repository_path": "ggml/src/ggml-cpu/ggml-cpu.cpp"
+    }
+  ],
+  "review_type": "AI static engineering review; not independent human scientific review",
+  "schema_version": 1,
+  "source_inputs": [
+    {
+      "bytes": 3689,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\ggml\\include\\ggml-alloc.h",
+      "receipt_bound": true,
+      "repository_path": "ggml/include/ggml-alloc.h",
+      "semantic_review_here": false,
+      "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+    },
+    {
+      "bytes": 58995,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\ggml\\src\\gguf.cpp",
+      "receipt_bound": true,
+      "repository_path": "ggml/src/gguf.cpp",
+      "semantic_review_here": true,
+      "sha256": "7505d6a434dc740941a682fd3b476ef9bd9893ab76adf18c9969daa528bd5be5"
+    },
+    {
+      "bytes": 9885,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\src\\llama-model-loader.h",
+      "receipt_bound": true,
+      "repository_path": "src/llama-model-loader.h",
+      "semantic_review_here": true,
+      "sha256": "4eb5318f7b70333015386d612738f507153770e4e5635895b2c1d8355ff22103"
+    },
+    {
+      "bytes": 2215,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\src\\llama-mmap.h",
+      "receipt_bound": true,
+      "repository_path": "src/llama-mmap.h",
+      "semantic_review_here": true,
+      "sha256": "0fff03ce62bc51b1649833f6017fbd84dc0aac7fce3b38484439153fc13ba8f5"
+    },
+    {
+      "bytes": 30403,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\src\\llama-mmap.cpp",
+      "receipt_bound": true,
+      "repository_path": "src/llama-mmap.cpp",
+      "semantic_review_here": true,
+      "sha256": "130601ff8c2b6e16668b70a1dca07cc09ae84328d91bbd5bd259aea5658103e7"
+    },
+    {
+      "bytes": 261602,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\ggml\\src\\ggml.c",
+      "receipt_bound": true,
+      "repository_path": "ggml/src/ggml.c",
+      "semantic_review_here": true,
+      "sha256": "42b238412cda218552812a37329fab95a2f94be6d8bff5139083450d432f796d"
+    },
+    {
+      "bytes": 117958,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\src\\models\\models.h",
+      "receipt_bound": true,
+      "repository_path": "src/models/models.h",
+      "semantic_review_here": true,
+      "sha256": "243c07302980a2d88d4a9ba0359512497dc2cbe5ae2cf771b5252d1a209ca0d3"
+    },
+    {
+      "bytes": 5494,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\sources\\src\\models\\qwen2.cpp",
+      "receipt_bound": true,
+      "repository_path": "src/models/qwen2.cpp",
+      "semantic_review_here": true,
+      "sha256": "7f7f9df9bdaaf7c8aaab900fe046c97936b67d656f66dea445735f1beec695f4"
+    }
+  ],
+  "status": "delegated_loader_review_complete_explicit_cpu_policy_pending_two_source_references",
+  "unchanged_gates": [
+    "Native ABI roundtrip",
+    "Grammar and EOG conformance",
+    "Resource/deadline fit",
+    "Scientific/clinical validation",
+    "Human review",
+    "Fresh-source eligibility"
+  ],
+  "upstream_commit": "848bbda9041decd87904f7eb5a2990863ecce03b"
+}

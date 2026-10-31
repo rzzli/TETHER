@@ -1,0 +1,36 @@
+{
+  "activity": {
+    "CPU_binary_reads": 0,
+    "GGUF_reads": 0,
+    "SDK_constructors": 0,
+    "actual_children": 0
+  },
+  "checker": {
+    "bytes": 4249,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_reporting_seal_before_v5.py",
+    "sha256": "cd966a1eb25dd1fa7985371b9836788445bd663c01ea87dc1406ed284362f9c8"
+  },
+  "errors": [
+    "test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal (__main__.Checks.test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal) (fault='metadata_runtime', code=0)",
+    "test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal (__main__.Checks.test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal) (fault='metadata_runtime', code=2)",
+    "test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal (__main__.Checks.test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal) (fault='metadata_KI', code=0)",
+    "test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal (__main__.Checks.test_report_failure_or_interrupt_never_bypasses_original_lease_cleanup_and_seal) (fault='metadata_KI', code=2)"
+  ],
+  "failures": [],
+  "harness": {
+    "bytes": 11804,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_parent_integration_v4.py",
+    "sha256": "f66d73c0919b232d7bbd455baadd4b3effe211f66a2229e8078ebfabb2b7cc47"
+  },
+  "observed": [],
+  "schema_version": 1,
+  "scope": "Injected pure reporting RuntimeError/KeyboardInterrupt with fake process/file leases only; not an actual leaked host handle or runtime run",
+  "source": {
+    "bytes": 37060,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v4.py",
+    "sha256": "4fc57980d353469e64320a1510207888497e45d36383c8bd738fc9f3f7e531c9"
+  },
+  "status": "failed_expected_before_unconditional_sealer_boundary",
+  "subcases": 4,
+  "tests": 1
+}

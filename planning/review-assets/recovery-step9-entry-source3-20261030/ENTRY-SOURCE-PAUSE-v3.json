@@ -1,0 +1,106 @@
+{
+  "schema_version": 3,
+  "status": "COHERENT_THREE_SOURCE_PAUSE_BEFORE_FIRST_SOURCE3_IMPORT_OR_TEST",
+  "source_scope": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE3-CORRECTION-AUTHORING-SCOPE-v1.json",
+    "bytes": 2352,
+    "sha256": "92efd17643ecaf7ed0d303225fe9616d5fa921cce48c365a904a0b9d49381b0b"
+  },
+  "sources": {
+    "kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+      "bytes": 121192,
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "owner_ops": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_owner_ops_v3.py",
+      "bytes": 39889,
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "file_view": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_file_view_v3.py",
+      "bytes": 3614,
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    }
+  },
+  "source_module_map": {
+    "kernel": {
+      "module": "preflight_entry_kernel_v3",
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+      "bytes": 121192,
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "owner_ops": {
+      "module": "preflight_owner_ops_v3",
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_owner_ops_v3.py",
+      "bytes": 39889,
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "file_view": {
+      "module": "preflight_file_view_v3",
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_file_view_v3.py",
+      "bytes": 3614,
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    }
+  },
+  "captured_dependency": {
+    "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+    "bytes": 55497,
+    "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+  },
+  "source_delta": {
+    "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-CORRECTION-DELTA-v3.json",
+    "bytes": 3179,
+    "sha256": "7b20af8b6984d2ded86c044ef51b35d60c075232d2a3e8120d7af94a4cc3492a"
+  },
+  "source2_pause": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE-PAUSE-v2.json",
+    "bytes": 5308,
+    "sha256": "2fc856163278a6521325b4865f8be77c148f72e09f35050fd6b54d60c635a54c"
+  },
+  "source2_actual_before": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE2-DIAGNOSTIC-PROOF-v2.json",
+    "bytes": 337633,
+    "sha256": "a1ff84a198834c4fb5660f79693a65539c9e365d97209b03dfc972764268c459"
+  },
+  "static_checks": {
+    "kernel": {
+      "syntax": "AST_ONLY_PASS",
+      "unresolved_static_globals": []
+    },
+    "owner_ops": {
+      "syntax": "AST_ONLY_PASS",
+      "unresolved_static_globals": []
+    },
+    "file_view": {
+      "syntax": "AST_ONLY_PASS",
+      "unresolved_static_globals": []
+    }
+  },
+  "trusted_stdlib": [
+    "dataclasses",
+    "hashlib",
+    "json",
+    "math",
+    "re",
+    "struct",
+    "types"
+  ],
+  "trusted_codec_bootstrap": "UTF-16-LE preloaded as trusted pre-entry prerequisite",
+  "correction": "Two stopped-call guards only plus coherent v3 names. No current stopped-call cache retry, no report repair, same committed bank facts and original errors, fresh nonstopped cleanup still allowed.",
+  "chronology": "Source1 actual constructor failure and Source2 four-pass/one-fail diagnostic remain unchanged. No Source3 actual evidence exists at this pause.",
+  "execution": {
+    "subject_imports": 0,
+    "subject_tests": 0,
+    "native_or_target_operations": 0
+  },
+  "qualification": {
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

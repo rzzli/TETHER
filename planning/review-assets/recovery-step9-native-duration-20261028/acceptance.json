@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T03:59:53.455838+00:00",
+  "version": "0.3.10",
+  "status": "accepted_native_duration_consistency_engineering_only",
+  "full_tests": {
+    "run": 1737,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "new_regression_tests": 13,
+  "source_pins_rechecked": 324,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "matching_frozen_verifiers": 9,
+  "installed_duration_cases": 8,
+  "real_input_duration_checks": 6,
+  "actual_model_calls": 0,
+  "actual_native_servers": 0,
+  "source_inclusive_simulation_result": {
+    "actual_model_calls": 0,
+    "automatic_retries": false,
+    "budget": {
+      "max_calls": 16,
+      "max_cost_usd": 0,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_retries": 1,
+      "max_seconds": 300
+    },
+    "conservative_unresolved_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "elapsed_seconds": 232.625,
+    "execution_scope": "simulated_native_transport",
+    "fixture_declared_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "input_reserved": 24558,
+    "known_http_attempts": 0,
+    "known_model_calls": 0,
+    "known_simulated_http_attempts": 6,
+    "known_simulated_model_calls": 6,
+    "native_dispatch_attempts": 6,
+    "native_processes": 0,
+    "observed_model_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "output_reserved": 6144,
+    "pure_invocations": 2,
+    "recorded_calls": 0,
+    "recovered_transport_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "role": "evaluation_only",
+    "run_id": "945db421-5c72-48fb-a608-c751b8910901",
+    "schema_version": 1,
+    "scientific_validation": "not_attempted",
+    "simulated_native_calls": 6,
+    "simulated_server_processes": 1,
+    "simulated_transport_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 384,
+      "output_tokens": 384
+    },
+    "source_authority_sha256": "84ff16c264c48daf995dc9533bb42227c7c53964edd4c039eae468286b3d6520",
+    "source_scope": "receipt_verified_collected_case_not_scientific_validation",
+    "strategy": "literal_case_overlap_then_id_v1",
+    "tokenizer_processes": 6,
+    "track": "authority_bound_collected_source_four_arm_simulated_native_v2",
+    "unknown_http_attempts": 0,
+    "unknown_model_calls": 0,
+    "unknown_simulated_model_calls": 0,
+    "receipt_sha256": "eb04ce0235a44084b9a3fc6205d86a44f8cfc0e58e64d18c7e78b300422307a4",
+    "sealed_elapsed_seconds": 295.9219999999041
+  },
+  "provider_spend_usd": 0,
+  "new_model_downloads": 0,
+  "outer_execution_seconds": 295.9219999999041,
+  "case_budget_seconds": 300,
+  "observed_time_margin_seconds": 4.078000000095926,
+  "actual_native_case_feasibility": "not_established",
+  "grammar_conformance": "unverified",
+  "scientific_validation": "not_established",
+  "human_reviews": "pending",
+  "entire_R09_complete": false,
+  "native_R07_stop_unchanged": true,
+  "old_039_artifacts_modified": false,
+  "wheel": {
+    "path": "data/cache/recovery-step9-duration-wheel-20261028/dist/asof_target_agents-0.3.10-py3-none-any.whl",
+    "sha256": "b6f9ea34bafcc6f94cfa7761dae7e27373a0651c82f88ed4698eefc86d67b790",
+    "bytes": 265226
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-duration-verifier-0310-20261028/asof_target_agents-0.3.10-py3-none-any.whl",
+    "sha256": "b6f9ea34bafcc6f94cfa7761dae7e27373a0651c82f88ed4698eefc86d67b790",
+    "bytes": 265226
+  },
+  "evidence": [
+    {
+      "path": "data/cache/r09-duration-installed-20261028/guarded-installed-verification.json",
+      "sha256": "b36d1b38290758a39847cd71069c54a7b24a0199aed8a88adf303edc5e34a883",
+      "bytes": 16762
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/INSTALLED-REPLAY.json",
+      "sha256": "877e05486ff4ded2739bd67e5709acf10bb6dd93b50744c2311dd15cf61a9356",
+      "bytes": 3318
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/INSTALLED-RELOCATION.json",
+      "sha256": "3a40dd58a7da0e21cecfa2c99925b60102dce638e0223a38168faa1893b689d6",
+      "bytes": 3501
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/full-validation.json",
+      "sha256": "aee0f03011e9999c460c0c7f27a32bf983de06d22b8b2b0dfb673a1ad338150a",
+      "bytes": 473
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/code-validation.json",
+      "sha256": "7892b4108f5579a1b4a9cc693cc8940887699d381aee6c958acfbb56162269a9",
+      "bytes": 36745
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/CONTRACT.md",
+      "sha256": "9b2d73093dcf7ee401e9933f439457d1d8fa9eb717818625352c8ee5eeef4606",
+      "bytes": 1912
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/compatibility-profile-review.md",
+      "sha256": "0e94bd2d106364af51dca9ba8636c965f344e89e7a2fcb71763de27af9ceb091",
+      "bytes": 1218
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/DEVELOPMENT-FINDINGS.md",
+      "sha256": "3bfd3862504e2bd0bdd102b3cb7223df3528e0db0ab589277d09deb19d5dfc86",
+      "bytes": 3742
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/DURATION-REGRESSIONS-BEFORE.log",
+      "sha256": "5e7ce17c5dd462d2f944b4c12923f37b3502ec8e420dac11be75f2f705f60587",
+      "bytes": 17000
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/DURATION-COMPONENT-FOCUSED.log",
+      "sha256": "22b03635de4260f60c36a6d58363487c82d60f9d0e2eadbdc7a95181d8a510b7",
+      "bytes": 4646
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/NATIVE-CONTROLLER-FOCUSED.log",
+      "sha256": "646d99b513e6bacff56ac904c27c204b6aa25b935d635e9ae31dbe2da0984839",
+      "bytes": 12955
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/RECORDED-REGRESSIONS.log",
+      "sha256": "52e86828237beae031c016b75e9a78008a756bad00e546ffbd994518a43d6ab8",
+      "bytes": 1406
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/TARGETED-COMPLETION.json",
+      "sha256": "e92832ee54bda153165c2fb3a55e72ce94d9758285dac4ba1cf938d481a9bc2a",
+      "bytes": 2848
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/VERSION-BOUNDARY.json",
+      "sha256": "616483e10c6511b46c471120f4e56da6106f9289c51e33de9d3d8231b7a395a5",
+      "bytes": 472
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "sha256": "728f542b4ce14c8f6dfb8389c3909dbe8bbf4aea2733060bb47d648e6684146f",
+      "bytes": 6200
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/STAGE-TIMING-AUDIT.json",
+      "sha256": "9f534a85ca16d4a8719939c05f7aa647e647d322395141f39071436b180e177f",
+      "bytes": 31110
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/stage_timing_audit.py",
+      "sha256": "09242f2c076be87d25622d59c358472a5ef4fdeb37ad1278fc8b4c014bb503d7",
+      "bytes": 8889
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/SIMULATION-PROTOCOL.json",
+      "sha256": "bd4c92a9c5c9c602e67d2d07f90fe3584cb0016c038314996249a1ab70fa6594",
+      "bytes": 2042
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/SIMULATION-QUALIFICATION.json",
+      "sha256": "094df802fd6bbd1184ee5846b102300a65638087ae45bc3f0e810eb840ed3d4b",
+      "bytes": 5682
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/WHEEL-ENVIRONMENTS.json",
+      "sha256": "2599dc7916d5dea5de1318e3c807f39dd7c650897c250ca06c43b995dfe38cee",
+      "bytes": 145835
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-VERIFIER-CHECKS.json",
+      "sha256": "2c6ebaf22c4127a9ed7301acb3844bd55d2a5251cda4d12ba8a1fdf33e451824",
+      "bytes": 14125
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/qualify_simulated.py",
+      "sha256": "7e3ab477d6964d55d7c1deaddaccb6cf74b0724e8bb6b41886fabfbbb5cea759",
+      "bytes": 10579
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/verify_native_installed.py",
+      "sha256": "7b4317c1a3982c6e86977127e6fd2b64f60afb0808e79e60c8ae432b2ccbd9e2",
+      "bytes": 6927
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/verify_default_installed.py",
+      "sha256": "0a8266b481628900f4553f873d16ac5302d328a80475fa51d7e75027a6caf9cf",
+      "bytes": 13530
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "sha256": "12c53dbdda7091b47974c3fba2d41515ca45e99538c9c4f2d9fd922289d5dadd",
+      "bytes": 4735
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-031-AFTER.json",
+      "sha256": "473a0b390903d26e3dbfa69ec1cd38652823027fe8594f7d8a2acd4060b86ded",
+      "bytes": 978
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-032-AFTER.json",
+      "sha256": "b39c59717aec11e97e35808b4b3ed83269f4e513551c0fac7d65fb9360e9af1b",
+      "bytes": 1000
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-033-AFTER.json",
+      "sha256": "465c5c62b916ea3eaa21bb0e676fbc71786d6e2a7d87aeb24fc10b8f05f7ab44",
+      "bytes": 1106
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-034-AFTER.json",
+      "sha256": "3cbc66e757d70e2c477d6a8045d0554499599e616dadab2d7b313014788fac0f",
+      "bytes": 943
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-035-AFTER.json",
+      "sha256": "59ba648d6dc83f8579ea7f6c83431e91cd712e092ee2fbaca57d64b73e159cbd",
+      "bytes": 1393
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-036-AFTER.json",
+      "sha256": "03d305ce29a29ad8be3ad37679c782cb729dc1cf54760f4c46522100a377a5d5",
+      "bytes": 1877
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-037-AFTER.json",
+      "sha256": "ff8fa62f6c32576314b285e74679a28c58fb01f317b8f423fbda906e0c80ab32",
+      "bytes": 2448
+    },
+    {
+      "path": "data/cache/r09-duration-frozen-038-20261028/guarded-installed-verification.json",
+      "sha256": "1e25aed9019acb32ea801e25e67f94b3cc95e20c633d478bc728924966c1a266",
+      "bytes": 14800
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-039-AFTER.json",
+      "sha256": "4ee936a61d041147e5e07d67ff449ad1a259e6154edce157e632b62004042519",
+      "bytes": 3476
+    }
+  ],
+  "remaining": [
+    "Typed actual-DLL ABI smoke and native converter qualification under frozen protocol",
+    "Native document/EOS or vocabulary/EOG qualification if conversion eligible",
+    "Fresh-case/source sufficiency, independent human references and R10-R16 scientific gates"
+  ]
+}

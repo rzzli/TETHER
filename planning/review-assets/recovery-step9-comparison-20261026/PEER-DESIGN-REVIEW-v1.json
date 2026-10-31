@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T18:45:59.232223+00:00",
+  "role": "planning_only",
+  "review_type": "AI engineering design review; no human/scientific acceptance",
+  "status": "supports_bounded_recorded_implementation_after_current_runtime_acceptance",
+  "inputs": [
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PLAN-v2.json",
+      "sha256": "33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52",
+      "bytes": 3868
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PREPARATION-CHECK-v2.json",
+      "sha256": "3ba206a5b2de41f9f26d3ecb46994c010d902a01f74eb6e9f34123e280c7a5aa",
+      "bytes": 2470
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PREPARATION-PINS-v2.json",
+      "sha256": "2d0c2c162fe19edb376e065ac96ccb863459fcd415687f972acad7915601b021",
+      "bytes": 2907
+    },
+    {
+      "path": "data/cache/recovery-step9-peer-tests/comparison-v2-checks.json",
+      "sha256": "ff2278f2f4b91f34809b53bc7b4fadebd3f4f8ee7c8592da05e75551cbf369a3",
+      "bytes": 759
+    }
+  ],
+  "checks_passed": [
+    "All sixteen original v1 artifact pins and sixteen v2 pins match.",
+    "All twelve non-dispatchable payload hashes and decoded source requests match authenticated original synthetic fixtures.",
+    "Per-fixture shared Budget defaults unchanged; six stages reserve31715/28503 input and6144 output.",
+    "Schema changes only narrow source aliases/pointers and request claim cap; original answer-state conditions remain.",
+    "Existing postvalidator accepts invented legal-state fixtures and rejects partial with null abstention_reason.",
+    "V2 guide consistently names abstention_reason and distinguishes input bounds from active output limits.",
+    "Sources remain identical at every stage; source-ID history does not add/filter evidence.",
+    "VB adaptation explicitly discloses rewritten roles, source-ID-only history, missing original tools/models/orchestrator and changed subset policy."
+  ],
+  "implementation_requirements_not_yet_verified": [
+    "Build history only from verified same-run/same-arm accepted predecessor cells with exact source/request/response/receipt bindings; caller hashes or IDs are insufficient.",
+    "Keep history outside evidence ancestry; no human/gold/evaluator packet or arbitrary external fixture shortcut.",
+    "Use precisely measured semantic_data prompt projection; execution provenance must not silently enlarge prompts.",
+    "Recheck whole-fixture reservations and one shared monotonic deadline, including pure computation time; do not reset budgets at arms/stages.",
+    "Retain failures/unrun descendants and zero retries; fixture-declared token usage is not measured model usage.",
+    "Use strict postvalidation with no JSON/state/pointer/reasoning repair; materialized quote bytes remain separate from original generated text.",
+    "Do not route pure baselines through fake model dispatch/accounting.",
+    "Installed recorded execution must reuse existing StudySession/callback/proof helpers and avoid planning/tools imports."
+  ],
+  "minor_editorial_followup": "MD statement that both fixtures have two aliases should read at most two; orientation has one. No budget/hash computation used a fabricated second alias.",
+  "tight_budget_warning": "synthetic-context input headroom is285; any added framing requires remeasurement and must fail without source truncation or ceiling increase if it no longer fits.",
+  "not_established": [
+    "Runtime stage chain implementation",
+    "Native JSON-schema grammar support",
+    "Real-source admission",
+    "Actual model capability or output fit",
+    "Scientific entailment/usefulness",
+    "Fresh case or human-reference qualification",
+    "End-to-end retrieval",
+    "Full Virtual Biotech reproduction",
+    "R09 completion"
+  ],
+  "model_calls": 0,
+  "runtime_or_test_edits": false,
+  "clinical_labels_or_human_answers_read": false
+}

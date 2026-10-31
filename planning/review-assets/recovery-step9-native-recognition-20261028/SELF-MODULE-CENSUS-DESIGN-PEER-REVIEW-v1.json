@@ -1,0 +1,60 @@
+{
+  "context_assessment": {
+    "bytes": 9141,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\APPHELP-CURRENT-MODULE-POLICY-ASSESSMENT-v1.json",
+    "sha256": "4b9048ccaa1be5d729818cd853b4bdda1ecad837f586eae440704fcfc2cca7a3"
+  },
+  "contract": {
+    "bytes": 8879,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CONTRACT-v1.json",
+    "sha256": "5bcde6482793961eb20ec10c7bb9002747f42a5670ff227bee6745d65b8caf41"
+  },
+  "design": {
+    "bytes": 8770,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-DESIGN-v1.md",
+    "sha256": "79096837cd66f28db8129ccf46baa34be4342c5d7f48345c2d8ac6448bd81a40"
+  },
+  "implementation_review_focus": [
+    "Verify the final branch actually returns before Api on every census outcome, including all-approved entries; reject --abi/--recognize/wrong executable/runtime in the census parent.",
+    "At exactly64 retained entries, the64th Next call must distinguish natural end from an extra65th entry; caps cannot fabricate completion.",
+    "Record successful query error status without stale GetLastError; errors and clipped paths must not invent a full returned length.",
+    "Confirm total-artifact reserve/framing accounting and append/flush results; publication failure or partial bytes must veto complete collection even when a summary is written.",
+    "The validator must recompute ordinal/count/hex/type/byte/completeness relations and keep unknown/unlisted metadata separate from approvals; no filesystem lookup on reported paths.",
+    "Review exact separately pinned status-only sealer AST, globals/closure binding, failure matrix and terminal universe before any activation."
+  ],
+  "limitations": [
+    "Source/design only; planned validators/formatters/sealer are not implemented or executed by this record.",
+    "Native DLL/CRT initializers may have effects during loading; zero explicit queries is not zero OS side effects.",
+    "A current-process snapshot has documented API exclusions and cannot establish load cause, full process lifetime or unknown file/loaded-byte identity.",
+    "No ABI/model/grammar/recognition/scientific acceptance follows."
+  ],
+  "material_blockers": [],
+  "recorded_at_utc": "2026-10-29T00:41:04.843785+00:00",
+  "remaining_gates": [
+    "Root accepts this design before implementation.",
+    "Source-only implementation and pure fault evidence require independent exact review.",
+    "Bounded build protocol/compile verification and a distinct fixed census parent/protocol each need separate review/root decisions.",
+    "No current image read, census API, compiler, child or policy edit is authorized by this design peer record."
+  ],
+  "reviewed_properties": [
+    "One separately named --module-census role after the same core4 load order, before Api construction, with unconditional return and zero target export resolution/public C queries. No baseline or causal phase is included.",
+    "Exactly one non-inherited current-process module snapshot; at most64 retained entries, First1/Next64/path-query64. No other PID/process/thread/heap enumeration and no automatic ERROR_BAD_LENGTH retry.",
+    "At most2MiB total child structured artifacts including framing, with64KiB reserved for attempt/terminal/error records. Existing64KiB row/stdout/stderr and parent/Job/time/memory limits remain. Cap exhaustion is partial, never a reason to expand bounds.",
+    "Raw snapshot name and one bounded query path response remain distinct, with return/error/timing, clipping, actual-length-unknown semantics, prefix/UTF16 code units and optional UTF8. Reported strings are never followed as files or loaded/pinned.",
+    "Rows are append/flushed before classification. Unknown entries do not stop capture, and classification against the existing list is metadata-only rather than eligibility.",
+    "Natural end, metadata completeness, publication, parent resource validation and sealed integrity are separate. Positive census needs natural ERROR_NO_MORE_FILES plus durable lossless untruncated identity metadata/counts and existing clean parent conditions; no full lifetime/system/datafile inventory is claimed.",
+    "A distinct strict census validator/status is required. Positive census with unlisted names must keep ABI_eligibility_established=false and may not invoke any typed target API.",
+    "Original SDK3bf and its gate/sealer remain unchanged. A separately pinned make_sealer copy may change only the success literal, with whole-function AST normalization proof and direct call from new parent, no SDK monkeypatch.",
+    "Primary/interruption/late-close/publication/postseal vetoes and cleanup-only cancellation persist. Planned fake tests cover caps, natural/end errors, clipping/hex, publication, unlisted completeness, fabricated counts/flags, argv and literal-only sealer behavior.",
+    "Current apphelp metadata does not identify earlier failures, authenticate file bytes or establish a compatibility fix/load cause. All unknowns are reviewed as a batch; any later image inspection/policy revision requires separate scope and root decision."
+  ],
+  "reviewer_activity": {
+    "CPU_GGUF_model_payload_reads": 0,
+    "SDK_or_target_API_calls": 0,
+    "compiler_or_children": 0,
+    "implementation_or_policy_edits": 0,
+    "unknown_image_opens": 0
+  },
+  "schema_version": 1,
+  "status": "CLEAR_prospective_self_census_design_for_root_implementation_decision_only"
+}

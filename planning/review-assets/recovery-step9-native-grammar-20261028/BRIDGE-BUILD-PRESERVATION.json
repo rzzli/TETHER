@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "status": "three_build_attempts_preserved_v3_static_build_passed",
+  "records": [
+    {
+      "build": "v1",
+      "status": "failed",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\TYPED-CONVERTER-BRIDGE-BUILD.json",
+        "sha256": "fb78a6f6d847527ac8d0cfaeece6fda9dff8bf12c1eb12de9d6186688c60585a",
+        "bytes": 4427
+      },
+      "cache": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z",
+      "copied_records": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\build-helper.py",
+          "sha256": "d8b1b3167dde9c2a0c063efa0761df68bfa520dd246f16b53d08ad983e240bad",
+          "bytes": 15031
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\BUILD-CONTRACT.md",
+          "sha256": "8da8961895616872e2b3fa5825aee731fe350725cf1374077190e079c29f5ba5",
+          "bytes": 3483
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\HEADER-CLOSURE.json",
+          "sha256": "c66884e79fb75d82d6fe6932883de44b988c008d9de486ca2e634acb4bb4779e",
+          "bytes": 4108
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\BUILD-RESULT.json",
+          "sha256": "fb78a6f6d847527ac8d0cfaeece6fda9dff8bf12c1eb12de9d6186688c60585a",
+          "bytes": 4427
+        }
+      ],
+      "immutable_build_inputs_outputs": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\typed_converter_bridge.cpp",
+          "sha256": "e4c9532b74532e548192304324cae139b5883d9a25def4c6588ae909e4b90867",
+          "bytes": 15755
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\approved_runtime.hpp",
+          "sha256": "025f2b9553080f9acc71832a5642ae41a91c2199ee9d34cecd9c045250b1b7a8",
+          "bytes": 3409
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\llama-common-typed.def",
+          "sha256": "ba0802d683b6acdb873561ce68a7e8fc1136557f626b6e18b2825664af838882",
+          "bytes": 388
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\llama-common-typed.lib",
+          "sha256": "31d0dcf893113fe60a758ad45dfb766f9912fea86a4e305c9e1b0e965b6a0c07",
+          "bytes": 3826
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\headers\\json-schema-to-grammar.h",
+          "sha256": "7dc12dd8b3513b97293f22c2f87f0918e476fac3ba8895e8cb9671110401ea07",
+          "bytes": 743
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\headers\\json-schema.h",
+          "sha256": "57933a181ec0e84cbba1abea7fd898dc03e452d7de1a35795b787cee679d02af",
+          "bytes": 6095
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\headers\\json.h",
+          "sha256": "a352f31307f1be2bdb34c027b876f42a1c5d1ea775cc8e4f11d703b16c40d22f",
+          "bytes": 13476
+        }
+      ],
+      "note": "Older authored_source pointer is historical; exact compiled source is preserved in this cache"
+    },
+    {
+      "build": "-v2",
+      "status": "typed_actual_converter_bridge_built_not_executed",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\TYPED-CONVERTER-BRIDGE-BUILD-v2.json",
+        "sha256": "0500ead0bbd79dc30f4c7da4ea47cd84ce2675355264d3a8dd07885c8026fdbd",
+        "bytes": 23717
+      },
+      "cache": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z",
+      "copied_records": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\build-helper.py",
+          "sha256": "c60bfed19a0470ae2e52de94b612938e268e3e6d25661be71581f0909a799dbd",
+          "bytes": 15670
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\BUILD-CONTRACT.md",
+          "sha256": "8da8961895616872e2b3fa5825aee731fe350725cf1374077190e079c29f5ba5",
+          "bytes": 3483
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\HEADER-CLOSURE.json",
+          "sha256": "c66884e79fb75d82d6fe6932883de44b988c008d9de486ca2e634acb4bb4779e",
+          "bytes": 4108
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\BUILD-RESULT.json",
+          "sha256": "0500ead0bbd79dc30f4c7da4ea47cd84ce2675355264d3a8dd07885c8026fdbd",
+          "bytes": 23717
+        }
+      ],
+      "immutable_build_inputs_outputs": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.cpp",
+          "sha256": "e4c9532b74532e548192304324cae139b5883d9a25def4c6588ae909e4b90867",
+          "bytes": 15755
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\approved_runtime.hpp",
+          "sha256": "025f2b9553080f9acc71832a5642ae41a91c2199ee9d34cecd9c045250b1b7a8",
+          "bytes": 3409
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.def",
+          "sha256": "63d52034dd9415d9401cc50d6ce361c8ec46817ec07ec026bd7434c9741ee261",
+          "bytes": 378
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.lib",
+          "sha256": "812d7ef41ef393122a9943b261e426d76bdf24b35a381c07fa3adeb63713175c",
+          "bytes": 3786
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json-schema-to-grammar.h",
+          "sha256": "7dc12dd8b3513b97293f22c2f87f0918e476fac3ba8895e8cb9671110401ea07",
+          "bytes": 743
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json-schema.h",
+          "sha256": "57933a181ec0e84cbba1abea7fd898dc03e452d7de1a35795b787cee679d02af",
+          "bytes": 6095
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json.h",
+          "sha256": "a352f31307f1be2bdb34c027b876f42a1c5d1ea775cc8e4f11d703b16c40d22f",
+          "bytes": 13476
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.exe",
+          "sha256": "ecfe2421a1b2006b5a10c076a654fd627e0582bab116cae69a6857aa5ea64af6",
+          "bytes": 89600
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.obj",
+          "sha256": "a773826a7b910d776f67444d8041edc86024bdd9c61cdaa5c72059d389175c6b",
+          "bytes": 434791
+        }
+      ],
+      "note": "Older authored_source pointer is historical; exact compiled source is preserved in this cache"
+    },
+    {
+      "build": "-v3",
+      "status": "typed_actual_converter_bridge_built_not_executed",
+      "result": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\TYPED-CONVERTER-BRIDGE-BUILD-v3.json",
+        "sha256": "2366ad20fb04af44354a92dffdca87fa565186e0fbd24517956b031538def08a",
+        "bytes": 23745
+      },
+      "cache": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z",
+      "copied_records": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\build-helper.py",
+          "sha256": "0567591358da2bc70134a480e3bc4310561e843a4a7872c4eea6ece087ac49b6",
+          "bytes": 15670
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\BUILD-CONTRACT.md",
+          "sha256": "8da8961895616872e2b3fa5825aee731fe350725cf1374077190e079c29f5ba5",
+          "bytes": 3483
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\HEADER-CLOSURE.json",
+          "sha256": "c66884e79fb75d82d6fe6932883de44b988c008d9de486ca2e634acb4bb4779e",
+          "bytes": 4108
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\BUILD-RESULT.json",
+          "sha256": "2366ad20fb04af44354a92dffdca87fa565186e0fbd24517956b031538def08a",
+          "bytes": 23745
+        }
+      ],
+      "immutable_build_inputs_outputs": [
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\typed_converter_bridge.cpp",
+          "sha256": "3e00990253fe29b5a76d177c4d5998642eded5c73e7eef04274e247e133147d0",
+          "bytes": 16550
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\approved_runtime.hpp",
+          "sha256": "025f2b9553080f9acc71832a5642ae41a91c2199ee9d34cecd9c045250b1b7a8",
+          "bytes": 3409
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\llama-common-typed.def",
+          "sha256": "63d52034dd9415d9401cc50d6ce361c8ec46817ec07ec026bd7434c9741ee261",
+          "bytes": 378
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\llama-common-typed.lib",
+          "sha256": "a21e9405e30ba6782066108a14d2394877d0bf424a57580f2aa68a2e62aed3ed",
+          "bytes": 3786
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\headers\\json-schema-to-grammar.h",
+          "sha256": "7dc12dd8b3513b97293f22c2f87f0918e476fac3ba8895e8cb9671110401ea07",
+          "bytes": 743
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\headers\\json-schema.h",
+          "sha256": "57933a181ec0e84cbba1abea7fd898dc03e452d7de1a35795b787cee679d02af",
+          "bytes": 6095
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\headers\\json.h",
+          "sha256": "a352f31307f1be2bdb34c027b876f42a1c5d1ea775cc8e4f11d703b16c40d22f",
+          "bytes": 13476
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\typed_converter_bridge.exe",
+          "sha256": "ea5064b8e2b68aa193efb0e129ef1da6087809d1a6fb21facccefaad70c362ca",
+          "bytes": 89600
+        },
+        {
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\typed_converter_bridge.obj",
+          "sha256": "e748ca0b05363c75a2894f88db3575d1aeef34fcdab98075d953b99ed430096e",
+          "bytes": 436534
+        }
+      ],
+      "note": "Older authored_source pointer is historical; exact compiled source is preserved in this cache"
+    }
+  ],
+  "final_executable": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033334Z\\typed_converter_bridge.exe",
+    "sha256": "ea5064b8e2b68aa193efb0e129ef1da6087809d1a6fb21facccefaad70c362ca",
+    "bytes": 89600
+  },
+  "bridge_executions": 0,
+  "llama_libraries_loaded": 0,
+  "compiler_processes_terminal": true,
+  "execution_authorization": "Not granted",
+  "abi_compatibility": "unverified",
+  "native_grammar_conformance": "unverified"
+}

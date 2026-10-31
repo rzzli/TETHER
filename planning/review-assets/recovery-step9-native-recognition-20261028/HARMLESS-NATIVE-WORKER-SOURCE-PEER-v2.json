@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "review_id": "native-harmless-worker-v2-source-delta-peer-20261028",
+  "recorded_at_utc": "2026-10-28T20:47:17.663183+00:00",
+  "status": "CLEAR_source_delta_only_separate_build_protocol_review_pending",
+  "compilation_or_execution_authorized": false,
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_worker_native_v2.cpp",
+      "bytes": 16593,
+      "sha256": "c22e5b781a2beb1fb82c70382b036b608582dad19f60b36540f1bc51832d1f60"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-WORKER-DESIGN-v2.md",
+      "bytes": 4838,
+      "sha256": "ba0f6940a4e0fed57501d94fb5bf8253c4e86b95721a2e4e6e747b9f5d4f5d88"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-WORKER-SOURCE-PEER-v1.json",
+      "bytes": 4930,
+      "sha256": "4484919b60800cc9df2c1269a98e244e6ff780aae9d6bad99120e45418e4b9c7"
+    }
+  ],
+  "findings": [],
+  "checks": [
+    "Only resource-result unexpected-success evidence changes; all code before resource_result and from error_bytes onward is identical.",
+    "Already returned child PID/thread IDs, first/final wait status, termination outcome/error, reaped and explicit thread/process close outcomes are retained. Rejected association path uses null fields rather than fabricated values.",
+    "No new API family, descendant loop, retry or target path is added. Exactly one own-executable creation attempt remains; created=true still fails the existing final assertion regardless of cleanup outcome.",
+    "Normal argc/path/hash/atomic marker/overflow/sleep/abort behavior and /MD design remain unchanged; v1 stays intact."
+  ],
+  "limitations": [
+    "Source-only comparison; no compilation, checker, Windows API or worker execution.",
+    "Wait result codes are retained; the source does not instrument arbitrary initializer/OS effects or establish the Python cumulative-total cause.",
+    "Exact compiler/protocol/dependency/PE review and separate root decision remain required; any worker qualification requires another explicit protocol."
+  ],
+  "activity": {
+    "compiles_links": 0,
+    "Windows_API_calls": 0,
+    "child_dispatches": 0,
+    "helper_executions": 0,
+    "source_mutations": 0
+  }
+}

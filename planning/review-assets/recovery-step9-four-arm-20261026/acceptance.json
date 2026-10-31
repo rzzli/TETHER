@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T21:35:20.130970+00:00",
+  "version": "0.3.6",
+  "status": "accepted_invented_authority_bound_four_arm_recorded_engineering_only",
+  "full_tests": {
+    "run": 1646,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "new_regression_tests": 30,
+  "independent_peer_tests": 13,
+  "post_final_patch_session_capacity_tests": 34,
+  "source_pins_rechecked": 312,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "matching_frozen_verifiers": 5,
+  "fixture": "invented-six-v1",
+  "retrieval_policy": "literal_case_overlap_then_id_v1",
+  "selected_ids": [
+    "id03",
+    "id04"
+  ],
+  "arms": 4,
+  "recorded_cells": 6,
+  "pure_results": 2,
+  "tokenizer_children": 6,
+  "prior_failed_qualification_tokenizer_children": 2,
+  "total_children_across_these_two_qualification_attempts": 8,
+  "local_mirror_bytes": 9078923323,
+  "mirror_source_unchanged": true,
+  "actual_model_calls": 0,
+  "provider_spend_usd": 0,
+  "input_reserved": 14315,
+  "output_reserved": 6144,
+  "fixture_declared_usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 384,
+    "output_tokens": 384
+  },
+  "execution_outer_seconds": 192.7029999999795,
+  "sealed_elapsed_seconds": 192.68700000003446,
+  "replay_seconds": 29.359000000054948,
+  "peak_parent_working_set_bytes": 36966400,
+  "child_peak_memory_bytes": null,
+  "child_memory_reason": "Not independently instrumented",
+  "real_source_expansion": false,
+  "nontrivial_real_retrieval_demonstrated": false,
+  "scientific_validation": "not_established",
+  "human_reviews": "pending",
+  "entire_R09_complete": false,
+  "native_R07_stop_unchanged": true,
+  "default_byte_policy_unchanged": true,
+  "remaining": [
+    "Nontrivial real evidence-access qualification",
+    "Fresh-case and independent human references",
+    "Prospectively permitted model-quality qualification; existing native version remains stopped",
+    "R10-R16 scientific and conditional programme"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-four-arm-wheel-20261026/dist/asof_target_agents-0.3.6-py3-none-any.whl",
+    "sha256": "3ae0ecf76ef1a8e6e462c2c563578c5aa13842d2e294063013f39f15341b10dc",
+    "bytes": 242363
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-four-arm-verifier-036-20261027/asof_target_agents-0.3.6-py3-none-any.whl",
+    "sha256": "3ae0ecf76ef1a8e6e462c2c563578c5aa13842d2e294063013f39f15341b10dc",
+    "bytes": 242363
+  },
+  "evidence": [
+    {
+      "path": "data/cache/r09-four-arm-installed-20261027/guarded-installed-verification.json",
+      "sha256": "02a3b13d893eab0e8153afc262453e5cbe0eefc726aa8fb7b218bdc29e6d431c",
+      "bytes": 10718
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/full-validation.json",
+      "sha256": "66a6525b951a7a26e9c3eb93b8baec6033613f803af9574df328226b6afa5cf8",
+      "bytes": 473
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/code-validation.json",
+      "sha256": "7c678f9b436ab11284c42de0345c9445b885a8ba9c99bb6819ea981d6224aadd",
+      "bytes": 35364
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v2.md",
+      "sha256": "8140e6c7ca169a1d86bc71d4bf883eb7f61f6b792afaafa95623181a4832b562",
+      "bytes": 12558
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v2.json",
+      "sha256": "5e133d02ec71ea53117ade1a998df73e54b116e7ac835a1c1485f297eace1a70",
+      "bytes": 6847
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/INDEPENDENT-CONTRACT-REVIEW-v2.json",
+      "sha256": "ffa541b821c145a0df54b5401348f0105f07a6c4ee2784d845226e86e8011cd2",
+      "bytes": 2585
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/INDEPENDENT-ENGINEERING-REVIEW.json",
+      "sha256": "229898584e7c0a4e5d0e2592442709d129424ecd4cfa9df3cbeb7cd78a89dd79",
+      "bytes": 5635
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/FROZEN-VERIFIER-CHECKS.json",
+      "sha256": "64fbfbc7afc67229d9018956aba22cfda5c66d988ce62d83a5ca331616c6d37e",
+      "bytes": 22786
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/QUALIFICATION-PROTOCOL-v1.json",
+      "sha256": "9ee7a7c395f62c4346afcfb4c3c4e55f16c524627c05066aadd566c93bea561e",
+      "bytes": 1625
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/QUALIFICATION-PROTOCOL-v2.json",
+      "sha256": "5af6e97a48b6cf7bb0470f5a5f0895571ed1852425f0d26f13794aa290c4122a",
+      "bytes": 2496
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/QUALIFICATION-FAILURE-v1.json",
+      "sha256": "fc87c38c8cb28034074d9314ffd7b3cf0d4105f0daac33c096e1d0a409247435",
+      "bytes": 681
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/QUALIFICATION-FAILURE-CLOSEOUT-v1.json",
+      "sha256": "9e1a18316153b018966a5f0c18791815bd1727963a7dc629db2b15e66426eeb7",
+      "bytes": 1752
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/MODEL-MIRROR.json",
+      "sha256": "920da7c14c0ddc19ba602c8aed4eed289aa2bef28304cbb1b3497ab7ef3841a9",
+      "bytes": 9548
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/STORAGE-REMEDIATION.md",
+      "sha256": "2bce539c0ce5f486086814358a5aac26b129a28d9718939769063b3d0d2bd565",
+      "bytes": 2039
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/QUALIFICATION.json",
+      "sha256": "326a035ff0c39a9b1b0e684f4aed4575eacf86b37631ba25f1b48bebe2916ed4",
+      "bytes": 4700
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/HELPER-REVIEW.md",
+      "sha256": "894858fc41fae559cf39daeea2418aea8e6c6f052c550b6d72dfcb23b8b41cb1",
+      "bytes": 2204
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/relocation-verification.json",
+      "sha256": "f02873c8d89839090241b70bc7c96a9e9c8fa7bae0e710f22f797674a55c7d6a",
+      "bytes": 1897
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CAPACITY-FOCUSED-FINAL.log",
+      "sha256": "f95471683dc4de79e1aca2697c23cdc0d5b20cb30a161abab3f99795b441c925",
+      "bytes": 5944
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CAPACITY-DOWNGRADE-BEFORE.log",
+      "sha256": "5d420ada9756f2911b1c59f9e45affc476ffe1b1c895ef437714b352cd93dc8d",
+      "bytes": 920
+    }
+  ]
+}

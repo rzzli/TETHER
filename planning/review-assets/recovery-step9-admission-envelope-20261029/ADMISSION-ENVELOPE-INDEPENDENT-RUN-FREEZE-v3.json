@@ -1,0 +1,74 @@
+{
+  "actual_target_API_calls": 0,
+  "chronology": "OS author controls may already have run after the same source pause. Local zero counters apply only to this independent combined runner. The focused methods and their intended-green expectations predate V2 correction.",
+  "focused_regression_methods": 4,
+  "freezer": {
+    "bytes": 3314,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\freeze_admission_envelope_independent_run_v3.py",
+    "sha256": "5e2b1c319f815a0b0f03d871f3f631d71501d2dda4932db41ba1dd87159aeaf7"
+  },
+  "inputs": {
+    "ADMISSION-ENVELOPE-INDEPENDENT-REGRESSION-BEFORE-v1.json": {
+      "bytes": 15493,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-REGRESSION-BEFORE-v1.json",
+      "sha256": "8a02fb18aed5469637e11ff990dacad35e5e4472b3d7ae217c45756ab286be05"
+    },
+    "ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json": {
+      "bytes": 84160,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json",
+      "sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7"
+    },
+    "ADMISSION-ENVELOPE-ROOT-CORRECTION-SCOPE-v2.json": {
+      "bytes": 6140,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-CORRECTION-SCOPE-v2.json",
+      "sha256": "82ff068c7ab2d6864da45a6f547b1266adbb5e278e4412092a3c23930fe3f39b"
+    },
+    "ADMISSION-ENVELOPE-ROOT-RUNNER-CORRECTION-v2.json": {
+      "bytes": 2234,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-RUNNER-CORRECTION-v2.json",
+      "sha256": "97194dda516b87ef6f65f88b0b3c2dc77a006c16393c2d39342422efbd40daff"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-PAUSE-v2.json": {
+      "bytes": 1482,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-PAUSE-v2.json",
+      "sha256": "075026212bb247cc0655ed4fb517b2b8d28059adbb0dfd8c415b9276f84d971b"
+    },
+    "admission_envelope_independent_tests_v1.py": {
+      "bytes": 9524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py",
+      "sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc"
+    },
+    "admission_envelope_regressions_v1.py": {
+      "bytes": 4512,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_regressions_v1.py",
+      "sha256": "5644882f8d67c0121b4967538d3af9eedf200266792bdb0d07b08e0392171e34"
+    },
+    "admission_envelope_v2.py": {
+      "bytes": 17098,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v2.py",
+      "sha256": "ea676476f37974e7e7c6c63062b27c798dec6874a3f8802f20229d13a0a71191"
+    },
+    "run_admission_envelope_independent_v2.py": {
+      "bytes": 12401,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\run_admission_envelope_independent_v2.py",
+      "sha256": "a2c60af1ff63c1c1bf8d21b0443be5dc54ac041dd9c90bfd048599c6a32d4265"
+    },
+    "run_admission_envelope_independent_v3.py": {
+      "bytes": 9718,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\run_admission_envelope_independent_v3.py",
+      "sha256": "79d45135922eba9e0b79fb34737eef39eb2a412bc40b9400106bdd65298c9b89"
+    }
+  },
+  "local_V2_source_imports": 0,
+  "local_V2_subject_tests": 0,
+  "observation_only_delta": "Do not encode input for per-invocation logging, avoiding any incidental coercion of the genuine int-subclass probe. Original inputs are passed untouched; corpus/test/source pins and strict comparisons remain.",
+  "original_methods": 4,
+  "original_payload_operations": 0,
+  "recorded_at_utc": "2026-10-29T18:52:24.189710+00:00",
+  "retained_audit_and_import_map": "Exact audit/active_call from pinned runnerV2; only json,re,types supplied to fresh subject. No old subject/cache fallback.",
+  "runtime_authorized": false,
+  "schema_version": 3,
+  "status": "V2_SOURCE_AND_UNCHANGED_EIGHT_METHOD_BINDINGS_FROZEN_BEFORE_FIRST_LOCAL_REPLAY",
+  "subject_module_name": "admission_envelope_v2",
+  "unique_original_metadata_vectors": 30
+}

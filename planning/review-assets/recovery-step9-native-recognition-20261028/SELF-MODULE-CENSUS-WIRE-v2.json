@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "status": "shared_wire_source_implementation_not_runtime_authority",
+  "mode": "--module-census",
+  "artifacts": {
+    "success": [
+      "attempt.json",
+      "result.jsonl"
+    ],
+    "failure": [
+      "attempt.json",
+      "result.partial.jsonl",
+      "failure.json"
+    ],
+    "attempt_claim": {
+      "schema_version": 1,
+      "mode": "--module-census",
+      "status": "claimed_before_native_load",
+      "draft": true
+    }
+  },
+  "events": {
+    "before_explicit_required_OpenMP_dependency_load": {
+      "dependency_native_initialization_possible": true
+    },
+    "module_census_started": {
+      "schema_version": 1,
+      "mode": "--module-census",
+      "scope": "post_core4_current_process_metadata_only",
+      "pid": "integer",
+      "known_core4_load_stage_returned": true,
+      "Api_constructed": false,
+      "target_C_queries": 0,
+      "ABI_eligibility_established": false,
+      "max_modules": 64,
+      "max_structured_bytes": 2097152,
+      "reserved_terminal_bytes": 65536
+    },
+    "census_call_reserved": {
+      "call_id": "integer contiguous from1",
+      "api": "enum below",
+      "ordinal": "integer|null",
+      "started_ms": "integer elapsed"
+    },
+    "census_call_returned": {
+      "call_id": "same",
+      "api": "same",
+      "ordinal": "same",
+      "ended_ms": "integer elapsed",
+      "ok": "boolean",
+      "error": "integer|null; null on success; immediate GetLastError on failure/clipping",
+      "returned_count": "integer|null",
+      "more_entries": "boolean|null",
+      "buffer_clipped": "boolean"
+    },
+    "module_metadata": {
+      "ordinal": "integer1..64",
+      "snapshot_name": "Wide",
+      "snapshot_name_terminated": "boolean",
+      "path": "Wide|null",
+      "path_query_call_id": "integer",
+      "path_full_utf16_units_known": "integer|null",
+      "path_buffer_terminated": "boolean",
+      "path_contains_NUL": "boolean"
+    },
+    "module_census_enumeration_end": {
+      "entries_recorded": "integer",
+      "entries_returned_at_least": "integer",
+      "natural_end": "boolean",
+      "termination_reason": "natural_end|module_cap|api_error"
+    },
+    "module_census_classification": {
+      "system_directory": "Wide|null",
+      "rows": [
+        {
+          "ordinal": "integer",
+          "category": "enum below",
+          "snapshot_basename_matches_path": "boolean|null",
+          "system_directory_matches": "boolean|null",
+          "system_basename_listed": "boolean|null"
+        }
+      ],
+      "required_report_counts": {
+        "self_executable": "integer",
+        "libomp.dll": "integer",
+        "ggml-base.dll": "integer",
+        "ggml.dll": "integer",
+        "llama.dll": "integer"
+      },
+      "all_required_once": "boolean",
+      "classification_is_eligibility": false
+    },
+    "module_census_complete": {
+      "pid": "integer",
+      "entries_recorded": "integer",
+      "natural_end": true,
+      "metadata_complete": true,
+      "all_prior_rows_durable": true,
+      "required_known_reports_complete": true,
+      "classification_complete": true,
+      "snapshot_close_returned": true,
+      "Api_constructed": false,
+      "target_C_queries": 0,
+      "ABI_eligibility_established": false,
+      "counters": "per API reserved/returned object below",
+      "structured_bytes_reserved_before_complete": "integer attempt + all preceding JSONL raw byte reservations, excluding self",
+      "structured_bytes_written_known_before_complete": "integer attempt + preceding flushed JSONL bytes, excluding self"
+    }
+  },
+  "Wide": {
+    "utf16_units": "integer captured code units",
+    "prefix_utf16_units": "integer retained units",
+    "truncated": "boolean",
+    "pair_cut_adjusted": "boolean",
+    "utf8_conversion": "returned|failed",
+    "utf8": "string|null",
+    "utf16_code_units_hex": "four lowercase hex digits per numeric UTF16 code unit, in sequence"
+  },
+  "apis": {
+    "CreateToolhelp32Snapshot": {
+      "reserved_max": 1,
+      "returned_max": 1,
+      "ordinal": null,
+      "returned_count": null,
+      "more_entries": null
+    },
+    "Module32FirstW": {
+      "reserved_max": 1,
+      "returned_max": 1,
+      "ordinal": null,
+      "returned_count": null,
+      "more_entries": "equals ok"
+    },
+    "Module32NextW": {
+      "reserved_max": 64,
+      "returned_max": 64,
+      "ordinal": "last recorded ordinal",
+      "returned_count": null,
+      "more_entries": "equals ok"
+    },
+    "GetModuleFileNameW": {
+      "reserved_max": 64,
+      "returned_max": 64,
+      "ordinal": "current ordinal",
+      "returned_count": "raw DWORD",
+      "more_entries": null
+    },
+    "CloseHandle": {
+      "reserved_max": 1,
+      "returned_max": 1,
+      "ordinal": null,
+      "returned_count": null,
+      "more_entries": null
+    },
+    "GetSystemDirectoryW": {
+      "reserved_max": 1,
+      "returned_max": 1,
+      "ordinal": null,
+      "returned_count": "raw UINT",
+      "more_entries": null
+    }
+  },
+  "counter_shape": {
+    "CreateToolhelp32Snapshot": {
+      "reserved": "integer",
+      "returned": "integer"
+    },
+    "Module32FirstW": {
+      "reserved": "integer",
+      "returned": "integer"
+    },
+    "Module32NextW": {
+      "reserved": "integer",
+      "returned": "integer"
+    },
+    "GetModuleFileNameW": {
+      "reserved": "integer",
+      "returned": "integer"
+    },
+    "CloseHandle": {
+      "reserved": "integer",
+      "returned": "integer"
+    },
+    "GetSystemDirectoryW": {
+      "reserved": "integer",
+      "returned": "integer"
+    }
+  },
+  "categories": [
+    "self_executable",
+    "pinned_runtime_report",
+    "listed_system_report",
+    "unlisted_report",
+    "unresolved_metadata"
+  ],
+  "comparison": {
+    "algorithm": "Replace slash / with backslash; lowercase ONLY ASCII A..Z code units. No dot/short-name/extended-prefix/Unicode normalization and no filesystem calls. Split parent/basename at last slash/backslash.",
+    "unknown_reported_paths_are_data_only": true,
+    "basename_disagreement_prevents_complete": true
+  },
+  "ordering": [
+    "OpenMP event",
+    "started",
+    "one snapshot call pair",
+    "First call pair",
+    "path call pair then module_metadata; Next call pair; repeat",
+    "enumeration_end",
+    "snapshot CloseHandle call pair",
+    "one GetSystemDirectoryW call pair",
+    "classification",
+    "complete footer on success only"
+  ],
+  "natural_end": "Module32NextW returned ok=false, more_entries=false, error=18; 64th Next true means >=65 entries and module_cap partial",
+  "metadata_complete": "all rows query success and n<32768, terminated and no embeddedNUL, full retained untruncated UTF16, snapshot/path basename agrees; UTF8 optional",
+  "failure": {
+    "tag": "module_census_incomplete",
+    "complete_footer_present": false,
+    "partial_fields": [
+      "reason",
+      "pid",
+      "entries_recorded",
+      "entries_returned_at_least",
+      "natural_end",
+      "metadata_complete",
+      "snapshot_close_returned",
+      "counters"
+    ],
+    "context_key": "module_census"
+  },
+  "stdout_success": {
+    "status": "module_census_child_returned_metadata_requires_review"
+  },
+  "bytes": {
+    "all_child_artifacts": 2097152,
+    "terminal_reserve": 65536,
+    "row_cap": 65536,
+    "path_buffer_units": 32768,
+    "name_prefix_units": 256,
+    "path_prefix_units": 2048,
+    "reserve_before_write_no_rollback": true
+  },
+  "examples": {
+    "complete": {
+      "entries_recorded": 5,
+      "natural_end": true,
+      "metadata_complete": true,
+      "required_known_reports_complete": true,
+      "ABI_eligibility_established": false
+    },
+    "partial_cap": {
+      "entries_recorded": 64,
+      "entries_returned_at_least": 65,
+      "natural_end": false,
+      "reason": "module_cap",
+      "complete_footer_present": false
+    }
+  },
+  "clarifications": {
+    "CloseHandle_scope": "Exactly the owned census Toolhelp snapshot; loader, output and other existing resource closes are outside these counters. Ownership is released before the one attempted snapshot CloseHandle, including failed/publication-error paths; no RAII retry.",
+    "failure_footer": "Collector-partial failures have no complete footer. Rename/commit or later parent failures may follow a footer; every failure marker vetoes census acceptance.",
+    "query_clipping": "n >= capacity is logical ok=false, buffer_clipped=true, and immediate GetLastError is retained. Success n>0 and n<capacity has error=null.",
+    "comparison": "Conservative observational slash replacement and ASCII code-unit fold only; not equivalent to old Unicode/lexical approved_system predicate. Complete rows carry all three comparison booleans.",
+    "negative_predicate": "Snapshot basename/path basename mismatch prevents metadata completeness. Unlisted but complete metadata remains diagnostic-only.",
+    "partial_classification": "All three predicates null and category unresolved_metadata unless snapshot name, path and system directory are fully retained, terminated, unclipped and query-valid. Complete records still require all booleans.",
+    "entry_count": "entries_returned_at_least increments immediately after each successful First/Next return, before return-record publication or post-call deadline checks."
+  },
+  "failure_context_additional_fields": {
+    "snapshot_close_ok": "boolean",
+    "snapshot_close_error": "integer only for observed failed close, otherwise null",
+    "snapshot_close_publication_failed": "boolean"
+  }
+}

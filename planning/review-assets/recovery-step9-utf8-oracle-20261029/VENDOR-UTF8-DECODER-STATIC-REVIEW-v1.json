@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "static_source_feasibility_and_domain_findings_no_extraction_or_execution",
+  "source_commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+  "pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-grammar-source-20261028T020623Z\\sources\\src\\llama-grammar.cpp",
+      "sha256": "97d76071a2ed1b0c4ce827f002f554b12a25593776adb525dde33ac4cb1eb1e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-grammar-source-20261028T020623Z\\sources\\src\\llama-grammar.h",
+      "sha256": "db730e5aff77f96274aba4a43670f036400d89c7ed44b6e98d3ced41c7b9d193"
+    }
+  ],
+  "reviewed_boundaries": {
+    "grammar_cpp_18_32": "const-char grammar-text decoder; explicitly assumes valid UTF8; not the chunk decoder under consideration",
+    "grammar_cpp_34_91": "std::string plus llama_partial_utf8 decoder used by grammar candidate/accept paths",
+    "grammar_header_52_55": "llama_partial_utf8 contains uint32_t value and int n_remain; negative indicates invalid continuation state",
+    "grammar_cpp_1358_1402_and_1461_1524": "Sampler application/acceptance supplies vocabulary pieces and partial state; a source decoder harness does not exercise those actual DLL/token/EOG routes"
+  },
+  "minimal_future_harness": {
+    "feasible_without_model_or_target_DLL": true,
+    "basis": "Chunk decoder body is self-contained: std::string, std::vector, std::pair, uint8_t/uint32_t/size_t and the exact two-field partial structure. Whole llama-grammar.cpp instead includes grammar/impl/vocab/sampler private headers and must not be treated as a closed standalone build.",
+    "future_controls": "If separately authorized, mechanically retain the exact function and partial structure under their source pins; supply explicit standard headers and bounded authored chunks. Do not rewrite decoder checks or expose guessed private DLL layouts/exports. Preserve returned codepoints including terminator sentinel, raw partial.value/n_remain and thrown outcome. No function extraction/build occurred in this review.",
+    "meaning": "A newly built source algorithm experiment, not the installed DLL, grammar membership, token-boundary/EOG coverage, or completion of the failed frozen-pack gate",
+    "not_returned_by_vendor": ["consumed/examined byte counts", "strict Unicode validity classification", "final EOF/error state", "model/vocabulary/token identity"],
+    "comparison_domain": "Compare complete scalars and meaningful pending state only under an explicitly frozen profile. Returned value may retain the last scalar when n_remain==0. One terminator zero is representation metadata, not evidence that raw NUL was emitted. Do not normalize malformed/NUL observations into strict-oracle success."
+  },
+  "material_domain_findings": [
+    {
+      "id": "fresh_sequence_validation",
+      "source": "New-sequence continuation loop at77_83 masks following bytes without checking their10xxxxxx form. No shortest-form, surrogate orU+10FFFF guard is present in this helper.",
+      "examples_source_predicted_NOT_observed": {"c241": "codepoint0x81", "c0af": "codepoint0x2f", "eda080": "codepoint0xd800", "f4908080": "codepoint0x110000"},
+      "consequence": "Strict malformed-byte expected errors must not be defined by this helper; retain a vendor divergence separately if later measured. This is a helper-domain finding, not an executed full-grammar defect claim."
+    },
+    {
+      "id": "prior_pending_continuation",
+      "source": "Continuation of a previous partial sequence at46_57 checks10xxxxxx and returns sentinel0 plus partial{0,-1} on a mismatch.",
+      "consequence": "Chunk partitioning changes which validation branch runs; every interiorcut of2/3/4-byte inputs and malformed continuations across chunks must be explicit."
+    },
+    {
+      "id": "literal_NUL_terminator",
+      "source": "Both scan loops use *pos!=0 over src.c_str(). Literal00 ends scanning; a final sentinel0 is appended to returned codepoints.",
+      "consequence": "Strict UTF8 must accept and emitU+0000, including bytes after it. The helper is not a length-counted NUL-transparent decoder. Raw NUL, control characters and JSON escape spellings have separate meanings."
+    },
+    {
+      "id": "no_final_flag",
+      "source": "An empty chunk with pending n_remain returns that pending state; there is no final-input parameter.",
+      "consequence": "Strict EOF rejection of a pending scalar belongs to the separately specified oracle/harness contract. It must not be described as a vendor-returned EOF result."
+    }
+  ],
+  "strict_oracle_review_requirements": [
+    "Freeze expected consumed/examined counts, pending candidate bytes, emitted scalars, first error/offending byte and terminal no-recovery behavior before adapter code.",
+    "Consume buffered legal prefix bytes but do not consume the examined offending byte; keep pending bytes as failure evidence. No posterror decoder state is assumed.",
+    "Independent CPython validation feeds strict utf-8 one byte at a time, records successful output and pre-call getstate, and stops on error; UnicodeDecodeError.start is not automatically the offending-byte offset.",
+    "Strict utf-8 emits initial BOM asU+FEFF and accepts raw NUL/ASCII controls. No utf-8-sig stripping, JSON validity or grammar membership is implied.",
+    "Include scalar boundary exclusions/overlong/invalid continuation/illegal lead, every interiorcut2/3/4, mixed complete-scalar and pending tails, and finalEOF after every pending length."
+  ],
+  "primary_references_supplied_by_root": [
+    "https://www.rfc-editor.org/rfc/rfc3629.html#section-3",
+    "https://www.rfc-editor.org/rfc/rfc3629.html#section-4",
+    "https://docs.python.org/3.11/library/codecs.html#incrementaldecoder-objects"
+  ],
+  "activity": {"source_reads_only": true, "source_extraction": 0, "vendor_or_native_execution": 0, "compilation": 0, "CPU_GGUF_oldpack_operations": 0, "corpus_validation_before_spec_freeze": 0}
+}

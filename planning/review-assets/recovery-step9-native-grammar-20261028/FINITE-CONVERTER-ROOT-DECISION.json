@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T04:27:00.903865+00:00",
+  "decision": "root_approved_finite_protocol_execution",
+  "protocol_sha256": "30966db2bf9846f3280b3ff881e423cd66adeac175113157e326f196c034ed68",
+  "review_basis": "Root read complete operator helper, protocol, dry-run/readiness and typed C++ execution path; preparation stable and no blocking defect found",
+  "independent_review_status": "requested and pending; not a required protocol prerequisite",
+  "authorization_basis": "Active owner-authorized recovery plan and installed-toolchain follow-up",
+  "maximum_children": 2,
+  "automatic_retry": false,
+  "no_vocabulary_or_model_stage": true,
+  "stop_on_any_native_diagnostics": true,
+  "scope": "ABI roundtrip and unchanged-schema converter diagnostic only; no grammar/scientific qualification",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z"
+}

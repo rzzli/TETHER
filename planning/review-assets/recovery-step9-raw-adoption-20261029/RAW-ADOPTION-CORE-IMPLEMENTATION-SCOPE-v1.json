@@ -1,0 +1,55 @@
+{
+  "actual_API_calls": 0,
+  "core": "raw_adoption_core_v1.py",
+  "inputs": {
+    "ADOPTION-FIXTURE-SCHEMA-v2.json": {
+      "bytes": 19347,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-v2.json",
+      "sha256": "b4b6670c71d08133670af0af357088447c452f0e973f179c07e69702f900ade5"
+    },
+    "RAW-ADOPTION-FIXTURE-FREEZE-v2.json": {
+      "bytes": 6635,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-FREEZE-v2.json",
+      "sha256": "bb83204db84c64941cad82c760396ce3bc8b91f1d7fd692c29c05a746b3c84ff"
+    },
+    "RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 7682,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v2.json",
+      "sha256": "9dd25010c0e248fd249ef9a6607b6d5ed3bac0a36a8768568ba46775e67976d4"
+    },
+    "RAW-ADOPTION-FIXTURES-v2.json": {
+      "bytes": 255549,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURES-v2.json",
+      "sha256": "09f79b6a5f7bca50a3da63f3d95a6041e8bc2acf84ec85f1db5d96a4e7c1d5f6"
+    },
+    "RAW-ADOPTION-RAWVALUE-COUNTER-SUBSET-REVIEW-v3.json": {
+      "bytes": 5236,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-RAWVALUE-COUNTER-SUBSET-REVIEW-v3.json",
+      "sha256": "be3d0634639592f7ddb62e5ba18ee0c572454ac1810e869aeec60f520e2df0af"
+    }
+  },
+  "limits": [
+    "Only injected/source-issued HARNESS_ONLY typed contexts and synthetic byte records. No fixture, case ID, fault or expected projection is read by core.",
+    "No ctypes, platform DLL, SDK, filesystem, live first-clock bootstrap, real wrapper or actual file/API calls.",
+    "Origin is an explicit same-object synthetic continuation, not proof of interpreter/native clock provenance.",
+    "First raw scalar/count sentinel facts survive auxiliary/cache/wrapper failure. Python/C conversion and first-storage window remains unproved.",
+    "Preconditions cannot mint production identity, original availability, source freshness, whole-file completeness or any runtime/profile/resource/scientific qualification.",
+    "All32 frozen histories/checkpoints must drive actual generic methods, not replay expected state. Exact source/proofs freeze before independent peer/root acceptance."
+  ],
+  "ownership": "This agent owns core only. Grammar owns separate literal driver/tests. Native owns independent source peer after pause.",
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "runtime_authorized": false
+  },
+  "recorded_at_utc": "2026-10-29T14:07:35.909619+00:00",
+  "root": {
+    "bytes": 4282,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-PREPARATION-AND-SOURCE-SCOPE-v2.json",
+    "sha256": "e20b47ff32c3dc4f190cbee1621458f9fd5ca4eefdf0d6b3d9eddfd8c1f10aad"
+  },
+  "schema_version": 1,
+  "status": "AUTHORIZED_PORTABLE_CORE_SOURCE_PURE_ONLY_NOT_ACCEPTED"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "status": "declared_raw_identity_anchor_not_opened_or_rehashed",
+  "descriptor": {
+    "path": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/snapshot.json",
+    "sha256": "12f2c8d40ae9d1437d95e28b61740148e318d5d5527952472c908c6c83074849",
+    "bytes": 182034
+  },
+  "packet": {
+    "path": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/evidence.json",
+    "sha256": "7f806638dc8ab9c2373e25c428f446bc3bc123d02a471bfb8b6c9b5f28051c23",
+    "bytes": 14625512,
+    "descriptor": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/snapshot.json",
+    "observations": 2315
+  },
+  "match": {
+    "packet": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/evidence.json",
+    "observation_index": 1128,
+    "identity_metadata": {
+      "context": {
+        "cohort_ids": []
+      },
+      "dependency_group": null,
+      "indication_id": "EFO_0000676",
+      "input_refs": [
+        "raw-07b92d2600f177f64467ff91",
+        "raw-5cc0c89b096ad82cd7f06765",
+        "raw-6119b566a07792ecf1ea7d90",
+        "raw-e0a9b38e278f8d69713b010f"
+      ],
+      "observation_id": "ot25:europepmc:34deafcb16a7d2da3798affc3de3d38f3e82c86b",
+      "source_kind": "integrated",
+      "source_locator": {
+        "datasource_id": "europepmc",
+        "evidence_id": "34deafcb16a7d2da3798affc3de3d38f3e82c86b",
+        "row": 46915,
+        "row_group": 0,
+        "source_id": "raw-6119b566a07792ecf1ea7d90"
+      },
+      "source_metrics": {
+        "cohortId": null,
+        "literature": [
+          "31019502"
+        ],
+        "studyId": null
+      },
+      "study_id": null,
+      "target_id": "ENSG00000110944"
+    },
+    "hits": [
+      {
+        "article_id": "31019502",
+        "field": "source_metrics/literature",
+        "value": "31019502"
+      }
+    ]
+  },
+  "raw_source_declared_metadata": {
+    "source_id": "raw-6119b566a07792ecf1ea7d90",
+    "dataset_id": "ot_evidence",
+    "release_id": "25.09",
+    "path": "raw/open_targets_platform/25.09/supplemental-20261017T064802Z/europepmc/part-00027-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+    "sha256": "d8d599a158285dd69c1ab18c1504189d847c68802e5fce69379a0f22c87853b7",
+    "role": "agent_evidence",
+    "source_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/evidence/sourceId=europepmc/part-00027-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+    "receipt_path": "manifests/receipt-archive/a578cbc3181463b233ccac8339df43fe2951007e464aac71b3b25b272ee49a60.json",
+    "receipt_sha256": "a578cbc3181463b233ccac8339df43fe2951007e464aac71b3b25b272ee49a60"
+  },
+  "raw_ancestor_read": false,
+  "source_content_or_conclusions_read": false
+}

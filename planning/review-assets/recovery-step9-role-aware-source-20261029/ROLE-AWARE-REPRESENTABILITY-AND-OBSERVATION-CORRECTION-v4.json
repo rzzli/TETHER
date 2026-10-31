@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "FINITE_SOURCE_AND_THREE_TEST_CORRECTIONS_AUTHORIZED",
+  "basis": {
+    "preserved_extensions_first_sha256": "ca8b142d6e9a96dcc7ea0518b3571e87617fda66953e3ae09830c2c276791e98",
+    "independent_localization_sha256": "321524454289ad0202672d359228fee5591e2946566fb5ca70cda8e5c3488bd8",
+    "source_localization_sha256": "b6da330cf3c3d5263ffa484c5e2e8db94a6ed1f78eb7474475c8e2ad022ac7d9",
+    "passing_codec_sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b",
+    "passing_legacy_sha256": "8b9708d6c778505c387188bb39b5078186392deda5e1acd7c6d65d4d2d2206e7"
+  },
+  "actual_first_result": "All13 methods completed:10 passed,3 errors. All six indexed controls passed. Large-stream work has not started.",
+  "source_delta": "Before issuing LegacySnapshot, project_legacy checks every present primary/secondary diagnostic phase against the exact47-member pinned50ee domain. Unsupported new phase raises the existing codec.FormatError code LEGACY_NOT_REPRESENTABLE. Preserve new snapshot, original phase, exception/token and raw facts. Never retag, omit or normalize a new diagnostic to fit legacy output. Four coherent own-module names become v4; other behavior stays unchanged.",
+  "test_delta": [
+    "Methods01 and07 capture their genuine FileState reference while the owner is active, then inspect that held object read-only after finalization. Keep the source's FINALIZED_MISUSE guard and explicitly verify it; do not reopen source work.",
+    "Method04 inspects the actual new ProducerSnapshot for packing-failure/raw/error/token facts and asserts typed legacy refusal for the new freeze phase. Preserve original exception identity, no eligible failed bytes, no retry and once-close checks. Do not force invalid data through the unchanged old validator."
+  ],
+  "preservation": "All other four new extension method bodies and all old48/SAME8/SAME6 assertions, fixture/validator bytes, oracleV3 and previous proofs remain unchanged. No skipped case or relaxed postfinal/legacy domain. Named extension testV2 and fresh runner/bindings retain the first failing test source.",
+  "codec_rule": "If codec4 is byte-identical to codec3 and has no changed own-module dependency, preserve that exact evidence and carry the pure-codec PASS; do not rerun an unchanged codec solely for filename numbering. Actual V4 Legacy and extension tests remain required for the changed projector/integration.",
+  "next_gate": "Freeze exact four V4 sources/testV2/runners and obtain finite static peer. Fresh explicit execution bindings then validate Legacy before extensions. This correction decision authorizes authoring only.",
+  "not_authorized": ["large216-file preparation/run", "original targets/protected outcomes", "real entry/SDK/ctypes/Win32/native/model execution", "downloads or paid calls", "application/default changes"],
+  "provider_spend_usd": 0,
+  "runtime_or_scientific_qualified": false
+}

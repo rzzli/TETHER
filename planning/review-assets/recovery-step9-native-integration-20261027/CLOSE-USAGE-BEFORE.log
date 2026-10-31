@@ -1,0 +1,15 @@
+test_close_failure_recovers_known_usage_without_accepting_answer (tests.test_study_native_composition.NativeCompositionTests.test_close_failure_recovers_known_usage_without_accepting_answer) ... ERROR
+
+======================================================================
+ERROR: test_close_failure_recovers_known_usage_without_accepting_answer (tests.test_study_native_composition.NativeCompositionTests.test_close_failure_recovers_known_usage_without_accepting_answer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_composition.py", line 311, in test_close_failure_recovers_known_usage_without_accepting_answer
+    self.assertEqual(marker['recovered_transport_usage']['input_tokens'],20)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'recovered_transport_usage'
+
+----------------------------------------------------------------------
+Ran 1 test in 79.406s
+
+FAILED (errors=1)

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T16:05:04.652720+00:00",
+  "decision": "authorize_once_only_fixed_twelve_public_text_reference_fetch",
+  "protocol_sha256": "633b630163060b3216ad94de60aa90799791565981a38971fd4cfdaed16bf607",
+  "helper_sha256": "e49bc2907f864e1c0e43621865742e566a409390d1b3552fbf92a583d9443ea5",
+  "peer_precheck_sha256": "a3bec7761ffdda1bede41cae199dfb8301871a9972fa768099018836177f8cab",
+  "root_and_peer_pins_checked": 116,
+  "scope": "12 exact-commit UTF8 source references only; no crawl or retry",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-source-20261028T160234Z",
+  "limits": {
+    "aggregate_retained_body_bytes": 4194304,
+    "aggregate_seconds": 300,
+    "attempts_per_url": 1,
+    "file_body_bytes": 1048576,
+    "finalization_reserve_seconds": 30,
+    "maximum_children": 12,
+    "maximum_concurrent_requests": 1,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 65536,
+    "whole_child_seconds": 20
+  },
+  "network_host": "raw.githubusercontent.com",
+  "credentials": false,
+  "proxies": false,
+  "redirects": false,
+  "v1_preparation": "rejected_preserved_unexecuted",
+  "models_datasets_native_execution_or_builds_authorized": false,
+  "provider_spending_usd": 0,
+  "scientific_case_budget_seconds_unchanged": 300,
+  "entire_project_complete": false
+}

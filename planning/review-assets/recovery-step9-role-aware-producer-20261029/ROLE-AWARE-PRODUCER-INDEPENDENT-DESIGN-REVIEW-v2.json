@@ -1,0 +1,235 @@
+{
+  "activities": {
+    "Win32_FFI_SDK_native_compiler_calls": 0,
+    "accepted_artifact_edits": 0,
+    "embedded_target_stat_open_hash": 0,
+    "metadata_only": true,
+    "old_run_replay": 0,
+    "reviewed_component_imports": 0,
+    "subject_probes_or_tests": 0
+  },
+  "independent_metadata_checks": {
+    "artifact_caps": [
+      {
+        "kind": "candidate-ledger.bin",
+        "maximum_bytes": 14800384,
+        "membership_rule": "conditional: accepted work prefix before original closes; absent/unissued on failure"
+      },
+      {
+        "kind": "terminal-ledger.bin",
+        "maximum_bytes": 14800384,
+        "membership_rule": "conditional: final observed original-close/unknown facts; failure may leave absent/unissued"
+      },
+      {
+        "kind": "journal.jsonl",
+        "maximum_bytes": 2293760,
+        "membership_rule": "owned namespace only; complete or bounded observed prefix, never reconstructed success"
+      },
+      {
+        "kind": "producer-report.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional compact report; no full-table duplication"
+      },
+      {
+        "kind": "candidate.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional normal candidate"
+      },
+      {
+        "kind": "cleanup.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional observed finalization/close report"
+      },
+      {
+        "kind": "failure.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "conditional owner failure; distinct from child failure marker"
+      },
+      {
+        "kind": "receipt.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "only after required gates and known closures/journal close"
+      },
+      {
+        "kind": "seal.json",
+        "maximum_bytes": 8192,
+        "membership_rule": "only after receipt and required terminal gates"
+      },
+      {
+        "kind": "child/result.partial.jsonl",
+        "maximum_bytes": 7995392,
+        "membership_rule": "new84 structured trace; bounded partial allowed, completion never implied"
+      },
+      {
+        "kind": "child/attempt.json",
+        "maximum_bytes": 4096,
+        "membership_rule": "new84 child attempt metadata"
+      },
+      {
+        "kind": "child/failure.json",
+        "maximum_bytes": 65536,
+        "membership_rule": "conditional independent child failure marker"
+      },
+      {
+        "kind": "stdout.bin",
+        "maximum_bytes": 65536,
+        "membership_rule": "child stdout capture; independent from structured files"
+      },
+      {
+        "kind": "stderr.bin",
+        "maximum_bytes": 65536,
+        "membership_rule": "child stderr capture; independent from structured files"
+      }
+    ],
+    "closed_artifact_count": 14,
+    "conservative_named_payload_bytes": 113985546,
+    "generated_store_bytes": 40139776,
+    "hash_or_slice_transient_max_bytes": 1048576,
+    "healthy_generated_phase_named_payload_bytes": 105596938,
+    "named_payload_terms": {
+      "canonical_evidence_tables": 14800384,
+      "generated_immutable_store": 40139776,
+      "hash_or_slice_transient": 1048576,
+      "immutable_capture": 33554432,
+      "one_capture_assembly": 8388608,
+      "one_generated_artifact_assembly": 14800384,
+      "path_comparison_workspace": 131072,
+      "query_work_buffer": 8202,
+      "read_buffer": 1048576,
+      "serializer_work": 65536
+    },
+    "no_changes_to_N4_roles_chunk_caps_limits_legacy_oracle_or_operational_missing_route": true,
+    "no_changes_to_historical_vector_or_subset": true,
+    "one_generated_artifact_assembly_max_bytes": 14800384,
+    "one_ledger_bytes": 14800384,
+    "original_capture_file_and_assembly_max_bytes": 8388608,
+    "original_capture_total_bytes": 33554432,
+    "path_workspace_bytes": 131072,
+    "removed_duplicate_journal_packet_report_bytes": 2342912,
+    "representation_delta_keys": [
+      "capture",
+      "freeze_failure",
+      "freeze_lifetime",
+      "generated_bytes",
+      "journal_packet_report_lifetime",
+      "paths",
+      "terms_at_profile_max",
+      "transient_rule"
+    ],
+    "separate_stdout_stderr_bytes": 131072,
+    "serialization_delta_keys": [
+      "artifacts",
+      "bounded_emission",
+      "ledger",
+      "out_bytes",
+      "readback",
+      "store"
+    ],
+    "structured_child_bytes": 8065024,
+    "top_level_delta_keys": [
+      "F1_unchanged_dimensions",
+      "correction_basis",
+      "preserved_proposal",
+      "representation",
+      "root_selected_F1_scope",
+      "schema_version",
+      "serialization",
+      "status"
+    ],
+    "unchanged_top_level_sections": [
+      "activities",
+      "basis",
+      "chunk_choice",
+      "current_n4",
+      "next_gate",
+      "operational_profile_proposal",
+      "operational_route",
+      "qualification",
+      "role_policy",
+      "scope",
+      "transitions",
+      "versioning"
+    ]
+  },
+  "material_blockers": [],
+  "pins": [
+    {
+      "bytes": 19901,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v1.json",
+      "sha256": "cce5dbedd166ff58e2182deb2ada8afcf5a165a6c0413e9245f4490d987e7512"
+    },
+    {
+      "bytes": 28502,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+      "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+    },
+    {
+      "bytes": 4294,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-F1-DESIGN-ADDENDUM-v2.json",
+      "sha256": "b1405e2d9f349a109a70647936c1d7a861923b26e8390dc7b56886e2427abedc"
+    },
+    {
+      "bytes": 8986,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v1.json",
+      "sha256": "f06480b0efee0a74a0897e891bd07ce1acd9ad612b81dec1beebc2096cdf3972"
+    },
+    {
+      "bytes": 95229,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/RETAINED-HISTORICAL-RESOURCE-VECTOR-v1.json",
+      "sha256": "3a7e00e9cc812f7fcf0676c70704c65ab35565cac4b6a652fe06fad42c890c75"
+    },
+    {
+      "bytes": 9023,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/PROSPECTIVE-NEW84-KNOWN-RESOURCE-SUBSET-v1.json",
+      "sha256": "458a289c807dc2db6082a1f74b7f3dbda131ad660d2541de8372630b516d72f9"
+    }
+  ],
+  "prerequisites_unchanged": [
+    "Exact raw-cell provenance, enum/bit/offset/length/numeric/clock representations and independent literal framing remain to be frozen before implementation.",
+    "Complete selected new84 roster, module graph, byte-consumer graph and versioned legacy projection remain required; the historical213 vector and16-resource subset are not new admission.",
+    "The prospective1MiB formula/representation remains distinct from the accepted64KiB calculator and unchanged indexed N4 source.",
+    "Physical same-handle writer/flush/close/readback, their call reservations and real first-entry/FFI bindings remain explicitly missing.",
+    "The distinct84 child/header/pack/build/parent/protocol and new exact archive/journal/resource/semantic composition remain missing; old189 source policies cannot substitute.",
+    "The113,985,546 sum covers named encoded payload only. Python/interpreter/exception/module/native memory, measured RSS and timing remain outside this proof;256MiB and all clock gates remain external qualifications."
+  ],
+  "prior_finding_disposition": {
+    "id": "F1_PHASE_LIFETIME_AND_BYTE_CONSUMPTION",
+    "reason": "The generated artifact universe and immutable-byte store are separate from original captured inputs. Canonical tables, candidate and terminal snapshots, one generated assembly, hash/slice transient and path workspace have explicit distinct lifetimes and bounds. Byte-consuming checkers receive complete actual immutable bytes, not iterators, digests, ACKs or reported counts. Failed/unissued/late/quarantined states cannot mint positive evidence.",
+    "status": "resolved_at_design_level"
+  },
+  "proposal": {
+    "bytes": 28502,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+    "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+  },
+  "qualification": {
+    "design_F1_closed": true,
+    "full_roster_admitted": false,
+    "implementation": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific_validation": false
+  },
+  "recorded_at_utc": "2026-10-29T19:30:09.326647+00:00",
+  "retainer": {
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/retain_role_aware_producer_design_peer_v2.py",
+    "sha256": "a2aedeb9b6dbef8929a4ea9ac6883f07e8c5445a0d810eb02d2a597c3fd14b75"
+  },
+  "reviewed_lifetime_and_evidence_rules": [
+    "The same canonical owner/origin/nonce/registry issues a non-owning GeneratedArtifactContext holding actual immutable bytes. It is separate from original InputContext.blobs and cannot promote hash-only originals.",
+    "Live canonical facts remain allocated. Candidate freezes pre-close facts and terminal freezes final-close facts in distinct byte objects that cannot alias mutable tables, an assembly or each other. Later closes cannot change candidate bytes.",
+    "Each closed artifact has at most one attempt/issued object. Missing, partial and unissued artifacts remain explicit; only eligible fully frozen bytes reach positive consumers.",
+    "Freeze validation occurs under the original owner clock. Known late returns remain observed but ineligible. Failure latches the original exception, never retries favorably, and keeps canonical facts and close rights.",
+    "A failed/unissued assembly is released before another build when safely known; unknown release retains/quarantines that single assembly and stops another build.",
+    "One original-path UTF8 pool is counted. Final-path evidence remains in complete retained UTF16 query frames; one reserved path workspace handles comparisons without another per-file decoded pool.",
+    "Store-owned journal, packet and report bytes are not duplicated in the named payload sum. Structured child artifacts and stdout/stderr are separate bounded entries.",
+    "Original capture limits are unchanged. Generated ledgers do not bypass those limits as oversized originals; they have a distinct closed store and consumer source-binding requirement."
+  ],
+  "reviewer": "/root/native_039_acceptance_audit",
+  "schema_version": 2,
+  "scope": "Exact F1 phase-lifetime/byte-consumption correction only. This metadata review closes the single f064 HOLD family and does not authorize implementation, physical output, full-roster admission or runtime.",
+  "status": "CLEAR_DESIGN_F1_LIFETIME_CLOSURE_ONLY"
+}

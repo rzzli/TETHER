@@ -1,0 +1,358 @@
+{
+  "activities": {
+    "extension_or_large_advance": false,
+    "harness_edits": 0,
+    "metadata_and_source_reads_only": true,
+    "oracle_edits": 0,
+    "original_model_native_or_physical_operations": 0,
+    "source_edits": 0,
+    "subject_imports": 0,
+    "subject_runs_or_replays": 0
+  },
+  "actual_retained_scope": {
+    "all48_protocol_errors_empty": true,
+    "all_wire_kinds_equal_declared_callback_aliases": true,
+    "genuine_projector_calls": 383,
+    "histories_executed": 48,
+    "histories_matched": 7,
+    "main_publications_observed": 89,
+    "methods": 9,
+    "publication_statuses": [
+      "INCOMPLETE",
+      "OBSERVED_COMPLETE",
+      "OBSERVED_NEGATIVE"
+    ],
+    "strict_snapshots": 372,
+    "unmatched_histories": 41,
+    "unmatched_with_no_fixture_differences": 36,
+    "violations": {
+      "wrong new packet kind/status": 89
+    }
+  },
+  "different_fixture_paths_by_case": {
+    "baseline_consistent": [
+      "status",
+      "pure_seam_complete",
+      "refusal_code",
+      "plan.events_used",
+      "journal.next_sequence",
+      "errors.primary",
+      "errors.secondary",
+      "gates",
+      "terminal.seal_acknowledged",
+      "terminal.final_clock_passed",
+      "terminal.pure_owner_ack",
+      "journal.events"
+    ],
+    "baseline_core_negative": [
+      "status",
+      "pure_seam_complete",
+      "refusal_code",
+      "plan.events_used",
+      "journal.next_sequence",
+      "errors.primary",
+      "errors.secondary",
+      "gates",
+      "terminal.seal_acknowledged",
+      "terminal.final_clock_passed",
+      "terminal.pure_owner_ack",
+      "journal.events"
+    ],
+    "postseal_no_new_output": [
+      "terminal.seal_acknowledged",
+      "journal.next_sequence"
+    ],
+    "publication_attempt_or_size_cap": [
+      "status",
+      "pure_seam_complete",
+      "refusal_code",
+      "plan.events_used",
+      "journal.next_sequence",
+      "errors.primary",
+      "errors.secondary",
+      "gates",
+      "terminal.seal_acknowledged",
+      "terminal.final_clock_passed",
+      "terminal.pure_owner_ack",
+      "journal.events"
+    ],
+    "seal_ack_late": [
+      "origin.now",
+      "terminal.seal_acknowledged"
+    ]
+  },
+  "finite_root_cause": {
+    "bounded_correction_proposal": "In a separately named root-authorized adapter successor, compare decoded kind to callback kind using the frozen schema alias domain. Keep all payload keys/version/scope/status/qualification/byte/canonical/once-kind/deadline/ACK and failed-prefix monitors, source, oracle and old fixture comparisons unchanged.",
+    "harness": "role_aware_legacy_fixture_adapter_v1.SinkSpy._call line149 instead demands decoded kind == callback kind + .json. r.violate raises before line152 callback_actions.",
+    "observed_effect": "All89 main publication attempts are rejected by that comparison before returning an ACK. Five histories gain downstream fixture differences;36 others already have their expected negative facts but fail the transport monitor.",
+    "schema": "publication.constants.packet_kind is the five short aliases; packet_kind_to_artifact separately maps to .json artifact names.",
+    "source": "role_owner_v3._packet line645 sets wire kind to the callback alias. This matches the declared packet_kind domain."
+  },
+  "inputs": [
+    {
+      "bytes": 9795303,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v6.json",
+      "sha256": "dc02853ad550319d50c8361aa073aa0d4ba4ee8577d3b2bc99dc6bf318565a84"
+    },
+    {
+      "bytes": 11798,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v3.json",
+      "sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de"
+    },
+    {
+      "bytes": 89573,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    {
+      "bytes": 34138,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_aware_legacy_fixture_adapter_v1.py",
+      "sha256": "0a4ca4da76db67594f2301d60e9f14ac6566a83644b4b6a91c61292cdf071afe"
+    },
+    {
+      "bytes": 76176,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v3.py",
+      "sha256": "7fa4acd6a6059530429e26958c8ddcd76bcb91b1cb0fd57900286bf43643e339"
+    }
+  ],
+  "masked_late_controls": [
+    {
+      "name": "known_late_candidate_ACK",
+      "origin": {
+        "clock_state": "ok",
+        "hard_end": 400,
+        "now": 100,
+        "start": 100,
+        "work_end": 395
+      },
+      "primary_class": "HarnessError",
+      "publication_axes": {
+        "candidate": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "cleanup": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "failure": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "receipt": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        },
+        "seal": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        }
+      },
+      "terminal": {
+        "candidate_acknowledged": false,
+        "cleanup_acknowledged": false,
+        "final_clock_passed": false,
+        "journal_closed": true,
+        "original_closures_complete": true,
+        "pure_owner_ack": false,
+        "receipt_acknowledged": false,
+        "result_issued": true,
+        "seal_acknowledged": false,
+        "started": true
+      },
+      "violations": [
+        "wrong new packet kind/status",
+        "wrong new packet kind/status",
+        "wrong new packet kind/status"
+      ]
+    },
+    {
+      "name": "known_late_cleanup_ACK",
+      "origin": {
+        "clock_state": "ok",
+        "hard_end": 400,
+        "now": 100,
+        "start": 100,
+        "work_end": 395
+      },
+      "primary_class": "HarnessError",
+      "publication_axes": {
+        "candidate": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "cleanup": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "failure": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "receipt": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        },
+        "seal": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        }
+      },
+      "terminal": {
+        "candidate_acknowledged": false,
+        "cleanup_acknowledged": false,
+        "final_clock_passed": false,
+        "journal_closed": true,
+        "original_closures_complete": true,
+        "pure_owner_ack": false,
+        "receipt_acknowledged": false,
+        "result_issued": true,
+        "seal_acknowledged": false,
+        "started": true
+      },
+      "violations": [
+        "wrong new packet kind/status",
+        "wrong new packet kind/status",
+        "wrong new packet kind/status"
+      ]
+    },
+    {
+      "name": "known_late_receipt_ACK",
+      "origin": {
+        "clock_state": "ok",
+        "hard_end": 400,
+        "now": 100,
+        "start": 100,
+        "work_end": 395
+      },
+      "primary_class": "HarnessError",
+      "publication_axes": {
+        "candidate": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "cleanup": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "failure": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "receipt": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        },
+        "seal": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        }
+      },
+      "terminal": {
+        "candidate_acknowledged": false,
+        "cleanup_acknowledged": false,
+        "final_clock_passed": false,
+        "journal_closed": true,
+        "original_closures_complete": true,
+        "pure_owner_ack": false,
+        "receipt_acknowledged": false,
+        "result_issued": true,
+        "seal_acknowledged": false,
+        "started": true
+      },
+      "violations": [
+        "wrong new packet kind/status",
+        "wrong new packet kind/status",
+        "wrong new packet kind/status"
+      ]
+    },
+    {
+      "name": "known_late_seal_ACK",
+      "origin": {
+        "clock_state": "ok",
+        "hard_end": 400,
+        "now": 100,
+        "start": 100,
+        "work_end": 395
+      },
+      "primary_class": "HarnessError",
+      "publication_axes": {
+        "candidate": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "cleanup": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "failure": {
+          "acknowledged": false,
+          "attempted": true,
+          "return_observed": false
+        },
+        "receipt": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        },
+        "seal": {
+          "acknowledged": false,
+          "attempted": false,
+          "return_observed": false
+        }
+      },
+      "terminal": {
+        "candidate_acknowledged": false,
+        "cleanup_acknowledged": false,
+        "final_clock_passed": false,
+        "journal_closed": true,
+        "original_closures_complete": true,
+        "pure_owner_ack": false,
+        "receipt_acknowledged": false,
+        "result_issued": true,
+        "seal_acknowledged": false,
+        "started": true
+      },
+      "violations": [
+        "wrong new packet kind/status",
+        "wrong new packet kind/status",
+        "wrong new packet kind/status"
+      ]
+    }
+  ],
+  "qualification": {
+    "full_roster": false,
+    "late_ACK_behavior_passed": false,
+    "legacy48_passed": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "scientific": false,
+    "source_accepted": false
+  },
+  "schema_version": 1,
+  "source_ACK_static_analysis": {
+    "callback": "_callback line566 records return_observed and actual ACK identity before postcallback clock. A callback that never returned correctly remains return_observedFalse/acknowledgedFalse.",
+    "evidence_limit": "The four late ACK controls did not reach their callback_actions clock400 injections. Their actual now100/HarnessError/falseACK is masked by this harness mismatch; no observed source ACK-loss is established.",
+    "terminal": "_finish lines678/686/698/700 copies retained callback acknowledged after try_action returns, including its failure path."
+  },
+  "status": "ONE_FINITE_HARNESS_PUBLICATION_KIND_MISMATCH_STATIC_LOCALIZATION"
+}

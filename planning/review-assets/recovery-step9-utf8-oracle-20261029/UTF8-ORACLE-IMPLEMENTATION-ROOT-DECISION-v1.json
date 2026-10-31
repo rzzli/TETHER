@@ -1,0 +1,45 @@
+{
+  "allowed": [
+    "Pure dependency-free Python implementation",
+    "Frozen107fixture167step354byte corpus and meaningful typedAPI/immutability/adversarial controls",
+    "Exact source/fixture fingerprints and scoped retained proof"
+  ],
+  "anchors": {
+    "UTF8-ORACLE-CORPUS-v2.json": {
+      "bytes": 154021,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v2.json",
+      "sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d"
+    },
+    "UTF8-ORACLE-FIXTURE-FREEZE-v2.json": {
+      "bytes": 6847,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-FIXTURE-FREEZE-v2.json",
+      "sha256": "285a46b3b7ac00cf7bbb0b262242ffc04f2c3049e4b7cf541dbcfdf0080f1eac"
+    },
+    "UTF8-ORACLE-SPEC-v2.md": {
+      "bytes": 9826,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v2.md",
+      "sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a"
+    },
+    "UTF8-ORACLE-SPLIT-REFERENCE-PROOF-v2.json": {
+      "bytes": 55550,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPLIT-REFERENCE-PROOF-v2.json",
+      "sha256": "1a1c1e683d5e59a0901313fdb8946a0a3da10dc4d4c626bfd7f45895d87555e9"
+    }
+  },
+  "contract": "Strict incremental RFC3629 byte-state oracle with frozen authored consumption/API semantics; independent implementation does not read reference checker source",
+  "forbidden": [
+    "Compiler or SDK constructors",
+    "Vendor decoder or target DLL execution",
+    "CPU/GGUF/oldpack/payload reads",
+    "Old experiment or external verification reset/retry",
+    "Inference/scoring/scientific qualification/default application integration"
+  ],
+  "new_native_profile_authorized": false,
+  "old_external_gate": "INCOMPLETE_TIMEOUT",
+  "old_profile": "FAILED_required_UTF8_coverage_unavailable",
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T06:20:09.919639+00:00",
+  "reference_scope": "104 direct CPython cases;3 normative earliest-rejection cases supported by bounded nonextendability certificate. Not107directincrementalAPIagreement.",
+  "schema_version": 1,
+  "status": "root_authorizes_independent_pure_oracle_and_synthetic_checks_only"
+}

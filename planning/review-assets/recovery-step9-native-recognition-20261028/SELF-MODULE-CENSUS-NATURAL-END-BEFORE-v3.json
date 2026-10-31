@@ -1,0 +1,13 @@
+{
+  "status": "failed_expected_regression_first",
+  "source": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v7.cpp",
+  "source_sha256": "731f757976b5fdaa7d235b6f25d153ad4cdb87a3d9702aebc1f3fc863d48daf8",
+  "checker_sha256": "10b32f13ee475090870fe450549a284223eeda82b7cb75c5d0c30e3474762a49",
+  "tests_run": 3,
+  "failures": [
+    "(<__main__.Regressions testMethod=test_observed_natural_end_precedes_post_call_admission>, 'Traceback (most recent call last):\\n  File \"D:\\\\Projects\\\\drug_target_agents\\\\planning\\\\review-assets\\\\recovery-step9-native-recognition-20261028\\\\check_module_census_regressions_v3_before.py\", line 37, in test_observed_natural_end_precedes_post_call_admission\\n    self.assertLess(block.index(\"natural_end = error == ERROR_NO_MORE_FILES\"), block.index(\"result(Next\"))\\nAssertionError: 234 not less than 108\\n')"
+  ],
+  "errors": [],
+  "actual_children": 0,
+  "scope": "Static source ordering/retained-input regression; not compiled native execution"
+}

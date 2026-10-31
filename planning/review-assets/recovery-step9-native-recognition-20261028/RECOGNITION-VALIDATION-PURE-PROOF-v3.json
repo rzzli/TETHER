@@ -1,0 +1,1147 @@
+{
+  "activity": {
+    "CPU_binary_reads": 0,
+    "GGUF_reads": 0,
+    "SDK_constructors": 0,
+    "children": 0,
+    "compiler_calls": 0,
+    "native_calls": 0,
+    "qualified_small_pack_data_reads": 1
+  },
+  "before_regression": {
+    "bytes": 3919,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-COVERAGE-REGRESSION-BEFORE-v2.json",
+    "sha256": "d37923320bf58da3b09158730c1182232a5547438ad1141a50a82d03d67bd9d2"
+  },
+  "checker": {
+    "bytes": 22089,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_validation_v3.py",
+    "sha256": "8fba6e3c73fb2f030f84ce8ccf7704636c8f81d4d94af1666a2e55ccbe1ccf51"
+  },
+  "contract": {
+    "bytes": 10486,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+    "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+  },
+  "denied_real_operations": [],
+  "elapsed_seconds": 1.702999999979511,
+  "errors": [],
+  "failures": [],
+  "frozen_pack": {
+    "bytes": 259867,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-pack-v2-20261028T183647Z\\recognition.pack",
+    "sha256": "f75ab9937c57b5f03c2234643a8a9c91cda852ca0cca0de0478369f793e57e5f"
+  },
+  "manifest": {
+    "bytes": 90238,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXPECTED-PACK-METADATA-v1.json",
+    "sha256": "096e1234e239d04c3b276295e7176f5886f139a4064c3fc5f207745f8938f64d"
+  },
+  "module_policy": {
+    "bytes": 7105,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_module_policy_v1.py",
+    "sha256": "5031f2e3d1672684ef0d0dee1aa8370184cd8bc4df05042bfc135c1451f48f12"
+  },
+  "mutation_cases": [
+    {
+      "coverage": {
+        "accounting_frames_consumed": 15,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Complete unique sorted EOG set",
+      "id": "EOG-[]"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 15,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Complete unique sorted EOG set",
+      "id": "EOG-[511, 511]"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 15,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Complete unique sorted EOG set",
+      "id": "EOG-[True]"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 15,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Complete unique sorted EOG set",
+      "id": "EOG-[512]"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Complete EOG vector required",
+      "id": "missing-terminal-EOG"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 345,
+        "case_group_results_validated": [
+          161,
+          0,
+          0
+        ],
+        "case_results_validated": 161,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 161,
+        "last_observed_cases_computed_claim": 162,
+        "last_observed_prefix_results_written_claim": 6,
+        "last_observed_prefix_slots_seen_claim": 6,
+        "missing_case_results": 28,
+        "missing_prefix_results": 0,
+        "native_case_results_validated": 161,
+        "prefix_results_validated": 6,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Case fields/layer/expected outcome differ",
+      "id": "NUL-not-native-negative"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Unknown/unreturned native API cannot qualify",
+      "id": "counter-pending"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native API cap/type",
+      "id": "counter-bool"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native counters decreased",
+      "id": "counter-decrease"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native actionable ownership differs",
+      "id": "counter-owner"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native exceptions/unknown ownership cannot qualify",
+      "id": "counter-exceptions"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Case token count cap",
+      "id": "missing-case_result"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Prefix token/cut cap",
+      "id": "duplicate-case_result"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Prefix token/cut cap",
+      "id": "missing-prefix_result"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 18,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 1,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 1,
+        "missing_case_results": 188,
+        "missing_prefix_results": 5,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 1,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Exact recognition event order: before_case",
+      "id": "duplicate-prefix_result"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Required UTF8 prefix coverage unavailable",
+      "id": "prefix-unavailable"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Missing case result",
+      "id": "partial-tail"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 14,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Exact vocabulary-only parameters",
+      "id": "stage-empty_devices_array_nonnull"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 6,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Exact whole-shard hash return",
+      "id": "stage-bytes"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 3,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Pinned typed version/defaults",
+      "id": "stage-version"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 2,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Expected event selects module phase; child cannot select it",
+      "id": "wrongphase-exact_core_modules_loaded_exports_resolved"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 12,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Expected event selects module phase; child cannot select it",
+      "id": "wrongphase-cpu_registry_verified_before_llama_backend_init"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 12,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Module report policy: missing_required_reports",
+      "id": "CPU-missing"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 12,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Module report policy: protected_native_not_eligible",
+      "id": "CPU-wrongdir"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 12,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Module report policy: invalid_metadata",
+      "id": "CPU-verifiedflag"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 12,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Module report policy: duplicate_report",
+      "id": "CPU-duplicate"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Prefix token/cut cap",
+      "id": "prefix-cut"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 18,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 1,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 1,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Prefix fields/identity/EOG outcome differ",
+      "id": "prefix-sha"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 18,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 1,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 1,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Incomplete prefixes require all ordinary tokens admitted and all EOG rejected",
+      "id": "prefix-tokens"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 18,
+        "case_group_results_validated": [
+          1,
+          0,
+          0
+        ],
+        "case_results_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 1,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 1,
+        "missing_case_results": 188,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 1,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Incomplete prefixes require all ordinary tokens admitted and all EOG rejected",
+      "id": "prefix-native-token-reject"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Missing native accounting snapshot",
+      "id": "last-observed-missing_snapshot"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Unknown/unreturned native API cannot qualify",
+      "id": "last-observed-pending_snapshot"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 16,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Exact recognition event order: case_result",
+      "id": "last-observed-wrong_event"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 0,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": null,
+        "last_observed_cases_computed_claim": null,
+        "last_observed_prefix_results_written_claim": null,
+        "last_observed_prefix_slots_seen_claim": null,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Required result frame missing: before_explicit_required_OpenMP_dependency_load",
+      "id": "no-accounting-frame"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 17,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 1,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Case fields/layer/expected outcome differ",
+      "id": "uncommitted-layer-native_case_results_validated"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 345,
+        "case_group_results_validated": [
+          161,
+          0,
+          0
+        ],
+        "case_results_validated": 161,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 161,
+        "last_observed_cases_computed_claim": 162,
+        "last_observed_prefix_results_written_claim": 6,
+        "last_observed_prefix_slots_seen_claim": 6,
+        "missing_case_results": 28,
+        "missing_prefix_results": 0,
+        "native_case_results_validated": 161,
+        "prefix_results_validated": 6,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Case fields/layer/expected outcome differ",
+      "id": "uncommitted-layer-harness_dispositions_validated"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 2,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native API stage schedule differs: ggml_backend_load at typed_version_and_defaults_observed",
+      "id": "early-stage-ggml_backend_load"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 2,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native API stage schedule differs: llama_backend_init at typed_version_and_defaults_observed",
+      "id": "early-stage-llama_backend_init"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 2,
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 0,
+        "last_observed_case_results_written_claim": 0,
+        "last_observed_cases_computed_claim": 0,
+        "last_observed_prefix_results_written_claim": 0,
+        "last_observed_prefix_slots_seen_claim": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Native API stage schedule differs: llama_model_load_from_splits at typed_version_and_defaults_observed",
+      "id": "early-stage-llama_model_load_from_splits"
+    },
+    {
+      "coverage": {
+        "accounting_frames_consumed": 400,
+        "case_group_results_validated": [
+          167,
+          18,
+          4
+        ],
+        "case_results_validated": 189,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "harness_dispositions_validated": 5,
+        "last_observed_case_results_written_claim": 189,
+        "last_observed_cases_computed_claim": 189,
+        "last_observed_prefix_results_written_claim": 6,
+        "last_observed_prefix_slots_seen_claim": 6,
+        "missing_case_results": 0,
+        "missing_prefix_results": 0,
+        "native_case_results_validated": 184,
+        "prefix_results_validated": 6,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Apply/accept/EOG contributions differ",
+      "id": "selfconsistent-extra-apply"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Synthetic byte-token modeled wire and strict deterministic consistency only; never actual tokenizer/native vocabulary, model quality or scientific validation",
+  "source": {
+    "bytes": 29157,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_validation_v3.py",
+    "sha256": "bbd98b162bf47ff035a945cca29b97c5290113b39c8b1efb7770abc89f0ca229"
+  },
+  "stage_layer_before_regression": {
+    "bytes": 4481,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-STAGE-LAYER-REGRESSION-BEFORE-v3b.json",
+    "sha256": "c734ae31ee1fb73b4dc2311bd35648f4dfde73746888eaed3194cca29135d4c1"
+  },
+  "status": "passed",
+  "synthetic_frames": 401,
+  "tests": 12,
+  "wire": {
+    "bytes": 7402,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-WIRE-v2.json",
+    "sha256": "d578bc2179e55f7866dd7b2df3ec3169fdc3bcb0dee58629c2a31b8d366d0d01"
+  }
+}

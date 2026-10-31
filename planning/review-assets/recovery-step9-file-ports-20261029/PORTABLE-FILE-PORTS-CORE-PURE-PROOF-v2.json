@@ -1,0 +1,23 @@
+{
+  "actual_API_calls": 0,
+  "checker": {
+    "bytes": 14091,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_core_v2.py",
+    "sha256": "1c13a6f3c53942f493284c08495bce14adb5deb04e320c4269f7883f3952c491"
+  },
+  "errors": [],
+  "failures": [],
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T12:47:30.375168+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Actual portable source logic on new synthetic bytes/clock/API only. Private fault injection and harness seed assumptions are test-only, never production identity/eligibility.",
+  "source": {
+    "bytes": 34590,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+    "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+  },
+  "source_unchanged": true,
+  "status": "PASS",
+  "tests": 21
+}

@@ -1,0 +1,12 @@
+{
+  "assertion": "assert \"[x] Implement/review one canonical shared-owner continuation\" in todo",
+  "checker": "check_shared_owner_current_docs_v2.py",
+  "checker_sha256": "a5611a70d3ed4b555006d731ccb05f9649e45170545ec6ebe6735669a4e518fb",
+  "correction": "Identify the one completed canonical-continuation item and still require its small-fictional qualifier plus exact scoped acceptance/peer. All20status, actualpending/human, numeric/chronology/link/acceptance checks stay unchanged.",
+  "reason": "The completed TODO item says 'the small fictional canonical shared-owner continuation' and includes exact7e0/13b1 scope. The old checker required a different literal prose prefix; no source or documentation semantics failed.",
+  "recorded_at_utc": "2026-10-29T17:18:46.850698+00:00",
+  "schema_version": 1,
+  "status": "PRESERVED_ROOT_METADATA_PHRASE_ASSERTION_FAILURE",
+  "subject_tests_rerun": false,
+  "under_test_or_application_changed": false
+}

@@ -1,0 +1,156 @@
+{
+  "SDK_headers": [
+    {
+      "bytes": 37180,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\processthreadsapi.h",
+      "sha256": "436ae4cbb017d1cdb381aaf2119a3f89b04bae257fd4c881ef251daa02533540"
+    },
+    {
+      "bytes": 272738,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\winbase.h",
+      "sha256": "1e27239cda673a4b6c8f4295a3a0a8c3b87892eb7a593922eb11e0f22e602318"
+    },
+    {
+      "bytes": 904340,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\winnt.h",
+      "sha256": "797b974b2c95697bcb28a4c1d7ca33d9b0be602b4e0b28118fb1edf770d82d21"
+    },
+    {
+      "bytes": 40460,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\fileapi.h",
+      "sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1"
+    },
+    {
+      "bytes": 5539,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\namedpipeapi.h",
+      "sha256": "37062eba19e35b391cf050519c9403e19c6782663ea644ff38b2b5eb71dfce6b"
+    },
+    {
+      "bytes": 2976,
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\jobapi2.h",
+      "sha256": "a8f9591dc2b0bd249d03150b70abd47c0068c6eda2a1d74d24bc8964bcd68549"
+    }
+  ],
+  "Windows_API_qualification": "unperformed",
+  "actual_child_processes_dispatched": 0,
+  "actual_creator_API_calls": 0,
+  "actual_target_calls": 0,
+  "build_verification": {
+    "bytes": 63367,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-RESULT-VERIFICATION.json",
+    "sha256": "5a05e7310a42caebd9fdd6991487424d5cc860fe21bb5a806f5991c4c920f6bc"
+  },
+  "checker": {
+    "bytes": 12939,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_abi_parent_launch_draft.py",
+    "sha256": "b0caa7a283ddd4f97d9cbabc5ead8898515896f1c7612c3e58e12c200f43450c"
+  },
+  "claim_scope": "AI engineering preparation only; pure tests use fakes, no real Windows creator/Job behavior or native ABI qualification",
+  "creation_flags_hex": "0x08080404",
+  "execution_authorized": false,
+  "existing_EXE": {
+    "bytes": 188416,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "9f955aec8310ded1cd26648c7d9828369751219975893d5f45b35073b6927696"
+  },
+  "job_limit_flags_hex": "0x2308",
+  "limits": {
+    "active_process_limit": 1,
+    "job_commit_bytes": 268435456,
+    "maximum_children": 1,
+    "owned_child_attempt_seconds": 30,
+    "parent_finalization_reserve_seconds": 5,
+    "parent_seconds": 60,
+    "process_commit_bytes": 268435456,
+    "reserved_child_cleanup_seconds": 2,
+    "result_jsonl_bytes": 4194304,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 65536
+  },
+  "preserved_first_pass_checks": {
+    "bytes": 613,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-PURE-CHECKS.json",
+    "sha256": "25fff422325dd601d52d3cd821771b7444f57cc36559ad580ed05da02b872691"
+  },
+  "preserved_first_pass_source": {
+    "bytes": 40208,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft_pre_timing_review.py",
+    "sha256": "d3792eead4c9c4dae8592d45bbaae2ffbe1f94ad3a65455b5630623d9a290333"
+  },
+  "primary_docs": [
+    {
+      "purpose": "Public creation and explicit mutable Unicode arguments",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw"
+    },
+    {
+      "purpose": "Exactly three inheritable stdio handles via HANDLE_LIST",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-updateprocthreadattribute"
+    },
+    {
+      "purpose": "Public extended startup structure and cb size",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-startupinfoexw"
+    },
+    {
+      "purpose": "Assignment/nested Job behavior and prior-allocation limitation",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/jobapi2/nf-jobapi2-assignprocesstojobobject"
+    },
+    {
+      "purpose": "Previous suspension count exactly1",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread"
+    },
+    {
+      "purpose": "Separate process/Job commit limits and measured peak fields",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_extended_limit_information"
+    },
+    {
+      "purpose": "CREATE_SUSPENDED, NO_WINDOW, extended startup and Unicode environment",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags"
+    },
+    {
+      "purpose": "Public anonymous-pipe ownership/inheritance pattern",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/creating-a-child-process-with-redirected-input-and-output"
+    }
+  ],
+  "public_layouts": {
+    "ACCOUNTING": 48,
+    "BASIC_LIMIT": 64,
+    "EXTENDED_LIMIT": 144,
+    "IO_COUNTERS": 48,
+    "PID_LIST": 136,
+    "PROCESS_INFORMATION": 24,
+    "SECURITY_ATTRIBUTES": 24,
+    "STARTUPINFOEXW": 112,
+    "STARTUPINFOW": 104
+  },
+  "pure_checks": {
+    "bytes": 613,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-PURE-CHECKS-v2.json",
+    "sha256": "9400cfc51b57d836609013a879e895fc10a09f9fcd233d599b4df624528b9292"
+  },
+  "pure_log": {
+    "bytes": 2618,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-PURE-CHECKS-v2.log",
+    "sha256": "9d4b46680b3ab2ed3db4561dfd035e62c8093e9a3846c0e55ed8ff8d5971abab"
+  },
+  "pure_test_count": 19,
+  "recorded_at_utc": "2026-10-28T19:02:59.842546+00:00",
+  "remaining_gates": [
+    "Independent exact-hash draft review",
+    "Current OS Job-accounting diagnosis disposition",
+    "Separately authorized harmless same-stdio suspended-worker qualification, including failure/reap paths",
+    "New execution-enabled helper version, exact frozen inputs/protocol/qualified parent interpreter and root decision",
+    "Once-only ABI execution and independent raw result verification"
+  ],
+  "schema_version": 1,
+  "source": {
+    "bytes": 41401,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft.py",
+    "sha256": "ec26bfdd77cc8966bb081536e0fd89b2c80f20a1eeb8aa9ec08f9fe3750c7bcd"
+  },
+  "status": "prospective_design_and_hard_disabled_draft_only",
+  "verified_build_receipt": {
+    "bytes": 1564,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\receipt.json",
+    "sha256": "ebae856c74554b200b8d486cc5ce958fa530dc75499035bf82a9133114ae7c72"
+  }
+}

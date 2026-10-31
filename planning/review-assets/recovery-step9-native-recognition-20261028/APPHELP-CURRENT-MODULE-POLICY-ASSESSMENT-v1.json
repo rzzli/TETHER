@@ -1,0 +1,115 @@
+{
+  "activity": {
+    "CPU_GGUF_model_payload_reads": 0,
+    "actual_census_or_API_calls": 0,
+    "compiler_or_child_calls": 0,
+    "official_primary_web_research": true,
+    "policy_or_source_edits": 0,
+    "selected_technical_artifact_reads": true,
+    "unknown_image_opens": 0
+  },
+  "current_report": {
+    "UTF16_hex_matches_UTF8": true,
+    "diagnostic_row_publication": "returned",
+    "enumeration_index": 5,
+    "full_untruncated_prefixes": true,
+    "image_file_opened_or_hashed_by_reviewer": false,
+    "name": "apphelp.dll",
+    "path": "C:\\Windows\\SYSTEM32\\apphelp.dll",
+    "system_basename_listed": false,
+    "system_directory_matches": true,
+    "tag": "unapproved_non_native_module"
+  },
+  "excluded_changes": [
+    "No allowlist edit now",
+    "No apphelp image open/hash now",
+    "No census API/child/compiler execution now",
+    "No disabling AppCompat, registry/database edits, executable renaming or retry-until-pass workaround",
+    "No counter allowance or retrospective success reinterpretation"
+  ],
+  "interpretation": [
+    "For this attempt only, the recorded policy refusal is the absent basename under the unchanged sixteen-name list; recorded directory comparison passed.",
+    "The name/path are current-process reported/lexically normalized metadata. No image hash, size, signature, trusted provenance or loaded-byte identity is established for apphelp.dll.",
+    "Enumeration index5 is not evidence of when or why the module loaded. No specific compatibility database match, applied shim, IAT modification or target-initializer cause is established.",
+    "The earlier second-attempt generic failure has no retained module identity. Current apphelp metadata must not be projected backward onto it.",
+    "The first refusal stopped enumeration; no full current-process module inventory exists in this run. Later entries, data-file-only mappings, historical loads/unloads and later initialization effects are not established."
+  ],
+  "minimum_before_any_list_change": [
+    "Independently verify that one current-process census reached its declared post-core/pre-query boundary and completed all representation/publication/terminal conditions. If incomplete, keep the policy unchanged; do not fill gaps with static candidates.",
+    "Review all unlisted/wrong-directory/unknown entries as one batch. Full census metadata is evidence of reported names/paths only, not an approval list or proof of benign role.",
+    "Separately authorize exact static eligibility reads for each proposed new System32 candidate before opening it: canonical path/no-reparse, hash/size/PE/import metadata and provenance adequate for the existing System32 pin standard. No such read is performed or authorized by this assessment.",
+    "Prospectively freeze one finite reviewed candidate set and update header names, parent contract/System32 pins/validator and build/launch protocol together. Preserve old sources/results, keep generic Job policy unchanged and require new independent source/pure/pin review plus root decision.",
+    "Continue to label source/host scope and native initializer effects honestly. No actual shim/load cause, loaded-byte attestation, full lifetime inventory or scientific/ABI acceptance follows solely from a census or a policy edit."
+  ],
+  "primary_documentation": [
+    {
+      "fact": "Microsoft lists Apphelp.dll as the DLL supplying SdbGetAppPatchDir, an AppPatch/shim-database-related API. This associates the named Windows component with compatibility infrastructure; it does not authenticate the reported file.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/devnotes/sdbgetapppatchdir"
+    },
+    {
+      "fact": "Microsoft describes the application compatibility engine as loader-associated and performing database matching at application start. This makes a startup compatibility association plausible, not a trace of the load in this process.",
+      "url": "https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-appcompat#appcompatturnoffengine"
+    },
+    {
+      "fact": "Microsoft distinguishes compatibility matching, Apphelp messages and Appfix hooks. Mere module presence does not demonstrate that any particular match, message or fix was applied.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/devnotes/application-compatibility-database"
+    },
+    {
+      "fact": "A process-specific module snapshot can be requested, errors must be retained, and DATAFILE-style mappings are excluded. A snapshot is not a lifetime/global module history.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot"
+    },
+    {
+      "fact": "GetModuleFileNameW reports a loaded current-process module path, with documented truncation/error and path-format rules. It does not verify file bytes or provenance.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew"
+    }
+  ],
+  "protocol": {
+    "bytes": 63411,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v3.json",
+    "sha256": "88672320d5969c5dbd32e265155353f31b187b51aeaad39396f40788fdda1fb8"
+  },
+  "recorded_at_utc": "2026-10-29T00:30:11.119349+00:00",
+  "root_decision": {
+    "bytes": 6063,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-ROOT-DECISION-v3.json",
+    "sha256": "40978ab1f166c29a7e52c835fb921c2543bf9eead5138fd97d6881fde204ac69"
+  },
+  "schema_version": 1,
+  "selected_prospective_minimum": {
+    "completion": "Normal Module32Next end with ERROR_NO_MORE_FILES, all rows durably retained, no entry/byte/time cap, query failure, truncated identity representation or publication error. Enumeration completion and metadata completeness are separate flags; neither implies file identity or eligibility.",
+    "explicit_defaults_calls": 0,
+    "explicit_target_registry_backend_model_grammar_calls": 0,
+    "explicit_version_calls": 0,
+    "maximum_census_artifact_bytes": 2097152,
+    "maximum_retained_module_rows": 64,
+    "native_initializer_effects": "Core DLL loading still runs native initializers; no claim of zero OS registry/file/network/thread effects.",
+    "native_target_C_queries": 0,
+    "outputs": "Exclusive bounded census artifact plus small summary/independent failure disposition and complete parent seal; do not echo the entire census into64KiB stdout. Partial or missing census/summary/seal stays incomplete and negative.",
+    "parent": "Same detached SDK3bf, JOB_LIST/suspended/three stdio handles, strict generic Job total1/active0/terminated0/empty,256MiB,30/60seconds,2/5second reserves and no automatic retry.",
+    "policy": "Classify against the unchanged list after recording; classification is observational only. No name is allowed dynamically, and no typed API is called even if all rows would satisfy policy.",
+    "role": "One separately frozen metadata-only current-process census, after the same approved core4 load stage and before any explicit target C query. No pre-load baseline/causation phase.",
+    "rows": "Retain every admitted entry before any policy stop: ordinal, query return/error, bounded name/path UTF16 units and optional UTF8, lengths/truncation/conversion, unchanged classification/predicate booleans and explicit unverified-file scope.",
+    "scope": "Current child PID only, using existing module snapshot/path query family; no global scan, other PID open, unknown image open/hash or API-set resolution.",
+    "snapshot_attempts": "One predeclared attempt; snapshot/query/cap failures remain incomplete, with no automatic rerun.",
+    "status": "Distinct census validator and diagnostic-only terminal status; never reuse ABI success label. If needed, pin a status-only sealer copy with exact normalized AST equivalence; do not mutate SDK/gates.",
+    "validation": "Fake bounds/normal end/query/cap/UTF16/publication/unknown-row cases, no-target-call source guard, exact provenance/pins/source review and separate root decision before any build or actual census."
+  },
+  "selected_technical_evidence": [
+    {
+      "bytes": 1028,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v3-20261029T001629Z\\execution\\child\\failure.json",
+      "sha256": "bc485384044b24ca4625355c9d9810fc782d8145e7b130eeb7b3107449bec3e4"
+    },
+    {
+      "bytes": 2058,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v3-20261029T001629Z\\execution\\child\\result.partial.jsonl",
+      "sha256": "dc30a79986fbd25532eda2d29f75e28608d3c7bccc3803c3491b997dc85eca80"
+    },
+    {
+      "bytes": 939,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v3-20261029T001629Z\\stdout.bin",
+      "sha256": "6dd754e60a15b919bc0d477330d220a62c80559da6065a0fa007ccf27736a425"
+    }
+  ],
+  "status": "policy_change_HOLD_current_report_only_one_bounded_self_census_selected_source_design_only"
+}

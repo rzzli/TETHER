@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T03:49:46.169077+00:00",
+  "reviewer": "os_accounting_peer",
+  "status": "design_consistent_source_pure_scope_with_required_freeze_details",
+  "review_type": "Independent finite engineering design critique; not execution or asset-access permission",
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-SOURCE-ROOT-DECISION-v1.json",
+      "bytes": 4851,
+      "sha256": "20ea58d6626b82dd55c7b823ed1bd729134ecac15470fcc6c4c1ad69d92a5399"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\POST-ABI-RECOGNITION-PREREQUISITES-v1.md",
+      "bytes": 13612,
+      "sha256": "0f3e26dfd833e5b5e8f3e0a24c00697c42e0849db132ce9e34e99b87b12cc77b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\POST-ABI-RECOGNITION-PREREQUISITES-v1.json",
+      "bytes": 9781,
+      "sha256": "fb7dd1ed800c5c56e2672a7a85dadbcb8a56ee748817a7a8f997fe3b94dc82ff"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-ACCEPTANCE-v1.json",
+      "bytes": 2492,
+      "sha256": "024e053664ba45dbda59096ea3a11ab4351fc52fc6f06300af045bc152d2991b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_platform_v1.cpp",
+      "bytes": 76135,
+      "sha256": "dbf76b19358465e7963ea16eb37ff1f637d4fa6334fcc5c93d4f531495b1f918"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_platform_abi_observation_v2.py",
+      "bytes": 59541,
+      "sha256": "f2682469f48919698d4ba702920888e8b2175b63161080afc62604668d639ef5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "bytes": 53085,
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    }
+  ],
+  "material_contradiction_in_root_decision": false,
+  "required_before_source_parent_protocol_freeze": [
+    {
+      "id": "deadline_and_exact_payload_roles",
+      "before_freeze_required": true,
+      "evidence": "Current parent small-file records and SDK leased handles have a128MiB cap. ABI execute starts its60s clock inside execute, initial leases use parent_end-5, but final leases use parent_end. These qualified small-input mechanics do not establish a bounded three-model recognition hash path.",
+      "source_locations": [
+        "run_platform_abi_observation_v2.py:77",
+        "run_platform_abi_observation_v2.py:333",
+        "run_platform_abi_observation_v2.py:356",
+        "run_platform_abi_observation_v2.py:437",
+        "detached_parent_launch_draft_v1.py:494"
+      ],
+      "required": "Freeze every driver/parent/child/final hash pass and byte ceiling. Start the recorded300s owner/driver deadline before runtime validation/hashing; use streaming with reserved per-chunk attempt/return byte state. End all bulk validation before the5s finalization reserve. Bind model exceptions to exactly the three ordered original descriptors at exact sizes and hashes; retain small limits for all software/DLL roles and reject arbitrary large leaves before opening. Preparation remains descriptor-only. If time is insufficient, preserve partial evidence and stop without widening limits or repeating.",
+      "metadata_only_cost": {
+        "one_three_shard_pass_bytes": 8988110496,
+        "conditional_parent_initial_child_initial_parent_final_passes": 3,
+        "conditional_logical_bytes": 26964331488,
+        "physical_IO_or_elapsed_fit_established": false
+      },
+      "meaningful_faults": [
+        "Out-of-role large leaf rejected before filesystem access",
+        "Deadline at first/last model chunk retains attempted/returned byte state and cannot reach launch after failed validation",
+        "Final hash deadline cannot consume the reserved sealing interval"
+      ]
+    },
+    {
+      "id": "native_attempt_return_and_cleanup_state",
+      "before_freeze_required": true,
+      "evidence": "Dormant recognition code tracks selected successful-work counters and uses destructor fallback. Its explicit cleanup clears model/backend ownership before native free returns. This prevents a simple retry but does not retain an explicit attempted/returned/unknown cleanup ledger.",
+      "source_locations": [
+        "typed_public_c_recognizer_platform_v1.cpp:474",
+        "typed_public_c_recognizer_platform_v1.cpp:481",
+        "typed_public_c_recognizer_platform_v1.cpp:555",
+        "typed_public_c_recognizer_platform_v1.cpp:559",
+        "typed_public_c_recognizer_platform_v1.cpp:581"
+      ],
+      "required": "Freeze per-family plus aggregate call-attempt/return ceilings, including registry/backend/model/vocabulary/EOG enumeration, tokenization/piece sizing retries, sampler init/apply/accept/free and cleanup. Reserve attempt state before dispatch; record returned pointers, side effects and ownership before deadline checks/logging. Distinguish not attempted, return observed and return unknown. Free samplers before model and model before paired backend cleanup; allow bounded cleanup after work quota expiry without repeating uncertain frees. Success requires required cleanup returned; preserve primary failure and partial coverage through late errors, interruption and sealing. Keep117000ms cooperative work inside120s external child including2s cleanup; no claim that a native call is interruptible.",
+      "meaningful_faults": [
+        "Late returned model/sampler pointer is owned before a failing postcall deadline check and is cleaned exactly once",
+        "Late backend initialization return remains cleanup-eligible",
+        "Work cap prevents the next target call while cleanup remains eligible; unknown cleanup return is never silently retried or reported successful"
+      ]
+    },
+    {
+      "id": "exact_cpu_phase_and_single_attempt",
+      "before_freeze_required": true,
+      "evidence": "Root requires a separately versioned recognition policy while preserving immutable ABI807. Existing dormant runtime.recognition=true is not an adequate recognition admission predicate.",
+      "source_locations": [
+        "typed_public_c_recognizer_platform_v1.cpp:535",
+        "typed_public_c_recognizer_platform_v1.cpp:537",
+        "typed_public_c_recognizer_platform_v1.cpp:541",
+        "typed_public_c_recognizer_platform_v1.cpp:556"
+      ],
+      "required": "Freeze the parent-derived event/phase sequence and shared fingerprint: pre_cpu exact self/core4 with CPU forbidden; post explicit pinned CPU-registration return exact self/core4/one CPU at the original pinned runtime path. Reject early/missing/duplicate CPU, protected aliases and other providers before trusted-platform classification. Registry/device singleton identity and expected effective vocabulary-only parameters are separate required observations. Child-supplied phase/eligibility flags confer no authority. Strict nine-argument argv binds only reviewed EXE,mode,runtime,output,pack,CPU and the ordered three shards. Interpret CPU/vocabulary/EOG and document gates as stages of the same sole child/attempt, not additional probe launches.",
+      "meaningful_faults": [
+        "Forged phase or post_cpu before explicit load return rejects",
+        "Missing/early/duplicate/wrong-path CPU and protected System32 aliases reject while ABI807 still rejects CPU",
+        "Extra/reordered shard or argv value rejects before target execution"
+      ]
+    },
+    {
+      "id": "complete_coverage_and_missingness",
+      "before_freeze_required": true,
+      "evidence": "The frozen pack retains167primary cases,18authored abstentions and4independent guards, with six prefix slots. primary/161 raw NUL has native membership null; required token-boundary partial-UTF8 selectors can be unavailable before any grammar observation.",
+      "required": "Freeze a strict whole-pack case/group/prefix ledger and final success predicate. Preserve IDs, raw hashes, independent harness/native/prefix outcomes and every unattempted slot. Harness rejection is not native nonmembership; interrupted, capped, unpublished, unknown-return or missing work is not a negative native result. Required coverage_unavailable makes the gate unqualified even if all available observations match. EOG enumeration must cover the complete bounded vocabulary and every retained EOG probe without accepting EOG. Output/call/capture/resource limits and publication failures veto qualification; terminal failure metadata remains durable. Singleton results establish neither full-mask behavior nor inference/scientific correctness.",
+      "meaningful_faults": [
+        "All available cases match but one required UTF8 prefix is unavailable: qualification remains false",
+        "Raw-NUL harness case cannot carry false native membership",
+        "Missing case/prefix, incomplete EOG scan or cap/publication failure cannot be normalized into a complete successful batch"
+      ]
+    }
+  ],
+  "prospective_upper_bounds": {
+    "EOG_ids": 64,
+    "active_processes": 1,
+    "cases": 200,
+    "child_JSONL_bytes": 8388608,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds_including_cleanup": 120,
+    "cooperative_work_ms": 117000,
+    "counted_token_work": 1000000,
+    "grammars": 20,
+    "maximum_attempts": 1,
+    "maximum_children": 1,
+    "pack_bytes": 20971520,
+    "parent_finalization_reserved_seconds": 5,
+    "parent_seconds": 300,
+    "prefixes": 6,
+    "process_and_job_commit_bytes": 268435456,
+    "row_bytes": 65536,
+    "stream_bytes": 65536,
+    "vocabulary_ids": 262144
+  },
+  "preserved_ABI_policy_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589",
+  "observed_prior_ABI_version": "0.7.0-dev",
+  "activity": {
+    "CPU_payload_opens_or_hashes": 0,
+    "GGUF_payload_opens_or_hashes": 0,
+    "SDK_constructors": 0,
+    "target_native_calls": 0,
+    "child_launches": 0,
+    "compiler_calls": 0,
+    "new_OS_diagnostics": 0,
+    "unknown_image_opens": 0,
+    "benchmark_or_human_answer_reads": 0
+  },
+  "limits": [
+    "Only listed engineering source and metadata were read/hashed. The arithmetic uses retained descriptor sizes; no physical-I/O, hash-speed, memory-fit or120/300s completion claim is made.",
+    "Existing ABI807 acceptance and fullruntime311 remain unchanged. No new model/tokenizer/grammar conformance, full mask, inference, scientific result or universal containment follows.",
+    "The requirements identify finite source/pure freeze checks. Source/pure, build, asset, parent/protocol and root execution decisions remain separate. No recursive ancestry/authentication or additional census is requested."
+  ]
+}

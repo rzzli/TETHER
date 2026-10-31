@@ -1,0 +1,107 @@
+{
+  "activity": {
+    "CPU_binary_reads": 0,
+    "GGUF_reads": 0,
+    "SDK_constructors": 0,
+    "children": 0,
+    "native_calls": 0
+  },
+  "checker": {
+    "bytes": 2615,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_coverage_before_v2.py",
+    "sha256": "4ff8b1d757995b1388faacbac5cf4380f034c334d62abf4268b441ebeed0409b"
+  },
+  "errors": [],
+  "failures": [
+    "test_missing_snapshot_cannot_validate_expected_computation (__main__.Checks.test_missing_snapshot_cannot_validate_expected_computation)",
+    "test_pending_snapshot_cannot_validate_expected_computation (__main__.Checks.test_pending_snapshot_cannot_validate_expected_computation)",
+    "test_wrong_event_cannot_validate_expected_computation (__main__.Checks.test_wrong_event_cannot_validate_expected_computation)"
+  ],
+  "observed": [
+    {
+      "coverage": {
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "cases_computed_claims_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "frames_validated": 16,
+        "harness_dispositions_validated": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Missing native accounting snapshot",
+      "kind": "missing_snapshot"
+    },
+    {
+      "coverage": {
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "cases_computed_claims_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "frames_validated": 16,
+        "harness_dispositions_validated": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Unknown/unreturned native API cannot qualify",
+      "kind": "pending_snapshot"
+    },
+    {
+      "coverage": {
+        "case_group_results_validated": [
+          0,
+          0,
+          0
+        ],
+        "case_results_validated": 0,
+        "cases_computed_claims_validated": 1,
+        "complete": false,
+        "expected_cases": 189,
+        "expected_prefixes": 6,
+        "frames_validated": 16,
+        "harness_dispositions_validated": 0,
+        "missing_case_results": 189,
+        "missing_prefix_results": 6,
+        "native_case_results_validated": 0,
+        "prefix_results_validated": 0,
+        "status": "unqualified_incomplete_or_invalid",
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      },
+      "error": "Exact recognition event order: case_result",
+      "kind": "wrong_event"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "bytes": 26980,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_validation_v1.py",
+    "sha256": "bf23e68436f356e1261b3f4db9bdc2f768921804834eb0701695d862d8d07f12"
+  },
+  "status": "failed_expected_before_last_observed_coverage_fix",
+  "synthetic_fixture": {
+    "bytes": 19348,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_validation_v1.py",
+    "sha256": "e175c4752bdcdff9a9b273ca47515d0bd3afd5aabe596b9c49ca1b900446c9fb"
+  },
+  "tests": 3
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "status": "HOLD_TWO_CONFIRMED_STATIC_INTEGRATION_DEFECTS",
+  "scope": "Finite source-text/AST review of frozen non-authored OwnerOps40ee and FileView79c against authored Kernel88ff. Reviewer authored Kernel; this is not an independent kernel implementation peer. Native owns independent whole-source/harness evidence. Root subsequently identified F2 in the authored kernel; this named successor retains exact static evidence and narrows the earlier raw/cache statement. No claim of independent kernel implementation review is made.",
+  "pause": {
+    "path": "planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-SOURCE-PAUSE-v1.json",
+    "bytes": 5271,
+    "sha256": "5594746b7d9687a7a386f4188564726f8ab000f1ec4ba38e557b7696373687fb"
+  },
+  "sources": {
+    "kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_entry_kernel_v1.py",
+      "bytes": 117371,
+      "sha256": "88ff0b2782b02b9cb96d94e6981df6911e87d73f6280f2838eed8c97d42ece20"
+    },
+    "owner_ops": {
+      "path": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_owner_ops_v1.py",
+      "bytes": 39530,
+      "sha256": "40ee3dbd2fceca14ad94ec19be6a2e81807b8ed366b61fb9062cba526cccfeda"
+    },
+    "file_view": {
+      "path": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_file_view_v1.py",
+      "bytes": 3614,
+      "sha256": "79c371a201c9450bb7f50cef3ac0340fee782e744bf00390c4683e66d4c34daf"
+    }
+  },
+  "findings": [
+    {
+      "id": "F1_SINK_JOURNAL_CLOSE_METHOD_MISSING",
+      "classification": "CONFIRMED_STATIC_INTERFACE_DEFECT_NOT_EXECUTED",
+      "severity": "blocks_healthy_completion",
+      "consumer": {
+        "path": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_owner_ops_v1.py",
+        "line": 132,
+        "expression": "self.sink.close_journal(ack,self.origin.hard_end)"
+      },
+      "provider": {
+        "path": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_entry_kernel_v1.py",
+        "lines": [
+          146,
+          152,
+          153
+        ],
+        "class": "SinkFacade",
+        "actual_methods": [
+          "__init__",
+          "__setattr__",
+          "append",
+          "close",
+          "publish"
+        ],
+        "missing_method": "close_journal"
+      },
+      "causal_path": [
+        "Owned _finish reaches journal_close at Ops lines130-136.",
+        "journal.closed is consumed at line131 before _callback invokes the missing facade method.",
+        "The lambda raises AttributeError before the declared backend close_callback can run.",
+        "try_action retains that error; journal close ACK remains false, so receipt/seal/final_clock/pure_owner_ack cannot be reached on the healthy path."
+      ],
+      "smallest_candidate_fix": "Align the kernel sink facade to the declared close_journal callback method (or the one exact Ops call to the canonical facade method), preserving the same backend/ACK/clock/once semantics. Root decides a separately named correction; no alias or source edit is applied here.",
+      "evidence_limit": "No subject import, call, exception reproduction or test result is claimed."
+    },
+    {
+      "id": "F2_PYTHON_DELIVERY_PROMOTED_BEFORE_NATIVE_COMMIT",
+      "identified_by": "root; statically confirmed by kernel author",
+      "classification": "CONFIRMED_STATIC_CANONICAL_AUTHORITY_DEFECT_NOT_EXECUTED",
+      "severity": "can_promote_uncommitted_handle_or_count",
+      "source": "planning/review-assets/recovery-step9-entry-source-20261029/preflight_entry_kernel_v1.py",
+      "assign_before_publish": [
+        {
+          "axis": "scalar",
+          "assignment_line": 995,
+          "publish_line": 996
+        },
+        {
+          "axis": "count",
+          "assignment_line": 1027,
+          "publish_line": 1028
+        },
+        {
+          "axis": "error_definition",
+          "assignment_line": 1046,
+          "publish_line": 1047
+        },
+        {
+          "axis": "error_value",
+          "assignment_line": 1063,
+          "publish_line": 1064
+        },
+        {
+          "axis": "compat_error_value",
+          "assignment_line": 1078,
+          "publish_line": 1079
+        },
+        {
+          "axis": "compat_error_definition",
+          "assignment_line": 1081,
+          "publish_line": 1082
+        }
+      ],
+      "bank_evidence": {
+        "observe_lines": [
+          257,
+          262
+        ],
+        "stage_lines": [
+          237,
+          239
+        ],
+        "commit_line": 252,
+        "reconcile_lines": [
+          1549,
+          1553
+        ],
+        "handle_line": 893,
+        "defined_line": 898,
+        "cold_projection_lines": [
+          814,
+          854
+        ]
+      },
+      "causal_path": [
+        "AdoptionHooks first assigns c.scalar/count/error/error_definition as Python-visible delivery, then calls raw_store.observe.",
+        "observe writes payload/stage_hint before its separate commit call. An original exception before commit leaves bank UNOBSERVED/STAGED authority, while the Python c.* value remains populated.",
+        "_publish_axis latches the original error/quarantine, but _reconcile_native only fills fields still UNOBSERVED from committed axes; it does not undo the populated noncommitted c.*.",
+        "handle returns c.scalar and defined/cold projection derive known count from c.scalar/c.count, so staged handle77 can appear owned or staged count58 can appear known despite authoritative bank unknown. Quarantine alone does not fix those observations or cleanup rights."
+      ],
+      "required_minimal_principle": "Canonical native bank observedness/commit controls rights, defined count and cold canonical lower bounds. Publish/commit before deriving caches; retain distinct original Python delivery facts separately if needed. A failed commit must not populate authoritative caches. Conversely, a committed fact must remain recoverable for cleanup/cold reports if the later cache assignment is interrupted; reporting cannot heal/retry a failed fold.",
+      "regression_scope": "Root selects two finite pre-fix controls on unchanged source1 for sink callback spelling and this raw-bank authority boundary before one coherent source2; existing E17/E18/E21 native known/staged/dirty requirements apply.",
+      "evidence_limit": "Static source only. No staged interruption, close dispatch, count report or exception reproduction has been executed by this reviewer."
+    }
+  ],
+  "checked_areas": [
+    {
+      "area": "method_and_function_surface",
+      "result": "ONE_BLOCKER_F1",
+      "evidence": "All other late-table18, Core _bootstrap_* methods, StateView.state/_state and FileRef.owner/spec names resolve statically. SinkFacade mismatch is isolated above."
+    },
+    {
+      "area": "canonical_identity_and_nonownership",
+      "result": "STATIC_CONSISTENT",
+      "evidence": "Ops lines287-295 stores only immutable _view/_state/_attach_ref; FileView lines14-33 does likewise. Both require executing K.KernelState and actual kernel_module identity. No Owner/Origin/Registry constructor or replacement backend is used."
+    },
+    {
+      "area": "fixed_captured_table",
+      "result": "STATIC_CONSISTENT",
+      "evidence": "Ops lines281-285 declares fixed MappingProxyType18; lines334-344 forwards a literal allowed name set to Core. Kernel retains the original captured table and exact ordered function identities at loader acceptance; installation and Core late lookup check them."
+    },
+    {
+      "area": "roles_and_contexts",
+      "result": "STATIC_CONSISTENT",
+      "evidence": "FileView lines51-58 enforces exact FileSpec, closed role enum and capture relation. Ops lines65-70 uses canonical same-state ports and creates full context with captured blobs only. Checker evidence at lines417-420 is limited to actual same-owner CapturedContext.blobs; hash-only inputs are not promoted."
+    },
+    {
+      "area": "raw_cache_and_once_close",
+      "result": "HOLD_F2_AUTHORITATIVE_BANK_MISMATCH",
+      "evidence": "The FileView remains non-owning and preserves canonical refs/once-close routing, but Root-identified F2 shows the new kernel still treats precommit Python deliveries as authoritative values. The prior static lineage observation is not a proof of the stronger native-bank authority contract."
+    },
+    {
+      "area": "late_ack_retention",
+      "result": "STATIC_CONSISTENT_EXCEPT_F1_AVAILABILITY",
+      "evidence": "Ops candidate/cleanup/receipt/seal ACK projections at lines119/127/139/141 read retained callback facts outside try_action, preserving known ACK even if a postclock check raises. Journal facts are projected again outside try_action at line137; F1 prevents its actual callback from being reached."
+    },
+    {
+      "area": "snapshot_and_serialization",
+      "result": "STATIC_CONSISTENT",
+      "evidence": "_snapshot lines276-279 uses genuine Core._issue_snapshot. Full declared/trusted dependency policy is retained in snapshot metadata; ROLE1 lines184-185 encode only admitted captured edges and refuse unknown externals. Wire rows use bounded tuple/_Rows paths rather than a global call-dict list; phase provenance retains immutable completed bytes."
+    },
+    {
+      "area": "final_result_cutoff",
+      "result": "STATIC_CONSISTENT",
+      "evidence": "Ops lines144-147 performs existing final proof before snapshot issuance. Core._issue_snapshot guards row capture and immutable assembly under the original cleanup clock and vetoes partial/late outer completion. Final snapshot getters remain cache-only. No physical deadline or RSS claim follows."
+    }
+  ],
+  "source_methods_observed": {
+    "ops_sink_calls": [
+      "close_journal",
+      "publish"
+    ],
+    "kernel_sink_methods": [
+      "__init__",
+      "__setattr__",
+      "append",
+      "close",
+      "publish"
+    ]
+  },
+  "activity": {
+    "source_text_and_AST_only": true,
+    "subject_imports": 0,
+    "subject_calls": 0,
+    "subject_tests": 0,
+    "source_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "next_step": "Preserve all5594/source1 pins. Root-authorized finite pre-fix probes must precede a separately named coherent correction for F1/F2; no broad suite replay, source edit or oracle adaptation is performed here.",
+  "qualification": {
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "supersedes_without_mutation": {
+    "path": "planning/review-assets/recovery-step9-entry-source-20261029/ENTRY-OPS-FILEVIEW-STATIC-REVIEW-v1.json",
+    "bytes": 7085,
+    "sha256": "96b4a7970e16eacc246e77919406460ff12a1b2e1c577d8951af483c2d8ced54"
+  }
+}

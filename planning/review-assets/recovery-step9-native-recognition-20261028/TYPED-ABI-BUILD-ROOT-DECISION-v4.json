@@ -1,0 +1,76 @@
+{
+  "CPU_GGUF_model_reads": 0,
+  "anchors": {
+    "BRIDGE-SYMBOL-OWNERS-PURE-PROOF-v4.json": {
+      "bytes": 7510,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-SYMBOL-OWNERS-PURE-PROOF-v4.json",
+      "sha256": "cae0ad9da16ca1a95a29abe8ee99ba89c2edbf75dc1a4690afe15777d0a726eb"
+    },
+    "TYPED-ABI-BUILD-PREPARATION-v4.json": {
+      "bytes": 1011,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PREPARATION-v4.json",
+      "sha256": "f4ed402e4d45e4222b78dedcaa1840588f45b7c937dae19936a5521ec6b04be3"
+    },
+    "TYPED-ABI-BUILD-PROTOCOL-v4.json": {
+      "bytes": 56784,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PROTOCOL-v4.json",
+      "sha256": "5a6f8598456efb79eab3e977faf32adca50a8f3a0e876b72121eebabfd525da0"
+    },
+    "TYPED-ABI-BUILD-PURE-CHECKS-v4-v2.json": {
+      "bytes": 670,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PURE-CHECKS-v4-v2.json",
+      "sha256": "107f0f51e41edda70b44684abb9c92e3d74c8453ad21bd06e33155ce6552cd69"
+    },
+    "TYPED-ABI-BUILD-V4-INDEPENDENT-REVIEW.json": {
+      "bytes": 3440,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V4-INDEPENDENT-REVIEW.json",
+      "sha256": "c1e3dd84b2a8280806e4ca2a5b11256c236e62b6f3335899da65e3d6f91ebf81"
+    },
+    "build_harmless_native_worker_v3.py": {
+      "bytes": 26981,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_harmless_native_worker_v3.py",
+      "sha256": "f292b65c6a86a9a70a41a1fb5286e20266281b6749c1583579e64193524af5ae"
+    },
+    "build_public_c_bridge.py": {
+      "bytes": 36739,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_public_c_bridge.py",
+      "sha256": "733a47bb8c047e129560c0c68dd63d97cf09c95c23b3cabd105df7791927c09c"
+    },
+    "build_typed_abi_bridge_v4.py": {
+      "bytes": 29926,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_typed_abi_bridge_v4.py",
+      "sha256": "988b48fbfd8e0e07011669906ce8670727257a7fda7847f62f6ed4c282c400f9"
+    },
+    "check_bridge_symbol_owners_v4.py": {
+      "bytes": 10522,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_bridge_symbol_owners_v4.py",
+      "sha256": "cb4196f2a3d0d39c44f9b0c1ab581cdd0a25314c8fedb61bee2529d3ea502ef9"
+    },
+    "typed_public_c_recognizer_v4.cpp": {
+      "bytes": 49559,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v4.cpp",
+      "sha256": "2f34035545c6d7bd742b8932a95449aeb76ebc48084e8dc170cbea6b740794ae"
+    }
+  },
+  "automatic_retry": false,
+  "compiler_scope": "Launched compiler/linker handles only; descendants not independently attested",
+  "excluded_old_inputs": 25,
+  "execute_compiled_result": false,
+  "failure_scope": "Pre-tool constructor/journal-publication errors may leave incomplete output; never accepted/retried automatically",
+  "finalizer_AST_equal_except_terminal_event": true,
+  "fresh_input_hashes_checked": 194,
+  "maximum_compiler_linker_processes": 2,
+  "network_requests": 0,
+  "no_scientific_or_ABI_acceptance": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-build-v4-20261028T231155Z",
+  "output_absent": true,
+  "provider_spend_usd": 0,
+  "recognition_enabled": false,
+  "recorded_at_utc": "2026-10-28T23:15:13.797811+00:00",
+  "required_independent_output_verification": true,
+  "schema_version": 1,
+  "status": "root_authorizes_one_exact_compile_link_only_attempt",
+  "target_DLL_loads": 0,
+  "toolchain_scope": "Pinned prior direct SDK/STL/tool leaves and libraries; not a complete transitive toolchain closure",
+  "unchanged_header_sha256": "dee857596074375218a3c3f8d11130f4066fbfb07b7ae08e454f1f12306a1784"
+}

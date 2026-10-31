@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "NORMATIVE_SPECIFIC_CODE_ERRATA_READY_FOR_INDEPENDENT_REVIEW",
+  "authorization": "Root direct task: independently assess N04.2/N06.1/N07.1 normative support; if supported author only three exact-code corrections with Source4 unchanged. This record is delegated-author provenance, not an execution scope.",
+  "evidence": {
+    "base_contract": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "bytes": 43817,
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    "unchanged_source4_kernel": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "prior_accepted_source4_E22": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_contract_cases_source4_v1.py",
+      "bytes": 36778,
+      "sha256": "c54681bd4b0af36915f03f728499e6b1eb52348574629f80cac703aad0b1a10d"
+    },
+    "prior_acceptance": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-ROOT-ACCEPTANCE-v1.json",
+      "bytes": 5632,
+      "sha256": "43316e7aa8611aa9d9df5033778d37a7ebfc3f0d64577d2728bea3abe051f2ab"
+    },
+    "prior_matrix": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BRANCH-MATRIX-v2.json",
+      "bytes": 30303,
+      "sha256": "e52a6c66d8839b2e40115ff6b10f439432d29ba103614760e33f6862cd585049"
+    },
+    "callback_control": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v3.json",
+      "bytes": 238104,
+      "sha256": "bca943d0e85c32c6575b4e0225fd152777200041bb81a983d8ed01bb431f0892"
+    }
+  },
+  "corrections": [
+    {
+      "branch": "N04.2",
+      "old": "INVALID_INPUT",
+      "exact": "RAW_RETURN_UNKNOWN",
+      "normative": "N04_committed_native_NULL expected committed native NULL, usable_handle false, and ownership UNKNOWN_OR_REFUSED; no INVALID_INPUT code is prescribed.",
+      "implementation": "Unchanged Source4 _BootstrapPrimitives.acquire line1621 requires usable(c.scalar) with RAW_RETURN_UNKNOWN after retaining the committed raw scalar. NULL gives no close right.",
+      "prior_accepted": "Actual accepted Source4 E22 handle_NULL/handle0 cases catch semantic refusal without requiring INVALID_INPUT and assert exact native/Python delivery plus no usable close right.",
+      "unchanged": "Native zero retained, no close reservation/right, no CloseHandle call."
+    },
+    {
+      "branch": "N06.1",
+      "old": "INVALID_INPUT",
+      "exact": "READ_PROGRESS_INCOMPLETE",
+      "normative": "N06_true_count_zero explicitly requires count_defined true, known_count0, progress0 and remaining_nonzero READ_PROGRESS_INCOMPLETE.",
+      "implementation": "Unchanged Source4 hash_capture line1688 accepts defined true count0, then line1689 rejects count<=0 with READ_PROGRESS_INCOMPLETE before hash/copy progress or retry.",
+      "prior_mapping_error": "Frozen matrix v2 N06 branch prose and preparation expectation footer incorrectly said existing kernel INVALID_INPUT. Its normative_expected and the earlier base contract already name READ_PROGRESS_INCOMPLETE. Preserve the matrix unchanged and apply this explicit source-code mapping erratum.",
+      "unchanged": "Count COMMITTED0/defined true, known bytes/hash/capture0, no complete hash, exactly one read/no retry."
+    },
+    {
+      "branch": "N07.1",
+      "old": "INVALID_INPUT",
+      "exact": "READ_COUNT_UNKNOWN",
+      "normative": "N07_false_count_zero requires count_defined false, raw_count0, progress0, error_value_defined true, and error word0 observed rather than unknown; it does not prescribe INVALID_INPUT.",
+      "implementation": "Unchanged Source4 hash_capture line1688 rejects undefined count through READ_COUNT_UNKNOWN before the positive-progress guard. The scalar failure, raw COUNT0 and independent error DWORD0/definitionTrue remain retained.",
+      "unchanged": "Count COMMITTED0/defined false, progress/hash/capture0, error DWORD0 independently observed and defined, exactly one read/no retry."
+    }
+  ],
+  "materiality": "These are exact specific refusals, not accepted-code sets, xfail, dropped cases or source normalization. Two N25 API/axis kind-guard failures remain unmodified diagnostic failures.",
+  "source_changes": 0,
+  "subject_imports": 0,
+  "subject_runs": 0
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "role": "source_only_bounded_job_iocp_observer_design",
+  "execution_authorized": false,
+  "qualification_established": false,
+  "case_modes": ["overflow"],
+  "attempts_per_protocol": 1,
+  "sdk_sha256": "c111ac5f42209eb61fc49522d4cd6db544987b1c4230577404022e1add6eb2f4",
+  "worker_executable_sha256": "0100ee6004531a41a28156385ad66fd5c0bded43c4840091a846573efe6d8e49",
+  "worker_source_sha256": "11490803ed4a3e68937c7bf685f31a042752f3c8681347c67f2bf4cd46721be6",
+  "consumed_qualification_helper_sha256": "c5756bd173e1a613f883713c39891a5709631fdb9edcac4164f43b725e807697",
+  "consumed_qualification_protocol_sha256": "e29a7bf8a141ba02d41248c0e693a441c2e2fa3731fb360e833325435af0c652",
+  "limits": {
+    "parent_seconds": 60,
+    "case_seconds": 8,
+    "cleanup_reserved_seconds": 2,
+    "process_and_job_commit_bytes": 268435456,
+    "active_process_limit": 1,
+    "stream_retained_bytes_each": 65536,
+    "job_snapshot_count": 40,
+    "job_snapshots_before_stop_maximum": 36,
+    "job_snapshots_reserved_stop_boundaries": 4,
+    "job_snapshot_pid_capacity": 16,
+    "iocp_dequeued_packets": 64,
+    "distinct_pid_metadata_records": 16,
+    "gqcs_calls": 1024,
+    "drain_packet_batch": 8,
+    "gqcs_timeout_ms": 0,
+    "pid_wait_timeout_ms": 0,
+    "pid_open_attempts_each": 1,
+    "image_buffer_wchars": 32768
+  },
+  "association": {
+    "class": 7,
+    "key_policy": "fixed_nonzero_protocol_value",
+    "before_child_creation": true,
+    "port_inherited": false,
+    "struct_x64_bytes": 16,
+    "struct_offsets": {"CompletionKey": 0, "CompletionPort": 8},
+    "create_port_arguments": ["INVALID_HANDLE_VALUE", "NULL", 0, 1],
+    "added_binding_count": 3
+  },
+  "pid_policy": {
+    "open_access_hex": "0x00101000",
+    "inherit_handle": false,
+    "source": "successful_exact_key_documented_pid_message_only",
+    "message_ids": [2, 6, 7, 8, 9, 10, 11],
+    "non_pid_message_ids": [1, 3, 4],
+    "never_dereference_payload": true,
+    "never_reopen_pid": true,
+    "no_new_opens_in_final_drain": true,
+    "forbidden": ["PID termination", "PID suspension/resume", "nonzero PID wait", "access escalation", "SeDebugPrivilege", "global process enumeration", "PPID", "module enumeration", "process memory reads", "reported image file open or hash"]
+  },
+  "queue_call_row_fields": [
+    "sequence", "phase", "started_monotonic_ns", "finished_monotonic_ns", "timeout_ms",
+    "ok", "error", "raw_number_of_bytes", "raw_completion_key", "raw_overlapped_value",
+    "packet_dequeued", "number_and_key_defined", "message_name", "pid_interpretation",
+    "drain_termination", "packet_budget_used", "call_budget_used"
+  ],
+  "queue_failure_rules": {
+    "false_null_wait_timeout_258": "no_packet_currently_available; number/key undefined; current drain ends",
+    "true_null": "valid packet; only documented non-PID interpretation",
+    "false_nonnull": "failed_io_packet_preserved; no_PID_open; stop_to_cleanup",
+    "other_error_or_wrong_key_or_unclassified": "raw_retained; uncertainty_or_failure; stop_to_cleanup",
+    "bound_reached": "incomplete_observation; no_extra_probe; stop_to_cleanup"
+  },
+  "pid_record_fields": [
+    "pid", "first_packet_sequence", "all_packet_sequences_within_packet_cap", "open_attempted",
+    "open_access", "open_inherit", "open_started_monotonic_ns", "open_finished_monotonic_ns",
+    "open_ok", "open_error", "handle_registered_immediately", "query_outcomes",
+    "historical_identity_confirmed", "pid_reuse_before_open_possible", "close_outcome"
+  ],
+  "pid_query_outcomes": {
+    "common_fields": ["started_monotonic_ns", "finished_monotonic_ns", "ok", "error", "raw_output", "output_defined"],
+    "queries_in_order": ["GetProcessId", "QueryFullProcessImageNameW", "IsProcessInJob_exact_job", "WaitForSingleObject_0", "GetProcessTimes"],
+    "times_fields": ["creation_filetime", "exit_filetime_raw", "exit_filetime_defined_only_if_signaled", "kernel_filetime", "user_filetime"],
+    "exit_filetime_defined_only_after_preceding_signaled_wait": true,
+    "historical_identity_confirmed_default": false,
+    "errors_are": "retained_unknowns_not_proof_of_no_job_event"
+  },
+  "raw_snapshot_fields": [
+    "stage", "ordinal", "parent_monotonic_interval", "raw_sdk_snapshot",
+    "generic_total1_predicate_problem", "observer_open_pid_handles", "observer_pid_handles_still_outstanding",
+    "termination_attempt_state", "owned_child_wait_state", "queue_budget_state"
+  ],
+  "required_stop_boundary_stages": [
+    "before_terminate",
+    "after_terminate_return_before_wait",
+    "after_owned_reap_observer_handles_held",
+    "after_observer_pid_release_before_job_close"
+  ],
+  "raw_rules": [
+    "SDK raw query buffers/errors/lengths/decoded values are retained before checks",
+    "accounting and PID-list queries are not atomic",
+    "generic SDK total1 predicate remains unchanged and failure remains failure",
+    "running anomaly requests immediate owned-Job stop; only cleanup evidence follows",
+    "counter discrepancy is never normalized, rewritten or accepted as qualification",
+    "first observed discrepancy gives an observation interval, not kernel event time"
+  ],
+  "handle_lifetime_order": [
+    "register port immediately on create success",
+    "associate empty configured Job before creation",
+    "register each query handle immediately on open success",
+    "retain query handles through after_owned_reap_observer_handles_held",
+    "independently close all query handles recording errors",
+    "final drain with no new PID opens",
+    "after_observer_pid_release_before_job_close snapshot records failed closes too",
+    "inherited owned child, stdio and Job cleanup always attempted",
+    "close port independently",
+    "original leases close before post-lease cleanup and terminal seal"
+  ],
+  "terminal_outcomes": [
+    "completed_bounded_diagnostic_observations_NOT_qualification",
+    "failed_or_incomplete_diagnostic_observations_NOT_qualification"
+  ],
+  "terminal_required_fields": [
+    "expected_cap_trigger", "stop_reason", "termination_call_outcome", "owned_exit_code", "owned_reaped",
+    "first_strict_counter_problem", "stop_boundary_snapshot_references", "queue_call_and_packet_counts",
+    "pid_metadata_record_count", "drain_end_reasons", "outstanding_handles", "observer_errors",
+    "primary_failure", "cleanup_errors", "observation_incomplete_reasons", "no_qualification_established"
+  ],
+  "limitations": [
+    "ordinary Job notifications are not guaranteed",
+    "ACTIVE_PROCESS_LIMIT notification supplies no PID",
+    "dequeue time is not event time and message order is not a full causal history",
+    "PID may be recycled before OpenProcess; no historical identity claim from image alone",
+    "metadata open/query failures and late no-open packets can leave identities unknown",
+    "holding a query handle may prolong ActiveProcesses for a rejected association",
+    "empty queue at a zero-time call proves no durable delivery completeness",
+    "raw counter sampling can only bound first observation relative to parent calls",
+    "previous Python/native failures and original active2 remain unresolved"
+  ],
+  "freeze_requirements": [
+    "independent native qualification failure proof pinned",
+    "all consumed failed outputs preserved and pinned",
+    "exact new helper, protocol, design, contract, SDK headers and pure proof frozen",
+    "pure preparation executes zero SDK APIs and zero children",
+    "independent source-only peer review complete",
+    "root separately decides exact one-attempt execution"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "powershell_version": "7.6.5",
+  "model_calls": 0,
+  "assemblies": [
+    {
+      "sha256": "2f6201bb3caf4c08158be733e786dd85b11537694f7e6ab40356fc0727a3596f",
+      "path": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Microsoft.PowerShell.Commands.Utility.dll",
+      "name": "Microsoft.PowerShell.Commands.Utility",
+      "version": "7.6.0.500"
+    },
+    {
+      "sha256": "ed5f0f3773c89948471e3691f31963ea00d3577e17296ac4dfb97772e78b6fa3",
+      "path": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\System.Text.Json.dll",
+      "name": "System.Text.Json",
+      "version": "10.0.0.0"
+    },
+    {
+      "sha256": "879c8631777b621ff25e939f021f06dfb2745c3a98e8cd5a281f6eee9da77aa6",
+      "path": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\JsonSchema.Net.dll",
+      "name": "JsonSchema.Net",
+      "version": "7.0.0.0"
+    },
+    {
+      "sha256": "aefde47dbcb4e96a0280630138430e74d518e4eff79967377d05104b4c40707f",
+      "path": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\JsonPointer.Net.dll",
+      "name": "JsonPointer.Net",
+      "version": "5.0.0.0"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T19:00:04.318485+00:00",
+  "decision": "proceed_once_exact_v3_OS_only_job_identity_diagnostic",
+  "helper_sha256": "d5f23f471adc9d4ee293d2bee27a3d85443b578a4a116e50ce53ccd235920e49",
+  "protocol_sha256": "e47419db7763b21b36885691d1e589aaf171d94c3c992c0500922cae62005412",
+  "peer_sha256": "48dbf4b7e43828079a9484a995d8f35b8e1392525720f6c2bafefa8b08491da8",
+  "root_review": "53pins rehashed; scoped guard/bootstrap path diff reviewed; actual cached+explicit system module check beforeJob; original captures/markers/layouts/five snapshots/limits unchanged; all previous failed or held artifacts preserved.",
+  "scope": "One direct own Python sleepworker; ownedjobPID metadata only. No target DLL/GGUF/model/tokenizer/server/network/private/global enumeration/elevation. Raw observations not universal containment proof.",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-diagnostic-v3-20261028T185655Z",
+  "limits": {
+    "active_process_limit": 1,
+    "aggregate_seconds": 45,
+    "children": 1,
+    "finalization_reserve_seconds": 5,
+    "image_characters": 32768,
+    "maximum_job_pids": 16,
+    "maximum_total_unique_pids": 16,
+    "process_commit_bytes": 67108864,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 65536,
+    "steady_seconds": 1,
+    "whole_child_seconds": 8
+  },
+  "provider_spend_usd": 0
+}

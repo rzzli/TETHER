@@ -1,0 +1,14 @@
+test_clinical_reserved_roots_and_unanchored_input_are_rejected (tests.test_study_collected_composition.CollectedInputTests.test_clinical_reserved_roots_and_unanchored_input_are_rejected) ... ok
+test_lease_required_and_protected_authority_fails_before_open (tests.test_study_collected_composition.CollectedInputTests.test_lease_required_and_protected_authority_fails_before_open) ... ok
+test_roots_are_copied_and_deeply_immutable (tests.test_study_collected_composition.CollectedInputTests.test_roots_are_copied_and_deeply_immutable) ... ok
+test_collected_case_not_invented_and_source_inclusive_replay (tests.test_study_collected_composition.CollectedLifecycleTests.test_collected_case_not_invented_and_source_inclusive_replay) ... ok
+test_existing_output_cannot_repeat_dispatch (tests.test_study_collected_composition.CollectedLifecycleTests.test_existing_output_cannot_repeat_dispatch) ... ok
+test_explicit_replay_roots_required_no_archived_root_fallback (tests.test_study_collected_composition.CollectedLifecycleTests.test_explicit_replay_roots_required_no_archived_root_fallback) ... ok
+test_source_lease_denies_ordinary_mutation_and_releases (tests.test_study_collected_composition.CollectedLifecycleTests.test_source_lease_denies_ordinary_mutation_and_releases) ... ok
+test_verifier_without_source_lease_fails_before_cache_use (tests.test_study_collected_composition.CollectedLifecycleTests.test_verifier_without_source_lease_fails_before_cache_use) ... ok
+test_wrong_category_fails_before_token_or_consumption (tests.test_study_collected_composition.CollectedLifecycleTests.test_wrong_category_fails_before_token_or_consumption) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 71.618s
+
+OK

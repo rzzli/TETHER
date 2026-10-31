@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step8-bounded-sources-20261026\\source-qualification.json",
+  "source_sha256": "305dffb35183b2f4973818dd70f10a957fa30a65649fc8c6de5858648aad8a5a",
+  "clean_files": [
+    "Expert-source-review.html",
+    "README.md",
+    "Recruitment.md"
+  ],
+  "passage_count": 8,
+  "question_count": 14,
+  "no_answer_key": true,
+  "no_candidate_outputs": true,
+  "browser_qa": "pending_root",
+  "share_zip": "not_created_pending_browser_qa",
+  "files": {
+    "Expert-source-review.html": "6d1a4328ebe892beb8c30161e0b3f8d585e0e01ab6ad41113bf92f88537f8613",
+    "README.md": "a649b367a09f63f9a1aca3e06addc0df32307c3332e440e5e95ae72822dc48f6",
+    "Recruitment.md": "c928fd82d67700a361c50010bff771c67e685eddb59b91e283fc909df0cb59b8"
+  }
+}

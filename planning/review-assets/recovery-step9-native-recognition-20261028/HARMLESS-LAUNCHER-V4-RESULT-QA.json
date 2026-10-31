@@ -1,0 +1,21 @@
+{
+  "accepted_wheel_sha256": "b0d7573be994e3f44e3d942a1944cddb2e43e1306a64cfd6480dd05e3415a276",
+  "activity": {
+    "API_calls": 0,
+    "GGUF_reads": 0,
+    "helper_imports": 0,
+    "protected_payload_reads": 0,
+    "reruns": 0,
+    "source_changes": 0
+  },
+  "actual_case_limit_and_creation_flag_checks": 2,
+  "all85_in_protocol_source_universe": true,
+  "exact_sanitized_environments_checked": 2,
+  "installed_runtime_members_byte_equal_to_wheel": 85,
+  "native_ABI_authorized": false,
+  "qualification_passed": false,
+  "recorded_at_utc": "2026-10-28T20:39:38.134079+00:00",
+  "schema_version": 1,
+  "status": "read_only_v4_additional_configuration_and_runtime_closure_checks_passed_negative_result_preserved",
+  "terminal_outputs_unchanged": true
+}

@@ -1,0 +1,43 @@
+{
+  "CPU_GGUF_oldpack_operations": 0,
+  "checker": {
+    "bytes": 11249,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\check_utf8_oracle_structure_v1.py",
+    "sha256": "1d24abe1e669e1ed29d1c0fe0bbf6f85197d37877481b7a88c4a854a2cca07fb"
+  },
+  "corpus": {
+    "bytes": 136032,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v1.json",
+    "sha256": "395c6a51e1a4d537c12bb9c0b93940b1c72a99c6c23ac44766d6fcdf248598ba"
+  },
+  "counts": {
+    "fixtures": 96,
+    "steps": 146,
+    "supplied_bytes": 315
+  },
+  "elapsed_seconds": 0.01600000006146729,
+  "errors": [],
+  "failures": [],
+  "generation_provenance": {
+    "bytes": 1441,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-GENERATION-PROVENANCE-v1.json",
+    "sha256": "c4f6e6368f6cd5e52fa798c39ed823bdbc382db99f04c18130cf914dddf385df"
+  },
+  "generator": {
+    "bytes": 14226,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\author_utf8_oracle_corpus_v1.py",
+    "sha256": "0cfeeea2bd07e0295c17f776fe91a74d2d9677b7f5abe4e89bf200e3bc673bef"
+  },
+  "native_compiler_network_calls": 0,
+  "schema_version": 1,
+  "scope": "Structural/schema/hash/cut/counter-framing/provenance checks only; no UTF8 decoding or independent semantic oracle validation.",
+  "semantic_decoder_comparisons": 0,
+  "specification": {
+    "bytes": 8598,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v1.md",
+    "sha256": "33c9fbba546ae78ae71e1674753b1dc8c64dceaf6a1e2c9493f19d81b6bc02c3"
+  },
+  "status": "passed",
+  "test_adapters_implemented": 0,
+  "tests": 5
+}

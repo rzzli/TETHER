@@ -1,0 +1,274 @@
+{
+  "activity": {
+    "bulk_generation_or_rehash": 0,
+    "native_calls": 0,
+    "old_payload_operations": 0,
+    "producer_runs": 0,
+    "subject_imports": 0
+  },
+  "actual_source_elapsed": 10.094000000040978,
+  "api_invocations": {
+    "CloseHandle": 216,
+    "CreateFileW": 216,
+    "GetFileInformationByHandleEx": 216,
+    "GetFileSizeEx": 216,
+    "GetFileType": 216,
+    "GetFinalPathNameByHandleW": 216,
+    "ReadFile": 8799
+  },
+  "binding": {
+    "bytes": 4949,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-BINDING-v3.json",
+    "sha256": "ea6b7f11ccbd11471e54d90d3446c4fddd905973b7dac6ac087af7cba6aeebdf"
+  },
+  "candidate": {
+    "bytes": 4373152,
+    "calls": 9879,
+    "sha256": "9474e3a16d13e416e7914091fe6a3e9bbb933f2d9a563bb099531a92c41dcd64"
+  },
+  "checked_input_pins": [
+    {
+      "bytes": 5646,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-EXECUTION-SCOPE-v3.json",
+      "sha256": "06f22278c51462753c45b75c265800baf34093ae3781c124be1dc3819be8e285"
+    },
+    {
+      "bytes": 84696,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+      "sha256": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+    },
+    {
+      "bytes": 15180,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "sha256": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929"
+    },
+    {
+      "bytes": 34130,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_aware_legacy_fixture_adapter_v2.py",
+      "sha256": "b0f8cbf326f05c9b868b26fbac2eaee5bdd9ae78fdcc15d1da848d2822abff4f"
+    },
+    {
+      "bytes": 56147,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_large_injected_v3.py",
+      "sha256": "b97792ab1c8a60167947943d482b11f164f335a72abaee4463138edc8710afc3"
+    },
+    {
+      "bytes": 4273,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\continue_role_verification_v4.py",
+      "sha256": "403adec1f4389eb29d08b14f8da24989c8cdde50f20882629ed1a5cbb81292f7"
+    },
+    {
+      "bytes": 21279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_file_ports_v4.py",
+      "sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7"
+    },
+    {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    {
+      "bytes": 77221,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_owner_v4.py",
+      "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"
+    },
+    {
+      "bytes": 12572,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ALLOCATION-REVIEW-v3.json",
+      "sha256": "c7184b5554555a64d7315b0bd607646d4e82f56268045a1bcf13539065d50f10"
+    },
+    {
+      "bytes": 5127,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-CODE-FREEZE-v3.json",
+      "sha256": "35bc6bf182f0457f10d26ce49b53486e4ea6a5456155fce552dab5f0b28df8cf"
+    },
+    {
+      "bytes": 1369,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-HARNESS-RAW-SIDECAR-CHECK-v3.json",
+      "sha256": "deccd3d3089c71bf485de98936eb5ecb51732e124d17e11d00f00d0cfee1b944"
+    },
+    {
+      "bytes": 7449,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-CODE-PROTOCOL-v3.json",
+      "sha256": "be3cdcec599a5f15f2ce029c53caea4f3941230d12693bba24b9b722f60e3e7d"
+    },
+    {
+      "bytes": 4999,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-RAW-SIDECAR-FORMAT-v1.json",
+      "sha256": "62fb60c268e2fc4c31bbed43c1c29f0fb7d71468b69d9f991bc78a338bb305e9"
+    },
+    {
+      "bytes": 715,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-ROOT-CHECK-v1.json",
+      "sha256": "5f557e17bc4611ed1025ae6ee37964373301f247c87f3323a0ab1d4eafae46a5"
+    },
+    {
+      "bytes": 2985,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json",
+      "sha256": "096f5781b0c5d92208fcbd6a0da21528939f668be62ccd573c433ae7517b7445"
+    },
+    {
+      "bytes": 7074,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-STATIC-REVIEW-v3.json",
+      "sha256": "913566e18dc2ba118b2ca2aceffeb2cf039991790ccb607868694b228a64db26"
+    },
+    {
+      "bytes": 34130,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_aware_legacy_fixture_adapter_v2.py",
+      "sha256": "b0f8cbf326f05c9b868b26fbac2eaee5bdd9ae78fdcc15d1da848d2822abff4f"
+    },
+    {
+      "bytes": 56147,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_large_injected_v3.py",
+      "sha256": "b97792ab1c8a60167947943d482b11f164f335a72abaee4463138edc8710afc3"
+    }
+  ],
+  "checker": {
+    "bytes": 27229,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v2.py",
+    "sha256": "53a34bc88e645432e91257f08256f9716a3d8042b977e14e1e6582f9864835a3"
+  },
+  "checks": 1900632,
+  "consumer_passes": 2,
+  "independent_binary_rows": {
+    "calls": 19974,
+    "edges": 2,
+    "files": 432,
+    "modules": 4
+  },
+  "journal_rows": 1331,
+  "limits": "One retained synthetic periodic 216-descriptor result. Digest/slot identity is verified from immutable retained evidence and previously reviewed genuine source paths, not reconstructed live authority. Independent reference preparation and harness persistence are separate from owner time. No empirical RSS/commit/VRAM/Job fit, physical output/readback, actual first entry/FFI, complete real roster, distinct84/native protocol or scientific qualification. Earlier failures and consumed original experiment remain unchanged.",
+  "material_blockers": [],
+  "packets": {
+    "candidate": {
+      "bytes": 929,
+      "sha256": "c732dd6e057766fe1a8c81f44fc3c3703e3a9d9a88a026f9b37a3a0445d4a4b1"
+    },
+    "cleanup": {
+      "bytes": 1079,
+      "sha256": "f93f21e46be78baf591050aae739c7d65a4fd36c661f165de526fa2dff000329"
+    },
+    "receipt": {
+      "bytes": 1485,
+      "sha256": "19fddca0f113017f683426d81d6fc1738ef55a0e961d3fcfc37f75129b6ab6df"
+    },
+    "seal": {
+      "bytes": 1609,
+      "sha256": "1a394e098ba916328a40150f682236d7560643aa48417a25ccb7e93780f58428"
+    }
+  },
+  "preserved_reviewer_first_attempt": {
+    "cause": "Reviewer direct binary expected flags omitted the schema F64 tag2 encodings at bits32 and34; no source or retained evidence finding. V2 adds exactly those tag bits.",
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v1.json",
+    "sha256": "29dc6f789ac1aa13c2521ffb68b73b81676e9db19660b8235dfc4f416cb2931e"
+  },
+  "proof": {
+    "bytes": 18010,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json",
+    "sha256": "7cefbe0e5dc71f950a3537be9f30790d0c7501ca7c5c3446c3c331567a98cedf"
+  },
+  "qualification": {
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "retained_artifacts": [
+    {
+      "bytes": 4373152,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\candidate-ledger.bin",
+      "sha256": "9474e3a16d13e416e7914091fe6a3e9bbb933f2d9a563bb099531a92c41dcd64"
+    },
+    {
+      "bytes": 4428448,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\terminal-ledger.bin",
+      "sha256": "a628f6a983d3c85e8e6478576d1aeb1e6e315fc20756ba89be49712ca72c63b2"
+    },
+    {
+      "bytes": 170743,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\journal.jsonl",
+      "sha256": "37827eb8259eb8426f76271b71564141e9c0840b0e7d74591ee9f15240c9d51d"
+    },
+    {
+      "bytes": 3254,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\producer-report.json",
+      "sha256": "9de013b9a1400de22a55b94773b8bf316075ec44d01a1b1ed397edc3eb817050"
+    },
+    {
+      "bytes": 929,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\candidate.json",
+      "sha256": "c732dd6e057766fe1a8c81f44fc3c3703e3a9d9a88a026f9b37a3a0445d4a4b1"
+    },
+    {
+      "bytes": 1079,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\cleanup.json",
+      "sha256": "f93f21e46be78baf591050aae739c7d65a4fd36c661f165de526fa2dff000329"
+    },
+    {
+      "bytes": 1485,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\receipt.json",
+      "sha256": "19fddca0f113017f683426d81d6fc1738ef55a0e961d3fcfc37f75129b6ab6df"
+    },
+    {
+      "bytes": 1609,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\seal.json",
+      "sha256": "1a394e098ba916328a40150f682236d7560643aa48417a25ccb7e93780f58428"
+    },
+    {
+      "bytes": 11575490,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-canonical-raw-facts.jsonl",
+      "sha256": "02f58857ac2f4faf4ca6fb771bf5169e35606644560d22d47b1c0a3cb6db6b49"
+    },
+    {
+      "bytes": 1775088,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-canonical-query-frames.bin",
+      "sha256": "d28731e94318fefd606bf7f7ab4fc4f44fb8751566d9a687f936cd403ba1822b"
+    },
+    {
+      "bytes": 646080,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-original-dispatches.bin",
+      "sha256": "cea26e02bafafc5412fba8899b66fc9187ad936ebf13ad343db7397917afab70"
+    },
+    {
+      "bytes": 2769,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-close-facts.json",
+      "sha256": "5741ad183fa6fbca0d3e9d8da304d31d917e8b0975162d6c967212e14197d1a5"
+    },
+    {
+      "bytes": 170743,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-callback-journal.jsonl",
+      "sha256": "37827eb8259eb8426f76271b71564141e9c0840b0e7d74591ee9f15240c9d51d"
+    },
+    {
+      "bytes": 239027,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-sink-callback-metadata.json",
+      "sha256": "997d7c997157bf7e91366eb6b11736785a9b72fd36d3154fa630d093be032a03"
+    },
+    {
+      "bytes": 812,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\large-injected-evidence-v3\\independent-ledger-consumption.json",
+      "sha256": "475faf9472f8cad5fa4ec46b2cc4f7ab2779a831b999002c4a2d034a131de192"
+    }
+  ],
+  "separate_harness_persistence_elapsed": 0.3589999999385327,
+  "sink_callbacks": 1337,
+  "status": "CLEAR_SOURCE_PURE_LARGE_GENERATED_RESULT_ONLY",
+  "streamed_totals": {
+    "closes": 216,
+    "copied": 209,
+    "hashed": 9017363601,
+    "known": 9017363601,
+    "queries": 648,
+    "query_bytes": 1775088,
+    "reads": 8799,
+    "rows": 10095
+  },
+  "terminal": {
+    "bytes": 4428448,
+    "calls": 10095,
+    "sha256": "a628f6a983d3c85e8e6478576d1aeb1e6e315fc20756ba89be49712ca72c63b2"
+  }
+}

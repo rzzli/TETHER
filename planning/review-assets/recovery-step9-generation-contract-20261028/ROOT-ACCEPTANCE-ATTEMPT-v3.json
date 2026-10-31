@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-28T14:43:06.499723+00:00",
+  "status": "failed_acceptance_helper_no_acceptance_published",
+  "helper_sha256": "dbb7f32b4d23f5f30ba7c8c01d822981cf09d1ae8c1a885a33ea8020134c27a9",
+  "exit_code": 1,
+  "observed_wall_time_seconds": 5.8851444,
+  "error_class": "RuntimeError",
+  "error": "File hash differs: ingestion-environment/Lib/site-packages/pyarrow/__pycache__/ipc.cpython-311.pyc",
+  "location": "wheel_and_installed line548 / check_pin",
+  "diagnosis": "pending read-only audit; do not infer harmless cache mutation",
+  "runtime_or_wheel_modified_by_this_attempt": false,
+  "acceptance_published": false,
+  "model_calls": 0,
+  "note": "Root retention of observed tool terminal result, not a substituted original stdout capture"
+}

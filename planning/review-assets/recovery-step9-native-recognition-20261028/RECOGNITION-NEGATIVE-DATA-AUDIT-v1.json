@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "status": "NEGATIVE_required_UTF8_prefix_coverage_unavailable",
+  "strict_success_parser": {
+    "error": "Required UTF8 prefix coverage unavailable",
+    "coverage": {
+      "status": "unqualified_incomplete_or_invalid",
+      "complete": false,
+      "accounting_frames_consumed": 239,
+      "expected_cases": 189,
+      "last_observed_cases_computed_claim": 111,
+      "last_observed_case_results_written_claim": 110,
+      "last_observed_prefix_slots_seen_claim": 2,
+      "last_observed_prefix_results_written_claim": 2,
+      "case_results_validated": 111,
+      "case_group_results_validated": [
+        111,
+        0,
+        0
+      ],
+      "prefix_results_validated": 2,
+      "expected_prefixes": 6,
+      "native_case_results_validated": 111,
+      "harness_dispositions_validated": 0,
+      "missing_case_results": 78,
+      "missing_prefix_results": 4,
+      "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+    }
+  },
+  "retained_rows": 400,
+  "all_case_results_checked": 189,
+  "groups": [
+    167,
+    18,
+    4
+  ],
+  "native_case_results": 184,
+  "harness_dispositions": 5,
+  "all_cases_match_expected": true,
+  "prefixes": [
+    {
+      "id": "prefix/final_close_missing",
+      "base_index": 0,
+      "base_id": "primary/000",
+      "status": "native_eog_rejection",
+      "token_count": 69,
+      "ordinal": 18,
+      "kind": 0
+    },
+    {
+      "id": "prefix/empty",
+      "base_index": 1,
+      "base_id": "primary/001",
+      "status": "native_eog_rejection",
+      "token_count": 0,
+      "ordinal": 21,
+      "kind": 0
+    },
+    {
+      "id": "prefix/natural_partial_astral",
+      "base_index": 110,
+      "base_id": "primary/110",
+      "status": "coverage_unavailable",
+      "token_count": null,
+      "ordinal": 240,
+      "kind": 2
+    },
+    {
+      "id": "prefix/natural_partial_bmp",
+      "base_index": 127,
+      "base_id": "primary/127",
+      "status": "coverage_unavailable",
+      "token_count": null,
+      "ordinal": 275,
+      "kind": 1
+    },
+    {
+      "id": "prefix/escape_backslash",
+      "base_index": 144,
+      "base_id": "primary/144",
+      "status": "native_eog_rejection",
+      "token_count": 40,
+      "ordinal": 310,
+      "kind": 0
+    },
+    {
+      "id": "prefix/surrogate_half",
+      "base_index": 144,
+      "base_id": "primary/144",
+      "status": "native_eog_rejection",
+      "token_count": 44,
+      "ordinal": 311,
+      "kind": 0
+    }
+  ],
+  "full_batch_or_normal_completion_present": false,
+  "vocabulary_count": 152064,
+  "EOG_ids": [
+    128247,
+    151643,
+    151645,
+    151662,
+    151663,
+    151664
+  ],
+  "final_native_call_counters": {
+    "ggml_backend_dev_count": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_dev_get": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_dev_name": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_dev_type": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_load": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "ggml_backend_reg_count": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_reg_dev_count": {
+      "attempted": 3,
+      "returned": 3
+    },
+    "ggml_backend_reg_dev_get": {
+      "attempted": 3,
+      "returned": 3
+    },
+    "ggml_backend_reg_get": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "ggml_backend_reg_name": {
+      "attempted": 2,
+      "returned": 2
+    },
+    "llama_backend_free": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_backend_init": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_model_default_params": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_model_free": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_model_get_vocab": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_model_load_from_splits": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_sampler_accept": {
+      "attempted": 64928,
+      "returned": 64928
+    },
+    "llama_sampler_apply": {
+      "attempted": 65446,
+      "returned": 65446
+    },
+    "llama_sampler_free": {
+      "attempted": 188,
+      "returned": 188
+    },
+    "llama_sampler_init_grammar": {
+      "attempted": 188,
+      "returned": 188
+    },
+    "llama_token_to_piece": {
+      "attempted": 159450,
+      "returned": 159450
+    },
+    "llama_tokenize": {
+      "attempted": 375,
+      "returned": 375
+    },
+    "llama_version": {
+      "attempted": 1,
+      "returned": 1
+    },
+    "llama_vocab_is_eog": {
+      "attempted": 152064,
+      "returned": 152064
+    },
+    "llama_vocab_n_tokens": {
+      "attempted": 1,
+      "returned": 1
+    }
+  },
+  "final_native_state": {
+    "total_attempted": 442668,
+    "total_returned": 442668,
+    "exceptions": 0,
+    "last_attempt": "llama_backend_free",
+    "last_return": "llama_backend_free",
+    "last_return_kind": 1,
+    "last_scalar": 3,
+    "last_pointer_nonnull": true,
+    "last_tokenize_return": 31,
+    "last_piece_return": 3,
+    "last_apply_return_observed": true,
+    "last_apply_shape_valid": true,
+    "last_apply_logit_kind": 2,
+    "cpu_load_return_observed": true,
+    "cpu_registry_nonnull": true,
+    "backend_init_return_observed": true,
+    "backend_owned": false,
+    "model_load_return_observed": true,
+    "model_return_nonnull": true,
+    "model_owned": false,
+    "model_free_attempted": true,
+    "model_free_return_observed": true,
+    "model_release_unknown": false,
+    "backend_free_attempted": true,
+    "backend_free_return_observed": true,
+    "backend_release_unknown": false,
+    "cleanup_failed": false,
+    "sampler_nonnull_returns": 188,
+    "samplers_owned": 0,
+    "sampler_release_unknown": 0,
+    "sampler_free_returned_nonnull": 188,
+    "token_work_reserved": 97477,
+    "current_case_index": 188,
+    "current_prefix_slot": 5,
+    "group_computed": [
+      167,
+      18,
+      4
+    ],
+    "group_results_written": [
+      167,
+      18,
+      4
+    ],
+    "cases_computed": 189,
+    "case_results_written": 189,
+    "prefix_slots_seen": 6,
+    "prefix_results_written": 6,
+    "EOG_ids_examined": 152064,
+    "last_EOG_id": 152063,
+    "last_EOG_returned": true,
+    "last_EOG_value": false,
+    "required_UTF8_prefix_unavailable": true
+  },
+  "source_bound_derived_accepts": 64928,
+  "source_bound_derived_applies": 65446,
+  "module_snapshots": [
+    {
+      "event": "exact_core_modules_loaded_exports_resolved",
+      "classification": {
+        "module_policy_id": "trusted-System32-recognition-v1",
+        "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+        "module_policy_phase": "pre_cpu",
+        "reports": [
+          {
+            "ordinal": 1,
+            "name": "typed_public_c_recognizer_abi.exe",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+            "policy_class": "self_executable"
+          },
+          {
+            "ordinal": 2,
+            "name": "ntdll.dll",
+            "path": "C:\\Windows\\SYSTEM32\\ntdll.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 3,
+            "name": "KERNEL32.DLL",
+            "path": "C:\\Windows\\System32\\KERNEL32.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 4,
+            "name": "KERNELBASE.dll",
+            "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 5,
+            "name": "apphelp.dll",
+            "path": "C:\\Windows\\SYSTEM32\\apphelp.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 6,
+            "name": "ucrtbase.dll",
+            "path": "C:\\Windows\\System32\\ucrtbase.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 7,
+            "name": "MSVCP140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\MSVCP140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 8,
+            "name": "VCRUNTIME140_1.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 9,
+            "name": "bcrypt.dll",
+            "path": "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 10,
+            "name": "VCRUNTIME140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 11,
+            "name": "sechost.dll",
+            "path": "C:\\Windows\\System32\\sechost.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 12,
+            "name": "bcryptprimitives.dll",
+            "path": "C:\\Windows\\System32\\bcryptprimitives.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 13,
+            "name": "libomp.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 14,
+            "name": "PSAPI.DLL",
+            "path": "C:\\Windows\\System32\\PSAPI.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 15,
+            "name": "ggml-base.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 16,
+            "name": "ggml.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 17,
+            "name": "llama.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+            "policy_class": "pinned_runtime"
+          }
+        ],
+        "required_report_counts": {
+          "self_executable": 1,
+          "libomp.dll": 1,
+          "ggml-base.dll": 1,
+          "ggml.dll": 1,
+          "llama.dll": 1
+        },
+        "maximum_modules": 64,
+        "platform_image_authentication": "not_established",
+        "CPU_module_eligible": false,
+        "model_access_authorized": false,
+        "trust_scope": "Externally pinned/leased native context and canonical reported platform context; no image authentication or model/CPU execution permission"
+      }
+    },
+    {
+      "event": "cpu_registry_verified_before_llama_backend_init",
+      "classification": {
+        "module_policy_id": "trusted-System32-recognition-v1",
+        "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+        "module_policy_phase": "post_cpu",
+        "reports": [
+          {
+            "ordinal": 1,
+            "name": "typed_public_c_recognizer_abi.exe",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+            "policy_class": "self_executable"
+          },
+          {
+            "ordinal": 2,
+            "name": "ntdll.dll",
+            "path": "C:\\Windows\\SYSTEM32\\ntdll.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 3,
+            "name": "KERNEL32.DLL",
+            "path": "C:\\Windows\\System32\\KERNEL32.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 4,
+            "name": "KERNELBASE.dll",
+            "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 5,
+            "name": "apphelp.dll",
+            "path": "C:\\Windows\\SYSTEM32\\apphelp.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 6,
+            "name": "ucrtbase.dll",
+            "path": "C:\\Windows\\System32\\ucrtbase.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 7,
+            "name": "MSVCP140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\MSVCP140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 8,
+            "name": "VCRUNTIME140_1.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 9,
+            "name": "bcrypt.dll",
+            "path": "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 10,
+            "name": "VCRUNTIME140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 11,
+            "name": "sechost.dll",
+            "path": "C:\\Windows\\System32\\sechost.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 12,
+            "name": "bcryptprimitives.dll",
+            "path": "C:\\Windows\\System32\\bcryptprimitives.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 13,
+            "name": "libomp.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 14,
+            "name": "PSAPI.DLL",
+            "path": "C:\\Windows\\System32\\PSAPI.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 15,
+            "name": "ggml-base.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 16,
+            "name": "ggml.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 17,
+            "name": "llama.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 18,
+            "name": "ggml-cpu-x64.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 19,
+            "name": "ADVAPI32.dll",
+            "path": "C:\\Windows\\System32\\ADVAPI32.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 20,
+            "name": "msvcrt.dll",
+            "path": "C:\\Windows\\System32\\msvcrt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 21,
+            "name": "RPCRT4.dll",
+            "path": "C:\\Windows\\System32\\RPCRT4.dll",
+            "policy_class": "trusted_platform_context"
+          }
+        ],
+        "required_report_counts": {
+          "self_executable": 1,
+          "libomp.dll": 1,
+          "ggml-base.dll": 1,
+          "ggml.dll": 1,
+          "llama.dll": 1,
+          "ggml-cpu-x64.dll": 1
+        },
+        "maximum_modules": 64,
+        "platform_image_authentication": "not_established",
+        "CPU_module_eligible": true,
+        "model_access_authorized": false,
+        "trust_scope": "Externally pinned/leased native context and canonical reported platform context; no image authentication or model/CPU execution permission"
+      }
+    },
+    {
+      "event": "backend_init_returned_exact_CPU_identity_rechecked",
+      "classification": {
+        "module_policy_id": "trusted-System32-recognition-v1",
+        "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+        "module_policy_phase": "post_cpu",
+        "reports": [
+          {
+            "ordinal": 1,
+            "name": "typed_public_c_recognizer_abi.exe",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+            "policy_class": "self_executable"
+          },
+          {
+            "ordinal": 2,
+            "name": "ntdll.dll",
+            "path": "C:\\Windows\\SYSTEM32\\ntdll.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 3,
+            "name": "KERNEL32.DLL",
+            "path": "C:\\Windows\\System32\\KERNEL32.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 4,
+            "name": "KERNELBASE.dll",
+            "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 5,
+            "name": "apphelp.dll",
+            "path": "C:\\Windows\\SYSTEM32\\apphelp.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 6,
+            "name": "ucrtbase.dll",
+            "path": "C:\\Windows\\System32\\ucrtbase.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 7,
+            "name": "MSVCP140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\MSVCP140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 8,
+            "name": "VCRUNTIME140_1.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 9,
+            "name": "bcrypt.dll",
+            "path": "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 10,
+            "name": "VCRUNTIME140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 11,
+            "name": "sechost.dll",
+            "path": "C:\\Windows\\System32\\sechost.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 12,
+            "name": "bcryptprimitives.dll",
+            "path": "C:\\Windows\\System32\\bcryptprimitives.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 13,
+            "name": "libomp.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 14,
+            "name": "PSAPI.DLL",
+            "path": "C:\\Windows\\System32\\PSAPI.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 15,
+            "name": "ggml-base.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 16,
+            "name": "ggml.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 17,
+            "name": "llama.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 18,
+            "name": "ggml-cpu-x64.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 19,
+            "name": "ADVAPI32.dll",
+            "path": "C:\\Windows\\System32\\ADVAPI32.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 20,
+            "name": "msvcrt.dll",
+            "path": "C:\\Windows\\System32\\msvcrt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 21,
+            "name": "RPCRT4.dll",
+            "path": "C:\\Windows\\System32\\RPCRT4.dll",
+            "policy_class": "trusted_platform_context"
+          }
+        ],
+        "required_report_counts": {
+          "self_executable": 1,
+          "libomp.dll": 1,
+          "ggml-base.dll": 1,
+          "ggml.dll": 1,
+          "llama.dll": 1,
+          "ggml-cpu-x64.dll": 1
+        },
+        "maximum_modules": 64,
+        "platform_image_authentication": "not_established",
+        "CPU_module_eligible": true,
+        "model_access_authorized": false,
+        "trust_scope": "Externally pinned/leased native context and canonical reported platform context; no image authentication or model/CPU execution permission"
+      }
+    },
+    {
+      "event": "all_vocabulary_ids_EOG_enumerated",
+      "classification": {
+        "module_policy_id": "trusted-System32-recognition-v1",
+        "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+        "module_policy_phase": "post_cpu",
+        "reports": [
+          {
+            "ordinal": 1,
+            "name": "typed_public_c_recognizer_abi.exe",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+            "policy_class": "self_executable"
+          },
+          {
+            "ordinal": 2,
+            "name": "ntdll.dll",
+            "path": "C:\\Windows\\SYSTEM32\\ntdll.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 3,
+            "name": "KERNEL32.DLL",
+            "path": "C:\\Windows\\System32\\KERNEL32.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 4,
+            "name": "KERNELBASE.dll",
+            "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 5,
+            "name": "apphelp.dll",
+            "path": "C:\\Windows\\SYSTEM32\\apphelp.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 6,
+            "name": "ucrtbase.dll",
+            "path": "C:\\Windows\\System32\\ucrtbase.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 7,
+            "name": "MSVCP140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\MSVCP140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 8,
+            "name": "VCRUNTIME140_1.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 9,
+            "name": "bcrypt.dll",
+            "path": "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 10,
+            "name": "VCRUNTIME140.dll",
+            "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 11,
+            "name": "sechost.dll",
+            "path": "C:\\Windows\\System32\\sechost.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 12,
+            "name": "bcryptprimitives.dll",
+            "path": "C:\\Windows\\System32\\bcryptprimitives.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 13,
+            "name": "libomp.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 14,
+            "name": "PSAPI.DLL",
+            "path": "C:\\Windows\\System32\\PSAPI.DLL",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 15,
+            "name": "ggml-base.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 16,
+            "name": "ggml.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 17,
+            "name": "llama.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 18,
+            "name": "ggml-cpu-x64.dll",
+            "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+            "policy_class": "pinned_runtime"
+          },
+          {
+            "ordinal": 19,
+            "name": "ADVAPI32.dll",
+            "path": "C:\\Windows\\System32\\ADVAPI32.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 20,
+            "name": "msvcrt.dll",
+            "path": "C:\\Windows\\System32\\msvcrt.dll",
+            "policy_class": "trusted_platform_context"
+          },
+          {
+            "ordinal": 21,
+            "name": "RPCRT4.dll",
+            "path": "C:\\Windows\\System32\\RPCRT4.dll",
+            "policy_class": "trusted_platform_context"
+          }
+        ],
+        "required_report_counts": {
+          "self_executable": 1,
+          "libomp.dll": 1,
+          "ggml-base.dll": 1,
+          "ggml.dll": 1,
+          "llama.dll": 1,
+          "ggml-cpu-x64.dll": 1
+        },
+        "maximum_modules": 64,
+        "platform_image_authentication": "not_established",
+        "CPU_module_eligible": true,
+        "model_access_authorized": false,
+        "trust_scope": "Externally pinned/leased native context and canonical reported platform context; no image authentication or model/CPU execution permission"
+      }
+    }
+  ],
+  "prefix_document_byte_stats": [
+    {
+      "index": 110,
+      "id": "primary/110",
+      "bytes": 7389,
+      "sha256": "9055d33f041a4d2908209ac3e7a7974ea24c5e01768ccc14b944d752f94d325d",
+      "nonASCII_bytes": 7200,
+      "scalar_counts_by_UTF8_width": {
+        "1": 189,
+        "4": 1800
+      },
+      "literal_backslash_u_sequences": 0,
+      "raw_width4_scalars": 1800,
+      "raw_width2_or3_scalars": 0,
+      "raw_nonASCII_present": true,
+      "interpretation": "Raw Unicode scalars exist; unavailable selector means no qualifying returned token boundary in this fixed document, not vocabulary-wide absence. No piece bytes/end offsets retained to distinguish exact tokenization mechanism."
+    },
+    {
+      "index": 127,
+      "id": "primary/127",
+      "bytes": 193,
+      "sha256": "a7ab4de34d101769e195148b9675d370bb1df5f60880344fe9ebadca54b8dace",
+      "nonASCII_bytes": 4,
+      "scalar_counts_by_UTF8_width": {
+        "1": 189,
+        "2": 2
+      },
+      "literal_backslash_u_sequences": 0,
+      "raw_width4_scalars": 0,
+      "raw_width2_or3_scalars": 2,
+      "raw_nonASCII_present": true,
+      "interpretation": "Raw Unicode scalars exist; unavailable selector means no qualifying returned token boundary in this fixed document, not vocabulary-wide absence. No piece bytes/end offsets retained to distinguish exact tokenization mechanism."
+    }
+  ],
+  "partial_result_sha256": "124cc3ed15fe87e6fd8f5a4c396781c79d3d0197799a992351cbdc997c8eba71",
+  "source_bound_not_tokenizer_replay": true,
+  "elapsed_external_verification_seconds": 292.65600000007544
+}

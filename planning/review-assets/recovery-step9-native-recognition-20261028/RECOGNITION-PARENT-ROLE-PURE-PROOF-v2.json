@@ -1,0 +1,25 @@
+{
+  "CPU_binary_reads": 0,
+  "GGUF_reads": 0,
+  "actual_children": 0,
+  "checker": {
+    "bytes": 12439,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_parent_role_v2.py",
+    "sha256": "58fe630e4afa775929d1f30c88736f3fda8e27d382c9dc5424a02de20529d596"
+  },
+  "compiler_calls": 0,
+  "denied_real_operations": [],
+  "elapsed_seconds": 1.172000000020489,
+  "errors": [],
+  "failures": [],
+  "helper": {
+    "bytes": 36326,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v2.py",
+    "sha256": "e6c8739a9baf383a12876c435e5418c9657aa18cf174f3f459bafe4d67eea9fa"
+  },
+  "real_SDK_constructions": 0,
+  "schema_version": 1,
+  "scope": "Unbound parent role/clock source and fake typed lease failures only; not full lifecycle, final wire parser, OS/API or payload qualification",
+  "status": "passed",
+  "tests": 10
+}

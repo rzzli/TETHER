@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "scope": "independent implementation review, offline invented fixtures only",
+  "status": "one_source_resource_binding_fix_pending",
+  "findings": [
+    {
+      "id": "peer-prep-1",
+      "status": "reproduced_before_fix",
+      "module": "source_preparation.verify_source_preparation",
+      "finding": "A complete resealed package proof can reassign required resource names to other packaged paths. Generic package verification accepts the declared mapping; consumer must require exact study/name locations."
+    },
+    {
+      "id": "peer-prep-2",
+      "status": "fixed_and_peer_test_passed",
+      "module": "tokenization._run_child",
+      "finding": "Fallible final timing call replaced primary KeyboardInterrupt and skipped child retention. Fixed to preserve primary and retain unknown timing explicitly."
+    }
+  ],
+  "other_checks": [
+    "Whole Observation rejects source_kind, missingness, publication and method-note modifications.",
+    "All six hypothetical payloads preserve full source request, two-claim guide/schema parity and no execution authorization.",
+    "Declared oversized stable read fails before opening payload.",
+    "Token resource alias rejected; previous tokenization_key already bound package proof, so no independently reproduced token alias defect claimed."
+  ],
+  "test_state": "six peer tests: five pass; source resource mapping regression pending owner fix",
+  "evidence": [
+    {
+      "path": "tests/test_study_preparation_peer.py",
+      "sha256": "3adc92f99c4d080b84bfae9df91d0ad7b90f87709cdce4ba75d0eb0fd996c196",
+      "bytes": 8379
+    },
+    {
+      "path": "data/cache/preparation-peer-before.txt",
+      "sha256": "6a3141b3c06d052fef085ff4065d9d526025931b86b5e75cd69b2d2c93fae1d5",
+      "bytes": 2959
+    },
+    {
+      "path": "data/cache/preparation-peer-after.txt",
+      "sha256": "e62ab185bbe134311231844c14ccbb1275897bbe4eeb685bdceb6fb0571932f7",
+      "bytes": 1852
+    }
+  ],
+  "raw_source_replayed_by_this_review": false,
+  "protected_payloads_read": false,
+  "generation_calls": 0,
+  "real_tokenizer_calls": 0,
+  "scientific_validation": "not_performed",
+  "remaining_limits": [
+    "No independent biological review or real-source eligibility conclusion.",
+    "OS loader/trusted-user boundary remains; sharing locks are not a hostile-user sandbox.",
+    "Source admission kernel deadline remains cooperatively checked around long existing calls."
+  ]
+}

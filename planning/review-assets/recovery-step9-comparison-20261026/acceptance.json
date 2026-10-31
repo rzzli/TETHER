@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T19:45:20.187975+00:00",
+  "status": "accepted_recorded_fixed_evidence_engineering_only",
+  "version": "0.3.3",
+  "full_tests": {
+    "run": 1536,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "scoped_tests": 17,
+  "source_pins_rechecked": 286,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "recorded_adapter_cells": 12,
+  "pure_baseline_results": 4,
+  "actual_generation_calls": 0,
+  "provider_spending_usd": 0,
+  "fixture_tokens": "declared_fixture_usage_not_observed_model_usage",
+  "comparison_receipt_sha256": "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+  "comparison_relocation": "verified_original_bundle_and_live_source_unavailable",
+  "prior_R07_and_baseline_replay": "verified_by_matching_reviewed_frozen_installations",
+  "real_source_admission": false,
+  "entire_R09_complete": false,
+  "scientific_validation": "not_established",
+  "actual_input_feasibility": {
+    "unchanged_IL6R_byte_reservation": 85173,
+    "lossless_trial_byte_reservation": 81945,
+    "pinned_CLI_tokens": 28049,
+    "pinned_CLI_reservation_with_margin": 28241,
+    "unchanged_input_ceiling": 32000,
+    "exact_prior_native_token_count_controls": 6,
+    "conclusion": "Byte policy fails; measured tokenizer counts fit. Current runtime policy and source allowlist unchanged."
+  },
+  "remaining": [
+    "Trusted token-aware preflight specification and implementation",
+    "Source-inclusive real-data admission and separate end-to-end retrieval",
+    "Qualified fresh case/reference/interpretation protocols and actual human submissions",
+    "Native/model and scientific quality remain untested by recorded fixtures"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-comparison-wheel-20261026/dist/asof_target_agents-0.3.3-py3-none-any.whl",
+    "sha256": "e6e6cfed70519aa14b34fa8449645c566c130f9966ec6d5259a4448de737d28b",
+    "bytes": 189879
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-comparison-verifier-033-20261026/asof_target_agents-0.3.3-py3-none-any.whl",
+    "sha256": "e6e6cfed70519aa14b34fa8449645c566c130f9966ec6d5259a4448de737d28b",
+    "bytes": 189879
+  },
+  "evidence": [
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/full-validation.json",
+      "sha256": "176945966b5a38ed7257d40c1cb4c754348bee8a0e91d59ee16d199bf980b0e0",
+      "bytes": 472
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/code-validation.json",
+      "sha256": "985cb6e032f0c9c11d8613d6a55f058ce411928d3dbf00cbbf0bd722e2a2c6ee",
+      "bytes": 32354
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/installed-verification.json",
+      "sha256": "8869a802cfa29ba71179db4cbb362886f657d0ea4e1fc4c9c60be51c1ca5a39e",
+      "bytes": 8519
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PLAN-v2.json",
+      "sha256": "33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52",
+      "bytes": 3868
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PREPARATION-CHECK-v2.json",
+      "sha256": "3ba206a5b2de41f9f26d3ecb46994c010d902a01f74eb6e9f34123e280c7a5aa",
+      "bytes": 2470
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/PEER-DESIGN-REVIEW-v1.json",
+      "sha256": "fb8654e00c07a6bf6104c5ec85d999735200f65f426730db3e2aa43c86e61dd3",
+      "bytes": 4061
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/IMPLEMENTATION-PEER-REVIEW-v1.json",
+      "sha256": "6996abd2f42e37006e4b3f49ec1904be2677935c78ee4153bf1462840b28987f",
+      "bytes": 5034
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/frozen-r07-verification-after.json",
+      "sha256": "91c6712f86d0f5b88cf28baa912f7ca75006d90eefb5f88014f406369c9c9b8d",
+      "bytes": 976
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/frozen-baseline-verification-after.json",
+      "sha256": "5cdec923b03d9f5e060e689b8f822c8e85a231534652ca5ed0a4bfff55268aa9",
+      "bytes": 1006
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/relocation-verification.json",
+      "sha256": "d74dd0ebf1ed3f7a0bbe0a89428b5d8af85a9539997ed3d7df054c60a3a05384",
+      "bytes": 1118
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/REAL-INPUT-FEASIBILITY.json",
+      "sha256": "cae8610bed822676e8661eda7441ed407719b7ec61cfd5934fe9a8840211ac19",
+      "bytes": 5453
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/lossless-projection-v1/RESULT.json",
+      "sha256": "afefadcab8ba8cd8f5b0ef97066c6d41d3ebe3271a5254eb8d6107a224ce7669",
+      "bytes": 15367
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/MEASUREMENT-PLAN-v2.json",
+      "sha256": "8274b069c69afe51ac87caf106b1876fe423e0621f5d4c493a5e1e527723cddd",
+      "bytes": 2238
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/RESULT.json",
+      "sha256": "aefbaf540d3ff9dc6921ac1a01b0ca1c77500e3934ba76f0520ceaa8da4bd7f8",
+      "bytes": 25140
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/ASSET-CHECK.json",
+      "sha256": "465a89f0c8565085619b8e1ca177ea37b3e6d8f0babc6342ee39722876992020",
+      "bytes": 11233
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/SOURCE-PIN-CHECK.json",
+      "sha256": "2374324bfc65f6af76b972cfd37c24c91454655697fba5a808b5ce10c5687a13",
+      "bytes": 2098
+    }
+  ]
+}

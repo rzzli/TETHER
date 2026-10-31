@@ -1,0 +1,8 @@
+{
+  "status": "AUTHOR_ASSERTION_BEFORE_SOURCE_WRITE",
+  "tool_chunk": "7169d5",
+  "exit_code": 1,
+  "error": "Author compared read_text-normalized LF bytes with frozen physical CRLF source hash; assertion stopped before any output write. Corrected check hashes original read_bytes.",
+  "source_sha256": "a6877861860ba7a42d22d581d4bfa565984e6ce377d937ff3c4525b04130fd8a",
+  "actual_API_calls": 0
+}

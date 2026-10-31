@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "status": "prospective_before_execution",
+  "scope": "24 offline tokenization calls:18 literal PLAN-v2 stage prompts and6 sealed R07 original prompts",
+  "generation_calls": 0,
+  "provider_spend_usd": 0,
+  "source_changes": false,
+  "runtime_changes": false,
+  "asset_gate": "Fresh SHA256/size of R05-pinned llama-tokenize.exe, all DLLs in its runtime directory and all3GGUF shards; fail before any prompt on mismatch",
+  "argv": [
+    "llama-tokenize.exe",
+    "--offline",
+    "--model",
+    "PINNED_FIRST_GGUF_SHARD",
+    "--no-escape",
+    "--no-bos",
+    "--stdin",
+    "--ids",
+    "--show-count"
+  ],
+  "stdin": "Exact UTF8prompt bytes, no shell/powershell pipe, no newline addition",
+  "parse_special": "default enabled, no variants authorized in this experiment",
+  "timeout_seconds_per_process": 30,
+  "max_invocations": 24,
+  "failure_policy": "Stop on timeout, nonzero exit, missing/malformed count, mismatched ID/count or input pin; preserve stdout/stderr/progress/failure. subprocess.run timeout kills and waits owned process. No retries.",
+  "controls": {
+    "exposed-il6r-genetics-current": 4377,
+    "exposed-il6r-genetics-simplified": 4507,
+    "synthetic-orientation-current": 1241,
+    "synthetic-orientation-simplified": 1371,
+    "synthetic-context-current": 1397,
+    "synthetic-context-simplified": 1527
+  },
+  "qualification": "CLI token counts, not observed generation usage. Exact parity across6 controls supports only these prompts/settings; mismatch stays unqualified, no prompt repair/server/generation. Byte reservation/runtime policy unchanged.",
+  "binding": "Terminalseal+member hashes; literal18payload fingerprints match retained preparation/real feasibility. Numeric previous usage only from post-run-mechanical-audit. Never read raw candidate answers.",
+  "supersedes_sha256": "ca0731bea685070a213d8235eed765355e0b45b159e2d6c7bc420aaaaae3b51c",
+  "correction": "Before any tokenizer/model execution, retained numeric audit identifies orientation1241/1371 and context1397/1527; original prospective mapping swapped fixture names. Counts unchanged; labels corrected from numeric audit, not model results."
+}

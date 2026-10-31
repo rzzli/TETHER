@@ -1,0 +1,234 @@
+{
+  "activity": {
+    "V2_subject_imports": 0,
+    "V2_subject_tests": 0,
+    "ctypes_SDK_native_or_physical_calls": 0,
+    "large_generated_runs": 0,
+    "large_reference_fixture_preparation": 0,
+    "original_payload_file_ops": 0
+  },
+  "allowed_stdlib": [
+    "dataclasses",
+    "hashlib",
+    "json",
+    "math",
+    "re",
+    "struct",
+    "types"
+  ],
+  "author_static": {
+    "AST_syntax_only_files": 4,
+    "exact_byte_delta_verified": true,
+    "subject_behavior_tests": 0,
+    "subject_imports": 0
+  },
+  "correction_scope": "Only FormatError lifecycle assignment, safe immutable diagnostic refreeze and the exact v2 own-module import map. Decoder reservation validation is unchanged.",
+  "execution_gate": "No V2 imports/tests until exact corpus V3 preparation peer/root acceptance and fresh runner binding/root execution scope.",
+  "first_execution_required": [
+    "Root-bound CODEC_FIRST independent literals",
+    "Root-bound LEGACY48_FIRST genuine owner projection and same8",
+    "separate frozen SAME6/newrole/fault/smallstream controls",
+    "static allocation/source peer before any separately authorized large generated control"
+  ],
+  "imports": {
+    "continue_role_verification_v2": [
+      "dataclasses",
+      "role_owner_v2"
+    ],
+    "role_file_ports_v2": [
+      "dataclasses",
+      "hashlib",
+      "struct",
+      "role_owner_v2"
+    ],
+    "role_ledger_codec_v2": [
+      "hashlib",
+      "json",
+      "math",
+      "re",
+      "struct",
+      "types"
+    ],
+    "role_owner_v2": [
+      "dataclasses",
+      "hashlib",
+      "json",
+      "math",
+      "types",
+      "struct",
+      "re",
+      "role_ledger_codec_v2"
+    ]
+  },
+  "inputs": [
+    {
+      "bytes": 2589,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-SOURCE-SCOPE-v1.json",
+      "sha256": "9e202d81d5d2f18bf2eb7b3552c86782ceda2b0f2a6cf56a711f70ee4f1053e5"
+    },
+    {
+      "bytes": 89573,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    {
+      "bytes": 9251,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-FREEZE-v2.json",
+      "sha256": "e0d636af4501544f3fd8aba77b061633a5052be81f06f8fa0ab8fded41cb4e53"
+    },
+    {
+      "bytes": 1044085,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-CORPUS-v2.json",
+      "sha256": "55e01082063f23128780cf47f6f8275f360a7e896e400fa4b1271cd081a5581c"
+    },
+    {
+      "bytes": 11494,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/role_ledger_independent_tests_v2.py",
+      "sha256": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea"
+    },
+    {
+      "bytes": 20332,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-IMPLEMENTATION-SLICE-v1.json",
+      "sha256": "35484f8a35d29bc108712dc7279e1cbbcb4b76470d28a6c1241895bbc4fd3f9c"
+    },
+    {
+      "bytes": 6824,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v1.json",
+      "sha256": "8e607ebe4483218280be100724c0840f306905c22cbd0eac36c29f025c45c1be"
+    },
+    {
+      "bytes": 9571,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v4.json",
+      "sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa"
+    },
+    {
+      "bytes": 4670,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-CODEC-FIRST-FAILURE-LOCALIZATION-v1.json",
+      "sha256": "f13fb458432e3d1c2de0f969e90dbce760bd673af4c76fcba0f33aaf059e5896"
+    },
+    {
+      "bytes": 7131,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-STATIC-REVIEW-v1.json",
+      "sha256": "f8f6eca094e394da251f00cf3d51a3cf879ddc71a0ff7895205cd234787f564b"
+    },
+    {
+      "bytes": 2867,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-RESERVATION-ORACLE-CORRECTION-v3.json",
+      "sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a"
+    },
+    {
+      "bytes": 467,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PORTS-IMPORT-DELTA-v2.json",
+      "sha256": "5690e682cb16d4c6240be0f809ed4debedecc4ae825cec5fce953137a2ac8838"
+    },
+    {
+      "bytes": 5171,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-DELTA-v2.json",
+      "sha256": "edaafdc6a4a082e113cc307e6356ce490a9ea54197407837acc085e01bb31f7f"
+    }
+  ],
+  "own_module_order": [
+    "role_ledger_codec_v2",
+    "role_owner_v2",
+    "role_file_ports_v2",
+    "continue_role_verification_v2"
+  ],
+  "preservation": "These exact four files are immutable from this pause through first actual source results. Any correction requires a separately named coherent successor; no frozen oracle changes.",
+  "preserved_first_evidence": {
+    "callback_checks": 1288,
+    "codec_forward_calls": 83,
+    "completed_method_outcomes": null,
+    "owner_refreeze": "Static source finding only; no before-owner execution claim.",
+    "reason": "Actual V1 test execution aborted during unittest exception formatting. Not setup-only and not zero activity."
+  },
+  "public_interfaces": {
+    "codec": [
+      "encode_ledger(value,*,check)",
+      "decode_ledger(raw,*,check)",
+      "FormatError immutable code/offset/path",
+      "iter_checked_records(raw,*,check)",
+      "pack_row_tuple_into(dst,offset,kind,fields)"
+    ],
+    "controller": [
+      "continue_once(claimed_continuation,request,authority_factory,checker_factory)"
+    ],
+    "owner": [
+      "FileSpec(path,role,size,sha256,capture,descriptor_id=None,legacy_role=None)",
+      "start_injected(clock,setup,*,profile=PROFILE_N4)",
+      "SharedOwner/ProducerSnapshot/GeneratedArtifactBytes/CaptureNotRequested",
+      "project_legacy(genuine_snapshot,*,check)",
+      "owner.freeze_generated(kind)/generated_bytes(kind)/generated_artifact(kind)/check_generated(artifact)"
+    ],
+    "ports": [
+      "FilePortView(owner,binding)",
+      "AdoptionHooks(owner,call=None) with restricted observed-identical unbound compatibility",
+      "seven original API subset only"
+    ]
+  },
+  "qualification": {
+    "FFI_conversion": false,
+    "RSS_fit": false,
+    "full_real_roster": false,
+    "inference_memory": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_first_entry": false,
+    "scientific": false,
+    "source_accepted": false
+  },
+  "schema_version": 1,
+  "scope": {
+    "actual_codec": true,
+    "diagnostic_slots_reusable": true,
+    "genuine_injected_owner": true,
+    "hash_only_no_bulk_capture": true,
+    "no_global_call_dicts_in_operational_encoder": true,
+    "profile_1MiB_explicit": true,
+    "profile_N4_default": true
+  },
+  "source_map": {
+    "continue_role_verification_v2": {
+      "bytes": 4273,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v2.py",
+      "sha256": "81ddf109ffaaf2d6c2c25366c57a9581c7e88e8b0b4db0463ff3912254f26096"
+    },
+    "role_file_ports_v2": {
+      "bytes": 21279,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v2.py",
+      "sha256": "e7da487e71e4442755a709b71b2dd0e729ccecbb27cac42622b97f7e9605cd3c"
+    },
+    "role_ledger_codec_v2": {
+      "bytes": 55461,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v2.py",
+      "sha256": "baa4b814921a502d42f940299cf2a1fea1ca2eb1481de106ac3e38671b3d4ede"
+    },
+    "role_owner_v2": {
+      "bytes": 76176,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v2.py",
+      "sha256": "50c6c91c99f670bef8490630c68b62114c336e315e68c76ed493972a903e68d7"
+    }
+  },
+  "sources": {
+    "continue_role_verification_v2": {
+      "bytes": 4273,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v2.py",
+      "sha256": "81ddf109ffaaf2d6c2c25366c57a9581c7e88e8b0b4db0463ff3912254f26096"
+    },
+    "role_file_ports_v2": {
+      "bytes": 21279,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v2.py",
+      "sha256": "e7da487e71e4442755a709b71b2dd0e729ccecbb27cac42622b97f7e9605cd3c"
+    },
+    "role_ledger_codec_v2": {
+      "bytes": 55461,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v2.py",
+      "sha256": "baa4b814921a502d42f940299cf2a1fea1ca2eb1481de106ac3e38671b3d4ede"
+    },
+    "role_owner_v2": {
+      "bytes": 76176,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v2.py",
+      "sha256": "50c6c91c99f670bef8490630c68b62114c336e315e68c76ed493972a903e68d7"
+    }
+  },
+  "status": "COHERENT_V2_PAUSE_BEFORE_ANY_V2_SUBJECT_IMPORT_OR_TEST"
+}

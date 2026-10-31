@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "tests": 5,
+  "failures": [],
+  "errors": [],
+  "checker_sha256": "648c43d00d660957abef56bdea3ec558ccfe1a47d3123540e08839e0c388af66",
+  "descriptor_sha256": "e42cfda8a76c0784883c5d3dd1f695fd6e10c4d60b9c85685bfc2aba2a89922c",
+  "header_sha256": "0a049358a1d8f2a8fd1bcc734a7c3995535f6e1829ec1bf0de8b39df1f86b3e6",
+  "contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+  "CPU_GGUF_pack_payload_stat_open_hash": 0,
+  "compiler_calls": 0,
+  "SDK_constructors": 0,
+  "children": 0,
+  "scope": "Exact metadata-only bindings and in-memory negatives; no asset identity freshness or execution permission"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "manual_precheck_clear_for_fixture_freeze_independent_reference_pending",
+  "spec_sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a",
+  "corpus_sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d",
+  "generator_sha256": "a844f88aefa2cb1fad3be52f8de7d11884e6485edfc046259a9c20c654dd2a79",
+  "provenance_sha256": "22aa695081ed6338ad68ac2c2ac3c9a6f7c6d8bd85b134fa0e5ae6704c8c23fa",
+  "initial_HOLD_sha256": "9b5a953bf064ef0cb213389a10635dedcf9e08279bcd863bf3f967ed44ec5adf",
+  "scope": "Read-only manual spec/literal-generator delta review; no decoding algorithm or codec was run before freeze",
+  "resolved": [
+    "Literal C280 minimum and F1808080 ordinaryF1 branch plus all interiorcuts are included.",
+    "E0/F0/ED/F4 restricted-second-byte failures now have split-chunk witnesses retaining the lead and examined/notconsumed offending tail.",
+    "MiddleBOM emitsU+FEFF; initialBOM/rawNUL/ASCII controls/noncharacters remain valid UTF8 independent of JSON membership.",
+    "API argument types precede state checks; exact bytes/finalbool only; bad arguments and afterfinished requests raise without consuming or mutating stream error state. Encoding error remains absorbing for validly typed feeds."
+  ],
+  "new_manual_blockers": [],
+  "next": "Author freezes exact fixture/provenance/structural pins; independently validate every frozen step with CPython strictutf-8 bytewise plus explicit RFC error/consumption accounting before any adapter is authorized.",
+  "limits": "Finite107 authored cases, not exhaustive Unicode validation. No actual DLL/token/EOG/grammar/native/model/resource/scientific qualification.",
+  "activity": {"corpus_semantic_runs": 0, "adapter_implementations": 0, "vendor_extraction_or_execution": 0, "CPU_GGUF_oldpack_operations": 0}
+}

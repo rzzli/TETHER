@@ -1,0 +1,110 @@
+{
+  "actual_callback_record": {
+    "acknowledged": true,
+    "attempted": true,
+    "prepared_bytes": 1505,
+    "prepared_sha256": "57ba3e81a394e6b733a36d6e847dfb0c69b97aa32a39a4d06da8e43057c52273",
+    "return_observed": true,
+    "semantics": "fictional_callback_not_physical_IO"
+  },
+  "actual_error": {
+    "args_repr": [
+      "'HARD_DEADLINE'"
+    ],
+    "class_name": "SharedOwnerError",
+    "format_failed": false,
+    "identity": "source:SharedOwnerError:0",
+    "message": "HARD_DEADLINE",
+    "phase": "final_clock"
+  },
+  "actual_last_sink_observations": [
+    {
+      "acknowledged": true,
+      "clock": 100,
+      "kind": null,
+      "returned": true,
+      "target": "close_journal"
+    },
+    {
+      "acknowledged": true,
+      "clock": 100,
+      "kind": "receipt",
+      "returned": true,
+      "target": "publish_receipt"
+    },
+    {
+      "acknowledged": true,
+      "clock": 100,
+      "kind": "seal",
+      "returned": true,
+      "target": "publish_seal"
+    }
+  ],
+  "actual_origin": {
+    "clock_state": "hard_expired",
+    "hard_end": 400,
+    "now": 400,
+    "start": 100,
+    "work_end": 395
+  },
+  "actual_target_API_calls": 0,
+  "actual_terminal": {
+    "candidate_acknowledged": true,
+    "cleanup_acknowledged": true,
+    "final_clock_passed": false,
+    "journal_closed": true,
+    "original_closures_complete": true,
+    "pure_owner_ack": false,
+    "receipt_acknowledged": true,
+    "result_issued": true,
+    "seal_acknowledged": false,
+    "started": true
+  },
+  "additional_actual_replay": false,
+  "case": "seal_ack_late",
+  "cause": "The owner _callback retains actual returned ACK before its post-call original-clock check. _finish assigns terminal.seal_acknowledged from try_action(_publish), whose exception outcomeFalse replaces the known callback fact. Same source pattern exists for candidate/cleanup/receipt; only late-seal was directly exercised in the frozen48.",
+  "checker": {
+    "bytes": 5689,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_integration_actual_v1.py",
+    "sha256": "fc1d2d447c24c8081a7c19f4c04b4f1da7b0c5d4749ac748377bcb7b23498c11"
+  },
+  "classification": "Source bookkeeping boundary, not a frozen literal/oracle or harness correction. Preserve known callback ACK while retaining deadline/primary/incomplete veto; no successful seal gate/final acknowledgment afterhard.",
+  "driver": {
+    "bytes": 31582,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_fixture_driver_v1.py",
+    "sha256": "33cc4283e95c82b3fc293b36b0e8eeadf30f4233a7e54fd1d9f77db7c15639ae"
+  },
+  "first_proof": {
+    "bytes": 4931434,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-FIRST-PROOF-v1.json",
+    "sha256": "5a104017dfd925f46b11aa15b4a53355a407a8fa0afce6b83c01ec5ae9ccd577"
+  },
+  "fixture": {
+    "bytes": 312462,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+    "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+  },
+  "oracle_modified": false,
+  "public_schema": {
+    "bytes": 37533,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+    "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+  },
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 36450,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v1.py",
+    "sha256": "76384e02282b1ce2437b9ff342913297f58ea0858752308724bef912b9e2643b"
+  },
+  "source_modified": false,
+  "status": "CONFIRMED_THIRD_SOURCE_BOUNDARY_KNOWN_CALLBACK_ACK_LOST_IN_TERMINAL_SUMMARY"
+}

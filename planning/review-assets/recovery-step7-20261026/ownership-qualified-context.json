@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-26T16:08:26.055029+00:00",
+  "pid": 38372,
+  "api": "GetExtendedTcpTable",
+  "table_class": "TCP_TABLE_OWNER_PID_LISTENER",
+  "remote_requests": 0,
+  "http_requests": 0,
+  "model_calls": 0,
+  "listener_created": true,
+  "own_listener_closed": true,
+  "ownership_confirmed": true,
+  "execution_context": "caller_supplied",
+  "host": "127.0.0.1",
+  "port": 64255,
+  "size_query_status": 122,
+  "required_bytes": 756,
+  "table_read_status": 0,
+  "returned_bytes": 516,
+  "own_port_rows": [
+    {
+      "state": 2,
+      "host": "127.0.0.1",
+      "port": 64255,
+      "pid": 38372
+    }
+  ],
+  "status": "qualified_for_this_execution_context_only"
+}

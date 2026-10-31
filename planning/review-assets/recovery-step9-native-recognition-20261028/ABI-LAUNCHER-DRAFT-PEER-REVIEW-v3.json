@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "review_id": "abi-launcher-v3-disabled-draft-independent-source-peer-20261028",
+  "recorded_at_utc": "2026-10-28T19:39:39.628037+00:00",
+  "status": "CLEAR_source_and_retained_fake_evidence_only_actual_harmless_qualification_pending",
+  "execution_authorized_by_this_review": false,
+  "harmless_worker_execution_authorized": false,
+  "reviewer_executed_or_imported_helpers": false,
+  "scope": "Narrow b129-to-c111 source/AST and retained synthetic fixture review; own Python reads/hashes/parses files and writes only review artifacts. No API/helper/test/child rerun.",
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft_v3.py",
+      "bytes": 53085,
+      "sha256": "c111ac5f42209eb61fc49522d4cd6db544987b1c4230577404022e1add6eb2f4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-EXECUTION-DESIGN-v3.md",
+      "bytes": 6948,
+      "sha256": "75b41cf2e60546f44626c057a0a278a29ff05066642a64e567aa6e492520af33"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-DRAFT-PREPARATION-v3.json",
+      "bytes": 14930,
+      "sha256": "d2e243b044ab4578d9067ecf81f3411c77bf563ffd7208349ba0c72cf588ae66"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_abi_parent_launch_draft_v3.py",
+      "bytes": 30988,
+      "sha256": "96f614e23d81758284e364d42654c5dffa832cd84c936b0ff9016ab7427bfc11"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-PARENT-V3-PURE-CHECKS.json",
+      "bytes": 613,
+      "sha256": "50638171ed0f866f70ecb0bee7cab4fd35b39c3880c53dd752d6f56e1e27d0fb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-LAUNCHER-DRAFT-PEER-REVIEW-v2.json",
+      "bytes": 9742,
+      "sha256": "41a4eeb6499b12282c0ba0efbccc3719d2303266a774fd7cec011306195e6145"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-LAUNCHER-DRAFT-PEER-REVIEW.json",
+      "bytes": 12238,
+      "sha256": "e5f3a4afe7722148db1d80b3104318b5a17c63225539804152a163fbfacd4318"
+    }
+  ],
+  "cleared_v2_finding": {
+    "id": "late_cleanup_failure_not_persisted_when_primary_failure_exists",
+    "resolved": true,
+    "new_helper": "seal_post_lease_cleanup",
+    "finding": "Every tracked lease close outcome is retained in post-lease-cleanup.json after all close attempts, including initial validation/cleanup history and explicit unconfirmed closure. A separate authoritative late-failure.json is written for late errors even if primary failure.json already exists. Old primary marker/receipt are never overwritten. A required terminal-seal.json binds old receipt, cleanup, known failure markers and complete earlier-output inventory. Missing terminal seal is incomplete and any primary/late/after-seal failure marker vetoes a positive status."
+  },
+  "reviewed_terminal_semantics": [
+    "Original leases are held through early receipt publication, then every close is attempted before post-cleanup artifact hashing.",
+    "Required cleanup evidence is written on successful and already failed attempts. Both primary and late close errors remain independently visible.",
+    "Terminal output hashes bind all earlier files; in ordinary completed synthetic fixtures only terminal-seal.json itself is outside the inventory.",
+    "A parent deadline crossed during terminal publication creates after-seal-failure.json; source return status becomes failed even if on-disk earlier seal had a pending status.",
+    "Post-cleanup/sealing exceptions attempt a separate late supplement with close outcomes without rewriting a primary failure, early receipt or partial artifact. Missing/invalid records remain incomplete; no retry is implied."
+  ],
+  "unchanged_source_scope": {
+    "all_existing_classes_and_methods_AST_identical": 13,
+    "all_other_existing_top_level_functions_AST_identical": 16,
+    "changed_top_level_functions": [
+      "prepare_config",
+      "execute_draft"
+    ],
+    "new_top_level_functions": [
+      "seal_post_lease_cleanup"
+    ],
+    "launch_architecture": "Public CreateProcessW with SUSPENDED and two live JOB_LIST/HANDLE_LIST attributes; distinct noninherited owned Job excluded from only3stdio handles; no manual Assign fallback",
+    "before_resume": "Raw named snapshot, exact Job membership/limits/returned process/thread/image/creation identity; one ResumeThread requiring previous count1; unknown create/resume retained",
+    "finite_limits": {
+      "parent_seconds": 60,
+      "child_attempt_seconds": 30,
+      "child_cleanup_reserve_seconds": 2,
+      "finalization_reserve_seconds": 5,
+      "process_and_job_commit_bytes": 268435456,
+      "active_processes": 1,
+      "per_stream_bytes": 65536,
+      "max_job_snapshots": 40,
+      "running_snapshot_period_seconds": 0.9
+    },
+    "harddisable": "LiteralFalse, constructor and execute-entry gates plus CLI denial remain intact"
+  },
+  "independent_checks": {
+    "all48_preparation_pins_rehashed_and_match": true,
+    "all193_original_build_pins_rehashed_and_match": true,
+    "source_design_metadata_checker_report_exact_hashes_match": true,
+    "all_old_ec26_b129_designs_reviews_test_evidence_preserved": true,
+    "retained_pure_tests_reported_passed": 33,
+    "retained_failures_errors_skips": 0,
+    "reviewer_test_reruns": 0,
+    "synthetic_terminal_fixtures": 3,
+    "synthetic_fixture_files_rehashed": 29,
+    "synthetic_fixture_inventories_complete": true,
+    "full_fake_journal_chains_valid": 2,
+    "full_fake_journal_events_each": 14,
+    "all_early_receipt_output_pins_and_tips_valid": true,
+    "standalone_original_primary_and_receipt_exact_known_bytes_preserved": true,
+    "fake_factory_injected_before_temporary_testflag": true,
+    "harddisable_restored_before_real_factory_source_restoration": true
+  },
+  "retained_synthetic_fixture_checks": [
+    {
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-rrumg5oq\\attempt",
+      "classification": "synthetic fake-SDK/journal fixture; not an OS or native result",
+      "files": 11,
+      "status": "ABI_observations_retained_independent_qualification_pending",
+      "terminal_seal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-rrumg5oq\\attempt\\terminal-seal.json",
+        "bytes": 1943,
+        "sha256": "aba7f687d3f9e96109248a87815a24258e0e826c32fd93545a992aaa01b1a263"
+      },
+      "all_terminal_output_pins_and_universe_match": true,
+      "early_receipt_cleanup_primary_and_late_bindings_match": true,
+      "cleanup_outcomes": 2,
+      "journal_events": 14,
+      "journal_chain_and_early_receipt_tip_valid": true
+    },
+    {
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-s2fee34n",
+      "classification": "synthetic fake-SDK/journal fixture; not an OS or native result",
+      "files": 5,
+      "status": "failed",
+      "terminal_seal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-s2fee34n\\terminal-seal.json",
+        "bytes": 1543,
+        "sha256": "36f824869c13d49a583482a08c2447b705e29c8b7ff5b883e9ad5e6a3212504f"
+      },
+      "all_terminal_output_pins_and_universe_match": true,
+      "early_receipt_cleanup_primary_and_late_bindings_match": true,
+      "cleanup_outcomes": 1,
+      "journal_events": 0,
+      "journal_chain_and_early_receipt_tip_valid": null
+    },
+    {
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-tfvay4z0\\attempt",
+      "classification": "synthetic fake-SDK/journal fixture; not an OS or native result",
+      "files": 13,
+      "status": "failed",
+      "terminal_seal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-abi-v3-pure-tfvay4z0\\attempt\\terminal-seal.json",
+        "bytes": 2488,
+        "sha256": "de4b8e7392547d0e6932841e493fdd076c2639216b4bdb23bfffcea8796d2e62"
+      },
+      "all_terminal_output_pins_and_universe_match": true,
+      "early_receipt_cleanup_primary_and_late_bindings_match": true,
+      "cleanup_outcomes": 2,
+      "journal_events": 14,
+      "journal_chain_and_early_receipt_tip_valid": true
+    }
+  ],
+  "material_findings_remaining": [],
+  "limitations": [
+    "All33 checks are pure/fake-SDK control-flow/layout/file/journal evidence. No actual Windows creator/Job/resource/inheritance/pipe API, target child or ABI observation was exercised by these fixtures or this reviewer.",
+    "The required terminal artifact/failure-veto schema must be honored by future independent result verification; an early receipt alone is insufficient.",
+    "Synchronous OS/I/O and cleanup remain cooperative rather than a hard responsiveness guarantee. Abrupt parent death/storage loss can leave incomplete evidence and unobserved outcomes.",
+    "Creation-time JOB_LIST removes the old manual-assignment gap by design; arbitrary interruption inside an unreturned OS call is not proven recoverable.",
+    "Full fake success uses FAKE_PURE_FIXTURE_NOT_NATIVE and pure_fixture=true. It must not enter actual ABI/scientific evidence.",
+    "Original active2 was not reproduced by the separate actual v3 diagnostic and remains unexplained. That result did not qualify this new launch architecture.",
+    "A separately authorized same-path harmless worker qualification must exercise real success/resource/capture/timeout/abort/failure/reap paths before any enabled target ABI helper/protocol/root decision."
+  ],
+  "activity": {
+    "helper_or_checker_imports_or_executions": 0,
+    "pure_test_reruns": 0,
+    "actual_probe_reruns": 0,
+    "Windows_API_calls": 0,
+    "child_dispatches": 0,
+    "compiler_calls": 0,
+    "target_DLL_loads": 0,
+    "GGUF_model_tokenizer_server_calls": 0,
+    "network_requests": 0,
+    "author_source_or_existing_artifact_mutations": 0
+  },
+  "disposition": "No remaining material source blocker identified in the finite disabled-source/fake-evidence scope. Exact c111 remains disabled and unexecuted. This review grants no harmless-worker, ABI or native execution permission and establishes no containment/scientific completion."
+}

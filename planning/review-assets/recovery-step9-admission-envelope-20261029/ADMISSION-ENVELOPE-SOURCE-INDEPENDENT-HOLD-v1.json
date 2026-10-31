@@ -1,0 +1,141 @@
+{
+  "actual_API_calls": 0,
+  "authorization": "Root scope f8188745 authorizes four frozen pre-fix controls only. No source correction is authorized by this HOLD; preserve source4c8653, all thirty expectations and both runner outcomes until subsequent root scope.",
+  "confirmed_positive_scope": [
+    "All thirty original literal vectors pass in corrected independent proof0cf04. This does not cover the three retained boundaries.",
+    "The source imports json/re/types only, allocates metadata-sized structures rather than represented R/C/byte pools, and computes the twelve frozen comparisons and None/overflow projections consistently in the exercised corpus.",
+    "Callback checks are outside private metadata-error catch regions, including final report/byte preparation; cached getters do not re-enter callbacks. Captured inputs and report outputs are detached/immutable in the exercised controls."
+  ],
+  "existing_evidence": {
+    "actual_analyze_calls": 54,
+    "author_failures": 1,
+    "author_methods": 8,
+    "author_passes": 7,
+    "check_invocations": 462,
+    "corrected_independent_methods": 4,
+    "first_runner": "003b9481 preserves the trusted codec-load setup failure; it is not an arithmetic diagnosis. Named runner correction97194dda preloads UTF-16-LE before ACTIVE without changing source/oracle/audit semantics.",
+    "frozen_vectors_matched": 30,
+    "injected_check_exceptions": 18,
+    "report_getters": 105
+  },
+  "finite_batch_complete": true,
+  "helper_sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242",
+  "inputs": {
+    "ADMISSION-ENVELOPE-AUTHOR-FIRST-PROOF-v1.json": {
+      "bytes": 1899,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-AUTHOR-FIRST-PROOF-v1.json",
+      "sha256": "c3f79da767d1270d437692e5e05c5378f9aea0736b307b4fec1168cd468f5113"
+    },
+    "ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json": {
+      "bytes": 14239,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json",
+      "sha256": "038611daa69c5749def12d64dedc0b9afebdbfba2aff7d0e93981551e08d2cb8"
+    },
+    "ADMISSION-ENVELOPE-FINITE-CLARIFICATIONS-v2.json": {
+      "bytes": 7037,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-FINITE-CLARIFICATIONS-v2.json",
+      "sha256": "57ff21a8955de95f61fa059543e33c1ace52726efbc36b286a52310af5addf97"
+    },
+    "ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v1.json": {
+      "bytes": 109337,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v1.json",
+      "sha256": "003b948178c36037557a69fb2d945e36dcf0f13db21b5a9081e65f65c6801e68"
+    },
+    "ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v2.json": {
+      "bytes": 39070,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v2.json",
+      "sha256": "0cf04ddbe83d147ce33b48b8b70e104430d841093a5999ddd9307a3062fa15a1"
+    },
+    "ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json": {
+      "bytes": 84160,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json",
+      "sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7"
+    },
+    "ADMISSION-ENVELOPE-ROOT-REGRESSION-SCOPE-v2.json": {
+      "bytes": 2480,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-REGRESSION-SCOPE-v2.json",
+      "sha256": "f818874527df3702274cd67a00342081081295a856dc385d14bcc11693523bf1"
+    },
+    "ADMISSION-ENVELOPE-ROOT-RUNNER-CORRECTION-v2.json": {
+      "bytes": 2234,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-RUNNER-CORRECTION-v2.json",
+      "sha256": "97194dda516b87ef6f65f88b0b3c2dc77a006c16393c2d39342422efbd40daff"
+    },
+    "ADMISSION-ENVELOPE-ROOT-SOURCE-SCOPE-v1.json": {
+      "bytes": 6311,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-SOURCE-SCOPE-v1.json",
+      "sha256": "30644e8c0b59356b7dda2f9fde30f366fec80638945d051dc4c5baed1e8f74c3"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-PAUSE-v1.json": {
+      "bytes": 1085,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-PAUSE-v1.json",
+      "sha256": "1bf53afac8b3c00399d0ef0a821ed5de9055fd5ac47f3ae1287077c34ee955dd"
+    },
+    "admission_envelope_independent_tests_v1.py": {
+      "bytes": 9524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py",
+      "sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc"
+    },
+    "admission_envelope_v1.py": {
+      "bytes": 16761,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v1.py",
+      "sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242"
+    }
+  },
+  "material_blockers": [
+    {
+      "evidence": "Static source and root confirmation; deterministic per-generator traversal probe is authorized but not yet executed by this reviewer.",
+      "id": "F1",
+      "implication": "An oversized exact built-in dictionary can force work/allocation beyond the promised fixed-size callback-free structural snapshot. The current source has no len guard in _object.",
+      "issue": "_object iterates all caller keys for type validation and builds sets before refusing the wrong cardinality.",
+      "kind": "bounded structural capture",
+      "required": "After exact dict type, reject the wrong key count in constant time before bounded key traversal/set construction; preserve ordinary key/type refusal semantics.",
+      "source_line": 32
+    },
+    {
+      "evidence": {
+        "bytes": 1899,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-AUTHOR-FIRST-PROOF-v1.json",
+        "sha256": "c3f79da767d1270d437692e5e05c5378f9aea0736b307b4fec1168cd468f5113"
+      },
+      "id": "F2",
+      "implication": "The frozen domain/error contract is not met, even though the object is rejected without numeric coercion.",
+      "issue": "_integer returns INTEGER_DOMAIN for an int subclass, while the effective exact-container rule requires TYPE_DOMAIN for subclasses.",
+      "kind": "exact built-in error domain",
+      "required": "Distinguish forbidden subclasses from ordinary wrong numeric values without calling conversion or arbitrary object hooks; bool remains INTEGER_DOMAIN.",
+      "source_line": 39
+    },
+    {
+      "evidence": "Static source ordering and root confirmation; the two exact before controls are authorized separately.",
+      "id": "F3",
+      "implication": "A typed cycle plus aggregate mismatch produces AGGREGATE_MISMATCH, and a typed cycle plus overflowing size sum reaches ARITHMETIC_OVERFLOW, before the required MODULE_GRAPH refusal.",
+      "issue": "_steps computes the total size and checks aggregate consistency before declared module graph/binding validation, contrary to 57ff validation order.",
+      "kind": "deterministic validation precedence",
+      "required": "Validate graph/binding first, then optional aggregate consistency and checked arithmetic in the declared order. Do not change fields, formulas or the thirty original expectations.",
+      "source_line": 155
+    }
+  ],
+  "original_payload_operations": 0,
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "required_pre_fix_regressions": [
+    "Oversized exact built-in dictionary: trusted profiling counts the actual key-validation generator, requiring zero traversal before size refusal. No timing proxy, source-global replacement or fake input container.",
+    "An int-subclass numeric field returns TYPE_DOMAIN with no conversion/traversal hook.",
+    "Cycle plus aggregate mismatch returns MODULE_GRAPH.",
+    "Cycle plus otherwise overflowing known size sum returns MODULE_GRAPH before arithmetic."
+  ],
+  "reviewed_source_or_fixture_edits": 0,
+  "reviewer": "native_039_acceptance_audit",
+  "reviewer_subject_imports": 0,
+  "reviewer_subject_tests": 0,
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "source": {
+    "bytes": 16761,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v1.py",
+    "sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242"
+  },
+  "source_correction_authorized": false,
+  "status": "HOLD_FINITE_THREE_SOURCE_BOUNDARIES",
+  "verification_complete": false
+}

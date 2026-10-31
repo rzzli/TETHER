@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T04:22:50.725043+00:00",
+  "reviewer": "os_accounting_peer",
+  "status": "clear_exact_v2_source_and_metadata_header_only_not_build_or_execution_authority",
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_recognition_v2.cpp",
+      "bytes": 95007,
+      "sha256": "e683cf9b307e8e5d8943dc7f859c1f1a6e20f24dcd40faca19ab32841a9fe2ae"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_child_v2.py",
+      "bytes": 18173,
+      "sha256": "47e90c52a7d6b4c0ba35efa795152f262eaeb695f14eebfd49a4473b07fcd2bd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PURE-PROOF-v2.json",
+      "bytes": 905,
+      "sha256": "f5bd0d8088981530c8bbeffe3390d51d3e813bd408e67eb6754b121849d8d14a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+      "bytes": 10486,
+      "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-WIRE-v2.json",
+      "bytes": 7402,
+      "sha256": "d578bc2179e55f7866dd7b2df3ec3169fdc3bcb0dee58629c2a31b8d366d0d01"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_runtime_pins_v1.hpp",
+      "bytes": 2968,
+      "sha256": "0a049358a1d8f2a8fd1bcc734a7c3995535f6e1829ec1bf0de8b39df1f86b3e6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-RUNTIME-PIN-DESCRIPTOR-v1.json",
+      "bytes": 3498,
+      "sha256": "e42cfda8a76c0784883c5d3dd1f695fd6e10c4d60b9c85685bfc2aba2a89922c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_descriptors_v1.py",
+      "bytes": 5830,
+      "sha256": "648c43d00d660957abef56bdea3ec558ccfe1a47d3123540e08839e0c388af66"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-DESCRIPTOR-PURE-PROOF-v1.json",
+      "bytes": 681,
+      "sha256": "40f998b32f6acba26a8af7cb411109d26769cd8b4b8fa36436e470472fadff21"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-MODULE-POLICY-v1.json",
+      "bytes": 4873,
+      "sha256": "1f918760526adf368910096a3fc9f60c4cbd78fba5737907b332396d3f6ea37a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-MODULE-VECTORS-v1.json",
+      "bytes": 171388,
+      "sha256": "3602f46516165149ae34b74db0abbdc2b6f0d88e75edca5f026ebbc752ef0475"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-POLICY-AND-ROLE-PEER-REVIEW-v1.json",
+      "bytes": 9711,
+      "sha256": "372e4fb7af6780c5e0ea968ecf34a77d75c802f29c75dd9238afd325dbb056dd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-SOURCE-ROOT-DECISION-v1.json",
+      "bytes": 4851,
+      "sha256": "20ea58d6626b82dd55c7b823ed1bd729134ecac15470fcc6c4c1ad69d92a5399"
+    }
+  ],
+  "preserved_v1_hold": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PEER-REVIEW-v1.json",
+    "bytes": 2699,
+    "sha256": "9d81e5a2d28ca9a29a76170fe7dc9ff91739bb320c9ed866154e67299ddc5caa"
+  },
+  "resolved_finding": "unknown_creation_allows_dependent_teardown",
+  "exact_delta": [
+    "Version comment only",
+    "Sampler initialization attempted!=returned guard before all dependent session teardown",
+    "Model load attempted!=returned guard before backend teardown"
+  ],
+  "independent_source_checks": {
+    "aggregate_call_contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+    "per_API_caps_exact": 25,
+    "aggregate_attempt_cap": 4276181,
+    "native_state_keys_exact": 45,
+    "wrapper_return_bookkeeping_before_throwing_tick_or_log": true,
+    "returned_model_sampler_pointer_assignment_before_postcall_tick": true,
+    "cleanup_attempt_reserves_actionable_pointer_once": true,
+    "unknown_sampler_creation_or_release_blocks_model_and_backend": true,
+    "unknown_model_creation_or_release_blocks_backend": true,
+    "cleanup_bypasses_expired_work_tick_but_retains_fixed_caps": true,
+    "primary_exception_preserved_during_sampler_cleanup": true,
+    "pre_post_CPU_policy_fingerprint": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+    "ABI_policy_807_unchanged": true,
+    "ordered_three_shard_CPU_pack_version_header_descriptor_binding_exact": true,
+    "cooperative_work_ms": 117000,
+    "whole_pack_case_results": 189,
+    "source_groups": [
+      167,
+      18,
+      4
+    ],
+    "native_case_results": 184,
+    "harness_dispositions": 5,
+    "prefix_slots": 6,
+    "positive_complete_sampler_init_free_returns": 190,
+    "required_unavailable_UTF8_coverage_veto": true,
+    "EOG_acceptance_forbidden": true
+  },
+  "author_proof_review": {
+    "source_proof_sha256": "f5bd0d8088981530c8bbeffe3390d51d3e813bd408e67eb6754b121849d8d14a",
+    "source_tests": 15,
+    "shared_phase_vectors": 100,
+    "descriptor_proof_sha256": "40f998b32f6acba26a8af7cb411109d26769cd8b4b8fa36436e470472fadff21",
+    "descriptor_tests": 5,
+    "source_checker_contract_descriptor_pins_match": true,
+    "reviewer_reran_author_tests": false,
+    "scope": "Author intended Python ownership/counter models and static C++/metadata checks only; not compiled behavior or runtime conformance."
+  },
+  "source_scope": [
+    "All25 explicit bridge exports are wrapped with conservative reservation and observed-return counters; internal target calls, initializers and Windows calls are not included.",
+    "Counters and return/ownership state are in-memory between bounded stage/case/prefix snapshots; a killed/unpublished tail remains unknown. Reservations alone do not prove API entry.",
+    "Case/group computation updates before publication; written counts update after flush returns. Current row snapshot deliberately excludes its own written increment; later/final snapshot witnesses it.",
+    "PreCPU and postCPU module predicates classify reported current-process metadata, not a continuous module census or image authenticity proof.",
+    "Fixed header contains prospective CPU/GGUF descriptors only. Its bindings do not establish payload freshness, file identity or permission to open/load them.",
+    "One whole frozen-pack singleton batch and exact stage/case/prefix success accounting; no full-vocabulary-mask or inference/scientific qualification."
+  ],
+  "activity": {
+    "CPU_GGUF_payload_opens_hashes": 0,
+    "SDK_constructors": 0,
+    "Windows_native_or_target_API_calls": 0,
+    "compiler_calls": 0,
+    "child_launches": 0,
+    "author_checker_executions": 0,
+    "Cxx_execution": 0
+  },
+  "remaining_gates": [
+    "Separate build-helper/protocol source review and root compile-only decision",
+    "Separately authorized payload/runtime asset identity work under recorded deadlines",
+    "Final parent/parser/acyclic authority/protocol review, role-v2/reporting corrections and root once-only execution decision"
+  ],
+  "current_acceptance": "Existing ABI807 and fullruntime311 unchanged; no native recognition or scientific result claimed."
+}

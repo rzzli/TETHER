@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "CONFIRMED_STATIC_HOLD_SAME_F2_STOPPED_CLOSE_CACHE_DERIVATION",
+  "scope": "Finite source-text confirmation of Grammar remaining F2 finding only. Reviewer authored the kernel; this is not independent implementation acceptance. No source execution, modification or new family.",
+  "kernel": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/preflight_entry_kernel_v2.py",
+    "bytes": 120885,
+    "sha256": "b81ebfd53e71963b9f96d1fdef4be5b0fd8e0c7fe80062ddb3c50a097224508f"
+  },
+  "pause": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE-PAUSE-v2.json",
+    "bytes": 5308,
+    "sha256": "2fc856163278a6521325b4865f8be77c148f72e09f35050fd6b54d60c635a54c"
+  },
+  "grammar_review": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-KERNEL2-FILEVIEW2-INDEPENDENT-STATIC-REVIEW-v1.json",
+    "bytes": 5387,
+    "sha256": "fe4d8b6693dfc126bf086be0ef3e2144b503fff7d092ec2138a2c9edbbd70f60"
+  },
+  "finding": {
+    "id": "F2_STOPPED_CLOSE_NORMAL_RETURN_CACHE_REPAIR",
+    "locations": {
+      "publish_and_latch": [
+        981,
+        989
+      ],
+      "normal_wrapper_return_then_reconcile": [
+        1208,
+        1215
+      ],
+      "cache_helper_close_exemption": [
+        1545,
+        1554
+      ],
+      "reconcile_close_exemption": [
+        1580,
+        1585
+      ]
+    },
+    "actual_static_path": [
+      "A CloseHandle store_scalar publication commits the bank value, then an original exception leaves scalar cache UNOBSERVED. _accounting_failed marks this call stopped and retains the original error.",
+      "The trusted injected callback catches that error and returns normally; wrapper_result/return/state are correctly retained.",
+      "_call invokes _reconcile_native before testing c.stopped. Both cache derivation helpers exempt CloseHandle from owner-wide accounting failure.",
+      "_cache_committed_fact can therefore assign the committed scalar into this same stopped call cache. _call only subsequently raises the retained original error.",
+      "Committed bank knowledge, correct consumed close right and original error remain available; the defect is unauthorized same-call cache repair, not erased raw evidence or extra dispatch."
+    ],
+    "distinct_legal_path": "A different fresh CloseHandle after an earlier work error has stopped=False and must still dispatch under the reliable original hard clock, retain its own committed outcome and consume its existing close right once. Blocking all cleanup merely because owner.primary/accounting_fault is set would be incorrect."
+  },
+  "minimum_recommendation": {
+    "required": "Check the current call.stopped at the common _cache_committed_fact entry before its CloseHandle exemption; refuse derivation using the already retained original owner error (existing RAW_RETURN_UNKNOWN fallback only if no original exists). This also prevents a retained carrier from retrying cache derivation on that same stopped call.",
+    "early_equivalent_guard": "A matching c.stopped guard at _reconcile_native entry can stop the normal-return derivation/fold path before inspecting axes. It does not replace the common cache-entry protection for direct carrier calls.",
+    "preserve": [
+      "Actual normal wrapper return remains returned/observed even when the stopped guard rethrows.",
+      "Committed scalar/count/error/definition and immutable snapshot data remain inspectable by committed_fact; readonly reports do not repair caches.",
+      "Fresh nonstopped CloseHandle cleanup remains legal under an earlier owner-wide failure.",
+      "No new owner/time window/ref/close attempt, capability, profile cap or output is introduced."
+    ]
+  },
+  "next_step": "Native authors/freezes fifth control, Root executes it on unchanged Source2 and retains first evidence. Only a later Root scope may authorize a named minimal Source3 successor; no correction is applied here.",
+  "activity": {
+    "subject_imports": 0,
+    "subject_tests": 0,
+    "source_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "qualification_upgrade": false
+}

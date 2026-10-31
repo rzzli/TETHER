@@ -1,0 +1,71 @@
+{
+  "P1_hold": {
+    "actual_census_attempt_consumed": false,
+    "preparation_record_absent": true,
+    "prospective_output_absent": true,
+    "protocol": {
+      "bytes": 50035,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-EXECUTION-PROTOCOL-v1.json",
+      "sha256": "30b672021722acc608d109c0927cd37793166e3ce60c66ec59152d2e70fc42cd"
+    },
+    "reason": "Protocol publication returned but phase-local PREPARATION publication failed under inherited cache-only write_new; retain as failed preparation, not final execution clearance.",
+    "source_and_protocol_preserved": true
+  },
+  "checks": {
+    "SDK_declaration_headers": 6,
+    "accepted85_package_and3_distribution_leaves_exact_wheel_bytes": true,
+    "all_static_schema_hash_size_and_tuple_match": true,
+    "current_dynamic_pins_outside_static": true,
+    "current_parent_hash_references_in_static_text": false,
+    "exact_core4_and16_System32_candidates": true,
+    "interpreter_executables": 2,
+    "no_compiler_CPU_binary_GGUF_unknown_image_payload_inputs": true,
+    "public_headers_original_and_copied": 14,
+    "pyvenv_wheel_acceptance_and_declaration_metadata_present": true,
+    "static_authority_execution_permission": false
+  },
+  "current_parent_snapshot": {
+    "bytes": 61933,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v2.py",
+    "sha256": "afbdbeca027e687958dbef4a3b936ae5f426b279e82ccc654ac4379cd7706c12"
+  },
+  "limits": [
+    "No helper/SDK/constructor/child/compiler execution by reviewer.",
+    "Exact selected role closure, not complete CPython, Windows dependency or initializer attestation.",
+    "No reported-image path was opened, hashed or added to inputs.",
+    "A separately named publisher/path correction and final protocol require exact review before root dispatch authority."
+  ],
+  "manifest": {
+    "bytes": 42748,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json",
+    "sha256": "70efee36da8aa73845fee25ba2eea495895a84b4cd9676c98ae9777ce084b42c"
+  },
+  "no_reparse_unique_ancestry_entries": 233,
+  "recorded_at_utc": "2026-10-29T01:55:11.360511+00:00",
+  "roster_peer": {
+    "bytes": 51043,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\CENSUS-STATIC-ROSTER-PEER-REVIEW-v2.json",
+    "sha256": "e9520d8bc3cea49deb516cb0830a5bb39ccaf1dcdfc2e4c7848a38c5803eff4c"
+  },
+  "schema_version": 1,
+  "source_review": {
+    "P1_all_input_unique_ancestry": 237,
+    "P1_combined_bytes": 24914207,
+    "all183_P1_input_pins_match": true,
+    "corrected_binding_tests_read": 9,
+    "corrected_checker": {
+      "bytes": 11886,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_binding_v2_corrected.py",
+      "sha256": "badcbae87448f640694d6ee15229f6c1c6de1218da745103ceb8d6eeaf4c9ba0"
+    },
+    "corrected_proof": {
+      "bytes": 2895,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BINDING-PURE-PROOF-v2-corrected.json",
+      "sha256": "ea2441e1eda0ac021d4335099e7a71da842355175cdf75b0e8dd6dd2dcb0de93"
+    },
+    "mechanics_AST_exact_frozen_v1": 14
+  },
+  "static_bytes": 24794745,
+  "static_count": 179,
+  "status": "CLEAR_reusable_exact_179_static_roster_only_P1_preparation_HELD"
+}

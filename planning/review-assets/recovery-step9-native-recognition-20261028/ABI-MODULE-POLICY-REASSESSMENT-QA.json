@@ -1,0 +1,129 @@
+{
+  "UTF8": "strict, no BOM/replacement characters",
+  "activity": {
+    "GGUF_reads": 0,
+    "SDK_or_target_API_calls": 0,
+    "actual_children": 0,
+    "native_loads": 0,
+    "protected_payload_reads": 0
+  },
+  "assessment": {
+    "bytes": 14157,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - ABI Module Policy.md",
+    "sha256": "13f1cfefeac05cc660e0c7a5a1bb4deacd01d202c7065a9210d178bf1f97b7fd"
+  },
+  "checked_at_utc": "2026-10-28T23:45:18.816786+00:00",
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\qa_abi_module_policy_reassessment.py",
+    "sha256": "4aa709b59d6a1fe31e300df0b7581e7898793df110e656220c0ddb61bfab6bd9"
+  },
+  "evidence_pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V2-RESULT-VERIFICATION.json",
+      "sha256": "4b2a3cd7b09c14a8dc3d444ea6e815c8fefeeb9952cfa9724615af77769e9c24"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V4-RESULT-VERIFICATION.json",
+      "sha256": "48535ac53123db5246c95b7d7ed9211695531e687346e9854ca98d5c51d17473"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\acceptance.json",
+      "sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - ABI Export Failure.md",
+      "sha256": "274c0f56a8c797596db45ff1bcf932831b272161ab2b7e932b3ef49fce3de71e"
+    }
+  ],
+  "limitations": "Text/evidence QA, not a new framework test or scientific/native qualification.",
+  "local_links_checked": [
+    {
+      "label": "controlling recovery plan",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md"
+    },
+    {
+      "label": "execution checklist",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "label": "export-failure reassessment",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - ABI Export Failure.md"
+    },
+    {
+      "label": "corrected bridge build verification",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V4-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "new actual negative verification",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V2-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "first ABI result",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "AsOf 0.3.11",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\acceptance.json"
+    },
+    {
+      "label": "detached own-worker qualification",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "console-identity assessment",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Console Identity.md"
+    },
+    {
+      "label": "36 unqualified endpoint labels",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Endpoint-specific Follow-up Feasibility 2026-10-21.md"
+    },
+    {
+      "label": "17/32 observable primary registry states",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\B0 Registry Content Feasibility 2026-10-22.md"
+    },
+    {
+      "label": "0/12 jointly source-ready clinical cases",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md"
+    },
+    {
+      "label": "resource-path review",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RESOURCE-PATH-REVIEW.md"
+    }
+  ],
+  "ordered_next_gates": 6,
+  "schema_version": 1,
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ],
+  "supplemental_actual_result_checks": {
+    "EOF_call_and_already_observed_EOF_reconciled": true,
+    "all_three_returned_observations_within_reserved_deadline": true,
+    "exact_204_input_protocol_paths_equal_lease_and_recheck_paths": true,
+    "terminal_job_raw_value_final_report_equal": true,
+    "terminal_limits_value_final_report_equal": true
+  },
+  "verification_markdown": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V2-RESULT-VERIFICATION.md",
+    "sha256": "f4c06b9f31dc4112948eac682fbbc699f102e75b392e84a558dcb3f660307dc4"
+  }
+}

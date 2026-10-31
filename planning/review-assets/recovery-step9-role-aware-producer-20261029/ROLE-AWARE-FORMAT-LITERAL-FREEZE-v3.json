@@ -1,0 +1,88 @@
+{
+  "actual_source_calls_in_this_preparation": 0,
+  "anchors": 134,
+  "base_histories": 40,
+  "byte_negative_expansions": 225,
+  "changed_error_codes": 9,
+  "data_checks_passed": 3,
+  "pending": [
+    "Native exact nine-code/data-metadata peer",
+    "root acceptance",
+    "explicitV2 source execution scope+binding"
+  ],
+  "pins": [
+    {
+      "bytes": 6562,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-CORPUS-TEST-CONTRACT-v3.json",
+      "sha256": "510d02f456b49ea795caf3a6f10655c8224cfb4bea6b6c3b2bb56d8fb947f8b7"
+    },
+    {
+      "bytes": 1044112,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-CORPUS-v3.json",
+      "sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7"
+    },
+    {
+      "bytes": 5521,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-DELTA-v3.json",
+      "sha256": "2d66a14e34d72ed2b645b5db1fbbbac8bbcb9062a4f85564c2d30591aed0f194"
+    },
+    {
+      "bytes": 3170,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-PROVENANCE-v3.json",
+      "sha256": "b01f6738d5c0c50a530844d8a9ae14d0f72bff66b5c27d6e2587f21556e9159a"
+    },
+    {
+      "bytes": 2867,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-RESERVATION-ORACLE-CORRECTION-v3.json",
+      "sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a"
+    },
+    {
+      "bytes": 11494,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py",
+      "sha256": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea"
+    },
+    {
+      "bytes": 8463,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\author_role_ledger_oracle_classification_v3.py",
+      "sha256": "00f62a0a64827345631ad2fa867a0d67a672505212b251c8437c7e90700ce579"
+    },
+    {
+      "bytes": 1044085,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-CORPUS-v2.json",
+      "sha256": "55e01082063f23128780cf47f6f8275f360a7e896e400fa4b1271cd081a5581c"
+    },
+    {
+      "bytes": 9251,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-FREEZE-v2.json",
+      "sha256": "e0d636af4501544f3fd8aba77b061633a5052be81f06f8fa0ab8fded41cb4e53"
+    },
+    {
+      "bytes": 89573,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    {
+      "bytes": 7222,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-INDEPENDENT-REVIEW-v2.json",
+      "sha256": "3e1ac2257e59aa415d2494cac7d6aa8bc6b74179234629d2c0ba0141aca48549"
+    },
+    {
+      "bytes": 9571,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v4.json",
+      "sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa"
+    }
+  ],
+  "qualification": {
+    "full_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "reservation_data_regions": 3,
+  "schema_version": 1,
+  "status": "NORMATIVE_NINE_CODE_CORRECTION_FROZEN_PENDING_PEER",
+  "true_zero_padding_regions": 29
+}

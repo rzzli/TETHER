@@ -1,0 +1,31 @@
+{
+  "schema_version": 4,
+  "status": "OUTLINE_ONLY_NOT_AUTHORIZED_TO_RUN",
+  "future_binding_filename": "NATIVE25-COMPONENT-BINDING-v4.json",
+  "required_binding": {
+    "status": "ROOT_BOUND_NATIVE25_COMPONENT_ONE_SHOT",
+    "run_authorized": true,
+    "deadline_seconds": 60,
+    "freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v4.json",
+      "bytes": 11592,
+      "sha256": "c58b3404221e4f617e61bc3c06e23db7df1a89aa84c6e2363a8fbef43b522b95"
+    },
+    "execution_scope": {
+      "path": "ROOT_TO_SUPPLY",
+      "bytes": null,
+      "sha256": null
+    }
+  },
+  "required_execution_scope_status": "ROOT_AUTHORIZED_SINGLE_NATIVE25_COMPONENT_EXECUTION",
+  "invocation": "python -I -B run_native25_component_v4.py only after independent errata peer and Root binding",
+  "outputs": [
+    "NATIVE25-COMPONENT-ATTEMPT-v4.json",
+    "NATIVE25-COMPONENT-ARTIFACTS-v4",
+    "NATIVE25-COMPONENT-PROOF-v4.json"
+  ],
+  "one_shot": true,
+  "kind_guard_failures_remain_failures": true,
+  "source_successor_authorized": false,
+  "qualification": false
+}

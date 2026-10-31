@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "revision": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+  "tree_entries": 189,
+  "tree_truncated": false,
+  "blob_count": 143,
+  "submodule_entries": [],
+  "dataset_files": [
+    {
+      "path": "datasets/clinical_trials/chembl_clinical_nct_data.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "440d43947824534bd4acad89dcc7db39d9517621",
+      "size": 10375291,
+      "url": "https://api.github.com/repos/harrisongzhang/TheVirtualBiotech/git/blobs/440d43947824534bd4acad89dcc7db39d9517621"
+    },
+    {
+      "path": "datasets/clinical_trials/clinical_trial_labels_reconciled.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ada2382ada86d03fa2e395993cf45fc0bf0e7b8",
+      "size": 6074477,
+      "url": "https://api.github.com/repos/harrisongzhang/TheVirtualBiotech/git/blobs/7ada2382ada86d03fa2e395993cf45fc0bf0e7b8"
+    }
+  ],
+  "named_roster_or_evaluation_artifacts": [],
+  "metadata_matches": [
+    {
+      "repository_path": "README.md",
+      "local_path": "D:\\Projects\\drug_target_agents\\data\\derived\\virtual-biotech-compatibility-20261018-resume01\\README.md",
+      "bytes": 22937,
+      "sha256": "fd80f70ef302c434943f2e29e6e55ff32da3100995cb94f9396887e2169731f6",
+      "git_blob_sha1": "ada6cada25611d5a08efc0b8d40a6b35db57a60c",
+      "expected_tree_blob": "ada6cada25611d5a08efc0b8d40a6b35db57a60c",
+      "match": true
+    },
+    {
+      "repository_path": "src/config/datasets.py",
+      "local_path": "D:\\Projects\\drug_target_agents\\data\\derived\\virtual-biotech-compatibility-20261018-resume01\\src\\config\\datasets.py",
+      "bytes": 1055,
+      "sha256": "55b9a96428520a9e95f967407e4288c88e005a6945786a81d867dbd20e277fa1",
+      "git_blob_sha1": "673d8504376f819ae784f7060c40fbb07b89b6e4",
+      "expected_tree_blob": "673d8504376f819ae784f7060c40fbb07b89b6e4",
+      "match": true
+    },
+    {
+      "repository_path": "datasets/clinical_trials/chembl_clinical_nct_data.parquet",
+      "local_path": "E:\\projects_data\\drug_target_agents_data\\reference\\vbt_linkage\\71f9da6\\chembl_clinical_nct_data.parquet",
+      "bytes": 10375291,
+      "sha256": "50580ad5681c87aa9f7c3741f340a3a408fbd43ccba388546a172289fcda5897",
+      "git_blob_sha1": "440d43947824534bd4acad89dcc7db39d9517621",
+      "expected_tree_blob": "440d43947824534bd4acad89dcc7db39d9517621",
+      "match": true
+    }
+  ],
+  "interpretation": "Complete filename inventory at pinned revision; absence of separately named roster is not a claim that no external/private roster exists. Git blob identity verifies the local mapping at this repository commit without decoding clinical columns. No signatures or independent publisher SHA256 release are implied."
+}

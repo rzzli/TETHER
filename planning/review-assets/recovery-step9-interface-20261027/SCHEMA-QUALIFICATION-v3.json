@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "cases": 105,
+  "oracle": "installed PowerShell Test-Json / JsonSchema.NET",
+  "powershell_version": "7.6.5",
+  "executable": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "executable_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "interface_module_sha256": "8c349367d0080ec81b69f77c631aa8b0bbd341ca56ea1c40fd0e35236dafa511",
+  "input_sha256": "08d9749402320f6f956c10ec6a14681f0b635adc2b551dcbfb6c6eec0380548a",
+  "stdout_sha256": "268e94e703d61b843477bbc3fbbb8c4cf0e1a1e430b2fe922a78146bf289db07",
+  "model_calls": 0,
+  "new_downloads": 0,
+  "provider_spend_usd": 0,
+  "scientific_validation": "not_attempted",
+  "differences": [
+    {
+      "id": "duplicate_claim_texts",
+      "document_json": "{\"abstention_reason\":null,\"answer_status\":\"answered\",\"claims\":[{\"kind\":\"source_report\",\"limitations\":[],\"quote_refs\":[\"Q0\"],\"text\":\"In cultured mouse liver cells, compound Z reduced transcript X after 24 hours compared with vehicle. Human efficacy, protein abundance and adverse effects were not measured.\"},{\"kind\":\"source_report\",\"limitations\":[],\"quote_refs\":[\"Q0\"],\"text\":\"In cultured mouse liver cells, compound Z reduced transcript X after 24 hours compared with vehicle. Human efficacy, protein abundance and adverse effects were not measured.\"}],\"unresolved\":[]}",
+      "python_accepted": false,
+      "expected_schema_exception": "Cross-claim text uniqueness is explicitly post-validation only",
+      "schema_accepted": true
+    }
+  ],
+  "all_results": [
+    {
+      "id": "whole_source_report",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "3595acfaa81d52883b54b539deafbec210b0b046f331ac380bae8e02e7b11088"
+    },
+    {
+      "id": "inference",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "689b848e1cf8b87a0215efde79be8c1c25ddb677ece88010064ba31caea3e611"
+    },
+    {
+      "id": "caution",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "9346f91660660c7485e6783ea4fb3ea051939c7baa979d4b42aeab1afd148543"
+    },
+    {
+      "id": "two_source_quotes",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "7144a02726309b464946d56f7789154deee98741789bf7a0c30a76951547c4e2"
+    },
+    {
+      "id": "state_answered_True_None",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "3595acfaa81d52883b54b539deafbec210b0b046f331ac380bae8e02e7b11088"
+    },
+    {
+      "id": "state_answered_True_'Incomplete scope.'",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "64cbf8f90d3b328fef2bf5ebfacc536a89930453f43bd7063e2bc21c4ac95659"
+    },
+    {
+      "id": "state_answered_True_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "a60a87db4145aab5f3cb117cdb9e2626295e2ecda68edc2da569a8c472db0fea"
+    },
+    {
+      "id": "state_answered_False_None",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "6477ba74c389e8812e9834b9111d719a1c44550dba83e3160b69b3ea7bd04c2d"
+    },
+    {
+      "id": "state_answered_False_'Incomplete scope.'",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "9f0158b9f0dce6a18a9769dd045a22a44fcf7aa3471cff3de3b4da3256603e8c"
+    },
+    {
+      "id": "state_answered_False_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d6462b495dccba2c589b81844458878a64b1ceef7ef245003eda52ce150dfaad"
+    },
+    {
+      "id": "state_partial_True_None",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "54471498ccdc54ff9af7172538460f05e5fea9c562b624c50219fb2d51aa8295"
+    },
+    {
+      "id": "state_partial_True_'Incomplete scope.'",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "4821662e4e7b499344c84d304fd07bb8f00b5004da1da106e6a0827f2d2d0302"
+    },
+    {
+      "id": "state_partial_True_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d9901660ce462efa3b94d4524dbe32d67ba72903f11a2764fb73ce2473fab7c4"
+    },
+    {
+      "id": "state_partial_False_None",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "b5e1b0e9fe93db076826f9cb46f6cd414bb4c7c71aeaa6bea04d7407929821db"
+    },
+    {
+      "id": "state_partial_False_'Incomplete scope.'",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "24c966517e4b4298646090a7ace0b9b716b3ae4da90f07accd21abbf00624cb0"
+    },
+    {
+      "id": "state_partial_False_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "dee8b3cc034d8fce23fb69d15432e4d944812f8858ba9e66f5466f98e4bb15d4"
+    },
+    {
+      "id": "state_abstained_True_None",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "7eb127352e2949713d84ef02030d2f963bf4b31fd427b336b2bda03552f1708b"
+    },
+    {
+      "id": "state_abstained_True_'Incomplete scope.'",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "13d9bc2f9b1a839ae374326001e191cacacf36cec6e2b2d7436d03fc4f8df11a"
+    },
+    {
+      "id": "state_abstained_True_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "6e3808401cb6c0d4ea565fd7f334d7cbc9f2c341bcb145741c02e7fd5d093f66"
+    },
+    {
+      "id": "state_abstained_False_None",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "2e2f777c30ddde91028ccb1643605e46cfc08a694f5da72d480873763ca839e5"
+    },
+    {
+      "id": "state_abstained_False_'Incomplete scope.'",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "5dabd4039d404b254a0596ef411d114a4b379a9c804b00bdc9230b084d91fa03"
+    },
+    {
+      "id": "state_abstained_False_'   '",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "48d7a6da63ddeb82ebaf58e9c11007c1824bd73dd9383fce348f1e760fbbf830"
+    },
+    {
+      "id": "unknown_reference",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "9ea35cd0e311297e9489fefceed99f86ca83357cd38f0488bfbe71c2b320a955"
+    },
+    {
+      "id": "duplicate_reference",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "175d576badbd3b0302f93438108de12034ef488b1260a64fa5aaf68e1eb27d45"
+    },
+    {
+      "id": "missing_reference",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ccf941e8274e5b90c0515031e07ce230ca2e5cdd87a3f6159d89dc1ea676adfe"
+    },
+    {
+      "id": "valid_ref_wrong_text",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "053f190e88e53e45cee48402cd6c6fed2d824cc088809be02e8ec79798a344e2"
+    },
+    {
+      "id": "wrong_literal",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "bf22307130955495b881e6504b10cfb465654f0c4d88ac7f52abe7362a7114f0"
+    },
+    {
+      "id": "no_inference_limits",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "9ec44198d503f78dc8c16ed2e70bdeb6e0c76fc5b3da52abf197c15b5d3bcbdc"
+    },
+    {
+      "id": "extra_root",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "cf39bfc3ce4500d321775616ccf0a3db6fae15677f9e357f56f00576115b37d8"
+    },
+    {
+      "id": "extra_claim",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "e5765ddfc5592cd1fa06e029c5f8b839efaf224e1fb5522d01b74d8ab8ff4759"
+    },
+    {
+      "id": "duplicate_claim_texts",
+      "python_accepted": false,
+      "schema_accepted": true,
+      "expected_schema_exception": "Cross-claim text uniqueness is explicitly post-validation only",
+      "document_sha256": "9e952d5abce3f9de85fcd02eee012cd61afdae233ff0cd0d0c121d533eb62083"
+    },
+    {
+      "id": "text_''0",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "f0be2822f9d137b891da9b325143244565621da9b4c8be4fd2dd2f6de2fb7e09"
+    },
+    {
+      "id": "text_' '1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d3d92c26fe0173efd3fdd3116f079a03e295d57599210b9d36a0a4cd0a83a464"
+    },
+    {
+      "id": "text_'\\u2003'1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "5fbf4f6ab05273a8dec1257e6ad87a6f9b76e8acffcba442192b4db397a3b139"
+    },
+    {
+      "id": "text_'\\x1c'1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "cfe0c7949c8b8d8e9e6c94049ebbc4beac656dcbe28caa076754cb74efff08b9"
+    },
+    {
+      "id": "text_'\u00c3\u00b0\u00c5\u00b8\u00cb\u0153\u00e2\u201a'16200",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "8dd74521428609df2f89a69578761db43cc0d92444962a91546fac16ca493292"
+    },
+    {
+      "id": "text_'\u00c3\u00b0\u00c5\u00b8\u00cb\u0153\u00e2\u201a'16209",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "0f6552eee00df8a19753ac024e24e8540a894fa9a4886cc50aceb616da496382"
+    },
+    {
+      "id": "reason_''0",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d572b917b086ec610b129a29b8dc358b1859675184e373c33e1ba4ef5ed83a0f"
+    },
+    {
+      "id": "reason_' '1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "a2b5584769a79f8cadcb9f8b52ffa87c0f1daef71a3d2e2d753bda88cec34dca"
+    },
+    {
+      "id": "reason_'\\u2003'1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "afc64ae295c456e2d5a19404f85689718f776d6230f2dc6954d73c1a20cf3d93"
+    },
+    {
+      "id": "reason_'\\x1c'1",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "0745aa2d8e5028c02630f14a7de7a893b7256da3a77f1ab134d3415044e15445"
+    },
+    {
+      "id": "reason_'xxxxxxxx'512",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "565a3ed12ec77181595e2c6c467241f979c50266386dbc6861d8e10f2bc2463b"
+    },
+    {
+      "id": "reason_'xxxxxxxx'513",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "c98ea1b2db4767ea84e64c1101f206d89aede063437e59dc39161bc733ee9e72"
+    },
+    {
+      "id": "unicode_whitespace_text_9",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "c6bdbb5f9908c9584d55b460f739f1ee193ea8430a0634b5747eae5e3210e3d4"
+    },
+    {
+      "id": "unicode_whitespace_reason_9",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "5119308e9dff91e099eb4d5913d632e475f44b0f072dec3f9b83570e235728b2"
+    },
+    {
+      "id": "unicode_whitespace_text_10",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d86dacadd6b031175d9aafd156a75ef2dac1dcce50fca83c8a0e0ff7e69ad664"
+    },
+    {
+      "id": "unicode_whitespace_reason_10",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "4091206943b7569fe36b25bb764cb5e4bbacd22a0679dcdedc8d26fdba9431dc"
+    },
+    {
+      "id": "unicode_whitespace_text_11",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "69bbb2ca241c47ea3c0aafb08a8652c3ef6187a5eb0c0ca50ec5ab51a9110086"
+    },
+    {
+      "id": "unicode_whitespace_reason_11",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "706172f64e0e029f4c429b9908f0461359ae40e3cba512874ee953214505e73d"
+    },
+    {
+      "id": "unicode_whitespace_text_12",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "65555d3130a644b2e996f68974ce463258c05ae605932990ff666295c3ba1ffd"
+    },
+    {
+      "id": "unicode_whitespace_reason_12",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "c7bac6bf52f373a61103a8dcbc84d676c97b6fe4e6640a80b67689c4373176af"
+    },
+    {
+      "id": "unicode_whitespace_text_13",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "31703c8dd45a0f44338b07d80e456a98d54523ac1889c843af12633babb761bc"
+    },
+    {
+      "id": "unicode_whitespace_reason_13",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "3521c263aaf021b82e7bdbd9c91d12515459785a3fe0b90090dd1bc0a1230c20"
+    },
+    {
+      "id": "unicode_whitespace_text_28",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "d9fb1b994e0b32a21af262bd42815dcd2d2693af3fbcd08b3f27cec6f387df7c"
+    },
+    {
+      "id": "unicode_whitespace_reason_28",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "0745aa2d8e5028c02630f14a7de7a893b7256da3a77f1ab134d3415044e15445"
+    },
+    {
+      "id": "unicode_whitespace_text_29",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "30efa1c65fe73efd3888f74198ddacf708b12c380ca6749469bc0822ee282ee7"
+    },
+    {
+      "id": "unicode_whitespace_reason_29",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "617f1e31d1ebbd7f9c5ef5b7d19c39a0bb0de20c12e9960a733cb7ddc2c29021"
+    },
+    {
+      "id": "unicode_whitespace_text_30",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "b38ec5fef59c83b507451a42ef58d24283db9d722e3fd899fba0fd0be9eed3bb"
+    },
+    {
+      "id": "unicode_whitespace_reason_30",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ed8238fc368b9757f5b2a21d23933c6e2dde315bed1c4a79cc5c0f4df347cc31"
+    },
+    {
+      "id": "unicode_whitespace_text_31",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "25313b92cf11f8402d3862cbf09d8120bbb34bc808b12810ad271f17fa16f963"
+    },
+    {
+      "id": "unicode_whitespace_reason_31",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ab1d6375086c567ae8d4307f8aa39bfbc28d360687cc6e347a77c7d315545ff3"
+    },
+    {
+      "id": "unicode_whitespace_text_32",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "cc559dedb03f01f4b941d50f1ccaedbe67b46de0d461ead4f5e4e8b4e20d2214"
+    },
+    {
+      "id": "unicode_whitespace_reason_32",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "a2b5584769a79f8cadcb9f8b52ffa87c0f1daef71a3d2e2d753bda88cec34dca"
+    },
+    {
+      "id": "unicode_whitespace_text_133",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "aa89314be3e26c05fde2c4fb8784a1834dc5e6b7e171ed2c4c7e665434532854"
+    },
+    {
+      "id": "unicode_whitespace_reason_133",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "5eb38ae9d95c153852c1472a7d9097110b690c2e079212e72c8be4aa878f38ae"
+    },
+    {
+      "id": "unicode_whitespace_text_160",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "4578bf9641a15ebeb3985a802035362dce456ee227440832edf696c07439a20d"
+    },
+    {
+      "id": "unicode_whitespace_reason_160",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "8e1baace1f4e56d9670d2dafd9c332a60008dae5fccd1338e113d3903be2c011"
+    },
+    {
+      "id": "unicode_whitespace_text_5760",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "7185a7170c159a2196e863d8ff8377648099a75a8d40a40de43de8fa59305d39"
+    },
+    {
+      "id": "unicode_whitespace_reason_5760",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "600217387066654c0fb42e5302c86a535973bb28c17c2dc617c7855724368cb6"
+    },
+    {
+      "id": "unicode_whitespace_text_8192",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "eafdda092596576d66c219e13af2aa6e89017eff81bbf1ac20f4907188810dd3"
+    },
+    {
+      "id": "unicode_whitespace_reason_8192",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "45a1a75604e6525aaf1574072cb9354f7c08244a158f6792ca2db909f29536bb"
+    },
+    {
+      "id": "unicode_whitespace_text_8193",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "8c7039eb90ce84c28adf1fe77e76f02a0fea3487745761a8e806d5c602e51d59"
+    },
+    {
+      "id": "unicode_whitespace_reason_8193",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ec9d1ee0f312c33cf440b4dd2b3ac80b408898c64c7d204e6daf9924511e75d8"
+    },
+    {
+      "id": "unicode_whitespace_text_8194",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "38c8c8a720a87fdc0f282c1c471fd85d644bfa1e8e01dd46453560fc3262241b"
+    },
+    {
+      "id": "unicode_whitespace_reason_8194",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ce3a5439d37dad187e2c228fc87ecafa9648aca45607de8455051b49e036ebf3"
+    },
+    {
+      "id": "unicode_whitespace_text_8195",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "43316a3bfabfdf64dcc8231a8335b172b7b2c6c13885970cb270bcff722ea8b3"
+    },
+    {
+      "id": "unicode_whitespace_reason_8195",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "afc64ae295c456e2d5a19404f85689718f776d6230f2dc6954d73c1a20cf3d93"
+    },
+    {
+      "id": "unicode_whitespace_text_8196",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "079932bcbdb78b3afdc42057104968085baa5aef4c65878e451d09f96fa872c8"
+    },
+    {
+      "id": "unicode_whitespace_reason_8196",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ed1b065bf31cea780df5646456156914ba3cfd8dfc277bf079754467147cf203"
+    },
+    {
+      "id": "unicode_whitespace_text_8197",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "9c46fcc92b907738d4da06601f6c2208fd0544dc533bda90b1932d77be4a5528"
+    },
+    {
+      "id": "unicode_whitespace_reason_8197",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "7bec841db7a5f8353a48b8709ebe2df5a8a094056f90fe2dcb1cf0e8bbfa1588"
+    },
+    {
+      "id": "unicode_whitespace_text_8198",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "6bc87c4b329e6d3ebf90ce3bd557267b5224d413b01a18082b9af7334bd5a360"
+    },
+    {
+      "id": "unicode_whitespace_reason_8198",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "a60cdf54e1ae5d3f611d2c225847cb06fe01d9245b414d517ec68c65262c2844"
+    },
+    {
+      "id": "unicode_whitespace_text_8199",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "3a3c3dab18df8b730e458982f6d7c8c344a832943f2ae46e5001139c052a594f"
+    },
+    {
+      "id": "unicode_whitespace_reason_8199",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "f2ba2046fc486dd50e6de812d705dbe5e7116b35e2236d95f4eda447fc3592df"
+    },
+    {
+      "id": "unicode_whitespace_text_8200",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "696c022c5709f2e1a4dcb8d899ca6f6c61ad76258af235902e4f0ce26eb69fcc"
+    },
+    {
+      "id": "unicode_whitespace_reason_8200",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "9a2bebbd448fe53dfe8618299fc932d47cb5c89884febe4ba958cca403e708c3"
+    },
+    {
+      "id": "unicode_whitespace_text_8201",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "b1697ba57b65c5da7f7e8973ad6f1e8bd259244a026b13202ff54c1dba13f69d"
+    },
+    {
+      "id": "unicode_whitespace_reason_8201",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "7317bcc660462551d9153f467f3da860e562f91d51224b1f4e398de8dccc9953"
+    },
+    {
+      "id": "unicode_whitespace_text_8202",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "f77f9dd78c46fa53ca6d94eeb1281c4ae7c4478fbfb2a18289d35ae8b3a82446"
+    },
+    {
+      "id": "unicode_whitespace_reason_8202",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "2e562f6246e803deb861cee7a8116e7215bec41016f32e76c05f293bdd7b3a1c"
+    },
+    {
+      "id": "unicode_whitespace_text_8232",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "77902ae6836d2f4de25aa5b5d69ddbeca36c6f594e1b9c620590a68781de9795"
+    },
+    {
+      "id": "unicode_whitespace_reason_8232",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "92f1a46dc5346c93492480d3c4162642293de6eed58e673757b54d0349a66d26"
+    },
+    {
+      "id": "unicode_whitespace_text_8233",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "3952ad265caeaa1cc0efd2d75d6053ad8baa8f5fab0a5ee089485a083de1f903"
+    },
+    {
+      "id": "unicode_whitespace_reason_8233",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "4bb77fb89064216a1e8fc6753e5c1aabe2c278e099ae9b8825b119d96432e207"
+    },
+    {
+      "id": "unicode_whitespace_text_8239",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "bdd90de98eb326683305a181e820dc990717093c1f694e33d0daa7a927fb6233"
+    },
+    {
+      "id": "unicode_whitespace_reason_8239",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "5ca02e2c652e73cf3c681abab081d66e621d4e6fb9d22c87a0f0d833bf3255b1"
+    },
+    {
+      "id": "unicode_whitespace_text_8287",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "6300ffc28c73c110c01156b16c40b1017c2cbe6b8bb750ccf9eb75511782128e"
+    },
+    {
+      "id": "unicode_whitespace_reason_8287",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "4ee7f688a1a38f9f3f50ac70e38570f48983451c121afab08fdc9551a3ccc61d"
+    },
+    {
+      "id": "unicode_whitespace_text_12288",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "3f024bd8387b89cc5c0b21ee9dbbbb50699ee5853ec3de85b4a19fd0896439d2"
+    },
+    {
+      "id": "unicode_whitespace_reason_12288",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "ac78414124b68bc6d70f66d86423f2d4a8650e6f0f53c5e79b994ccb1becc0f8"
+    },
+    {
+      "id": "limitations4",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "8e5772466672fa0a164f380ab7bc981e838060b3e11cabc8fa3cef3d179b2539"
+    },
+    {
+      "id": "limitations5",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "093a532a0ffe75e4bf24938fec6cbe1c8e63ca47b0bcc7730ccccb0ae3c2ff13"
+    },
+    {
+      "id": "unresolved4",
+      "python_accepted": true,
+      "schema_accepted": true,
+      "expected_schema_exception": null,
+      "document_sha256": "1b720c70ae5aa736016bd3649265896b3e05fb6d6041bbd3a3f693635a33b27a"
+    },
+    {
+      "id": "unresolved5",
+      "python_accepted": false,
+      "schema_accepted": false,
+      "expected_schema_exception": null,
+      "document_sha256": "8bbffa43bd2d17bd51c3e5754f80e065b460b29e80d246441c236152415bce71"
+    }
+  ],
+  "schema_sha256": "a75dd967b16fd387da820e0bd90071aba511aee5363f700e9ac5849f8cc72911",
+  "oracle_helper_sha256": "43cf11ada0e2e3c754afeb14abdf687bd2d671eb88aedb58cfcbfaf0ff893365",
+  "oracle_script_sha256": "86ea92814b683867bb86e49666921e0645bb4dc02d9ff2e5db28fb218e30a51c"
+}

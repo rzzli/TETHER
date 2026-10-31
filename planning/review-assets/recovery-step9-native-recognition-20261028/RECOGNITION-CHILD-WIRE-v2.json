@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "status": "shared_recognition_wire_draft_parser_binding_source_not_yet_frozen",
+  "mode": "--recognize",
+  "argc_including_executable": 9,
+  "module_policy": {
+    "policy_id": "trusted-System32-recognition-v1",
+    "policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+    "row_fields": [
+      "name",
+      "path"
+    ],
+    "outer_fields": [
+      "module_policy_id",
+      "module_policy_sha256",
+      "module_policy_phase"
+    ],
+    "pre_cpu_events": [
+      "exact_core_modules_loaded_exports_resolved"
+    ],
+    "post_cpu_events": [
+      "cpu_registry_verified_before_llama_backend_init",
+      "backend_init_returned_exact_CPU_identity_rechecked",
+      "all_vocabulary_ids_EOG_enumerated",
+      "recognition_batch_returned"
+    ]
+  },
+  "existing_events_preserved": [
+    "cpu_registry_verified_before_llama_backend_init",
+    "pack_verified_before_backend_or_model",
+    "before_exact_shard_hash",
+    "exact_shard_hash_returned",
+    "three_exact_shards_hash_verified_and_read_leased",
+    "backend_init_returned_exact_CPU_identity_rechecked",
+    "before_model_load_from_three_explicit_splits",
+    "all_vocabulary_ids_EOG_enumerated",
+    "before_case",
+    "case_result",
+    "prefix_result",
+    "prefix_result",
+    "recognition_batch_returned",
+    "before_explicit_required_OpenMP_dependency_load",
+    "exact_core_modules_loaded_exports_resolved",
+    "typed_version_and_defaults_observed",
+    "abi_observations_returned",
+    "child_normal_completion"
+  ],
+  "native_call_counters": {
+    "schema": "exact25API names mapping to {attempted:int,returned:int}",
+    "scope": "explicit own bridge export calls only; no internal/OS/inference count claim",
+    "attempted": "conservative reservation before API entry",
+    "returned": "increment immediately on observed return, before tick/log; attempted-returned is unknown, never retried",
+    "snapshot_placement": [
+      "first recognition load stage",
+      "each before_case",
+      "each case_result",
+      "each prefix_result",
+      "recognition_batch_returned",
+      "failure record when writable"
+    ]
+  },
+  "native_state": {
+    "cpu_load_return_observed": "bool",
+    "cpu_registry_nonnull": "bool",
+    "backend_init_return_observed": "bool",
+    "backend_owned": "bool",
+    "model_load_return_observed": "bool",
+    "model_return_nonnull": "bool",
+    "model_owned": "bool",
+    "model_free_attempted": "bool",
+    "model_free_return_observed": "bool",
+    "backend_free_attempted": "bool",
+    "backend_free_return_observed": "bool",
+    "sampler_nonnull_returns": "int",
+    "samplers_owned": "int",
+    "sampler_free_returned_nonnull": "int",
+    "cleanup_failed": "bool"
+  },
+  "progress": {
+    "cases_computed": "before result publication",
+    "case_results_written": "after acknowledged flushed result",
+    "prefix_slots_seen": "before selector",
+    "prefix_results_written": "after acknowledged publication",
+    "required_UTF8_prefix_unavailable": "failure/coverage_unavailable; never repaired"
+  },
+  "groups": [
+    "primary_frozen_wire",
+    "new_serialization_of_retained_authored_abstention",
+    "harness_byte_guards"
+  ],
+  "scope": "All original pack bytes/groups189/sixprefixes retained; singleton candidate arrays only, no full mask or inference; incomplete/mismatch/unknown prefix keeps gate unqualified",
+  "limits": {
+    "parent_seconds": 300,
+    "child_seconds_including_cleanup": 120,
+    "cooperative_work_ms": 117000,
+    "child_cleanup_reserved_seconds": 2,
+    "parent_finalization_reserved_seconds": 5,
+    "process_and_job_commit_bytes": 268435456,
+    "maximum_attempts": 1
+  },
+  "header_descriptor": "RECOGNITION-RUNTIME-PIN-DESCRIPTOR-v1.json",
+  "row_augmentation": [
+    "native_call_contract_sha256",
+    "native_call_counters",
+    "native_call_scope",
+    "unrecorded_killed_tail",
+    "native_state"
+  ],
+  "row_augmentation_scope": "Every recognition JSONL row and independent failure marker; no per-hot-call publication. ABI/census modes are not augmented.",
+  "native_state_fields": {
+    "last_pointer_nonnull": "bool",
+    "last_apply_return_observed": "bool",
+    "last_apply_shape_valid": "bool",
+    "cpu_load_return_observed": "bool",
+    "cpu_registry_nonnull": "bool",
+    "backend_init_return_observed": "bool",
+    "backend_owned": "bool",
+    "model_load_return_observed": "bool",
+    "model_return_nonnull": "bool",
+    "model_owned": "bool",
+    "model_free_attempted": "bool",
+    "model_free_return_observed": "bool",
+    "model_release_unknown": "bool",
+    "backend_free_attempted": "bool",
+    "backend_free_return_observed": "bool",
+    "backend_release_unknown": "bool",
+    "cleanup_failed": "bool",
+    "last_EOG_returned": "bool",
+    "last_EOG_value": "bool",
+    "required_UTF8_prefix_unavailable": "bool",
+    "total_attempted": "nonnegative integer",
+    "total_returned": "nonnegative integer",
+    "exceptions": "nonnegative integer",
+    "sampler_nonnull_returns": "nonnegative integer",
+    "samplers_owned": "nonnegative integer",
+    "sampler_release_unknown": "nonnegative integer",
+    "sampler_free_returned_nonnull": "nonnegative integer",
+    "token_work_reserved": "nonnegative integer",
+    "cases_computed": "nonnegative integer",
+    "case_results_written": "nonnegative integer",
+    "prefix_slots_seen": "nonnegative integer",
+    "prefix_results_written": "nonnegative integer",
+    "EOG_ids_examined": "nonnegative integer",
+    "last_scalar": "signed integer",
+    "last_tokenize_return": "signed integer",
+    "last_piece_return": "signed integer",
+    "current_case_index": "signed integer",
+    "current_prefix_slot": "signed integer",
+    "last_EOG_id": "signed integer",
+    "last_attempt": "API name|null",
+    "last_return": "API name|null",
+    "last_return_kind": "0none/1void/2scalar/3pointer/4trivialstruct",
+    "last_apply_logit_kind": "0notobserved/1negativeInfinity/2finiteZero/3unexpected",
+    "group_computed": "three nonnegative ints in source-group order",
+    "group_results_written": "three nonnegative ints in source-group order"
+  },
+  "native_call_contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+  "aggregate_native_attempt_cap": 4276181,
+  "snapshot_semantics": "Case/prefix computation/slot count updates before result publication; written count updates only after flush returns, so current result row snapshot excludes its own written increment. Next snapshot/final batch witnesses it. Killed tails after last flushed snapshot remain unknown.",
+  "positive_completion": "189 computed/written cases;6 seen/written prefixes; groups167/18/4;184 native cases and5 harness guards;190 sampler init/free returns; EOGexamined==actualnv; all25attempted==returned; no owned/unknown releases; all required prefix coverage available.",
+  "cleanup": "Free reservation clears actionable pointer once; attempted-minus-returned/explicit release_unknown preserves uncertainty. No repeat. Cleanup bypasses work quota but remains under APIcaps and external hardowner. Unknown sampler release blocks model/backend free, unknown model release blocks backend free; preserve primary failure.",
+  "prepared_header": "recognition_runtime_pins_v1.hpp"
+}

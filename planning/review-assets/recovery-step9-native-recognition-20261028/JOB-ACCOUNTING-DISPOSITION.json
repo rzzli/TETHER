@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T19:13:45.689174+00:00",
+  "status": "scoped_OS_diagnostic_verified_target_execution_still_held",
+  "independent_result_sha256": "fd38eceb4d732fe3697c79715d93d59d21c6741137cbb5708172138976d78288",
+  "disposition_sha256": "b81ddec6773f1c929f2c808c1c24811cfb8d62b31c2b842ad940d9e99cb2c766",
+  "old_active_two_cause": "unresolved_not_reproduced",
+  "next_gate": "Correct disabled SDK launcher and qualify harmless suspended/job-at-creation worker before target ABI",
+  "native_execution_authorized": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "working_version": "0.3.11",
+  "tests": 58,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "elapsed_seconds": 3.2040000000270084,
+  "code_unchanged_during_tests": true,
+  "source_pins": {
+    "src\\asof\\study\\interpretation_grammar.py": "6ee02a55b41b59e3390f9a0c807ef168a646a355c646bde73621d75480ca3c97",
+    "src\\asof\\study\\interpretation_generation.py": "dd74e8b7829162a66419e9fdbc5a72d62cd457158a39d59288999cf05adc5e4f",
+    "tests\\test_study_interpretation_generation.py": "7f7e8190e3495a3ca84a924ec7640764adfe5206e7ae23fc3248d249885588fc"
+  },
+  "native_calls": 0,
+  "model_calls": 0,
+  "ruff_check": "passed_three_files",
+  "ruff_format_check": "passed_three_files"
+}

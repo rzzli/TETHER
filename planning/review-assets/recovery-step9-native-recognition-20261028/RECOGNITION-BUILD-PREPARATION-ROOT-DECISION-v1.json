@@ -1,0 +1,46 @@
+{
+  "CPU_or_GGUF_payload_paths_in_build_inputs": false,
+  "CPU_or_GGUF_payload_stat_open_hash_load_authorized": false,
+  "allowed_input_classes": [
+    "Own reviewed source/header/descriptor/pack/contracts/pure checks and immutable historical correction evidence",
+    "Previously approved public declarations, exact installed compiler/SDK/STL/tool/library files",
+    "Existing accepted application/interpreter provenance, core4 and prior System16 file pins"
+  ],
+  "approved_readonly_software_file_leases_allowed": true,
+  "compiled_result_execution_authorized": false,
+  "compiler_dispatch_authorized": false,
+  "file_lease_scope": "Existing accepted stable-read primitives on exact software/preparation inputs only; no Job/process/target-library construction or execution",
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserved_seconds": 5,
+    "link_seconds": 10,
+    "maximum_compiler_linker_processes": 2,
+    "parent_seconds": 60,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144
+  },
+  "no_new_downloads": true,
+  "preserve_old_artifacts": true,
+  "prior_source_decision": {
+    "bytes": 4851,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-SOURCE-ROOT-DECISION-v1.json",
+    "sha256": "20ea58d6626b82dd55c7b823ed1bd729134ecac15470fcc6c4c1ad69d92a5399"
+  },
+  "provider_spend_usd": 0,
+  "recognition_future_runtime_separate": true,
+  "recorded_at_utc": "2026-10-29T04:27:55.559798+00:00",
+  "schema_version": 1,
+  "scope": "Prepare/review finite compiler helper and its metadata protocol only; compilation/result execution need separate future exact decisions.",
+  "source": {
+    "bytes": 95007,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_recognition_v2.cpp",
+    "sha256": "e683cf9b307e8e5d8943dc7f859c1f1a6e20f24dcd40faca19ab32841a9fe2ae"
+  },
+  "source_peer": {
+    "bytes": 8024,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PEER-REVIEW-v2.json",
+    "sha256": "17c6e6b4faadfe6dee4724e292ae434fed8ebcc8ec63953955a71dd2c9adc39f"
+  },
+  "status": "root_authorizes_recognition_build_source_pure_and_metadata_preparation_only"
+}

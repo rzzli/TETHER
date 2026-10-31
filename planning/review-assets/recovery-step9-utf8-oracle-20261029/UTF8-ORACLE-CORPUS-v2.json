@@ -1,0 +1,5173 @@
+{
+  "JSON_membership": "out_of_scope",
+  "cases": [
+    {
+      "chunk_cuts": [
+        0
+      ],
+      "expectation_rule": "Empty boundary plus final request",
+      "id": "ascii/empty_final",
+      "purpose": "Empty stream finalizes without output",
+      "raw_hex": "",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "steps": [
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 0,
+            "examined_total": 0,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and empty feeds"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/ordinary",
+      "purpose": "Ordinary ASCII scalar identity",
+      "raw_hex": "41427a",
+      "sha256": "15959fe11aa87c80b4f1c6d90865c3a4e4451c646af76b44658cdc11609b050b",
+      "steps": [
+        {
+          "chunk_hex": "41427a",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65,
+              66,
+              122
+            ],
+            "emitted_scalars": [
+              65,
+              66,
+              122
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/raw_nul",
+      "purpose": "Raw NUL emits U+0000; no JSON or harness inference",
+      "raw_hex": "00",
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "steps": [
+        {
+          "chunk_hex": "00",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [
+              0
+            ],
+            "emitted_scalars": [
+              0
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        5
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/control_edges",
+      "purpose": "ASCII controls, space and DEL are scalar values",
+      "raw_hex": "00011f207f",
+      "sha256": "3f69120e3eb66bb057eee69810b282c0b6d54479086594027bf7b13aa2ab31b8",
+      "steps": [
+        {
+          "chunk_hex": "00011f207f",
+          "expected": {
+            "consumed_in_chunk": 5,
+            "consumed_total": 5,
+            "decoded_scalars": [
+              0,
+              1,
+              31,
+              32,
+              127
+            ],
+            "emitted_scalars": [
+              0,
+              1,
+              31,
+              32,
+              127
+            ],
+            "error": null,
+            "examined_in_chunk": 5,
+            "examined_total": 5,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        8
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/json_escape_bmp",
+      "purpose": "ASCII JSON escape spelling is not decoded as U+0041",
+      "raw_hex": "225c753030343122",
+      "sha256": "32469e9084dc32bc95eecce24a3c775ddc13f669789512e05588f4a75d65fcee",
+      "steps": [
+        {
+          "chunk_hex": "225c753030343122",
+          "expected": {
+            "consumed_in_chunk": 8,
+            "consumed_total": 8,
+            "decoded_scalars": [
+              34,
+              92,
+              117,
+              48,
+              48,
+              52,
+              49,
+              34
+            ],
+            "emitted_scalars": [
+              34,
+              92,
+              117,
+              48,
+              48,
+              52,
+              49,
+              34
+            ],
+            "error": null,
+            "examined_in_chunk": 8,
+            "examined_total": 8,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        14
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/json_escape_surrogate_pair",
+      "purpose": "ASCII JSON surrogate-pair spelling stays ASCII",
+      "raw_hex": "225c75443833445c754445303022",
+      "sha256": "90a0592bc0139ce2c0bb6663aeb86fbcd798ec35cee310184c5e5688f76c3e8c",
+      "steps": [
+        {
+          "chunk_hex": "225c75443833445c754445303022",
+          "expected": {
+            "consumed_in_chunk": 14,
+            "consumed_total": 14,
+            "decoded_scalars": [
+              34,
+              92,
+              117,
+              68,
+              56,
+              51,
+              68,
+              92,
+              117,
+              68,
+              69,
+              48,
+              48,
+              34
+            ],
+            "emitted_scalars": [
+              34,
+              92,
+              117,
+              68,
+              56,
+              51,
+              68,
+              92,
+              117,
+              68,
+              69,
+              48,
+              48,
+              34
+            ],
+            "error": null,
+            "examined_in_chunk": 14,
+            "examined_total": 14,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        8
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/json_escape_lone_surrogate",
+      "purpose": "ASCII lone-surrogate spelling stays validUTF8, regardless of JSON semantics",
+      "raw_hex": "225c754438303022",
+      "sha256": "e2abb8b90faadf0e98d5e6382fa5f354e814aaa72ce1155de80231de88c7724d",
+      "steps": [
+        {
+          "chunk_hex": "225c754438303022",
+          "expected": {
+            "consumed_in_chunk": 8,
+            "consumed_total": 8,
+            "decoded_scalars": [
+              34,
+              92,
+              117,
+              68,
+              56,
+              48,
+              48,
+              34
+            ],
+            "emitted_scalars": [
+              34,
+              92,
+              117,
+              68,
+              56,
+              48,
+              48,
+              34
+            ],
+            "error": null,
+            "examined_in_chunk": 8,
+            "examined_total": 8,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/json_backslash_prefix",
+      "purpose": "An unfinished JSON string escape is a finished validUTF8 stream",
+      "raw_hex": "225c",
+      "sha256": "386cf314bb05acdaaabdf4da1caf140167271a26bd08bf34c3a7427d4bc4431f",
+      "steps": [
+        {
+          "chunk_hex": "225c",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              34,
+              92
+            ],
+            "emitted_scalars": [
+              34,
+              92
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        5
+      ],
+      "expectation_rule": "One-byte00..7F identity; no JSON parser",
+      "id": "ascii/json_object_prefix",
+      "purpose": "An unfinished JSON object prefix is validUTF8",
+      "raw_hex": "7b2261223a",
+      "sha256": "ffb38b22ee3e0ca90325ebce953a9846990f292faf44c50498771602e31cb61f",
+      "steps": [
+        {
+          "chunk_hex": "7b2261223a",
+          "expected": {
+            "consumed_in_chunk": 5,
+            "consumed_total": 5,
+            "decoded_scalars": [
+              123,
+              34,
+              97,
+              34,
+              58
+            ],
+            "emitted_scalars": [
+              123,
+              34,
+              97,
+              34,
+              58
+            ],
+            "error": null,
+            "examined_in_chunk": 5,
+            "examined_total": 5,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "ASCII and JSON escape controls"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/cent",
+      "purpose": "Complete literal scalar 0xa2",
+      "raw_hex": "c2a2",
+      "sha256": "c85763f2ea4e473a0f576e06ff8e11dd9c9756a2c9f110eca7814930ecad3644",
+      "steps": [
+        {
+          "chunk_hex": "c2a2",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              162
+            ],
+            "emitted_scalars": [
+              162
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/cent/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "c2a2",
+      "sha256": "c85763f2ea4e473a0f576e06ff8e11dd9c9756a2c9f110eca7814930ecad3644",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              162
+            ],
+            "emitted_scalars": [
+              162
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/two_byte_max",
+      "purpose": "Complete literal scalar 0x7ff",
+      "raw_hex": "dfbf",
+      "sha256": "c57c6175c9087b0c1f7f849c840c8d1ab5b0c32163ffac03fb9f1913f222516d",
+      "steps": [
+        {
+          "chunk_hex": "dfbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              2047
+            ],
+            "emitted_scalars": [
+              2047
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/two_byte_max/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "dfbf",
+      "sha256": "c57c6175c9087b0c1f7f849c840c8d1ab5b0c32163ffac03fb9f1913f222516d",
+      "steps": [
+        {
+          "chunk_hex": "df",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "df",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              2047
+            ],
+            "emitted_scalars": [
+              2047
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/three_byte_min",
+      "purpose": "Complete literal scalar 0x800",
+      "raw_hex": "e0a080",
+      "sha256": "a36ae1af6063cc9281d4010e979a1e3fd3d9ee3e804b7093d2b00f6ee6388bec",
+      "steps": [
+        {
+          "chunk_hex": "e0a080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              2048
+            ],
+            "emitted_scalars": [
+              2048
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/three_byte_min/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "e0a080",
+      "sha256": "a36ae1af6063cc9281d4010e979a1e3fd3d9ee3e804b7093d2b00f6ee6388bec",
+      "steps": [
+        {
+          "chunk_hex": "e0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e0",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a080",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              2048
+            ],
+            "emitted_scalars": [
+              2048
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/three_byte_min/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "e0a080",
+      "sha256": "a36ae1af6063cc9281d4010e979a1e3fd3d9ee3e804b7093d2b00f6ee6388bec",
+      "steps": [
+        {
+          "chunk_hex": "e0a0",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "e0a0",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              2048
+            ],
+            "emitted_scalars": [
+              2048
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/euro",
+      "purpose": "Complete literal scalar 0x20ac",
+      "raw_hex": "e282ac",
+      "sha256": "c4cc90ed3d26f12d4b08a75140970a7904035c31cbb4515a83f19b9003c00d1d",
+      "steps": [
+        {
+          "chunk_hex": "e282ac",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/euro/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "e282ac",
+      "sha256": "c4cc90ed3d26f12d4b08a75140970a7904035c31cbb4515a83f19b9003c00d1d",
+      "steps": [
+        {
+          "chunk_hex": "e2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "82ac",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/euro/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "e282ac",
+      "sha256": "c4cc90ed3d26f12d4b08a75140970a7904035c31cbb4515a83f19b9003c00d1d",
+      "steps": [
+        {
+          "chunk_hex": "e282",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "ac",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/before_surrogates",
+      "purpose": "Complete literal scalar 0xd7ff",
+      "raw_hex": "ed9fbf",
+      "sha256": "4ebbb7b74dcc9b0b81efbbcf4991f2c57244312fc919377648906b6ea93f7c81",
+      "steps": [
+        {
+          "chunk_hex": "ed9fbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              55295
+            ],
+            "emitted_scalars": [
+              55295
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/before_surrogates/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "ed9fbf",
+      "sha256": "4ebbb7b74dcc9b0b81efbbcf4991f2c57244312fc919377648906b6ea93f7c81",
+      "steps": [
+        {
+          "chunk_hex": "ed",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ed",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "9fbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              55295
+            ],
+            "emitted_scalars": [
+              55295
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/before_surrogates/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "ed9fbf",
+      "sha256": "4ebbb7b74dcc9b0b81efbbcf4991f2c57244312fc919377648906b6ea93f7c81",
+      "steps": [
+        {
+          "chunk_hex": "ed9f",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "ed9f",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              55295
+            ],
+            "emitted_scalars": [
+              55295
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/after_surrogates",
+      "purpose": "Complete literal scalar 0xe000",
+      "raw_hex": "ee8080",
+      "sha256": "d3bff2f46df9d97c71c9e1e2b066cfaa50b64c37ac41e9e2ec77bf49ccc79a8b",
+      "steps": [
+        {
+          "chunk_hex": "ee8080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              57344
+            ],
+            "emitted_scalars": [
+              57344
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/after_surrogates/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "ee8080",
+      "sha256": "d3bff2f46df9d97c71c9e1e2b066cfaa50b64c37ac41e9e2ec77bf49ccc79a8b",
+      "steps": [
+        {
+          "chunk_hex": "ee",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ee",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "8080",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              57344
+            ],
+            "emitted_scalars": [
+              57344
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/after_surrogates/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "ee8080",
+      "sha256": "d3bff2f46df9d97c71c9e1e2b066cfaa50b64c37ac41e9e2ec77bf49ccc79a8b",
+      "steps": [
+        {
+          "chunk_hex": "ee80",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "ee80",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              57344
+            ],
+            "emitted_scalars": [
+              57344
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/noncharacter_fdd0",
+      "purpose": "Complete literal scalar 0xfdd0",
+      "raw_hex": "efb790",
+      "sha256": "251a30fc0ff91fc9431054d9c34f398e59d04b013963bb31b4e954174d150ddf",
+      "steps": [
+        {
+          "chunk_hex": "efb790",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              64976
+            ],
+            "emitted_scalars": [
+              64976
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/noncharacter_fdd0/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "efb790",
+      "sha256": "251a30fc0ff91fc9431054d9c34f398e59d04b013963bb31b4e954174d150ddf",
+      "steps": [
+        {
+          "chunk_hex": "ef",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ef",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "b790",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              64976
+            ],
+            "emitted_scalars": [
+              64976
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/noncharacter_fdd0/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "efb790",
+      "sha256": "251a30fc0ff91fc9431054d9c34f398e59d04b013963bb31b4e954174d150ddf",
+      "steps": [
+        {
+          "chunk_hex": "efb7",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "efb7",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "90",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              64976
+            ],
+            "emitted_scalars": [
+              64976
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/bom",
+      "purpose": "Complete literal scalar 0xfeff",
+      "raw_hex": "efbbbf",
+      "sha256": "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5",
+      "steps": [
+        {
+          "chunk_hex": "efbbbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65279
+            ],
+            "emitted_scalars": [
+              65279
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/bom/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "efbbbf",
+      "sha256": "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5",
+      "steps": [
+        {
+          "chunk_hex": "ef",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ef",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bbbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65279
+            ],
+            "emitted_scalars": [
+              65279
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/bom/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "efbbbf",
+      "sha256": "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5",
+      "steps": [
+        {
+          "chunk_hex": "efbb",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "efbb",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65279
+            ],
+            "emitted_scalars": [
+              65279
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/bmp_max",
+      "purpose": "Complete literal scalar 0xffff",
+      "raw_hex": "efbfbf",
+      "sha256": "2c34e62119d9c5fc3aa11640bd7945d6bf309acc6e99d8054f54ae5110e343f6",
+      "steps": [
+        {
+          "chunk_hex": "efbfbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65535
+            ],
+            "emitted_scalars": [
+              65535
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/bmp_max/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "efbfbf",
+      "sha256": "2c34e62119d9c5fc3aa11640bd7945d6bf309acc6e99d8054f54ae5110e343f6",
+      "steps": [
+        {
+          "chunk_hex": "ef",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ef",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bfbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65535
+            ],
+            "emitted_scalars": [
+              65535
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        3
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/bmp_max/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "efbfbf",
+      "sha256": "2c34e62119d9c5fc3aa11640bd7945d6bf309acc6e99d8054f54ae5110e343f6",
+      "steps": [
+        {
+          "chunk_hex": "efbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "efbf",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65535
+            ],
+            "emitted_scalars": [
+              65535
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/four_byte_min",
+      "purpose": "Complete literal scalar 0x10000",
+      "raw_hex": "f0908080",
+      "sha256": "31237b174ba6047a15db0d343ad9550da611b7b7bce867a23522f81a05df3eda",
+      "steps": [
+        {
+          "chunk_hex": "f0908080",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65536
+            ],
+            "emitted_scalars": [
+              65536
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_byte_min/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "f0908080",
+      "sha256": "31237b174ba6047a15db0d343ad9550da611b7b7bce867a23522f81a05df3eda",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "908080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65536
+            ],
+            "emitted_scalars": [
+              65536
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_byte_min/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "f0908080",
+      "sha256": "31237b174ba6047a15db0d343ad9550da611b7b7bce867a23522f81a05df3eda",
+      "steps": [
+        {
+          "chunk_hex": "f090",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f090",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "8080",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65536
+            ],
+            "emitted_scalars": [
+              65536
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_byte_min/3",
+      "purpose": "Retain exactly3bytes, then complete the scalar",
+      "raw_hex": "f0908080",
+      "sha256": "31237b174ba6047a15db0d343ad9550da611b7b7bce867a23522f81a05df3eda",
+      "steps": [
+        {
+          "chunk_hex": "f09080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f09080",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65536
+            ],
+            "emitted_scalars": [
+              65536
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/grinning_face",
+      "purpose": "Complete literal scalar 0x1f600",
+      "raw_hex": "f09f9880",
+      "sha256": "f0443a342c5ef54783a111b51ba56c938e474c32324d90c3a60c9c8e3a37e2d9",
+      "steps": [
+        {
+          "chunk_hex": "f09f9880",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/grinning_face/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "f09f9880",
+      "sha256": "f0443a342c5ef54783a111b51ba56c938e474c32324d90c3a60c9c8e3a37e2d9",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "9f9880",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/grinning_face/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "f09f9880",
+      "sha256": "f0443a342c5ef54783a111b51ba56c938e474c32324d90c3a60c9c8e3a37e2d9",
+      "steps": [
+        {
+          "chunk_hex": "f09f",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "9880",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/grinning_face/3",
+      "purpose": "Retain exactly3bytes, then complete the scalar",
+      "raw_hex": "f09f9880",
+      "sha256": "f0443a342c5ef54783a111b51ba56c938e474c32324d90c3a60c9c8e3a37e2d9",
+      "steps": [
+        {
+          "chunk_hex": "f09f98",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/scalar_max",
+      "purpose": "Complete literal scalar 0x10ffff",
+      "raw_hex": "f48fbfbf",
+      "sha256": "708b8add9f6b5b556a07b72973b10ff9a3ec30e002034ef24aa076fab4b40e50",
+      "steps": [
+        {
+          "chunk_hex": "f48fbfbf",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              1114111
+            ],
+            "emitted_scalars": [
+              1114111
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/scalar_max/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "f48fbfbf",
+      "sha256": "708b8add9f6b5b556a07b72973b10ff9a3ec30e002034ef24aa076fab4b40e50",
+      "steps": [
+        {
+          "chunk_hex": "f4",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f4",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "8fbfbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              1114111
+            ],
+            "emitted_scalars": [
+              1114111
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/scalar_max/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "f48fbfbf",
+      "sha256": "708b8add9f6b5b556a07b72973b10ff9a3ec30e002034ef24aa076fab4b40e50",
+      "steps": [
+        {
+          "chunk_hex": "f48f",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f48f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bfbf",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              1114111
+            ],
+            "emitted_scalars": [
+              1114111
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/scalar_max/3",
+      "purpose": "Retain exactly3bytes, then complete the scalar",
+      "raw_hex": "f48fbfbf",
+      "sha256": "708b8add9f6b5b556a07b72973b10ff9a3ec30e002034ef24aa076fab4b40e50",
+      "steps": [
+        {
+          "chunk_hex": "f48fbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f48fbf",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              1114111
+            ],
+            "emitted_scalars": [
+              1114111
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/two_byte_min",
+      "purpose": "Complete literal scalar 0x80",
+      "raw_hex": "c280",
+      "sha256": "ea0add9a514e94de9abd0ba721eed15b15aa0b3a0f09ebee5e54a9dfae943153",
+      "steps": [
+        {
+          "chunk_hex": "c280",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              128
+            ],
+            "emitted_scalars": [
+              128
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/two_byte_min/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "c280",
+      "sha256": "ea0add9a514e94de9abd0ba721eed15b15aa0b3a0f09ebee5e54a9dfae943153",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              128
+            ],
+            "emitted_scalars": [
+              128
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal scalar/hex pair from encoding table",
+      "id": "scalar/four_middle_lead",
+      "purpose": "Complete literal scalar 0x40000",
+      "raw_hex": "f1808080",
+      "sha256": "48cf4325ee409046cda19152664360718223ee1bb7f542d9ec90dc77a3ed4a09",
+      "steps": [
+        {
+          "chunk_hex": "f1808080",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              262144
+            ],
+            "emitted_scalars": [
+              262144
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Literal scalar boundaries"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_middle_lead/1",
+      "purpose": "Retain exactly1bytes, then complete the scalar",
+      "raw_hex": "f1808080",
+      "sha256": "48cf4325ee409046cda19152664360718223ee1bb7f542d9ec90dc77a3ed4a09",
+      "steps": [
+        {
+          "chunk_hex": "f1",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f1",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "808080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              262144
+            ],
+            "emitted_scalars": [
+              262144
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_middle_lead/2",
+      "purpose": "Retain exactly2bytes, then complete the scalar",
+      "raw_hex": "f1808080",
+      "sha256": "48cf4325ee409046cda19152664360718223ee1bb7f542d9ec90dc77a3ed4a09",
+      "steps": [
+        {
+          "chunk_hex": "f180",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f180",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "8080",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              262144
+            ],
+            "emitted_scalars": [
+              262144
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        4
+      ],
+      "expectation_rule": "Fixed literal scalar and every interior byte cut",
+      "id": "interior/four_middle_lead/3",
+      "purpose": "Retain exactly3bytes, then complete the scalar",
+      "raw_hex": "f1808080",
+      "sha256": "48cf4325ee409046cda19152664360718223ee1bb7f542d9ec90dc77a3ed4a09",
+      "steps": [
+        {
+          "chunk_hex": "f18080",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f18080",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              262144
+            ],
+            "emitted_scalars": [
+              262144
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Every declared representative interior cut"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2
+      ],
+      "expectation_rule": "Literal scalar table; each byte a separate chunk",
+      "id": "multichunk/cent",
+      "purpose": "Complete one scalar across all its bytes",
+      "raw_hex": "c2a2",
+      "sha256": "c85763f2ea4e473a0f576e06ff8e11dd9c9756a2c9f110eca7814930ecad3644",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [
+              162
+            ],
+            "emitted_scalars": [
+              162
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Byte-at-a-time completion"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2,
+        3
+      ],
+      "expectation_rule": "Literal scalar table; each byte a separate chunk",
+      "id": "multichunk/euro",
+      "purpose": "Complete one scalar across all its bytes",
+      "raw_hex": "e282ac",
+      "sha256": "c4cc90ed3d26f12d4b08a75140970a7904035c31cbb4515a83f19b9003c00d1d",
+      "steps": [
+        {
+          "chunk_hex": "e2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "82",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "ac",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Byte-at-a-time completion"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "expectation_rule": "Literal scalar table; each byte a separate chunk",
+      "id": "multichunk/grinning_face",
+      "purpose": "Complete one scalar across all its bytes",
+      "raw_hex": "f09f9880",
+      "sha256": "f0443a342c5ef54783a111b51ba56c938e474c32324d90c3a60c9c8e3a37e2d9",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "9f",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "98",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Byte-at-a-time completion"
+    },
+    {
+      "chunk_cuts": [
+        0,
+        1,
+        1,
+        3,
+        3
+      ],
+      "expectation_rule": "Empty feed changes no byte/scalar state",
+      "id": "multichunk/empty_while_pending",
+      "purpose": "Empty feeds preserve both boundary and pending state",
+      "raw_hex": "e282ac",
+      "sha256": "c4cc90ed3d26f12d4b08a75140970a7904035c31cbb4515a83f19b9003c00d1d",
+      "steps": [
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 0,
+            "examined_total": 0,
+            "finalization": "not_requested",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "boundary",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "e2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 0,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "82ac",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "boundary",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 0,
+            "examined_total": 3,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Empty feeds"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        5
+      ],
+      "expectation_rule": "A+E282 pending, then euro+B",
+      "id": "mixed/ascii_then_partial_euro",
+      "purpose": "Commit ASCII before a pending3byte scalar",
+      "raw_hex": "41e282ac42",
+      "sha256": "76706509712c3f9f881721b99ac3a1afd78b7f354761fbca22948a2ef33a1833",
+      "steps": [
+        {
+          "chunk_hex": "41e282",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65
+            ],
+            "emitted_scalars": [
+              65
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "ac42",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 5,
+            "decoded_scalars": [
+              65,
+              8364,
+              66
+            ],
+            "emitted_scalars": [
+              8364,
+              66
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 5,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Mixed complete and partial tails"
+    },
+    {
+      "chunk_cuts": [
+        4,
+        6
+      ],
+      "expectation_rule": "Cent+F09F pending, then complete astral scalar",
+      "id": "mixed/complete_two_then_partial_four",
+      "purpose": "Keep a complete scalar before an astral pending tail",
+      "raw_hex": "c2a2f09f9880",
+      "sha256": "7368793c2282a0950426df57d015cd9edf76e2d70e0f715bae977f752005c4b2",
+      "steps": [
+        {
+          "chunk_hex": "c2a2f09f",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              162
+            ],
+            "emitted_scalars": [
+              162
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "not_requested",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "9880",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 6,
+            "decoded_scalars": [
+              162,
+              128512
+            ],
+            "emitted_scalars": [
+              128512
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 6,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Mixed complete and partial tails"
+    },
+    {
+      "chunk_cuts": [
+        4,
+        8,
+        11
+      ],
+      "expectation_rule": "Literal A,cent,euro,astral,Z sequence",
+      "id": "mixed/three_widths_three_chunks",
+      "purpose": "Multiple completions and new pending sequences across chunks",
+      "raw_hex": "41c2a2e282acf09f98805a",
+      "sha256": "c5d6c0ee0a78b66eeb6c14bc97afaa5f90a1d4056fe20700a3ec0b64e06e3556",
+      "steps": [
+        {
+          "chunk_hex": "41c2a2e2",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65,
+              162
+            ],
+            "emitted_scalars": [
+              65,
+              162
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "82acf09f",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 8,
+            "decoded_scalars": [
+              65,
+              162,
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": null,
+            "examined_in_chunk": 4,
+            "examined_total": 8,
+            "finalization": "not_requested",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "98805a",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 11,
+            "decoded_scalars": [
+              65,
+              162,
+              8364,
+              128512,
+              90
+            ],
+            "emitted_scalars": [
+              128512,
+              90
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 11,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Mixed complete and partial tails"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        5
+      ],
+      "expectation_rule": "No NUL sentinel in strictUTF8",
+      "id": "mixed/nul_does_not_terminate",
+      "purpose": "Continue after a raw NUL",
+      "raw_hex": "4100c2a242",
+      "sha256": "47804675ff47c721c623719e0383dcebe1b6c318e773e0e321187cdcd10f841b",
+      "steps": [
+        {
+          "chunk_hex": "4100c2",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65,
+              0
+            ],
+            "emitted_scalars": [
+              65,
+              0
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a242",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 5,
+            "decoded_scalars": [
+              65,
+              0,
+              162,
+              66
+            ],
+            "emitted_scalars": [
+              162,
+              66
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 5,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "NUL is a scalar"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        4
+      ],
+      "expectation_rule": "UTF8 not UTF8-SIG",
+      "id": "mixed/bom_is_not_removed",
+      "purpose": "An initial BOM is emitted, followed by ASCII",
+      "raw_hex": "efbbbf41",
+      "sha256": "4d91bc408f19af2e9483a216ae71673e0ee456ece7a12998dd207e504f4f19a6",
+      "steps": [
+        {
+          "chunk_hex": "efbb",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "efbb",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "bf41",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65279,
+              65
+            ],
+            "emitted_scalars": [
+              65279,
+              65
+            ],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 4,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "BOM preservation"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/cent/1",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "c2",
+      "sha256": "c557e71380112b980eaf1145fa80621130dfbdfa1e375d87ae0018b7c60ac16b",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        1
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/cent/1",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "c2",
+      "sha256": "c557e71380112b980eaf1145fa80621130dfbdfa1e375d87ae0018b7c60ac16b",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/euro/1",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "e2",
+      "sha256": "30a5bfa58e128af9e5a4955725d8ad26d4d574a537b58b7dc6d357acad578572",
+      "steps": [
+        {
+          "chunk_hex": "e2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        1
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/euro/1",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "e2",
+      "sha256": "30a5bfa58e128af9e5a4955725d8ad26d4d574a537b58b7dc6d357acad578572",
+      "steps": [
+        {
+          "chunk_hex": "e2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/euro/2",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "e282",
+      "sha256": "eed0eb1f664e53388c1f00a4a9ba9b8da60fe792af9eb5f6f4b5ee852a91f03f",
+      "steps": [
+        {
+          "chunk_hex": "e282",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        2
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/euro/2",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "e282",
+      "sha256": "eed0eb1f664e53388c1f00a4a9ba9b8da60fe792af9eb5f6f4b5ee852a91f03f",
+      "steps": [
+        {
+          "chunk_hex": "e282",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/grinning_face/1",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "f0",
+      "sha256": "fde502858306c235a3121e42326b53228b7ef4690eeed92a2b2eafe73c03a3ef",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        1
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/grinning_face/1",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "f0",
+      "sha256": "fde502858306c235a3121e42326b53228b7ef4690eeed92a2b2eafe73c03a3ef",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/grinning_face/2",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "f09f",
+      "sha256": "3c1c36c746e9b9106e77cfc2ede3374d38a883e23fbcd3b20023e326008c5434",
+      "steps": [
+        {
+          "chunk_hex": "f09f",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        2,
+        2
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/grinning_face/2",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "f09f",
+      "sha256": "3c1c36c746e9b9106e77cfc2ede3374d38a883e23fbcd3b20023e326008c5434",
+      "steps": [
+        {
+          "chunk_hex": "f09f",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Pending prefix plus final request",
+      "id": "eof/same_chunk/grinning_face/3",
+      "purpose": "Reject unfinished scalar at requested same-chunk EOF",
+      "raw_hex": "f09f98",
+      "sha256": "b38af6aef10b9620ceb4fe55a4aaf8def5e4d9bd99bd1ebff06a0d44220546a2",
+      "steps": [
+        {
+          "chunk_hex": "f09f98",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 3,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "failed",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        3,
+        3
+      ],
+      "expectation_rule": "Empty final consumes/examines no extra bytes",
+      "id": "eof/empty_final/grinning_face/3",
+      "purpose": "Reject pending bytes on a later empty final feed",
+      "raw_hex": "f09f98",
+      "sha256": "b38af6aef10b9620ceb4fe55a4aaf8def5e4d9bd99bd1ebff06a0d44220546a2",
+      "steps": [
+        {
+          "chunk_hex": "f09f98",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "not_requested",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 3,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 3,
+            "finalization": "failed",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Premature EOF"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/stray_80",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "80",
+      "sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+      "steps": [
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "unexpected_continuation",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "80"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/stray_bf",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "bf",
+      "sha256": "b12dc850a3b0a3b79fc2255e175241ce20489fe45df93ff35c42c6c348df4fbf",
+      "steps": [
+        {
+          "chunk_hex": "bf",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "unexpected_continuation",
+              "offending_byte": 191,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "bf"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/overlong_lead_c0",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "c0af",
+      "sha256": "caf573f0daa6960ecb26f8eddbc4e2059277ad5afc6f72ffd59a0ecead602a22",
+      "steps": [
+        {
+          "chunk_hex": "c0af",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "invalid_lead",
+              "offending_byte": 192,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "c0af"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/overlong_lead_c1",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "c180",
+      "sha256": "9d1fc20a964456eef247be27a7d2d3d9917cff4f2bdb1601155e063039856c2d",
+      "steps": [
+        {
+          "chunk_hex": "c180",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "invalid_lead",
+              "offending_byte": 193,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "c180"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/lead_f5",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f5808080",
+      "sha256": "902e7d539c596f4dc9459345a8e4cbea6c287e0ae26951e5e72fd33d2290ae65",
+      "steps": [
+        {
+          "chunk_hex": "f5808080",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "invalid_lead",
+              "offending_byte": 245,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "f5808080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        5
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/lead_f8",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f888808080",
+      "sha256": "c0569cef7287222a791fb74755cfbf405ff326d1e46bb79353d501e64135314d",
+      "steps": [
+        {
+          "chunk_hex": "f888808080",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "invalid_lead",
+              "offending_byte": 248,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "f888808080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        1
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/lead_ff",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "ff",
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "steps": [
+        {
+          "chunk_hex": "ff",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "invalid_lead",
+              "offending_byte": 255,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "ff"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/two_ascii_continuation",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "c241",
+      "sha256": "9b9b34fcc6a32a6b0b6d43b3e71b033e90c3e3977646d82934b59e8e4006ff42",
+      "steps": [
+        {
+          "chunk_hex": "c241",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/two_new_lead",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "c2c2a2",
+      "sha256": "bb29a01040231d3531a76b69ea7d7f87df3245cf1bfaf9a0719dd4ec23412d7b",
+      "steps": [
+        {
+          "chunk_hex": "c2c2a2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 194,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": "c2a2"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/three_ascii_second",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "e241",
+      "sha256": "d3aa7d9dd1890c7cadb2496c5b43a5dc79ff665632a448e6498c30d5a484df07",
+      "steps": [
+        {
+          "chunk_hex": "e241",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/three_ascii_third",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "e28241",
+      "sha256": "958a720949c96f32834da578eb0ec1aad044f83710008f97d2410325de767840",
+      "steps": [
+        {
+          "chunk_hex": "e28241",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "failed",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/four_ascii_second",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f041",
+      "sha256": "b70c51faf8e812bb144fedd3b488ac34ec017ebc612a402ea3fc0b82985a17bf",
+      "steps": [
+        {
+          "chunk_hex": "f041",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/four_ascii_third",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f09f41",
+      "sha256": "7083387d8146ddfb3b219a0b542865174e303e1ba39806d63089dcf498216f3a",
+      "steps": [
+        {
+          "chunk_hex": "f09f41",
+          "expected": {
+            "consumed_in_chunk": 2,
+            "consumed_total": 2,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 2,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "failed",
+            "pending_hex": "f09f",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/four_ascii_fourth",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f09f9841",
+      "sha256": "3fa4946f27235cd475fa6f924fb502f2e7bb8a548f02979f10797d69827b94eb",
+      "steps": [
+        {
+          "chunk_hex": "f09f9841",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 3,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "failed",
+            "pending_hex": "f09f98",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "41"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/three_overlong_low",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "e080af",
+      "sha256": "c1c020b08264a9ef66fde0912fb69314dbb8bb166276d9eb16b36e28596880da",
+      "steps": [
+        {
+          "chunk_hex": "e080af",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e0",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "80af"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/three_overlong_high",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "e09fbf",
+      "sha256": "541a10600268d6b1a0262f63c782253b5b363c8d2825267220f6bca28769ebbf",
+      "steps": [
+        {
+          "chunk_hex": "e09fbf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 159,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e0",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "9fbf"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/four_overlong_low",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f08080af",
+      "sha256": "ae301af0c63dbf63a26c35c08c9d6224f7babf9173fbd78922635977e5630976",
+      "steps": [
+        {
+          "chunk_hex": "f08080af",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "8080af"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/four_overlong_high",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f08fbfbf",
+      "sha256": "ce25a90616f1650244d0b25f6b6c112120401fd9e51e9faed53e06dad5a2823d",
+      "steps": [
+        {
+          "chunk_hex": "f08fbfbf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 143,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "8fbfbf"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/surrogate_low",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "eda080",
+      "sha256": "91a681b998555fb475479817b126c94e57e52011fa1842c5d188795a4a05226b",
+      "steps": [
+        {
+          "chunk_hex": "eda080",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "surrogate_scalar",
+              "offending_byte": 160,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "ed",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "a080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/surrogate_high",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "edbfbf",
+      "sha256": "8a8821b226fa468b6fadc951dad490315bf41b4761d6f3f56917f1d0e50d4dae",
+      "steps": [
+        {
+          "chunk_hex": "edbfbf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "surrogate_scalar",
+              "offending_byte": 191,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "ed",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "bfbf"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/out_of_range_low",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f4908080",
+      "sha256": "fb16995ef3b5d7c2c81b153f945979f1db35ebc62b17616cdc896f8e7836d371",
+      "steps": [
+        {
+          "chunk_hex": "f4908080",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "out_of_range_scalar",
+              "offending_byte": 144,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f4",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "908080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/out_of_range_high",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "f4bfbfbf",
+      "sha256": "ec5cb6f6c138a943e2b122253a1bc085daadc77c3bfd0d4d52eb3705d7730c83",
+      "steps": [
+        {
+          "chunk_hex": "f4bfbfbf",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "out_of_range_scalar",
+              "offending_byte": 191,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f4",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "bfbfbf"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/nul_is_not_continuation",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "c200",
+      "sha256": "486daed13adcd9b8e8ae5ea6429e5adfb8712fbfc35ad7ae3ec76e7320efb592",
+      "steps": [
+        {
+          "chunk_hex": "c200",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 0,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": "00"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        2
+      ],
+      "expectation_rule": "Literal negative position and rule category",
+      "id": "invalid/del_is_not_continuation",
+      "purpose": "Reject the authored earliest offending byte",
+      "raw_hex": "e27f",
+      "sha256": "99f8bc2bc393b34ad9a34dc876895eede1fefb5b5ffee5e39f4a576e04ea509a",
+      "steps": [
+        {
+          "chunk_hex": "e27f",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 127,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 2,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "7f"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Malformed byte sequences"
+    },
+    {
+      "chunk_cuts": [
+        7
+      ],
+      "expectation_rule": "A+cent emitted, E2 pending,28 rejected at offset4",
+      "id": "invalid/valid_prefix_committed",
+      "purpose": "Retain valid output preceding a later same-chunk failure",
+      "raw_hex": "41c2a2e228a142",
+      "sha256": "ade32e80f169cf3c77510493214d9637fe05fd487a82bd55a9890e259f65b38f",
+      "steps": [
+        {
+          "chunk_hex": "41c2a2e228a142",
+          "expected": {
+            "consumed_in_chunk": 4,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65,
+              162
+            ],
+            "emitted_scalars": [
+              65,
+              162
+            ],
+            "error": {
+              "byte_offset": 4,
+              "code": "invalid_continuation",
+              "offending_byte": 40,
+              "sequence_start_offset": 3
+            },
+            "examined_in_chunk": 5,
+            "examined_total": 5,
+            "finalization": "failed",
+            "pending_hex": "e2",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "28a142"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Valid output before byte error"
+    },
+    {
+      "chunk_cuts": [
+        4
+      ],
+      "expectation_rule": "Euro emitted,80 rejected at a new scalar boundary",
+      "id": "invalid/valid_scalar_then_stray",
+      "purpose": "Keep euro output before a stray continuation",
+      "raw_hex": "e282ac80",
+      "sha256": "ab837a89801ae45f314854f034fe2fe54cd5d1e5c2560e1454fd483e5abdd65c",
+      "steps": [
+        {
+          "chunk_hex": "e282ac80",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              8364
+            ],
+            "emitted_scalars": [
+              8364
+            ],
+            "error": {
+              "byte_offset": 3,
+              "code": "unexpected_continuation",
+              "offending_byte": 128,
+              "sequence_start_offset": 3
+            },
+            "examined_in_chunk": 4,
+            "examined_total": 4,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "80"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Valid output before byte error"
+    },
+    {
+      "chunk_cuts": [
+        3
+      ],
+      "expectation_rule": "A emitted, E282 pending at requested EOF",
+      "id": "eof/valid_prefix_committed",
+      "purpose": "Preserve ASCII while the following scalar remains incomplete",
+      "raw_hex": "41e282",
+      "sha256": "b31cfcaa718e37ce970aa21a6bd39c6d61354fe1d0161bcb1f2f7afe04265b82",
+      "steps": [
+        {
+          "chunk_hex": "41e282",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 3,
+            "decoded_scalars": [
+              65
+            ],
+            "emitted_scalars": [
+              65
+            ],
+            "error": {
+              "byte_offset": 3,
+              "code": "premature_eof",
+              "offending_byte": null,
+              "sequence_start_offset": 1
+            },
+            "examined_in_chunk": 3,
+            "examined_total": 3,
+            "finalization": "failed",
+            "pending_hex": "e282",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Valid output before EOF error"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3,
+        5
+      ],
+      "expectation_rule": "Offending byte examined/notconsumed; subsequent bytes ignored",
+      "id": "absorbing/pending_error_later_valid_bytes_ignored",
+      "purpose": "Do not recover when a later chunk could complete the pending scalar",
+      "raw_hex": "c241a2a242",
+      "sha256": "99ce44f092bc8b6f0afbac931068c75bed46472109f4e86e8a26426f9c924e42",
+      "steps": [
+        {
+          "chunk_hex": "c2",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "41a2",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "not_requested",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": "41a2"
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a242",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "invalid_continuation",
+              "offending_byte": 65,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "c2",
+            "pending_width": 2,
+            "status": "error",
+            "unconsumed_hex": "a242"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Absorbing error"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        1
+      ],
+      "expectation_rule": "No extra byte/offset or replacement after rejection",
+      "id": "absorbing/boundary_error_empty_final",
+      "purpose": "Empty final request preserves the first byte error",
+      "raw_hex": "80",
+      "sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+      "steps": [
+        {
+          "chunk_hex": "80",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "unexpected_continuation",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": "80"
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 0,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 0,
+              "code": "unexpected_continuation",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 0,
+            "examined_total": 1,
+            "finalization": "failed",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "error",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Absorbing error"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4,
+        5
+      ],
+      "expectation_rule": "Literal A,BOM,B scalar sequence",
+      "id": "mixed/middle_bom_is_not_removed",
+      "purpose": "A middle BOM is emitted without stripping or resetting",
+      "raw_hex": "41efbbbf42",
+      "sha256": "5f843d8dfcb44eb1c9645373d9c4dde2974c888f0d558f5e910ef42997bd4ac1",
+      "steps": [
+        {
+          "chunk_hex": "41",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [
+              65
+            ],
+            "emitted_scalars": [
+              65
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "boundary",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "efbbbf",
+          "expected": {
+            "consumed_in_chunk": 3,
+            "consumed_total": 4,
+            "decoded_scalars": [
+              65,
+              65279
+            ],
+            "emitted_scalars": [
+              65279
+            ],
+            "error": null,
+            "examined_in_chunk": 3,
+            "examined_total": 4,
+            "finalization": "not_requested",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "boundary",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "42",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 5,
+            "decoded_scalars": [
+              65,
+              65279,
+              66
+            ],
+            "emitted_scalars": [
+              66
+            ],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 5,
+            "finalization": "succeeded",
+            "pending_hex": "",
+            "pending_width": null,
+            "status": "finished",
+            "unconsumed_hex": ""
+          },
+          "final": true
+        }
+      ],
+      "stratum": "BOM preservation"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Literal lead-specific invalid second byte",
+      "id": "split_restricted/overlong_three",
+      "purpose": "Keep the leading-byte range restriction when the second byte arrives later",
+      "raw_hex": "e080af",
+      "sha256": "c1c020b08264a9ef66fde0912fb69314dbb8bb166276d9eb16b36e28596880da",
+      "steps": [
+        {
+          "chunk_hex": "e0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "e0",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "80af",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "e0",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "80af"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Restricted second-byte state across chunks"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Literal lead-specific invalid second byte",
+      "id": "split_restricted/overlong_four",
+      "purpose": "Keep the leading-byte range restriction when the second byte arrives later",
+      "raw_hex": "f08080af",
+      "sha256": "ae301af0c63dbf63a26c35c08c9d6224f7babf9173fbd78922635977e5630976",
+      "steps": [
+        {
+          "chunk_hex": "f0",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "8080af",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "overlong_sequence",
+              "offending_byte": 128,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f0",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "8080af"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Restricted second-byte state across chunks"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        3
+      ],
+      "expectation_rule": "Literal lead-specific invalid second byte",
+      "id": "split_restricted/surrogate",
+      "purpose": "Keep the leading-byte range restriction when the second byte arrives later",
+      "raw_hex": "eda080",
+      "sha256": "91a681b998555fb475479817b126c94e57e52011fa1842c5d188795a4a05226b",
+      "steps": [
+        {
+          "chunk_hex": "ed",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "ed",
+            "pending_width": 3,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "a080",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "surrogate_scalar",
+              "offending_byte": 160,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "ed",
+            "pending_width": 3,
+            "status": "error",
+            "unconsumed_hex": "a080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Restricted second-byte state across chunks"
+    },
+    {
+      "chunk_cuts": [
+        1,
+        4
+      ],
+      "expectation_rule": "Literal lead-specific invalid second byte",
+      "id": "split_restricted/out_of_range",
+      "purpose": "Keep the leading-byte range restriction when the second byte arrives later",
+      "raw_hex": "f4908080",
+      "sha256": "fb16995ef3b5d7c2c81b153f945979f1db35ebc62b17616cdc896f8e7836d371",
+      "steps": [
+        {
+          "chunk_hex": "f4",
+          "expected": {
+            "consumed_in_chunk": 1,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": null,
+            "examined_in_chunk": 1,
+            "examined_total": 1,
+            "finalization": "not_requested",
+            "pending_hex": "f4",
+            "pending_width": 4,
+            "status": "pending",
+            "unconsumed_hex": ""
+          },
+          "final": false
+        },
+        {
+          "chunk_hex": "908080",
+          "expected": {
+            "consumed_in_chunk": 0,
+            "consumed_total": 1,
+            "decoded_scalars": [],
+            "emitted_scalars": [],
+            "error": {
+              "byte_offset": 1,
+              "code": "out_of_range_scalar",
+              "offending_byte": 144,
+              "sequence_start_offset": 0
+            },
+            "examined_in_chunk": 1,
+            "examined_total": 2,
+            "finalization": "failed",
+            "pending_hex": "f4",
+            "pending_width": 4,
+            "status": "error",
+            "unconsumed_hex": "908080"
+          },
+          "final": true
+        }
+      ],
+      "stratum": "Restricted second-byte state across chunks"
+    }
+  ],
+  "error_recovery": "none_absorbing",
+  "expected_scalar_encoding_pairs": [
+    {
+      "hex": "c2a2",
+      "id": "cent",
+      "scalar": 162
+    },
+    {
+      "hex": "dfbf",
+      "id": "two_byte_max",
+      "scalar": 2047
+    },
+    {
+      "hex": "e0a080",
+      "id": "three_byte_min",
+      "scalar": 2048
+    },
+    {
+      "hex": "e282ac",
+      "id": "euro",
+      "scalar": 8364
+    },
+    {
+      "hex": "ed9fbf",
+      "id": "before_surrogates",
+      "scalar": 55295
+    },
+    {
+      "hex": "ee8080",
+      "id": "after_surrogates",
+      "scalar": 57344
+    },
+    {
+      "hex": "efb790",
+      "id": "noncharacter_fdd0",
+      "scalar": 64976
+    },
+    {
+      "hex": "efbbbf",
+      "id": "bom",
+      "scalar": 65279
+    },
+    {
+      "hex": "efbfbf",
+      "id": "bmp_max",
+      "scalar": 65535
+    },
+    {
+      "hex": "f0908080",
+      "id": "four_byte_min",
+      "scalar": 65536
+    },
+    {
+      "hex": "f09f9880",
+      "id": "grinning_face",
+      "scalar": 128512
+    },
+    {
+      "hex": "f48fbfbf",
+      "id": "scalar_max",
+      "scalar": 1114111
+    },
+    {
+      "hex": "c280",
+      "id": "two_byte_min",
+      "scalar": 128
+    },
+    {
+      "hex": "f1808080",
+      "id": "four_middle_lead",
+      "scalar": 262144
+    }
+  ],
+  "limits": {
+    "maximum_bytes_per_fixture": 128,
+    "maximum_fixtures": 128,
+    "maximum_steps": 1024,
+    "maximum_total_supplied_bytes": 32768
+  },
+  "normalization": "none",
+  "profile": "strict_UTF8_byte_chunk_oracle_v1",
+  "schema_version": 1,
+  "specification": {
+    "bytes": 9826,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v2.md",
+    "sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a"
+  },
+  "status": "fixed_expected_fixtures_not_adapter_or_native_qualification"
+}

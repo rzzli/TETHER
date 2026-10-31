@@ -1,0 +1,44 @@
+{
+  "build_proof_sha256": "51c255ec00aaf050a833682f4a41abd27f6b82fe6ffadef18a8e1a92d6756306",
+  "census_observation_and_R10_still_pending": true,
+  "compiled_result_reported_unexecuted": true,
+  "files": [
+    {
+      "bytes": 33689,
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "sha256": "574d9aa0bce137b792425f856cf8ff08ff57f366b50c7fec4db04282e5cfbe4d"
+    },
+    {
+      "bytes": 27711,
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "sha256": "a4b5f3860b37d1080db01519853f22491a486e6a985f036305d7bad68a0736b3"
+    },
+    {
+      "bytes": 102255,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "sha256": "92552c4f898ea7336b97b9a59e236f7af3cd81786d95865ef6d42ba8969d7754"
+    },
+    {
+      "bytes": 30266,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-28-r09-native-build.md",
+      "sha256": "1b93055b171fe8361c4e47623b36ea4462786675ad5e932e140772c1b4ff0503"
+    },
+    {
+      "bytes": 42260,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "5aefb845c5ca62cd13e04356ec9e38aa1118f1257855723b6c18942484f1407a"
+    },
+    {
+      "bytes": 33620,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "615acd360a92e13cb63bba90d42161ddab39426ba1fb0e9984603e5199d8aba2"
+    }
+  ],
+  "full_framework_tests_rerun": false,
+  "new_build_links_exist": true,
+  "recorded_at_utc": "2026-10-29T01:34:59.877559+00:00",
+  "schema_version": 1,
+  "scope": "Current build-only documentation checkpoint; no native or scientific acceptance",
+  "status": "passed_targeted_current_build_status_QA",
+  "strict_utf8": true
+}

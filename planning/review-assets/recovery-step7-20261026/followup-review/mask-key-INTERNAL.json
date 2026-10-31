@@ -1,0 +1,20 @@
+{
+  "role": "evaluation_only_internal_mask_key",
+  "assignment": "deterministic_not_randomized",
+  "candidates": [
+    {
+      "candidate": "A",
+      "cell_id": "exposed-il6r-genetics-simplified",
+      "wrapper_path": "D:\\Projects\\drug_target_agents\\runs\\r07-native-diagnostic-20261026T165505Z\\cells\\exposed-il6r-genetics-simplified\\raw-response.bin",
+      "wrapper_sha256": "3b20e146317fd85909df94af808205fa43bd0b16bd4db9148af2352bf5bf55fa",
+      "original_content_sha256": "b9165cd2845e92380ef92e865d9979fd54fee9e3db3ccbbce722f19a8ccd884f"
+    },
+    {
+      "candidate": "B",
+      "cell_id": "exposed-il6r-genetics-current",
+      "wrapper_path": "D:\\Projects\\drug_target_agents\\runs\\r07-native-diagnostic-20261026T165505Z\\cells\\exposed-il6r-genetics-current\\raw-response.bin",
+      "wrapper_sha256": "432444d1603229a61d44b24d2aca65e4684315e600f7e4b40a15799321b227bf",
+      "original_content_sha256": "71c94c3937dd2f612135fe3a1ed3eeff8f4bc83a95a199129fc05cc15068fc7c"
+    }
+  ]
+}

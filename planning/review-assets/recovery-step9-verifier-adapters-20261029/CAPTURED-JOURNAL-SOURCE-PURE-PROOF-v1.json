@@ -1,0 +1,258 @@
+{
+  "CPU_GGUF_pack_reads": 0,
+  "actual_children": 0,
+  "actual_old_run_replay": false,
+  "actual_original_file_rehashes": 0,
+  "checker": {
+    "bytes": 15384,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_v1.py",
+    "sha256": "dc5c7b4d9ff98c9d84f4f117a586bfcd5eb9fff9f134ad62905c830252753856"
+  },
+  "component_AST_sha256": {
+    "CapturedJournalError": "5b648caa89d9257b5e7f6a49082be79f7ad870111dccf927a78fa3ec57621aff",
+    "_copy_bindings": "fe3f185d5324a9b8c00a9a61fb5cea8513560e74f0d71a8c7d6b3d57eb953ddb",
+    "_depth": "df49f2b4e0b048cd81d2ade137a3b85486d75a3e970c04e3c3f075e105af3499",
+    "_job_limits": "288274fdf733d868a2f23bb45d03779b92ea44dca40cae514125b4b7eedf7b9c",
+    "_json": "0e88fc0023724c5a37b2c06cf961f10f19b840dc0c8a22af653b8e049231fa8b",
+    "_parse": "a5a8406ebbef3efd270d82df0f9a4d0ee87243cf247c675029f573b0c320fc38",
+    "_path_key": "724aa4a1d5462edb6534c6b4cd8687b1f0fb27928d489fc2e54bc25bed28f9cf",
+    "_shape": "1f1c0dc453c3864aba80bca33baa9d52813d98ae6deac277351168536e5022dd",
+    "_utc": "c18ae41fb00cda582cf2fa2368ebbfcf3d302b2c047dd941d72ad5ed5b60312d",
+    "canonical": "7b1ade02887621b4c854651e68c454481b0c9f8c4c1571c751f655885a41bb25",
+    "check_chain": "c74368ff7eb6d32878ebbe5a53669598755d68a68136a0d012600c5905ba823d",
+    "check_native_v7": "58d02df6c113f065ceeb407c99c7385a17b7e041b08d6e09a7f8e29bc96821f9",
+    "digest": "1eace81c21f1d813c589fa74a214b0c9bbad22d813c3662529cc49f1a484eedf",
+    "exact": "a91640f83c359f0cabdc6dd21960d3264046153e9d0991110b761154abf0ed6d",
+    "freeze": "9e01688e2be1b0b8fc0eafa62ae980cb389ce760f6a4b65ddf67f60fd6676a2d",
+    "need": "68f49d95ee37cda88549e02e7f7fd728a67f3c1b5b32d59cb1ffd2cc9057c7ea",
+    "positive": "cfde031f3450479b9b1d1491768819f96980a4b11d3eb6c871094deac4a0365e",
+    "uint": "311c9136bbabfae5e912821517c5a7e6120314d92e620b828faf4ac7203254b1"
+  },
+  "contract": {
+    "bytes": 13091,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-CONTRACT-v1.json",
+    "sha256": "2993cf83b8768f2324feb495bae65217d627135f0ce4d20fb341d537893d71ff"
+  },
+  "elapsed_seconds": 0.3910000000614673,
+  "errors": [],
+  "failures": [],
+  "fixture_freeze": {
+    "bytes": 1711,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-FIXTURE-FREEZE-v1.json",
+    "sha256": "cd4f6b3f381a837d790dfcad84e92231111456e3eb6648a0ebd7617c84980140"
+  },
+  "fixtures": {
+    "bytes": 2749847,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-FIXTURES-v1.json",
+    "sha256": "1448873002dc5350be8ca835254ff283b734d04bda88382273b1c4b4319fe28c"
+  },
+  "frozen_case_observations": [
+    {
+      "chain_valid": true,
+      "id": "valid/native_positive",
+      "native_complete": true
+    },
+    {
+      "chain_valid": true,
+      "id": "valid/native_consistent_negative_with_unicode_separators",
+      "native_complete": true
+    },
+    {
+      "chain_valid": true,
+      "id": "valid/application_chain_only",
+      "native_complete": false,
+      "native_error_family": "outside_native_policy"
+    },
+    {
+      "chain_error_family": "framing",
+      "chain_valid": false,
+      "id": "framing/missing_final_LF",
+      "native_complete": false,
+      "native_error_family": "framing"
+    },
+    {
+      "chain_error_family": "framing",
+      "chain_valid": false,
+      "id": "framing/BOM",
+      "native_complete": false,
+      "native_error_family": "framing"
+    },
+    {
+      "chain_error_family": "framing",
+      "chain_valid": false,
+      "id": "framing/CRLF",
+      "native_complete": false,
+      "native_error_family": "framing"
+    },
+    {
+      "chain_error_family": "framing",
+      "chain_valid": false,
+      "id": "framing/blank_record",
+      "native_complete": false,
+      "native_error_family": "framing"
+    },
+    {
+      "chain_error_family": "framing",
+      "chain_valid": false,
+      "id": "framing/invalid_UTF8",
+      "native_complete": false,
+      "native_error_family": "framing"
+    },
+    {
+      "chain_error_family": "chain",
+      "chain_valid": false,
+      "id": "chain/wrong_previous",
+      "native_complete": false,
+      "native_error_family": "chain"
+    },
+    {
+      "chain_error_family": "chain",
+      "chain_valid": false,
+      "id": "chain/wrong_digest",
+      "native_complete": false,
+      "native_error_family": "chain"
+    },
+    {
+      "chain_error_family": "JSON",
+      "chain_valid": false,
+      "id": "JSON/duplicate_name",
+      "native_complete": false,
+      "native_error_family": "JSON"
+    },
+    {
+      "chain_error_family": "JSON",
+      "chain_valid": false,
+      "id": "JSON/nonfinite",
+      "native_complete": false,
+      "native_error_family": "JSON"
+    },
+    {
+      "chain_error_family": "counter_type",
+      "chain_valid": false,
+      "id": "types/bool_sequence",
+      "native_complete": false,
+      "native_error_family": "counter_type"
+    },
+    {
+      "chain_error_family": "canonical",
+      "chain_valid": false,
+      "id": "canonical/outside_whitespace",
+      "native_complete": false,
+      "native_error_family": "canonical"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/protocol_mismatch",
+      "native_complete": false,
+      "native_error_family": "reference"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/bool_created_PID",
+      "native_complete": false,
+      "native_error_family": "counter_type"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/bool_hash_bytes",
+      "native_complete": false,
+      "native_error_family": "counter_type"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/hash_source_mismatch",
+      "native_complete": false,
+      "native_error_family": "reference"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/unknown_event",
+      "native_complete": false,
+      "native_error_family": "source_order"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/duplicate_resume",
+      "native_complete": false,
+      "native_error_family": "source_order"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/reordered_creation_resume",
+      "native_complete": false,
+      "native_error_family": "source_order"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/terminal_disagrees_report",
+      "native_complete": false,
+      "native_error_family": "reference"
+    },
+    {
+      "chain_valid": true,
+      "id": "native/snapshot_disagrees_report",
+      "native_complete": false,
+      "native_error_family": "reference"
+    },
+    {
+      "chain_valid": true,
+      "id": "incomplete/no_terminal",
+      "native_complete": false,
+      "native_error_family": "incomplete_scope"
+    },
+    {
+      "chain_valid": true,
+      "id": "incomplete/prelaunch_prefix",
+      "native_complete": false,
+      "native_error_family": "incomplete_scope"
+    },
+    {
+      "chain_valid": true,
+      "id": "bindings/unknown_ready_flag",
+      "native_complete": false,
+      "native_error_family": "binding_schema"
+    },
+    {
+      "chain_error_family": "row_cap",
+      "chain_valid": false,
+      "id": "caps/row",
+      "native_complete": false,
+      "native_error_family": "row_cap"
+    },
+    {
+      "chain_error_family": "event_cap",
+      "chain_valid": false,
+      "id": "caps/events",
+      "native_complete": false,
+      "native_error_family": "event_cap"
+    },
+    {
+      "chain_error_family": "depth_cap",
+      "chain_valid": false,
+      "id": "caps/nesting",
+      "native_complete": false,
+      "native_error_family": "depth_cap"
+    },
+    {
+      "chain_error_family": "input_cap",
+      "chain_valid": false,
+      "id": "caps/input",
+      "native_complete": false,
+      "native_error_family": "input_cap"
+    }
+  ],
+  "methods": 9,
+  "native_compiler_model_tokenizer_calls": 0,
+  "profile_qualified": false,
+  "real_SDK_constructions": 0,
+  "recorded_at_utc": "2026-10-29T08:09:28.790726+00:00",
+  "resource_semantics_validated": false,
+  "schema_version": 1,
+  "scope": "Synthetic captured bytes and metadata only; no actual archive/resource/profile qualification. Test harness reads only new source/contract/fixtures and writes this result.",
+  "source": {
+    "bytes": 24796,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\captured_journal_v1.py",
+    "sha256": "5b86f70a57dd1b51d7fe74829b032ddd954f656075ec585c062d5c6dc5e3cf37"
+  },
+  "status": "passed"
+}

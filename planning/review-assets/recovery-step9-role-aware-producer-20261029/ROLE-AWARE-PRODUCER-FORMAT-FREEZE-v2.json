@@ -1,0 +1,70 @@
+{
+  "API_error_probe_rows": 14,
+  "encoder_implemented": false,
+  "golden_generation": false,
+  "groups": 5,
+  "original_or_native_runtime_operations": 0,
+  "pins": [
+    {
+      "bytes": 89573,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+      "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+    },
+    {
+      "bytes": 3961,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-DELTA-v2.json",
+      "sha256": "9116ec346e7fa315c7d3f02d94456b2c2ff397faee686f66ae7c40a5d7ea738c"
+    },
+    {
+      "bytes": 2691,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CLARIFICATION-v2.md",
+      "sha256": "7eb7e6f6c3a75a75d2c7e861344d1344ef74961f4b3c1681d35e3f68e4360a8b"
+    },
+    {
+      "bytes": 15792,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/author_format_contract_v2.py",
+      "sha256": "11c0dd6900a248749496e292066498add45973543149be894bc6a96017c80b34"
+    },
+    {
+      "bytes": 72400,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v1.json",
+      "sha256": "d5f28f0b5aa151515941b6a39b03d3a811c6012fa055490a4103927871fa69e4"
+    },
+    {
+      "bytes": 2659,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-FREEZE-v1.json",
+      "sha256": "dfc9be92fb02ee06663d9c2d81d52f45cf8d6664bc83b3a4edc456e41c70047d"
+    },
+    {
+      "bytes": 9624,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-INDEPENDENT-REVIEW-v1.json",
+      "sha256": "44eee60666d9ee62e2e821bfd0710c754e1934c68f14fff59d4a8b97a7bc4c3b"
+    },
+    {
+      "bytes": 4349,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-ROOT-CLARIFICATION-CHOICE-v2.json",
+      "sha256": "97c2c67232660c6c5e9a457a62aec07afef2a1754e6bc28ba87a67b51d2dd9d4"
+    },
+    {
+      "bytes": 5135,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-CORPUS-PRECHECK-v1.json",
+      "sha256": "9964dd045097dbef39fdeef96874941e058f4802062b828f7a8a774a5cb9a6cf"
+    }
+  ],
+  "producer_implemented": false,
+  "qualification": {
+    "full_roster": false,
+    "new84_runtime": false,
+    "originals": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "schema_accepted": false,
+    "science": false,
+    "source_authorized": false
+  },
+  "schema_version": 2,
+  "status": "FIVE_GROUP_SCHEMA_V2_PAUSED_BEFORE_INDEPENDENT_PEER_OR_GOLDENS",
+  "subject_tests": 0
+}

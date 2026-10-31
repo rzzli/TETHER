@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T04:43:29.883616+00:00",
+  "status": "closed_negative_conversion_incomplete_warning",
+  "role": "execution_author_scoped_summary_not_independent_scientific_review",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T043655Z",
+  "protocol_sha256": "a4f09687d19bc2803a4b419c6c707044d6f0097515a0f5778770563f0f267ce0",
+  "accepted_software_version": "0.3.10",
+  "accepted_software_acceptance_sha256": "27f33a36fd01d48b79e1492ad6b4b185a60e4bd662bb1ee0d955e5a284079cdc",
+  "bridge_sha256": "ea5064b8e2b68aa193efb0e129ef1da6087809d1a6fb21facccefaad70c362ca",
+  "source_commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+  "experimental_unit": "One fixed mixed synthetic JSON ABI roundtrip, then one unchanged response schema shared by the frozen 109 synthetic cases",
+  "limits": {
+    "global_seconds": 120,
+    "max_children": 2,
+    "max_input_bytes": 65536,
+    "max_native_output_bytes": 4194304,
+    "max_stderr_bytes": 1048576,
+    "max_stdout_bytes": 1048576,
+    "per_child_seconds": 30
+  },
+  "actual_native_children": 2,
+  "limited_abi_roundtrip": "passed_for_this_fixed_fixture_only",
+  "conversion_qualification": "failed_incomplete_conversion_warning",
+  "schema_sha256": "a75dd967b16fd387da820e0bd90071aba511aee5363f700e9ac5849f8cc72911",
+  "force_gbnf": false,
+  "diagnostic": {
+    "stderr_bytes": 2955,
+    "stderr_sha256": "98073196b103fa927fc89bb2cc281877d8189ee80375723ec35fa76a8efdcf8b",
+    "unsupported_pattern_warning_occurrences": 17,
+    "finding": "The actual converter reports unanchored non-whitespace patterns unsupported and accepts any string for those pattern constraints"
+  },
+  "records": [
+    {
+      "mode": "roundtrip",
+      "classification": "abi_roundtrip_passed",
+      "exit_code": 0,
+      "pid": 7044,
+      "reaped": true,
+      "elapsed_seconds": 0.09399999992456287,
+      "input_bytes": 271,
+      "input_sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+      "output_bytes": 271,
+      "output_sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+      "stdout": {
+        "bytes": 3067,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T043655Z\\stages\\00-roundtrip\\stdout.bin",
+        "sha256": "cc945d26b936007f88c9fe2999748558d447283a5d2587848ea0de7e8259b0b5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T043655Z\\stages\\00-roundtrip\\stderr.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "normal_cpp_lifetime_completed": true,
+      "common_module_process_lifetime_pinned": true,
+      "program_reported_native_modules": [
+        {
+          "bytes": 8161792,
+          "name": "llama-common.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama-common.dll",
+          "sha256": "d4840df1870ff0ac5dd88c3a43f32d8b1ef7af97d95a802e2c9d3b98066d0505"
+        },
+        {
+          "bytes": 78848,
+          "name": "ggml.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+          "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba"
+        },
+        {
+          "bytes": 803840,
+          "name": "ggml-base.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+          "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3"
+        },
+        {
+          "bytes": 3581952,
+          "name": "llama.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+          "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d"
+        },
+        {
+          "bytes": 768000,
+          "name": "libomp.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+          "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/inputs/roundtrip.json",
+          "sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+          "bytes": 271
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/stdout.bin",
+          "sha256": "cc945d26b936007f88c9fe2999748558d447283a5d2587848ea0de7e8259b0b5",
+          "bytes": 3067
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/parent-attempt.json",
+          "sha256": "b72b110dc56d3cb803a177a91bc3e7659531bf3a41de3da40724ffd2c968e235",
+          "bytes": 1489
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.attempt.json",
+          "sha256": "42a8d3ffa1cfdfb942170547eba2f1c1438132acb55ced4b879e24400db0e9db",
+          "bytes": 301
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.json",
+          "sha256": "4c6ff95d49010a7581bed42e0e1dfeec0ad85e70ef3d3528e49dda87d5a9375c",
+          "bytes": 3066
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.output.bin",
+          "sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+          "bytes": 271
+        }
+      ]
+    },
+    {
+      "mode": "convert",
+      "classification": "conversion_incomplete_warning",
+      "exit_code": 0,
+      "pid": 38420,
+      "reaped": true,
+      "elapsed_seconds": 0.0779999999795109,
+      "input_bytes": 7563,
+      "input_sha256": "a75dd967b16fd387da820e0bd90071aba511aee5363f700e9ac5849f8cc72911",
+      "output_bytes": 14866,
+      "output_sha256": "1abe05ff0c8b9004f9e0757cd9ecdbc273ffb595417f2f8545ce5721dee87bc8",
+      "stdout": {
+        "bytes": 3066,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T043655Z\\stages\\01-convert\\stdout.bin",
+        "sha256": "2037a5606ee7896375b27b5ad8108262bb4b366874796b3553a005fff112ce74"
+      },
+      "stderr": {
+        "bytes": 2955,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T043655Z\\stages\\01-convert\\stderr.bin",
+        "sha256": "98073196b103fa927fc89bb2cc281877d8189ee80375723ec35fa76a8efdcf8b"
+      },
+      "normal_cpp_lifetime_completed": true,
+      "common_module_process_lifetime_pinned": true,
+      "program_reported_native_modules": [
+        {
+          "bytes": 8161792,
+          "name": "llama-common.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama-common.dll",
+          "sha256": "d4840df1870ff0ac5dd88c3a43f32d8b1ef7af97d95a802e2c9d3b98066d0505"
+        },
+        {
+          "bytes": 3581952,
+          "name": "llama.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+          "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d"
+        },
+        {
+          "bytes": 78848,
+          "name": "ggml.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+          "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba"
+        },
+        {
+          "bytes": 803840,
+          "name": "ggml-base.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+          "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3"
+        },
+        {
+          "bytes": 768000,
+          "name": "libomp.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+          "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/inputs/convert.json",
+          "sha256": "a75dd967b16fd387da820e0bd90071aba511aee5363f700e9ac5849f8cc72911",
+          "bytes": 7563
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/stdout.bin",
+          "sha256": "2037a5606ee7896375b27b5ad8108262bb4b366874796b3553a005fff112ce74",
+          "bytes": 3066
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/stderr.bin",
+          "sha256": "98073196b103fa927fc89bb2cc281877d8189ee80375723ec35fa76a8efdcf8b",
+          "bytes": 2955
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/parent-attempt.json",
+          "sha256": "a3e25890603d97e1377414ed10e6f7f089bfe2178b2fb89e1985c55d03e734f6",
+          "bytes": 1484
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.attempt.json",
+          "sha256": "c015ff137eb61c7c91ba8a603b08bae33ebb5f24a559000ca6a5501ff0d7e03b",
+          "bytes": 300
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.json",
+          "sha256": "764137cc4abf656b5f8aea5713ad4dcb338b25a7da03b5acd3aa6585e4446774",
+          "bytes": 3065
+        },
+        {
+          "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.output.bin",
+          "sha256": "1abe05ff0c8b9004f9e0757cd9ecdbc273ffb595417f2f8545ce5721dee87bc8",
+          "bytes": 14866
+        }
+      ]
+    }
+  ],
+  "all_children_reaped": true,
+  "timeouts": 0,
+  "capture_truncations": 0,
+  "cleanup_errors": 0,
+  "elapsed_seconds_before_sealing": 1.172000000020489,
+  "elapsed_seconds_at_seal_state_creation": 1.297000000020489,
+  "sealing_seconds_at_state_creation": 0.10900000005494803,
+  "independent_end_to_end_wall_seconds": null,
+  "wall_time_reason": "No independent process-wall measurement retained; seal-state timestamps above are the checked harness observations",
+  "peak_parent_memory_bytes": null,
+  "peak_child_memory_bytes": null,
+  "peak_gpu_memory_bytes": null,
+  "peak_memory_reason": "Not instrumented by this finite diagnostic",
+  "model_calls": 0,
+  "vocabulary_loads": 0,
+  "inference_contexts": 0,
+  "servers": 0,
+  "gguf_reads": 0,
+  "provider_spend_usd": 0,
+  "new_downloads_during_execution": 0,
+  "native_document_filtering_cases_run": 0,
+  "native_eos_filtering_cases_run": 0,
+  "native_grammar_conformance": "not_established",
+  "failure_history": {
+    "prior_v2_disposition": "prior_operator_authorization_consumed_pre_native_harness_failure",
+    "prior_v2_protocol_sha256": "30966db2bf9846f3280b3ff881e423cd66adeac175113157e326f196c034ed68",
+    "prior_v2_native_bridge_calls": 0,
+    "prior_v2_observed_subprocess_audit_events": 0,
+    "prior_v2_known_spawned_children": 0,
+    "prior_v2_reason": "Exact stdin DEVNULL device open was rejected before subprocess audit/CreateProcess",
+    "prior_v2_artifacts_preserved": true,
+    "no_retry_of_same_protocol": true,
+    "preparation_failures": "Quoted .def names and synthetic fixture audit-flags/line-ending assumptions were corrected before native approval; original artifacts remain retained"
+  },
+  "terminal_artifact_scope": "Sealed negative engineering result; receipt inventory is not scientific validation or proof of native grammar enforcement",
+  "independent_engineering_result_verification": "Separate reviewer workstream; not claimed by this summary",
+  "human_scientific_reviews": "pending",
+  "scientific_validation": "not_established",
+  "followup_policy": "No rerun, schema anchoring/repair, backend forcing, or vocabulary/model stage under this protocol; any later correction requires a separate prospective plan",
+  "evidence": [
+    {
+      "path": "planning/review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json",
+      "sha256": "a4f09687d19bc2803a4b419c6c707044d6f0097515a0f5778770563f0f267ce0",
+      "bytes": 44078
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/terminal-report.json",
+      "sha256": "731a648fca7570121dde5f27e7b601b465b68de83d34bd007333b64ad16eac2b",
+      "bytes": 9779
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/journal.jsonl",
+      "sha256": "66c1f6e41527ac8f14573af9d7c339cb6439d4088e3d6ad66271ec33c5b2dadd",
+      "bytes": 8242
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/receipt.json",
+      "sha256": "73c3f2bede92d2f51238831dea8012e3e4d20a0dd9655002d9f51432bdefcaa4",
+      "bytes": 6839
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/seal-state.json",
+      "sha256": "2d1d4eff84ec786907fba754eb46c5db610463384708b2a5ba23869708866ffe",
+      "bytes": 485
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/inputs/roundtrip.json",
+      "sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+      "bytes": 271
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/stdout.bin",
+      "sha256": "cc945d26b936007f88c9fe2999748558d447283a5d2587848ea0de7e8259b0b5",
+      "bytes": 3067
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/parent-attempt.json",
+      "sha256": "b72b110dc56d3cb803a177a91bc3e7659531bf3a41de3da40724ffd2c968e235",
+      "bytes": 1489
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.attempt.json",
+      "sha256": "42a8d3ffa1cfdfb942170547eba2f1c1438132acb55ced4b879e24400db0e9db",
+      "bytes": 301
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.json",
+      "sha256": "4c6ff95d49010a7581bed42e0e1dfeec0ad85e70ef3d3528e49dda87d5a9375c",
+      "bytes": 3066
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/00-roundtrip/result.output.bin",
+      "sha256": "c8554fa148280465a7d76d473d7a35f1ef53de79d8cf48079ff928df0c6a2aa1",
+      "bytes": 271
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/inputs/convert.json",
+      "sha256": "a75dd967b16fd387da820e0bd90071aba511aee5363f700e9ac5849f8cc72911",
+      "bytes": 7563
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/stdout.bin",
+      "sha256": "2037a5606ee7896375b27b5ad8108262bb4b366874796b3553a005fff112ce74",
+      "bytes": 3066
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/stderr.bin",
+      "sha256": "98073196b103fa927fc89bb2cc281877d8189ee80375723ec35fa76a8efdcf8b",
+      "bytes": 2955
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/parent-attempt.json",
+      "sha256": "a3e25890603d97e1377414ed10e6f7f089bfe2178b2fb89e1985c55d03e734f6",
+      "bytes": 1484
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.attempt.json",
+      "sha256": "c015ff137eb61c7c91ba8a603b08bae33ebb5f24a559000ca6a5501ff0d7e03b",
+      "bytes": 300
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.json",
+      "sha256": "764137cc4abf656b5f8aea5713ad4dcb338b25a7da03b5acd3aa6585e4446774",
+      "bytes": 3065
+    },
+    {
+      "path": "data/cache/r09-finite-converter-execution-20261028T043655Z/stages/01-convert/result.output.bin",
+      "sha256": "1abe05ff0c8b9004f9e0757cd9ecdbc273ffb595417f2f8545ce5721dee87bc8",
+      "bytes": 14866
+    }
+  ]
+}

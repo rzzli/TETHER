@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T00:17:33.115475+00:00",
+  "status": "prepared_diagnostic_third_ABI_attempt_requires_separate_root_decision",
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v3.json",
+    "bytes": 63411,
+    "sha256": "88672320d5969c5dbd32e265155353f31b187b51aeaad39396f40788fdda1fb8"
+  },
+  "inputs_rehashed": 243,
+  "reparse_violations": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v3-20261029T001629Z",
+  "output_absent_at_preparation_review": true,
+  "artifacts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v6.py",
+      "bytes": 45147,
+      "sha256": "ec985415358e547db31bf988a5027099b2992a06d096f3067136ffa03f858aff"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v6.json",
+      "bytes": 21054,
+      "sha256": "676a77cc45c7c19ead757f09e7283a7343f80c91a45a658638f9d737ee965ce2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-DESIGN-v6.md",
+      "bytes": 2578,
+      "sha256": "40aaf4a4c68687a91348c454109af885f7d357f0f034d277cfe44041d33fe9a8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_observation_v4.py",
+      "bytes": 20780,
+      "sha256": "3d0382918380c0a111d6284b36dae505c44b011b7fe647b0a5033313bb317660"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PURE-CHECKS-v4.json",
+      "bytes": 38261,
+      "sha256": "ee0f4a4f0a0bccd7c2fc6958608ce5f80cb48dbe45d4d9e2f9b3866a23fed3e0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v6.py",
+      "bytes": 21945,
+      "sha256": "253f1c70fe9c336efded9ef71e5cf38a7a4943027a191a1f301c8780ff8f71a4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v6.json",
+      "bytes": 68300,
+      "sha256": "9aaa761b38c880cd12955ecd2371bf3d6e9b8032749fbe257e221f663c8c8784"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V6-PREDISPATCH-PRECHECK.json",
+      "bytes": 66474,
+      "sha256": "a778165b31679029a395c750a67e19c4e66baff3b941b9372764290c35dfc461"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V5-PREDISPATCH-FAILURE.json",
+      "bytes": 9521,
+      "sha256": "9efe90674b6e4cfdc15bda367c8a40abef046fa31c7861ccddf23e8bbda378e0"
+    }
+  ],
+  "validation": {
+    "main_tests": 20,
+    "independent_methods": 9,
+    "independent_fake_cases": 17,
+    "component_tests": 19,
+    "diagnostic_source_contract_tests": 11,
+    "static_owner_tests": 7,
+    "actual_format_prior_output_files": 13,
+    "canonical_locator_negative_vectors": 16,
+    "actual_config_role_and_synthetic_constructor_guard": "passed",
+    "local_document_links": "passed"
+  },
+  "activity_this_record": {
+    "real_SDK_constructors": 0,
+    "target_API_calls": 0,
+    "child_dispatches": 0,
+    "compiler_calls": 0,
+    "GGUF_reads": 0,
+    "network": 0
+  },
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 30,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 4194304,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "recorded_at_utc_scope": "Current preparation time; older contract lineage timestamps remain historical only",
+  "prior_failures": "Both consumed native failures and every failed pure/preparation revision remain unchanged; actual unknown module identity remains unavailable until separately authorized diagnostic execution."
+}

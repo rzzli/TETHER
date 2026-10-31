@@ -1,0 +1,68 @@
+{
+  "actual_API_calls": 0,
+  "checker": {
+    "bytes": 14796,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_integration_literals_v3.py",
+    "sha256": "70d3d6f768e0c0bc081384446745e391a940167db8ddd4fd0daa42c59716bb59"
+  },
+  "closure_delta": {
+    "bytes": 17264,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-TWO-CLOSURE-DELTA-v3.json",
+    "sha256": "9818431315898d384f6641303bc0de757abfc82da6fea28bd8f2d10f29275d46"
+  },
+  "cohort": {
+    "bytes": 4876,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+    "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+  },
+  "current_fake_dispatches": 0,
+  "errors": [],
+  "expected_baseline_fake_calls": 21,
+  "expected_baseline_journal_rows": 53,
+  "failures": [],
+  "fixture": {
+    "bytes": 312462,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+    "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+  },
+  "fixture_behavior_qualified": false,
+  "groups": 14,
+  "histories": 48,
+  "methods": 8,
+  "public_peer": {
+    "bytes": 6686,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-DATA-INDEPENDENT-PEER-v2.json",
+    "sha256": "3b32ba1bb0f3ebbd33be91aeb190e86b4da575a05196ff5d9950c69c042d0f6a"
+  },
+  "public_schema": {
+    "bytes": 37533,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+    "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+  },
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "reserved_call_capacity": 69,
+  "reserved_event_capacity": 218,
+  "root_scope": {
+    "bytes": 5276,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-PREPARATION-SCOPE-v2.json",
+    "sha256": "ba6328a7a22d43af33e1e1c15265cb87960fe3b1354bee0434474bedfd91fa16"
+  },
+  "schema": {
+    "bytes": 13345,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+    "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+  },
+  "schema_version": 1,
+  "scope": "Literal schema/frame/count/callback/expected-projection checks ONLY. No transition interpreter, generic fake binding, source helper, reviewed component or native code was executed.",
+  "status": "passed",
+  "toy_helpers_executed": false,
+  "under_test_imported": false
+}

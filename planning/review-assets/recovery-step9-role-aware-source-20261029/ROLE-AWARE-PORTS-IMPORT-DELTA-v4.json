@@ -1,0 +1,16 @@
+{
+  "after_sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7",
+  "before_sha256": "777ae88eec38719d5f4597e19e2681791f74b94ebcbe343ffc88aeb81e7be32d",
+  "behavioral_changes": 0,
+  "bytes": 21279,
+  "changes": [
+    {
+      "after": "from role_owner_v4 import (",
+      "before": "from role_owner_v3 import ("
+    }
+  ],
+  "schema_version": 1,
+  "status": "IMPORT_ONLY_COHERENT_V4_SUCCESSOR",
+  "subject_imports": 0,
+  "subject_tests": 0
+}

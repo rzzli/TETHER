@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "review_role": "independent_AI_engineering_peer_not_scientific_adjudication",
+  "disposition": "suitable_for_root_freeze_and_full_validation_pending_final_patch_tests",
+  "peer_test_results": {
+    "capacity": {
+      "passed": 9,
+      "seconds": 19.327
+    },
+    "composition": {
+      "passed": 4,
+      "seconds": 146.633
+    },
+    "all_run_before_final_schema_downgrade_patch": true
+  },
+  "independently_reproduced_defects": 4,
+  "owner_final_followup": "schema2 descriptor and binding requirement; reviewed statically, owner post-fix34 and full gates pending at report creation",
+  "actual_os_tokenizer_calls": 0,
+  "model_calls": 0,
+  "network_calls": 0,
+  "provider_cost_usd": 0,
+  "protected_outcomes_read": false,
+  "reviewer_runtime_edits": false,
+  "whole_R09_completed": false,
+  "scientific_validation": "not_attempted",
+  "tested_snapshot": [
+    {
+      "path": "src/asof/__init__.py",
+      "sha256": "010882d38472e047a8fc38985c6146abbdfe41d4a870bdfd5be790dca04330f9",
+      "bytes": 83
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "419af810d7ca8f61d7eb46c34ff3aa2fcdfc845b9e00a14cdb491a6ff99661e1",
+      "bytes": 33028
+    },
+    {
+      "path": "src/asof/study/token_capacity.py",
+      "sha256": "a713371d55bee13706ccc72cb6d3c4b03e043cff8a41f9ba4dc7db51adf4ff81",
+      "bytes": 8268
+    },
+    {
+      "path": "src/asof/study/tokenization.py",
+      "sha256": "460e2aeaa0a2e57075f448bad71559e9d76801bbaddbbccf67ebeb202c65c711",
+      "bytes": 27753
+    },
+    {
+      "path": "src/asof/study/authority_four_arm.py",
+      "sha256": "b00b164d34ece5707970b1ff82041d0f0f0abb54cb70907a44b94ab857c6af1f",
+      "bytes": 39544
+    },
+    {
+      "path": "src/asof/study/preparation_payloads.py",
+      "sha256": "0e871a0e1aa9a57aaf750c217802b6eea1906018808faefe8b4dbc49d0d78247",
+      "bytes": 6504
+    },
+    {
+      "path": "src/asof/study/resources/authority-four-arm-stimuli-v1.json",
+      "sha256": "dfcacdad1bb907ffcbade393a8c474e2b9d420f27d982d10090c4f0207a2363c",
+      "bytes": 1327
+    },
+    {
+      "path": "tests/test_study_token_capacity_peer.py",
+      "sha256": "7d75f707049645bdea3bf80c0eacc00b041ed25ea2611578175fadb508c51314",
+      "bytes": 8175
+    },
+    {
+      "path": "tests/test_study_authority_four_arm_peer.py",
+      "sha256": "966ae2193f5ff8479743a400c36983ae938a43b30ca4ecd44c5b857e69a6cfe4",
+      "bytes": 6367
+    }
+  ],
+  "final_reviewed_snapshot": [
+    {
+      "path": "src/asof/__init__.py",
+      "sha256": "010882d38472e047a8fc38985c6146abbdfe41d4a870bdfd5be790dca04330f9",
+      "bytes": 83
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "419af810d7ca8f61d7eb46c34ff3aa2fcdfc845b9e00a14cdb491a6ff99661e1",
+      "bytes": 33028
+    },
+    {
+      "path": "src/asof/study/token_capacity.py",
+      "sha256": "7bfb0fe1dc77d179503400abd8fea8ab0ad44e615321ae7536a7e230fcccc881",
+      "bytes": 8879
+    },
+    {
+      "path": "src/asof/study/tokenization.py",
+      "sha256": "460e2aeaa0a2e57075f448bad71559e9d76801bbaddbbccf67ebeb202c65c711",
+      "bytes": 27753
+    },
+    {
+      "path": "src/asof/study/authority_four_arm.py",
+      "sha256": "b00b164d34ece5707970b1ff82041d0f0f0abb54cb70907a44b94ab857c6af1f",
+      "bytes": 39544
+    },
+    {
+      "path": "src/asof/study/preparation_payloads.py",
+      "sha256": "0e871a0e1aa9a57aaf750c217802b6eea1906018808faefe8b4dbc49d0d78247",
+      "bytes": 6504
+    },
+    {
+      "path": "src/asof/study/resources/authority-four-arm-stimuli-v1.json",
+      "sha256": "dfcacdad1bb907ffcbade393a8c474e2b9d420f27d982d10090c4f0207a2363c",
+      "bytes": 1327
+    },
+    {
+      "path": "tests/test_study_token_capacity_peer.py",
+      "sha256": "7d75f707049645bdea3bf80c0eacc00b041ed25ea2611578175fadb508c51314",
+      "bytes": 8175
+    },
+    {
+      "path": "tests/test_study_authority_four_arm_peer.py",
+      "sha256": "966ae2193f5ff8479743a400c36983ae938a43b30ca4ecd44c5b857e69a6cfe4",
+      "bytes": 6367
+    }
+  ],
+  "changed_after_peer_runs": [
+    {
+      "path": "src/asof/study/token_capacity.py",
+      "tested_sha256": "a713371d55bee13706ccc72cb6d3c4b03e043cff8a41f9ba4dc7db51adf4ff81",
+      "final_reviewed_sha256": "7bfb0fe1dc77d179503400abd8fea8ab0ad44e615321ae7536a7e230fcccc881"
+    }
+  ],
+  "evidence_pins": [
+    {
+      "path": "data/cache/four-arm-capacity-short-timeout-before.log",
+      "sha256": "1416a5be18c60f0621d50a632c9850299378a12075307adb3a5b46df7ccb777a",
+      "bytes": 941
+    },
+    {
+      "path": "data/cache/four-arm-composition-peer-before.log",
+      "sha256": "46b8aee725ccb45752c28c14f4f6d83942b49d09b75d84632f5e64e2b859751b",
+      "bytes": 9094
+    },
+    {
+      "path": "data/cache/four-arm-composition-peer-after-v1.log",
+      "sha256": "2ec381a43b2b2c549992e2f139af1b0da6e548279fee76873078e2b11e582003",
+      "bytes": 1587
+    },
+    {
+      "path": "data/cache/four-arm-capacity-peer-final.log",
+      "sha256": "783306c0909364c7a6b2c1d271a205ca92e63003c81860d5f11008a92680fcaf",
+      "bytes": 1844
+    },
+    {
+      "path": "data/cache/four-arm-composition-peer-final.log",
+      "sha256": "f115e07a9e287f5b8584512982350baa5ee83bc974a0a48c92dcfbfeee976aea",
+      "bytes": 895
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/INDEPENDENT-ENGINEERING-REVIEW.md",
+      "sha256": "aa873b52ea065b3ed7afd941503856a13dc5a13f283b6fbd1233561ed89eb036",
+      "bytes": 5959
+    }
+  ]
+}

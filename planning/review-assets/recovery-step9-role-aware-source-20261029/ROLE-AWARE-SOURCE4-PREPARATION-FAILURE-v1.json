@@ -1,0 +1,37 @@
+{
+  "attempted_basename": "ROLE-AWARE-EXTENSIONS-FIRST-INDEPENDENT-LOCALIZATION-v3.json",
+  "error_class": "FileNotFoundError",
+  "helper": {
+    "bytes": 7180,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\freeze_role_aware_v4_extension_correction_v1.py",
+    "sha256": "53e1716ba89e627eb9ffbed2baf810d77fab7374780b07ba7287c4b0c85acfbb"
+  },
+  "preparation_outputs_published_before_failure": 0,
+  "reason": "Native localization record version is1, not3. This was a metadata path transcription error, not a source/test result.",
+  "schema_version": 1,
+  "status": "METADATA_FREEZE_STOPPED_BEFORE_PUBLICATION",
+  "subject_imports": 0,
+  "subject_runs": 0,
+  "unchanged_runners": [
+    {
+      "bytes": 18096,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v8.py",
+      "sha256": "d5796d9718af79d58df5c8e4fe3f877ca5e2005f2fe6d59eacf6aadb915b3bb6"
+    },
+    {
+      "bytes": 13912,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_extensions_v5.py",
+      "sha256": "8c471b7d8e5caafc8e0c1b863c5310c5a7fd978e12320b9a2f0c660e86f4638e"
+    }
+  ],
+  "unchanged_test": {
+    "bytes": 29614,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_aware_producer_extension_tests_v2.py",
+    "sha256": "ee5c39889ecca4b79bddfce5dacc4dac8e7765a505f457d982557076c173e699"
+  },
+  "verified_actual": {
+    "bytes": 6522,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-FIRST-INDEPENDENT-LOCALIZATION-v1.json",
+    "sha256": "321524454289ad0202672d359228fee5591e2946566fb5ca70cda8e5c3488bd8"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "actual_experiments_repeated": false,
+  "assessment_sha256": "225f23bc9e878573eb501fb86adcf2653d71e7a45c6637ed3855eab102b95ee8",
+  "cause": "Root QA expected the literal '300-second'; document correctly states '295.922/300 seconds'.",
+  "correction": "Check the explicit retained budget expression and pending gate, then publish corrected QA-v2",
+  "document_changed": false,
+  "recorded_at_utc": "2026-10-29T03:32:42.202183+00:00",
+  "schema_version": 1,
+  "scope": "QA literal mismatch, not a document-budget or implementation defect",
+  "status": "failed_document_QA_phrase_check_before_report_publication"
+}

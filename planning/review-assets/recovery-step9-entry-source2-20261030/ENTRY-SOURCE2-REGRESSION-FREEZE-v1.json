@@ -1,0 +1,58 @@
+{
+  "adaptation_author": {
+    "bytes": 5672,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\adapt_entry_regression_harness_v2.py",
+    "sha256": "ad3881e56f4f8a7f2724f0092a009cfde2fcb2cbdb8102cb2e2b7318a8b646de"
+  },
+  "harness": {
+    "regressions": {
+      "bytes": 7796,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_initial_regressions_v2.py",
+      "sha256": "347b97ba5fda596a0274aafab53b240c6b00a6762a22d4f3f5f5364e17240dcc"
+    },
+    "runner": {
+      "bytes": 10078,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\run_entry_source2_regressions_v1.py",
+      "sha256": "278bc6a4bdf6c068ab9943002dcb856487e639f76797f1d37a94b412d5cbc10d"
+    },
+    "support": {
+      "bytes": 15938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_independent_test_support_v2.py",
+      "sha256": "bdbde9fdd6effa9b3ffc9f30c7fc39e824ef8092b8e14504f46ff2f43e63fdb0"
+    },
+    "world": {
+      "bytes": 11981,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_independent_world_v2.py",
+      "sha256": "c7745388c42dae79942d0476bd345771a55c8a0ef842e13c367ca6613911f7c4"
+    }
+  },
+  "inputs": {
+    "bytes": 5546,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-ACTUAL-HELPER-INPUTS-v1.json",
+    "sha256": "ba549a8558740c182920d244ff66b3d4665106219a2820c1b21fb6f10d234bf5"
+  },
+  "outline": {
+    "bytes": 3428,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-REGRESSION-BINDING-OUTLINE-v1.json",
+    "sha256": "a5d4fe973cef8623b24f3016da55c19a6a3b0c62b7256ec1074f601e4099d083"
+  },
+  "preparation": {
+    "bytes": 5516,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-REGRESSION-PREPARATION-v1.json",
+    "sha256": "82baa12634f3fd5d2efa366f3520f2b4094770577a59abcc16cae0e4dead67aa"
+  },
+  "preparer": {
+    "bytes": 9897,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\prepare_entry_source2_regressions_v1.py",
+    "sha256": "dde09ecec16003013feb1757ec6479103aea5355f863d4ce6b7a21f4cb174d59"
+  },
+  "schema_version": 1,
+  "source_pause": {
+    "bytes": 5308,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE-PAUSE-v2.json",
+    "sha256": "2fc856163278a6521325b4865f8be77c148f72e09f35050fd6b54d60c635a54c"
+  },
+  "status": "FROZEN_BEFORE_FIRST_SOURCE2_IMPORT_OR_TEST",
+  "subject_imports": 0,
+  "subject_runs": 0
+}

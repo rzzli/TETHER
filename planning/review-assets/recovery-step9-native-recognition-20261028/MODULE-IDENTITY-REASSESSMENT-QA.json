@@ -1,0 +1,145 @@
+{
+  "UTF8": "strict, no BOM/replacement characters",
+  "activity": {
+    "GGUF_or_protected_payload_reads": 0,
+    "SDK_or_target_API_calls": 0,
+    "actual_children": 0,
+    "native_loads": 0,
+    "reported_image_file_opens": 0
+  },
+  "assessment": {
+    "bytes": 14888,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Module Identity.md",
+    "sha256": "6d89ff75fee17442d63b850c3603cec718bd8af4e63f4657ca573dd2c8bd77d4"
+  },
+  "checked_at_utc": "2026-10-29T00:29:22.714815+00:00",
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\qa_module_identity_reassessment.py",
+    "sha256": "e82c63c8eac5124f610edd2fd0cd31e583513d9479204894b35c9b47d417c9d5"
+  },
+  "evidence_pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V3-RESULT-VERIFICATION.json",
+      "sha256": "a92b92376c090401a70fd5ab0e699d0bd02b478b1d3490b9a64817d30cc34221"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.json",
+      "sha256": "5878717f9048398f4c710fdc4a2b796d81872b9f8d0b3383176108c2ffd4d0c5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v6.json",
+      "sha256": "9aaa761b38c880cd12955ecd2371bf3d6e9b8032749fbe257e221f663c8c8784"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v6.json",
+      "sha256": "e0d0d46367922bcf23eed2edc091549f2460a0de1e0c9e38d28d787311112a7b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\acceptance.json",
+      "sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - ABI Module Policy.md",
+      "sha256": "13f1cfefeac05cc660e0c7a5a1bb4deacd01d202c7065a9210d178bf1f97b7fd"
+    }
+  ],
+  "limitations": "Text/evidence QA only, not new application tests, native qualification or scientific review.",
+  "local_links_checked": [
+    {
+      "label": "recovery plan",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md"
+    },
+    {
+      "label": "execution checklist",
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "label": "module-policy reassessment",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - ABI Module Policy.md"
+    },
+    {
+      "label": "v5 build verification",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.json"
+    },
+    {
+      "label": "new independent lifecycle proof",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v6.json"
+    },
+    {
+      "label": "binding QA",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v6.json"
+    },
+    {
+      "label": "actual v3 diagnostic verification",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V3-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "preceding v2 result",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V2-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "first ABI failure",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "AsOf 0.3.11",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\acceptance.json"
+    },
+    {
+      "label": "detached own-worker qualification",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "label": "36 unqualified endpoint labels",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Endpoint-specific Follow-up Feasibility 2026-10-21.md"
+    },
+    {
+      "label": "17/32 observable primary registry states",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\B0 Registry Content Feasibility 2026-10-22.md"
+    },
+    {
+      "label": "0/12 jointly source-ready clinical cases",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Source Readiness Closeout and T6 Quality Next Stage 2026-10-24.md"
+    },
+    {
+      "label": "resource-path review",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RESOURCE-PATH-REVIEW.md"
+    }
+  ],
+  "ordered_next_gates": 6,
+  "schema_version": 1,
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ],
+  "supplemental_actual_checks": {
+    "attempt_row_partial_stream_and_stdout_stderr_caps": "passed",
+    "module_context_existing_32768_byte_cap": "passed",
+    "old_v2_outputs_unchanged_and_offender_remains_unknown": true,
+    "reported_module_image_not_in_approved_read_set": true,
+    "unchanged_16_system_names_and_4_package_DLL_scope": true
+  },
+  "verification_markdown": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V3-RESULT-VERIFICATION.md",
+    "sha256": "7b061c2e1411e563cd0eb260b51a361177a2ae59106e855d773e6c2f00c9b9fe"
+  }
+}

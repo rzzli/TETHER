@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "installed_collected_source_relocation_verified",
+  "result": {
+    "actual_model_calls": 0,
+    "automatic_retries": false,
+    "budget": {
+      "max_calls": 16,
+      "max_cost_usd": 0,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_retries": 1,
+      "max_seconds": 300
+    },
+    "elapsed_seconds": 133.75,
+    "fixture_declared_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 384,
+      "output_tokens": 384
+    },
+    "input_reserved": 22067,
+    "native_processes": 0,
+    "observed_model_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "output_reserved": 6144,
+    "pure_invocations": 2,
+    "recorded_calls": 6,
+    "role": "evaluation_only",
+    "run_id": "075fa117-977d-48dd-8de2-df2df22642cf",
+    "schema_version": 1,
+    "scientific_validation": "not_attempted",
+    "source_authority_sha256": "84ff16c264c48daf995dc9533bb42227c7c53964edd4c039eae468286b3d6520",
+    "source_scope": "receipt_verified_collected_case_not_scientific_validation",
+    "strategy": "literal_case_overlap_then_id_v1",
+    "tokenizer_processes": 6,
+    "track": "authority_bound_collected_source_four_arm_recorded",
+    "receipt_sha256": "a6c2bae1bdcb7ba85f4fe184d6eecfa7432c4f2b9c2a1986e99b942425c9103d",
+    "sealed_elapsed_seconds": 157.81299999996554
+  },
+  "isolated": true,
+  "installed_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-collected-wheel-20261027\\ingestion-environment",
+  "version": "0.3.7",
+  "pyarrow_version": "21.0.0",
+  "guards": {
+    "live_code": [],
+    "unapproved_source": [],
+    "imports": [],
+    "dispatch": [],
+    "original_bundle": []
+  },
+  "elapsed_seconds": 53.34400000004098,
+  "model_calls": 0,
+  "tokenizer_calls": 0,
+  "network_calls": 0,
+  "explicit_original_input_roots": {
+    "project": "D:\\Projects\\drug_target_agents",
+    "raw": "E:\\projects_data\\drug_target_agents_data"
+  },
+  "original_source_input_count": 27,
+  "original_bundle_reads_denied": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-qualified-20261027T231243Z",
+  "restored": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-generation-frozen-20261028\\037",
+  "run_bundle_relocation_only": true,
+  "raw_inputs_restored": false,
+  "archived_code_executed": false,
+  "scientific_validation": "not_attempted"
+}

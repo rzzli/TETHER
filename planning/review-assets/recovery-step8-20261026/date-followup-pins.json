@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "original_pins_unchanged": true,
+  "original_pins_sha256": "fc09660b2efd1485f04f0d50ca4f7ccf603d7027d61ac6ae5256f784c1782457",
+  "artifacts": {
+    "planning\\review-assets\\recovery-step8-20261026\\date-and-review-addendum.md": {
+      "sha256": "1135f273a528b005ab7f45a91095414305d98093cdf3b72e45732f0d70ba181c",
+      "bytes": 8431
+    },
+    "planning\\review-assets\\recovery-step8-20261026\\analyze_dates.py": {
+      "sha256": "ab2d117c6c2d5171a53ae625b94d8287faf34c6ac711ce5d17e8809af5f0c329",
+      "bytes": 3466
+    },
+    "data\\cache\\recovery-step8-date-followup-20261026\\date-analysis.json": {
+      "sha256": "9932c4e5b8083be18debb47adaf7b379302a1f82c4bc0c75926e53cbca23b754",
+      "bytes": 47403
+    }
+  }
+}

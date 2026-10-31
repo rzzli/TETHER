@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "role": "prospective_engineering_execution_protocol",
+  "created_at_utc": "2026-10-27T21:28:23.522811+00:00",
+  "version": "0.3.6",
+  "helper_sha256": "fda2ddea9412fef6706842d0e91654cc76d5b999b2ab5d66f50666f482ffa124",
+  "source_pins": {
+    "path": "data/cache/recovery-step9-four-arm-validation-20261026/before-source-pins.json",
+    "sha256": "382d09a9328a3662d9b6e7a17910ef4ede98ae31750d9f68405fc86e6e7914f2"
+  },
+  "full_validation_sha256": "66a6525b951a7a26e9c3eb93b8baec6033613f803af9574df328226b6afa5cf8",
+  "code_validation_sha256": "7c678f9b436ab11284c42de0345c9445b885a8ba9c99bb6819ea981d6224aadd",
+  "inventory_path": "planning/review-assets/recovery-step5-20261026/inventory.json",
+  "model_root": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-tokenizer-mirror-20261027T212545Z",
+  "fixture": "invented-six-v1",
+  "policy": "literal_case_overlap_then_id_v1",
+  "selected_ids": [
+    "id03",
+    "id04"
+  ],
+  "maximum_tokenizer_children": 6,
+  "actual_model_calls": 0,
+  "provider_cost_usd": 0,
+  "automatic_retries": false,
+  "budget": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0,
+    "max_seconds": 300,
+    "max_retries": 1
+  },
+  "source_change": false,
+  "real_source_expansion": false,
+  "preflight_sha256": "b9f3fdd9a7400af5e8e4453c7755e393c11a7fd21318e6cbdae4c69e688e3bdc",
+  "interpretation": "One finite invented recorded qualification, not native or scientific validation",
+  "helper_review_sha256": "894858fc41fae559cf39daeea2418aea8e6c6f052c550b6d72dfcb23b8b41cb1",
+  "qualification_attempt": 2,
+  "mirror_sha256": "920da7c14c0ddc19ba602c8aed4eed289aa2bef28304cbb1b3497ab7ef3841a9",
+  "previous_failed_protocol_sha256": "9ee7a7c395f62c4346afcfb4c3c4e55f16c524627c05066aadd566c93bea561e",
+  "previous_failure_sha256": "fc87c38c8cb28034074d9314ffd7b3cf0d4105f0daac33c096e1d0a409247435",
+  "previous_partial_closeout_sha256": "9e1a18316153b018966a5f0c18791815bd1727963a7dc629db2b15e66426eeb7",
+  "storage_remediation_sha256": "2bce539c0ce5f486086814358a5aac26b129a28d9718939769063b3d0d2bd565",
+  "prior_failed_attempt_tokenizer_children": 2,
+  "maximum_new_tokenizer_children": 6,
+  "maximum_children_across_these_two_qualification_attempts": 8,
+  "factor_changed": "Physical model asset root only; all35 mirrored files verified byte-identical",
+  "E_reads_during_second_attempt": 0,
+  "no_third_attempt_authorized": true
+}

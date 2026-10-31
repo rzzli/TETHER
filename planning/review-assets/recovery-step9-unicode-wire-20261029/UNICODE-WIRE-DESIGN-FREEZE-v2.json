@@ -1,0 +1,19 @@
+{
+  "author": {
+    "bytes": 16750,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\author_unicode_wire_design_v2.py",
+    "sha256": "0ec81954db616cdf074c536e65870f949430d2a3ee9912bed0d4f70443290389"
+  },
+  "contract": {
+    "bytes": 86124,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+    "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+  },
+  "execution_authorized": false,
+  "fixed_case_overhead_bytes": 6408,
+  "footer_rows_each_max8192": true,
+  "implementation_authorized": false,
+  "schema_version": 1,
+  "semantic_sha256": "9a313df2dca6632a0863f547322e1aeced26346a3ab709686f07c16623c714e3",
+  "status": "CORRECTED_DESIGN_FROZEN_FOR_REVIEW_BEFORE_LITERAL_FRAMING_FIXTURES"
+}

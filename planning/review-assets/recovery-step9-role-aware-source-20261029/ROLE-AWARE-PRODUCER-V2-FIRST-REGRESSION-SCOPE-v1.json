@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "FINITE_V3_ORACLE_ACCEPTED_AND_V2_FIRST_REGRESSIONS_AUTHORIZED",
+  "source_pause_sha256": "ddc92af0f11b94652ad90a34fbbcd4b428c8a01566dcf09e8ec750ead89fed6f",
+  "root_pin_check_sha256": "c9ca994602f1a036708b81aa271c238b229a830727fa2d04cab087648bbbd067",
+  "combined_static_peer_sha256": "2e3c90ab67d643d7fa96962e7f5a75982f9ac4ab08936732b32047e9685a26c7",
+  "oracle_v3": {
+    "freeze_sha256": "8daa9a4dbc234c1edfe14694869c03fa3d5df7e9c15472d63673a09ff9cd5a2c",
+    "corpus_sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7",
+    "root_choice_sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a",
+    "verified": "12 pins match. All40 base objects and225 mutation recipes/bytes/hashes/IDs remain unchanged. Exactly9 required codes change for computed R/C/E mismatches, independently deriving R17/C23/E198. All134 anchors and frozen test-source a3051f08 remain unchanged. All invalid mutations still require rejection."
+  },
+  "source_v2_delta": "Only FormatError lifecycle assignment while protecting code/offset/path and their slots, recursive handling of exact internal immutable diagnostic containers, and the explicit v2 own-module import map. Reservation validation is unchanged.",
+  "prior_evidence": {
+    "first_v1_proof_sha256": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa",
+    "failure_localization_sha256": "f13fb458432e3d1c2de0f969e90dbce760bd673af4c76fcba0f33aaf059e5896",
+    "actual_source_imports": 4,
+    "actual_forwarded_codec_calls": 83,
+    "actual_source_check_sites": 1288,
+    "completed_method_outcomes": null,
+    "unknown_reason": "Unittest traceback cleanup aborted the suite. The retained forwarding counts are known; unreturned method/suite results and remaining coverage are not. Owner diagnostic refreeze was identified statically, not reproduced in a V1 owner run."
+  },
+  "phase_order": ["CODEC_FIRST", "LEGACY48_FIRST"],
+  "phase_gate": "Use the fresh V5 runner and immutable phase-specific bindings. CODEC_FIRST must pass before the first actual V2 LEGACY48_FIRST run. Preserve each first result and all V1 evidence. Failure stops advancement for a named correction; no oracle weakening or hidden replay.",
+  "deadline": "Original started+60 cooperative suite deadline per explicit phase, actual callback identity and late-result veto; original synthetic owner100/395/400 clocks unchanged. No hard callback-free hang guarantee.",
+  "allowed": "Fresh exact four v2 modules, fixed synthetic literals and legacy fixtures only. Closed in-memory toy-helper execution is permitted in the genuine producer tests. Trusted harness writes named local proof files.",
+  "not_authorized": ["producer extensions before codec/legacy pass", "large fixture preparation or run", "real entry/SDK/ctypes/Win32/native/model execution", "original target or protected outcome access", "downloads or paid calls", "application/default changes"],
+  "provider_spend_usd": 0,
+  "qualification": {"source_accepted": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

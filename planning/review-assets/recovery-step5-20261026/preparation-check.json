@@ -1,0 +1,16 @@
+{
+  "status": "planning_preparation_verified_not_execution_qualified",
+  "retained_pins_rehashed": 17,
+  "model_runtime_assets_verified": 56,
+  "case_count": 3,
+  "payload_count": 6,
+  "model_calls": 0,
+  "spend_usd": 0,
+  "postvalidation_schema_sha256": "b91d4f97fae1bcb42007bbad58c30f3b909dec8a4dd56cf7937a0b9b1bb19051",
+  "remaining": [
+    "runtime simplified postvalidator and adapter qualification",
+    "stronger model control unavailable",
+    "independent human scientific review unavailable",
+    "actual fit/peak-memory/latency unmeasured"
+  ]
+}

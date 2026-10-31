@@ -1,0 +1,40 @@
+{
+  "allocation_audit": {
+    "bytes": 21358,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-ALLOCATION-LIFETIME-AUDIT-v4.json",
+    "sha256": "9d6f0240b9c2bf2cba533c64775109f8df58736cb1c2c332c307cac52faf7871"
+  },
+  "clock": "Own original reference-main sample +300s, including metadata processing. Separate from future producer original entry clock; cooperative, no hard callback-free hang or persistence-time bound.",
+  "execution": "One exact helper invocation in a separate pinned Python process. Independent periodic SHA256 prefix references only; 213 historical size values and209 frozen fictional bytes form216 invented descriptors.",
+  "first_result": "Exclusive attempt and result. Keep partial hashes on failure; descriptors None and no producer advancement. No timing retry.",
+  "helper": {
+    "bytes": 8819,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\prepare_role_aware_large_reference_v1.py",
+    "sha256": "773860bbc34e5c4b1e1ee9052da02f64f054ef930076e42c61262e49dabf484e"
+  },
+  "independent_code_peer": {
+    "bytes": 8795,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-INDEPENDENT-ALLOCATION-REVIEW-v1.json",
+    "sha256": "2bf0f301058745d6fdf23978e74b4e8ba1615d48d5ec463fe3100efd9d5561d4"
+  },
+  "memory": "One1MiB periodic block plus256B seed and bounded metadata. No whole-bulk bodies or source-owned values are used as an oracle. Actual heap/RSS remain unknown.",
+  "not_authorized": [
+    "producer source imports or calls",
+    "actual large producer run",
+    "original or protected targets",
+    "SDK/ctypes/Win32/compiler/native/model calls",
+    "downloads, paid calls, application/default changes"
+  ],
+  "outputs": [
+    "ROLE-AWARE-LARGE-REFERENCE-ATTEMPT-v1.json",
+    "ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json"
+  ],
+  "provider_spend_usd": 0,
+  "schema_version": 1,
+  "small_acceptance": {
+    "bytes": 2985,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json",
+    "sha256": "096f5781b0c5d92208fcbd6a0da21528939f668be62ccd573c433ae7517b7445"
+  },
+  "status": "ROOT_AUTHORIZED_REFERENCE_PREPARATION_ONLY"
+}

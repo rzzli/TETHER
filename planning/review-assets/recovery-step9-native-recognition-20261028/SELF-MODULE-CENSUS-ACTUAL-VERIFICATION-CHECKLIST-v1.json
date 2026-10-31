@@ -1,0 +1,92 @@
+{
+  "activity": {
+    "actual_parent_child_SDK_or_target_execution": 0,
+    "global_process_scans": 0,
+    "reported_image_file_reads": 0
+  },
+  "bases": {
+    "SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.json": {
+      "bytes": 22617,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.json",
+      "sha256": "51c255ec00aaf050a833682f4a41abd27f6b82fe6ffadef18a8e1a92d6756306"
+    },
+    "SELF-MODULE-CENSUS-PARENT-MECHANICS-PEER-v1.json": {
+      "bytes": 8535,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-PARENT-MECHANICS-PEER-v1.json",
+      "sha256": "19c2b386d771c8682c520a2eef8469e0cb24b874e4a19dc83e75ecd5f0817702"
+    },
+    "SELF-MODULE-CENSUS-PARSER-INDEPENDENT-PROOF-v1.json": {
+      "bytes": 3711,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-PARSER-INDEPENDENT-PROOF-v1.json",
+      "sha256": "69f20cb3683f818402bdfcc38037d3e8a68bcfdad046c15913dc3a49a1481bb8"
+    },
+    "SELF-MODULE-CENSUS-SEALER-INDEPENDENT-PROOF-v1.json": {
+      "bytes": 3924,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-SEALER-INDEPENDENT-PROOF-v1.json",
+      "sha256": "d55b0ce120056bc8e925a871ef0beb4a74f9def39c86193097c93eaaf55fed78"
+    },
+    "SELF-MODULE-CENSUS-WIRE-v2.json": {
+      "bytes": 9717,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+      "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+    },
+    "module_census_status_seal_v1.py": {
+      "bytes": 6025,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_status_seal_v1.py",
+      "sha256": "7794819e3b8013847f0f5e8912d8b8424edfea8c2a95a09354b0918409daf682"
+    },
+    "module_census_validation_v1.py": {
+      "bytes": 17312,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_validation_v1.py",
+      "sha256": "f5b8b4496018bfa66473bb694c99c3588a49bbb1060b814196f1ba80b32b95db"
+    }
+  },
+  "checks": [
+    {
+      "requirements": [
+        "Rehash final source/authority/static manifest/protocol and accepted finite inputs; verify reviewed compiled source/header/EXE lineage.",
+        "Exact archived protocol bytes and finite output-file universe; classify any empty directories separately.",
+        "Early receipt/post-lease cleanup/final seal complete hashes and journal hash chain; missing seal or any authoritative failure/late/afterseal marker vetoes a positive result."
+      ],
+      "stage": "Authority and exact artifact closure"
+    },
+    {
+      "requirements": [
+        "Exactly one reserved CreateProcess and at most one Resume; exact EXE, command, environment, detached/suspended/JOB_LIST and three-stdio HANDLE_LIST.",
+        "Owned PID/image/creation/strict-parent records and raw prelaunch/assigned/running/final Job query responses; strict generic total1, active0-or1 consistency and only own PID, final Active0/list0.",
+        "Memory limits/peaks and snapshot query caps; bounded complete child lifetime/exit/reaping with terminal observations before original handle cleanup.",
+        "Capture retained/observed/truncation fields against exact stdout/stderr bytes; physical pipe EOF is separate from observed process exit.",
+        "All original/recheck lease ownership and per-close outcomes, primary-plus-late failures, postcleanup seal; unknown creation/return/missing response remains unknown."
+      ],
+      "stage": "One owned process and terminal observations"
+    },
+    {
+      "requirements": [
+        "Own artifact entries pass no-reparse/regular-file guards and aggregate2MiB/attempt4KiB/row64KiB/reserve64KiB caps before content reads.",
+        "Exact attempt and metadata-only stdout; strict duplicate-free/nonfinite-free bounded newline JSONL.",
+        "Use pinned f5b8 pure-parser AST or exact bound equivalent without importing launcher/SDK; independently reconstruct numeric UTF16 units, length, termination, truncation, UTF8 conversion flags and complete raw-line byte framing.",
+        "Require query reservation/return ordering/counts, one Snapshot/First, at most64 complete rows, natural Next false/error18, one snapshot Close and complete retained SystemDirectory; incomplete/error/65th/clipped metadata cannot be complete.",
+        "Raw module metadata must precede classification; recompute every ASCII-case/slash-only predicate/category and exact known EXE/core4 presence from retained units, with unresolved partial metadata never eligible.",
+        "Recompute enumeration/footer counts, attempt-plus-prefix byte counters, declaration bounds and explicit Api=false/targetCqueries0/ABIeligibilityfalse."
+      ],
+      "stage": "Finite child format and raw reconstruction"
+    },
+    {
+      "requirements": [
+        "Reported image strings stay data: no stat/open/hash/resolve/exists calls on them and no global process scan.",
+        "Group only retained current-process snapshot metadata; classification is not permission.",
+        "Separate raw API observations, child self-reports and source-derived zero-explicit-target-call invariants.",
+        "Do not infer unknown image identity/trust, complete permanent/system inventory, actual loader cause, historical identity, old-run identity or ABI eligibility."
+      ],
+      "stage": "Scope and presentation"
+    }
+  ],
+  "exit_rule": "One finite actual-result assessment and a separately explicit minimum policy decision; no retry-until-pass or further OS diagnostic expansion.",
+  "prerequisites": [
+    "Final exact bound parent/source/authority/static manifest/protocol peer review.",
+    "Separate root once-only census dispatch decision."
+  ],
+  "recorded_at_utc": "2026-10-29T01:32:59.205438+00:00",
+  "schema_version": 1,
+  "status": "PROSPECTIVE_finite_verification_only_no_execution_authority"
+}

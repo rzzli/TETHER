@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "role": "development_design_review",
+  "status": "conditionally_approved_for_narrow_implementation",
+  "date": "2026-10-26",
+  "runtime_edited": false,
+  "tests_run": false,
+  "tokenizer_calls": 0,
+  "model_calls": 0,
+  "protected_payloads_read": false,
+  "required_conditions": [
+    "explicit caller deadline for token-mode verify_study and all nested quote replay",
+    "authenticated reservation acquisition before allocation validation",
+    "request/payload retained before quote; complete config2 only after verified binding",
+    "absolute deadline checked after quote/document validation immediately before one-use consumption"
+  ],
+  "scope": "one invented retrieved request, one policy, six recorded cells and two pure arms under one unchanged Budget; not scientific or whole-R09 completion",
+  "pins": [
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v2.md",
+      "sha256": "8140e6c7ca169a1d86bc71d4bf883eb7f61f6b792afaafa95623181a4832b562",
+      "bytes": 12558
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v2.json",
+      "sha256": "5e133d02ec71ea53117ade1a998df73e54b116e7ac835a1c1485f297eace1a70",
+      "bytes": 6847
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/TOKEN-QUOTE-RESULT-v2.json",
+      "sha256": "23e42fd792435435fbaee3f5a9be5481b58d3729e86f71852cde3408465c38ff",
+      "bytes": 7031
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/INDEPENDENT-CONTRACT-REVIEW-v2.md",
+      "sha256": "9eb6215478a90013126fee2ca7991140c1b68545e18b9af841a9dd89e5ad97c3",
+      "bytes": 7669
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "71ffef361f1c71cdd2b759dafab1059d7216cbaf739952845ea6e0d038db0518",
+      "bytes": 28202
+    },
+    {
+      "path": "src/asof/study/recorded.py",
+      "sha256": "beb14f0528de5edf9caddf4ea66a71e3ebae7e8e41517903226bb68d0bd04705",
+      "bytes": 4394
+    },
+    {
+      "path": "src/asof/study/fixed_evidence.py",
+      "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10",
+      "bytes": 18519
+    },
+    {
+      "path": "src/asof/study/tokenization.py",
+      "sha256": "65b69f8b0d325bb9c851bea5894c54975526254e616c83790350a6ddc7a93f60",
+      "bytes": 27668
+    },
+    {
+      "path": "src/asof/study/baselines.py",
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "bytes": 8475
+    }
+  ]
+}

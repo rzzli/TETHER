@@ -1,0 +1,202 @@
+{
+  "AST_bindings": {
+    "execute": "90faafc02456eb365e68c070df77f9d09bbca970d52f09e310c4338f3c588999",
+    "own_abi_argv": "40cb02066e75fa2dc9d6c3e7cd054cbd3495a2510e9362f0d85402bc30642aa1"
+  },
+  "budgets": {
+    "active_limit": 1,
+    "automatic_retry": false,
+    "child_cleanup_reserve_seconds": 2,
+    "child_including_cleanup_seconds": 30,
+    "commit_bytes": 268435456,
+    "final_generic_job": "TotalProcesses1/ActiveProcesses0/TotalTerminatedProcesses0/empty PID list; no resources exception",
+    "job_pid_capacity": 16,
+    "job_snapshot_maximum": 40,
+    "maximum_attempts": 1,
+    "parent_finalization_reserve_seconds": 5,
+    "parent_seconds": 60,
+    "stream_bytes": 65536,
+    "terminal_capture_polls": 64,
+    "terminal_drain_seconds": 0.25
+  },
+  "build_authority": {
+    "bytes": 18384,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V4-RESULT-VERIFICATION.json",
+    "sha256": "48535ac53123db5246c95b7d7ed9211695531e687346e9854ca98d5c51d17473"
+  },
+  "contract": {
+    "bytes": 18580,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v3.json",
+    "sha256": "db63e7431ec14442dc038543bce810ea9b9be98fd73ea0b4354fce6f8c623dd2"
+  },
+  "correction_disposition": "Preliminary d922 review did not establish the parent preexisting-interruption boundary. The failed draft/pure setup and late-read regression remain preserved; final v4/v3 components and fresh proofs address those prospective source defects without altering original actual observations.",
+  "design": {
+    "bytes": 3075,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-DESIGN-v3.md",
+    "sha256": "0d1ad132ff53e3ce15de6d6cd8f1dd3f61f75fb96a7e83ccbc2dad2a27dd8c1b"
+  },
+  "fresh_verification": {
+    "CPU_binary_GGUF_model_pack_payload_inputs": 0,
+    "SDK_prepare_config_or_execute_draft_called_by_parent": false,
+    "component_tests": 19,
+    "creation_flags": "0x0008040C",
+    "duplicate_paths": 0,
+    "exact_input_set": "198 actual-format precheck records plus four final main/independent proof/checker records",
+    "executables": "New c5df bridge plus accepted venv/base Python only; no compiler or harmless worker",
+    "existing_files_and_ancestors_lstat": 252,
+    "finite_System32_DLLs": 16,
+    "fixture_hash_mismatches": [],
+    "independent_fixture_file_hashes_verified": 173,
+    "independent_fixtures": 15,
+    "independent_methods": 8,
+    "input_hash_mismatches": [],
+    "main_fixture_file_hashes_verified": 213,
+    "main_tests": 19,
+    "original_and_detached_SDK_native_gates": false,
+    "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z",
+    "output_absent": true,
+    "protocol_inputs": 202,
+    "reparse_or_symlink_violations": [],
+    "runtime_DLLs": 4,
+    "strict_parser_ASTs_unchanged": true,
+    "strict_parser_prior_vectors": 230
+  },
+  "helper": {
+    "bytes": 41809,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v4.py",
+    "sha256": "f3bbd60e3c84c5eb99c2ba700b73dda81da45d6f2e039c74fa5b9fb88f4d25b9"
+  },
+  "limitations": [
+    "Source-only clearance is not execution permission; root must freshly bind exact helper/protocol/peer and externally bound d0f79 integration binding before any separately authorized once-only attempt.",
+    "No actual new ABI outcome is available. The first required_export_missing failure and its unavailable final Job/peaks/full EOF remain negative/unknown as recorded.",
+    "Harmless fixture qualification is observed-host/source scoped. DLL/CRT/OpenMP initialization effects are uninstrumented; this does not establish universal containment or zero registry/file/network effects.",
+    "Child module path inventory is reported before the two explicit queries; there is no final/global module inventory or initializer-effect attestation.",
+    "The unchanged generated header/binary contains CPU/GGUF metadata names; this review establishes no CPU binary/model/GGUF payload input or read, not absence of those strings.",
+    "No scientific, model, grammar or recognition completion is established."
+  ],
+  "material_blockers": [],
+  "preparation": {
+    "bytes": 4903,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PREPARATION-v2.json",
+    "sha256": "9ef52a8160f7145e196426e17ce09184adf845e26db22a554bfd1e75b1de519f"
+  },
+  "preserved_negative_evidence": [
+    {
+      "bytes": 33282,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v2.py",
+      "sha256": "d92297033bea4897434d1e5187efc148d010ccdb7422e23c6ff35e60711f8a4c"
+    },
+    {
+      "bytes": 673,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-PARENT-INTEGRATION-DRAFT-PROOF-v2.json",
+      "sha256": "31cde055a2d7af0d85f4637760349946006e418716ffc1006a9f95bb4a26adef"
+    },
+    {
+      "bytes": 39092,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v3.py",
+      "sha256": "89a2096ed5ae97b6f4174120e996f6faf12913adaa75749ac9e9618345ff5a48"
+    },
+    {
+      "bytes": 4191,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v3.json",
+      "sha256": "15f666fa0a035d0365ac387fa7bfcc59ecf51dc2ddf0f4b9ac0a052da6df25cb"
+    },
+    {
+      "bytes": 1825,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-ARGV-INTEGRATION-REGRESSION-v3.json",
+      "sha256": "b71dcbc077a51dcf1388f2f75d971bc7466e662d3bac25877c71541758f8151e"
+    },
+    {
+      "bytes": 10226,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v2.py",
+      "sha256": "f910dd6e4075a8e12c78dbe86f278c0e2c4ac42632db596d4c98a80f2c48667a"
+    },
+    {
+      "bytes": 1659,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v2.json",
+      "sha256": "5750edd55649c2a11043cc6886b83116660ed606996e5cf23964c33e7be07536"
+    },
+    {
+      "bytes": 9479,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V1-RESULT-VERIFICATION.json",
+      "sha256": "425a2e609f4e2ac6fb1170fbca1ecc66a637f5faa59635fc8175dabff084202a"
+    }
+  ],
+  "protocol": {
+    "bytes": 53696,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v2.json",
+    "sha256": "58154061a1a2dff9e3369a01662cb2b8be601012ba16c2b694f98255067adf6d"
+  },
+  "pure_evidence": [
+    {
+      "bytes": 38261,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PURE-CHECKS-v3.json",
+      "sha256": "f043c29a3342a821d74a0d09cebdd56c13d8a058c3d9fb1b65b2a186a289d690"
+    },
+    {
+      "bytes": 19725,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_observation_v3.py",
+      "sha256": "1656a5d93e8290a56650bd1c5d537d53e38f1b95e1ff7b8663f7323639b6537d"
+    },
+    {
+      "bytes": 57323,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v4.json",
+      "sha256": "31067ddb02aeed26c4ca20e68224f926ca6e4e4bc60b610fc27584a0a4fdf320"
+    },
+    {
+      "bytes": 18531,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v4.py",
+      "sha256": "6244564ed4e9995aaa35a3011effb073365899a03316ad6e21594a63f11f7aa0"
+    },
+    {
+      "bytes": 4880,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v4.json",
+      "sha256": "d0f79c4d8394139d9f8c28c3aa8253a2af72532a2efcd8461fb8c8fd430cfa37"
+    },
+    {
+      "bytes": 55379,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V4-PREDISPATCH-PRECHECK.json",
+      "sha256": "93f96e99cde90719b61d111a7fec065118a3ce983d9adb75dd995164355c8583"
+    },
+    {
+      "bytes": 1377,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v3.json",
+      "sha256": "999447824c2c3b22b08a4d2991cb16c4773e1f271a1c42912b5230c2ba6ed637"
+    },
+    {
+      "bytes": 17386,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_terminal_component_v3.py",
+      "sha256": "90db30fe0f97ad6a1e80ff3e1c83584e2c077aef73f8c46d7156f8cacaf0a9ee"
+    }
+  ],
+  "recorded_at_utc": "2026-10-28T23:35:18.383567+00:00",
+  "review_activity": {
+    "CPU_GGUF_model_payload_reads": 0,
+    "SDK_API_calls": 0,
+    "child_dispatches": 0,
+    "compiler_calls": 0,
+    "helper_or_checker_reruns": 0,
+    "source_and_data_hash_reads": true,
+    "target_DLL_loads": 0
+  },
+  "review_scope": "Independent parent/component source and retained pure evidence review; no runtime permission or actual ABI qualification",
+  "reviewer": "os_accounting_peer",
+  "schema_version": 1,
+  "source_findings": [
+    "Own abi_argv is bound to the new c5df bridge and exact runtime. All three parent configuration/validation/create call sites use it; four argv items, NUL/UTF16 command cap and Windows list2cmdline bounds remain. No original SDK global or method is patched.",
+    "The new build proof hash, status, EXE/source/copied source/header/protocol/receipt/terminal and selected output identities are explicitly checked. The build result was independently verified by another agent; this parent review is not self-approval of the build helper authored by this reviewer.",
+    "The parent invokes the terminal component once from finally before unchanged owner cleanup. A known nonzero owned exit remains primary while eligible bounded capture EOF, raw Job and memory/peak responses are independently retained.",
+    "Raw Job response is retained/published before strict generic final policy evaluation; failed/late raw responses and read bytes remain visible without success or further API admission. Terminal complete requires confirmed creation+exit, nontruncated EOFs, published raw snapshot, strict finished predicate, returned limits and no observation errors.",
+    "Preexisting KeyboardInterrupt/SystemExit bypasses new terminal observations. Component interruption, binding/call interruption, artifact-validation interruption and unchanged cleanup interruption metadata also latch cleanup-only handling and suppress new input recheck leases.",
+    "Unknown creation or absent observed exit remains pre_cleanup_creation_or_exit_unconfirmed; no PID-open/recovery/global scan is added, and physical pipe EOF does not establish child exit.",
+    "Final rechecks reserve each call and retain per-call return/close outcomes, counts and completed/failed/interrupted/skipped disposition. A failed first close survives successful sealer retry. Primary, terminal errors, owner cleanup, input recheck, publication and late/seal failures remain separate.",
+    "Success requires complete terminal observations, observed exit0, strict five-row typed artifact validation, reaped/clean owned cleanup and authoritative post-lease/terminal sealing. Missing or failed seal and every authoritative failure marker veto success.",
+    "Exactly one explicit version call and one defaults call are permitted by this fixed ABI route. Wider25 export resolution is not invocation. Core4 plus finite16 System32 candidates remain the only DLL inputs; no CPU binary/GGUF/model/backend call, compiler, recognition or IOCP reuse is admitted."
+  ],
+  "status": "CLEAR_exact_parent_source_protocol_and_pure_evidence_for_separate_root_decision",
+  "terminal_component": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  }
+}

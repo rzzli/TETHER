@@ -1,0 +1,147 @@
+{
+  "AST_checks": {
+    "changed_owner_methods": [
+      "__init__",
+      "finish",
+      "hash_files",
+      "result"
+    ],
+    "gate_and_checker_order_unchanged": true,
+    "unchanged_owner_methods": [
+      "admit",
+      "check",
+      "check_stage",
+      "cleanup_emit",
+      "close_all",
+      "emit",
+      "latch",
+      "now",
+      "proof",
+      "report_time",
+      "stage"
+    ]
+  },
+  "activity": {
+    "SDK_target_compiler_calls": 0,
+    "old_original_or_payload_reads": 0,
+    "reviewed_source_tests_or_helpers_executed": 0,
+    "source_test_edits": 0
+  },
+  "approval_basis": "Delivered root source/pure v2 instruction, as transparently recorded by proof.root_approval; no separate root decision file is invented.",
+  "artifacts": {
+    "VERIFIER-OPEN-RETURN-REGRESSION-BEFORE-v2.json": {
+      "bytes": 5836,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-OPEN-RETURN-REGRESSION-BEFORE-v2.json",
+      "sha256": "7cd1ab36c772256e982d8e766aad8ab4792be6def2161b7fef83482e7b034085"
+    },
+    "VERIFIER-RECOVERY-DESIGN-CONTRACT-v2.json": {
+      "bytes": 14086,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-DESIGN-CONTRACT-v2.json",
+      "sha256": "7bff14386239d908ca33fd1a11214e95d90010b312aed3d23ac07b9fd69e3c6f"
+    },
+    "VERIFIER-RECOVERY-IMPLEMENTATION-v2.md": {
+      "bytes": 2284,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-IMPLEMENTATION-v2.md",
+      "sha256": "d431620487b31c90c33a989fcfad236a85aaa2a4887c348611e3ff4bf9f9441a"
+    },
+    "VERIFIER-RECOVERY-INDEPENDENT-HOLD-SUPPLEMENT-v1.json": {
+      "bytes": 2897,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-INDEPENDENT-HOLD-SUPPLEMENT-v1.json",
+      "sha256": "b61dc485f5cae14499658a4cc22deced68fad3f95476c44028edf02daa5dca2c"
+    },
+    "VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v1.json": {
+      "bytes": 9396,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v1.json",
+      "sha256": "cdc450bd151d87251117e64491ff5850af90eb231b970c22d9b8225d2f04f1e8"
+    },
+    "VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v1.json": {
+      "bytes": 5934,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v1.json",
+      "sha256": "4ac3271c3b488fae45ed266585164aed700e1486f344d6eb2bc1f6f719e2ce65"
+    },
+    "VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json": {
+      "bytes": 7481,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json",
+      "sha256": "f6ddcadf030230dc24672836b2a1d430286148fc06169b6210a5f3af79ba6a10"
+    },
+    "check_deterministic_verifier_v2.py": {
+      "bytes": 23538,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\check_deterministic_verifier_v2.py",
+      "sha256": "17ab0c8f9f5254dc88cb440d7fa8c992b03af170733a47cd2f9f0a1794f4c55a"
+    },
+    "deterministic_verifier_v1.py": {
+      "bytes": 23219,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v1.py",
+      "sha256": "b15142efac14d8beafc19f9c71b5d594737063303f5096f627e08e7f04adac4b"
+    },
+    "deterministic_verifier_v2.py": {
+      "bytes": 24716,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+      "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+    },
+    "retain_verifier_pure_proofs_v2.py": {
+      "bytes": 4186,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\retain_verifier_pure_proofs_v2.py",
+      "sha256": "4d7c572c6640ce1a557eae1916db3a9766bbec59dd35e9bccd25446ee8ea7638"
+    }
+  },
+  "evidence": {
+    "author_errors": 0,
+    "author_failures": 0,
+    "author_methods_passed": 23,
+    "old_witness_errors": 0,
+    "old_witness_failures": 3,
+    "old_witness_methods": 4,
+    "pure_test_timing": "Measured elapsed0.0 is clock-resolution output; runnertext0.015s. No real-time resource-fit inference.",
+    "reviewer_reruns": 0
+  },
+  "execution_authorized": false,
+  "owner_bounds": {
+    "events": 2048,
+    "files": 256,
+    "finalization_reserve_seconds": 5,
+    "joint_reservation": 1728,
+    "total_seconds": 300,
+    "work_seconds": 295
+  },
+  "prior_limited_clear_and_hold_preserved": true,
+  "real_profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T06:47:50.686982+00:00",
+  "recorder": {
+    "bytes": 11242,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\record_verifier_recovery_peer_review_v2.py",
+    "sha256": "bb5651ed6659045a5d55dad74441214efe51aa7cab98d92bbbbb858d1d97994a"
+  },
+  "remaining_material_source_blockers": [],
+  "remaining_unimplemented": [
+    "First-clock real bootstrap before component/source imports",
+    "Exact approved live authority and original-file adapter",
+    "Real archive/journal/raw-resource/core checker implementations",
+    "Bounded real complete-profile verification and resource feasibility"
+  ],
+  "resolution": [
+    {
+      "evidence": "Four ownership-focused latest methods pass. Preserved v1before-witness has3unsafe-close failures and1late-valid-owned control pass.",
+      "finding": "Resolved: exact explicit owned-success with nonnull handle alone transfers a lease before later metadata/time checks. Exact OpenFailure transfers no handle. Null, foreign, typed-null and invalid ownership flags remain unknown without a guessed close.",
+      "hold_id": "malformed_open_cannot_transfer_ownership",
+      "source_line": 320
+    },
+    {
+      "evidence": "test_factories_have_reserved_and_return_witnesses covers all3factories with throwing/late and complete paths. Six added events stay inside fixed64allowance.",
+      "finding": "Resolved: all3post-reservation factories use existing stage reservations and return/unknown observations under the same owner clock. Late observed factory returns remain visible without a gate; throwing factories keep prior durable attempt.",
+      "hold_id": "durable_factory_stage_attempts",
+      "source_line": 514
+    }
+  ],
+  "retained_conditions": [
+    "Original clock/gates/immutable context/streamed capture/late-return bookkeeping/once-only cleanup/final-seal veto mechanics retain the completed v1source review.",
+    "Malformed ownership may conceal an untransferred resource; unknown is preserved and never represented as successful cleanup or no side effects.",
+    "The platform-neutral engine trusts its source-bound port to validate native invalid-handle sentinels before minting an owned-success acknowledgment.",
+    "Owner-issued proofs/context block accidental or serialized cross-run reuse, not malicious in-process Python code."
+  ],
+  "review_type": "Independent AI engineering source/evidence review; no scientist or live-profile qualification",
+  "schema_version": 1,
+  "scientific_and_historical_limits": "No old failed experiment, incomplete external verifier, native conformance gate or scientific outcome is reclassified. No clinical probabilities/full-mask/inference claim.",
+  "scientific_validation": "not_established",
+  "status": "CLEAR_V2_SOURCE_PURE_ORCHESTRATION_ONLY"
+}

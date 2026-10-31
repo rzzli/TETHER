@@ -1,0 +1,33 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3488,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\raw-sidecar-harness-only-check-v3\\independent-canonical-raw-facts.jsonl",
+      "sha256": "02fcf19551ef26027a780e0b197e44139903b2c581bd94757e337b2b1fa64e64"
+    },
+    {
+      "bytes": 8,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\raw-sidecar-harness-only-check-v3\\independent-canonical-query-frames.bin",
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    }
+  ],
+  "detached_records_checked": 3,
+  "extracted_functions": [
+    "HarnessError",
+    "canonical",
+    "persist_canonical_raw",
+    "raw_atom",
+    "require"
+  ],
+  "harness_sha256": "b97792ab1c8a60167947943d482b11f164f335a72abaee4463138edc8710afc3",
+  "large_runs": 0,
+  "native_calls": 0,
+  "owner_constructions": 0,
+  "producer_dispatches": 0,
+  "qualification": false,
+  "raw_atom_controls": 12,
+  "schema_version": 1,
+  "scope": "Exact harness functions on three detached mock records. Reserved/uninvoked, raw NULL/zero/false, absent helper ACK, binary clocks, query bytes and explicit unencodable values remain distinct. No formatting of opaque objects.",
+  "status": "PASS_HARNESS_RAW_SIDECAR_ONLY",
+  "subject_imports": 0
+}

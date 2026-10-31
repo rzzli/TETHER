@@ -1,0 +1,294 @@
+{
+  "SDK_native_payload_operations": 0,
+  "actual_directory_complete": false,
+  "checker": {
+    "bytes": 11201,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\check_captured_archive_peer_after_v3.py",
+    "sha256": "b3a9b9d0740e04693e3e6e569def58cc3a96ab8434f4de910fba81d01be452cd"
+  },
+  "contract": {
+    "bytes": 29094,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-CONTRACT-v3.json",
+    "sha256": "ce077d5bfd2e12bd5de7a84d17094572a15286e0cb44bdc224513206f305e3d2"
+  },
+  "controls": [
+    {
+      "id": "eleven_callback_identity_probes",
+      "passed": true
+    },
+    {
+      "id": "all32_authored_projection_comparisons",
+      "passed": true
+    },
+    {
+      "id": "ten_locator_DAG_role_and_late_controls",
+      "passed": true
+    },
+    {
+      "id": "immutable_return_and_early_unknowns",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "fixture": {
+    "bytes": 1716151,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json",
+    "sha256": "3e75447d4d3a01c56833d089bf23dab52e5e53bc49a9ea33e9de689eef9b5dcd"
+  },
+  "methods": 7,
+  "old_archive_replays": 0,
+  "originals_authenticated": false,
+  "probes": [
+    {
+      "id": "bounded_large_integer_periodic_interval",
+      "result": {
+        "actual_directory_complete": false,
+        "captured_graph_status": "inconsistent_captured_graph",
+        "complete_journal_chain_validated": false,
+        "declared_binding_consistency": "unresolved",
+        "early_receipt_membership_status": "unresolved",
+        "edge_count": 0,
+        "failure_vetoes": [],
+        "issues": [
+          "configuration_periodic_interval"
+        ],
+        "missing_nodes": [],
+        "node_count": 13,
+        "node_digests": {
+          "@authority": {
+            "bytes": 3843,
+            "sha256": "bde4038ce58dd29d7dd98a2b9b9ca6800c5f41db65e188458f6732c444f401d5"
+          },
+          "@protocol": {
+            "bytes": 8911,
+            "sha256": "1b00036ad825085bdd245c27b20ca9f1cbf0aeb16189b6eaa41db1638edad5b7"
+          },
+          "effective-protocol.json": {
+            "bytes": 8911,
+            "sha256": "1b00036ad825085bdd245c27b20ca9f1cbf0aeb16189b6eaa41db1638edad5b7"
+          },
+          "execution/child/attempt.json": {
+            "bytes": 93,
+            "sha256": "329db2356562df23d467f06cd21bce8893604d3d15f456a551d044a87b24574b"
+          },
+          "execution/child/result.jsonl": {
+            "bytes": 57,
+            "sha256": "c069409f60e166e6a233b938526fe83f946aad4d6a6e098dc12aaa22df26956d"
+          },
+          "execution/journal.jsonl": {
+            "bytes": 925,
+            "sha256": "918b9516afcb605acdc57b4ccfe0dc4d86a6ad986223b39e07ef32a77a98161e"
+          },
+          "parent-report.json": {
+            "bytes": 206,
+            "sha256": "33ea1ccdfe07a041cad187207c468554ddb4b943fcdcc6b7a142ac11532869a3"
+          },
+          "parent-reservation.json": {
+            "bytes": 120,
+            "sha256": "b17c7b9535bc3866a72aec511a17494a0f4b1a61c0cc8763941f1ba721de9f8a"
+          },
+          "post-lease-cleanup.json": {
+            "bytes": 732,
+            "sha256": "de72eb7e216c11132bf6edf34ceaca79e971ddeac4664e471dc53762ab216776"
+          },
+          "receipt.json": {
+            "bytes": 1190,
+            "sha256": "528c5cf46dae6726f290a24c54f99a88019b61626d216556da74bf41c3343b31"
+          },
+          "stderr.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "terminal-seal.json": {
+            "bytes": 1808,
+            "sha256": "87175d4db0986c0044b2db380a4ba0f7b5641810fc767c7519ec940e8d1bd98e"
+          }
+        },
+        "originals_authenticated": false,
+        "owner_context_provenance_established": false,
+        "profile_qualified": false,
+        "resource_or_profile_semantics_validated": false,
+        "source_qualified": false,
+        "source_terminal_disposition": "unresolved",
+        "terminal_captured_universe_matches": null
+      }
+    },
+    {
+      "id": "malformed_known_marker",
+      "result": {
+        "actual_directory_complete": false,
+        "captured_graph_status": "inconsistent_captured_graph",
+        "complete_journal_chain_validated": false,
+        "declared_binding_consistency": "consistent_declared_bindings",
+        "early_receipt_membership_status": "unresolved",
+        "edge_count": 27,
+        "failure_vetoes": [
+          "failure.json"
+        ],
+        "issues": [
+          "duplicate_JSON_key:failure.json"
+        ],
+        "missing_nodes": [],
+        "node_count": 14,
+        "node_digests": {
+          "@authority": {
+            "bytes": 3843,
+            "sha256": "bde4038ce58dd29d7dd98a2b9b9ca6800c5f41db65e188458f6732c444f401d5"
+          },
+          "@protocol": {
+            "bytes": 7913,
+            "sha256": "25292467660098771df718f7db1013b86ac1eec7c22cec9bb22d053b4654f9c1"
+          },
+          "effective-protocol.json": {
+            "bytes": 7913,
+            "sha256": "25292467660098771df718f7db1013b86ac1eec7c22cec9bb22d053b4654f9c1"
+          },
+          "execution/child/attempt.json": {
+            "bytes": 93,
+            "sha256": "329db2356562df23d467f06cd21bce8893604d3d15f456a551d044a87b24574b"
+          },
+          "execution/child/result.jsonl": {
+            "bytes": 57,
+            "sha256": "c069409f60e166e6a233b938526fe83f946aad4d6a6e098dc12aaa22df26956d"
+          },
+          "execution/journal.jsonl": {
+            "bytes": 925,
+            "sha256": "82e84676e59ac1ab0d6ec1e4a67c586c30e18a9d4bbe2f265af2a4bcd639fa7c"
+          },
+          "failure.json": {
+            "bytes": 45,
+            "sha256": "7c254df6a0d2e6326cd27ab3e57a335d23c4e3d572c3598acd50ec526cb1d776"
+          },
+          "parent-report.json": {
+            "bytes": 206,
+            "sha256": "33ea1ccdfe07a041cad187207c468554ddb4b943fcdcc6b7a142ac11532869a3"
+          },
+          "parent-reservation.json": {
+            "bytes": 120,
+            "sha256": "b17c7b9535bc3866a72aec511a17494a0f4b1a61c0cc8763941f1ba721de9f8a"
+          },
+          "post-lease-cleanup.json": {
+            "bytes": 732,
+            "sha256": "e8b9b13a8d660de302c98a7a8520ec822e40f38c34968a49bc58839203ddd459"
+          },
+          "receipt.json": {
+            "bytes": 1190,
+            "sha256": "009dfc9b05c28ae7d8ecd2d74432976056448074c5071068f0e2cc6d9614d445"
+          },
+          "stderr.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "terminal-seal.json": {
+            "bytes": 1912,
+            "sha256": "bab6b1a1084607b541d4a6a8c7f74756f850b24b6611df5d678be655411d38e9"
+          }
+        },
+        "originals_authenticated": false,
+        "owner_context_provenance_established": false,
+        "profile_qualified": false,
+        "resource_or_profile_semantics_validated": false,
+        "source_qualified": false,
+        "source_terminal_disposition": "source_negative",
+        "terminal_captured_universe_matches": null
+      }
+    },
+    {
+      "id": "already_closed_source_null_success",
+      "result": {
+        "actual_directory_complete": false,
+        "captured_graph_status": "consistent_captured_graph",
+        "complete_journal_chain_validated": false,
+        "declared_binding_consistency": "consistent_declared_bindings",
+        "early_receipt_membership_status": "matched_source_membership",
+        "edge_count": 48,
+        "failure_vetoes": [],
+        "issues": [],
+        "missing_nodes": [],
+        "node_count": 13,
+        "node_digests": {
+          "@authority": {
+            "bytes": 3843,
+            "sha256": "bde4038ce58dd29d7dd98a2b9b9ca6800c5f41db65e188458f6732c444f401d5"
+          },
+          "@protocol": {
+            "bytes": 7913,
+            "sha256": "25292467660098771df718f7db1013b86ac1eec7c22cec9bb22d053b4654f9c1"
+          },
+          "effective-protocol.json": {
+            "bytes": 7913,
+            "sha256": "25292467660098771df718f7db1013b86ac1eec7c22cec9bb22d053b4654f9c1"
+          },
+          "execution/child/attempt.json": {
+            "bytes": 93,
+            "sha256": "329db2356562df23d467f06cd21bce8893604d3d15f456a551d044a87b24574b"
+          },
+          "execution/child/result.jsonl": {
+            "bytes": 57,
+            "sha256": "c069409f60e166e6a233b938526fe83f946aad4d6a6e098dc12aaa22df26956d"
+          },
+          "execution/journal.jsonl": {
+            "bytes": 925,
+            "sha256": "82e84676e59ac1ab0d6ec1e4a67c586c30e18a9d4bbe2f265af2a4bcd639fa7c"
+          },
+          "parent-report.json": {
+            "bytes": 206,
+            "sha256": "33ea1ccdfe07a041cad187207c468554ddb4b943fcdcc6b7a142ac11532869a3"
+          },
+          "parent-reservation.json": {
+            "bytes": 120,
+            "sha256": "b17c7b9535bc3866a72aec511a17494a0f4b1a61c0cc8763941f1ba721de9f8a"
+          },
+          "post-lease-cleanup.json": {
+            "bytes": 733,
+            "sha256": "665e0b4ebd07e3e3094f495d1aad991d59a9a024b1acbbe86b0e838fec707920"
+          },
+          "receipt.json": {
+            "bytes": 1190,
+            "sha256": "009dfc9b05c28ae7d8ecd2d74432976056448074c5071068f0e2cc6d9614d445"
+          },
+          "stderr.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "terminal-seal.json": {
+            "bytes": 1808,
+            "sha256": "5e5f427718efcda95dafa62644c84b58e969add05ed89c0eb358efbb3cff19d4"
+          }
+        },
+        "originals_authenticated": false,
+        "owner_context_provenance_established": false,
+        "profile_qualified": false,
+        "resource_or_profile_semantics_validated": false,
+        "source_qualified": false,
+        "source_terminal_disposition": "source_positive_observations_pending",
+        "terminal_captured_universe_matches": true
+      }
+    }
+  ],
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:13:10.904291+00:00",
+  "schema_version": 1,
+  "scope": "New synthetic byte captures only. Baseline32 and independent branch controls; no actual old archive replay, live file or resource/profile authority.",
+  "source": {
+    "bytes": 36212,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\captured_archive_v3.py",
+    "sha256": "90ba49a96713b6178320f04e68affee084abfb77588551b22140330309cd7d9b"
+  },
+  "source_qualified": false,
+  "source_unchanged": true,
+  "status": "passed"
+}

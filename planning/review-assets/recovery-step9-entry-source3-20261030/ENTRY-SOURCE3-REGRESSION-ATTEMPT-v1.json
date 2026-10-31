@@ -1,0 +1,17 @@
+{
+  "binding": {
+    "bytes": 3764,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-BINDING-v1.json",
+    "sha256": "b60c09016d331473676882601f04301098af00af6a2b07890c870352c7323eba"
+  },
+  "methods": [
+    "test01_valid_entry",
+    "test02_normal_captured_helpers_finish",
+    "test03_staged_scalar_has_no_cleanup_authority",
+    "test04_committed_scalar_survives_cache_boundary_failure",
+    "test05_stopped_close_normal_return_does_not_heal_cache"
+  ],
+  "source1_replayed": false,
+  "source2_replayed": false,
+  "status": "STARTED_BEFORE_SOURCE3_IMPORT"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "NAMED_CORRECTED_HARNESS_LEGACY_VALIDATION_AUTHORIZED",
+  "source_pause_v3_sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de",
+  "passing_unchanged_codec_sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b",
+  "prior_blocked_legacy_sha256": "dc02853ad550319d50c8361aa073aa0d4ba4ee8577d3b2bc99dc6bf318565a84",
+  "harness_correction_choice_sha256": "02bac72d6f9d45c49ddb88cd3b4d97ece4fd24eba6a6f0d72ab39f239f2a3afa",
+  "corrected_adapter_sha256": "b0f8cbf326f05c9b868b26fbac2eaee5bdd9ae78fdcc15d1da848d2822abff4f",
+  "delta": "Exactly one packet.kind comparison changes from artifact filename to the normative short alias. The four producer sources, corpus, legacy assertions, SAME8/SAME6 checks, guards, callback actions and original clocks stay unchanged. RunnerV7 uses fresh retained paths and the exact corrected adapter.",
+  "execution": "After exact finite static peer and a fresh immutable binding, execute LEGACY48_FIRST once under the corrected named harness. This explicitly repeats the synthetic validation after fixing its monitor; it is not a hidden replay or a repeat of the consumed real native experiment. Retain the earlier failed verdict unchanged. Do not repeat the already passing codec suite.",
+  "gate": "The existing codec PASS is usable only if all four current source fingerprints still match its proof. A successful new Legacy result is required before any source-extension execution. Failure stops advancement for further concrete diagnosis.",
+  "deadline": "Original started+60 cooperative suite deadline and original synthetic100/395/400 owner clocks remain strict; late ACK facts remain observable but cannot qualify completion. No hard callback-free hang bound.",
+  "allowed": "Pinned four V3 modules, closed synthetic fixtures and in-memory141B toy helpers; exclusive local attempt/result records only.",
+  "not_authorized": ["codec replay", "extensions before new Legacy pass", "large fixture preparation/run", "original targets/protected outcomes", "real entry/SDK/ctypes/Win32/native/model execution", "downloads or paid calls", "application/default changes"],
+  "provider_spend_usd": 0,
+  "qualification": {"source_accepted": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

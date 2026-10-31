@@ -1,0 +1,152 @@
+{
+  "activities": {
+    "helper_or_subject_imports": 0,
+    "native_or_physical_API_calls": 0,
+    "original_payload_operations": 0,
+    "producer_execution": 0,
+    "reference_hash_execution": 0,
+    "source_or_test_edits": 0,
+    "static_AST_parse_only": true
+  },
+  "bounded_findings": [
+    {
+      "evidence": [
+        {
+          "line": 19,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "EXPECTED={"
+        },
+        {
+          "line": 64,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "sizes=[r['bytes'] for r in rows]"
+        },
+        {
+          "line": 65,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "if not all(integer(n) for n in sizes)"
+        }
+      ],
+      "fact": "Three expected NEW planning-asset roles have hard-coded SHA256/path pairs; binding must match them before values are used. From historical rows, the helper extracts only213 positive integer byte sizes, verifies aggregate/max/1MiB geometry, and never opens embedded paths or uses inherited roles/digests for virtual descriptors.",
+      "id": "R1_METADATA_ONLY_INPUTS"
+    },
+    {
+      "evidence": [
+        {
+          "line": 68,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "block=SEED*(CHUNK//len(SEED));view=memoryview(block)"
+        },
+        {
+          "line": 74,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "offset=position%len(block);n=min(stop-position,len(block)-offset)"
+        },
+        {
+          "line": 77,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "hashes[str(stop)]=hasher.copy().hexdigest();copy_count+=1"
+        }
+      ],
+      "fact": "One immutable1MiB periodic block plus256B seed is created. Hash updates use readonly memoryview slices; no checkpoint/file body is allocated. A single independent hasher advances to the largest size3,991,999,872, with<=213 tiny hash-state copies and hex digest strings. Offset into the block preserves periodic continuation across non256-aligned checkpoints. This is reference preparation, not9,017,363,601 actual producer bytes.",
+      "id": "R2_ONE_REFERENCE_BLOCK"
+    },
+    {
+      "evidence": [
+        {
+          "line": 82,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "body=bytes.fromhex(b['utf8_hex'])"
+        },
+        {
+          "line": 91,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "role='hash_only_bulk',capture=False,size=size,sha256=hashes[str(size)]"
+        },
+        {
+          "line": 95,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "if (Q,R,C,E)!=(8799,12255,13551,1496)"
+        }
+      ],
+      "fact": "Retains213 sizes, unique digest metadata and216 fictional descriptors. Only three tiny captured helpers/metadata have utf8_hex, totaling209B;213 bulk descriptors have no body/hex/querypool. New paths and roles are explicit; no source or physical authority follows from historical geometry.",
+      "id": "R3_BOUNDED_DESCRIPTOR_RETENTION"
+    },
+    {
+      "evidence": [
+        {
+          "line": 53,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "if attempt.exists() or output.exists()"
+        },
+        {
+          "line": 60,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "with attempt.open('xb')"
+        },
+        {
+          "line": 112,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "missing_expected_digests='UNKNOWN; producer execution must not consume partial reference data.'"
+        },
+        {
+          "line": 118,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "with output.open('xb')"
+        }
+      ],
+      "fact": "Attempt/result names are exclusive-create and replay is refused. Error/timeout records retain partial position and completed checkpoint hashes, with descriptors None so partial data cannot feed producer. Success also passes a final cooperative deadline veto before serialization. No successful rerun or completion fabricated from missing digests.",
+      "id": "R4_FIRST_REFERENCE_RESULT"
+    },
+    {
+      "evidence": [
+        {
+          "line": 38,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "started=time.monotonic()"
+        },
+        {
+          "line": 51,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "deadline=started+binding['deadline_seconds']"
+        },
+        {
+          "line": 73,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+          "statement": "if time.monotonic()>=deadline:raise TimeoutError('independent reference preparation deadline')"
+        }
+      ],
+      "fact": "Reference timer is local to reference main, includes binding/metadata processing and actual prefix hashing, and is independently bounded1..300s. It is not the future producer Origin or a proof that real entry/bootstrap is inside300s. Timeout is cooperative; file writing/serialization and stdlib startup are not an independently enforced hard wall or memory measurement.",
+      "id": "R5_SEPARATE_CLOCK_AND_AUTHORITY"
+    }
+  ],
+  "explicit_unknown": {
+    "actual_Python_heap_RSS_or_commit": true,
+    "actual_first_entry_FFI_physical_readback": true,
+    "actual_reference_checkpoint_digests": true,
+    "actual_reference_elapsed_time": true,
+    "new84_full_roster_scientific_qualification": true,
+    "producer_large_completion": true
+  },
+  "helper": {
+    "bytes": 8819,
+    "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/prepare_role_aware_large_reference_v1.py",
+    "sha256": "773860bbc34e5c4b1e1ee9052da02f64f054ef930076e42c61262e49dabf484e"
+  },
+  "material_blockers_reference_preparation": [],
+  "producer_differences_still_pending": [
+    "Corrected named protocol successor must remove duplicate producer_phase.binding keys; protocolv1 is not accepted by this review.",
+    "Exact future producer wrapper must mint the original300s entry clock before its trusted bootstrap/source-binding work and preserve the same Origin into the owner. This helper does not prove that.",
+    "Actual producer must fill the same1MiB source buffer from256B seed; no whole bulk bodies/read payload hex or full duplicate query expectation pools in spies.",
+    "Complete genuine candidate/terminal bytes and first terminal/failure artifacts, fake originalcall/onceclose observations and bounded logs need their own reviewed producer persistence contract. They are not physical writes or reference-prep evidence.",
+    "Large one-run source execution remains separately gated after its helper/protocol/bindings are frozen; no runtime/RSS/model/scientific claim comes from reference success."
+  ],
+  "required_before_reference_execution": [
+    "Root must authorize exact helper pin and an exact execution binding: mode, bounded deadline, root scope pin and the fixed three planning input pins.",
+    "Retain first exclusive attempt/result. Missing/late/error reference descriptors must remain unusable.",
+    "Use a separate reference preparation process/timer; no subject source import or producer invocation in this phase."
+  ],
+  "schema_version": 1,
+  "scope": "Finite source-allocation/lifetime review of exact reference helper; no execution of it, no prefix hashing, no application/subject import, no original/embedded target operations. Producer-run authorization is explicitly excluded.",
+  "status": "CLEAR_REFERENCE_PREPARATION_CODE_ONLY_NOT_PRODUCER_EXECUTION"
+}

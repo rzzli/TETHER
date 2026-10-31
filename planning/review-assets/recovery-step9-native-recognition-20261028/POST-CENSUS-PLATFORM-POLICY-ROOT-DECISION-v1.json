@@ -1,0 +1,55 @@
+{
+  "CPU_provider_or_GGUF_access_authorized": false,
+  "SDK_constructor_or_child_authorized": false,
+  "census_output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-self-module-census-v1-20261029T015746Z",
+  "census_verification": {
+    "bytes": 86265,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.json",
+    "sha256": "4b628df880898e892482399585436b5fa2a068aed607947cd59e5f3d2f8b3f1e"
+  },
+  "classification_order": [
+    "Validate complete non-NUL path/name metadata, lexical canonical spelling and unique names/paths under one shared deterministic rule.",
+    "Accept self only at the exact independently pinned executable path; reject a reserved self basename at any other path.",
+    "For exact runtime basenames and protected ASCII prefixes ggml/llama/libomp, require the exact mode-eligible pinned runtime name, directory and leased file identity before considering any platform exception.",
+    "Accept other DLL reports only with exact declared System32 parent, safe canonical basename and no protected application namespace.",
+    "Reject every other report; require exact self and every mode-required core library once."
+  ],
+  "comparison": {
+    "canonical_rule": "Require absolute DOS-drive spelling, no UNC/device prefix, dot/dotdot/empty components, alternate stream, trailing dot/space or hidden normalization. Do not resolve short-name/Unicode/path aliases.",
+    "case_rule": "ASCII A-Z fold only; preserve other UTF16 code units",
+    "name_rule": "Snapshot/serialized name must equal reported path basename under the same rule; retain complete reported context.",
+    "reported_image_filesystem_operations": 0,
+    "separator_rule": "Slash to backslash only"
+  },
+  "compiler_dispatch_authorized": false,
+  "current_census_scope": "Exactly one complete post-core4 current-process snapshot;17 reports, self1/core4/platform12, apphelp sole previously unlisted report",
+  "downloader_and_monitor_untouched": true,
+  "implementation_required": [
+    "Separately versioned child, data-only parent matcher, contract and protocol with identical policy semantics and policy fingerprint.",
+    "Preserve old sources/header/attempts/census unchanged; original16-name classifier remains a historical descriptive baseline.",
+    "Regression vectors for protected prefixes/wrong directories, missing/duplicate required modules, outside-platform and malformed/ambiguous paths, and complete17-row observed metadata.",
+    "Keep recognition disabled and preserve exact public declarations,25-export owner mapping, typed version/default/layout checks, loader pins and existing cleanup/accounting machinery.",
+    "Compile/link only after exact source review; observe ABI only after independent build verification and separate root once-only decision."
+  ],
+  "limits": {
+    "active_processes": 1,
+    "child_cleanup_reserve_seconds": 2,
+    "child_seconds": 30,
+    "finalization_reserve_seconds": 5,
+    "maximum_children": 1,
+    "maximum_modules": 64,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456
+  },
+  "native_or_scientific_qualification": false,
+  "no_further_census_or_OS_tracing": true,
+  "platform_root": "C:\\Windows\\System32",
+  "policy_id": "trusted-System32-platform-v1",
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T02:13:37.923373+00:00",
+  "schema_version": 1,
+  "selected_route": "Prospective pure platform-context rule; no extra platform-image acquisition/pinning/authentication",
+  "source_and_pure_implementation_authorized": true,
+  "status": "root_selects_prospective_trusted_System32_platform_context_source_only",
+  "trust_assumption": "The declared Windows host and reported canonical System32 DLL context are trusted platform inputs. This is not image authentication, shim exclusion, initializer attestation, lifetime closure or scientific validation."
+}

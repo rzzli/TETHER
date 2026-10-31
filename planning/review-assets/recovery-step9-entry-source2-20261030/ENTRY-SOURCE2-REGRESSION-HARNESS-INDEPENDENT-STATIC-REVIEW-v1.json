@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_HARNESS_STATIC_PREPARATION_ONLY",
+  "reviewer": "grammar_toolchain_requirements",
+  "reviewed": {
+    "entry_independent_test_support_v2.py": {
+      "path": "planning/review-assets/recovery-step9-entry-source2-20261030/entry_independent_test_support_v2.py",
+      "bytes": 15938,
+      "sha256": "bdbde9fdd6effa9b3ffc9f30c7fc39e824ef8092b8e14504f46ff2f43e63fdb0"
+    },
+    "entry_independent_world_v2.py": {
+      "path": "planning/review-assets/recovery-step9-entry-source2-20261030/entry_independent_world_v2.py",
+      "bytes": 11981,
+      "sha256": "c7745388c42dae79942d0476bd345771a55c8a0ef842e13c367ca6613911f7c4"
+    },
+    "entry_initial_regressions_v2.py": {
+      "path": "planning/review-assets/recovery-step9-entry-source2-20261030/entry_initial_regressions_v2.py",
+      "bytes": 7796,
+      "sha256": "347b97ba5fda596a0274aafab53b240c6b00a6762a22d4f3f5f5364e17240dcc"
+    },
+    "run_entry_source2_regressions_v1.py": {
+      "path": "planning/review-assets/recovery-step9-entry-source2-20261030/run_entry_source2_regressions_v1.py",
+      "bytes": 10078,
+      "sha256": "278bc6a4bdf6c068ab9943002dcb856487e639f76797f1d37a94b412d5cbc10d"
+    },
+    "prepare_entry_source2_regressions_v1.py": {
+      "path": "planning/review-assets/recovery-step9-entry-source2-20261030/prepare_entry_source2_regressions_v1.py",
+      "bytes": 9897,
+      "sha256": "dde09ecec16003013feb1757ec6479103aea5355f863d4ce6b7a21f4cb174d59"
+    }
+  },
+  "scope": "One finite read-only peer of the new Source2 runner/support/world/regressions and prefix preparer. The reviewer authored Ops2; this record does not independently accept that source. No subject or harness module was imported/executed.",
+  "material_blockers": [],
+  "checks": [
+    {
+      "group": "ORIGINAL_ASSERTIONS",
+      "result": "Three original top-level regression function ASTs exactly equal preserved Source1 tests; fourth method is a separate converse and no original branch is dropped."
+    },
+    {
+      "group": "MECHANICAL_DEPENDENCIES",
+      "result": "Support text equals Source1 after only the kernel v2 spelling is normalized; World text equals Source1 after only the support v2 spelling is normalized. Both retain actual helper-prefix accounting and identities."
+    },
+    {
+      "group": "PUBLISHED_API_JOIN",
+      "result": "World constructs genuine Kernel EntryAttempt/PreboundServices/SyntheticRawBackend/SyntheticOutputBackend/EntryPlan, invokes actual entry/capture/loader/continuation/attach/continue/finalize APIs, and retains genuine KernelSnapshot. Ops2 signatures and the agreed Kernel committed_fact API match the uses. No old owner, fake state, decoded brand, runtime alias or source fallback is provided."
+    },
+    {
+      "group": "STAGED_VERSUS_COMMITTED_FAULTS",
+      "result": "Third method stages then raises on the actual RawCallStore.observe seam; fourth delegates actual observe then raises after COMMITTED and before carrier cache acknowledgment. Both preserve original MemoryError identity. The converse checks canonical raw bits, cold row/file projection, an UNOBSERVED cache, no report dispatch, one cleanup close and cache-only terminal getter. The patch is restored in finally."
+    },
+    {
+      "group": "FIRST_RESULT_RETENTION",
+      "result": "Exclusive attempt/proof files prevent replay. Each method retains its original assertion/source error separately from cleanup/evidence failures. Cleanup holds the first actual source snapshot; evidence copies its immutable native rows/eight axis fields/facts and records actual first source error, close attempts, callbacks and events. Constructor failure stops downstream methods rather than fabricating Core."
+    },
+    {
+      "group": "DEADLINE_AND_AUDIT",
+      "result": "One started+60 real cooperative deadline spans setup/test/cleanup/evidence; CallGate checks pre/post successful calls and final suite veto checks elapsed time. Exceptions are not masked by finally time checks. Audit rejects dangerous I/O/import events while active or with source filenames on stack. This is cooperative and cannot stop callback-free hangs."
+    },
+    {
+      "group": "CLOSED_MAP_AND_PREFIX",
+      "result": "Pinned source and harness maps are compared before the attempt and rechecked afterward. A fresh exact kernel is used for each World; captured helper execution uses the supplied actual module namespace and closed resolver. Prefix preparer derives helper bytes/imports from final exact Source2 sources, binds exact codec4 and independent fictional metadata/bulk, and freezes expected geometry before tests."
+    }
+  ],
+  "static_checks": {
+    "parsed_files": 5,
+    "original_three_function_asts_equal": true,
+    "support_only_kernel_name_delta": true,
+    "world_only_support_name_delta": true
+  },
+  "source_join_note": "During this read OS reported the scoped _issue_snapshot committed-fact projection was completed before coherent pause. This is not an actual assertion result; the independent fourth regression must exercise it on the final paused source.",
+  "chronology": "Source1 actual ordinary entry failed at constructor mismatch; downstream F1/F2 were NOT_REACHED. The original three methods predate correction. Supplemental fourth was authored during Source2 drafting under correction authorization before coherent pause/execution, not claimed pre-fix authored.",
+  "activity": {
+    "subject_imports": 0,
+    "harness_imports": 0,
+    "subject_tests": 0,
+    "harness_execution": 0,
+    "reviewed_file_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "limitations": [
+    "Final coherent source/prefix freeze and Root execution authorization remain separate.",
+    "No 32/53 or native25 execution is claimed.",
+    "Native ABI/physical output/full-roster/RSS/scientific and production first-entry qualification remain false."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_V2_RUNNER_MAP_AND_ABORT_ACCOUNTING_STATIC_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "scope": "Finite static review of all-V2 source maps, phase retention and started/aborted conformance accounting. No runner or subject was executed.",
+  "pins": {
+    "independent_runner_v5": {"bytes": 18096, "sha256": "ba767e126b1a07f215095f9c6e13d573b486b7df909537f4d85981df66b41d9a"},
+    "extension_runner_v2": {"bytes": 13912, "sha256": "5694ec9898c385c8ae825d2b88dcaea0b5e73684c9a9d6984d975aed68064aa8"},
+    "preparation": {"bytes": 7458, "sha256": "c45a60e3251bb31dca2a7e32d0a94a0e9387b8d3bda889576c90faaa08407e70"},
+    "independent_outline_v5": {"bytes": 9849, "sha256": "344c439cceeb37068a914e0e1c6e03b3b91ea39b5ef873cc7c0c2ea5bbea9483"},
+    "extension_outline_v2": {"bytes": 10694, "sha256": "8ed874c34311ac79b39c1d8e5bc2a06f6c75adfb93f08287372481df02b9b9bf"}
+  },
+  "source_basis": {
+    "pause_v2": "ddc92af0f11b94652ad90a34fbbcd4b428c8a01566dcf09e8ec750ead89fed6f",
+    "source_oracle_static_peer": "2e3c90ab67d643d7fa96962e7f5a75982f9ac4ab08936732b32047e9685a26c7",
+    "oracle_v3": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7",
+    "frozen_codec_test": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea",
+    "prior_runner_peer": "4fd17f7f6a624b6e0eb036a3ec2df2ba3a0a0354ce66768b0023e835f8bfa0df",
+    "extension_test_peer": "645be2f9d7aa104f29259a7a6c459b1b0f8d6085c8f0c111fcee5d3af726e717"
+  },
+  "findings": [
+    "Both SUBJECT_NAMES tuples contain only role_ledger_codec_v2, role_owner_v2, role_file_ports_v2 and continue_role_verification_v2. Both outlines pin those same exact V2 files and their pause; no V1 import or cached fallback is introduced.",
+    "The fixed map and order are checked before fresh loading. The retained loader accepts only that map and its existing closed stdlib set. Legacy dictionary role names point to actual V2 objects; they are not source module aliases or authority.",
+    "Independent CODEC_FIRST and LEGACY48_FIRST retain required closed phase arguments, exact phase/binding equality and exclusive versioned attempt/proof paths. Extensions retain a separate single-phase binding and versioned attempt/proof paths.",
+    "Source-definition, conformance-started and returned-result states are separate. An entered conformance abort is not relabeled as a setup/import-only failure.",
+    "The independent runner retains its live actual codec-forwarding statistics when T.run aborts. It does not replace those observations with declared test totals.",
+    "partial_codec_counts walks at most128 traceback frames and accepts only the pinned test filename plus function name run, the exact ten-field built-in counts dictionary, and exact nonbool bounded integer counter values. It copies observed counters or returns None with a reason. It never reruns a test.",
+    "The helper and completed-result metadata explicitly mark unique_bases, unique_byte_negatives and subject_methods as declared fields rather than executed coverage. When no structured suite result returned, completed method outcomes remain None/UNKNOWN.",
+    "Counter-observation failures are contained as reporting failures without replacing the original conformance exception. This catch does not wrap source callbacks or fabricate a passing result.",
+    "The prior deadline facade text is unchanged. The common post-suite veto and original started+60 cooperative limit remain. The extension caption now truthfully states that codec-facade forwarding is not executed by EXTENSIONS_FIRST.",
+    "Frozen codec tests, legacy adapters, SAME8/SAME6 assertions, strict snapshot validator and genuine identity checks are not rewritten by these runners."
+  ],
+  "chronology": {
+    "preserved_first_V1_proof": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa",
+    "preserved_known_V1_forward_calls": 83,
+    "preserved_known_V1_checks": 1288,
+    "lost_completed_V1_method_and_remainder_results": "UNKNOWN_AFTER_ABORT",
+    "owner_refreeze_V1_finding": "STATIC_ONLY",
+    "V1_replay": false
+  },
+  "pending": "Root acceptance/execution bindings and first actual V2 results. This static record is not an execution approval or a producer-behavior verdict.",
+  "activities": {
+    "new_runner_metadata_and_text_inspection": true,
+    "subject_or_runner_imports": 0,
+    "subject_compilation_or_AST_parsing": 0,
+    "subject_runner_or_frozen_test_execution": 0,
+    "author_source_harness_or_fixture_edits": 0,
+    "original_native_or_physical_operations": 0
+  },
+  "qualification": {"source_behavior": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

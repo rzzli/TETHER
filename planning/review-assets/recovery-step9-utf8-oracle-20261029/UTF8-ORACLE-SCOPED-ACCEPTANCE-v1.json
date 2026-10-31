@@ -1,0 +1,87 @@
+{
+  "accepted_at_utc": "2026-10-29T06:32:32.826445+00:00",
+  "anchors": {
+    "UTF8-ORACLE-CORPUS-v2.json": {
+      "bytes": 154021,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v2.json",
+      "sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d"
+    },
+    "UTF8-ORACLE-FIXTURE-FREEZE-v2.json": {
+      "bytes": 6847,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-FIXTURE-FREEZE-v2.json",
+      "sha256": "285a46b3b7ac00cf7bbb0b262242ffc04f2c3049e4b7cf541dbcfdf0080f1eac"
+    },
+    "UTF8-ORACLE-IMPLEMENTATION-CHECKER-FAILURE-v1.json": {
+      "bytes": 1327,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-IMPLEMENTATION-CHECKER-FAILURE-v1.json",
+      "sha256": "a41ae3025ce987f090f833104759f0fc594c87934964d9b8f5ed9d0c52ad71ed"
+    },
+    "UTF8-ORACLE-IMPLEMENTATION-PEER-REVIEW-v1.json": {
+      "bytes": 5081,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-IMPLEMENTATION-PEER-REVIEW-v1.json",
+      "sha256": "37d59537f2c9fc8fabd6d9a143da5d2a8c6b034e6914a630ce1ae2fcd4390383"
+    },
+    "UTF8-ORACLE-IMPLEMENTATION-PURE-PROOF-v2.json": {
+      "bytes": 25781,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-IMPLEMENTATION-PURE-PROOF-v2.json",
+      "sha256": "045011191f4ef89b1fb480db8f40f04dc658c9c84cd997a87fa674143d036c53"
+    },
+    "UTF8-ORACLE-SPEC-v2.md": {
+      "bytes": 9826,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v2.md",
+      "sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a"
+    },
+    "UTF8-ORACLE-SPLIT-REFERENCE-PROOF-v2.json": {
+      "bytes": 55550,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPLIT-REFERENCE-PROOF-v2.json",
+      "sha256": "1a1c1e683d5e59a0901313fdb8946a0a3da10dc4d4c626bfd7f45895d87555e9"
+    },
+    "check_strict_utf8_oracle_v2.py": {
+      "bytes": 11841,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\check_strict_utf8_oracle_v2.py",
+      "sha256": "0dcb3a0ae42a6d275f24029e387d7ff96cbdf111e0ae1f32fabbff9a1fd9cd35"
+    },
+    "strict_utf8_oracle_v1.py": {
+      "bytes": 5647,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\strict_utf8_oracle_v1.py",
+      "sha256": "4e5d36afa001339735a349a8ebab88a312cde1cb57fa43336e38ee4195134c21"
+    }
+  },
+  "application_version": "0.3.11",
+  "checker_corruption_controls": 11,
+  "compiler_calls": 0,
+  "declared_representative_interior_cuts": 29,
+  "default_dispatch": "v2",
+  "fixtures": 107,
+  "implementation_tests": 7,
+  "independent_per_case_state_hashes_equal": 107,
+  "invariants": [
+    "Exact strictbyte bounds and frozen earliest-error consumption/EOF policy",
+    "Strictbytes/finalbool/APIerror precedence and no-state-change",
+    "OrdinaryAPIimmutableframes and freshserializationcontainers",
+    "Fixturefreeze preceded independentreference and implementation; failedversions preserved"
+  ],
+  "limits": [
+    "Only declared finitefixture/reference scope; not proof overeverypossible stream",
+    "Cumulative history copying canbequadratic for manytiny feeds; no integratedstreamingresourcequalification",
+    "Not hostilePython isolation or exact vendor decoder behavior",
+    "Not actualDLL/vocabulary/EOG/fullmask/inference/scientificqualification"
+  ],
+  "literal_scalar_encoding_pairs": 14,
+  "new_native_execution_authorized": false,
+  "next": "Finish source-only deterministic verifier orchestration and its fault/ownership tests; prospective runtime profile remains separate.",
+  "old_external_verification": "INCOMPLETE_TIMEOUT",
+  "old_native_profile": "FAILED_two_unavailable_natural_UTF8_slots",
+  "old_payload_reads": 0,
+  "provider_spend_usd": 0,
+  "reference_scope": {
+    "direct_CPython": 104,
+    "full107_CPython_incremental_API_agreement": false,
+    "normative_RFC_with_nonextendability_certificate": 3
+  },
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "status": "ACCEPTED_scoped_model_independent_pure_UTF8_oracle_ONLY",
+  "steps": 167,
+  "supplied_bytes": 354
+}

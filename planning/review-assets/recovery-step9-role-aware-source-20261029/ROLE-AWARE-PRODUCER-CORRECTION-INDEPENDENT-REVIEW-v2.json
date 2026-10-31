@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_FINITE_STATIC_CORRECTION_PREPARATION_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "scope": "Combined finite peer of the two named V2 source fixes and the nine-code V3 oracle correction. This permits no behavior or runtime qualification and does not replace first actual V2 evidence.",
+  "source_pause": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v2.json",
+    "bytes": 9211,
+    "sha256": "ddc92af0f11b94652ad90a34fbbcd4b428c8a01566dcf09e8ec750ead89fed6f"
+  },
+  "source_delta": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-DELTA-v2.json",
+    "bytes": 5171,
+    "sha256": "edaafdc6a4a082e113cc307e6356ce490a9ea54197407837acc085e01bb31f7f"
+  },
+  "sources": {
+    "role_ledger_codec_v2": {"bytes": 55461, "sha256": "baa4b814921a502d42f940299cf2a1fea1ca2eb1481de106ac3e38671b3d4ede"},
+    "role_owner_v2": {"bytes": 76176, "sha256": "50c6c91c99f670bef8490630c68b62114c336e315e68c76ed493972a903e68d7"},
+    "role_file_ports_v2": {"bytes": 21279, "sha256": "e7da487e71e4442755a709b71b2dd0e729ccecbb27cac42622b97f7e9605cd3c"},
+    "continue_role_verification_v2": {"bytes": 4273, "sha256": "81ddf109ffaaf2d6c2c25366c57a9581c7e88e8b0b4db0463ff3912254f26096"}
+  },
+  "source_findings": [
+    "Independent exact byte replacement checks confirm one FormatError setter replacement, two owner freeze branches and three own-module import replacements. Every other source byte equals the corresponding paused V1 file.",
+    "The setter rejects assignments to code/offset/path and their _code/_offset/_path backing slots. Other assignments delegate to BaseException.__setattr__, structurally allowing traceback/context/cause lifecycle bookkeeping without rewriting the three format metadata fields.",
+    "Internal freeze now recursively copies exact MappingProxyType and tuple containers as immutable containers. Exact object token leaves remain the identical source objects. Unsupported raw leaf policy is unchanged.",
+    "The original-profile reservation formula comparison and decoder error classification remain STATE_CONTRADICTION. No source special case for fixture IDs, byte offsets or failed mutations was introduced.",
+    "The source fixes structurally address the retained exception-lifecycle failure and the static negative-snapshot refreeze HOLD. Actual V2 exception cleanup, negative legacy projection and token identity remain to be tested."
+  ],
+  "root_oracle_choice": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-RESERVATION-ORACLE-CORRECTION-v3.json",
+    "bytes": 2867,
+    "sha256": "11949f60ddc08b4a02d6262dd42b7859a7e18f2afe994eb49107f04f8eee7e8a"
+  },
+  "oracle": {
+    "corpus": {"bytes": 1044112, "sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7"},
+    "contract": {"bytes": 6562, "sha256": "510d02f456b49ea795caf3a6f10655c8224cfb4bea6b6c3b2bb56d8fb947f8b7"},
+    "delta": {"bytes": 5521, "sha256": "2d66a14e34d72ed2b645b5db1fbbbac8bbcb9062a4f85564c2d30591aed0f194"},
+    "provenance_data_proof": {"bytes": 3170, "sha256": "b01f6738d5c0c50a530844d8a9ae14d0f72bff66b5c27d6e2587f21556e9159a"},
+    "freeze": {"bytes": 4096, "sha256": "8daa9a4dbc234c1edfe14694869c03fa3d5df7e9c15472d63673a09ff9cd5a2c"},
+    "unchanged_test": {"bytes": 11494, "sha256": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea"}
+  },
+  "independent_data_checks": {
+    "whole_base_objects_identical": 40,
+    "byte_negative_count": 225,
+    "whole_mutation_objects_identical": 216,
+    "authorized_changed_field_only": "expected.required_code: RESERVED_NONZERO -> STATE_CONTRADICTION",
+    "changed_ids": ["reserved_01_0", "reserved_01_1", "reserved_01_2", "reserved_02_0", "reserved_02_1", "reserved_02_2", "reserved_03_0", "reserved_03_1", "reserved_03_2"],
+    "all_225_mutation_recipes_raw_hashes_lengths_ids_preserved": true,
+    "anchors_preserved": 134,
+    "base_formula_independently_recomputed": {"N": 1, "B": 0, "M": 0, "read_chunk": 65536, "expected_size": 3, "R": 17, "C": 23, "E": 198},
+    "mutated_R_values": [1, 65553, 16777233],
+    "mutated_C_values": [1, 65559, 16777239],
+    "mutated_E_values": [1, 65734, 16777414],
+    "all_nine_contradict_their_required_formula_value": true,
+    "true_zero_padding_regions": 29,
+    "separate_computed_reservation_data_regions": 3,
+    "metadata_note": "The historical reserved_regions count32 remains the total grouped region count; explicit new fields distinguish29 true zero-padding regions from3 reservation data fields."
+  },
+  "chronology": {
+    "first_V1_actual_proof": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa",
+    "first_failure_localization": "f13fb458432e3d1c2de0f969e90dbce760bd673af4c76fcba0f33aaf059e5896",
+    "static_owner_HOLD": "f8f6eca094e394da251f00cf3d51a3cf879ddc71a0ff7895205cd234787f564b",
+    "oracle_correction_follows_first_actual_failure": true,
+    "retained_known_forward_calls": 83,
+    "retained_known_checks": 1288,
+    "completed_V1_method_or_remainder_outcomes": "UNKNOWN_AFTER_ABORT",
+    "owner_refreeze_runtime_reproduced_in_V1": false,
+    "V1_source_or_fixture_replay_by_reviewer": false,
+    "reviewer_helper_disclosure": "An initial byte-comparison helper assumed CRLF and failed its own assertion. Inspection showed LF source files. The corrected LF comparison verified the exact listed replacements. No subject code was loaded or executed by either helper."
+  },
+  "pending": [
+    "Exact V2 source and V3 oracle runner bindings under separate root execution authorization.",
+    "First actual CODEC evidence, then genuine legacy48/identity and extension evidence as authorized.",
+    "Final source/behavioral peer after complete promised evidence; this record is static preparation only."
+  ],
+  "activities": {
+    "new_metadata_comparisons_and_literal_data_checks": true,
+    "subject_imports": 0,
+    "subject_compilation_or_AST_parsing": 0,
+    "subject_or_frozen_test_execution": 0,
+    "original_native_or_physical_operations": 0,
+    "author_source_harness_or_fixture_edits": 0
+  },
+  "qualification": {"source_behavior": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

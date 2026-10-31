@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "five focused metadata tests; no acceptance main or runtime/full test execution",
+  "tests": 5,
+  "exit_code": 0,
+  "v3_helper_sha256": "dbb7f32b4d23f5f30ba7c8c01d822981cf09d1ae8c1a885a33ea8020134c27a9",
+  "v2_helper_sha256": "03c2d7e52a59727dda14825e223a39df98df12d64b2f79df54d83f7b1b03d722",
+  "original_observed_failure_sha256": "76a735bb3f678075f3f47d583ef7082fe81072ae924fac8f83b6170d345a7f1a",
+  "changed_existing_functions": [
+    "wheel_and_installed"
+  ],
+  "added_functions": [
+    "check_dependency_metadata"
+  ],
+  "source_runtime_or_wheel_changed": false,
+  "acceptance_main_executed": false,
+  "acceptance_published": false,
+  "model_calls": 0,
+  "native_target_calls": 0
+}

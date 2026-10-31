@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T14:37:08.408038+00:00",
+  "decision": "authorize_scoped_engineering_acceptance_only_if_all_helper_gates_pass",
+  "version": "0.3.11",
+  "reviewed_inputs": {
+    "accept_generation_v2.py": "03c2d7e52a59727dda14825e223a39df98df12d64b2f79df54d83f7b1b03d722",
+    "FROZEN-VERIFIER-COMBINED.json": "17afefc0ac2b83c76bc8974c68a366ea779379fb42199911c494da5967d9d5eb",
+    "FROZEN-COMPLETION-PROTOCOL-v3.json": "75b44d1b2bfbafb7910d8e894d77dba550aae4970b1c5931bcaa9e7f6da34087",
+    "FROZEN-COMPLETION-RESULT-VERIFICATION.json": "238495caf3a47df38b107283bf9784781d08b6ed56afc49dc0e78dc41964c6f6"
+  },
+  "independent_completion_verification": "passed",
+  "root_and_independent_source_reviews": "no_blocking_findings_at_exact_helper_hash",
+  "original_failed_attempt": "must_remain_failed",
+  "native_conformance": "unverified",
+  "new_v3_execution_authorized": false,
+  "scientific_validation": "not_established",
+  "entire_project_complete": false
+}

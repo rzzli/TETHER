@@ -1,0 +1,4721 @@
+{
+  "schema_version": 1,
+  "status": "all_512_completions_rejected",
+  "corpus_sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d",
+  "freeze_sha256": "285a46b3b7ac00cf7bbb0b262242ffc04f2c3049e4b7cf541dbcfdf0080f1eac",
+  "helper_sha256": "4af6d7368b3b738509c08148ef3ddedb0d03fe1fa58dcb6449affd75e954b02e",
+  "CPython_version": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "prefixes": [
+    {
+      "prefix_hex": "eda0",
+      "fixture_ids": [
+        "invalid/surrogate_low",
+        "split_restricted/surrogate"
+      ],
+      "bytewise_then_empty_final_trace": [
+        {
+          "input_hex": "ed",
+          "final": false,
+          "pre_pending_hex": "",
+          "pre_flag": 0,
+          "outcome": "returned",
+          "emitted_scalars": [],
+          "post_pending_hex": "ed",
+          "post_flag": 0
+        },
+        {
+          "input_hex": "a0",
+          "final": false,
+          "pre_pending_hex": "ed",
+          "pre_flag": 0,
+          "outcome": "returned",
+          "emitted_scalars": [],
+          "post_pending_hex": "eda0",
+          "post_flag": 0
+        },
+        {
+          "input_hex": "",
+          "final": true,
+          "pre_pending_hex": "eda0",
+          "pre_flag": 0,
+          "outcome": "raised",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1,
+          "posterror_state_not_read": true
+        }
+      ],
+      "completions": [
+        {
+          "third_byte": 0,
+          "input_hex": "eda000",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 1,
+          "input_hex": "eda001",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 2,
+          "input_hex": "eda002",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 3,
+          "input_hex": "eda003",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 4,
+          "input_hex": "eda004",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 5,
+          "input_hex": "eda005",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 6,
+          "input_hex": "eda006",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 7,
+          "input_hex": "eda007",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 8,
+          "input_hex": "eda008",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 9,
+          "input_hex": "eda009",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 10,
+          "input_hex": "eda00a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 11,
+          "input_hex": "eda00b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 12,
+          "input_hex": "eda00c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 13,
+          "input_hex": "eda00d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 14,
+          "input_hex": "eda00e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 15,
+          "input_hex": "eda00f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 16,
+          "input_hex": "eda010",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 17,
+          "input_hex": "eda011",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 18,
+          "input_hex": "eda012",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 19,
+          "input_hex": "eda013",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 20,
+          "input_hex": "eda014",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 21,
+          "input_hex": "eda015",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 22,
+          "input_hex": "eda016",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 23,
+          "input_hex": "eda017",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 24,
+          "input_hex": "eda018",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 25,
+          "input_hex": "eda019",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 26,
+          "input_hex": "eda01a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 27,
+          "input_hex": "eda01b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 28,
+          "input_hex": "eda01c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 29,
+          "input_hex": "eda01d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 30,
+          "input_hex": "eda01e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 31,
+          "input_hex": "eda01f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 32,
+          "input_hex": "eda020",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 33,
+          "input_hex": "eda021",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 34,
+          "input_hex": "eda022",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 35,
+          "input_hex": "eda023",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 36,
+          "input_hex": "eda024",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 37,
+          "input_hex": "eda025",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 38,
+          "input_hex": "eda026",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 39,
+          "input_hex": "eda027",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 40,
+          "input_hex": "eda028",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 41,
+          "input_hex": "eda029",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 42,
+          "input_hex": "eda02a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 43,
+          "input_hex": "eda02b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 44,
+          "input_hex": "eda02c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 45,
+          "input_hex": "eda02d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 46,
+          "input_hex": "eda02e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 47,
+          "input_hex": "eda02f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 48,
+          "input_hex": "eda030",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 49,
+          "input_hex": "eda031",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 50,
+          "input_hex": "eda032",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 51,
+          "input_hex": "eda033",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 52,
+          "input_hex": "eda034",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 53,
+          "input_hex": "eda035",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 54,
+          "input_hex": "eda036",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 55,
+          "input_hex": "eda037",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 56,
+          "input_hex": "eda038",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 57,
+          "input_hex": "eda039",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 58,
+          "input_hex": "eda03a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 59,
+          "input_hex": "eda03b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 60,
+          "input_hex": "eda03c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 61,
+          "input_hex": "eda03d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 62,
+          "input_hex": "eda03e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 63,
+          "input_hex": "eda03f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 64,
+          "input_hex": "eda040",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 65,
+          "input_hex": "eda041",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 66,
+          "input_hex": "eda042",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 67,
+          "input_hex": "eda043",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 68,
+          "input_hex": "eda044",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 69,
+          "input_hex": "eda045",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 70,
+          "input_hex": "eda046",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 71,
+          "input_hex": "eda047",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 72,
+          "input_hex": "eda048",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 73,
+          "input_hex": "eda049",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 74,
+          "input_hex": "eda04a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 75,
+          "input_hex": "eda04b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 76,
+          "input_hex": "eda04c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 77,
+          "input_hex": "eda04d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 78,
+          "input_hex": "eda04e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 79,
+          "input_hex": "eda04f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 80,
+          "input_hex": "eda050",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 81,
+          "input_hex": "eda051",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 82,
+          "input_hex": "eda052",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 83,
+          "input_hex": "eda053",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 84,
+          "input_hex": "eda054",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 85,
+          "input_hex": "eda055",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 86,
+          "input_hex": "eda056",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 87,
+          "input_hex": "eda057",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 88,
+          "input_hex": "eda058",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 89,
+          "input_hex": "eda059",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 90,
+          "input_hex": "eda05a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 91,
+          "input_hex": "eda05b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 92,
+          "input_hex": "eda05c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 93,
+          "input_hex": "eda05d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 94,
+          "input_hex": "eda05e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 95,
+          "input_hex": "eda05f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 96,
+          "input_hex": "eda060",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 97,
+          "input_hex": "eda061",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 98,
+          "input_hex": "eda062",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 99,
+          "input_hex": "eda063",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 100,
+          "input_hex": "eda064",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 101,
+          "input_hex": "eda065",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 102,
+          "input_hex": "eda066",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 103,
+          "input_hex": "eda067",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 104,
+          "input_hex": "eda068",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 105,
+          "input_hex": "eda069",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 106,
+          "input_hex": "eda06a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 107,
+          "input_hex": "eda06b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 108,
+          "input_hex": "eda06c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 109,
+          "input_hex": "eda06d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 110,
+          "input_hex": "eda06e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 111,
+          "input_hex": "eda06f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 112,
+          "input_hex": "eda070",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 113,
+          "input_hex": "eda071",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 114,
+          "input_hex": "eda072",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 115,
+          "input_hex": "eda073",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 116,
+          "input_hex": "eda074",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 117,
+          "input_hex": "eda075",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 118,
+          "input_hex": "eda076",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 119,
+          "input_hex": "eda077",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 120,
+          "input_hex": "eda078",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 121,
+          "input_hex": "eda079",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 122,
+          "input_hex": "eda07a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 123,
+          "input_hex": "eda07b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 124,
+          "input_hex": "eda07c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 125,
+          "input_hex": "eda07d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 126,
+          "input_hex": "eda07e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 127,
+          "input_hex": "eda07f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 128,
+          "input_hex": "eda080",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 129,
+          "input_hex": "eda081",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 130,
+          "input_hex": "eda082",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 131,
+          "input_hex": "eda083",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 132,
+          "input_hex": "eda084",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 133,
+          "input_hex": "eda085",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 134,
+          "input_hex": "eda086",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 135,
+          "input_hex": "eda087",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 136,
+          "input_hex": "eda088",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 137,
+          "input_hex": "eda089",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 138,
+          "input_hex": "eda08a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 139,
+          "input_hex": "eda08b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 140,
+          "input_hex": "eda08c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 141,
+          "input_hex": "eda08d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 142,
+          "input_hex": "eda08e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 143,
+          "input_hex": "eda08f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 144,
+          "input_hex": "eda090",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 145,
+          "input_hex": "eda091",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 146,
+          "input_hex": "eda092",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 147,
+          "input_hex": "eda093",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 148,
+          "input_hex": "eda094",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 149,
+          "input_hex": "eda095",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 150,
+          "input_hex": "eda096",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 151,
+          "input_hex": "eda097",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 152,
+          "input_hex": "eda098",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 153,
+          "input_hex": "eda099",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 154,
+          "input_hex": "eda09a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 155,
+          "input_hex": "eda09b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 156,
+          "input_hex": "eda09c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 157,
+          "input_hex": "eda09d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 158,
+          "input_hex": "eda09e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 159,
+          "input_hex": "eda09f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 160,
+          "input_hex": "eda0a0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 161,
+          "input_hex": "eda0a1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 162,
+          "input_hex": "eda0a2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 163,
+          "input_hex": "eda0a3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 164,
+          "input_hex": "eda0a4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 165,
+          "input_hex": "eda0a5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 166,
+          "input_hex": "eda0a6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 167,
+          "input_hex": "eda0a7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 168,
+          "input_hex": "eda0a8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 169,
+          "input_hex": "eda0a9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 170,
+          "input_hex": "eda0aa",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 171,
+          "input_hex": "eda0ab",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 172,
+          "input_hex": "eda0ac",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 173,
+          "input_hex": "eda0ad",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 174,
+          "input_hex": "eda0ae",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 175,
+          "input_hex": "eda0af",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 176,
+          "input_hex": "eda0b0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 177,
+          "input_hex": "eda0b1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 178,
+          "input_hex": "eda0b2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 179,
+          "input_hex": "eda0b3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 180,
+          "input_hex": "eda0b4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 181,
+          "input_hex": "eda0b5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 182,
+          "input_hex": "eda0b6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 183,
+          "input_hex": "eda0b7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 184,
+          "input_hex": "eda0b8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 185,
+          "input_hex": "eda0b9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 186,
+          "input_hex": "eda0ba",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 187,
+          "input_hex": "eda0bb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 188,
+          "input_hex": "eda0bc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 189,
+          "input_hex": "eda0bd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 190,
+          "input_hex": "eda0be",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 191,
+          "input_hex": "eda0bf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 192,
+          "input_hex": "eda0c0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 193,
+          "input_hex": "eda0c1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 194,
+          "input_hex": "eda0c2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 195,
+          "input_hex": "eda0c3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 196,
+          "input_hex": "eda0c4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 197,
+          "input_hex": "eda0c5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 198,
+          "input_hex": "eda0c6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 199,
+          "input_hex": "eda0c7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 200,
+          "input_hex": "eda0c8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 201,
+          "input_hex": "eda0c9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 202,
+          "input_hex": "eda0ca",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 203,
+          "input_hex": "eda0cb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 204,
+          "input_hex": "eda0cc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 205,
+          "input_hex": "eda0cd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 206,
+          "input_hex": "eda0ce",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 207,
+          "input_hex": "eda0cf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 208,
+          "input_hex": "eda0d0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 209,
+          "input_hex": "eda0d1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 210,
+          "input_hex": "eda0d2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 211,
+          "input_hex": "eda0d3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 212,
+          "input_hex": "eda0d4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 213,
+          "input_hex": "eda0d5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 214,
+          "input_hex": "eda0d6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 215,
+          "input_hex": "eda0d7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 216,
+          "input_hex": "eda0d8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 217,
+          "input_hex": "eda0d9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 218,
+          "input_hex": "eda0da",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 219,
+          "input_hex": "eda0db",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 220,
+          "input_hex": "eda0dc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 221,
+          "input_hex": "eda0dd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 222,
+          "input_hex": "eda0de",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 223,
+          "input_hex": "eda0df",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 224,
+          "input_hex": "eda0e0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 225,
+          "input_hex": "eda0e1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 226,
+          "input_hex": "eda0e2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 227,
+          "input_hex": "eda0e3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 228,
+          "input_hex": "eda0e4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 229,
+          "input_hex": "eda0e5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 230,
+          "input_hex": "eda0e6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 231,
+          "input_hex": "eda0e7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 232,
+          "input_hex": "eda0e8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 233,
+          "input_hex": "eda0e9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 234,
+          "input_hex": "eda0ea",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 235,
+          "input_hex": "eda0eb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 236,
+          "input_hex": "eda0ec",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 237,
+          "input_hex": "eda0ed",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 238,
+          "input_hex": "eda0ee",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 239,
+          "input_hex": "eda0ef",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 240,
+          "input_hex": "eda0f0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 241,
+          "input_hex": "eda0f1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 242,
+          "input_hex": "eda0f2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 243,
+          "input_hex": "eda0f3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 244,
+          "input_hex": "eda0f4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 245,
+          "input_hex": "eda0f5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 246,
+          "input_hex": "eda0f6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 247,
+          "input_hex": "eda0f7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 248,
+          "input_hex": "eda0f8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 249,
+          "input_hex": "eda0f9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 250,
+          "input_hex": "eda0fa",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 251,
+          "input_hex": "eda0fb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 252,
+          "input_hex": "eda0fc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 253,
+          "input_hex": "eda0fd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 254,
+          "input_hex": "eda0fe",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 255,
+          "input_hex": "eda0ff",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        }
+      ],
+      "rejected": 256,
+      "accepted": 0,
+      "no_valid_third_byte_completion": true
+    },
+    {
+      "prefix_hex": "edbf",
+      "fixture_ids": [
+        "invalid/surrogate_high"
+      ],
+      "bytewise_then_empty_final_trace": [
+        {
+          "input_hex": "ed",
+          "final": false,
+          "pre_pending_hex": "",
+          "pre_flag": 0,
+          "outcome": "returned",
+          "emitted_scalars": [],
+          "post_pending_hex": "ed",
+          "post_flag": 0
+        },
+        {
+          "input_hex": "bf",
+          "final": false,
+          "pre_pending_hex": "ed",
+          "pre_flag": 0,
+          "outcome": "returned",
+          "emitted_scalars": [],
+          "post_pending_hex": "edbf",
+          "post_flag": 0
+        },
+        {
+          "input_hex": "",
+          "final": true,
+          "pre_pending_hex": "edbf",
+          "pre_flag": 0,
+          "outcome": "raised",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1,
+          "posterror_state_not_read": true
+        }
+      ],
+      "completions": [
+        {
+          "third_byte": 0,
+          "input_hex": "edbf00",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 1,
+          "input_hex": "edbf01",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 2,
+          "input_hex": "edbf02",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 3,
+          "input_hex": "edbf03",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 4,
+          "input_hex": "edbf04",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 5,
+          "input_hex": "edbf05",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 6,
+          "input_hex": "edbf06",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 7,
+          "input_hex": "edbf07",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 8,
+          "input_hex": "edbf08",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 9,
+          "input_hex": "edbf09",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 10,
+          "input_hex": "edbf0a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 11,
+          "input_hex": "edbf0b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 12,
+          "input_hex": "edbf0c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 13,
+          "input_hex": "edbf0d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 14,
+          "input_hex": "edbf0e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 15,
+          "input_hex": "edbf0f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 16,
+          "input_hex": "edbf10",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 17,
+          "input_hex": "edbf11",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 18,
+          "input_hex": "edbf12",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 19,
+          "input_hex": "edbf13",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 20,
+          "input_hex": "edbf14",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 21,
+          "input_hex": "edbf15",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 22,
+          "input_hex": "edbf16",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 23,
+          "input_hex": "edbf17",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 24,
+          "input_hex": "edbf18",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 25,
+          "input_hex": "edbf19",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 26,
+          "input_hex": "edbf1a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 27,
+          "input_hex": "edbf1b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 28,
+          "input_hex": "edbf1c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 29,
+          "input_hex": "edbf1d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 30,
+          "input_hex": "edbf1e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 31,
+          "input_hex": "edbf1f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 32,
+          "input_hex": "edbf20",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 33,
+          "input_hex": "edbf21",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 34,
+          "input_hex": "edbf22",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 35,
+          "input_hex": "edbf23",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 36,
+          "input_hex": "edbf24",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 37,
+          "input_hex": "edbf25",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 38,
+          "input_hex": "edbf26",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 39,
+          "input_hex": "edbf27",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 40,
+          "input_hex": "edbf28",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 41,
+          "input_hex": "edbf29",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 42,
+          "input_hex": "edbf2a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 43,
+          "input_hex": "edbf2b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 44,
+          "input_hex": "edbf2c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 45,
+          "input_hex": "edbf2d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 46,
+          "input_hex": "edbf2e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 47,
+          "input_hex": "edbf2f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 48,
+          "input_hex": "edbf30",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 49,
+          "input_hex": "edbf31",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 50,
+          "input_hex": "edbf32",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 51,
+          "input_hex": "edbf33",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 52,
+          "input_hex": "edbf34",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 53,
+          "input_hex": "edbf35",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 54,
+          "input_hex": "edbf36",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 55,
+          "input_hex": "edbf37",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 56,
+          "input_hex": "edbf38",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 57,
+          "input_hex": "edbf39",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 58,
+          "input_hex": "edbf3a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 59,
+          "input_hex": "edbf3b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 60,
+          "input_hex": "edbf3c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 61,
+          "input_hex": "edbf3d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 62,
+          "input_hex": "edbf3e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 63,
+          "input_hex": "edbf3f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 64,
+          "input_hex": "edbf40",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 65,
+          "input_hex": "edbf41",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 66,
+          "input_hex": "edbf42",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 67,
+          "input_hex": "edbf43",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 68,
+          "input_hex": "edbf44",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 69,
+          "input_hex": "edbf45",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 70,
+          "input_hex": "edbf46",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 71,
+          "input_hex": "edbf47",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 72,
+          "input_hex": "edbf48",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 73,
+          "input_hex": "edbf49",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 74,
+          "input_hex": "edbf4a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 75,
+          "input_hex": "edbf4b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 76,
+          "input_hex": "edbf4c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 77,
+          "input_hex": "edbf4d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 78,
+          "input_hex": "edbf4e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 79,
+          "input_hex": "edbf4f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 80,
+          "input_hex": "edbf50",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 81,
+          "input_hex": "edbf51",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 82,
+          "input_hex": "edbf52",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 83,
+          "input_hex": "edbf53",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 84,
+          "input_hex": "edbf54",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 85,
+          "input_hex": "edbf55",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 86,
+          "input_hex": "edbf56",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 87,
+          "input_hex": "edbf57",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 88,
+          "input_hex": "edbf58",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 89,
+          "input_hex": "edbf59",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 90,
+          "input_hex": "edbf5a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 91,
+          "input_hex": "edbf5b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 92,
+          "input_hex": "edbf5c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 93,
+          "input_hex": "edbf5d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 94,
+          "input_hex": "edbf5e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 95,
+          "input_hex": "edbf5f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 96,
+          "input_hex": "edbf60",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 97,
+          "input_hex": "edbf61",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 98,
+          "input_hex": "edbf62",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 99,
+          "input_hex": "edbf63",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 100,
+          "input_hex": "edbf64",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 101,
+          "input_hex": "edbf65",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 102,
+          "input_hex": "edbf66",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 103,
+          "input_hex": "edbf67",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 104,
+          "input_hex": "edbf68",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 105,
+          "input_hex": "edbf69",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 106,
+          "input_hex": "edbf6a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 107,
+          "input_hex": "edbf6b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 108,
+          "input_hex": "edbf6c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 109,
+          "input_hex": "edbf6d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 110,
+          "input_hex": "edbf6e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 111,
+          "input_hex": "edbf6f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 112,
+          "input_hex": "edbf70",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 113,
+          "input_hex": "edbf71",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 114,
+          "input_hex": "edbf72",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 115,
+          "input_hex": "edbf73",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 116,
+          "input_hex": "edbf74",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 117,
+          "input_hex": "edbf75",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 118,
+          "input_hex": "edbf76",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 119,
+          "input_hex": "edbf77",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 120,
+          "input_hex": "edbf78",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 121,
+          "input_hex": "edbf79",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 122,
+          "input_hex": "edbf7a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 123,
+          "input_hex": "edbf7b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 124,
+          "input_hex": "edbf7c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 125,
+          "input_hex": "edbf7d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 126,
+          "input_hex": "edbf7e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 127,
+          "input_hex": "edbf7f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 128,
+          "input_hex": "edbf80",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 129,
+          "input_hex": "edbf81",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 130,
+          "input_hex": "edbf82",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 131,
+          "input_hex": "edbf83",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 132,
+          "input_hex": "edbf84",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 133,
+          "input_hex": "edbf85",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 134,
+          "input_hex": "edbf86",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 135,
+          "input_hex": "edbf87",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 136,
+          "input_hex": "edbf88",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 137,
+          "input_hex": "edbf89",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 138,
+          "input_hex": "edbf8a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 139,
+          "input_hex": "edbf8b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 140,
+          "input_hex": "edbf8c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 141,
+          "input_hex": "edbf8d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 142,
+          "input_hex": "edbf8e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 143,
+          "input_hex": "edbf8f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 144,
+          "input_hex": "edbf90",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 145,
+          "input_hex": "edbf91",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 146,
+          "input_hex": "edbf92",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 147,
+          "input_hex": "edbf93",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 148,
+          "input_hex": "edbf94",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 149,
+          "input_hex": "edbf95",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 150,
+          "input_hex": "edbf96",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 151,
+          "input_hex": "edbf97",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 152,
+          "input_hex": "edbf98",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 153,
+          "input_hex": "edbf99",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 154,
+          "input_hex": "edbf9a",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 155,
+          "input_hex": "edbf9b",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 156,
+          "input_hex": "edbf9c",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 157,
+          "input_hex": "edbf9d",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 158,
+          "input_hex": "edbf9e",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 159,
+          "input_hex": "edbf9f",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 160,
+          "input_hex": "edbfa0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 161,
+          "input_hex": "edbfa1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 162,
+          "input_hex": "edbfa2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 163,
+          "input_hex": "edbfa3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 164,
+          "input_hex": "edbfa4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 165,
+          "input_hex": "edbfa5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 166,
+          "input_hex": "edbfa6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 167,
+          "input_hex": "edbfa7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 168,
+          "input_hex": "edbfa8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 169,
+          "input_hex": "edbfa9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 170,
+          "input_hex": "edbfaa",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 171,
+          "input_hex": "edbfab",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 172,
+          "input_hex": "edbfac",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 173,
+          "input_hex": "edbfad",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 174,
+          "input_hex": "edbfae",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 175,
+          "input_hex": "edbfaf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 176,
+          "input_hex": "edbfb0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 177,
+          "input_hex": "edbfb1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 178,
+          "input_hex": "edbfb2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 179,
+          "input_hex": "edbfb3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 180,
+          "input_hex": "edbfb4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 181,
+          "input_hex": "edbfb5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 182,
+          "input_hex": "edbfb6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 183,
+          "input_hex": "edbfb7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 184,
+          "input_hex": "edbfb8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 185,
+          "input_hex": "edbfb9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 186,
+          "input_hex": "edbfba",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 187,
+          "input_hex": "edbfbb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 188,
+          "input_hex": "edbfbc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 189,
+          "input_hex": "edbfbd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 190,
+          "input_hex": "edbfbe",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 191,
+          "input_hex": "edbfbf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 192,
+          "input_hex": "edbfc0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 193,
+          "input_hex": "edbfc1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 194,
+          "input_hex": "edbfc2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 195,
+          "input_hex": "edbfc3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 196,
+          "input_hex": "edbfc4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 197,
+          "input_hex": "edbfc5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 198,
+          "input_hex": "edbfc6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 199,
+          "input_hex": "edbfc7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 200,
+          "input_hex": "edbfc8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 201,
+          "input_hex": "edbfc9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 202,
+          "input_hex": "edbfca",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 203,
+          "input_hex": "edbfcb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 204,
+          "input_hex": "edbfcc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 205,
+          "input_hex": "edbfcd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 206,
+          "input_hex": "edbfce",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 207,
+          "input_hex": "edbfcf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 208,
+          "input_hex": "edbfd0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 209,
+          "input_hex": "edbfd1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 210,
+          "input_hex": "edbfd2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 211,
+          "input_hex": "edbfd3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 212,
+          "input_hex": "edbfd4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 213,
+          "input_hex": "edbfd5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 214,
+          "input_hex": "edbfd6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 215,
+          "input_hex": "edbfd7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 216,
+          "input_hex": "edbfd8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 217,
+          "input_hex": "edbfd9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 218,
+          "input_hex": "edbfda",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 219,
+          "input_hex": "edbfdb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 220,
+          "input_hex": "edbfdc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 221,
+          "input_hex": "edbfdd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 222,
+          "input_hex": "edbfde",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 223,
+          "input_hex": "edbfdf",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 224,
+          "input_hex": "edbfe0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 225,
+          "input_hex": "edbfe1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 226,
+          "input_hex": "edbfe2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 227,
+          "input_hex": "edbfe3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 228,
+          "input_hex": "edbfe4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 229,
+          "input_hex": "edbfe5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 230,
+          "input_hex": "edbfe6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 231,
+          "input_hex": "edbfe7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 232,
+          "input_hex": "edbfe8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 233,
+          "input_hex": "edbfe9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 234,
+          "input_hex": "edbfea",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 235,
+          "input_hex": "edbfeb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 236,
+          "input_hex": "edbfec",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 237,
+          "input_hex": "edbfed",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 238,
+          "input_hex": "edbfee",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 239,
+          "input_hex": "edbfef",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 240,
+          "input_hex": "edbff0",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 241,
+          "input_hex": "edbff1",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 242,
+          "input_hex": "edbff2",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 243,
+          "input_hex": "edbff3",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 244,
+          "input_hex": "edbff4",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 245,
+          "input_hex": "edbff5",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 246,
+          "input_hex": "edbff6",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 247,
+          "input_hex": "edbff7",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 248,
+          "input_hex": "edbff8",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 249,
+          "input_hex": "edbff9",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 250,
+          "input_hex": "edbffa",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 251,
+          "input_hex": "edbffb",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 252,
+          "input_hex": "edbffc",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 253,
+          "input_hex": "edbffd",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 254,
+          "input_hex": "edbffe",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        },
+        {
+          "third_byte": 255,
+          "input_hex": "edbfff",
+          "outcome": "rejected",
+          "exception_class": "UnicodeDecodeError",
+          "reason": "invalid continuation byte",
+          "exception_start": 0,
+          "exception_end": 1
+        }
+      ],
+      "rejected": 256,
+      "accepted": 0,
+      "no_valid_third_byte_completion": true
+    }
+  ],
+  "bounded_completion_decode_calls": 512,
+  "separate_probe_incremental_decode_calls": 6,
+  "separate_probe_getstate_calls": 10,
+  "elapsed_seconds": 0.0,
+  "deadline_seconds": 10,
+  "findings": "Nonfinal buffering/diagnostic timing is not the chosen earliest-error API contract. All possible third bytes are tested for these two fixed malformed prefixes only.",
+  "new_corpus_fixtures": 0,
+  "adapter_imports": 0,
+  "vendor_or_native_calls": 0,
+  "CPU_GGUF_oldpack_operations": 0,
+  "original_failed_reference_preserved": true,
+  "corpus_or_spec_edits": 0
+}

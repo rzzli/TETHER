@@ -1,0 +1,51 @@
+{
+  "adapted_late_methods": [
+    "match_full_roster",
+    "hash_remaining",
+    "_packet",
+    "_wire_source",
+    "_snapshot"
+  ],
+  "ast_syntax_only": "PASS",
+  "canonical_constructor_calls": [],
+  "copied_late_method_AST_equal": [
+    "_publish",
+    "_make_report",
+    "_close",
+    "finalize",
+    "_finish",
+    "_context_report",
+    "_wire_call",
+    "_consume_ledger",
+    "freeze_generated",
+    "generated_bytes",
+    "generated_artifact",
+    "_install_generated",
+    "check_generated"
+  ],
+  "native_or_original_ops": 0,
+  "schema_version": 1,
+  "scope": "Source4 algorithm text reused/adapted only; no old owner/Origin/Registry is constructed or imported. Public facade contains readonly refs only. continue_once local and factories explicitly synthetic. No source execution.",
+  "source": {
+    "bytes": 38489,
+    "path": "planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_owner_ops_v1.py",
+    "sha256": "2fd520cdf7d6bb331d79586d836de1680def7ba3c0b7133f1dca7af962718a9a"
+  },
+  "source4_reference": {
+    "path": "planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_owner_v4.py",
+    "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"
+  },
+  "status": "OWNEROPS_CANDIDATE_PAUSED_BEFORE_SUBJECT_IMPORT_OR_TEST",
+  "subject_imports": 0,
+  "subject_tests": 0,
+  "surface": [
+    "StateView.state",
+    "Core.validate_state_view",
+    "Core.install_owner_ops(view,ops,_LATE_TABLE)",
+    "fixed MappingProxyType table bound to SAME Core",
+    "Core.make_context",
+    "Core._issue_snapshot",
+    "KernelSnapshot.require_role1_representable",
+    "Core.output_key"
+  ]
+}

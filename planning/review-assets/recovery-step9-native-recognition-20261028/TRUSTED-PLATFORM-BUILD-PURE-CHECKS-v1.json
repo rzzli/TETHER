@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "helper_sha256": "c9a59c9279336ab550c753cc78b8e607349fdbf099b6883f5d149477db443f71",
+  "checker_sha256": "eb056a6f77a9c11572e7d1d9bdb696cb95bb8382fc0e9f5d79a262ddd8e1edc0",
+  "tests": 21,
+  "failures": 1,
+  "errors": 2,
+  "actual_compiler_dispatches": 0,
+  "actual_children": 0,
+  "target_DLL_loads": 0,
+  "CPU_binary_reads": 0,
+  "GGUF_model_reads": 0,
+  "denied_real_operations": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-trusted-platform-build-v1-pure-1793241896192189700",
+  "scope": "Own fake compiler/leases/finalizer plus bounded source/PE data; no build or target execution"
+}

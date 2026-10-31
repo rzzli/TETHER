@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T16:57:16.744901+00:00",
+  "status": "prepared_only_not_fetched_pending_root_and_independent_exact_review",
+  "scope": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BACKEND-SOURCE-SCOPE.json",
+    "sha256": "8f68b130dfdbc829c7d620256f5a42f133006565804c007046a56d5c3adfb43f"
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\fetch_backend_sources.py",
+    "sha256": "21e17bd4ef16078551c3e53f90df41356131424fbeb89a60833e1b82e6bee3ce",
+    "bytes": 46620
+  },
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BACKEND-SOURCE-PROTOCOL.json",
+    "sha256": "18206642dd4b8647a4bc9d6ff3fbe1bb14f02148a172b9ed49aa6add58ff7a84",
+    "bytes": 90860
+  },
+  "fixture": {
+    "helper_sha256": "12910663a6737c147e42d308762844f768165dbe0bbfdebc9171254f9fcbb092",
+    "report_sha256": "0ef8bbb4c7938a0b23ba928803a29183c8a04d536b0732d02f27e1fde3a7f85f",
+    "journal_sha256": "a2a04b71cc3b63e1801e41ab3af703540d0d4d5f163161e63142eaaead95a0ee",
+    "journal_tip_sha256": "6b8a8a331e70e82bc05f52e640854e097edb4a2771ba7910ad3cdb54ebf9f9f7",
+    "actual_rejection": "Incomplete/unbound source receipt",
+    "actual_children": 0,
+    "actual_network_requests": 0,
+    "remaining_not_dispatched": 1,
+    "reservation_retained": 1048576
+  },
+  "pinned_files_rehashed": 357,
+  "ast_identical_to_successful_eight_file_helper": [
+    "child_one",
+    "collect",
+    "files",
+    "need",
+    "pin",
+    "run_child",
+    "safe_input",
+    "safe_path",
+    "sanitized_environment",
+    "sha",
+    "worker_identity",
+    "write_new"
+  ],
+  "ast_changed_scope_functions": [
+    "accepted",
+    "checked_protocol",
+    "fetch",
+    "parent_guards",
+    "prepare"
+  ],
+  "fixed_reference_count": 2,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-backend-source-20261028T165636Z",
+  "output_absent": true,
+  "limits": {
+    "aggregate_retained_body_bytes": 4194304,
+    "aggregate_seconds": 300,
+    "attempts_per_url": 1,
+    "file_body_bytes": 1048576,
+    "finalization_reserve_seconds": 30,
+    "maximum_children": 2,
+    "maximum_concurrent_requests": 1,
+    "stderr_bytes": 65536,
+    "stdout_bytes": 65536,
+    "whole_child_seconds": 20
+  },
+  "upstream_commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+  "accepted_software_sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b",
+  "first_twelve_receipt_sha256": "cf2a70a3488d4dd96320d893a22e1b7706d6f913e8f5f238c9e68d4de1405f90",
+  "second_eight_receipt_sha256": "6e479bdaf3a0cf58b3afd1869c2317b9799e7dfa2e92c1fc9332730e7a7f86e9",
+  "public_header_closure_sha256": "84eb35b43abd346caeb565b6d2c6b3514acc705c07debeed963f4de0abcfaada",
+  "architecture_metadata_sha256": "596d0e6f8353a82d273f93156efd3fe06685f14ca9d08d3da05f70b8ebec5bf7",
+  "activity": {
+    "actual_source_requests": 0,
+    "actual_fetch_children": 0,
+    "native_target_calls": 0,
+    "gguf_reads": 0,
+    "model_or_tokenizer_calls": 0,
+    "builds": 0
+  },
+  "scope_limit": "Owned pure fixture and --prepare only; no CPU library or source request executed. No runtime route is authorized by these artifacts."
+}

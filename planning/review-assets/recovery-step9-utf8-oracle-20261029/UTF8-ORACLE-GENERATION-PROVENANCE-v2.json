@@ -1,0 +1,29 @@
+{
+  "CPU_GGUF_oldpack_access": 0,
+  "basis": "Authored literal scalar/hex pairs, every declared representative interior cut, authored negative-byte positions and explicit step expectations. Helpers only frame lengths, byte slices, cumulative emitted lists and hashes.",
+  "compiler_or_native_calls": 0,
+  "corpus": {
+    "bytes": 154021,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v2.json",
+    "sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d"
+  },
+  "decoder_or_codec_calls": 0,
+  "fixture_count": 107,
+  "generator": {
+    "bytes": 15439,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\author_utf8_oracle_corpus_v2.py",
+    "sha256": "a844f88aefa2cb1fad3be52f8de7d11884e6485edfc046259a9c20c654dd2a79"
+  },
+  "model_token_ID_selection": false,
+  "schema_version": 1,
+  "semantic_validation": "pending_independent_review_and_postfreeze_reference_check",
+  "specification": {
+    "bytes": 9826,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SPEC-v2.md",
+    "sha256": "f4f3835481f1961c01830bf6ba37107cf270ebaad7a9321d6f1b4ee0fcdec44a"
+  },
+  "status": "literal_fixture_generation_before_any_adapter",
+  "steps": 167,
+  "supplied_bytes": 354,
+  "vendor_calls": 0
+}

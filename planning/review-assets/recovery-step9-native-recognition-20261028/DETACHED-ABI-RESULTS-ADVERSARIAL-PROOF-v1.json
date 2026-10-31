@@ -1,0 +1,1198 @@
+{
+  "activity": {
+    "CPU_DLL_or_GGUF_reads": 0,
+    "SDK_API_calls": 0,
+    "child_or_DLL_or_model_calls": 0
+  },
+  "checker": {
+    "bytes": 16971,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_results_v1.py",
+    "sha256": "a2136bc58fa853bcb4471a797bbce1b75395bfb6ca4ac90da235694f27517fe0"
+  },
+  "component_AST_sha256": {
+    "authority": "d946570137cdaf50f29df15b1a56fbe33c38ab0c4c4040a206069074b769b30d",
+    "exact": "076fa98b41d264684bb8a15daafd55ac83d37b1ccdfec00a28b7b10cb23c9318",
+    "json_value": "b31065421c704f1fe283da8f27d12f305e3d0beeb5f5df049cc71886e57f15ce",
+    "runtime_pins": "51da1b0879a8598ae5ea81e0e5114aa896604e19523d9daec3bdd616e9a772aa",
+    "sha": "82daf9a8840800fa4b1f26786e43bbffb24afd53ebb2d272f3678319873cd50c",
+    "validate_child_artifacts": "f5beaeb4e0b3abfda60064ae5b09f8ed0266a805575cf2b1210a3bbc235c9853",
+    "validate_modules": "40a2f125e56a9af4892a1705cd3599aa91424973deb1a72f56489b3d33a0f463"
+  },
+  "contract": {
+    "bytes": 11723,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v1.json",
+    "sha256": "2be3241b97ca3a4f0f237ebb6cbcff4884366f37d10303608c09366c4e709457"
+  },
+  "denied_real_operations": [],
+  "elapsed_seconds": 3.140999999945052,
+  "errors": [],
+  "failures": [],
+  "fixture_root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-result-pure-1793227772866210000",
+  "recorded_at_utc": "2026-10-28T22:49:36.006174+00:00",
+  "safe_source": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "schema_version": 1,
+  "scope": "AST-extracted data-only validator vectors, not real ABI or launcher qualification",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v1.py",
+    "sha256": "97544efa7e181e2a33d494c0923e3547b4f98f7903c6e0e1db024999736b6437"
+  },
+  "status": "passed",
+  "tests": 9,
+  "vector_count": 230,
+  "vectors": [
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "duplicate-root-key"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "duplicate-nested-key"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "nonfinite-child-NaN"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "nonfinite-child-Infinity"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "nonfinite-child--Infinity"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "nonfinite-child-1e999"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "file-cap-attempt.json"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "file-cap-result.jsonl"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "row-cap"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "no-final-LF"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "blank-extra-row"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "extra-file-failure.json"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "extra-file-result.partial.jsonl"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "extra-file-unapproved.txt"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "attempt-claim-draft"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "attempt-claim-mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "attempt-claim-schema_version"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "authority-mismatch-CONTRACT"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "authority-mismatch-DESIGN"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "authority-mismatch-QUALIFICATION"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "authority-mismatch-BUILD_PROTOCOL"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "mock-reparse-entry-attempt.json"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "mock-reparse-entry-result.jsonl"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-missing-0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-duplicate-0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-extra-field-0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-missing-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-duplicate-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-extra-field-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-missing-2"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-duplicate-2"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-extra-field-2"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-missing-3"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-duplicate-3"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-extra-field-3"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-missing-4"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-duplicate-4"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-extra-field-4"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-reordered"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-nonobject"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "event-failed-child"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-devices_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-devices_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-devices_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-tensor_buft_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-tensor_buft_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-tensor_buft_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-tensor_split_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-tensor_split_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-tensor_split_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-progress_callback_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-progress_callback_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-progress_callback_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-progress_userdata_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-progress_userdata_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-progress_userdata_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-kv_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-kv_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-kv_overrides_null"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-missing-load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-type-load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-value-load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "default-extra-key"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-pointer"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-pointer"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-pointer"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-token_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-token_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-token_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-bool_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-bool_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-bool_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_params_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_params_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_params_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_params_align"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_params_align"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_params_align"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-token_data_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-token_data_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-token_data_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-token_array_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-token_array_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-token_array_size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/devices"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/devices"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/devices"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/tensor_buft_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/tensor_buft_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/tensor_buft_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/n_gpu_layers"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/split_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/load_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/lazy_mode"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/main_gpu"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/tensor_split"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/tensor_split"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/tensor_split"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/progress_callback"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/progress_callback"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/progress_callback"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/progress_callback_user_data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/progress_callback_user_data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/progress_callback_user_data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/kv_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/kv_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/kv_overrides"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/vocab_only"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/check_tensors"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/use_extra_bufts"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/no_host"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/no_alloc"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-model_offsets/load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-model_offsets/load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-model_offsets/load_mtp"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-candidate_offsets/id"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-candidate_offsets/id"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-candidate_offsets/id"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-candidate_offsets/logit"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-candidate_offsets/logit"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-candidate_offsets/logit"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-candidate_offsets/p"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-candidate_offsets/p"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-candidate_offsets/p"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-array_offsets/data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-array_offsets/data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-array_offsets/data"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-array_offsets/size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-array_offsets/size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-array_offsets/size"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-array_offsets/selected"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-array_offsets/selected"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-array_offsets/selected"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-value-array_offsets/sorted"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-type-array_offsets/sorted"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-missing-array_offsets/sorted"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "layout-extra"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-missing-required-0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-missing-required-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-missing-required-2"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-missing-required-3"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-missing-required-4"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-duplicate-0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-duplicate-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-duplicate-5"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-path-D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-path-D:\\unapproved\\llama.dll"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-path-C:\\Windows\\evil.dll"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-path-llama.dll"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-name-mismatch"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-extra-field"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-noncanonical-dot"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "module-too-many"
+    },
+    {
+      "expected": "accept",
+      "passed": true,
+      "vector": "version-boundary-1"
+    },
+    {
+      "expected": "accept",
+      "passed": true,
+      "vector": "version-boundary-255"
+    },
+    {
+      "expected": "accept",
+      "passed": true,
+      "vector": "five-required-module-minimum"
+    },
+    {
+      "expected": "accept",
+      "passed": true,
+      "vector": "attempt-exact4096"
+    },
+    {
+      "expected": "accept",
+      "passed": true,
+      "vector": "row-exact65536"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-''"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-'\\n'"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-'\\x7f'"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-'\u00e9'"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-lone-surrogate"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-True"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "version-invalid-None"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "completion-time--1"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "completion-time-30001"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "completion-time-True"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "completion-time-0.0"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "completion-time-'0'"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-0-dependency_native_initialization_possible"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-2-no_backend_or_model_call_so_far"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-3-model_called"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-3-backend_init_called"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-3-registry_called"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-3-version_expected_previously_known"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-4-parent_qualification_required"
+    },
+    {
+      "expected": "reject",
+      "passed": true,
+      "vector": "scope-4-mode"
+    }
+  ]
+}

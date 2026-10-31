@@ -1,0 +1,121 @@
+{
+  "System32_candidates": 16,
+  "anchors": {
+    "DETACHED-ABI-EXECUTION-CONTRACT-v3.json": {
+      "bytes": 18580,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v3.json",
+      "sha256": "db63e7431ec14442dc038543bce810ea9b9be98fd73ea0b4354fce6f8c623dd2"
+    },
+    "DETACHED-ABI-EXECUTION-DESIGN-v3.md": {
+      "bytes": 3075,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-DESIGN-v3.md",
+      "sha256": "0d1ad132ff53e3ce15de6d6cd8f1dd3f61f75fb96a7e83ccbc2dad2a27dd8c1b"
+    },
+    "DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v4.json": {
+      "bytes": 4880,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v4.json",
+      "sha256": "d0f79c4d8394139d9f8c28c3aa8253a2af72532a2efcd8461fb8c8fd430cfa37"
+    },
+    "DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v4.json": {
+      "bytes": 57323,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v4.json",
+      "sha256": "31067ddb02aeed26c4ca20e68224f926ca6e4e4bc60b610fc27584a0a4fdf320"
+    },
+    "DETACHED-ABI-OBSERVATION-PEER-REVIEW-v2.json": {
+      "bytes": 12982,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PEER-REVIEW-v2.json",
+      "sha256": "69f2fe3f11f50c7d7052a51efa7fed6b565c525ea29e5b516b2cea617cc24f53"
+    },
+    "DETACHED-ABI-OBSERVATION-PREPARATION-v2.json": {
+      "bytes": 4903,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PREPARATION-v2.json",
+      "sha256": "9ef52a8160f7145e196426e17ce09184adf845e26db22a554bfd1e75b1de519f"
+    },
+    "DETACHED-ABI-OBSERVATION-PROTOCOL-v2.json": {
+      "bytes": 53696,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v2.json",
+      "sha256": "58154061a1a2dff9e3369a01662cb2b8be601012ba16c2b694f98255067adf6d"
+    },
+    "DETACHED-ABI-OBSERVATION-PURE-CHECKS-v3.json": {
+      "bytes": 38261,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PURE-CHECKS-v3.json",
+      "sha256": "f043c29a3342a821d74a0d09cebdd56c13d8a058c3d9fb1b65b2a186a289d690"
+    },
+    "DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v3.json": {
+      "bytes": 1377,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v3.json",
+      "sha256": "999447824c2c3b22b08a4d2991cb16c4773e1f271a1c42912b5230c2ba6ed637"
+    },
+    "TYPED-ABI-BUILD-V4-RESULT-VERIFICATION.json": {
+      "bytes": 18384,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V4-RESULT-VERIFICATION.json",
+      "sha256": "48535ac53123db5246c95b7d7ed9211695531e687346e9854ca98d5c51d17473"
+    },
+    "detached_abi_terminal_observation_v3.py": {
+      "bytes": 10524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+      "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+    },
+    "run_detached_abi_observation_v4.py": {
+      "bytes": 41809,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v4.py",
+      "sha256": "f3bbd60e3c84c5eb99c2ba700b73dda81da45d6f2e039c74fa5b9fb88f4d25b9"
+    }
+  },
+  "automatic_retry": false,
+  "counters_instrumented": false,
+  "executable": {
+    "bytes": 191488,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-build-v4-20261028T231155Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "c5df7b62ce1de641407d973e5994aa91ea244331e5de2d243d3f1e717997e398"
+  },
+  "explicit_target_call_policy": [
+    "llama_version",
+    "llama_model_default_params"
+  ],
+  "fresh_input_hashes_checked": 202,
+  "interruption_policy": "Cleanup/seal only, no new input reads; retain unknown outcomes and poll same running session without redispatch",
+  "inventory_scope": "Child-reported after core load and before version/default calls only; no post-call/global attestation or initializer instrumentation",
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 30,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 4194304,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "maximum_attempts": 1,
+  "no_CPU_GGUF_model_vocabulary_grammar_backend_path": true,
+  "no_compilation_or_download": true,
+  "old_failures_preserved": true,
+  "original_and_detached_general_gates_false": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z",
+  "output_absent": true,
+  "proposed_attempt": 2,
+  "protected_hash_only_checks": {
+    "data/benchmark/cohorts/science4-outcomes-20261019T024500Z/adjudication/normalized-outcomes.json": "9392df7cec11704f3f0abaddc12e4196349ace1aba55b4da0af0f14d41bb26f2",
+    "data/benchmark/labels/endpoint-followup-feasibility-20261021/adjudication-v1/normalized-outcomes.json": "c3195a27565debe2c0b891f8aecffbae8a63988dfe2fd62b9e5aed37f0353398"
+  },
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-28T23:36:35.864336+00:00",
+  "required_independent_actual_verification": true,
+  "runtime_DLLs": 4,
+  "schema_version": 1,
+  "source_revision": 4,
+  "status": "root_authorizes_one_exact_corrected_ABI_observation",
+  "terminal_policy": {
+    "capture_drain_seconds": 0.25,
+    "late_returned_bytes_retained": true,
+    "maximum_capture_polls": 64,
+    "physical_pipe_EOF_is_not_child_exit": true,
+    "skip_new_observations_and_input_rechecks_after_interruption": true,
+    "unknown_creation_is_not_final": true
+  }
+}

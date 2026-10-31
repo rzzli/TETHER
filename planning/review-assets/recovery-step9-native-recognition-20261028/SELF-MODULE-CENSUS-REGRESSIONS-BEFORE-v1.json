@@ -1,0 +1,14 @@
+{
+  "status": "failed_expected_regression_first",
+  "source": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v6.cpp",
+  "source_sha256": "5a5964cb724cef0d03aab1653c52b14dae952cd4b5ec6f758a96228cd93882d0",
+  "checker_sha256": "38f06a90dc927ebda50c03b7523efb6fba878de22b2627f7e6e93dc56766aae9",
+  "tests_run": 2,
+  "failures": [
+    "(<__main__.Regressions testMethod=test_comparison_requires_lossless_retained_inputs>, 'Traceback (most recent call last):\\n  File \"D:\\\\Projects\\\\drug_target_agents\\\\planning\\\\review-assets\\\\recovery-step9-native-recognition-20261028\\\\check_module_census_regressions_v1.py\", line 29, in test_comparison_requires_lossless_retained_inputs\\n    self.assertIn(required, block)\\nAssertionError: \\'row.name_terminated\\' not found in \\'bool comparable = row.path_ok && row.path_terminated && !row.path_nul;\\\\n                bool basename_match = comparable && census_key(row.name) == base, system_match = comparable && census_key(census_parent(row.path)) == system_key, listed = false;\\\\n                for (const wchar_t* allowed : R09_SYSTEM_DLL_NAMES) if (base == census_key(allowed)) listed = true;\\\\n                \\'\\n')",
+    "(<__main__.Regressions testMethod=test_successful_first_and_next_count_before_publication>, 'Traceback (most recent call last):\\n  File \"D:\\\\Projects\\\\drug_target_agents\\\\planning\\\\review-assets\\\\recovery-step9-native-recognition-20261028\\\\check_module_census_regressions_v1.py\", line 19, in test_successful_first_and_next_count_before_publication\\n    self.assertIn(\"if (found) ++seen;\", block)\\nAssertionError: \\'if (found) ++seen;\\' not found in \\'BOOL found = Module32FirstW(snapshot, &entry); error = found ? ERROR_SUCCESS : GetLastError(); result(First, id, 0, found != FALSE, error, \"null\", json_bool(found != FALSE), false);\\\\n            \\'\\n')"
+  ],
+  "errors": [],
+  "actual_children": 0,
+  "scope": "Static source ordering/retained-input regression; not compiled native execution"
+}

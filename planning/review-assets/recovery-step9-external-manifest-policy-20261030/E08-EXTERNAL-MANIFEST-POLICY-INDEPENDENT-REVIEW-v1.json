@@ -1,0 +1,153 @@
+{
+  "activity": {
+    "app_defaults_or_monitors_changed": false,
+    "metadata_json_and_hash_work_only": true,
+    "native_or_original_targets_followed": false,
+    "policy_solver_executed": false,
+    "subject_implementation": false,
+    "subject_imports": 0,
+    "subject_runs": 0
+  },
+  "checker_chronology": {
+    "contract_or_literal_changes": false,
+    "first_metadata_checker": "Preserved checker_v1 stopped on its own overly strict framing-dict equality at literal34; literals34/35 legitimately include an explicit invalid-Unicode reason. It produced no successful check artifact and ran no subject.",
+    "named_successor": "Checker_v2 changes only result filename and the exact existing two-key Unicode framing expectation, retaining all outcome/size/report/pin checks. Its single run passes; proof d23d47c1 is bound above.",
+    "subject_failure_or_replay": false
+  },
+  "findings": [
+    {
+      "evidence": "Actual executing-kernel binding class and original selected object remain distinct from envelope data. Same Core/Origin/nonce/Registry/raw store are required before semantic validation; report validation precedes output callbacks, original opens, helper compilation and continuation. Neither role labels, hashes, status nor data-only schema acceptance mint authority.",
+      "id": "F01",
+      "result": "CLEAR",
+      "topic": "External trust and temporal boundary"
+    },
+    {
+      "evidence": "The structural-only six-argument immutable constructor deliberately retains scalar semantic faults for original-clock Core validation. All52 literal shells satisfy its stated exact list/pin/leaf bounds. AUTHORING keeps explicit planned/unbuilt nulls and returns before runtime work; EXECUTION compares independent typed EntryPlan count/pins and still requires all existing live gates.",
+      "id": "F02",
+      "result": "CLEAR",
+      "topic": "Noncircular authoring and selection"
+    },
+    {
+      "evidence": "Manually read all52 fixed requests/outcomes. Direct/transitive and nonbasis INPUT/CONSUMER current ancestry refuses even when acyclic; global cycles include current-output-only cycles. External/prior restrictions, known references, exact root pins and ordered IDs remain separate. Duplicate pin/node identical/conflict and cross-role conflict order, length-before-pattern/Unicode and declared-edge counting match selected clarification8ac0.",
+      "id": "F03",
+      "result": "CLEAR",
+      "topic": "Graph direction, current ancestry and error precedence"
+    },
+    {
+      "evidence": "Independent pure-data checker rehashed all24 freeze pins, verified all52 draft/final vector objects unchanged, reconstructed all10 exact12-field report data values/digests and all52 canonical sizes or explicit invalid-Unicode absence. Seven bound equality/one-over pairs are discriminating; edge4096/4097 layouts reference only33 external roots, and canonical131072/131073 layouts reference only16 roots. No generic cycle/admission solver was executed.",
+      "id": "F04",
+      "result": "CLEAR",
+      "topic": "Exact metadata framing and limits"
+    },
+    {
+      "evidence": "Literal44/45 leave graph/canonical metadata equal to valid literal1 while independently changing FileSpec context count or pin. Harness-only entry_basis_pins never enters request/canonical bytes. The10/15 declarative scenarios require genuine separate kernel namespaces, same-object handoff, cold immutable observations, once-only failures, original exception identity, prepared-versus-issued interruption, no counterfeit objects and unchanged legal once-close cleanup under original hard cutoff.",
+      "id": "F05",
+      "result": "CLEAR",
+      "topic": "Independent basis and genuine integration obligations"
+    },
+    {
+      "evidence": "A constructor-returned immutable report is retained before final clock/bookkeeping; late failure leaves public issued report absent and eligibility false. No cached status can heal/retry. A later unrelated work failure after genuine issuance does not become a blanket primary-is-None cleanup prohibition; stopped same-call caches remain quarantined.",
+      "id": "F06",
+      "result": "CLEAR",
+      "topic": "Prepared report and postfailure cleanup"
+    },
+    {
+      "evidence": "Final schema is a structural companion for validated values, not a constructor shell or admission proof. Contract has no final-corpus pin dependency; final corpus pins contract/schema; freeze pins both; index is not hashed back. Historical Source3 50PASS/3DEFERRED remains unchanged and E08 is still unimplemented/unexecuted. E16, native25, physical output/ABI, live resource/lease/child, full new84 roster, resource fit and science remain pending.",
+      "id": "F07",
+      "result": "CLEAR",
+      "topic": "Scope and provenance"
+    }
+  ],
+  "material_blockers": [],
+  "next": "Separate Root source-authoring decision and coherent source pause; preserve this exact contract/corpus and all accepted historical artifacts.",
+  "pins": [
+    {
+      "bytes": 9103,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-POLICY-PRECODE-FREEZE-v1.json",
+      "sha256": "096efd94efe29ab2c9e5b65b3d9ccd3e12eabf375a94e0f4ddcdfb4c557f3fa0"
+    },
+    {
+      "bytes": 1976,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-POLICY-DESIGN-INDEX-v1.md",
+      "sha256": "40097435df554b053b2cdc878cc9b41acd42c1e1721f493ed3946db81a55626b"
+    },
+    {
+      "bytes": 33105,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-v1.json",
+      "sha256": "a55b839b5b1fb038e8f0348d7fc5570abc36415db9a8f94ff6cb32269071f656"
+    },
+    {
+      "bytes": 10978,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-SCHEMA-v1.json",
+      "sha256": "6553a874cb34f4d312d5d1c5068c6a625ad9a6ae7cb56a050f3116bfa26b708a"
+    },
+    {
+      "bytes": 1045916,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-CORPUS-v1.json",
+      "sha256": "ea2fc0966d45f95e97e995e9477c89fe3d2c6d9f647c7ed7dfaf1710b8c25b4c"
+    },
+    {
+      "bytes": 5332,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-PROVENANCE-v1.json",
+      "sha256": "fb339d8f77f83db4323d86021da25307a39259d0f780ce35a5da6641dbab3f96"
+    },
+    {
+      "bytes": 11421,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-GENUINE-INTEGRATION-PRECODE-SCENARIOS-v1.json",
+      "sha256": "95f6b3be183593d9ae154fce3ee15065a29143ae091bbbf59b9dc3dd3a6618ff"
+    },
+    {
+      "bytes": 10425,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/check_e08_frozen_metadata_peer_v2.py",
+      "sha256": "b7e3eb0e08dfd99da299d269d2e8e5998a631e0df4a01e4dddfb885734098caa"
+    },
+    {
+      "bytes": 16593,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-FROZEN-METADATA-CHECK-v2.json",
+      "sha256": "d23d47c1e55b632d716ddb212e42fa330c030fc3a9a84824c59955d1065419b2"
+    },
+    {
+      "bytes": 10233,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/check_e08_frozen_metadata_peer_v1.py",
+      "sha256": "ee4b8e1246913b30e7d7330527f86a3a3e4b12682f3512c20970cebd64b4da2e"
+    },
+    {
+      "bytes": 935,
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-METADATA-CHECK-FIRST-FAILURE-v1.json",
+      "sha256": "1bad5b5a00e6f522ae32fef0389a88834b91f2e2040faa2fceb7fb80b689a78b"
+    }
+  ],
+  "qualification": {
+    "E08_executed": false,
+    "E08_implemented": false,
+    "complete_entry_gate": false,
+    "full_new84_roster": false,
+    "native25": false,
+    "physical_or_native": false,
+    "precode_metadata_consistent": true,
+    "project_complete": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "residual_limits": [
+    "This is a design/precode review, not52 executed tests or15 observed integration branches.",
+    "Constructor-only custom-container/scalar-hook, binding namespace/rebinding, original clock and report-allocation behavior require the separately scoped genuine implementation/tests.",
+    "256nodes/4096edges/131072metadata bytes and illustrative74slots do not certify full roster, physical call census, heap/RSS, performance, native authority or scientific qualification.",
+    "Pre-entry launcher/binding selection is an explicit TCB assumption; E08 does not authenticate that launcher."
+  ],
+  "reviewed_counts": {
+    "constructible_binding_shells": 52,
+    "executed_genuine_integration_branches": 0,
+    "executed_policy_vectors": 0,
+    "expected_refusal_outcomes": 42,
+    "expected_report_values": 10,
+    "literal_vectors": 52,
+    "named_genuine_integration_scenarios": 10,
+    "planned_expanded_branches": 15
+  },
+  "reviewer": "grammar_toolchain_requirements; independent of contract and literal authors",
+  "schema_version": 1,
+  "scope": "Finite exact final E08 contract/schema/52 literal expectations/15 declarative integration branches. No implementation, policy graph solver, constructor/Core execution or existing Source3 replay.",
+  "status": "CLEAR_INDEPENDENT_PRECODE_METADATA_PEER_ONLY",
+  "verified_freeze_pins": 24
+}

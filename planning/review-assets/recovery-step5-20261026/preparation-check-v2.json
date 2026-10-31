@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "status": "superseding_planning_preparation_verified_not_execution_qualified",
+  "retained_pins_rehashed": 20,
+  "case_limits": [
+    {
+      "case": "exposed-il6r-genetics",
+      "limits": {
+        "max_claims": 2,
+        "max_quotes_per_claim": 2,
+        "max_output_tokens": 2048
+      }
+    },
+    {
+      "case": "synthetic-orientation",
+      "limits": {
+        "max_claims": 3,
+        "max_quotes_per_claim": 2,
+        "max_output_tokens": 2048
+      }
+    },
+    {
+      "case": "synthetic-context",
+      "limits": {
+        "max_claims": 3,
+        "max_quotes_per_claim": 2,
+        "max_output_tokens": 2048
+      }
+    }
+  ],
+  "model_calls": 0,
+  "provider_spend_usd": 0,
+  "paired_preflight_sha256": "91443283414fc886795e747056b70c7cd6a2a676aacc236487096ac91b146205",
+  "supersedes_preparation_check_sha256": "743f25bfc1b9936331fa463f501a760d8d4c61903d7ebd22dc45ff9a94d038e7",
+  "original_proofs_and_payloads_preserved": true,
+  "remaining": [
+    "simplified runtime validator/adapter qualification",
+    "stronger control unavailable",
+    "genetics-methods human references pending",
+    "memory fit and timing unmeasured"
+  ]
+}

@@ -1,0 +1,1543 @@
+{
+  "actual_full48_fake_dispatches": 518,
+  "actual_full48_in_memory_toy_module_execs": 34,
+  "actual_hot_metrics": [
+    {
+      "actual": 103,
+      "canonical_records": 18,
+      "expected": 103,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 1,
+        "iterated_items": 0,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "handle",
+      "window": "clean_hot"
+    },
+    {
+      "actual": 68,
+      "canonical_records": 18,
+      "expected": 68,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 0,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "read_known",
+      "window": "clean_hot"
+    },
+    {
+      "canonical_records": 18,
+      "foreign_genuine_ref_rejected": true,
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 1,
+        "iterated_items": 0,
+        "len_calls": 1,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "ref_membership",
+      "window": "clean_hot"
+    },
+    {
+      "actual": "actual_canonical_state",
+      "canonical_records": 17,
+      "expected": null,
+      "metrics": {
+        "append_calls": 1,
+        "direct_index_items": 6,
+        "iterated_items": 0,
+        "len_calls": 8,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "read_admission",
+      "window": "clean_hot"
+    }
+  ],
+  "actual_target_API_calls": 0,
+  "audit_denials": [],
+  "author_methods_separate": 12,
+  "author_supplement_methods_separate": 4,
+  "chronology": [
+    "Accepted V2, frozen48 oracle, SAME8 regressions and strict validator predate indexed implementation.",
+    "Pre-code six controls d76/protocolcccf/freeze52da and actual accepted-V2 BEFORE24da predate V3 code. Prior control-v1/HOLD/baseline88dd preserved.",
+    "Source pause8c010 freezes all3 before any V3 subject import/test. OS author16 and independent15 then execute separately on those same immutable bytes.",
+    "Source-binding55910/run-freeze6855 source_tests_before_this_* = 0 are LOCAL independent-run counts; they do not assert OS author controls had not run. No zero-historical-subject-execution claim.",
+    "This evidence-freeze performs only bounded NEW metadata/proof/pin checks, no subject replay or additional native/compiler/original operation."
+  ],
+  "component_accepted": false,
+  "explicit_canonical_report_metrics": [
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_canonical_append_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_before_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 18,
+      "known": {
+        "captured_bytes": 141,
+        "early_captured_bytes": 141,
+        "early_hashed_bytes": 141,
+        "early_known_read_bytes": 141,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 141,
+        "known_read_bytes": 141,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 2,
+        "buffer_state": "reserved",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 2,
+        "invocation_reserved": false,
+        "ordinal": 17,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "not_returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 18,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "index_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_before_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_first_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_second_report",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "fold_after_after_quarantine_check",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 58,
+        "early_captured_bytes": 58,
+        "early_hashed_bytes": 58,
+        "early_known_read_bytes": 58,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 58,
+        "known_read_bytes": 58,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 58
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": false,
+        "wrapper_return_observed": true,
+        "wrapper_state": "returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "healthy_identical_count_replay",
+      "primary": null,
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 0,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 0,
+        "read_count_unknown": true,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": false,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": false,
+        "wrapper_state": "raised"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "partial_scalar",
+      "primary": "MemoryError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    },
+    {
+      "calls": 6,
+      "known": {
+        "captured_bytes": 0,
+        "early_captured_bytes": 0,
+        "early_hashed_bytes": 0,
+        "early_known_read_bytes": 0,
+        "early_rehashes_after_claim": 0,
+        "early_reopens_after_claim": 0,
+        "hashed_bytes": 0,
+        "known_read_bytes": 0,
+        "read_count_unknown": false,
+        "remaining_captured_bytes": 0,
+        "remaining_hashed_bytes": 0,
+        "remaining_known_read_bytes": 0
+      },
+      "last_call": {
+        "api": "ReadFile",
+        "buffer_generation": 0,
+        "buffer_state": "raw_retained",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "error_defined": false,
+        "file_id": 0,
+        "invocation_reserved": true,
+        "ordinal": 5,
+        "raw_buffer_bytes": null,
+        "raw_buffer_sha256": null,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 0
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "reserved": true,
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "stopped": true,
+        "wrapper_return_observed": true,
+        "wrapper_state": "returned"
+      },
+      "metrics": {
+        "append_calls": 0,
+        "direct_index_items": 0,
+        "iterated_items": 6,
+        "len_calls": 0,
+        "membership_items": 0,
+        "slice_copied_items": 0
+      },
+      "name": "defined_zero",
+      "primary": "SharedOwnerError",
+      "qualification": {
+        "FFI_registration_proven": false,
+        "originals_authenticated": false,
+        "production_owner_bound": false,
+        "profile_qualified": false,
+        "real_checkers_bound": false,
+        "runtime_authorized": false,
+        "verification_complete": false
+      },
+      "window": "canonical_report_allowed"
+    }
+  ],
+  "freezer": {
+    "bytes": 5915,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\freeze_indexed_accounting_actual_evidence_v3.py",
+    "sha256": "86d3db50c6afd773195c742671a92636cbf84c0430512591179c42e53bee33e1"
+  },
+  "histories_matched": 48,
+  "independent_methods": 15,
+  "inputs": {
+    "INDEXED-ACCOUNTING-ACTUAL-V2-BEFORE-PROOF-v2.json": {
+      "bytes": 24923,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-ACTUAL-V2-BEFORE-PROOF-v2.json",
+      "sha256": "24da94c6576a7d94ef1c88467e28a179ae4f57b7da6e0a6a885f1e836101ef7d"
+    },
+    "INDEXED-ACCOUNTING-APPEND-ENVELOPE-CLARIFICATION-v1.json": {
+      "bytes": 3047,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-APPEND-ENVELOPE-CLARIFICATION-v1.json",
+      "sha256": "147dc12855fe6f9bbd5b1994bc1e389b938cb03bdc25ddb1cf4137c5fc48cfd6"
+    },
+    "INDEXED-ACCOUNTING-AUTHOR-CONTROLS-PURE-PROOF-v3.json": {
+      "bytes": 1801,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-AUTHOR-CONTROLS-PURE-PROOF-v3.json",
+      "sha256": "80d93cc5a7d5f53229380b79c8d65d02d70130fa563a33acbaee0aaa900c9b91"
+    },
+    "INDEXED-ACCOUNTING-AUTHOR-SUPPLEMENT-PURE-PROOF-v3.json": {
+      "bytes": 1033,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-AUTHOR-SUPPLEMENT-PURE-PROOF-v3.json",
+      "sha256": "a86d0da9642ef79a0432e50cea7a3f4d203824a29c3f367746daca06549bbe81"
+    },
+    "INDEXED-ACCOUNTING-INDEPENDENT-ACTUAL-PROOF-v3.json": {
+      "bytes": 9674956,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-ACTUAL-PROOF-v3.json",
+      "sha256": "173bfdeba4a25bab32ac676c1af194805cd33dc847b2616e12f4ffa7a905d660"
+    },
+    "INDEXED-ACCOUNTING-INDEPENDENT-PRECODE-PEER-v2.json": {
+      "bytes": 20155,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-PRECODE-PEER-v2.json",
+      "sha256": "4f5d8553a9dcf4e48af2eb864bbbdac1d1c00ad2487eb573ff3fffee977f656f"
+    },
+    "INDEXED-ACCOUNTING-INDEPENDENT-RUN-FREEZE-v3.json": {
+      "bytes": 3529,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-RUN-FREEZE-v3.json",
+      "sha256": "6855ba5b581698f2c26d37b02773d461ffa7bca281a5b294d89ad8f63d395fd6"
+    },
+    "INDEXED-ACCOUNTING-INDEPENDENT-SOURCE-BINDING-v3.json": {
+      "bytes": 8265,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-SOURCE-BINDING-v3.json",
+      "sha256": "55910e6d1f062a56bd2333b97d2b9192b3703c70cdbf1841387ae8244e44fdbc"
+    },
+    "INDEXED-ACCOUNTING-PRECODE-CONTROL-FREEZE-v2.json": {
+      "bytes": 2893,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-CONTROL-FREEZE-v2.json",
+      "sha256": "52da9451c215d50f4b3e559a47eb4c286dd7e33fc884b8bf67430d9e6ac9703d"
+    },
+    "INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v2.json": {
+      "bytes": 16359,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v2.json",
+      "sha256": "cccf8a1f4f6219ff51ade0279e82f587cfbe76c969e1be69125c0cc72ff2a3bd"
+    },
+    "INDEXED-ACCOUNTING-ROOT-SOURCE-SCOPE-v3.json": {
+      "bytes": 5099,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-ROOT-SOURCE-SCOPE-v3.json",
+      "sha256": "7683b6f661387b12e10ab2cbf83157b56dd3d5d5e2e4439d19e9804175196f97"
+    },
+    "INDEXED-ACCOUNTING-SOURCE-PAUSE-v3.json": {
+      "bytes": 1771,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-SOURCE-PAUSE-v3.json",
+      "sha256": "8c0103972a4cd33365e0b642e8d9ae44981d6121a31d644cfc2e443c1f20390c"
+    },
+    "INDEXED-ACCOUNTING-SUCCESSOR-PROPOSAL-v1.json": {
+      "bytes": 13696,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-SUCCESSOR-PROPOSAL-v1.json",
+      "sha256": "7e2b1b5b71095863ab687a92f8152239c2922f0bd8ada9c875562ec15d6d9a5b"
+    },
+    "SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 13345,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "34c3df0519df387e31439096b8c76e39fc3ce74437e1281346da58ab3a33952e"
+    },
+    "SHARED-OWNER-INTEGRATION-FIXTURES-v3.json": {
+      "bytes": 312462,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v3.json",
+      "sha256": "e12d6485d0bc38b38c5b4bf33edcab22c1471da15858718185f18f1b5179eee2"
+    },
+    "SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json": {
+      "bytes": 37533,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    },
+    "SHARED-OWNER-SCOPED-ACCEPTANCE-v2.json": {
+      "bytes": 5460,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SCOPED-ACCEPTANCE-v2.json",
+      "sha256": "7e0d94849d5ba9da358167a9d103b44fa6ae25acc8e5bed646d2839162220344"
+    },
+    "SHARED-OWNER-SNAPSHOT-VALIDATOR-INDEPENDENT-PEER-v1.json": {
+      "bytes": 7281,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SNAPSHOT-VALIDATOR-INDEPENDENT-PEER-v1.json",
+      "sha256": "5d01dbf90f220c50ad5bf9d6a7e140ceaefbc62dd4d8da194271db347a2585fd"
+    },
+    "SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json": {
+      "bytes": 4876,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+      "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+    },
+    "author_indexed_accounting_source_binding_v3.py": {
+      "bytes": 4624,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\author_indexed_accounting_source_binding_v3.py",
+      "sha256": "6b1854ece899f1af2850f0dc056ad0a14e2777ae1b51ff4e613ddd329d36f36e"
+    },
+    "check_shared_owner_author_controls_v3.py": {
+      "bytes": 12662,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\check_shared_owner_author_controls_v3.py",
+      "sha256": "c0e09b8bdece8d6a742b70cb0f89fca21a627e6d1a9953432d6b4cee6916286b"
+    },
+    "check_shared_owner_author_supplement_v3.py": {
+      "bytes": 4095,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\check_shared_owner_author_supplement_v3.py",
+      "sha256": "1c4f2fb0eb898e00b50aaf0010349d2a65ec26bdf610bdc5dd6b815bc1ec0ba0"
+    },
+    "continue_verification_v3": {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\continue_verification_v3.py",
+      "sha256": "16ff0a3463d7d97f068fb38b709addfdfa43944490c015329e4470fad314a47e"
+    },
+    "indexed_accounting_controls_v2.py": {
+      "bytes": 14210,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v2.py",
+      "sha256": "d76e1a2d7c70a9a42fa70c5f4989f08f2e291e79f12fa53b454250998c74bf5b"
+    },
+    "run_indexed_accounting_actual_v3_v1.py": {
+      "bytes": 8260,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\run_indexed_accounting_actual_v3_v1.py",
+      "sha256": "d0165d0c8d409ceed5bc00547ade6cfa8837bbb9ee15ee3a2c15783779f95f01"
+    },
+    "shared_file_ports_v3": {
+      "bytes": 11057,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_file_ports_v3.py",
+      "sha256": "8ecabef93656867fa443d26ef8826b359029f79d33c220cbc1a41734f80c0f49"
+    },
+    "shared_owner_five_regressions_v2.py": {
+      "bytes": 8106,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_five_regressions_v2.py",
+      "sha256": "8fc70bcfa3a12ffd4bcae0c5fd3ba6c856960f4044bef3856d5f19537fc4367d"
+    },
+    "shared_owner_fixture_driver_v2.py": {
+      "bytes": 31603,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_fixture_driver_v2.py",
+      "sha256": "a97ae3ca57ce6f1b97e5a382a4051714242621c11b3d1756262f1f8025c8f566"
+    },
+    "shared_owner_snapshot_validator_v1": {
+      "bytes": 26053,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_snapshot_validator_v1.py",
+      "sha256": "afa71df1ebba3eb7da83890b6e86675597894600cd593578b34f5f1a12cefefc"
+    },
+    "shared_owner_snapshot_validator_v1.py": {
+      "bytes": 26053,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_snapshot_validator_v1.py",
+      "sha256": "afa71df1ebba3eb7da83890b6e86675597894600cd593578b34f5f1a12cefefc"
+    },
+    "shared_owner_v3": {
+      "bytes": 42970,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_owner_v3.py",
+      "sha256": "d8ee1e135a9e9d4b5c197eacb287f9e0fcb8c145d8baef154aa8faa7a68fca31"
+    }
+  },
+  "limits": [
+    "Hot metrics are deterministic source algorithm evidence for fixed valid N3 worlds under current N4 caps, not timing, production size fit or full-roster capacity.",
+    "Static source peer must rule out direct base-list/dict-values bypass or hidden report called from read work; observed metrics alone cannot establish that.",
+    "Reporting windows are explicit; all retained sampled canonical reports visit r records once. No cache healing, cleared fault or renewed owner/clock/registry follows.",
+    "No real entry/FFI/Win32/physical sink/source closure/old source/model/native/profile/scientific qualification. All current real flags stay false; app/defaults unchanged."
+  ],
+  "original_payload_or_sourceclosure_operations": 0,
+  "precode_indexed_control_methods": 6,
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "quarantine_checks": [
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_canonical_append_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_before_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "index_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "fold_before_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    },
+    {
+      "binding_dispatches": 0,
+      "clock": 100,
+      "name": "fold_after_otherwise_valid_work_check",
+      "original_primary_preserved": true,
+      "refused": true,
+      "sink_callbacks": 0,
+      "source_facts_and_progress_unchanged": true,
+      "window": "post_canonical_report"
+    }
+  ],
+  "recorded_at_utc": "2026-10-29T17:59:54.992757+00:00",
+  "same_five_family_regression_methods": 8,
+  "schema_version": 3,
+  "source_and_test_bytes_unchanged": true,
+  "status": "EXACT_INDEXED_N4_SOURCE_PURE_EVIDENCE_FROZEN_INDEPENDENT_SOURCE_PEER_PENDING",
+  "strict_full48_snapshots": 372,
+  "unchanged_histories": 48
+}

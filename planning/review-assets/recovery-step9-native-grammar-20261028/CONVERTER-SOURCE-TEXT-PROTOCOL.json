@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "role": "prospective_source_reference_acquisition",
+  "recorded_at_utc": "2026-10-28T03:07:04.348243+00:00",
+  "commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+  "helper_sha256": "600ef43f7822095b594d93425dd7865be558fe685b2bc64278645d82247deda2",
+  "files": [
+    {
+      "index": 0,
+      "path": "common/json-schema-to-grammar.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/848bbda9041decd87904f7eb5a2990863ecce03b/common/json-schema-to-grammar.h"
+    },
+    {
+      "index": 1,
+      "path": "common/json.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/848bbda9041decd87904f7eb5a2990863ecce03b/common/json.h"
+    },
+    {
+      "index": 2,
+      "path": "common/json-schema.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/848bbda9041decd87904f7eb5a2990863ecce03b/common/json-schema.h"
+    },
+    {
+      "index": 3,
+      "path": "common/json.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/848bbda9041decd87904f7eb5a2990863ecce03b/common/json.cpp"
+    },
+    {
+      "index": 4,
+      "path": "common/json-schema-to-grammar.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/848bbda9041decd87904f7eb5a2990863ecce03b/common/json-schema-to-grammar.cpp"
+    }
+  ],
+  "cache_relative_path": "data/cache/r09-native-converter-source-20261028T030704Z",
+  "per_file_bytes": 524288,
+  "aggregate_bytes": 2097152,
+  "per_file_timeout_seconds": 15,
+  "max_concurrent_requests": 1,
+  "attempts_per_url": 1,
+  "credentials": false,
+  "proxies": false,
+  "redirects": false,
+  "execute_external_material": false,
+  "build": false,
+  "import_external_material": false,
+  "model_calls": 0,
+  "servers": 0,
+  "permitted_content": "UTF-8 public source/license reference text only",
+  "timeout_enforcement": "Owned fetch child killed after 15-second wait; elapsed includes cleanup overhead"
+}

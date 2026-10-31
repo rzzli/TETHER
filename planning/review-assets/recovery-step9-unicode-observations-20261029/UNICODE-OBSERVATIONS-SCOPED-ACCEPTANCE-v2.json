@@ -1,0 +1,89 @@
+{
+  "actual_old_run_replay": false,
+  "author_methods": 14,
+  "complete_fictional_histories": 6,
+  "four_corrected_guards": [
+    "Bounded JSON integer data errors",
+    "Phase-aware failure/marker terminal work and safe cleanup, including an in-flight prefix",
+    "Supplied marker presence before row parsing",
+    "Final original-caller check after result freezing"
+  ],
+  "independent_terminal_data_probes": 4,
+  "inputs": {
+    "UNICODE-OBSERVATIONS-IMPLEMENTATION-FREEZE-v2.json": {
+      "bytes": 8573,
+      "sha256": "f8afdc057976ac871bb8d27b75771a0c3332c66a17869e48be68006ded02c1e6"
+    },
+    "UNICODE-OBSERVATIONS-IMPLEMENTATION-PURE-PROOF-v3.json": {
+      "bytes": 11637,
+      "sha256": "66a57c7b3316e6791dbdcb645ca968338aa61f19f68962964bf96126c9d6ca70"
+    },
+    "UNICODE-OBSERVATIONS-ROOT-BOUNDARY-AFTER-v2.json": {
+      "bytes": 2399,
+      "sha256": "628834ca137cedfb11dfdd9ca29e3ec2cd3c05a892706971d62912bac4d08a2e"
+    },
+    "UNICODE-OBSERVATIONS-ROOT-BOUNDARY-BEFORE-v1.json": {
+      "bytes": 2359,
+      "sha256": "e6ebbb0fc2c9e237edad11c3d00b85c52e697db139730b0b0401a5d7f98d9282"
+    },
+    "UNICODE-OBSERVATIONS-ROOT-CORRECTION-SCOPE-v2.json": {
+      "bytes": 2329,
+      "sha256": "b39b0ef2876d50775a588cdc84ea9985f99225de5000933a59f43069223c82d1"
+    },
+    "UNICODE-OBSERVATIONS-ROOT-TERMINAL-PHASE-CLARIFICATION-v2.json": {
+      "bytes": 1706,
+      "sha256": "45300fb64d9958d5208804b35b8f2193c99652f7e710f195977ac370da74b72e"
+    },
+    "UNICODE-OBSERVATIONS-SOURCE-INDEPENDENT-AFTER-v2.json": {
+      "bytes": 5213,
+      "sha256": "280b37501d99e8fd8ec20ceb5a317baf5edaf0aabb6f98df6cd2c70774a8c80d"
+    },
+    "UNICODE-OBSERVATIONS-SOURCE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 5485,
+      "sha256": "eb6aad83d2f6a15592a9203c1bb3892331b3403608ac9ef5df0cb401eae18a23"
+    },
+    "UNICODE-OBSERVATIONS-TRACE-FIXTURES-v2.json": {
+      "bytes": 12027723,
+      "sha256": "cecd6aad28b91a526541ffc1694e5fa9e7c91749f8b920453316314319bf065b"
+    },
+    "unicode_observation_tables_v1.py": {
+      "bytes": 156220,
+      "sha256": "009e46ee19e945575472afb5105e88fe708a38b30c2f1014bbf8f6549d76786d"
+    },
+    "unicode_observations_v2.py": {
+      "bytes": 54851,
+      "sha256": "47c7cc1fc3889e32c5a3ff3efff50425ef208a041a308f5a447872bd788414b6"
+    }
+  },
+  "literal_scenarios": 36,
+  "nested_type_mutations": 22,
+  "new_SDK_native_model_calls": 0,
+  "observe_callback_identity_vectors": 33,
+  "old_original_source_closure_qualified": false,
+  "original_negative_and_timeout_unchanged": true,
+  "originals_authenticated": false,
+  "prior_sources_harness_failures_and_before_proofs_preserved": true,
+  "production_activation": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T12:41:55.559782+00:00",
+  "remaining": [
+    "Portable file-port source/fixture corrections and independent behavioral acceptance",
+    "Same-origin owner/entry/loader/registry/output/engine continuation",
+    "New Unicode child/parent source and exact new journal/archive/resource policies",
+    "Separate real-file/native/masking/integrated-resource/scientific gates"
+  ],
+  "root_boundary_regressions": 2,
+  "runtime_authorized": false,
+  "runtime_pack_file_created": false,
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "Callback-bounded caller-captured Unicode JSONL/marker consistency, immutable typed observations, exact source/state/counter/geometry/selection/cleanup checks and separate complete-success, complete-negative and partial classifications.",
+  "scope_limits": [
+    "Declared paths/descriptors and reported module consistency authenticate no original file/image, loaded DLL, process or actual clock",
+    "Optional module rejection diagnostic is bounded but opaque and remains partial/external pending",
+    "Cross-case piece-ID and failure current_case diagnostics receive no new semantic rule beyond the accepted contract",
+    "Raw bytes, declared sources and a typed consistent result cannot replace actual owner, journal, archive, resource or native profile gates"
+  ],
+  "status": "ACCEPTED_V2_SOURCE_PURE_UNICODE_OBSERVATION_VALIDATOR_ONLY",
+  "strict_callback_identity_vectors": 22
+}

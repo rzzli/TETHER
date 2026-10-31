@@ -1,0 +1,117 @@
+{
+  "actual_failed_ABI": false,
+  "compiler_calls": 0,
+  "finding": "ggml-base.dll imports libomp.dll; original allowed_runtime permitted libomp only in recognition mode and would reject unavoidable ABI dependency",
+  "model_reads": 0,
+  "network_requests": 0,
+  "preserved_original_design_sha256": "2bb222d6830a52513fab88c1db29b0d5b7cc093d5357ff224f3d3a42b2f8431b",
+  "preserved_original_peer_sha256": "62d8fde49f4fe623519a1ccf081dde233bb5289567e85500f775a7f3502dafd8",
+  "previous_converter_inventory": "Only native package modules were observed; no complete historical System32 loaded-module inventory exists in the retained converter result",
+  "prospective_correction": "Permit required OpenMP in ABI and recognition iff pinned PE requires; require its hash/read lease and securely preload before base DLL. CPU DLL and CPU/backend/model API calls stay ABI-forbidden.",
+  "recorded_at_utc": "2026-10-28T17:33:35.270342+00:00",
+  "runtime_PE_inputs": [
+    {
+      "bytes": 803840,
+      "delay": [],
+      "machine": "AMD64_PE32+",
+      "ordinary": [
+        "libomp.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll"
+      ],
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+      "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3"
+    },
+    {
+      "bytes": 78848,
+      "delay": [],
+      "machine": "AMD64_PE32+",
+      "ordinary": [
+        "ggml-base.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll"
+      ],
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+      "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba"
+    },
+    {
+      "bytes": 3581952,
+      "delay": [],
+      "machine": "AMD64_PE32+",
+      "ordinary": [
+        "ggml.dll",
+        "ggml-base.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "VCRUNTIME140_1.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll"
+      ],
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+      "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d"
+    },
+    {
+      "bytes": 909824,
+      "delay": [],
+      "machine": "AMD64_PE32+",
+      "ordinary": [
+        "ggml-base.dll",
+        "libomp.dll",
+        "KERNEL32.dll",
+        "ADVAPI32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll"
+      ],
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+      "sha256": "d402f7ff9cb7e27224ead72a83ae064653f60d237ef82a10697b21be5a6bd472"
+    },
+    {
+      "bytes": 768000,
+      "delay": [],
+      "machine": "AMD64_PE32+",
+      "ordinary": [
+        "KERNEL32.dll",
+        "PSAPI.DLL"
+      ],
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+      "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Static PE metadata and source-branch comparison; not actual loaded-module, dependency-init or build-equivalence proof",
+  "source": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer.cpp",
+  "source_sha256": "3f7e13ec7695bd5257e3e58d627ae71c1a2cdcaea7dbec8aad869424a0f5188b",
+  "status": "static_preexecution_incompatibility_found_no_ABI_attempt",
+  "target_loads": 0
+}

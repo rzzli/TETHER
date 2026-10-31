@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "status": "verified_complete_transport_rejected_output_contracts",
+  "terminal_seal_sha256": "863bf2a9cfb8d4fd01a5223b993d87fbe2ac06992e7206d3d32ef4c712cf2d41",
+  "planned_cells": 6,
+  "dispatch_reservations": 6,
+  "complete_http_responses": 6,
+  "assistant_json_valid": 6,
+  "output_contracts_accepted": 0,
+  "retries": 0,
+  "measured_input_tokens": 14420,
+  "measured_output_tokens": 2108,
+  "estimated_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0
+  },
+  "cells": [
+    {
+      "cell_id": "exposed-il6r-genetics-current",
+      "http_status": 200,
+      "original_native_bytes": 24867,
+      "native_body_sha256": "54cf000b1068d6d686b0ce16217901d5d89b48e13a0237dd37d520a2d22f2016",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Claims contradict answer state"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 4377,
+        "output_tokens": 476
+      },
+      "elapsed_seconds": 9.96899999998277,
+      "claims_emitted": 1,
+      "clinical_probability": null,
+      "accepted_features": {}
+    },
+    {
+      "cell_id": "exposed-il6r-genetics-simplified",
+      "http_status": 200,
+      "original_native_bytes": 17798,
+      "native_body_sha256": "ca331472f353584d9686633ae59ca1f6943f38fce8a05c4bf8319b2aa1027c74",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Invalid paired quote bounds"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 4507,
+        "output_tokens": 305
+      },
+      "elapsed_seconds": 6.625,
+      "claims_emitted": 1,
+      "clinical_probability": null,
+      "accepted_features": {}
+    },
+    {
+      "cell_id": "synthetic-orientation-current",
+      "http_status": 200,
+      "original_native_bytes": 14192,
+      "native_body_sha256": "63bef6526c66ad62c423bb860cb8b95bcfdeccd5f12f0c491ecf1f2299816d5f",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Claims contradict answer state"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 1241,
+        "output_tokens": 359
+      },
+      "elapsed_seconds": 6.688000000023749,
+      "claims_emitted": 1,
+      "clinical_probability": null,
+      "accepted_features": {}
+    },
+    {
+      "cell_id": "synthetic-orientation-simplified",
+      "http_status": 200,
+      "original_native_bytes": 7889,
+      "native_body_sha256": "8c8ace423e1c7815928617b5607c187c83950b6cced566f384038a449d0c2d64",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Invalid simplified fields"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 1371,
+        "output_tokens": 191
+      },
+      "elapsed_seconds": 3.389999999955762,
+      "claims_emitted": 1,
+      "clinical_probability": null,
+      "accepted_features": {}
+    },
+    {
+      "cell_id": "synthetic-context-current",
+      "http_status": 200,
+      "original_native_bytes": 15814,
+      "native_body_sha256": "7be6efb54e64c96f6d821399668aef14353bf3a07715264cdb5a9368190b2261",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Claims contradict answer state"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 1397,
+        "output_tokens": 557
+      },
+      "elapsed_seconds": 9.25,
+      "claims_emitted": 2,
+      "clinical_probability": null,
+      "accepted_features": {}
+    },
+    {
+      "cell_id": "synthetic-context-simplified",
+      "http_status": 200,
+      "original_native_bytes": 8772,
+      "native_body_sha256": "b793f1835c9c7e35270e798595dbb8ff69c62e296b02452a299df656bf147c4c",
+      "native_transport_and_binding": "verified",
+      "assistant_json_syntax": "valid",
+      "frozen_output_contract": "rejected_reproduced",
+      "rejection": {
+        "error_class": "ContractError",
+        "message": "Invalid simplified fields"
+      },
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 1527,
+        "output_tokens": 220
+      },
+      "elapsed_seconds": 3.860000000044238,
+      "claims_emitted": 2,
+      "clinical_probability": null,
+      "accepted_features": {}
+    }
+  ],
+  "resources": {
+    "total_execution_seconds": 59.39100000000326,
+    "owned_server": {
+      "elapsed_seconds": 51.95299999997951,
+      "exit_code": 1,
+      "peak_native_memory_bytes": null,
+      "peak_native_memory_reason": "Not instrumented",
+      "pid": 17248,
+      "secondary_failures": [],
+      "server_stopped": true,
+      "started": true
+    },
+    "observed_process_peak_working_set_bytes": 12325232640,
+    "process_memory_basis": "Windows GetProcessMemoryInfo PeakWorkingSetSize observed per cell; generic lifecycle peak field remains uninstrumented",
+    "gpu_peak_bytes": null,
+    "gpu_peak_reason": "Not independently sampled; startup allocation logs are not peak GPU measurement",
+    "runtime_reported_offloaded_layers": "49/49",
+    "context_tokens": 16384,
+    "parallel_slots": 1,
+    "runtime_reported_gpu_buffers_mib": {
+      "model": 8148.38,
+      "kv": 3072.0,
+      "compute": 137.01
+    },
+    "provider_spending_usd": 0
+  },
+  "scientific_accuracy": "not_estimated",
+  "human_scientific_review": "pending",
+  "capacity_comparison": "unresolved_no_stronger_control",
+  "new_raw_data_downloads": 0,
+  "clinical_outcome_contents_read": false
+}

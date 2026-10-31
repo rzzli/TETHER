@@ -1,0 +1,115 @@
+{
+  "activity": {
+    "native_or_physical_operations": 0,
+    "ordinary_toy_helper_execution": 0,
+    "original_or_payload_operations": 0,
+    "subject_imports": 0,
+    "subject_runs": 0
+  },
+  "author": {
+    "bytes": 36497,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\author_role_ledger_literals_v1.py",
+    "sha256": "2d7edbfe48bd66bcc84da81f6a4e4ef0b719498148a5e40259f0eea5d4a3b1b8"
+  },
+  "contract": {
+    "bytes": 3772,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-CORPUS-TEST-CONTRACT-v1.json",
+    "sha256": "523cb5e3d2e2afe1efb72e7f1220e418ef81a011353289a2fc0b51719321620d"
+  },
+  "corpus": {
+    "bytes": 1056097,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-FORMAT-LITERAL-CORPUS-v1.json",
+    "sha256": "16899fd5481e8bb63790dc9314acb8553af3eec65a81dc14ac6ce5cbeba56232"
+  },
+  "counts": {
+    "anchors": 134,
+    "base_histories": 40,
+    "byte_negative_expansions": 225,
+    "full_cap_layout_controls": 1,
+    "positive_data_bases": 39,
+    "reserved_regions": 32,
+    "shape_only_negative_bases": 1
+  },
+  "full_cap": {
+    "claim": "Complete used-capacity table extents with intentionally invalid API0; shape/hash rejection control only.",
+    "raw_bytes": 14777728,
+    "reserved_ledger_cap": 14800384,
+    "section_layout": [
+      {
+        "bytes": 65536,
+        "count": 256,
+        "id": 1,
+        "name": "files",
+        "offset": 4096,
+        "record_size": 256,
+        "sha256": "ed10328c2e8d04fd6f9595fb06ae4099478a9da0b5c7cb3225ac46ce12afb358"
+      },
+      {
+        "bytes": 4194304,
+        "count": 16384,
+        "id": 2,
+        "name": "calls",
+        "offset": 69632,
+        "record_size": 256,
+        "sha256": "0e59a5ed5407768bca5e1d46c8ce6e6078c6b7d61ea061508ff3de04adfe9f8d"
+      },
+      {
+        "bytes": 2103808,
+        "count": 2103808,
+        "id": 3,
+        "name": "queries",
+        "offset": 4263936,
+        "record_size": 1,
+        "sha256": "861b9284b98387bbbb263d0235c2e666fd4f3bca86d254caf50e413041eb4a43"
+      },
+      {
+        "bytes": 3142656,
+        "count": 3142656,
+        "id": 4,
+        "name": "paths",
+        "offset": 6367744,
+        "record_size": 1,
+        "sha256": "6b0dc85042a46b4e51dc86ac2ec88c05236df306328e113dc04700e121ac4518"
+      },
+      {
+        "bytes": 8192,
+        "count": 128,
+        "id": 5,
+        "name": "modules",
+        "offset": 9510400,
+        "record_size": 64,
+        "sha256": "ddd461528c3b5729b6ca9f9bf58d5b568e152c4ae78a05633c9b046b05f37ddb"
+      },
+      {
+        "bytes": 65536,
+        "count": 65536,
+        "id": 6,
+        "name": "module_names",
+        "offset": 9518592,
+        "record_size": 1,
+        "sha256": "3cd2d5180e8eb3db5b02da92476bc3d43240934707400d1deb12eee2ce317771"
+      },
+      {
+        "bytes": 16256,
+        "count": 8128,
+        "id": 7,
+        "name": "module_edges",
+        "offset": 9584128,
+        "record_size": 2,
+        "sha256": "2994fe234af1856d1de0947c927c4fe4dff17f47b45d424dfed7b6521e41aaa0"
+      },
+      {
+        "bytes": 5177344,
+        "count": 5056,
+        "id": 8,
+        "name": "diagnostics",
+        "offset": 9600384,
+        "record_size": 1024,
+        "sha256": "c9596c7250d1705701b252325bd53d6ed613d3a7d86a129ea90d6ceadebdd6c7"
+      }
+    ]
+  },
+  "golden_source": "Hand-authored semantic facts plus direct documented little-endian field assignments. No target encoder/decoder/reference validator or producer source was imported or consulted.",
+  "schema_version": 1,
+  "status": "LITERALS_AUTHORED_WITHOUT_TARGET_CODEC"
+}

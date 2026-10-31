@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_AUTHORIZED_E08_CONTRACT_AND_INDEPENDENT_LITERALS_ONLY",
+  "prerequisite_scoped_acceptance_sha256": "e54b6d5580a107c6a2acf4279ad59db02bb92792aba81c70c102408aa0f9e706",
+  "preserved_entry_contract_sha256": "cdfeaa338f387c18039818e7d414c9c13252ee916f872ff42e400da48012a95b",
+  "source3_pause_sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a",
+  "output_directory": "planning/review-assets/recovery-step9-external-manifest-policy-20261030",
+  "objective": "Specify and independently freeze the missing E08 external current-decision/output content-pin policy before implementation. Source3's captured import-DAG refusal is retained and does not substitute for this external policy.",
+  "deliverables": [
+    "bounded versioned metadata schema/contract and precise future same-Core integration point",
+    "independent finite pre-code literal inputs, expected outcomes and failure categories",
+    "compatibility, unresolved-dependency and finite independent peer disposition"
+  ],
+  "required_design": [
+    "Validation occurs after the original canonical clock/Core exist and before original-file opens; pre-entry TCB/externally pinned roots remain explicit.",
+    "Distinguish external immutable TCB/prior approved metadata roots from the current decision, current outputs and ordinary input/consumer nodes. No self-trust from hashing the current decision or serialized approved/ready flags.",
+    "Reject direct/transitive self or mutual content-pin cycles, references that depend on current outputs/decision, unknown/duplicate/conflicting nodes and invalid dependency roles.",
+    "Source-authoring and eventual execution requirements are distinct. Future CPP/shim/parent/pack nodes may remain planned/unbuilt with null hash plus reason during source authoring; they cannot be treated as executable or freshly admitted.",
+    "Derive bounded graph/metadata/time checks from explicit existing limits and the retained staged48-node graph; explain chosen new metadata bounds without lifting original7/physical/model caps.",
+    "A parsed/validated report is data only. It cannot mint an Origin, nonce, state/ref, continuation, native lease, child binding or actual file admission; existing live identity/hash/lease checks remain necessary.",
+    "Preserve Source3 and all consumed proofs. Any later integration uses a separately authorized successor and a coherent pause before tests; do not rewrite the50-pass/3-defer result or mark the two historical E16 invocations passed."
+  ],
+  "allowed_now": "Read selected frozen review metadata/Source3 text or AST, author contract/literal JSON and review prose, validate JSON/AST and fingerprints using trusted metadata helpers. Inspect staged metadata only; never follow its original-resource paths.",
+  "not_authorized": [
+    "subject or policy implementation/import/execution",
+    "source3 or prior fixture/proof edits",
+    "native25 execution or native/compiler/SDK/FFI/model actions",
+    "original/protected data or model payload reads",
+    "downloads or paid calls",
+    "application/default/downloader/periodic-monitor changes",
+    "runtime admission from contract/preparation success"
+  ],
+  "provider_spend_usd": 0,
+  "qualification": false
+}

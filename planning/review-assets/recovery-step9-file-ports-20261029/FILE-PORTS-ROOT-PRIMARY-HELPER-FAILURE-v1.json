@@ -1,0 +1,12 @@
+{
+  "correction": "A separately named helper compares against [close_failed]; no source, fixture, expected outcome or behavioral test changes.",
+  "failed_helper": {
+    "bytes": 2507,
+    "sha256": "2b5733bc2c2714862c5b3744f9d7a045c18f68b14745588ad1004d4922342d77"
+  },
+  "failure": "The root helper assumed expected.secondary was a scalar string; the fixture schema uses a list. Its assertion stopped with exit1 before witness publication. This is not another fixture or port defect.",
+  "port_behavior_or_runtime_executed": false,
+  "recorded_at_utc": "2026-10-29T11:57:14.075573+00:00",
+  "schema_version": 1,
+  "status": "ROOT_METADATA_HELPER_STOPPED_BEFORE_PUBLICATION"
+}

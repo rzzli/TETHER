@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T18:27:07.927555+00:00",
+  "status": "passed_scoped_engineering_peer_review",
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "proofs": [
+    {
+      "path": "src/asof/study/baselines.py",
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "bytes": 8475
+    },
+    {
+      "path": "src/asof/study/baseline_smoke.py",
+      "sha256": "c7d8d19f95e62f2c9b31e430bc73f25b1f5924537d58d163be724f5157d10c7c",
+      "bytes": 10855
+    },
+    {
+      "path": "tests/test_study_baselines_peer.py",
+      "sha256": "a72e6d93b1c05ce7ba6d5a9694254c9e1aaabe2fa92f7325c06299070923c3eb",
+      "bytes": 11245
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-20261026/ENGINEERING-SCOPE.md",
+      "sha256": "282b38407e19c5cd675d44ff23b574ef92adbf6eda89c18597d07435135e8423",
+      "bytes": 6217
+    }
+  ],
+  "findings_corrected": [
+    "Neutral-label validation initially admitted arm names; now single A-Z label.",
+    "Writer originally created missing descendants before rejecting reparse ancestry; independently reproduced and corrected in new writer only.",
+    "Consumer binds resource logical names to exact required paths; resealed swaps rejected."
+  ],
+  "verified_boundaries": [
+    "Exact authenticated synthetic resources; known_source labels and rehashed evaluator metadata do not admit inputs.",
+    "External policy anchor rejects a self-consistent alternative policy.",
+    "No network or process dispatch; zero model accounting and exact algorithm invocation counts.",
+    "Oversized source strings retain omissions without clipping.",
+    "Reviewer projections reject forged scientific claims, probabilities and denominator changes.",
+    "Failed output reservation prevents repeat computation."
+  ],
+  "scientific_validation": "not_attempted",
+  "R09_complete": false,
+  "full_suite_and_installed_replays": "pending_root_validation",
+  "before_failure_log": "data/cache/recovery-step9-peer-tests/path-boundary-before.txt",
+  "after_log": "data/cache/recovery-step9-peer-tests/peer-after.txt"
+}

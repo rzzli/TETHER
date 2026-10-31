@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "complete_projection_of_local_mapping_only",
+  "repository_revision": "71f9da68c95c5ee0ef4c1d9b8f45f10693de022d",
+  "source": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\reference\\vbt_linkage\\71f9da6\\chembl_clinical_nct_data.parquet",
+    "sha256": "50580ad5681c87aa9f7c3741f340a3a408fbd43ccba388546a172289fcda5897",
+    "bytes": 10375291
+  },
+  "receipt": {
+    "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\vbt-linkage-71f9da6.json",
+    "sha256": "f1f0f507207d6adc974e77d9de5c8a36d34a67bc91b7e92efa2c1593ebee4db3",
+    "bytes": 820
+  },
+  "source_matches_local_receipt": true,
+  "publisher_hash_verified": false,
+  "schema_columns": [
+    "nct_id",
+    "drugId",
+    "targetId",
+    "diseaseId",
+    "phase",
+    "status",
+    "trial_date",
+    "disease_name",
+    "targetFromSourceId",
+    "studyId",
+    "studyStopReason",
+    "studyStopReasonCategories",
+    "dtd_combo"
+  ],
+  "projected_columns": [
+    "targetId",
+    "diseaseId",
+    "nct_id"
+  ],
+  "excluded_columns": [
+    "drugId",
+    "phase",
+    "status",
+    "trial_date",
+    "disease_name",
+    "targetFromSourceId",
+    "studyId",
+    "studyStopReason",
+    "studyStopReasonCategories",
+    "dtd_combo"
+  ],
+  "projection_applied_before_python_conversion": true,
+  "rows_scanned": 488361,
+  "rows_with_missing_target_or_indication": 0,
+  "distinct_target_indication_pairs": 72158,
+  "distinct_trials": 76925,
+  "distinct_targets": 1520,
+  "distinct_indications": 2559,
+  "key_inventory": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step8-exposure-20261026\\virtual-biotech-identity-keys-v1.json",
+    "sha256": "b544537bcd5922d319338ad38e2d9ee0c8ed984ce7a051f604fb5dec4d6699c2",
+    "bytes": 7412455
+  },
+  "pyarrow_version": "21.0.0",
+  "elapsed_seconds": 1.7660000000032596,
+  "clinical_fields_decoded": false,
+  "clinical_labels_read": false,
+  "normalized_outcomes_read": false,
+  "terms_basis": "Pinned competitor README states Open Targets data CC0; no independent legal or upstream-per-record terms adjudication performed.",
+  "limitation": "Local mapping covers published repository mapping universe. Evaluated-label subset, article vignette universe and single-cell trial-feature case list are not inferred from linkage membership. No action/modality/tissue or outcome inferred."
+}

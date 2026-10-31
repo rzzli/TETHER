@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T18:06:05.775773+00:00",
+  "status": "passed_static_source_fidelity_and_verdict_separation_science_pending",
+  "role": "evaluation_only",
+  "auditor": "AI development peer review; not independent human scientific assessment",
+  "inputs": [
+    {
+      "path": "docs/expert-review-source-feasibility-20261026/Expert-source-review.html",
+      "sha256": "582749a47d9c49751c49cdbebd9e492a9a7f8e6fdb626346a596de92314695d1",
+      "bytes": 32646
+    },
+    {
+      "path": "docs/expert-review-source-feasibility-20261026/README.md",
+      "sha256": "09f8c4b5eab096a5df0d844ee2cff658ac50f268b19b1e51536bc8a04e97b3ac",
+      "bytes": 1674
+    },
+    {
+      "path": "docs/expert-review-source-feasibility-20261026/Recruitment.md",
+      "sha256": "c928fd82d67700a361c50010bff771c67e685eddb59b91e283fc909df0cb59b8",
+      "bytes": 1248
+    },
+    {
+      "path": "docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip",
+      "sha256": "ac93a4b9ce7af30a75c039a6332333264eec1a43c3c81de612e71d840e6eb115",
+      "bytes": 8858
+    },
+    {
+      "path": "data/cache/recovery-step8-bounded-sources-20261026/source-qualification.json",
+      "sha256": "305dffb35183b2f4973818dd70f10a957fa30a65649fc8c6de5858648aad8a5a",
+      "bytes": 16481
+    },
+    {
+      "path": "planning/review-assets/recovery-step8-20261026/form-review/final-interface-acceptance.json",
+      "sha256": "e4bdccb8e6878d360a0badbe7b2d848e14165c32feb81a9e96263d81b41d2d45",
+      "bytes": 1517
+    }
+  ],
+  "checks": {
+    "source_texts_exact_to_pinned_source": 8,
+    "source_locators_exact_to_pinned_source": 8,
+    "contexts_and_target_disease_ids_match": 2,
+    "radio_question_groups": 14,
+    "prechecked_radio_count": 0,
+    "hidden_input_count": 0,
+    "automatic_external_resource_or_form_action_count": 0,
+    "share_zip_exact_clean_members": 3,
+    "candidate_responses_present": false,
+    "AI_scientific_verdict_or_answer_key_present": false,
+    "grading_logic_present": false,
+    "source_metadata_export_roles": "evaluation_only/unadjudicated/source_only",
+    "blank_answer_handling": "null",
+    "action_modality_tissue": "unassigned",
+    "prior_shared_article_disclosure": "neutral provenance disclosure, not answer instruction"
+  },
+  "method": "Static HTML/options/script and cleanzip inspection; structural projection of only source snippets/locators/identities from pinned source qualification file, excluding assessment fields. No repeat browser execution. Existing visual/interaction acceptance remains separately anchored.",
+  "limitations": [
+    "Question instrument is AI-prepared and unadjudicated.",
+    "No actual human responses, workload or scientific sufficiency established.",
+    "Shared article presence does not establish identical prior passages or model consumption.",
+    "Neither context qualified fresh; no source/case replacement or generation authorized."
+  ],
+  "protected_outcome_contents_read": false,
+  "candidate_output_or_human_answer_files_read": false,
+  "model_calls": 0,
+  "network_requests": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "Exploratory own Python boundary model/static C++ checks before shared-vector final binding; no compiled C++ or SDK execution",
+  "tests": 9,
+  "failures": [],
+  "errors": [],
+  "source_sha256": "dbf76b19358465e7963ea16eb37ff1f637d4fa6334fcc5c93d4f531495b1f918",
+  "source_unchanged": true,
+  "checker_sha256": "125fe4796092a3da0c1696147eac631d555fac9ef7a6f691ee10ab0105fdb168",
+  "actual_children": 0,
+  "compiler_calls": 0,
+  "SDK_constructions": 0,
+  "reported_image_files_opened": 0
+}

@@ -1,0 +1,112 @@
+{
+  "actual_target_API_calls": 0,
+  "correction_source_exists": false,
+  "expected_green": [
+    {
+      "expectation": "SCHEMA_KEYS with exactly one real source _object call and zero key-validation generator yields/resumptions before rejection. Profile original restored; no source-code/global replacement.",
+      "input": "Exact built-in dictionary with4096 bounded ordinary string keys, including the seven valid top keys.",
+      "method": "test_01_oversized_real_dict_refused_before_key_traversal"
+    },
+    {
+      "expectation": "TYPE_DOMAIN, zero protocol hooks and all-false qualification.",
+      "input": "Only bulk size replaced by an int subclass; all hooks instrumented to fail if entered.",
+      "method": "test_02_int_subclass_is_type_domain_without_hooks"
+    },
+    {
+      "expectation": "MODULE_GRAPH before aggregate consistency; safe refusal projection.",
+      "input": "Valid baseline plus toy_leaf\u2194toy_entry cycle and aggregate bytes65747 instead of65746.",
+      "method": "test_03_cycle_precedes_aggregate_mismatch"
+    },
+    {
+      "expectation": "MODULE_GRAPH before total arithmetic; safe refusal projection.",
+      "input": "Valid baseline plus same cycle, bulk size2^63-1 and aggregate.bytes=None, so a later size sum would overflow.",
+      "method": "test_04_cycle_precedes_total_overflow"
+    }
+  ],
+  "freezer": {
+    "bytes": 4367,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\freeze_admission_envelope_regressions_v1.py",
+    "sha256": "f849a955220aa8954ca7ff3fcb6a8a28115a5747d7ba825df23c612737007f34"
+  },
+  "inputs": {
+    "ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v1.json": {
+      "bytes": 109337,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v1.json",
+      "sha256": "003b948178c36037557a69fb2d945e36dcf0f13db21b5a9081e65f65c6801e68"
+    },
+    "ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v2.json": {
+      "bytes": 39070,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-INDEPENDENT-ACTUAL-PROOF-v2.json",
+      "sha256": "0cf04ddbe83d147ce33b48b8b70e104430d841093a5999ddd9307a3062fa15a1"
+    },
+    "ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json": {
+      "bytes": 84160,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json",
+      "sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7"
+    },
+    "ADMISSION-ENVELOPE-ROOT-REGRESSION-SCOPE-v2.json": {
+      "bytes": 2480,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-ROOT-REGRESSION-SCOPE-v2.json",
+      "sha256": "f818874527df3702274cd67a00342081081295a856dc385d14bcc11693523bf1"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-HOLD-v1.json": {
+      "bytes": 9209,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-HOLD-v1.json",
+      "sha256": "da3b47e59aca5d28971d55c1fe9cfc5157e487e18940f12c93b9ac6d02615b7b"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-PAUSE-v1.json": {
+      "bytes": 1085,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-PAUSE-v1.json",
+      "sha256": "1bf53afac8b3c00399d0ef0a821ed5de9055fd5ac47f3ae1287077c34ee955dd"
+    },
+    "admission_envelope_independent_tests_v1.py": {
+      "bytes": 9524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py",
+      "sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc"
+    },
+    "admission_envelope_regressions_v1.py": {
+      "bytes": 4512,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_regressions_v1.py",
+      "sha256": "5644882f8d67c0121b4967538d3af9eedf200266792bdb0d07b08e0392171e34"
+    },
+    "admission_envelope_v1.py": {
+      "bytes": 16761,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v1.py",
+      "sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242"
+    },
+    "run_admission_envelope_independent_v2.py": {
+      "bytes": 12401,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\run_admission_envelope_independent_v2.py",
+      "sha256": "a2c60af1ff63c1c1bf8d21b0443be5dc54ac041dd9c90bfd048599c6a32d4265"
+    },
+    "run_admission_envelope_regressions_before_v1.py": {
+      "bytes": 5579,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\run_admission_envelope_regressions_before_v1.py",
+      "sha256": "31cb56d0538c3215e27ae02caa2f4fc65f6b8b0612cbc1b54c2eb428f5004efc"
+    }
+  },
+  "local_regression_subject_runs": 0,
+  "methods": [
+    "test_01_oversized_real_dict_refused_before_key_traversal",
+    "test_02_int_subclass_is_type_domain_without_hooks",
+    "test_03_cycle_precedes_aggregate_mismatch",
+    "test_04_cycle_precedes_total_overflow"
+  ],
+  "original_30_and_test_module_unchanged": true,
+  "original_payload_operations": 0,
+  "profiling": "Trusted CPython sys.setprofile is installed outside audited invocation and observes actual code objects/generator yields only. Source _object and actual built-in dict are unchanged. No timing or complete operation-count inference.",
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "recorded_at_utc": "2026-10-29T18:47:13.096683+00:00",
+  "schema_version": 1,
+  "scope": "Exactly four NEW pure pre-fix methods on preserved source V1. No runtime/native/source-closure/resource/model or actual file operation.",
+  "source_correction_authorized": false,
+  "status": "FOUR_REGRESSION_METHODS_AND_EXPECTATIONS_FROZEN_BEFORE_SOURCE_CORRECTION"
+}

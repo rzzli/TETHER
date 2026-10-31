@@ -1,0 +1,195 @@
+{
+  "CPU_GGUF_oldpack_operations": 0,
+  "case_order": "Fourbaselines,42scalargrid,14ASCIIcounterparts,8contexts,10negativecontrols,6harnessguards.",
+  "contract": {
+    "bytes": 9809,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+    "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+  },
+  "corpus": {
+    "bytes": 233438,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+    "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+  },
+  "execution_authorized": false,
+  "generator": {
+    "bytes": 19121,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\author_unicode_controls_v2.py",
+    "sha256": "001b864fbaa81937020ca9a0a081896e1ae191a024935c068f44d9a4cbc34a06"
+  },
+  "limits_not_increased": true,
+  "packaged_synthetic_assets": [
+    {
+      "bytes": 3769,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\resources\\synthetic-context-v1.json",
+      "sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221"
+    },
+    {
+      "bytes": 3323,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\resources\\synthetic-orientation-v1.json",
+      "sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219"
+    },
+    {
+      "bytes": 2815,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\resources\\diagnostic-templates-v1.json",
+      "sha256": "050742fd8621378130fdce0d596df40f0e12a9a86602b9c8e3c95f8ba26f36d7"
+    },
+    {
+      "bytes": 3868,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\resources\\fixed-evidence-plan-v1.json",
+      "sha256": "33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52"
+    }
+  ],
+  "profile": {
+    "bytes": 9951,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROFILE-v2.md",
+    "sha256": "f6512f48ffd58756e96ea1655df05824e4ccb2588cbe19264cd21e8b1bd27dbf"
+  },
+  "pure_checks": {
+    "bytes": 25630,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-GENERATION-CHECKS-v1.json",
+    "sha256": "9f1c4636d15706cc9fa628f55d0c668ce622d96d1ca5f02e7fcb2b7f9a252a4c"
+  },
+  "runtime_distribution": "asof-target-agents==0.3.11",
+  "scalar_basis": {
+    "bytes": 154021,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-CORPUS-v2.json",
+    "sha256": "65428d32cc06c58836d1d541bde0e893db13cef9e5ae756e26d6e353908b302d"
+  },
+  "schema_version": 1,
+  "source_modules": [
+    {
+      "installed": {
+        "bytes": 6818,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\interpretation_generation.py",
+        "sha256": "dd74e8b7829162a66419e9fdbc5a72d62cd457158a39d59288999cf05adc5e4f"
+      },
+      "module": "asof.study.interpretation_generation",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 6818,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\interpretation_generation.py",
+        "sha256": "dd74e8b7829162a66419e9fdbc5a72d62cd457158a39d59288999cf05adc5e4f"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 17046,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\interpretation_grammar.py",
+        "sha256": "6ee02a55b41b59e3390f9a0c807ef168a646a355c646bde73621d75480ca3c97"
+      },
+      "module": "asof.study.interpretation_grammar",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 17046,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\interpretation_grammar.py",
+        "sha256": "6ee02a55b41b59e3390f9a0c807ef168a646a355c646bde73621d75480ca3c97"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 13666,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\interpretation_interface.py",
+        "sha256": "5f8933c53bd94fa3c1044b0656f175a1328b487805a962b715d23ec4ce8a82f3"
+      },
+      "module": "asof.study.interpretation_interface",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 13666,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\interpretation_interface.py",
+        "sha256": "5f8933c53bd94fa3c1044b0656f175a1328b487805a962b715d23ec4ce8a82f3"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 9390,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\diagnostic.py",
+        "sha256": "03dbf421992e173e5bcd9d4dbe5ab9da00b9a64502a47bb40d8e1ee751f125d3"
+      },
+      "module": "asof.study.diagnostic",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 9390,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\diagnostic.py",
+        "sha256": "03dbf421992e173e5bcd9d4dbe5ab9da00b9a64502a47bb40d8e1ee751f125d3"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 35406,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\diagnostic_codec.py",
+        "sha256": "f9b6b7f0c8a5aabe91b2da29d7139fcc9a90eb5acbdfac0554967e7b77d4d43b"
+      },
+      "module": "asof.study.diagnostic_codec",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 35406,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\diagnostic_codec.py",
+        "sha256": "f9b6b7f0c8a5aabe91b2da29d7139fcc9a90eb5acbdfac0554967e7b77d4d43b"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 18519,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\fixed_evidence.py",
+        "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10"
+      },
+      "module": "asof.study.fixed_evidence",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 18519,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\fixed_evidence.py",
+        "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 1275,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\diagnostic_resources.py",
+        "sha256": "c557d82bb31d8e04886f6b6e9bf36e7e59e756eb7377d486ffb9c82097691083"
+      },
+      "module": "asof.study.diagnostic_resources",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 1275,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\diagnostic_resources.py",
+        "sha256": "c557d82bb31d8e04886f6b6e9bf36e7e59e756eb7377d486ffb9c82097691083"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 11545,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\serde.py",
+        "sha256": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8"
+      },
+      "module": "asof.serde",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 11545,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+        "sha256": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8"
+      }
+    },
+    {
+      "installed": {
+        "bytes": 11843,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\study\\native_interpretation.py",
+        "sha256": "decc0ba3dd7dca8c84883b58bf3fe8acb0b277ef0aaf5a5a7186b7864477d674"
+      },
+      "module": "asof.study.native_interpretation",
+      "universal_newline_source_text_equal": true,
+      "workspace": {
+        "bytes": 11843,
+        "path": "D:\\Projects\\drug_target_agents\\src\\asof\\study\\native_interpretation.py",
+        "sha256": "decc0ba3dd7dca8c84883b58bf3fe8acb0b277ef0aaf5a5a7186b7864477d674"
+      }
+    }
+  ],
+  "stages": {
+    "bytes": 227662,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+    "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+  },
+  "status": "source_only_fixture_generation_before_bridge_pack_runtime_code",
+  "tokenizer_native_compiler_network_calls": 0
+}

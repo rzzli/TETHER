@@ -1,0 +1,35 @@
+{
+  "SDK_source": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "activity": {
+    "SDK_constructors_or_API_calls": 0,
+    "children_or_target_DLL_calls": 0,
+    "model_or_protected_payload_reads": 0
+  },
+  "checker": {
+    "bytes": 17376,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_terminal_component_v2.py",
+    "sha256": "80bc92cdbba8f16683e8f413abe098e646749115ce60e400e65b232b913988da"
+  },
+  "component": {
+    "bytes": 10226,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v2.py",
+    "sha256": "f910dd6e4075a8e12c78dbe86f278c0e2c4ac42632db596d4c98a80f2c48667a"
+  },
+  "component_AST_sha256": "a38d61774f1ffffc75e69f524d666f88eb673d61a5154a494893062c84f72d48",
+  "denied_real_operations": [],
+  "elapsed_seconds": 0.0,
+  "errors": [
+    "test_expired_work_cutoff_preserves_cleanup_reserve (__main__.TerminalTests.test_expired_work_cutoff_preserves_cleanup_reserve)"
+  ],
+  "failures": [
+    "test_late_read_return_preserves_known_bytes_and_bound (__main__.TerminalTests.test_late_read_return_preserves_known_bytes_and_bound)"
+  ],
+  "schema_version": 1,
+  "scope": "Independent fake terminal component only; parentv2 integration/late lease/seal path not covered yet",
+  "status": "failed",
+  "tests": 19
+}

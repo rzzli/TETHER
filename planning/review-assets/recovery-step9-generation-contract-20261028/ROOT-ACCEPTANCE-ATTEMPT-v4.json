@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-28T15:13:01.705170+00:00",
+  "status": "all_evidence_gates_passed_publication_failed_no_acceptance",
+  "helper_sha256": "85cc6cc3ca359a0558773724bc976049f6c1a1480a515ac2c38dee90c1c60a28",
+  "exit_code": 1,
+  "observed_wall_time_seconds": 6.4717049,
+  "error_class": "PermissionError",
+  "winerror": 5,
+  "operation": "os.link same-directory temporary to acceptance.json",
+  "acceptance_published": false,
+  "temporary_removed_by_original_finally": true,
+  "runtime_wheel_environment_or_receipts_modified": false,
+  "note": "Root retention of observed terminal result; hardlink denial cause not proven beyond WinError5. CIM volume query also denied, filesystem type unverified."
+}

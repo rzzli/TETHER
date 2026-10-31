@@ -1,0 +1,58 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "audit_denials": [],
+  "fixture_histories_replayed": 0,
+  "old_payload_or_source_closure_operations": 0,
+  "probe_source": {
+    "bytes": 5288,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\probe_raw_adoption_source_peer_v2.py",
+    "sha256": "afe2224594f4f0894ff6b0350f9e2dc2a30509832c5a92a7f6e90fe110ab822a"
+  },
+  "probes": [
+    {
+      "claims_after": 1,
+      "disposition_after": "primitive_complete",
+      "name": "handoff_after_known_early_source_close",
+      "observed_problem": true,
+      "primary_before": null,
+      "rejection_code": null,
+      "same_objects_after": true,
+      "slot_before": {
+        "close_invocations": 1,
+        "close_right": "consumed",
+        "close_success": true,
+        "closer": "CloseHandle",
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 101
+        },
+        "id": "early",
+        "liveness": "closed_known"
+      }
+    },
+    {
+      "call_stopped": true,
+      "captured_bytes": 0,
+      "caught_same_object": true,
+      "disposition": "primitive_complete",
+      "known_read_bytes": 3,
+      "name": "injected_core_exception_class_from_copy_hook",
+      "observed_problem": true,
+      "owner_primary_is_injected": false,
+      "owner_primary_is_none": true,
+      "primary_code": null
+    }
+  ],
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "source": {
+    "bytes": 30480,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v2.py",
+    "sha256": "a6877861860ba7a42d22d581d4bfa565984e6ce377d937ff3c4525b04130fd8a"
+  },
+  "status": "REPRODUCED_TWO_SOURCE_BOUNDARY_FINDINGS",
+  "synthetic_owners": 2
+}

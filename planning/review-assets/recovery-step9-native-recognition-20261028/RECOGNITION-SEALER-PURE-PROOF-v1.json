@@ -1,0 +1,174 @@
+{
+  "actual_SDK_or_child_or_target_calls": 0,
+  "basis": {
+    "bytes": 5999,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_seal_v2.py",
+    "sha256": "4cc94dd9ab5940f4f5e303d4c41ffbbb8d5032103eafb139113133d44cbb1dcb"
+  },
+  "checker": {
+    "bytes": 7795,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_status_seal_v1.py",
+    "sha256": "0563640a4d130c07a839f18695a28d7b4ec833401eccb5fb4a31847fb680ea8f"
+  },
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "fixtures": [
+    {
+      "case": "cleanup-publication",
+      "files": [
+        {
+          "bytes": 88,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\cleanup-publication\\failure.json",
+          "sha256": "a894b681fd8c9d9d49f66b4dffd6ec7fd3625ed629450c4937b77d526c666129"
+        },
+        {
+          "bytes": 804,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\cleanup-publication\\late-failure.json",
+          "sha256": "2aa652dff1f1667e61a27faa9404126923ab7b082a2fd9dacfe0825c8e48154a"
+        },
+        {
+          "bytes": 39,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\cleanup-publication\\receipt.json",
+          "sha256": "e786b77ca6f90a1dbff939b96a176608ef482ffb0b92e10095ce3073ad2f691c"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\cleanup-publication"
+    },
+    {
+      "case": "interrupt-close",
+      "files": [
+        {
+          "bytes": 622,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\interrupt-close\\late-failure.json",
+          "sha256": "951d7c9835af64715c49a7b5761b3a1978b552013d46d967e7b316bcf9b0a279"
+        },
+        {
+          "bytes": 973,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\interrupt-close\\post-lease-cleanup.json",
+          "sha256": "1e65810759affb99c10dd1d8782ace6e4e4cdac208b0ba0e32f6be7d16387c65"
+        },
+        {
+          "bytes": 100,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\interrupt-close\\receipt.json",
+          "sha256": "6103756646206858e7fca36284508f9d8268cf5af0cc98def53b3a565e7c6ae3"
+        },
+        {
+          "bytes": 1364,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\interrupt-close\\terminal-seal.json",
+          "sha256": "6591536b5e2916bd489248972d87979c05e156387c4029499e3a7ef0cd09e04f"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\interrupt-close"
+    },
+    {
+      "case": "seal-publication",
+      "files": [
+        {
+          "bytes": 514,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\seal-publication\\late-failure.json",
+          "sha256": "f0aac9ab9786f5f22c61c6e803ef940f795935c0dc1c39a3351115c3aa90c588"
+        },
+        {
+          "bytes": 810,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\seal-publication\\post-lease-cleanup.json",
+          "sha256": "9953a170efb9f6c55e5bcf7d8cff0bf7f652f401a5d068fffb239a12ff7d08a8"
+        },
+        {
+          "bytes": 100,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\seal-publication\\receipt.json",
+          "sha256": "6103756646206858e7fca36284508f9d8268cf5af0cc98def53b3a565e7c6ae3"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\seal-publication"
+    },
+    {
+      "case": "after-seal",
+      "files": [
+        {
+          "bytes": 338,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\after-seal\\after-seal-failure.json",
+          "sha256": "1a851638654ae036577177f1178cdc9f21df267f1af26ae3db98b66d35ac9054"
+        },
+        {
+          "bytes": 804,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\after-seal\\post-lease-cleanup.json",
+          "sha256": "4b668c003486f0612e5b7fc77711a25d9e67eae76306b282317cf31b5c92984f"
+        },
+        {
+          "bytes": 100,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\after-seal\\receipt.json",
+          "sha256": "6103756646206858e7fca36284508f9d8268cf5af0cc98def53b3a565e7c6ae3"
+        },
+        {
+          "bytes": 1080,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\after-seal\\terminal-seal.json",
+          "sha256": "fcb3c4622f2dff0e033faf242bc8d4fe5b9a82ee58ff632a749dfce3adf79836"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\after-seal"
+    },
+    {
+      "case": "primary-close",
+      "files": [
+        {
+          "bytes": 88,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close\\failure.json",
+          "sha256": "a894b681fd8c9d9d49f66b4dffd6ec7fd3625ed629450c4937b77d526c666129"
+        },
+        {
+          "bytes": 890,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close\\late-failure.json",
+          "sha256": "be79fe65d1af6142c149fc8abb6c4e8f7e658901adf12ac8b5e7d870c1971400"
+        },
+        {
+          "bytes": 1168,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close\\post-lease-cleanup.json",
+          "sha256": "a8452b586eae33128c88c803ca63040cc4c44cf04d59b3520aab7368ff8eac5e"
+        },
+        {
+          "bytes": 39,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close\\receipt.json",
+          "sha256": "e786b77ca6f90a1dbff939b96a176608ef482ffb0b92e10095ce3073ad2f691c"
+        },
+        {
+          "bytes": 1679,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close\\terminal-seal.json",
+          "sha256": "c8e0dc29af2b568e602432934210f48b7d1af6b7653bf68c7a21f778167e61f6"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\primary-close"
+    },
+    {
+      "case": "success",
+      "files": [
+        {
+          "bytes": 801,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\success\\post-lease-cleanup.json",
+          "sha256": "b389199f8188a6c33f255cc894b74ca38438bca49fbd5a29df934f17e2301fa1"
+        },
+        {
+          "bytes": 100,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\success\\receipt.json",
+          "sha256": "6103756646206858e7fca36284508f9d8268cf5af0cc98def53b3a565e7c6ae3"
+        },
+        {
+          "bytes": 1074,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\success\\terminal-seal.json",
+          "sha256": "c0599327199081cb4d81c0ed793e4358a60e9b0f1fcebf2eb4dac7f486670e8f"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-sealer-pure-1793248334742479900\\success"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Status-only sealer source/AST and synthetic filesystem cleanup/publication evidence",
+  "source": {
+    "bytes": 6050,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_status_seal_v1.py",
+    "sha256": "652b8ea5a7b612ef16636d114b3e9b8a24dc99b35aede10410ab0fac4f1595aa"
+  },
+  "status": "passed",
+  "tests": 6,
+  "whole_function_AST_equal_after_one_literal": true
+}

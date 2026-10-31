@@ -1,0 +1,221 @@
+{
+  "installed_comparison_smoke": {
+    "status": "verified",
+    "run_id": "bf61d792-b9d6-4aed-9f54-b1c774269075",
+    "receipt_sha256": "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+    "recorded_adapter_cells": 12,
+    "pure_baseline_results": 4,
+    "actual_model_calls": 0,
+    "scientific_validation": "not_attempted",
+    "scope": "synthetic_recorded_contract_only"
+  },
+  "installed_baseline_smoke": {
+    "status": "verified",
+    "receipt_sha256": "0a8ea762e9342d65b1aa5a6ff67be6d481e031111c3aea330e09ac08341ddf27",
+    "synthetic_cells": 4,
+    "artifact_files": 19,
+    "model_calls": 0,
+    "scientific_validation": "not_attempted",
+    "real_case_admission": false
+  },
+  "installed_study_smoke": {
+    "status": "recorded_smoke_passed",
+    "success": {
+      "status": "verified_study_cell",
+      "byte_integrity": "verified",
+      "mechanical_consistency": "verified",
+      "consumer_contract": "verified",
+      "scientific_validation": "not_established",
+      "run_id": "4d83ab49-8ac7-47c7-8be8-28f988d51408"
+    },
+    "failure": {
+      "schema_version": 1,
+      "status": "failed_or_incomplete",
+      "calls": 1,
+      "unresolved_attempts": [],
+      "measured_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "estimated_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "durable_events": 6,
+      "failure_marker_present": true,
+      "recovery_action": "inspect only; never automatically repeat any cell"
+    },
+    "native_model_calls": 0,
+    "provider_spend_usd": 0,
+    "scientific_validation": "not_established"
+  },
+  "status": "passed",
+  "installed_module": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-comparison-wheel-20261026\\environment\\Lib\\site-packages\\asof\\archive\\core.py",
+  "isolated_mode": true,
+  "verifier_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-comparison-wheel-20261026\\environment",
+  "results": [
+    {
+      "run_id": "legacy_v1",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "unavailable_legacy_v1",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 1,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 13,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "e8d086be3b508529a7479026f83c0194bba239b798403ffd15b907aa8332f132",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 27
+      },
+      "elapsed_seconds": 0.5940000000409782
+    },
+    {
+      "run_id": "core_v2",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 2,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 16,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "e8d086be3b508529a7479026f83c0194bba239b798403ffd15b907aa8332f132",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 37
+      },
+      "elapsed_seconds": 0.7339999999967404
+    },
+    {
+      "run_id": "local_selection_recorded",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "e8d086be3b508529a7479026f83c0194bba239b798403ffd15b907aa8332f132",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 2.312999999965541
+    },
+    {
+      "run_id": "local_selection_native",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "e8d086be3b508529a7479026f83c0194bba239b798403ffd15b907aa8332f132",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 2.3589999999967404
+    },
+    {
+      "run_id": "bounded_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "interpretation_integrity_and_structure_verified",
+        "source_inputs_replayed": true,
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "code_closure_scope": "historical_declared_dependencies; no execution attestation",
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 2.0310000000172295
+    },
+    {
+      "run_id": "question_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "question_run_source_and_mechanical_consistency_verified",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "source_admission": "replayed",
+        "adapter_verification": "exact_recorded_replay_not_model_execution",
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 2.8130000000237487
+    },
+    {
+      "run_id": "question_latest_failed",
+      "status": "passed",
+      "result": {
+        "schema_version": 2,
+        "kind": "question_interpretation",
+        "last_event": "build_failed",
+        "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+        "durable_events": 9,
+        "calls": 1,
+        "unresolved_attempts": [],
+        "measured_usage": {
+          "input_tokens": 4650,
+          "output_tokens": 601,
+          "cost_usd": 0.0
+        },
+        "estimated_upper_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "receipt_present": false,
+        "failure": {
+          "schema_version": 2,
+          "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+          "stage": "response_validation",
+          "error_class": "ContractError",
+          "secondary_failures": [],
+          "qualification": "Failure fallback, not a successful receipt or execution attestation"
+        },
+        "recovery_action": "inspect only; never repeat inference",
+        "status": "terminal_failure_inspected_not_success",
+        "source_admission": "replayed",
+        "scientific_validation": "not_performed",
+        "archived_code_executed": false
+      },
+      "elapsed_seconds": 2.6869999999762513
+    }
+  ],
+  "elapsed_seconds": 13.53100000001723,
+  "peak_working_set_bytes": 60678144,
+  "original_root_access_attempts": [],
+  "archived_execution_attempts": [],
+  "repository_tools_import_attempts": [],
+  "network_or_child_attempts": [],
+  "receipt_bytes_rewritten": false,
+  "historical_program_execution": "not_performed",
+  "scientific_validation": "not_established"
+}

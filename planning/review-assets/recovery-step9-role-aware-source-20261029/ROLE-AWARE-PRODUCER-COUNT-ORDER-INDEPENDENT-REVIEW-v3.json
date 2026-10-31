@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_EXACT_V3_SOURCE_RUNNER_DELTA_STATIC_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "scope": "Finite exact peer of the count-cap ordering correction, coherent V3 imports and mechanical all-V3 runner maps. No behavioral result or execution authority is inferred.",
+  "source_pause": {"bytes": 11798, "sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de"},
+  "source_delta": {"bytes": 5277, "sha256": "aefa250de71fc1851e7f0019520f9e388b62d6a2d4a443a91e1b807178c776dd"},
+  "sources": {
+    "role_ledger_codec_v3": {"bytes": 55497, "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"},
+    "role_owner_v3": {"bytes": 76176, "sha256": "7fa4acd6a6059530429e26958c8ddcd76bcb91b1cb0fd57900286bf43643e339"},
+    "role_file_ports_v3": {"bytes": 21279, "sha256": "777ae88eec38719d5f4597e19e2681791f74b94ebcbe343ffc88aeb81e7be32d"},
+    "continue_role_verification_v3": {"bytes": 4273, "sha256": "8051d6de8df6f6a33fabc1d36ae1194e8f35e39d7494d6b16195befc70b66ce7"}
+  },
+  "source_checks": [
+    "An independent exact byte replacement comparison confirms decode_ledger removes only module_count==module_count_repeat from its earlier header layout require and inserts that identical equality after the unchanged strict profile/count cap require.",
+    "The count cap now precedes repeat consistency, so count129 cannot be classified first as a repeat-layout mismatch. Both checks remain; no malformed input is newly accepted.",
+    "All other codec bytes are identical to V2. The owner, ports and controller differ only by one coherent own-module import replacement each. FormatError lifecycle/refreeze corrections, APIs, constants, states and capacity values remain unchanged.",
+    "The V3 source introduces no fixture ID, selected mutation, special byte patch, source test lookup or oracle classifier workaround. The existing original-profile formula check remains STATE_CONTRADICTION."
+  ],
+  "runners": {
+    "independent_v6": {"bytes": 18096, "sha256": "1c2a9e5a9dbe372e25d6537f6714276b1f2100169e61284fda1e6b152f636018"},
+    "extensions_v3": {"bytes": 13912, "sha256": "29b1511874f8b83aec68b872051ce8fa289c723939ca9032609f897a86f71073"},
+    "preparation": {"bytes": 4039, "sha256": "bc1ee71f00299492fbf451169e932eb78bdbd90c26e0b341b463b15ceedc888d"},
+    "independent_outline_v6": {"bytes": 9581, "sha256": "a38b3ab52d4f9e67d50dc712ec1b7fc3bc8bd448bae198aaeaaa0c92fc0e2cc1"},
+    "extension_outline_v3": {"bytes": 10426, "sha256": "988ef5f0f837457409391a311d7f94e8f7df0f19aa3a66797dad8b07f833579c"}
+  },
+  "runner_checks": [
+    "Independent exact byte replacement comparisons confirm only the four actual source-module spellings change from V2 to V3, together with new phase-specific binding/attempt/proof/unbound-error version names.",
+    "All deadline facade, fresh loading, audit, actual identity, abort-counter reporting and frozen assertion code remains byte-identical to the prior statically cleared runners.",
+    "Legacy dictionary role names remain harness roles pointing at actual V3 objects. No V1/V2 source fallback is introduced.",
+    "Both new outlines deliberately contain null source-pin values under the four V3 names. They are unbound preparation; root must populate exact pause pins and execution scope before either runner can execute. No active binding is claimed here.",
+    "The corpus dependency remains exact V3 8ae5b333. No base, mutation, expected code, frozen test or capacity changes in this correction."
+  ],
+  "retained_basis": {
+    "root_correction": "db59ce3ff9516c4cb23a721e8d6beed5a597c4cf61f446d71a8da66b12723c77",
+    "actual_V2_codec_failure": "8184541d030cf578918859509963085c70b3eb7cfb0715ec9901714a982ba968",
+    "count_order_localization": "7d460d49b0c98279281914fd51d590b09f34b41e77ad15be27ff3122a5060327",
+    "separate_disjoint_tail_result": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97",
+    "prior_source_oracle_peer": "2e3c90ab67d643d7fa96962e7f5a75982f9ac4ab08936732b32047e9685a26c7",
+    "prior_runner_peer": "52fa806d1f823a235f7d5db5111c8ffb728a05783070b97844324ffcce762e3a",
+    "unchanged_oracle": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7"
+  },
+  "pending": "Root binds and runs first full V3 codec conformance, then genuine legacy/extension phases only as authorized. The separately retained V2 tail does not replace or repair the earlier failed full-suite result.",
+  "activities": {"exact_new_metadata_source_and_runner_byte_comparisons": true, "subject_or_runner_imports": 0, "subject_compilation_or_AST_parsing": 0, "subject_or_test_execution": 0, "source_harness_or_oracle_edits": 0, "original_native_or_physical_operations": 0},
+  "qualification": {"source_behavior": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-29T01:22:32.229648+00:00",
+  "status": "CLEAR_exact_source_preparation_only_root_compile_decision_required",
+  "reviewer": "independent os_accounting_peer; not helper author",
+  "scope": "Read-only source, AST, protocol/pin and retained pure-fault evidence review; no helper import, test execution, compiler dispatch, SDK construction, target DLL load or result execution by reviewer.",
+  "artifacts": {
+    "build_self_module_census_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_self_module_census_v1.py",
+      "bytes": 35092,
+      "sha256": "3e994b65e1373ac4a57ec6582131d245e3c420f461f7746428f242df3634a845"
+    },
+    "SELF-MODULE-CENSUS-BUILD-PROTOCOL-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-PROTOCOL-v1.json",
+      "bytes": 68041,
+      "sha256": "c9ceb5bd7ce11e54f02ceaaaf70dc56ac5c926be04f2c2458d026d2ffa9634f3"
+    },
+    "SELF-MODULE-CENSUS-BUILD-PREPARATION-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-PREPARATION-v1.json",
+      "bytes": 1022,
+      "sha256": "298c80d67952d2d3779938d3eed45fe54485ef108bf3053b1bc0b002721cc7ab"
+    },
+    "SELF-MODULE-CENSUS-BUILD-PURE-CHECKS-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-PURE-CHECKS-v1.json",
+      "bytes": 674,
+      "sha256": "7a880189b42391ec0543fe5109412e10ccbd4360b64d234f7a24bb04dfccba3c"
+    },
+    "check_self_module_census_build_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_build_v1.py",
+      "bytes": 17947,
+      "sha256": "e62c310ec3a74c6dccf7dc002f271c524f7040f66043a5fd7cb4ae3131585b49"
+    },
+    "build_typed_abi_bridge_v5.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_typed_abi_bridge_v5.py",
+      "bytes": 33564,
+      "sha256": "e865831fab5513b48a8dabfa018083d61a025df5c4394badf794c90b9c4e135b"
+    },
+    "typed_public_c_recognizer_v8.cpp": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v8.cpp",
+      "bytes": 69930,
+      "sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18"
+    },
+    "SELF-MODULE-CENSUS-WIRE-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+      "bytes": 9717,
+      "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+    },
+    "SELF-MODULE-CENSUS-CHILD-SOURCE-PEER-REVIEW-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-SOURCE-PEER-REVIEW-v1.json",
+      "bytes": 7947,
+      "sha256": "c1217de687887ab3c6b612673ef35283d17ac57577df34c085368f4fd84ca766"
+    },
+    "SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v3.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v3.json",
+      "bytes": 965,
+      "sha256": "b3100c72f6a8fd3a8d462d1aca0659e1d8c48a8e08cc3557b8a33f52de1bb652"
+    },
+    "SELF-MODULE-CENSUS-REGRESSIONS-AFTER-v4.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-REGRESSIONS-AFTER-v4.json",
+      "bytes": 521,
+      "sha256": "10a775571390abb7e25d039da24deb45d483478c1052b027fff0c7b094c61246"
+    }
+  },
+  "exception_header": {
+    "bytes": 13765,
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\exception",
+    "sha256": "49c3ebe69f8fd1947c6a05f7de89dd17fc962e4c229b8bf1a5b0d040e5dcb0cb"
+  },
+  "fresh_checks": {
+    "input_count": 234,
+    "input_bytes": 76213854,
+    "all_input_size_sha256_match": true,
+    "unique_file_and_ancestor_lstat_checks": 315,
+    "no_symlink_or_reparse_observed": true,
+    "closure_exact_v5_inputs_minus_old_9_copies_plus_explicit_census_dependencies_and_new_9_copies": true,
+    "exclusion_path_set_unchanged": true,
+    "excluded_basis_count": 25,
+    "prepared_files_exact": 9,
+    "prepared_source_sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18",
+    "data_header_sha256": "dee857596074375218a3c3f8d11130f4066fbfb07b7ae08e454f1f12306a1784",
+    "seven_public_headers_and_data_header_byte_identical_to_prior_copies": true,
+    "installed_exception_header_sha256_match": true,
+    "commands_and_environment_equal_prior_after_path_substitution": true,
+    "limits_exact_unchanged": true,
+    "prospective_output_absent": true
+  },
+  "unchanged_function_ASTs": [
+    "need",
+    "sha",
+    "basis",
+    "named_exports",
+    "verify_export_mapping",
+    "filtered_basis_inputs",
+    "validate_parent_interpreter",
+    "accepted",
+    "collect_inputs",
+    "verify_pins",
+    "export_tables",
+    "pe_policy",
+    "commands",
+    "finalize",
+    "build"
+  ],
+  "source_checks_review": {
+    "prior_v5_source_owner_and_diagnostic_proofs_preserved_as_prior": true,
+    "current_v8_source_wire_16_case_and_3_regression_proofs_bound": true,
+    "source_peer_c121_bound": true,
+    "original_API_recognition_and_Runtime_module_policy_blocks_byte_equal_to_v5": true,
+    "census_branch_commits_and_returns_before_Api": true,
+    "collector_checks_no_target_export_resolution_or_unknown_image_reads": true,
+    "recognition_header_false_expected_version_empty": true,
+    "input_roles_enforced_before_supplied_payload_pin_iteration": true,
+    "CPU_binary_GGUF_model_pack_payloads_not_selected": true
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/nologo",
+        "/Bv",
+        "/std:c++17",
+        "/MD",
+        "/O2",
+        "/DNDEBUG",
+        "/D_ITERATOR_DEBUG_LEVEL=0",
+        "/EHsc",
+        "/Zp8",
+        "/Gd",
+        "/W4",
+        "/WX",
+        "/utf-8",
+        "/c",
+        "/DR09_PIN_HEADER=\"recognizer_runtime_pins.hpp\"",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\headers",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\typed_public_c_recognizer.cpp",
+        "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\bridge.obj",
+        "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\compiler.pdb"
+      ],
+      "seconds": 45,
+      "stage": "compile"
+    },
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+        "/NOLOGO",
+        "/MACHINE:X64",
+        "/SUBSYSTEM:CONSOLE",
+        "/INCREMENTAL:NO",
+        "/MANIFEST:NO",
+        "/DYNAMICBASE",
+        "/NXCOMPAT",
+        "/HIGHENTROPYVA",
+        "/OUT:D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\bridge.obj",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.lib"
+      ],
+      "seconds": 10,
+      "stage": "link"
+    }
+  ],
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserve_seconds": 5,
+    "link_seconds": 10,
+    "maximum_children": 2,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144,
+    "total_seconds": 60
+  },
+  "pure_evidence_review": {
+    "retained_tests": 21,
+    "reported_failures": 0,
+    "reported_errors": 0,
+    "reviewer_read_all_test_cases": true,
+    "reviewer_did_not_rerun": true,
+    "coverage": [
+      "accepted parent interpreter negative",
+      "filtered closure and input injection rejection",
+      "exact current source/proof/header and owner mapping",
+      "missing duplicate zero forwarded export negatives",
+      "exception direct header dependency",
+      "census zero-query false-eligibility fields including bool/int distinction",
+      "unchanged tool commands bounds PE policy and function ASTs",
+      "existing output no retry",
+      "primary plus late lease-close failure",
+      "early report publication failure",
+      "postcleanup inventory failure",
+      "seal publication failure",
+      "postseal deadline veto",
+      "fake compile failure traverses finalization"
+    ],
+    "actual_compiler_dispatches_reported": 0,
+    "actual_children_reported": 0
+  },
+  "finalization_review": {
+    "unchanged_hardened_finalizer": true,
+    "primary_failure_preserved": true,
+    "post_lease_cleanup_record_required": true,
+    "late_close_or_publication_failures_veto_success": true,
+    "terminal_seal_binds_complete_output_universe": true,
+    "missing_seal_or_failure_markers_veto_success": true,
+    "legacy_terminal_journal_event": "typed_ABI_bridge_v5_build_terminal",
+    "legacy_event_deliberately_unchanged_not_qualification": true,
+    "result_status": "module_census_capable_bridge_built_recognition_disabled_not_executed"
+  },
+  "limitations": [
+    "Source/pure evidence does not authorize compiler execution or prove runtime census behavior.",
+    "Tool ownership covers launched compiler/linker handles; descendants are not independently attested.",
+    "Direct pinned SDK/STL/tool leaves are not a complete transitive toolchain closure.",
+    "Unchanged data header contains unused CPU/GGUF names; no claim that binaries lack those names.",
+    "No module policy expansion, ABI qualification, target query, full-system inventory or old-failure causal reinterpretation."
+  ],
+  "material_blockers": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z",
+  "next_authority": "Root must independently bind these exact helper/protocol/review hashes and decide any compile/link-only dispatch; generated result must not execute during build."
+}

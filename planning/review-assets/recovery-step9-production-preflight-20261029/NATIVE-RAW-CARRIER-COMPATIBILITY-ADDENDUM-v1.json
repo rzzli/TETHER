@@ -1,0 +1,103 @@
+{
+  "activities": {
+    "C_SDK_compiler_native_or_model_actions": 0,
+    "base_contract_edits": 0,
+    "new_producer_outputs": 0,
+    "original_target_reads": 0,
+    "source4_edits": 0,
+    "subject_import_or_execution": 0
+  },
+  "base_contract": {
+    "bytes": 43817,
+    "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+    "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+  },
+  "canonical_reserve_surface": {
+    "actor": "Exact string BOOTSTRAP/ORIGINAL/OUTPUT/READBACK/ANCESTOR_METADATA/SEARCH/NAMESPACE/TERMINAL_TAIL.",
+    "api": "Exact string from the14 API name table, no int/bool/alias/coercion.",
+    "numeric_ids": "Native header api_id/actor_id are derived fixed table codes after validation; kernel.reserve_call(state,target_ref,api_id,actor_id,...) in the base is superseded, not a second public API.",
+    "observe_return_boundary": "The base observe_python_return spelling describes the kernel dispatch wrapper INTERNAL first-visible completion step, not an ordinary public setter accepting a caller assertion of success. Only that actual active invocation records its return/original exception. A ready/returned argument alone is no authority.",
+    "public_signature": "state.reserve_call(api, actor, target_ref, requested=None, buffer_ref=None) -> RawCallRef"
+  },
+  "case_count": "25 existing finite data-case IDs retained; these are additional exact assertions within existing cases, not a new runtime experiment or implementation.",
+  "current_format_rule": {
+    "default_native_profile": "Even fully committed native cells do not make the current native/physical wire profile qualified. Current native bank snapshots remain native-profile-unqualified until a separately reviewed format/profile explicitly represents native state/identity/actor semantics. The next source-pure tests can inspect exact KernelSnapshots using an explicitly synthetic store; a separately proven structural legacy-compatible projection is data-only, never native qualification.",
+    "formats": [
+      "ROLE_AWARE_LEDGER_1 value_schema2/current Source4 wire",
+      "pinned50ee legacy projection"
+    ],
+    "persisted_artifacts": "No unnamed producer-native raw page/15th output is added. The existing14-artifact universe does NOT already persist this extra native state. Until explicit later native format/storage/physical profile design, native-state inspectability is source-issued IN-MEMORY only. A separately authorized trusted harness may retain its own evidence under its own names without making it a producer publication/gate.",
+    "pure_codec_limit": "The existing codec can encode valid caller dictionaries as data. A caller manually omitting native fields from a dictionary does not turn that output into a source-issued native snapshot or complete evidence; producer adapters must preserve/refuse actual source observations. Source4/codec files and existing evidence are unchanged.",
+    "required_refusal": "Any genuine producer adapter into those current formats must refuse an unsupported native axis/state or uncommitted payload with existing codec.FormatError(LEGACY_NOT_REPRESENTABLE) BEFORE issuing encoded/projection data. No staged->ordinaryUNOBSERVED, staged->COMMITTED, payload-bit drop or diagnostic retagging. This includes UNOBSERVED with changed rawbits from the pre-stage gap."
+  },
+  "existing_case_expectation_closures": [
+    {
+      "add": "KernelSnapshot retains STAGED_UNCOMMITTED/rawbits101 exactly; snapshot and accessor immutable. Current ROLE1/legacy adapter raises LEGACY_NOT_REPRESENTABLE and does not change snapshot/store.",
+      "id": "N02_payload_written_commit_missing"
+    },
+    {
+      "add": "UNOBSERVED with rawbits101 remains inspectable as unknown, never ordinaryzero/known101; unsupported currentwire projection refuses.",
+      "id": "N03_payload_before_stage_interrupted"
+    },
+    {
+      "add": "Committed native handle survives same original conversionMemoryError and snapshot capture; no currentnative-profile completion is inferred from ordinary structural encoding.",
+      "id": "N10_conversion_fault_after_handle"
+    },
+    {
+      "add": "Cache-only repeated snapshot/axis access does not heal/stage/commit/doublefold; earlier snapshots do not alias later mutable storage.",
+      "id": "N15_duplicate_and_conflicting_commit"
+    }
+  ],
+  "numeric_layout": {
+    "bytes": 4511,
+    "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-CONTRACT-FREEZE-v1.json",
+    "sha256": "4cf7a07f219e47c61abb4505c2dfe37f4a6aa47b92c3c9412483ac6412c891d2"
+  },
+  "planned_source_name": {
+    "canonical": "preflight_file14_v1.py",
+    "native_source_unchanged": "preflight_file14_raw_v1.c",
+    "state": "BothPLANNED_SOURCE/UNBUILT; no file is implied to exist from a name.",
+    "supersedes": "preflight_file14_view_v1.py"
+  },
+  "qualification": {
+    "NativeInputLease_available": false,
+    "current_wire_native_qualified": false,
+    "native_first_capture_qualified": false,
+    "native_implementation": false,
+    "new84_runtime": false,
+    "physical_profile": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "schema_version": 1,
+  "scope": "Three existing compatibility points only: one reserve signature/planned wrapper name, explicit immutable staged-state inspection, and strict current-wire representability. Base16aa and numeric4cf remain unchanged. No native implementation, source execution or output universe change.",
+  "snapshot_surface": {
+    "APIs": [
+      "state.snapshot() -> KernelSnapshot",
+      "snapshot.raw_call(ordinal) -> RawCallSnapshot",
+      "raw_call.axis(name) -> immutable NativeAxisSnapshot"
+    ],
+    "axis_names": [
+      "scalar",
+      "count",
+      "error_value",
+      "error_definition"
+    ],
+    "axis_snapshot_fields": [
+      "native_state",
+      "kind",
+      "width",
+      "epoch",
+      "stage_hint",
+      "commit",
+      "raw_payload_bits",
+      "known_value"
+    ],
+    "budget": "Immutable native cell snapshots/reference metadata have their own bounded live/transient retention cost. Up to256B native cell image per reserved row plus kernel clock/wrapper metadata is NOT silently paid by Source4 wire256B or its generated store. Exact actual representation/phase lifetime must be budgeted before native/physical profile qualification; no cap or RSS claim is made here.",
+    "immutability": "Snapshot freezes/copied metadata at a quiescent point; it never exposes a live mutable native bank alias. Old issued snapshots do not change when another reservation/cell/wrapper/clock/close progresses. Getters are cache-only, no resample/rebuild/commit/heal. RawCallView of the live bank is readonly and may only be inspected under its specified quiescent lifetime.",
+    "meaning": "raw_payload_bits retains exact native cell bits even when value authority is unknown. known_value is unavailable/None for UNOBSERVED and STAGED_UNCOMMITTED, not guessed0; COMMITTED/nativeNULL remains distinguished by native_state/kind/rawbits and committed interpretation. An interruption after payload write but before stage can leave UNOBSERVED with changed rawbits; that information is preserved.",
+    "other_facts": "RawCallSnapshot also preserves actual kernel wrapper-return/exception/clock cells as separate axes; native RAW_EXIT_PREPARED/conversion OBJECT_PREPARED cannot be reclassified as Python return observed.",
+    "types": "Exact executing kernel KernelSnapshot and RawCallSnapshot, alongside RawCallView. No copied type/decoded data is a brand."
+  },
+  "status": "FINITE_NATIVE_ENTRY_AND_WIRE_COMPATIBILITY_CLOSURE_NO_CODE"
+}

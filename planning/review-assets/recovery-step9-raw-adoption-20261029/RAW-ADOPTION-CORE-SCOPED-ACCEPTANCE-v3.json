@@ -1,0 +1,118 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "application_changed": false,
+  "changed_v2_methods": [
+    "Owner._component",
+    "Owner.handoff",
+    "Owner.raise_exception"
+  ],
+  "checkpoints": 9,
+  "corrected_boundaries": [
+    "Issued snapshot diagnostics are immutable while original exception identity remains available separately.",
+    "Identity-query timeout retains its cause and same-Origin deadline; successful handoff advances event sequence once.",
+    "Handoff checks current early-source liveness and close authority; failed, unknown and successful closes cannot become live leases.",
+    "Injected fresh core-class exceptions latch by identity; already latched exact exceptions are not duplicated.",
+    "A known wrapper return remains observed after a later stop, with stopped-call refusal and legal once-only cleanup."
+  ],
+  "fixture_correction": "Only the previously declared but unused buffer is included in that case's expected snapshot; the other31 cases and all step/raw/counter projections are unchanged. Test identity-map errors were corrected separately; source deadline/handoff guards were not relaxed.",
+  "histories": 32,
+  "independent_driver_methods": 19,
+  "inputs": {
+    "ADOPTION-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 21443,
+      "sha256": "1dfc199ced5a8f055cd82557b1f38defb5fa49d37b31e330e03d6c78f1dfc0ec"
+    },
+    "RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v3.json": {
+      "bytes": 505960,
+      "sha256": "1c05165b626aade0db9ff2cfb6399e015ffc7a07b3618f41af5d9c4b41d47a81"
+    },
+    "RAW-ADOPTION-CORE-SOURCE-FREEZE-v3.json": {
+      "bytes": 14761,
+      "sha256": "15c07bc04d40f224d977a00f19cbab926590fb7d514872e83250960053e5782c"
+    },
+    "RAW-ADOPTION-CORE-SOURCE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 4499,
+      "sha256": "f39c2f209acf074f1c643d7725480f772b6519734f229d923f712f31263f0932"
+    },
+    "RAW-ADOPTION-CORE-SOURCE-INDEPENDENT-PEER-v3.json": {
+      "bytes": 8279,
+      "sha256": "4bcb3d67f0458dd8aef7cf1dccbb942033dc8cd78c1e51140d863e20fde57c4e"
+    },
+    "RAW-ADOPTION-FIXTURE-FREEZE-v3.json": {
+      "bytes": 2749,
+      "sha256": "f82b4ad090a4a669ba8568fabe7f9fbd856980ad1b07eecde3533edc2a148e58"
+    },
+    "RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v3.json": {
+      "bytes": 3972,
+      "sha256": "d6a3d8575e3cc4cc8f56ca1518771702cdb87b7f585091de25eb17c59e141e43"
+    },
+    "RAW-ADOPTION-FIXTURES-v3.json": {
+      "bytes": 257088,
+      "sha256": "37e3c0d614a5aaeca2125c05e8d94c42707d901e039c41ac02978bb23caacc64"
+    },
+    "RAW-ADOPTION-HOOK-IDENTITY-HARNESS-CORRECTION-v1.json": {
+      "bytes": 2021,
+      "sha256": "8949993321db69b74cda81fefeff789250651077a2417497f16d730b9c7270d1"
+    },
+    "RAW-ADOPTION-INDEPENDENT-THREE-REGRESSIONS-BEFORE-v3.json": {
+      "bytes": 3811,
+      "sha256": "7a9a64f9fee27c6424a7d8650dca5790e87fe1539da29a59f258c0681753b23a"
+    },
+    "RAW-ADOPTION-LITERAL-CORRECTION-PROOF-v3.json": {
+      "bytes": 2665,
+      "sha256": "734587b3feeb8bd89a85ee2000293e4ad152cb34c15d64904e4945c40c654710"
+    },
+    "RAW-ADOPTION-OWNER-CONTROLS-PROOF-v3.json": {
+      "bytes": 1030,
+      "sha256": "2aae75bd78d0ff05d0c93c259231cb5646f698cd1f2ab80028e0600c17ea9305"
+    },
+    "RAW-ADOPTION-PREPARATION-AND-SOURCE-SCOPE-v2.json": {
+      "bytes": 4282,
+      "sha256": "e20b47ff32c3dc4f190cbee1621458f9fd5ca4eefdf0d6b3d9eddfd8c1f10aad"
+    },
+    "RAW-ADOPTION-SOURCE-INDEPENDENT-AFTER-v3.json": {
+      "bytes": 2605,
+      "sha256": "4a2b30bf78a352806e8c81e3b822ec67de198c9c4a464c34d2d1b55ac4057042"
+    },
+    "RAW-ADOPTION-SOURCE-INDEPENDENT-BEFORE-v2.json": {
+      "bytes": 1867,
+      "sha256": "0121b32c00b54af2c1a50c20b74800e96abd9c31f18cba4cb4340d248af1c477"
+    },
+    "RAW-ADOPTION-WRAPPER-RETURN-BEFORE-v2.json": {
+      "bytes": 3110,
+      "sha256": "5978ffafd2d635bebe9e8f4a2b4392a117726fb5edd04a9fb9aca666a1d765fb"
+    },
+    "accept_raw_adoption_core_v3.py": {
+      "bytes": 8099,
+      "sha256": "cdf404b384963e820bc6964fe4d4a5e44bd0821d6ada5b88cae2e8902b315894"
+    },
+    "raw_adoption_core_v3.py": {
+      "bytes": 30816,
+      "sha256": "f4fcae07926927f509f455b1b8e243cec2be8fdbc91fa710aacf14618e9b5bea"
+    }
+  },
+  "limits": [
+    "Portable source facts supplied after FFI conversion do not close the native-to-Python window or prove actual entered/returned observations.",
+    "No actual14-export binding, real first-entry, shared bootstrap/controller owner, loader/journal/output continuation or full-roster/time fit is qualified.",
+    "Harness capabilities/typed refs and same-object identities grant no serialized production readiness.",
+    "Old known-v7 journal/archive policies do not qualify a future Unicode parent."
+  ],
+  "next": "Implement a concrete source-only shared-owner continuation seam with one Origin/registry/output/early-byte context/source loader/journal and bounded terminal sequence; separately qualify real FFI and first-entry later.",
+  "old_original_payload_or_source_closure_operations": 0,
+  "originals_authenticated": false,
+  "owner_controls_methods": 21,
+  "preserved": "All earlier sources, unsuccessful runs, before proofs, limited reviews, HOLDs, fixture/harness candidates and author-helper failures remain immutable.",
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T14:46:12.151082+00:00",
+  "runtime_authorized": false,
+  "same_regression_before_failures": 4,
+  "same_regression_before_methods": 3,
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "Generic source-issued HARNESS_ONLY raw fact reservation, incremental reconciliation, buffer lifetime, once-only rights and same-object early-context handoff under fictional calls and clocks.",
+  "snapshots": 320,
+  "status": "ACCEPTED_V3_PORTABLE_RAW_ADOPTION_SOURCE_PURE_ONLY",
+  "verified_frozen_input_pins": 28
+}

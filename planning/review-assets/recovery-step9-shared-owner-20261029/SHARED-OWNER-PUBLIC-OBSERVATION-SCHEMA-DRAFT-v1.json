@@ -1,0 +1,767 @@
+{
+  "actual_target_API_calls": 0,
+  "api_counter": {
+    "exact_keys": [
+      "reserved",
+      "invocations",
+      "scalar_returns",
+      "count_values",
+      "wrapper_returns"
+    ],
+    "fields": {
+      "count_values": "observedCOUNT32cells;definednessseparate",
+      "invocations": "conservativeinvocationreservations",
+      "reserved": "actualrecords",
+      "scalar_returns": "actualnonUNOBSERVEDfirstscalarfacts",
+      "wrapper_returns": "observedwrapperreturns;notnativecalls"
+    }
+  },
+  "atom": {
+    "exact_keys": [
+      "tag",
+      "value"
+    ],
+    "fields": {
+      "tag": "UNOBSERVED|NULL|HANDLE|BOOL32|DWORD|COUNT32",
+      "value": "nullforsentinel/NULL;strictapiintegerotherwise"
+    }
+  },
+  "author": {
+    "bytes": 18613,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\author_shared_owner_public_schema_v1.py",
+    "sha256": "ab01e3cdcd0c61c77c064bcbfeb21e33795e1577789b7c26129c6e69970102d2"
+  },
+  "baseline": {
+    "actual_each_sevenAPI": {
+      "invocations": 3,
+      "reserved": 3,
+      "scalar_returns": 3,
+      "wrapper_returns": 3
+    },
+    "actual_raw_calls": 21,
+    "captured_bytes": 209,
+    "cohort_files": 3,
+    "early_after_claim_rehashes": 0,
+    "early_after_claim_reopens": 0,
+    "early_bytes": 141,
+    "early_files": 2,
+    "hashed_bytes": 209,
+    "journal_rows": 53,
+    "known_read_bytes": 209,
+    "loader_attempted": [
+      "cohort_entry",
+      "cohort_leaf"
+    ],
+    "loader_returned": [
+      "cohort_leaf",
+      "cohort_entry"
+    ],
+    "modules": 2,
+    "plan": {
+      "B": 2,
+      "C": 69,
+      "E": 218,
+      "M": 2,
+      "N": 3,
+      "R": 51
+    },
+    "read_count_values": 3,
+    "remaining_bytes": 68,
+    "total_input_bytes": 209
+  },
+  "baseline_event_order": [
+    "output_reserved",
+    "earlyleaf:sourceopenpair/identitypair/hashpair",
+    "earlyentry:sourceopenpair/identitypair/hashpair",
+    "handoff_reserved",
+    "handoff_claimed",
+    "compileentryreserved",
+    "compileleafreserved",
+    "compileleafreturned",
+    "compileentryreturned",
+    "authority_factory stagepair",
+    "checker_factory stagepair",
+    "admit_reconcile stagepair",
+    "hash_remaining stagereserved",
+    "metadata:fileopenpair/hashpair",
+    "hash_remaining stagereturned",
+    "archive stagepair",
+    "journal stagepair",
+    "resources stagepair",
+    "core stagepair",
+    "consistency stagepair",
+    "finalization_reserved",
+    "candidate publicationpair",
+    "reverse metadata/entry/leaf originalclosepairs",
+    "cleanup publicationpair",
+    "journal_close_reserved"
+  ],
+  "byte_totals": {
+    "exact_keys": [
+      "known_read_bytes",
+      "hashed_bytes",
+      "captured_bytes",
+      "early_known_read_bytes",
+      "early_hashed_bytes",
+      "early_captured_bytes",
+      "remaining_known_read_bytes",
+      "remaining_hashed_bytes",
+      "remaining_captured_bytes",
+      "read_count_unknown",
+      "early_reopens_after_claim",
+      "early_rehashes_after_claim"
+    ],
+    "fields": {
+      "captured_bytes": "actualcommitbytes",
+      "early_captured_bytes": "earlysubset capturecommits",
+      "early_hashed_bytes": "earlysubset hashcommits",
+      "early_known_read_bytes": "earlysubset known bytes",
+      "early_rehashes_after_claim": "actualhashattempts,baseline0",
+      "early_reopens_after_claim": "actualinvocations,baseline0",
+      "hashed_bytes": "actualcommitbytes",
+      "known_read_bytes": "sumunique definedreadcounts",
+      "read_count_unknown": "everenteredundefinedread",
+      "remaining_captured_bytes": "remainingsubset capturecommits",
+      "remaining_hashed_bytes": "remainingsubset hashcommits",
+      "remaining_known_read_bytes": "remainingsubset known bytes"
+    }
+  },
+  "call": {
+    "exact_keys": [
+      "ordinal",
+      "api",
+      "file_id",
+      "reserved",
+      "invocation_reserved",
+      "raw_scalar",
+      "raw_count",
+      "raw_error",
+      "error_defined",
+      "scalar_aux_ack",
+      "count_aux_ack",
+      "right_transfer_ack",
+      "wrapper_return_observed",
+      "wrapper_state",
+      "stopped",
+      "count_defined",
+      "buffer_state",
+      "buffer_generation",
+      "raw_buffer_bytes",
+      "raw_buffer_sha256"
+    ],
+    "fields": {
+      "api": "active sevenAPI name",
+      "buffer_generation": "null|strictint",
+      "buffer_state": "buffer_state enum",
+      "count_aux_ack": "strictbool",
+      "count_defined": "strictbool",
+      "error_defined": "strictbool",
+      "file_id": "admittedfileordinal",
+      "invocation_reserved": "strictbool;notmeasuredCentry",
+      "ordinal": "uniqueownerordinal0..C-1",
+      "raw_buffer_bytes": "known retainedimmutableframelength ornull",
+      "raw_buffer_sha256": "known retainedimmutableframehash ornull",
+      "raw_count": "UNOBSERVED|COUNT32 atom;ReadFileonly",
+      "raw_error": "UNOBSERVED|DWORD atom",
+      "raw_scalar": "taggedfirstatom",
+      "reserved": "strictbool",
+      "right_transfer_ack": "strictbool",
+      "scalar_aux_ack": "strictbool",
+      "stopped": "strictbool",
+      "wrapper_return_observed": "monotonic strictbool",
+      "wrapper_state": "wrapper_state enum;returnednoterasedbylaterstop"
+    }
+  },
+  "callback": {
+    "exact_keys": [
+      "attempted",
+      "return_observed",
+      "acknowledged",
+      "prepared_bytes",
+      "prepared_sha256",
+      "semantics"
+    ],
+    "fields": {
+      "acknowledged": "strictbool",
+      "attempted": "strictbool",
+      "prepared_bytes": "0..8192 forpublish;boundedrow/reserveotherwise",
+      "prepared_sha256": "null|lowercase64hex",
+      "return_observed": "strictbool",
+      "semantics": "constant fictional_callback_not_physical_IO"
+    }
+  },
+  "compile_record": {
+    "exact_keys": [
+      "module",
+      "state",
+      "return_observed",
+      "accepted"
+    ],
+    "fields": {
+      "accepted": "strictbool;clock/livecheckspassed",
+      "module": "closedmodulename",
+      "return_observed": "strictbool",
+      "state": "operation_state enum"
+    }
+  },
+  "construction_and_methods": {
+    "continue_verification_v1.py": [
+      "Request(output_key, files)",
+      "TestAuthority(owner, files, checker_ids)",
+      "TestCheckerPorts(owner, ids, handlers)",
+      "TestObservation(context, stage, verdict, evidence_paths, detail=\"\")",
+      "test_factories(owner, authority_callback, checker_callback) -> (TestAuthorityFactory, TestCheckerFactory)",
+      "continue_once(claimed_continuation, request, test_authority_factory, test_checker_factory) -> frozen FinalResult"
+    ],
+    "shared_file_ports_v1.py": [
+      "FilePortView(owner, injected_binding)",
+      "view.acquire(spec) -> FileRecordRef",
+      "view.inspect(file_ref)",
+      "view.hash_capture(file_ref)",
+      "view.close(file_ref) [one central closer primitive]",
+      "InjectedBinding.invoke(call_ref, arguments, adoption_hooks) -> None"
+    ],
+    "shared_owner_v1.py": [
+      "start_injected(clock, setup) -> setup(owner); first injected sample before setup only",
+      "FileSpec(path, role, size, sha256, capture)",
+      "ModuleRule(fullname, path, dependencies, package=False)",
+      "owner.bind_ports(file_view, sink) [once before plan]",
+      "owner.bind_test_hooks(TestHooks(owner, callback)) [once before plan; optional no-op when absent]",
+      "owner.bind_test_compiler(compiler, stdlib=()) [once before plan; load refuses when absent]",
+      "owner.admit_plan(full_specs, early_paths, module_rules)",
+      "owner.reserve_output(output_key)",
+      "owner.capture_early() -> EarlySourceContext",
+      "owner.issue_continuation() -> HandoffToken",
+      "HandoffToken.claim() -> Continuation(owner) [once]",
+      "owner.load_source(fullname) -> loaded object [only after claim]",
+      "owner.file_ref(path) -> SAME non-owning canonical FileRecordRef",
+      "owner.check(cleanup=False) -> original clock sample",
+      "owner.snapshot() -> immutable Snapshot",
+      "owner.finalize(outcome) -> frozen FinalResult [once]",
+      "owner.exception_for_token(token) -> same original exception"
+    ]
+  },
+  "context": {
+    "exact_keys": [
+      "file_ids",
+      "captured_bytes",
+      "digests",
+      "complete"
+    ],
+    "fields": {
+      "captured_bytes": "sumthiscontext immutable blobs",
+      "complete": "source/progresspredicateonly;notrealqualification",
+      "digests": "canonicalpath->ownerobserveddigest",
+      "file_ids": "orderedownerfileids"
+    }
+  },
+  "counter_semantics": "R/C/E are reservation capacities, NOT actualcalls/events. Raw scalar/count/wrapper axes fold independently bycanonicalordinal. Caller-dict reports/ready booleans do not complete gates. No no-op clock/hook expectations may cause required checks to be removed.",
+  "diagnostic": {
+    "exact_keys": [
+      "identity",
+      "phase",
+      "class_name",
+      "message",
+      "args_repr",
+      "format_failed"
+    ],
+    "fields": {
+      "args_repr": "captured<=8boundedreprstrings",
+      "class_name": "captured<=128chars",
+      "format_failed": "strictbool",
+      "identity": "opaqueownerissuedtoken;notexceptionleaf",
+      "message": "captured<=256chars",
+      "phase": "boundedclosedoperationphase"
+    }
+  },
+  "enums": {
+    "buffer_state": [
+      "not_applicable",
+      "reserved",
+      "raw_retained",
+      "defined",
+      "malformed",
+      "unknown"
+    ],
+    "checker_stage": [
+      "archive",
+      "journal",
+      "resources",
+      "core"
+    ],
+    "close_state": [
+      "not_attempted",
+      "reserved",
+      "not_dispatched_deadline",
+      "entered_return_unknown",
+      "returned_success",
+      "returned_failure"
+    ],
+    "identity_state": [
+      "not_attempted",
+      "in_progress",
+      "verified",
+      "refused",
+      "unknown"
+    ],
+    "open_state": [
+      "unopened",
+      "reserved",
+      "entered_return_unknown",
+      "owned",
+      "known_failure_no_handle",
+      "ownership_unknown"
+    ],
+    "operation_state": [
+      "not_attempted",
+      "reserved",
+      "entered_return_unknown",
+      "return_observed",
+      "refused"
+    ],
+    "phase": [
+      "CREATED",
+      "PLAN",
+      "RESERVATION",
+      "EARLY_CAPTURE",
+      "HANDOFF",
+      "LOADING",
+      "CONTINUATION",
+      "CHECKERS",
+      "FINALIZING",
+      "FINALIZED"
+    ],
+    "publish_kind": [
+      "candidate",
+      "cleanup",
+      "failure",
+      "receipt",
+      "seal"
+    ],
+    "refusal_code": [
+      null,
+      "INVALID_INPUT",
+      "PLAN_NOT_ADMITTED",
+      "JOINT_CAP_EXCEEDED",
+      "FOREIGN_IDENTITY",
+      "PORT_ALREADY_BOUND",
+      "OUTPUT_NOT_OWNED",
+      "OUTPUT_ALREADY_RESERVED",
+      "EARLY_DESCRIPTOR_MISMATCH",
+      "EARLY_SOURCE_NOT_LIVE_COMPLETE",
+      "HANDOFF_REPEATED",
+      "CONTINUATION_REPEATED",
+      "SOURCE_LOADER_UNBOUND",
+      "SOURCE_IMPORT_REFUSED",
+      "RAW_RETURN_UNKNOWN",
+      "READ_COUNT_UNKNOWN",
+      "READ_PROGRESS_INCOMPLETE",
+      "IDENTITY_INCOMPLETE",
+      "CHECKER_BINDING_REFUSED",
+      "CHECKER_CONTEXT_REFUSED",
+      "PUBLICATION_REFUSED",
+      "JOURNAL_CLOSED",
+      "POST_SEAL_DISPATCH",
+      "WORK_DEADLINE",
+      "HARD_DEADLINE",
+      "CLOCK_INVALID",
+      "FINALIZED_MISUSE"
+    ],
+    "stage_state": [
+      "reserved",
+      "entered_return_unknown",
+      "return_observed",
+      "accepted",
+      "refused"
+    ],
+    "status": [
+      "ACTIVE",
+      "REFUSED",
+      "INCOMPLETE",
+      "PURE_SEAM_COMPLETE_CONSISTENT",
+      "PURE_SEAM_COMPLETE_NEGATIVE"
+    ],
+    "verdict": [
+      "consistent",
+      "negative"
+    ],
+    "wrapper_state": [
+      "not_returned",
+      "returned",
+      "raised"
+    ]
+  },
+  "errors": {
+    "exact_keys": [
+      "primary",
+      "secondary"
+    ],
+    "fields": {
+      "primary": "null|immutableDiagnostic",
+      "secondary": "listimmutableDiagnostic"
+    }
+  },
+  "event": {
+    "exact_keys": [
+      "sequence",
+      "event",
+      "stage",
+      "kind",
+      "file_id",
+      "module",
+      "elapsed",
+      "state",
+      "return_observed",
+      "acknowledged"
+    ],
+    "fields": {
+      "acknowledged": "strictbool callbackonly",
+      "elapsed": "lastsample-originalstart",
+      "event": "closed eventname",
+      "file_id": "null|admittedfileordinal",
+      "kind": "null|candidate/cleanup/failure",
+      "module": "null|closedmodulename",
+      "return_observed": "strictbool",
+      "sequence": "owner sequence",
+      "stage": "null|closedstage",
+      "state": "operation_state enum"
+    }
+  },
+  "event_names": [
+    "output_reserved",
+    "source_open_reserved",
+    "source_open_returned",
+    "source_identity_reserved",
+    "source_identity_returned",
+    "source_hash_reserved",
+    "source_hash_returned",
+    "handoff_reserved",
+    "handoff_claimed",
+    "source_compile_reserved",
+    "source_compile_returned",
+    "file_open_reserved",
+    "file_open_returned",
+    "file_hash_reserved",
+    "file_hash_returned",
+    "stage_reserved",
+    "stage_returned",
+    "finalization_reserved",
+    "publication_reserved",
+    "publication_returned",
+    "original_close_reserved",
+    "original_close_returned_or_unknown",
+    "journal_close_reserved"
+  ],
+  "exception_and_ref_rules": "SharedOwnerError(code) is the exported source error for controls; injected RuntimeError/MemoryError/TimeoutError/KI/SE retain their original objects. owner.primary and tuple owner.secondary expose originals; issued diagnostics contain no BaseException leaves. Ref/identity getters expose source-issued objects or immutable/read-only objects, never cloned registry/lease dictionaries.",
+  "file": {
+    "exact_keys": [
+      "id",
+      "spec",
+      "early",
+      "open_state",
+      "handle_fact",
+      "identity_state",
+      "identity_queries",
+      "open_invocations",
+      "read_invocations",
+      "read_scalar_returns",
+      "known_read_bytes",
+      "hashed_bytes",
+      "captured_bytes",
+      "read_count_unknown",
+      "hash_complete",
+      "capture_complete",
+      "actual_sha256",
+      "close_reserved",
+      "close_invocations",
+      "close_return_observed",
+      "close_success",
+      "close_state"
+    ],
+    "fields": {
+      "actual_sha256": "null|lowercase64hex",
+      "capture_complete": "strictbool",
+      "captured_bytes": "committedcopiedbytes",
+      "close_invocations": "strictint0..1",
+      "close_reserved": "strictbool",
+      "close_return_observed": "strictbool",
+      "close_state": "close_state enum",
+      "close_success": "null|strictbool",
+      "early": "strictbool",
+      "handle_fact": "UNOBSERVED|NULL|HANDLE atom",
+      "hash_complete": "strictbool",
+      "hashed_bytes": "committedhashbytes",
+      "id": "owner ordinal in admittedfulltuple",
+      "identity_queries": "ordered raw query ordinals",
+      "identity_state": "identity_state enum",
+      "known_read_bytes": "defined lowerbound",
+      "open_invocations": "strictint0..1",
+      "open_state": "open_state enum",
+      "read_count_unknown": "strictbool",
+      "read_invocations": "strictint0..Ri",
+      "read_scalar_returns": "strictint<=readinvocations",
+      "spec": "exact{path,role,size,sha256,capture}"
+    }
+  },
+  "identity_checks_external": "Harness asserts actual is identity across phases. The registry property is the canonical read-only registry object containing the actual records, not a decorative copied token. A file_ref remains the SAME canonical record reference across capture/claim/controller/close. Full evidence early_context is the original object and early blobs are the SAME bytes objects. No same_* report boolean grants authority.",
+  "identity_properties": [
+    "view.owner",
+    "Continuation.owner",
+    "owner.origin",
+    "owner.nonce",
+    "owner.registry",
+    "owner.port",
+    "owner.sink",
+    "owner.loader",
+    "owner.journal",
+    "owner.early_context",
+    "owner.evidence_context",
+    "EvidenceContext.early_context",
+    "Context.bytes_for(path)"
+  ],
+  "journal": {
+    "exact_keys": [
+      "reservation",
+      "next_sequence",
+      "closed",
+      "close_return_observed",
+      "close_acknowledged",
+      "tip",
+      "events"
+    ],
+    "fields": {
+      "close_acknowledged": "strictbool",
+      "close_return_observed": "strictbool",
+      "closed": "strictboolcallbackprotocol",
+      "events": "eventrecordlist",
+      "next_sequence": "lenreservedrows",
+      "reservation": "capacityE or0",
+      "tip": "null|exact{bytes,sha256} ofretainedacknowledgedrowbytes"
+    }
+  },
+  "lifecycle": "Bind the non-owning view/sink/compiler/hooks, then admit full metadata plan BEFORE reserve_output/open. Capture early, issue token, claim once to a Continuation, load the marker entry through the same loader, then call continue_once on that ALREADY-CLAIMED view. continue_once enters once and owns finally/finalize. On a bootstrap failure before continue_once, its caller invokes owner.finalize once. Baseline never finalizes a second time.",
+  "loader": {
+    "exact_keys": [
+      "bound",
+      "attempted",
+      "returned",
+      "cache_hits",
+      "records"
+    ],
+    "fields": {
+      "attempted": "ordereduniquemodulenames",
+      "bound": "strictbool",
+      "cache_hits": "orderedmodulenames",
+      "records": "compile record list",
+      "returned": "orderedknownreturnnames"
+    }
+  },
+  "observation_protocol": "Snapshot.to_dict returns ordinary detached containers plus stable source-issued opaque identity tokens in diagnostics; no live mutable record or exception object leaf. File/Call refs are accepted only by current owner. Harness normalizes opaque tokens for JSON comparison separately and checks original object identities externally.",
+  "old_original_payload_or_sourceclosure_operations": 0,
+  "origin": {
+    "exact_keys": [
+      "start",
+      "now",
+      "work_end",
+      "hard_end",
+      "clock_state"
+    ],
+    "fields": {
+      "clock_state": "ok|work_expired|hard_expired|invalid",
+      "hard_end": "start+300",
+      "now": "last observed finite originalseconds",
+      "start": "finite originalseconds",
+      "work_end": "start+295"
+    }
+  },
+  "outputs": {
+    "exact_keys": [
+      "reservation",
+      "publications",
+      "journal_close",
+      "total_reserved_bytes"
+    ],
+    "fields": {
+      "journal_close": "callbackrecord",
+      "publications": "exactfivepublishkindkeys->callbackrecord",
+      "reservation": "callback record",
+      "total_reserved_bytes": "strictboundedint;countunknownattempts reservations"
+    }
+  },
+  "plan": {
+    "exact_keys": [
+      "N",
+      "B",
+      "M",
+      "R",
+      "C",
+      "E",
+      "calls_used",
+      "events_used",
+      "capture_used",
+      "raw_storage_used",
+      "raw_storage_peak",
+      "read_buffer_capacity",
+      "read_generation",
+      "output_reserved_bytes"
+    ],
+    "fields": {
+      "B": "strictint0..2",
+      "C": "6N+R <=92 capacity",
+      "E": "6N+2B+2M+192 <=224 capacity",
+      "M": "strictint0..2",
+      "N": "strictint0..4",
+      "R": "derived sumceil+16; <=68",
+      "calls_used": "actual created raw records <=C",
+      "capture_used": "actual immutable captured bytes <=16384",
+      "events_used": "actual reserved journal rows <=E",
+      "output_reserved_bytes": "prepared attempted callback payload total <=524288",
+      "raw_storage_peak": "observed owner payload allocation highwater <=131072",
+      "raw_storage_used": "currently charged payload bytes <=131072",
+      "read_buffer_capacity": "0..65536; exactly one when allocated",
+      "read_generation": "monotonic bounded byR"
+    }
+  },
+  "proposal": {
+    "bytes": 32975,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-CONTINUATION-PROPOSAL-v2.json",
+    "sha256": "90fc021a044bba34953a8f8f8e42b05f5d61f49da945044e1e108f92bb1fc3cd"
+  },
+  "qualification_exact": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "recorded_at_utc": "2026-10-29T15:30:54.906668+00:00",
+  "required_gate_order": [
+    "admission",
+    "hashes",
+    "archive",
+    "journal",
+    "resources",
+    "core",
+    "consistency",
+    "leases_closed",
+    "sealed",
+    "final_clock"
+  ],
+  "schema_version": 1,
+  "snapshot": {
+    "exact_keys": [
+      "scope",
+      "status",
+      "phase",
+      "refusal_code",
+      "finalized",
+      "pure_seam_complete",
+      "origin",
+      "plan",
+      "files",
+      "calls",
+      "api_counters",
+      "byte_totals",
+      "early_context",
+      "evidence_context",
+      "loader",
+      "journal",
+      "outputs",
+      "stages",
+      "gates",
+      "errors",
+      "terminal",
+      "qualification"
+    ],
+    "fields": {
+      "api_counters": "exact sevenAPI keys -> counter record",
+      "byte_totals": "byte_totals record",
+      "calls": "ordered raw call records by owner ordinal",
+      "early_context": "context record ornull",
+      "errors": "errors record",
+      "evidence_context": "context record ornull",
+      "files": "ordered file records, full plan order",
+      "finalized": "strictbool",
+      "gates": "ordered list of accepted required gate names",
+      "journal": "journal record",
+      "loader": "loader record",
+      "origin": "origin record",
+      "outputs": "outputs record",
+      "phase": "phase enum",
+      "plan": "plan record ornull beforeadmission",
+      "pure_seam_complete": "strictbool; never verification_complete",
+      "qualification": "qualification_exact",
+      "refusal_code": "nullable refusal_code",
+      "scope": "constant pure_shared_owner_seam",
+      "stages": "stage records",
+      "status": "status enum",
+      "terminal": "terminal record"
+    }
+  },
+  "source_implementation_authorized": false,
+  "stage": {
+    "exact_keys": [
+      "name",
+      "state",
+      "return_observed",
+      "accepted",
+      "verdict"
+    ],
+    "fields": {
+      "accepted": "strictbool",
+      "name": "closedstage",
+      "return_observed": "strictbool",
+      "state": "stage_state enum",
+      "verdict": "null|consistent|negative"
+    }
+  },
+  "stage_names": [
+    "authority_factory",
+    "checker_factory",
+    "admit_reconcile",
+    "hash_remaining",
+    "archive",
+    "journal",
+    "resources",
+    "core",
+    "consistency"
+  ],
+  "status": "PUBLIC_INTERFACE_DATA_DRAFT_FOR_LITERAL_PREPARATION_NO_IMPLEMENTATION",
+  "terminal": {
+    "exact_keys": [
+      "started",
+      "candidate_acknowledged",
+      "original_closures_complete",
+      "cleanup_acknowledged",
+      "journal_closed",
+      "receipt_acknowledged",
+      "seal_acknowledged",
+      "final_clock_passed",
+      "pure_owner_ack",
+      "result_returned"
+    ],
+    "fields": {
+      "candidate_acknowledged": "strictbool callbackonly",
+      "cleanup_acknowledged": "strictboolcallbackonly",
+      "final_clock_passed": "strictbool",
+      "journal_closed": "strictboolcallbackonly",
+      "original_closures_complete": "allrequiredknownonceclosefacts",
+      "pure_owner_ack": "strictbool",
+      "receipt_acknowledged": "strictboolcallbackonly",
+      "result_returned": "strictbool",
+      "seal_acknowledged": "strictboolcallbackonly",
+      "started": "strictbool"
+    }
+  },
+  "terminal_semantics": "An in-flight error AFTER seal ACK but BEFORE finalclock/result vetoes completion, records immutable primary/secondary and causes no postseal I/O. AFTER a frozen final result has returned, foreign/repeated/second-finalize/close/work attempts raise SharedOwnerError(FINALIZED_MISUSE) BEFORE clock/error/counter/event mutation or I/O. The cached issued result/snapshot remains unchanged; no new session invalidates it.",
+  "test_seams": {
+    "clock": "Clock is a monotonic stateful synthetic callable; literal steps may change its value or raise at a generic hook/binding point. Do NOT prescribe no-op sample counts. All required checks still sample it. Snapshot/to_dict never sample or advance the clock. Time fields are seconds; work/hard ends are original start+295/+300, not absolute0/295/300.",
+    "close": "Only owner.finalize enumerates cleanup. view.close is the single central close primitive and may be driven directly by a negative lifetime fixture; it does not create another cleanup owner/list. A prematurely closed early lease then blocks handoff/load/cache-return.",
+    "compiler": "compiler(fullname, exact_captured_bytes, resolver). No ordinary import/cache/path fallback. Loading cohort_entry attempts entry then leaf and returns leaf then entry. Marker functions are not authority/checker factories.",
+    "factories": "Both callbacks are zero-argument trusted harness functions. Wrapped factories/returned TestAuthority/TestCheckerPorts are explicitly SYNTHETIC_ONLY and bound to owner/nonce. Handlers take exact EvidenceContext and return TestObservation. ids order is archive/journal/resources/core. No production factory/checker constructor exists.",
+    "forged_caps": "admit_plan has ONLY its three positional parameters and no claimed_C/E input. Wrong full_specs dictionary or unexpected keyword is a type/interface refusal; an unentered Python TypeError does not fabricate owner primary/attempt/output evidence. Literal expectations independently assert derived C/E.",
+    "hooks": "TestHooks(owner, callback); callback(point, owner, call_ref_or_None) has EXACT points hash_update/copy_bytes/before_final_ack. Return value ignored. hash_update/copy_bytes run immediately BEFORE their real commit: a hash fault has knownN/hash0/capture0; a copy fault has knownN/hashN/capture0. before_final_ack runs after seal ACK retention, before final clock/result; its errors/illegal dispatches are in-flight vetoes."
+  }
+}

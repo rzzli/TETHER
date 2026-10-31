@@ -1,0 +1,262 @@
+{
+  "actual_target_file_API_calls": 0,
+  "ast_v2_to_v3": {
+    "changed_methods": [
+      "Owner._component",
+      "Owner.handoff",
+      "Owner.raise_exception"
+    ],
+    "new_or_removed_methods": [],
+    "unchanged_methods": [
+      "AdoptionError.__init__",
+      "Call.__init__",
+      "Call.__setattr__",
+      "Call._set",
+      "HarnessFactory.__init__",
+      "HarnessFactory.origin",
+      "HarnessFactory.owner",
+      "HarnessFactory.ref",
+      "HarnessOrigin.__init__",
+      "HarnessOrigin.__setattr__",
+      "Owner.__init__",
+      "Owner._atom",
+      "Owner._buffer_pending",
+      "Owner._buffer_reusable_for_reservation",
+      "Owner._call",
+      "Owner._check",
+      "Owner._count_state",
+      "Owner._defined",
+      "Owner._diagnostic",
+      "Owner._fact_ready",
+      "Owner._fold",
+      "Owner._hard_api",
+      "Owner._latch",
+      "Owner._raw_failure",
+      "Owner._ref",
+      "Owner._reject",
+      "Owner._require",
+      "Owner._retain_diagnostic",
+      "Owner._setup",
+      "Owner._slice",
+      "Owner._slot_state",
+      "Owner._store",
+      "Owner._validate_context",
+      "Owner.advance",
+      "Owner.aux",
+      "Owner.buffer_write",
+      "Owner.copy",
+      "Owner.declare_buffer",
+      "Owner.declare_identity_prefix",
+      "Owner.declare_slot",
+      "Owner.exception_for_token",
+      "Owner.hash",
+      "Owner.install_early",
+      "Owner.invoke",
+      "Owner.primary",
+      "Owner.reconcile",
+      "Owner.record",
+      "Owner.reserve",
+      "Owner.reuse_buffer",
+      "Owner.secondary",
+      "Owner.snapshot",
+      "Owner.store_count",
+      "Owner.store_error",
+      "Owner.store_scalar",
+      "Owner.wrapper_return",
+      "Snapshot.to_dict",
+      "_Buffer.__init__",
+      "_Slot.__init__",
+      "_bool",
+      "_diagnostic_fallback",
+      "_exception_text",
+      "_freeze",
+      "_need",
+      "_thaw",
+      "_uint",
+      "_usable"
+    ]
+  },
+  "chronology": [
+    "Initial2ef source:13own controls passed; independent32 first batch7fd retained28finalmatches plus genuine snapshot/phase/event failures, one unused-buffer expected omission and seven separate harness identity-map errors.",
+    "Nameda687 v2 fixed the first source batch. Root-authorized literal v3 added only its already-declared unused buffer expected projection; harness identity mapping was separately corrected. Independent16method32/9 pass123 and own18 pass20db remain immutable.",
+    "Later concrete5978 wrapper-counter drop and Native0121 closed-lease/injected-error counterexamples led to f39 source HOLD; they are not overwritten by covered passes.",
+    "Root authorized one namedv3 three-method batch. Independent before7a9a tests reproduce4failed assertions on a687, then final19methods pass; owner21methods also pass. No native or historical archive replay.",
+    "Two private author helper failures stopped before source writes: nested quote SyntaxError and normalized-text-vs-physical-CRLF hash assertion. Both receipts retained; neither was an executed core qualification."
+  ],
+  "corrections": [
+    "Snapshot metadata contains immutable captured exception descriptors/opaque identity tokens, while Owner getters and token resolver preserve original exception objects. Formatting starts only after latch; fallback does not recurse.",
+    "Identity-query stop classifies deadline only for actual TimeoutError at current original work cutoff with the typed query/phase; unrelated RuntimeError is not retagged by name.",
+    "Successful same-owner handoff advances existing event sequence exactly once; foreign/repeated/closed early-source handoffs do not increment or mint owner/output.",
+    "v3 preserves wrapper Returned state/count after later stop, prohibits new facts/work on the stopped invocation, and permits legal same-owner once cleanup.",
+    "v3 component catch latches a fresh injected AdoptionError by original identity; already-recorded exact errors are not duplicated.",
+    "v3 checks all current early slots are owned_live with available close rights before handoff; closed/failed/unknown close outcomes cannot be reused as live source leases."
+  ],
+  "inputs": {
+    "ADOPTION-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 21443,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "1dfc199ced5a8f055cd82557b1f38defb5fa49d37b31e330e03d6c78f1dfc0ec"
+    },
+    "RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v1.json": {
+      "bytes": 520036,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v1.json",
+      "sha256": "7fd350816c3849d034a0ae34996a9784cd2a50b9d1b1b476416b0e379292af54"
+    },
+    "RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v2.json": {
+      "bytes": 505184,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v2.json",
+      "sha256": "123393e0adaa50654cf47a4263145c079ffdeb8611990e4172c33a8969f34e33"
+    },
+    "RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v3.json": {
+      "bytes": 505960,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-DRIVER-PURE-PROOF-v3.json",
+      "sha256": "1c05165b626aade0db9ff2cfb6399e015ffc7a07b3618f41af5d9c4b41d47a81"
+    },
+    "RAW-ADOPTION-CORE-IMPLEMENTATION-SCOPE-v1.json": {
+      "bytes": 3378,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-IMPLEMENTATION-SCOPE-v1.json",
+      "sha256": "40695dd368b7344e54bed9a6f03343b6d0352cb416bb0ac49fb3d756d725011c"
+    },
+    "RAW-ADOPTION-CORE-SOURCE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 4499,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-SOURCE-INDEPENDENT-PEER-v2.json",
+      "sha256": "f39c2f209acf074f1c643d7725480f772b6519734f229d923f712f31263f0932"
+    },
+    "RAW-ADOPTION-CORE-V2-AUTHORING-FAILURE-v1.json": {
+      "bytes": 407,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-V2-AUTHORING-FAILURE-v1.json",
+      "sha256": "0012c462177ba41f1978a2587b181643a4de684b4f6839c2ea74c3a57dd5d6a9"
+    },
+    "RAW-ADOPTION-CORE-V3-AUTHORING-FAILURE-v1.json": {
+      "bytes": 405,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-V3-AUTHORING-FAILURE-v1.json",
+      "sha256": "14bb382c5cccd08d1292726b57e93986c2980b5ad39d039000087735525d5c1d"
+    },
+    "RAW-ADOPTION-FIXTURE-FREEZE-v3.json": {
+      "bytes": 2749,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-FREEZE-v3.json",
+      "sha256": "f82b4ad090a4a669ba8568fabe7f9fbd856980ad1b07eecde3533edc2a148e58"
+    },
+    "RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v3.json": {
+      "bytes": 3972,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v3.json",
+      "sha256": "d6a3d8575e3cc4cc8f56ca1518771702cdb87b7f585091de25eb17c59e141e43"
+    },
+    "RAW-ADOPTION-FIXTURES-v3.json": {
+      "bytes": 257088,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURES-v3.json",
+      "sha256": "37e3c0d614a5aaeca2125c05e8d94c42707d901e039c41ac02978bb23caacc64"
+    },
+    "RAW-ADOPTION-HOOK-IDENTITY-HARNESS-CORRECTION-v1.json": {
+      "bytes": 2021,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-HOOK-IDENTITY-HARNESS-CORRECTION-v1.json",
+      "sha256": "8949993321db69b74cda81fefeff789250651077a2417497f16d730b9c7270d1"
+    },
+    "RAW-ADOPTION-INDEPENDENT-THREE-REGRESSIONS-BEFORE-v3.json": {
+      "bytes": 3811,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-INDEPENDENT-THREE-REGRESSIONS-BEFORE-v3.json",
+      "sha256": "7a9a64f9fee27c6424a7d8650dca5790e87fe1539da29a59f258c0681753b23a"
+    },
+    "RAW-ADOPTION-LITERAL-CORRECTION-PROOF-v3.json": {
+      "bytes": 2665,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-LITERAL-CORRECTION-PROOF-v3.json",
+      "sha256": "734587b3feeb8bd89a85ee2000293e4ad152cb34c15d64904e4945c40c654710"
+    },
+    "RAW-ADOPTION-OWNER-CONTROLS-PROOF-v1.json": {
+      "bytes": 1029,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-OWNER-CONTROLS-PROOF-v1.json",
+      "sha256": "5015ae6ef45840422bd3f3e97c828f92bc951e87f2b0c9f1024493159a4c335f"
+    },
+    "RAW-ADOPTION-OWNER-CONTROLS-PROOF-v2.json": {
+      "bytes": 1030,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-OWNER-CONTROLS-PROOF-v2.json",
+      "sha256": "20db386478414c13a9ab6094ddf6ee3e52fa004068568cea0234160edfde4d69"
+    },
+    "RAW-ADOPTION-OWNER-CONTROLS-PROOF-v3.json": {
+      "bytes": 1030,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-OWNER-CONTROLS-PROOF-v3.json",
+      "sha256": "2aae75bd78d0ff05d0c93c259231cb5646f698cd1f2ab80028e0600c17ea9305"
+    },
+    "RAW-ADOPTION-PREPARATION-AND-SOURCE-SCOPE-v2.json": {
+      "bytes": 4282,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-PREPARATION-AND-SOURCE-SCOPE-v2.json",
+      "sha256": "e20b47ff32c3dc4f190cbee1621458f9fd5ca4eefdf0d6b3d9eddfd8c1f10aad"
+    },
+    "RAW-ADOPTION-SOURCE-INDEPENDENT-BEFORE-v2.json": {
+      "bytes": 1867,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-SOURCE-INDEPENDENT-BEFORE-v2.json",
+      "sha256": "0121b32c00b54af2c1a50c20b74800e96abd9c31f18cba4cb4340d248af1c477"
+    },
+    "RAW-ADOPTION-WRAPPER-RETURN-BEFORE-v2.json": {
+      "bytes": 3110,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-WRAPPER-RETURN-BEFORE-v2.json",
+      "sha256": "5978ffafd2d635bebe9e8f4a2b4392a117726fb5edd04a9fb9aca666a1d765fb"
+    },
+    "check_raw_adoption_core_v3.py": {
+      "bytes": 19436,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\check_raw_adoption_core_v3.py",
+      "sha256": "0f16124c2f80236da37522fe529cdbb2bf2e6549525765ebb505d8b05d3043b8"
+    },
+    "check_raw_adoption_owner_controls_v3.py": {
+      "bytes": 16746,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\check_raw_adoption_owner_controls_v3.py",
+      "sha256": "0122812ea138d64a38ed93f381b77c13a4619a86a251e2511935b199a5c04ea7"
+    },
+    "probe_raw_adoption_wrapper_return_v2.py": {
+      "bytes": 2549,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\probe_raw_adoption_wrapper_return_v2.py",
+      "sha256": "e382d5631cb5a623fe6d8322d9d665b2773101f5c36092a55e3ff9e502b0cee4"
+    },
+    "raw_adoption_core_v1.py": {
+      "bytes": 27735,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v1.py",
+      "sha256": "2ef902a12e20f3ff6eb40bbc37504969970b1d86880ba0c396a6e7ad0e94edcb"
+    },
+    "raw_adoption_core_v2.py": {
+      "bytes": 30480,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v2.py",
+      "sha256": "a6877861860ba7a42d22d581d4bfa565984e6ce377d937ff3c4525b04130fd8a"
+    },
+    "raw_adoption_fixture_driver_v3.py": {
+      "bytes": 13742,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_fixture_driver_v3.py",
+      "sha256": "2c7e322fe8b61336df5eb47eb443274b3432f3e6a541079bb8455bbf912ff094"
+    },
+    "raw_adoption_regressions_v3.py": {
+      "bytes": 6306,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_regressions_v3.py",
+      "sha256": "7c90a42a4f1b02b3079b2e6fd5ad38627aa1f7d5cc440961dec72453ceca239a"
+    }
+  },
+  "old_original_payload_or_source_closure_operations": 0,
+  "pending": [
+    "Exact independent source peer/root acceptance is still required; this author does not self-approve.",
+    "Native-to-Python/ctypes conversion-before-first-storage gap is not closed by these source/fake interfaces.",
+    "Actual14-export binding, real first-clock bootstrap, real shared controller/registry/output/source context integration and full roster/call/event/time fit remain separate.",
+    "No original availability/authentication, live source/resource/semantic/profile/runtime/scientific gate is established. No default application or SDK activation changed."
+  ],
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "runtime_authorized": false
+  },
+  "recorded_at_utc": "2026-10-29T14:39:01.461583+00:00",
+  "schema_version": 1,
+  "scope": "Pure portable generic methods over source-issued HARNESS_ONLY typed refs/bytes/synthetic Origin. Core never reads fixtures/cases/fault selectors/expected projections or files. The independent driver alone converts literal input into actual typed objects, calls methods and compares fixed outputs.",
+  "source": {
+    "bytes": 30816,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v3.py",
+    "sha256": "f4fcae07926927f509f455b1b8e243cec2be8fdbc91fa710aacf14618e9b5bea"
+  },
+  "status": "PAUSED_SOURCE_PURE_COMPONENT_FOR_INDEPENDENT_PEER_NOT_ACCEPTED",
+  "tests": {
+    "checkpoints": 9,
+    "frozen_histories": 32,
+    "independent_driver_methods": 19,
+    "issued_history_snapshots": 320,
+    "owner_controls_methods": 21,
+    "source_unchanged": true
+  }
+}

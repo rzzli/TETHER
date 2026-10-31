@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "questions": 18,
+  "options": 90,
+  "pdf_pages": 9,
+  "pdf_fields": 63,
+  "widgets": 135,
+  "blank_answers": true,
+  "field_bounds_checked": true,
+  "appearances_checked": true,
+  "fill_roundtrip": "passed",
+  "javascript_syntax": "passed",
+  "private_path_and_verdict_leak_check": "passed",
+  "browser_functional_check": "passed",
+  "files": {
+    "Expert-review.html": "7f0b1da445f21bb86ed0393a5be356e862c2309825fddf7892f202bfa787813f",
+    "Expert-review.pdf": "f90261f77cc94f917dcd30e953cfd7edb821f5d77f049f416f437554d19090c7"
+  },
+  "browser_checks": 10,
+  "pdf_render_pixels_unchanged": true
+}

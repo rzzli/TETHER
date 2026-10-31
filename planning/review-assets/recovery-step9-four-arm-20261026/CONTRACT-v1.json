@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "status": "prospective_conditional_not_implemented",
+  "track": "authority_bound_retrieved_fixed_evidence_four_arm_recorded",
+  "fixture": "invented-six-v1",
+  "retrieval_policy": "literal_case_overlap_then_id_v1",
+  "selected_ids": [
+    "id03",
+    "id04"
+  ],
+  "request_sha256": "fdb7c21b5d5758fabd4a17e8110b134861836bf65d0d715398a046838b40a4a5",
+  "preflight_sha256": "b9f3fdd9a7400af5e8e4453c7755e393c11a7fd21318e6cbdae4c69e688e3bdc",
+  "calls": {
+    "asof": 1,
+    "adapted_virtual_biotech": 5,
+    "extractive": 0,
+    "lexical": 0
+  },
+  "budget": {
+    "max_calls": 16,
+    "max_cost_usd": 0,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_retries": 1,
+    "max_seconds": 300
+  },
+  "byte_preflight": {
+    "input": 47753,
+    "output": 6144,
+    "admitted": false
+  },
+  "next_gate": "Separate prospective approval for offline token quotation; trusted current executing-package token receipts required before any token-capacity integration or recorded schedule execution",
+  "no_generation": true,
+  "no_native": true,
+  "no_real_universe_expansion": true,
+  "historical_policy": "Existing fixed-two-fixture gates and legacybyteStudySession behavior remain unchanged by default; never drop package proof from oldquotes orsourceparents",
+  "history": "only verified same-run prior source-IDprojection; allIDs hypothetical preflight is not universal token bound; eachactualpayload requires itsownverifiedquote",
+  "source_authority": "Freshcurrentpackage retrievalpreparation with external authority/receiptanchors; requalify originalfixture/policy/subset, preserveall fields/citations/aliasorder; no callerJSONauthority",
+  "pure_helpers": "Reuse original deterministic selection/ranking/exactquote helpers behind a new externallyauthenticated composition; do not widen existing public twofixture gates",
+  "execution_controller": "ExistingStudySession/RecordedBackend/Journal/atomic/proofs only; no new scheduler/modeladapter",
+  "capacity_extension": "Narrow optional explicit trustedcapacityproof branch, defaultlegacybytepolicy unchanged; quote validates exactprompt/payload/tokenizer/model/assets/code+externalreceipt; no backendIDspecialcase or fakezero modelusage",
+  "scientific_validation": "not_attempted"
+}

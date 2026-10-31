@@ -1,0 +1,27 @@
+{
+  "actual_API_authorized": false,
+  "author_findings": {
+    "bytes": 4101,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-ADMISSION-FINDINGS-v2.json",
+    "sha256": "f4370d07a26f06e36e8d9a408df17fbdd7902f310841daaf2fb3233e43152dc8"
+  },
+  "port_implementation_authorized": false,
+  "precheck": {
+    "bytes": 4392,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-INDEPENDENT-PRECHECK-v2.json",
+    "sha256": "9a40bc4367be182c9887172743fb79213c7fa48929c8bd5dca92a8e695f2e0e4"
+  },
+  "predecessor": {
+    "bytes": 11662,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v2.json",
+    "sha256": "e3e20e39c08eb9718b03ef65700d375870f6bdf1d77b54279f98465ced454dfc"
+  },
+  "recorded_at_utc": "2026-10-29T11:41:11.197702+00:00",
+  "schema": {
+    "bytes": 13088,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v3.json",
+    "sha256": "e3069b89cca7e9b04c630de994f24392054daf341c280f50778aea3d0f81657b"
+  },
+  "schema_version": 1,
+  "status": "SCHEMA_V3_FROZEN_BEFORE_NARROW_FIXTURE_SUCCESSOR"
+}

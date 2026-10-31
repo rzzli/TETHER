@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "status": "PASS_TEN_CURRENT_DOCS_SOURCE3_FIVE_REGRESSION_MILESTONE",
+  "reviewer": "grammar_toolchain_requirements",
+  "scope": "Current checkpoint paragraphs,20 project statuses,5 following gates,accepted metric/scope consistency,local-link existence,and one authorized TODO reassessment closure. No subject/source/model/original-payload read or execution.",
+  "documents": {
+    "README.md": {
+      "path": "README.md",
+      "bytes": 38359,
+      "sha256": "eba4e77d8fb4aff0d24705956b264de85e4a0319316c4d1b6d8047f61f1d884d"
+    },
+    "TODO.md": {
+      "path": "TODO.md",
+      "bytes": 53012,
+      "sha256": "75bc115831d592a49f50d22b2ecc51f2eeb82ecf28230de836526013e126e89e"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 44156,
+      "sha256": "1634cb94e06f79a4b7f7cbd8340adfdc6de558128b54ce4c1135471d53802de0"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 34837,
+      "sha256": "09b4d653f8a7ed8e7043b28b8279b5fdcf551add75e1a9e0d4d783854420aecf"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 18096,
+      "sha256": "1d001301d5ef6e173e3714d6df102dc63431892b50ba24f636fe09950baf8ae7"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "path": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "bytes": 11282,
+      "sha256": "2389095cadd624cb20aa47ae02cde89fae3f1630b6bf1f392744db4dd596ed75"
+    },
+    "planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md": {
+      "path": "planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md",
+      "bytes": 13738,
+      "sha256": "ecf19f8c2feb33f32d8955a49459a6f29bbfe81d6041d008569fc4a0aa5d0505"
+    },
+    "memory/project-goals.md": {
+      "path": "memory/project-goals.md",
+      "bytes": 114893,
+      "sha256": "2d26b4251fd5d24d33bd30a0e364bf6deaa13962bca9ff554b225aab331500d6"
+    },
+    "memory/MEMORY.md": {
+      "path": "memory/MEMORY.md",
+      "bytes": 26115,
+      "sha256": "3c876ad7129ade114ad1ff0ddff4babe158676d3cad5f8843fa8f260aa0134ca"
+    },
+    "memory/research-log-2026-10-30-entry-corrections.md": {
+      "path": "memory/research-log-2026-10-30-entry-corrections.md",
+      "bytes": 3018,
+      "sha256": "3486b2704431d5617e60226c0d1af6bd18eea9cd2d3ca0c86541b2492b89a297"
+    }
+  },
+  "evidence": {
+    "root_acceptance": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE3-FIVE-REGRESSION-ROOT-ACCEPTANCE-v1.json",
+      "bytes": 3568,
+      "sha256": "0d9c42a2f8c3575f4706ce43d189e56a680ed26eb9ef60737e9453d7b2bd4fb4"
+    },
+    "actual_proof": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE3-REGRESSION-PROOF-v1.json",
+      "bytes": 336850,
+      "sha256": "ca6baf6761b6342cf0578e1f74167f3379e9efb3b1306ac5c1d1e5c38a110e28"
+    },
+    "independent_actual_review": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE3-REGRESSION-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+      "bytes": 6230,
+      "sha256": "5efc550f47d5245b556e4c94bf93d273ed140a6866396d6baf7c73942a85eb8c"
+    }
+  },
+  "checks": {
+    "named_checks_passed": 81,
+    "status_rows": 20,
+    "following_gates": 5,
+    "local_markdown_links": 222,
+    "wikilinks": 197,
+    "total_link_occurrences": 419,
+    "broken_links": [],
+    "all_checks_passed": true
+  },
+  "status_rows": {
+    "R01": "Accepted scope, governance and exposure boundaries.",
+    "R02": "Accepted tested checkpoint and restoration inventory.",
+    "R03": "Accepted scoped archive compatibility and relocation; complete host/raw/model restoration remains separate.",
+    "R04": "Accepted reproduced application correctness fixes.",
+    "R05": "Accepted bounded diagnostic preparation; stronger-model scientific sufficiency unresolved.",
+    "R06": "Accepted reusable infrastructure slice.",
+    "R07": "Technical diagnostic closed negative; independent human assessment pending.",
+    "R08": "Partial source/exposure preparation; no scientifically qualified fresh case.",
+    "R09": "Five entry correction regressions now accepted in source/synthetic scope. Full entry32/53, native25 coverage, real roster, native/physical composition, distinct84 and integrated resources remain open.",
+    "R10": "Timed independent human development pilot pending qualified cases, mechanics and reviewers.",
+    "R11": "Estimand, power, amended H5 protocol, preregistration and analysis freeze pending.",
+    "R12": "Locked H5 evaluation and report pending protocol, mechanics and final independent panel.",
+    "R13": "Alternative clinical outcome source conditional and unqualified.",
+    "R14": "Regional genetics/compatible LD, causal features, predictors and scorer/calibration conditional and unqualified.",
+    "R15": "Original clinical comparisons and ablations conditional and pending.",
+    "R16": "Individually gated T2\u2013T5/H6 extensions and reproducible release pending.",
+    "HR1": "Human recruitment, domain matching, conflicts and exposure records pending.",
+    "HR2": "Two independent orientation submissions and measured workload pending.",
+    "HR3": "Fresh source-only references, reviewer coverage and masked ratings pending.",
+    "HR4": "Sized final panel and independent adjudication pending."
+  },
+  "accepted_metrics": {
+    "methods": 5,
+    "worlds": 5,
+    "entries": 5,
+    "elapsed_seconds": 0.203,
+    "normal_calls": 37,
+    "normal_known_bytes": 2196237,
+    "normal_close_attempts": 5,
+    "helper_prefix_bytes": 99000,
+    "kernel_pre_entry_trusted_bytes": 121192,
+    "total_raw_rows": 61,
+    "axes": 244,
+    "total_once_close_attempts": 9
+  },
+  "scope_limits": [
+    "Five synthetic source regressions only. Full entry32/53 and native25 are pending; their suite authoring is not an actual execution result.",
+    "Real entry/native first publication/positive native lease/full roster/physical14/joint resources/distinct84/scientific and independent-human gates remain open.",
+    "Application0.3.11/defaultv2,retained1774 full tests/327pins,prior native failures and scientific/data gaps are preserved; no new application suite or payload run."
+  ],
+  "resolved_content_issue": "Root corrected only the assessment/new log capability wording: Source3 synthetic search DATA/SyntheticSearchRef controls are available; physical/native search authority remains pending. Critical step now separates runtime,data,static,deferred coverage and links the finite feasibility review.",
+  "link_method": "Document-relative/absolute-workspace Markdown paths are percent-decoded. Wikilinks resolve by current/vault-root path or existing unique basename, preserving dotted version suffixes. Only target existence was inspected; no link payload contents were read. Earlier memory-only/stem-splitting checker assumptions produced false missing-link candidates and were corrected without modifying any linked documents.",
+  "authorized_edit": {
+    "path": "TODO.md",
+    "before_sha256": "a1ecd4113fd081323e86446569f18d76fd63cfa08052a823205d1f515bfcbdeb",
+    "after_sha256": "75bc115831d592a49f50d22b2ecc51f2eeb82ecf28230de836526013e126e89e",
+    "changed_lines": 1,
+    "rule": "Only the pending entry-corrections reassessment item was checked and its trailing pending-QA phrase replaced with this QA filename. No QA hash is embedded in TODO, avoiding a self-hash cycle. All broader entry/full32/native25/science items remain pending."
+  },
+  "activity": {
+    "subject_or_source_reads": 0,
+    "subject_execution": 0,
+    "model_or_original_payload_reads": 0,
+    "native_or_target_operations": 0,
+    "authorized_document_lines_changed": 1,
+    "other_document_edits": 0
+  },
+  "check_names": [
+    "root_acceptance_prefix",
+    "actual_proof_pin",
+    "actual_peer_pin",
+    "actual_proof_PASS",
+    "five_methods_worlds_entries",
+    "actual_elapsed_rounds_0.203",
+    "actual_setup_audit_pins_deadline_clean",
+    "actual_method_cleanup_evidence_clean",
+    "full32_native25_NOT_EXECUTED",
+    "actual_false_real_qualification",
+    "peer61_rows244_axes9_close_attempts",
+    "normal37_calls2196237_bytes5_closes",
+    "helper99000_kernel121192_separate",
+    "stopped_cache_unobserved_committed_normal_sameerror_onceclose",
+    "root_false_remaining_gates",
+    "exact20_status_ids",
+    "status_row_R01",
+    "status_row_R02",
+    "status_row_R03",
+    "status_row_R04",
+    "status_row_R05",
+    "status_row_R06",
+    "status_row_R07",
+    "status_row_R08",
+    "status_row_R09",
+    "status_row_R10",
+    "status_row_R11",
+    "status_row_R12",
+    "status_row_R13",
+    "status_row_R14",
+    "status_row_R15",
+    "status_row_R16",
+    "status_row_HR1",
+    "status_row_HR2",
+    "status_row_HR3",
+    "status_row_HR4",
+    "open_scope_R08",
+    "open_scope_R09",
+    "open_scope_R10",
+    "open_scope_R11",
+    "open_scope_R12",
+    "open_scope_R13",
+    "open_scope_R14",
+    "open_scope_R15",
+    "open_scope_R16",
+    "open_scope_HR1",
+    "open_scope_HR2",
+    "open_scope_HR3",
+    "open_scope_HR4",
+    "R07_human_pending",
+    "five_following_gate_bullets",
+    "search_data_vs_physical_clarified",
+    "staging_and_absent_branch_distinctions",
+    "scientific_gap_preservation",
+    "application_baseline_preserved",
+    "historical_native_failure_preserved",
+    "logical_not_RSS",
+    "full84_and_human_pending",
+    "README.md_current_pins_timing_scope",
+    "TODO.md_current_pins_timing_scope",
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md_current_pins_timing_scope",
+    "planning/Recovery Status and Next Gates 2026-10-26.md_current_pins_timing_scope",
+    "planning/Project Progress Reassessments.md_current_pins_timing_scope",
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md_current_pins_timing_scope",
+    "memory/project-goals.md_new_memory_pointer",
+    "memory/MEMORY.md_new_memory_pointer",
+    "memory/research-log-2026-10-30-entry-corrections.md_new_memory_pointer",
+    "broader_TODO_stays_open",
+    "full32_TODO_stays_open",
+    "local_link_existence",
+    "exact_pending_QA_item",
+    "single_TODO_line_change",
+    "README.md_unchanged_during_QA",
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md_unchanged_during_QA",
+    "planning/Recovery Status and Next Gates 2026-10-26.md_unchanged_during_QA",
+    "planning/Project Progress Reassessments.md_unchanged_during_QA",
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md_unchanged_during_QA",
+    "planning/Project Progress Reassessment 2026-10-30 - Entry Corrections.md_unchanged_during_QA",
+    "memory/project-goals.md_unchanged_during_QA",
+    "memory/MEMORY.md_unchanged_during_QA",
+    "memory/research-log-2026-10-30-entry-corrections.md_unchanged_during_QA"
+  ]
+}

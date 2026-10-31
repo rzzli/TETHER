@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T07:37:40Z",
+  "scope": "Read-only comparison of retained metadata and current narrative; no repeated audit, source-closure validation or payload read.",
+  "retained_report": "../recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json",
+  "report_elapsed_seconds": 0.0779999999795109,
+  "earlier_narrative_seconds": 0.094,
+  "correction": "Use approximately 0.078 seconds for the report's recorded elapsed_seconds. The earlier 0.094-second narrative has no separate measurement scope established here and must not be attributed to this field or an isolated disk/parser cost.",
+  "original_whole_verification": "INCOMPLETE_TIMEOUT, unchanged",
+  "new_execution": false
+}

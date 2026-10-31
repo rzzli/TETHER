@@ -1,0 +1,46 @@
+{
+  "allowed_changes": [
+    "Insert required same-origin clock/no-op log checkpoints without removing real work guards",
+    "Complete the coherent namespace/reservation prefix with known bytes and retained partial slots",
+    "Preserve first write failure as primary and close failure as secondary",
+    "Use reviewed known-vs-unknown and root-spelling diagnostics without changing admission rejection or byte observations",
+    "Keep primitive seed identity assumptions explicit and harness-only under the separately guarded test capability; never mint production identity from a serialized flag"
+  ],
+  "fixture_publication_authorized": true,
+  "inputs": {
+    "PORTABLE-FILE-PORTS-CORRECTION-INDEPENDENT-REVIEW-v2.json": {
+      "bytes": 8507,
+      "sha256": "d280210e7cc639a2898b8be0f669d52a6929bc43d4864e054c6525d4db575254"
+    },
+    "PORTABLE-FILE-PORTS-CORRECTION-PROPOSAL-v1.json": {
+      "bytes": 152230,
+      "sha256": "c30fbddf1019dee9a457705ec2553d0662b6555ae5a753a6bab7aeecd51dfc22"
+    },
+    "PORTABLE-FILE-PORTS-SOURCE-CHOICE-REVIEW-v1.json": {
+      "bytes": 4304,
+      "sha256": "9f00a14375d87734f985d217ac3fb5add5c4e93a720604ffaebb2519fd4d6eae"
+    },
+    "PORTABLE-FILE-PORTS-SOURCE-FREEZE-v2.json": {
+      "bytes": 11828,
+      "sha256": "cfb8c8ea21214732ad085804b1e64444ebdcb9795ccf08241696738c15771e55"
+    },
+    "portable_file_ports_v2.py": {
+      "bytes": 34590,
+      "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+    }
+  },
+  "no_changes_to_default_application_or_disabled_SDK": true,
+  "old_original_or_payload_operations_authorized": false,
+  "originals_authenticated": false,
+  "production_entry_or_engine_activation_authorized": false,
+  "profile_qualified": false,
+  "real_FFI_or_live_file_operations_authorized": false,
+  "recorded_at_utc": "2026-10-29T12:52:24.393114+00:00",
+  "required_after_publication": "Hash/freeze the exact literal data and interface, run all84 cases through b778 portable behavior (zero script mismatches) and retain the focused21-method proof. Obtain final independent source/fixture verification before any acceptance.",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Publish a separately named literal fixture successor applying the exact c30 proposal: thirteen repaired scripts, eighteen changed cases and sixty-six unchanged cases. Preserve the original case set, raw API outcomes, fault injections and explicit advancing times.",
+  "source_acceptance": false,
+  "source_guards": "Identity before content, entered unreturned write counts, and entered/defined read counts across pre-dispatch deadline/malformed return boundaries are required. Existing source/before/proposal evidence stays unchanged.",
+  "status": "EXACT_REVIEWED_FIXTURE_SUCCESSOR_PUBLICATION_AUTHORIZED"
+}

@@ -1,0 +1,226 @@
+{
+  "activities": {
+    "AST_syntax_parse_only_helper": true,
+    "original_native_or_physical_subject_operations": 0,
+    "producer_execution": 0,
+    "protocol_JSON_duplicate_keys": 0,
+    "reference_hash_replay": 0,
+    "source_harness_or_oracle_edits": 0,
+    "subject_or_helper_imports": 0
+  },
+  "cleared_finite_areas": [
+    {
+      "area": "Original injected clock",
+      "evidence": [
+        {
+          "line": 471,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "entry=time.monotonic() # FIRST helper-entry action"
+        },
+        {
+          "line": 84,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "return self.entry if self.calls==1 else time.monotonic()"
+        },
+        {
+          "line": 502,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "source_started=True;modules=D.load_exact_modules(source_pins)"
+        }
+      ],
+      "facts": "First statement in main captures entry before argument/binding/source metadata checks and fresh subject module loading. EntryClock returns that same held sample once, then current monotonic samples. World checks exact start/+295/+300 and uses real cutoff checks for dispatch/consumers/final verification. Top-level trusted helper/stdlib import startup is outside main; this remains an injected component boundary, not qualified real first entry or a hard callback-free hang bound."
+    },
+    {
+      "area": "Bounded allocation",
+      "evidence": [
+        {
+          "line": 112,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "self.w=world;self.log=bytearray(C*SPY_ROW.size)"
+        },
+        {
+          "line": 166,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "hooks.buffer_copy_within(ref,ref.buffer_ref,generation,0,n)"
+        },
+        {
+          "line": 343,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "raw=query_frame(d,api);require(value[offset:offset+len(raw)]==raw"
+        }
+      ],
+      "facts": "One source-owned1MiB buffer is filled from<=256B seed with checked in-buffer doubling; tiny captured bodies total209B. Spy allocates13551*64=867264B plus13551 canonical reference slots and fixed216-file metadata. Query/path comparison streams per-frame/per-path readonly views; no bulk body/hex or full expected querypool copy. Python container/boxed/hash-state/traceback/RSS storage is unmeasured."
+    },
+    {
+      "area": "Exact source artifact lifetime",
+      "evidence": [
+        {
+          "line": 229,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "self.artifacts[name]=artifact"
+        },
+        {
+          "line": 230,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "artifact.raw is self.w.owner.generated_bytes(name)"
+        },
+        {
+          "line": 549,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "if raw is not None:persist(name.replace('/','__'),raw"
+        }
+      ],
+      "facts": "Sink keeps actual GeneratedArtifactBytes before consumer validation, compares original issuer identities and exact cached byte identity, and does not duplicate ledger bodies. Consumer visits actual rows/pools. After source unwinds persistence writes every actual known generated.raw, including known ineligible/partial bytes, directly with its cap. No digest-only substitute, new encoder/freeze or physical producer publication is claimed."
+    },
+    {
+      "area": "Earlier failure closure",
+      "evidence": [
+        {
+          "line": 258,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "self.owner=None;self.binding=None;self.sink=None;self.view=None"
+        },
+        {
+          "line": 511,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "original_error=sys.exc_info()[1]"
+        },
+        {
+          "line": 513,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "cleanup_result=D.invoke(w.owner.finalize"
+        },
+        {
+          "line": 519,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "first_terminal=terminal_observation(w,issued)"
+        },
+        {
+          "line": 568,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "callback['source_return_observed']"
+        }
+      ],
+      "facts": "V2 initializes absent binding/sink/view, guards partial metrics, captures an actual returned/cached terminal observation before positive assertions, and preserves the original unwinding exception before a secondary cleanup error. Explicit no-owner/no-issued states remain data, not manufactured terminal success. Genuine source callback return axes are distinguished from ACK supplied/return prepared."
+    },
+    {
+      "area": "Bootstrap/pin stability/protocol",
+      "evidence": [
+        {
+          "line": 490,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "require(tuple(pause['own_module_order'])==MODULES"
+        },
+        {
+          "line": 497,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "declared_helper=bindings['helper']"
+        },
+        {
+          "line": 578,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "Path(observed['path']).resolve()==Path(p['path']).resolve()"
+        }
+      ],
+      "facts": "Source map uses exact set/content equality and the paused dependency order rather than JSON object order. Fresh code loader has no cached source fallback. Helper and postrun stability compare resolved paths/bytes/hash. Protocol V2 parses with no duplicate keys and keeps completed reference preparation separate from unexecuted producer."
+    },
+    {
+      "area": "Trusted evidence output",
+      "evidence": [
+        {
+          "line": 535,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "publication_started=time.monotonic()"
+        },
+        {
+          "line": 543,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "with path.open('xb') as out:out.write(raw)"
+        },
+        {
+          "line": 556,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "for row in (() if w.sink is None else w.sink.journal):out.write(row)"
+        }
+      ],
+      "facts": "Evidence.mkdir/exclusive files occur only after subject return/unwind, outside ACTIVE. Journal bytes are streamed from aliases, not concatenated or hex-encoded. Persistence failures veto PASS separately. These are real trusted-harness local file writes after the owner window, not physical producer ACK/readback or scientific qualification."
+    }
+  ],
+  "decision": "Reference preparation was separately cleared/completed. Do not execute this frozen producerV2 until Root resolves F1 in a separately named finite successor and the exact successor is reviewed. No broader source/normal-correctness rework is requested.",
+  "inputs": [
+    {
+      "bytes": 50016,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+      "sha256": "852767c3a0a66cf9a601eb53f259fa57e16b82d962c16dd81baf9fd442da1601"
+    },
+    {
+      "bytes": 6894,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-CODE-PROTOCOL-v2.json",
+      "sha256": "11b6d069a1e17db06f3d4b1fff213e474b0e44c5622a7259a1e99a0770fc2665"
+    },
+    {
+      "bytes": 4853,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-CODE-FREEZE-v2.json",
+      "sha256": "7e0081e1d7686e1b501fead7aa13d2c40bfc926b944a06d7c60c85f414af9b31"
+    },
+    {
+      "bytes": 15180,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "sha256": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929"
+    },
+    {
+      "bytes": 84696,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+      "sha256": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+    }
+  ],
+  "material_blockers": [
+    {
+      "contract": "Protocol retention promises complete call/query/close evidence and first failure. A failed prefix cannot be represented as absent work merely because no complete candidate ledger was issued.",
+      "evidence": [
+        {
+          "line": 175,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "hooks.store_scalar(ref,scalar);flags|=2"
+        },
+        {
+          "line": 178,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "hooks.store_count(ref,count);flags|=4"
+        },
+        {
+          "line": 457,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "def terminal_observation(w,issued):"
+        },
+        {
+          "line": 547,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "for name,rec in w.owner._generated.items()"
+        },
+        {
+          "line": 551,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_large_injected_v2.py",
+          "statement": "persist('independent-original-dispatches.bin'"
+        }
+      ],
+      "finite_required_resolution": "Keep the spy completion flags accurately labeled as helper-completed. After subject unwinds, stream the existing canonical call first cells and relevant observedness/stopped/fold/entry/return/close axes, including reserved/uninvoked rows, plus retained query bytes, to bounded trusted evidence files. Borrow existing immutable byte objects and write one record/frame at a time; no source calls/encoder repair/refreeze/new owner/clock, whole call-dict list, querypool join or payload hex. If an axis/body is unobserved or unencodable, retain its explicit unknown state rather than infer it from the spy. Preserve frozenV2 and use a named successor/root decision.",
+      "id": "F1_FAILED_PREFIX_SOURCE_FACTS",
+      "observed_static_gap": "Spy flags2/4 are updated after hooks.store_scalar/store_count returns. A source hook may first-assign the raw cell then raise before that update. Before candidate issuance, every generated.raw may beNone and prospective ProducerSnapshot.calls isNone; terminal_observation retains aggregate/diagnostic metadata only. Current persistence writes compact binding rows and close facts, but no complete canonical raw call-axis/query facts. Thus it cannot establish all first stored values/unknown axes for that failed prefix."
+    }
+  ],
+  "qualification": {
+    "actual_RSS_or_process_commit_fit": false,
+    "full_real_roster": false,
+    "hard_watchdog": false,
+    "large_control_passed": false,
+    "new84_runtime": false,
+    "physical_producer_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "scientific": false
+  },
+  "schema_version": 1,
+  "scope": "Exact frozen helper/protocol V2 allocation, clock and trusted persistence review. Positive row-by-row semantics remain Native independent peer lane. No helper, subject or virtual payload execution.",
+  "status": "FINITE_HOLD_CANONICAL_FAILED_PREFIX_FACT_RETENTION"
+}

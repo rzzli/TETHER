@@ -1,0 +1,58 @@
+{
+  "CPU_GGUF_oldpack_operations": 0,
+  "Win32_API_calls": 0,
+  "author": {
+    "bytes": 8433,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\author_file_ports_design_v2.py",
+    "sha256": "ecb5c2831b2630fd13ec76e53b0225760fdba93a231578d4da01f43200977fd1"
+  },
+  "changed_semantic_top_fields": [
+    "admission_formulas",
+    "admitted_paths",
+    "metadata_scans",
+    "output",
+    "port_design_id",
+    "required_fake_vectors"
+  ],
+  "contract": {
+    "bytes": 38532,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-DESIGN-CONTRACT-v2.json",
+    "sha256": "d2c775cb9e24dce90f2dc0cc97d7976567d94a1e147e1f57be72f7a5d21efd4d"
+  },
+  "direct_file_exports": 14,
+  "event_API_formulas_and_output_quotas_unchanged": true,
+  "execution_authorized": false,
+  "implementation_authorized": false,
+  "leaf_grammar_and_roles_unchanged": true,
+  "old_original_or_source_qualification": 0,
+  "original_clock_and_slot_ownership_unchanged": true,
+  "peer_basis": {
+    "bytes": 8876,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-INDEPENDENT-DESIGN-REVIEW-v1.json",
+    "sha256": "08f7d4c0b4f73fa59398f14e8789b6b2f8bda5e10ac986523e0e8236f94bc196"
+  },
+  "prior_contract": {
+    "bytes": 34201,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-DESIGN-CONTRACT-v1.json",
+    "sha256": "bc73427712614a6652e37924a6ff91646c1b8a881e5928cd98b200516bce7a05"
+  },
+  "schema_version": 2,
+  "semantic_sha256": "a831da81b09767d135664714769a6addba2880967a9e182078aaf31907eae03b",
+  "status": "DESIGN_FROZEN_FOR_REVIEW_NO_PORT_IMPLEMENTATION",
+  "typed_API_structures_flags_unchanged": true,
+  "unchanged_semantic_top_fields": [
+    "ABI",
+    "authorization",
+    "documentation",
+    "execution_authorized",
+    "implementation_authorized",
+    "originals",
+    "schema_version",
+    "scientific_validation",
+    "seal_DAG",
+    "slots",
+    "source_and_qualification",
+    "superseded_proposal",
+    "trusted_origin"
+  ]
+}

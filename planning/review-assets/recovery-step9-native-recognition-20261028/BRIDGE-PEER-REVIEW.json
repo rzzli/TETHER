@@ -1,0 +1,165 @@
+{
+  "blocking_findings": [],
+  "build_authorized_by_review": false,
+  "caps": {
+    "cases": 200,
+    "cooperative_seconds": 120,
+    "dll_bytes": 134217728,
+    "document_bytes": 65536,
+    "eog_ids": 64,
+    "grammar_bytes": 65536,
+    "jsonl_bytes": 8388608,
+    "pack_bytes": 20971520,
+    "piece_bytes": 65536,
+    "prefix_slots": 6,
+    "row_bytes": 65536,
+    "token_slots": 65536,
+    "total_token_charge": 1000000,
+    "vocabulary_ids": 262144
+  },
+  "design": {
+    "bytes": 19551,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-DRAFT-DESIGN.md",
+    "sha256": "2bb222d6830a52513fab88c1db29b0d5b7cc093d5357ff224f3d3a42b2f8431b"
+  },
+  "draft_findings_resolved_before_freeze": [
+    {
+      "id": "BP01",
+      "issue": "A JSONL failure during Output::failure could prevent failure-marker attempt",
+      "lines": [
+        153,
+        158
+      ],
+      "resolution": "Independent try blocks for failure row and exclusive marker",
+      "verification": "Static final-source review, not executed fault regression"
+    },
+    {
+      "id": "BP02",
+      "issue": "Post-initializer checks only compared registry/device counts",
+      "lines": [
+        302,
+        328
+      ],
+      "resolution": "Preserves registry/device pointers; full singleton/name/type/identity helper before and after initializer",
+      "verification": "Static final-source review, not native observation"
+    },
+    {
+      "id": "BP03",
+      "issue": "Bool fields in defaults emitted JSON numeric0/1",
+      "lines": [
+        210,
+        211
+      ],
+      "resolution": "std::boolalpha plus explicit null flags",
+      "verification": "Static stream inspection, not compiled output"
+    }
+  ],
+  "native_execution_authorized": false,
+  "recorded_at_utc": "2026-10-28T17:16:38.161460+00:00",
+  "remaining_limits": [
+    "Text review cannot establish compilation/link correctness or runtime ABI",
+    "Cooperative timing does not interrupt blocking calls or enforce native memory",
+    "Exact DLL pins and module allowlists do not prove no earlier GPU/API/DllMain side effect",
+    "CPU feature/dynamic loader implementation bodies remain outside source audit; no further acquisition proposed",
+    "Whole-shard child hashing deliberately reads weight bytes and may exhaust fixed time; no zeroOS-I/O or resource-fit claim",
+    "Only used token pieces are checked; no universal vocabulary/fullmask/Unicode conformance",
+    "No model quality, clinical/scientific/human/freshness acceptance"
+  ],
+  "required_future_gates": [
+    "Exact data-only generated pin header and compiler/header/source bindings",
+    "Static build/import/exports qualification; no private implementation compilation",
+    "OSjob/memory/process/deadline/capture probes before target call",
+    "Once-only ABI execution and independent observation review",
+    "New recognition header/build pinning nonempty reviewed ABI version",
+    "Frozen exact corpus/pack/group counts, unmodified original wires and new authored serialization derivations",
+    "Separately authorized native recognition execution, failure preservation and independent result verification"
+  ],
+  "review_type": "AI independent engineering text review; not human scientist review",
+  "reviewed_entire_final_source": true,
+  "reviewer_activity": {
+    "compiles": 0,
+    "gguf_reads": 0,
+    "helper_executions": 0,
+    "network_requests": 0,
+    "target_dll_loads": 0,
+    "tokenizer_or_model_calls": 0
+  },
+  "schema_version": 1,
+  "scope_checks": [
+    {
+      "area": "public typed ABI",
+      "detail": "Exact public declarations, decltype export signatures, static layout assumptions; compiler/static-import/actual ABI checks pending",
+      "evidence_lines": [
+        35,
+        54
+      ]
+    },
+    {
+      "area": "loader and modules",
+      "detail": "Read leases/pins, core load order, fixed search flags, runtime/system allowlists and inventories; delegated loader/DllMain effects remain outside proof",
+      "evidence_lines": [
+        123,
+        206
+      ]
+    },
+    {
+      "area": "ABI observation boundary",
+      "detail": "ABI mode calls version/defaults only; unknown version allowed only as bounded nonempty ASCII observation; recognize requires nonempty exact pinned version and enabled new header",
+      "evidence_lines": [
+        357,
+        372
+      ]
+    },
+    {
+      "area": "CPU and model scope",
+      "detail": "Exact baseline CPU path, pre/post singleton identity; vocab-only/no-alloc/emptydevices/explicit ordered three shards; no context or inference",
+      "evidence_lines": [
+        302,
+        334
+      ]
+    },
+    {
+      "area": "pack and provenance",
+      "detail": "Bounded exact binary pack, hashes, category IDs, groups0/1 versus harnessgroup2, no JSON repair/parser; prospective18 authored serializations kept distinct from original167 wires",
+      "evidence_lines": [
+        218,
+        244
+      ]
+    },
+    {
+      "area": "tokens and native membership",
+      "detail": "One negative-size retry, INT32MIN before wide negation, valid ID/no documentEOG, full token-piece byte roundtrip, fresh grammar, finite0 candidate masks, accept ordinary admitted tokens only; all EOGs probed but not accepted",
+      "evidence_lines": [
+        251,
+        299
+      ]
+    },
+    {
+      "area": "prefixes and accounting",
+      "detail": "Frozen byte cuts/new tokenization; deterministic natural UTF8 token-boundary prefixes reuse original tokens; unavailablecoverage prevents success; first expectation mismatch stops",
+      "evidence_lines": [
+        335,
+        354
+      ]
+    },
+    {
+      "area": "failure/lifetime",
+      "detail": "Exclusive claim, partial fsynced rows, no-replace publication, independent marker attempt, fixed nonprotocol exception tags, cleanup before final publication; native abort/hardkill require parent authoritative failure",
+      "evidence_lines": [
+        141,
+        159
+      ],
+      "other_lines": [
+        351,
+        375
+      ]
+    }
+  ],
+  "source": {
+    "bytes": 47485,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer.cpp",
+    "sha256": "3f7e13ec7695bd5257e3e58d627ae71c1a2cdcaea7dbec8aad869424a0f5188b"
+  },
+  "source_or_design_modified_by_reviewer": false,
+  "status": "cleared_exact_draft_text_for_separate_build_preparation_review"
+}

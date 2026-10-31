@@ -1,0 +1,3345 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "proof": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-PROOF-v2.json",
+    "bytes": 6337722,
+    "sha256": "5c193cdb20df9fca83641059ed3c2ae419ff36ba05bdfb42ab1f5ffaf9cda7a1"
+  },
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\verify_entry_contract_evidence_bytes_v1.py",
+    "bytes": 14979,
+    "sha256": "43251a8d0340750fe73ef35577e2eeb0be6bcc89e5beb56f2f32a9aa3eca236c"
+  },
+  "totals": {
+    "worlds": 55,
+    "artifact_files": 594,
+    "artifact_bytes": 18955766,
+    "canonical_calls": 4461,
+    "registered_rows": 4460,
+    "missing_rows": 1,
+    "snapshots": 59,
+    "copied_rows": 4483,
+    "axis_copies": 17932,
+    "query_files": 273,
+    "query_bytes": 747838,
+    "complete_snapshot_projections": 52
+  },
+  "failure": null,
+  "worlds": [
+    {
+      "branch": "E01",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E05",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 0,
+      "snapshots": 2
+    },
+    {
+      "branch": "E06",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E07",
+      "world": 1,
+      "canonical_calls": 51,
+      "registered_rows": 51,
+      "snapshots": 1
+    },
+    {
+      "branch": "E08",
+      "world": 1,
+      "canonical_calls": 0,
+      "registered_rows": 0,
+      "snapshots": 1
+    },
+    {
+      "branch": "E09",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E10",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E10",
+      "world": 2,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E11",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E11",
+      "world": 2,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E12/Origin_rebound",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E12/Ops_attach_rebound",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E13",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E14",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E15/open_unknown",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 1
+    },
+    {
+      "branch": "E15/close_unknown",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E15/capture_incomplete",
+      "world": 1,
+      "canonical_calls": 7,
+      "registered_rows": 7,
+      "snapshots": 1
+    },
+    {
+      "branch": "E16/foreign_attach",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E16/foreign_attach",
+      "world": 2,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E16/Source4_constructor",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E16/Source4_start_injected",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E17",
+      "world": 1,
+      "canonical_calls": 2,
+      "registered_rows": 2,
+      "snapshots": 1
+    },
+    {
+      "branch": "E18",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 1
+    },
+    {
+      "branch": "E19/count0",
+      "world": 1,
+      "canonical_calls": 7,
+      "registered_rows": 7,
+      "snapshots": 2
+    },
+    {
+      "branch": "E19/count_UNOBSERVED",
+      "world": 1,
+      "canonical_calls": 7,
+      "registered_rows": 7,
+      "snapshots": 2
+    },
+    {
+      "branch": "E20/definition_before_code",
+      "world": 1,
+      "canonical_calls": 2,
+      "registered_rows": 2,
+      "snapshots": 1
+    },
+    {
+      "branch": "E20/code_before_definition",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 1
+    },
+    {
+      "branch": "E20/false_definition_with_code",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 1
+    },
+    {
+      "branch": "E21/before_commit",
+      "world": 1,
+      "canonical_calls": 7,
+      "registered_rows": 7,
+      "snapshots": 2
+    },
+    {
+      "branch": "E21/after_commit",
+      "world": 1,
+      "canonical_calls": 7,
+      "registered_rows": 7,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/handle_UNOBSERVED",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/handle_NULL",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/handle0",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/handle_INVALID",
+      "world": 1,
+      "canonical_calls": 1,
+      "registered_rows": 1,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/handle77",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 2
+    },
+    {
+      "branch": "E22/BOOL0",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E22/BOOLminus1",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E23",
+      "world": 1,
+      "canonical_calls": 21,
+      "registered_rows": 21,
+      "snapshots": 1
+    },
+    {
+      "branch": "E24",
+      "world": 1,
+      "canonical_calls": 18,
+      "registered_rows": 18,
+      "snapshots": 1
+    },
+    {
+      "branch": "E25/backward",
+      "world": 1,
+      "canonical_calls": 0,
+      "registered_rows": 0,
+      "snapshots": 1
+    },
+    {
+      "branch": "E25/nonfinite",
+      "world": 1,
+      "canonical_calls": 0,
+      "registered_rows": 0,
+      "snapshots": 1
+    },
+    {
+      "branch": "E25/provider_exception",
+      "world": 1,
+      "canonical_calls": 0,
+      "registered_rows": 0,
+      "snapshots": 1
+    },
+    {
+      "branch": "E26",
+      "world": 1,
+      "canonical_calls": 6,
+      "registered_rows": 6,
+      "snapshots": 1
+    },
+    {
+      "branch": "E27",
+      "world": 1,
+      "canonical_calls": 0,
+      "registered_rows": 0,
+      "snapshots": 1
+    },
+    {
+      "branch": "E28",
+      "world": 1,
+      "canonical_calls": 2,
+      "registered_rows": 2,
+      "snapshots": 2
+    },
+    {
+      "branch": "E30",
+      "world": 1,
+      "canonical_calls": 37,
+      "registered_rows": 37,
+      "snapshots": 1
+    },
+    {
+      "branch": "E31",
+      "world": 1,
+      "canonical_calls": 37,
+      "registered_rows": 37,
+      "snapshots": 1
+    },
+    {
+      "branch": "E32",
+      "world": 1,
+      "canonical_calls": 3842,
+      "registered_rows": 3842,
+      "snapshots": 1
+    }
+  ],
+  "artifact_hashes_verified": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "ef6ce8ae6efb11a41f1a694abeac665365cff8d6fa8bc45823d145da5cad68eb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "4cf9408f54d976457bf40d57e4a75fe9ffb80b376dcaa8132173a74f83e56112"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-01-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "f3ed2d83b7729ae2a2ff155780a2c24123a34b54ee9f0b11e229d8b89ec3a304"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.first_wrapper_observed.json",
+      "bytes": 11232,
+      "sha256": "3608b8ec73728bd6598d13f92b4ae2a5742e5aa783cb1cc1483dbb8f9896704b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.source_cached_final.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.source_cached_final.json",
+      "bytes": 11602,
+      "sha256": "9966c35e7e00ab59343ee30a34a945d06ee68fe7e3d6cd03efdedc093dde3b9a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-07-world-01.canonical-calls.jsonl",
+      "bytes": 612,
+      "sha256": "c3f286b19252a474aa94451da67b777a7ce073aa9f6fb082d09f0ce4bc8b951c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.first_wrapper_observed.json",
+      "bytes": 10129,
+      "sha256": "69c9907016952a8cdaa7814fc532b4685a61c7de535999fdb0618e9e5c839f0b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-08-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "937f2f9e903da08cecf924db66347b7368bd07d001a95cff6d1a4b0b8e7cf692"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 13056,
+      "sha256": "8bfb9d77b1dd5065e80dfce19e64ac1934787b644bdbf680e37785e59b8d1d81"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 78698,
+      "sha256": "03f6fd03bfcb1adebc89f4ccfae3ceb6c5922ccc176368309d816aa78d43162a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.first_wrapper_observed.json",
+      "bytes": 52730,
+      "sha256": "369afe48ab15bb8f69afa8d92ee931131b5b6261a8ab0e1bb972057cbef4f0a7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.candidate-ledger.bin",
+      "bytes": 75432,
+      "sha256": "32694b278f13199f98fabf859489635a3a34916d91a0f87b72b9d1bd37ebce3e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.terminal-ledger.bin",
+      "bytes": 77224,
+      "sha256": "3acfe7c9eed5d5d018d493985b060f8ec3e0534150566227fcbe85dbc8f3533a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.journal.jsonl",
+      "bytes": 10317,
+      "sha256": "142aed2eb26858062462033265b4e73da0786ce4f0fd1031d12dad4ea314b0c4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.producer-report.json",
+      "bytes": 3236,
+      "sha256": "ee5484ab87615407c90d0f3bab6b561b50b734dab58274ef20dbc87e929cf27a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.candidate.json",
+      "bytes": 919,
+      "sha256": "abc8826a630ee1a84ff0c52b68a81c089fa125ff3b26357896a847691dcef1e1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.cleanup.json",
+      "bytes": 1069,
+      "sha256": "6fa8a3582eff16506a1917352d0c80c35fb086d135b3fbdc6de65dab9e3ab9bc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.receipt.json",
+      "bytes": 1460,
+      "sha256": "f55491ebfe50c516375e4510f9eff9bbb261e1c5748d711b312d751c1c15a137"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.generated.seal.json",
+      "bytes": 1584,
+      "sha256": "116d781d2f19e816089a987bd68b4e1b1c9c5b9d2e1ba73e0a5dec6c31492468"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-20.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-21.bin",
+      "bytes": 8202,
+      "sha256": "0e26ed260e12329fe96446006e900625024310c92bd286ec63d087b7cb4b94fb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-22.bin",
+      "bytes": 8,
+      "sha256": "ede2d8b56206c63b527986f4a6058aff91d29e810acd8f7b5f653141625b5b0d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-26.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-27.bin",
+      "bytes": 8202,
+      "sha256": "a01472b506d7a3580219d234dfff82c0b763a231a6b4ade99ccc8ee13e4d154c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-28.bin",
+      "bytes": 8,
+      "sha256": "5d398e3379895c4053102feb592c6345f7a5f021e07fd905da7278a8bfc445ca"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-32.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-33.bin",
+      "bytes": 8202,
+      "sha256": "4c6ff15fa1730bdb1a555c350fb2447b5ca7bd879f2f90d9f2d2700339510395"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-34.bin",
+      "bytes": 8,
+      "sha256": "1ff66ac9fef32032c75d065f1dca8f58d995c9d35d75070503e83446305b3979"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-38.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-39.bin",
+      "bytes": 8202,
+      "sha256": "74bf8e555493f6e69b8f190e7ea3a2bd22e9598de66a8429603ae50c459ec34c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.query-40.bin",
+      "bytes": 8,
+      "sha256": "cda2e8be77bc2fe222d17acd66cdc46fce92fea13129fbf49180e1947ecae3cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.canonical-native-rows.bin",
+      "bytes": 13056,
+      "sha256": "8bfb9d77b1dd5065e80dfce19e64ac1934787b644bdbf680e37785e59b8d1d81"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-09-world-01.canonical-calls.jsonl",
+      "bytes": 68004,
+      "sha256": "eeb94aaad1e1efd31e6895665502416df95826a7f9ec9a6e3099a6636dd50c09"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-10-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-10-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-10-world-01.first_wrapper_observed.json",
+      "bytes": 3786,
+      "sha256": "5ec8c547e7ce5d9f696a0585feec051cf6aad355d1c8f9bacd7abdf93b621f2f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-10-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-10-world-01.canonical-calls.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "5ab2588ff5f556a86404317b2d7a8eef9b6e9a043f5fd3ab85f6dbc4f8c99c50"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.first_wrapper_observed.json",
+      "bytes": 29057,
+      "sha256": "515773f652c7b9c3f79b0e9cbaa0e80f397d0011289d0cd615acff28aa7027c7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.generated.terminal-ledger.bin",
+      "bytes": 52330,
+      "sha256": "ae28bb9f9365b351cfa240cbe5d69ec5c0e3846bb603a1d323a899fb6817bae3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.generated.journal.jsonl",
+      "bytes": 4319,
+      "sha256": "92575cffa264811281d9bbec5fc186856a9c34b5b03b5ccbf41375df797e22a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.generated.producer-report.json",
+      "bytes": 2965,
+      "sha256": "151722d84c0b40f0044c2877a0f9e5e01cc52894c7e99f34e7d9e6549f64a271"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.generated.cleanup.json",
+      "bytes": 839,
+      "sha256": "f177c10b12d970fe52d86936eaa2f2eafd35abba3e35d15a335be7bab3e824ed"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-11-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "3cde7e3c865b02fa9a230586619f582097800f15fa4514e6c6374e96567aa145"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.first_wrapper_observed.json",
+      "bytes": 29045,
+      "sha256": "572f685d9b20d8c344ff520981955ab5d7d62d76b22398416b37c7db531dbeae"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.generated.terminal-ledger.bin",
+      "bytes": 52330,
+      "sha256": "b97c94f8cf77bd994e5baeb13fb8a920af578558383fd1ef4b58dae8f7d5a5c0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.generated.journal.jsonl",
+      "bytes": 4307,
+      "sha256": "265655aaf398fc527a1d88c06c20a7b31dd18ea128f65afd40b26d1b5377fa0e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.generated.producer-report.json",
+      "bytes": 2965,
+      "sha256": "7087b515dedefdc35b2fb3c720b4a51dc11b170e1524489bfdfef740298ff06a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.generated.cleanup.json",
+      "bytes": 838,
+      "sha256": "ae71cf3687b2ea057a8de2e7fe0b824631deb1fd177be86177ace6106b2c7c00"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "5e98d069747e1a8a8e5359b70c71b5fbdaf38d35527ec425e359c643ac5db865"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.first_wrapper_observed.json",
+      "bytes": 29045,
+      "sha256": "dd56e39be2eaeeff254ce75cc3f3240bb05d2392955d8f9a64e3ed14629a2d64"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.generated.terminal-ledger.bin",
+      "bytes": 52330,
+      "sha256": "b97c94f8cf77bd994e5baeb13fb8a920af578558383fd1ef4b58dae8f7d5a5c0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.generated.journal.jsonl",
+      "bytes": 4307,
+      "sha256": "265655aaf398fc527a1d88c06c20a7b31dd18ea128f65afd40b26d1b5377fa0e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.generated.producer-report.json",
+      "bytes": 2965,
+      "sha256": "7087b515dedefdc35b2fb3c720b4a51dc11b170e1524489bfdfef740298ff06a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.generated.cleanup.json",
+      "bytes": 838,
+      "sha256": "ae71cf3687b2ea057a8de2e7fe0b824631deb1fd177be86177ace6106b2c7c00"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-02.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "c58c5ada3d475cb7eb2f6d5629cd2fe99d004bf535214f37525b36510d54a680"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "19260e6d7be7e99e6f48cbd0f4cc3a47f0e80b65ebf255f599aa5f7c0b8b69aa"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "1b24c04c3c6c0775eb5734f3ac53026a555e8f85972a26d1f59bfe86e420772a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "802977cef36eaacd042cfa5dc26568c1aedfd3d0802f49319878218b3907616f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-13-world-02.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "109fe8dcf6399f4e840a02e621d329006ad2a63045ce8fc991f97f07c9cfedfd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "2e5ab15752f7ba9cc87f74612c804f34794e8576a16ba131b9567b9a7eff5593"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-14-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "16e02f62c964e5d297c17f01195378e8b9e4fde2b4efe60595b9906c33a2153f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "0a8de50562bd4454ef8100717b9ace1620a2ea5c9ca843ec5c873eb2a060d54b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-15-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "49222f2e1afb88d3fb501543c4d0960f7033014baa64735e72d5c4c50c0f826a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.first_wrapper_observed.json",
+      "bytes": 29045,
+      "sha256": "30adb032706e191fda8154af6d3463a8cd9a80aa3c9e84939d9f4bdb983ee4c5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.generated.terminal-ledger.bin",
+      "bytes": 52330,
+      "sha256": "b97c94f8cf77bd994e5baeb13fb8a920af578558383fd1ef4b58dae8f7d5a5c0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.generated.journal.jsonl",
+      "bytes": 4307,
+      "sha256": "265655aaf398fc527a1d88c06c20a7b31dd18ea128f65afd40b26d1b5377fa0e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.generated.producer-report.json",
+      "bytes": 2965,
+      "sha256": "7087b515dedefdc35b2fb3c720b4a51dc11b170e1524489bfdfef740298ff06a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.generated.cleanup.json",
+      "bytes": 838,
+      "sha256": "ae71cf3687b2ea057a8de2e7fe0b824631deb1fd177be86177ace6106b2c7c00"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-16-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "58b0131bed96db9c519ca75f29dfca64c214c184b0ab943bd4d948119a74328c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "5a3f7fbcb25712c4182cf0f9ed075082a494ab6309f88b9ca6553afc649d39f8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.first_wrapper_observed.json",
+      "bytes": 10132,
+      "sha256": "887f86114c069eb8694e79915313093bd451f6318a0c248a5f963fe0ae63f807"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "5a3f7fbcb25712c4182cf0f9ed075082a494ab6309f88b9ca6553afc649d39f8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-17-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "f6d204cf6dce8e5f3ee46afbde5ae137319a2c68c37f6f808856ca973efb009d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-18-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "b78c910d50a32417d68b5bc727945005434e1c2095de9cec6cd277b6bd4ed04c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-18-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1562,
+      "sha256": "4561a589a27e1ccd924faeb7d0f12e9ec60b50b171fc78ed6ef719d14cecb497"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-18-world-01.first_wrapper_observed.json",
+      "bytes": 9725,
+      "sha256": "f9cebcadfe47567d5acc02006527ed76257a549a36eb3bca12935e0acc9196a6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-18-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "b78c910d50a32417d68b5bc727945005434e1c2095de9cec6cd277b6bd4ed04c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-18-world-01.canonical-calls.jsonl",
+      "bytes": 1207,
+      "sha256": "8f24917a5fcb6b803b760ed8babf49b9937f863fb4678d3b2312b0101fcc33c8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "3c1dbb233fe88e83b1d97f04da5be238f4c3aa200300735fa6aafc46d96938f4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32490,
+      "sha256": "4ec83a682599a9a46f8b43b40c5e5b7c16e74f7fdb672fa01001c2e73c7ed802"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.first_wrapper_observed.json",
+      "bytes": 10152,
+      "sha256": "ef77b2fa0c5809eb9d0162c39d291037a6b981486784507063edaf23afd32109"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "3c1dbb233fe88e83b1d97f04da5be238f4c3aa200300735fa6aafc46d96938f4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-19-world-01.canonical-calls.jsonl",
+      "bytes": 28164,
+      "sha256": "942e567898cf3fc092e9b5763891f97297ecc8a56b5643a6971799589e7f9ea9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 1792,
+      "sha256": "3458d746eada0cb73c4bcfe2e265e324b495f51a77de6c50bf5e8f91a49165d3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 10808,
+      "sha256": "493ca4baf4ccd1681583f0389d5bbd378803a6528cabcb5b68fa854b9e39e52f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.first_wrapper_observed.json",
+      "bytes": 9774,
+      "sha256": "f42d311467905fa2d41ac902259369a9f0b36ea14038fb1ac71f45546dc7ad08"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.canonical-native-rows.bin",
+      "bytes": 1792,
+      "sha256": "3458d746eada0cb73c4bcfe2e265e324b495f51a77de6c50bf5e8f91a49165d3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-20-world-01.canonical-calls.jsonl",
+      "bytes": 9357,
+      "sha256": "f0954709f844cb770d5bad6d028205709d903609e093b9ec4c4e655ef804f4ee"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "3ac83cd69b6038ae6d893dca413932f55a9c139a45428d75bc432651c0878ecd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "e39ebb0672d05c8ef66e3ff31d2995ffa7b3e737c031bd38d2346670ce48989f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "2060b77b2c66da82d7100bb3c816f10d127a89a84a613b10d0f50c00d81f1a89"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-21-world-02.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "62907c974be63028b9d009b1735a4a40754c10d2c4cbb063ff0974ffe45df0cb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.first_wrapper_observed.json",
+      "bytes": 10114,
+      "sha256": "05237972516664691f60974f2e1c4356562b24bf2589f0b2f7703d0c0b348d63"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-22-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "ae33ca0e32540a9aa9b946cb8c0c05749f668789d0b6a1e5670aa311c71f2636"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.first_wrapper_observed.json",
+      "bytes": 10114,
+      "sha256": "0c0b5f03392ce0a2de54cfb80bfa9412f11e73bede616e3438743f8750f21108"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-23-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "58580509e2fa9e3b4089b5cbd5692a6348dd4642dd158d249da594b24e79156f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-24-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 512,
+      "sha256": "5893614f19f2d6f30b8e2438e0cd4aa8517e6a450cd4fcc67de12e9e8cfd3282"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-24-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 3086,
+      "sha256": "a16e89a04d6d2ea1750b3d5e1816ea6c956dcb5b1b05694fc6764ce76ba8fe45"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-24-world-01.first_wrapper_observed.json",
+      "bytes": 9721,
+      "sha256": "7aab4d344e67eae80adc67143a0ab354d23d1b31bfc6f6c72f9053812eb573fb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-24-world-01.canonical-native-rows.bin",
+      "bytes": 512,
+      "sha256": "5893614f19f2d6f30b8e2438e0cd4aa8517e6a450cd4fcc67de12e9e8cfd3282"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-24-world-01.canonical-calls.jsonl",
+      "bytes": 2384,
+      "sha256": "827f29670d60eb8034bc7dde46edae3c2ba58094cd68f58a71f3cd8029e41b02"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-25-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "7d7a071ac1d5da807eb41a3728ae3ded1e34ce9e0ff62f4c01f5b2d29998a947"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-25-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1571,
+      "sha256": "420515c212b0bfa0f368de2a47c9752b5957a8431931c9fa5429989e4d32fdcb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-25-world-01.first_wrapper_observed.json",
+      "bytes": 9719,
+      "sha256": "822148a763712a1e3fb5e496ca3a46f3a996b319c306c48352ae44acce9f6a13"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-25-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "7d7a071ac1d5da807eb41a3728ae3ded1e34ce9e0ff62f4c01f5b2d29998a947"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-25-world-01.canonical-calls.jsonl",
+      "bytes": 1216,
+      "sha256": "70b862a6aa2aeff5f8880871441dbe94a31ef82fd6ae18afb120d2e48af73757"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 1536,
+      "sha256": "f16b357f132f201a5ca29cd24b038fe778cb428eb342d3d71e3817003e762c06"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 9244,
+      "sha256": "e22670a78aa3214390e4f4c37d6b2f1b1e883833b30baff6907c1ce499863f2f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.first_wrapper_observed.json",
+      "bytes": 9756,
+      "sha256": "cf9f5864a439f472136e58d7f63623beb419b2c9188466329a4d927c20ee5c94"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.source_cached_final.native-rows.bin",
+      "bytes": 1792,
+      "sha256": "3824a00d6fabafa7af355591e6d9728f4346a37852a290f9655e6e52c2d4ec51"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 10782,
+      "sha256": "9e83020e2f8ff07c5bbcbfccff8e98a3e859f36ad17eb38087f1529d089eef89"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.source_cached_final.json",
+      "bytes": 9742,
+      "sha256": "a34b05c89b205fcadbce1a4c27663e148e8c4cd2902e8d874edaffc590ee203b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.canonical-native-rows.bin",
+      "bytes": 1792,
+      "sha256": "3824a00d6fabafa7af355591e6d9728f4346a37852a290f9655e6e52c2d4ec51"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-26-world-01.canonical-calls.jsonl",
+      "bytes": 9352,
+      "sha256": "c07b8d9c380f9e55d9907fa59928971adc86af200f6869e36681a0e7762ea40f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 1536,
+      "sha256": "5f42eaef27146457622aa23164a69a93581e9a71a134e97f373bce15b72c131c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 9258,
+      "sha256": "ab01ee66c490377c54ed6cf44ba5bd7f53933a9d844f7456fee1fcc227443e03"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.first_wrapper_observed.json",
+      "bytes": 9742,
+      "sha256": "c86a11e2672ffdb50b8cc4c9a86da8a761a55ad8431117eeb3fdecc702033d71"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.source_cached_final.native-rows.bin",
+      "bytes": 1792,
+      "sha256": "abefb5211aa6f87a63cf4e2d89c7c629c4dfe46b98c9883dc70b863bf28346c3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 10796,
+      "sha256": "346a747a0e8cb85aece3eaca8d20f9b101c7c5932d1366a4cf9cc5e4cc1235eb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.source_cached_final.json",
+      "bytes": 9728,
+      "sha256": "843b9212425394f7f101926b14dab084d42ab89969c737e215b17d8a5f97048f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.canonical-native-rows.bin",
+      "bytes": 1792,
+      "sha256": "abefb5211aa6f87a63cf4e2d89c7c629c4dfe46b98c9883dc70b863bf28346c3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-27-world-01.canonical-calls.jsonl",
+      "bytes": 9373,
+      "sha256": "c8de87b22ffbfbb19fe9b520488d5907c2bb190114bf998a7ee0c59d26ffe047"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-28-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 512,
+      "sha256": "93b45fb1a0414b32ad8790fca8cbcf628d0d9ed4fbbebc658be50e22d303abd1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-28-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 3081,
+      "sha256": "5f5dd88abcc01792a5fda582c6e591303716632886056e20f855417dff6cfc90"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-28-world-01.first_wrapper_observed.json",
+      "bytes": 9672,
+      "sha256": "f7b553e1467033d647492ff792ae3f3b5cb1361605e650bf9780a5dc6992cfa7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-28-world-01.canonical-native-rows.bin",
+      "bytes": 512,
+      "sha256": "93b45fb1a0414b32ad8790fca8cbcf628d0d9ed4fbbebc658be50e22d303abd1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-28-world-01.canonical-calls.jsonl",
+      "bytes": 2373,
+      "sha256": "de1d0258ee3d189f45ad34ae452775803f19c60667e23654083f8119f613a63e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-29-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "74ce317156a1497aa1a371e61991b00dac1a0399a427f47316178121f0a82cef"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-29-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1591,
+      "sha256": "1e3572108ddd4fa63da612f5ca6307b084a7ed0ece3333abcd6749cbef88e8ab"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-29-world-01.first_wrapper_observed.json",
+      "bytes": 9715,
+      "sha256": "815e12bb834358f019290f3c9a503b71defb92b60d2e638c335431124ac6e4bd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-29-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "74ce317156a1497aa1a371e61991b00dac1a0399a427f47316178121f0a82cef"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-29-world-01.canonical-calls.jsonl",
+      "bytes": 1226,
+      "sha256": "e03f8594b02bb13bd74be88837a7dd5ff7e63b671332c8c5c1924320d109106a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-30-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "f1d86b591efeb103d02d946beee46a2fabf56267f9dd1d75afd7fe33c4840159"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-30-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1581,
+      "sha256": "d5a9b477f3427542e57d1a64cb610d43036cb85a3b3283a614099d67c6f7d331"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-30-world-01.first_wrapper_observed.json",
+      "bytes": 9715,
+      "sha256": "79f107d01d79661f6ba7fa9b3292e1c195d23d94ef63f338f3d8a6584aabd0fc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-30-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "f1d86b591efeb103d02d946beee46a2fabf56267f9dd1d75afd7fe33c4840159"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-30-world-01.canonical-calls.jsonl",
+      "bytes": 1211,
+      "sha256": "ea98fb5a07b06b59e01fe342c5e938261af56fe84272f0e5fb4bd4de021a9a17"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 1536,
+      "sha256": "99e15ad15d705add4621dfd2e12940cae3475ea631ec39ee78d8b91d10420b2a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 9256,
+      "sha256": "60775f1072c8415bbaee942f5cffdf0218da3b1b365676162b3064c7992d6062"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.first_wrapper_observed.json",
+      "bytes": 9777,
+      "sha256": "3c2cb1e5efec3e654d8e855710bec79c6bf55ec4505604fddc68bfc18e4bcac9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.source_cached_final.native-rows.bin",
+      "bytes": 1792,
+      "sha256": "0251037b7d75290bc7fcabf4ad2b65a77a29169cdca83f207cc30dbe39a6d95a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 10794,
+      "sha256": "aca0cdf67e93cd9f5eb3a0d9938caf2928445632b5102460ff5df114453ca4cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.source_cached_final.json",
+      "bytes": 9763,
+      "sha256": "f61f923e488c1b5cd2bffdb9e9a76db7f92959fd00aa0033e4ae8a136bae705b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.canonical-native-rows.bin",
+      "bytes": 1792,
+      "sha256": "0251037b7d75290bc7fcabf4ad2b65a77a29169cdca83f207cc30dbe39a6d95a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-31-world-01.canonical-calls.jsonl",
+      "bytes": 9346,
+      "sha256": "ae2a7b49ec21ec0ad4879cfe26f95f576cb06279e4321c728dd5598e4243ff9d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 1536,
+      "sha256": "99e15ad15d705add4621dfd2e12940cae3475ea631ec39ee78d8b91d10420b2a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 9258,
+      "sha256": "7cc27274318c8f27800ce502427adf0dde26a2ba6999d4529333a1473245d569"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.first_wrapper_observed.json",
+      "bytes": 9775,
+      "sha256": "23c1505d2c4cb0931cf5fd992866d88895d56e3de76c7cbce29cc93acf44974d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.source_cached_final.native-rows.bin",
+      "bytes": 1792,
+      "sha256": "0251037b7d75290bc7fcabf4ad2b65a77a29169cdca83f207cc30dbe39a6d95a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 10796,
+      "sha256": "0538e71b0ab911b3d6ec52cafef4dfba2cd13d7aa4371ac8e09bb0649bdce8d0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.source_cached_final.json",
+      "bytes": 9761,
+      "sha256": "e9c7aa86f9527a14593ead6b8d568de9b9f00daf500f1132a12e1bb96ec1453d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.canonical-native-rows.bin",
+      "bytes": 1792,
+      "sha256": "0251037b7d75290bc7fcabf4ad2b65a77a29169cdca83f207cc30dbe39a6d95a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-32-world-01.canonical-calls.jsonl",
+      "bytes": 9348,
+      "sha256": "7755be04e00934ebeafefe9c1bee3da6e5b0b9bb1e843b4f55e7979f7d865cf4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "b78c910d50a32417d68b5bc727945005434e1c2095de9cec6cd277b6bd4ed04c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1562,
+      "sha256": "4561a589a27e1ccd924faeb7d0f12e9ec60b50b171fc78ed6ef719d14cecb497"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.first_wrapper_observed.json",
+      "bytes": 9722,
+      "sha256": "ce9d718381b803ab7e121a7d96eb182e4e5cac134d6ed54a1b33db3181738cda"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.source_cached_final.native-rows.bin",
+      "bytes": 256,
+      "sha256": "b78c910d50a32417d68b5bc727945005434e1c2095de9cec6cd277b6bd4ed04c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 1562,
+      "sha256": "4561a589a27e1ccd924faeb7d0f12e9ec60b50b171fc78ed6ef719d14cecb497"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.source_cached_final.json",
+      "bytes": 9706,
+      "sha256": "d78b7adcb7c16b1afec9ae7020df7ee7418fb87f39874a13472546673e5246f1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "b78c910d50a32417d68b5bc727945005434e1c2095de9cec6cd277b6bd4ed04c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-33-world-01.canonical-calls.jsonl",
+      "bytes": 1207,
+      "sha256": "8f24917a5fcb6b803b760ed8babf49b9937f863fb4678d3b2312b0101fcc33c8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1537,
+      "sha256": "2565d95f46c33c697881f68c68f443587d7406aae4a75b7dd80d0f521b39022e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.first_wrapper_observed.json",
+      "bytes": 9698,
+      "sha256": "04ee7e4efc33ff937cf4130ffc1941626bbb6092c228e54c9aa666c46217b058"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.source_cached_final.native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 1537,
+      "sha256": "2565d95f46c33c697881f68c68f443587d7406aae4a75b7dd80d0f521b39022e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.source_cached_final.json",
+      "bytes": 9682,
+      "sha256": "2d293b08a0e6f57f5d9850893267f7585e9040ce8bd2861fcd38b5a92fd682db"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-34-world-01.canonical-calls.jsonl",
+      "bytes": 1195,
+      "sha256": "a1604961c0f4f82747aac1b73588b93ea2f65eb0312fb443c15afc136bc3e88b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1536,
+      "sha256": "0d7da0a847c204627b4c6387b9dd26cae68faa469b4d06923887ee97c403ea21"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.first_wrapper_observed.json",
+      "bytes": 9698,
+      "sha256": "7b9cd816eb28b90465c84009d7f700e5d2516fcf8f0528d3d665848d498c84c1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.source_cached_final.native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 1536,
+      "sha256": "0d7da0a847c204627b4c6387b9dd26cae68faa469b4d06923887ee97c403ea21"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.source_cached_final.json",
+      "bytes": 9682,
+      "sha256": "79dd0fbe7f422f73c1851fe670b2a44c1d6e6c5aa34790fef221d693d242c91f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "517e1da0fa0799d9b5a75701e7069de2b28584643c62cf5ef4d4f73934ab37bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-35-world-01.canonical-calls.jsonl",
+      "bytes": 1192,
+      "sha256": "8286d4772cd307f277b9490ace720983fbb47ed0601b1c1cc770cb2a94baf528"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "a72de0e13138b49dbc972e10f03ecb547cfc4c6eaf38460e2e00b4c9b8b95e26"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1611,
+      "sha256": "02c8c383c626a7eb38f42f8e802053d3722f99b6406105336194978d3bf96975"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.first_wrapper_observed.json",
+      "bytes": 9722,
+      "sha256": "9f1b5395e5428c9e496fd7efc2ee7078a8063fa04733bb5b60b8185f0d9f00dd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.source_cached_final.native-rows.bin",
+      "bytes": 256,
+      "sha256": "a72de0e13138b49dbc972e10f03ecb547cfc4c6eaf38460e2e00b4c9b8b95e26"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 1611,
+      "sha256": "02c8c383c626a7eb38f42f8e802053d3722f99b6406105336194978d3bf96975"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.source_cached_final.json",
+      "bytes": 9706,
+      "sha256": "f1445de78ba588b3653b82dd0ab82383c26a3d845286a902392966ab5b9d6f3d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.canonical-native-rows.bin",
+      "bytes": 256,
+      "sha256": "a72de0e13138b49dbc972e10f03ecb547cfc4c6eaf38460e2e00b4c9b8b95e26"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-36-world-01.canonical-calls.jsonl",
+      "bytes": 1249,
+      "sha256": "1e0adb7f502a5698b34548e14d7015eb629ad8b8416a5887f081068a988fd2e7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 4608,
+      "sha256": "4a85fc2f0cf015f283c5a902249a0d236940b0eefaa2be331b6da83ecec07ac4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 27781,
+      "sha256": "55e1149fd451987388d88c753359b876c83c92334882a386f13cb7e5be1fec5b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.first_wrapper_observed.json",
+      "bytes": 9753,
+      "sha256": "c00bb858f88ba3ccbab772c2d3e6330f5c361266893c61b02d83a851ee364fe3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.source_cached_final.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "da49ebbd4d1742c705e1c0ed6bb75150c871746ba3d6fe7b69e75b03cfb41165"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 32401,
+      "sha256": "6df7dc810f3926ee49076fd6c11e5e69e14cdfee11b26c4911d310fff78bc0f5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.source_cached_final.json",
+      "bytes": 9745,
+      "sha256": "fb79de9b93aa4319ba94d715d7c76b06b3af32694754d053aab0d317d215ef2d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "da49ebbd4d1742c705e1c0ed6bb75150c871746ba3d6fe7b69e75b03cfb41165"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-37-world-01.canonical-calls.jsonl",
+      "bytes": 28113,
+      "sha256": "510efe65560aef62f03ba3aeb75aa52ba02d95dbd3e0b5fd48fb2438d6ee9040"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "daa73cb8a5e6622d6167359a270b58ff91a310aa064a07e3045845367bdb7415"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "0ee29c41b1e0138e37fd9564843e2d8cb5eb41274e0739960e551324fdde1986"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.first_wrapper_observed.json",
+      "bytes": 10494,
+      "sha256": "94473aa249021f576db86d44ac5ee67871b1e853f69f30be11fc2e66329fc9f5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "daa73cb8a5e6622d6167359a270b58ff91a310aa064a07e3045845367bdb7415"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-38-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "bdfdb73f5f3eb5dbe711cf283c11e240ffb9aacee4a30845b29c1c6432463f57"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "56fdb7945c7932653a5ed41e89020dcbf9a3305822197699bfb92af591999e72"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32421,
+      "sha256": "d62ad81fa114b5ca5eebd7fb4481341e1f84b0a19d20a440c2f265a25977dbe2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.first_wrapper_observed.json",
+      "bytes": 10100,
+      "sha256": "0d6ca0ba16831a5ff36d4f40c06ac4fe04a7ad595d227d003727bc1ba7b7767e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "56fdb7945c7932653a5ed41e89020dcbf9a3305822197699bfb92af591999e72"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-39-world-01.canonical-calls.jsonl",
+      "bytes": 28130,
+      "sha256": "470453de6faf5b66e29ccdce70881b635f0ba78434f1fdbede94996c06e2bae3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 5376,
+      "sha256": "5a3f7fbcb25712c4182cf0f9ed075082a494ab6309f88b9ca6553afc649d39f8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 32409,
+      "sha256": "bc90222b54549267ece81f54a6676a2df0f4a959625083cb56772b2be3f769cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.first_wrapper_observed.json",
+      "bytes": 10100,
+      "sha256": "160c4e08301e19b537ec13094fb09e3e005574fe7f156d3ac62bf9413710e8aa"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.canonical-native-rows.bin",
+      "bytes": 5376,
+      "sha256": "5a3f7fbcb25712c4182cf0f9ed075082a494ab6309f88b9ca6553afc649d39f8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-40-world-01.canonical-calls.jsonl",
+      "bytes": 28119,
+      "sha256": "aa6bc291224782c6df636388ed2b4978d974f93c85a9c8a630d326c43871d81c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.first_wrapper_observed.json",
+      "bytes": 13160,
+      "sha256": "b1daed888a4782c914841bebdd733af94204c8992d6e76da40bc21fd0883c9f2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.canonical-native-rows.bin",
+      "bytes": 4608,
+      "sha256": "dd51dad82792846d2a199482869e6f927230de1b004975592e677c9da897c916"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-41-world-01.canonical-calls.jsonl",
+      "bytes": 24522,
+      "sha256": "3c76c58030d68fe1ec0facdb1a1a2e91123603c21d08028afadb72bc176dcd48"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-42-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-42-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-42-world-01.first_wrapper_observed.json",
+      "bytes": 10966,
+      "sha256": "02065e71cfc0240c7b982720de8fae195e0ba8b3b112f3b7c4ad94ca98a19a31"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-42-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-42-world-01.canonical-calls.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-43-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-43-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-43-world-01.first_wrapper_observed.json",
+      "bytes": 10966,
+      "sha256": "689bb510588b134263ce8d5469d205dfc00d3828d65717980a8f6c0653ac799b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-43-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-43-world-01.canonical-calls.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-44-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-44-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-44-world-01.first_wrapper_observed.json",
+      "bytes": 10996,
+      "sha256": "df466a9c0e4ef200a43da7f3b5790c231b1a0d249e1e9f831d361717f8f75ff7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-44-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-44-world-01.canonical-calls.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.first_wrapper_observed.json",
+      "bytes": 12007,
+      "sha256": "3731bbae14661a910888f23e0f2a8ba5a331ca2cee4dcd53c4966fb3d4358c97"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.canonical-native-rows.bin",
+      "bytes": 1536,
+      "sha256": "acb2eb2792dc694fae3dbd1e63f3dcd60ed13a19c02f83f2e942808fbe57938f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-47-world-01.canonical-calls.jsonl",
+      "bytes": 8157,
+      "sha256": "60bc9816d0a9afdebd82ad88054e6802cc82f4af7d5224da1683df9aec35e8fb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-48-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-48-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-48-world-01.first_wrapper_observed.json",
+      "bytes": 9746,
+      "sha256": "4b9f23b4905522f0a1fccb880a5044b3aea981f0c4c179910f2e5734095992ea"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-48-world-01.canonical-native-rows.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-48-world-01.canonical-calls.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 256,
+      "sha256": "a01ca1948e2ac138eebe9cd65cbb7239172576a27343cfcce59f691278a2cb9b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 1556,
+      "sha256": "e520db399fbc707c03760332675575f85e10b08daad17a3bf6f7d3332bd1623c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.first_wrapper_observed.json",
+      "bytes": 9720,
+      "sha256": "8a926a43aced292493bf9a7cebef97482fce2ecf0ae1fad9b1ce8199a774a861"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.source_cached_final.native-rows.bin",
+      "bytes": 512,
+      "sha256": "6e92bed99db6a04a577c2e4f12312c9425a1abc16f1a752fbc6ad0bf60a7dd0b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.source_cached_final.native-rows.jsonl",
+      "bytes": 3094,
+      "sha256": "282d5137b6c66c9e3fe5eb6221de22564e5c61489deed64fe176701be42e8a27"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.source_cached_final.json",
+      "bytes": 9705,
+      "sha256": "441d1a9ebc44ab6e5a44c7572187080cd37e7522401710dc4c4c0a368937713f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.canonical-native-rows.bin",
+      "bytes": 512,
+      "sha256": "6e92bed99db6a04a577c2e4f12312c9425a1abc16f1a752fbc6ad0bf60a7dd0b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-49-world-01.canonical-calls.jsonl",
+      "bytes": 2390,
+      "sha256": "89d62127ecdc7ece2125ba38a03fa10cb19587d9306cf2f551b6f65bc5cb6261"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 9472,
+      "sha256": "15ebce6fa49810876c5bfed3900e8083ba7a586b1ba3f50471a9f50e6a033187"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 57100,
+      "sha256": "588a203148a289418f5b4f5479986d6dc74b883ee4fea131745eaab9f0fb19ec"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.first_wrapper_observed.json",
+      "bytes": 42495,
+      "sha256": "996679682885b5352a4b7705f1785988cf24f5aaf037ab43d58c54080e2a42e2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.candidate-ledger.bin",
+      "bytes": 55146,
+      "sha256": "dfbb2ee06f3be2d43c54b6a8992293a19d360b972ff399549b910956202ba31d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.terminal-ledger.bin",
+      "bytes": 56426,
+      "sha256": "0d53a2809d384b4e559caf7a97079b3e0b2ace918044bcf70b12481bedce5545"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.journal.jsonl",
+      "bytes": 7973,
+      "sha256": "e2f509aad92cc7d9df05e6cdd7a86a0f895ea7fb6474d37a7870aa16c220f7e5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.producer-report.json",
+      "bytes": 3236,
+      "sha256": "f8f6c353f8b0030a5e9f51734dd2aeab58c2f1b7397a8c215dcc23a41aefbb28"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.candidate.json",
+      "bytes": 919,
+      "sha256": "21e0ce4bfc1b627ac106a941d08a74e104c1fd63ac85ae3db05f172006e4f510"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.cleanup.json",
+      "bytes": 1069,
+      "sha256": "e30da13ee30749731ef10f3fdb47c6236e7054e26bedaa6f74c08fe2a1a045dd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.receipt.json",
+      "bytes": 1459,
+      "sha256": "d0b98db69e4d8114f48af62ae096af9420aa395640eed9b8f4051456122ff754"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.generated.seal.json",
+      "bytes": 1583,
+      "sha256": "af815ee1697df4cf7100407cf4a12d570a0d2ed0b63f195fda032be3079f4a15"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-20.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-21.bin",
+      "bytes": 8202,
+      "sha256": "4c6ff15fa1730bdb1a555c350fb2447b5ca7bd879f2f90d9f2d2700339510395"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-22.bin",
+      "bytes": 8,
+      "sha256": "1ff66ac9fef32032c75d065f1dca8f58d995c9d35d75070503e83446305b3979"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-26.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-27.bin",
+      "bytes": 8202,
+      "sha256": "74bf8e555493f6e69b8f190e7ea3a2bd22e9598de66a8429603ae50c459ec34c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.query-28.bin",
+      "bytes": 8,
+      "sha256": "cda2e8be77bc2fe222d17acd66cdc46fce92fea13129fbf49180e1947ecae3cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.canonical-native-rows.bin",
+      "bytes": 9472,
+      "sha256": "15ebce6fa49810876c5bfed3900e8083ba7a586b1ba3f50471a9f50e6a033187"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-51-world-01.canonical-calls.jsonl",
+      "bytes": 49249,
+      "sha256": "f267d6681b8af59fb89c479d68615fa18adc77a654ae1389a485de559e86044c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 9472,
+      "sha256": "15ebce6fa49810876c5bfed3900e8083ba7a586b1ba3f50471a9f50e6a033187"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 57100,
+      "sha256": "588a203148a289418f5b4f5479986d6dc74b883ee4fea131745eaab9f0fb19ec"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.first_wrapper_observed.json",
+      "bytes": 42495,
+      "sha256": "b780033f26e2e0e7e19a3f49a38a1e012c614ecd57a96d32ba68156dd4eb5721"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.candidate-ledger.bin",
+      "bytes": 55146,
+      "sha256": "dfbb2ee06f3be2d43c54b6a8992293a19d360b972ff399549b910956202ba31d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.terminal-ledger.bin",
+      "bytes": 56426,
+      "sha256": "0d53a2809d384b4e559caf7a97079b3e0b2ace918044bcf70b12481bedce5545"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.journal.jsonl",
+      "bytes": 7973,
+      "sha256": "e2f509aad92cc7d9df05e6cdd7a86a0f895ea7fb6474d37a7870aa16c220f7e5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.producer-report.json",
+      "bytes": 3236,
+      "sha256": "f8f6c353f8b0030a5e9f51734dd2aeab58c2f1b7397a8c215dcc23a41aefbb28"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.candidate.json",
+      "bytes": 919,
+      "sha256": "21e0ce4bfc1b627ac106a941d08a74e104c1fd63ac85ae3db05f172006e4f510"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.cleanup.json",
+      "bytes": 1069,
+      "sha256": "e30da13ee30749731ef10f3fdb47c6236e7054e26bedaa6f74c08fe2a1a045dd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.receipt.json",
+      "bytes": 1459,
+      "sha256": "d0b98db69e4d8114f48af62ae096af9420aa395640eed9b8f4051456122ff754"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.generated.seal.json",
+      "bytes": 1583,
+      "sha256": "af815ee1697df4cf7100407cf4a12d570a0d2ed0b63f195fda032be3079f4a15"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-20.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-21.bin",
+      "bytes": 8202,
+      "sha256": "4c6ff15fa1730bdb1a555c350fb2447b5ca7bd879f2f90d9f2d2700339510395"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-22.bin",
+      "bytes": 8,
+      "sha256": "1ff66ac9fef32032c75d065f1dca8f58d995c9d35d75070503e83446305b3979"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-26.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-27.bin",
+      "bytes": 8202,
+      "sha256": "74bf8e555493f6e69b8f190e7ea3a2bd22e9598de66a8429603ae50c459ec34c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.query-28.bin",
+      "bytes": 8,
+      "sha256": "cda2e8be77bc2fe222d17acd66cdc46fce92fea13129fbf49180e1947ecae3cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.canonical-native-rows.bin",
+      "bytes": 9472,
+      "sha256": "15ebce6fa49810876c5bfed3900e8083ba7a586b1ba3f50471a9f50e6a033187"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-52-world-01.canonical-calls.jsonl",
+      "bytes": 49249,
+      "sha256": "27634235a5b7d68e599b2cd927eca054ebc7fada48f3274b8c51ec660452bd4d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.first_wrapper_observed.native-rows.bin",
+      "bytes": 983552,
+      "sha256": "494b0ad3a78ce28a3561e864152e1ff25cb418a621a262f81658cb9b79210a6f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.first_wrapper_observed.native-rows.jsonl",
+      "bytes": 5952810,
+      "sha256": "e00d956adf551ab94498b4f3c7be6562ab13ba489e03dcf907b9dbad7c147447"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.first_wrapper_observed.json",
+      "bytes": 42560,
+      "sha256": "5a8aa093a0551cac9d75fbdd49583eeb2dd681da83c2328e4841efdfd71d7e61"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.candidate-ledger.bin",
+      "bytes": 1029226,
+      "sha256": "4b1cf78c0d861cee605be7029923a7b994c2d9732add6c9ffc9d19a0daab4133"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.terminal-ledger.bin",
+      "bytes": 1030506,
+      "sha256": "8a0b74bc27d130f9d6286460d00cecba81e3f8c00c0c9894256f9e14f8a6a22e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.journal.jsonl",
+      "bytes": 7973,
+      "sha256": "e2f509aad92cc7d9df05e6cdd7a86a0f895ea7fb6474d37a7870aa16c220f7e5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.producer-report.json",
+      "bytes": 3253,
+      "sha256": "e55305dd6b791f8da606890b7b4456a23f400a600d6cdf5f15baa6c8da1d5512"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.candidate.json",
+      "bytes": 929,
+      "sha256": "5bcc48801cf055afdec80d0e2be258901ccd1fbaefa38f4ee885b2d5bd3b6acb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.cleanup.json",
+      "bytes": 1080,
+      "sha256": "112ff011e84537c3e780bd94ac62fd95f48f1a2d157d18e32c303bacfdd0d963"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.receipt.json",
+      "bytes": 1470,
+      "sha256": "4be0053848ad18cd4c65ca6f4a652fae3f8c98ac0c4e97a1ecb50ac3946bf9b6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.generated.seal.json",
+      "bytes": 1594,
+      "sha256": "0f71ea800ad41385d487f04c528a005409621dbe265a39fbc82eaa83e15446c5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-2.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-3.bin",
+      "bytes": 8202,
+      "sha256": "95d5d4b83b554fb44820470400a66e28f2a01235ad636ed35c5ae904b49a010e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-4.bin",
+      "bytes": 8,
+      "sha256": "b69e25bde0e10ba7220de4993cf4575555eff9216cfdd038795d7bb9d6301778"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-8.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-9.bin",
+      "bytes": 8202,
+      "sha256": "60ea2bb28142ce29b90dbff081587437cff37abe8f38f703a5caccd93591f481"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-10.bin",
+      "bytes": 8,
+      "sha256": "376af7e04df8e35dcca7b0ad92e03e537f5ffa62c077a2c169864d743ef8aa4f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-14.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-15.bin",
+      "bytes": 8202,
+      "sha256": "ced1ed0bf3c9b293b9185662441a4bd36954c82949e3f1dca3c4875e61eaacc4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-16.bin",
+      "bytes": 8,
+      "sha256": "fd2474c845e9ce93c9167d396774c8ddd18e2501b5164c6b4d8e0e56366773e9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-20.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-21.bin",
+      "bytes": 8202,
+      "sha256": "4c6ff15fa1730bdb1a555c350fb2447b5ca7bd879f2f90d9f2d2700339510395"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-22.bin",
+      "bytes": 8,
+      "sha256": "1ff66ac9fef32032c75d065f1dca8f58d995c9d35d75070503e83446305b3979"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-26.bin",
+      "bytes": 8,
+      "sha256": "b1b0bee5378188f5250138bcce25855f2617f9c55b20b9628e13d367c47404a9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-27.bin",
+      "bytes": 8202,
+      "sha256": "74bf8e555493f6e69b8f190e7ea3a2bd22e9598de66a8429603ae50c459ec34c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.query-28.bin",
+      "bytes": 8,
+      "sha256": "9fcbc9536df9241fd135308e2608be75b0660bf81bf89b347c71f9f5a6f789b2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.canonical-native-rows.bin",
+      "bytes": 983552,
+      "sha256": "494b0ad3a78ce28a3561e864152e1ff25cb418a621a262f81658cb9b79210a6f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-53-world-01.canonical-calls.jsonl",
+      "bytes": 4602460,
+      "sha256": "d64094ee99e67536f00571848ec5e28fc7b020071f6eca8b6cb6f6328164fc04"
+    }
+  ],
+  "activity": {
+    "subject_imports": 0,
+    "subject_invocations": 0,
+    "native_or_target_operations": 0
+  },
+  "scope": "Retained synthetic evidence byte checks only; no full entry/native/physical/scientific authority."
+}

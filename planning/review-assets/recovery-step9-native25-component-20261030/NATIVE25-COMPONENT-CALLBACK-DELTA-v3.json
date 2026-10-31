@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "status": "STATIC_CALLBACK_DECLARATION_DELTA_ONLY",
+  "authoring_scope": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-CALLBACK-CORRECTION-AUTHORING-SCOPE-v3.json",
+    "bytes": 1492,
+    "sha256": "0eadd7e021d36b694c700348881c54c758ec8b82bbcd0abe57e8f5aacb0974f1"
+  },
+  "prior_cases": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v1.py",
+    "bytes": 23046,
+    "sha256": "4915773974d3567be5912fda56cfa478528591e92bd7043d9c99f3213de66dcd"
+  },
+  "cases": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v2.py",
+    "bytes": 23102,
+    "sha256": "90cfd1e63f2db1029756f35493c4b90083de79b6240a22df42f970edda57735b"
+  },
+  "prior_runner": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v2.py",
+    "bytes": 20628,
+    "sha256": "475ff8c94cbee25bbc4c870bf39b11b7ddb0306f4e091709bc3097227adae5f4"
+  },
+  "runner": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v3.py",
+    "bytes": 20628,
+    "sha256": "9ecec0188e64c857f2ca81d0c66a6fb08cee733e976cc0a529baadfd92985199"
+  },
+  "first_diagnostic": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v2.json",
+    "bytes": 228676,
+    "sha256": "2519c0b16193732e07f63449a1239d03de4951b367db8cfaf95b319fce4b0123"
+  },
+  "hook_count": 7,
+  "old_positional_arguments": 5,
+  "new_positional_arguments": 6,
+  "leading_parameter": "_world",
+  "declaration_source_lines": [
+    59,
+    103,
+    129,
+    175,
+    200,
+    282,
+    324
+  ],
+  "cases_bytes_added": 56,
+  "normalized_cases_AST_equal": true,
+  "assertion_body_expression_AST_changes": 0,
+  "runner_reverse_text_equal": true,
+  "runner_literal_replacements": [
+    {
+      "before": "NATIVE25-COMPONENT-ATTEMPT-v2",
+      "after": "NATIVE25-COMPONENT-ATTEMPT-v3"
+    },
+    {
+      "before": "NATIVE25-COMPONENT-PROOF-v2",
+      "after": "NATIVE25-COMPONENT-PROOF-v3"
+    },
+    {
+      "before": "NATIVE25-COMPONENT-ARTIFACTS-v2",
+      "after": "NATIVE25-COMPONENT-ARTIFACTS-v3"
+    },
+    {
+      "before": "NATIVE25-COMPONENT-FREEZE-v2",
+      "after": "NATIVE25-COMPONENT-FREEZE-v3"
+    },
+    {
+      "before": "NATIVE25-COMPONENT-BINDING-v2",
+      "after": "NATIVE25-COMPONENT-BINDING-v3"
+    },
+    {
+      "before": "'native25_component_cases_v1'",
+      "after": "'native25_component_cases_v2'"
+    }
+  ],
+  "source_changes": 0,
+  "source_imports": 0,
+  "source_runs": 0,
+  "expectation": "No xfail: the two source kind-guard failures remain ordinary failures if reproduced. The ten previously masked runtime branch outcomes remain unknown before the separately bound control."
+}

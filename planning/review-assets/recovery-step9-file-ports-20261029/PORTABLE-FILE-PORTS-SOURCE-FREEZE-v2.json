@@ -1,0 +1,201 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "ast": {
+    "added": [
+      "PortableOwner._require_identity",
+      "PortableOwner.assume_seed_identity_for_tests"
+    ],
+    "changed": [
+      "PortableOwner.__init__",
+      "PortableOwner._file_identity",
+      "PortableOwner.hash_capture",
+      "PortableOwner.observe",
+      "PortableOwner.seed_for_tests",
+      "PortableOwner.write_record"
+    ],
+    "unchanged": [
+      "Observation.to_dict",
+      "Origin.__init__",
+      "Origin.__setattr__",
+      "Origin.check",
+      "Origin.end",
+      "Origin.last",
+      "Origin.nonce",
+      "Origin.start",
+      "Origin.work_end",
+      "PortError.__init__",
+      "PortableOwner._attributes",
+      "PortableOwner._call",
+      "PortableOwner._latch",
+      "PortableOwner._new",
+      "PortableOwner._open_observation",
+      "PortableOwner._slot",
+      "PortableOwner.admit_plan",
+      "PortableOwner.close_slot",
+      "PortableOwner.create_namespace",
+      "PortableOwner.diagnostic_projection",
+      "PortableOwner.finalize_output",
+      "PortableOwner.inspect_ancestors",
+      "PortableOwner.open_original",
+      "PortableOwner.open_output",
+      "PortableOwner.output_pin",
+      "PortableOwner.reserve_namespace",
+      "PortableOwner.run",
+      "PortableOwner.scan",
+      "PortableOwner.validate_handoff",
+      "PortableOwner.validate_path_syntax",
+      "PortableOwner.validate_seal_graph",
+      "Slot.__init__",
+      "Slot.projection",
+      "_freeze",
+      "_thaw",
+      "begin_injected",
+      "need",
+      "path_key",
+      "raw_BOOL",
+      "uint"
+    ]
+  },
+  "chronology": [
+    "Initial v1 actual84 behavioral batch65matched retained644fa49d.",
+    "Root primary witness/peer identity finding; three source counterexamples retained5e053626.",
+    "Proposed13scripts in-memory on v1:83/84,0script mismatch4e7e5626.",
+    "Early sourcev2 identity/write fix87f6 snapshot; proposed84/84a2e8863f remains limited before read-admission correction.",
+    "Adjacent before-dispatch read counterexample159ec51d retained, then root explicitly approved entered-only read correction.",
+    "Final sourcev2 focused21PASS and proposed84/84 replay retained; no actual platform operation."
+  ],
+  "fixture_corrections_pending": "c30f proposal exact13 script changes plus explicit expecteddiagnostic diff. Current saved fixturev3 and limited preparation acceptance remain immutable. Native/Grammar/root approval needed before a separately named applied fixture revision.",
+  "inputs": {
+    "FILE-PORTS-DESIGN-CONTRACT-v2.json": {
+      "bytes": 38532,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-DESIGN-CONTRACT-v2.json",
+      "sha256": "d2c775cb9e24dce90f2dc0cc97d7976567d94a1e147e1f57be72f7a5d21efd4d"
+    },
+    "FILE-PORTS-FIXTURE-INDEPENDENT-PEER-v3.json": {
+      "bytes": 5885,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-INDEPENDENT-PEER-v3.json",
+      "sha256": "c8a46dde6753141909d560d0558c2ea6cc68881bae6689078c9af00e50ccd22c"
+    },
+    "FILE-PORTS-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 13088,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v3.json",
+      "sha256": "e3069b89cca7e9b04c630de994f24392054daf341c280f50778aea3d0f81657b"
+    },
+    "FILE-PORTS-FIXTURES-v3.json": {
+      "bytes": 429712,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURES-v3.json",
+      "sha256": "9e445e2e230689aa7c36e7eba666959dcac87478caf27252154eb02e978109b7"
+    },
+    "FILE-PORTS-PREPARATION-AND-SOURCE-SCOPE-v1.json": {
+      "bytes": 3896,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-PREPARATION-AND-SOURCE-SCOPE-v1.json",
+      "sha256": "6410dd07d8b3291e44c8862ede5efbf94adb5ef6997241378be3f58fac87d0e3"
+    },
+    "FILE-PORTS-ROOT-PRIMARY-WITNESS-v1.json": {
+      "bytes": 1532,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ROOT-PRIMARY-WITNESS-v1.json",
+      "sha256": "c6514590448c02eee2516b07484835bc8d7d5a4bb1173b02d2fe11c2d11f88f7"
+    },
+    "PORTABLE-FILE-PORTS-CORE-PURE-PROOF-v2.json": {
+      "bytes": 991,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-CORE-PURE-PROOF-v2.json",
+      "sha256": "bcc8a865c043135b7b9b734f75d17604f2486cf4b6cd11af091df3d8303ec0c1"
+    },
+    "PORTABLE-FILE-PORTS-CORRECTION-PROPOSAL-v1.json": {
+      "bytes": 152230,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-CORRECTION-PROPOSAL-v1.json",
+      "sha256": "c30fbddf1019dee9a457705ec2553d0662b6555ae5a753a6bab7aeecd51dfc22"
+    },
+    "PORTABLE-FILE-PORTS-FIRST-BEHAVIORAL-PROOF-v1.json": {
+      "bytes": 237312,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-FIRST-BEHAVIORAL-PROOF-v1.json",
+      "sha256": "644fa49dc05363451504710b31afe2329822078d8de450ba058c8441d0ddfff4"
+    },
+    "PORTABLE-FILE-PORTS-IDENTITY-WRITE-BEFORE-v1.json": {
+      "bytes": 10126,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-IDENTITY-WRITE-BEFORE-v1.json",
+      "sha256": "5e053626e150f47fba38149bd68dfacdae13526bfe3eb9f1251367ed635cc0dd"
+    },
+    "PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v1.json": {
+      "bytes": 190236,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v1.json",
+      "sha256": "4e7e56268e4b58486ba358cab0068d445eee72ef1b18c2486bf942864dd2f4bc"
+    },
+    "PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v2.json": {
+      "bytes": 193802,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v2.json",
+      "sha256": "a2e8863f1b856b6fd82863274871715fad47f850d922fd62e39ab428f0d56e23"
+    },
+    "PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v3.json": {
+      "bytes": 193815,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-PROPOSED-INTERFACE-REPLAY-v3.json",
+      "sha256": "cd43a6eb413a2fbe79dedf7cc4b4ac33fe842e58763991d97f6118c21a5285e3"
+    },
+    "PORTABLE-FILE-PORTS-READ-ADMISSION-BEFORE-v1.json": {
+      "bytes": 3221,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-READ-ADMISSION-BEFORE-v1.json",
+      "sha256": "159ec51d1255d6653bac90d580fb0a7bebe4a25cc28d863e096b186c46643291"
+    },
+    "check_portable_core_v2.py": {
+      "bytes": 14091,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_core_v2.py",
+      "sha256": "1c13a6f3c53942f493284c08495bce14adb5deb04e320c4269f7883f3952c491"
+    },
+    "check_portable_corrections_proposed_v3.py": {
+      "bytes": 7620,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_corrections_proposed_v3.py",
+      "sha256": "7e50c0f897b0a5d357e67ae0e7e509cfbbdc2a456874742c585a68a30cd3d0ad"
+    },
+    "check_portable_identity_before_v1.py": {
+      "bytes": 4090,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_identity_before_v1.py",
+      "sha256": "58da39f7f89c4c2f751a1212a710428400a79b68b1dbb26ff3f8eeaa3fd41ab8"
+    },
+    "check_portable_read_admission_before_v1.py": {
+      "bytes": 2310,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_read_admission_before_v1.py",
+      "sha256": "0ff4d6a5f2c49a2e3734875d37400446ad93320f3aabd111f6deaa6056cfcc15"
+    },
+    "portable_file_ports_v1.py": {
+      "bytes": 30848,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v1.py",
+      "sha256": "8909386decb2c67097a5c7f6a5ac1d6d8f528d00ea01e8efef82558edc5da2a9"
+    },
+    "portable_file_ports_v2_pre_read_accounting.py": {
+      "bytes": 34405,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2_pre_read_accounting.py",
+      "sha256": "87f6c58eb5175752bfb38cd65a79bef996612dea55f640213540b9df59d085a5"
+    },
+    "propose_portable_fixture_corrections_v1.py": {
+      "bytes": 7768,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\propose_portable_fixture_corrections_v1.py",
+      "sha256": "2905dcd6af6a54f60be0e3b588f948079660a4a2fc055e03be56598295ab878f"
+    }
+  },
+  "old_original_payload_operations": 0,
+  "originals_authenticated": false,
+  "pending": [
+    "Concrete native raw-return immediate registration/invalid sentinel normalization remains a separately reviewed FFI binding; Python return conversion/allocation gap is not closed by these fakes.",
+    "Real first-clock bootstrap/EngineContinuation ownership/roster/event/output integration and actual data checkers remain separate.",
+    "All real payload/original authentication, live API conformance, runtime/profile/scientific authority remain absent."
+  ],
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T12:48:41.561758+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Portable ownership/read/metadata/output algorithms under injected Python RawReturn/API/clock/hook only. 21 additional behavioral methods and all84 proposed-script cases pass. Proposed fixture patches remain in-memory/unaccepted; no frozen fixture overwritten. No actual FFI, platform adapter, first-clock live entry, full verifier/semantic gate or production activation.",
+  "source": {
+    "bytes": 34590,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+    "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+  },
+  "source_corrections": {
+    "harness": "Source-issued immutable HarnessIdentityPrecondition only for pristine fictional seed slots before any API or identity queries; isolated owner binding, explicit assumption counter; not observed native identity or production provenance.",
+    "identity": "Same-owner nonce/slot/handle/path/spec-bound successful four-query witness required before hash/read/write content. identity_ok booleans or serialized dictionaries are not authority. Caught identity failure never mints a proof.",
+    "read_count": "Same entered-only count separation; before295 refusal leaves0read attempts/count unknownFalse; malformed returned BOOL/count or nonreturn yields unknown; known late count remains known.",
+    "write_count": "Unknown after entered but unreturned/malformed/undefined WriteFile; no unknown byte claim if deadline prevents dispatch; known late bytes registered before throwing clock; no hash/flush claim for late result."
+  },
+  "status": "SOURCE_PURE_PAUSED_FOR_INDEPENDENT_PEER_NOT_ACCEPTED"
+}

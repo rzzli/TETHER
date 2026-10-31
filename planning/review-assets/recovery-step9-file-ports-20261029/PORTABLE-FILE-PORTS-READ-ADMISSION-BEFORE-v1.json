@@ -1,0 +1,98 @@
+{
+  "actual_API_calls": 0,
+  "calls": [
+    "CloseHandle"
+  ],
+  "checker": {
+    "bytes": 2310,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_portable_read_admission_before_v1.py",
+    "sha256": "0ff4d6a5f2c49a2e3734875d37400446ad93320f3aabd111f6deaa6056cfcc15"
+  },
+  "observed": {
+    "FFI_registration_proven": false,
+    "api_attempts": {
+      "CloseHandle": 1,
+      "CreateDirectoryW": 0,
+      "CreateFileW": 0,
+      "FindClose": 0,
+      "FindFirstFileExW": 0,
+      "FindNextFileW": 0,
+      "FlushFileBuffers": 0,
+      "GetFileAttributesExW": 0,
+      "GetFileInformationByHandleEx": 0,
+      "GetFileSizeEx": 0,
+      "GetFileType": 0,
+      "GetFinalPathNameByHandleW": 0,
+      "ReadFile": 0,
+      "WriteFile": 0
+    },
+    "api_returns": {
+      "CloseHandle": 1,
+      "CreateDirectoryW": 0,
+      "CreateFileW": 0,
+      "FindClose": 0,
+      "FindFirstFileExW": 0,
+      "FindNextFileW": 0,
+      "FlushFileBuffers": 0,
+      "GetFileAttributesExW": 0,
+      "GetFileInformationByHandleEx": 0,
+      "GetFileSizeEx": 0,
+      "GetFileType": 0,
+      "GetFinalPathNameByHandleW": 0,
+      "ReadFile": 0,
+      "WriteFile": 0
+    },
+    "captured_bytes": 0,
+    "disposition": "incomplete_deadline",
+    "flushed_known_bytes": 0,
+    "harness_identity_assumptions": 1,
+    "hashed_bytes": 0,
+    "journal_recursive_events": 0,
+    "known_read_bytes": 0,
+    "known_write_bytes": 0,
+    "namespace_owned": true,
+    "originals_authenticated": false,
+    "primary": "late",
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "read_count_unknown": true,
+    "reservation_ready": true,
+    "runtime_authorized": false,
+    "secondary": [],
+    "slots": [
+      {
+        "close_attempts": 1,
+        "close_state": "returned_success",
+        "closer": "CloseHandle",
+        "handle": 101,
+        "id": "o0",
+        "kind": "original_file",
+        "open_state": "observed_owned"
+      }
+    ],
+    "terminal_ack": false,
+    "test_seeded": true,
+    "write_count_unknown": false,
+    "write_hash_bytes": 0
+  },
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T12:45:14.881720+00:00",
+  "required": {
+    "ReadFile_attempts": 0,
+    "read_count_unknown": false
+  },
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Constant/finite fictional clock, source-issued harness seed assumption and injected Python API only. This is not an original file or platform call.",
+  "source": {
+    "bytes": 34405,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2_pre_read_accounting.py",
+    "sha256": "87f6c58eb5175752bfb38cd65a79bef996612dea55f640213540b9df59d085a5"
+  },
+  "status": "SOURCE_COUNTEREXAMPLE_NO_READ_DISPATCH_BUT_UNKNOWN_COUNT",
+  "unchanged_candidate": {
+    "bytes": 34405,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+    "sha256": "87f6c58eb5175752bfb38cd65a79bef996612dea55f640213540b9df59d085a5"
+  }
+}

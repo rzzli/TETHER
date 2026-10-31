@@ -1,0 +1,51 @@
+{
+  "budget_seconds": 60,
+  "cleanup_status": "close_outcomes_retained",
+  "elapsed_seconds": 0.0779999999795109,
+  "files": 13,
+  "journal_event_counts": {
+    "abi_CreateProcessW_reserved": 1,
+    "abi_assigned_before_resume": 1,
+    "abi_create_suspended_reserved": 1,
+    "abi_created_suspended": 1,
+    "abi_job_configured_empty": 1,
+    "abi_job_snapshot_observed": 12,
+    "abi_resume_reserved": 1,
+    "abi_resume_returned": 1,
+    "build_reserved": 1,
+    "detached_ABI_terminal_call_reserved": 3,
+    "detached_recognition_attempt_reserved": 1,
+    "detached_recognition_terminal": 1,
+    "recognition_file_hash_reserved": 398,
+    "recognition_file_hash_returned": 398,
+    "recognition_lease_attempt_reserved": 398
+  },
+  "journal_events": 1219,
+  "new_OS_queries": 0,
+  "original_external_gate": "INCOMPLETE_TIMEOUT",
+  "payload_opens": 0,
+  "raw_job_records_decoded": 13,
+  "receipt_and_terminal_output_hashes_match": true,
+  "recorded_at_utc": "2026-10-29T05:42:17.486939+00:00",
+  "replays": 0,
+  "resource_snapshot": {
+    "active_limit": 1,
+    "flags": 8968,
+    "job_commit": 268435456,
+    "peak_job_commit": 64368640,
+    "peak_process_commit": 64368640,
+    "process_commit": 268435456
+  },
+  "returned_exit_code": 2,
+  "run_status": "failed",
+  "schema_version": 1,
+  "scope": "Separate read-only negative-archive readability/integrity review after the original external300s gate timed out. This does not finish/reset/qualify that gate or add a payload check.",
+  "source_output_directory": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z",
+  "status": "post_hoc_negative_archive_metadata_checks_passed_NO_qualification",
+  "target_native_calls": 0,
+  "terminal_seal": {
+    "bytes": 2373,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z\\terminal-seal.json",
+    "sha256": "b46c8b98ebeba8cb79f80397073f5908b4619e6a09b13ad6c9ed3886fe87284e"
+  }
+}

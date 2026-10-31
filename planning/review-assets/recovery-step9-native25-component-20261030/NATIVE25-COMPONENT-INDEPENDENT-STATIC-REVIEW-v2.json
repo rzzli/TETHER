@@ -1,0 +1,196 @@
+{
+  "activity": {
+    "C_SDK_or_native_actions": 0,
+    "harness_runs": 0,
+    "original_targets_followed": false,
+    "source_or_case_edits": false,
+    "subject_imports": 0,
+    "subject_runs": 0
+  },
+  "counts": {
+    "DATA": 22,
+    "DEFERRED": 4,
+    "SOURCE_RUNTIME": 21,
+    "STATIC_ONLY": 1,
+    "executable": 43,
+    "executed": 0,
+    "normative_families": 25,
+    "planned_branches": 48
+  },
+  "freeze": {
+    "bytes": 6162,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v2.json",
+    "sha256": "fd479a87b768be50d39dda27f0ad85c931753f171aeef5b4e1e37f7dc435e1e8"
+  },
+  "material_blockers": [],
+  "next": "Separate Root execution scope/binding for one finite diagnostic against unchanged Source4, retaining any first kind-guard failures.",
+  "outline": {
+    "bytes": 1127,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BINDING-OUTLINE-v2.json",
+    "sha256": "03507f50717a80f544786d9c122af8d92d5bd54e69d91205c6f422dc41c55b14"
+  },
+  "preserved_first_freeze": {
+    "bytes": 5094,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v1.json",
+    "sha256": "e95781a024ddc66e88d7f89b67fc7bd01bdf1600b4e24a52700240e7876809e9"
+  },
+  "prior_hold": {
+    "bytes": 7211,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-HOLD-v1.json",
+    "sha256": "8fc0f64f6214ea992ba79c2b86def2b974ed335e948314adc4b09d74934da1ef"
+  },
+  "provenance": "Original preparationv1 is retained as base fixture/case/geometry history and still names runner1; active runner2 is selected exclusively by freeze2/outline2. Original v1 runner/freeze/HOLD remain unmodified; no source has run.",
+  "qualification": false,
+  "residual_limits": [
+    "Static consistency is not43passed controls or25/25native qualification.",
+    "Native ticket/epoch, genuine qualified child/lease/path lifetime and fulljoint14 admission branches remain explicitlydeferred.",
+    "Root C14 source/build/fake79 component is separate and is not executed or qualified by this Python DATA/source suite.",
+    "Real entry, native before-conversion capture/ABI, physical output/readback, real roster/new84, RSS/resource fit and science remain false."
+  ],
+  "resolved_findings": [
+    {
+      "evidence": "The actual collected audit_denials list participates in the failure-status expression. Return code shares that exact status, so a caught denied source operation cannot leave successful verdict/zero exit. Original errors and audit entries remain separately retained.",
+      "id": "R1",
+      "result": "CLOSED_STATIC"
+    },
+    {
+      "evidence": "Context persists a harness-owned progress object before walking retained observations. Completed and pending world/data/snapshot entries and artifact prefixes are updated incrementally; overall completion staysFalse until all phasesfinish. Main catches the first evidence error and emits that same cached progress (or existing artifact list if progress unavailable), without source snapshot/getter call, retry, re-freeze or synthesized completion.",
+      "id": "R2",
+      "result": "CLOSED_STATIC"
+    }
+  ],
+  "runner_ast": {
+    "added_removed_functions": 0,
+    "changed_functions": [
+      "Context.__init__",
+      "Context.persist",
+      "main"
+    ],
+    "unchanged_assertion_source": true,
+    "unchanged_function_count": 18,
+    "unchanged_matrix_inputs_source_subjects": true
+  },
+  "schema_version": 2,
+  "scope": "Exact R1/R2 named runner successor and unchanged source/cases/matrix/inputs; static text/AST/hash review, no subject/harness import or execution.",
+  "status": "CLEAR_STATIC_NATIVE25_COMPONENT_ONLY",
+  "unchanged_contract_checks": [
+    "43 exact executable case keys; 22 DATA and21 source-runtime rows remain separate from1static+4deferred.",
+    "Actual fresh Source4 Kernel/EntryWorld/SyntheticExercise and source-issued unqualified SearchRef are used; no old owner or fake native/launch/lease issuer.",
+    "Small fictional2MiB+17 bulk plus empty captured/hash-only contrast; no122suite/4GB/original payload replay.",
+    "Raw native-cell bytes and Python cache/wrapper/clock facts remain separate, including deliberately corrupted metadata retained without decoder repair.",
+    "Original MemoryError/KeyboardInterrupt identity, known once-close rights, original0/295/300cutoffs and explicit harddeadline-blocked cleanup/terminal absence are preserved.",
+    "Known partial snapshot refs/raw rows and later final snapshots are retained independently; no favorable renewed source clock.",
+    "Both valid alternate scalar/count kind negatives still require NATIVE_STATE_NOT_REPRESENTABLE. A first actual acceptance becomesFAIL and remains diagnostic evidence, neverxfail or a source-patched harness.",
+    "One original<=60s cooperative bound, exclusive v2 attempt/proof/artifact paths, changed-pin veto and fixed source/stdlib maps remain; no hard noncooperative timeout claim."
+  ],
+  "verified_pins": [
+    {
+      "bytes": 2026,
+      "name": "authoring_scope",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE25-COMPONENT-HARNESS-AUTHORING-SCOPE-v1.json",
+      "sha256": "bf52dbb0ee5a3d9b7f29fe612b404c4ffe74d29e75a2492061a7aeb5e711b0e1"
+    },
+    {
+      "bytes": 6910,
+      "name": "source_pause",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+      "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+    },
+    {
+      "bytes": 55828,
+      "name": "prior_fixture_inputs",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INPUTS-v2.json",
+      "sha256": "23708be2b0e78dac2ae34dba6178086f6a053efd380a6c5ce5ec8a2b7a4c26d1"
+    },
+    {
+      "bytes": 30303,
+      "name": "matrix",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BRANCH-MATRIX-v2.json",
+      "sha256": "e52a6c66d8839b2e40115ff6b10f439432d29ba103614760e33f6862cd585049"
+    },
+    {
+      "bytes": 23046,
+      "name": "cases",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v1.py",
+      "sha256": "4915773974d3567be5912fda56cfa478528591e92bd7043d9c99f3213de66dcd"
+    },
+    {
+      "bytes": 20628,
+      "name": "runner",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v2.py",
+      "sha256": "475ff8c94cbee25bbc4c870bf39b11b7ddb0306f4e091709bc3097227adae5f4"
+    },
+    {
+      "bytes": 7699,
+      "name": "preparer",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\prepare_native25_component_v1.py",
+      "sha256": "d3b2bb7865c48f510665bcb44336634bdca0f90700e04aeb2950510178d1347a"
+    },
+    {
+      "bytes": 15938,
+      "name": "support",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_test_support_v4.py",
+      "sha256": "5cfec098b8e3ce3acd5eb26104bb456986467506411e1065ac12011aef500066"
+    },
+    {
+      "bytes": 16022,
+      "name": "world",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_world_v4.py",
+      "sha256": "2c16bb8609dba2ff58f6a60386103527ba9939ab1e9238157ad72066d88d60e0"
+    },
+    {
+      "bytes": 145042,
+      "name": "subject_preflight_entry_kernel_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_entry_kernel_v4.py",
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    {
+      "bytes": 3614,
+      "name": "subject_preflight_file_view_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    },
+    {
+      "bytes": 39889,
+      "name": "subject_preflight_owner_ops_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    {
+      "bytes": 55497,
+      "name": "subject_role_ledger_codec_v4",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    {
+      "bytes": 9770,
+      "name": "inputs",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INPUTS-v1.json",
+      "sha256": "c02ff280b719e1cf77def5a9012592534526ae65068996959b42965ea8305a23"
+    },
+    {
+      "bytes": 5619,
+      "name": "preparation",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v1.json",
+      "sha256": "d51b1f027bb8d74cc842e61f4c9f59ab17bcd5a633d3964508090cc02b77a8ba"
+    },
+    {
+      "bytes": 10089,
+      "name": "successor_preparer",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\correct_native25_runner_v2.py",
+      "sha256": "f0d5c2d59c6bb2f8e5a389dac2c95d5ae4889a16efb221b177e9df98bba59fce"
+    },
+    {
+      "bytes": 7211,
+      "name": "prior_static_hold",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-HOLD-v1.json",
+      "sha256": "8fc0f64f6214ea992ba79c2b86def2b974ed335e948314adc4b09d74934da1ef"
+    },
+    {
+      "bytes": 1337,
+      "name": "runner_delta",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-RUNNER-DELTA-v2.json",
+      "sha256": "df1bb54ccb096c3cc7370ed39a1bd6185978944841c852498e9a2616913faee4"
+    }
+  ]
+}

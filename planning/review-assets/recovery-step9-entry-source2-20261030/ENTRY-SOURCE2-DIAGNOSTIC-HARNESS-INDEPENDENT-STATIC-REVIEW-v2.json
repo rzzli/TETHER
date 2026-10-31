@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_FIVE_CHECK_DIAGNOSTIC_HARNESS_STATIC_ONLY",
+  "reviewer": "grammar_toolchain_requirements",
+  "scope": "Only the new fifth test and runner delta versus the preserved four-check preparation. Prior static harness review b686 remains its own narrower record; authored Ops source acceptance is excluded.",
+  "freeze": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE2-DIAGNOSTIC-FREEZE-v2.json",
+    "bytes": 3213,
+    "sha256": "09607fb5a47cd6813933fb5a315564a8172d135f4a3176c5d64772c0121040e3"
+  },
+  "preparation": {
+    "bytes": 7266,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-PREPARATION-v2.json",
+    "sha256": "fd26ceb15c5a226e7a888e974ccab6f143b942c05d0a920a5bc8764657679251"
+  },
+  "harness": {
+    "regressions": {
+      "bytes": 12142,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_initial_regressions_v3.py",
+      "sha256": "8049671bae3528c8cf3efaeaa1967e50b860a2d393e8adbce70dd47e79b5d04a"
+    },
+    "runner": {
+      "bytes": 10292,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\run_entry_source2_regressions_v2.py",
+      "sha256": "9a12667a1183a35499dca39e4b384fb974bd98b839e38e0b6bf005117e1dbb06"
+    },
+    "support": {
+      "bytes": 15938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_independent_test_support_v2.py",
+      "sha256": "bdbde9fdd6effa9b3ffc9f30c7fc39e824ef8092b8e14504f46ff2f43e63fdb0"
+    },
+    "world": {
+      "bytes": 11981,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\entry_independent_world_v2.py",
+      "sha256": "c7745388c42dae79942d0476bd345771a55c8a0ef842e13c367ca6613911f7c4"
+    }
+  },
+  "inputs": {
+    "bytes": 5546,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-ACTUAL-HELPER-INPUTS-v1.json",
+    "sha256": "ba549a8558740c182920d244ff66b3d4665106219a2820c1b21fb6f10d234bf5"
+  },
+  "source_pause": {
+    "bytes": 5308,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE-PAUSE-v2.json",
+    "sha256": "2fc856163278a6521325b4865f8be77c148f72e09f35050fd6b54d60c635a54c"
+  },
+  "material_blockers": [],
+  "verified": {
+    "original_four_function_asts_equal": true,
+    "appended_test": "test05_stopped_close_normal_return_does_not_heal_cache",
+    "runner_changed_function_asts": [
+      "main",
+      "retain_world"
+    ],
+    "support_world_inputs_and_source_map_pins_verified": true
+  },
+  "finite_findings": [
+    "The new test supplies a genuine exact PreboundServices before entry, replacing only the explicitly synthetic raw callback. It keeps the same actual clock/EntryAttempt/output/hash/compiler/executing module/envelope/trusted map and does not construct or repair Core.",
+    "Actual bootstrap/captured helper execution/attachment occurs before the observe patch and chosen early-file close. The ordinary VirtualOriginals callback still independently counts close attempts; its wrapper catches only the identical injected MemoryError on CloseHandle and returns normally.",
+    "The patch first delegates real observe to COMMITTED, then throws before cache acknowledgment. Assertions distinguish actual raw BOOL1, wrapper normal return/stopped state, original primary/rethrown identity, consumed close count, and the required UNOBSERVED cache. No fake source callback sites or result labels reach under-test source.",
+    "Bounded stopped_close_probe records the actual cache/raw/wrapper/error/close facts before the expected failing assertion. The existing runner retains original method failure, later cleanup/evidence errors, genuine immutable snapshot rows and events independently. Observe is restored in finally before subsequent cleanup.",
+    "Original four methods are unchanged. Runner delta only adds the fifth method, fresh exclusive diagnostic filenames/regression module/status captions, and stopped_close_probe evidence. Audit/deadline/loader/error helper bodies remain identical.",
+    "A fifth assertion failure remains a real FAIL and makes the run INCOMPLETE_OR_FAILED. Expected four-pass/one-fail diagnostic preparation does not turn the source into PASS. One original cooperative60s deadline and common final veto remain unchanged."
+  ],
+  "chronology": "All Source2 subjects are paused unchanged. The first four assertions and their previous preparation remain preserved. This named five-check diagnostic is frozen before its first actual execution and before a separately authorized Source3 correction.",
+  "activity": {
+    "subject_imports": 0,
+    "harness_imports": 0,
+    "subject_tests": 0,
+    "harness_execution": 0,
+    "reviewed_file_edits": 0,
+    "native_or_target_operations": 0
+  },
+  "limits": "Root binding/execution scope remains required. No runtime result is claimed, and no new source/cap/feature/native/physical/RSS/full-roster/production-first-entry authority is inferred."
+}

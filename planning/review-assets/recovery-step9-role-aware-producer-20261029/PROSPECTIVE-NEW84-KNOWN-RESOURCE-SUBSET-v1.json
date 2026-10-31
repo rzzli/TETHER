@@ -1,0 +1,184 @@
+{
+  "dispositions": {
+    "historical_software_192": "Not inherited; every future consumer and dependency must be explicitly selected, including required native images. Filename extensions confer no role or admission.",
+    "old_owner_outputs_16": "Old experiment archival material excluded. Future new84 outputs receive new descriptors after one future authorized terminal run; no replay or freshness inheritance.",
+    "old_pack_259867": "Consumed 189-case profile excluded; cannot satisfy the 84-case pack."
+  },
+  "early_sources": null,
+  "full_roster": null,
+  "known_capture_bytes": 712415,
+  "known_hash_only_bytes": 8989020320,
+  "known_resources": 16,
+  "module_graph": null,
+  "physical_pack_exists": false,
+  "qualifications": {
+    "actual_originals": false,
+    "profile": false,
+    "runtime": false
+  },
+  "resources": [
+    {
+      "bytes": 909824,
+      "consumer": "future explicit native module/model loading policy; digest identity only, no byte-consuming checker",
+      "fresh": false,
+      "kind": "existing_retained_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+      "role": "hash_only_bulk",
+      "sha256": "d402f7ff9cb7e27224ead72a83ae064653f60d237ef82a10697b21be5a6bd472"
+    },
+    {
+      "bytes": 3991999872,
+      "consumer": "future explicit native module/model loading policy; digest identity only, no byte-consuming checker",
+      "fresh": false,
+      "kind": "existing_retained_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+      "role": "hash_only_bulk",
+      "sha256": "a09ea5e7b1eafb1b30b241726c3cc3c905c96f14ad41e246ffa5f44e53904f68"
+    },
+    {
+      "bytes": 3989373504,
+      "consumer": "future explicit native module/model loading policy; digest identity only, no byte-consuming checker",
+      "fresh": false,
+      "kind": "existing_retained_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00002-of-00003.gguf",
+      "role": "hash_only_bulk",
+      "sha256": "21b9457d079680d284e90ef69607c4b2d8ef64a09d4729cb7b5e1357bdba41ae"
+    },
+    {
+      "bytes": 1006737120,
+      "consumer": "future explicit native module/model loading policy; digest identity only, no byte-consuming checker",
+      "fresh": false,
+      "kind": "existing_retained_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00003-of-00003.gguf",
+      "role": "hash_only_bulk",
+      "sha256": "c8d37006760a387a35216e070e6664d7da927f10be8eb870fef2e3d4833d9976"
+    },
+    {
+      "bytes": 42970,
+      "consumer": "source-closed import/source comparison only if selected by future frozen module graph",
+      "fresh": false,
+      "kind": "existing_accepted_source_reference_not_future_successor",
+      "path": "planning/review-assets/recovery-step9-indexed-accounting-20261029/shared_owner_v3.py",
+      "role": "captured_software",
+      "sha256": "d8ee1e135a9e9d4b5c197eacb287f9e0fcb8c145d8baef154aa8faa7a68fca31"
+    },
+    {
+      "bytes": 11057,
+      "consumer": "source-closed import/source comparison only if selected by future frozen module graph",
+      "fresh": false,
+      "kind": "existing_accepted_source_reference_not_future_successor",
+      "path": "planning/review-assets/recovery-step9-indexed-accounting-20261029/shared_file_ports_v3.py",
+      "role": "captured_software",
+      "sha256": "8ecabef93656867fa443d26ef8826b359029f79d33c220cbc1a41734f80c0f49"
+    },
+    {
+      "bytes": 4258,
+      "consumer": "source-closed import/source comparison only if selected by future frozen module graph",
+      "fresh": false,
+      "kind": "existing_accepted_source_reference_not_future_successor",
+      "path": "planning/review-assets/recovery-step9-indexed-accounting-20261029/continue_verification_v3.py",
+      "role": "captured_software",
+      "sha256": "16ff0a3463d7d97f068fb38b709addfdfa43944490c015329e4470fad314a47e"
+    },
+    {
+      "bytes": 17145,
+      "consumer": "reference only; prospective 1MiB envelope requires explicitly versioned formula successor",
+      "fresh": false,
+      "kind": "existing_accepted_64KiB_calculator_reference",
+      "path": "planning/review-assets/recovery-step9-admission-envelope-20261029/admission_envelope_v3.py",
+      "role": "captured_software",
+      "sha256": "24889920f1f0d4e6f26130c053adde9cdf7f9e006a250f9f9bae274e61ac0501"
+    },
+    {
+      "bytes": 16685,
+      "consumer": "decode exact new profile bytes with required owner check callback",
+      "fresh": false,
+      "kind": "existing_accepted_source",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\unicode_pack_codec_v2.py",
+      "role": "captured_software",
+      "sha256": "8ff0d6228fbec2900d52125f2e94e311cc22762d2d0b8b52c3eaadf0e59be91a"
+    },
+    {
+      "bytes": 9809,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+      "role": "captured_metadata",
+      "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+    },
+    {
+      "bytes": 233438,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+      "role": "captured_metadata",
+      "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+    },
+    {
+      "bytes": 227662,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+      "role": "captured_metadata",
+      "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+    },
+    {
+      "bytes": 8506,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-PIECE-ANALYZER-CONTRACT-v1.json",
+      "role": "captured_metadata",
+      "sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6"
+    },
+    {
+      "bytes": 86124,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+      "role": "captured_metadata",
+      "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+    },
+    {
+      "bytes": 16995,
+      "consumer": "profile/grammar/framing bytes; no old profile substitution",
+      "fresh": false,
+      "kind": "existing_frozen_new84_descriptor",
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-CONTRACT-v1.json",
+      "role": "captured_metadata",
+      "sha256": "4c4645f53c878e03cf1f0eaec575b3dcf1dcc006375aadc0080819393e4c3d24"
+    },
+    {
+      "bytes": 37766,
+      "consumer": "future new84 pack decoder; its eventual file descriptor/physical construction is missing",
+      "fresh": false,
+      "kind": "logical_bytes_from_retained_pure_proof_not_physical_file",
+      "path": null,
+      "role": "captured_metadata",
+      "sha256": "d2537df43e7e6e8113c4e08f0536c2e3a698bd274963ab71a4efced4fa32c8ab"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 95229,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/RETAINED-HISTORICAL-RESOURCE-VECTOR-v1.json",
+      "sha256": "3a7e00e9cc812f7fcf0676c70704c65ab35565cac4b6a652fe06fad42c890c75"
+    },
+    {
+      "bytes": 6568,
+      "path": "planning/review-assets/recovery-step9-unicode-codec-20261029/UNICODE-PACK-CODEC-PURE-PROOF-v2.json",
+      "sha256": "a3dd915fd78d3ffed4701a7b1655ba1904813240363385cb372a0a0af3c96177"
+    },
+    {
+      "bytes": 2353,
+      "path": "planning/review-assets/recovery-step9-unicode-codec-20261029/UNICODE-PACK-CODEC-SCOPED-ACCEPTANCE-v2.json",
+      "sha256": "3455f28244a44ed17612d80b6d452430b1963100e08ca072233ca87f4e4a64d6"
+    }
+  ],
+  "status": "prospective_known_subset_not_complete_roster"
+}

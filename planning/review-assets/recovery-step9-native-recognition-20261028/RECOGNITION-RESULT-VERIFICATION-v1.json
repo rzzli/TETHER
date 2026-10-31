@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T05:45:54.775820+00:00",
+  "reviewer": "os_accounting_peer",
+  "status": "NEGATIVE_RECOGNITION_PROFILE_UNQUALIFIED_EXTERNAL_VERIFICATION_INCOMPLETE_TIMEOUT",
+  "actual_attempt": {
+    "root_decision_sha256": "b6327d4a3457f4319d39a9f600c29e2aba3649b0db3ecb371f54a8de46a4bbe1",
+    "protocol_sha256": "b690c63bbcc576dab0ea02b4f6359ed31b24edc39a850bc945789563bf99bbf2",
+    "output_directory": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z",
+    "automatic_retry": false,
+    "driver_exit_reported_by_root": 1,
+    "driver_elapsed_reported_by_root_seconds": 79.328,
+    "child_exit_reported": 2,
+    "child_elapsed_failure_marker_reported_ms": 30078,
+    "primary_child_failure": "required_partial_UTF8_prefix_coverage_unavailable",
+    "profile_success": false,
+    "additional_attempts": 0
+  },
+  "timing": {
+    "original_external_limit_seconds": 300,
+    "clock": {
+      "started_monotonic": 656115.031,
+      "deadline_monotonic": 656415.031,
+      "started_utc": "2026-10-29T05:32:14.336699+00:00",
+      "scope": "One separately authorized fresh original-path leased verification pass after terminated target; no target replay"
+    },
+    "fresh_pass_completed_elapsed_seconds": 158.65600000007544,
+    "strict_and_all_row_core_audit_completed_elapsed_seconds": 292.65600000007544,
+    "whole_check_terminal_elapsed_seconds": 820.4370000000345,
+    "whole_check_completed_within_limit": false,
+    "whole_check_disposition": "INCOMPLETE_TIMEOUT",
+    "after_deadline_activity": "Summarizing own already retained records and writing this report only; no new original input/output validation, no clock reset, no extra payload pass",
+    "timing_is_separate_from_native_owner": true
+  },
+  "scope_results": {
+    "fresh_input_integrity": "COMPLETED_WITHIN_BUDGET",
+    "strict_positive_gate": "REJECTED_WITHIN_BUDGET",
+    "negative_all_retained_row_data_audit": "COMPLETED_WITHIN_BUDGET_source_bound_consistency_only",
+    "receipt_journal_seal_closure": "NOT_COMPLETED_WITHIN_EXTERNAL_DEADLINE",
+    "independent_raw_Job_and_resource_reconstruction": "NOT_COMPLETED_WITHIN_EXTERNAL_DEADLINE",
+    "overall_independent_actual_verification": "INCOMPLETE_TIMEOUT_not_qualified"
+  },
+  "fresh_lineage": {
+    "receipt": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-FRESH-INPUT-PASS-v1.json",
+      "bytes": 397429,
+      "sha256": "04eff7fb2274a13130c8bc6ee639d57cb3362d7761f2ae96c1e084d97b06fb49"
+    },
+    "reservation_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-FRESH-INPUT-PASS-RESERVATION-v1.json",
+    "fresh_original_protocol_inputs": 197,
+    "extra_owner_output_metadata_records": 16,
+    "total_leased_hash_records": 213,
+    "total_original_path_leases": 213,
+    "all_recorded_leases_validated_and_closed": true,
+    "known_hashed_bytes": 9017363392,
+    "exact_fresh_payload_hash_passes": 1,
+    "exact_original_payload_opens": 5,
+    "payload_records": [
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-cpu-x64.dll",
+        "bytes": 909824,
+        "sha256": "d402f7ff9cb7e27224ead72a83ae064653f60d237ef82a10697b21be5a6bd472",
+        "role": "CPU"
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "bytes": 3991999872,
+        "sha256": "a09ea5e7b1eafb1b30b241726c3cc3c905c96f14ad41e246ffa5f44e53904f68",
+        "role": "model"
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00002-of-00003.gguf",
+        "bytes": 3989373504,
+        "sha256": "21b9457d079680d284e90ef69607c4b2d8ef64a09d4729cb7b5e1357bdba41ae",
+        "role": "model"
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00003-of-00003.gguf",
+        "bytes": 1006737120,
+        "sha256": "c8d37006760a387a35216e070e6664d7da927f10be8eb870fef2e3d4833d9976",
+        "role": "model"
+      },
+      {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-pack-v2-20261028T183647Z\\recognition.pack",
+        "bytes": 259867,
+        "sha256": "f75ab9937c57b5f03c2234643a8a9c91cda852ca0cca0de0478369f793e57e5f",
+        "role": "pack"
+      }
+    ],
+    "role_caps": "128MiB software/CPU,20MiB pack, exact recorded bytes for only the three original ordered models",
+    "file_API_names": [
+      "CreateFileW",
+      "GetFileInformationByHandleEx",
+      "GetFinalPathNameByHandleW",
+      "GetFileSizeEx",
+      "ReadFile",
+      "CloseHandle"
+    ],
+    "identity_primitive": "Exact extracted approved SDK validate_lease and role-v2 hash_lease; no Kernel32 SDK constructor. Read-only original handles with FILE_SHARE_READ deny write/delete sharing, reparse/regular-file/final-path/size/SHA checks.",
+    "file_identity_and_hash_source_SHA256": [
+      "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd",
+      "97eb16d55ea84d9e8193e2195e977469e87acbef4d838ad049cc9771ea75a344"
+    ],
+    "target_Job_process_calls": 0,
+    "no_serialized_ready_flag_substituted_for_fresh_hash": true
+  },
+  "captured_technical_pins": {
+    "root_decision": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-ROOT-DECISION-v1.json",
+      "bytes": 6828,
+      "sha256": "b6327d4a3457f4319d39a9f600c29e2aba3649b0db3ecb371f54a8de46a4bbe1",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "protocol": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-PROTOCOL-v1.json",
+      "bytes": 96007,
+      "sha256": "b690c63bbcc576dab0ea02b4f6359ed31b24edc39a850bc945789563bf99bbf2",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "driver": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\execute_recognition_once_v1.py",
+      "bytes": 8493,
+      "sha256": "71101d748da93dca8fcf3f888ecb3a57fad9b7619890948e492fae3b9b129681",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "parent": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v7.py",
+      "bytes": 75195,
+      "sha256": "b2aafdd98b797f181d4d718b5edab75a4dad4e16a735cbf719baa5c58cb54b09",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "receipt": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z\\receipt.json",
+      "bytes": 1380,
+      "sha256": "466ddd75f53ca8d92cbf3e87336ee3965b2fd672568634719fe4a6f217618a60",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "terminal": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z\\terminal-seal.json",
+      "bytes": 2373,
+      "sha256": "b46c8b98ebeba8cb79f80397073f5908b4619e6a09b13ad6c9ed3886fe87284e",
+      "source": "computed_under_original_timed_read_lease"
+    },
+    "journal": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z\\execution\\journal.jsonl",
+      "bytes": 555649,
+      "sha256": "f90ff8e64522d69da2843da2aa8033ad1dc9afa818cca5e185172d7e904af20a",
+      "source": "computed_under_original_timed_read_lease"
+    }
+  },
+  "negative_semantic_audit": {
+    "audit": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-NEGATIVE-DATA-AUDIT-v1.json",
+      "bytes": 30210,
+      "sha256": "0022dee9b0f25da4dfb2cb52596b681955d89a3d812f09a2e4ee95d45765b27d"
+    },
+    "same_pass_pack_bytes_captured": true,
+    "captured_pack_locator": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-VERIFIER-CAPTURED-PACK-v1.bin",
+    "captured_pack_sha256": "f75ab9937c57b5f03c2234643a8a9c91cda852ca0cca0de0478369f793e57e5f",
+    "original_payload_rereads_for_semantic_audit": 0,
+    "retained_rows": 400,
+    "strict_success_parser": {
+      "error": "Required UTF8 prefix coverage unavailable",
+      "coverage": {
+        "status": "unqualified_incomplete_or_invalid",
+        "complete": false,
+        "accounting_frames_consumed": 239,
+        "expected_cases": 189,
+        "last_observed_cases_computed_claim": 111,
+        "last_observed_case_results_written_claim": 110,
+        "last_observed_prefix_slots_seen_claim": 2,
+        "last_observed_prefix_results_written_claim": 2,
+        "case_results_validated": 111,
+        "case_group_results_validated": [
+          111,
+          0,
+          0
+        ],
+        "prefix_results_validated": 2,
+        "expected_prefixes": 6,
+        "native_case_results_validated": 111,
+        "harness_dispositions_validated": 0,
+        "missing_case_results": 78,
+        "missing_prefix_results": 4,
+        "unrecorded_tail": "unknown_since_last_acknowledged_snapshot"
+      }
+    },
+    "separate_all_retained_row_source_consistency": {
+      "case_bodies": 189,
+      "groups": [
+        167,
+        18,
+        4
+      ],
+      "native_case_results": 184,
+      "harness_dispositions": 5,
+      "all_case_bodies_match_expected": true,
+      "prefix_results": [
+        {
+          "id": "prefix/final_close_missing",
+          "base_index": 0,
+          "base_id": "primary/000",
+          "status": "native_eog_rejection",
+          "token_count": 69,
+          "ordinal": 18,
+          "kind": 0
+        },
+        {
+          "id": "prefix/empty",
+          "base_index": 1,
+          "base_id": "primary/001",
+          "status": "native_eog_rejection",
+          "token_count": 0,
+          "ordinal": 21,
+          "kind": 0
+        },
+        {
+          "id": "prefix/natural_partial_astral",
+          "base_index": 110,
+          "base_id": "primary/110",
+          "status": "coverage_unavailable",
+          "token_count": null,
+          "ordinal": 240,
+          "kind": 2
+        },
+        {
+          "id": "prefix/natural_partial_bmp",
+          "base_index": 127,
+          "base_id": "primary/127",
+          "status": "coverage_unavailable",
+          "token_count": null,
+          "ordinal": 275,
+          "kind": 1
+        },
+        {
+          "id": "prefix/escape_backslash",
+          "base_index": 144,
+          "base_id": "primary/144",
+          "status": "native_eog_rejection",
+          "token_count": 40,
+          "ordinal": 310,
+          "kind": 0
+        },
+        {
+          "id": "prefix/surrogate_half",
+          "base_index": 144,
+          "base_id": "primary/144",
+          "status": "native_eog_rejection",
+          "token_count": 44,
+          "ordinal": 311,
+          "kind": 0
+        }
+      ],
+      "success_batch_or_completion_present": false
+    },
+    "vocabulary_count": 152064,
+    "EOG_ids": [
+      128247,
+      151643,
+      151645,
+      151662,
+      151663,
+      151664
+    ],
+    "final_total_explicit_attempted": 442668,
+    "final_total_explicit_returned": 442668,
+    "sampler_returns_cleaned": 188,
+    "positive_profile_requires_sampler_states": 190,
+    "required_UTF8_prefix_unavailable": true,
+    "derived_accepts": 64928,
+    "derived_applies": 65446,
+    "phase_module_snapshots_checked": 4,
+    "source_bound_not_actual_tokenizer_replay": true,
+    "missing_prefix_interpretation": "Two fixed documents did not yield a qualifying token boundary under the reviewed selector. Raw non-ASCII input is present; retained rows do not include piece bytes/end offsets. No vocabulary-wide absence or precise tokenizer mechanism is established."
+  },
+  "prefix_original_wire_byte_stats": [
+    {
+      "index": 110,
+      "id": "primary/110",
+      "bytes": 7389,
+      "sha256": "9055d33f041a4d2908209ac3e7a7974ea24c5e01768ccc14b944d752f94d325d",
+      "nonASCII_bytes": 7200,
+      "scalar_counts_by_UTF8_width": {
+        "1": 189,
+        "4": 1800
+      },
+      "literal_backslash_u_sequences": 0,
+      "raw_width4_scalars": 1800,
+      "raw_width2_or3_scalars": 0,
+      "raw_nonASCII_present": true,
+      "interpretation": "Raw Unicode scalars exist; unavailable selector means no qualifying returned token boundary in this fixed document, not vocabulary-wide absence. No piece bytes/end offsets retained to distinguish exact tokenization mechanism."
+    },
+    {
+      "index": 127,
+      "id": "primary/127",
+      "bytes": 193,
+      "sha256": "a7ab4de34d101769e195148b9675d370bb1df5f60880344fe9ebadca54b8dace",
+      "nonASCII_bytes": 4,
+      "scalar_counts_by_UTF8_width": {
+        "1": 189,
+        "2": 2
+      },
+      "literal_backslash_u_sequences": 0,
+      "raw_width4_scalars": 0,
+      "raw_width2_or3_scalars": 2,
+      "raw_nonASCII_present": true,
+      "interpretation": "Raw Unicode scalars exist; unavailable selector means no qualifying returned token boundary in this fixed document, not vocabulary-wide absence. No piece bytes/end offsets retained to distinguish exact tokenization mechanism."
+    }
+  ],
+  "reported_terminal_facts_not_independently_reconstructed_in_original_clock": {
+    "source": "Retained parent report read during core-audit tool call and root terminal message; raw query/receipt/journal consistency not completed by this verifier before300s",
+    "child_exit": 2,
+    "reaped": true,
+    "captures": {
+      "stdout_bytes": 83,
+      "stderr_bytes": 6695,
+      "both_EOF": true
+    },
+    "final_Job": {
+      "total": 1,
+      "active": 0,
+      "terminated": 0,
+      "PID_list": []
+    },
+    "peak_process_and_Job_commit_bytes": 64368640,
+    "limits_process_and_Job_commit_bytes": 268435456,
+    "cleanup_errors_reported": []
+  },
+  "separate_root_posthoc_archive_review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json",
+    "sha256": "b513793dd960e043bf20cd0f9166268382900ab1173fdc6946ff979b1d030cbd",
+    "provenance": "Root reported a separate0.094s/60s metadata-only audit after original external deadline:13files,1219journal events and receipt/seal/raw-record consistency. This verifier did not consume or validate that file after deadline.",
+    "does_not_complete_reset_or_qualify_original_external_gate": true
+  },
+  "activity": {
+    "target_or_native_replay": 0,
+    "compiler_calls": 0,
+    "Job_process_or_global_OS_diagnostic_calls": 0,
+    "original_payload_file_opens": 5,
+    "payload_hash_passes": 1,
+    "original_payload_reads_after_pass": 0,
+    "original_input_output_validation_after_external_deadline": 0,
+    "original_artifact_edits": 0
+  },
+  "limits": [
+    "The actual frozen-pack recognition attempt is NEGATIVE and required UTF8 coverage remains unqualified even though separately reconstructed retained case bodies match expected source-bound statuses.",
+    "The strict success parser validated111cases and2prefixes before rejecting. The separate negative observer checked189retained case bodies; these counts are different scopes and are not interchangeable.",
+    "Original external verification remains INCOMPLETE_TIMEOUT because receipt/journal/seal/resource gates were not finished before300s. Fresh integrity and core data checks do not substitute for the unfinished whole check.",
+    "Post-hoc root archive metadata review is a distinct informational scope and cannot convert this timed gate into success.",
+    "Explicit25 export counters exclude internal library/initializer/OS calls. Source-bound consistency is not an adversarial-child proof or independent tokenizer replay.",
+    "No piece bytes/token-end offsets are retained; input byte statistics rule out ASCII-only input but do not establish the mechanism causing unavailable boundaries.",
+    "No replacement corpus/prefix, favorable rerun, full-mask/inference/scientific qualification or probability claim follows. Existing ABI807/fullruntime311 and prior failures are unchanged."
+  ]
+}

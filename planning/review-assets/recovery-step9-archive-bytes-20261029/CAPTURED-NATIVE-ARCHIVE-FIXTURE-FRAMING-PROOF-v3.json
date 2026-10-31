@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "status": "fixture_framing_and_narrow_source_delta_passed",
+  "fixtures": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json",
+    "bytes": 1716151,
+    "sha256": "3e75447d4d3a01c56833d089bf23dab52e5e53bc49a9ea33e9de689eef9b5dcd"
+  },
+  "freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURE-FREEZE-v3.json",
+    "bytes": 2350,
+    "sha256": "7663f2edfff3d0c4365bbe9d4336895b56f2e5b5001bb69717eeeab06bfd96b9"
+  },
+  "recorder": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\retain_archive_fixture_framing_v3.py",
+    "bytes": 9025,
+    "sha256": "4f2911906528f46971c1824721605abc27f13397f5747474438f0eac4f6b936d"
+  },
+  "methods": 5,
+  "failures": 0,
+  "errors": 0,
+  "failure_details": [],
+  "cases": 32,
+  "argv_derivations": 9,
+  "changed_run_files_by_case": {
+    "complete_positive_captured_graph": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "child_negative": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "publication_after_receipt": [
+      "failure.json",
+      "post-lease-cleanup.json",
+      "terminal-publication-error.json",
+      "terminal-seal.json"
+    ],
+    "after_seal": [
+      "after-seal-failure.json",
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "retry_after_close_failure": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "normal_late": [
+      "late-failure.json",
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "exception_after_terminal": [
+      "late-failure.json",
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "missing_terminal": [
+      "post-lease-cleanup.json"
+    ],
+    "early_initialization": [],
+    "root_journal_locator": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "traversal_locator": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "cross_root_pin": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "terminal_self_edge": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "receipt_future_edge": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "digest_corruption": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "bool_descriptor_bytes": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "static_dynamic_collision": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "reservation_owner": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "wrong_first_kind": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "second_header_limits": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "missing_parent_reservation": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "malformed_root_marker": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "child_final_conflict": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_0": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_1": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_2": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_3": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_4": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_5": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_6": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_7": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ],
+    "argv_8": [
+      "post-lease-cleanup.json",
+      "terminal-seal.json"
+    ]
+  },
+  "early_source_projection": "RunJournal constructor raises before execution journal return; outer reservation only, no API/Owner/leases. Selected incomplete report projection, not complete source/resource evidence.",
+  "elapsed_seconds": 0.015999999945051968,
+  "maximum_seconds": 20,
+  "expected_graph_results_are_authored_not_observed": true,
+  "actual_archive_graph_checks": 0,
+  "archive_checker_implemented": false,
+  "actual_old_runs_replayed": 0,
+  "source_closure_qualification": false,
+  "SDK_native_payload_operations": 0,
+  "profile_qualified": false
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T01:36:48.823246+00:00",
+  "version": "0.3.9",
+  "status": "accepted_native_adapter_controller_integration_engineering_only",
+  "interface": "source-quote-interpretation-v2",
+  "full_tests": {
+    "run": 1724,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "new_regression_tests": 43,
+  "source_pins_rechecked": 324,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "matching_frozen_verifiers": 8,
+  "installed_interface_preparations": 12,
+  "actual_model_calls": 0,
+  "actual_native_servers": 0,
+  "actual_network_requests": 0,
+  "tokenizer_children": 6,
+  "simulated_native_calls": 6,
+  "simulated_native_servers": 1,
+  "pure_results": 2,
+  "source_inclusive_simulation_result": {
+    "actual_model_calls": 0,
+    "automatic_retries": false,
+    "budget": {
+      "max_calls": 16,
+      "max_cost_usd": 0,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_retries": 1,
+      "max_seconds": 300
+    },
+    "conservative_unresolved_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "elapsed_seconds": 163.5470000000205,
+    "execution_scope": "simulated_native_transport",
+    "fixture_declared_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "input_reserved": 24558,
+    "known_http_attempts": 0,
+    "known_model_calls": 0,
+    "known_simulated_http_attempts": 6,
+    "known_simulated_model_calls": 6,
+    "native_dispatch_attempts": 6,
+    "native_processes": 0,
+    "observed_model_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "output_reserved": 6144,
+    "pure_invocations": 2,
+    "recorded_calls": 0,
+    "recovered_transport_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "role": "evaluation_only",
+    "run_id": "c98c45c6-3032-4ef6-a7d9-46f1de08151c",
+    "schema_version": 1,
+    "scientific_validation": "not_attempted",
+    "simulated_native_calls": 6,
+    "simulated_server_processes": 1,
+    "simulated_transport_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 384,
+      "output_tokens": 384
+    },
+    "source_authority_sha256": "84ff16c264c48daf995dc9533bb42227c7c53964edd4c039eae468286b3d6520",
+    "source_scope": "receipt_verified_collected_case_not_scientific_validation",
+    "strategy": "literal_case_overlap_then_id_v1",
+    "tokenizer_processes": 6,
+    "track": "authority_bound_collected_source_four_arm_simulated_native_v2",
+    "unknown_http_attempts": 0,
+    "unknown_model_calls": 0,
+    "unknown_simulated_model_calls": 0,
+    "receipt_sha256": "f74bc1605f78acb78a61f9672d5ce1a611ceaeb663bad6fd879a93605f063e98",
+    "sealed_elapsed_seconds": 200.0
+  },
+  "native_grammar_conformance": "unverified",
+  "actual_native_resource_feasibility": "unverified",
+  "new_independent_peer_review": false,
+  "model_adapter_implemented": true,
+  "controller_integration_implemented": true,
+  "provider_spend_usd": 0,
+  "new_downloads": 0,
+  "scientific_validation": "not_established",
+  "human_reviews": "pending",
+  "entire_R09_complete": false,
+  "native_R07_stop_unchanged": true,
+  "relocation_scope": "Run bundle only; explicit original source/model inputs remain available",
+  "remaining": [
+    "Pinned native schema-to-grammar conformance",
+    "Separately declared finite native experiment",
+    "Independent source references, fresh-frame/source sufficiency and R10-R16 gates"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-native-wheel-20261028/dist/asof_target_agents-0.3.9-py3-none-any.whl",
+    "sha256": "63ae92affecfd33305ff389779678f427917283186a9a2b34fe73e45345b3faa",
+    "bytes": 264501
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-native-verifier-039-20261028/asof_target_agents-0.3.9-py3-none-any.whl",
+    "sha256": "63ae92affecfd33305ff389779678f427917283186a9a2b34fe73e45345b3faa",
+    "bytes": 264501
+  },
+  "evidence": [
+    {
+      "path": "data/cache/r09-native-installed-20261028/guarded-installed-verification.json",
+      "sha256": "f0e573f27ab7678206e57db07f8f6497e3de677b4763c44d816bfb48bae4635f",
+      "bytes": 15905
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/INSTALLED-REPLAY.json",
+      "sha256": "b58a80bf6b8b15755d08725dd6743f553540579b48c1670cb4c0a25ce2cca599",
+      "bytes": 3313
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/INSTALLED-RELOCATION.json",
+      "sha256": "8a114aef5d3927be2803e9bdab6cdcf9049a97ac7b40e3faa5aa67cffe833a74",
+      "bytes": 3485
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/full-validation.json",
+      "sha256": "13729ff9917546ebbdaef159711330e5eae9372126024760b6e9b123a30279ca",
+      "bytes": 473
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/code-validation.json",
+      "sha256": "16b690f1c1dbbaca38b096c20652a6e4c1db692dd8c408caaa7516bd4e351438",
+      "bytes": 36745
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "sha256": "3adc9e5e56ad30894798bd87c80091debd2b29c499ccca656503f5cebb3dd2b9",
+      "bytes": 7875
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/compatibility-profile-review.md",
+      "sha256": "3e1f6528bcbdb96136534abd5b1263ea356ae45316e00d2e8a688ec16f11499f",
+      "bytes": 791
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/DEVELOPMENT-FINDINGS.md",
+      "sha256": "54ccf3edd184542f2dfbb6d22637359721f6c975340305736076055e44d90710",
+      "bytes": 8389
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FOCUSED-COMPONENT-FINAL.log",
+      "sha256": "7eb2015d6ac37f50b24b87bac64426c4ecf3840d44071dc150bcde86cf9753b7",
+      "bytes": 9450
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/INTEGRATION-FAILURES-FINAL.log",
+      "sha256": "40fa1531ff9e9410a851568752efdcae0b79426293dd20ad03e1771cf09c6a32",
+      "bytes": 5161
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/LINEAGE-NATIVE-FOCUSED.log",
+      "sha256": "0e5d284e97feb54c7c502d4216e26d657f1a64b2c2bd39d5bcc6aaa56f419776",
+      "bytes": 308
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/RECORDED-REGRESSIONS.log",
+      "sha256": "677e2d4ee639a50b1f1a72dc5e9ff38e1b314c0c853b19c4d01a62350ffc2046",
+      "bytes": 1406
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/SIMULATION-PROTOCOL.json",
+      "sha256": "ea423bead521566dfcaec3824cf02bbe42b3fa2eea3960ed03327f3121718f3d",
+      "bytes": 2039
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/SIMULATION-QUALIFICATION.json",
+      "sha256": "3b6c118bfc1f864d38b71930454bf76771f4aadb56810098a9469f508085210c",
+      "bytes": 4478
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/WHEEL-ENVIRONMENTS.json",
+      "sha256": "2eb612dee914281a781c944d92ad43cc06476e009880862bcab042b8f722327e",
+      "bytes": 145805
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/NATIVE-MODEL-MIRROR.json",
+      "sha256": "5ec132da880d016ecc36a0e0207386d1c802964bbaead7fe392bbdf617839b8d",
+      "bytes": 12080
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-VERIFIER-CHECKS.json",
+      "sha256": "5012040e6bc533361884e7cc92a103ec123017a236c47c32de573bd6ac23e85e",
+      "bytes": 12732
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/qualify_simulated.py",
+      "sha256": "ab8d02ce4e5ce7ef25fab58709fdabede821c3a038f7b6a05100757064efc7e3",
+      "bytes": 9746
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/verify_native_installed.py",
+      "sha256": "e9fb9d382b99e30ffe01a55438793e6fd1a80fb4c3732b20fc3539f36bc2ee3e",
+      "bytes": 6806
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/verify_default_installed.py",
+      "sha256": "c4407e5b77891ec85259333396e1764d4f1a1811ca0058f72371426c7f91464c",
+      "bytes": 12341
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/build_installed.py",
+      "sha256": "4faa37398751d4cd5c2a03c3a97dc79af662bbcced8a6c5e3436f05a0c96be9d",
+      "bytes": 4640
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md",
+      "sha256": "e178a01c0d8c0f263f9c66865bc99a062d7f6a95476b47cc4ac91399072c1746",
+      "bytes": 5105
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md",
+      "sha256": "200837668af57a5140e3afb8ba2877b3d9b3923718478ca78fc4e1fc927e9826",
+      "bytes": 3537
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-031-AFTER.json",
+      "sha256": "ac4e74ea1bb475bcfa57a0dac4e9320218ae0173fa75278fa9822851ecd22ed4",
+      "bytes": 978
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-032-AFTER.json",
+      "sha256": "33d73fc27878318143a7776d4639898e6525f671477648164f45cf73770652fd",
+      "bytes": 1004
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-033-AFTER.json",
+      "sha256": "d0feeb11d4379203aefee4dc92163e0372473e16314ec5882c4c9e36ed394247",
+      "bytes": 1097
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-034-AFTER.json",
+      "sha256": "bde78230c45b7bfbad3264517936f0b52e8d913a8fd78cd6b05e69dd50272dbf",
+      "bytes": 932
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-035-AFTER.json",
+      "sha256": "8c83dd0171c0f52f41b3b542ec5d436bdede540e52f90b3d1d0ac4d1ecf2e253",
+      "bytes": 1393
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-036-AFTER.json",
+      "sha256": "0a85e76524f0b56a98439af712cd92ef1a1f71ad5a5646f9f79b58f8427daa67",
+      "bytes": 1894
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-integration-20261027/FROZEN-037-AFTER.json",
+      "sha256": "24a49b2739365593c03f45deb877777d4cc19202b6b45b46e96304da226be3a8",
+      "bytes": 2453
+    },
+    {
+      "path": "data/cache/r09-native-frozen-038-after-20261028/guarded-installed-verification.json",
+      "sha256": "f330a9eb810f4fc110b5f94b390971ae915bc827545376c4fdf2c9adc26ea863",
+      "bytes": 14800
+    }
+  ]
+}

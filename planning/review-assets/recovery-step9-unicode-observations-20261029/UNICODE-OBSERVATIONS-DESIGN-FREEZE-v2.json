@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "status": "CORRECTED_PROSPECTIVE_OBSERVATION_DESIGN_FOR_ROOT_AND_PEER_REVIEW",
+  "inputs": {
+    "UNICODE-OBSERVATIONS-DESIGN-CONTRACT-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-observations-20261029\\UNICODE-OBSERVATIONS-DESIGN-CONTRACT-v2.json",
+      "bytes": 25381,
+      "sha256": "edacdc2bddbceab5735699ee9d973f89bad46b64713b193fe43ab80ed989101f"
+    },
+    "UNICODE-OBSERVATIONS-DESIGN-DELTA-v2.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-observations-20261029\\UNICODE-OBSERVATIONS-DESIGN-DELTA-v2.md",
+      "bytes": 2178,
+      "sha256": "c66ea57621717b9d8ceff3b7a7555685c148dcdf96fe0600b4e345a97f3ec98e"
+    },
+    "UNICODE-OBSERVATIONS-DESIGN-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-observations-20261029\\UNICODE-OBSERVATIONS-DESIGN-CONTRACT-v1.json",
+      "bytes": 18337,
+      "sha256": "8629cadf1f7981f596d06151d8a261495bc042d9f2d803e392d2880f046afcd5"
+    },
+    "UNICODE-OBSERVATIONS-INDEPENDENT-DESIGN-REVIEW-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-observations-20261029\\UNICODE-OBSERVATIONS-INDEPENDENT-DESIGN-REVIEW-v1.json",
+      "bytes": 5023,
+      "sha256": "384385f3db96c90e7b79d6fc44d8fff3a615e175acf8c01a7cfffef9d40d17cb"
+    }
+  },
+  "prospective_time_and_failure_conventions": true,
+  "wire_author_consulted": true,
+  "all15_setup_occurrences_in_work_set": true,
+  "fixture_generation_authorized": false,
+  "validator_implemented": false,
+  "pack_file_written": false,
+  "SDK_native_payload_operations": 0,
+  "source_qualification": false,
+  "profile_qualified": false
+}

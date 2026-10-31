@@ -1,0 +1,15 @@
+const fs=require('fs'),vm=require('vm'),path=require('path');
+const fields=new Map(),selections=new Map();
+const element=id=>{if(!fields.has(id))fields.set(id,{value:'',textContent:'',addEventListener(){}});return fields.get(id);};
+const document={getElementById:element,querySelector(selector){const name=/name="([^"]+)"/.exec(selector)[1];return selections.has(name)?{value:selections.get(name)}:null;}};
+const context={document,JSON,Date,Number,Error};vm.createContext(context);
+vm.runInContext(fs.readFileSync(path.join(__dirname,'embedded-script.js'),'utf8'),context);
+const empty=context.buildExport();
+if(empty.role!=='evaluation_only'||empty.candidates.length!==2||!empty.candidates.every(c=>c.dimensions.length===7&&c.dimensions.every(d=>d.selection===null&&d.rationale===null)))throw Error('Defaults are not blank');
+if(empty.source_reference_submitted!==null||empty.paired_preference!==null||empty.source_ref_id!==null)throw Error('Gate/preference/reference prefilled');
+selections.set('A-fidelity','cannot_assess');selections.set('preference','neither');element('source-ref-id').value='REF-EXAMPLE';
+const partial=context.buildExport();
+if(partial.candidates[0].dimensions[0].selection!=='cannot_assess'||partial.paired_preference!=='neither'||partial.source_ref_id!=='REF-EXAMPLE')throw Error('Selections not retained');
+element('elapsed').value='-1';let rejected=false;try{context.buildExport();}catch{rejected=true;}if(!rejected)throw Error('Negative elapsed time accepted');
+const result={status:'passed',mode:'DOM-free export checks; not browser visual QA',candidates:2,dimensions_per_candidate:7,blank_defaults:true,role:'evaluation_only',unadjudicated:true,negative_elapsed_rejected:true,network_calls:0};
+fs.writeFileSync(path.join(__dirname,'export-check.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

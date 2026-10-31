@@ -1,0 +1,65 @@
+{
+  "API_atom_types": 14,
+  "activity": {
+    "encoder_or_producer_implemented": false,
+    "original_payload_native_operations": 0,
+    "subject_imports": 0,
+    "subject_tests": 0
+  },
+  "combined_named_payload_bytes": 127809034,
+  "complete_profile_API_types": 7,
+  "header_bytes": 4096,
+  "live_value_payload_bytes": 13823488,
+  "pending": [
+    "independent finite schema peer",
+    "literal corpus/test freeze",
+    "separate root source scope",
+    "real provenance/physical/resource/roster gates"
+  ],
+  "pins": [
+    {
+      "bytes": 72400,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v1.json",
+      "sha256": "d5f28f0b5aa151515941b6a39b03d3a811c6012fa055490a4103927871fa69e4"
+    },
+    {
+      "bytes": 2822,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v1.md",
+      "sha256": "7cc0ced183210db307d547978bee32a6588144d10c61986f31c4e8b81133b5a8"
+    },
+    {
+      "bytes": 50498,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/author_format_contract_v1.py",
+      "sha256": "6854617e1e0260adc4cdf43f40af56e2773e50e3b6e163cca8217b0727bf92d0"
+    },
+    {
+      "bytes": 16676,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-PRECODE-SCHEMA-QUESTIONS-v1.json",
+      "sha256": "c0fe88dc391abe64987d29c0c4fad75fb44174468637e680886f508e5160b1d7"
+    },
+    {
+      "bytes": 5500,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-DESIGN-ACCEPTANCE-v2.json",
+      "sha256": "d3fee3d6e91b272267075f2b6df93e32e8a026e1f464ba8c0e3b072c155d7d64"
+    },
+    {
+      "bytes": 28502,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+      "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+    },
+    {
+      "bytes": 4294,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-F1-DESIGN-ADDENDUM-v2.json",
+      "sha256": "b1405e2d9f349a109a70647936c1d7a861923b26e8390dc7b56886e2427abedc"
+    },
+    {
+      "bytes": 10904,
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v2.json",
+      "sha256": "98729d86ccb8fa81855f456b0410f1c6361fedf29d3fc77c0f1f3b135233cd4f"
+    }
+  ],
+  "question_groups": 10,
+  "schema_version": 1,
+  "section_types": 8,
+  "status": "source_independent_schema_paused_before_literal_or_encoder_implementation"
+}

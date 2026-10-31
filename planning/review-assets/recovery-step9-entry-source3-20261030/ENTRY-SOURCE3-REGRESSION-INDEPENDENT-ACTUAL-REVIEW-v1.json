@@ -1,0 +1,148 @@
+{
+  "actual_entries": 5,
+  "actual_original_dispatches": 61,
+  "actual_read_dispatches": 10,
+  "actual_worlds": 5,
+  "all_61_native_rows_identical_to_retained_source2": true,
+  "audit_denials": 0,
+  "before_source2_proof": {
+    "bytes": 337633,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-PROOF-v2.json",
+    "sha256": "a1ff84a198834c4fb5660f79693a65539c9e365d97209b03dfc972764268c459"
+  },
+  "binding": {
+    "bytes": 3764,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-BINDING-v1.json",
+    "sha256": "b60c09016d331473676882601f04301098af00af6a2b07890c870352c7323eba"
+  },
+  "changed_pins": 0,
+  "checker": {
+    "bytes": 9174,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\check_entry_source3_actual_regressions_v1.py",
+    "sha256": "f3b7012a8e3c42c2b30b9265c8e513d331fc824157804ce9137500eb8aae632e"
+  },
+  "elapsed_seconds": 0.2029999999795109,
+  "execution_scope": {
+    "bytes": 2752,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-EXECUTION-SCOPE-v1.json",
+    "sha256": "5424f17b7c4439a6b6f932b3356701c18d5a336a99e0835d7d9c9c1d4196a3c8"
+  },
+  "failed_methods": 0,
+  "fifth_stopped_close_evidence": {
+    "api": "CloseHandle",
+    "cache_scalar": null,
+    "cache_scalar_unobserved": true,
+    "call_stopped": true,
+    "callback_caught_original": 1,
+    "chosen_path_close_attempts": 1,
+    "known_value": 1,
+    "native_state": "COMMITTED",
+    "ordinal": 18,
+    "original_error_is_primary": true,
+    "original_error_rethrown": true,
+    "raw_payload_bits": 1,
+    "wrapper_result_is_none": true,
+    "wrapper_return_observed": true,
+    "wrapper_state": "returned"
+  },
+  "five_assertion_ASTs_unchanged": true,
+  "interpretation": "The same fifth assertion now passes: committed close BOOL1, stopped flag, normal wrapper return and original MemoryError remain known, while the same-call scalar cache stays UNOBSERVED. Original raw rows and the other four assertions are retained unchanged. The fresh cleanup-under-earlier-error converse still passes.",
+  "limitations": [
+    "Only five synthetic entry worlds, not entry32/53 or native25 completion.",
+    "The measured0.203s belongs to this injected cooperative diagnostic, not production performance/resource fit.",
+    "No native/physical/real-first-entry/full-roster/new84/scientific or human qualification."
+  ],
+  "material_blockers": [],
+  "methods": [
+    {
+      "actual_helper_compiler_callbacks": 0,
+      "known_read_bytes": 0,
+      "method": "test01_valid_entry",
+      "once_close_attempts": 0,
+      "original_calls": 0,
+      "outcome": "PASS",
+      "read_calls": 0
+    },
+    {
+      "actual_helper_compiler_callbacks": 3,
+      "known_read_bytes": 2196237,
+      "method": "test02_normal_captured_helpers_finish",
+      "once_close_attempts": 5,
+      "original_calls": 37,
+      "outcome": "PASS",
+      "read_calls": 7
+    },
+    {
+      "actual_helper_compiler_callbacks": 0,
+      "known_read_bytes": 0,
+      "method": "test03_staged_scalar_has_no_cleanup_authority",
+      "once_close_attempts": 0,
+      "original_calls": 1,
+      "outcome": "PASS",
+      "read_calls": 0
+    },
+    {
+      "actual_helper_compiler_callbacks": 0,
+      "known_read_bytes": 0,
+      "method": "test04_committed_scalar_survives_cache_boundary_failure",
+      "once_close_attempts": 1,
+      "original_calls": 2,
+      "outcome": "PASS",
+      "read_calls": 0
+    },
+    {
+      "actual_helper_compiler_callbacks": 3,
+      "known_read_bytes": 99000,
+      "method": "test05_stopped_close_normal_return_does_not_heal_cache",
+      "once_close_attempts": 3,
+      "original_calls": 21,
+      "outcome": "PASS",
+      "read_calls": 3
+    }
+  ],
+  "native_axis_cells_byte_verified": 244,
+  "once_close_attempts": 9,
+  "passed_methods": 5,
+  "preparation": {
+    "bytes": 5962,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-PREPARATION-v1.json",
+    "sha256": "2470ac0f83e4f5e4c3c0fde4fa9079023205f0f17d1153d3a70d0e1efe21b84f"
+  },
+  "proof": {
+    "bytes": 336850,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE3-REGRESSION-PROOF-v1.json",
+    "sha256": "ca6baf6761b6342cf0578e1f74167f3379e9efb3b1306ac5c1d1e5c38a110e28"
+  },
+  "schema_version": 1,
+  "setup_cleanup_evidence_errors": 0,
+  "source_map": {
+    "preflight_entry_kernel_v3": {
+      "bytes": 121192,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "preflight_file_view_v3": {
+      "bytes": 3614,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    },
+    "preflight_owner_ops_v3": {
+      "bytes": 39889,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "role_ledger_codec_v4": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    }
+  },
+  "source_pause": {
+    "bytes": 4114,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE-PAUSE-v3.json",
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "status": "CLEAR_SOURCE_PURE_FIVE_ENTRY_REGRESSIONS_ONLY",
+  "subject_execution_by_reviewer": 0,
+  "total_raw_rows_byte_verified": 61
+}

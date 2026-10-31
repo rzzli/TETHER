@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "passed_installed_source_and_token_replay",
+  "installed_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-token-aware-wheel-20261026\\environment-v2",
+  "optional_dependency": "pyarrow==21.0.0",
+  "source": {
+    "status": "verified",
+    "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+    "model_calls": 0,
+    "scientific_validation": "not_performed"
+  },
+  "quote_count": 6,
+  "input_reservation": 28241,
+  "original_data_access": "27 explicitly approved files only",
+  "original_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "guards": {
+    "live_code": [],
+    "unapproved_source": [],
+    "imports": [],
+    "dispatch": []
+  },
+  "elapsed_seconds": 2.89000000001397,
+  "generation_calls": 0,
+  "scientific_validation": "not_performed",
+  "whole_R09_complete": false
+}

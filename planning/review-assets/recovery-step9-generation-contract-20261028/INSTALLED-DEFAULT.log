@@ -1,0 +1,897 @@
+{
+  "installed_generation_v3": {
+    "role": "pure_synthetic_v3_preparation_and_semantic_validation_only",
+    "stages": [
+      {
+        "fixture": "synthetic-context",
+        "arm": "asof_interpretation",
+        "index": 0,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "aace12d7947a5b938cce1364c58fdfdcb3c75dc08dda01c40d266fc589289022",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 8002,
+        "payload_bytes": 15016,
+        "response_sha256": "a60698d756629366afbdce55f06917f9947fdbab98f7eaadb63711cb8877bb2d",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "a60698d756629366afbdce55f06917f9947fdbab98f7eaadb63711cb8877bb2d"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "622fb7fc03e005e4c5ac0134964704f4d6f36612ea40f067247f914c9d4904e9"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "867be73951fe282412f95dc6cabf2df615a40c90588e3c3495d81a81d419d882"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-context",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 0,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "55184a85aac3d3f567f7898abac2c57620bd8cec4f9dfd418f2d81ac37e96304",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 7999,
+        "payload_bytes": 15013,
+        "response_sha256": "10662a2b58de0a5b61c59af7849492b13b26ada7aba0dd28bdfabfec7b4efb2c",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "10662a2b58de0a5b61c59af7849492b13b26ada7aba0dd28bdfabfec7b4efb2c"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "4f5e1dff5aa00cf7b6be3aee510ee2769a7f08822be6171881d8fa70c6bf2928"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "2d9e9a88af628447b24eb4a978681bd8b56d7ca906d5367dcca1c1d54f816e03"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-context",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 1,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "6decd780c7ccd7c9bdf2b1d7e9e9e103ff8c529f7053fb32668d5c1beca41b3c",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 8071,
+        "payload_bytes": 15093,
+        "response_sha256": "d37961a455ceeedf180dd82321fa061eb2eedef322184b23f839fa70125b6e31",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "d37961a455ceeedf180dd82321fa061eb2eedef322184b23f839fa70125b6e31"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "6dc7fc8e6276b288b70176c9a76ba0f2f55fbc3f19051021c1959c4ac00f5374"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "8240c2ecf59ae0cdc424715ccf57569a119c2fdf69dd1d8c0151f26c83fe90ad"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-context",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 2,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "a5e0310bab3a117f47f2effe112f62aeac2e57433d6c87e826b8e7510b8d5ae0",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 8132,
+        "payload_bytes": 15162,
+        "response_sha256": "1c5b555aae440f617b7e0557226e0272a47488d526a88e65351f93afd3c33b6b",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "1c5b555aae440f617b7e0557226e0272a47488d526a88e65351f93afd3c33b6b"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "5c00d4122442a8f9018f96c72048484d9f04d718ea67872426339e28bb5e38d6"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "f4e098a2af301c539e213f6ee2688d731c17a7bedadc8804b4cd44756346042b"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-context",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 3,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "0a3ebdf0d911033286dc3f9194b31deea0f23e912b1f96c6adb37f3f2c995fd9",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 8185,
+        "payload_bytes": 15223,
+        "response_sha256": "b8dbc005ae6d10ba298400aec3a80309e0d93c63ae81e10e785a4a97f1663de6",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "b8dbc005ae6d10ba298400aec3a80309e0d93c63ae81e10e785a4a97f1663de6"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "79620fc562d8134ef820ac87f45fa711976d479db410667cf7d631076efa1d42"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "b46f7c04a0f850e376e76359e090357cb355b3ef5bb124c9cfe8a98c0be2e91c"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-context",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 4,
+        "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+        "payload_sha256": "8586cbe0e4e6fb99dafb4a4dfeb332c8364d6d05915053fcaa09d3c3c2569987",
+        "generation_contract_sha256": "f5e20a11259fcf7e20a89fbc0837e1d916c78cca3cfafffafd52a312a89d4182",
+        "grammar_sha256": "e250e03ea6835848196f8d716c15a77e3b03778ac7f49d6758c9f05758d1c407",
+        "grammar_bytes": 5823,
+        "prompt_bytes": 8243,
+        "payload_bytes": 15289,
+        "response_sha256": "9042681edaa5b520d614fc6d232cce16c8e7b4087626db8bd22b83b44875ae3a",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "9042681edaa5b520d614fc6d232cce16c8e7b4087626db8bd22b83b44875ae3a"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "27e5b37c7e7bd36fc803d3367ae72a35e7b20bb20dfbc8c81d35ae9d6c406b53"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "07a34fb4e15c4114be5e887fd3f17a56673ceda48f900b5bcc882dd9321e0e80"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "asof_interpretation",
+        "index": 0,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "329b705149ee588ed672013c4279a9abb0dc2e5baf445c04143401a236289ebb",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7276,
+        "payload_bytes": 14035,
+        "response_sha256": "e8dfce381530bdae6968cf20fa3fc497d0d8e3de28d31d6363c8f54ae09c02f8",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "e8dfce381530bdae6968cf20fa3fc497d0d8e3de28d31d6363c8f54ae09c02f8"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "2a702bd7572a9b4eff37e65aa3061d91239e4130099b26058a1f8cf57df92332"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "ab22b0eb68f1f9a4609a4fd20b15abecd8c9aa8985c40bfb1e495aa618a45935"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 0,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "68977e52f77945bf1ab234a53b4c25755a8dcce7a1b45ce7c2a578b2a02ab106",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7273,
+        "payload_bytes": 14032,
+        "response_sha256": "34281caf18ce8a597f6cc43ea23455b50dfa0d889f777687f4915bc7fbceace5",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "34281caf18ce8a597f6cc43ea23455b50dfa0d889f777687f4915bc7fbceace5"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "e529f23128f29ca9b6474023aaa147de458b9c138f6ca008bee8b85ff927d2b5"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "43a09efc29574384560cb441ac74507e33e0ef20e68ae4c37cbfde21a3b93a1e"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 1,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "ac548f658fe0ce5706b1367cb3da0ff099bae6e3298afb70601e773c96ad0852",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7345,
+        "payload_bytes": 14112,
+        "response_sha256": "4b080b58d9fb54ce6f2a4ad4f2b8f9d97591483151a39ac89d3a3a917bd9a8c0",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "4b080b58d9fb54ce6f2a4ad4f2b8f9d97591483151a39ac89d3a3a917bd9a8c0"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "f06f34c09941428cf58adc48e1089d8125058792b52081b7f8c6908c95b5a400"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "c8042b833b1ba2561094ab81dba65848958382edcb367f77247a4c193a5fb95e"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 2,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "8ba91a61a9628f300e30b5533dddc6217d13dfb76dbe36ed18137b3a4e5a8ad5",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7406,
+        "payload_bytes": 14181,
+        "response_sha256": "82d031b3f0d3c621cf5bd69ad49da0408144f9b07ebaeeab4f5f0a9559b9e19d",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "82d031b3f0d3c621cf5bd69ad49da0408144f9b07ebaeeab4f5f0a9559b9e19d"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "210c951c8b05879246dedef4b524591279e633ad1b2792d54b219d7a35555a17"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "48d3c280bbaa07b7188b2321fe020c538e85f7aa5767ff7fe75ff9324d53d53d"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 3,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "2d985a941dcd5f10cb468b8c87c134b41490b443e42a94cb58875c8ad0c91a31",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7459,
+        "payload_bytes": 14242,
+        "response_sha256": "f008151e8151a65cc3e7bfb7e81902dbc982790c312b3d2066b3923654990912",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "f008151e8151a65cc3e7bfb7e81902dbc982790c312b3d2066b3923654990912"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "8e2f1458e26afea0a806a23b155755b9ffc18e547bb97557410ffa24ea1c10a6"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "b56d851f9957d0b80a1822a5d1af37583fd3204f546390db5800e18ea74e077e"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      },
+      {
+        "fixture": "synthetic-orientation",
+        "arm": "adapted_virtual_biotech_interpretation",
+        "index": 4,
+        "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+        "payload_sha256": "c272985af6717498cee9120f0e10a1b216aa0a7c9186f3cef216d70f3fa6887a",
+        "generation_contract_sha256": "91ecaa6a3784ee27bb5d31ca7a014887129ae15f3fbe918b76cfb15b518c5c49",
+        "grammar_sha256": "de1e58d6c259ba3bdc868acca742e5d12f498a1e4e0384f00c5415884aacaafc",
+        "grammar_bytes": 5695,
+        "prompt_bytes": 7517,
+        "payload_bytes": 14308,
+        "response_sha256": "e9e817b3f340d774938dca66f92209e0a6c996cd54f66a58311e1de2ee54c48f",
+        "states": [
+          {
+            "state": "answered",
+            "response_sha256": "e9e817b3f340d774938dca66f92209e0a6c996cd54f66a58311e1de2ee54c48f"
+          },
+          {
+            "state": "partial",
+            "response_sha256": "bac001de59880f61194fbdedf85feed4256d7921269ed251a3ad02c8c7f59212"
+          },
+          {
+            "state": "abstained",
+            "response_sha256": "7b4a2cfdcab9241cc95c57bd0554a02ef160708fe0405fda7b88c33f8d3a7a23"
+          }
+        ],
+        "deeply_immutable": true,
+        "native_conformance": "unverified"
+      }
+    ],
+    "stage_count": 12,
+    "state_validations": 36,
+    "rejected": [
+      "synthetic-context/asof_interpretation/0/old_reconstruct_new",
+      "synthetic-context/asof_interpretation/0/new_reconstruct_old",
+      "synthetic-context/asof_interpretation/0/old_validate_new",
+      "synthetic-context/asof_interpretation/0/new_validate_old",
+      "synthetic-context/asof_interpretation/0/contradictory_state",
+      "synthetic-context/asof_interpretation/0/changed_grammar",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/old_reconstruct_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/new_reconstruct_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/old_validate_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/new_validate_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/contradictory_state",
+      "synthetic-context/adapted_virtual_biotech_interpretation/0/changed_grammar",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/old_reconstruct_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/new_reconstruct_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/old_validate_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/new_validate_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/contradictory_state",
+      "synthetic-context/adapted_virtual_biotech_interpretation/1/changed_grammar",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/old_reconstruct_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/new_reconstruct_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/old_validate_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/new_validate_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/contradictory_state",
+      "synthetic-context/adapted_virtual_biotech_interpretation/2/changed_grammar",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/old_reconstruct_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/new_reconstruct_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/old_validate_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/new_validate_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/contradictory_state",
+      "synthetic-context/adapted_virtual_biotech_interpretation/3/changed_grammar",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/old_reconstruct_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/new_reconstruct_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/old_validate_new",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/new_validate_old",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/contradictory_state",
+      "synthetic-context/adapted_virtual_biotech_interpretation/4/changed_grammar",
+      "synthetic-orientation/asof_interpretation/0/old_reconstruct_new",
+      "synthetic-orientation/asof_interpretation/0/new_reconstruct_old",
+      "synthetic-orientation/asof_interpretation/0/old_validate_new",
+      "synthetic-orientation/asof_interpretation/0/new_validate_old",
+      "synthetic-orientation/asof_interpretation/0/contradictory_state",
+      "synthetic-orientation/asof_interpretation/0/changed_grammar",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/old_reconstruct_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/new_reconstruct_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/old_validate_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/new_validate_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/contradictory_state",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/0/changed_grammar",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/old_reconstruct_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/new_reconstruct_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/old_validate_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/new_validate_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/contradictory_state",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/1/changed_grammar",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/old_reconstruct_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/new_reconstruct_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/old_validate_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/new_validate_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/contradictory_state",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/2/changed_grammar",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/old_reconstruct_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/new_reconstruct_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/old_validate_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/new_validate_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/contradictory_state",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/3/changed_grammar",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/old_reconstruct_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/new_reconstruct_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/old_validate_new",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/new_validate_old",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/contradictory_state",
+      "synthetic-orientation/adapted_virtual_biotech_interpretation/4/changed_grammar",
+      "oversized_original_quote_no_pruning",
+      "oversized_raw_response"
+    ],
+    "negative_case_count": 74,
+    "native_conformance": "unverified",
+    "execution_authorized": false,
+    "actual_model_calls": 0,
+    "tokenizer_calls": 0,
+    "native_processes": 0,
+    "network_calls": 0,
+    "scientific_validation": "not_established",
+    "relocation": {
+      "kind": "plain_json_pure_artifact_relocation_only",
+      "original": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-generation-installed-20261028\\generation-v3-original",
+      "copied": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-generation-installed-20261028\\generation-v3-relocated",
+      "external_anchor": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-generation-installed-20261028\\generation-v3-external-anchor.json",
+      "external_anchor_sha256": "191b9da0d5011205c435b358f0d13811e53874105c60790f305936c067535eb6",
+      "external_expected_receipt_sha256": "63762a15f4874ebfde42385631ddf2b5629e861a0da03e814691645ce8b3b9f5",
+      "fixture_sha256": "403b7bce94a6576727994f02c1c39b82614398de8df4a34b4294c5db95bf62a3",
+      "preparation_sha256": "5b29d91c5892076a4e62901cc3158991d60b5e77c84ca0f22292dad17ce27b7e",
+      "validated_response_sha256": "a60698d756629366afbdce55f06917f9947fdbab98f7eaadb63711cb8877bb2d",
+      "original_json_reads_denied": true,
+      "archived_code_executed": false,
+      "new_native_or_dossier_family": false
+    }
+  },
+  "installed_native_wrapper": {
+    "role": "invented_wrapper_only",
+    "positive_cases": 1,
+    "negative_cases": [
+      "request_sha256",
+      "body_sha256",
+      "complete"
+    ],
+    "accounting": {
+      "native_dispatch_attempts": 1,
+      "known_http_attempts": 0,
+      "unknown_http_attempts": 0,
+      "known_model_calls": 0,
+      "unknown_model_calls": 0,
+      "known_simulated_model_calls": 1,
+      "unknown_simulated_model_calls": 0,
+      "known_simulated_http_attempts": 1,
+      "actual_model_calls": 0,
+      "observed_model_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "simulated_transport_usage": {
+        "input_tokens": 20,
+        "output_tokens": 5,
+        "cost_usd": 0.0
+      },
+      "conservative_unresolved_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "recovered_transport_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    "actual_native_servers": 0,
+    "network_calls": 0,
+    "duration_cases": [
+      {
+        "id": "zero",
+        "accepted": true,
+        "expected": true
+      },
+      {
+        "id": "enclosed",
+        "accepted": true,
+        "expected": true
+      },
+      {
+        "id": "report_equal",
+        "accepted": true,
+        "expected": true
+      },
+      {
+        "id": "over_budget",
+        "accepted": false,
+        "expected": false
+      },
+      {
+        "id": "at_budget",
+        "accepted": false,
+        "expected": false
+      },
+      {
+        "id": "above_report",
+        "accepted": false,
+        "expected": false
+      },
+      {
+        "id": "missing_budget",
+        "accepted": false,
+        "expected": false
+      },
+      {
+        "id": "missing_report",
+        "accepted": false,
+        "expected": false
+      }
+    ]
+  },
+  "installed_interpretation_interface": [
+    {
+      "fixture": "synthetic-context",
+      "arm": "asof_interpretation",
+      "index": 0,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "6d6fe967b4349b105d1f8e354c4774a5813d9a0cacd8386c5a28c32d7901a8fe",
+      "response_sha256": "e2c143e702f898c4ec4fe36965b3be80699e6aeec4fc8517fd2c30eaca428645",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-context",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 0,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "74c709a691f5ab6e0b0dd85bb6ab9e60ddb29b1124146a6241a2d5b50318da6c",
+      "response_sha256": "dba9a234d79f18ea199a9b26b66a7565a95de52957161d02b8b74b3e8167f2f4",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-context",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 1,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "5fc84136f6c61ac852a5868e9a0dfde65cf431573e722e7efefbf740c9218dd4",
+      "response_sha256": "f2a2e3b4c9aa6916751c6f37a4bd3fe0c0718db513125f24d23ba476fedb0c94",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-context",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 2,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "75ed44d7f14d99899d33beef7c53f7eba57b549ee8029e53f8a2bf635f249b11",
+      "response_sha256": "2d5eae87426168d9539232f5ec2f5b557d6e5d34e82e850c4b85e240ec3b6c1c",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-context",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 3,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "9dff1bdc082aa47ca429aa34e3c0f95cb95285cacb1fc59a37565d302c633f85",
+      "response_sha256": "ebabe7cd25dfacf00bd460b661b68ce05249139a0d3516e9de5f67971dfb2fd9",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-context",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 4,
+      "request_sha256": "22099c48404069444ce482f0f81c37c36814b7fe77cc6f8ca54326761e458221",
+      "payload_sha256": "9fc4fcc84a803144a076ae7a592a361b5aa0444635d263e46362705192e15579",
+      "response_sha256": "587e0dc83ffeb510e9002a92e4a73c6ad1662e99ad68c39e1436090cb07715d8",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "asof_interpretation",
+      "index": 0,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "4602751213d10ea960b77c0a13cf3a34f307b8ed30e37f89d7070180b86e689f",
+      "response_sha256": "d346d38918ff54a6296db958f0956baeae6e5c1e8413615425dcb340596b2508",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 0,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "2dec321a6d17a8f4da31eba0cb03eef71a24a3fda4e98250f1004c1b98fdef00",
+      "response_sha256": "5dd7bcfe67fba0883e9dbae665514a519d6a34e948bfd591ad0ebd528eed239e",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 1,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "947ef0dac513e88addb0e504c31f65e89eb1ca9ebfc083fb5acfe14382348d80",
+      "response_sha256": "32c5bd3be469d28585a31eb1511411223bb16246f397b056d1800ae816d3634b",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 2,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "cc0b40d9693c3eab80c28941a19a699f67fb0047a1a061c7cd418ed19b6fe12d",
+      "response_sha256": "0bb4aa592cb28f272850f4d4f76e484a2c713e990da4db2f551340aff6596d40",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 3,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "af9741d1c3e4560d1868f6339b656653cafa7bddb24f6806f8b5be52df7ea4f7",
+      "response_sha256": "2816f0fc44c0177c41be919021a9144ac1cc35f53375b327b015a55cd37b35ef",
+      "states_checked": 3
+    },
+    {
+      "fixture": "synthetic-orientation",
+      "arm": "adapted_virtual_biotech_interpretation",
+      "index": 4,
+      "request_sha256": "2a951ee8bc329aec95bf7de9e2cb189b41c2355ae7165d55d9762f75ae811219",
+      "payload_sha256": "f3825a203616946782ddfeae557e66428f4bab51ea4c8987de1a7b68cc5f2744",
+      "response_sha256": "f3b0e3a2b938a4c5e0e4e16ce1c8e5d61893432d60d8bc8d649c794c18b31258",
+      "states_checked": 3
+    }
+  ],
+  "installed_retrieval_smoke": {
+    "actual_model_calls": 0,
+    "automatic_retries": false,
+    "elapsed_seconds": 19.734000000054948,
+    "fixture_declared_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 128,
+      "output_tokens": 128
+    },
+    "four_arm_manifests": "preparation_only_no_four_arm_outputs",
+    "input_reserved": 15656,
+    "native_processes": 0,
+    "observed_model_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "output_reserved": 2048,
+    "recorded_adapter_cells": 2,
+    "retrieval_preparations": 2,
+    "role": "evaluation_only",
+    "run_id": "6d0d8b53-1b5f-414c-9469-8d5f8855524f",
+    "schema_version": 1,
+    "scientific_validation": "not_attempted",
+    "status": "recorded_contract_completed_not_scientific_validation",
+    "tokenizer_processes": 0,
+    "track": "bounded_collected_corpus_recorded_integration",
+    "receipt_sha256": "c87e3389527c87bf6290bbf159f5372354f2d90fe0104a45dd5cc0342f09669e"
+  },
+  "installed_comparison_smoke": {
+    "status": "verified",
+    "run_id": "4b5db0ea-e7d5-49c4-84ff-43120f7beae8",
+    "receipt_sha256": "a2100727ff4fcd2bbc9bc4b3ea958bf66c3e76690c8eef4ffe8513fcbc2aa9d4",
+    "recorded_adapter_cells": 12,
+    "pure_baseline_results": 4,
+    "actual_model_calls": 0,
+    "scientific_validation": "not_attempted",
+    "scope": "synthetic_recorded_contract_only"
+  },
+  "installed_baseline_smoke": {
+    "status": "verified",
+    "receipt_sha256": "aca61201691cde6dfdcbf3176df820ad36a0f8ef8f8b6e5d7fff1f9810f415a3",
+    "synthetic_cells": 4,
+    "artifact_files": 19,
+    "model_calls": 0,
+    "scientific_validation": "not_attempted",
+    "real_case_admission": false
+  },
+  "installed_study_smoke": {
+    "status": "recorded_smoke_passed",
+    "success": {
+      "status": "verified_study_cell",
+      "byte_integrity": "verified",
+      "mechanical_consistency": "verified",
+      "consumer_contract": "verified",
+      "scientific_validation": "not_established",
+      "run_id": "02bea473-fb60-4caf-a5b7-bf4f600b74d9"
+    },
+    "failure": {
+      "schema_version": 1,
+      "status": "failed_or_incomplete",
+      "calls": 1,
+      "unresolved_attempts": [],
+      "measured_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "estimated_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "durable_events": 6,
+      "failure_marker_present": true,
+      "recovery_action": "inspect only; never automatically repeat any cell"
+    },
+    "native_model_calls": 0,
+    "provider_spend_usd": 0,
+    "scientific_validation": "not_established"
+  },
+  "status": "passed",
+  "installed_module": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Lib\\site-packages\\asof\\archive\\core.py",
+  "isolated_mode": true,
+  "verifier_environment": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment",
+  "results": [
+    {
+      "run_id": "legacy_v1",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "unavailable_legacy_v1",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 1,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 13,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 27
+      },
+      "elapsed_seconds": 1.0309999999590218
+    },
+    {
+      "run_id": "core_v2",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 2,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 16,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 37
+      },
+      "elapsed_seconds": 1.297000000020489
+    },
+    {
+      "run_id": "local_selection_recorded",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 3.672000000020489
+    },
+    {
+      "run_id": "local_selection_native",
+      "status": "passed",
+      "result": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 19,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 20,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 19
+      },
+      "elapsed_seconds": 3.812000000034459
+    },
+    {
+      "run_id": "bounded_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "interpretation_integrity_and_structure_verified",
+        "source_inputs_replayed": true,
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "code_closure_scope": "historical_declared_dependencies; no execution attestation",
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 3.0929999999934807
+    },
+    {
+      "run_id": "question_interpretation_recorded",
+      "status": "passed",
+      "result": {
+        "status": "question_run_source_and_mechanical_consistency_verified",
+        "byte_integrity": "verified",
+        "mechanical_consistency": "verified",
+        "source_admission": "replayed",
+        "adapter_verification": "exact_recorded_replay_not_model_execution",
+        "scientific_validation": "not_performed",
+        "clinical_probability": null,
+        "archive_resolver_version": 1,
+        "archived_code_executed": false,
+        "source_binding": "caller_approved_restored_files",
+        "external_receipt_anchor_checked": true
+      },
+      "elapsed_seconds": 4.532000000006519
+    },
+    {
+      "run_id": "question_latest_failed",
+      "status": "passed",
+      "result": {
+        "schema_version": 2,
+        "kind": "question_interpretation",
+        "last_event": "build_failed",
+        "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+        "durable_events": 9,
+        "calls": 1,
+        "unresolved_attempts": [],
+        "measured_usage": {
+          "input_tokens": 4650,
+          "output_tokens": 601,
+          "cost_usd": 0.0
+        },
+        "estimated_upper_usage": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": 0
+        },
+        "receipt_present": false,
+        "failure": {
+          "schema_version": 2,
+          "run_id": "b250e0bc-43bb-425c-8dcb-7509723b9516",
+          "stage": "response_validation",
+          "error_class": "ContractError",
+          "secondary_failures": [],
+          "qualification": "Failure fallback, not a successful receipt or execution attestation"
+        },
+        "recovery_action": "inspect only; never repeat inference",
+        "status": "terminal_failure_inspected_not_success",
+        "source_admission": "replayed",
+        "scientific_validation": "not_performed",
+        "archived_code_executed": false
+      },
+      "elapsed_seconds": 4.452999999979511
+    }
+  ],
+  "elapsed_seconds": 21.905999999959022,
+  "peak_working_set_bytes": 63713280,
+  "original_root_access_attempts": [],
+  "archived_execution_attempts": [],
+  "repository_tools_import_attempts": [],
+  "network_or_child_attempts": [],
+  "receipt_bytes_rewritten": false,
+  "historical_program_execution": "not_performed",
+  "scientific_validation": "not_established"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "role": "prospective_real_input_simulated_native_qualification",
+  "created_at_utc": "2026-10-28T03:33:39.558052+00:00",
+  "version": "0.3.10",
+  "helper_sha256": "7e3ab477d6964d55d7c1deaddaccb6cf74b0724e8bb6b41886fabfbbb5cea759",
+  "code_validation": {
+    "path": "data/cache/recovery-step9-duration-validation-20261028/code-validation.json",
+    "sha256": "7892b4108f5579a1b4a9cc693cc8940887699d381aee6c958acfbb56162269a9"
+  },
+  "source_authority": {
+    "path": "planning/review-assets/recovery-step9-real-retrieval-20261027/SOURCE-AUTHORITY-v1.json",
+    "sha256": "84ff16c264c48daf995dc9533bb42227c7c53964edd4c039eae468286b3d6520"
+  },
+  "raw_root": "E:\\projects_data\\drug_target_agents_data",
+  "model_root": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z",
+  "inventory_path": "planning/review-assets/recovery-step5-20261026/inventory.json",
+  "model_mirror_sha256": "5ec132da880d016ecc36a0e0207386d1c802964bbaead7fe392bbdf617839b8d",
+  "execution_scope": "simulated_native_transport",
+  "maximum_tokenizer_children": 6,
+  "maximum_simulated_posts": 6,
+  "maximum_simulated_servers": 1,
+  "actual_model_calls": 0,
+  "actual_native_servers": 0,
+  "actual_network_requests": 0,
+  "provider_cost_usd": 0,
+  "automatic_retries": false,
+  "budget": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0,
+    "max_seconds": 300,
+    "max_retries": 1
+  },
+  "case": "existing_exposed_IL6R_RA_inhibit_antibody",
+  "fresh_case": false,
+  "declared_candidate_count": 5,
+  "original_source_files": 27,
+  "selected_strategy": "literal_case_overlap_then_id_v1",
+  "features": {},
+  "clinical_probability": null,
+  "scientific_validation": "not_attempted",
+  "human_reviews": "pending",
+  "new_downloads": 0,
+  "interpretation": "Exact source reports through fake process and HTTP; actual approved tokenizer only. No model result, grammar qualification or native R07 restart."
+}

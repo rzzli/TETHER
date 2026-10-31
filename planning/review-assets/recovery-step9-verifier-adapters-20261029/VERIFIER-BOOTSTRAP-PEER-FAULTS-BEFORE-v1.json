@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "HOLD_two_ordinary_interface_gaps_reproduced_before_fix",
+  "source_sha256": "4c5c0ee62c5663e7666094fdccfcd110ab1ed77b420dfc6c6499a12d7a899966",
+  "checker_sha256": "0283b18c867c60ee9e02bee5a7f4025baa4279b483530d4680df899128f61255",
+  "foreign_read_port": {
+    "reproduced": true,
+    "original_read_calls": 0,
+    "foreign_read_calls": 1,
+    "source_hash_marked_complete": true,
+    "captured_bytes": 8,
+    "original_open_close_calls": [
+      1,
+      1
+    ],
+    "original_port_binding_unchanged": true,
+    "runtime_qualification_flags": [
+      false,
+      false
+    ]
+  },
+  "snapshot_nested_alias": {
+    "reproduced": true,
+    "original_primary": {
+      "phase": "fixture",
+      "error_class": "RuntimeError",
+      "error": "original diagnostic"
+    },
+    "changed_primary": {
+      "phase": "changed_phase",
+      "error_class": "RuntimeError",
+      "error": "changed through returned snapshot"
+    },
+    "original_compile": [
+      {
+        "module": "sample",
+        "state": "return_observed",
+        "return_observed": true
+      }
+    ],
+    "changed_compile": [
+      {
+        "module": "sample",
+        "state": "changed_compile_state",
+        "return_observed": true
+      }
+    ],
+    "nested_errors_altered": true,
+    "copied_outer_list_control": true,
+    "copied_file_row_control": true,
+    "fake_compiler_callbacks": 1,
+    "captured_source_exec_or_compiles": 0,
+    "original_close_calls": 1,
+    "runtime_qualification_flags": [
+      false,
+      false
+    ]
+  },
+  "elapsed_seconds": 0.030999999959021807,
+  "budget_seconds": 20,
+  "audit_denials": [],
+  "scope": "Injected pure source interface/clock/slots/sink/fake callbacks only; no live adapter, evidence qualification or runtime-success exploit",
+  "synthetic_original_path_opens": 0,
+  "live_filesystem_port_calls": 0,
+  "target_SDK_calls": 0,
+  "native_compiler_calls": 0,
+  "CPU_GGUF_oldpack_operations": 0,
+  "proposed_corrections": [
+    "Reject port is not owner._port before capture hash/read state mutation or dispatch.",
+    "Snapshot must detach every nested retained primary/error/compile diagnostic container; add mutating-returned-snapshot regression."
+  ]
+}

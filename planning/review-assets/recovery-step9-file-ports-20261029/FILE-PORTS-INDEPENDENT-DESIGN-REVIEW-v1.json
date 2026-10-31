@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "REVISION_REQUIRED_ONE_METADATA_DIRECTORY_GRAMMAR_GAP_BEFORE_IMPLEMENTATION",
+  "reviewed_contract_sha256": "bc73427712614a6652e37924a6ff91646c1b8a881e5928cd98b200516bce7a05",
+  "retained_semantic_sha256": "a7ada923353b9efbc9648d041526e46639db483510f35ffcbf3676a9cd908913",
+  "scope": "Independent finite source/design and official-documentation review only. No platform implementation, ABI construction, real file-port test, source-closure qualification, old-run replay or payload operation.",
+  "required_findings": [
+    {
+      "id": "metadata_drive_root_not_in_file_leaf_grammar",
+      "contract_fields": ["semantic_contract.admitted_paths.grammar", "semantic_contract.admitted_paths.ancestor_index", "semantic_contract.metadata_scans.ancestor_calls"],
+      "source_basis": "The referenced accepted source_key requires a drive-absolute path with at least4characters and rejects empty components after drive-prefix splitting. C:\\ and D:\\ are3characters and cannot pass it. The new ancestor index includes all directory ancestors of admitted originals/output parents, including those drive roots.",
+      "effect": "The design has no representable admitted metadata node for a required ancestor. A literal source_key reuse either rejects every otherwise valid drive path during ancestor construction or silently omits/normalizes a node outside the stated U census.",
+      "minimal_required_correction": "Define a distinct metadata-directory-node grammar that admits exact approved X:\\ drive roots only when derived from the finite admitted ancestor index. Keep original/output file leaf grammar unchanged; no arbitrary root discovery or role expansion. Include each distinct root in U and its attributes call budget, retain canonical collision identity and directory/no-reparse/known-return requirements.",
+      "required_future_pure_vectors": ["Approved C:\\ and D:\\ ancestors admitted and each counted once", "Drive-root spelling cannot be an original/output file leaf or scan-discovered new authority", "Malformed/bare-drive/relative/UNC/device/foreign-root forms rejected", "Failed/unknown root attributes prevent ancestry completion without fallback or a hidden extra call"],
+      "author_response": "Author independently confirmed the gap and proposed this exact directory-only correction. Frozen v1 remains unchanged; no implementation or correction was run."
+    }
+  ],
+  "batch_complete": true,
+  "no_other_confirmed_material_design_blocker": true,
+  "documented_API_assessment": {
+    "count": 14,
+    "ownership": "CreateFileW and FindFirstFileExW document INVALID_HANDLE_VALUE failure; unexpected null/zero remains unknown. CreateDirectoryW TRUE may establish namespace ownership only, while existing/failure/unknown cannot authorize writes. Known file/search handles belong in the registry before inspection/logging/clock checks.",
+    "closers": "File slots use CloseHandle; search slots use FindClose. The once-only close reservation and unknown/failure disposition are coherent. No unknown handle is guessed closed or retried.",
+    "identity": "Disk type, FileAttributeTagInfo9, normalized DOS final-path flags0 and same-handle size checks match the stated APIs. Failed buffers remain undefined. Success DWORD lengths and BOOL outputs need function-specific definedness, not a blanket LastError0 assumption.",
+    "synchronous_IO": "Read/write handles omit OVERLAPPED and supply count cells. Retain returned flag/raw count/known successful count and ownership before throwing postchecks; unsuccessful raw cells do not establish known bytes. Positive short operations are bounded; zero progress cannot loop indefinitely.",
+    "search": "First failed buffer is indeterminate; initial documented not-found handling is separate from a valid iterator's FindNext false/error18 natural end. FindNext order is not guaranteed. Retained API-order buffers and a separately sorted complete index are appropriate.",
+    "publication": "CREATE_NEW plus explicit flush/close/owner acknowledgment is a coherent prospective DAG. A written seal alone cannot attest its own close or final clock; missing/partial/failure markers and unknown required operations continue to veto. No post-hard-deadline API dispatch is authorized."
+  },
+  "arithmetic_and_scope_checks": {
+    "file_identity_and_close_API_term": "6*(N+F) matches one CreateFile,GetFileType,AttributeTagInfo,FinalPath,Size,Close attempt per prospective file slot.",
+    "journal_event_formula": "13 K pairs +7 fixed events +128 reserved headroom =161. With declared symbol ceilings N256,B16,M16,S16, E=1825<=2048; this is algebra, not admission of an actual roster or proof of time/memory fit.",
+    "search_buffers": "Two scans with sumD<=16 and sumX<=178 require at most194 distinct592-byte buffers =114848bytes, preserving failed/late cells.",
+    "output_quota": "8MiB journal +four2MiB reports +four8192-byte small files =16809984bytes. Proposed sumWrite bound E+412 and Flush bound E+F are internally consistent conservative allowances; short/failing paths may exhaust them and remain incomplete.",
+    "full_plan": "Exact future N/B/M/U/directories/roles/bytes/edges/events/API/capture/report admission is still required before remaining original opens. Existing bounds do not establish that a future real graph fits.",
+    "clock": "The first source clock and same-origin continuation preserve300s/295s with5s finalization reserve. The design discloses interpreter prerequisites and lacks OS preemption guarantees. Bulk original reads/hash/capture cease at work cutoff; cleanup/publication is constrained by the unchanged hard cutoff."
+  },
+  "author_clarifications_to_preserve_in_successor": [
+    "Per-output API/write/flush/close observations are registry-only, not extra journal events outside the fixed stage/F_fixed budget. This avoids journal recursion and preserves the stated E admission formula.",
+    "A late known write may leave hashing pending. The prepared immutable record and known-written offset remain retained; no post-hard-cutoff hash completion or successful artifact pin is inferred.",
+    "The4096-unit path/buffer admission ceiling is not a claim that unprefixed DOS paths all work without the Windows long-path opt-in. Documented API failures remain negative; no new path-prefix fallback, registry probe or OS policy project is requested."
+  ],
+  "future_review_boundaries": [
+    "Actual typed bindings/layout sizes/offsets and function-specific last-error capture need separately reviewed source/pure vectors before harmless live qualification.",
+    "Preallocated registry ownership must survive identity/deadline/journal/cleanup errors before port return; exact raw-to-wrapper ordering is an implementation obligation, not proven by this design review.",
+    "Actual bootstrap source/decision ports, closed captured-source loader, once-only handoff and production engine continuation remain unimplemented/unqualified.",
+    "Archive/report/resource/Unicode checkers and exact source-bound protocol/authority closure remain separate. File-port design consistency cannot qualify an old failed profile or a future native experiment."
+  ],
+  "official_sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfiletype",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getfileinformationbyhandleex",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfilesizeex",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-readfile",
+    "https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-closehandle",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileattributesexw",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findfirstfileexw",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findnextfilew",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-findclose",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createdirectoryw",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile",
+    "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers"
+  ],
+  "activity": {"retained_source_and_design_text_reads": true, "official_documentation_reads": true, "source_closure_qualification": false, "ctypes_SDK_API_constructions": 0, "live_file_ports_or_directory_scans": 0, "CPU_GGUF_pack_or_oldrun_operations": 0, "implementation_changes": 0, "execution_authorized": false},
+  "profile_qualified": false
+}

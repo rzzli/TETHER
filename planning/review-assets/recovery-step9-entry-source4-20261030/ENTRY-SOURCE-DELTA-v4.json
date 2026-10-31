@@ -1,0 +1,134 @@
+{
+  "schema_version": 4,
+  "status": "FROZEN_E08_SOURCE_ONLY_DELTA_BEFORE_FIRST_IMPORT_TEST",
+  "scope": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-ENTRY-SUCCESSOR-AUTHORING-SCOPE-v1.json",
+    "bytes": 4315,
+    "sha256": "29f35d62699766b5a6eaf7aa00441af2410cff542a26a36c20b718dda3a47113"
+  },
+  "base_source3_pause": {
+    "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-PAUSE-v3.json",
+    "bytes": 4114,
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "base_sources": {
+    "kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+      "bytes": 121192,
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "owner_ops": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_owner_ops_v3.py",
+      "bytes": 39889,
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "file_view": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_file_view_v3.py",
+      "bytes": 3614,
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    }
+  },
+  "new_sources": {
+    "kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "owner_ops": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "file_view": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    }
+  },
+  "exact_codec_dependency_unchanged": {
+    "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+    "bytes": 55497,
+    "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+  },
+  "contract": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-v1.json",
+    "bytes": 33105,
+    "sha256": "a55b839b5b1fb038e8f0348d7fc5570abc36415db9a8f94ff6cb32269071f656"
+  },
+  "root_graph_fragment": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/E08_GRAPH_FRAGMENT-v1.txt",
+    "bytes": 7893,
+    "sha256": "b17e93bbddeb773fa59a229140f242c8c0c2a86690d471b3faa3e920aa51de29"
+  },
+  "kernel_ast": {
+    "normalized_source3_existing_function_count": 221,
+    "changed_existing_functions": [
+      "SinkFacade.append",
+      "SinkFacade.close_journal",
+      "SinkFacade.publish",
+      "_KernelAlgorithms.admit_plan",
+      "_KernelAlgorithms.emit",
+      "_KernelAlgorithms.stage",
+      "KernelState.__init__",
+      "KernelState.reserve_bootstrap_output",
+      "KernelState.reserve_call",
+      "KernelState._bootstrap_acquire",
+      "KernelState._bootstrap_inspect",
+      "KernelState._bootstrap_hash_capture",
+      "KernelState._bootstrap_close",
+      "KernelState.bootstrap_capture",
+      "KernelState.make_context",
+      "KernelState.load_captured",
+      "KernelState.issue_continuation",
+      "KernelState._issue_snapshot",
+      "CapturedLoader._import",
+      "CapturedLoader.load",
+      "entry"
+    ],
+    "unchanged_existing_functions_count": 200,
+    "added_functions": [
+      "_policy_constructor_leaf",
+      "_policy_constructor_list",
+      "ManifestPolicyBinding.__init__",
+      "ManifestPolicyBinding.__setattr__",
+      "ManifestPolicyBinding.to_dict",
+      "_manifest_binding_value",
+      "ManifestPolicyReport.__init__",
+      "ManifestPolicyReport.__setattr__",
+      "ManifestPolicyReport.to_dict",
+      "_make_manifest_policy_report",
+      "_policy_object",
+      "_policy_list",
+      "_policy_id",
+      "_policy_integer",
+      "_policy_digest",
+      "_policy_mode",
+      "_policy_ids",
+      "_policy_pins",
+      "_capture_manifest_policy",
+      "_manifest_policy_graph",
+      "_manifest_policy_graph.pin_duplicates",
+      "_manifest_policy_graph.id_duplicates",
+      "_manifest_policy_graph.disjoint_groups",
+      "_manifest_canonical",
+      "KernelState._require_execution_policy",
+      "KernelState._manifest_policy_observation",
+      "KernelState._check_manifest_entry_basis",
+      "KernelState.validate_external_policy"
+    ],
+    "removed_functions": [],
+    "graph_fragment_ast_exact": true,
+    "old_profile_api_role_gate_artifact_constants_equal": true
+  },
+  "nonfunction_delta": [
+    "VersionedPreboundServices appends required manifest_policy_binding aftertrusted_modules.",
+    "Two new kernel-defined immutable data classes plus bounded in-kernel policy helpers/metadata constants.",
+    "Original namespace export table adds ManifestPolicyBinding andManifestPolicyReport.",
+    "Coherent own-module defaults/strings_v4. No old owner orpolicy implementation imported."
+  ],
+  "helper_delta": "Ops4 andFileView4 are exact UTF8Source3 text with onlypreflight_entry_kernel_v3->preflight_entry_kernel_v4 import spelling. No behavioral edits.",
+  "behavior": "After originalclock/Core/Registry, bounded detached E08 policy validates exact prebound binding, graph andordered FileSpec pins before existingadmit/output work. AUTHORING returns data-only beforeFileSpecs/output; prepared report first return is retained separately from timely issuance. Ordinary I/O/source/context/continuation paths require exact originally selected binding/report; unrelated laterprimary faults do not revoke known cleanup rights.",
+  "checks": "AST/text/metadata only. No subjectmodule imported, bytecodecompiled, instantiated orrun. Nativeharness andRoot runner/preparer remain separately pinned/frozen before anyactualexecution.",
+  "preservation": "Source3five regressions and50PASS/3deferred suite proofs, all priorfailures/oracles/caps/defaults remainunchanged. NoE08 runtime successclaimed.",
+  "qualification": false
+}

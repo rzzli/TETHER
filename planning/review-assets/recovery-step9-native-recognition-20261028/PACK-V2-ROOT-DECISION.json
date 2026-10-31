@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T18:36:46.967257+00:00",
+  "decision": "proceed_once_pure_pack_v2_preparation_only",
+  "helper_sha256": "a6d071f433d2d08b09c562fa23e93663852490455706ef4a9f448d4fefedb411",
+  "peer_sha256": "757fea0253aa318e1cf4dfb58b6457440f48c76aaf36004147accc603f77710d",
+  "root_diff_reviewed": true,
+  "scope": "All167wirebytes/pure44+123 retained; exact primary/161 rawNUL is harness-only/native-unobserved.166native-byte-front candidates44+122,18newauthored serializations,4byteguards,6prefixes; no corpusrepair or substitution. Originalpack/review/helper preserved. Ownpureoracle only, no target/GGUF/model/network.",
+  "native_execution_authorized": false,
+  "provider_spend_usd": 0
+}

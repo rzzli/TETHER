@@ -1,0 +1,102 @@
+{
+  "actual_SDK_constructors": 0,
+  "actual_children": 0,
+  "actual_execution_protocols_created": 0,
+  "checker_sha256": "92356f35b7d21bbc098ca8bddda2f49a5905bd799648926ca5a9f167a9085306",
+  "combined_inputs_after_real_proof": 183,
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "helper": {
+    "bytes": 61937,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v3.py",
+    "sha256": "018f3c8216b6096e34eff43241c3864a9a15f0decbdde6005f2b905c5e6c247d"
+  },
+  "helper_sha256": "018f3c8216b6096e34eff43241c3864a9a15f0decbdde6005f2b905c5e6c247d",
+  "old_parent": {
+    "bytes": 32030,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v1.py",
+    "sha256": "3dfa67eb78baba8e16de0fc685438cbd0082c3c2326e006296f02539e608b9a6"
+  },
+  "publication_fixtures": [
+    {
+      "case": "full_prepare",
+      "protocol": {
+        "bytes": 49975,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-binding-pure-1793239044677655200\\full-prepare-protocol.json",
+        "sha256": "484c521766bc4500eee5f7c5441b58a9910f617174eb12988f627b75c2699f17"
+      },
+      "report": {
+        "bytes": 1086,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-binding-pure-1793239044677655200\\full-prepare-report.json",
+        "sha256": "9bf4c1b35b75825b49ea3e05d5f7a6f730ac1a7b6651a8b93ae53c1ee59d126d"
+      }
+    },
+    {
+      "case": "report_publication_failure",
+      "protocol": {
+        "bytes": 49976,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-binding-pure-1793239044677655200\\fault-prepare-protocol.json",
+        "sha256": "4fe605714b80b92f03dabd851d2fcad971de41a6b6db60a7aeea19b4644350bd"
+      },
+      "repeat_rejected": true,
+      "report_absent": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Acyclic binding and census role; source-identical v1 mechanics. Full prepare tests use private patched cache paths/current-proof fixtures; no actual candidate protocol, constructor or child is created",
+  "static_authority": {
+    "bytes": 42748,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json",
+    "sha256": "70efee36da8aa73845fee25ba2eea495895a84b4cd9676c98ae9777ce084b42c"
+  },
+  "static_inputs": 179,
+  "status": "passed",
+  "tests": 11,
+  "unchanged_mechanics_functions": 14,
+  "vector_labels": [
+    "finite-selected-provenance-only",
+    "collision-run_self_module_census_v3.py",
+    "collision-SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json",
+    "collision-check_self_module_census_binding_v3.py",
+    "collision-SELF-MODULE-CENSUS-BINDING-PURE-PROOF-v3.json",
+    "dynamic-current-byte-check",
+    "role-mode",
+    "role-mode",
+    "role-ABI_eligibility_established",
+    "role-explicit_target_C_calls",
+    "role-target_export_resolution",
+    "role-maximum_attempts",
+    "role-automatic_retry",
+    "role-execution_authorized_by_preparation",
+    "argv-0",
+    "argv-1",
+    "argv-2",
+    "static-missing",
+    "static-extra",
+    "static-self",
+    "static-authority",
+    "static-proof",
+    "static-checker",
+    "static-protocol",
+    "static-output",
+    "static-unknown_image",
+    "static-arbitrary_text",
+    "static-duplicate",
+    "static-malformed-bytes",
+    "static-malformed-bytes",
+    "static-malformed-sha256",
+    "static-malformed-sha256",
+    "static-malformed-path",
+    "static-extra-field",
+    "14-runtime-functions-and-prior33-methods-reused",
+    "full-prepare-both-exclusive-publications",
+    "dynamic-malformed-bytes",
+    "dynamic-malformed-bytes",
+    "dynamic-malformed-sha256",
+    "dynamic-malformed-sha256",
+    "failed-report-preserves-protocol-no-automatic-repeat",
+    "fresh-hash-not-serialized-status",
+    "acyclic-static-body"
+  ]
+}

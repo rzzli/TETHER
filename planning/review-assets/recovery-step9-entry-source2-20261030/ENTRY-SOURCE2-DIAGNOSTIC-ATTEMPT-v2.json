@@ -1,0 +1,16 @@
+{
+  "binding": {
+    "bytes": 3789,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-BINDING-v2.json",
+    "sha256": "a84c6c045193a7f9fbac3732a6ea9de7d63849cdaf2ff9da282b795764a02783"
+  },
+  "methods": [
+    "test01_valid_entry",
+    "test02_normal_captured_helpers_finish",
+    "test03_staged_scalar_has_no_cleanup_authority",
+    "test04_committed_scalar_survives_cache_boundary_failure",
+    "test05_stopped_close_normal_return_does_not_heal_cache"
+  ],
+  "source1_replayed": false,
+  "status": "STARTED_BEFORE_SOURCE2_IMPORT"
+}

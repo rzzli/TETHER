@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "all_eight_source_references_verified",
+  "recorded_at_utc": "2026-10-28T02:10:06.075405+00:00",
+  "source_acquisition_sha256": "57908b3073f33773dc85a33b46e23e81032d363c6ac8a91fc1c1b9ba8f8091f5",
+  "protocol_sha256": "d1d8550884e9309ea48a9b1ada0983b027381241cc3adf56fd9477c7839f18f2",
+  "helper_sha256": "676a8c6d39099d015d83e0787e7c404909c396be5b9d713a5a5f694a0a7bfcac",
+  "files": 8,
+  "bytes": 371242,
+  "http_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "redirects": 0,
+  "unknown_response_bytes": false,
+  "source_reference_role_only": true,
+  "model_calls": 0,
+  "servers": 0,
+  "builds": 0,
+  "external_code_executed": false,
+  "external_code_imported": false
+}

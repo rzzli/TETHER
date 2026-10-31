@@ -1,0 +1,21 @@
+{
+  "activity": {
+    "native_calls": 0,
+    "producer_runs": 0,
+    "subject_imports": 0
+  },
+  "checker": {
+    "bytes": 26832,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v1.py",
+    "sha256": "d7b040c3c1166297dd1c5914b5fd7b3ed7d4965e799b549d7c252d013c3e8b3a"
+  },
+  "checks": 34092,
+  "material_blockers": [
+    {
+      "message": "actual complete call wire:fact_flags",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v1.py\", line 344, in <module>\n    result=run()\n           ^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v1.py\", line 282, in run\n    expect_fields(wire,dict(ordinal=j,file_id=i,api=API.index(api)+1,record_version=1,fact_flags=bitmask(schema,'call_flags_bits',flags),requested=requested,buffer_id=0 if read else 1 if query else 65535,phase=schema['enums']['phase_code']['original_close' if api==API[6] else 'binding_invoke'],generation=qgen or 0,buffer_written=requested if read else len(qraw) if query else 0,raw_scalar_bits=scalar,raw_count=requested if read else 0,raw_error=0,hashed_contribution=requested if read else 0,captured_contribution=requested if read and captured else 0,known_count_contribution=requested if read else 0,query_offset=expected_query['offset'] if query else 0,query_length=len(qraw) if query else 0,input_handle_bits=0 if api==API[0] else handle,pre_dispatch_clock_bits=int.from_bytes(bytes.fromhex(pre['bits']),'little'),post_binding_clock_bits=int.from_bytes(bytes.fromhex(post['bits']),'little'),error_id=0xffffffff,path_id=i,reserved_zero=0,fold_state=2 if read else 0,buffer_state=2 if read else 3 if query else 0),'actual complete call wire')\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v1.py\", line 134, in expect_fields\n    need(k in actual and same(actual[k], v), label + ':' + k)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\check_large_injected_actual_peer_v1.py\", line 29, in need\n    raise AssertionError(label)\nAssertionError: actual complete call wire:fact_flags\n",
+      "type": "AssertionError"
+    }
+  ],
+  "status": "HOLD_RETAINED_EVIDENCE_REVIEW_FAILED"
+}

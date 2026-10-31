@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_date_utc": "2026-10-29",
+  "status": "AUTHORIZED_NAMED_SCHEMA_SUCCESSOR_FOR_FINITE_FIVE_GROUP_CLOSURE_ONLY",
+  "preserved_schema_sha256": "d5f28f0b5aa151515941b6a39b03d3a811c6012fa055490a4103927871fa69e4",
+  "preserved_freeze_sha256": "dfc9be92fb02ee06663d9c2d81d52f45cf8d6664bc83b3a4edc456e41c70047d",
+  "combined_schema_hold_sha256": "44eee60666d9ee62e2e821bfd0710c754e1934c68f14fff59d4a8b97a7bc4c3b",
+  "independent_precheck_sha256": "9964dd045097dbef39fdeef96874941e058f4802062b828f7a8a774a5cb9a6cf",
+  "F1_design_acceptance_sha256": "d3fee3d6e91b272267075f2b6df93e32e8a026e1f464ba8c0e3b072c155d7d64",
+  "choices": {
+    "descriptor_counts": "Use record_size=1/count=byte_length for queries, paths and module_names in every profile, including empty pools. Original query length remains8218*N; fragment query length is exact applicable API frame0/8/36/592/8202. Fixed tables use their exact record width and entry count; module_edges uses2/count=len(tuple). Derive counts, lengths, offsets and SHA from actual sections, never caller-ready claims.",
+    "fragment_absent_size_and_handle": "Fragment expected_size=None requires EXPECTED_SIZE_PRESENT=false and zero encoded bits; original known empty expected_size0 has presence=true. Absent input_handle_atom is UNOBSERVED/presence=false/zero bits. Present input is HANDLE exact unsigned64 (0/INVALID allowed only as fragment negative data); input NULL refuses ATOM_DOMAIN because no independent input-null tag exists. Raw scalar HANDLE NULL remains distinct and supported. Original entered operations require the canonical usable owned handle.",
+    "error_definition": "Definition sentinel is OBSERVED=false/DEFINED=false; observed False is true/false; observed True is true/true. True requires invoked, a domain-valid observed scalar in the API's declared error-probe branch (HANDLE INVALID, DWORD0, BOOL0); error code0 is allowed and never means undefined. Definition truth is separate from whether error_atom returned: raw DWORD may be observed while definition remains pending, and a known applicable definition may precede a missing error return. Do not infer missing=False or discard undefined observed raw error. Close the per-API applicability table in v2, keeping source first-slot rules.",
+    "exact_value_surface": "DecodedLedger.to_dict equals the canonical encode-value shape/types exactly (nine top-level keys, bytes pools/digests, tuple module_edges, list tables, typed atoms and closed flags). Getters remain cache-only/detached. FormatError.code is the exact enum-name str; offset is nonbool int|None; path is tuple[str|nonbool int,...] made from internal field names/ordinals, with no offending value coercion/echo. Call.error_id becomes optional_u32 None<->0xffffffff, same width/offset. New BOOL atom maps to legacy BOOL32 with identical signed value. ProducerSnapshot-only legacy identity remains mandatory.",
+    "publication": "Packets use schema_version2 and scope='role_aware_producer_format_v1'. Reports use schema_version2 and existing format_id='ROLE_AWARE_LEDGER_1' (no additional scope key unless explicitly frozen). Both use only the existing OBSERVED_COMPLETE/OBSERVED_NEGATIVE/INCOMPLETE status names; no legacy-scope/status inheritance or completion authority. Preserve exact other keys, sizes, causal DAG and all-false qualification fields.",
+    "logical_live_accounting": "Label13823488 and combined127809034 as logical reference/value-bit allowances only. Eight-byte value bits do not bound CPython int digit payload, boxed numeric/object storage, headers, containers, allocator, malformed return objects or exception/module graphs. Explicitly keep ALL such implementation memory unknown; no physical primitive/heap/RSS/time fit follows. Preserve F1 generated store/assembly/lifetime choices."
+  },
+  "next": "Author separately named schema v2 and finite delta record, preserving v1. Independent peer closes the same five groups. Only then freeze independent literal corpus/expectations and consider an encoder/producer source scope. No fifth/sixth unrelated requirement or broad framework rewrite.",
+  "source_implementation_authorized": false,
+  "golden_generation_authorized": false,
+  "actual_runtime_authorized": false,
+  "original_payload_operations": 0,
+  "application_changed": false,
+  "provider_spending": 0
+}

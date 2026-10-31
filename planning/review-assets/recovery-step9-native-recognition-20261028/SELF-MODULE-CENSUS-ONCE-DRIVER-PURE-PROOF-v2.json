@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "source_sha256": "c6fff0d0b44b942fd2d7766f150d3f1da194b29325e6af2b2d72214085f12419",
+  "checker_sha256": "4b5765b57abd55c66291ddd30014249ffb58217d78e97f97f184650274711f68",
+  "source_unchanged": true,
+  "tests": 6,
+  "failures": [],
+  "errors": [],
+  "scenarios": [
+    {
+      "name": "failed_execution_False",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute",
+        "print"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "failed_execution_True",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "KeyboardInterrupt",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "SystemExit",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "preconsumed_output",
+      "calls": [
+        "exists"
+      ],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "success",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute",
+        "print"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "wrong_decision_hash",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_driver",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_helper",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_protocol",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_status",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_maximum_attempts_bool",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_limits_bool",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_automatic_retry",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_mode",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    }
+  ],
+  "actual_parent_imports": 0,
+  "actual_SDK_constructions": 0,
+  "actual_child_dispatches": 0,
+  "scope": "Only AST-extracted driver main with authored fake pins/files/import boundary/helper; no real parent import or native execution"
+}

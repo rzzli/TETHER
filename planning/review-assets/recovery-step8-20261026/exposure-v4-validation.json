@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "status": "passed_preparation_consistency_not_R08_acceptance",
+  "output": {
+    "path": "planning/review-assets/recovery-step8-20261026/EXPOSURE-DRAFT-v4.json",
+    "sha256": "7fa00b8859b8c196b429981d3e0a32ab45c068e79d08eb38053c1e3eb743905d",
+    "bytes": 1029185
+  },
+  "previous_revision": {
+    "path": "planning/review-assets/recovery-step8-20261026/EXPOSURE-DRAFT-v3.json",
+    "sha256": "986e48cbd67e29f99a47f81a5c3416007cccf66b495c46c63a41a9eb23412186",
+    "bytes": 927179
+  },
+  "previous_revision_unchanged": true,
+  "R01": {
+    "path": "planning/decisions/2026-10-26-exposure-register.json",
+    "sha256": "550d6f3ed614b9589b719b7a63404b4eb728efcf1255d4703f9d438161819fea",
+    "bytes": 15859
+  },
+  "inputs_rehashed": 571,
+  "historical_case_files": 471,
+  "historical_metadata_occurrences": 493,
+  "historical_occurrence_partition_complete": true,
+  "historical_real_hypotheses": 20,
+  "historical_unique_targets": 18,
+  "historical_unique_target_indication_pairs": 18,
+  "candidate_review": {
+    "targets": 14,
+    "target_concept_pairs": 70,
+    "exact_historical_target_overlap": 0,
+    "VB_mapping_overlap": 31,
+    "VB_nonoverlap_not_certified_fresh": 39,
+    "intended_disease_pairs": 56,
+    "alternate_RA_audit_pairs": 14,
+    "intended_mapping_nonmatches_not_fresh": 25
+  },
+  "new_case_files": 0,
+  "new_agent_visible_manifests": 0,
+  "new_model_calls": 0,
+  "protected_contents_read": false,
+  "fresh_cases_qualified": 0,
+  "source_preparation_references": {
+    "source-feasibility.md": {
+      "path": "planning/review-assets/recovery-step8-20261026/source-feasibility.md",
+      "sha256": "b8833f56680330ecde12fda57101d6c5bb2459b7b80c2fab9fa4ce67058c6a1e",
+      "bytes": 8840
+    },
+    "source-feasibility-pins.json": {
+      "path": "planning/review-assets/recovery-step8-20261026/source-feasibility-pins.json",
+      "sha256": "fc09660b2efd1485f04f0d50ca4f7ccf603d7027d61ac6ae5256f784c1782457",
+      "bytes": 4018
+    },
+    "terms-review.md": {
+      "path": "planning/review-assets/recovery-step8-20261026/terms-review.md",
+      "sha256": "ef5bf65cd619ae1cf2e4848b84e00b945755628f0fd1c6a1666cfea3ce66adc9",
+      "bytes": 1903
+    },
+    "terms-review.json": {
+      "path": "planning/review-assets/recovery-step8-20261026/terms-review.json",
+      "sha256": "f0462c1019fd7050702d5b7f5163fbdfe8937c7ab5ebe6dd99259c6934a27780",
+      "bytes": 1302
+    },
+    "virtual-biotech-public-coverage-discovery-v1.json": {
+      "path": "planning/review-assets/recovery-step8-20261026/virtual-biotech-public-coverage-discovery-v1.json",
+      "sha256": "b8b71cc309e5e65363929768ce6865612d8c8bc56c1a936d755da8d6716f2045",
+      "bytes": 5327
+    },
+    "virtual-biotech-public-coverage.md": {
+      "path": "planning/review-assets/recovery-step8-20261026/virtual-biotech-public-coverage.md",
+      "sha256": "7fab0e16f282d3fba350e85c572a9e98446c483b56793b71193de4f063b50cb6",
+      "bytes": 4059
+    },
+    "virtual-biotech-pinned-tree-audit-v1.json": {
+      "path": "planning/review-assets/recovery-step8-20261026/virtual-biotech-pinned-tree-audit-v1.json",
+      "sha256": "3bd4d74551f8703474f4e9b0e4130ce62ca30dedbb51a4686503ca00e94e9128",
+      "bytes": 2812
+    },
+    "date-and-review-addendum.md": {
+      "path": "planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md",
+      "sha256": "1135f273a528b005ab7f45a91095414305d98093cdf3b72e45732f0d70ba181c",
+      "bytes": 8431
+    },
+    "date-followup-pins.json": {
+      "path": "planning/review-assets/recovery-step8-20261026/date-followup-pins.json",
+      "sha256": "f95d9435f8f7ad575eddb0741bbab5701cbaf04a3df26a1cb7f03e22e72c0d3c",
+      "bytes": 798
+    }
+  },
+  "generator": {
+    "path": "planning/review-assets/recovery-step8-20261026/build_exposure_v4.py",
+    "sha256": "fc367410abaf753ee1ac8bb8d037688057af5b154d69d34b38c84d78acb4e226",
+    "bytes": 14054
+  }
+}

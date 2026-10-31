@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "passed_interface_qa_coordinator_held",
+  "candidate_texts_verbatim": 2,
+  "original_json_blocks_verbatim": 2,
+  "source_passages_verbatim": 13,
+  "dimensions_per_candidate": 7,
+  "blank_defaults": true,
+  "desktop_mobile_export_roundtrip": "passed",
+  "desktop_candidate_and_mobile_save_views_visually_inspected": true,
+  "external_requests": 0,
+  "qa_exports_are_human_submissions": false,
+  "human_reviews_received": 0,
+  "source_reference_gate": "retain_independent_source_reference_before_candidate_release",
+  "masking": "deterministic_neutral_A_B_not_randomized",
+  "scientific_validation": "not_established",
+  "candidate_content_or_source_modified": false,
+  "source_only_share_bundle_unchanged": true,
+  "files": {
+    "Candidate-followup.html": "82bace1c4b87097fd5b25df77b6b83074b8c7c12c66ea66090ee22dca7d16ad6",
+    "README.md": "e076318f9d7b9e0e0498b797d248fd8b37c37e5f25f2516e376cfeaf7f10c566",
+    "browser-check.json": "e7b763259ea2a300e42fe215a68acdb7004f01aabcd77bdc284820099cdf205c",
+    "fidelity-check.json": "750805caa1d7cec7723d63dc03cec2c6a9a8323b5ddf7c46b4450d7b162b9b52"
+  }
+}

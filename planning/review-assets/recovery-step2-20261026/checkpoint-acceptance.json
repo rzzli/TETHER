@@ -1,0 +1,17 @@
+{
+  "status": "passed_checkpoint_bytes_not_relocation",
+  "checkpoint": "D:\\Projects\\drug_target_agents\\data\\reference\\recovery-checkpoint-20261026T065127Z",
+  "checkpoint_sha256": "5945c8cdac7f6a1e496ca2cbbf4a7bcb652d626f682163af9d1eec53f5322ba4",
+  "repository_members": 994,
+  "logical_entries": 1305,
+  "unique_objects": 1090,
+  "unique_object_bytes": 814966211,
+  "representative_runs": 7,
+  "unchanged_tested_code_pins": 213,
+  "original_receipts_modified": false,
+  "historical_code_recovered": true,
+  "old_bounded_run_current_verification": "fails_live_code_pin; restoration verification pending",
+  "current_head_hosted_ci": "unverified_invalid_github_auth",
+  "off_machine_backup": "not_established",
+  "whole_project_complete": false
+}

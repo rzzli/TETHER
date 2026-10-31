@@ -1,0 +1,17 @@
+{
+  "GGUF_reads": 0,
+  "actual_processes_created": 0,
+  "checker_sha256": "b0caa7a283ddd4f97d9cbabc5ead8898515896f1c7612c3e58e12c200f43450c",
+  "ctypes_kernel32_construction": 0,
+  "errors": 0,
+  "failures": 0,
+  "helper_sha256": "ec26bfdd77cc8966bb081536e0fd89b2c80f20a1eeb8aa9ec08f9fe3750c7bcd",
+  "native_API_construction_enabled": false,
+  "network_requests": 0,
+  "schema_version": 1,
+  "scope": "Pure sizes/offsets, argv/environment/caps and fake-API ownership sequencing only; no Windows API qualification",
+  "skips": 0,
+  "status": "passed_pure_draft_checks",
+  "target_native_calls": 0,
+  "tests": 19
+}

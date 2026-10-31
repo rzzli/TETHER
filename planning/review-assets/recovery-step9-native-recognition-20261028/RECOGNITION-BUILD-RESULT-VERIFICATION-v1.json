@@ -1,0 +1,577 @@
+{
+  "PE": {
+    "ASLR_NX_high_entropy": true,
+    "added_imported_DLLs": [],
+    "added_imported_functions": {},
+    "delay_imports": {},
+    "machine": "0x8664",
+    "optional": "PE32+",
+    "ordinary_DLL_name_set_unchanged_from_prior_trusted_platform_build": true,
+    "ordinary_imports": {
+      "KERNEL32.dll": [
+        "SetUnhandledExceptionFilter",
+        "InitializeSListHead",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "QueryPerformanceCounter",
+        "GetFileInformationByHandleEx",
+        "GetEnvironmentVariableW",
+        "CreateFileW",
+        "FlushFileBuffers",
+        "GetDriveTypeW",
+        "GetFileAttributesW",
+        "GetFileInformationByHandle",
+        "GetFileSizeEx",
+        "GetFullPathNameW",
+        "ReadFile",
+        "SetFilePointerEx",
+        "WriteFile",
+        "CloseHandle",
+        "GetLastError",
+        "GetCurrentProcess",
+        "GetCurrentProcessId",
+        "GetTickCount64",
+        "GetSystemDirectoryW",
+        "ReadProcessMemory",
+        "GetModuleFileNameW",
+        "GetModuleHandleW",
+        "GetModuleHandleExW",
+        "GetProcAddress",
+        "LoadLibraryExW",
+        "AddDllDirectory",
+        "RemoveDllDirectory",
+        "SetDefaultDllDirectories",
+        "MoveFileExW",
+        "MultiByteToWideChar",
+        "WideCharToMultiByte",
+        "CreateToolhelp32Snapshot",
+        "Module32FirstW",
+        "Module32NextW",
+        "FormatMessageA",
+        "GetLocaleInfoEx",
+        "FindClose",
+        "FindFirstFileW",
+        "FindFirstFileExW",
+        "FindNextFileW",
+        "GetFileAttributesExW",
+        "CreateFile2",
+        "AreFileApisANSI",
+        "LocalFree"
+      ],
+      "MSVCP140.dll": [
+        "?width@ios_base@std@@QEAA_J_J@Z",
+        "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z",
+        "?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z",
+        "?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z",
+        "?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+        "?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD0@Z",
+        "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+        "?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ",
+        "??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+        "?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z",
+        "?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ",
+        "?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ",
+        "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ",
+        "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAADD@Z",
+        "??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+        "??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z",
+        "??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+        "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAVios_base@1@AEAV21@@Z@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_N@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@G@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@I@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_K@Z",
+        "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ",
+        "?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z",
+        "?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z",
+        "?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+        "?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z",
+        "?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z",
+        "?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z",
+        "?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+        "?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ",
+        "?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+        "?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+        "?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A",
+        "?width@ios_base@std@@QEBA_JXZ",
+        "?setf@ios_base@std@@QEAAHHH@Z",
+        "?setf@ios_base@std@@QEAAHH@Z",
+        "?flags@ios_base@std@@QEBAHXZ",
+        "?good@ios_base@std@@QEBA_NXZ",
+        "?_Winerror_map@std@@YAHH@Z",
+        "?_Syserror_map@std@@YAPEBDH@Z",
+        "?__ExceptionPtrRethrow@@YAXPEBX@Z",
+        "?__ExceptionPtrCurrentException@@YAXPEAX@Z",
+        "?__ExceptionPtrToBool@@YA_NPEBX@Z",
+        "?__ExceptionPtrAssign@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrCopy@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrDestroy@@YAXPEAX@Z",
+        "?__ExceptionPtrCreate@@YAXPEAX@Z",
+        "?uncaught_exception@std@@YA_NXZ",
+        "?_Xout_of_range@std@@YAXPEBD@Z",
+        "?_Xlength_error@std@@YAXPEBD@Z",
+        "??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+        "??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_exception_destroy",
+        "__std_terminate",
+        "memmove",
+        "_CxxThrowException",
+        "memset",
+        "__C_specific_handler",
+        "__current_exception",
+        "__current_exception_context",
+        "memcpy",
+        "__std_exception_copy",
+        "memcmp"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "malloc",
+        "free",
+        "_set_new_mode",
+        "_callnewh"
+      ],
+      "api-ms-win-crt-locale-l1-1-0.dll": [
+        "_configthreadlocale",
+        "___lc_codepage_func"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "_fdclass",
+        "__setusermatherr"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_crt_atexit",
+        "_register_onexit_function",
+        "_initialize_onexit_table",
+        "abort",
+        "_register_thread_local_exe_atexit_callback",
+        "_c_exit",
+        "_cexit",
+        "__p___wargv",
+        "__p___argc",
+        "_exit",
+        "exit",
+        "_initterm_e",
+        "_initterm",
+        "_get_initial_wide_environment",
+        "_initialize_wide_environment",
+        "_configure_wide_argv",
+        "_set_app_type",
+        "_seh_filter_exe",
+        "terminate"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "_set_fmode",
+        "__p__commode"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "wcslen",
+        "strlen",
+        "towlower"
+      ],
+      "bcrypt.dll": [
+        "BCryptOpenAlgorithmProvider",
+        "BCryptDestroyHash",
+        "BCryptFinishHash",
+        "BCryptHashData",
+        "BCryptCreateHash",
+        "BCryptCloseAlgorithmProvider",
+        "BCryptGetProperty"
+      ]
+    },
+    "removed_imported_DLLs": [],
+    "removed_imported_functions": {},
+    "static_policy_passed": true,
+    "subsystem": 3
+  },
+  "activity": {
+    "CPU_DLL_GGUF_pack_or_protected_reads": 0,
+    "bridge_or_target_API_calls": 0,
+    "compiler_reruns_by_verifier": 0,
+    "generated_executable_executions": 0,
+    "original_artifact_edits": 0,
+    "unknown_platform_image_operations": 0
+  },
+  "build_peer": {
+    "bytes": 12146,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PEER-REVIEW-v1.json",
+    "sha256": "4ad375ecfd2f9044747c386f8c7fe8c8610c98a7754074f1e58785ac08ae50fb"
+  },
+  "child_pure_proof": {
+    "bytes": 905,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PURE-PROOF-v2.json",
+    "sha256": "f5bd0d8088981530c8bbeffe3390d51d3e813bd408e67eb6754b121849d8d14a"
+  },
+  "cleanup": {
+    "bytes": 559,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\post-lease-cleanup.json",
+    "sha256": "5e743adc82e2cf4080b6d1d6fd9106eee5bfb494a17dfc4391b303b3254f1a9c"
+  },
+  "cleanup_observation": {
+    "close_attempted": true,
+    "close_error": null,
+    "close_returned": true,
+    "deadline_expired": false,
+    "prior_primary_failure": null
+  },
+  "cleanup_scope": "ExitStack.close/stable_files context-manager outcome only; no individual-handle close attestation",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/nologo",
+        "/Bv",
+        "/std:c++17",
+        "/MD",
+        "/O2",
+        "/DNDEBUG",
+        "/D_ITERATOR_DEBUG_LEVEL=0",
+        "/EHsc",
+        "/Zp8",
+        "/Gd",
+        "/W4",
+        "/WX",
+        "/utf-8",
+        "/c",
+        "/DR09_PIN_HEADER=\"recognizer_runtime_pins.hpp\"",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-preparation-v1-20261029T043450Z\\headers",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-preparation-v1-20261029T043450Z",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-preparation-v1-20261029T043450Z\\typed_public_c_recognizer.cpp",
+        "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\bridge.obj",
+        "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\compiler.pdb"
+      ],
+      "cleanup_errors": [],
+      "effective_seconds": 45.0,
+      "full_process_elapsed_seconds": 2.156000000075437,
+      "pid": 29716,
+      "process_scope": "Launched compiler/linker handle only; descendants not independently attested",
+      "reaped": true,
+      "returncode": 0,
+      "spawned": true,
+      "stage": "compile",
+      "stderr": {
+        "bytes": 1156,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\compile.stderr.bin",
+        "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9"
+      },
+      "stdout": {
+        "bytes": 31,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\compile.stdout.bin",
+        "sha256": "b9f5e2f37c9b22a686fa484d5fde626c03a8dcfeed831563bf0d88ea1956d23a"
+      },
+      "streams": {
+        "stderr": {
+          "error_class": null,
+          "observed_bytes_at_least": 1156,
+          "retained_bytes": 1156,
+          "truncated": false
+        },
+        "stdout": {
+          "error_class": null,
+          "observed_bytes_at_least": 31,
+          "retained_bytes": 31,
+          "truncated": false
+        }
+      },
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+        "/NOLOGO",
+        "/MACHINE:X64",
+        "/SUBSYSTEM:CONSOLE",
+        "/INCREMENTAL:NO",
+        "/MANIFEST:NO",
+        "/DYNAMICBASE",
+        "/NXCOMPAT",
+        "/HIGHENTROPYVA",
+        "/OUT:D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\bridge.obj",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.lib"
+      ],
+      "cleanup_errors": [],
+      "effective_seconds": 10.0,
+      "full_process_elapsed_seconds": 0.045999999972991645,
+      "pid": 4580,
+      "process_scope": "Launched compiler/linker handle only; descendants not independently attested",
+      "reaped": true,
+      "returncode": 0,
+      "spawned": true,
+      "stage": "link",
+      "stderr": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\link.stderr.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\link.stdout.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "streams": {
+        "stderr": {
+          "error_class": null,
+          "observed_bytes_at_least": 0,
+          "retained_bytes": 0,
+          "truncated": false
+        },
+        "stdout": {
+          "error_class": null,
+          "observed_bytes_at_least": 0,
+          "retained_bytes": 0,
+          "truncated": false
+        }
+      },
+      "timed_out": false
+    }
+  ],
+  "compiled_source_copy": {
+    "bytes": 95007,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-preparation-v1-20261029T043450Z\\typed_public_c_recognizer.cpp",
+    "sha256": "e683cf9b307e8e5d8943dc7f859c1f1a6e20f24dcd40faca19ab32841a9fe2ae"
+  },
+  "descriptor": {
+    "bytes": 3498,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-RUNTIME-PIN-DESCRIPTOR-v1.json",
+    "sha256": "e42cfda8a76c0784883c5d3dd1f695fd6e10c4d60b9c85685bfc2aba2a89922c"
+  },
+  "descriptor_proof": {
+    "bytes": 681,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-DESCRIPTOR-PURE-PROOF-v1.json",
+    "sha256": "40f998b32f6acba26a8af7cb411109d26769cd8b4b8fa36436e470472fadff21"
+  },
+  "elapsed_before_terminal_seal_seconds": 5.265999999945052,
+  "exception_header": {
+    "bytes": 13765,
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\exception",
+    "sha256": "49c3ebe69f8fd1947c6a05f7de89dd17fc962e4c229b8bf1a5b0d040e5dcb0cb"
+  },
+  "executable": {
+    "bytes": 290304,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "382754c8d947e68541262905c9289a3c80cdb2efdc505efead7f0219f628482b"
+  },
+  "execution_contract": {
+    "bytes": 10486,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+    "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+  },
+  "header": {
+    "bytes": 2968,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-preparation-v1-20261029T043450Z\\recognizer_runtime_pins.hpp",
+    "sha256": "0a049358a1d8f2a8fd1bcc734a7c3995535f6e1829ec1bf0de8b39df1f86b3e6"
+  },
+  "helper": {
+    "bytes": 41853,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_recognition_bridge_v1.py",
+    "sha256": "7b46d67568e22e34dff048eb7a73abec3578268553d2f32c2550f2bb9919a18d"
+  },
+  "inputs": {
+    "CPU_DLL_GGUF_pack_or_unknown_platform_image_reads": false,
+    "all_hashes_sizes_match": true,
+    "bytes": 77496944,
+    "count": 287,
+    "exact_input_role_set_previously_reviewed": true,
+    "lstat_entries": 368,
+    "reparse_free": true
+  },
+  "journal": {
+    "chain_valid": true,
+    "created_at_utc": "2026-10-29T04:41:26.165155+00:00",
+    "events": 8,
+    "legacy_terminal_event_deliberately_unchanged": "typed_ABI_bridge_v5_build_terminal",
+    "owner_pid": 33072,
+    "stages_once_each": [
+      "compile",
+      "link"
+    ],
+    "tip_sha256": "8358f7170305e2d201e31d559b4ed3d3a71e9afd82155d518d49041115cd5118"
+  },
+  "limits": [
+    "The generated result was not executed. Source/pure checks plus compilation establish no runtime recognition, CPU initialization, model loading, tokenization or grammar correctness.",
+    "Owned compiler29716/linker4580 handles recorded exit0 and reaping. Descendants and complete transitive toolchain closure remain unqualified.",
+    "Context-manager cleanup returned before seal; individual lease-handle closes are not independently attested.",
+    "Parent reports zero network requests; compiler processes are not independently network-attested.",
+    "The recognition-enabled header contains exact retained CPU/GGUF/pack descriptors; no corresponding payload read or freshness validation occurred.",
+    "Explicit25 export counters, phase markers and strings are static source/data here, not observed runtime call instrumentation.",
+    "Current ABI807, fullruntime311, prior failures and scientific status remain unchanged. Asset/parent/parser/protocol/root gates are separate."
+  ],
+  "object": {
+    "bytes": 1868929,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\bridge.obj",
+    "sha256": "b10cd933def72afd604a66bee932bc8e41b9fe96b0cf82e74800f58220097f68"
+  },
+  "output_directory": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z",
+  "outputs": [
+    {
+      "bytes": 1868929,
+      "path": "bridge.obj",
+      "sha256": "b10cd933def72afd604a66bee932bc8e41b9fe96b0cf82e74800f58220097f68"
+    },
+    {
+      "bytes": 10342,
+      "path": "build-report.json",
+      "sha256": "e870daa0d9ebe48d1dab706d984648fe3da3cb89aab834b11d39ed6a10588003"
+    },
+    {
+      "bytes": 1836,
+      "path": "compile-attempt.json",
+      "sha256": "bb8515805d086e6fd90595b067862689f7812bd19f1e8b32af613467d5d525b4"
+    },
+    {
+      "bytes": 1156,
+      "path": "compile.stderr.bin",
+      "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9"
+    },
+    {
+      "bytes": 31,
+      "path": "compile.stdout.bin",
+      "sha256": "b9f5e2f37c9b22a686fa484d5fde626c03a8dcfeed831563bf0d88ea1956d23a"
+    },
+    {
+      "bytes": 84045,
+      "path": "effective-protocol.json",
+      "sha256": "c1a7de88730d9965003e35701033e12e00c4632625a4f3d54bd88a43bba6ba4f"
+    },
+    {
+      "bytes": 7453,
+      "path": "journal.jsonl",
+      "sha256": "cc2a2edae55478c597747e6a0f470c4797498cc77fb3b904dc31d5c7f1205fe4"
+    },
+    {
+      "bytes": 1598,
+      "path": "link-attempt.json",
+      "sha256": "2bd8a69ffeb84f95a67415f05de5971d23aaad18ed7fd801a3e361448caf031b"
+    },
+    {
+      "bytes": 0,
+      "path": "link.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "link.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 559,
+      "path": "post-lease-cleanup.json",
+      "sha256": "5e743adc82e2cf4080b6d1d6fd9106eee5bfb494a17dfc4391b303b3254f1a9c"
+    },
+    {
+      "bytes": 1702,
+      "path": "receipt.json",
+      "sha256": "61b147ffe0a62a2bfc46422c314287b14ab68d2a8f90c4e6057a94dc0a9ad53c"
+    },
+    {
+      "bytes": 2003,
+      "path": "terminal-seal.json",
+      "sha256": "853f8888825ff99552b461a4d1756f950503fdf2471200bc804f4c0f40db33eb"
+    },
+    {
+      "bytes": 290304,
+      "path": "typed_public_c_recognizer_abi.exe",
+      "sha256": "382754c8d947e68541262905c9289a3c80cdb2efdc505efead7f0219f628482b"
+    }
+  ],
+  "policy": {
+    "CPU_GGUF_payload_access_authorized": false,
+    "expected_version": "0.7.0-dev",
+    "id": "trusted-System32-recognition-v1",
+    "marker_presence_is_not_runtime_format_or_policy_conformance_evidence": true,
+    "metadata_ascii_marker_presence": {
+      "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861": true,
+      "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713": true,
+      "module_policy_id": true,
+      "module_policy_sha256": true,
+      "native_call_counters": true,
+      "trusted-System32-recognition-v1": true,
+      "unapproved_non_native_module": true,
+      "unknown_since_last_acknowledged_snapshot": true
+    },
+    "platform_image_authentication": "not_established",
+    "recognition_enabled": true,
+    "reported_platform_image_operations_source_policy": 0,
+    "route": "trusted_System32_recognition_pre_post_CPU",
+    "runtime_execution_authorized": false,
+    "scope": "Prospective recognition singleton/counter/CPU phase code compiled only. CPU/GGUF descriptors are embedded metadata; no load, tokenization, grammar or target query occurred.",
+    "semantic_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+    "source_compiled_copy_exact": true
+  },
+  "policy_contract": {
+    "bytes": 4873,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-MODULE-POLICY-v1.json",
+    "sha256": "1f918760526adf368910096a3fc9f60c4cbd78fba5737907b332396d3f6ea37a"
+  },
+  "protocol": {
+    "bytes": 84045,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PROTOCOL-v1.json",
+    "sha256": "c1a7de88730d9965003e35701033e12e00c4632625a4f3d54bd88a43bba6ba4f"
+  },
+  "receipt": {
+    "bytes": 1702,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\receipt.json",
+    "sha256": "61b147ffe0a62a2bfc46422c314287b14ab68d2a8f90c4e6057a94dc0a9ad53c"
+  },
+  "recorded_at_utc": "2026-10-29T04:44:19.912838+00:00",
+  "review_type": "Independent retained actual compile/link artifact verification; no result replay, payload identity revalidation or recognition conformance",
+  "root_decision": {
+    "bytes": 4888,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-ROOT-DECISION-v1.json",
+    "sha256": "4624823d437082658d41d6300dacb6f40d890eea2e4f1840fc00f6c8a6fcab9a"
+  },
+  "schema_version": 1,
+  "shared_vectors": {
+    "bytes": 171388,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-MODULE-VECTORS-v1.json",
+    "sha256": "3602f46516165149ae34b74db0abbdc2b6f0d88e75edca5f026ebbc752ef0475"
+  },
+  "source": {
+    "bytes": 95007,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_recognition_v2.cpp",
+    "sha256": "e683cf9b307e8e5d8943dc7f859c1f1a6e20f24dcd40faca19ab32841a9fe2ae"
+  },
+  "source_peer": {
+    "bytes": 8024,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PEER-REVIEW-v2.json",
+    "sha256": "17c6e6b4faadfe6dee4724e292ae434fed8ebcc8ec63953955a71dd2c9adc39f"
+  },
+  "status": "VERIFIED_recognition_enabled_bridge_compiled_NOT_EXECUTED_runtime_unqualified",
+  "terminal": {
+    "bytes": 2003,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\terminal-seal.json",
+    "sha256": "853f8888825ff99552b461a4d1756f950503fdf2471200bc804f4c0f40db33eb"
+  },
+  "universe": {
+    "directory_note": "Retained empty compiler-created directories only; descendants/network not independently attested.",
+    "early_receipted": 11,
+    "empty_compiler_created_directory_entries": [
+      "Microsoft",
+      "Microsoft/VSApplicationInsights",
+      "Microsoft/VSApplicationInsights/vstelf3e86b4023cc43f0be495508d51f588a"
+    ],
+    "exact": true,
+    "files": 14,
+    "no_failure_late_or_postseal_markers": true,
+    "terminal_receipted": 13
+  },
+  "wire": {
+    "bytes": 7402,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-WIRE-v2.json",
+    "sha256": "d578bc2179e55f7866dd7b2df3ec3169fdc3bcb0dee58629c2a31b8d366d0d01"
+  }
+}

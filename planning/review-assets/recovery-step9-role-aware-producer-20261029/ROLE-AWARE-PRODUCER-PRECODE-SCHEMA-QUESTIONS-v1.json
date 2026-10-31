@@ -1,0 +1,307 @@
+{
+  "closed_F1": {
+    "generated_assembly_max": 14800384,
+    "generated_store_bytes": 40139776,
+    "meaning": "Actual same-owner issued candidate/terminal byte objects, live canonical tables and both potentially retained assemblies are accounted separately. Fourteen artifact slots and complete direct byte consumers are fixed. No RSS/physical-I/O qualification follows.",
+    "named_retained_payload": 113985546,
+    "original_capture_file": 8388608,
+    "original_capture_total": 33554432
+  },
+  "current_cap_changes": 0,
+  "draft_offsets_from_existing_proposal": {
+    "fields": [
+      {
+        "bytes": 4,
+        "field": "ordinal",
+        "offset": 0
+      },
+      {
+        "bytes": 2,
+        "field": "file_id",
+        "offset": 4
+      },
+      {
+        "bytes": 1,
+        "field": "api",
+        "offset": 6
+      },
+      {
+        "bytes": 1,
+        "field": "record_version",
+        "offset": 7
+      },
+      {
+        "bytes": 8,
+        "field": "fact_flags",
+        "offset": 8
+      },
+      {
+        "bytes": 4,
+        "field": "requested",
+        "offset": 16
+      },
+      {
+        "bytes": 2,
+        "field": "buffer_id",
+        "offset": 20
+      },
+      {
+        "bytes": 2,
+        "field": "phase",
+        "offset": 22
+      },
+      {
+        "bytes": 4,
+        "field": "generation",
+        "offset": 24
+      },
+      {
+        "bytes": 4,
+        "field": "buffer_written",
+        "offset": 28
+      },
+      {
+        "bytes": 8,
+        "field": "raw_scalar_bits",
+        "offset": 32
+      },
+      {
+        "bytes": 4,
+        "field": "raw_count",
+        "offset": 40
+      },
+      {
+        "bytes": 4,
+        "field": "raw_error",
+        "offset": 44
+      },
+      {
+        "bytes": 8,
+        "field": "hashed_contribution",
+        "offset": 48
+      },
+      {
+        "bytes": 8,
+        "field": "captured_contribution",
+        "offset": 56
+      },
+      {
+        "bytes": 8,
+        "field": "known_count_contribution",
+        "offset": 64
+      },
+      {
+        "bytes": 4,
+        "field": "query_offset",
+        "offset": 72
+      },
+      {
+        "bytes": 4,
+        "field": "query_length",
+        "offset": 76
+      },
+      {
+        "bytes": 8,
+        "field": "input_handle_bits",
+        "offset": 80
+      },
+      {
+        "bytes": 8,
+        "field": "reserved_clock_observation_1",
+        "offset": 88
+      },
+      {
+        "bytes": 8,
+        "field": "reserved_clock_observation_2",
+        "offset": 96
+      },
+      {
+        "bytes": 4,
+        "field": "error_id",
+        "offset": 104
+      },
+      {
+        "bytes": 2,
+        "field": "path_id",
+        "offset": 108
+      },
+      {
+        "bytes": 2,
+        "field": "reserved_zero",
+        "offset": 110
+      },
+      {
+        "bytes": 4,
+        "field": "fold_state",
+        "offset": 112
+      },
+      {
+        "bytes": 4,
+        "field": "buffer_state",
+        "offset": 116
+      },
+      {
+        "bytes": 136,
+        "field": "reserved_zero_tail",
+        "offset": 120
+      }
+    ],
+    "record_bytes": 256,
+    "status": "Read-only derived offsets from proposal v2, not a frozen codec specification or implemented encoder."
+  },
+  "implementation_authorized": false,
+  "inputs": {
+    "ROLE-AWARE-PRODUCER-F1-DESIGN-ADDENDUM-v2.json": {
+      "bytes": 4294,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-F1-DESIGN-ADDENDUM-v2.json",
+      "sha256": "b1405e2d9f349a109a70647936c1d7a861923b26e8390dc7b56886e2427abedc"
+    },
+    "ROLE-AWARE-PRODUCER-INDEPENDENT-CONTROL-DESIGN-v2.json": {
+      "bytes": 16518,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-INDEPENDENT-CONTROL-DESIGN-v2.json",
+      "sha256": "64364c93fe9b8d27f8f624027f87abfe1b59f24b755d41e35519653549582264"
+    },
+    "ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v2.json": {
+      "bytes": 10904,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v2.json",
+      "sha256": "98729d86ccb8fa81855f456b0410f1c6361fedf29d3fc77c0f1f3b135233cd4f"
+    },
+    "ROLE-AWARE-PRODUCER-ROOT-F1-DESIGN-CHOICE-v2.json": {
+      "bytes": 3225,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-ROOT-F1-DESIGN-CHOICE-v2.json",
+      "sha256": "7630cbfffc7473eb46b904b37154d4be12c6a9d522e0fde9f1ec86ca343567ce"
+    },
+    "ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json": {
+      "bytes": 28502,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+      "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+    }
+  },
+  "next_artifact": "One fully closed source-independent schema/enum/offset/mapping contract, then separately authorized literal positive/negative/partial fixtures before any encoder/producer code.",
+  "producer_source_changes": 0,
+  "qualification": {
+    "full_roster_admitted": false,
+    "new84_runtime": false,
+    "originals_authenticated": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false
+  },
+  "questions": [
+    {
+      "closure": "A reader can classify every byte and every absent/partial/issued artifact without guessing; version fields are format identity, never source or owner authority.",
+      "id": "Q1_HEADER_SECTIONS_AND_MANIFEST",
+      "must_freeze": [
+        "One authoritative table for all header/file/call/query/path/module/diagnostic sections; checked arithmetic, overlap/gap/trailing-byte rules and complete consumption.",
+        "Exact reserved-zero bytes and unsupported-version/enum/length rejection. No inferred current flags from zero padding.",
+        "Exact manifest/packet keys and conditional fourteen-artifact membership/DAG, with bytes/hash references and no selfhash cycle."
+      ],
+      "question": "What exact magic/version/header fields, byte order, section order/count/offset/length/digest fields and phase identifiers define each complete ledger and its compact manifest?"
+    },
+    {
+      "closure": "No first returned fact can disappear because a later observedness flag or encoding operation failed. Native-to-Python return conversion remains a separately unqualified boundary.",
+      "id": "Q2_CANONICAL_FIRST_FACT_CELL",
+      "must_freeze": [
+        "The authoritative UNOBSERVED sentinel versus observed NULL/0/value, separately for scalar/count/error, before cache/fold/format/clock operations.",
+        "If packing is derived, identify and account the canonical live raw cells and dirty/quarantine state; no parallel unbounded per-call dictionary. If packed cells are canonical, specify the tagged write/failure boundary without assuming a multi-field write is atomic.",
+        "Idempotent scalar-then-count reconciliation, committed contribution once, and canonical reporting after partial cache/serialization failure."
+      ],
+      "question": "Are packed bytes the live canonical first-fact cells, or a derived serialization of separately source-owned first raw cells? What exact commit rule preserves an observed zero/NULL if interrupted before a later flags/aux write?"
+    },
+    {
+      "closure": "A field-by-field mapping covers every old DATA atom and unknown axis; producers cannot choose a convenient interpretation from bits alone.",
+      "id": "Q3_API_IDS_ATOMS_AND_APPLICABILITY",
+      "must_freeze": [
+        "Explicit enum values for the seven-original subset and future fourteen-file-export scope, with inactive/unknown IDs refused. This does not reserve or qualify future physical operations.",
+        "HANDLE/NULL/INVALID_HANDLE versus unsigned DWORD and signed32 BOOL bits; function-specific failure/unknown rules, scalar observedness and count/error observedness versus definedness.",
+        "Requested/buffer/query/input-handle fields: applicable known0, unobserved and not-applicable forms; raw width and unused-high-bit rules. Failed/undefined output is retained without becoming successful known0."
+      ],
+      "question": "Which exact API IDs and API-specific scalar/count/error atoms are legal in each active profile, and how do they map losslessly to the existing public raw tags?"
+    },
+    {
+      "closure": "Valid negative/partial histories roundtrip, and impossible or fabricated-complete combinations cannot be minted by the decoder.",
+      "id": "Q4_FLAG_STATE_AND_COMBINATION_TABLES",
+      "must_freeze": [
+        "Known wrapper return plus later stopped=True remains legal and monotone. Reserved-but-unentered and entered-return-unknown remain distinct.",
+        "Close reservation/entry/BOOL observation/nullable success and consumed-once rights cannot collapse into a wrapper result.",
+        "Defined count requires the actual compatible scalar/count/request bounds; observed but undefined raw values remain preserved.",
+        "Every flag/reserved bit/state combination has an accept/refuse rule; no unknown enum silently defaults to a successful or empty state."
+      ],
+      "question": "What exact bit positions, closed enum values and cross-field legality tables implement reservation/invocation/wrapper/stop/ownership/fold/buffer/close state?"
+    },
+    {
+      "closure": "Clock fields are real facts, not reserved padding. Header/record timestamps do not prove actual first-entry Origin/class/clock adoption.",
+      "id": "Q5_CLOCK_SAMPLE_RAW_ENCODING",
+      "must_freeze": [
+        "Exact reservation/pre/post sample sites and attempted/returned/valid/late distinctions. A returned sample is retained before a throwing deadline check.",
+        "Tagged exact integer versus IEEE754 float representation, allowed range/signedness/nonfinite rejection and raw bits; an integer above2^53 must not silently become a float. Preserve known0 versus no sample.",
+        "Lossless legacy start/now/elapsed type mapping or an explicitly versioned narrowed source domain; finite old values do not authorize a clock reset."
+      ],
+      "question": "What do the two 8-byte clock fields observe, and how are their raw types and observedness encoded without rounding or replacing unknown/late values by zero?"
+    },
+    {
+      "closure": "All original/final path/query evidence is reconstructible with one explicit storage owner per retained byte.",
+      "id": "Q6_QUERY_PATH_AND_SPAN_OWNERSHIP",
+      "must_freeze": [
+        "Retain full8/8202/8 query-frame cells and API-defined returned lengths/flags; failed/uninitialized zero-filled memory never becomes observed successful data.",
+        "Original UTF8 path bytes alone own the3*4100*N pool. Final raw UTF16 path data stays in query frames; comparison workspace is separate, not another uncharged retained UTF8 copy.",
+        "Byte versus UTF16-unit lengths, terminators, canonical identity comparison and raw spelling preservation; no filesystem normalization or opening a reported path.",
+        "Checked offsets/lengths within the correct section, exact absent-span sentinels, no accidental alias to another call/file, and generation-lifetime rules."
+      ],
+      "question": "Which exact observed-length/definedness/span tables govern the three raw query frames and the original path pool?"
+    },
+    {
+      "closure": "Successful calls recycle only unfilled reservations; all actual errors remain retained. No assumption of2*C available diagnostic slots or zero-cost exception graphs is hidden.",
+      "id": "Q7_DIAGNOSTIC_RESERVATION_AND_IDENTITY",
+      "must_freeze": [
+        "Two-slot pre-dispatch borrowing/reservation must not permanently consume two slots on every successful call. Define unused-slot release and the last throwable post-check boundary before reuse.",
+        "Define irreversible commit, identity deduplication and formatter-failure fallback. Never overwrite/retry a committed original or formatter diagnostic; original exception getters preserve object identity while issued metadata stays immutable.",
+        "Prove the maximum post-fault cleanup/publication diagnostics and a protected reserve; exhaustion refuses before dispatch without suppressing already-owned mandatory cleanup.",
+        "Freeze the1024-byte record offsets and combined class/phase/message/args/truncation bounds, UTF8 prefix validity, unfilled/partial slot encoding and opaque identity references."
+      ],
+      "question": "How can D=5056 diagnostic slots support C=16384 calls while preserving every actual committed diagnostic and safe cleanup?"
+    },
+    {
+      "closure": "Every public file/module state has a unique reconstruction; no enum or offset is improvised after encoder implementation.",
+      "id": "Q8_FILE_MODULE_AND_ROLE_STATE_LAYOUT",
+      "must_freeze": [
+        "Canonical file ordinal versus descriptor ID/path_id, expected/actual digest presence, per-role capture intent/state, known/hash/copy totals and nullable open/close ordinals.",
+        "Not-requested stays distinct from requested pending/failed/unknown/complete, including captured empty bytes versus hash-only absence.",
+        "Closed module IDs/names/packages/dependency order, captured-only eligibility and all array/name length bounds.",
+        "All schema-input numeric types are exact built-ins checked by identity before comparison/packing; no producer metaclass equality or coercion hook."
+      ],
+      "question": "What complete offset/enum tables define the256-byte file records,64-byte module records, names/edges and diagnostic references?"
+    },
+    {
+      "closure": "This closes the exact checker schema; it does not reopen F1 or qualify physical Write/Flush/Close/readback.",
+      "id": "Q9_ISSUED_BYTE_STORE_AND_CONSUMER_SCHEMA",
+      "must_freeze": [
+        "Reserved/building/issued records, per-artifact caps/attempts and immutable byte identity; candidate never acquires terminal close facts through aliasing.",
+        "Failure between assembly and immutable issuance retains truthful lower bounds/quarantine, never a fabricated hash/issued flag or reused partial buffer.",
+        "Consumers receive the actual complete eligible same-owner byte object and declared phase; a manifest/iterator/ready flag alone does not count as consuming the artifact.",
+        "Preserve all14 artifact slots and simultaneous byte owners from F1 without charging aliases twice or omitting a real copy."
+      ],
+      "question": "Which exact source-issued artifact and consumer interfaces realize the already-chosen F1 store law?"
+    },
+    {
+      "closure": "Old48 parity and new role/schema tests have distinct claims. Neither a decoded ledger nor a projected report mints actual owner/source/runtime authority.",
+      "id": "Q10_LEGACY_PROJECTION_AND_CONTEXT_MAPPING",
+      "must_freeze": [
+        "Map legacy software/owner_metadata/artifact and capture flags explicitly, including legacy refusal cases. Projection is capture-only and rejects hash-only cases.",
+        "Strictly validate actual successor records before projection; copy genuine facts rather than synthesize capture completion, bool/int coercions, omitted calls or new clock samples.",
+        "Full roster/spec/digest coverage remains complete while blob/evidence_paths are a completed captured subset. bytes_for(hash-only) remains typed CaptureNotRequested with no reread/promotion.",
+        "Freeze owner/context/ref/early-bytes identity assertions and byte-versus-digest consumer requirements; a caught getter refusal cannot authorize byte/AST/PE/parser evidence."
+      ],
+      "question": "What exact source-fact-only mapping preserves frozen48/DATA50ee while exposing the successor schema truthfully?"
+    }
+  ],
+  "recorded_at_utc": "2026-10-29T19:32:08.658744+00:00",
+  "schema_version": 1,
+  "scope": "Close the already-required exact binary table, raw-fact and legacy mapping contract before independent literals or encoder source. These are framing prerequisites, not a new review family or a reopening of the accepted F1 byte-store decision.",
+  "status": "FINITE_PRECODE_SCHEMA_QUESTIONS_ONLY_NO_SOURCE_OR_TESTS",
+  "subject_imports": 0,
+  "subject_tests": 0,
+  "target_payload_operations": 0,
+  "unchanged_limits": "Accepted N4/64KiB/old48/DATA50ee and calculator certification remain unchanged. Proposed full1MiB profile, real84 roster, actual first entry/FFI/writer/resource/native checks remain separate pending gates."
+}

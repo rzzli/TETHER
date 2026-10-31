@@ -1,0 +1,68 @@
+{
+  "API_owner_block_byte_equal": true,
+  "API_owner_block_sha256": "15eb82fd905d753ebb8afec33e69655a8dca33a3097e2b5ac1b72769e0623f75",
+  "activity": {
+    "GGUF_model_reads": 0,
+    "children": 0,
+    "compiler_calls": 0,
+    "network_requests": 0,
+    "target_DLL_loads": 0
+  },
+  "declared_delta": [
+    "bounded module-rejection metadata and UTF16 representation",
+    "failure context retention in independent marker/stdout",
+    "Output reference passed to existing module-enumeration calls"
+  ],
+  "direct_include_sequence": [
+    "<windows.h>",
+    "<tlhelp32.h>",
+    "<bcrypt.h>",
+    "<algorithm>",
+    "<array>",
+    "<cmath>",
+    "<cstddef>",
+    "<cstdint>",
+    "<cwctype>",
+    "<filesystem>",
+    "<iomanip>",
+    "<iostream>",
+    "<initializer_list>",
+    "<limits>",
+    "<memory>",
+    "<sstream>",
+    "<stdexcept>",
+    "<string>",
+    "<type_traits>",
+    "<utility>",
+    "<vector>",
+    "\"llama.h\"",
+    "R09_PIN_HEADER"
+  ],
+  "direct_includes_unchanged": true,
+  "exact_diff": {
+    "bytes": 21139,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-V4-V5-SOURCE-DIFF.patch",
+    "sha256": "0155d96071c533bd6761a871ef04bb61e5e02cbc65bc23e8fa4329d35acd55e8"
+  },
+  "limitations": "Diff and selected exact byte equivalence only; final source/design/pure proof and independent policy review are separately required.",
+  "new_direct_STL_headers": [],
+  "previous_source": {
+    "bytes": 49559,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v4.cpp",
+    "sha256": "2f34035545c6d7bd742b8932a95449aeb76ebc48084e8dc170cbea6b740794ae"
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 53407,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+    "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+  },
+  "status": "source_diff_retained_not_build_or_ABI_qualification",
+  "unchanged_build_scope": [
+    "same seven public headers",
+    "same disabled recognition data header",
+    "same four core DLL PE data read set",
+    "same 25 required typed API owners",
+    "no new direct header or linker library"
+  ]
+}

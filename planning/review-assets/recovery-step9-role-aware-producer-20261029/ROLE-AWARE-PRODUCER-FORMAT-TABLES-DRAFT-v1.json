@@ -1,0 +1,1231 @@
+{
+  "apis": [
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 1,
+      "name": "CreateFileW",
+      "query_frame_bytes": 0,
+      "scalar": "HANDLE",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 2,
+      "name": "GetFileType",
+      "query_frame_bytes": 0,
+      "scalar": "DWORD",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 3,
+      "name": "GetFileInformationByHandleEx",
+      "query_frame_bytes": 8,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 4,
+      "name": "GetFinalPathNameByHandleW",
+      "query_frame_bytes": 8202,
+      "scalar": "DWORD",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 5,
+      "name": "GetFileSizeEx",
+      "query_frame_bytes": 8,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": true,
+      "fragment_allowed": true,
+      "id": 6,
+      "name": "ReadFile",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": true,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 7,
+      "name": "CloseHandle",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "ORIGINAL"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 8,
+      "name": "GetFileAttributesExW",
+      "query_frame_bytes": 36,
+      "scalar": "BOOL",
+      "target": "ANCESTOR"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 9,
+      "name": "FindFirstFileExW",
+      "query_frame_bytes": 592,
+      "scalar": "HANDLE",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 10,
+      "name": "FindNextFileW",
+      "query_frame_bytes": 592,
+      "scalar": "BOOL",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 11,
+      "name": "FindClose",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "SEARCH"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 12,
+      "name": "CreateDirectoryW",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "NAMESPACE"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": true,
+      "fragment_allowed": true,
+      "id": 13,
+      "name": "WriteFile",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "GENERATED"
+    },
+    {
+      "complete_ledger_allowed": false,
+      "count_applicable": false,
+      "fragment_allowed": true,
+      "id": 14,
+      "name": "FlushFileBuffers",
+      "query_frame_bytes": 0,
+      "scalar": "BOOL",
+      "target": "GENERATED"
+    }
+  ],
+  "call_record": {
+    "bytes": 256,
+    "fields": [
+      {
+        "bytes": 4,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "file_id",
+        "offset": 4,
+        "type": "u16"
+      },
+      {
+        "bytes": 1,
+        "name": "api",
+        "offset": 6,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "record_version",
+        "offset": 7,
+        "type": "u8"
+      },
+      {
+        "bytes": 8,
+        "name": "fact_flags",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "requested",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "buffer_id",
+        "offset": 20,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 22,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "generation",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_written",
+        "offset": 28,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "raw_scalar_bits",
+        "offset": 32,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "raw_count",
+        "offset": 40,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "raw_error",
+        "offset": 44,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_contribution",
+        "offset": 48,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_contribution",
+        "offset": 56,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "known_count_contribution",
+        "offset": 64,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "query_offset",
+        "offset": 72,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "query_length",
+        "offset": 76,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "input_handle_bits",
+        "offset": 80,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "pre_dispatch_clock_bits",
+        "offset": 88,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "post_binding_clock_bits",
+        "offset": 96,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 4,
+        "name": "error_id",
+        "offset": 104,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_id",
+        "offset": 108,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_zero",
+        "offset": 110,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "fold_state",
+        "offset": 112,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "buffer_state",
+        "offset": 116,
+        "type": "u32"
+      },
+      {
+        "bytes": 136,
+        "name": "reserved_zero_tail",
+        "offset": 120,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "diagnostic_record": {
+    "bytes": 1024,
+    "fields": [
+      {
+        "bytes": 4,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u32"
+      },
+      {
+        "bytes": 1,
+        "name": "state",
+        "offset": 4,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "flags",
+        "offset": 5,
+        "type": "u8"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 6,
+        "type": "u16"
+      },
+      {
+        "bytes": 8,
+        "name": "opaque_identity_id",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "call_ordinal",
+        "offset": 16,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "secondary_of",
+        "offset": 20,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 2,
+        "name": "class_bytes",
+        "offset": 24,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "message_bytes",
+        "offset": 26,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "args_bytes",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 8,
+        "name": "clock_bits",
+        "offset": 32,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 1,
+        "name": "clock_tag",
+        "offset": 40,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "severity",
+        "offset": 41,
+        "type": "u8"
+      },
+      {
+        "bytes": 86,
+        "name": "reserved_header",
+        "offset": 42,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 96,
+        "name": "class_utf8",
+        "offset": 128,
+        "type": "fixed96"
+      },
+      {
+        "bytes": 512,
+        "name": "message_utf8",
+        "offset": 224,
+        "type": "fixed512"
+      },
+      {
+        "bytes": 256,
+        "name": "args_utf8",
+        "offset": 736,
+        "type": "fixed256"
+      },
+      {
+        "bytes": 32,
+        "name": "reserved_zero_tail",
+        "offset": 992,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "enums": {
+    "artifact": {
+      "candidate-ledger.bin": 1,
+      "candidate.json": 5,
+      "child/attempt.json": 11,
+      "child/failure.json": 12,
+      "child/result.partial.jsonl": 10,
+      "cleanup.json": 6,
+      "failure.json": 7,
+      "journal.jsonl": 3,
+      "producer-report.json": 4,
+      "receipt.json": 8,
+      "seal.json": 9,
+      "stderr.bin": 14,
+      "stdout.bin": 13,
+      "terminal-ledger.bin": 2
+    },
+    "artifact_state": {
+      "BUILDING": 1,
+      "ISSUED": 3,
+      "RESERVED": 0,
+      "UNISSUED_PARTIAL": 2,
+      "UNKNOWN_RETURN": 4
+    },
+    "buffer": {
+      "DEFINED": 3,
+      "INCOMPLETE_UNKNOWN": 4,
+      "NOT_APPLICABLE": 0,
+      "RAW_RETAINED": 2,
+      "RESERVED": 1
+    },
+    "call_flags_bits": {
+      "ACCOUNTING_FAULT": 15,
+      "BUFFER_DATA_OBSERVED": 14,
+      "CAPTURE_REQUESTED": 29,
+      "CLOSE_RIGHT_CONSUMED": 16,
+      "COPY_ATTEMPTED": 27,
+      "COPY_RETURN_OBSERVED": 28,
+      "COUNT_AUX_ACK": 8,
+      "COUNT_DEFINED": 4,
+      "COUNT_DOMAIN_VALID": 19,
+      "COUNT_OBSERVED": 3,
+      "ERROR_DEFINED": 6,
+      "ERROR_DEFINITION_OBSERVED": 31,
+      "ERROR_DOMAIN_VALID": 20,
+      "ERROR_OBSERVED": 5,
+      "HASH_ATTEMPTED": 25,
+      "HASH_RETURN_OBSERVED": 26,
+      "IDENTITY_VERIFIED_AT_DISPATCH": 17,
+      "INVOKED": 0,
+      "MALFORMED_RAW": 30,
+      "POST_CLOCK_ATTEMPTED": 22,
+      "POST_CLOCK_RETURN_OBSERVED": 24,
+      "PRE_CLOCK_ATTEMPTED": 21,
+      "PRE_CLOCK_RETURN_OBSERVED": 23,
+      "QUERY_CAPTURE_OBSERVED": 12,
+      "QUERY_DEFINED": 13,
+      "RIGHT_TRANSFER_ACK": 9,
+      "SCALAR_AUX_ACK": 7,
+      "SCALAR_DOMAIN_VALID": 18,
+      "SCALAR_NULL": 2,
+      "SCALAR_OBSERVED": 1,
+      "STOPPED": 11,
+      "WRAPPER_RETURNED": 10
+    },
+    "capture": {
+      "COMPLETE": 2,
+      "FAILED": 3,
+      "NOT_REQUESTED": 0,
+      "PENDING": 1
+    },
+    "clock": {
+      "F64": 2,
+      "I64": 1,
+      "UNOBSERVED": 0
+    },
+    "close": {
+      "ENTERED_RETURN_UNKNOWN": 2,
+      "NOT_ATTEMPTED": 0,
+      "NOT_DISPATCHED_DEADLINE": 5,
+      "RESERVED": 1,
+      "RETURNED_FAILURE": 4,
+      "RETURNED_SUCCESS": 3
+    },
+    "diagnostic_state": {
+      "COMMITTED": 2,
+      "FORMAT_FALLBACK": 3
+    },
+    "file_flags_bits": {
+      "ACTUAL_DIGEST_PRESENT": 1,
+      "ASSEMBLY_RETAINED": 13,
+      "CAPTURE_COMPLETE": 5,
+      "CAPTURE_REQUESTED": 2,
+      "CLOSE_RESERVED": 9,
+      "CLOSE_SUCCESS_KNOWN": 11,
+      "CLOSE_SUCCESS_TRUE": 12,
+      "COPY_UNKNOWN": 8,
+      "EARLY": 10,
+      "EXPECTED_DIGEST_PRESENT": 0,
+      "HASH_ATTEMPTED": 3,
+      "HASH_COMPLETE": 4,
+      "HASH_UNKNOWN": 7,
+      "READ_UNKNOWN": 6
+    },
+    "fold": {
+      "COMMITTED": 2,
+      "COMMITTING": 1,
+      "FAILED_AFTER_COMMIT": 4,
+      "FAILED_BEFORE_COMMIT": 3,
+      "PENDING": 0
+    },
+    "identity": {
+      "IN_PROGRESS": 1,
+      "NOT_ATTEMPTED": 0,
+      "REFUSED": 3,
+      "UNKNOWN": 4,
+      "VERIFIED": 2
+    },
+    "module_flags": {
+      "ACCEPTED": 2,
+      "CACHED": 3,
+      "PACKAGE": 0,
+      "RETURN_OBSERVED": 1
+    },
+    "open": {
+      "ENTERED_RETURN_UNKNOWN": 2,
+      "KNOWN_FAILURE_NO_HANDLE": 4,
+      "OWNED": 3,
+      "OWNERSHIP_UNKNOWN": 5,
+      "RESERVED": 1,
+      "UNOPENED": 0
+    },
+    "phase": {
+      "CANDIDATE": 1,
+      "FRAGMENT": 0,
+      "TERMINAL": 2
+    },
+    "phase_code": {
+      "RawReturn_allocation": 5,
+      "admit_plan": 18,
+      "admit_reconcile": 38,
+      "after_count_before_aux": 6,
+      "after_scalar_before_aux": 2,
+      "after_scalar_before_right_transfer": 3,
+      "archive": 40,
+      "authority_factory": 36,
+      "before_final_ack": 46,
+      "bind_ports": 15,
+      "bind_test_compiler": 17,
+      "bind_test_hooks": 16,
+      "binding_invoke": 0,
+      "buffer_copy": 7,
+      "canonical_reconcile": 48,
+      "capture_early": 20,
+      "checker_factory": 37,
+      "claim_continuation": 22,
+      "cleanup_publication": 13,
+      "close_wrapper": 12,
+      "consistency": 44,
+      "continue_once": 24,
+      "copy_bytes": 45,
+      "core": 43,
+      "diagnostic_format": 34,
+      "encoding": 49,
+      "entry": 14,
+      "error_copy": 4,
+      "final_clock": 35,
+      "finalize": 25,
+      "fragment": 53,
+      "freeze": 50,
+      "generated_checker": 51,
+      "handoff": 11,
+      "hash_remaining": 39,
+      "hash_update": 8,
+      "identity_query": 10,
+      "issue_continuation": 21,
+      "journal": 41,
+      "journal_append": 26,
+      "journal_close": 27,
+      "legacy_projection": 52,
+      "load_source": 23,
+      "original_close": 33,
+      "post_call_clock": 9,
+      "pre_dispatch": 1,
+      "publish_candidate": 28,
+      "publish_cleanup": 29,
+      "publish_failure": 30,
+      "publish_receipt": 31,
+      "publish_seal": 32,
+      "reserve_output": 19,
+      "resources": 42,
+      "source_admission": 47
+    },
+    "profile": {
+      "ORIGINAL7_N4": 1,
+      "ORIGINAL7_PROSPECTIVE": 2,
+      "UNQUALIFIED_FRAGMENT": 0
+    },
+    "role": {
+      "CAPTURED_METADATA": 2,
+      "CAPTURED_SOFTWARE": 1,
+      "HASH_ONLY_BULK": 3,
+      "NONE_FRAGMENT_ONLY": 0
+    },
+    "severity": {
+      "FORMATTER_FAILURE": 3,
+      "PRIMARY": 1,
+      "SECONDARY": 2
+    },
+    "status": {
+      "INCOMPLETE": 3,
+      "OBSERVED_COMPLETE": 1,
+      "OBSERVED_NEGATIVE": 2
+    },
+    "target": {
+      "ANCESTOR": 2,
+      "GENERATED": 4,
+      "NAMESPACE": 5,
+      "ORIGINAL": 1,
+      "SEARCH": 3
+    },
+    "wrapper": {
+      "NOT_RETURNED": 0,
+      "RAISED": 2,
+      "RETURNED": 1
+    }
+  },
+  "file_record": {
+    "bytes": 256,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 1,
+        "name": "role",
+        "offset": 2,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "capture_state",
+        "offset": 3,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "target_class",
+        "offset": 4,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "open_state",
+        "offset": 5,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "identity_state",
+        "offset": 6,
+        "type": "u8"
+      },
+      {
+        "bytes": 1,
+        "name": "close_state",
+        "offset": 7,
+        "type": "u8"
+      },
+      {
+        "bytes": 8,
+        "name": "flags",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "descriptor_id",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "path_offset",
+        "offset": 20,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "path_bytes",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_utf16_units",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 8,
+        "name": "expected_size",
+        "offset": 32,
+        "type": "u64"
+      },
+      {
+        "bytes": 32,
+        "name": "expected_sha256",
+        "offset": 40,
+        "type": "digest32"
+      },
+      {
+        "bytes": 32,
+        "name": "actual_sha256",
+        "offset": 72,
+        "type": "digest32"
+      },
+      {
+        "bytes": 4,
+        "name": "open_ordinal",
+        "offset": 104,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "close_ordinal",
+        "offset": 108,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 8,
+        "name": "known_read_bytes",
+        "offset": 112,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_bytes",
+        "offset": 120,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_bytes",
+        "offset": 128,
+        "type": "u64"
+      },
+      {
+        "bytes": 4,
+        "name": "query_offset",
+        "offset": 136,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "query_length",
+        "offset": 140,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "first_diagnostic",
+        "offset": 144,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 4,
+        "name": "read_reservations",
+        "offset": 148,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "read_invocations",
+        "offset": 152,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "captured_blob_length",
+        "offset": 156,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "early_ordinal",
+        "offset": 160,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "path_id",
+        "offset": 162,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "read_generation",
+        "offset": 164,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "module_ordinal",
+        "offset": 168,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 86,
+        "name": "reserved_zero_tail",
+        "offset": 170,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "header": {
+    "bytes": 4096,
+    "fields": [
+      {
+        "bytes": 8,
+        "name": "magic",
+        "offset": 0,
+        "type": "ascii8"
+      },
+      {
+        "bytes": 2,
+        "name": "format_version",
+        "offset": 8,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "value_schema_version",
+        "offset": 10,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "profile",
+        "offset": 12,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "phase",
+        "offset": 14,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "status",
+        "offset": 16,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "header_bytes",
+        "offset": 18,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "section_count",
+        "offset": 20,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "file_count",
+        "offset": 22,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "call_count",
+        "offset": 24,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "module_count",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "diagnostic_count",
+        "offset": 30,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "edge_count",
+        "offset": 32,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "flags",
+        "offset": 36,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "total_bytes",
+        "offset": 40,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "captured_input_bytes",
+        "offset": 48,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "known_read_bytes",
+        "offset": 56,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "hashed_bytes",
+        "offset": 64,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "copied_bytes",
+        "offset": 72,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "origin_data_id",
+        "offset": 80,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "ledger_sequence",
+        "offset": 88,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "start_clock_bits",
+        "offset": 96,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "latest_clock_bits",
+        "offset": 104,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 8,
+        "name": "freeze_clock_bits",
+        "offset": 112,
+        "type": "typed_clock_bits"
+      },
+      {
+        "bytes": 1,
+        "name": "clock_tags",
+        "offset": 120,
+        "type": "u8"
+      },
+      {
+        "bytes": 7,
+        "name": "reserved_121_127",
+        "offset": 121,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 32,
+        "name": "previous_ledger_sha256",
+        "offset": 128,
+        "type": "digest32"
+      },
+      {
+        "bytes": 8,
+        "name": "qualification_bits",
+        "offset": 160,
+        "type": "u64_must_be_zero"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_R",
+        "offset": 168,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_C",
+        "offset": 172,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_E",
+        "offset": 176,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "early_count",
+        "offset": 180,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "module_count_repeat",
+        "offset": 182,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "read_chunk",
+        "offset": 184,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "path_policy",
+        "offset": 188,
+        "type": "u16"
+      },
+      {
+        "bytes": 66,
+        "name": "reserved_to_descriptors",
+        "offset": 190,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 512,
+        "name": "section_descriptors",
+        "offset": 256,
+        "type": "8x64"
+      },
+      {
+        "bytes": 3328,
+        "name": "reserved_zero_tail",
+        "offset": 768,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "module_record": {
+    "bytes": 64,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "ordinal",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "file_ordinal",
+        "offset": 2,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "flags",
+        "offset": 4,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "dependency_count",
+        "offset": 6,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "name_offset",
+        "offset": 8,
+        "type": "u32"
+      },
+      {
+        "bytes": 2,
+        "name": "name_length",
+        "offset": 12,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_14",
+        "offset": 14,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 4,
+        "name": "edge_offset",
+        "offset": 16,
+        "type": "u32"
+      },
+      {
+        "bytes": 4,
+        "name": "first_diagnostic",
+        "offset": 20,
+        "type": "optional_u32"
+      },
+      {
+        "bytes": 2,
+        "name": "attempt_order",
+        "offset": 24,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "return_order",
+        "offset": 26,
+        "type": "optional_u16"
+      },
+      {
+        "bytes": 2,
+        "name": "cache_hit_count",
+        "offset": 28,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "reserved_30",
+        "offset": 30,
+        "type": "zero_bytes"
+      },
+      {
+        "bytes": 32,
+        "name": "reserved_zero_tail",
+        "offset": 32,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "section_descriptor": {
+    "bytes": 64,
+    "fields": [
+      {
+        "bytes": 2,
+        "name": "id",
+        "offset": 0,
+        "type": "u16"
+      },
+      {
+        "bytes": 2,
+        "name": "record_size",
+        "offset": 2,
+        "type": "u16"
+      },
+      {
+        "bytes": 4,
+        "name": "count",
+        "offset": 4,
+        "type": "u32"
+      },
+      {
+        "bytes": 8,
+        "name": "offset",
+        "offset": 8,
+        "type": "u64"
+      },
+      {
+        "bytes": 8,
+        "name": "length",
+        "offset": 16,
+        "type": "u64"
+      },
+      {
+        "bytes": 32,
+        "name": "sha256",
+        "offset": 24,
+        "type": "digest32"
+      },
+      {
+        "bytes": 4,
+        "name": "flags",
+        "offset": 56,
+        "type": "u32_must_be_zero"
+      },
+      {
+        "bytes": 4,
+        "name": "reserved_zero_tail",
+        "offset": 60,
+        "type": "zero_bytes"
+      }
+    ]
+  },
+  "status": "DRAFT_TABLES_NO_ENCODER_OR_PRODUCER"
+}

@@ -1,0 +1,58 @@
+{
+  "actual_accounting_review": {
+    "bytes": 16251,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-ACTUAL-ACCOUNTING-RESOURCE-REVIEW-v3.json",
+    "sha256": "674cdf3471c133153882752a948b8515ce8518efee0472bb2834607cad1edd24"
+  },
+  "actual_bytes_hashed": 9017363601,
+  "actual_experiments": 1,
+  "actual_peak_RSS": null,
+  "application_changed": false,
+  "budget": {
+    "reserved_C": 13551,
+    "reserved_E": 1496,
+    "used_C": 10095,
+    "used_E": 1331
+  },
+  "canonical_raw_rows": 10095,
+  "captured_bytes": 209,
+  "complete_candidate_bytes": 4373152,
+  "complete_terminal_bytes": 4428448,
+  "fake_original_calls": 10095,
+  "fictional_inputs": 216,
+  "harness_evidence_disk_bytes": 14410009,
+  "independent_actual_peer": {
+    "bytes": 13554,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v2.json",
+    "sha256": "fa6b4375559d310587cd7ea53a0679bd1434182a78c8984e1723337ecbb0f2a5"
+  },
+  "known_successful_close_returns": 216,
+  "logical_raw_storage_peak_bytes": 2832075,
+  "next": "Full actual new84 source/import/content-consumer roster and concrete first-entry/native-first-return bindings. Then separately qualify14API physical output/readback, distinct84 native/integrated resources and scientific/human gates. The original-only cap is not a joint physical budget.",
+  "preserved": "All source/oracle/test first failures and staticV2 HOLDs remain. The actual result was not repeated. Independent reviewer first checker omitted clock-tag expectation bits; named corrected checker and both reports remain. No source/evidence defect is attributed to that reviewer setup error.",
+  "project_complete": false,
+  "proof": {
+    "bytes": 18010,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json",
+    "sha256": "7cefbe0e5dc71f950a3537be9f30790d0c7501ca7c5c3446c3c331567a98cedf"
+  },
+  "provider_spend_usd": 0,
+  "qualification": {
+    "RSS_or_process_fit": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "scientific": false
+  },
+  "read_dispatches": 8799,
+  "retained_disk_bytes": 23390708,
+  "retained_files": 15,
+  "root_checks": "Exact accepted proof/reviews, all15 retained output hashes rechecked in chunks, unchanged source/harness pins, all known source/canonical/spy/consumer/clock/close counts and false authority flags agree. No subject import, producer replay or original payload access.",
+  "schema_version": 1,
+  "separate_evidence_persistence_seconds": 0.3589999999385327,
+  "source_generated_disk_bytes": 8980699,
+  "source_unwind_seconds": 10.094000000040978,
+  "status": "ACCEPTED_LARGE_GENERATED_SOURCE_PURE_ONLY"
+}

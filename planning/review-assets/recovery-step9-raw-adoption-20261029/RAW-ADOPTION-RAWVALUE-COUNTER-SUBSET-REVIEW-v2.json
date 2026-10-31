@@ -1,0 +1,735 @@
+{
+  "actual_API_calls": 0,
+  "closed_findings": [
+    "COUNT_DOMAIN",
+    "ONCE_AND_INCREMENTAL_FOLD",
+    "CLOSE_AND_BUFFER_DOMAINS"
+  ],
+  "inputs": {
+    "ADOPTION-FIXTURE-SCHEMA-DRAFT-v1.json": {
+      "bytes": 12230,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-DRAFT-v1.json",
+      "sha256": "ca2234165ee5a115b4d5b2acccec30b87b8a47baf7f3fc17bb2bd5cce8885623"
+    },
+    "ADOPTION-FIXTURE-SCHEMA-DRAFT-v2.json": {
+      "bytes": 15186,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-DRAFT-v2.json",
+      "sha256": "69f25d7720a95b90cdf4da4768b43384f1086bcd45312995acbbaa9eb370c36a"
+    },
+    "ADOPTION-FIXTURE-SCHEMA-v1.json": {
+      "bytes": 18421,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-v1.json",
+      "sha256": "1bfac6c0ec87d499279178311db7948ad2ef40704d84ce5462e1073971a3d1bc"
+    },
+    "RAW-ADOPTION-FIXTURES-v1.json": {
+      "bytes": 246927,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURES-v1.json",
+      "sha256": "879ec35dc270169e2b13c002dc2d433bd14c3305d924f72191eadcac1a6ca3ad"
+    },
+    "RAW-ADOPTION-RAWVALUE-COUNTER-SUBSET-REVIEW-v1.json": {
+      "bytes": 5050,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-RAWVALUE-COUNTER-SUBSET-REVIEW-v1.json",
+      "sha256": "1391c2b63671a20729d4ed4e2aea31818792d98ea30e5291f653d40cee7d77ee"
+    }
+  },
+  "limitations": [
+    "Checkpoint geometry manually inspected for named first-fact/incremental cases; no general callable sequencer or source behavior is claimed.",
+    "No actual C/Python conversion window, raw return bridge, owner integration, real metadata or profile proof is established."
+  ],
+  "manual_boundary_checks": [
+    "Observed NULL and HANDLE0 retain scalar return1 and no closer; UNOBSERVED predispatch has scalar return0 and no guessed effect.",
+    "Stored handle/count before auxiliary flags survives KI/SE/wrapper faults; wrapper return0 is independent from raw return1.",
+    "False BOOL+COUNT32(0) remains undefined/unknown bytes; true BOOL+COUNT32(0) is knownzero and negative for incomplete read.",
+    "Incremental case checkpoints at3/6 keep unique ordinal1 while count0=>1 and knownread0=>3, final byte totals once.",
+    "Same-ordinal reconcile repeats do not inflate counters; conflicting reserve and repeatedinvoke keep originalfacts and no second invocation.",
+    "Known close BOOL0 maps false; absent close scalar mapsnull; buffered stop/reuse rejection keeps exact generation0 and originalabc."
+  ],
+  "old_payload_or_source_closure_operations": 0,
+  "portable_imports_or_executions": 0,
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "runtime_authorized": false
+  },
+  "recorded_at_utc": "2026-10-29T13:46:18.595853+00:00",
+  "reviewed_cases": 32,
+  "rows": [
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "success_read_capture_close",
+      "known_bytes": {
+        "captured": 3,
+        "hashed": 3,
+        "read": 3,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 0,
+        "known_count_values": 0,
+        "known_scalar_returns": 0,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 0
+      },
+      "id": "cutoff_before_invocation",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "open_wrapper_allocation",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "open_first_fact_before_aux",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "open_first_fact_before_right_transfer",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "observed_INVALID_handle",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "observed_NULL_handle",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "observed_numeric_zero_handle",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "read_count_fact_before_aux",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 3,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "incremental_scalar_then_count_fold",
+      "known_bytes": {
+        "captured": 3,
+        "hashed": 3,
+        "read": 3,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "pending_count_wrapper_stop",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "failed_read_observed_zero",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "successful_defined_zero",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 1,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "write_known_before_hard_cutoff",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 4
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "file_close_first_fact_wrapper_stop",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "search_close_first_fact_wrapper_stop",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "identity_fourth_query_late",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 0,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "invocation_without_scalar_fact",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "search_initial2_declared_empty",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "search_initial18_not_empty",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "search_next18_then_findclose",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "namespace_first_flag_before_wrapper",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "same_ordinal_reconcile_twice",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "foreign_owner_reconcile_then_cleanup",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "conflicting_reserve_keeps_original",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 0,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 2,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "repeated_invoke_no_second_dispatch",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "wrong_closer_then_correct_once",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 0,
+        "known_count_values": 0,
+        "known_scalar_returns": 0,
+        "logical_call_reservations": 0,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 0
+      },
+      "id": "same_owner_early_handoff",
+      "known_bytes": {
+        "captured": 5,
+        "hashed": 5,
+        "read": 5,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 0,
+        "known_count_values": 0,
+        "known_scalar_returns": 0,
+        "logical_call_reservations": 0,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 0
+      },
+      "id": "same_numeric_start_foreign_origin",
+      "known_bytes": {
+        "captured": 5,
+        "hashed": 5,
+        "read": 5,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 0,
+        "known_count_values": 0,
+        "known_scalar_returns": 0,
+        "logical_call_reservations": 0,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 0
+      },
+      "id": "same_owner_second_handoff_rejected",
+      "known_bytes": {
+        "captured": 5,
+        "hashed": 5,
+        "read": 5,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 1,
+        "known_count_values": 0,
+        "known_scalar_returns": 1,
+        "logical_call_reservations": 1,
+        "portable_wrapper_returns": 0,
+        "unique_reconciled_ordinals": 1
+      },
+      "id": "existing_primary_known_close_false",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 0,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    },
+    {
+      "close_nullable_outcomes": true,
+      "counts": {
+        "FFI_invocations_reserved": 2,
+        "known_count_values": 1,
+        "known_scalar_returns": 2,
+        "logical_call_reservations": 2,
+        "portable_wrapper_returns": 1,
+        "unique_reconciled_ordinals": 2
+      },
+      "id": "buffer_generation_retained_after_stop",
+      "known_bytes": {
+        "captured": 0,
+        "hashed": 0,
+        "read": 3,
+        "written": 0
+      },
+      "raw_field_record_agreement": true,
+      "request_and_count_domains": true,
+      "retained_buffer_bytes_generations_agree": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Static literal/field arithmetic and schema/text inspection only; expected projections are checked against stored steps, not used to drive an adoption implementation. No under-test adoption code exists or executes. This is not Native\u2019s whole-fixture/same-owner/source conformance review.",
+  "status": "CLEAR_FINITE_RAWVALUE_COUNTER_LITERAL_SUBSET_NOT_WHOLE_FIXTURE_CLEARANCE"
+}

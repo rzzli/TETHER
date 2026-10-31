@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "current_interface_preflight_only",
+  "model_calls": 0,
+  "request_file": "runs\\question-development-20261026T023832Z\\preparation\\mr-discovery-replication-request.json",
+  "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "roundtrip_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "roundtrip_equal": true,
+  "prompt_utf8_bytes": 12785,
+  "canonical_http_body_bytes": 16702,
+  "canonical_payload_sha256": "00bfc6e31a3b506cf81813ad4cf7367b2d943402aba7ba078eb59df994a9ac01",
+  "reservation_input_tokens": 12817,
+  "reservation_output_tokens": 2048,
+  "simplified_preflight": "pending_unimplemented_renderer",
+  "synthetic_preflight": "pending_admitted_requests"
+}

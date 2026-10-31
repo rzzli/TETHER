@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T22:23:44.763780+00:00",
+  "status": "CLEAR_exact_source_protocol_pure_evidence_only_separate_root_execution_decision_pending",
+  "execution_authorized_by_review": false,
+  "actual_qualification_established": false,
+  "anchors": {
+    "detached_parent_launch_draft_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "bytes": 53085,
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    },
+    "qualify_detached_native_worker_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\qualify_detached_native_worker_v1.py",
+      "bytes": 42316,
+      "sha256": "6be0634f9bc9ea89eff1e54cbb963c355853eacc9ad9bbe63496b2f1aa50fea9"
+    },
+    "DETACHED-NATIVE-QUALIFICATION-PROTOCOL-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-NATIVE-QUALIFICATION-PROTOCOL-v1.json",
+      "bytes": 37846,
+      "sha256": "b196a352dcd6b62b59b7b445cafcc2dedb98b454707c01fc19f96a661cedf7b2"
+    },
+    "DETACHED-NATIVE-QUALIFICATION-PURE-CHECKS-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-NATIVE-QUALIFICATION-PURE-CHECKS-v1.json",
+      "bytes": 777,
+      "sha256": "ff7e385bc163d5788feb8828042c6bf35c777b1c11727cc8e801ffe7f32b52b3"
+    },
+    "check_detached_native_qualification_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_native_qualification_v1.py",
+      "bytes": 23776,
+      "sha256": "2ffb128dbd205713e9eb980b9b7818c54a55e80b777cf726b9123965bd836ac8"
+    },
+    "DETACHED-POLICY-DESIGN-v1.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-POLICY-DESIGN-v1.md",
+      "bytes": 9046,
+      "sha256": "65353b41b45ce5d2dfa420cbe2855718f63757c64941039283326d01679907ae"
+    },
+    "DETACHED-POLICY-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-POLICY-CONTRACT-v1.json",
+      "bytes": 5997,
+      "sha256": "387d0c686c7efb364cea9b21c6da36cb38b12015a4498239192da071f42edfdc"
+    },
+    "DETACHED-RESOURCE-MATRIX-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-RESOURCE-MATRIX-v1.json",
+      "bytes": 1060,
+      "sha256": "00f55f0bad70265e0832b31a461f78e8d257d21085d372c093d99e449c3ebc9c"
+    },
+    "check_detached_resource_matrix_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_resource_matrix_v1.py",
+      "bytes": 1744,
+      "sha256": "d0c61cb1ee3a808957358aeb38f46d27f80fe1ba3590b9928d2dd8176a3f4da3"
+    },
+    "abi_parent_launch_draft_v3.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft_v3.py",
+      "bytes": 53085,
+      "sha256": "c111ac5f42209eb61fc49522d4cd6db544987b1c4230577404022e1add6eb2f4"
+    },
+    "harmless_launch_seal_v2.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_seal_v2.py",
+      "bytes": 5999,
+      "sha256": "4cc94dd9ab5940f4f5e303d4c41ffbbb8d5032103eafb139113133d44cbb1dcb"
+    },
+    "NATIVE-JOB-IOCP-V1-RESULT-VERIFICATION.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\NATIVE-JOB-IOCP-V1-RESULT-VERIFICATION.json",
+      "bytes": 10964,
+      "sha256": "25c648a168c5d836acb44e080ba8c4219c2d38068d15174ab35a92701d5beec5"
+    },
+    "NATIVE-JOB-IOCP-V1-POST-REVIEW-WARNING.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\NATIVE-JOB-IOCP-V1-POST-REVIEW-WARNING.json",
+      "bytes": 3894,
+      "sha256": "f0840e3d5e0ca82c42092853e75d81839f9064fb52f9952d99405c53a846fdc0"
+    }
+  },
+  "protocol_inputs": 140,
+  "common_prior_pins_unchanged": 130,
+  "prospective_output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-v1-20261028T221916Z",
+  "checks": {
+    "all140pins_match": true,
+    "output_absent": true,
+    "canonical_protocol": true,
+    "SDK_literal_only_byte_AST_delta": true,
+    "both_SDK_gates_false": true,
+    "unchanged_own_EXE_source": true,
+    "same_nine_System32_candidates": true,
+    "no_target_compiler_model_IOCP_route": true,
+    "typed_bindings_unchanged": true,
+    "raw_resource_override_final_stage_only": true,
+    "generic_total1_and_Active2_rejection_unchanged": true,
+    "all12null_fields_mandatory": true,
+    "primary_plus_final_recheck_close_error_retained": true,
+    "read_leases_post_cleanup_terminal_seal_vetoes_preserved": true,
+    "six_fixture_universes_receipt_seal_hashes_journal_chains_and_actual_flag_events_verified": true
+  },
+  "policy": {
+    "creation_flags": "0x0008040C",
+    "case_order": [
+      "resources",
+      "overflow",
+      "sleep",
+      "suspended_abort"
+    ],
+    "once_each": true,
+    "resources_final_totals": [
+      1,
+      2
+    ],
+    "resources_final_active": 0,
+    "resources_final_terminated": 0,
+    "resources_final_pids": [],
+    "generic_total": 1,
+    "Active2_accepted": false,
+    "conhost_allowlist": false,
+    "resource_failed_child_attempt_retains_frozen_NO_WINDOW": true
+  },
+  "fault_evidence": {
+    "main_pure_tests": 19,
+    "additional_raw_consistent_terminated_matrix_conditions": 8,
+    "additional_matrix_is_peer_root_anchor_not_flat_protocol_input": true
+  },
+  "fixtures": [
+    {
+      "name": "fake-case-publication",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-case-publication",
+      "files": 12,
+      "journal_events": 15,
+      "creation_flag_events": 1,
+      "journal_tip_sha256": "67df1656a8cee45491978682834272133189882b9ff0211b07c3a0ca6f7638eb",
+      "terminal_status": "failed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-case-publication\\terminal-seal.json",
+        "bytes": 2409,
+        "sha256": "efe29be54ef03545bec7b25291245e74284093642016ae2165b6519df8b2ab11"
+      }
+    },
+    {
+      "name": "fake-complete",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-complete",
+      "files": 23,
+      "journal_events": 56,
+      "creation_flag_events": 4,
+      "journal_tip_sha256": "01826e6995a0b1b5fa6700e37d961bb31debf9cb4216d30d5452a38d83a6c089",
+      "terminal_status": "harmless_launch_qualification_passed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-complete\\terminal-seal.json",
+        "bytes": 3604,
+        "sha256": "7a8c1c90cf0ab90a00549f440bb149a4b92b05337d6abeafa39bc5fe2d1f069a"
+      }
+    },
+    {
+      "name": "fake-late-close",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-late-close",
+      "files": 24,
+      "journal_events": 56,
+      "creation_flag_events": 4,
+      "journal_tip_sha256": "3837056d52adb4fd149473a2ea6ccf7e730f44dffedc66ec7feb1d314a8fa939",
+      "terminal_status": "failed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-late-close\\terminal-seal.json",
+        "bytes": 3911,
+        "sha256": "bd8e3bb555db775419e521a0389c7d22be376128abb4f3e917cdeee858f1e4bf"
+      }
+    },
+    {
+      "name": "fake-wrong-stop-exit",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-wrong-stop-exit",
+      "files": 17,
+      "journal_events": 29,
+      "creation_flag_events": 2,
+      "journal_tip_sha256": "471a26d7b2ba5dc63c24fb8e184f5a95103ab8f7bfcc90d1c9a91912f49b6331",
+      "terminal_status": "failed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\fake-wrong-stop-exit\\terminal-seal.json",
+        "bytes": 3046,
+        "sha256": "c4b527443d9510384426857fd4f49e48411e74c283ae99e01fa75472f64caa5b"
+      }
+    },
+    {
+      "name": "flags",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\flags",
+      "files": 23,
+      "journal_events": 56,
+      "creation_flag_events": 4,
+      "journal_tip_sha256": "a8bfbe3e486351d8447edda20f94b9d639d194713d3a846ae96c7e3588021d5a",
+      "terminal_status": "harmless_launch_qualification_passed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\flags\\terminal-seal.json",
+        "bytes": 3587,
+        "sha256": "af59ecf0dbbaa927dffae999b435f7c84c984001aea190a27ac46d98bbc12949"
+      }
+    },
+    {
+      "name": "recheck-failure",
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\recheck-failure",
+      "files": 17,
+      "journal_events": 29,
+      "creation_flag_events": 2,
+      "journal_tip_sha256": "18f68d3341f0fd09c17f7a2418a7b72ccc3169745325c788ca2462ff8cf1524e",
+      "terminal_status": "failed",
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-native-qualification-pure-1793225885569223100\\recheck-failure\\terminal-seal.json",
+        "bytes": 3027,
+        "sha256": "816baaf76f8abdb14f072f70ed0a6acc2aa014a3e88d91a49625b39f4c270478"
+      }
+    }
+  ],
+  "material_findings": [],
+  "resolved_findings": [
+    "SDK docstring/expression changes removed; exact flag literal only",
+    "All12 failed-spawn fields required None, with per-field negatives",
+    "Final-recheck close failure retained even with prior primary and successful sealer retry"
+  ],
+  "limitations": [
+    "Source and synthetic evidence only; no actual detached attempt or ABI permission.",
+    "Resources final1or2 was predeclared before any detached run; it does not uniquely attribute the extra total.",
+    "Error1816 does not isolate a private active-limit failure and null metadata is a reporting convention.",
+    "The frozen resource-child attempt still requests NO_WINDOW; original worker binary is unchanged.",
+    "All old negative results and unknown historical PID causes remain unchanged; no universal containment claim.",
+    "Consumed IOCP has a known unknown-return accounting gap and is excluded from this route."
+  ],
+  "activity": {
+    "author_helpers_executed": 0,
+    "Windows_API_calls": 0,
+    "compiler_worker_target_or_model_execution": 0,
+    "conhost_file_opened_or_hashed": false
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "status": "AUTHOR_ACCOUNTING_AND_RESOURCE_INTERPRETATION_ONLY",
+  "reviewer_scope": "Reviewer authored Kernel4/policy contract and earlier scaffolding. This is retained byte/count/resource interpretation, not independent correctness acceptance of that source or harness. Native and Grammar actual branch/byte peers are separate.",
+  "inputs": {
+    "actual_proof": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-PROOF-v1.json",
+      "bytes": 14195595,
+      "sha256": "f1c1e9803e1128acbfd6343aa038d1ba81c902c075c770c3f8adf4b3f35073db"
+    },
+    "first_attempt": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-ATTEMPT-v1.json",
+      "bytes": 474,
+      "sha256": "7e8b94ea45bc8151e6e24953eee53ede380acc2445df9e97061e5e58a044fd66"
+    },
+    "execution_binding": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-BINDING-v1.json",
+      "bytes": 4841,
+      "sha256": "9787b72d7799cc8a3d394ef03232da684756dc3608c53d88d4e8eccde5fe0975"
+    },
+    "harness_freeze": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-FREEZE-v2.json",
+      "bytes": 7074,
+      "sha256": "cf4d6aac69665e5829f00004225058028d6af67792e31429b859323e460fc36d"
+    }
+  },
+  "activity": {
+    "subject_imports": 0,
+    "subject_replays": 0,
+    "source_edits": 0,
+    "original_or_native_operations": 0,
+    "checks": "Proof/attempt/binding/freeze hashes,844 manifest paths/content lengths against resolved retained directory paths, arithmetic counts and74 retained snapshot metadata files. No independent rehash/decode of every byte artifact or policy re-evaluation; those are the separate peer lanes. Absent-Core metadata is unavailable, not a fabricated zero source fact."
+  },
+  "run_summary": {
+    "test_dispatches": 122,
+    "groups": {
+      "preserved_corrections": 5,
+      "literal_metadata_outcomes": 52,
+      "integration_branches": 15,
+      "prior_causal_assertions": 50
+    },
+    "passes": 122,
+    "failed_or_deferred_current_dispatches": 0,
+    "worlds": 128,
+    "first_entry_attempt_flags": 123,
+    "core_present": 119,
+    "core_absent_or_not_entered": 9,
+    "original7_callback_records": 4561,
+    "canonical_reservations": 4562,
+    "registered_raw_rows": 4561,
+    "explicit_missing_registration": 1,
+    "close_callback_attempts_not_success_count": 105,
+    "ReadFile_callbacks": 3921,
+    "call_gate": {
+      "attempts": 1266,
+      "checks": 75416,
+      "normal_returns": 1126
+    },
+    "native25": "NOT_EXECUTED",
+    "whole_entry_gate_complete": false,
+    "Source3_original_E08_and_two_E16_results": "Preserved unchanged; the current suite excludes the historical factory invocations rather than relabelling them passed."
+  },
+  "retained_content": {
+    "artifact_files": 844,
+    "artifact_bytes": 20134324,
+    "categories": {
+      "source_generated_byte_copies": {
+        "files": 72,
+        "bytes": 3121169
+      },
+      "immutable_snapshot_raw256_copies": {
+        "files": 74,
+        "bytes": 1173248
+      },
+      "immutable_snapshot_row_metadata": {
+        "files": 74,
+        "bytes": 7096736
+      },
+      "immutable_snapshot_observation_metadata": {
+        "files": 74,
+        "bytes": 1161597
+      },
+      "query_witness_copies": {
+        "files": 312,
+        "bytes": 854672
+      },
+      "latest_bank_raw256_copies": {
+        "files": 119,
+        "bytes": 1167616
+      },
+      "latest_canonical_row_metadata": {
+        "files": 119,
+        "bytes": 5559286
+      }
+    },
+    "source_generated_copies": {
+      "files": 72,
+      "bytes": 3121169
+    },
+    "other_harness_artifacts": {
+      "files": 772,
+      "bytes": 17013155
+    },
+    "plus_proof": {
+      "files": 845,
+      "bytes": 34329919
+    },
+    "plus_proof_and_attempt": {
+      "files": 846,
+      "bytes": 34330393
+    },
+    "excludes": "Bindings/scope/source/preparation/checker reviews and this note. Values are apparent file-content lengths, not allocated disk blocks, heap or resident memory."
+  },
+  "source_generated_kinds": {
+    "candidate-ledger.bin": {
+      "files": 6,
+      "bytes": 1325242
+    },
+    "terminal-ledger.bin": {
+      "files": 12,
+      "bytes": 1647414
+    },
+    "journal.jsonl": {
+      "files": 12,
+      "bytes": 76036
+    },
+    "producer-report.json": {
+      "files": 12,
+      "bytes": 37223
+    },
+    "candidate.json": {
+      "files": 6,
+      "bytes": 5524
+    },
+    "cleanup.json": {
+      "files": 12,
+      "bytes": 11454
+    },
+    "receipt.json": {
+      "files": 6,
+      "bytes": 8766
+    },
+    "seal.json": {
+      "files": 6,
+      "bytes": 9510
+    }
+  },
+  "copy_meaning": "These72 files copy actual source-generated immutable objects during harness persistence. The other772 files copy snapshot/native-bank/query/metadata evidence. Physical disk writes by the harness do occur; they do not qualify the subject physical14 writer/flush/readback/durability pipeline. No bulk body is represented by the disk totals.",
+  "read_axes": {
+    "spy_completed_delivery_bytes_all_worlds": 4005313821,
+    "source_reported_known_read_bytes_selected_snapshots": 4005313937,
+    "source_reported_hashed_bytes_selected_snapshots": 4005258266,
+    "source_reported_captured_bytes_selected_snapshots": 2772549,
+    "selected_last_snapshot_worlds": 62,
+    "selection": "Prefer retained source_cached_final snapshot; otherwise first_wrapper_observed snapshot. Other57 Core observations have no persisted source snapshot and are not silently assigned measured zero totals. All original delivery records are represented by the selected-world comparison here.",
+    "difference": {
+      "bytes": 116,
+      "explanation": "Two CAUSAL/E21 read-fold interruption controls each retain a committed native count58 while the fixture never reaches its completed-delivery increment. Fold before/after labels do not mean native count uncommitted. Known, hashed, captured and fixture delivery axes stay distinct; no extra physical read or missing-byte claim."
+    }
+  },
+  "snapshot_copies": {
+    "immutable_snapshot_objects": 74,
+    "immutable_raw_rows": 4583,
+    "partial_snapshot_objects": 8,
+    "latest_registered_bank_rows": 4561,
+    "selected_last_partial_snapshots": 7,
+    "meaning": "Immutable snapshots and latest-bank rows overlap the same canonical facts. They are additional evidence copies, not additional reads, hashes, file opens or call reservations."
+  },
+  "policy_observations": {
+    "Core_observations": 119,
+    "prepared_reports": 72,
+    "issued_reports": 70,
+    "prepared_only_reports": 2,
+    "meaning": "These are retained actual observation counts. Prepared report status alone is not authority; graph/binding/report data, including prebound metadata echoed into the proof, is separate from original-file captured_bytes. Detailed causal/eligibility correctness belongs to the independent peers."
+  },
+  "E32_source_reported": {
+    "procedural_bulk_bytes": 3991999872,
+    "total_known_hashed_bytes": 3992098940,
+    "captured_actual_helpers_metadata_bytes": 99068,
+    "actual_original_calls": 3842,
+    "ReadFile_calls": 3812,
+    "once_closes": 5,
+    "admitted_C": 3922,
+    "admitted_E": 234,
+    "read_buffer_capacity": 1048576,
+    "logical_raw_storage_peak": 1196936,
+    "capture_assembly_peak": 55497,
+    "capture_assembly_live_at_snapshot": 0,
+    "generated_store_copied_bytes": 2076031,
+    "candidate_ledger_bytes": 1029226,
+    "terminal_ledger_bytes": 1030506,
+    "admitted_raw_bank_logical_bytes": 1004032,
+    "immutable_snapshot_copy_bytes": 983552,
+    "latest_bank_copy_bytes": 983552,
+    "meaning": "Actual deterministic procedural bytes through the genuine synthetic source path, not historical model reads/authentication, native loading or inference."
+  },
+  "resource_and_timing": {
+    "reported_elapsed_seconds": 13.358999999938533,
+    "cooperative_suite_deadline_seconds": 60,
+    "included": "Runner setup/source activity and per-world evidence copies before final result construction.",
+    "excluded_or_unmeasured": "Final proof serialization/write/hash/print/exit and interpreter/pre-main startup are outside or unmeasured. This is not whole-process timing, crash durability or a hard noncooperative bound.",
+    "reported_logical_raw_peaks": [
+      1180500,
+      1196936,
+      1213513
+    ],
+    "memory_limits": "The logical raw metric excludes separately retained raw banks, immutable snapshots/generated store, E08 bindings/detached graphs/prepared and issued reports, boxed Python heap/code/hash state, fixtures and driver copies. The runner retains many worlds. Disk totals, phase bounds and cross-world sums cannot establish simultaneous live memory, RSS/commit,256MiB child fit, RAM/VRAM/KV or inference capacity."
+  },
+  "next_gate_recommendation": {
+    "priority": "Make the next major engineering stage the staged real-route source/admission and physical-profile path. Native25 is a finite component regression prerequisite that can proceed in parallel and before qualifying the native wrapper; do not turn synthetic bank/refusal coverage into another completion claim.",
+    "minimum_concrete_work": [
+      "Resolve the explicitly selected new84 source/import/content-consumer graph and dispositions for known core4; distinguish captured Python/parser inputs from hash-only native bulk with an unavailable-until-qualified held-lease child/image route. Do not inherit the historical software roster wholesale.",
+      "Stage actual original7 C carrier/typed wrapper plus entry/launcher/parent/CPP and physical sink/readback source/build recipes from their frozen boundaries. Keep future built images/pack PLANNED_SOURCE orUNBUILT with null hashes until built, then externally pin actual artifacts before execution; final binary hashes must not circularly block source authoring.",
+      "Before a full physical profile, recompute the joint actor/call/query/report/output envelope for the selected roster and complete writer/readback protocol. Retained illustrative19,079 joint calls exceed current16,384; it is a version/profile gate, not permission for an arbitrary cap lift.",
+      "Run only genuinely reachable native25 source/data branches on actual issued objects; label synthetic14-record fragments and unavailable positive launch/lease/before-conversion ABI branches explicitly. Then build/ABI/native/physical qualification requires separate Root scopes."
+    ],
+    "pending": "Current E08 source-only success does not close real pre-entry TCB authentication/outer watchdog, actual before-Python native capture, held identity/path lifetime, native consumer/child binding, physical flush/readback/closure, final real roster, resources or scientific/human gates."
+  },
+  "qualification_upgrade": false
+}

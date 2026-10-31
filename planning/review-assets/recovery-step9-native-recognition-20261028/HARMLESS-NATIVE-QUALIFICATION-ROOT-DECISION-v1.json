@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "decided_at": "2026-10-28T21:21:43.123923+00:00",
+  "decision": "execute_exact_own_compiled_worker_four_cases_once",
+  "reviewed_pins": {
+    "qualify_harmless_native_worker_v1.py": "c5756bd173e1a613f883713c39891a5709631fdb9edcac4164f43b725e807697",
+    "HARMLESS-NATIVE-QUALIFICATION-PROTOCOL-v1.json": "e29a7bf8a141ba02d41248c0e693a441c2e2fa3731fb360e833325435af0c652",
+    "HARMLESS-NATIVE-QUALIFICATION-PEER-REVIEW-v1.json": "8adc403bce05a36a01f20d76636d2079e95b931cd5a10c86aad9c8ad0de33121",
+    "HARMLESS-NATIVE-QUALIFICATION-DESIGN-v1.md": "804c43bd0f0cbebcce5c5612a8cb2831f08c41ad080ed54d8025a2fd84bba11a"
+  },
+  "inputs_verified": 135,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-qualification-v1-20261028T211517Z",
+  "scope": "Exact own EXE0100ee60 only; resources/overflow/sleep/suspended_abort, fixed caps, no upstream ABI/target DLL/model/server/network.",
+  "automatic_retry": false,
+  "python_failures_preserved": true,
+  "generic_total1_unchanged": true,
+  "original_sdk_native_flag": false,
+  "unexplained_native_counter_disposition": "Stop batch; independent result review then separately designed bounded PID/accounting diagnostic before ABI"
+}

@@ -1,0 +1,33 @@
+{
+  "API_constants_domains_serialization_imports_unchanged": true,
+  "actual_target_API_calls": 0,
+  "before_sha256": "c4c84c6a5b17fae8a0509dcbaf89d83e3e8ef972687636bb3ef460cefa9e8dee",
+  "changed_ASTs": [
+    "_integer"
+  ],
+  "diff_sha256": "b8d3d87e82be2f0c093bf49c4bea2a00ba20b9d494b895431bfa5d317e4908c8",
+  "original_payload_reads": 0,
+  "other_function_class_ASTs_equal": true,
+  "preserved_source": {
+    "bytes": 17098,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v2.py",
+    "sha256": "ea676476f37974e7e7c6c63062b27c798dec6874a3f8802f20229d13a0a71191"
+  },
+  "recorded_at_utc": "2026-10-29T18:55:57.850413+00:00",
+  "root_scope_sha256": "1f38f0424b9a97b320593ddbdec1f7968f1c12a2457ff86cd0585901acdda893",
+  "schema_version": 1,
+  "scope": "Only F2 type-identity predicate; no protocol hooks, runtime or role/cap changes",
+  "source": {
+    "bytes": 17145,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v3.py",
+    "sha256": "24889920f1f0d4e6f26130c053adde9cdf7f9e006a250f9f9bae274e61ac0501"
+  },
+  "status": "IDENTITY_ONLY_V3_SOURCE_PAUSE_BEFORE_IMPORT_OR_TEST",
+  "subject_imports": 0,
+  "subject_tests": 0,
+  "trusted_imports": [
+    "json",
+    "re",
+    "types"
+  ]
+}

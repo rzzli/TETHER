@@ -1,0 +1,214 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "author": {
+    "bytes": 15635,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\author_shared_owner_interface_review_v1.py",
+    "sha256": "ad096a09b8cf4e56d1df758d258675d6e2985ab40140b7cea7cceb12e6775f5c"
+  },
+  "existing_sources_modified": false,
+  "fixture_execution": false,
+  "interfaces": [
+    {
+      "id": "entry",
+      "minimum_successor_requirement": "Use a continuation-only entry taking the exact one-shot owner-issued continuation and its current source-bound factories. Do not call run_once or any begin/start/factory-owner constructor after adoption. A new non-owning view may be allocated; it must not create another owning registry or deadline.",
+      "source_facts": [
+        "controller.run_once samples clock(), constructs _Owner(clock,started), allocates token/leases/events, invokes output_factory and sink.reserve, then calls hash_files for every spec.",
+        "bootstrap.Handoff.claim instead returns EngineContinuation retaining the existing BootstrapOwner, Origin, slots, sink, CapturedSources and event sequence.",
+        "portable.begin_injected, bootstrap.start_injected and raw.HarnessFactory.owner are independent constructors, not adoption entrypoints."
+      ]
+    },
+    {
+      "id": "clock",
+      "minimum_successor_requirement": "Select one original source-issued Origin and nonce. All work/hard/check adapters delegate to its checks and do not maintain another last sample, start, nonce or elapsed allowance. Nanosecond diagnostic projection may derive from that origin; it is not a new clock authority. Preserve the 295/300 cutoffs including already spent bootstrap time.",
+      "source_facts": [
+        "bootstrap.Origin.check(cleanup=False), .work_end and .hard_end use one seconds clock; portable.Origin.check(hard=False), .work_end, .end and .nonce use another exact class.",
+        "controller._Owner.check(final=False) uses clock/started/last_time/work_end/end fields independent of either Origin.",
+        "raw.HarnessOrigin stores synthetic integer nanoseconds and samples only through Owner.advance; exact _brand and exact Context types are required."
+      ]
+    },
+    {
+      "id": "registry_and_rights",
+      "minimum_successor_requirement": "One canonical registry entry and one close right per handle, source claim and path role. Existing component slot interfaces must become non-owning views of those entries; copying a handle into another owning Slot/_Lease is insufficient. Choose explicit finite synthetic bounds rather than silently enlarging the raw prototype. Never use seed_for_tests/assume_seed_identity_for_tests/HarnessFactory or copied identity_ok fields as production adoption authority.",
+      "source_facts": [
+        "bootstrap.LeaseSlot, portable.Slot/_IdentityWitness, controller._Lease and raw._Slot/Call are different state owners.",
+        "raw HarnessFactory preconditions are explicitly HARNESS_ONLY and raw bounds are four slots/eight calls per owner; portable permits 281 slots, controller 256 originals, bootstrap 16 sources.",
+        "portable._require_identity requires its own owner/nonce/exact slot/exact spec and four-query witness; bootstrap.IdentityReturn is a coarse typed aggregate, not that witness."
+      ]
+    },
+    {
+      "id": "raw_and_port_return",
+      "minimum_successor_requirement": "A bounded source-bound dispatch seam registers the call into the SAME canonical registry before dispatch and reconciles retained raw facts in a finally path before exposing any wrapper result/error. Wrapper-return counters and raw scalar-return counters stay separate and monotone. Owner-issued normalized views may describe known effects but cannot transfer a second right. This remains simulated Python-return adoption; no real C-to-first-store atomicity is proved.",
+      "source_facts": [
+        "portable._call accepts api(name,args)->RawReturn, increments portable returns after the Python call returns, then runs the observe callback and post-clock.",
+        "bootstrap.acquire/inspect/read/close instead expect port methods that update LeaseSlot before returning; controller.open/read/close expect OpenReturn/ReadReturn/bool.",
+        "raw reserve/invoke/store_scalar/store_count/reconcile distinguish invocation reservation, scalar/count first facts, portable-wrapper return and one-shot close ownership."
+      ]
+    },
+    {
+      "id": "early_captured_bytes",
+      "minimum_successor_requirement": "At continuation, match every early source claim to one exact approved full-roster descriptor and its live canonical slot, nonce and byte/digest provenance; reject missing/colliding/different declarations. Carry the SAME captured immutable byte objects and previously counted hash/read/copy contributions. Open/hash only the remaining roster. Do not mark the overall hashes gate until both the carried early-source subset and all remaining originals are complete.",
+      "source_facts": [
+        "bootstrap.capture_all emits owner/nonce-local CapturedSources with claims/blobs/digests and require_live_sources demands the exact fresh context and all source slots still live.",
+        "controller.CapturedContext has a different exact type and owner-token/check fields; controller.hash_files reopens every original and rebuilds all blobs/digests.",
+        "raw early_context presently contains explicit fictional existing bytes/digests/counts/event sequence and typed refs, not a real bootstrap context."
+      ]
+    },
+    {
+      "id": "output_events_and_admission",
+      "minimum_successor_requirement": "Reuse the exact existing owned namespace/reservation/journal slots, sink object and event ordinal; never call reserve_namespace or sink.reserve again at continuation. Choose one joint finite admission ledger which accounts for early reservations plus remaining work, API/read/write/flush/close counts, source loading and finalization. Independent budgets cannot each be reset or summed into an unproved fit. Portable log hooks delegate once to the shared journal; internal output I/O observations remain registry-only to prevent journal recursion.",
+      "source_facts": [
+        "bootstrap.sink.reserve(ack)/append(row) and controller.sink.reserve(key,ack,end)/append(row)/seal(candidate,ack,end)/failure(report) are incompatible sink contracts.",
+        "portable.reserve_namespace creates its own namespace/reservation/journal and later exposes write_record/finalize_output/output_pin.",
+        "bootstrap has MAX_EVENTS128 and 10*source_count+8 admission; portable has a constructor event budget and admit_plan E=6N+2B+2M+4S+161; controller uses 6N+64+128<=2048."
+      ]
+    },
+    {
+      "id": "loader_factories_and_context",
+      "minimum_successor_requirement": "Carry the same CapturedLoader instance/cache/attempted set, current source context and original bound stdlib. Source factories must be produced through it after continuation admission; do not recreate a loader or use cached external modules/default import. One merged non-owning captured-data view can bind complete specs to the same owner and check callback, without authenticating missing source or checker semantics. Synthetic checker returns test dispatch/identity only, never qualify real archive/resource/core gates.",
+      "source_facts": [
+        "bootstrap.CapturedLoader requires exact EngineContinuation, the original live source slots and captured blobs; imports are closed to declared dependencies and bound stdlib, failed compile attempts cannot retry.",
+        "bootstrap.EngineContinuation currently exposes only check/snapshot/close; it is not the controller interface.",
+        "controller factory/checker ids and _Proof owner tokens currently originate from its own _Owner, and CheckObservation requires the exact controller context."
+      ]
+    },
+    {
+      "id": "cleanup_and_terminal",
+      "minimum_successor_requirement": "One canonical lifecycle-finalizer owns all closer reservations. Bootstrap/continuation views delegate and never duplicate close dispatch even on false/unreturned close, wrapper fault, KI/SE or repeated cleanup request. Required sources stay live until final execution ends. Preserve original primary identity, later cleanup/publication errors, known byte counts and retained buffers. At hard cutoff retain in-memory failure evidence without invoking any further output I/O; final acknowledgment/clock must refer to this same sink and Origin.",
+      "source_facts": [
+        "bootstrap.close_all, portable.run finally and controller.finish/close_all each independently enumerate their owning slots/leases.",
+        "portable.run marks its owner consumed; running it around only the bootstrap phase would close early source handles before source execution.",
+        "controller.finish calls sink.failure for reporting after a deadline; a sink that performs real I/O must independently remain bounded by the original hard cutoff."
+      ]
+    }
+  ],
+  "minimum_conclusion": "A successor can expose non-owning adapters around ONE canonical owner, but the four current exact-class prototypes cannot be directly composed by copying time/slots/ready state. Freeze the canonical owner/slot/continuation/sink signatures and finite causal fixtures before authoring integration code.",
+  "nonclaims": [
+    "Actual first process clock before bootstrap imports",
+    "Actual C/ctypes return-to-first-store window",
+    "Real original source availability, live leases or fixed roster qualification",
+    "Production/checker/loader/sink integration authority",
+    "Actual full source roster/event/byte/time fit",
+    "Unicode/native/profile/scientific qualification"
+  ],
+  "open_design_choices": [
+    "Which one source-issued canonical owner/Origin/registry implementation supplies all non-owning views; not a new layer of independently owning clones.",
+    "Exact method signatures/slot views and explicit small synthetic roster/call/event caps for the first integration proof.",
+    "How normalized port wrappers expose raw/portable return axes without double-counting and retain buffers through faults.",
+    "One admitted event/output/read-write formula and final-ack rule; current independent prototype bounds are not a combined fit proof."
+  ],
+  "originals_authenticated": false,
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "proposed_finite_cases": [
+    {
+      "expected": [
+        "All continuation references are identical by is: owner,Origin,nonce,registry,port,sink,loader,journal and early context.",
+        "Each early source has one open/identity/hash/capture history; remaining file has one history; no second bootstrap hashing or namespace reservation.",
+        "Each canonical close right is consumed exactly once at final cleanup. Result is synthetic lifecycle observation only, all real qualification flags false."
+      ],
+      "id": "small_joint_lifecycle",
+      "input": "Two synthetic early source claims plus one remaining captured metadata file; one namespace/journal; one closed captured loader; synthetic checker handlers only."
+    },
+    {
+      "expected": [
+        "No remaining source open/read/hash or checker begins after395.",
+        "Deadline remains work395/hard400; start is100, not adoption time.",
+        "Known bootstrap bytes/counts remain; cleanup uses the original reserve. No later positive result even if its own callback returns."
+      ],
+      "id": "spent_time_is_not_reset",
+      "input": "Original start100; bootstrap uses294.9 seconds; continuation next work check reaches395, then bounded cleanup before400."
+    },
+    {
+      "expected": [
+        "Both reject before new call/claim/event/namespace mutation.",
+        "Existing exact owner/Origin/registry/sink stay unchanged; no constructor/reset/reopen fallback."
+      ],
+      "id": "foreign_and_repeated_handoff",
+      "input": "Equal-labelled/time-valued context from second factory, then a repeated claim of an already consumed genuine handoff."
+    },
+    {
+      "expected": [
+        "No continuation/source compile can claim live eligibility from the captured bytes alone.",
+        "No replacement open or close retry; original handle fact, close attempt and unknown/failure disposition remain."
+      ],
+      "id": "early_slot_not_live",
+      "input": "One early source close already invoked: observed true, observed false or return UNOBSERVED."
+    },
+    {
+      "expected": [
+        "Raw known-return/count/known-read contributions fold once despite later wrapper failure; portable wrapper-return remains absent.",
+        "No hash/copy success is invented; exact retained buffer+generation remains owned, no additional read admitted after cutoff.",
+        "Controller sees source incomplete/unknown and central cleanup consumes the existing close right once."
+      ],
+      "id": "late_read_first_facts",
+      "input": "Same registry read stores raw scalar nonzero and count3 then wrapper raises KI/SE or timeout before portable RawReturn/hash/copy."
+    },
+    {
+      "expected": [
+        "Reject before opening remaining inputs, source execution or hash eligibility.",
+        "No fallback duplicate early hashing and no serialized diagnostic/token becomes authority."
+      ],
+      "id": "early_context_collision",
+      "input": "Missing early source role, changed hash/size/capture declaration, duplicate canonical path, foreign context or copied ready dict."
+    },
+    {
+      "expected": [
+        "Ordinal k remains reserved and is never reused; neither source loader nor controller starts a new sequence0.",
+        "Existing namespace ownership is retained while readiness/publication remains unknown or failed.",
+        "Primary identity survives; cleanup/output observations do not recursively append a second journal for their own I/O."
+      ],
+      "id": "journal_failure_keeps_sequence",
+      "input": "Append reserves ordinal k then fails/returns unknown at the handoff boundary."
+    },
+    {
+      "expected": [
+        "Same loader attempted/cache state and original live-slot gate rejects retry/default-import/cached-module fallback.",
+        "No fresh loader or owner bypass; all accumulated diagnostics/counters remain."
+      ],
+      "id": "loader_failure_and_live_slot",
+      "input": "Captured compiler throws after attempted record reservation, or an early source becomes closed before a later load."
+    },
+    {
+      "expected": [
+        "Known returned close stays known and consumed; unknown close never retries.",
+        "Same original primary and all secondary errors remain without pretending closed/EOF/hash complete.",
+        "No I/O is issued at/after hard cutoff; in-memory negative evidence is permitted but no seal success or profile qualification."
+      ],
+      "id": "final_close_and_hard_cutoff",
+      "input": "Returned close true followed by wrapper error; alternate unknown close; then hard cutoff before failure-output dispatch."
+    }
+  ],
+  "reviewed_components_imported": false,
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Only five named NEW source/design files were read/hashed. No reviewed component import, synthetic lifecycle run, source modification, SDK/Win32/FFI/native/old payload/source-closure operation.",
+  "sources": {
+    "bootstrap": {
+      "bytes": 22010,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v2.py",
+      "sha256": "d937599212133ee7c036ee863b8c751885ffe60f7d657ec1ed5e506bf90c74eb"
+    },
+    "controller": {
+      "bytes": 24716,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+      "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+    },
+    "existing_gap": {
+      "bytes": 2519,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\ENGINE-CONTINUATION-INTEGRATION-GAP-v1.json",
+      "sha256": "69dfb4a49ba608840b35b7663607bd31fdac22bfbb7ab1dded259d70c98d1bf3"
+    },
+    "portable_port": {
+      "bytes": 34590,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\portable_file_ports_v2.py",
+      "sha256": "b7785bd67b461f41ae7beeb1ce2e3b1a8bd0f210ba875eae61aaa25732425aed"
+    },
+    "raw_adoption": {
+      "bytes": 30816,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v3.py",
+      "sha256": "f4fcae07926927f509f455b1b8e243cec2be8fdbc91fa710aacf14618e9b5bea"
+    }
+  },
+  "status": "FINITE_SOURCE_TEXT_INTERFACE_REVIEW_DESIGN_FACTS_NOT_IMPLEMENTATION"
+}

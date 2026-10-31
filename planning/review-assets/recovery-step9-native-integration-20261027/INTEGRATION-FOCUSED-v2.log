@@ -1,0 +1,24 @@
+test_archived_locations_cannot_authorize_replay (tests.test_study_native_mode.NativeModeTests.test_archived_locations_cannot_authorize_replay) ... ok
+test_archived_native_clock_cannot_move_backwards (tests.test_study_native_mode.NativeModeTests.test_archived_native_clock_cannot_move_backwards) ... ok
+test_cleanup_wait_is_limited_by_current_parent_time (tests.test_study_native_mode.NativeModeTests.test_cleanup_wait_is_limited_by_current_parent_time) ... ok
+test_config_is_explicit_immutable_local_and_fixed_command (tests.test_study_native_mode.NativeModeTests.test_config_is_explicit_immutable_local_and_fixed_command) ... ok
+test_context_failure_stops_owned_process_and_keeps_primary (tests.test_study_native_mode.NativeModeTests.test_context_failure_stops_owned_process_and_keeps_primary) ... ok
+test_lease_checks_assets_and_blocks_mutation_then_releases (tests.test_study_native_mode.NativeModeTests.test_lease_checks_assets_and_blocks_mutation_then_releases) ... ok
+test_missing_or_modified_server_fails_before_spawn (tests.test_study_native_mode.NativeModeTests.test_missing_or_modified_server_fails_before_spawn) ... ok
+test_owned_start_context_and_terminal_are_retained (tests.test_study_native_mode.NativeModeTests.test_owned_start_context_and_terminal_are_retained) ... ok
+test_parent_expiry_during_launch_hashing_prevents_spawn (tests.test_study_native_mode.NativeModeTests.test_parent_expiry_during_launch_hashing_prevents_spawn) ... ok
+test_foreign_request_owner_and_prompt_cannot_be_counted_known (tests.test_study_native_accounting.NativeAccountingTests.test_foreign_request_owner_and_prompt_cannot_be_counted_known) ... ok
+test_measured_usage_and_bound_model_count (tests.test_study_native_accounting.NativeAccountingTests.test_measured_usage_and_bound_model_count) ... ok
+test_missing_wrapper_is_unknown_not_zero (tests.test_study_native_accounting.NativeAccountingTests.test_missing_wrapper_is_unknown_not_zero) ... ok
+test_simulated_transport_never_claims_model_or_network_usage (tests.test_study_native_accounting.NativeAccountingTests.test_simulated_transport_never_claims_model_or_network_usage) ... ok
+test_wrong_echoed_model_or_settings_are_unknown (tests.test_study_native_accounting.NativeAccountingTests.test_wrong_echoed_model_or_settings_are_unknown) ... ok
+test_all_arms_source_and_usage_replay_without_recorded_consumption (tests.test_study_native_composition.NativeCompositionTests.test_all_arms_source_and_usage_replay_without_recorded_consumption) ... ok
+test_history_is_same_arm_accepted_quote_sources (tests.test_study_native_composition.NativeCompositionTests.test_history_is_same_arm_accepted_quote_sources) ... ok
+test_native_roots_required_and_original_locations_are_metadata (tests.test_study_native_composition.NativeCompositionTests.test_native_roots_required_and_original_locations_are_metadata) ... ok
+test_run_relocation_uses_logical_case_parent (tests.test_study_native_composition.NativeCompositionTests.test_run_relocation_uses_logical_case_parent) ... ok
+test_shutdown_and_existing_output_prevent_duplicate_dispatch (tests.test_study_native_composition.NativeCompositionTests.test_shutdown_and_existing_output_prevent_duplicate_dispatch) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 118.668s
+
+OK

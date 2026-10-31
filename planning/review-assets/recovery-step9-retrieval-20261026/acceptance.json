@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T21:59:12.156967+00:00",
+  "status": "accepted_bounded_retrieval_preparation_and_recorded_integration_only",
+  "version": "0.3.5",
+  "full_tests": {
+    "run": 1616,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "scoped_tests": 34,
+  "peer_tests": 7,
+  "source_pins_rechecked": 305,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "invented_candidate_records": 6,
+  "retrieval_strategies": [
+    "id_order_v1",
+    "literal_case_overlap_then_id_v1"
+  ],
+  "recorded_adapter_cells": 2,
+  "fixture_declared_usage": {
+    "input_tokens": 128,
+    "output_tokens": 128,
+    "cost_usd": 0
+  },
+  "actual_model_calls": 0,
+  "tokenizer_calls": 0,
+  "provider_spending_usd": 0,
+  "input_reserved": 15656,
+  "output_reserved": 2048,
+  "outer_preparation_and_sealing_seconds": 12.09299999999348,
+  "interpretation": "four_arm_access_manifests_only_not_four_arm_execution",
+  "real_scope": "same_one_exposed_IL6R_record_current_parent_no_universe_expansion",
+  "real_parent_available_count": 9,
+  "real_missing_inputs": 65,
+  "real_source_row_qualified": 1,
+  "real_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "nontrivial_real_retrieval_demonstrated": false,
+  "scientific_validation": "not_established",
+  "human_scientific_review": "pending",
+  "entire_R09_complete": false,
+  "remaining": [
+    "Single-policy authority-aware four-arm execution contract and finite preflight",
+    "Conditional explicit token-capacity integration if complete payloads require it",
+    "Fresh-case/reference/reviewer qualification and prospectively gated native/scientific work"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-retrieval-wheel-20261026/dist/asof_target_agents-0.3.5-py3-none-any.whl",
+    "sha256": "a543a294d70999063bcbf52656ef806f708c34d88dd12b96902382b1295beea2",
+    "bytes": 228157
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-retrieval-verifier-035-20261026/asof_target_agents-0.3.5-py3-none-any.whl",
+    "sha256": "a543a294d70999063bcbf52656ef806f708c34d88dd12b96902382b1295beea2",
+    "bytes": 228157
+  },
+  "evidence": [
+    {
+      "path": "data/cache/r09retrieval-installed-20261026/guarded-installed-verification.json",
+      "sha256": "fa135b3df37c5315026c251eced91a00daa63936dec1dc4e1f8582d23c0c3ac5",
+      "bytes": 9527
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/full-validation.json",
+      "sha256": "258cd7f3c50fa5caf1e2e74eead90fbf5d0fc1a98512e1cbba2f78569c6adfef",
+      "bytes": 462
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/code-validation.json",
+      "sha256": "0d9895d86ce5b4facb4bcd561455d03e873f0bc6be70a77a96fd2d0b76640e4d",
+      "bytes": 34544
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md",
+      "sha256": "1bf366c01b0b02dab02b875aa6f05cab2342ed8d92c27f90ad46c4e3be9ab9b0",
+      "bytes": 23280
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.json",
+      "sha256": "bcf9f399d704dacfcadecf8143a023220f6cfeb8d9e9cc3d0c7e8660232df541",
+      "bytes": 5213
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/INDEPENDENT-CONTRACT-REVIEW-v3.json",
+      "sha256": "3ad1a7c2ce648c5483daa4ea6adf278dc98a128a6cc42a173c99cccd9d0ad845",
+      "bytes": 1720
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/IMPLEMENTATION-PEER-REVIEW-final.json",
+      "sha256": "36af7faae307164ffe3db5d2eba1653549622d559271826a6f55378b5ada1163",
+      "bytes": 4618
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/QUALIFICATION.json",
+      "sha256": "db1660b62a18dd28ba99a47d24202ab5e1425a519e8066840c8f51f491bcc878",
+      "bytes": 2571
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/KNOWN-REAL-PROTOCOL.json",
+      "sha256": "668ad1801d7eea8a6dcd7f7768f58e9fc33730da676aef2c8613afa169872941",
+      "bytes": 1106
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/KNOWN-REAL-QUALIFICATION.json",
+      "sha256": "f80dd0770b46fa6b144c07c8c46f57d88a30dcb6231f443fae0c66a5acc506fb",
+      "bytes": 5097
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/OLD-PARENT-REJECTION.json",
+      "sha256": "adf73b75b7d94909e46a6a3341d96f9f266af165f42c3cbef0552002e0c07d73",
+      "bytes": 389
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/BEFORE-VERSION.json",
+      "sha256": "322f1bef99fb899c803a86f12c303dfd9db454c53c22a108b678fdc9d8f73796",
+      "bytes": 330
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/frozen-r07-after.json",
+      "sha256": "202978b939887b7a6012424fe9a55053b3c297a187f73a86124a4a32891fbecc",
+      "bytes": 976
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/frozen-baseline-after.json",
+      "sha256": "2619073eefe8f6572df106c3e99b82da8a904c04eb23af7180c3cd9e9aeaa255",
+      "bytes": 995
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/frozen-comparison-after.json",
+      "sha256": "ffd4a2ea5f1dbb58c9de6218073076f9187ae9acc7dd4ebf7eeefe5bb1f509e5",
+      "bytes": 1102
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/frozen-034-after.json",
+      "sha256": "578a2b14514a129e1dd67682941e79f3d013bb0fb6ea13936eae4ab7ca54792a",
+      "bytes": 945
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-retrieval-20261026/relocation-verification.json",
+      "sha256": "4911a303e2a782ab530dfde7cb5371fd3980ac579090f7eac4fc3fb39ddef576",
+      "bytes": 1711
+    }
+  ]
+}

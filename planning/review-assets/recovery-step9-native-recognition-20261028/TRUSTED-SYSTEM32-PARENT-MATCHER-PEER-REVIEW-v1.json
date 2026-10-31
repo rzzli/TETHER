@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "POST-CENSUS-PLATFORM-POLICY-ROOT-DECISION-v1.json": {
+      "bytes": 3949,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\POST-CENSUS-PLATFORM-POLICY-ROOT-DECISION-v1.json",
+      "sha256": "7e59903195890e06c01a3c1e409ae17b0c71fd38374c291cdf690702e298d50e"
+    },
+    "TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json": {
+      "bytes": 9211,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json",
+      "sha256": "d63f9047a1670026b18e56deea02b8fb1cfa38ac9b9f3c24a7dbff8f21a27e6f"
+    },
+    "TRUSTED-SYSTEM32-MODULE-POLICY-v1.json": {
+      "bytes": 4912,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-POLICY-v1.json",
+      "sha256": "fdd15d4f551efbd3c1ecb515b2724b4ee68cf08d3ea1ed2f5c2a576774da2ca4"
+    },
+    "TRUSTED-SYSTEM32-MODULE-VECTORS-v1.json": {
+      "bytes": 119983,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-VECTORS-v1.json",
+      "sha256": "b7e762b56a67370eeb82f8d9e1df1e3300fc9a9b9f729e8813a563c58c23634a"
+    },
+    "TRUSTED-SYSTEM32-PARENT-MATCHER-PURE-PROOF-v1.json": {
+      "bytes": 1756,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-PARENT-MATCHER-PURE-PROOF-v1.json",
+      "sha256": "9d0ab66ae955628cad4d3f75e7a26ab7cf8c5970e14c802474b9111f40a741bc"
+    },
+    "check_trusted_system32_module_policy_v1.py": {
+      "bytes": 6048,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_trusted_system32_module_policy_v1.py",
+      "sha256": "a355a3b3e826a6b05ab098cf48ca5d7c57c465568c03a72858e1e1f47ff848ce"
+    },
+    "trusted_system32_module_policy_v1.py": {
+      "bytes": 6362,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\trusted_system32_module_policy_v1.py",
+      "sha256": "77e39b3bb82fb83049aba9956da0251b4a8d914f167dc6d6512d554ad7bfb3a8"
+    }
+  },
+  "integration_requirements": [
+    "New parent must validate fixed self/core byte/lease authority and exact input role before calling this pure matcher; the expected context strings alone are not file authentication.",
+    "Parent must require exact policy ID/fingerprint on the specified second ABI event and strict module row schema, then recompute classifications with this pinned matcher.",
+    "Typed version/default/layout parsing, generic Job/resource/capture/cleanup/seal controls and exact once-only protocol remain separately reviewed integration gates.",
+    "Build/helper/protocol and actual build verification are separate; this review authorizes no compiler or target execution."
+  ],
+  "limitations": [
+    "Pure source/vector agreement is not execution of the compiled C++ guard or ABI/native/scientific qualification.",
+    "Platform context is an explicit host trust assumption; no unknown image is acquired or authenticated.",
+    "No second census, OS tracing, CPU/model/GGUF access or prior-failure reinterpretation follows."
+  ],
+  "material_blockers": [],
+  "policy": {
+    "id": "trusted-System32-platform-v1",
+    "independently_recomputed": true,
+    "no_future_source_binary_parent_proof_hash_dependency": true,
+    "semantic_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589"
+  },
+  "recorded_at_utc": "2026-10-29T02:46:09.773421+00:00",
+  "retained_evidence": {
+    "all_checker_methods_read": true,
+    "all_shared_case_expectations_previously_reviewed_with_child": true,
+    "filesystem_denial_fixture": "Ordinary newly trusted System32 report processed while builtins.open/Path.open/stat/resolve raise; source review independently confirms no file APIs.",
+    "fingerprint_and_context_independence": true,
+    "forged_flags_negative": true,
+    "methods": 6,
+    "negative_cases": 64,
+    "observed17_reclassification": "self1/core4/trusted_platform12; data-only prospective rule check, not a new census.",
+    "positive_cases": 9,
+    "proof_and_all_four_direct_bindings_match": true,
+    "reviewer_did_not_import_or_rerun": true,
+    "shared_cases": 73
+  },
+  "schema_version": 1,
+  "scope": "Independent read-only source/AST/contract/vector/proof review and own hash calculation; no matcher/helper imports or test rerun, native/SDK/compiler/child calls or unknown-image operation.",
+  "source_review": {
+    "ASCII_only_case_slash_mapping_no_hidden_Unicode_or_filesystem_normalization": true,
+    "all_functions_read": true,
+    "exact_self_then_reserved_self_then_protected_native_precedes_platform": true,
+    "imports_only": [
+      "hashlib",
+      "json",
+      "re"
+    ],
+    "maximum_modules": 64,
+    "name255_path32767_contract_limits": true,
+    "no_filesystem_loader_process_or_network_APIs_in_matching": true,
+    "only_fixed_core4_native_eligible": true,
+    "platform_context_not_authentication": true,
+    "pure_matcher_requires_prevalidated_fixed_caller_context": true,
+    "raw_lexical_DOS_grammar_and_global_device_stems": true,
+    "scalar_UTF16_lengths_and_strict_types": true,
+    "self_and_each_core_required_exactly_once": true,
+    "serialized_verified_or_child_category_or_sha_flags_rejected": true,
+    "strict_two_field_module_rows": true,
+    "unique_canonical_names_and_paths": true,
+    "wrong_runtime_and_CPU_provider_rejected": true
+  },
+  "status": "CLEAR_exact_pure_matcher_contract_shared_vectors_and_retained_proof_only"
+}

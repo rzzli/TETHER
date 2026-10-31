@@ -1,0 +1,8 @@
+{
+  "status": "AUTHOR_INLINE_SYNTAX_ERROR_BEFORE_ANY_SOURCE_WRITE",
+  "tool_chunk": "9402a8",
+  "exit_code": 1,
+  "error": "Nested triple-double quote in author string produced SyntaxError at source-helper line43 before execution; no core source artifact was created or edited.",
+  "prior_source_sha256": "2ef902a12e20f3ff6eb40bbc37504969970b1d86880ba0c396a6e7ad0e94edcb",
+  "actual_API_calls": 0
+}

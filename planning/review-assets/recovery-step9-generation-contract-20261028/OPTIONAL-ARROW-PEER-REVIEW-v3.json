@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_exact_five_cache_derivation_review",
+  "author_record_expected_sha256": "22462459f61495c2107a495eb64c9871f6e2f9015d2a6c24d6b1441b4b4406fd",
+  "actual_package_imports": 0,
+  "model_calls": 0,
+  "native_target_calls": 0,
+  "network_calls": 0,
+  "environment_files_modified_or_repaired": 0,
+  "source_code_objects_executed": 0,
+  "source_compile_operations": 10,
+  "scope": "independent_optional_environment_derivation_only_not_acceptance",
+  "prior_peer_attempts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\OPTIONAL-ARROW-PEER-REVIEW.json",
+      "sha256": "210b75cf3b2466812f4ca29911f7d619190453fb3c1e1fd28332d46708bbe9f9",
+      "bytes": 595
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\OPTIONAL-ARROW-PEER-REVIEW-v2.json",
+      "sha256": "bc0e4401c64647de1e51b4e571cb4d9d378e2bcac4d3f7daf5405d759e82589a",
+      "bytes": 970
+    }
+  ],
+  "prior_peer_failure_disposition": "v1 missed stdlib marshal import; v2 used a temporary compiled object and did not retain documented filename-object sharing. Both failed reviews remain preserved; v2 reported zero compile count was an unupdated default, not reliable instrumentation.",
+  "representation_probe": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\OPTIONAL-ARROW-MARSHAL-REPRESENTATION-PROBE.json",
+    "sha256": "621dbfa08a498f8fca475b0c5af2e238aa010a47f5431b14d8ad93081002d90a",
+    "bytes": 8706
+  },
+  "primary_source": "https://github.com/python/cpython/blob/v3.11.15/Python/marshal.c",
+  "author_record": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\OPTIONAL-ARROW-DIAGNOSIS.json",
+    "sha256": "22462459f61495c2107a495eb64c9871f6e2f9015d2a6c24d6b1441b4b4406fd",
+    "bytes": 349797
+  },
+  "author_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\diagnose_optional_arrow.py",
+    "sha256": "f215629f3903e702c2f9bc9123f6a13e8b1ca0ac3a4d104bd5105c88669eba2e",
+    "bytes": 13321
+  },
+  "amendment": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\AMENDMENT-3-OPTIONAL-ENVIRONMENT-CACHES.md",
+    "sha256": "369c8e019535114a7304bca11a9550ca10127b5d195cd4d40b56daaaa25ba92f",
+    "bytes": 3930
+  },
+  "copy_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-generation-contract-20261028\\WHEEL-ENVIRONMENTS.json",
+    "sha256": "d822ac7ac670be4ce772c0e4d12aa20d16970e5711e3b5726dfb0736845f6609",
+    "bytes": 145859
+  },
+  "original_files_rehashed": 760,
+  "original_source_files_still_match": 760,
+  "target_files_rehashed": 760,
+  "unchanged_target_files": 755,
+  "individually_qualified_changed_caches": 5,
+  "same_file_universe": {
+    "source": {
+      "files": 760,
+      "traversed_directories": 56,
+      "missing_files": [],
+      "unlisted_files": []
+    },
+    "target": {
+      "files": 760,
+      "traversed_directories": 56,
+      "missing_files": [],
+      "unlisted_files": []
+    }
+  },
+  "reparse_and_link_checks": {
+    "checked_unique_paths": 1643,
+    "checked_directories": 123,
+    "checked_regular_files": 1520,
+    "violations": [],
+    "method": "os.stat(follow_symlinks=False), S_ISLNK and FILE_ATTRIBUTE_REPARSE_POINT; both sites, approved-root ancestors, traversed directories/files"
+  },
+  "record_hashed_rows_verified": 751,
+  "record_unhashed_rows": 1,
+  "caches": [
+    {
+      "cache": "pyarrow/__pycache__/__init__.cpython-311.pyc",
+      "source": "pyarrow/__init__.py",
+      "source_sha256": "468d2cd1b68d462ae34233405a537a9d9870c16a931dfe704bd2910ba9ee0bff",
+      "original_sha256": "b6c781ed5ac024e957e3b888720493f17b30b9f61324c6f3a70cbe20dab1f912",
+      "current_sha256": "29397a7e0bc939607e6bd1c30b3fb5582179307534ee4a8be45f831fcaeaf204",
+      "old_and_current_complete_marshaled_payloads_match_nonexecuted_compile": true,
+      "recursive_code_objects_checked": 19,
+      "only_recursive_field_difference": "co_filename",
+      "all_expected_paths_verified": true,
+      "magic_hex": "a70d0d0a",
+      "flags": 0,
+      "optimization": 0,
+      "source_headers_match": true
+    },
+    {
+      "cache": "pyarrow/__pycache__/_generated_version.cpython-311.pyc",
+      "source": "pyarrow/_generated_version.py",
+      "source_sha256": "eb76987e786fe7e3159a4668ec56a7cffd1504605a0877b7fad95889469a3cf2",
+      "original_sha256": "6e09ce8770daa4ebb6e9d965a0ae2c45284f1793b4dea387c823f6e7c47051ea",
+      "current_sha256": "49fac344920286c3d27806fd2940390b6faca9811c126c98b127b4b10708022a",
+      "old_and_current_complete_marshaled_payloads_match_nonexecuted_compile": true,
+      "recursive_code_objects_checked": 1,
+      "only_recursive_field_difference": "co_filename",
+      "all_expected_paths_verified": true,
+      "magic_hex": "a70d0d0a",
+      "flags": 0,
+      "optimization": 0,
+      "source_headers_match": true
+    },
+    {
+      "cache": "pyarrow/__pycache__/ipc.cpython-311.pyc",
+      "source": "pyarrow/ipc.py",
+      "source_sha256": "cceb7a59c905f770e34100bd01c56d06bb64340b7849a2f3f5924ef9356a3cd2",
+      "original_sha256": "43ec6fad195caead2f9067cb88b7e57e248ff101a2fad274f296d1e093ad2f6d",
+      "current_sha256": "777ef3393355918e691747bcb099e33d53c70e62be5e994a0736d2bea4142048",
+      "old_and_current_complete_marshaled_payloads_match_nonexecuted_compile": true,
+      "recursive_code_objects_checked": 17,
+      "only_recursive_field_difference": "co_filename",
+      "all_expected_paths_verified": true,
+      "magic_hex": "a70d0d0a",
+      "flags": 0,
+      "optimization": 0,
+      "source_headers_match": true
+    },
+    {
+      "cache": "pyarrow/__pycache__/types.cpython-311.pyc",
+      "source": "pyarrow/types.py",
+      "source_sha256": "01a161f198c6745f8560b2b1f9a80fd2196690f5d21a7d814e1072e4dce5e2e5",
+      "original_sha256": "a7b5619a212ea792855dc1dda89b4c4665a1b839b75233c29c3c0fa9d65fe586",
+      "current_sha256": "ca5a4a0571122fdccf046dc269d1e294b38dffacb9a4e662c12cd4b1782a6b51",
+      "old_and_current_complete_marshaled_payloads_match_nonexecuted_compile": true,
+      "recursive_code_objects_checked": 54,
+      "only_recursive_field_difference": "co_filename",
+      "all_expected_paths_verified": true,
+      "magic_hex": "a70d0d0a",
+      "flags": 0,
+      "optimization": 0,
+      "source_headers_match": true
+    },
+    {
+      "cache": "pyarrow/__pycache__/util.cpython-311.pyc",
+      "source": "pyarrow/util.py",
+      "source_sha256": "45d8d0609513f3fd3c49fe399324c7b6e30592cd6ea07da79885064425348c56",
+      "original_sha256": "9281a1075370d46fef221ff68698ea778c993b13182a0e3c1f0d37035a917b8e",
+      "current_sha256": "64ec8f1551a058e4fff4238c579734a02cf58b9d5a47cf529d94543361807592",
+      "old_and_current_complete_marshaled_payloads_match_nonexecuted_compile": true,
+      "recursive_code_objects_checked": 22,
+      "only_recursive_field_difference": "co_filename",
+      "all_expected_paths_verified": true,
+      "magic_hex": "a70d0d0a",
+      "flags": 0,
+      "optimization": 0,
+      "source_headers_match": true
+    }
+  ],
+  "working_source_pins_rehashed": 327,
+  "guard_attempts": [],
+  "source_compile_host": {
+    "executable": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+    "version": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+    "cache_tag": "cpython-311",
+    "magic_hex": "a70d0d0a"
+  },
+  "comparison_method": "Validated approved filename values, reused corresponding decoded filename objects, retained compiled code objects, byte-for-byte complete marshal comparisons plus separate complete recursive code-field comparisons",
+  "limitations": [
+    "Derivation equivalence is not OS-attested writer attribution",
+    "No blanket cache exception",
+    "Acceptance remains pending root approval; native conformance and science remain open"
+  ],
+  "elapsed_seconds": 0.75
+}

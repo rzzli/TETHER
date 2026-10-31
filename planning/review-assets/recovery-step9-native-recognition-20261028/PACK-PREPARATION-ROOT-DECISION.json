@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T17:22:12.098563+00:00",
+  "decision": "proceed_once_own_pure_pack_preparation",
+  "helper_sha256": "2f760a22b1568084c18c4d8ffa61a6f751a3550c1d2ebf5d04eb1fb7748356c6",
+  "peer_sha256": "834d893096bd995ad68de5683c8b042d4b63d17c54e95822e7982c80bd0d9871",
+  "scope": "189cases:167preservedwire +18newdeclaredcanonicalabstentions +4rawbyteguards,6prefixcontrols. Mayexecute only pinned own finite oracle f59671fc from frozeninputs1b80 authority. No downloads/targetDLL/GGUF/tokenizer/inference/server. This does not resolve OS accounting or authorize native execution.",
+  "execution_native_authorized": false,
+  "provider_spend_usd": 0
+}

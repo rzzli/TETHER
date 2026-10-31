@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "tests": 13,
+  "failures": [],
+  "errors": [],
+  "source_sha256": "104a54fd8ffe1477b77f61d29af66fdf265ccc3afa14eefb71e61331fd9f820a",
+  "source_unchanged": true,
+  "checker_sha256": "69ea4a5ad9d8c7b3e2ccdb72fd2560e1bfaea47a3f584fdeb9bb5560ceb2a2b0",
+  "shared_vectors": 100,
+  "execution_contract_sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861",
+  "phase_policy_sha256": "1f918760526adf368910096a3fc9f60c4cbd78fba5737907b332396d3f6ea37a",
+  "descriptor_sha256": "e42cfda8a76c0784883c5d3dd1f695fd6e10c4d60b9c85685bfc2aba2a89922c",
+  "activity": {
+    "compiler_calls": 0,
+    "SDK_constructors": 0,
+    "children": 0,
+    "CPU_GGUF_payload_open_hash": 0
+  },
+  "scope": "Own intended Python phase/ownership/counter models and static C++ source checks; not compiled native execution, asset identity revalidation or conformance"
+}

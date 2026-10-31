@@ -1,0 +1,156 @@
+{
+  "schema_version": 4,
+  "status": "COHERENT_THREE_SOURCE_PAUSE_BEFORE_FIRST_SOURCE4_IMPORT_OR_TEST",
+  "source_scope": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-ENTRY-SUCCESSOR-AUTHORING-SCOPE-v1.json",
+    "bytes": 4315,
+    "sha256": "29f35d62699766b5a6eaf7aa00441af2410cff542a26a36c20b718dda3a47113"
+  },
+  "sources": {
+    "kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "owner_ops": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "file_view": {
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    }
+  },
+  "source_module_map": {
+    "kernel": {
+      "module": "preflight_entry_kernel_v4",
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "owner_ops": {
+      "module": "preflight_owner_ops_v4",
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "file_view": {
+      "module": "preflight_file_view_v4",
+      "path": "planning/review-assets/recovery-step9-entry-source4-20261030/preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    }
+  },
+  "captured_dependency": {
+    "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+    "bytes": 55497,
+    "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+  },
+  "source_delta": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-SOURCE-DELTA-v4.json",
+    "bytes": 6265,
+    "sha256": "9c4cf4cfac6cb9046f8b3d55c25afd7afb027bf2845081dec910c3d17f42ecb8"
+  },
+  "base_source3_pause": {
+    "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-PAUSE-v3.json",
+    "bytes": 4114,
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "precode_contract": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-v1.json",
+    "bytes": 33105,
+    "sha256": "a55b839b5b1fb038e8f0348d7fc5570abc36415db9a8f94ff6cb32269071f656"
+  },
+  "precode_freeze": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-POLICY-PRECODE-FREEZE-v1.json",
+    "bytes": 9103,
+    "sha256": "096efd94efe29ab2c9e5b65b3d9ccd3e12eabf375a94e0f4ddcdfb4c557f3fa0"
+  },
+  "precode_peer": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-INDEPENDENT-REVIEW-v1.json",
+    "bytes": 9411,
+    "sha256": "faaba85e28e2b9374b94088563f0d8ea8d0e7143d205c6aae021bd4229cc76eb"
+  },
+  "precode_acceptance": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-PRECODE-ROOT-ACCEPTANCE-v1.json",
+    "bytes": 2310,
+    "sha256": "a055dfb37924481a103b47c54a21423dff4ec70bbbf6a4f71919be3eec9f393a"
+  },
+  "root_graph_fragment": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/E08_GRAPH_FRAGMENT-v1.txt",
+    "bytes": 7893,
+    "sha256": "b17e93bbddeb773fa59a229140f242c8c0c2a86690d471b3faa3e920aa51de29"
+  },
+  "source_authors_ready": {
+    "kernel": "AUTHOR_FINAL_READY after AST/text checks andbounded Rootfeedback; no planned edits.",
+    "helpers": "RootOps4/FileView4 exactimport-only sourcepins ready.",
+    "preliminary_source_peer": "Grammar FINAL_READY on kernel e389db4e subjecttoexactpausepin recheck; no remainingpre-pause blocker."
+  },
+  "static_checks": {
+    "syntax": "AST_ONLY_PASS for3 subjects",
+    "kernel_ast_existing_changed": 21,
+    "kernel_ast_existing_unchanged": 200,
+    "kernel_ast_added": 28,
+    "graph_fragment_ast_exact": true,
+    "helpers_import_only_text_equal": true,
+    "caps_constants_unchanged": true
+  },
+  "trusted_stdlib": [
+    "dataclasses",
+    "hashlib",
+    "json",
+    "math",
+    "re",
+    "struct",
+    "types"
+  ],
+  "trusted_codec_bootstrap": "UTF-16-LE preloaded in trusted pre-entry setup; exact existingcodec4 only. No filesystem/sourcecache fallback.",
+  "public_interface": {
+    "services_order": [
+      "clock",
+      "entry_attempt",
+      "raw_backend",
+      "output_backend",
+      "hash_factory",
+      "compile_exec",
+      "executing_module",
+      "external_root_envelope",
+      "trusted_modules",
+      "manifest_policy_binding"
+    ],
+    "binding": "ManifestPolicyBinding(mode,current_decision_id,current_output_ids,basis_ids,external_tcb_pins,prior_metadata_pins)",
+    "report": "ManifestPolicyReport(mint,values); to_dict()->detached12 fields. Trusted real __init__ wrapper is an allocation/lateclockfault seam; never replace classglobal.",
+    "policy": "KernelState.validate_external_policy(envelope), once only; report/binding properties readonly andcold.",
+    "guard": "_require_execution_policy():POLICY_NOT_VALIDATED; no clock andno primary-is-None condition; exact original bindingreference/classes andissued/prepared report checked.",
+    "authoring": "entry(services,None,executing_module=K) allowed with validAUTHORING envelope; same-Core datareport, zero output/original/helper/continuation activity.",
+    "snapshot": "manifest_policy contains attempted/prepared_report/issued_report/execution_eligible/error_identity from actualretained fields, no policyretry."
+  },
+  "captured_helper_prefix": {
+    "codec_bytes": 55497,
+    "owner_ops_bytes": 39889,
+    "file_view_bytes": 3614,
+    "total_bytes": 99000,
+    "kernel_is_external_TCB_not_bootstrap_capture": true
+  },
+  "execution": {
+    "subject_imports": 0,
+    "subject_tests": 0,
+    "native_or_target_operations": 0
+  },
+  "qualification": {
+    "E08_implemented_not_executed": true,
+    "E08_behavior_qualified": false,
+    "complete_entry": false,
+    "native25": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "next": "Exact source/harness/input metadata peer andRoot executionbinding required. Preserve thisfirstcoherentcohort andfirst actualresults; correctionsrequire separate named successors."
+}

@@ -1,0 +1,862 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "method_proof": {
+    "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/method.json",
+    "sha256": "acb906d7e17091ce6bdc30a200efe199ac69d665633b3ca9bf13a710a670b555",
+    "bytes": 15898
+  },
+  "script_proof": {
+    "path": "planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/crosswalk.py",
+    "sha256": "312376b979bcff92ff3bccdf2d2d4c35b6cbc405d47c1c4e6cacefdad742611b",
+    "bytes": 8773
+  },
+  "article_ids": [
+    "15059373",
+    "22284131",
+    "31019502",
+    "32697884",
+    "35784333",
+    "40571861"
+  ],
+  "descriptors": [
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "sha256": "fe3c108cd74372eca1eed4885598d581588c0cff48fb5291cb5f6e9b43321b3a",
+      "bytes": 49424
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "sha256": "2a5976c37ba1aeb9b0944605772959d290ddd0c0136d4cf0867b413c18252231",
+      "bytes": 214692
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "sha256": "4429ca23641fe9e245a9e72a4576619b9fd5eeef345d4f9cb85f8a3ecd56fa4d",
+      "bytes": 63238
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "sha256": "283ac67e7b11fa273efb20a363eaf94ea97e8a13c63690f68499e99531b3db67",
+      "bytes": 63230
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "sha256": "cad6dab8cbd1365003dbd8bdc193771e85c0d7a515605574fbb200319f4ab2e6",
+      "bytes": 83053
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "434875679e4926d1c292c02b6deabe550e631dd279cd65684e2a8b1116ee1df2",
+      "bytes": 19200
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "sha256": "c04a9322d635b4a4a0bfbcbd38c20ff2969394f52bffe39f894bd2bad96fa19a",
+      "bytes": 22310
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "1762708a08b00fbc763af081c0010491b0b6fbb9a12d1e64e2f50ca2bef54162",
+      "bytes": 80178
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "sha256": "ec538e52a768e35c72abc01c3ee6e44818a52a03d25dd8b6a3183a3e0f2b0229",
+      "bytes": 80192
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "sha256": "020194777cc196846d528d53f5978a4976c2842f73b3c2d3dc0d16c23d8deaac",
+      "bytes": 22273
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "sha256": "d9bd08eab2d60bfee292fa15b79826105cfacfeb60241e7715ef1e9313a96e63",
+      "bytes": 49424
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "sha256": "da584f3e02c5c32a5423f37a74198d9aae2ebd380a4a793f4868ef6ca46d7d22",
+      "bytes": 214692
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "sha256": "79a4121941cef7ed5c33946be7a53c48f6b6bb3f222758b92be1a174a90757c8",
+      "bytes": 63238
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "sha256": "5b695fb3d558b2c3ea594f92b9f6e95aec6ea085f31b8eab3ab900def0f81548",
+      "bytes": 63230
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "sha256": "55e1ea8154e7fd1e3643e1bd31b19dbc4bc4dda9d5002975ca3b2d22b09d771a",
+      "bytes": 83053
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "2b27c2dc819797d318e3f986043a4beb48ff37e667ba31ea8902f447194acf89",
+      "bytes": 19200
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "sha256": "538cb0cca9c6a91e74513df9d020d6ce5487379445c1cee5fb571a0cb6d911a9",
+      "bytes": 22310
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "2c334ca4dfbdc96a504fe343a57d73ce7ecbf956b4ff4093bce70ff8a13a3c0f",
+      "bytes": 80178
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "sha256": "22d33ad9a7ab21b9a18de884c579fa9c52938e6c2c1d605532cd926ac164de63",
+      "bytes": 80192
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "sha256": "f2265c806630448a4cfd9b71d1d3897c8c1e880c67cac8580ea996c2ed7a74c7",
+      "bytes": 22273
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "sha256": "2bd5ef42f2a47d830ae311695ba16a59656b22754e414555a3bb2adf868c5f22",
+      "bytes": 135993
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "sha256": "6587379f5a2d273585ab097ab62f7ee53de19bb782500b1906e26ca781209366",
+      "bytes": 161957
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "sha256": "dd9549cea90690db9c608886029d4735b2c6a07d838b91a03b56c1c04cb25432",
+      "bytes": 161949
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "a7e3d4304440cf992bb3d8cc98ef0667812bbbd32bcf7bd2535a341c5d4fd722",
+      "bytes": 35894
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "sha256": "a3b5ff13d67b48901c8161ee2d299185830fd5f00551e9f971a1927c81684b4e",
+      "bytes": 29925
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "ea4b7958314c35ae024c208ee8fb688a1535595e1b4ecb65abe587cadfed8ba4",
+      "bytes": 178890
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "sha256": "07ffc0cd40e7da0012378b050956a559969cdf724258d544f06e101e38a41ca4",
+      "bytes": 178904
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "sha256": "0faa2abe71b38d69f5ed47f6e1f64de50e08ffd2d964b30df28ca732d704550c",
+      "bytes": 135993
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "sha256": "eb91c64aa5d4a05905cdc076fa8b9a29edf9765c43ee05417a1dd1893e721208",
+      "bytes": 314584
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "sha256": "652702999eadd714be9093aa3b47e8e5432f8354774f9ba5d8fd8eba4265dcdb",
+      "bytes": 161957
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "sha256": "ec9ec21cc4a984eb1488afb95b82e52f6278b546afca2356d1dbc4dfacbf8fa1",
+      "bytes": 161949
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "sha256": "30fc3583dc1fdccc210cc56d4b4f8a5018fb8473184c3aea536e2a5ba92243b7",
+      "bytes": 181765
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "5342cadc6c4681b6abfc2aeb1628179c9e15d3aa88f625ec5e7c14cf0a6b5405",
+      "bytes": 35894
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "sha256": "c64f832ef47a21e459dbbbe2919d5e29c4cd82ddbd8a12a3e9c26359c340bf36",
+      "bytes": 29925
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "99afc72f5652554901c795b2603b62ec67e84f710d23919205a842e2dc4d5675",
+      "bytes": 178890
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "sha256": "07ead1f74685ecd0f2717866e57b91486b682f17bcdec5371af8ffe7fa8fef0b",
+      "bytes": 178904
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "sha256": "21816bb5e1fdd41cb5998a814d92a334d852ca7c5190bdd5f04dd5de043d1ac5",
+      "bytes": 45046
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/angptl3-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "bc25cba75043c9b5f786ea49eed8f95426c83cae367416bf23cf7efbca2a4652",
+      "bytes": 83103
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide/snapshot.json",
+      "sha256": "42a653767a56b70c86a4fa48b63da55681d2b3dae5d917c39aed786061f2d8d2",
+      "bytes": 156039
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/cd19-efo_0000403-antigen_directed_cell_killing-car_t/snapshot.json",
+      "sha256": "bf57c962dc933525a9efcac81a54157ebd6aa14b1a686210d1533414474fb5ca",
+      "bytes": 159027
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/snapshot.json",
+      "sha256": "12f2c8d40ae9d1437d95e28b61740148e318d5d5527952472c908c6c83074849",
+      "bytes": 182034
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/jak1-efo_0000729-inhibit-small_molecule/snapshot.json",
+      "sha256": "a7ec912ae96ba8123e8aff24590b4096cc72c01c6fdf7124c40f79672b612ae1",
+      "bytes": 131681
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/kras-efo_0002618-inhibit-small_molecule/snapshot.json",
+      "sha256": "576e84ab297d45abae7db30b6030c0c30c4287b4f79a7f4e16b3e741b65cebb3",
+      "bytes": 157566
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/lrrk2-mondo_0005180-inhibit-small_molecule/snapshot.json",
+      "sha256": "198d8013beec0133ecadb64a6ba07d368e664134c308d1bb0a73ddc170e20c6e",
+      "bytes": 195763
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide/snapshot.json",
+      "sha256": "a65efd386d7eb0b2a0ad13967ed7d27bee968cebd30fe5559d88950c4a2fede6",
+      "bytes": 124761
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/tnf-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "3f88ca6ea72cfd89ae72a828505ed6e9dd7a3be850db95221a091d494e22f980",
+      "bytes": 154457
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/trem2-mondo_0004975-activate-antibody/snapshot.json",
+      "sha256": "a8e373c214dee4b5c3b387f784e0602f7c6a6a3971f050093ada3d2cca58aef6",
+      "bytes": 175889
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "sha256": "996116457d9416ed2b912e717f9a8dea373e98393bacbab0f8fb3a6cdf3b9fbb",
+      "bytes": 48666
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "sha256": "571bedfc43ab9f206b58988a2fffaab05dccc0f33deda63d0f8e4dbeb6c06285",
+      "bytes": 213587
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "sha256": "fe55e20da727a5ee80a5d9eb58e5d36a2797c610d3aa771a49d541fae07a1a25",
+      "bytes": 62359
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "sha256": "7d008d0039f88d9ef44109b7549c9d97275437d3a107388bc29628dbdd30193f",
+      "bytes": 62351
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "sha256": "88717e9a2bcabad92ff1da354ee3779862ceb6a98412f6e76d8124ddc4888a0c",
+      "bytes": 82291
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "sha256": "dc64b90a7b04679d18d59f31d06220b095d3b5afc36e3898edee10ae99001a7e",
+      "bytes": 18444
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "sha256": "cda7b188ecd3b4e3b857416c135115a211c91855462dc18b6f600f6a529d3997",
+      "bytes": 21554
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "sha256": "30091d1637bc6d997d765b25c679fe3a56a6dcde4dbdae6169122e1b9fdeaba6",
+      "bytes": 79169
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "sha256": "2e57b25a1fe371c1260e7dc77dadcaa20a3fe6ac027d703928767b7bf87bbffa",
+      "bytes": 79183
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "sha256": "ec512b8a594547e41fec30f263ee433cc2d98de4271298007a9a3009dded0307",
+      "bytes": 21400
+    }
+  ],
+  "packet_proofs": [
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/cd276-efo_0003060-delivery_antigen-adc/evidence.json",
+      "sha256": "0b9308aab0455687c4a45729e11fd735c71c60775b81f41189f08682450a747d",
+      "bytes": 396164,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "observations": 60
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/cftr-mondo_0009061-activate-small_molecule/evidence.json",
+      "sha256": "e3d28ac3eff158c54eaba0337c63485330faf42b8a7356ac7205afe3063b7319",
+      "bytes": 47668802,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "observations": 8008
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-delivery_antigen-adc/evidence.json",
+      "sha256": "909ff617c294a7cfff9d25e60f88a4b5a7a138fd9ca40d13c7c4175909cfaa4d",
+      "bytes": 5046836,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-inhibit-antibody/evidence.json",
+      "sha256": "909ff617c294a7cfff9d25e60f88a4b5a7a138fd9ca40d13c7c4175909cfaa4d",
+      "bytes": 5046836,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/glp1r-mondo_0005148-activate-peptide/evidence.json",
+      "sha256": "c9e19cc4196365ed235f3877f80840d310360b18d95b158afc801a88ff4c0a97",
+      "bytes": 21861618,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "observations": 3401
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/il6r-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "4bdd82ff8f4954a40e7e9d7ef72341bf1c4581248efa824d9f9d0e7c5bbc02dc",
+      "bytes": 64410,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 9
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/osmr-efo_0000729-inhibit-antibody/evidence.json",
+      "sha256": "1cf0c652748ff0f09a79d589ff9d93ee5b28fccd0bc869ae17af8bf36b1c22f9",
+      "bytes": 56668,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "observations": 10
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "5bffc4e8a5bbff2e0223e8a9dfbedc8848b3c5a2dca33a6d41c51dba001df7e5",
+      "bytes": 10729130,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-reduce_expression-sirna/evidence.json",
+      "sha256": "5bffc4e8a5bbff2e0223e8a9dfbedc8848b3c5a2dca33a6d41c51dba001df7e5",
+      "bytes": 10729130,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/context-revision-20261016T054655Z/scn9a-efo_0005762-inhibit-small_molecule/evidence.json",
+      "sha256": "0f3e1816f9b97ea0159d6b2b3bd84129daddcf58e5e40d7ca75087564bdbe3f4",
+      "bytes": 75012,
+      "descriptor": "data/derived/context-revision-20261016T054655Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "observations": 12
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/cd276-efo_0003060-delivery_antigen-adc/evidence.json",
+      "sha256": "a94048c7809d608372f1c6dcc53eb15c28fe34f23c9f1c1d521caf002780faab",
+      "bytes": 396164,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "observations": 60
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/cftr-mondo_0009061-activate-small_molecule/evidence.json",
+      "sha256": "dc588eb6f82cd09d114a505816299c7a6e4ae75804063096598b46400e97b7b8",
+      "bytes": 47668802,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "observations": 8008
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-delivery_antigen-adc/evidence.json",
+      "sha256": "cf90c23faca729b8bd2fa75055c056918125c5a1b844bfa92afcde4b3da3b122",
+      "bytes": 5046836,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-inhibit-antibody/evidence.json",
+      "sha256": "cf90c23faca729b8bd2fa75055c056918125c5a1b844bfa92afcde4b3da3b122",
+      "bytes": 5046836,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/glp1r-mondo_0005148-activate-peptide/evidence.json",
+      "sha256": "70c986496f270f1e6adb407daea2f6aa1e787d7e412249b9244dfdab3e89467f",
+      "bytes": 21861618,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "observations": 3401
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/il6r-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "9d4fc7dbdc293bc85572ac3721ce5b278e62224dc0ae86f5bfdc5b17d83f97f2",
+      "bytes": 64410,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 9
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/osmr-efo_0000729-inhibit-antibody/evidence.json",
+      "sha256": "74a70efb16c99a3ebef1f3e1b89cb4e1358cb79d416465a7a3ec9842d936cf86",
+      "bytes": 56668,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "observations": 10
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "49bd70f7a9cedf05b46a5f2298ed96b117f4afc4493d6af8abfd86a8213790d8",
+      "bytes": 10729130,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-reduce_expression-sirna/evidence.json",
+      "sha256": "49bd70f7a9cedf05b46a5f2298ed96b117f4afc4493d6af8abfd86a8213790d8",
+      "bytes": 10729130,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/context-revision-20261016T055518Z/scn9a-efo_0005762-inhibit-small_molecule/evidence.json",
+      "sha256": "cc1e7474c11adc347536876ff9df6637d60ec89c61fe60928a6f229c380ab512",
+      "bytes": 75012,
+      "descriptor": "data/derived/context-revision-20261016T055518Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "observations": 12
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/cd276-efo_0003060-delivery_antigen-adc/evidence.json",
+      "sha256": "cf4f1f2df9e260c1e44160e1d4c17d2a04db99516cd9b840b0152c81ee49092b",
+      "bytes": 1238053,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "observations": 188
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-delivery_antigen-adc/evidence.json",
+      "sha256": "f861280504417339114b213f1c3442a00031c1218c35fb61031b502048298115",
+      "bytes": 14523277,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "observations": 2339
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-inhibit-antibody/evidence.json",
+      "sha256": "f861280504417339114b213f1c3442a00031c1218c35fb61031b502048298115",
+      "bytes": 14523277,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "observations": 2339
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/il6r-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "7e9cc21ba4eb0fc0378f4c1f6c14466fce3ca2f7ba9b06c55331661bddd09f07",
+      "bytes": 138506,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 21
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/osmr-efo_0000729-inhibit-antibody/evidence.json",
+      "sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+      "bytes": 86360,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "observations": 15
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "1d967a56196bf999035f30bd1be7ba942ee4f9ef41f7850584cf256931aa1b93",
+      "bytes": 12777329,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 2230
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-reduce_expression-sirna/evidence.json",
+      "sha256": "1d967a56196bf999035f30bd1be7ba942ee4f9ef41f7850584cf256931aa1b93",
+      "bytes": 12777329,
+      "descriptor": "data/derived/literature-coverage-20261017T081106Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "observations": 2230
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/cd276-efo_0003060-delivery_antigen-adc/evidence.json",
+      "sha256": "cf4f1f2df9e260c1e44160e1d4c17d2a04db99516cd9b840b0152c81ee49092b",
+      "bytes": 1238053,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "observations": 188
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/evidence-0001.json",
+      "sha256": "b540de9a840921d6d8aa35af726005a4d39b5e1b721693c79f9bd523646e4f15",
+      "bytes": 67104865,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "observations": 10803
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/evidence-0002.json",
+      "sha256": "7dcec6a8d272cf445d16d021e12bc779a1eaa311079bbd54ef5099f2b7562d2a",
+      "bytes": 12198027,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "observations": 1746
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-delivery_antigen-adc/evidence.json",
+      "sha256": "f861280504417339114b213f1c3442a00031c1218c35fb61031b502048298115",
+      "bytes": 14523277,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "observations": 2339
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-inhibit-antibody/evidence.json",
+      "sha256": "f861280504417339114b213f1c3442a00031c1218c35fb61031b502048298115",
+      "bytes": 14523277,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "observations": 2339
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/glp1r-mondo_0005148-activate-peptide/evidence.json",
+      "sha256": "743de32fce7ee23f77eb5230dc247a6f8f00a79710593bb17ef0b326f2b977b1",
+      "bytes": 61907427,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "observations": 9616
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/il6r-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "7e9cc21ba4eb0fc0378f4c1f6c14466fce3ca2f7ba9b06c55331661bddd09f07",
+      "bytes": 138506,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 21
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/osmr-efo_0000729-inhibit-antibody/evidence.json",
+      "sha256": "99e7dd312ddc9197877860ef8d019750016ac2c3e44a40bd414c2486891ab56f",
+      "bytes": 86360,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "observations": 15
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "1d967a56196bf999035f30bd1be7ba942ee4f9ef41f7850584cf256931aa1b93",
+      "bytes": 12777329,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 2230
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-reduce_expression-sirna/evidence.json",
+      "sha256": "1d967a56196bf999035f30bd1be7ba942ee4f9ef41f7850584cf256931aa1b93",
+      "bytes": 12777329,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "observations": 2230
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/scn9a-efo_0005762-inhibit-small_molecule/evidence.json",
+      "sha256": "1952c028fb467af0139c68beb59fd5291e961284bcebbe2db8e5e03a3fb3dc0a",
+      "bytes": 163951,
+      "descriptor": "data/derived/literature-coverage-20261017T082208Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "observations": 27
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/angptl3-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "5a75606705aff5e5df877948fa9cb1c7d91d8ddd06f7037f4062acc2ca006c91",
+      "bytes": 383809,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/angptl3-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 64
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide/evidence.json",
+      "sha256": "31af944a9e9ad2e493c64e9c1655730d3b5a0b070d0305c98bffdadbfdc68fb2",
+      "bytes": 2076879,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/apoc3-efo_0004211-reduce_expression-antisense_oligonucleotide/snapshot.json",
+      "observations": 338
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/cd19-efo_0000403-antigen_directed_cell_killing-car_t/evidence.json",
+      "sha256": "9351202671a09619faf54cc69784bd47508f09e12c8c30e67b394accdcb28ec6",
+      "bytes": 5846383,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/cd19-efo_0000403-antigen_directed_cell_killing-car_t/snapshot.json",
+      "observations": 915
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/evidence.json",
+      "sha256": "7f806638dc8ab9c2373e25c428f446bc3bc123d02a471bfb8b6c9b5f28051c23",
+      "bytes": 14625512,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/snapshot.json",
+      "observations": 2315
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/jak1-efo_0000729-inhibit-small_molecule/evidence.json",
+      "sha256": "b5621f1017440bc7839e5fd0397dacd955a0c2b0c081c5996750b06d018383df",
+      "bytes": 1005412,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/jak1-efo_0000729-inhibit-small_molecule/snapshot.json",
+      "observations": 164
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/kras-efo_0002618-inhibit-small_molecule/evidence.json",
+      "sha256": "430561c016b68561fa89e3081e2a3b8bb0462a2169652f5e5b7f30a983caf6a9",
+      "bytes": 1611172,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/kras-efo_0002618-inhibit-small_molecule/snapshot.json",
+      "observations": 267
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/lrrk2-mondo_0005180-inhibit-small_molecule/evidence.json",
+      "sha256": "2c42be2685e411885a1863257178787a545c424512d04d40ee75ef53f13082cf",
+      "bytes": 25612444,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/lrrk2-mondo_0005180-inhibit-small_molecule/snapshot.json",
+      "observations": 3321
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide/evidence.json",
+      "sha256": "dd9298d41b5c4393ebc5d9a6d9dfb7d7baf1b3b29807acfe097cbe50c0af1e24",
+      "bytes": 2071148,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/sod1-mondo_0004976-reduce_expression-antisense_oligonucleotide/snapshot.json",
+      "observations": 365
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/tnf-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "201eabbd9eb549166415752139396a6b2f25607b33d1d57d8f9b9357aad5f825",
+      "bytes": 1878918,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/tnf-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 288
+    },
+    {
+      "path": "data/derived/science2-fresh-20261018T170501Z/trem2-mondo_0004975-activate-antibody/evidence.json",
+      "sha256": "cc9984d2db7bb8588aebb607b57115d6251f48098944e1e33af347ee6ff06d70",
+      "bytes": 17144276,
+      "descriptor": "data/derived/science2-fresh-20261018T170501Z/trem2-mondo_0004975-activate-antibody/snapshot.json",
+      "observations": 2475
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/cd276-efo_0003060-delivery_antigen-adc/evidence.json",
+      "sha256": "c91fd9d8b79e722da96049fcbbe74e9c7674d1462f49c89bab25ec93aad1eba9",
+      "bytes": 451232,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/cd276-efo_0003060-delivery_antigen-adc/snapshot.json",
+      "observations": 60
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/cftr-mondo_0009061-activate-small_molecule/evidence.json",
+      "sha256": "616ff134e76932e7cf9892eff8ba533136cf0d1bc1ed88d7c58cbe8a6b53ed4d",
+      "bytes": 60883175,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/cftr-mondo_0009061-activate-small_molecule/snapshot.json",
+      "observations": 8008
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-delivery_antigen-adc/evidence.json",
+      "sha256": "7fa9a4a50eee3af4efa28b366c1c0940b47f6bac9ee68db9659b5ad904572f9c",
+      "bytes": 6132455,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-delivery_antigen-adc/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-inhibit-antibody/evidence.json",
+      "sha256": "7fa9a4a50eee3af4efa28b366c1c0940b47f6bac9ee68db9659b5ad904572f9c",
+      "bytes": 6132455,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/erbb2-efo_0000305-inhibit-antibody/snapshot.json",
+      "observations": 816
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/glp1r-mondo_0005148-activate-peptide/evidence.json",
+      "sha256": "9649a3f5a8a78e4200705f1625fe784ed1a2a2d025275978bb2f02d80bfedc2e",
+      "bytes": 25572629,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/glp1r-mondo_0005148-activate-peptide/snapshot.json",
+      "observations": 3401
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/il6r-efo_0000685-inhibit-antibody/evidence.json",
+      "sha256": "2550abcc09acb48e236b6a14af3e448aca0a7c09112a9d3436a4263cb27b8b3c",
+      "bytes": 68061,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/il6r-efo_0000685-inhibit-antibody/snapshot.json",
+      "observations": 9
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/osmr-efo_0000729-inhibit-antibody/evidence.json",
+      "sha256": "7fa0e2de8234d32afb9149f8041a5b61efb72a3a1c9bb89cc6dd5a5679f7ea6d",
+      "bytes": 76404,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/osmr-efo_0000729-inhibit-antibody/snapshot.json",
+      "observations": 10
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-inhibit-antibody/evidence.json",
+      "sha256": "e008ff8ec297a5ab84cc47e3ed22d0ddc67f5a3f0931e715b9856e7bc4b4e025",
+      "bytes": 14534514,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-inhibit-antibody/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-reduce_expression-sirna/evidence.json",
+      "sha256": "e008ff8ec297a5ab84cc47e3ed22d0ddc67f5a3f0931e715b9856e7bc4b4e025",
+      "bytes": 14534514,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/pcsk9-efo_0004911-reduce_expression-sirna/snapshot.json",
+      "observations": 1891
+    },
+    {
+      "path": "data/derived/v02-contemporary-pilot-20261012T014305Z/scn9a-efo_0005762-inhibit-small_molecule/evidence.json",
+      "sha256": "aedde0f56b02e094bc091c5acef8e68e399a458a4bb8b3073312dc3b53de1745",
+      "bytes": 90129,
+      "descriptor": "data/derived/v02-contemporary-pilot-20261012T014305Z/scn9a-efo_0005762-inhibit-small_molecule/snapshot.json",
+      "observations": 12
+    }
+  ],
+  "matches": [
+    {
+      "packet": "data/derived/science2-fresh-20261018T170501Z/il23a-efo_0000676-inhibit-antibody/evidence.json",
+      "observation_index": 1128,
+      "identity_metadata": {
+        "context": {
+          "cohort_ids": []
+        },
+        "dependency_group": null,
+        "indication_id": "EFO_0000676",
+        "input_refs": [
+          "raw-07b92d2600f177f64467ff91",
+          "raw-5cc0c89b096ad82cd7f06765",
+          "raw-6119b566a07792ecf1ea7d90",
+          "raw-e0a9b38e278f8d69713b010f"
+        ],
+        "observation_id": "ot25:europepmc:34deafcb16a7d2da3798affc3de3d38f3e82c86b",
+        "source_kind": "integrated",
+        "source_locator": {
+          "datasource_id": "europepmc",
+          "evidence_id": "34deafcb16a7d2da3798affc3de3d38f3e82c86b",
+          "row": 46915,
+          "row_group": 0,
+          "source_id": "raw-6119b566a07792ecf1ea7d90"
+        },
+        "source_metrics": {
+          "cohortId": null,
+          "literature": [
+            "31019502"
+          ],
+          "studyId": null
+        },
+        "study_id": null,
+        "target_id": "ENSG00000110944"
+      },
+      "hits": [
+        {
+          "article_id": "31019502",
+          "field": "source_metrics/literature",
+          "value": "31019502"
+        }
+      ]
+    }
+  ],
+  "unknown": [],
+  "source_metric_key_counts": {
+    "alleleOrigins": 102170,
+    "allelicRequirements": 102170,
+    "ancestry": 102170,
+    "ancestryId": 102170,
+    "beta": 102170,
+    "betaConfidenceIntervalLower": 102170,
+    "betaConfidenceIntervalUpper": 102170,
+    "biologicalModelAllelicComposition": 102170,
+    "biologicalModelGeneticBackground": 102170,
+    "biologicalModelId": 102170,
+    "biosamplesFromSource": 102170,
+    "cellType": 102170,
+    "clinicalSignificances": 85256,
+    "cohortDescription": 102170,
+    "cohortId": 102170,
+    "cohortPhenotypes": 102170,
+    "cohortShortName": 102170,
+    "contrast": 102170,
+    "crisprScreenLibrary": 102170,
+    "directionOnTrait": 102170,
+    "diseaseCellLines": 102170,
+    "diseaseModelAssociatedHumanPhenotypes": 102170,
+    "diseaseModelAssociatedModelPhenotypes": 102170,
+    "evidenceDate": 102170,
+    "geneticBackground": 102170,
+    "literature": 102170,
+    "log2FoldChangePercentileRank": 102170,
+    "log2FoldChangeValue": 102170,
+    "oddsRatio": 102170,
+    "oddsRatioConfidenceIntervalLower": 102170,
+    "oddsRatioConfidenceIntervalUpper": 102170,
+    "pValueExponent": 102170,
+    "pValueMantissa": 102170,
+    "pathways": 102170,
+    "pmcIds": 85256,
+    "publicationDate": 102170,
+    "publicationYear": 102170,
+    "reactionId": 102170,
+    "reactionName": 102170,
+    "releaseDate": 102170,
+    "releaseVersion": 102170,
+    "resourceScore": 102170,
+    "score": 102170,
+    "sex": 102170,
+    "statisticalMethod": 102170,
+    "statisticalMethodOverview": 102170,
+    "statisticalTestTail": 102170,
+    "studyCases": 102170,
+    "studyCasesWithQualifyingVariants": 102170,
+    "studyId": 102170,
+    "studyLocusId": 102170,
+    "studyOverview": 85256,
+    "studySampleSize": 102170,
+    "targetInModel": 102170,
+    "targetInModelEnsemblId": 102170,
+    "targetInModelMgiId": 102170,
+    "targetModulation": 102170,
+    "textMiningSentences": 85256,
+    "variantAminoacidDescriptions": 102170,
+    "variantEffect": 102170,
+    "variantFromSourceId": 102170,
+    "variantFunctionalConsequenceId": 102170,
+    "variantHgvsId": 102170,
+    "variantId": 102170,
+    "variantRsId": 102170
+  },
+  "freshness_established": false,
+  "protected_files_read": false,
+  "candidate_outputs_read": false,
+  "source_text_values_decoded": false,
+  "coverage": {
+    "descriptors_verified": 57,
+    "packets_verified_projected": 58,
+    "observation_occurrences": 102170,
+    "observation_occurrences_with_literature": 63873,
+    "matched_observation_occurrences": 1
+  },
+  "limitations": [
+    "Normalized selected packet identity metadata only; raw ancestors not traversed.",
+    "Identity absence, missing literature fields and missing cohort/article aliases remain unknown exposure; not freshness.",
+    "Repeated snapshot occurrences are not independent scientific records.",
+    "Exact published Virtual Biotech analytic roster and complete GEO/article crosswalk remain unresolved."
+  ],
+  "elapsed_seconds": 45.15600000001723,
+  "positive_match_interpretation": {
+    "established": [
+      "shared_article_identity",
+      "previous_agent_evidence_packet_presence"
+    ],
+    "not_established": [
+      "identical_passage",
+      "actual_prior_model_consumption",
+      "prior_answer_content"
+    ],
+    "current_context": "BTK / EFO_0000676 psoriasis",
+    "fresh_case_qualification": "blocked_by_confirmed_article_family_overlap_and_remaining_unknowns",
+    "replacement_permitted": false
+  }
+}

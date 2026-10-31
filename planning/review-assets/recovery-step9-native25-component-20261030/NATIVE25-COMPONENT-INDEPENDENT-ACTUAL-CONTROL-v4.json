@@ -1,0 +1,627 @@
+{
+  "schema_version": 4,
+  "status": "ACTUAL_CONTROL4_EVIDENCE_VERIFIED_41_PASS_2_KIND_GUARD_FAIL_WITH_4_DEFERRED_1_STATIC",
+  "scope": "Finite retained-evidence review: exact hashes/inventory/counters plus three newly reached raw predicate paths and two repeated kind failures. No subject import, replay or source changes.",
+  "pins": {
+    "authoring_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-real-route-closure-20261030\\NATIVE25-COMPONENT-HARNESS-AUTHORING-SCOPE-v1.json",
+      "bytes": 2026,
+      "sha256": "bf52dbb0ee5a3d9b7f29fe612b404c4ffe74d29e75a2492061a7aeb5e711b0e1"
+    },
+    "source_pause": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+      "bytes": 6910,
+      "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+    },
+    "prior_fixture_inputs": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INPUTS-v2.json",
+      "bytes": 55828,
+      "sha256": "23708be2b0e78dac2ae34dba6178086f6a053efd380a6c5ce5ec8a2b7a4c26d1"
+    },
+    "matrix": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BRANCH-MATRIX-v2.json",
+      "bytes": 30303,
+      "sha256": "e52a6c66d8839b2e40115ff6b10f439432d29ba103614760e33f6862cd585049"
+    },
+    "cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v3.py",
+      "bytes": 23153,
+      "sha256": "43985a249068892307a6b3d77bce6f213b8d636b9ddd2dfb3261d9922de90d35"
+    },
+    "runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v4.py",
+      "bytes": 20628,
+      "sha256": "cfe114a46d89e1d7c0d6eb480da7874761eecbd7bb41c495ad0a6f6e769e094b"
+    },
+    "preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\prepare_native25_component_v1.py",
+      "bytes": 7699,
+      "sha256": "d3b2bb7865c48f510665bcb44336634bdca0f90700e04aeb2950510178d1347a"
+    },
+    "support": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_test_support_v4.py",
+      "bytes": 15938,
+      "sha256": "5cfec098b8e3ce3acd5eb26104bb456986467506411e1065ac12011aef500066"
+    },
+    "world": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_independent_world_v4.py",
+      "bytes": 16022,
+      "sha256": "2c16bb8609dba2ff58f6a60386103527ba9939ab1e9238157ad72066d88d60e0"
+    },
+    "subject_preflight_entry_kernel_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_entry_kernel_v4.py",
+      "bytes": 145042,
+      "sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8"
+    },
+    "subject_preflight_file_view_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_file_view_v4.py",
+      "bytes": 3614,
+      "sha256": "546f943c7e16ae095eebc3687fc31e48608f9a044253c3cd4603e02f7f764d52"
+    },
+    "subject_preflight_owner_ops_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\preflight_owner_ops_v4.py",
+      "bytes": 39889,
+      "sha256": "4a419fcc0f0639b178c7b43442c189d769fa4fcc264ff03fabd6f824ce0eebea"
+    },
+    "subject_role_ledger_codec_v4": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "bytes": 55497,
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    "inputs": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INPUTS-v1.json",
+      "bytes": 9770,
+      "sha256": "c02ff280b719e1cf77def5a9012592534526ae65068996959b42965ea8305a23"
+    },
+    "preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v1.json",
+      "bytes": 5619,
+      "sha256": "d51b1f027bb8d74cc842e61f4c9f59ab17bcd5a633d3964508090cc02b77a8ba"
+    },
+    "successor_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\correct_native25_runner_v2.py",
+      "bytes": 10089,
+      "sha256": "f0d5c2d59c6bb2f8e5a389dac2c95d5ae4889a16efb221b177e9df98bba59fce"
+    },
+    "prior_static_hold": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-HOLD-v1.json",
+      "bytes": 7211,
+      "sha256": "8fc0f64f6214ea992ba79c2b86def2b974ed335e948314adc4b09d74934da1ef"
+    },
+    "runner_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-RUNNER-DELTA-v2.json",
+      "bytes": 1337,
+      "sha256": "df1bb54ccb096c3cc7370ed39a1bd6185978944841c852498e9a2616913faee4"
+    },
+    "callback_correction_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-CALLBACK-CORRECTION-AUTHORING-SCOPE-v3.json",
+      "bytes": 1492,
+      "sha256": "0eadd7e021d36b694c700348881c54c758ec8b82bbcd0abe57e8f5aacb0974f1"
+    },
+    "callback_correction_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\correct_native25_callbacks_v3.py",
+      "bytes": 8478,
+      "sha256": "d7d043e05baceaeca5be72935f68083eac1fc0e5e1580fd63de239715d3f6f8d"
+    },
+    "prior_frozen_cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v1.py",
+      "bytes": 23046,
+      "sha256": "4915773974d3567be5912fda56cfa478528591e92bd7043d9c99f3213de66dcd"
+    },
+    "prior_accepted_runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v2.py",
+      "bytes": 20628,
+      "sha256": "475ff8c94cbee25bbc4c870bf39b11b7ddb0306f4e091709bc3097227adae5f4"
+    },
+    "prior_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v2.json",
+      "bytes": 6162,
+      "sha256": "fd479a87b768be50d39dda27f0ad85c931753f171aeef5b4e1e37f7dc435e1e8"
+    },
+    "first_diagnostic": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v2.json",
+      "bytes": 228676,
+      "sha256": "2519c0b16193732e07f63449a1239d03de4951b367db8cfaf95b319fce4b0123"
+    },
+    "callback_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-CALLBACK-DELTA-v3.json",
+      "bytes": 3071,
+      "sha256": "b136602df4f2cdf7cd867eb167bb892e77b21151ef04428b4732aad71a22434b"
+    },
+    "callback_preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v3.json",
+      "bytes": 8667,
+      "sha256": "3d994a971d609412f441a59b3ca38e5f6b99a0b66983af12e92a7310a836ae0a"
+    },
+    "expected_code_preparer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\prepare_native25_expected_codes_v4.py",
+      "bytes": 12292,
+      "sha256": "e9d0c84287bb6cff0ed89fcdde79d10838d85310b46fe5903c56f4002b796b87"
+    },
+    "expected_code_errata": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-EXPECTED-CODE-ERRATA-v4.json",
+      "bytes": 4823,
+      "sha256": "5f80101c1f948699df3893dd27ed50f6df4a1ff268c3d9e16373377942167b72"
+    },
+    "expected_code_delta": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-EXPECTED-CODE-DELTA-v4.json",
+      "bytes": 2745,
+      "sha256": "99347379a9718aab6e51b45a8ba6c9004c0c1670ed4f24daa1165d3a574f6b5a"
+    },
+    "prior_callback_cases": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\native25_component_cases_v2.py",
+      "bytes": 23102,
+      "sha256": "90cfd1e63f2db1029756f35493c4b90083de79b6240a22df42f970edda57735b"
+    },
+    "prior_callback_runner": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\run_native25_component_v3.py",
+      "bytes": 20628,
+      "sha256": "9ecec0188e64c857f2ca81d0c66a6fb08cee733e976cc0a529baadfd92985199"
+    },
+    "prior_callback_freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v3.json",
+      "bytes": 8418,
+      "sha256": "3ec335327d414de40fe6e1c49ed726692995d629ef757c596716c80b3f26f987"
+    },
+    "first_callback_control": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v3.json",
+      "bytes": 238104,
+      "sha256": "bca943d0e85c32c6575b4e0225fd152777200041bb81a983d8ed01bb431f0892"
+    },
+    "base_native_contract": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "bytes": 43817,
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    "prior_accepted_E22": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\entry_contract_cases_source4_v1.py",
+      "bytes": 36778,
+      "sha256": "c54681bd4b0af36915f03f728499e6b1eb52348574629f80cac703aad0b1a10d"
+    },
+    "prior_source4_acceptance": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-ROOT-ACCEPTANCE-v1.json",
+      "bytes": 5632,
+      "sha256": "43316e7aa8611aa9d9df5033778d37a7ebfc3f0d64577d2728bea3abe051f2ab"
+    },
+    "expected_code_preparation": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PREPARATION-v4.json",
+      "bytes": 11606,
+      "sha256": "49b43a33bc250c6d95e8ccd0a5a8a9646844cf441a06a2b54b96d750ba817b3f"
+    },
+    "proof": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v4.json",
+      "bytes": 241989,
+      "sha256": "dfe90829f1f8ac9e05aaaa7ce31304422150bb286c3cecb300ac7651f61ff63d"
+    },
+    "freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v4.json",
+      "bytes": 11592,
+      "sha256": "c58b3404221e4f617e61bc3c06e23db7df1a89aa84c6e2363a8fbef43b522b95"
+    },
+    "attempt": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ATTEMPT-v4.json",
+      "bytes": 1137,
+      "sha256": "b14e08b9ab7e9c0137f4c84d644fcbc856b14a98e5eafce0440f721822a4c5c2"
+    },
+    "binding": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-BINDING-v4.json",
+      "bytes": 994,
+      "sha256": "a9b6f882fec52de5c20c087e97f9997d5cd4056984be0eaaa3dca76d7689b329"
+    },
+    "execution_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-EXECUTION-SCOPE-v4.json",
+      "bytes": 2171,
+      "sha256": "6c68489aa8518f74092545a89f1262993e6fd0ceea980e1c88a41e64bad36d64"
+    },
+    "static_peer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-REVIEW-v4.json",
+      "bytes": 22020,
+      "sha256": "cb1def1aea2e638ec499c9cebd5b70df50101894fccf426e291a179819c5c3a3"
+    },
+    "first_actual_review": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-ACTUAL-DIAGNOSTIC-v1.json",
+      "bytes": 30944,
+      "sha256": "dce3d245e2ecb01993813b864000c40c75e2a64c9f9abf5fda7d577f976e2b0f"
+    },
+    "callback_actual_review": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-ACTUAL-DIAGNOSTIC-v2.json",
+      "bytes": 22373,
+      "sha256": "ac634c039d9032c641e02688ade931c5abe7b25c7dd3f205c6db27dab8e38ada"
+    }
+  },
+  "actual_result": {
+    "status": "COMPONENT_FAILURES_WITH_EXPLICIT_DEFERRED",
+    "counts": {
+      "COMPONENT_PASS": 41,
+      "DEFERRED_NOT_EXECUTED": 4,
+      "STATIC_DECLARATION_ONLY": 1,
+      "FAIL": 2
+    },
+    "group_outcomes": {
+      "DATA": {
+        "COMPONENT_PASS": 20,
+        "FAIL": 2
+      },
+      "DEFERRED": {
+        "DEFERRED_NOT_EXECUTED": 4
+      },
+      "SOURCE_RUNTIME": {
+        "COMPONENT_PASS": 21
+      },
+      "STATIC_ONLY": {
+        "STATIC_DECLARATION_ONLY": 1
+      }
+    },
+    "elapsed_seconds": 0.23400000005494803,
+    "call_gate": {
+      "attempts": 493,
+      "returns": 453,
+      "checks": 1582
+    },
+    "setup_error": null,
+    "evidence_error": null,
+    "audit_denials": [],
+    "changed_pins": [],
+    "cooperative_deadline_late": false,
+    "persistence_complete": true,
+    "persistence_stage": "COMPLETE",
+    "native25_complete": false,
+    "timing_scope": "Per-world evidence copies included; final proof serialization/write/hash/print and process startup/exit outside or unmeasured."
+  },
+  "artifact_audit": {
+    "declared": 188,
+    "unique": 188,
+    "all_bytes_and_hashes_match": true,
+    "total_bytes": 578314,
+    "missing_or_unlisted": [],
+    "canonical_actual_inventory_sha256": "379be47d4429bcf6f698e0a838a910ff930e2fc56145ec778d4b61f3333c7176",
+    "inventory_source": "The exact proof pin above contains every independently rehashed artifact path/bytes/SHA; no embedded original-resource path was followed.",
+    "worlds": 20,
+    "data": 26,
+    "snapshots": 30,
+    "world_raw_rows": 115,
+    "data_raw_rows": 41,
+    "snapshot_raw_rows": 180,
+    "canonical_bank_raw_and_jsonl_shapes_match": 46,
+    "snapshot_byte_shapes_match": 30,
+    "missing_registered_ordinals_total": 0,
+    "qualification": "Integrity, bounded byte shape and the specifically described targeted semantic checks; not a full independent requalification of every passing branch or an RSS/resource-fit measurement."
+  },
+  "three_now_reached_raw_predicate_paths": [
+    {
+      "id": "N04.2",
+      "world": 4,
+      "outcome": "COMPONENT_PASS",
+      "specific_expected_error": {
+        "class_name": "KernelRefusal",
+        "code": "RAW_RETURN_UNKNOWN",
+        "message": "RAW_RETURN_UNKNOWN",
+        "harness_identity": 1996259962368
+      },
+      "previously_unreached_trailing_raw_assertions_now_executed_and_passed": true,
+      "active_snapshot_metadata": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-004.json",
+        "bytes": 10268,
+        "sha256": "2a48053d008027484615af389ab0d92289bddf30b30c72966c03003a1f4eedd0"
+      },
+      "active_snapshot_raw": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-004.raw256.bin",
+        "bytes": 256,
+        "sha256": "bcb95f0e9bc1277e36528c2eaf9901ff620012eb31adb933219b87eecfba9337",
+        "semantics": "ALREADY_COPIED_IMMUTABLE_GENUINE_KERNEL_SNAPSHOT"
+      },
+      "active_snapshot_is_exact_prefix_of_retained_canonical_bank": true,
+      "target_raw_ordinal": 0,
+      "target_raw_axes": {
+        "scalar": {
+          "raw_payload_bits": 0,
+          "kind": 1,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "count": {
+          "raw_payload_bits": 0,
+          "kind": 4,
+          "stage_hint": 0,
+          "commit": 0
+        },
+        "error_value": {
+          "raw_payload_bits": 0,
+          "kind": 3,
+          "stage_hint": 0,
+          "commit": 0
+        },
+        "error_definition": {
+          "raw_payload_bits": 0,
+          "kind": 5,
+          "stage_hint": 0,
+          "commit": 0
+        }
+      },
+      "file_snapshot_fields": {
+        "handle_fact": {
+          "tag": "NULL",
+          "value": null
+        },
+        "close_reserved": false,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_state": "PENDING"
+      },
+      "all_observed_original_API_counts": {
+        "CreateFileW": 1
+      },
+      "no_source_or_oracle_changes_during_actual_control": true
+    },
+    {
+      "id": "N06.1",
+      "world": 5,
+      "outcome": "COMPONENT_PASS",
+      "specific_expected_error": {
+        "class_name": "KernelRefusal",
+        "code": "READ_PROGRESS_INCOMPLETE",
+        "message": "READ_PROGRESS_INCOMPLETE",
+        "harness_identity": 1996259963904
+      },
+      "previously_unreached_trailing_raw_assertions_now_executed_and_passed": true,
+      "active_snapshot_metadata": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-005.json",
+        "bytes": 10325,
+        "sha256": "5981ef7e7e27d65cbaa895458e077e6ffc93989124cd5980e2c1229a4f2fe03c"
+      },
+      "active_snapshot_raw": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-005.raw256.bin",
+        "bytes": 1536,
+        "sha256": "c747591ea54d6114143ae3cde145cc8251f2b8bb6afc37e57bbd5f3f55a89de0",
+        "semantics": "ALREADY_COPIED_IMMUTABLE_GENUINE_KERNEL_SNAPSHOT"
+      },
+      "active_snapshot_is_exact_prefix_of_retained_canonical_bank": true,
+      "target_raw_ordinal": 5,
+      "target_raw_axes": {
+        "scalar": {
+          "raw_payload_bits": 1,
+          "kind": 2,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "count": {
+          "raw_payload_bits": 0,
+          "kind": 4,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "error_value": {
+          "raw_payload_bits": 0,
+          "kind": 3,
+          "stage_hint": 0,
+          "commit": 0
+        },
+        "error_definition": {
+          "raw_payload_bits": 0,
+          "kind": 5,
+          "stage_hint": 0,
+          "commit": 0
+        }
+      },
+      "file_snapshot_fields": {
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 1003
+        },
+        "close_reserved": false,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": false,
+        "hash_complete": false,
+        "capture_state": "FAILED"
+      },
+      "all_observed_original_API_counts": {
+        "CreateFileW": 1,
+        "GetFileType": 1,
+        "GetFileInformationByHandleEx": 1,
+        "GetFinalPathNameByHandleW": 1,
+        "GetFileSizeEx": 1,
+        "ReadFile": 1,
+        "CloseHandle": 1
+      },
+      "no_source_or_oracle_changes_during_actual_control": true
+    },
+    {
+      "id": "N07.1",
+      "world": 6,
+      "outcome": "COMPONENT_PASS",
+      "specific_expected_error": {
+        "class_name": "KernelRefusal",
+        "code": "READ_COUNT_UNKNOWN",
+        "message": "READ_COUNT_UNKNOWN",
+        "harness_identity": 1996260592512
+      },
+      "previously_unreached_trailing_raw_assertions_now_executed_and_passed": true,
+      "active_snapshot_metadata": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-006.json",
+        "bytes": 10311,
+        "sha256": "7dfd7071e2116a2b3e7b770ec0fed1722b6945036472ae8593e811bf8752ec73"
+      },
+      "active_snapshot_raw": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\snapshot-006.raw256.bin",
+        "bytes": 1536,
+        "sha256": "3a3be07a783f8f41c5d2b1eea28a588e3212505d93939000e8badd391bd69a35",
+        "semantics": "ALREADY_COPIED_IMMUTABLE_GENUINE_KERNEL_SNAPSHOT"
+      },
+      "active_snapshot_is_exact_prefix_of_retained_canonical_bank": true,
+      "target_raw_ordinal": 5,
+      "target_raw_axes": {
+        "scalar": {
+          "raw_payload_bits": 0,
+          "kind": 2,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "count": {
+          "raw_payload_bits": 0,
+          "kind": 4,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "error_value": {
+          "raw_payload_bits": 0,
+          "kind": 3,
+          "stage_hint": 1,
+          "commit": 1
+        },
+        "error_definition": {
+          "raw_payload_bits": 1,
+          "kind": 5,
+          "stage_hint": 1,
+          "commit": 1
+        }
+      },
+      "file_snapshot_fields": {
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 1003
+        },
+        "close_reserved": false,
+        "known_read_bytes": 0,
+        "hashed_bytes": 0,
+        "captured_bytes": 0,
+        "read_count_unknown": true,
+        "hash_complete": false,
+        "capture_state": "FAILED"
+      },
+      "all_observed_original_API_counts": {
+        "CreateFileW": 1,
+        "GetFileType": 1,
+        "GetFileInformationByHandleEx": 1,
+        "GetFinalPathNameByHandleW": 1,
+        "GetFileSizeEx": 1,
+        "ReadFile": 1,
+        "CloseHandle": 1
+      },
+      "no_source_or_oracle_changes_during_actual_control": true
+    }
+  ],
+  "two_remaining_kind_failures": [
+    {
+      "id": "N25.5.scalar_kind_mismatch",
+      "data": 25,
+      "outcome": "FAIL",
+      "raw_artifact": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\data-025.raw256.bin",
+        "bytes": 256,
+        "sha256": "6ecfbef6b2fbc51dc621f3dd87136296c61d64f8f42955e13b1a65f07782b12f",
+        "semantics": "EXISTING_SOURCE_MODEL_BANK_BYTES_NOT_NATIVE_C_EVIDENCE"
+      },
+      "actual_guard_failure": {
+        "class_name": "AssertionError",
+        "code": null,
+        "message": "required refusal was absent: NATIVE_STATE_NOT_REPRESENTABLE",
+        "harness_identity": 1996295044160
+      },
+      "unexpected_source_return": {
+        "tag": "OPAQUE_SOURCE_OBJECT",
+        "class_name": "RawCallView",
+        "harness_identity": 1996302664960
+      },
+      "raw256_byte_identical_to_both_prior_failed_controls": true,
+      "disposition": "CONFIRMED_UNCHANGED_SOURCE4_API_AXIS_KIND_GUARD_FAILURE"
+    },
+    {
+      "id": "N25.5.count_kind_mismatch",
+      "data": 26,
+      "outcome": "FAIL",
+      "raw_artifact": {
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-ARTIFACTS-v4\\data-026.raw256.bin",
+        "bytes": 256,
+        "sha256": "bce6aaeae84d0e876b185f3a33545d3961d44f31bebd9b9687cb06c1aae9fe47",
+        "semantics": "EXISTING_SOURCE_MODEL_BANK_BYTES_NOT_NATIVE_C_EVIDENCE"
+      },
+      "actual_guard_failure": {
+        "class_name": "AssertionError",
+        "code": null,
+        "message": "required refusal was absent: NATIVE_STATE_NOT_REPRESENTABLE",
+        "harness_identity": 1996295044160
+      },
+      "unexpected_source_return": {
+        "tag": "OPAQUE_SOURCE_OBJECT",
+        "class_name": "RawCallView",
+        "harness_identity": 1996302666752
+      },
+      "raw256_byte_identical_to_both_prior_failed_controls": true,
+      "disposition": "CONFIRMED_UNCHANGED_SOURCE4_API_AXIS_KIND_GUARD_FAILURE"
+    }
+  ],
+  "transitions_from_preserved_callback_control": [
+    {
+      "id": "N04.2",
+      "callback_control": "FAIL",
+      "current_control": "COMPONENT_PASS"
+    },
+    {
+      "id": "N06.1",
+      "callback_control": "FAIL",
+      "current_control": "COMPONENT_PASS"
+    },
+    {
+      "id": "N07.1",
+      "callback_control": "FAIL",
+      "current_control": "COMPONENT_PASS"
+    }
+  ],
+  "history": {
+    "first_diagnostic": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v2.json",
+      "bytes": 228676,
+      "sha256": "2519c0b16193732e07f63449a1239d03de4951b367db8cfaf95b319fce4b0123"
+    },
+    "first_outcomes": "31 PASS / 12 FAIL / 4 DEFERRED / 1 STATIC",
+    "first_callback_control": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-PROOF-v3.json",
+      "bytes": 238104,
+      "sha256": "bca943d0e85c32c6575b4e0225fd152777200041bb81a983d8ed01bb431f0892"
+    },
+    "callback_outcomes": "38 PASS / 5 FAIL / 4 DEFERRED / 1 STATIC",
+    "no_retroactive_change_to_prior_FAIL_or_UNREACHED_labels": true,
+    "specific_erratum": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-EXPECTED-CODE-ERRATA-v4.json",
+      "bytes": 4823,
+      "sha256": "5f80101c1f948699df3893dd27ed50f6df4a1ff268c3d9e16373377942167b72"
+    },
+    "source4_unchanged": true,
+    "only_three_new_outcome_transitions": true,
+    "all_other_45_outcomes_unchanged": true
+  },
+  "deferred": [
+    "N14.3",
+    "N23.3",
+    "N24.2",
+    "N25.6"
+  ],
+  "static_only": [
+    "N25.4"
+  ],
+  "disposition": "Control4 is actual 41 PASS / 2 FAIL, not a completed native25 gate. Both bounded Source4 API/axis-kind failures remain strict FAIL. Any separate Source5 correction and actual execution need their own Root scope and exact static peer.",
+  "qualification": {
+    "source_component_diagnostic_only": true,
+    "native25_complete": false,
+    "full_entry": false,
+    "native_C_or_ABI": false,
+    "physical_IO": false,
+    "real_roster_or_targets": false,
+    "native_input_lease": false,
+    "RSS_or_fit": false,
+    "model_or_science": false
+  },
+  "reviewer_activity": {
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "source_edits": 0,
+    "compiler_SDK_native_calls": 0,
+    "original_payload_reads": 0,
+    "current_doc_edits": 0
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "accepted": [
+    "Fixed ordered verification gates and nonserialized owner-local context/proofs",
+    "Original single300second clock before factories,295workdeadline/5finalizationreserve",
+    "Typed owned-success/no-handle-failure/malformedunknown open returns; onlyknowntransferredhandles closedonce",
+    "Late returned handle/definedbyte accounting beforedeadlinechecks; unknownreturns remainunknown",
+    "Immutablecapturedbyte/indexcontext; trustedsourcecheckerports cannotbe replacedbyserializedreadyflags",
+    "Acknowledgedexclusiveoutputownership beforeterminalwrites; durablefactory/finalize/seal reservations",
+    "Requiredchecks/leasecloses/sealreturn/finalsameclockgate beforecomplete; source-negative staysnegative"
+  ],
+  "accepted_at_utc": "2026-10-29T06:55:46.971226+00:00",
+  "anchors": {
+    "VERIFIER-OPEN-RETURN-REGRESSION-BEFORE-v2.json": {
+      "bytes": 5836,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-OPEN-RETURN-REGRESSION-BEFORE-v2.json",
+      "sha256": "7cd1ab36c772256e982d8e766aad8ab4792be6def2161b7fef83482e7b034085"
+    },
+    "VERIFIER-RECOVERY-DESIGN-CONTRACT-v2.json": {
+      "bytes": 14086,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-DESIGN-CONTRACT-v2.json",
+      "sha256": "7bff14386239d908ca33fd1a11214e95d90010b312aed3d23ac07b9fd69e3c6f"
+    },
+    "VERIFIER-RECOVERY-INDEPENDENT-HOLD-SUPPLEMENT-v1.json": {
+      "bytes": 2897,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-INDEPENDENT-HOLD-SUPPLEMENT-v1.json",
+      "sha256": "b61dc485f5cae14499658a4cc22deced68fad3f95476c44028edf02daa5dca2c"
+    },
+    "VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v2.json": {
+      "bytes": 7927,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v2.json",
+      "sha256": "1d3b6143195e978d8df320bfb4983df9b34fc2b331c33bac653d67d82c1e5c9f"
+    },
+    "VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json": {
+      "bytes": 7481,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json",
+      "sha256": "f6ddcadf030230dc24672836b2a1d430286148fc06169b6210a5f3af79ba6a10"
+    },
+    "check_deterministic_verifier_v2.py": {
+      "bytes": 23538,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\check_deterministic_verifier_v2.py",
+      "sha256": "17ab0c8f9f5254dc88cb440d7fa8c992b03af170733a47cd2f9f0a1794f4c55a"
+    },
+    "deterministic_verifier_v2.py": {
+      "bytes": 24716,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+      "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+    }
+  },
+  "caps": {
+    "finalization_seconds": 5,
+    "joint_planned_event_bound": 1728,
+    "maximum_events": 2048,
+    "maximum_files": 256,
+    "total_seconds": 300,
+    "work_seconds": 295
+  },
+  "compiler_calls": 0,
+  "default_application_changed": false,
+  "limits": [
+    "No real fileidentity/read/close adapter or liveoutput sink",
+    "No real fixedauthority/checker bootstrap or source/archive/resource/core checker qualification",
+    "Future trusted entry/bootstrap must preserve original owner clock across sourcehash/import/setup; not implemented or tested as liveentry",
+    "Synthetic clocks/bytes establish controlflow only; no actual300second fit",
+    "Private tokens are ordinary API protection, not hostilePython isolation"
+  ],
+  "live_adapter_execution": false,
+  "next": "Freeze prospective Unicode control corpus and real bootstrap/file/checker binding contracts before any new actual-vocabulary experiment. No new runtime authority follows from this acceptance.",
+  "old_external_gate": "INCOMPLETE_TIMEOUT",
+  "old_native_profile": "FAILED_two_unavailable_natural_UTF8_slots",
+  "old_versions_preserved": true,
+  "original_payload_reads": 0,
+  "provider_spend_usd": 0,
+  "schema_version": 1,
+  "status": "ACCEPTED_source_pure_orchestration_component_ONLY",
+  "synthetic_methods": 23,
+  "target_native_calls": 0
+}

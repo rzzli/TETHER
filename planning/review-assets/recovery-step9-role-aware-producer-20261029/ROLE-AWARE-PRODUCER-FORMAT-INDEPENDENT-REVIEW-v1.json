@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/native_039_acceptance_audit",
+  "status": "HOLD_PRECODE_SCHEMA_FOR_FINITE_VALUE_AND_ACCOUNTING_CLOSURES",
+  "scope": "One finite independent schema batch against the ten existing c0fe questions and accepted F1 design. No source implementation, goldens, producer test, physical operation or new qualification family.",
+  "proposal": {
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v1.json",
+    "bytes": 72400,
+    "sha256": "d5f28f0b5aa151515941b6a39b03d3a811c6012fa055490a4103927871fa69e4"
+  },
+  "pins": [
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-FREEZE-v1.json",
+      "bytes": 2659,
+      "sha256": "dfc9be92fb02ee06663d9c2d81d52f45cf8d6664bc83b3a4edc456e41c70047d"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-PRECODE-SCHEMA-QUESTIONS-v1.json",
+      "bytes": 16676,
+      "sha256": "c0fe88dc391abe64987d29c0c4fad75fb44174468637e680886f508e5160b1d7"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-CORPUS-PRECHECK-v1.json",
+      "bytes": 5135,
+      "sha256": "9964dd045097dbef39fdeef96874941e058f4802062b828f7a8a774a5cb9a6cf"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-STORAGE-PROPOSAL-v2.json",
+      "bytes": 28502,
+      "sha256": "0460eb2df71b393670b2cc386155e4ee960ceff2d1e873730eaa37f97cebf462"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-INDEPENDENT-DESIGN-REVIEW-v2.json",
+      "bytes": 10904,
+      "sha256": "98729d86ccb8fa81855f456b0410f1c6361fedf29d3fc77c0f1f3b135233cd4f"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "bytes": 37533,
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    }
+  ],
+  "material_blockers": [
+    {
+      "id": "S1_SECTION_DESCRIPTOR_DOMAIN",
+      "existing_questions": ["Q1", "Q6"],
+      "finding": "Each descriptor needs exact record_size and count rules. In particular the fragment query section has an API-specific length of 0, 8, 36, 592 or 8202 bytes, while the section table names the original-profile 8218-byte record size. Independent goldens cannot infer a unique descriptor count/size pair.",
+      "resolution": "Close the per-section descriptor table for full and fragment profiles, including empty sections and the unique fixed frame length. Preserve the existing contiguous eight-section layout; do not add a section or reinterpret original query ownership."
+    },
+    {
+      "id": "S2_ABSENT_SIZE_AND_INPUT_HANDLE",
+      "existing_questions": ["Q3", "Q6", "Q8"],
+      "finding": "The exact value representation of absent fragment expected_size is not fixed separately from known zero. The input-handle field has one presence bit and zero bits, so accepting both NULL and HANDLE0 would not roundtrip their distinct tags.",
+      "resolution": "Specify absent expected_size value/flag/padding and restrict or encode input argument tags explicitly. Grammar's proposed HANDLE-or-UNOBSERVED input domain can remove the NULL collision without changing observed return HANDLE/NULL/zero distinctions."
+    },
+    {
+      "id": "S3_ERROR_DEFINITION_THREE_STATES",
+      "existing_questions": ["Q2", "Q3", "Q4"],
+      "finding": "The canonical error-definition slot has UNOBSERVED, False and True, but call_exact_keys and the two error-definition bits do not yet provide the complete unambiguous value-to-wire mapping and cross-field applicability.",
+      "resolution": "Specify the input field or exact equivalent representation, the two-bit mapping, raw error observedness/definedness relations and refusal for True on an incompatible successful branch. Do not silently change a stored True into False or infer False from an unobserved sentinel."
+    },
+    {
+      "id": "S4_EXACT_VALUE_RESULT_ERROR_AND_PUBLICATION_SURFACES",
+      "existing_questions": ["Q1", "Q8", "Q9", "Q10"],
+      "finding": "The pure API needs exact DecodedLedger.to_dict keys/container types and FormatError code/offset/path types and absent-value rules before independent goldens. Within the same value-surface closure, publication schema_version/scope/status must select explicit new values/domains rather than silently inherit pure_shared_owner_seam; optional call.error_id and the BOOL wire versus BOOL32 source-observation mapping need explicit treatment.",
+      "resolution": "Close those existing data/interface tables in one successor. The pinned50ee required_gate_order is already resolvable and is not an additional issue. Genuine ProducerSnapshot projection must preserve actual legacy tokens/refs and observed values; decoded data cannot create that authority."
+    },
+    {
+      "id": "S5_LOGICAL_VERSUS_BOXED_PRIMITIVE_ACCOUNTING",
+      "existing_questions": ["Q2"],
+      "finding": "The added live accounting describes per-slot primitive payload as conservatively at most eight bytes. Eight bytes can bound an in-domain logical value bit width, but no physical CPython boxed numeric-storage bound is established; integer digit payload is not merely an object header.",
+      "resolution": "Explicitly label the added 13,823,488 bytes and combined 127,809,034 bytes as named logical accounting only, excluding boxed numeric payload and other implementation storage from any physical bound. Alternatively provide a justified bound, but no new interpreter/RSS gate is requested here. Never present eight bytes as actual per-Python-value allocation."
+    }
+  ],
+  "independent_static_checks": {
+    "layouts": {
+      "header": {"bytes": 4096, "gaps_or_overlaps": 0},
+      "section_descriptor": {"bytes": 64, "gaps_or_overlaps": 0},
+      "call_record": {"bytes": 256, "gaps_or_overlaps": 0},
+      "file_record": {"bytes": 256, "gaps_or_overlaps": 0},
+      "module_record": {"bytes": 64, "gaps_or_overlaps": 0},
+      "diagnostic_record": {"bytes": 1024, "gaps_or_overlaps": 0}
+    },
+    "api_types": 14,
+    "complete_profile_active_apis": 7,
+    "sections": 8,
+    "canonical_call_slot_count": 34,
+    "canonical_file_slot_count": 29,
+    "canonical_module_slot_count": 14,
+    "additional_accounting_term_arithmetic": 13823488,
+    "prior_named_reserve": 113985546,
+    "combined_accounting_term_arithmetic": 127809034,
+    "diagnostic_slots_at_prospective_max": 5056,
+    "artifact_caps_count": 14,
+    "generated_store_bytes_unchanged": 40139776
+  },
+  "coherent_design_rules_not_additional_findings": [
+    "Canonical preallocated slots retain the first original scalar/count/error/clock object before type validation, observedness flags, folds, packing or clocks. Packed cells are derived; their partial failure cannot erase source facts. This is application ordering after return conversion, not real FFI qualification.",
+    "Known zero and NULL derive observedness from sentinel identity, not auxiliary flags. Exact built-in input checks precede comparisons/packing. Signed32 nonzero BOOL, unsigned handles/DWORD/counts and typed I64/F64 clock bits are explicit.",
+    "Known wrapper return plus later stop, canonical owned-close rights, partial cache quarantine, failed/unknown read/hash/copy tails and lower bounds remain separate.",
+    "The D5056 design borrows two reusable uncommitted diagnostic slots per serial operation rather than consuming two per successful call. First error identity is latched before formatting; committed diagnostics are immutable and unreused. Genuine source debit/fault proof remains pending.",
+    "Original paths own one UTF8 pool, final paths remain in complete retained query frames and one reserved comparison workspace. No target path is opened by decoding.",
+    "The accepted F1 generated-byte universe and candidate/terminal lifetimes remain closed. Actual same-owner bytes, not manifests or iterators, are required by future byte consumers.",
+    "Legacy projection requires a genuine same-owner ProducerSnapshot and refuses dict/DecodedLedger/hash-only/new-profile input. Pure codec roundtrip cannot establish live owner or exception-token provenance.",
+    "API IDs 8..14 are not activated as full physical call domains; they are fragment data only. Existing original-only C and storage do not silently absorb writer/readback/scan operations."
+  ],
+  "non_scope": [
+    "No reopening of F1 lifetime design, accepted legacy fixtures or N4 caps.",
+    "No new codec/producer implementation, extra feature family, original target access, scientific gate or model run.",
+    "Full roster, true first entry, raw native-return conversion, physical writer/readback and measured RSS/clock fit remain separate existing prerequisites.",
+    "The original consumed189 failure and whole-verification timeout remain unchanged."
+  ],
+  "activity": {
+    "metadata_and_layout_arithmetic_only": true,
+    "reviewed_subject_imports": 0,
+    "subject_tests_or_probes": 0,
+    "golden_generation": 0,
+    "producer_or_encoder_changes": 0,
+    "target_payload_or_old_run_replay": 0,
+    "Win32_FFI_SDK_native_compiler_calls": 0
+  },
+  "qualification": {
+    "schema_cleared": false,
+    "F1_design_reopened": false,
+    "implementation": false,
+    "full_roster": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "resource_fit": false,
+    "new84_runtime": false,
+    "scientific": false
+  }
+}

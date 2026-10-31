@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_V3_FIRST_REGRESSIONS_AUTHORIZED",
+  "source_pause_sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de",
+  "root_pin_check_sha256": "496b8c7e37b42bda354f288efdb3ed86a7b0878b89e0027fb92af4e3fdca6cb1",
+  "finite_source_runner_peer_sha256": "3ffcb1dd52668c1de83ef9ea2b79593061a0886766314e0fe593eb0ba6d62251",
+  "oracle_v3_sha256": "8ae5b333a8955b2359b4c267d0ce586000959355a7c3a11bc5523ccd00f168a7",
+  "frozen_test_sha256": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea",
+  "finite_change": "Count caps now precede module_count_repeat consistency. All other source behavior and oracle expectations remain unchanged; only the four coherent own-module imports and runner paths use v3.",
+  "phase_order": ["CODEC_FIRST", "LEGACY48_FIRST"],
+  "phase_gate": "Fresh runnerV6 and immutable phase-specific bindings. The complete codec suite must pass before the first genuine Legacy48/same8 run. Failure stops advancement and remains retained for a named correction. No old suite replay or silent expectation change.",
+  "deadline": "One original started+60 cooperative suite deadline per explicit phase, original100/395/400 synthetic owner clocks, callback-identity and final late-result veto unchanged. No hard callback-free hang guarantee.",
+  "allowed": "Only the exact four V3 modules, pinned synthetic fixtures and trusted closed runner. Genuine legacy tests may execute the existing141B toy captured helper chain in memory. Named local attempts/results are retained exclusively.",
+  "not_authorized": ["extensions before codec/legacy pass", "large fixture preparation or run", "original targets/protected outcomes", "real entry/SDK/ctypes/Win32/native/model execution", "downloads or paid calls", "application/default changes"],
+  "provider_spend_usd": 0,
+  "qualification": {"source_accepted": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

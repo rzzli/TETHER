@@ -1,0 +1,32 @@
+{
+  "actual_runner": {
+    "bytes": 8819,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\prepare_role_aware_large_reference_v1.py",
+    "sha256": "773860bbc34e5c4b1e1ee9052da02f64f054ef930076e42c61262e49dabf484e"
+  },
+  "deadline_seconds": 300,
+  "execution_scope": {
+    "bytes": 2411,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-EXECUTION-SCOPE-v1.json",
+    "sha256": "1b1482420e7ffeea665e53f5e022c954675b222d23d58247cb3445e953906742"
+  },
+  "inputs": {
+    "implementation_slice": {
+      "bytes": 20332,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\ROLE-AWARE-PRODUCER-IMPLEMENTATION-SLICE-v1.json",
+      "sha256": "35484f8a35d29bc108712dc7279e1cbbcb4b76470d28a6c1241895bbc4fd3f9c"
+    },
+    "size_vector": {
+      "bytes": 95229,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\RETAINED-HISTORICAL-RESOURCE-VECTOR-v1.json",
+      "sha256": "3a7e00e9cc812f7fcf0676c70704c65ab35565cac4b6a652fe06fad42c890c75"
+    },
+    "tiny_cohort": {
+      "bytes": 4876,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+      "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+    }
+  },
+  "mode": "INDEPENDENT_LARGE_PERIODIC_PREFIX_REFERENCE_V1",
+  "schema_version": 1
+}

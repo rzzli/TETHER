@@ -1,0 +1,84 @@
+{
+  "actual_DLL_or_scientific_qualification": false,
+  "anchors": {
+    "UTF8-ORACLE-IMPLEMENTATION-PEER-REVIEW-v1.json": {
+      "bytes": 5081,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-IMPLEMENTATION-PEER-REVIEW-v1.json",
+      "sha256": "37d59537f2c9fc8fabd6d9a143da5d2a8c6b034e6914a630ce1ae2fcd4390383"
+    },
+    "UTF8-ORACLE-IMPLEMENTATION-PURE-PROOF-v2.json": {
+      "bytes": 25781,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-IMPLEMENTATION-PURE-PROOF-v2.json",
+      "sha256": "045011191f4ef89b1fb480db8f40f04dc658c9c84cd997a87fa674143d036c53"
+    },
+    "UTF8-ORACLE-SCOPED-ACCEPTANCE-v1.json": {
+      "bytes": 4555,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\UTF8-ORACLE-SCOPED-ACCEPTANCE-v1.json",
+      "sha256": "1e0890b4d016a5cd00966107a72d2a9e9925cab606d51b519e6cdfa115512a4e"
+    }
+  },
+  "critical_next_gates": 5,
+  "documents": [
+    {
+      "bytes": 36125,
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "sha256": "71aff43bcb0e7553dcfcf98b2c8a2dee955aff232df1116a70aa5639e2f75517"
+    },
+    {
+      "bytes": 34099,
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "sha256": "5a8545982771d967ebde7b7d59a521348dc42b3d91c1e098dc54424b1da85ff5"
+    },
+    {
+      "bytes": 43903,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "6dc0919c17f82bfc7ff630b7874c3382e4e6a44495a036935232f2ab7fab10e6"
+    },
+    {
+      "bytes": 34440,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "70a1e9d7772e705eeff4df9e18a23fd2547011361073598d2bde8c75ac04dffb"
+    },
+    {
+      "bytes": 8475,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessments.md",
+      "sha256": "94e498989d61ae31405c41c2d11a894be028255357776922fd10e40c23c9ce10"
+    },
+    {
+      "bytes": 11059,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md",
+      "sha256": "98662fce7d0025867522a152cfb790fbee1a0ec7cd473450b37149d032ade86b"
+    },
+    {
+      "bytes": 9851,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "sha256": "6425f543e4df3b8c9a2886f8f0c1c59b9a543692058d8b7a4a68553d503dad09"
+    },
+    {
+      "bytes": 107113,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "sha256": "0b0ef9e414148583fef4f6f74996d21b3a69da003a4e35ae3f7792b46eb7ae23"
+    },
+    {
+      "bytes": 45220,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-28-r09-native-build.md",
+      "sha256": "6acf4704d4baecaf8a5936fe4fd0e6868bd17723bef303312087f88b2e4df476"
+    }
+  ],
+  "edited_docs_outside_327_accepted_source_pins": true,
+  "local_links_checked": 16,
+  "new_full_suite": false,
+  "old_external_gate": "INCOMPLETE_TIMEOUT",
+  "old_native_profile": "FAILED",
+  "ordered_recovery_steps": 10,
+  "original_payload_reads": 0,
+  "primary_web_references": [
+    "https://www.rfc-editor.org/rfc/rfc3629.html",
+    "https://docs.python.org/3.11/library/codecs.html#incrementaldecoder-objects"
+  ],
+  "project_and_human_rows": 20,
+  "recorded_at_utc": "2026-10-29T06:44:02.943438+00:00",
+  "schema_version": 1,
+  "status": "passed_documentation_and_scope_QA_only",
+  "verifier_orchestration": "draft_unaccepted"
+}

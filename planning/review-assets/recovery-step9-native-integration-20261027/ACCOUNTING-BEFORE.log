@@ -1,0 +1,65 @@
+test_foreign_request_owner_and_prompt_cannot_be_counted_known (tests.test_study_native_accounting.NativeAccountingTests.test_foreign_request_owner_and_prompt_cannot_be_counted_known) ... D:\Projects\drug_target_agents\tests\test_study_native_accounting.py:20: ResourceWarning: unclosed file <_io.FileIO name='D:\\Projects\\drug_target_agents\\data\\cache\\tmpmm49i97t\\run\\journal.jsonl' mode='xb' closefd=True>
+  with RunJournal(self.root,kind='build') as journal:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+test_measured_usage_and_bound_model_count (tests.test_study_native_accounting.NativeAccountingTests.test_measured_usage_and_bound_model_count) ... D:\Projects\drug_target_agents\tests\test_study_native_accounting.py:20: ResourceWarning: unclosed file <_io.FileIO name='D:\\Projects\\drug_target_agents\\data\\cache\\tmpwdqy_vdc\\run\\journal.jsonl' mode='xb' closefd=True>
+  with RunJournal(self.root,kind='build') as journal:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+test_missing_wrapper_is_unknown_not_zero (tests.test_study_native_accounting.NativeAccountingTests.test_missing_wrapper_is_unknown_not_zero) ... D:\Projects\drug_target_agents\tests\test_study_native_accounting.py:20: ResourceWarning: unclosed file <_io.FileIO name='D:\\Projects\\drug_target_agents\\data\\cache\\tmpwx2hm6zh\\run\\journal.jsonl' mode='xb' closefd=True>
+  with RunJournal(self.root,kind='build') as journal:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+test_simulated_transport_never_claims_model_or_network_usage (tests.test_study_native_accounting.NativeAccountingTests.test_simulated_transport_never_claims_model_or_network_usage) ... D:\Projects\drug_target_agents\tests\test_study_native_accounting.py:20: ResourceWarning: unclosed file <_io.FileIO name='D:\\Projects\\drug_target_agents\\data\\cache\\tmpsu9e0aef\\run\\journal.jsonl' mode='xb' closefd=True>
+  with RunJournal(self.root,kind='build') as journal:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+test_wrong_echoed_model_or_settings_are_unknown (tests.test_study_native_accounting.NativeAccountingTests.test_wrong_echoed_model_or_settings_are_unknown) ... D:\Projects\drug_target_agents\tests\test_study_native_accounting.py:20: ResourceWarning: unclosed file <_io.FileIO name='D:\\Projects\\drug_target_agents\\data\\cache\\tmpdi_655b5\\run\\journal.jsonl' mode='xb' closefd=True>
+  with RunJournal(self.root,kind='build') as journal:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+
+======================================================================
+ERROR: test_foreign_request_owner_and_prompt_cannot_be_counted_known (tests.test_study_native_accounting.NativeAccountingTests.test_foreign_request_owner_and_prompt_cannot_be_counted_known)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_accounting.py", line 20, in setUp
+    with RunJournal(self.root,kind='build') as journal:
+TypeError: 'RunJournal' object does not support the context manager protocol
+
+======================================================================
+ERROR: test_measured_usage_and_bound_model_count (tests.test_study_native_accounting.NativeAccountingTests.test_measured_usage_and_bound_model_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_accounting.py", line 20, in setUp
+    with RunJournal(self.root,kind='build') as journal:
+TypeError: 'RunJournal' object does not support the context manager protocol
+
+======================================================================
+ERROR: test_missing_wrapper_is_unknown_not_zero (tests.test_study_native_accounting.NativeAccountingTests.test_missing_wrapper_is_unknown_not_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_accounting.py", line 20, in setUp
+    with RunJournal(self.root,kind='build') as journal:
+TypeError: 'RunJournal' object does not support the context manager protocol
+
+======================================================================
+ERROR: test_simulated_transport_never_claims_model_or_network_usage (tests.test_study_native_accounting.NativeAccountingTests.test_simulated_transport_never_claims_model_or_network_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_accounting.py", line 20, in setUp
+    with RunJournal(self.root,kind='build') as journal:
+TypeError: 'RunJournal' object does not support the context manager protocol
+
+======================================================================
+ERROR: test_wrong_echoed_model_or_settings_are_unknown (tests.test_study_native_accounting.NativeAccountingTests.test_wrong_echoed_model_or_settings_are_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_accounting.py", line 20, in setUp
+    with RunJournal(self.root,kind='build') as journal:
+TypeError: 'RunJournal' object does not support the context manager protocol
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.030s
+
+FAILED (errors=5)

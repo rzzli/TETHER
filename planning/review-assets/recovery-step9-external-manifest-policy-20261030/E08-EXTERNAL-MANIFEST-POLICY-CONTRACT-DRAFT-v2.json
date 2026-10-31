@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "status": "READABLE_SUCCESSOR_DRAFT_PENDING_MUTUAL_READY_NO_IMPLEMENTATION",
+  "inputs": {
+    "scope": {
+      "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/E08-POLICY-CONTRACT-AUTHORING-SCOPE-v1.json",
+      "bytes": 3267,
+      "sha256": "3a043e2387de427022f3cb0f1f1025ddcb5b18687639899cfab806da3acd1b88"
+    },
+    "accepted_entry": {
+      "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/ENTRY-CONTRACT-SUITE-ROOT-ACCEPTANCE-v2.json",
+      "bytes": 5297,
+      "sha256": "e54b6d5580a107c6a2acf4279ad59db02bb92792aba81c70c102408aa0f9e706"
+    },
+    "source3_pause": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-PAUSE-v3.json",
+      "bytes": 4114,
+      "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+    },
+    "source3_kernel": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+      "bytes": 121192,
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "entry_contract": {
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json",
+      "bytes": 28509,
+      "sha256": "9e65fec645260308ed8847bed74381e39c167b8188600b59113088ba5ad19863"
+    },
+    "staged48": {
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+      "bytes": 94200,
+      "sha256": "2aad403db06d5388bf9a8e8fb674bf2a26f8ad90a437f2db51e1e19f17ff80a9"
+    }
+  },
+  "purpose": "Close E08 content-pin ancestry policy at the genuine entry boundary. This policy is not source authentication, file admission, a consumer capability or a whole-entry/native qualification.",
+  "planned_surface": {
+    "binding": "Kernel-defined ManifestPolicyBinding(mode,current_decision_id,current_output_ids,basis_ids,external_tcb_pins,prior_metadata_pins). Public construction consumes exact ordinary metadata containers and creates a detached immutable object; construction grants no authority. PreboundServices successor adds manifest_policy_binding. The externally selected launcher/TCB supplies the binding and envelope as distinct inputs.",
+    "core_method": "KernelState.validate_external_policy(envelope) -> ManifestPolicyReport. Uses only the exact binding already retained in the SAME Core; no caller-supplied alternate binding/check/clock. Called once by entry, not an optional validation helper.",
+    "cached_observation": "state.manifest_policy_report -> same immutable report or None; cache only, no callbacks/clock/revalidation. snapshot metadata carries report values or explicit attempted/error/absent state; it cannot mint an eligible policy.",
+    "report": "ManifestPolicyReport.to_dict() returns detached ordinary data; no native/root/lease authority is exposed.",
+    "literal_request": "{binding:<binding value>,envelope:<envelope value>}; independent literals grade future genuine entry integration, not a present policy implementation.",
+    "literal_entry_basis_pins": "Independent literal-case context outside request.binding/envelope: entry_basis_pins is a list of exact {id,bytes,sha256} declarations in the intended EntryPlan file order for EXECUTION, and None for AUTHORING. This harness-only context is not accepted as an alternate binding or passed to the policy metadata validator. It is excluded from combined metadata bytes/digests. Future genuine-entry tests construct actual FileSpecs from the independently frozen context and check count/pin mismatch against ordered basis nodes, never derive both comparison sides from a report.",
+    "retained_slots": {
+      "_manifest_policy_binding": "Original exact same-kernel prebound ManifestPolicyBinding reference, retained before metadata validation.",
+      "_manifest_policy_attempted": "False initially; set True once before structural capture. Failure is irreversible, no second binding/validation attempt.",
+      "_manifest_policy_binding_data": "None until full detached immutable validated structural binding data exists; never alias caller containers.",
+      "_manifest_policy_envelope_data": "None until full detached immutable structural envelope data exists; never alias caller containers.",
+      "_manifest_policy_prepared": "None until immutable12-field ManifestPolicyReport construction actually returns; store that original returned object before final clock eligibility checks.",
+      "_manifest_policy_report": "None until final original work-clock check and all validation pass; only then cache the same prepared object. Public manifest_policy_report returns only this issued object, or None.",
+      "_manifest_policy_eligible": "False initially and on any failure. It may become True only for a source-issued EXECUTION_BASIS_VALIDATED report after the final original-clock check; supplied booleans or report status alone cannot set it.",
+      "_manifest_policy_error": "First original refusal/allocation/encoding/provider exception object retained; diagnostic serialization uses existing source-issued identity protocol, not a fabricated exception."
+    },
+    "prepared_observation": "Genuine KernelSnapshot metadata adds manifest_policy={attempted,prepared_report,issued_report,execution_eligible,error_identity}, with prepared/issued values ordinary frozen report data or None. error_identity is the existing diagnostic token or None, resolved only by its genuine owner. Snapshot creation never runs/retries the policy. The first immutable prepared report remains inspectable and noneligible when a later clock or issuance step fails; public report is None and execution gate stays closed."
+  },
+  "exact_shapes": {
+    "binding_keys": [
+      "mode",
+      "current_decision_id",
+      "current_output_ids",
+      "basis_ids",
+      "external_tcb_pins",
+      "prior_metadata_pins"
+    ],
+    "envelope_keys": [
+      "schema_version",
+      "mode",
+      "current_decision_id",
+      "current_output_ids",
+      "external_anchor_ids",
+      "basis_ids",
+      "nodes"
+    ],
+    "node_keys": [
+      "id",
+      "role",
+      "state",
+      "bytes",
+      "sha256",
+      "reason",
+      "pin_dependencies"
+    ],
+    "pin_keys": [
+      "id",
+      "bytes",
+      "sha256"
+    ],
+    "mode": [
+      "AUTHORING",
+      "EXECUTION"
+    ],
+    "roles": [
+      "EXTERNAL_TCB",
+      "PRIOR_APPROVED_METADATA",
+      "INPUT",
+      "CONSUMER",
+      "CURRENT_DECISION",
+      "CURRENT_OUTPUT"
+    ],
+    "states": [
+      "PINNED",
+      "PLANNED_SOURCE",
+      "UNBUILT",
+      "CURRENT"
+    ],
+    "containers": "type(value) is dict/list/str/int as applicable; None is the only null. No bool numeric values, float, tuple input, subclass, custom Mapping/Sequence, coercion, user equality/order/hash/format callbacks. Frozen classes use tuples internally only after validated detached capture.",
+    "id": "ASCII fullmatch [A-Za-z][A-Za-z0-9_.:-]{0,127}; IDs are declared names, not paths, URIs, filenames, role inference or authority.",
+    "lists": "All ID lists preserve declared order, have unique IDs, and are bounded by nodes except current_output_ids <=14. basis_ids/external_tcb_pins each nonempty; prior_metadata_pins may be empty; nodes nonempty; current_output_ids nonempty.",
+    "pin": "bytes exact nonbool int 0..2^63-1; sha256 exactly64 lowercase hex; no target open/stat/hash follows.",
+    "node_state_rules": {
+      "PINNED": "Only noncurrent roles; bytes/sha256 satisfy pin domain and reason is None.",
+      "PLANNED_SOURCE_or_UNBUILT": "Only INPUT/CONSUMER; bytes is None, sha256 is None, reason exact str length1..256 Unicode codepoints, no lone surrogates.",
+      "CURRENT": "Exactly CURRENT_DECISION/CURRENT_OUTPUT; bytes is None, sha256 is None, reason exactly CURRENT_RUN_NOT_A_STATIC_PIN. No current hash can enter the static basis."
+    },
+    "basis": "Each basis_id names INPUT or CONSUMER. IDs/current IDs/root IDs must be disjoint by role. A PINNED node outside basis does not silently become an admitted input.",
+    "current_membership": "Exactly one CURRENT_DECISION, matching binding.current_decision_id. CURRENT_OUTPUT node IDs exactly match binding.current_output_ids in the envelope list; no extra node may use either current role."
+  },
+  "binding_rules": [
+    "The exact same executing kernel class namespace owns binding and Core; a same-name foreign-class object is refused. Core retains the original binding object reference and a detached validated value snapshot. Ordinary later mutation/rebinding cannot change that selection.",
+    "Envelope mode/current_decision_id/current_output_ids/basis_ids/external_anchor_ids must equal binding mode/current IDs/basis IDs/external_tcb_pins IDs respectively, with order significant for these comparison lists.",
+    "Node EXTERNAL_TCB and PRIOR_APPROVED_METADATA sets must exactly equal corresponding binding pin sets; each node bytes/sha256 must exactly equal its out-of-band pin. Declaring a role, approved/ready flag or content hash in the envelope cannot add a root.",
+    "Binding external/prior/current/basis IDs are jointly unique where their roles are disjoint; all binding references must resolve. External/prior pins are declared trusted configuration, not proof that Python authenticated the launcher/interpreter, or that prior bytes are freshly read.",
+    "EXECUTION additionally binds basis_ids positionally to EntryPlan.files: same count and each basis node PINNED with bytes and SHA equal to its corresponding exact FileSpec. No filename-derived mapping, omitted file, automatic role promotion or admission from a graph alone. Current FileSpec/captured-import/role/lease checks remain mandatory and unmodified.",
+    "AUTHORING validates the metadata graph but returns before FileSpec admission/output reservation/continuation/helper execution. Planned/null entries never need fictitious final binary hashes to authorize source authoring."
+  ],
+  "edges": {
+    "direction": "A.pin_dependencies contains B means A static content identity/admission relies on B. It is not a generic operational data-flow or consumer-read graph. A downstream CURRENT decision/output may refer to a static input without making that input depend on current output.",
+    "all_references": "Every dependency must resolve to exactly one declared node; no duplicate edges. Every declared node participates in schema/graph checks even when outside the selected basis. No undisclosed external name is ignored.",
+    "cycle": "The entire declared content-pin graph must be acyclic, including current nodes. Reject self edges and mutual/transitive cycles; no bounded depth truncation may convert a cycle to success.",
+    "role_table": {
+      "EXTERNAL_TCB": [],
+      "PRIOR_APPROVED_METADATA": [
+        "EXTERNAL_TCB",
+        "PRIOR_APPROVED_METADATA"
+      ],
+      "INPUT": [
+        "EXTERNAL_TCB",
+        "PRIOR_APPROVED_METADATA",
+        "INPUT",
+        "CONSUMER"
+      ],
+      "CONSUMER": [
+        "EXTERNAL_TCB",
+        "PRIOR_APPROVED_METADATA",
+        "INPUT",
+        "CONSUMER"
+      ],
+      "CURRENT_DECISION": [
+        "EXTERNAL_TCB",
+        "PRIOR_APPROVED_METADATA",
+        "INPUT",
+        "CONSUMER"
+      ],
+      "CURRENT_OUTPUT": [
+        "EXTERNAL_TCB",
+        "PRIOR_APPROVED_METADATA",
+        "INPUT",
+        "CONSUMER",
+        "CURRENT_DECISION",
+        "CURRENT_OUTPUT"
+      ]
+    },
+    "forbidden_ancestry": "Before general role-table rejection for INPUT/CONSUMER, inspect the full dependency ancestry of every INPUT/CONSUMER (basis and nonbasis). Any path to CURRENT_DECISION or CURRENT_OUTPUT is POLICY_FORBIDDEN_ANCESTRY, including a pinned intermediary and an acyclic path. External/prior root-edge restrictions are checked first. Current node inventory alone and downstream provenance edges are permitted; current nodes never become static roots.",
+    "planned_descendants": "AUTHORING permits pinned or planned INPUT/CONSUMER to depend on planned/unbuilt static nodes: the unresolved nodes stay explicit and the result stays AUTHORING_ONLY. EXECUTION refuses any planned/unbuilt node in the submitted graph, including a nonbasis node; caller must submit an explicitly selected ready graph instead of silently dropping it.",
+    "operational_graph_limit": "No native model-consumer, child/image binding, current output byte-checker graph or complete real84 import graph is qualified by this pin graph. Separate explicit runtime policies/leases are still required."
+  },
+  "limits": {
+    "nodes": 256,
+    "total_pin_edges": 4096,
+    "id_ascii_bytes": 128,
+    "reason_unicode_codepoints": 256,
+    "current_outputs": 14,
+    "canonical_combined_utf8_bytes": 131072,
+    "integer_max": 9223372036854775807
+  },
+  "limit_rationale": {
+    "nodes": "256 matches existing prospective original7 N upper bound numerically and covers retained48-node staging with room for explicit decision/output/TCB nodes. This is a metadata maximum, not a new original roster allowance.",
+    "edges": "4096 is a separate finite metadata reservation (16*256) for iterative O(V+E) traversal; a dense graph may refuse. It does not enlarge C/R/E or module edge/loader caps.",
+    "text_and_bytes": "128-byte IDs match existing output-key bound;256-codepoint reasons match existing diagnostic text scale;14 outputs match the closed producer artifact universe.131072 canonical UTF8 bytes is an independent bounded metadata allowance at the existing N4 pool scale, not a query-pool reallocation/RSS measurement. All bounds apply jointly; a dimension maximum need not be simultaneously attainable.",
+    "allocation": "Validated detached metadata, adjacency/index arrays and a report are separately retained logical data. Python boxed storage, hash/compiler state, RSS/commit and whole-process memory remain unmeasured. Never turn this metadata cap into a resource-fit claim.",
+    "retained_scale": {
+      "staged_resources": 48,
+      "declared_stdlib_names": 9,
+      "retained_reference_import_edges": 8,
+      "planned_graph_relations": 4,
+      "illustrative_named_slot_sum": "48 resources +14 current outputs +1 current decision +9 direct stdlib anchors +1 external launcher anchor +1 prior policy root =74 named slots. This construction is a size rationale only; some nodes overlap or lack trusted pins, and it is not a selected/validated full runtime graph.",
+      "nodes": "74 <256. The256 ceiling reuses the existing prospective original7 N numerical upper bound for metadata planning only. Full256 actual files plus their roots/current nodes need not fit this metadata graph; no full-roster admission is claimed.",
+      "edges": "Only8 retained source-reference imports plus4 planned relations are known here, not4096.4096 is an explicit bounded traversal reservation with global O(V+E) work, not an inferred future graph or an enlargement of original C/R/E. Unknown closure cannot be filled by assuming the remaining edge budget.",
+      "bytes": "The131072-byte cap independently limits the detached binding+envelope, including duplicated pin declarations. A graph may meet node/edge maxima yet refuse this cap; neither metadata bytes nor these ceilings establish process resource fit."
+    }
+  },
+  "canonical_encoding": {
+    "combined": "UTF8 of json.dumps({binding:<validated binding values>,envelope:<validated envelope values>},sort_keys=True,separators=(comma,colon),ensure_ascii=False,allow_nan=False), without BOM/newline. Exact literal separators are comma=\",\" and colon=\":\". Reject lone surrogates before encoding.",
+    "cap": "Combined canonical bytes <=131072. No padding/unknown keys. The structural schema is detached without clock or user callbacks, bounded by item/text ceilings; original work-clock checks immediately before and after that capture veto late completion. Canonical encoding/hash/report work then stays under original checks. Original capture/encoding failure is retained and cannot issue a report. Harness-only entry_basis_pins is excluded.",
+    "digests": "binding_sha256 and envelope_sha256 hash their own canonical ordinary objects with the same settings. They identify declared metadata, never resources or trust."
+  },
+  "report": {
+    "exact_keys": [
+      "schema_version",
+      "mode",
+      "status",
+      "node_count",
+      "edge_count",
+      "basis_ids",
+      "external_anchor_ids",
+      "prior_root_ids",
+      "planned_ids",
+      "unbuilt_ids",
+      "binding_sha256",
+      "envelope_sha256"
+    ],
+    "schema_version": 1,
+    "status": {
+      "AUTHORING": "AUTHORING_ONLY",
+      "EXECUTION": "EXECUTION_BASIS_VALIDATED"
+    },
+    "counts": "Exact nonbool ints. edge_count is total unique declared pin edges. Lists are IDs in declaration order (prior_root_ids follows binding prior pin order; planned/unbuilt follows node order).",
+    "qualification": "Both statuses mean a declared metadata graph passed this contract. Neither means launcher authenticated, live files admitted, source hashes observed, native/physical enabled or runtime authorized. AUTHORING never permits I/O; EXECUTION remains contingent on all existing live gates."
+  },
+  "validation_order": [
+    {
+      "step": 1,
+      "check": "Exact executing binding namespace/one-use live phase. Retain policy attempted before metadata validation.",
+      "refusal": "FOREIGN_POLICY_BINDING or POLICY_ALREADY_CHECKED"
+    },
+    {
+      "step": 2,
+      "check": "Binding then envelope structural capture: dict cardinality before key traversal, outer list cardinality before items, exact types/scalars/enums before value operations. Structural child order follows exact_shapes key lists; node/pin list order retained.",
+      "refusal": "POLICY_SCHEMA (missing/extra keys or wrong exact containers), POLICY_DOMAIN (scalar/type/enum/range/invalid Unicode), POLICY_LIMIT (list/text/edge size limit)"
+    },
+    {
+      "step": 3,
+      "check": "Unique binding pin/ID lists and node IDs. Same-ID identical node duplicate is duplicate; differing node content is conflicting duplicate. Dependency duplicates are duplicate.",
+      "refusal": "POLICY_DUPLICATE_ID or POLICY_PIN_CONFLICT"
+    },
+    {
+      "step": 4,
+      "check": "All referenced IDs resolve (binding lists first then per-node dependencies).",
+      "refusal": "POLICY_UNKNOWN_NODE"
+    },
+    {
+      "step": 5,
+      "check": "Binding/envelope current/basis/anchor list agreement, exact current-role membership and root role/pin agreement; basis node role INPUT/CONSUMER.",
+      "refusal": "POLICY_BINDING_MISMATCH"
+    },
+    {
+      "step": 6,
+      "check": "Iterative deterministic full-graph cycle check, including self/mutual cycles.",
+      "refusal": "POLICY_CYCLE"
+    },
+    {
+      "step": 7,
+      "check": "External root no-dependency rule and prior-root restricted dependencies.",
+      "refusal": "POLICY_DEPENDENCY_ROLE"
+    },
+    {
+      "step": 8,
+      "check": "Full INPUT/CONSUMER transitive forbidden-current ancestry, then remaining role-table checks.",
+      "refusal": "POLICY_FORBIDDEN_ANCESTRY or POLICY_DEPENDENCY_ROLE"
+    },
+    {
+      "step": 9,
+      "check": "EXECUTION planned/unbuilt refusal; AUTHORING preserves unresolved lists.",
+      "refusal": "POLICY_UNBUILT"
+    },
+    {
+      "step": 10,
+      "check": "Combined canonical metadata byte cap; then EXECUTION count/bytes/SHA comparison of ordered basis nodes against independently selected actual EntryPlan.files, before report issuance/admit_plan. Require exact EntryPlan/tuple/FileSpec namespace and scalar field types before comparing; malformed plan shape remains existing INVALID_INPUT, a valid unequal vector is POLICY_BASIS_MISMATCH. Harness-only entry_basis_pins independently describes this fixture vector and is excluded from graph/canonical metadata.",
+      "refusal": "POLICY_LIMIT or POLICY_BASIS_MISMATCH"
+    },
+    {
+      "step": 11,
+      "check": "Bind report constructor before call; directly retain actual immutable prepared return in _manifest_policy_prepared, then final original work-clock check and same-object issuance. On any later failure retain noneligible prepared data, leave public report absent and dispatch blocked.",
+      "refusal": "Original allocation/encoding/provider exception preserved, or existing CLOCK_INVALID/WORK_DEADLINE/HARD_DEADLINE"
+    }
+  ],
+  "same_step_precedence": "First affected input in the stated structural/list order. Duplicate equality uses already detached exact builtins only. Within a node roles/states are checked before their cross-field state rules. Canonical bytes cap is a final structural constraint, not a promise to ignore earlier semantic failures. Tests with multiple faults must target the stated earlier step.",
+  "integration": {
+    "source3_anchor": "Source3 entry lines1853-1867 capture original start, construct sole Origin/Core/Registry/raw store/facades, and retain attempt.state. Existing lines1862/1433 merely type-check/freeze external_root_envelope and do not enforce E08.",
+    "future_order": [
+      "Original first sample and sole Origin/Core/Registry/raw-store/facades, with original failure retainer.",
+      "Retain exact prebound ManifestPolicyBinding reference. Remove unbounded constructor freeze of raw envelope; perform bounded detached policy capture/check under original clock after Core exists.",
+      "Validate envelope/pins and expected plan basis, retaining report or first failure in the SAME Core. No plan FileSpec admission/allocation requiring future built hashes has occurred yet.",
+      "AUTHORING: return same Core with AUTHORING_ONLY cached report; permanently block output reservation, original7 work, compiler/helper loading and continuation. Readonly diagnostic/snapshot observation remains possible.",
+      "EXECUTION: require cached EXECUTION_BASIS_VALIDATED, then existing FileSpec/captured-DAG admission, raw-store/buffer quotas and output namespace/journal barrier.",
+      "Only after actual output ownership/reservation, allow original/helper opens; preserve captured-source authentication/resolver/claim and all old timing/identity/cleanup rules."
+    ],
+    "guards": "Original7 reservation/output reservation/compiler/continuation paths require the exact original binding, one successful source-issued _manifest_policy_report object whose mode/status are EXECUTION/EXECUTION_BASIS_VALIDATED, and the internally retained eligible transition; existing live phase/namespace/clock/file/lease gates also remain. No caller-supplied report or bool can install the transition. AUTHORING stays barred even with all nodes pinned. Getters remain cold.",
+    "clock": "Use only original Origin/provider. Check immediately before and after bounded no-callback structural capture, then during detached node/pin/edge traversal and before/after canonical encode/report assembly. Structural capture first checks dict/list cardinality and exact leaf types; it never calls an untrusted protocol or resamples clock mid-copy. It may overrun cooperatively, but post-capture check closes the gate. A clock exception or late sample does not retry, heal, replace binding, reserve output or open files. Cache-only report/observation getters never sample clock.",
+    "failure": "Retain first original exception in existing Core/EntryAttempt diagnostics. Once immutable report construction returns, directly retain that actual object in _manifest_policy_prepared before any final work-clock check. If that check or later issuance bookkeeping fails, retain prepared report data/diagnostic as noneligible, keep _manifest_policy_report None and _manifest_policy_eligible False, and block all work/output. A status string in prepared data is not authority. On healthy final issuance, cache the same prepared object. Repeated reads/snapshots cannot retry, repair, renew time or change eligibility.",
+    "immutable_report": "No mutable caller container aliases in binding/envelope/report capture. A custom object is rejected without invoking its protocol. Provenance/control authority remains the actual Core; data hashes/booleans cannot create it."
+  },
+  "compatibility": {
+    "versions": "No Source3 edits or retrospective E08 PASS. Prospective separately authorized kernel/services successor and adapted synthetic bindings required. Ops/FileView may remain algorithm-compatible subject to exact own-module map/pause. No implicit fallback when binding absent.",
+    "legacy": "Preserve50PASS/3DEFERRED proof, Source3 five regressions and Source4 retained baselines. Completing new E08 policy later does not execute the two historical E16 factories or qualify native25.",
+    "unbuilt": "Future shim/CPP/parent/pack may stay PLANNED_SOURCE/UNBUILT with null pins in AUTHORING. They require actual built output pins and separately qualified entry/ABI/lease/physical/science stages before execution; no circular binary-hash prerequisite for source authoring.",
+    "real_roster": "Retained48 staging/historical213 metadata are reference inputs, not automatic final selections. Joint19079 versus current C16384 physical reservation warning and positive native-input consumer remain unresolved; no cap lift."
+  },
+  "finite_precode_plan": "Native independently authors approximately40-44 explicit metadata vectors/outcomes, including all bounds, role/root spoofing, legal downstream provenance, direct/transitive ancestry, cycles, planned modes, ordering and2 independently declared EntryPlan basis mismatch cases. Exact final count/provenance comes from the literal freeze. Grammar performs one finite peer. Freeze only after explicit mutual FINAL_READY; named drafts preserved. No implementation/source import or execution in preparation.",
+  "activity": {
+    "subject_code_authored": false,
+    "subject_imported": false,
+    "subject_executed": false,
+    "original_targets_followed": false,
+    "native_or_payload_activity": false
+  },
+  "qualification": false,
+  "preserved_draft": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-DRAFT-v1.json",
+    "bytes": 20374,
+    "sha256": "d3def88c55775ab8ef0b8096c17c3a11a82fb18962d16e37d62daebd808f3d9b"
+  }
+}

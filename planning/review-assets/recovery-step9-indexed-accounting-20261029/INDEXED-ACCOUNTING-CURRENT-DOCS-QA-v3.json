@@ -1,0 +1,91 @@
+{
+  "application_tests_rerun": false,
+  "assessment_local_links": [
+    "planning\\Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-SCOPED-ACCEPTANCE-v3.json",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-ACTUAL-EVIDENCE-FREEZE-v3.json",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-SOURCE-INDEPENDENT-PEER-v3.json",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-INDEPENDENT-ACTUAL-PROOF-v3.json",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_owner_v3.py",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_file_ports_v3.py",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\continue_verification_v3.py",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-CONTROL-FREEZE-v2.json",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-ACTUAL-V2-BEFORE-PROOF-v2.json",
+    "planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\INDEXED-ACCOUNTING-SOURCE-PAUSE-v3.json",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\PRODUCTION-ROSTER-SCALING-PREFLIGHT-v1.md",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\SHARED-OWNER-FULL-ROSTER-FEASIBILITY-INDEPENDENT-v1.json"
+  ],
+  "checker_sha256": "f5ba90a70830e63940ba34f6e56168cd3478446fdfdddce624e14dc626f93163",
+  "documents": {
+    "README.md": {
+      "bytes": 38521,
+      "sha256": "3aa3630e99281df28f9987171cbe3f5bc286266849eaaf7353cb664d90dcb1c0"
+    },
+    "TODO.md": {
+      "bytes": 46119,
+      "sha256": "4bb1b820b809f6c7a8c980c7289eefc395a460b1c63bd22c65412701785a8a86"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 23825,
+      "sha256": "5e138fee10c1dc22574ab9737d725e0b379caca9303bebc2bd0725e9847df112"
+    },
+    "memory/project-goals.md": {
+      "bytes": 112063,
+      "sha256": "e734582edb2b23f4021b22df252a85e28978d7f3efab04bde92eccf6f5ad8118"
+    },
+    "memory/research-log-2026-10-29-r09-unicode-controls.md": {
+      "bytes": 24356,
+      "sha256": "9bc1b9c93132d585aaa3c44ae8a8e533b31f9e46cd51b72978f4fc1f7292bd05"
+    },
+    "planning/Project Progress Reassessment 2026-10-29 - Indexed Accounting.md": {
+      "bytes": 14174,
+      "sha256": "c1c141dd4e0ee0a490783d6e132d85bff4dea1a3945d1ebba59b9a6eb21dff0b"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 15356,
+      "sha256": "f8ce25638f9ad2e6b5acb438875fc9911f398c17d3b123c02cc54a7b866f1fa0"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 44265,
+      "sha256": "3f5f64ede187feb27707c57874fcf8db9166042e6e369c08b58c4148a692abb7"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 11391,
+      "sha256": "fa30fc145bde533506c073298f29b0cec7e258aac1647004a8368135db61645f"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 34946,
+      "sha256": "930447c0eefdd9d6ddbeb7b4b5053acaf812f1f84b0c76bba036dc298a782572"
+    }
+  },
+  "new_payload_or_native_activity": false,
+  "ordered_next_gates": 5,
+  "recorded_at_utc": "2026-10-29T18:05:22.396476+00:00",
+  "retained_application_source_pins": 327,
+  "retained_application_tests": 1774,
+  "schema_version": 1,
+  "scope": "Current UTF8 documents, twenty recovery/human status rows, five ordered next gates, exact scoped acceptance, chronology and unresolved production/science boundaries.",
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "read_only_next_scope_audit",
+  "next_action": "anchored bounded-retrieval preparation bridge and invented recorded integration using existing runtime",
+  "external_engineering_blocker": null,
+  "whole_R09_complete": false,
+  "scientific_acceptance": false,
+  "runtime_edits": false,
+  "protected_contents_read": false,
+  "generation_calls": 0,
+  "pins": [
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/NEXT-R09-ENGINEERING-AUDIT.md",
+      "sha256": "51af18d796e2633480f9dfc12a4c94c184fb7c89eb44c7bdb36f3ec7b943ceaf",
+      "bytes": 10926
+    },
+    {
+      "path": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "a5c4edc8d07078bbd769148692d73c4f9dc1021a26e4c1e3bd2f31469d3aa6f8",
+      "bytes": 37781
+    },
+    {
+      "path": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "sha256": "2bfcf3cbc4da0e825e11795e271cbb5d857cda573dd80041055acbea872e4f77",
+      "bytes": 4256
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json",
+      "sha256": "b7cc9e6407a45768bf8d5bb29d8da4eb2fc7c70c2462de6beef359a5bd0d7099",
+      "bytes": 8046
+    },
+    {
+      "path": "src/asof/retrieval.py",
+      "sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+      "bytes": 4320
+    },
+    {
+      "path": "src/asof/agents.py",
+      "sha256": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+      "bytes": 7395
+    },
+    {
+      "path": "src/asof/workflow.py",
+      "sha256": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+      "bytes": 13189
+    },
+    {
+      "path": "src/asof/study/source_preparation.py",
+      "sha256": "a01ae55d3a06c1130f293eec4fd10872b62dcfaf43c49b7e9da88dbee23418c1",
+      "bytes": 21083
+    },
+    {
+      "path": "src/asof/study/source_rows.py",
+      "sha256": "977c3b898da1796a18830854ab086f3d94469597bf07c16c3204a1865aa36138",
+      "bytes": 10467
+    },
+    {
+      "path": "src/asof/study/preparation_payloads.py",
+      "sha256": "d05ffe6860828c499dbecfec0ed08b1410cf622cfccfa01cf2b4c7300bdfc8b8",
+      "bytes": 4448
+    },
+    {
+      "path": "src/asof/study/fixed_evidence.py",
+      "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10",
+      "bytes": 18519
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "71ffef361f1c71cdd2b759dafab1059d7216cbaf739952845ea6e0d038db0518",
+      "bytes": 28202
+    },
+    {
+      "path": "src/asof/study/baselines.py",
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "bytes": 8475
+    }
+  ]
+}

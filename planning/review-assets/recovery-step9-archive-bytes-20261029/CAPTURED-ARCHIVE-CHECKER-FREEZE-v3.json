@@ -1,0 +1,176 @@
+{
+  "CPU_GGUF_oldpack_reads": 0,
+  "SDK_OS_native_model_operations": 0,
+  "actual_directory_complete": false,
+  "actual_old_archive_capture_or_replay": false,
+  "callback_and_LF_analysis_and_entry_ASTs_unchanged": true,
+  "changed_top_level_ASTs": [
+    "top_level_0",
+    "_number",
+    "_run_graph"
+  ],
+  "checker_or_tests_rerun_for_this_record": false,
+  "cleanup_qualification_expanded": false,
+  "correction_scope": [
+    "Source-valid already-closed nullable close result; no fabricated close observation.",
+    "Noncoercing exact integer/finite-float predicate; periodic range rejects giant integer."
+  ],
+  "exact_byte_transform_matches": true,
+  "frozen_synthetic_projections": 32,
+  "fully_rebound_before_after": 2,
+  "independent_peer_acceptance": false,
+  "inputs": {
+    "ARCHIVE-CHECKER-CORRECTION-ROOT-DECISION-v3.json": {
+      "bytes": 2858,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\ARCHIVE-CHECKER-CORRECTION-ROOT-DECISION-v3.json",
+      "sha256": "59c32bec1cb2e32f92ce90a1f6f21aa36b81f380c763738e940d399fd077ff33"
+    },
+    "CAPTURED-ARCHIVE-CHECKER-FREEZE-v2.json": {
+      "bytes": 6401,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-ARCHIVE-CHECKER-FREEZE-v2.json",
+      "sha256": "d2a8867dcf55f0ab261c8e355be3e55cf9723f56ebdfc63d381ed0633950593d"
+    },
+    "CAPTURED-ARCHIVE-EFFECTIVE-V3-v2.md": {
+      "bytes": 2336,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-ARCHIVE-EFFECTIVE-V3-v2.md",
+      "sha256": "a8010d1f8d24c7b53cd21cbfaa8bf10cda8b9a30121e9d72965ebdf12a44b0b4"
+    },
+    "CAPTURED-ARCHIVE-EFFECTIVE-V3-v3.md": {
+      "bytes": 2454,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-ARCHIVE-EFFECTIVE-V3-v3.md",
+      "sha256": "bd015b3c32ce3bdb451216f15662ebf47f6c8e4e746ecac397b93f0f221a99a1"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-CONTRACT-v3.json": {
+      "bytes": 29094,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-CONTRACT-v3.json",
+      "sha256": "ce077d5bfd2e12bd5de7a84d17094572a15286e0cb44bdc224513206f305e3d2"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-FIXTURE-FREEZE-v3.json": {
+      "bytes": 2350,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURE-FREEZE-v3.json",
+      "sha256": "7663f2edfff3d0c4365bbe9d4336895b56f2e5b5001bb69717eeeab06bfd96b9"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json": {
+      "bytes": 1716151,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-FIXTURES-v3.json",
+      "sha256": "3e75447d4d3a01c56833d089bf23dab52e5e53bc49a9ea33e9de689eef9b5dcd"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json": {
+      "bytes": 6551,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json",
+      "sha256": "1a48b0e0e19ed873fb99c19f3a7d865f3243168cdc8831a8a598844b38f513de"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PROBES-v3.json": {
+      "bytes": 10061,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PROBES-v3.json",
+      "sha256": "05b44dab09818ef89894c8483c0f05e2ec7ba7619465ac7f82d0a27ca7eec549"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v2.json": {
+      "bytes": 100428,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v2.json",
+      "sha256": "af24f8b7c19914a74e55db0a156f7f9c95a8c93da05359c9e3511c2661a8c83e"
+    },
+    "CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v3.json": {
+      "bytes": 111837,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-SOURCE-PURE-PROOF-v3.json",
+      "sha256": "cfde0f81ae458c9d76a4cd29cb68ef8ba532e8f4be01c71d3ce96a67c552b8c9"
+    },
+    "captured_archive_v2.py": {
+      "bytes": 35743,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\captured_archive_v2.py",
+      "sha256": "380d4b7ae68d3e2bef1f519b62f47a226c542feb98d9937d95eac1d487d912e2"
+    },
+    "captured_archive_v3.py": {
+      "bytes": 36212,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\captured_archive_v3.py",
+      "sha256": "90ba49a96713b6178320f04e68affee084abfb77588551b22140330309cd7d9b"
+    },
+    "check_captured_archive_v2.py": {
+      "bytes": 15454,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\check_captured_archive_v2.py",
+      "sha256": "fae24d64cc8d7d4ddca4b02af4030e26fde3e461df8f7ab3b2ce884050a49056"
+    },
+    "check_captured_archive_v3.py": {
+      "bytes": 23512,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\check_captured_archive_v3.py",
+      "sha256": "e6df7bd2272e56b5c7278d5b2901ad7f4d7d34f44a74ee4c28fe40e6b917e599"
+    },
+    "prepare_archive_checker_correction_v3.py": {
+      "bytes": 4691,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\prepare_archive_checker_correction_v3.py",
+      "sha256": "f9086059f5e94c177a3780489bcda0efb10c8c2cdff83749b3b5b6ccd7cb1b29"
+    },
+    "retain_archive_checker_v3_freeze.py": {
+      "bytes": 5642,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-archive-bytes-20261029\\retain_archive_checker_v3_freeze.py",
+      "sha256": "d8a394a21ad17841412fe5b67cb6a6e6fa26c3121028459c62c8b50e3cc0261b"
+    }
+  },
+  "methods": 13,
+  "originals_authenticated": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:13:38.869962+00:00",
+  "replacement_count": 3,
+  "schema_version": 1,
+  "source_qualified": false,
+  "status": "frozen_source_pure_candidate_for_independent_review",
+  "unchanged_top_level_ASTs": [
+    "top_level_1",
+    "top_level_2",
+    "top_level_3",
+    "top_level_4",
+    "top_level_5",
+    "top_level_6",
+    "top_level_7",
+    "top_level_8",
+    "top_level_9",
+    "top_level_10",
+    "top_level_11",
+    "top_level_12",
+    "top_level_13",
+    "top_level_14",
+    "top_level_15",
+    "top_level_16",
+    "top_level_17",
+    "top_level_18",
+    "top_level_19",
+    "top_level_20",
+    "top_level_21",
+    "top_level_22",
+    "top_level_23",
+    "top_level_24",
+    "top_level_25",
+    "top_level_26",
+    "top_level_27",
+    "top_level_28",
+    "top_level_29",
+    "top_level_30",
+    "top_level_31",
+    "top_level_32",
+    "_scalar",
+    "MetadataPin",
+    "DynamicPin",
+    "CapturedArchive",
+    "ArchiveBindings",
+    "_freeze",
+    "_thaw",
+    "CapturedArchiveResult",
+    "_Bad",
+    "_need",
+    "_uint",
+    "_hex",
+    "_same",
+    "_canonical",
+    "_shape",
+    "_text",
+    "_path",
+    "_locator",
+    "_pin",
+    "_utc",
+    "_Analysis",
+    "_declared",
+    "_marker",
+    "_headers",
+    "check_archive"
+  ]
+}

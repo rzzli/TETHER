@@ -1,0 +1,308 @@
+{
+  "actual_API_calls": 0,
+  "actual_literal_vectors": 30,
+  "arithmetic_records": [
+    {
+      "C": 93,
+      "Q": 5,
+      "R": 69,
+      "derived_fields_checked": 25,
+      "output": 245260,
+      "packet": 728,
+      "peak": 595116,
+      "vector": "mixed_role_all_bounds_equal"
+    },
+    {
+      "C": 92,
+      "Q": 4,
+      "R": 68,
+      "derived_fields_checked": 25,
+      "output": 245229,
+      "packet": 728,
+      "peak": 595043,
+      "vector": "bulk_exact_chunk_boundary"
+    },
+    {
+      "C": 75,
+      "Q": 3,
+      "R": 51,
+      "derived_fields_checked": 25,
+      "output": 244682,
+      "packet": 724,
+      "peak": 593782,
+      "vector": "bulk_zero_no_read_reservation"
+    },
+    {
+      "C": 93,
+      "Q": 5,
+      "R": 69,
+      "derived_fields_checked": 25,
+      "output": null,
+      "packet": 728,
+      "peak": null,
+      "vector": "null_representation_stays_unknown"
+    },
+    {
+      "C": 93,
+      "Q": 5,
+      "R": 69,
+      "derived_fields_checked": 25,
+      "output": 245260,
+      "packet": 728,
+      "peak": 595116,
+      "vector": "null_limit_stays_unknown"
+    },
+    {
+      "C": 140737488355419,
+      "Q": 140737488355331,
+      "R": 140737488355395,
+      "derived_fields_checked": 25,
+      "output": 4362862139260436,
+      "packet": 742,
+      "peak": null,
+      "vector": "near_max_ceiling_known_exceeds_with_unknown"
+    }
+  ],
+  "coverage_limits": [
+    "Thirty vectors are exact, not exhaustive strict-domain/path/graph coverage. In particular bool representation/limit cases were traded for independent overflow and precedence branches; all-field strictness remains a source-review obligation.",
+    "Six cancellation families are representative rather than every BaseException class. Future code review must keep every check outside metadata-error catches and the final check after report/byte preparation.",
+    "The calculator JSON bytes are not the prospective runtime report V. No packet transport/layout, original roster, streaming, runtime cap, native/FFI/source/resource/scientific fit or authority is proved.",
+    "The baseline metadata envelope has C93/R69, outside the current runtime C92/R68; WITHIN_DECLARED_BOUNDS_ONLY intentionally does not admit that runtime plan.",
+    "Source-only implementation requires a separate root decision, passing actual30+API controls and an independent exact source peer. Current indexed runtime and all prior failed/timeout evidence remain unchanged."
+  ],
+  "effective_design": [
+    {
+      "bytes": 14239,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json",
+      "sha256": "038611daa69c5749def12d64dedc0b9afebdbfba2aff7d0e93981551e08d2cb8"
+    },
+    {
+      "bytes": 7037,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-FINITE-CLARIFICATIONS-v2.json",
+      "sha256": "57ff21a8955de95f61fa059543e33c1ace52726efbc36b286a52310af5addf97"
+    }
+  ],
+  "implementation_authorized": false,
+  "independent_limit_contract": [
+    {
+      "equality": 4,
+      "limit": "max_files",
+      "one_over_limit": 3,
+      "violation": {
+        "code": "MAX_FILES",
+        "file_id": null,
+        "limit": 3,
+        "required": 4
+      }
+    },
+    {
+      "equality": 83,
+      "limit": "max_software_file_bytes",
+      "one_over_limit": 82,
+      "violation": {
+        "code": "MAX_SOFTWARE_FILE_BYTES",
+        "file_id": 1,
+        "limit": 82,
+        "required": 83
+      }
+    },
+    {
+      "equality": 68,
+      "limit": "max_metadata_file_bytes",
+      "one_over_limit": 67,
+      "violation": {
+        "code": "MAX_METADATA_FILE_BYTES",
+        "file_id": 2,
+        "limit": 67,
+        "required": 68
+      }
+    },
+    {
+      "equality": 65537,
+      "limit": "max_bulk_file_bytes",
+      "one_over_limit": 65536,
+      "violation": {
+        "code": "MAX_BULK_FILE_BYTES",
+        "file_id": 3,
+        "limit": 65536,
+        "required": 65537
+      }
+    },
+    {
+      "equality": 209,
+      "limit": "max_captured_bytes",
+      "one_over_limit": 208,
+      "violation": {
+        "code": "MAX_CAPTURED_BYTES",
+        "file_id": null,
+        "limit": 208,
+        "required": 209
+      }
+    },
+    {
+      "equality": 106819,
+      "limit": "max_raw_payload_bytes",
+      "one_over_limit": 106818,
+      "violation": {
+        "code": "MAX_RAW_PAYLOAD_BYTES",
+        "file_id": null,
+        "limit": 106818,
+        "required": 106819
+      }
+    },
+    {
+      "equality": 93,
+      "limit": "max_calls",
+      "one_over_limit": 92,
+      "violation": {
+        "code": "MAX_CALLS",
+        "file_id": null,
+        "limit": 92,
+        "required": 93
+      }
+    },
+    {
+      "equality": 224,
+      "limit": "max_events",
+      "one_over_limit": 223,
+      "violation": {
+        "code": "MAX_EVENTS",
+        "file_id": null,
+        "limit": 223,
+        "required": 224
+      }
+    },
+    {
+      "equality": 728,
+      "limit": "max_packet_bytes",
+      "one_over_limit": 727,
+      "violation": {
+        "code": "MAX_PACKET_BYTES",
+        "file_id": null,
+        "limit": 727,
+        "required": 728
+      }
+    },
+    {
+      "equality": 245260,
+      "limit": "max_output_bytes",
+      "one_over_limit": 245259,
+      "violation": {
+        "code": "MAX_OUTPUT_BYTES",
+        "file_id": null,
+        "limit": 245259,
+        "required": 245260
+      }
+    },
+    {
+      "equality": 12244,
+      "limit": "max_report_bytes",
+      "one_over_limit": 12243,
+      "violation": {
+        "code": "MAX_REPORT_BYTES",
+        "file_id": null,
+        "limit": 12243,
+        "required": 12244
+      }
+    },
+    {
+      "equality": 595116,
+      "limit": "max_declared_memory_bytes",
+      "one_over_limit": 595115,
+      "violation": {
+        "code": "MAX_DECLARED_MEMORY_BYTES",
+        "file_id": null,
+        "limit": 595115,
+        "required": 595116
+      }
+    }
+  ],
+  "inputs": {
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-FIXTURE-FREEZE-v1.json": {
+      "bytes": 3425,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-FIXTURE-FREEZE-v1.json",
+      "sha256": "5478b0144c737ff8876c9273fe5281790f3fe97aa5b7cfac2bae4b1d4d222bc6"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-PROVENANCE-v1.json": {
+      "bytes": 4909,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-PROVENANCE-v1.json",
+      "sha256": "47fd6844946e7eab60672787704ecf85082f660e15031303fde71f0d1dd5d40f"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-STRUCTURAL-PROOF-v1.json": {
+      "bytes": 10298,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-STRUCTURAL-PROOF-v1.json",
+      "sha256": "d0def250de6789e43c86bc01cdaf6244adfdfe009206ab26224fad349b52832d"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json": {
+      "bytes": 84160,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-PRECODE-VECTORS-v1.json",
+      "sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py": {
+      "bytes": 9524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_independent_tests_v1.py",
+      "sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\author_admission_envelope_vectors_v1.py": {
+      "bytes": 14035,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\author_admission_envelope_vectors_v1.py",
+      "sha256": "10861f0acfcdb42680943c89888cce3e38cf3d9e1d9f299a420b2067da5c42fe"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\check_admission_envelope_precode_data_v1.py": {
+      "bytes": 8048,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\check_admission_envelope_precode_data_v1.py",
+      "sha256": "459ccd6b56abb889e2818f6491db26243a6245f0ee49277c128bdf6f7643dd6d"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\freeze_admission_envelope_precode_v1.py": {
+      "bytes": 5078,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\freeze_admission_envelope_precode_v1.py",
+      "sha256": "861ba4c9ba07489c1ef70832482b340446c4d85a4721becaf94f386a7ce20836"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json": {
+      "bytes": 14239,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json",
+      "sha256": "038611daa69c5749def12d64dedc0b9afebdbfba2aff7d0e93981551e08d2cb8"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-FINITE-CLARIFICATIONS-v2.json": {
+      "bytes": 7037,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-FINITE-CLARIFICATIONS-v2.json",
+      "sha256": "57ff21a8955de95f61fa059543e33c1ace52726efbc36b286a52310af5addf97"
+    }
+  },
+  "material_blockers": [],
+  "original_payload_operations": 0,
+  "planned_test_review": {
+    "controls": "Future tests grade exact types/JSON for all30 vectors; second-callback input mutation; detached nested output/range and retained byte identity; six representative cancellation classes at first/middle/final actual check sites; and required callable interface. No source is imported by the test module.",
+    "import_dependencies": [
+      "import copy",
+      "import json",
+      "import unittest"
+    ],
+    "methods": [
+      "test_01_all_30_frozen_metadata_vectors",
+      "test_02_detached_input_and_output",
+      "test_03_original_check_exception_identity",
+      "test_04_required_check_interface"
+    ],
+    "subject_runs": 0
+  },
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "reviewed_artifact_edits": 0,
+  "reviewer": "native_039_acceptance_audit",
+  "reviewer_subject_imports": 0,
+  "reviewer_subject_tests": 0,
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Metadata-only finite design/oracle peer. No admission solver, subject import or test execution by reviewer.",
+  "semantic_review": [
+    "Strict identity uses the declared ID permutation for module/early bindings and canonical list ordinals for sizing and violations; no file authenticity is inferred.",
+    "All three roles are represented. Hash-only bulk contributes reads/call retention but no captured assembly; it is excluded from importable module binding.",
+    "The equality case independently binds all12 declared limits, and each one-over clone changes exactly one limit. No combined failure substitutes for isolated enforcement.",
+    "Zero versus exact-chunk/plus-one sizes, unknown representation and unknown limit, aggregate-only informational ranges, known exceeds with an unrelated unknown, and checked product overflow have distinct literal projections.",
+    "Invalid schema/integer/path/role/ID/graph/binding/aggregate cases were read against the fixed contract and retained error mapping. Overflow preserves only five constants, with no unsafe echoed value or inferred zero.",
+    "Logical storage includes captured assembly and immutable bytes separately, query frames and work buffers, full call/index/hash-state terms, journal retention/join workspace, all five packet capacities and declared report copies. These remain conditional declarations, not layout/RSS/time proof."
+  ],
+  "status": "CLEAR_CALCULATOR_DESIGN_AND_LITERAL_PREPARATION_ONLY",
+  "verification_complete": false
+}

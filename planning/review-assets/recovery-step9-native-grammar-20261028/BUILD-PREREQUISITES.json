@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "missing_known_build_dependency_nonstandard_location_unknown",
+  "known_installation_paths": [
+    {
+      "path": "C:\\Program Files\\Microsoft Visual Studio",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files\\LLVM",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files\\CMake",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe",
+      "exists": false
+    }
+  ],
+  "tools_on_path": {
+    "cmake": null,
+    "ninja": null,
+    "cl": null,
+    "clang++": null,
+    "g++": null,
+    "dumpbin": null,
+    "llvm-readobj": null,
+    "vswhere": null
+  },
+  "owner_toolchain_path": null,
+  "owner_path_reason": "Question pending; nonstandard installations not ruled out",
+  "exact_runtime_source_commit": null,
+  "source_commit_reason": "Exact tag metadata retrieval unresolved; tag does not prove source/binary equivalence",
+  "model_free_bridge": null,
+  "bridge_reason": "Not built; compatible toolchain and pinned headers/build identity needed",
+  "human_reviews": "pending",
+  "model_calls": 0,
+  "servers": 0,
+  "system_installation_attempted": false
+}

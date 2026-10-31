@@ -1,0 +1,384 @@
+{
+  "activities": {
+    "frozen_source_hashes_unchanged": true,
+    "large_generated_run": 0,
+    "large_reference_preparation": 0,
+    "original_model_native_or_physical_operations": 0,
+    "source_or_test_edits": 0,
+    "subject_imports": 0,
+    "subject_tests_or_replays": 0
+  },
+  "actual_source_profile_caps": {
+    "B": 128,
+    "C": 16384,
+    "E": 2240,
+    "M": 128,
+    "N": 256,
+    "captured_file_bytes": 8388608,
+    "captured_total_bytes": 33554432,
+    "chunk_bytes": 1048576,
+    "generated_store_bytes": 40139776,
+    "ledger_bytes_each": 14800384,
+    "query_buffer_bytes": 8202
+  },
+  "decision_boundary": {
+    "actual_large_run": "Separate root decision after exact generated descriptors/digests/geometry, bounded-memory reference preparation, real-original-clock large binding/spy retention and one-run evidence plan are frozen and statically reviewed. Do not run or prepare that control under this audit.",
+    "failure_requirement": "Retain first failure and exact canonical raw facts, no successful rerun/timing selection; quarantine/failure does not imply memory release.",
+    "recommendation": "The now-passing13 small extensions plus this source audit support root authorization of finite large216 synthetic fixture preparation. No source allocation change is required by this audit.",
+    "retention_requirement": "No whole bulk bytes, cached perfile body, expanded read payload logging, global call-dict projection, or public decoder materialization in the operational large path. Count harness expected query pools/output hex separately.",
+    "source_changes": false
+  },
+  "explicit_unmeasured": {
+    "Python_heap_or_RSS": true,
+    "Unicode_and_traceback_frame_storage": true,
+    "boxed_numeric_digits_objects_containers": true,
+    "elapsed_time_and_large_completion": true,
+    "full_new84_roster_child_model_or_scientific_fit": true,
+    "hashlib_and_codec_allocator_internal_storage": true,
+    "logical_counters": "raw_storage_used/peak and generated_used express selected source accounting conventions. They are not complete live-byte or allocator measurements.",
+    "process_commit_or256MiB_fit": true,
+    "real_native_FFI_physical_readback": true
+  },
+  "findings": [
+    {
+      "evidence": [
+        {
+          "line": 201,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self.hashed=0;self.captured=0;self.hash_attempted=False"
+        },
+        {
+          "line": 365,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "if file.spec.capture:"
+        },
+        {
+          "line": 378,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "hash_view = memoryview(c.buffer._data)[:c.count]"
+        },
+        {
+          "line": 418,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "blob = bytes(file.assembly)"
+        }
+      ],
+      "fact": "FileState starts with assembly/blob None. Only capture=True enters begin_capture/copy/bytes(assembly). Hash-only hashes a memoryview of the shared buffer, retains digest/hash state and all canonical call facts, and leaves blob None/NOT_REQUESTED. No spec.size bulk allocation or bulk bytes conversion exists on that branch.",
+      "id": "A1_HASH_ONLY_BODY",
+      "result": "SOURCE_CLEAR"
+    },
+    {
+      "evidence": [
+        {
+          "line": 440,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self.charge_raw(p.chunk);self._read_buffer=BufferRef"
+        },
+        {
+          "line": 195,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "view[start:end] = view[source_offset:source_offset + length]"
+        },
+        {
+          "line": 381,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "del hash_view, update"
+        },
+        {
+          "line": 400,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "del copy_into, copy_span, copy_view"
+        }
+      ],
+      "fact": "Admission creates one profile-sized read BufferRef plus one8202B query BufferRef. All ReadFile records point at that same read buffer. Virtual fill starts with<=256B seed then disjoint prefix-to-append memoryview assignments inside the same buffer; source does not export or cache a second chunk body. Hash/copy views are released on known success. Internal interpreter scratch and allocator storage remain unmeasured.",
+      "id": "A2_SHARED_FILL_BUFFER",
+      "result": "SOURCE_CLEAR"
+    },
+    {
+      "evidence": [
+        {
+          "line": 442,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self.require(file.spec.capture and(self._capture_assembly_owner is None"
+        },
+        {
+          "line": 445,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "file.assembly=bytearray(file.spec.size)"
+        },
+        {
+          "line": 450,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "file.blob=blob;self._capture_used+="
+        },
+        {
+          "line": 451,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "file.assembly=None;self._capture_assembly_owner=None"
+        },
+        {
+          "line": 257,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "object.__setattr__(self,'blobs',MappingProxyType(dict(self.blobs)))"
+        }
+      ],
+      "fact": "One _capture_assembly_owner permits at most one lazy assembly; admission limits each captured file<=8MiB and aggregate captured bytes<=32MiB in profile1MiB. bytes(file.assembly) briefly coexists with that assembly. finish_capture retains the immutable blob then releases the assembly. A failed capture retains its partial assembly and original exception; later work cannot begin another capture. Context maps reuse immutable blob objects rather than copying their bodies.",
+      "id": "A3_CAPTURE_ASSEMBLY",
+      "result": "SOURCE_CLEAR_WITH_EXPLICIT_OVERLAP"
+    },
+    {
+      "evidence": [
+        {
+          "line": 438,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self.registry._slots.extend(CallState(self,i)for i in range(C))"
+        },
+        {
+          "line": 824,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "projection=self._canonical_projection(include_calls=self.profile is PROFILE_N4)"
+        },
+        {
+          "line": 760,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "calls=_Rows(len(self.registry._calls),self._wire_call)"
+        },
+        {
+          "line": 397,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+          "statement": "ROW_WRITERS[SECTIONS.index(kind)](dst,offset,dict(zip(names,fields)))"
+        }
+      ],
+      "fact": "Registry preallocates C CallState objects, each with39 declared slots and one CallRef. Active _calls and _slots are lists of references to the same carriers. Profile1MiB _snapshot/_packet/_wire_source use canonical projection with include_calls=False. Operational _Rows yields one raw-slot-derived tuple; pack_row_tuple_into makes bounded per-row dictionaries only. No list of all call dictionaries is created on this operational path. All Python carrier/list/dict/boxed-value/hash-state storage is additional and has no measured byte bound here.",
+      "id": "A4_CALL_REPRESENTATION",
+      "result": "SOURCE_CLEAR_NO_SECOND_CALL_TABLE"
+    },
+    {
+      "evidence": [
+        {
+          "line": 279,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "c.query_bytes = bytes(memoryview(buffer._data)[:FRAMES[api]])"
+        },
+        {
+          "line": 335,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+          "statement": "text = path.query_bytes[:2*n].decode('utf-16-le', 'strict')"
+        },
+        {
+          "line": 732,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "def query_chunks():"
+        },
+        {
+          "line": 513,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+          "statement": "view=memoryview(raw)[expected:expected+desc['length']]"
+        }
+      ],
+      "fact": "Three original query frames8/8202/8 are copied once per successfully captured query into canonical call.query_bytes. The mutable8202B query buffer is separate. Wire query chunks borrow these immutable frames or bounded unobserved zero placeholders. Operational consumer yields readonly memoryviews over immutable ledger bytes, not full-pool byte copies. Original UTF8 path chunks are held during one build; final-path comparison creates bounded byte/Unicode intermediates per file, not a retained decoded-final-path pool. No actual preallocated128KiB arena or physical Unicode/allocator bound is proven.",
+      "id": "A5_QUERY_AND_PATH_LIFETIMES",
+      "result": "SOURCE_CLEAR_LOGICAL_SCALARS_ONLY"
+    },
+    {
+      "evidence": [
+        {
+          "line": 402,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+          "statement": "out=bytearray(4096+sum(sizes))"
+        },
+        {
+          "line": 435,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+          "statement": "result=bytes(out);check();return result"
+        },
+        {
+          "line": 783,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "rec['raw']=codec.build_ledger"
+        },
+        {
+          "line": 790,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self._artifact_sources[kind]=(source['header_wire'],raw);self._generated_assembly=None"
+        }
+      ],
+      "fact": "build_ledger allocates one bytearray out only after checking its total<=14800384; bytes(out) creates a distinct immutable result while out still exists. That overlap is one ledger assembly plus one generated artifact body. Candidate remains immutable while terminal is built as a distinct object. Generated registry has14 fixed artifact slots and total returned-byte admission40139776. Artifact.raw, registry.raw and provenance raw are references to the same bytes; header_wire is a small immutable tuple. The successful provenance drops live _Rows/query/header closures.",
+      "id": "A6_ENCODER_STORE_PHASES",
+      "result": "SOURCE_CLEAR_WITH_EXPLICIT_PEAK_OVERLAP"
+    },
+    {
+      "evidence": [
+        {
+          "line": 778,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "self.require(kind in('candidate-ledger.bin','terminal-ledger.bin')and self._plan is not None and self._generated_assembly is None"
+        },
+        {
+          "line": 792,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "except BaseException as error:rec['state']='UNISSUED_PARTIAL';self.record_error(error,'freeze');raise"
+        },
+        {
+          "line": 435,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+          "statement": "result=bytes(out);check();return result"
+        }
+      ],
+      "fact": "The original exception is retained. Its traceback can retain build_ledger.out, a just-created result if its final check throws, row streams/views and source metadata. A failed freeze remains UNISSUED_PARTIAL with the assembly marker retained, so a second generated build/installation is refused; it does not issue or retry partial bytes. Known bytes returned to owner are stored before later validation. _generated_used is not an allocator/RSS counter and need not count unreturned byte objects retained only in a traceback. The conservative slot-plus-one-assembly accounting must cover those actual lifetimes; arbitrary exception/callback/interpreter allocation is outside that logical claim.",
+      "id": "A7_FAILURE_FRAME_RETENTION",
+      "result": "KNOWN_LIMIT_NO_RSS_CLAIM"
+    },
+    {
+      "evidence": [
+        {
+          "line": 694,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "raw=b''.join(self._row_bytes)"
+        },
+        {
+          "line": 646,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "raw=(json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False)+'\\n').encode('utf-8')"
+        },
+        {
+          "line": 826,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "generated={k:dict(state=v['state']"
+        }
+      ],
+      "fact": "Before journal close, immutable row chunks coexist with the live journal observation table. join creates a new immutable journal while chunks still exist; successful installation then clears chunk refs. This temporary journal duplication occurs after ledger assembly is no longer active and fits the separate transient/assembly lifetime allowance rather than an extra permanent store copy. A failure may retain joined bytes/chunks via traceback and cannot be interpreted as successful publication. Packets/report are compact<=8192, generated store retains their actual bytes, and snapshots retain only artifact metadata rather than copying raw ledgers. JSON/Unicode and boxed metadata overhead remain unmeasured.",
+      "id": "A8_JOURNAL_REPORT_PACKET_DUPLICATION",
+      "result": "SOURCE_CLEAR_PHASE_ACCOUNTING_REQUIRED"
+    },
+    {
+      "evidence": [
+        {
+          "line": 618,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "{f.spec.path:f.blob for f in self.registry._files if f.spec.capture}"
+        },
+        {
+          "line": 260,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+          "statement": "raise CaptureNotRequested"
+        },
+        {
+          "line": 60,
+          "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v4.py",
+          "statement": "all(p in owner.evidence_context.blobs for p in observation.evidence_paths)"
+        }
+      ],
+      "fact": "Full context contains all specs/digests but blob bodies only for capture=True. bytes_for hash-only explicitly refuses; controller byte-evidence paths are confined to context.blobs. No implicit reread/promotion or full bulk body enters a loader/checker context. This is synthetic source-bound evidence, not authentic original source or real checker qualification.",
+      "id": "A9_CONSUMER_CONTEXT",
+      "result": "SOURCE_CLEAR"
+    },
+    {
+      "fact": "VirtualBinding records API/file_id/argument metadata and CallRef identities, not read-body payloads. Its periodic bulk branch holds<=256B seed/prefix and source-buffer views only. Independent artifact inspector currently joins expected query/path pools during a callback, and SinkSpy retains journal/packet payload hex. These are extra harness copies/objects; they are not producer-store usage or hidden bulk capture. Large preparation must quantify them or use independently reviewed streaming expected-pool comparison. The small harness hardcodes its synthetic100/395/400 world; a large execution needs one original real monotonic deadline without silently claiming this unchanged small harness provides it.",
+      "id": "A10_SMALL_HARNESS_RETENTION",
+      "large_query_expectation_copy_if_reused_bytes": 1775088,
+      "result": "HARNESS_ONLY_TERMS_MUST_STAY_SEPARATE",
+      "small_harness_lines": [
+        59,
+        64,
+        98,
+        103,
+        105,
+        138
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 15180,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "sha256": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929"
+    },
+    {
+      "bytes": 4273,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v4.py",
+      "sha256": "403adec1f4389eb29d08b14f8da24989c8cdde50f20882629ed1a5cbb81292f7"
+    },
+    {
+      "bytes": 21279,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+      "sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7"
+    },
+    {
+      "bytes": 55497,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    },
+    {
+      "bytes": 77221,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+      "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"
+    },
+    {
+      "bytes": 29614,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_aware_producer_extension_tests_v2.py",
+      "sha256": "ee5c39889ecca4b79bddfce5dacc4dac8e7765a505f457d982557076c173e699"
+    },
+    {
+      "bytes": 34130,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_aware_legacy_fixture_adapter_v2.py",
+      "sha256": "b0f8cbf326f05c9b868b26fbac2eaee5bdd9ae78fdcc15d1da848d2822abff4f"
+    },
+    {
+      "bytes": 66266,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v5.json",
+      "sha256": "cd0caf2efce5e8899c6275d1f82df7c0a63b4f7713e4e5235f48e2ee0bf125ae"
+    },
+    {
+      "bytes": 9690627,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v8.json",
+      "sha256": "f53e3db06b69337d2a8ce4b34fe851dab1338806bfe9aba0bba7b89261f22c6f"
+    }
+  ],
+  "large_supplied_geometry_source_terms": {
+    "B": 2,
+    "C_preallocated": 13551,
+    "E_reservation": 1496,
+    "M": 2,
+    "N": 216,
+    "Q_full_reads": 8799,
+    "R_reservation": 12255,
+    "actual_candidate_records_for_full_returns": 9879,
+    "actual_terminal_records_for_full_returns": 10095,
+    "call_source_fields_per_carrier": 39,
+    "captured_bytes": 209,
+    "chunk": 1048576,
+    "conditions": "These encoded-size equations assume2 modules/23 module-name bytes/one2B edge/zero diagnostics and complete full-size read returns. Short/fault paths retain actual canonical facts and have their separate admitted ceilings. They are arithmetic/source representations, not measured memory or timing.",
+    "conservative_path_bytes_max": 2656800,
+    "geometry_source": "Root-supplied synthetic geometry; not reread or rediscovered in this audit.213 historical size positions are fictional hash-only inputs plus58/83/68B captured helpers/metadata; all new paths/digests/roles. Not a new84 physical roster.",
+    "healthy_wire_candidate_bytes": {
+      "base_plus_P": 4363657,
+      "upper_with_path_reservation": 7020457
+    },
+    "healthy_wire_terminal_bytes": {
+      "base_plus_P": 4418953,
+      "upper_with_path_reservation": 7075753
+    },
+    "largest_capture_assembly_bytes": 83,
+    "path_bytes_symbol": "P is actual concatenated UTF8 fictional path bytes, frozen in future metadata.",
+    "read_query_capture_logical_terms": 2832075,
+    "retained_raw_query_bytes": 1775088,
+    "total_declared_input_bytes": 9017363601,
+    "total_source_field_slots": 528489
+  },
+  "material_blockers_for_preparation": [],
+  "qualification": {
+    "RSS_fit": false,
+    "full_roster_admitted": false,
+    "inference_memory": false,
+    "large_control_passed": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "scientific": false
+  },
+  "schema_version": 1,
+  "scope": "Actual frozen source4 and small-test-harness static allocation/lifetime audit; no subject imports/tests, no original targets or large preparation.",
+  "status": "SOURCE_ALLOCATION_LIFETIME_CLEAR_FOR_FINITE_LARGE_FIXTURE_PREPARATION_ONLY"
+}

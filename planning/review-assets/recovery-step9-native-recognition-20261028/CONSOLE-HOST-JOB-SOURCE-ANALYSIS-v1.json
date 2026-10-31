@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T22:07:01.208770+00:00",
+  "status": "source_research_only_no_new_attempt_or_qualification",
+  "anchors": {
+    "independent_actual_result": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\NATIVE-JOB-IOCP-V1-RESULT-VERIFICATION.json",
+      "bytes": 10964,
+      "sha256": "25c648a168c5d836acb44e080ba8c4219c2d38068d15174ab35a92701d5beec5"
+    },
+    "worker_source": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_worker_native_v3.cpp",
+      "bytes": 16574,
+      "sha256": "11490803ed4a3e68937c7bf685f31a042752f3c8681347c67f2bf4cd46721be6"
+    },
+    "worker_executable": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\harmless_launch_worker.exe",
+      "bytes": 66560,
+      "sha256": "0100ee6004531a41a28156385ad66fd5c0bded43c4840091a846573efe6d8e49"
+    },
+    "build_helper": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_harmless_native_worker_v3.py",
+      "bytes": 26981,
+      "sha256": "f292b65c6a86a9a70a41a1fb5286e20266281b6749c1583579e64193524af5ae"
+    },
+    "sdk_source": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\abi_parent_launch_draft_v3.py",
+      "bytes": 53085,
+      "sha256": "c111ac5f42209eb61fc49522d4cd6db544987b1c4230577404022e1add6eb2f4"
+    },
+    "post_review_warning": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\NATIVE-JOB-IOCP-V1-POST-REVIEW-WARNING.json",
+      "bytes": 3894,
+      "sha256": "f0840e3d5e0ca82c42092853e75d81839f9064fb52f9952d99405c53a846fdc0"
+    }
+  },
+  "static_facts": {
+    "creation_flags_hex": "0x08080404",
+    "CREATE_NO_WINDOW_already_set": true,
+    "PE_subsystem": 3,
+    "link_subsystem": "CONSOLE",
+    "CRT": "/MD",
+    "manifest": "/MANIFEST:NO",
+    "overflow_branch_has_explicit_CreateProcess_call": false,
+    "worker_source_uses_AllocConsole_or_AttachConsole": false
+  },
+  "bounded_inference": "Observed secondary current Job member with conhost image pathname is consistent with Microsoft-described OS console-host startup. Exact OS creation/admission path and active-limit exception are not proven.",
+  "formal_active_limit_exception_found": false,
+  "CRT_isolated_as_cause": false,
+  "prior_unidentified_active2_explained": false,
+  "alternatives": [
+    {
+      "policy": "detached_process",
+      "prospective_creation_flags_hex": "0x0008040C",
+      "source_only": true,
+      "same_executable_possible": true
+    },
+    {
+      "policy": "inherit_existing_parent_console",
+      "source_only": true,
+      "parent_console_precondition_not_established": true
+    },
+    {
+      "policy": "WINDOWS_subsystem",
+      "source_only": true,
+      "requires_new_executable_and_entry_contract": true
+    },
+    {
+      "policy": "CUI_detached_manifest",
+      "source_only": true,
+      "minimum_documented_client": "Windows11_24H2_build26100",
+      "requires_new_executable_or_manifest": true
+    }
+  ],
+  "references": {
+    "creation_flags": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags",
+    "console_creation": "https://learn.microsoft.com/en-us/windows/console/creation-of-a-console",
+    "microsoft_console_design": "https://github.com/microsoft/terminal/blob/main/doc/specs/%23492%20-%20Default%20Terminal/spec.md",
+    "active_limit": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information",
+    "job_membership": "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects",
+    "subsystem": "https://learn.microsoft.com/en-us/cpp/build/reference/subsystem-specify-subsystem?view=msvc-170",
+    "CRT_linkage": "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170",
+    "CRT_startup": "https://learn.microsoft.com/en-us/cpp/c-runtime-library/crt-initialization?view=msvc-170",
+    "standard_handles": "https://learn.microsoft.com/en-us/windows/console/getstdhandle",
+    "manifest_detached_policy": "https://learn.microsoft.com/en-us/windows/console/console-allocation-policy",
+    "QandA_empirical_only": "https://learn.microsoft.com/en-us/answers/questions/6034784/windows-job-object-reports-activeprocesses-1-after"
+  },
+  "activity": {
+    "Windows_API_calls": 0,
+    "helper_compiler_worker_or_target_execution": 0,
+    "conhost_binary_opened_or_hashed": false,
+    "global_process_enumeration": false
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "activity": {
+    "EXE_API_model_or_target_runs": 0,
+    "GGUF_or_protected_payload_reads": 0,
+    "compiler_or_link_reruns": 0,
+    "source_or_old_artifact_changes": 0
+  },
+  "artifacts": {
+    "ASLR_NX_high_entropy_flags": true,
+    "CRT": "/MD",
+    "PE_machine_hex": "0x8664",
+    "PE_type": "PE32+",
+    "delay_imports": {},
+    "executable": {
+      "bytes": 66560,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\harmless_launch_worker.exe",
+      "sha256": "0100ee6004531a41a28156385ad66fd5c0bded43c4840091a846573efe6d8e49"
+    },
+    "explicit_process_imports": [
+      "TerminateProcess",
+      "CreateProcessW"
+    ],
+    "object": {
+      "bytes": 291501,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\worker.obj",
+      "sha256": "44d5ce83604483b5dee8a272b3431162b24079169adf070f813bd5dfeebf0e71"
+    },
+    "object_machine_hex": "0x8664",
+    "ordinary_imports": {
+      "KERNEL32.dll": [
+        "GetModuleHandleW",
+        "SetUnhandledExceptionFilter",
+        "InitializeSListHead",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "QueryPerformanceCounter",
+        "WideCharToMultiByte",
+        "GetStdHandle",
+        "CreateFileW",
+        "FlushFileBuffers",
+        "GetFileAttributesW",
+        "GetFileSizeEx",
+        "GetFullPathNameW",
+        "ReadFile",
+        "WriteFile",
+        "CloseHandle",
+        "GetLastError",
+        "WaitForSingleObject",
+        "Sleep",
+        "GetCurrentProcessId",
+        "TerminateProcess",
+        "CreateProcessW",
+        "VirtualAlloc",
+        "VirtualFree",
+        "GetModuleFileNameW",
+        "MoveFileExW",
+        "GetFileInformationByHandleEx",
+        "CompareStringOrdinal"
+      ],
+      "MSVCP140.dll": [
+        "?_Xlength_error@std@@YAXPEBD@Z",
+        "?_Xout_of_range@std@@YAXPEBD@Z"
+      ],
+      "VCRUNTIME140.dll": [
+        "__current_exception_context",
+        "__std_exception_copy",
+        "__std_exception_destroy",
+        "_CxxThrowException",
+        "__current_exception",
+        "memcmp",
+        "memcpy",
+        "memmove",
+        "memset",
+        "__C_specific_handler"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free",
+        "_set_new_mode",
+        "malloc",
+        "_callnewh"
+      ],
+      "api-ms-win-crt-locale-l1-1-0.dll": [
+        "_configthreadlocale"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "__setusermatherr"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_initialize_wide_environment",
+        "_get_initial_wide_environment",
+        "_initterm",
+        "_initterm_e",
+        "exit",
+        "_exit",
+        "_seh_filter_exe",
+        "__p___argc",
+        "__p___wargv",
+        "_cexit",
+        "_c_exit",
+        "_register_thread_local_exe_atexit_callback",
+        "_configure_wide_argv",
+        "terminate",
+        "_set_app_type",
+        "_initialize_onexit_table",
+        "_register_onexit_function",
+        "_crt_atexit"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "_set_fmode",
+        "__p__commode"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strlen",
+        "wcslen"
+      ],
+      "bcrypt.dll": [
+        "BCryptGetProperty",
+        "BCryptDestroyHash",
+        "BCryptFinishHash",
+        "BCryptHashData",
+        "BCryptCreateHash",
+        "BCryptCloseAlgorithmProvider",
+        "BCryptOpenAlgorithmProvider"
+      ]
+    },
+    "subsystem": "console"
+  },
+  "compiler_and_link": [
+    {
+      "cleanup_errors": [],
+      "effective_seconds": 45.0,
+      "full_process_elapsed_seconds": 0.8599999999860302,
+      "pid": 2304,
+      "reaped": true,
+      "returncode": 0,
+      "stage": "compile"
+    },
+    {
+      "cleanup_errors": [],
+      "effective_seconds": 10.0,
+      "full_process_elapsed_seconds": 0.03200000000651926,
+      "pid": 9384,
+      "reaped": true,
+      "returncode": 0,
+      "stage": "link"
+    }
+  ],
+  "conclusions": [
+    "Source v3 compiles/links under unchanged /MD /WX settings; original source/copy agree and one UTF8 conversion correction is explicit.",
+    "All retained build proofs/seals are consistent and both owned launched handles were reaped with exit0.",
+    "The new EXE has never been run by this build/review; successful compilation grants no worker/ABI/target execution authority.",
+    "Python launcher failures and original active2 remain unrepaired/unexplained; compiled-child qualification requires its own exact protocol/decision."
+  ],
+  "input_pins": {
+    "all_current_hashes_sizes_match": true,
+    "count": 237,
+    "frozen_list_sha256": "2581084f95247751daa3f6d3e096c1ad55722e14189d8415ce26032898c9a7e3",
+    "reparse_free_components_checked": 324,
+    "unique": 237
+  },
+  "journal": {
+    "chain_valid": true,
+    "dispatches": 2,
+    "events": 8,
+    "tip_sha256": "61e75f5991f435598629a78c2a511cce124896658d643a1284cddfa45d05e5b4"
+  },
+  "limitations": [
+    "Static PE imports do not prove arbitrary dynamic behavior or actual loaded module identity.",
+    "Only launched compiler/linker handles are accounted; descendants/systemwidewrites not independently attested.",
+    "Cleanup is ExitStack/stable_files context outcome, not individual-handle close records.",
+    "2.922s is recorded before terminal seal, not a separately measured after-seal duration."
+  ],
+  "output_files": [
+    {
+      "bytes": 5896,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\build-report.json",
+      "sha256": "068aa08bd157525b696633081dfd596b43c3a3a636e2b730a2d7a434e3fc26ee"
+    },
+    {
+      "bytes": 1546,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\compile-attempt.json",
+      "sha256": "f280c2c3aa8a854d73ec2cefc77993bee5f6ab968555d20fd924972783f4808c"
+    },
+    {
+      "bytes": 1156,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\compile.stderr.bin",
+      "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9"
+    },
+    {
+      "bytes": 28,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\compile.stdout.bin",
+      "sha256": "27a6ec782136f081223e683acc19a626478d9b2c93b809b68a56e3ab13c9e957"
+    },
+    {
+      "bytes": 61858,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\effective-protocol.json",
+      "sha256": "7cf13e529deb26f147bf0b9358cdc47fe91c4b21b2064a3381db9119f6953aea"
+    },
+    {
+      "bytes": 66560,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\harmless_launch_worker.exe",
+      "sha256": "0100ee6004531a41a28156385ad66fd5c0bded43c4840091a846573efe6d8e49"
+    },
+    {
+      "bytes": 6817,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\journal.jsonl",
+      "sha256": "28b9de034ea209890838b569ca1157e06cef77c12863957928a2bf68c07e162b"
+    },
+    {
+      "bytes": 1578,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\link-attempt.json",
+      "sha256": "377115767facd6696fff18285b19b16a708b8a7e99e2abe1bb05577c1ba25c07"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\link.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\link.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 555,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\post-lease-cleanup.json",
+      "sha256": "329f721d2a842e2bd46167dd8bfced89b9d84ba32e9dc351b033626e740efad5"
+    },
+    {
+      "bytes": 1671,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\receipt.json",
+      "sha256": "da6b1b18bef2d168f0bcbb8d5136bc7e0a671559c8a8eee7fe2a04ff1902de3c"
+    },
+    {
+      "bytes": 1972,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\terminal-seal.json",
+      "sha256": "73c2ac4236eecbf7295909f096a3dc20ebdd146adbb4a5d7d2351828ff2fc905"
+    },
+    {
+      "bytes": 291501,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\worker.obj",
+      "sha256": "44d5ce83604483b5dee8a272b3431162b24079169adf070f813bd5dfeebf0e71"
+    }
+  ],
+  "preserved_failed_v2": {
+    "all10_failed_output_files_unchanged": true,
+    "all212_prior_input_bindings_unchanged": true,
+    "verification_sha256": "e5ea27f9e67561e84c2b04a2a7e6face657853fbb1a561205385568608a8988d"
+  },
+  "protocol": {
+    "bytes": 61858,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-PROTOCOL-v3.json",
+    "sha256": "7cf13e529deb26f147bf0b9358cdc47fe91c4b21b2064a3381db9119f6953aea"
+  },
+  "recorded_at_utc": "2026-10-28T21:08:31.699925+00:00",
+  "review_type": "Independent read-only successful compiler/link build verification; no EXE/runtime qualification",
+  "root_decision": {
+    "bytes": 1067,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-ROOT-DECISION-v3.json",
+    "sha256": "2d26fe182efb277ebbe8e1d5c6d989d305e47fa25ea215329dfd9e8179cbe458"
+  },
+  "schema_version": 1,
+  "seals": {
+    "context_cleanup": {
+      "bytes": 555,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\post-lease-cleanup.json",
+      "sha256": "329f721d2a842e2bd46167dd8bfced89b9d84ba32e9dc351b033626e740efad5"
+    },
+    "context_close_returned_without_error": true,
+    "elapsed_before_terminal_seal_seconds": 2.922000000020489,
+    "individual_handle_attestation": false,
+    "no_failure_markers": true,
+    "receipt": {
+      "bytes": 1671,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\receipt.json",
+      "sha256": "da6b1b18bef2d168f0bcbb8d5136bc7e0a671559c8a8eee7fe2a04ff1902de3c"
+    },
+    "terminal": {
+      "bytes": 1972,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z\\terminal-seal.json",
+      "sha256": "73c2ac4236eecbf7295909f096a3dc20ebdd146adbb4a5d7d2351828ff2fc905"
+    }
+  },
+  "source": {
+    "byte_equal": true,
+    "copied": {
+      "bytes": 16574,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-preparation-v3-20261028T210353Z\\harmless_launch_worker.cpp",
+      "sha256": "11490803ed4a3e68937c7bf685f31a042752f3c8681347c67f2bf4cd46721be6"
+    },
+    "only_v2_to_v3_changed_line": 270,
+    "original": {
+      "bytes": 16574,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_worker_native_v3.cpp",
+      "sha256": "11490803ed4a3e68937c7bf685f31a042752f3c8681347c67f2bf4cd46721be6"
+    },
+    "replacement": "        std::string expected = utf8(expected_w);"
+  },
+  "status": "VERIFIED_compiled_x64_MD_harmless_worker_built_NOT_EXECUTED",
+  "universe": {
+    "early_receipted": 11,
+    "files": 14,
+    "only_terminal_seal_outside_inventory": true,
+    "terminal_receipted": 13
+  }
+}

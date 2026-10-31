@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-four-arm-20261026\verify_relocation.py", line 20, in <module>
+    verify(ORIGINAL, EXPECTED)
+  File "D:\Projects\drug_target_agents\data\cache\recovery-step9-four-arm-wheel-20261026\environment\Lib\site-packages\asof\study\authority_four_arm.py", line 779, in verify
+    return _verify(path, sha256, deadline=deadline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\recovery-step9-four-arm-wheel-20261026\environment\Lib\site-packages\asof\study\authority_four_arm.py", line 790, in _verify
+    need(proof["sha256"] == sha256, "External composition anchor differs")
+  File "D:\Projects\drug_target_agents\data\cache\recovery-step9-four-arm-wheel-20261026\environment\Lib\site-packages\asof\study\diagnostic_codec.py", line 47, in need
+    raise ContractError(message)
+asof.serde.ContractError: External composition anchor differs

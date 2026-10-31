@@ -1,0 +1,58 @@
+{
+  "actual_target_API_calls": 0,
+  "audit_denials": [],
+  "codec": null,
+  "codec_forwarding": {
+    "actual_decode_calls": 44,
+    "actual_encode_calls": 39,
+    "actual_source_check_sites": 1288,
+    "actual_source_exceptions": 5,
+    "actual_source_returns": 78,
+    "facade_attempts": 83,
+    "late_seen": false,
+    "original_callback_calls": 1288,
+    "original_callback_exceptions": 0,
+    "original_callback_returns": 1288,
+    "postcall_late_vetoes": 0,
+    "preforward_deadline_refusals": 0
+  },
+  "elapsed_seconds": 0.18799999996554106,
+  "error_class": "TypeError",
+  "legacy_runs": [],
+  "message": "immutable FormatError",
+  "original_or_payload_operations": 0,
+  "phase": "CODEC_FIRST",
+  "same8_observations": [],
+  "schema_version": 1,
+  "source_pins": {
+    "continue_role_verification_v1": {
+      "bytes": 4273,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\continue_role_verification_v1.py",
+      "sha256": "82f07017f0f904507b7af8cbeceee21d891500304ef95b880a13577d0063a9f6"
+    },
+    "role_file_ports_v1": {
+      "bytes": 21279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_file_ports_v1.py",
+      "sha256": "56969f1a4eee247822364f80351a4780ee9ac444a11f82a3beab8b67598ada1b"
+    },
+    "role_ledger_codec_v1": {
+      "bytes": 55332,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v1.py",
+      "sha256": "e57b93f54c9199762f3b703da37424e5a42ee4082e3e023369620fb17a74d5c4"
+    },
+    "role_owner_v1": {
+      "bytes": 76125,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_owner_v1.py",
+      "sha256": "f1581400cc3747ae4b1a06520b896ee7177ff731e8b190f3ac293139e63170e1"
+    }
+  },
+  "source_unchanged": {
+    "continue_role_verification_v1": true,
+    "role_file_ports_v1": true,
+    "role_ledger_codec_v1": true,
+    "role_owner_v1": true
+  },
+  "status": "SETUP_OR_HARNESS_ERROR_FIRST_RESULT_PRESERVED",
+  "subject_runtime_qualification": false,
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 93, in refusal\n    try:invoke(which,v,lambda:None)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 78, in invoke\n    return getattr(codec,which+'_ledger')(value,check=checked)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v4.py\", line 103, in decode_ledger\n    def decode_ledger(self,value,*,check):return self._call('decode',value,check)\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v4.py\", line 92, in _call\n    try:result=function(value,check=wrapped)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v1.py\", line 487, in decode_ledger\n    result['header']={k:h[k]for k in HEADER_KEYS};validate_value(result,check)\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v1.py\", line 224, in validate_value\n    require(h['reserved_R']==R and h['reserved_C']==6*N+R and h['reserved_E']==6*N+2*h['early_count']+2*len(ms)+192,'STATE_CONTRADICTION')\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v1.py\", line 34, in require\n    if not ok:raise FormatError(code,offset,path)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrole_ledger_codec_v1.FormatError: STATE_CONTRADICTION\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 57, in testPartExecutor\n    yield\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 127, in test02_byte_negative_expansions\n    refusal('decode',raw,raw,m['expected']['required_code'])\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 94, in refusal\n    except codec.FormatError as err:error_surface(err,raw,required)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 82, in error_surface\n    if required is not None:assert err.code==required,(err.code,required)\n                                   ^^^^^^^^^^^^^^^^^^\nAssertionError: ('STATE_CONTRADICTION', 'RESERVED_NONZERO')\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v4.py\", line 161, in main\n    codec_result=T.run(facade,corpus)\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-producer-20261029\\role_ledger_independent_tests_v2.py\", line 200, in run\n    result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\runner.py\", line 217, in run\n    test(result)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\suite.py\", line 84, in __call__\n    return self.run(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\suite.py\", line 122, in run\n    test(result)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 678, in __call__\n    return self.run(*args, **kwds)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 622, in run\n    with outcome.testPartExecutor(self):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\contextlib.py\", line 158, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 74, in testPartExecutor\n    _addError(self.result, test_case, exc_info)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\case.py\", line 97, in _addError\n    result.addFailure(test, exc_info)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\runner.py\", line 106, in addFailure\n    super(TextTestResult, self).addFailure(test, err)\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\result.py\", line 17, in inner\n    return method(self, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\result.py\", line 122, in addFailure\n    self.failures.append((test, self._exc_info_to_string(err, test)))\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\result.py\", line 176, in _exc_info_to_string\n    tb = self._clean_tracebacks(exctype, value, tb, test)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\result.py\", line 214, in _clean_tracebacks\n    value.__traceback__ = tb\n    ^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v1.py\", line 28, in __setattr__\n    def __setattr__(self,key,value):raise TypeError('immutable FormatError')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: immutable FormatError\n"
+}

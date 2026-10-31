@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "status": "OUTLINE_ONLY_NOT_AUTHORIZED_TO_RUN",
+  "future_binding_filename": "NATIVE25-COMPONENT-BINDING-v2.json",
+  "required_binding": {
+    "status": "ROOT_BOUND_NATIVE25_COMPONENT_ONE_SHOT",
+    "run_authorized": true,
+    "deadline_seconds": 60,
+    "freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v2.json",
+      "bytes": 6162,
+      "sha256": "fd479a87b768be50d39dda27f0ad85c931753f171aeef5b4e1e37f7dc435e1e8"
+    },
+    "execution_scope": {
+      "path": "ROOT_TO_SUPPLY",
+      "bytes": null,
+      "sha256": null
+    }
+  },
+  "required_execution_scope_status": "ROOT_AUTHORIZED_SINGLE_NATIVE25_COMPONENT_EXECUTION",
+  "invocation": "python -I -B run_native25_component_v2.py only after independent exact successor peer and Root binding",
+  "outputs": [
+    "NATIVE25-COMPONENT-ATTEMPT-v2.json",
+    "NATIVE25-COMPONENT-ARTIFACTS-v2",
+    "NATIVE25-COMPONENT-PROOF-v2.json"
+  ],
+  "one_shot": true,
+  "known_diagnostic_failure_is_not_setup_failure": true,
+  "qualification": false
+}

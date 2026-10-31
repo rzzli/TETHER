@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "passed_atomic_markers_and_capped_capture_pure_fixtures",
+  "helper_sha256": "a6c91bea13a42b9c53b2c5296ff6d2bba687e34da062f1b599fc8e3ad51dff1d",
+  "fixture_sha256": "8da28034e292821eca6c6c9093afa1a0d23ee3c31f9302a4b16555fa0d26515d",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-job-accounting-v2-pure-checks-1793212853918274800",
+  "cases": [
+    {
+      "name": "interrupted_marker_not_visible",
+      "status": "passed"
+    },
+    {
+      "name": "complete_atomic_marker_and_existing_destination_preserved",
+      "status": "passed"
+    },
+    {
+      "name": "below_cap",
+      "status": "passed",
+      "observed_bytes_at_least": 12,
+      "retained_bytes": 12,
+      "truncated": false,
+      "error_class": null,
+      "stop_signalled": false
+    },
+    {
+      "name": "overflow",
+      "status": "passed",
+      "observed_bytes_at_least": 65553,
+      "retained_bytes": 65536,
+      "truncated": true,
+      "error_class": null,
+      "stop_signalled": true
+    },
+    {
+      "name": "read_error_signalled_with_partial_accounting",
+      "status": "passed",
+      "observed_bytes_at_least": 3,
+      "retained_bytes": 3,
+      "truncated": false,
+      "error_class": "OSError",
+      "error": "Synthetic capture read failure"
+    },
+    {
+      "name": "physical_lf_sdk_line_anchors_include_class9",
+      "status": "passed",
+      "sdk_sha256": "797b974b2c95697bcb28a4c1d7ca33d9b0be602b4e0b28118fb1edf770d82d21"
+    }
+  ],
+  "artifact_hashes": {
+    "below_cap.bin": {
+      "bytes": 12,
+      "sha256": "bf7df89f9ead3674aa3f2d6b569b59ad6563710b269d131e5aa7222c834bd8fd"
+    },
+    "overflow.bin": {
+      "bytes": 65536,
+      "sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3"
+    },
+    "read_error.bin": {
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    "partial/started.json.pending": {
+      "bytes": 26,
+      "sha256": "db5b6287d56e291d9dc9b45fefe26e569190b8f64ef73d488131c33986b46810"
+    },
+    "success/ready.json": {
+      "bytes": 49,
+      "sha256": "79cc4d3296b5762968f7e10ef8a421852a06624b60063b3c426038c10da501b0"
+    },
+    "success/ready.json.pending": {
+      "bytes": 33,
+      "sha256": "9aa44f420ac3c8a037bae495315315e78821da1d22612758212458f02f0e068d"
+    }
+  },
+  "actual_children": 0,
+  "network_requests": 0,
+  "windows_api_calls": 0,
+  "denied": [],
+  "scope": "Pure owned function checks only; no real pipes, threads, OS Job calls or diagnostic worker"
+}

@@ -1,0 +1,277 @@
+{
+  "artifacts": {
+    "TRUSTED-PLATFORM-ABI-BINDING-GENERATOR-FAILURE-v2.json": {
+      "bytes": 3221,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-BINDING-GENERATOR-FAILURE-v2.json",
+      "sha256": "dee33dc4186c5a4025f2af76aad02dff333ba67a2d00b359e91832174388255c"
+    },
+    "TRUSTED-PLATFORM-ABI-BINDING-PURE-PROOF-v2.json": {
+      "bytes": 4283,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-BINDING-PURE-PROOF-v2.json",
+      "sha256": "8bf1347062c31fbc6ccbb7b82ab03cabbb36f556f1283f328ce6d6037c9f3228"
+    },
+    "TRUSTED-PLATFORM-ABI-EXECUTION-PROTOCOL-v1.json": {
+      "bytes": 46299,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-EXECUTION-PROTOCOL-v1.json",
+      "sha256": "5e1755588ef3788540dd5a5775e1948803af05259bcabf1ff680b7e88de6866e"
+    },
+    "TRUSTED-PLATFORM-ABI-STATIC-AUTHORITY-v1.json": {
+      "bytes": 41865,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-STATIC-AUTHORITY-v1.json",
+      "sha256": "130ab496826afcef74236bfddae5386b267a7c788fe4496682c3f57338c0f8d2"
+    },
+    "TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.json": {
+      "bytes": 23575,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.json",
+      "sha256": "057c0fb212a9b7488f71a442182808c0f728c0b54f7a0fc83eaa13b400e51580"
+    },
+    "TRUSTED-SYSTEM32-ABI-CONTRACT-v2.json": {
+      "bytes": 6933,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-ABI-CONTRACT-v2.json",
+      "sha256": "f32dcfa3dff922937691b85129d8db7cfabf26e123fdc829027eff6e080bebc8"
+    },
+    "TRUSTED-SYSTEM32-ABI-PARENT-PURE-PROOF-v3.json": {
+      "bytes": 16628,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-ABI-PARENT-PURE-PROOF-v3.json",
+      "sha256": "7b32cbd445ade8abc3ea6cd40b3670577494d85c3f23e1c97e228bf90bebe1b8"
+    },
+    "TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json": {
+      "bytes": 9211,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json",
+      "sha256": "d63f9047a1670026b18e56deea02b8fb1cfa38ac9b9f3c24a7dbff8f21a27e6f"
+    },
+    "TRUSTED-SYSTEM32-MODULE-POLICY-v1.json": {
+      "bytes": 4912,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-POLICY-v1.json",
+      "sha256": "fdd15d4f551efbd3c1ecb515b2724b4ee68cf08d3ea1ed2f5c2a576774da2ca4"
+    },
+    "TRUSTED-SYSTEM32-MODULE-VECTORS-v1.json": {
+      "bytes": 119983,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-VECTORS-v1.json",
+      "sha256": "b7e762b56a67370eeb82f8d9e1df1e3300fc9a9b9f729e8813a563c58c23634a"
+    },
+    "TRUSTED-SYSTEM32-PARENT-MATCHER-PEER-REVIEW-v1.json": {
+      "bytes": 5746,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-PARENT-MATCHER-PEER-REVIEW-v1.json",
+      "sha256": "50f82c2b4b76ce48d7b081757a01f6db0f8dece68afa03b4dd22dbd142a85e95"
+    },
+    "check_platform_abi_binding_v2.py": {
+      "bytes": 12476,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_platform_abi_binding_v2.py",
+      "sha256": "60d64fc988bdcbce6c9c21e0e75dbdc366d917b776d999d774d2443684024d9a"
+    },
+    "check_platform_abi_parent_v3.py": {
+      "bytes": 11216,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_platform_abi_parent_v3.py",
+      "sha256": "8f6fb7a5b45a324c11c2b51b1123b3f71668d4290309ca6aded244bd6639f663"
+    },
+    "prepare_platform_abi_binding_v2.py": {
+      "bytes": 16461,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\prepare_platform_abi_binding_v2.py",
+      "sha256": "1ce30e02ed808bfcc74cf9c494c7dabd3b8b2eeec987626e837a95d98302868f"
+    },
+    "prepare_platform_abi_binding_v3.py": {
+      "bytes": 16428,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\prepare_platform_abi_binding_v3.py",
+      "sha256": "f877b087801a0eb93d66ddf768e3e6e659d5fce397bca6c9e1b34464c1c7cc73"
+    },
+    "run_detached_abi_observation_v6.py": {
+      "bytes": 45147,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v6.py",
+      "sha256": "ec985415358e547db31bf988a5027099b2992a06d096f3067136ffa03f858aff"
+    },
+    "run_platform_abi_observation_v1.py": {
+      "bytes": 27588,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_platform_abi_observation_v1.py",
+      "sha256": "caf3e69c38bdd06b4786122adba4e79b4e683c264621d64f5a516347082d53cc"
+    },
+    "run_platform_abi_observation_v2.py": {
+      "bytes": 59541,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_platform_abi_observation_v2.py",
+      "sha256": "f2682469f48919698d4ba702920888e8b2175b63161080afc62604668d639ef5"
+    },
+    "trusted_system32_module_policy_v1.py": {
+      "bytes": 6362,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\trusted_system32_module_policy_v1.py",
+      "sha256": "77e39b3bb82fb83049aba9956da0251b4a8d914f167dc6d6512d554ad7bfb3a8"
+    }
+  },
+  "completed_checks": {
+    "all_four_dynamic_records_match_current_bytes": true,
+    "all_sizes_SHA256_and_strict_three_field_records_match": true,
+    "current_parent_authority_checker_proof_outside_static": true,
+    "dynamic_inputs": 4,
+    "exact_static_tuple_authority_and_combined_inputs_match": true,
+    "no_current_parent_hash_references_in_static_text": true,
+    "no_reparse_or_symlink_observed": true,
+    "output_absent": true,
+    "preparation_report_and_output_locator_match": true,
+    "static_bytes": 24826696,
+    "static_inputs": 173,
+    "total_input_bytes": 24944861,
+    "total_inputs": 177,
+    "unique_input_file_and_ancestor_lstat_entries": 231,
+    "whole_protocol_independently_reconstructed": true
+  },
+  "contract_and_build": {
+    "current_executable": {
+      "bytes": 258560,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-trusted-platform-bridge-build-v2-20261029T024601Z\\typed_public_c_recognizer_abi.exe",
+      "sha256": "2feffe29d916f9345067d9458714525eb73a2554824f3567383856562c2b2464"
+    },
+    "exact_verified_build": {
+      "bytes": 23575,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.json",
+      "sha256": "057c0fb212a9b7488f71a442182808c0f728c0b54f7a0fc83eaa13b400e51580"
+    },
+    "expected_defaults_layouts_wire_semantics_equal_prototype_contract": true,
+    "expected_version": "",
+    "explicit_target_calls": [
+      "llama_version",
+      "llama_model_default_params"
+    ],
+    "no_CPU_model_or_GGUF_paths_supplied": true,
+    "platform_image_authentication": "not_established",
+    "policy_id": "trusted-System32-platform-v1",
+    "recognition_enabled": false,
+    "reported_platform_path_filesystem_operations": 0,
+    "semantic_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589",
+    "source_header_compiledcopy_receipt_terminal_cleanup_match_build_proof": true,
+    "version_expected_previously_known": false
+  },
+  "historical_preparation_failure": {
+    "failed_key": "header_copies",
+    "failure_before_first_bound_artifact_write": true,
+    "failure_receipt_external_to_frozen_static_closure": true,
+    "known_source_reads_before_failure_acknowledged": true,
+    "no_actual_ABI_attempt_consumed": true,
+    "no_original_stdout_recreated": true,
+    "preserved_original_generator_v2_and_corrected_v3": true,
+    "receipt": {
+      "bytes": 3221,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-BINDING-GENERATOR-FAILURE-v2.json",
+      "sha256": "dee33dc4186c5a4025f2af76aad02dff333ba67a2d00b359e91832174388255c"
+    },
+    "receipt_is_post_hoc_disposition": true
+  },
+  "limitations": [
+    "Source/pure consistency and compilation do not establish actual typed ABI behavior; a separately approved observation and independent result verification are still required.",
+    "System32 platform context is an explicit trust assumption; no platform image authenticity, initializer/shim or lifetime closure claim.",
+    "Finite selected interpreter/package/declaration/build inputs are not complete CPython or OS dependency attestation.",
+    "No second census, OS tracing, CPU/provider/model/GGUF access or reinterpretation of prior negative results is authorized."
+  ],
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 30,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 4194304,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "material_blockers": [],
+  "next_authority": "Root independently rehashes and binds this exact parent/protocol/peer with the separately reviewed once-only driver before deciding any single ABI observation. No execution permission is granted by preparation, static authority or this review.",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-trusted-platform-ABI-observation-v1-20261029T030043Z",
+  "parser_review": [
+    "Exactly five ordered complete JSONL events, strict duplicate/nonfinite rejection, exact attempt.json and result.jsonl only, guarded regular non-reparse artifact entries and existing file/row caps.",
+    "Second event requires exact field set including policy ID and fingerprint; layouts compare recursively with strict types.",
+    "Pinned pure matcher independently classifies only name/path rows using externally fixed self/runtime context; child verified/category/hash fields cannot grant eligibility.",
+    "All17 defaults, every layout leaf, printable first-observed version1..255, explicit-call scope and completion/time types remain strict.",
+    "Self/core native identity comes from fixed role/input leases before child launch; reported platform paths never become file inputs.",
+    "Module metadata is before explicit version/default queries, not a final or lifetime module inventory."
+  ],
+  "preparation_report": {
+    "bytes": 1137,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-trusted-platform-ABI-preparation-v2-20261029.json",
+    "sha256": "038dc17732bfc94f6059c98aeecf5177eae76b11e5d5273b721cc0324a8229ab"
+  },
+  "pure_evidence": {
+    "adapter_checks": 156,
+    "adapter_methods": 8,
+    "adapter_proof_sha256": "7b32cbd445ade8abc3ea6cd40b3670577494d85c3f23e1c97e228bf90bebe1b8",
+    "adapter_semantics_rebound_by12_AST_equality_and_equal_contract_values": true,
+    "adapter_source_and_contract_are_preserved_unbound_prototype": true,
+    "all73_shared_module_vectors_inside_complete_wire": true,
+    "author_reported_real_SDK_child_and_compiler_calls": 0,
+    "binding_errors": [],
+    "binding_failures": [],
+    "binding_methods": 10,
+    "binding_source_checker_and_authority_exact": true,
+    "binding_status": "passed",
+    "binding_vectors": 46,
+    "each_default_and_layout_leaf_and_policy_type_scope_JSON_negatives": true,
+    "filesystem_denial_and_unbound_gate_tests_reviewed": true,
+    "full_prepare_two_outputs_and_report_failure_preserves_protocol_no_repeat": true,
+    "publication_fixture_files_rehashed": 3,
+    "reviewer_did_not_rerun_tests": true
+  },
+  "recorded_at_utc": "2026-10-29T03:14:07.906378+00:00",
+  "retained_mechanics": [
+    "Strict generic Job total1 and PID consistency, detached0x0008040C Job-at-creation/suspended/restricted-stdio path and exactly one Resume are unchanged.",
+    "Terminal exit/raw Job/memory/capture observations precede original Owner cleanup; complete observations are required before successful result parsing.",
+    "Unknown creation remains unknown; preexisting KeyboardInterrupt/SystemExit suppress new terminal observations and input rechecks while original cleanup/sealing proceeds.",
+    "Tracked original/recheck lease errors, original primary, late close, terminal publication, missing/failed seal and afterseal veto paths remain unchanged.",
+    "Status ABI_observations_retained_independent_qualification_pending remains a narrow observation status, not scientific/native completion."
+  ],
+  "reviewer": "independent os_accounting_peer; not parent or test author",
+  "roster_review": {
+    "SDK_declaration_headers": 6,
+    "accepted_distribution_leaves": 3,
+    "accepted_package_members": 85,
+    "executable": "Only current verified2fe EXE plus accepted/base Python interpreters",
+    "finite_selected_provenance_not_complete_runtime_dependency_closure": true,
+    "interpreter_executables": 2,
+    "no_old_census_EXE_compiler_CPU_GGUF_model_or_unknown_platform_image_input": true,
+    "predetermined_original_System32_lease_context": 16,
+    "public_headers_original_and_copied": 14,
+    "runtime_core_DLLs": 4
+  },
+  "schema_version": 1,
+  "scope": "Completed read-only source/config/AST/pin/ancestor and retained pure-evidence review, finalized without a broad rerun. No helper/matcher imports, author-test reruns, SDK constructor, compiler, child/target API or unknown platform-image operations by reviewer.",
+  "source_review": {
+    "CLI_preparation_only": true,
+    "SDK_general_gate_false_unmodified": true,
+    "exact_own_new_EXE_argv_in_all_launch_checks": true,
+    "external_exact_root_driver_required_for_execute": true,
+    "full_binding_config_and_parser_methods_read": true,
+    "older_reviewed_ABI_mechanics_AST_equal_functions": [
+      "sha",
+      "terminal_observer",
+      "api_class",
+      "exact",
+      "json_value",
+      "runtime_pins",
+      "abi_argv",
+      "execute"
+    ],
+    "prototype_AST_equal_functions": [
+      "sha",
+      "policy_matcher",
+      "terminal_observer",
+      "api_class",
+      "exact",
+      "json_value",
+      "runtime_pins",
+      "validate_modules",
+      "validate_child_rows",
+      "validate_child_artifacts",
+      "abi_argv",
+      "execute"
+    ]
+  },
+  "status": "CLEAR_exact_bound_platform_ABI_parent_contract_protocol_v1_preparation_only_separate_root_once_decision_required",
+  "terminal_policy": {
+    "capture_drain_seconds": 0.25,
+    "late_returned_bytes_retained": true,
+    "maximum_capture_polls": 64,
+    "physical_pipe_EOF_is_not_child_exit": true,
+    "skip_new_observations_and_input_rechecks_after_interruption": true,
+    "unknown_creation_is_not_final": true
+  }
+}

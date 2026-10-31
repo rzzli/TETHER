@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "passed_five_publication_fixtures",
+  "helper_sha256": "0bcfcdca19805415604c37237f921c9b3239152874fb2cf4f457b9ed692fefcf",
+  "fixture_helper_sha256": "307c12f45c01eed060e56f316587227d264626e8b20d51010e6647de23f1176c",
+  "scope": "publisher_only_no_acceptance_aggregation_or_runtime_execution",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-generation-publication-fixtures-20261028",
+  "cases": [
+    {
+      "case": "successful_same_directory_publication",
+      "passed": true
+    },
+    {
+      "case": "existing_destination_preserved",
+      "passed": true
+    },
+    {
+      "case": "concurrent_writers_exactly_one_complete_winner",
+      "passed": true
+    },
+    {
+      "case": "failed_fsync_never_publishes",
+      "passed": true
+    },
+    {
+      "case": "non_windows_stops_before_file_creation",
+      "passed": true
+    }
+  ],
+  "runtime_model_or_native_calls": 0,
+  "original_acceptance_exists": false
+}

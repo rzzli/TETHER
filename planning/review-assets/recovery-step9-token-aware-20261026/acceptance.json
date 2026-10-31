@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T21:06:11.609045+00:00",
+  "status": "accepted_source_and_token_preparation_engineering_only",
+  "version": "0.3.4",
+  "full_tests": {
+    "run": 1582,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "peer_tests": {
+    "count": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 2.666,
+    "temporary_directory": "workspace data/cache",
+    "lint": "Ruff0.8.6 passed for peer test file"
+  },
+  "source_pins_rechecked": 297,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "approved_input_inventory_files": 27,
+  "approved_input_inventory_bytes": 363192274,
+  "selected_whole_rows_replayed": 1,
+  "identifier_mapping_rows_replayed": 3,
+  "real_request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "real_preparation_receipt_sha256": "eca1e49f6a1d23555938aaa6dfbfdb091501b4d8e0e886cf4bea8c4d8e5784b1",
+  "input_reservation": 28241,
+  "output_reservation": 6144,
+  "elapsed_preparation_seconds": 98.5,
+  "tokenizer_children": 6,
+  "actual_generation_calls": 0,
+  "provider_spending_usd": 0,
+  "lock_probe_tokenizer_children": 1,
+  "first_full_validation": "one test-discovery import error; runtime code unchanged; original report preserved",
+  "discovery_correction": "two peer fixture imports made package-qualified; test assertions unchanged",
+  "verified_history_scope": "exact_hypothetical_only_not_a_token_maximum",
+  "admission_scope": "one_exposed_case_supported_OT25.09_recipe2.2_contemporary_profile",
+  "runtime_execution_policy_changed": false,
+  "human_scientific_review": "pending",
+  "scientific_validation": "not_established",
+  "entire_R09_complete": false,
+  "remaining": [
+    "Token-aware execution-policy integration and end-to-end retrieval track",
+    "Fresh-case/source qualification and independent human references",
+    "Prospectively gated native comparison and scientific evaluation"
+  ],
+  "limits": [
+    "Cooperative kernel/filesystem deadlines; tokenizer child separately bounded",
+    "OS/loader/sharing trust boundaries; no hostile same-user sandbox or CPU attestation",
+    "No newly acquired data, new model, clinical probability or independent biological validation"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-token-aware-wheel-20261026/dist/asof_target_agents-0.3.4-py3-none-any.whl",
+    "sha256": "0c85a8cf5679de3d70eebdae1083cd5924e260dc7269fcfc54940fcb8c406d56",
+    "bytes": 212547
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-preparation-verifier-034-20261026/asof_target_agents-0.3.4-py3-none-any.whl",
+    "sha256": "0c85a8cf5679de3d70eebdae1083cd5924e260dc7269fcfc54940fcb8c406d56",
+    "bytes": 212547
+  },
+  "evidence": [
+    {
+      "path": "data/cache/r09prep-installed-20261026/guarded-installed-verification.json",
+      "sha256": "96398075bb65f5feffe702c489dd1d6d8d9fecfc9238b0f054e100c9d65cc602",
+      "bytes": 8498
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/first-full-validation-failure.json",
+      "sha256": "e755a6510a1f18e0c6f3a3c86ab181019e70b252b583be26bdd0e93942760efb",
+      "bytes": 472
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/first-code-validation.json",
+      "sha256": "cbcef41295862842260c63249d0ba7a19d6d1adb946960af5df8c9f5157248ea",
+      "bytes": 33589
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/full-validation.json",
+      "sha256": "4a696e966ff869fefb71e0d98650732c246fe1079725e0d8c11a7a66bf924ed9",
+      "bytes": 462
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/code-validation.json",
+      "sha256": "ec68d92af5d59f8c79a96c67ed296b251c2ae1677a3b15780136938172ab559a",
+      "bytes": 33589
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/CONTRACT-v2.md",
+      "sha256": "73468bc168a1804b900e5cd4bc640aa2f98a18db9895d77f2716533c70e47e69",
+      "bytes": 3791
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/CONTRACT-v2.json",
+      "sha256": "230cc8891a4cf099483d63cfc9fe995a53d58a96406aa6cfd64d7a688cee31c2",
+      "bytes": 3824
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/INDEPENDENT-CONTRACT-REVIEW-v2.json",
+      "sha256": "785ef38958b84520a9b62ad0909ce71bb111e37082f316017959802b8d2b9e5c",
+      "bytes": 2810
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/IMPLEMENTATION-PEER-REVIEW-final.json",
+      "sha256": "e87f1951dfe29bb3b89622fb7938cfc24b064967ad16b26c384695931493eb28",
+      "bytes": 4279
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/LOCK-PROBE-RESULT.json",
+      "sha256": "7351fef7f6dd4c6d6d2e796ef19b3fdae7c2e81e47e258987f2e9e1c71aa43f1",
+      "bytes": 10052
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/SOURCE-AUTHORITY-v1.json",
+      "sha256": "8a98d96c14193e5298384f90982ae30943de6927de80654c6b99eed9ae7f027a",
+      "bytes": 9183
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/SOURCE-AUTHORITY-PREPARATION.json",
+      "sha256": "3271127c945044dbfe673e0dea6dbe16a849a3029d5dc819fe5132fb97ab22fe",
+      "bytes": 556
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json",
+      "sha256": "b7cc9e6407a45768bf8d5bb29d8da4eb2fc7c70c2462de6beef359a5bd0d7099",
+      "bytes": 8046
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION-FAILURE.json",
+      "sha256": "12739725efe6a53b81f7114ca673d80a4198d3a2502c3767ed333fb6fee16000",
+      "bytes": 729
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION-PROTOCOL-v2.json",
+      "sha256": "5b800201813d027d125db2f83500798bd59072b3263a0f8f3f43d88d1458f7a7",
+      "bytes": 1754
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/installed-preparation-verification.json",
+      "sha256": "490421516697324562f0e511f851e00848876eab603814f8ea7f270d30b90eed",
+      "bytes": 945
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/frozen-r07-after.json",
+      "sha256": "996281654ba200e6c745dfb87b11097f62094df8ba257b4afab70613691bea8e",
+      "bytes": 978
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/frozen-baseline-after.json",
+      "sha256": "2ace832c6d6be6503c29af88becee673615833e14c8a82d477287928022b35e0",
+      "bytes": 991
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/frozen-comparison-after.json",
+      "sha256": "9c91e58444101b8b88e16d875a536de399b3ab433b5e592f8d1a9e37a5a84b7f",
+      "bytes": 1098
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-token-aware-20261026/WORKING-VERSION.json",
+      "sha256": "ebdcdb1a1de7cdfeafef2ee7e7bb4e4cb5203e85d34dbebebc37c6902d532175",
+      "bytes": 563
+    }
+  ]
+}

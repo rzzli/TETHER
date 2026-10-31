@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "status": "prospective_not_implemented_no_admission_or_generation",
+  "budget": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0.0,
+    "max_seconds": 300,
+    "max_retries": 1
+  },
+  "scope": "Offline preparation and quote only; no StudySession/native dispatch modification in this slice",
+  "units": {
+    "max_prompt_utf8_bytes": 32768,
+    "max_http_payload_utf8_bytes": 65536,
+    "context_tokens": 16384,
+    "output_tokens_per_stage": 1024,
+    "input_reservation": "verified CLI count plus32 per exact stage payload; six hypothetical histories only, not all-history bound",
+    "tokenizer_stdout_max_bytes": 2097152,
+    "tokenizer_stderr_max_bytes": 2097152
+  },
+  "asset_authority": {
+    "acquisition_sha256": "cc95c56ce1f497b36d6b9ed62b22721d8af7eaccc0a8c50da91439c5b076acbf",
+    "inventory_sha256": "2e8d51dfef65a14f2079e1fe5025856dd76743302f01a133481c706a97414e12",
+    "tokenizer_sha256": "5f20c72f9eac5a0631a178f430afb05be4cfd9de4c1c9c647e7fcd7388bbad0d",
+    "version": "build11717 commit848bbda90",
+    "required_assets": "Exact3GGUFshards and complete runtimeDLL inventory, bound to existing external inventory/acquisition anchors; installed dependency closure checked",
+    "allow_arbitrary_executable_or_arguments": false
+  },
+  "tokenization": {
+    "argv": [
+      "APPROVED_TOKENIZER",
+      "--offline",
+      "--model",
+      "APPROVED_FIRST_SHARD",
+      "--no-escape",
+      "--no-bos",
+      "--stdin",
+      "--ids",
+      "--show-count"
+    ],
+    "stdin": "exactUTF8 bytes of full finalized prompt; no newline addition",
+    "parse_special": true,
+    "generation_calls": 0,
+    "server_startups": 0,
+    "timeout_seconds": 30,
+    "retries": 0,
+    "environment": "remove LLAMA_/HF_/HUGGING_FACE overrides; explicitoffline; no credentials copied to evidence"
+  },
+  "claim_limit": "min(3,original_request.source_request.bounds.max_claims); exactsame value in guide/schema/postvalidation; retain original complete request",
+  "controls": {
+    "artifact": "planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/RESULT.json",
+    "sha256": "aefbaf540d3ff9dc6921ac1a01b0ca1c77500e3934ba76f0520ceaa8da4bd7f8",
+    "scope": "6empiricalparitycontrols; no universal preprocessing proof"
+  },
+  "runtime_policy": "Existing byte-based StudySession admission unchanged and cannot consume this quote yet; no fake inflation/monkeypatch",
+  "implementation_gate": "Root accepts finite preparation implementation after independent contract review; no generation or current runtime policy changes",
+  "supersedes_sha256": "d593398f8c10b168402cc911289d8bf9e592990fe7017002994cd9ae1a3eda4d",
+  "source_profile": {
+    "normalization": "asof.opentargets.normalize:2.2",
+    "releases": [
+      "OpenTargets25.09",
+      "HGNC2026-10-10"
+    ],
+    "optional_dependency": "pyarrow==21.0.0",
+    "raw_row_audit": "whole supported method2.2 Observation reconstruction/equality plus identifier mapping replay",
+    "compiler_parity": "preserve category ordering, fields, nulls, references and coverage; reject nonempty selected features; exact14b7 reconstruction only after authoritative admission"
+  },
+  "stable_read": {
+    "platform": "Windows",
+    "known_assets": "CreateFileW GENERIC_READ / FILE_SHARE_READ held across hash, child and post-hash",
+    "directories": "deny rename through held read handles; not a child-creation sandbox",
+    "probe_sha256": "7351fef7f6dd4c6d6d2e796ef19b3fdae7c2e81e47e258987f2e9e1c71aa43f1",
+    "trust_limits": [
+      "OS DLLs",
+      "no hostile same-user or privileged-process sandbox",
+      "no cryptographic execution attestation"
+    ]
+  }
+}

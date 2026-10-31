@@ -1,0 +1,14 @@
+test_archived_native_clock_cannot_move_backwards (tests.test_study_native_mode.NativeModeTests.test_archived_native_clock_cannot_move_backwards) ... FAIL
+
+======================================================================
+FAIL: test_archived_native_clock_cannot_move_backwards (tests.test_study_native_mode.NativeModeTests.test_archived_native_clock_cannot_move_backwards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_native_mode.py", line 147, in test_archived_native_clock_cannot_move_backwards
+    with self.assertRaises(ContractError):self.config.verify_archive(self.root,self.spec,events,successful=True)
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.838s
+
+FAILED (failures=1)

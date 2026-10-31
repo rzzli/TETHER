@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_PURE_only_decoder_phase_spec_literal_fixtures_required_before_implementation",
+  "purpose": "Decode captured Windows-x64 basic Job buffers and check narrow source-view/phase consistency. No live API, original-file/source qualification, report acceptance or complete resource qualification.",
+  "source_basis": {
+    "qualified_SDK": "planning/review-assets/recovery-step9-native-recognition-20261028/detached_parent_launch_draft_v1.py",
+    "retained_SDK_sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd",
+    "inspected_methods": [
+      "ACCOUNTING/PID_LIST declarations",
+      "Kernel32.job_snapshot",
+      "job_snapshot_problem",
+      "Kernel32.verify_limits",
+      "OwnedLaunch.observe_job"
+    ],
+    "terminal_source": "planning/review-assets/recovery-step9-native-recognition-20261028/detached_abi_terminal_observation_v3.py",
+    "retained_terminal_sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c",
+    "source_reads_not_new_qualification": true
+  },
+  "actual_capture_shape": {
+    "outer_keys": [
+      "query_started_monotonic_ns",
+      "query_finished_monotonic_ns",
+      "accounting",
+      "pid_list"
+    ],
+    "accounting_keys": [
+      "ok",
+      "error",
+      "returned_bytes",
+      "raw_hex",
+      "decoded"
+    ],
+    "pid_keys": [
+      "ok",
+      "error",
+      "returned_bytes",
+      "raw_hex",
+      "assigned_count",
+      "listed_count",
+      "pids"
+    ],
+    "flags": "ok exactbool; error/returned_bytes strict unsigned32 integers, never bool. Source sets error0 on success. Failure error0 remains failure, not success.",
+    "hex": "Canonical lowercase even hex, no separators/whitespace. Allocated ACCOUNTING frame is exactly48bytes; allocated PID frame exactly136bytes, independently of APIreturned length.",
+    "window": "Strict nonnegative integer start/finish with finish>=start. Invalid/malformed window yields query_window_validFalse,raw_completeFalse+issues without erasing independently decoded query data; wrong outerkeys insteadraiseValueError. Equal timestamps remain legal/non-atomic."
+  },
+  "byte_layout": {
+    "endianness": "little",
+    "pointer_bytes": 8,
+    "accounting": {
+      "frame_bytes": 48,
+      "struct_format": "<qqqqIIII",
+      "fields": [
+        {
+          "name": "TotalUserTime",
+          "offset": 0,
+          "bytes": 8,
+          "signed": true
+        },
+        {
+          "name": "TotalKernelTime",
+          "offset": 8,
+          "bytes": 8,
+          "signed": true
+        },
+        {
+          "name": "ThisPeriodTotalUserTime",
+          "offset": 16,
+          "bytes": 8,
+          "signed": true
+        },
+        {
+          "name": "ThisPeriodTotalKernelTime",
+          "offset": 24,
+          "bytes": 8,
+          "signed": true
+        },
+        {
+          "name": "TotalPageFaultCount",
+          "offset": 32,
+          "bytes": 4,
+          "signed": false
+        },
+        {
+          "name": "TotalProcesses",
+          "offset": 36,
+          "bytes": 4,
+          "signed": false
+        },
+        {
+          "name": "ActiveProcesses",
+          "offset": 40,
+          "bytes": 4,
+          "signed": false
+        },
+        {
+          "name": "TotalTerminatedProcesses",
+          "offset": 44,
+          "bytes": 4,
+          "signed": false
+        }
+      ],
+      "defined": "Only okTrue,error0,returned_bytes48,exact frame/schema. Preserve signed time-field values as signed; decoder does not validate CPU-time/period semantics."
+    },
+    "pid_list": {
+      "frame_bytes": 136,
+      "header_format": "<II",
+      "assigned_count_offset": 0,
+      "listed_count_offset": 4,
+      "pid_array_offset": 8,
+      "pid_element_bytes": 8,
+      "pid_capacity": 16,
+      "defined_complete": "Only okTrue,error0 and exact frame/schema, raw header assigned==listed==n with0<=n<=16 and8+8*n<=returned_bytes<=136. PIDvalues are unsigned64, firstn entries only.",
+      "returned_length_is_variable": "Empty response can return8bytes and a singlePID can return16; do not require returned_bytes136. Full allocated tail is retained raw evidence but is not an extraPID list or required-zero padding."
+    }
+  },
+  "minimal_API": {
+    "decoder": "decode_job_snapshot(snapshot)",
+    "phase_checker": "check_snapshot_phase(decoded: DecodedJobSnapshot, expected_phase, own_pid)",
+    "input": "snapshot isNone for absent/unobserved capture or exact source-shaped dict. A missing query uses accounting=None orpid_list=None while retaining outerkeys. Wrong outerkeys/type raises ValueError(snapshot_schema). No paths/livehandles/callbacks/receipt flags.",
+    "decoder_result": "Exact frozen/slots DecodedJobSnapshot ordinary immutable result with fresh to_dict(): capture_present,query_window_valid,accounting,pid_list,raw_complete,source_views_consistent,issues,atomic_snapshot,resource_qualified. Component values are exact immutable DecodedQuery orNone. atomic_snapshot/resource_qualified are constantFalse, not readiness input fields.",
+    "component_result": "Each nonmissing component has status decoded/undefined/malformed, raw_hex/error/returned_bytes retained when representable, fields orNone, source_view_matches bool orNone, issues. Decoded accounting fields use the8names above; decoded PID fields are assigned_count,listed_count,pids. Only complete defined successful frames yield fields.",
+    "failed_or_unknown": "okFalse yields undefined fields even if the allocated bytes are zero or look plausible. Success with malformed flags/frame/returned length or incomplete PID counts yields malformed fieldsNone. Missing capture/components never become empty Job state. Independently valid other-query data may remain retained; raw_completeFalse blocks phase matching.",
+    "source_view_consistency": "For defined buffers compare source-reported accounting.decoded(all8strictinteger fields), assigned_count/listed_count and pids(strictinteger list) against freshly decoded bytes. Ignore undefined source summaries. Mismatches are explicitFalse with field paths, not repairs. source_views_consistent isNone unless both query results are defined/complete; malformed source views cannot pass via bool/int coercion.",
+    "raw_complete": "Both queries have defined complete byte decodes and a valid captured window. Does not mean source views, limits, process identity, output or cleanup are qualified.",
+    "phase_output": "Immutable fresh to_dict(): status,expected_phase,observed_state,issues,non_atomic_race_possible,resource_qualified. resource_qualifiedFalse/non_atomic_race_possibleTrue always. Status matched_selected_source_phase/counter_or_PID_mismatch/unresolved. No runtime or overall-profile success field.",
+    "phase_type_boundary": "Require type(decoded) is DecodedJobSnapshot, not a dict, subclass, serialized ready/verified flag or bool. Wrong type raises TypeError(decoder_result_type). This is ordinary API typing, not hostilePython isolation or source/provenance authority.",
+    "bounded_invalid_metadata": "Returned component output retains ok onlyifexactbool,error/returned_bytes onlyifstrictuint32,raw_hex onlyifexact canonical full48/136-byte frame. Otherwise retainNone plus finite bounded issue names; never return huge/invalid rawhex or copied arbitrarysource-view containers. Input itself remains caller-owned original evidence."
+  },
+  "selected_source_phase_policy": {
+    "phases": [
+      "empty",
+      "assigned",
+      "running_or_finished",
+      "finished"
+    ],
+    "own_pid": "Strict unsigned32 PID. Positive for all nonempty phases; empty accepts0 orNone because creation may not exist. This is a source-reported numeric identity input, not proof of an owned OS handle.",
+    "prerequisites": "raw_completeTrue AND source_views_consistentTrue. Otherwise unresolved; failed/unknown/malformed or mismatched views cannot match.",
+    "tuple_fields": [
+      "TotalProcesses",
+      "ActiveProcesses",
+      "TotalTerminatedProcesses",
+      "pids"
+    ],
+    "empty": [
+      0,
+      0,
+      0,
+      []
+    ],
+    "assigned": "(1,1,0,[own_pid])",
+    "running_or_finished": "Either(1,1,0,[own_pid]) or(1,0,0,[])",
+    "finished": [
+      1,
+      0,
+      0,
+      []
+    ],
+    "PID_header": "Already checked assigned_count==listed_count==len(pids) in complete decoder; empty is0/0 and onePID is1/1.",
+    "non_atomic_mismatch": "Valid accounting Active1 with a separately observed empty PID list is counter_or_PID_mismatch, with race/unknown cause retained; never normalize it to assigned or finished, and never infer OS limit failure from this pair alone.",
+    "termination_counter_limit": "Terminated0 is the selected retained source-policy expectation, not a universal statement about all Windows termination mechanisms. Nonzero is retained mismatch, not silently rewritten."
+  },
+  "separate_report_bindings_design_only": {
+    "raw_to_journal": "A future checker must bind exact raw snapshot to RunJournal event abi_job_snapshot_observed details{stage,ordinal,snapshot}, exact sequence/hash chain and owned captured input bytes. RunJournal fields are sequence,event,details,previous_sha256,sha256. Decoder does not validate that chain.",
+    "phase_identity": "Bind configured_empty/before_resume/running_first/running_periodic/after_wait to reported creation/PID/resumption/ownedwait chronology, reservations and observed API returns. A phase string or PID in JSON alone is not ownership.",
+    "terminal_snapshot": "Bind report.final_job_snapshot to terminal_observation.observations.job_snapshot.raw/value and its raw publication/return/predicate/scope/ordinal, plus the exact journal raw observation. A late response may be retained with statusfailed and cannot become complete.",
+    "limit_metadata": {
+      "reported_flags": 8968,
+      "reported_flags_hex": "0x2308",
+      "reported_active_limit": 1,
+      "reported_process_commit": 268435456,
+      "reported_job_commit": 268435456,
+      "label": "Source-reported verify_limits metadata only, NOT raw48/136-derived or OS-enforcement proof."
+    },
+    "pending_full_resource_checks": [
+      "Exact limit/peak readback evidence and finite numeric bounds",
+      "Capture file hashes/byte accounting/caps/truncation and both physicalEOF records",
+      "Known creation/resumption/ownedwait/exit and reaping",
+      "Late returned failures/interruption/unknown operations",
+      "Cleanup/lease outcomes and authoritative failure markers/postcleanup seals",
+      "Original owner clock300/work295 and child/source bounds",
+      "Exact helper/source/authority/checker closure"
+    ],
+    "overall_failure_preserved": "A legal finished tuple, EOF and reaped child with exit2 can coexist with an overall failed experiment; this primitive must not convert that into success. PhysicalEOF alone never establishes child exit."
+  },
+  "fixture_plan_before_any_code": "Freeze a small set of actual-shaped synthetic records: legal empty(return8),assigned(return16),finished(return8); running_or_finished bothlegal branches; non-atomic mismatch; failedzero buffers; wrongreturned lengths/truncation/counts; raw-vs-summary mismatch/boolcoercion; nonzero unused tail; missingcapture; exactPID/count corruption. Expected structs are authored literals/framing only, no live samples replayed as qualification.",
+  "activity": {
+    "old_original_or_source_closure_qualification": 0,
+    "SDK_OS_target_calls": 0,
+    "CPU_GGUF_oldpack_operations": 0,
+    "decoder_or_report_checker_implementation": 0
+  },
+  "execution_authorized": false,
+  "revision": 2,
+  "predecessor_contract_sha256": "51e5c60fa490eb5e150480eff25e3816b13a40648db47bedb7779938cf0d8b2d",
+  "root_clarifications": [
+    "Immutable typeddecoder result onlyatphaseboundary, not serialized readiness.",
+    "Malformedtimewindow remainsexplicitfalse/issue, not outer-schema exception.",
+    "MissingcomponentsNone neverzero.",
+    "Invalidrawmetadata output bounded/scalar/frame-only orNone.",
+    "No report/fullresource/platform checker implementation in this version."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "actual_target_API_calls": 0,
+  "append_envelope_sha256": "147dc12855fe6f9bbd5b1994bc1e389b938cb03bdc25ddb1cf4137c5fc48cfd6",
+  "constraints": "Unchanged N4/4KiB/16KiB/generation68/C92/E224/Data50ee/48oracle; indexed private state only, one canonical owner and full authoritative raw records.",
+  "design_sha256": "7e2b1b5b71095863ab687a92f8152239c2922f0bd8ada9c875562ec15d6d9a5b",
+  "original_payload_reads": 0,
+  "precode_peer_sha256": "4f5d8553a9dcf4e48af2eb864bbbdac1d1c00ad2487eb573ff3fffee977f656f",
+  "qualification_all_false": true,
+  "recorded_at_utc": "2026-10-29T17:57:31.792830+00:00",
+  "root_scope_sha256": "7683b6f661387b12e10ab2cbf83157b56dd3d5d5e2e4439d19e9804175196f97",
+  "schema_version": 1,
+  "scope": "SOURCE/PURE only; real entry/FFI/physical source/output/full-roster/resource/profile/native/science pending",
+  "source_files": [
+    {
+      "bytes": 42970,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_owner_v3.py",
+      "sha256": "d8ee1e135a9e9d4b5c197eacb287f9e0fcb8c145d8baef154aa8faa7a68fca31"
+    },
+    {
+      "bytes": 11057,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\shared_file_ports_v3.py",
+      "sha256": "8ecabef93656867fa443d26ef8826b359029f79d33c220cbc1a41734f80c0f49"
+    },
+    {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-indexed-accounting-20261029\\continue_verification_v3.py",
+      "sha256": "16ff0a3463d7d97f068fb38b709addfdfa43944490c015329e4470fad314a47e"
+    }
+  ],
+  "status": "FIRST_COHERENT_V3_SOURCE_PAUSE_BEFORE_IMPORT_OR_TEST",
+  "subject_tests": 0,
+  "synthetic_subject_imports": 0
+}

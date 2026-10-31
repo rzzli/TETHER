@@ -1,0 +1,15 @@
+{
+  "child_dispatches": 0,
+  "correct_reference": "DETACHED-ABI-OBSERVATION-PURE-CHECKS-v4.json",
+  "correction": "Read actual PURE selector and repeat only root metadata validation before any decision",
+  "error": "Root used guessed PURE-CHECKS-v5 filename; frozen source selects PURE-CHECKS-v4",
+  "error_class": "FileNotFoundError",
+  "incorrect_reference": "DETACHED-ABI-OBSERVATION-PURE-CHECKS-v5.json",
+  "native_constructor_calls": 0,
+  "output_reserved": false,
+  "recorded_at_utc": "2026-10-29T00:20:40.090221+00:00",
+  "root_decision_written": false,
+  "schema_version": 1,
+  "source_and_protocol_unchanged": true,
+  "status": "root_preflight_failed_before_module_import_or_dispatch"
+}

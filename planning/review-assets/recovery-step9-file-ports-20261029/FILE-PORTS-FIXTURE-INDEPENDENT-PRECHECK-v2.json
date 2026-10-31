@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "HOLD_FINITE_FIXTURE_DERIVATION_AND_SELECTOR_ISOLATION_BEFORE_PORT_CODE",
+  "reviewer": "/root/native_039_acceptance_audit",
+  "reviewed": {
+    "design_sha256": "d2c775cb9e24dce90f2dc0cc97d7976567d94a1e147e1f57be72f7a5d21efd4d",
+    "schema_sha256": "e3e20e39c08eb9718b03ef65700d375870f6bdf1d77b54279f98465ced454dfc",
+    "fixtures_sha256": "6eeb21a719df69f3c4fdfaf66dcbdcef4a2b5019feadf94428d1cdf01cc244f3"
+  },
+  "findings": [
+    {
+      "id": "non_target_derived_write_sum_is_stale",
+      "reason": "The admission cases preserve an early B=1 lease. Their E is recomputed from N/B/M/S, but sumWj still carries the baseline B=0 value587. A coherent future admission guard could reject this different inconsistency before the intended quota.",
+      "cases": [
+        {"id":"admission_N","derived_E":1713,"supplied_sumWj":587,"derived_sumWj":2125},
+        {"id":"admission_U","derived_E":177,"supplied_sumWj":587,"derived_sumWj":589},
+        {"id":"admission_E","derived_E":177,"supplied_sumWj":587,"derived_sumWj":589},
+        {"id":"admission_capture","derived_E":177,"supplied_sumWj":587,"derived_sumWj":589},
+        {"id":"admission_report","derived_E":177,"supplied_sumWj":587,"derived_sumWj":589},
+        {"id":"admission_read","derived_E":177,"supplied_sumWj":587,"derived_sumWj":589}
+      ],
+      "minimal_correction": "Refresh non-target fields from the actual numeric base dimensions. For deliberately forged E, derive other fields from recomputed E177, not the false serialized E2049."
+    },
+    {
+      "id": "fault_labels_must_not_select_under_test_policy",
+      "reason": "admit_plan currently receives over_cap; validate_handoff and validate_seal_graph receive fault. Future logic must derive the verdict from actual declared inputs, not choose the expected branch using a fault label.",
+      "minimal_correction": "Use fixed plan/facts references; supply actual fictional identity, node path/pin and operation-state data. Keep labels as fixture descriptions only. A same-path vector must truly alias paths.",
+      "scope": "No guard or port has been implemented, so this is a fixture-interface correction before code, not a demonstrated runtime bypass."
+    }
+  ],
+  "derived_claim_clarification": {
+    "E": "With legal ceilings N256/B16/M16/S16, derived E<=1825<2048. E2049 with N1/B1 is a forged derived claim, not an isolated legal-dimension E overflow.",
+    "write": "The admission_write value590 differs from recomputed177+412=589; label it a forged derived-write claim, not an actual fixed-ceiling overflow.",
+    "read": "The read-control claim must similarly be checked against the fictional per-original size-derived Ri, not selected by an action fault label."
+  },
+  "bounded_passed_checks": {
+    "literal_cases": 84,
+    "required_families": 16,
+    "composition_baselines": 1,
+    "supplemental_BOOL_controls": 15,
+    "scripted_API_attempts": 189,
+    "scripted_unreturned_API_calls": 6,
+    "aggregate_byte_projection_disagreements": 0,
+    "once_only_close_count_disagreements": 0,
+    "inspected": [
+      "Exact original/output access, share, creation and reparse flags; four identity-query formats",
+      "Raw signed32 nonzero BOOL success controls, strict bool/type bounds and undefined failed buffers/counts",
+      "Ownership before post-clock/log work, namespace-owned versus reservation-ready, correct once-only closer",
+      "295-second original work cutoff versus300-second cleanup/publication cutoff",
+      "Metadata-only C/D roots, UTF16-unit boundaries, known late write retained with pending hash",
+      "Fictional staging and every false qualification flag; no full verifier success inferred"
+    ]
+  },
+  "method": "Read-only metadata/source inspection and independent arithmetic over the frozen literal scripts. No callable fake sequencer, author test, port or platform API was executed for this precheck.",
+  "batch_complete": true,
+  "no_additional_confirmed_material_finding_in_bounded_batch": true,
+  "next": "Preserve v2 and make one narrowly corrected fixture/interface successor, then exact independent final review before a separate root source-implementation decision.",
+  "actual_API_calls": 0,
+  "port_implemented_or_evaluated": false,
+  "old_original_payload_operations": 0,
+  "originals_authenticated": false,
+  "profile_qualified": false,
+  "runtime_authorized": false
+}

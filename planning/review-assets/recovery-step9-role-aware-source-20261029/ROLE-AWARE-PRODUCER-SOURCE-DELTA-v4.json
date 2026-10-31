@@ -1,0 +1,146 @@
+{
+  "activities": {
+    "AST_syntax_only_files": 4,
+    "V4_subject_imports": 0,
+    "V4_subject_tests": 0
+  },
+  "changes": {
+    "continue_role_verification": {
+      "after": {
+        "bytes": 4273,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v4.py",
+        "sha256": "403adec1f4389eb29d08b14f8da24989c8cdde50f20882629ed1a5cbb81292f7"
+      },
+      "before": {
+        "bytes": 4273,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/continue_role_verification_v3.py",
+        "sha256": "8051d6de8df6f6a33fabc1d36ae1194e8f35e39d7494d6b16195befc70b66ce7"
+      },
+      "byte_identical": false,
+      "changed_named_ASTs": [],
+      "exact_byte_replacements": 1,
+      "top_level_constants_unchanged": true,
+      "unchanged_named_ASTs": 8
+    },
+    "role_file_ports": {
+      "after": {
+        "bytes": 21279,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v4.py",
+        "sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7"
+      },
+      "before": {
+        "bytes": 21279,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_file_ports_v3.py",
+        "sha256": "777ae88eec38719d5f4597e19e2681791f74b94ebcbe343ffc88aeb81e7be32d"
+      },
+      "byte_identical": false,
+      "changed_named_ASTs": [],
+      "exact_byte_replacements": 1,
+      "top_level_constants_unchanged": true,
+      "unchanged_named_ASTs": 2
+    },
+    "role_ledger_codec": {
+      "after": {
+        "bytes": 55497,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v4.py",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      },
+      "before": {
+        "bytes": 55497,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_ledger_codec_v3.py",
+        "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      },
+      "byte_identical": true,
+      "changed_named_ASTs": [],
+      "exact_byte_replacements": 0,
+      "top_level_constants_unchanged": true,
+      "unchanged_named_ASTs": 42
+    },
+    "role_owner": {
+      "after": {
+        "bytes": 77221,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v4.py",
+        "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"
+      },
+      "before": {
+        "bytes": 76176,
+        "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/role_owner_v3.py",
+        "sha256": "7fa4acd6a6059530429e26958c8ddcd76bcb91b1cb0fd57900286bf43643e339"
+      },
+      "byte_identical": false,
+      "changed_named_ASTs": [
+        "project_legacy"
+      ],
+      "exact_byte_replacements": 2,
+      "top_level_constants_unchanged": true,
+      "unchanged_named_ASTs": 39
+    }
+  },
+  "codec_pure_pass_carryforward": {
+    "proof": {
+      "bytes": 12769,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v6.json",
+      "sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b"
+    },
+    "repeat_required_for_rename_only": false,
+    "source_bytes_identical_v3_v4": true
+  },
+  "guard": "Before LegacySnapshot issuance, each present primary and secondary diagnostic.phase must belong to the exact pinned47-name legacy union; otherwise FormatError(LEGACY_NOT_REPRESENTABLE).",
+  "identity": "No phase retagging/drop, exception/token substitution, new owner/context, clock call or source snapshot mutation.",
+  "inputs": [
+    {
+      "bytes": 11798,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v3.json",
+      "sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de"
+    },
+    {
+      "bytes": 2943,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-REPRESENTABILITY-AND-OBSERVATION-CORRECTION-v4.json",
+      "sha256": "73d80d6fa424b5135d8519f7952b86797ea69465407781fe5ba80507b02a28e9"
+    },
+    {
+      "bytes": 463,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PORTS-IMPORT-DELTA-v4.json",
+      "sha256": "ac3367bf191d503a627e56baa0017652f923d15db5c9d7b2cdaed1ea7aacf63e"
+    },
+    {
+      "bytes": 8151,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LEGACY-REPRESENTABILITY-FIRST-LOCALIZATION-v1.json",
+      "sha256": "b6da330cf3c3d5263ffa484c5e2e8db94a6ed1f78eb7474475c8e2ad022ac7d9"
+    },
+    {
+      "bytes": 9689333,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v7.json",
+      "sha256": "8b9708d6c778505c387188bb39b5078186392deda5e1acd7c6d65d4d2d2206e7"
+    },
+    {
+      "bytes": 67839,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v4.json",
+      "sha256": "ca8b142d6e9a96dcc7ea0518b3571e87617fda66953e3ae09830c2c276791e98"
+    },
+    {
+      "bytes": 12769,
+      "path": "planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-CODEC_FIRST-PROOF-v6.json",
+      "sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b"
+    },
+    {
+      "bytes": 37533,
+      "path": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    }
+  ],
+  "postfinal_guard": "SharedOwner.file_state/_active unchanged, as are all other methods and top-level constants.",
+  "qualification": {
+    "FFI_conversion": false,
+    "RSS_fit": false,
+    "full_real_roster": false,
+    "inference_memory": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_first_entry": false,
+    "scientific": false,
+    "source_accepted": false
+  },
+  "schema_version": 1,
+  "status": "STRICT_LEGACY_DIAGNOSTIC_PHASE_GUARD_ONLY_WITH_COHERENT_IMPORTS"
+}

@@ -1,0 +1,120 @@
+{
+  "activity": {
+    "actual_SDK_or_API_calls": 0,
+    "children_or_compiler_or_DLL_loads": 0,
+    "unknown_image_or_GGUF_payload_reads": 0
+  },
+  "checker": {
+    "bytes": 13771,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_census_parser_independent_v1.py",
+    "sha256": "c5205fd02a32f6a04bd1558076755707081b3aca7ad2097222ffa89a2420d200"
+  },
+  "denied_real_operations": [],
+  "elapsed_seconds": 0.0470000000204891,
+  "errors": 0,
+  "failures": 0,
+  "forbidden_filesystem_attempts": [],
+  "recorded_at_utc": "2026-10-29T01:09:05.244096+00:00",
+  "schema_version": 1,
+  "scope": "Independent repaired-wire format/source consistency only; not adversarial-child, image authenticity or lifetime/global inventory proof",
+  "source": {
+    "bytes": 17312,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_validation_v1.py",
+    "sha256": "f5b8b4496018bfa66473bb694c99c3588a49bbb1060b814196f1ba80b32b95db"
+  },
+  "status": "passed",
+  "tests": 6,
+  "vectors": [
+    {
+      "case": "positive-6",
+      "outcome": "census_only"
+    },
+    {
+      "case": "positive-64",
+      "outcome": "census_only"
+    },
+    {
+      "case": "65th-return-with-complete-footer",
+      "outcome": "rejected",
+      "reason": "65th module means partial corpus"
+    },
+    {
+      "case": "complete-after-query-error",
+      "outcome": "rejected",
+      "reason": "A failed/clipped census API cannot establish completeness"
+    },
+    {
+      "case": "complete-after-query-clip",
+      "outcome": "rejected",
+      "reason": "A failed/clipped census API cannot establish completeness"
+    },
+    {
+      "case": "complete-after-nonnatural-end",
+      "outcome": "rejected",
+      "reason": "Enumeration did not end naturally"
+    },
+    {
+      "case": "forged-ABI_eligibility_established",
+      "outcome": "rejected",
+      "reason": "Census footer/counters/bytes/scope mismatch"
+    },
+    {
+      "case": "forged-target_C_queries",
+      "outcome": "rejected",
+      "reason": "Census footer/counters/bytes/scope mismatch"
+    },
+    {
+      "case": "forged-status",
+      "outcome": "rejected",
+      "reason": "Exact census event/field set required: module_census_complete"
+    },
+    {
+      "case": "forged-Api-construction",
+      "outcome": "rejected",
+      "reason": "Exact census-only start/PID/scope required"
+    },
+    {
+      "case": "repaired-missing-self_executable",
+      "outcome": "rejected",
+      "reason": "Complete census is missing/duplicating a required known report"
+    },
+    {
+      "case": "repaired-missing-ggml.dll",
+      "outcome": "rejected",
+      "reason": "Complete census is missing/duplicating a required known report"
+    },
+    {
+      "case": "unlisted-sentinel-no-filesystem",
+      "outcome": "census_only_no_eligibility"
+    },
+    {
+      "case": "positive-astral-two-code-units",
+      "outcome": "census_only"
+    },
+    {
+      "case": "wide-mismatch-utf16_units",
+      "outcome": "rejected",
+      "reason": "Wide captured/prefix length bounds"
+    },
+    {
+      "case": "wide-mismatch-prefix_utf16_units",
+      "outcome": "rejected",
+      "reason": "Wide captured/prefix length bounds"
+    },
+    {
+      "case": "wide-mismatch-utf8",
+      "outcome": "rejected",
+      "reason": "Wide numeric UTF16/UTF8 mismatch"
+    },
+    {
+      "case": "wide-mismatch-utf8_conversion",
+      "outcome": "rejected",
+      "reason": "Wide failed conversion must retain null text"
+    },
+    {
+      "case": "uppercase-numeric-hex",
+      "outcome": "rejected",
+      "reason": "Wide numeric UTF16 hex framing"
+    }
+  ]
+}

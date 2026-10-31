@@ -1,0 +1,1 @@
+{"status": "passed", "cases": 105, "powershell_version": "7.6.5", "differences": [{"id": "duplicate_claim_texts", "expected": "Cross-claim text uniqueness is explicitly post-validation only"}]}

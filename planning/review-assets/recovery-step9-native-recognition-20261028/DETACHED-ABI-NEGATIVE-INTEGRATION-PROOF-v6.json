@@ -1,0 +1,1187 @@
+{
+  "activity": {
+    "CPU_DLL_GGUF_or_protected_reads": 0,
+    "children_or_target_DLL_calls": 0,
+    "real_SDK_constructors_or_API_calls": 0
+  },
+  "actual_children": 0,
+  "checker": {
+    "bytes": 21945,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v6.py",
+    "sha256": "253f1c70fe9c336efded9ef71e5cf38a7a4943027a191a1f301c8780ff8f71a4"
+  },
+  "component": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  },
+  "component_sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c",
+  "denied_real_operations": [],
+  "diagnostic_vectors": "Two own-authored untrusted rich-failure contexts; metadata never authorizes ABI or allowlist changes",
+  "elapsed_seconds": 1.922000000020489,
+  "errors": [],
+  "execute_AST_sha256": "90faafc02456eb365e68c070df77f9d09bbca970d52f09e310c4338f3c588999",
+  "failures": [],
+  "final_contract": {
+    "bytes": 21054,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-EXECUTION-CONTRACT-v6.json",
+    "sha256": "676a77cc45c7c19ead757f09e7283a7343f80c91a45a658638f9d737ee965ce2"
+  },
+  "fixtures": [
+    {
+      "case": "fault-drain",
+      "files": [
+        {
+          "bytes": 1559,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\effective-protocol.json",
+          "sha256": "91f4b83b2986f03fd768ce28a24456e29a2518b08d51dae389f0898394f5b583"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8911,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\execution\\journal.jsonl",
+          "sha256": "890e617112d82a71ae9ce72f5dd434731110fb20642ba7fddebffb27e41444dc"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7747,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\parent-report.json",
+          "sha256": "351eabc7c96ea9bb814ae11485f54ac3e005e56b3b878cb751749e645da735ee"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\parent-reservation.json",
+          "sha256": "16be7b74481c42ea2469fc1861823f1356e370532c04143b7511ed55f7e4ea2d"
+        },
+        {
+          "bytes": 3039,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\post-lease-cleanup.json",
+          "sha256": "61583c69c34d1dd63bfe87cdb4adfa7471f5bef0756b5ece6591e7c9a6743519"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\receipt.json",
+          "sha256": "04d8583b08a8d73276f63d2a0742da84dadcf1db16634de8b432ea16100f2dcd"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2287,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain\\terminal-seal.json",
+          "sha256": "d16c6b8a345fa444c1497ab85713699d319f8084b4a1e885786bc305ddafb47e"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-drain",
+      "status": "failed"
+    },
+    {
+      "case": "fault-snapshot",
+      "files": [
+        {
+          "bytes": 1574,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\effective-protocol.json",
+          "sha256": "cc1b686430179bf19001ebf7771a9c211c6d7b6a5d4282c938b0f421f1013b50"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 7902,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\execution\\journal.jsonl",
+          "sha256": "8cb79696f8a68c8274357a8a433faccee660bf881439dc5ad82d806ff494e751"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 5493,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\parent-report.json",
+          "sha256": "d2a46f8bd223f32e665d249c6efd42ee9906266ae388a727ae55b40dfba40b5b"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\parent-reservation.json",
+          "sha256": "a1b213b5b0c48aeb84f4bde32a12b3b7f798454052d1287003b576829d4052b3"
+        },
+        {
+          "bytes": 3057,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\post-lease-cleanup.json",
+          "sha256": "a7aef51aaa1a9dc180d001aca944e1304910810fac8d0c16269afca67b398cff"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\receipt.json",
+          "sha256": "844389024910d910ceaf9719ce151e768debcf333b6da003977a32a6a6a3c7c2"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2296,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot\\terminal-seal.json",
+          "sha256": "da569b45e353abd6e143c8320d0638b5d388b9f24c34ae24d2df043087e31f67"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-snapshot",
+      "status": "failed"
+    },
+    {
+      "case": "fault-peaks",
+      "files": [
+        {
+          "bytes": 1559,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\effective-protocol.json",
+          "sha256": "8d0e64450980e24dcd5d44c76cad4c7974488a1bf1e50915d4f3c9bab4115f86"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8911,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\execution\\journal.jsonl",
+          "sha256": "198ca2b0c62e587ef0c287327b1fe6a471162e2168c0b25a18b9d9cf7e152fb0"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7483,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\parent-report.json",
+          "sha256": "163a0d3b278a358bff476318424180f1172bb1974faf216b2ffc0c5a00ea67e9"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\parent-reservation.json",
+          "sha256": "837f4c027d3dd2f7431f9737bed487a189c60bceb1744c455da1fedeb08e44ce"
+        },
+        {
+          "bytes": 3039,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\post-lease-cleanup.json",
+          "sha256": "83b1cae11bc4174cdf6b8c3da2e4191ba51d81ae841e0013a06825a35d8c797e"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\receipt.json",
+          "sha256": "81b1a375e16f69933e6228d4f7ad378e593cfdb0cc9dc9f45b68c7ab30f1a824"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2287,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks\\terminal-seal.json",
+          "sha256": "fcdd781161603effd2e10f9a251cf463248595f04b2b68f9d3b692281dba9ac7"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-peaks",
+      "status": "failed"
+    },
+    {
+      "case": "fault-counter",
+      "files": [
+        {
+          "bytes": 1569,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\effective-protocol.json",
+          "sha256": "386bdc8f3a35336d1c1fca447a316ed2da87c2a0f70008d5a3162bd0a02618a6"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8917,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\execution\\journal.jsonl",
+          "sha256": "bff78505790e2585390dd83b9b7b0bc77f8f368a370e36742de9c6fe9c21639b"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7753,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\parent-report.json",
+          "sha256": "b17a1618ebf04de6b7747d19ffc94931b3a07819b213fe214371416006574cc7"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\parent-reservation.json",
+          "sha256": "34e68e7d3b59b280599ad8730c976ebacc858d286b0dd1bac3860356d1b725b7"
+        },
+        {
+          "bytes": 3051,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\post-lease-cleanup.json",
+          "sha256": "16f70e4847d38ea02cfcf4c2484e44318997eea84310789c800379de8ba6d1da"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\receipt.json",
+          "sha256": "0e1d4dc27ad4e719aa01848bfb8df40e71211d42a267b569b9e67713e2da3a3f"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2293,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter\\terminal-seal.json",
+          "sha256": "dceeba02823d2ad9c3dd84fe31259d7dc54980422e442f4f83854e266f59c30f"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-counter",
+      "status": "failed"
+    },
+    {
+      "case": "fault-raw_publication",
+      "files": [
+        {
+          "bytes": 1609,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\effective-protocol.json",
+          "sha256": "28212f8ff819be912e656b950c74b7d51626c78cf05d0e0b59d7fe08c76d6640"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 7923,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\execution\\journal.jsonl",
+          "sha256": "d856f47f891e57b0dc10a8c6abf97e2d9cce257daa5964d990d4990adb870142"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7894,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\parent-report.json",
+          "sha256": "db6ddced37b4448d0185fadd9bbcf16b4014801c909a1ade17b098b911b5da57"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\parent-reservation.json",
+          "sha256": "6044407ecd9b4a6fb46a27d287b1a9f2277a36109a6405947c58c7fb65d2b412"
+        },
+        {
+          "bytes": 3099,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\post-lease-cleanup.json",
+          "sha256": "b6645663573746c21aa2556eeee0704f296b84dbd7a6c4e8b68009fbcbaec61a"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\receipt.json",
+          "sha256": "e547fbb440dd311c97b29bfdc1eca5761686e63f471749ad17cbfc8769245504"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2317,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication\\terminal-seal.json",
+          "sha256": "e19546927cacca73033d0ffba7d9badae80808a0a07ab7c337bbd18e50498b10"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\fault-raw_publication",
+      "status": "failed"
+    },
+    {
+      "case": "nonzero",
+      "files": [
+        {
+          "bytes": 1539,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\effective-protocol.json",
+          "sha256": "28b2dfff513558ea94f7a1f575256859f023d97bbb6f6d8e066a4d31d52afe5e"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8899,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\execution\\journal.jsonl",
+          "sha256": "e65d485113d7d746be263b21117e94ece5052ac15dd0dd039ea02f94d588522d"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7447,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\parent-report.json",
+          "sha256": "041ee037d8ca874a4062d1746aa8d06218f4d12221eae32cb66ebea8a1e153a9"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\parent-reservation.json",
+          "sha256": "48ea535b30c939adacec622b5b51c70b3ad4af4e7421ff6f6fd5a4cb5d461c37"
+        },
+        {
+          "bytes": 3015,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\post-lease-cleanup.json",
+          "sha256": "4bccc94e2a4ad83803e976de099737a865ae978e0f1952238a3c3cc6cf33d07c"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\receipt.json",
+          "sha256": "9a1ef17680426dd5e9228d6925913bf911edb348c1776cb82831343c190e875d"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2275,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero\\terminal-seal.json",
+          "sha256": "fb282c3a263d6c17890ad0386b3cf2092d68bf64d6155f3b671d8e031848467c"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\nonzero",
+      "status": "failed"
+    },
+    {
+      "case": "late",
+      "files": [
+        {
+          "bytes": 1524,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\effective-protocol.json",
+          "sha256": "3bf87c027ab2c79b6b841e934c81293016eed67df2a3ea6f50a99d6698ae8c24"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8890,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\execution\\journal.jsonl",
+          "sha256": "413d8904e851462925f649c31c403210bb6f83ff0b55ee86e04dadd03e97eb97"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 1015,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\late-failure.json",
+          "sha256": "fc1077123afd9bc480b83e56d57d1fa2cbd683a202eb898ad66fb47660e38424"
+        },
+        {
+          "bytes": 7429,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\parent-report.json",
+          "sha256": "c4c03ff16a2371076b42b4c6ddd04fa3997caa552804ec462a411797dba6225a"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\parent-reservation.json",
+          "sha256": "ea3c705e8e2b0d740c81a1e984ea02a5c242b9b82bb1b30004aa0de75d6a78c5"
+        },
+        {
+          "bytes": 3283,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\post-lease-cleanup.json",
+          "sha256": "0e38ed4fdc29d9a2d87b12eccd0a33d480e883dea72e15c53b103015538aee88"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\receipt.json",
+          "sha256": "cf7204ecfff3b36b7049f50deae0a2fb82bc77b78caec0d9ab90e76981cd8f04"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2604,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late\\terminal-seal.json",
+          "sha256": "2daf7a3e987a7115ee89d0550b9710ccc9c3d2a1891a34f70f187550757854e0"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\late",
+      "status": "failed"
+    },
+    {
+      "case": "interrupt-KeyboardInterrupt",
+      "files": [
+        {
+          "bytes": 1639,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\effective-protocol.json",
+          "sha256": "7d0358eaae8eac3e0a809c75b4776e8d528536493b3af947e8989888bccd7301"
+        },
+        {
+          "bytes": 3751,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\execution\\journal.jsonl",
+          "sha256": "684453e941aed30b7bb05c347738c595e3d9e5a32ab042fec9a2df3b79621b84"
+        },
+        {
+          "bytes": 118,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\failure.json",
+          "sha256": "eb0662717b3602dce38375d1b65878a82b9a99df27f5386d5d2eb61644890ee0"
+        },
+        {
+          "bytes": 2666,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\parent-report.json",
+          "sha256": "5adcea561121a96dcd427a59d9ac2dd4d545bbb754065970f79617226ffb1617"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\parent-reservation.json",
+          "sha256": "7583c3fff70088b286ae41e430124d80fa8f46ed7617052bd96e46f0e85e493d"
+        },
+        {
+          "bytes": 1983,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\post-lease-cleanup.json",
+          "sha256": "d1d592d2161b93479c4733cf84f0d180fcb75e8eb32b7d95e1d9406b34199a69"
+        },
+        {
+          "bytes": 996,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\receipt.json",
+          "sha256": "0f3130743e797392612c8adfa09b3eca56c3cb043130391ca2d89c2ab7cbeb99"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\stdout.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2092,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt\\terminal-seal.json",
+          "sha256": "c64321558789c462fd5a69fa0d2d983588a0abff6e72a77227a4ef19f55e4498"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-KeyboardInterrupt",
+      "status": "failed"
+    },
+    {
+      "case": "interrupt-SystemExit",
+      "files": [
+        {
+          "bytes": 1604,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\effective-protocol.json",
+          "sha256": "63c24ab1b3553835a44848db93379f9f7c75571d157b0cd57f24caf856cf7b90"
+        },
+        {
+          "bytes": 3723,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\execution\\journal.jsonl",
+          "sha256": "2cfe9b96b331b126923b23e825414d4e6432bc0aa0079aa396f691386d3c5b8d"
+        },
+        {
+          "bytes": 111,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\failure.json",
+          "sha256": "8e5b084495fcbbfcd0de91afef3d108ca2cf300a691e00d01a09537e0372ce55"
+        },
+        {
+          "bytes": 2638,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\parent-report.json",
+          "sha256": "588ff49cab93c561ad944e18bb00b27ec680669aa86f2be2b1874590b75b72a5"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\parent-reservation.json",
+          "sha256": "a7237c83fece6d3fe82b917d4d73539224498782c5c4243ac230efd3e94726af"
+        },
+        {
+          "bytes": 1948,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\post-lease-cleanup.json",
+          "sha256": "e7232ee392c86dce024fcaf60c10345da3483835fa32a5280fdb25d12e734d6d"
+        },
+        {
+          "bytes": 996,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\receipt.json",
+          "sha256": "2cd12bb6020821a29b1ae0eaf0f60c07b68413ef7638b7ec8101e80d0e288d37"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\stdout.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2071,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit\\terminal-seal.json",
+          "sha256": "9d83c2483ce3e67cc3340cae09470d64b0bd3f7cd76f1e1a4c026ab97849c8fb"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\interrupt-SystemExit",
+      "status": "failed"
+    },
+    {
+      "case": "recheck",
+      "files": [
+        {
+          "bytes": 1539,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\effective-protocol.json",
+          "sha256": "ebe6b99c0aff1c07a9d9f77eb6c5c2b24fd6e225d79abc18e2824fc3c33c4e74"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8899,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\execution\\journal.jsonl",
+          "sha256": "7acb81def5cc555ba58e0d0ed1169a46343807d9ec283c18ed5189145ee5faed"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7109,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\parent-report.json",
+          "sha256": "3f51e04377d98f808a22bcdfe0bf5a13c41ca644f42ec7f10a19d07b567e0b30"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\parent-reservation.json",
+          "sha256": "ff14d6b1c0805837eafac02f23dcd34d53b3a1e512282f4ae19e442b14510d58"
+        },
+        {
+          "bytes": 2372,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\post-lease-cleanup.json",
+          "sha256": "450be6639d78db70e03ea071786dacaf8223cd86447252dd4d372b52881f8e2b"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\receipt.json",
+          "sha256": "0a60aea09aab39799db21978b63cd2802f3c967488a021b2b3fac834b3826741"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2275,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck\\terminal-seal.json",
+          "sha256": "00c2359899e3ef5620ac4227e9e24dcf29ed82727176a54ec8b58d66c0ea0fca"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\recheck",
+      "status": "failed"
+    },
+    {
+      "case": "diagnostic-context-2",
+      "files": [
+        {
+          "bytes": 1604,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\effective-protocol.json",
+          "sha256": "79f99643d9a154d82bbd2ffe68c5d6115b7e07db45853ee0722a44e72029ffa7"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 413,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\execution\\child\\failure.json",
+          "sha256": "6810d72dd02439586af91221f58819c24cf54ec62759617d14aa5742180b6a27"
+        },
+        {
+          "bytes": 782,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\execution\\child\\result.partial.jsonl",
+          "sha256": "d038aff4b0c43052c1106ae2bf0b3e729240b1bf1fcd53e66a92edbd2cd2d769"
+        },
+        {
+          "bytes": 8938,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\execution\\journal.jsonl",
+          "sha256": "67a7ccea8e2ff6673245c95c62eda8ad14308257cfb60184a8df183b6eb27776"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 7527,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\parent-report.json",
+          "sha256": "6a89863acaf56405db003c61da1f2f51131c633344ba882d988dee501ccf4607"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\parent-reservation.json",
+          "sha256": "98167b50c220327d2ba9a8561ea5d626c7945936a90b5c842a81f0600747b306"
+        },
+        {
+          "bytes": 3093,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\post-lease-cleanup.json",
+          "sha256": "4ada3857dcef7b6ac28bc515f2f791b69448d323180af74edbd8cbe83facf734"
+        },
+        {
+          "bytes": 1368,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\receipt.json",
+          "sha256": "a89b47772e0912194b634c9c0544a263bed43055a291ba5d42aadeb5e7002eb5"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 414,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\stdout.bin",
+          "sha256": "5bb4e75fc96dfbcdfba5cfbfef328c6c15e77b293f93d04448e4cf938eef148d"
+        },
+        {
+          "bytes": 2445,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2\\terminal-seal.json",
+          "sha256": "1550fd1bc074ec625f7f6f416940d6f741d68d187191cb5139682c58a52b397f"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-2",
+      "status": "failed"
+    },
+    {
+      "case": "diagnostic-context-0",
+      "files": [
+        {
+          "bytes": 1604,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\effective-protocol.json",
+          "sha256": "268e81243050a1a241c2143bbdf655301d9b54e08543a0e92a33e5f91e8d1a1e"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 413,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\execution\\child\\failure.json",
+          "sha256": "6810d72dd02439586af91221f58819c24cf54ec62759617d14aa5742180b6a27"
+        },
+        {
+          "bytes": 782,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\execution\\child\\result.partial.jsonl",
+          "sha256": "d038aff4b0c43052c1106ae2bf0b3e729240b1bf1fcd53e66a92edbd2cd2d769"
+        },
+        {
+          "bytes": 8959,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\execution\\journal.jsonl",
+          "sha256": "852ec784ca328218f2018db7878189244ec2e0f57856372dd279fad25a883e95"
+        },
+        {
+          "bytes": 124,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\failure.json",
+          "sha256": "0c08c4c2fc643f3fc23efdc952fed89aa69347738b198f571f25c4e429d049f0"
+        },
+        {
+          "bytes": 7548,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\parent-report.json",
+          "sha256": "b24f3609a55df29c3f2f13995aadc8b13e8577403e4924eec7c14edc834c03ca"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\parent-reservation.json",
+          "sha256": "d06efd13c4153f089846733a5cef6bf41f263d86527b9d3cec53bc3966f51517"
+        },
+        {
+          "bytes": 3114,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\post-lease-cleanup.json",
+          "sha256": "478b771671f6a8fc1a73a0c1302c041f1eee38946ec998408fe71f18dc8dec9c"
+        },
+        {
+          "bytes": 1368,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\receipt.json",
+          "sha256": "2fd9a93e7d8f2823eb00b0ca117b790fd3e3c7ec6bb6a3eb2ca1eb4b734e6dcb"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 414,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\stdout.bin",
+          "sha256": "5bb4e75fc96dfbcdfba5cfbfef328c6c15e77b293f93d04448e4cf938eef148d"
+        },
+        {
+          "bytes": 2445,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0\\terminal-seal.json",
+          "sha256": "398624cc752e85b0b6fc3af5278991391a3e06e7eec165e2d191f453a603e52e"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\diagnostic-context-0",
+      "status": "failed"
+    },
+    {
+      "case": "success",
+      "files": [
+        {
+          "bytes": 1539,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\effective-protocol.json",
+          "sha256": "039d0dbebfd4c978d710971bf243bc4c241f5cad7c222c859817b8ded5a1b0af"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 2453,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\execution\\child\\result.jsonl",
+          "sha256": "29f751a842809557d50f49307177347a844457ffd4ba610d2cb3faefb5fc0879"
+        },
+        {
+          "bytes": 8899,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\execution\\journal.jsonl",
+          "sha256": "1438559ce287a2a84b76c1028621dbf26463960686958200e1c297495db447be"
+        },
+        {
+          "bytes": 9421,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\parent-report.json",
+          "sha256": "bfb7cb08b041e59b79cf2a815ff8798dc2fc479f16408dd303326bf551c3497a"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\parent-reservation.json",
+          "sha256": "965eb5e0a2050c0a7a1d719c11b7933a3f7bfd8e3bc06becfbebe699b31c5638"
+        },
+        {
+          "bytes": 2791,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\post-lease-cleanup.json",
+          "sha256": "d6a4c69b9da349a3a46da8e16f1d4279e247a221b016840797d3d66f911d0e1b"
+        },
+        {
+          "bytes": 1187,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\receipt.json",
+          "sha256": "808993fef8c12a39908a29c852d32d80f8d65a9d6c05565acac7dce3ee2dffa0"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2001,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success\\terminal-seal.json",
+          "sha256": "60773409473f5292525b0236fbc36a2b6597343d38f964c68fa6604441119464"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\success",
+      "status": "ABI_observations_retained_independent_qualification_pending"
+    },
+    {
+      "case": "after-seal",
+      "files": [
+        {
+          "bytes": 350,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\after-seal-failure.json",
+          "sha256": "a4caf07f69978839468420aa982e4ca14927ccd51545888b140197743ad1aff7"
+        },
+        {
+          "bytes": 1554,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\effective-protocol.json",
+          "sha256": "d65db96d28127f29358cddd36c34d286f06d15386edc28f3cc39b0d8d43142d9"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 2453,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\execution\\child\\result.jsonl",
+          "sha256": "29f751a842809557d50f49307177347a844457ffd4ba610d2cb3faefb5fc0879"
+        },
+        {
+          "bytes": 8908,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\execution\\journal.jsonl",
+          "sha256": "37839dff28382782120ba00e4f060f7e854631ad9cbb44c67bc0f7a5528e8c26"
+        },
+        {
+          "bytes": 9439,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\parent-report.json",
+          "sha256": "ad737d388cf438c185fd974a834bfb782def56a9c806cc6b3ce9fd6b49bfb410"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\parent-reservation.json",
+          "sha256": "0cbcca9977473ffe3030544974754c23d3bdee722f8424e71327cf76006f86d1"
+        },
+        {
+          "bytes": 2806,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\post-lease-cleanup.json",
+          "sha256": "111e2fe67b838adb530a808ba84e575e223ff6b110bb6511ebeceb380511192b"
+        },
+        {
+          "bytes": 1187,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\receipt.json",
+          "sha256": "d368befa1230315e590d76f2586d40cdf2586653a73d8750d8008a7b5d007edb"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2007,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal\\terminal-seal.json",
+          "sha256": "1bf8272f7e8ba848f05e2f85ce11a970d3deca10e8c27d7beb02de9d2c860326"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\after-seal",
+      "status": "failed"
+    },
+    {
+      "case": "publication",
+      "files": [
+        {
+          "bytes": 1559,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\effective-protocol.json",
+          "sha256": "4dc5c25267f12d6141c8c2b11dc68edb3e6cef10257a5a778c22df0b1a284e2f"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 8911,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\execution\\journal.jsonl",
+          "sha256": "ceb93df1b6962dc426af8828f51775a3e842094568f4661663cb749d5946adee"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\parent-reservation.json",
+          "sha256": "cbea4b879334252d0b5d7851b90c220bfc54efa9a8ad3fa5a3eb78cdfad5c914"
+        },
+        {
+          "bytes": 2810,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\post-lease-cleanup.json",
+          "sha256": "3de6c4c2fffa3c593d73b7c5e0aa8e3ce5509e118b8f2a485d1eedd85c22b0fe"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 379,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\terminal-publication-error.json",
+          "sha256": "2dc5a3ca4175ae272aaf529405341c14e182d19f1c090e0398e0f94e2abac0f7"
+        },
+        {
+          "bytes": 1964,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication\\terminal-seal.json",
+          "sha256": "1bfde9b35c5caa2f66fdc00184e9d55506745fa93aca1e80ee723d2d6eb7ea70"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\publication",
+      "status": "failed"
+    },
+    {
+      "case": "unknown-unknown_creation",
+      "files": [
+        {
+          "bytes": 1624,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\effective-protocol.json",
+          "sha256": "82a1053a690f3777fe98a4f589442203b2f053596541ef960f3feae90822e31c"
+        },
+        {
+          "bytes": 6433,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\execution\\journal.jsonl",
+          "sha256": "256d694212cdfcbfa5ccaa58cd732b8d0fd190a0511f21f390182c97fb543e9d"
+        },
+        {
+          "bytes": 108,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\failure.json",
+          "sha256": "3cde20aef6217fd0ff945cc2412c89ac9114e74a94bc2fa13ef6e7600125f0fd"
+        },
+        {
+          "bytes": 7348,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\parent-report.json",
+          "sha256": "7489322a0da2f373c1ea4e7cd5b9ee4d166d2df0456356ca5044cca64ce05964"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\parent-reservation.json",
+          "sha256": "4750dc11c1afec2ad43c76555914664c3e01fb3895ef5bf267c904516fc4c208"
+        },
+        {
+          "bytes": 3139,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\post-lease-cleanup.json",
+          "sha256": "3f5a7b861550bd22e08bbb1a6f3dc42fafb7ca33df38e17bbbcfda3f417d53f8"
+        },
+        {
+          "bytes": 997,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\receipt.json",
+          "sha256": "9c896eaa7ed8cd330713c31031a4c5a9eab0dcc608344ba1fa67cc4703304059"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2102,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation\\terminal-seal.json",
+          "sha256": "b73e5ee5af02f0d573b85d5739db33154de655652d646c0320afedd96e5e1601"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-unknown_creation",
+      "status": "failed"
+    },
+    {
+      "case": "unknown-deadline",
+      "files": [
+        {
+          "bytes": 1584,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\effective-protocol.json",
+          "sha256": "89026811289f695bddffeb4d52e8529581fce3ae702d98b810c20552c9f0337b"
+        },
+        {
+          "bytes": 93,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\execution\\child\\attempt.json",
+          "sha256": "225caa7bbd59f68b15f7ef81248b420e3d2d47f3338e5795acda4a2fece149e3"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 7085,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\execution\\journal.jsonl",
+          "sha256": "846ef1db97176b329039cf241d4be711e96d01b800aa9efb783cf3e3fcf1a02f"
+        },
+        {
+          "bytes": 110,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\failure.json",
+          "sha256": "af9957752e0f40dd956df856d4358e327317abe635d9121cc0c4cbd07ac953df"
+        },
+        {
+          "bytes": 5560,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\parent-report.json",
+          "sha256": "93d856d164abb003be5af1ffd6da1afd27c35e63742efde51103d0e3c1cea275"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\parent-reservation.json",
+          "sha256": "1ebb180d282236e9c5b5af905de684453dd219a2436b054ff6035c4a6bd3dd6d"
+        },
+        {
+          "bytes": 3090,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\post-lease-cleanup.json",
+          "sha256": "f9635b952ba09b37da769d9797030df250ae6d4d2d903bbfecb8adf7aa9ced7b"
+        },
+        {
+          "bytes": 1237,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\receipt.json",
+          "sha256": "5a263dae3f67052a7d52fb7e123c45ebb8a2977a277a8de8a3026dcfcf618846"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2316,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline\\terminal-seal.json",
+          "sha256": "e48b18bb343cf6a9e272161e265e79ee717a7746342ab4b0aab2366156378e04"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-independent-negative-integration-v6-1793232944026138300\\unknown-deadline",
+      "status": "failed"
+    }
+  ],
+  "helper_sha256": "ec985415358e547db31bf988a5027099b2992a06d096f3067136ffa03f858aff",
+  "previous_runtime_source": {
+    "bytes": 41809,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v4.py",
+    "sha256": "f3bbd60e3c84c5eb99c2ba700b73dda81da45d6f2e039c74fa5b9fb88f4d25b9"
+  },
+  "qualified_SDK_source": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "real_sdk_constructions": 0,
+  "schema_version": 1,
+  "scope": "Independent execute-AST + terminal component + original SDK pure owner/sealer with fake API; role/authority inputs are synthetic, strict result parser uses retained contract shape",
+  "source": {
+    "bytes": 45147,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v6.py",
+    "sha256": "ec985415358e547db31bf988a5027099b2992a06d096f3067136ffa03f858aff"
+  },
+  "status": "passed",
+  "tests": 9,
+  "unchanged_runtime_component_ASTs": {
+    "abi_argv": "40cb02066e75fa2dc9d6c3e7cd054cbd3495a2510e9362f0d85402bc30642aa1",
+    "api_class": "0f24b22f28a513e707247c16b5d1857577b0042ab62c8a5f5cf36a2ebbe3f6d1",
+    "exact": "076fa98b41d264684bb8a15daafd55ac83d37b1ccdfec00a28b7b10cb23c9318",
+    "execute": "90faafc02456eb365e68c070df77f9d09bbca970d52f09e310c4338f3c588999",
+    "json_value": "b31065421c704f1fe283da8f27d12f305e3d0beeb5f5df049cc71886e57f15ce",
+    "runtime_pins": "51da1b0879a8598ae5ea81e0e5114aa896604e19523d9daec3bdd616e9a772aa",
+    "sha": "82daf9a8840800fa4b1f26786e43bbffb24afd53ebb2d272f3678319873cd50c",
+    "terminal_observer": "07e1d33b3cfdbbaae31a6ab205349e7396434a22c2b252d04c791ad8b558b9be",
+    "validate_child_artifacts": "f5beaeb4e0b3abfda60064ae5b09f8ed0266a805575cf2b1210a3bbc235c9853",
+    "validate_modules": "40a2f125e56a9af4892a1705cd3599aa91424973deb1a72f56489b3d33a0f463"
+  },
+  "unchanged_success_wire_sections": [
+    "expected_defaults",
+    "expected_layouts",
+    "child_artifacts",
+    "version_policy",
+    "runtime_pins",
+    "System32_candidate_names"
+  ]
+}

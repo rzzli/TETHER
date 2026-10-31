@@ -1,0 +1,64 @@
+{
+  "actual_SDK_constructors": 0,
+  "actual_children": 0,
+  "authority": {
+    "bytes": 42748,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json",
+    "sha256": "70efee36da8aa73845fee25ba2eea495895a84b4cd9676c98ae9777ce084b42c"
+  },
+  "checked_at_utc": "2026-10-29T02:00:01.617628+00:00",
+  "checker": {
+    "bytes": 14219,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_binding_v3.py",
+    "sha256": "92356f35b7d21bbc098ca8bddda2f49a5905bd799648926ca5a9f167a9085306"
+  },
+  "dynamic_inputs": 4,
+  "future_output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-self-module-census-v1-20261029T015746Z",
+  "future_output_absent": true,
+  "helper": {
+    "bytes": 61937,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v3.py",
+    "sha256": "018f3c8216b6096e34eff43241c3864a9a15f0decbdde6005f2b905c5e6c247d"
+  },
+  "input_bytes": 24917722,
+  "input_pins_rehashed": 183,
+  "preparation_report": {
+    "bytes": 1116,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-self-module-census-preparation-v3-20261029.json",
+    "sha256": "f7474d0a687f4d4db0a9c9770cce4f53e4198d07cf6ee490727a6ef9e1c9ae20"
+  },
+  "previous_failed_preparation_unchanged": true,
+  "protocol": {
+    "bytes": 50015,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-EXECUTION-PROTOCOL-v2.json",
+    "sha256": "8f011fc7bdc3a92033cd3ab5277b7346a512b08c447234ff2aedeefb3a192215"
+  },
+  "publisher_correction": "Only metadata source/checker/proof/protocol/report paths changed; every function AST equals preserved v2; report now one exclusive data/cache path",
+  "pure_proof": {
+    "bytes": 4073,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BINDING-PURE-PROOF-v3.json",
+    "sha256": "08d7c731a5fa3854e55c33f912670e8e4a3f506863892e25a53d38aff6127d21"
+  },
+  "reported_unknown_image_opens": 0,
+  "schema_version": 1,
+  "scope": "Author retained-data/source QA; no independent execution or scientific permission. Root decision and audited driver are still required.",
+  "static_inputs": 179,
+  "status": "author_preparation_QA_passed_pending_independent_review",
+  "unchanged_v1_mechanics_functions": [
+    "execute",
+    "api_class",
+    "terminal_observer",
+    "census_sealer",
+    "census_validator",
+    "validate_child_artifacts",
+    "inspect_child_artifact_bounds",
+    "validate_success_stdout",
+    "census_argv",
+    "wire_schema",
+    "json_value",
+    "exact",
+    "runtime_pins",
+    "sha"
+  ],
+  "unchanged_v2_function_count": 22
+}

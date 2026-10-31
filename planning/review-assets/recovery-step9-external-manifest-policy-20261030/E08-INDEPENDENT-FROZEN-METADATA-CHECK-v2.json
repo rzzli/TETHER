@@ -1,0 +1,500 @@
+{
+  "activity": {
+    "native_or_original_targets_followed": false,
+    "policy_solver": false,
+    "subject_imports": 0,
+    "subject_runs": 0
+  },
+  "checker": {
+    "bytes": 10425,
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/check_e08_frozen_metadata_peer_v2.py",
+    "sha256": "b7e3eb0e08dfd99da299d269d2e8e5998a631e0df4a01e4dddfb885734098caa"
+  },
+  "checks": [
+    "24 retained pin bytes/hashes",
+    "52 draft/final object identities by value",
+    "52 structural constructor shells",
+    "52 canonical sizes or explicit Unicode absence",
+    "10 exact report fields/counts/digests",
+    "42 manually reviewed refusal labels",
+    "7 independent equality/one-over bound pairs",
+    "independent EntryPlan mismatch context",
+    "10/15 unexecuted genuine integration geometry"
+  ],
+  "counts": {
+    "constructor_shells": 52,
+    "named_integration_scenarios": 10,
+    "planned_branches": 15,
+    "refusals": 42,
+    "reports": 10,
+    "vectors": 52
+  },
+  "freeze": {
+    "bytes": 9103,
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-POLICY-PRECODE-FREEZE-v1.json",
+    "sha256": "096efd94efe29ab2c9e5b65b3d9ccd3e12eabf375a94e0f4ddcdfb4c557f3fa0"
+  },
+  "literal_rows": [
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "allowed_external_and_prior_roots",
+      "ordinal": 1,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 1696,
+      "id": "allowed_downstream_current_provenance",
+      "ordinal": 2,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 1952,
+      "id": "authoring_planned_unbuilt_descendants",
+      "ordinal": 3,
+      "reviewed_outcome": "AUTHORING_ONLY"
+    },
+    {
+      "canonical_utf8_bytes": 1952,
+      "id": "execution_unbuilt_static_descendants",
+      "ordinal": 4,
+      "reviewed_outcome": "POLICY_UNBUILT"
+    },
+    {
+      "canonical_utf8_bytes": 1799,
+      "id": "execution_unbuilt_nonbasis_still_refuses",
+      "ordinal": 5,
+      "reviewed_outcome": "POLICY_UNBUILT"
+    },
+    {
+      "canonical_utf8_bytes": 1672,
+      "id": "forbidden_decision_direct",
+      "ordinal": 6,
+      "reviewed_outcome": "POLICY_FORBIDDEN_ANCESTRY"
+    },
+    {
+      "canonical_utf8_bytes": 1672,
+      "id": "forbidden_output_direct",
+      "ordinal": 7,
+      "reviewed_outcome": "POLICY_FORBIDDEN_ANCESTRY"
+    },
+    {
+      "canonical_utf8_bytes": 1862,
+      "id": "forbidden_output_transitive_via_pinned_input",
+      "ordinal": 8,
+      "reviewed_outcome": "POLICY_FORBIDDEN_ANCESTRY"
+    },
+    {
+      "canonical_utf8_bytes": 1867,
+      "id": "forbidden_ancestry_outside_basis",
+      "ordinal": 9,
+      "reviewed_outcome": "POLICY_FORBIDDEN_ANCESTRY"
+    },
+    {
+      "canonical_utf8_bytes": 1667,
+      "id": "cycle_self",
+      "ordinal": 10,
+      "reviewed_outcome": "POLICY_CYCLE"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "cycle_mutual",
+      "ordinal": 11,
+      "reviewed_outcome": "POLICY_CYCLE"
+    },
+    {
+      "canonical_utf8_bytes": 1860,
+      "id": "cycle_transitive_three_nodes",
+      "ordinal": 12,
+      "reviewed_outcome": "POLICY_CYCLE"
+    },
+    {
+      "canonical_utf8_bytes": 1672,
+      "id": "external_tcb_dependency_role_refuses",
+      "ordinal": 13,
+      "reviewed_outcome": "POLICY_DEPENDENCY_ROLE"
+    },
+    {
+      "canonical_utf8_bytes": 1657,
+      "id": "prior_metadata_dependency_role_refuses",
+      "ordinal": 14,
+      "reviewed_outcome": "POLICY_DEPENDENCY_ROLE"
+    },
+    {
+      "canonical_utf8_bytes": 1672,
+      "id": "unknown_dependency",
+      "ordinal": 15,
+      "reviewed_outcome": "POLICY_UNKNOWN_NODE"
+    },
+    {
+      "canonical_utf8_bytes": 1854,
+      "id": "identical_duplicate_node",
+      "ordinal": 16,
+      "reviewed_outcome": "POLICY_DUPLICATE_ID"
+    },
+    {
+      "canonical_utf8_bytes": 1854,
+      "id": "conflicting_duplicate_node",
+      "ordinal": 17,
+      "reviewed_outcome": "POLICY_PIN_CONFLICT"
+    },
+    {
+      "canonical_utf8_bytes": 1683,
+      "id": "duplicate_dependency",
+      "ordinal": 18,
+      "reviewed_outcome": "POLICY_DUPLICATE_ID"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "binding_mode_mismatch",
+      "ordinal": 19,
+      "reviewed_outcome": "POLICY_BINDING_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "binding_basis_order_mismatch",
+      "ordinal": 20,
+      "reviewed_outcome": "POLICY_BINDING_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "binding_external_pin_mismatch",
+      "ordinal": 21,
+      "reviewed_outcome": "POLICY_BINDING_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1698,
+      "id": "current_identity_relabelled_as_tcb",
+      "ordinal": 22,
+      "reviewed_outcome": "POLICY_BINDING_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1686,
+      "id": "serialized_approved_flag_is_extra_key",
+      "ordinal": 23,
+      "reviewed_outcome": "POLICY_SCHEMA"
+    },
+    {
+      "canonical_utf8_bytes": 1676,
+      "id": "unknown_role",
+      "ordinal": 24,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 1702,
+      "id": "current_role_cannot_use_pinned_state",
+      "ordinal": 25,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 1673,
+      "id": "boolean_bytes_not_integer_zero",
+      "ordinal": 26,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 1687,
+      "id": "signed64_byte_maximum_valid_metadata",
+      "ordinal": 27,
+      "reviewed_outcome": "AUTHORING_ONLY"
+    },
+    {
+      "canonical_utf8_bytes": 1687,
+      "id": "signed64_byte_one_over_domain",
+      "ordinal": 28,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 1608,
+      "id": "pinned_hash_null_is_not_unbuilt",
+      "ordinal": 29,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 2154,
+      "id": "id_128_ascii_bytes_valid",
+      "ordinal": 30,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 2158,
+      "id": "id_129_length_precedes_pattern",
+      "ordinal": 31,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": 1674,
+      "id": "id_nonascii_valid_length_domain",
+      "ordinal": 32,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 2305,
+      "id": "reason_256_unicode_codepoints_valid",
+      "ordinal": 33,
+      "reviewed_outcome": "AUTHORING_ONLY"
+    },
+    {
+      "canonical_utf8_bytes": null,
+      "id": "reason_257_length_precedes_unicode",
+      "ordinal": 34,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": null,
+      "id": "reason_lone_surrogate_domain",
+      "ordinal": 35,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 4049,
+      "id": "current_outputs_14_valid",
+      "ordinal": 36,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 4232,
+      "id": "current_outputs_15_limit",
+      "ordinal": 37,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": 46170,
+      "id": "nodes_256_valid",
+      "ordinal": 38,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 46348,
+      "id": "nodes_257_limit",
+      "ordinal": 39,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": 77471,
+      "id": "declared_edges_4096_valid",
+      "ordinal": 40,
+      "reviewed_outcome": "EXECUTION_BASIS_VALIDATED"
+    },
+    {
+      "canonical_utf8_bytes": 77482,
+      "id": "declared_edges_4097_limit",
+      "ordinal": 41,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": 131072,
+      "id": "canonical_combined_131072_valid",
+      "ordinal": 42,
+      "reviewed_outcome": "AUTHORING_ONLY"
+    },
+    {
+      "canonical_utf8_bytes": 131073,
+      "id": "canonical_combined_131073_limit",
+      "ordinal": 43,
+      "reviewed_outcome": "POLICY_LIMIT"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "entry_plan_basis_count_mismatch",
+      "ordinal": 44,
+      "reviewed_outcome": "POLICY_BASIS_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1670,
+      "id": "entry_plan_basis_pin_mismatch",
+      "ordinal": 45,
+      "reviewed_outcome": "POLICY_BASIS_MISMATCH"
+    },
+    {
+      "canonical_utf8_bytes": 1775,
+      "id": "identical_duplicate_external_pin",
+      "ordinal": 46,
+      "reviewed_outcome": "POLICY_DUPLICATE_ID"
+    },
+    {
+      "canonical_utf8_bytes": 1775,
+      "id": "conflicting_duplicate_external_pin",
+      "ordinal": 47,
+      "reviewed_outcome": "POLICY_PIN_CONFLICT"
+    },
+    {
+      "canonical_utf8_bytes": 1775,
+      "id": "cross_role_pin_overlap_identical_content",
+      "ordinal": 48,
+      "reviewed_outcome": "POLICY_PIN_CONFLICT"
+    },
+    {
+      "canonical_utf8_bytes": 1664,
+      "id": "duplicate_ordinary_basis_id",
+      "ordinal": 49,
+      "reviewed_outcome": "POLICY_DUPLICATE_ID"
+    },
+    {
+      "canonical_utf8_bytes": 1680,
+      "id": "binding_basis_current_role_overlap",
+      "ordinal": 50,
+      "reviewed_outcome": "POLICY_PIN_CONFLICT"
+    },
+    {
+      "canonical_utf8_bytes": 1658,
+      "id": "unknown_mode_domain",
+      "ordinal": 51,
+      "reviewed_outcome": "POLICY_DOMAIN"
+    },
+    {
+      "canonical_utf8_bytes": 1881,
+      "id": "current_output_mutual_cycle_outside_basis",
+      "ordinal": 52,
+      "reviewed_outcome": "POLICY_CYCLE"
+    }
+  ],
+  "qualification": false,
+  "schema_version": 1,
+  "status": "PASS_FIXED_METADATA_FRAMING_ONLY",
+  "verified_pins": [
+    {
+      "bytes": 3267,
+      "name": "scope",
+      "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/E08-POLICY-CONTRACT-AUTHORING-SCOPE-v1.json",
+      "sha256": "3a043e2387de427022f3cb0f1f1025ddcb5b18687639899cfab806da3acd1b88"
+    },
+    {
+      "bytes": 5297,
+      "name": "accepted_entry",
+      "path": "planning/review-assets/recovery-step9-entry-contract-tests-20261030/ENTRY-CONTRACT-SUITE-ROOT-ACCEPTANCE-v2.json",
+      "sha256": "e54b6d5580a107c6a2acf4279ad59db02bb92792aba81c70c102408aa0f9e706"
+    },
+    {
+      "bytes": 4114,
+      "name": "source3_pause",
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-PAUSE-v3.json",
+      "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+    },
+    {
+      "bytes": 121192,
+      "name": "source3_kernel",
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    {
+      "bytes": 28509,
+      "name": "entry_contract",
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json",
+      "sha256": "9e65fec645260308ed8847bed74381e39c167b8188600b59113088ba5ad19863"
+    },
+    {
+      "bytes": 94200,
+      "name": "staged48",
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/STAGED-NEW84-SELECTION-MANIFEST-v1.json",
+      "sha256": "2aad403db06d5388bf9a8e8fb674bf2a26f8ad90a437f2db51e1e19f17ff80a9"
+    },
+    {
+      "bytes": 33105,
+      "name": "contract",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-v1.json",
+      "sha256": "a55b839b5b1fb038e8f0348d7fc5570abc36415db9a8f94ff6cb32269071f656"
+    },
+    {
+      "bytes": 10978,
+      "name": "schema",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-SCHEMA-v1.json",
+      "sha256": "6553a874cb34f4d312d5d1c5068c6a625ad9a6ae7cb56a050f3116bfa26b708a"
+    },
+    {
+      "bytes": 2939,
+      "name": "integration_doc",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-INTEGRATION-v1.md",
+      "sha256": "ae2ddc4de20f12f210f6f7136f9495a018cccc682b4385ab5ca30d071580885d"
+    },
+    {
+      "bytes": 1045916,
+      "name": "independent_corpus",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-CORPUS-v1.json",
+      "sha256": "ea2fc0966d45f95e97e995e9477c89fe3d2c6d9f647c7ed7dfaf1710b8c25b4c"
+    },
+    {
+      "bytes": 5332,
+      "name": "independent_provenance",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-PROVENANCE-v1.json",
+      "sha256": "fb339d8f77f83db4323d86021da25307a39259d0f780ce35a5da6641dbab3f96"
+    },
+    {
+      "bytes": 11421,
+      "name": "genuine_integration_scenarios",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-GENUINE-INTEGRATION-PRECODE-SCENARIOS-v1.json",
+      "sha256": "95f6b3be183593d9ae154fce3ee15065a29143ae091bbbf59b9dc3dd3a6618ff"
+    },
+    {
+      "bytes": 1650,
+      "name": "literal_framing_proof",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-FRAMING-PROOF-DRAFT-v1.json",
+      "sha256": "05bc8e60b9685cfd3048e118e347f3c7283c4a54e0b5c4540a0dee9b5ba18246"
+    },
+    {
+      "bytes": 1045445,
+      "name": "literal_draft",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-CORPUS-DRAFT-v1.json",
+      "sha256": "c10c24468f0877a7536e1549296038172b0a3610e5a2ffd1f998d04123f8b3ae"
+    },
+    {
+      "bytes": 18040,
+      "name": "literal_author_helper",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/author_e08_literal_data_v1.py",
+      "sha256": "ca9275fc38b9c0d081d248832648711d1195c88cab191d8eb822724001ee5335"
+    },
+    {
+      "bytes": 5429,
+      "name": "literal_framing_checker",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/check_e08_literal_framing_v1.py",
+      "sha256": "f6ee13ffdae6e31b10196f9e4db9140649493e7ba71da2b01f916dd514d7edef"
+    },
+    {
+      "bytes": 6149,
+      "name": "literal_finalizer",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/finalize_e08_literal_data_v1.py",
+      "sha256": "4185f6d71ef531981c9da09611de0c7009b7e4b1f152b2db671905ce96985d88"
+    },
+    {
+      "bytes": 20374,
+      "name": "contract_draft1",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-DRAFT-v1.json",
+      "sha256": "d3def88c55775ab8ef0b8096c17c3a11a82fb18962d16e37d62daebd808f3d9b"
+    },
+    {
+      "bytes": 26224,
+      "name": "contract_draft2",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-DRAFT-v2.json",
+      "sha256": "28579307416260293c8ffbdee71e076ec078101470a846ccb9a75e59b8e4254c"
+    },
+    {
+      "bytes": 9820,
+      "name": "schema_draft1",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-SCHEMA-DRAFT-v1.json",
+      "sha256": "0f4ec87f9e78441f78f3ae47df2418d74f230de9d71e4af9e6ffe3ba9d6066b0"
+    },
+    {
+      "bytes": 10596,
+      "name": "schema_draft2",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-SCHEMA-DRAFT-v2.json",
+      "sha256": "021348c849cfcc48faa32c811aa24339487798186af7d4e05c6ca536970a27a2"
+    },
+    {
+      "bytes": 2601,
+      "name": "error_clarification_draft",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CLARIFICATIONS-DRAFT-v1.json",
+      "sha256": "8ac0c4ce0e62a88a09949f57a4361111a66bb6c0f7a93d7982f78e48a0edf098"
+    },
+    {
+      "bytes": 3550,
+      "name": "construction_boundary_draft",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONSTRUCTION-BOUNDARY-DRAFT-v1.json",
+      "sha256": "b7e360a109f2953e8edab4e313ddba37ac463e17435400a1220a89c7e2fa0ba4"
+    },
+    {
+      "bytes": 2315,
+      "name": "integration_draft",
+      "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-INTEGRATION-DRAFT-v1.md",
+      "sha256": "fe8d9c76258bbebdb457f1acbe63c2ec093ef218afb4dad9bf967f36ea668714"
+    }
+  ]
+}

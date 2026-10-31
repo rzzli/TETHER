@@ -1,0 +1,51 @@
+{
+  "activity": {
+    "actual_SDK_API_or_worker_calls": 0,
+    "model_or_protected_reads": 0
+  },
+  "after_checker": {
+    "bytes": 17386,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_terminal_component_v3.py",
+    "sha256": "90db30fe0f97ad6a1e80ff3e1c83584e2c077aef73f8c46d7156f8cacaf0a9ee"
+  },
+  "after_proof": {
+    "bytes": 1377,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v3.json",
+    "sha256": "999447824c2c3b22b08a4d2991cb16c4773e1f271a1c42912b5230c2ba6ed637"
+  },
+  "after_source": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  },
+  "before_checker": {
+    "bytes": 17376,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_terminal_component_v2.py",
+    "sha256": "80bc92cdbba8f16683e8f413abe098e646749115ce60e400e65b232b913988da"
+  },
+  "before_proof": {
+    "bytes": 1659,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-TERMINAL-COMPONENT-PROOF-v2.json",
+    "sha256": "5750edd55649c2a11043cc6886b83116660ed606996e5cf23964c33e7be07536"
+  },
+  "before_source": {
+    "bytes": 10226,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v2.py",
+    "sha256": "f910dd6e4075a8e12c78dbe86f278c0e2c4ac42632db596d4c98a80f2c48667a"
+  },
+  "correction_scope": [
+    "Return value remains available when a post-return deadline check fails.",
+    "Already-returned bounded read bytes are accounted and retained; original deadline failure remains and no further API work is admitted.",
+    "Late raw Job result remains explicitly retained without final predicate/publication success."
+  ],
+  "observed_terminal_failure_summary": {
+    "assertion": "0 != 9",
+    "real_regression": "Late read returned9knownbytes after work cutoff; return summary retained9 but capture observed/retained counters stayed0.",
+    "scope": "Summary of observed first pure-test terminal output; not an original stdout artifact",
+    "separate_checker_error": "Expired admission test indexed optional call_attempted flag; corrected checker uses .get(...,False)."
+  },
+  "recorded_at_utc": "2026-10-28T23:11:23.211145+00:00",
+  "remaining": "Parentv2 integration, late lease/seal lifecycle and final source binding remain separate; no ABI execution authorized.",
+  "schema_version": 1,
+  "status": "regression_first_failure_preserved_corrected_component19_pure_tests_pass"
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T08:50:08.075066+00:00",
+  "status": "CLEAR_DESIGN_FOR_LITERAL_FRAMING_SPEC_AND_FIXTURES_ONLY_NOT_IMPLEMENTATION",
+  "artifacts": {
+    "UNICODE-WIRE-DESIGN-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v1.json",
+      "bytes": 51022,
+      "sha256": "e7219e813562423ab9b71f39073be486c62ebf8357551f7b79c8956a2ef13302"
+    },
+    "UNICODE-WIRE-DESIGN-CONTRACT-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+      "bytes": 86124,
+      "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+    },
+    "UNICODE-WIRE-DESIGN-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-FREEZE-v1.json",
+      "bytes": 974,
+      "sha256": "0a5464de53f47fd98e1785aa9b152ba1c89a4bf5c24076bb4762e53d69374347"
+    },
+    "UNICODE-WIRE-DESIGN-FREEZE-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-FREEZE-v2.json",
+      "bytes": 896,
+      "sha256": "c127d1dbb4e8ffe433b86629e9984fdba9751691e01b4e2f01287469a7541b8a"
+    },
+    "UNICODE-WIRE-INDEPENDENT-DESIGN-REVIEW-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-INDEPENDENT-DESIGN-REVIEW-v1.json",
+      "bytes": 7564,
+      "sha256": "f430969e8561472273bd8f06b088aad62d72e358cb90e3a711ba53085fe594f4"
+    }
+  },
+  "semantic_sha256": "9a313df2dca6632a0863f547322e1aeced26346a3ab709686f07c16623c714e3",
+  "recorder": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\record_unicode_wire_peer_v3.py",
+    "bytes": 8654,
+    "sha256": "124e4bcce8904928e50bd3c81848c979c101008a55fcf71089f6e503b86b7d42"
+  },
+  "changed_semantic_sections": [
+    "API_accounting",
+    "case_row",
+    "coverage",
+    "event_order",
+    "framing",
+    "wire_size"
+  ],
+  "resolved_v1_findings": [
+    "Each of16footerJSONLrows<=8192; separatefailureFILE<=65536; no pooled64Krow",
+    "Closed setupbody schemas and full cumulative25API vectors plus case/prefix/cleanup source-delta formulas",
+    "Valid geometryQC/ledger retained despite nativeEOGdisagreement; nativeunknown/mismatch independently failsprofile",
+    "ActualJSONnull API-name union and measured6408fieldmax envelope"
+  ],
+  "setup_closure": {
+    "occurrences": 15,
+    "closed_body_families": 11,
+    "API_entries_per_vector": 25,
+    "typed_defaults": 17,
+    "typed_effective_params": 17,
+    "layout_leaves": 31,
+    "module_inventory_setup_occurrences": 4,
+    "extra_module_rows_authorized": false,
+    "limit": "Inventories are nested arrays in those rows, plus batchfooter. Whole row mustfit8192 or explicitly fail; no universal64-module fit, silent split or extra row allocation."
+  },
+  "zero_piece_accounting": {
+    "rule": "N+count(piece length>1)",
+    "examples": [
+      {
+        "lengths": [
+          0,
+          0,
+          1
+        ],
+        "N": 3,
+        "tokenize_calls": 2,
+        "piece_calls": 3
+      },
+      {
+        "lengths": [
+          0,
+          2,
+          1
+        ],
+        "N": 3,
+        "tokenize_calls": 2,
+        "piece_calls": 4
+      }
+    ],
+    "interpretation": "AllNincludeszero-length tokens; capacity1needsretry only forpiece length>1. Full ledger is computed before ordinary grammar rejection; rejection at r changes apply/accept, not precomputed token/piece counts."
+  },
+  "row_positions": {
+    "setup": 15,
+    "cases": 168,
+    "coverage": 183,
+    "selection": 184,
+    "normal_complete_rows": "188+U<=192",
+    "reserved_max_rows": 276
+  },
+  "original_caps_preserved": true,
+  "counter_or_time_fit_claim": false,
+  "mandatory_literal_framing_gates": [
+    "Freeze exact finite observation/failure reason/status enums and harness observationnull-versus-object shape; then bind the normative framing schema/fingerprint before implementation",
+    "Literal fragments only: exact8byte magic/little-endian fields/ternary/null/lengths/IDs/truncation/trailing bytes; no full native pack builder",
+    "Rows at/exceeding each8192/65536bucket and total quota; oversized repeated module inventories must fail instead of splitting/truncating",
+    "Zero-piece/multi-byte required-size retries; before/result write-ack lag, all25stage deltas and45state types; partial/failed/pending native histories",
+    "GeometryQCok versus token rejection/mixedEOG/nativeunknown, complete84scan, counts/firstselection/de-dup and no favorable filtering",
+    "Failure before/after complete-looking rows, bounded JSONL/file diagnostics and primary/late/terminal veto DAG without self-hash cycle"
+  ],
+  "scope": "Incremental design review only; no literal framing serializer/decoder, actual pack/bridge/parent or runtime implementation is approved by this peer.",
+  "material_blockers_for_next_design_fixture_stage": [],
+  "activity": {
+    "old_source_qualification": 0,
+    "CPU_GGUF_oldpack_operations": 0,
+    "native_SDK_compiler_OS_runtime_calls": 0,
+    "only_new_design_metadata_and_pure_arithmetic": true
+  },
+  "execution_authorized": false,
+  "implementation_authorized": false,
+  "profile_qualified": false,
+  "scientific_validation": "not_established",
+  "previous_negative_and_external_timeout_unchanged": true
+}

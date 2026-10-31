@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T06:10:32.901557+00:00",
+  "status": "source_only_timing_review_not_runtime_requalification",
+  "prior_gate": "INCOMPLETE_TIMEOUT_unchanged",
+  "retained_sources": [
+    {
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-RESULT-VERIFICATION-v1.json",
+      "sha256_as_previously_retained": "22cf3294d754845abe5351f9a14278218e5d5a73baf0c9bbbee6092b27748f47"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-FRESH-INPUT-PASS-v1.json",
+      "sha256_as_previously_retained": "04eff7fb2274a13130c8bc6ee639d57cb3362d7761f2ae96c1e084d97b06fb49"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-DATA-AUDIT-v1.json",
+      "sha256_as_previously_retained": "0022dee9b0f25da4dfb2cb52596b681955d89a3d812f09a2e4ee95d45765b27d"
+    }
+  ],
+  "identity_scope": "Prior SHA references are copied provenance, not fresh rehashes in this task. Only retained metadata, author-cell source and journal timing fields were inspected.",
+  "measured": {
+    "clock_started_monotonic": 656115.031,
+    "pass_reserved_monotonic": 656268.125,
+    "fresh_complete_monotonic": 656273.687,
+    "pre_reservation_elapsed_seconds": 153.094,
+    "reservation_to_fresh_complete_seconds": 5.562,
+    "fresh_complete_elapsed_seconds": 158.656,
+    "core_audit_complete_elapsed_seconds": 292.656,
+    "fresh_complete_to_core_audit_complete_seconds": 134.0,
+    "whole_check_reporting_terminal_elapsed_seconds": 820.437
+  },
+  "attribution_limits": [
+    "153.094s is clock-start to reservation, not measured idle time or payload hash time. Preflight/metadata preparation and orchestration occur in that interval; their individual durations are absent.",
+    "5.562s spans reservation to fresh-close completion, including file API setup, identity checks, all213 leased hashes, bookkeeping and close outcomes. Individual file/model/hash/physical-I/O durations are not retained.",
+    "134.000s is the interval between two retained completion records. No core-audit start is retained, so it is not a measured parser execution cost.",
+    "820.437s is later reporting terminal elapsed, not completed verification. The original300s whole gate remains incomplete."
+  ],
+  "journal": {
+    "events": 1219,
+    "file_hash_reserved_events": 398,
+    "file_hash_returned_events": 398,
+    "hash_events_have_monotonic_or_wallclock_timestamps": false,
+    "raw_Job_snapshot_timing_records": 12,
+    "configured_empty_query_end_ns": 655870593000000,
+    "before_resume_query_end_ns": 655878250000000,
+    "after_wait_query_end_ns": 655908343000000,
+    "configured_empty_to_before_resume_seconds": 7.657,
+    "before_resume_to_after_wait_seconds": 30.093,
+    "configured_empty_to_after_wait_seconds": 37.75,
+    "interpretation": "Query-to-query endpoint spans only. They do not isolate CreateProcess, native work, hashing, polling, OS delay or cause. Equal query start/end samples do not prove zero duration."
+  },
+  "source_observations": [
+    "Original deadline was preserved via the clock record across separate verifier cells; no deadline reset is evidenced.",
+    "Clock/preflight began before the later verification cells were authored and invoked. Required core/archive/resource/seal checks were not orchestrated as one synchronous call.",
+    "The fresh-pass author cell initially reads/hashes small metadata to construct expected records, then leased-hashes those records. Eliminating duplicate small-file work is a source-cost hypothesis, not a measured speedup.",
+    "The core cell recorded a completion time but no stage-start time. File hash events recorded paths/bytes/outcomes without timestamps.",
+    "A partial fresh-pass result could be reported before mandatory archive/resource/seal checks had executed; no complete terminal all-stage gate existed."
+  ],
+  "hypotheses_not_measurements": [
+    "Freeze code and invocation metadata before the future clock starts, while keeping all runtime inspection/import-validation/hash stages inside that clock.",
+    "Single-process orchestration eliminates coordination/tool/model round trips from the critical path; retained data does not quantify a speedup.",
+    "Owner-local immutable indexing and one capture of bounded small bytes can eliminate repeated metadata rebuilds without skipping fresh original identity/hash checks."
+  ],
+  "activity": {
+    "old_original_CPU_GGUF_pack_access": 0,
+    "old_source_input_rehashes": 0,
+    "old_runtime_helper_execution": 0,
+    "SDK_native_target_compiler_calls": 0
+  }
+}

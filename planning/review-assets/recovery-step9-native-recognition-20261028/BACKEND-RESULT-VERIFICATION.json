@@ -1,0 +1,75 @@
+{
+  "actual_worker_identity_matches_popen": true,
+  "elapsed_scope": "The retained terminal measures pre-finalization time; outer3.828seconds is root execution observation, not independently reconstructed from artifact timestamps.",
+  "guards": {
+    "denied": [],
+    "dispatch_attempts": 2,
+    "spawned_children": 2
+  },
+  "helper_sha256": "21e17bd4ef16078551c3e53f90df41356131424fbeb89a60833e1b82e6bee3ce",
+  "input_pins_verified": 357,
+  "journal": {
+    "events": 11,
+    "sha256": "5231abcc7f1ffdde85388cf40dfbcf6d3caeb7e8352640cc1bfd593c294428e6",
+    "tip_sha256": "f817fc1e842b0549512362f6f98643abb10787cdb912d4d7dd865204f66907cd"
+  },
+  "limitations": [
+    "Public source-text receipt only; no source-to-release reproducible build proof",
+    "No CPU backend, ABI, grammar, scientific or OS process-tree conformance claim"
+  ],
+  "native_or_model_execution_authorized": false,
+  "outer_elapsed_seconds_reported_by_root": 3.828,
+  "path_components_checked": 466,
+  "pinned_bytes_verified": 4810377,
+  "protocol_sha256": "18206642dd4b8647a4bc9d6ff3fbe1bb14f02148a172b9ed49aa6add58ff7a84",
+  "receipt": {
+    "exact_cache_file_count": 22,
+    "failure_marker": false,
+    "outputs_verified": 21,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-backend-source-20261028T165636Z\\receipt.json",
+    "sha256": "45dec6e0a3549a96a4765cdcaaa4283f505122c347d17013fbcec4c325a968b2",
+    "unlisted_files": []
+  },
+  "recorded_at_utc": "2026-10-28T17:02:52.353379+00:00",
+  "reservation_sum_bytes": 2097152,
+  "reservation_sum_is_not_transfer": true,
+  "retained_elapsed_seconds_before_finalization": 3.734000000054948,
+  "root_decision_sha256": "8a81b5ccba56e7469ba8cea4bbc7ec0dbef661c849375b70c68c69d4a0670f19",
+  "schema_version": 1,
+  "source_bytes": 25796,
+  "source_files": 2,
+  "sources": [
+    {
+      "actual_parent_pid": 34820,
+      "actual_worker_pid": 17596,
+      "bytes": 791,
+      "index": 0,
+      "owned_handle_reaped": true,
+      "path": "ggml/src/ggml-backend-dl.h",
+      "sha256": "225bd83a197c4e8b5f985717176824d1144e2b74a79f04838f51b84115c14dc5",
+      "whole_child_seconds": 1.0
+    },
+    {
+      "actual_parent_pid": 34820,
+      "actual_worker_pid": 26620,
+      "bytes": 25005,
+      "index": 1,
+      "owned_handle_reaped": true,
+      "path": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+      "sha256": "ccf382d3fbf126b5ddb5850a0a970656fb24e00587da4003419439277c91cd01",
+      "whole_child_seconds": 1.2810000000754371
+    }
+  ],
+  "status": "verified_backend_source_bytes_complete_universe_identity_accounting_and_journal",
+  "unknown_received": false,
+  "unresolved_reservation_bytes": 0,
+  "verifier_activity": {
+    "compilers": 0,
+    "fetch_helper_executions": 0,
+    "fetch_helper_imports": 0,
+    "gguf_reads": 0,
+    "model_or_tokenizer_calls": 0,
+    "requests": 0,
+    "target_dll_loads": 0
+  }
+}

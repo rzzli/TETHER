@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T04:49:06.154562+00:00",
+  "reviewer": "os_accounting_peer",
+  "status": "HOLD_exact_unbound_parent_v4_validator_v2_before_binding_freeze",
+  "scope": "Finite independent source/metadata review; no author helper/test execution, SDK/native/compiler/child or payload access",
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v4.py",
+      "bytes": 37060,
+      "sha256": "4fc57980d353469e64320a1510207888497e45d36383c8bd738fc9f3f7e531c9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_runtime_roles_v2.py",
+      "bytes": 7527,
+      "sha256": "97eb16d55ea84d9e8193e2195e977469e87acbef4d838ad049cc9771ea75a344"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-RUNTIME-ROLES-PURE-PROOF-v2.json",
+      "bytes": 1755,
+      "sha256": "e4ff8f3ae1311163ee72c8372e91b022a28410beed54db4c9f87e613d6ac85fa"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_runtime_roles_v2.py",
+      "bytes": 10370,
+      "sha256": "04bb5b54dc928378ffed1efe478a23f3b4a8a695fc4734b93373e5071f047cc9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_validation_v2.py",
+      "bytes": 27603,
+      "sha256": "9a2086ab226a5a7ae70a35b5eec1bf4d4e6f6d2fe9dedfc96092241186380c09"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-VALIDATION-PURE-PROOF-v2.json",
+      "bytes": 36522,
+      "sha256": "1f2c4a6b50ce373a4271ae25effaa9b154a32f3888e7dc1318b33119f0fb3000"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_status_seal_v1.py",
+      "bytes": 6050,
+      "sha256": "652b8ea5a7b612ef16636d114b3e9b8a24dc99b35aede10410ab0fac4f1595aa"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-SEALER-PURE-PROOF-v1.json",
+      "bytes": 8718,
+      "sha256": "43869c1fbafaa84cebc0cd12a4eec7910132a49c6905965ad01c9fef5caa8940"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\harmless_launch_seal_v2.py",
+      "bytes": 5999,
+      "sha256": "4cc94dd9ab5940f4f5e303d4c41ffbbb8d5032103eafb139113133d44cbb1dcb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-PARENT-INTEGRATION-PURE-PROOF-v4.json",
+      "bytes": 40128,
+      "sha256": "7a84d042e1bc14ff063624360746a783b5ba120493c18f6934d650c9696bf450"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+      "bytes": 10486,
+      "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXPECTED-PACK-METADATA-v1.json",
+      "bytes": 90238,
+      "sha256": "096e1234e239d04c3b276295e7176f5886f139a4064c3fc5f207745f8938f64d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-WIRE-v2.json",
+      "bytes": 7402,
+      "sha256": "d578bc2179e55f7866dd7b2df3ec3169fdc3bcb0dee58629c2a31b8d366d0d01"
+    }
+  ],
+  "cleared_components": {
+    "role_v2": "Raw case/slash-equivalent collisions and noncanonical dot components reject before filesystem access. Exact three-model context and128MiB software caps remain. Proof now pins contract/pack metadata and preserves before regression.",
+    "status_sealer": "Whole make_sealer AST equals immutable4cc94dd9 after exactly one success literal. SDK untouched; status is recognition_observations_retained_independent_qualification_pending.",
+    "parent_scope": "Strict nine argv, source-only authority/config/collector/prepare hardblocked,300s recorded owner start,120s child,117000ms cooperative profile,2s child cleanup and5s parent final reserve. Initial/final payload leases use parent_end-5. New payload/creation metrics distinguish known/unknown from zero-use claims."
+  },
+  "findings": [
+    {
+      "id": "layer_coverage_count_committed_before_full_case_acceptance",
+      "severity": "required_before_freeze",
+      "source": "recognition_validation_v2.py:validate_rows native/harness branches",
+      "evidence": "l.native or l.harness increments before l.equals(body,base). A result with a valid accounting snapshot/observation but wrong case ID rejects exact-row equality after the layer count advanced.",
+      "counterexample": "Mutate the first eligible case_result ID only, preserving valid tokens/native_state/counters/observation. The failure can report case_results_validated0 and native_case_results_validated1.",
+      "required": "Advance layer validated counts only after complete row validation succeeds; regression should assert per-layer counts never exceed accepted case results. Preserve original validator/proof."
+    },
+    {
+      "id": "native_stage_counter_claim_schedule_not_enforced",
+      "severity": "required_source_consistency_check_before_freeze",
+      "source": "recognition_validation_v2.py:Ledger.frame / typed_version_and_defaults_observed",
+      "evidence": "Cumulative caps/flags and event order are checked, but typed stage body no_backend_or_model_call_so_far=true does not require backend/model/CPU counters0. Early call claims can be propagated with consistent flags/cumulative counts through intermediate frames until the expected later stages.",
+      "required": "Add event-derived counter schedule constraints for setup/CPU/backend/model/vocabulary stages, including required pre-call zeros and expected post-call deltas. Add a propagated early-claim fixture so monotonicity alone cannot satisfy the regression.",
+      "evidence_scope": "Independent source control-flow/schema finding; reviewer did not execute the parser or an adversarial child. Author regression confirmation requested."
+    },
+    {
+      "id": "payload_observation_derivation_outside_unconditional_sealer_boundary",
+      "severity": "required_before_freeze",
+      "source": "run_recognition_observation_v4.py:524",
+      "evidence": "parent_payload_observations(...) runs before the terminal-publication try/finally beginning530; SEAL_POST_LEASE_CLEANUP is only invoked in that nested finally. An exception or KeyboardInterrupt in the new derivation can escape the outer finally before original read-lease cleanup/sealing.",
+      "required": "Move derived metadata computation inside the unconditional sealer boundary. Preserve existing primary and interruption, retain the reporting failure, close original leases and publish a failed terminal when possible. Add one fake metadata-call exception/interruption regression.",
+      "practical_scope": "Owned child cleanup has already been attempted. The defect concerns parent input handles and evidence finalization, not a new native ownership flaw."
+    }
+  ],
+  "author_evidence_scope": "Existing passed pure checks remain immutable evidence of their tested fixtures; these new source branches are not justified by those tests. Reuse qualified typed SDK/terminal/cleanup primitives where unchanged; no broad OS/ancestry expansion requested.",
+  "activity": {
+    "CPU_GGUF_pack_payload_access": 0,
+    "unknown_image_access": 0,
+    "SDK_native_compiler_child_calls": 0,
+    "author_helper_or_checker_execution": 0
+  },
+  "current_build": "Actual compile verification78a4d8c378836be294334801b42d6be16e0ef6c6ed49152014d2d5ded5319ddf is separate. Compilation does not clear these parent/parser findings.",
+  "current_acceptance": "ABI807/fullruntime311/prior failures/scientific status unchanged; no execution permission."
+}

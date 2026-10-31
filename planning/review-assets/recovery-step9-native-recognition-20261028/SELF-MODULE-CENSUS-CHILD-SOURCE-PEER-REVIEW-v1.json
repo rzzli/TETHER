@@ -1,0 +1,109 @@
+{
+  "design_peer": {
+    "bytes": 5601,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-DESIGN-PEER-REVIEW-v1.json",
+    "sha256": "fd22ae464508687fb7cebfc6e98c5b3bdbfaea85693ec46534c7e93504ff02f1"
+  },
+  "evidence_scope": {
+    "child_pure_cases": 16,
+    "compiled_CPP_executions": 0,
+    "conservative_model_bound_bytes": 1676032,
+    "corrected_regression_cases": 3,
+    "independent_parser_and_sealer_vectors": "Separate19-vector pure parser and3-case fake sealer proofs are retained; parent integration remains separate.",
+    "reviewer_child_checker_reruns": 0
+  },
+  "findings": [
+    "The distinct --module-census branch follows exactly the existing secure core4 loads and returns unconditionally before Api construction. Census helpers have no target API/registry/backend/model/vocabulary/grammar calls or export resolution. The complete existing25-owner API block is byte-identical to v5.",
+    "Exactly one current-process snapshot is attempted, with First1/Next64/path64 and one snapshot close. Capture admits64 rows; a returned65th entry stops partial rather than generating a complete footer. No global PID/thread/heap scan or unknown image open/hash/pin is added.",
+    "Snapshot ownership is invalidated before the single close attempt. Reservation/publication errors do not skip the owned close, outcomes/errors are recorded in partial context, and no RAII/destructor or failure retry dispatches a second CloseHandle.",
+    "Returned First/Next seen counts and natural_end/reason are captured immediately after the raw response, before result publication or post-call deadline checks. Late true/false18 results therefore survive in partial summaries; no new API work is admitted after the deadline.",
+    "Module query return data and raw bounded metadata are retained before post-call checks. Clipping leaves true full path length unknown. Only fully retained terminated name/path and a complete system-directory query permit comparisons; otherwise predicates are null/category unresolved. Hidden/unretained tails cannot classify a row.",
+    "Raw module rows are append/flushed before observational classification. Classification uses only declared ASCII/slash string comparisons and never grants eligibility or normalizes through filesystem APIs. It is not the old approval predicate and does not change the sixteen-name policy.",
+    "Aggregate requested-byte reservations precede writes without rollback. Total structured output is capped2MiB with64KiB terminal/error reserve and bounded independent failure marker. The model conservative corpus bound1676032bytes remains below the data ceiling; generic post-footer publication failure stays negative even if a footer was written.",
+    "Wire v2 explicitly scopes snapshot CloseHandle, defines clipped-query logical failure/error, permits partial null/unresolved metadata, separates collector-partial footer absence from later publication failures, and retains optional UTF8/numeric UTF16 lossless bindings.",
+    "No existing ABI/recognition loader, native calls or approval list is changed. The new direct <exception> declaration requires its separate installed header pin in build preparation; it grants no runtime or build authority."
+  ],
+  "implementation_decision": {
+    "bytes": 2277,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-IMPLEMENTATION-ROOT-DECISION-v1.json",
+    "sha256": "8b9ebb0cdf7543a080af04aa70c602c5373a1e665e28b1b180a70758b39386ab"
+  },
+  "limitations": [
+    "Source/intended-model consistency only; no compiled formatter, SDK or native behavior is established.",
+    "The snapshot has documented domain/race/representation limits and is not lifetime/global inventory or image authentication.",
+    "Native initializers may have effects; zero explicit target queries does not attest zero OS side effects."
+  ],
+  "material_blockers": [],
+  "preserved_regressions": [
+    {
+      "bytes": 69707,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v6.cpp",
+      "sha256": "5a5964cb724cef0d03aab1653c52b14dae952cd4b5ec6f758a96228cd93882d0"
+    },
+    {
+      "bytes": 966,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v1.json",
+      "sha256": "7f234565fdc0eb8e322b9167b7a93db648339d22739781a8d4a55afe72a2e1a8"
+    },
+    {
+      "bytes": 2095,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-REGRESSIONS-BEFORE-v1.json",
+      "sha256": "00115552e4f8ce0906cbfbdadb416abb5016901d35a0e5f3a5ff34ce2623c84a"
+    },
+    {
+      "bytes": 69967,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v7.cpp",
+      "sha256": "731f757976b5fdaa7d235b6f25d153ad4cdb87a3d9702aebc1f3fc863d48daf8"
+    },
+    {
+      "bytes": 966,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v2.json",
+      "sha256": "76b5b688aef7ece9110004fb4b862a28385d7c930117488c9760b8301af43feb"
+    }
+  ],
+  "recorded_at_utc": "2026-10-29T01:14:23.158279+00:00",
+  "regression_after": {
+    "bytes": 521,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-REGRESSIONS-AFTER-v4.json",
+    "sha256": "10a775571390abb7e25d039da24deb45d483478c1052b027fff0c7b094c61246"
+  },
+  "regression_checker": {
+    "bytes": 2801,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_census_regressions_v4.py",
+    "sha256": "5f5a0cbc0acae1208a3eebe42a563a296b5a2c7c3cb45121b78b04b88861416d"
+  },
+  "remaining": [
+    "Source-only build helper/protocol/pin/finalizer review is required before any root compiler decision.",
+    "Distinct census parent/artifact validator/status-only sealer and lifecycle pure evidence still require final exact review.",
+    "A later compiled result remains unexecuted until a separate exact census launch decision.",
+    "Census data cannot authorize ABI or a policy change; the existing list and prior failures remain unchanged."
+  ],
+  "reviewer_activity": {
+    "actual_SDK_or_CPP_or_compiler_or_child_calls": 0,
+    "production_source_edits": 0,
+    "source_and_retained_data_reads": true,
+    "unknown_image_or_CPU_GGUF_reads": 0
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 69930,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v8.cpp",
+    "sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18"
+  },
+  "source_checker": {
+    "bytes": 13235,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_census_child_v3.py",
+    "sha256": "807d7731187b6ba15566dd38c46cbf3bff9711d0399a8d92544f05314310e855"
+  },
+  "source_pure_proof": {
+    "bytes": 965,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v3.json",
+    "sha256": "b3100c72f6a8fd3a8d462d1aca0659e1d8c48a8e08cc3557b8a33f52de1bb652"
+  },
+  "status": "CLEAR_exact_child_v8_and_wire_v2_source_pure_scope_only",
+  "wire": {
+    "bytes": 9717,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+    "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+  }
+}

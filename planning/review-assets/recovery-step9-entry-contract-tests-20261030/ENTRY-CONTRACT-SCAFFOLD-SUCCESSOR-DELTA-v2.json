@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "status": "METADATA_AUTHORING_OVERLAP_SUCCESSOR_NO_SUBJECT_FAILURE",
+  "first_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-FREEZE-v1.json",
+    "bytes": 4766,
+    "sha256": "aae7d55d9df9c9352916d00bd5a8cc9a3650c7c3e2645e0cdcaa3072c48762f4"
+  },
+  "successor_freeze": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-FREEZE-v2.json",
+    "bytes": 5381,
+    "sha256": "2116ed80a148a8df9b81c65cd785e1db8666d276a7cda464d567736bc9ee4694"
+  },
+  "native_chronology": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-ASSERTION-REFINEMENT-CHRONOLOGY-v2.json",
+    "bytes": 2038,
+    "sha256": "7f2c5c87d76ede8343d0337289ae43c0d3c93e62cd276d8d2bb7232402d11f91"
+  },
+  "runner1": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\run_entry_contract_suite_v1.py",
+    "bytes": 20263,
+    "sha256": "7c7b08a5d4f5c98c98a7097b0fc895ea3ed22dc0e2283adf3c02cd33f0d74d22"
+  },
+  "runner2": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\run_entry_contract_suite_v2.py",
+    "bytes": 20263,
+    "sha256": "cbaa75873d6f5d3fdace3d91f753d18e1bf3f4ed95e7004b195d64bf3865b792"
+  },
+  "runner_delta": "Byte-identical after only exact v2 consumed-output names and own case-module key; runtime logic/assertions unchanged.",
+  "cases1": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\entry_contract_cases_v1.py",
+    "bytes": 36405,
+    "sha256": "47b78c54d722370cba7e31920f6eb8a2477d78153b0e4a529917258e4db4c373"
+  },
+  "cases2": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\entry_contract_cases_v2.py",
+    "bytes": 36778,
+    "sha256": "d084ef7563b92730f3220a8af5550cbdc35a619784d9e1282bf9e34d70b18d3a"
+  },
+  "case_changed_functions": [
+    "E17",
+    "E21"
+  ],
+  "case_delta": "Existing E17 original-primary-after-cleanup assertion and E21 original-primary/cache/no-read-retry-after-cleanup checks. Same32/53 criteria; no new source case.",
+  "preparer_delta": "v2 file/output names plus exact final case2 pin/old-case restore validation and Native chronology/prior-freeze binding. Same Source3/pre-entry helper sources, descriptor geometry, reference digest, historical anchors and deferred policy.",
+  "activity": {
+    "metadata_preparations": 2,
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "source3_edits": 0
+  },
+  "chronology": "Initial v1 metadata-only freeze completed before final E17/E21 refinement notification. Native restored exact frozen v1 bytes and retained refined named v2; final ready acknowledgment preceded v2 data generation. No Root execution was bound or retried.",
+  "qualification_upgrade": false
+}

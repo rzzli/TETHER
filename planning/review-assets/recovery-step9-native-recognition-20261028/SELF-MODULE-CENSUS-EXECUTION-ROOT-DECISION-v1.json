@@ -1,0 +1,119 @@
+{
+  "ABI_eligibility_established": false,
+  "CPU_GGUF_model_reads": 0,
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "CENSUS-STATIC-ROSTER-PEER-REVIEW-v2.json": {
+      "bytes": 51043,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\CENSUS-STATIC-ROSTER-PEER-REVIEW-v2.json",
+      "sha256": "e9520d8bc3cea49deb516cb0830a5bb39ccaf1dcdfc2e4c7848a38c5803eff4c"
+    },
+    "SELF-MODULE-CENSUS-BINDING-PURE-PROOF-v3.json": {
+      "bytes": 4073,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BINDING-PURE-PROOF-v3.json",
+      "sha256": "08d7c731a5fa3854e55c33f912670e8e4a3f506863892e25a53d38aff6127d21"
+    },
+    "SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.json": {
+      "bytes": 22617,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.json",
+      "sha256": "51c255ec00aaf050a833682f4a41abd27f6b82fe6ffadef18a8e1a92d6756306"
+    },
+    "SELF-MODULE-CENSUS-EXECUTION-PROTOCOL-v2.json": {
+      "bytes": 50015,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-EXECUTION-PROTOCOL-v2.json",
+      "sha256": "8f011fc7bdc3a92033cd3ab5277b7346a512b08c447234ff2aedeefb3a192215"
+    },
+    "SELF-MODULE-CENSUS-EXECUTION-SOURCE-PEER-REVIEW-v3.json": {
+      "bytes": 10729,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-EXECUTION-SOURCE-PEER-REVIEW-v3.json",
+      "sha256": "cfc16dcca42fcb8d606abd7a76930b1916dede5db01e3257bd20ba1fd16bc0ad"
+    },
+    "SELF-MODULE-CENSUS-ONCE-DRIVER-PURE-PROOF-v2.json": {
+      "bytes": 2808,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-ONCE-DRIVER-PURE-PROOF-v2.json",
+      "sha256": "b93972636dee11abaf5d7b885541965731a7270c4e8df9e024d0ee0d115578cc"
+    },
+    "SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json": {
+      "bytes": 42748,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-STATIC-AUTHORITY-v2.json",
+      "sha256": "70efee36da8aa73845fee25ba2eea495895a84b4cd9676c98ae9777ce084b42c"
+    },
+    "execute_self_module_census_once_v2.py": {
+      "bytes": 2811,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\execute_self_module_census_once_v2.py",
+      "sha256": "c6fff0d0b44b942fd2d7766f150d3f1da194b29325e6af2b2d72214085f12419"
+    },
+    "run_self_module_census_v3.py": {
+      "bytes": 61937,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v3.py",
+      "sha256": "018f3c8216b6096e34eff43241c3864a9a15f0decbdde6005f2b905c5e6c247d"
+    }
+  },
+  "automatic_retry": false,
+  "driver": {
+    "bytes": 2811,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\execute_self_module_census_once_v2.py",
+    "sha256": "c6fff0d0b44b942fd2d7766f150d3f1da194b29325e6af2b2d72214085f12419"
+  },
+  "executable": {
+    "bytes": 249344,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "559e4e9a654c9487679c551eebf73d6a279416d0990f491d0918d99cdb6f6183"
+  },
+  "explicit_target_C_calls": 0,
+  "failed_preparation_P1_preserved": true,
+  "fresh_input_bytes": 24917722,
+  "fresh_input_hashes_checked": 183,
+  "helper": {
+    "bytes": 61937,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v3.py",
+    "sha256": "018f3c8216b6096e34eff43241c3864a9a15f0decbdde6005f2b905c5e6c247d"
+  },
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "attempt_terminal_failure_reserve_bytes": 65536,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 30,
+    "child_structured_artifact_bytes": 2097152,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "max_modules": 64,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 2097152,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "maximum_attempts": 1,
+  "mode": "--module-census",
+  "nonreparse_components_checked": 237,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-self-module-census-v1-20261029T015746Z",
+  "output_absent": true,
+  "policy_unchanged": true,
+  "preparation": {
+    "bytes": 1116,
+    "path": "data\\cache\\r09-self-module-census-preparation-v3-20261029.json",
+    "sha256": "f7474d0a687f4d4db0a9c9770cce4f53e4198d07cf6ee490727a6ef9e1c9ae20"
+  },
+  "protected_answers_hash_only": true,
+  "protocol": {
+    "bytes": 50015,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-EXECUTION-PROTOCOL-v2.json",
+    "sha256": "8f011fc7bdc3a92033cd3ab5277b7346a512b08c447234ff2aedeefb3a192215"
+  },
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T02:04:45.491317+00:00",
+  "reported_image_files_must_not_be_opened": true,
+  "required_independent_result_verification": true,
+  "schema_version": 1,
+  "scope": "One post-core4 current-process metadata census only; no policy change, target query, model/vocabulary call or ABI/scientific acceptance",
+  "status": "root_authorizes_one_exact_self_module_census_observation",
+  "target_export_resolution": 0
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T06:33:51.253199+00:00",
+  "decision": "approve_preparation_of_separate_remaining_three_verification_protocol",
+  "amendment_sha256": "1bf138d7209bc88b2d4eb7e8e6d6daec89c9a9c332b742d5cecff6f6fe4de74c",
+  "diagnosis_sha256": "256ee4fe59fae39072f4c85930df2e863da3c5aebd25bc84c9922827a712c297",
+  "failed_primary_report_sha256": "c780b0643756aa3006c25cb3a01a0066bcc38cc3d603f9285c53754786848e50",
+  "reused_success_versions": [
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "037"
+  ],
+  "remaining_versions": [
+    "038",
+    "039",
+    "0310"
+  ],
+  "whole_process_seconds_each": 360,
+  "aggregate_verification_seconds": 1200,
+  "scientific_case_budget_seconds_unchanged": 300,
+  "native_model_calls_authorized": 0,
+  "require_fresh_protocol_hash_review": true,
+  "original_attempt_must_remain_failed": true
+}

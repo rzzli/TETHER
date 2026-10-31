@@ -1,0 +1,6 @@
+{
+  "status": "metadata_preparation_failed_before_header_or_descriptor_write",
+  "error": "re.sub replacement processing collapsed C++ path escapes; JSON decode rejected, before outputs",
+  "correction": "Use a literal-returning replacement callable; validate every metadata string before writing",
+  "CPU_GGUF_payload_operations": 0
+}

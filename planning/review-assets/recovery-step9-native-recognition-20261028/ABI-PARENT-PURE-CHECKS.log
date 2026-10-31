@@ -1,0 +1,23 @@
+test_assign_failure_never_resumes_unassigned_owned_process (__main__.PureDraftTests.test_assign_failure_never_resumes_unassigned_owned_process) ... ok
+test_capture_exact_boundary_then_one_byte_overflow (__main__.PureDraftTests.test_capture_exact_boundary_then_one_byte_overflow) ... ok
+test_configure_failure_closes_job_no_process (__main__.PureDraftTests.test_configure_failure_closes_job_no_process) ... ok
+test_deadlines_reject_nonfinite_expired_and_bool (__main__.PureDraftTests.test_deadlines_reject_nonfinite_expired_and_bool) ... ok
+test_environment_explicit_sorted_utf16_double_nul (__main__.PureDraftTests.test_environment_explicit_sorted_utf16_double_nul) ... ok
+test_environment_rejects_ambiguous_nul_nonstring_and_surrogate (__main__.PureDraftTests.test_environment_rejects_ambiguous_nul_nonstring_and_surrogate) ... ok
+test_exact_abi_arguments_runtime_binding_and_quoting (__main__.PureDraftTests.test_exact_abi_arguments_runtime_binding_and_quoting) ... ok
+test_finite_flags_no_breakaway (__main__.PureDraftTests.test_finite_flags_no_breakaway) ... ok
+test_interruption_after_create_retains_output_handles (__main__.PureDraftTests.test_interruption_after_create_retains_output_handles) ... ok
+test_job_anomaly_stops_before_resume (__main__.PureDraftTests.test_job_anomaly_stops_before_resume) ... ok
+test_journal_failure_after_create_retains_process_for_cleanup (__main__.PureDraftTests.test_journal_failure_after_create_retains_process_for_cleanup) ... ok
+test_journal_failure_before_resume_never_resumes (__main__.PureDraftTests.test_journal_failure_before_resume_never_resumes) ... ok
+test_membership_failure_never_resumes (__main__.PureDraftTests.test_membership_failure_never_resumes) ... ok
+test_native_construction_and_entry_are_held (__main__.PureDraftTests.test_native_construction_and_entry_are_held) ... ok
+test_no_subprocess_creation_private_api_or_network_import (__main__.PureDraftTests.test_no_subprocess_creation_private_api_or_network_import) ... ok
+test_public_sdk_x64_layouts (__main__.PureDraftTests.test_public_sdk_x64_layouts) ... ok
+test_resume_bad_previous_counts_have_no_second_attempt (__main__.PureDraftTests.test_resume_bad_previous_counts_have_no_second_attempt) ... ok
+test_suspended_assign_verify_before_exact_resume (__main__.PureDraftTests.test_suspended_assign_verify_before_exact_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.022s
+
+OK

@@ -1,0 +1,103 @@
+{
+  "assertion_refinement_chronology": {
+    "bytes": 2038,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-ASSERTION-REFINEMENT-CHRONOLOGY-v2.json",
+    "sha256": "7f2c5c87d76ede8343d0337289ae43c0d3c93e62cd276d8d2bb7232402d11f91"
+  },
+  "authoring_scope": {
+    "bytes": 2879,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-CONTRACT-SUITE-AUTHORING-SCOPE-v1.json",
+    "sha256": "df44dee067272444230061107b8a6d8774f52c0f1b5b4da7576714e480c6fd66"
+  },
+  "case_contract": {
+    "bytes": 13864,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json",
+    "sha256": "cdfeaa338f387c18039818e7d414c9c13252ee916f872ff42e400da48012a95b"
+  },
+  "harness": {
+    "cases": {
+      "bytes": 36778,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\entry_contract_cases_v2.py",
+      "sha256": "d084ef7563b92730f3220a8af5550cbdc35a619784d9e1282bf9e34d70b18d3a"
+    },
+    "runner": {
+      "bytes": 20263,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\run_entry_contract_suite_v2.py",
+      "sha256": "cbaa75873d6f5d3fdace3d91f753d18e1bf3f4ed95e7004b195d64bf3865b792"
+    },
+    "support": {
+      "bytes": 15938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\entry_independent_test_support_v3.py",
+      "sha256": "e9ebf09775b1fe31dee3fda50d42ee57ae8f4c4fa3c1c9c4b0cf96be79913536"
+    },
+    "world": {
+      "bytes": 11981,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\entry_independent_world_v3.py",
+      "sha256": "c81526ed32e30ae4ded4177739a64ec8b0d3dacf0b233b2c7dc19e262edb0d8a"
+    }
+  },
+  "inputs": {
+    "bytes": 27127,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-INPUTS-v2.json",
+    "sha256": "722636e395b69c9a19e64dee7c1e38843fcffebce090b40c84841ccc8df4840e"
+  },
+  "large_reference": {
+    "bytes": 84696,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+    "sha256": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+  },
+  "named_controls": 32,
+  "ordered_branches": 53,
+  "outline": {
+    "bytes": 4410,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-BINDING-OUTLINE-v2.json",
+    "sha256": "5222a23a30a8ac6c61e2c331e3570bb8a693092aa2c39a403b4763b5b5d24b0c"
+  },
+  "preparation": {
+    "bytes": 6406,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-PREPARATION-v2.json",
+    "sha256": "91624464eebc28f32617ac018b3c62b209899c9611704f9fae4c02d1184a9eb0"
+  },
+  "preparer": {
+    "bytes": 17360,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\prepare_entry_contract_suite_v2.py",
+    "sha256": "7f0ad2b4696c4688bc6d236830d8e924b22dd0590df03a8f4daf7c75f3a733a9"
+  },
+  "preserved_first_preparation": {
+    "bytes": 4766,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-FREEZE-v1.json",
+    "sha256": "aae7d55d9df9c9352916d00bd5a8cc9a3650c7c3e2645e0cdcaa3072c48762f4"
+  },
+  "qualification": false,
+  "schema_version": 2,
+  "source_map": {
+    "preflight_entry_kernel_v3": {
+      "bytes": 121192,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_entry_kernel_v3.py",
+      "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+    },
+    "preflight_file_view_v3": {
+      "bytes": 3614,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_file_view_v3.py",
+      "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+    },
+    "preflight_owner_ops_v3": {
+      "bytes": 39889,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\preflight_owner_ops_v3.py",
+      "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+    },
+    "role_ledger_codec_v4": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    }
+  },
+  "source_pause": {
+    "bytes": 4114,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source3-20261030\\ENTRY-SOURCE-PAUSE-v3.json",
+    "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+  },
+  "status": "FROZEN_ENTRY32_53_PREPARATION_BEFORE_SUBJECT_EXECUTION",
+  "subject_imports": 0,
+  "subject_runs": 0
+}

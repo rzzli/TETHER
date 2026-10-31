@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "source": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v6.cpp",
+  "source_sha256": "5a5964cb724cef0d03aab1653c52b14dae952cd4b5ec6f758a96228cd93882d0",
+  "source_unchanged": true,
+  "checker_sha256": "4771acb5df58eb5049451031fb73345c7ff38d90a337a0e152422c3a7705f1e9",
+  "wire_sha256": "522c07a2a2c5ed37e99d78a4ad1ae96bf6bebc7dc691a1749048488fc9b59bc5",
+  "tests_run": 13,
+  "failures": [],
+  "errors": [],
+  "measured_seconds": 0.015000000013969839,
+  "bounds": [
+    {
+      "kind": "conservative_structured_bound",
+      "raw_row_bytes": 23564,
+      "corpus_bound_bytes": 1676032
+    }
+  ],
+  "actual_children": 0,
+  "real_SDK_constructions": 0,
+  "compiler_calls": 0,
+  "native_target_calls": 0,
+  "scope": "Pure intended boundary models and static source comparisons; not compiled C++ behavior or native census qualification"
+}

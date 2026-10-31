@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "review_id": "actual-harmless-v3-independent-failed-result-verification-20261028",
+  "recorded_at_utc": "2026-10-28T20:21:45.267426+00:00",
+  "status": "VERIFIED_FAILED_complete_retained_evidence_resources_final_TotalProcesses2_policy_expected1",
+  "actual_qualification_pass": false,
+  "rerun_authorized_by_review": false,
+  "scope": "Independent retained-file/hash/SDK-buffer and primary-documentation review. No helper/API/child rerun, native target or global process scan.",
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-LAUNCHER-QUALIFICATION-PROTOCOL-v3.json",
+      "bytes": 36712,
+      "sha256": "eb2c1844c325dc02f8ff6546ea963e908ec8676bad36eae370d94fcc2a6e649b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-LAUNCHER-ROOT-DECISION-v3.json",
+      "bytes": 1010,
+      "sha256": "a4c9a543626d332b3ec4a386a4cdab7f20ac9866afcdcd706cc4299db5209759"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-LAUNCHER-PEER-REVIEW-v3.json",
+      "bytes": 13040,
+      "sha256": "fc4581ea3e135abec2e8151f2f2701c978fe0c4fca81eec6821e2962e2e99c3d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\parent-report.json",
+      "bytes": 65812,
+      "sha256": "1f92e90bf2de2e6670677efc5c12d4241bad051cd61b20ef08778683e1cfbcb9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\receipt.json",
+      "bytes": 1408,
+      "sha256": "1e6d2a71ce176165b3d268ae23ce9108a411bdef378ff7540003b1e4eaece09c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\terminal-seal.json",
+      "bytes": 2462,
+      "sha256": "e2bf0806fd0407c813a53c253147806e66ffdb33776e4ca1f193eb93ed9ab6d5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\failure.json",
+      "bytes": 127,
+      "sha256": "cd5016544685e5d9e53b20c68c0a1013001fdc7cd56ea3b17925103d93e613dd"
+    }
+  ],
+  "output_files": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\effective-protocol.json",
+      "bytes": 36712,
+      "sha256": "eb2c1844c325dc02f8ff6546ea963e908ec8676bad36eae370d94fcc2a6e649b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\journal.jsonl",
+      "bytes": 10271,
+      "sha256": "1bf193cb35ef8ca01a056354b9e6c0c6af1b076c4e31d28aa1db879373fde376"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\resources\\case-report.json",
+      "bytes": 776,
+      "sha256": "03e4dba18fd7f3a90ca2bd20ecd566f62718680e701427de4ac6b35485f22c21"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\resources\\child\\worker-result.json",
+      "bytes": 183,
+      "sha256": "6726748234b74ce929137b67fd70f05aa81a619080d98b24042de1768cc775a3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\resources\\child\\worker-started.json",
+      "bytes": 326,
+      "sha256": "8d069541a4e1a9cc145aaa47552fb6301800ac9678ae6ded1bb7e4cdfc1989fc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\resources\\stderr.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\execution\\resources\\stdout.bin",
+      "bytes": 200,
+      "sha256": "05b48112053edc47ad85a6ba465f6792e7ba6957fb924118228c58ce7291b4a2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\failure.json",
+      "bytes": 127,
+      "sha256": "cd5016544685e5d9e53b20c68c0a1013001fdc7cd56ea3b17925103d93e613dd"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\parent-report.json",
+      "bytes": 65812,
+      "sha256": "1f92e90bf2de2e6670677efc5c12d4241bad051cd61b20ef08778683e1cfbcb9"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\parent-reservation.json",
+      "bytes": 121,
+      "sha256": "c84d1c3e14c93c7a140cd472d4f727a12a68ac254d2a29086126d1435a3a196b"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\post-lease-cleanup.json",
+      "bytes": 111168,
+      "sha256": "742174083d3380576801230f052b4b97fcac820284edf1dd02407481f1bae799"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\receipt.json",
+      "bytes": 1408,
+      "sha256": "1e6d2a71ce176165b3d268ae23ce9108a411bdef378ff7540003b1e4eaece09c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-launcher-qualification-v3-20261028T200950Z\\terminal-seal.json",
+      "bytes": 2462,
+      "sha256": "e2bf0806fd0407c813a53c253147806e66ffdb33776e4ca1f193eb93ed9ab6d5"
+    }
+  ],
+  "verification": {
+    "all143_input_pins_match": true,
+    "effective_protocol_byte_identical": true,
+    "exact_root_reviewed_pins_and_output_match": true,
+    "output_file_count": 13,
+    "terminal_output_pins": 12,
+    "early_receipt_output_pins": 10,
+    "all_inventory_lengths_hashes_match": true,
+    "required_failed_terminal_seal_and_primary_veto_match": true,
+    "no_late_or_after_seal_failure_marker": true,
+    "no_pending_files": true,
+    "journal_records": 16,
+    "journal_chain_event_order_and_case_report_pin_valid": true,
+    "actual_primary_case_call_reservations": 1,
+    "actual_recorded_CreateProcessW_attempts": 1,
+    "actual_recorded_resume_returns": 1,
+    "actual_case_reports": 1,
+    "remaining_modes_unattempted": [
+      "overflow",
+      "sleep",
+      "suspended_abort"
+    ],
+    "raw_accounting_buffers_decoded": 4,
+    "raw_PID_buffers_decoded": 4,
+    "SDK_layout_return_lengths_raw_fields_match": true,
+    "resource_worker_pid": 7276,
+    "resource_worker_thread_id": 25012,
+    "canonical_image_creation_membership_and_resume1_recorded": true,
+    "worker_natural_returncode": 0,
+    "worker_reaped_as_recorded": true,
+    "owner_cleanup_errors": [],
+    "capture_stdout_bytes": 200,
+    "capture_stderr_bytes": 0,
+    "capture_counters_files_and_EOF_match": true,
+    "worker_marker_and_stdout_results_match": true,
+    "lease_ownership_records": 290,
+    "already_closed_recheck_leases": 145,
+    "final_live_lease_close_attempts": 145,
+    "all290_observed_closed_after": true,
+    "all_lease_validations_passed": true,
+    "late_close_errors": [],
+    "final_peak_query_not_reached": true
+  },
+  "observed_mismatch": {
+    "stage": "harmless_after_wait",
+    "expected": {
+      "TotalProcesses": 1,
+      "ActiveProcesses": 0,
+      "TotalTerminatedProcesses": 0,
+      "pids": []
+    },
+    "observed": {
+      "TotalProcesses": 2,
+      "ActiveProcesses": 0,
+      "TotalTerminatedProcesses": 0,
+      "pids": []
+    },
+    "only_mismatching_policy_field": "TotalProcesses",
+    "not_an_ActiveProcesses2_observation": true
+  },
+  "raw_snapshots": [
+    {
+      "stage": "configured_empty",
+      "accounting": {
+        "ActiveProcesses": 0,
+        "ThisPeriodTotalKernelTime": 0,
+        "ThisPeriodTotalUserTime": 0,
+        "TotalKernelTime": 0,
+        "TotalPageFaultCount": 0,
+        "TotalProcesses": 0,
+        "TotalTerminatedProcesses": 0,
+        "TotalUserTime": 0
+      },
+      "accounting_returned_bytes": 48,
+      "pid_assigned": 0,
+      "pid_listed": 0,
+      "pids": [],
+      "pid_returned_bytes": 8,
+      "raw_accounting_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "raw_PID_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "query_started_monotonic_ns": 622813921000000,
+      "query_finished_monotonic_ns": 622813921000000,
+      "raw_decoding_matches": true
+    },
+    {
+      "stage": "before_resume",
+      "accounting": {
+        "ActiveProcesses": 1,
+        "ThisPeriodTotalKernelTime": 0,
+        "ThisPeriodTotalUserTime": 0,
+        "TotalKernelTime": 0,
+        "TotalPageFaultCount": 521,
+        "TotalProcesses": 1,
+        "TotalTerminatedProcesses": 0,
+        "TotalUserTime": 0
+      },
+      "accounting_returned_bytes": 48,
+      "pid_assigned": 1,
+      "pid_listed": 1,
+      "pids": [
+        7276
+      ],
+      "pid_returned_bytes": 16,
+      "raw_accounting_hex": "000000000000000000000000000000000000000000000000000000000000000009020000010000000100000000000000",
+      "raw_PID_hex": "01000000010000006c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "query_started_monotonic_ns": 622814406000000,
+      "query_finished_monotonic_ns": 622814406000000,
+      "raw_decoding_matches": true
+    },
+    {
+      "stage": "harmless_running_first",
+      "accounting": {
+        "ActiveProcesses": 1,
+        "ThisPeriodTotalKernelTime": 0,
+        "ThisPeriodTotalUserTime": 0,
+        "TotalKernelTime": 0,
+        "TotalPageFaultCount": 553,
+        "TotalProcesses": 1,
+        "TotalTerminatedProcesses": 0,
+        "TotalUserTime": 0
+      },
+      "accounting_returned_bytes": 48,
+      "pid_assigned": 1,
+      "pid_listed": 1,
+      "pids": [
+        7276
+      ],
+      "pid_returned_bytes": 16,
+      "raw_accounting_hex": "000000000000000000000000000000000000000000000000000000000000000029020000010000000100000000000000",
+      "raw_PID_hex": "01000000010000006c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "query_started_monotonic_ns": 622814406000000,
+      "query_finished_monotonic_ns": 622814406000000,
+      "raw_decoding_matches": true
+    },
+    {
+      "stage": "harmless_after_wait",
+      "accounting": {
+        "ActiveProcesses": 0,
+        "ThisPeriodTotalKernelTime": 625000,
+        "ThisPeriodTotalUserTime": 468750,
+        "TotalKernelTime": 625000,
+        "TotalPageFaultCount": 6704,
+        "TotalProcesses": 2,
+        "TotalTerminatedProcesses": 0,
+        "TotalUserTime": 468750
+      },
+      "accounting_returned_bytes": 48,
+      "pid_assigned": 0,
+      "pid_listed": 0,
+      "pids": [],
+      "pid_returned_bytes": 8,
+      "raw_accounting_hex": "0e2707000000000068890900000000000e270700000000006889090000000000301a0000020000000000000000000000",
+      "raw_PID_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "query_started_monotonic_ns": 622814515000000,
+      "query_finished_monotonic_ns": 622814515000000,
+      "raw_decoding_matches": true
+    }
+  ],
+  "worker_identity": {
+    "executable": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+    "mode": "resources",
+    "parent_pid": null,
+    "parent_pid_reason": "Not queried by fixture; parent owns CreateProcess handles",
+    "pid": 7276,
+    "protocol_sha256": "eb2c1844c325dc02f8ff6546ea963e908ec8676bad36eae370d94fcc2a6e649b"
+  },
+  "worker_result": {
+    "descendant_spawn_attempts": 1,
+    "memory_rejected": true,
+    "model_calls": 0,
+    "network_requests": 0,
+    "spawn": {
+      "error_class": "OSError",
+      "rejected": true,
+      "winerror": 1816
+    },
+    "target_library_calls": 0
+  },
+  "source_failure_boundary": "Frozen owner.observe_job journals final raw response then rejects shared finished predicate. verify_limits/peaks and subsequent result-marker validation statements were not reached; independent reviewer validates the retained markers separately.",
+  "timing": {
+    "whole_case_seconds": 0.734000000054948,
+    "parent_before_early_receipt_seconds": 1.2179999999934807,
+    "parent_after_lease_closes_seconds": 1.2810000000754371,
+    "parent_before_terminal_seal_seconds": 1.312000000034459,
+    "case_limit_seconds": 8,
+    "parent_limit_seconds": 60,
+    "root_reported_invocation_exit_code": 1
+  },
+  "documentation": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_accounting_information",
+      "purpose": "Primary accounting semantics",
+      "finding": "Microsoft documents TotalProcesses as lifetime associations including an association rejected by a limit violation; ActiveProcesses may temporarily rise for that attempt until termination and references release."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_limit_information",
+      "purpose": "Primary active-process-limit semantics",
+      "finding": "Microsoft documents that exceeding the active association limit terminates the process and fails the association. Parent handles can delay decrement of the active count."
+    }
+  ],
+  "engineering_assessment": {
+    "classification": "Narrow harness-policy defect is supported as an inference consistent with primary documentation and this recorded intentional quota probe; not a proven sole causal explanation.",
+    "support": "The resources worker intentionally reports one rejected descendant attempt with1816, while shared finished validation assumes cumulative TotalProcesses remains1. Documentation explicitly allows failed limit associations to increment that cumulative field. This is consistent with observed final2/0/0/[] and does not establish a live extra process.",
+    "prospective_change_scope": "A separately reviewed future policy may require only resources final tuple(2,0,0,[]) together with exact independent worker one-attempt/1816/exit0 evidence. Keep pre-resume/all other phases/ABI strict, accept no ActiveProcesses2 or generic allowance, preserve all current bytes, and require a fresh protocol/root decision.",
+    "causal_limits": [
+      "No second PID was observed or identified; the two non-atomic queries do not prove a complete lifetime process census.",
+      "The documents and current result do not establish why TotalTerminatedProcesses was0, or uniquely attribute the second cumulative entry.",
+      "The original older active2 observation remains unresolved; this run has no active2 sample.",
+      "The consumed v3 attempt stays failed. Documentation consistency cannot retroactively qualify it or qualify the three unattempted negative modes."
+    ]
+  },
+  "limitations": [
+    "Successful raw worker assertions, exit0 and recorded cleanup do not make this full four-case qualification pass.",
+    "No final memory-peak readback exists because the strict final snapshot assertion failed first. Only earlier configuration/readback/peak observations and the worker-reported allocation rejection are retained.",
+    "Process reaping/handle-close interpretation uses the frozen source and retained reaped=True/empty cleanup errors; no independent live process/handle query was performed.",
+    "This review does not authorize rerun, a v4 protocol, any native ABI target/DLL/model or scientific completion."
+  ],
+  "activity": {
+    "helper_or_checker_imports_or_executions": 0,
+    "pure_test_reruns": 0,
+    "actual_probe_reruns": 0,
+    "Windows_API_calls": 0,
+    "child_dispatches": 0,
+    "global_process_scans": 0,
+    "compiler_calls": 0,
+    "target_DLL_loads": 0,
+    "GGUF_model_tokenizer_server_calls": 0,
+    "source_or_actual_cache_mutations": 0,
+    "web_readonly_primary_document_pages": 2
+  },
+  "disposition": "Verify and preserve authoritative FAILED v3 record. Exact failure is cumulative total2 versus expected1 after resources exit0, with active0 and empty PID list. Narrow case-specific policy correction is supported for prospective review, not sole causality or retroactive qualification. Three later cases remain unattempted; no rerun/native permission is granted."
+}

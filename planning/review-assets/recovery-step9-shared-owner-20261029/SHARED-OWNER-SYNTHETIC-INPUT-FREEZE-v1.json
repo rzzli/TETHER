@@ -1,0 +1,28 @@
+{
+  "actual_API_calls": 0,
+  "author": {
+    "bytes": 4786,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\author_shared_owner_input_cohort_v1.py",
+    "sha256": "e8d262d197fbd86baad567d6f4a848c10e51046c1b409c78ed0835a28ed6e687"
+  },
+  "checker": {
+    "bytes": 6110,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_input_cohort_v1.py",
+    "sha256": "c02de99954d37e21b6d48d1aa96c6083c6d964ac97eaec43a71060aeab9ed5f5"
+  },
+  "fixture": {
+    "bytes": 4876,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+    "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+  },
+  "fixture_behavior_qualified": false,
+  "preparation_proof": {
+    "bytes": 1379,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-PREPARATION-PROOF-v1.json",
+    "sha256": "2b7f3c88f3affa6aefca8f664ee49e7e1b612ede1bc4539336ba66e4e8db8d5b"
+  },
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Literal bytes/SHA/role/closed-source-AST and once-history framing checks only. No loader/compile/fixture behavior/source-original qualification.",
+  "status": "SMALL_SYNTHETIC_INPUT_COHORT_FROZEN_FOR_FUTURE_INTERFACE_FIXTURES"
+}

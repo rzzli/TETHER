@@ -1,0 +1,16 @@
+{
+  "allow_large_stream": true,
+  "binding": {
+    "bytes": 4841,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-BINDING-v1.json",
+    "sha256": "9787b72d7799cc8a3d394ef03232da684756dc3608c53d88d4e8eccde5fe0975"
+  },
+  "declared_dispatches": 122,
+  "groups": {
+    "CAUSAL": 50,
+    "CORRECTIONS": 5,
+    "INTEGRATION": 15,
+    "LITERALS": 52
+  },
+  "status": "STARTED_BEFORE_SOURCE4_IMPORT"
+}

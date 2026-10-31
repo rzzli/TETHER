@@ -1,0 +1,199 @@
+{
+  "actual_SDK_constructors": 0,
+  "actual_children": 0,
+  "checker": {
+    "bytes": 8549,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_artifacts_v1.py",
+    "sha256": "4fa7d30b252145408dd913e6b196738f883055785add75215169915821894c28"
+  },
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "fixtures": [
+    {
+      "case": "cap-before-read",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\cap-before-read\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 2097056,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\cap-before-read\\result.jsonl",
+          "sha256": "3bf2157f5a579196c7439b41f8ab58fbfd785de59650d28b48b0708d4de06b0b"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\cap-before-read"
+    },
+    {
+      "case": "entry-guard",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\entry-guard\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 13541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\entry-guard\\result.jsonl",
+          "sha256": "b1d9038113c90a33e684ea00a3aef4edb4bd2075a4c62f6196da0f7f5fb1ffda"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\entry-guard"
+    },
+    {
+      "case": "directory-entry",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\directory-entry\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\directory-entry"
+    },
+    {
+      "case": "positive",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\positive\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 13541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\positive\\result.jsonl",
+          "sha256": "b1d9038113c90a33e684ea00a3aef4edb4bd2075a4c62f6196da0f7f5fb1ffda"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\positive"
+    },
+    {
+      "case": "failure-reserve",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\failure-reserve\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 65440,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\failure-reserve\\failure.json",
+          "sha256": "8fa38957f253802ba2e3f7722f1edd5351df4fad284a0ffbdc9b43c7ea37562a"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\failure-reserve"
+    },
+    {
+      "case": "unexpected",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\unexpected\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 20,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\unexpected\\not-a-census-file.bin",
+          "sha256": "dbe9ee1aa33e5413772ea76eb00cf3fd18417cdf7c4a9c7556880e1bbeadd64b"
+        },
+        {
+          "bytes": 13541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\unexpected\\result.jsonl",
+          "sha256": "b1d9038113c90a33e684ea00a3aef4edb4bd2075a4c62f6196da0f7f5fb1ffda"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\unexpected"
+    },
+    {
+      "case": "stdout",
+      "files": [
+        {
+          "bytes": 65537,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\stdout\\stdout.bin",
+          "sha256": "1abe08ebecf1c18cab71f6fe28aaddf20268f85bad78bb9a72f88ca47c874662"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\stdout"
+    },
+    {
+      "case": "invalid-mode",
+      "files": [
+        {
+          "bytes": 87,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-mode\\attempt.json",
+          "sha256": "785770b52f43483475c227b61374b9b3299546dc2e4a8cffeec11d3afb2de7d2"
+        },
+        {
+          "bytes": 13541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-mode\\result.jsonl",
+          "sha256": "b1d9038113c90a33e684ea00a3aef4edb4bd2075a4c62f6196da0f7f5fb1ffda"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-mode"
+    },
+    {
+      "case": "invalid-marker",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-marker\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 20,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-marker\\failure.json",
+          "sha256": "7fd0d3d434f0a0935c3b41f2e3a1f373bb10ee85dc2178c4e8c47e2f2e590ec6"
+        },
+        {
+          "bytes": 13541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-marker\\result.jsonl",
+          "sha256": "b1d9038113c90a33e684ea00a3aef4edb4bd2075a4c62f6196da0f7f5fb1ffda"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-marker"
+    },
+    {
+      "case": "invalid-newline",
+      "files": [
+        {
+          "bytes": 97,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-newline\\attempt.json",
+          "sha256": "a5a7d2a0dded3bfc3b83301d9d3c33a37fea4d16738d4b195f7c0c98473dee5e"
+        },
+        {
+          "bytes": 13540,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-newline\\result.jsonl",
+          "sha256": "6dd2c9a2ee7df9dd6fa119e07c4e7ac20a24f9eec32c8e2497637a87f28e3e6e"
+        }
+      ],
+      "root": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-census-artifacts-pure-1793237214858670200\\invalid-newline"
+    }
+  ],
+  "reported_image_file_opens": 0,
+  "schema_version": 1,
+  "scope": "Source-only v1 artifact/argv/unbound-gate tests, not future authority closure qualification; v1 remains blocked",
+  "source": {
+    "bytes": 32030,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v1.py",
+    "sha256": "3dfa67eb78baba8e16de0fc685438cbd0082c3c2326e006296f02539e608b9a6"
+  },
+  "status": "passed",
+  "status_sealer": {
+    "bytes": 6025,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_status_seal_v1.py",
+    "sha256": "7794819e3b8013847f0f5e8912d8b8424edfea8c2a95a09354b0918409daf682"
+  },
+  "tests": 7,
+  "validator": {
+    "bytes": 17312,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_validation_v1.py",
+    "sha256": "f5b8b4496018bfa66473bb694c99c3588a49bbb1060b814196f1ba80b32b95db"
+  },
+  "wire": {
+    "bytes": 9717,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+    "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+  }
+}

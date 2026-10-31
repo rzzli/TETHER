@@ -1,0 +1,41 @@
+{
+  "activity": {
+    "CPU_DLL_or_GGUF_reads": 0,
+    "SDK_or_target_API_or_worker_calls": 0,
+    "test_reruns": 0
+  },
+  "checker": {
+    "bytes": 16971,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_results_v1.py",
+    "sha256": "a2136bc58fa853bcb4471a797bbce1b75395bfb6ca4ac90da235694f27517fe0"
+  },
+  "parser_component_AST_sha256": {
+    "authority": "d946570137cdaf50f29df15b1a56fbe33c38ab0c4c4040a206069074b769b30d",
+    "exact": "076fa98b41d264684bb8a15daafd55ac83d37b1ccdfec00a28b7b10cb23c9318",
+    "json_value": "b31065421c704f1fe283da8f27d12f305e3d0beeb5f5df049cc71886e57f15ce",
+    "runtime_pins": "51da1b0879a8598ae5ea81e0e5114aa896604e19523d9daec3bdd616e9a772aa",
+    "sha": "82daf9a8840800fa4b1f26786e43bbffb24afd53ebb2d272f3678319873cd50c",
+    "validate_child_artifacts": "f5beaeb4e0b3abfda60064ae5b09f8ed0266a805575cf2b1210a3bbc235c9853",
+    "validate_modules": "40a2f125e56a9af4892a1705cd3599aa91424973deb1a72f56489b3d33a0f463"
+  },
+  "prepared_input_count": 147,
+  "prepared_protocol": {
+    "bytes": 40286,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v1.json",
+    "sha256": "dc7de124b9f64a5cce688f91857d960e27549fa2df9c27fd667517da4c980672"
+  },
+  "pure_proof": {
+    "bytes": 29258,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-RESULTS-ADVERSARIAL-PROOF-v1.json",
+    "sha256": "2a7745f95468e11bc5f0206ce3e83be49fc57d474306ac05aee4a82dd9006587"
+  },
+  "recorded_at_utc": "2026-10-28T22:51:55.019288+00:00",
+  "schema_version": 1,
+  "scope": "9 pure methods/230 synthetic vectors; no actual ABI or parent lifecycle guarantee",
+  "source": {
+    "bytes": 30370,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v1.py",
+    "sha256": "97544efa7e181e2a33d494c0923e3547b4f98f7903c6e0e1db024999736b6437"
+  },
+  "status": "PASS_final_whole_source_unchanged_and_all7_tested_parser_components_bound"
+}

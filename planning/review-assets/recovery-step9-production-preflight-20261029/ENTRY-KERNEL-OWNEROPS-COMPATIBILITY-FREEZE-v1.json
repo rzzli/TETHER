@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_NARROW_ENTRY_NATIVE_COMPATIBILITY_PENDING_FINITE_PEER",
+  "pins": {
+    "ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v1.json",
+      "bytes": 10080,
+      "sha256": "edd2b5e4f0eddeabf2376e6caee6a25f68cd7cd10065af3fdc57fdb6491f6dda"
+    },
+    "NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "bytes": 9184,
+      "sha256": "08e80ef53ee512a63c5585059176d19bba8c0d48c21b9db0f9976628f3da64e5"
+    },
+    "NATIVE-RAW-CARRIER-CONTRACT-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-CONTRACT-FREEZE-v1.json",
+      "bytes": 4511,
+      "sha256": "4cf7a07f219e47c61abb4505c2dfe37f4a6aa47b92c3c9412483ac6412c891d2"
+    },
+    "ENTRY-KERNEL-OWNEROPS-INDEPENDENT-PRECHECK-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-INDEPENDENT-PRECHECK-v1.json",
+      "bytes": 7111,
+      "sha256": "faeb95440550c478d73e402b4739204346321e5516de83914187c594e56fd283"
+    },
+    "ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json",
+      "bytes": 13864,
+      "sha256": "cdfeaa338f387c18039818e7d414c9c13252ee916f872ff42e400da48012a95b"
+    },
+    "ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json",
+      "bytes": 28509,
+      "sha256": "9e65fec645260308ed8847bed74381e39c167b8188600b59113088ba5ad19863"
+    },
+    "NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "bytes": 43817,
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    },
+    "ENTRY-KERNEL-OWNEROPS-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-FREEZE-v1.json",
+      "bytes": 3213,
+      "sha256": "27aa7b41b4810cca57bb620745a7795f80d2c0bd17bd014400950c7d80ea0f47"
+    }
+  },
+  "effective": "ENTRY contract9e65 + casescdfe + compatibility addendum below; frozen base/cases preserved",
+  "scope": "Snapshot native-stage/raw-bit inspectability and exact reserve/wrapper vocabulary only; no implementation/native/target/source execution or new producer output",
+  "checks": {
+    "json_parse": "PASS",
+    "named_controls": 32,
+    "planned_literal_branches": 53,
+    "new_cases": 0,
+    "source_imports": 0,
+    "native_or_original_operations": 0
+  },
+  "root_choice": "KernelSnapshot raw256B copied rows plus metadata; cache-only raw_call/axis access; explicit allocation/lifetime/partial noneligibility; KernelRefusal NATIVE_STATE_NOT_REPRESENTABLE; exact current Source4 codec/errors unchanged"
+}

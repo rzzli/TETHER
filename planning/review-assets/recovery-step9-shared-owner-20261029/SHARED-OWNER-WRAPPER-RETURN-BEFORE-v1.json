@@ -1,0 +1,43 @@
+{
+  "actual_API_calls": 0,
+  "expected": {
+    "stopped": true,
+    "wrapper_return_observed": true,
+    "wrapper_state": "returned"
+  },
+  "first_author_proof_sha256": "e3b024d10f27f65fede8fb99098b9549ac52d6e7ca5705c1579a5080f383bc52",
+  "observed": {
+    "hashed_bytes": 0,
+    "known_read_bytes": 3,
+    "raw_count": {
+      "tag": "COUNT32",
+      "value": 3
+    },
+    "raw_scalar": {
+      "tag": "BOOL32",
+      "value": 1
+    },
+    "stopped": true,
+    "wrapper_return_observed": true,
+    "wrapper_state": "raised"
+  },
+  "original_exception_propagated": true,
+  "original_primary": true,
+  "schema_version": 1,
+  "scope": "pure fictional wrapper return after separately recorded original stop; not real native return",
+  "source_pins": [
+    {
+      "name": "shared_owner_v1.py",
+      "sha256": "76384e02282b1ce2437b9ff342913297f58ea0858752308724bef912b9e2643b"
+    },
+    {
+      "name": "shared_file_ports_v1.py",
+      "sha256": "d80f980c771e11ba0116aa3a1a8e526015ce43cafeacc6cf8bc2890f86b4c900"
+    },
+    {
+      "name": "continue_verification_v1.py",
+      "sha256": "7f52397a8293ae133f019ede1da78881814eb547b026768f072a34e4a4cf8eb2"
+    }
+  ],
+  "status": "REPRODUCED_SOURCE_COUNTEREXAMPLE"
+}

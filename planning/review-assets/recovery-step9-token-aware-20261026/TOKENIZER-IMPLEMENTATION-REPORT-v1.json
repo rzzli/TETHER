@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "implemented_pending_independent_review_and_root_acceptance",
+  "new_files": [
+    "src/asof/study/stable_read.py",
+    "src/asof/study/tokenization.py",
+    "src/asof/study/resources/tokenizer-assets-v1.json",
+    "tests/test_study_tokenization.py"
+  ],
+  "focused_test_count": 16,
+  "focused_test_result": "passed, no failures/errors/skips",
+  "regression_first_findings": [
+    {
+      "finding": "cleanup skipped owned kill when poll failed",
+      "before": "test_cleanup_still_kills_if_poll_itself_raises failed killed=False",
+      "after": "passed; cleanup treats unknown poll status as running and preserves primary"
+    },
+    {
+      "finding": "pipe faults arriving in completion check could be missed",
+      "before": "test_pipe_fault_after_poll_before_completed_branch_is_rejected failed OSError not raised",
+      "after": "passed; post-completion/post-join fault and overflow rechecks"
+    },
+    {
+      "finding": "deadline expired during spawn could feed prompt",
+      "before": "test_expiry_during_spawn_never_feeds_stdin failed 6bytes !=0",
+      "after": "passed; deadline checked after retained ownership/journal before stdin workers"
+    },
+    {
+      "finding": "cleanup timing clock could replace primary interruption and skip child retention",
+      "before": "independent peer test failed, retained data/cache/preparation-peer-before.txt",
+      "after": "peer token test passes; primary interruption preserved, child/raw records retained with explicit unknown elapsed time"
+    }
+  ],
+  "tests_use": "Invented assets and trusted fake subprocess only; Windows sharing test writes only invented workspace fixture",
+  "local_model_asset_calls": 0,
+  "generation_calls": 0,
+  "provider_spend_usd": 0,
+  "known_limitations": [
+    "Windows sharing locks fail closed on other platforms",
+    "OS loader/system DLLs and hostile same-user/privileged modification not sandboxed",
+    "full current-package proof requires matching trusted installed package for replay",
+    "token counts certify exact prompts only; StudySession byte policy unchanged",
+    "No independent human or scientific validation"
+  ],
+  "ruff": "passed using locally cached Ruff0.15.22 executable",
+  "resource_path_invariant": "Explicit defensive consumer mapping added; original token alias probe already rejected by tokenization_key, no reproduced alias bug claimed"
+}

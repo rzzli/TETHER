@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "conditional_support_pending_exact_current_six_quote_gate_and_narrow_API_freeze",
+  "blocking_external_human_input_for_engineering": false,
+  "capacity_and_backend_quote_both_need_explicit_trusted_mode": true,
+  "baseline_query_policy_must_be_frozen": true,
+  "old_default_capacity_and_fixed_fixture_gates_preserved": true,
+  "runtime_test_edits": false,
+  "tokenizer_or_model_operations_by_reviewer": 0,
+  "data_inputs_or_protected_payloads_read": false,
+  "pins": [
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v1.md",
+      "sha256": "970aaa3cd2bb962b3501f19b5a612046fb13caa47f806ada5a40931dda9aa682",
+      "bytes": 9957
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/CONTRACT-v1.json",
+      "sha256": "437958391b44d195a0e40a1df5c63d3ca233d022f5d4c90bada4b0fbfc62715a",
+      "bytes": 2351
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/PREFLIGHT-RESULT.json",
+      "sha256": "b9f3fdd9a7400af5e8e4453c7755e393c11a7fd21318e6cbdae4c69e688e3bdc",
+      "bytes": 6395
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/INDEPENDENT-CONTRACT-REVIEW-v1.md",
+      "sha256": "cfc0d42996ea73612498a957ccc2fc9e29531d7b250cafc3d01d74f526bbe3a3",
+      "bytes": 7232
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "71ffef361f1c71cdd2b759dafab1059d7216cbaf739952845ea6e0d038db0518",
+      "bytes": 28202
+    },
+    {
+      "path": "src/asof/study/recorded.py",
+      "sha256": "beb14f0528de5edf9caddf4ea66a71e3ebae7e8e41517903226bb68d0bd04705",
+      "bytes": 4394
+    },
+    {
+      "path": "src/asof/study/baselines.py",
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "bytes": 8475
+    }
+  ]
+}

@@ -1,0 +1,2803 @@
+{
+  "actual_tokenizer_or_vocabulary_observations": 0,
+  "bounds": {
+    "maximum_case_instances": 64,
+    "maximum_piece_entries": 256,
+    "maximum_total_supplied_bytes": 4096,
+    "maximum_vectors": 16
+  },
+  "contract_sha256": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6",
+  "profile": "synthetic_piece_interval_component_v1",
+  "schema_version": 1,
+  "scope": "Literal byte-interval/count/witness/selector expectations. Not full v3 language cases, native pack or observed tokenizer outputs; real84case corpus remains independently frozen.",
+  "synthetic_token_labels_only": true,
+  "vectors": [
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "a2",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "a3",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41e282ac42",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "a4",
+          "native_byte_eligible": true,
+          "ordinal": 2,
+          "raw_hex": "41f09f988042",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "a2",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width3",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 4,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 5,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 0,
+              "pending_width3": 1,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "a3",
+            "matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 1,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width4",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 3,
+                "pending_end": 5,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 6,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 3,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 0,
+              "pending_width3": 0,
+              "pending_width4": 1,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "a4",
+            "matrix": [
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 2,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 1,
+          "same_piece_complete_scalar_then_pending": 3
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 1,
+          "same_piece_complete_scalar_then_pending": 3
+        },
+        "known_matrix_lower_bound": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": true,
+        "selected_prefixes": [
+          {
+            "byte_cut": 2,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          },
+          {
+            "byte_cut": 2,
+            "case_ordinal": 1,
+            "classes": [
+              "pending_width3",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          },
+          {
+            "byte_cut": 3,
+            "case_ordinal": 2,
+            "classes": [
+              "pending_width4",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": 2,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "all_widths_and_selection_dedup",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            3
+          ],
+          "piece_hex": [
+            "41e2",
+            "82ac42"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            3,
+            3
+          ],
+          "piece_hex": [
+            "41f09f",
+            "988042"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Widths2/3/4 and mixed; priority selectors share one boundary without repeated prefix sampling.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "carry",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "c2a2e282ac",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2"
+                ],
+                "complete_widths": [],
+                "end": 1,
+                "pending_end": 2,
+                "pending_start": 0,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": []
+              },
+              {
+                "classes": [
+                  "pending_width3"
+                ],
+                "complete_widths": [],
+                "end": 3,
+                "pending_end": 5,
+                "pending_start": 2,
+                "start": 1,
+                "token_ordinal": 1,
+                "witnesses": []
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 5,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 3,
+                "token_ordinal": 2,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 1,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 0
+            },
+            "id": "carry",
+            "matrix": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 1,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          },
+          {
+            "byte_cut": 3,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width3"
+            ],
+            "take_tokens": 2,
+            "token_ordinal": 1
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": null
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "carried_scalar_not_wholly_contained",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            1,
+            2,
+            2
+          ],
+          "piece_hex": [
+            "c2",
+            "a2e2",
+            "82ac"
+          ],
+          "token_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "purpose": "Completing a scalar begun in the prior piece does not satisfy mixed.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "carry_ascii",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "c2a241e282ac",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2"
+                ],
+                "complete_widths": [],
+                "end": 1,
+                "pending_end": 2,
+                "pending_start": 0,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": []
+              },
+              {
+                "classes": [
+                  "pending_width3",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 4,
+                "pending_end": 6,
+                "pending_start": 3,
+                "start": 1,
+                "token_ordinal": 1,
+                "witnesses": [
+                  [
+                    1,
+                    2,
+                    3
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 6,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 4,
+                "token_ordinal": 2,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 1,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "carry_ascii",
+            "matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 1,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          },
+          {
+            "byte_cut": 4,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width3",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 2,
+            "token_ordinal": 1
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "carry_then_whole_ASCII_then_pending",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            1,
+            3,
+            2
+          ],
+          "piece_hex": [
+            "c2",
+            "a241e2",
+            "82ac"
+          ],
+          "token_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "purpose": "A separate complete ASCII scalar within the piece qualifies after a carried scalar.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "repeats",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "4142c2a2c2a3e282ac5a",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width3",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1,
+                  2
+                ],
+                "end": 7,
+                "pending_end": 9,
+                "pending_start": 6,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ],
+                  [
+                    2,
+                    2,
+                    4
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 10,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 7,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 0,
+              "pending_width3": 1,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "repeats",
+            "matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 7,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width3",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          }
+        ],
+        "selectors": {
+          "pending_width2": null,
+          "pending_width3": 0,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "matrix_distinct_widths_not_scalar_count",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            7,
+            3
+          ],
+          "piece_hex": [
+            "4142c2a2c2a3e2",
+            "82ac5a"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Repeated complete widths count once; one boundary increments multiple matrix rows.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "zero",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 0,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": []
+              },
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 1,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 2,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 2,
+                "witnesses": []
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 3,
+                "witnesses": []
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 4,
+                "token_ordinal": 4,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "zero",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 3
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 2,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 2,
+            "token_ordinal": 1
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": null,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "zero_pieces_keep_original_token_ordinals",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            0,
+            2,
+            0,
+            2,
+            0
+          ],
+          "piece_hex": [
+            "",
+            "41c2",
+            "",
+            "a242",
+            ""
+          ],
+          "token_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "purpose": "Empty pieces remain in arrays/counts and prefix take; they are not candidate boundaries.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "first",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "later",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "first",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "later",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 1,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 2,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 2
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 2,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 2
+        },
+        "known_matrix_lower_bound": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 2,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": null,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "scan_all_cases_not_first_success_only",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Later eligible boundaries increase counts, while first selection stays the first ordinal.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": false,
+          "id": "generation_excluded",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "semantic_excluded",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": false
+        },
+        {
+          "generation_member": false,
+          "id": "harness",
+          "native_byte_eligible": false,
+          "ordinal": 2,
+          "raw_hex": "00",
+          "semantic_eligible": false
+        },
+        {
+          "generation_member": true,
+          "id": "ASCII_population",
+          "native_byte_eligible": true,
+          "ordinal": 3,
+          "raw_hex": "41",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "generation_excluded",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": false,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "semantic_excluded",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 1,
+            "population": false,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          },
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "harness",
+            "matrix": null,
+            "ordinal": 2,
+            "population": false,
+            "qc_reason": "harness_declared",
+            "qc_status": "harness_ineligible",
+            "zero_piece_count": null
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 1,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 0,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 0
+            },
+            "id": "ASCII_population",
+            "matrix": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 3,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 0,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 0,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [],
+        "selectors": {
+          "pending_width2": null,
+          "pending_width3": null,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": null
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "only_source_flags_define_population",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        null,
+        {
+          "piece_byte_lengths": [
+            1
+          ],
+          "piece_hex": [
+            "41"
+          ],
+          "token_ids": [
+            1
+          ]
+        }
+      ],
+      "purpose": "Generation/semantic/harness exclusions are declarations, not observed membership filters.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "unknown",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "known",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41e282ac42",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": false,
+        "cases": [
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "unknown",
+            "matrix": null,
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": "missing_ledger",
+            "qc_status": "unknown",
+            "zero_piece_count": null
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width3",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 4,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 5,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 0,
+              "pending_width3": 1,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "known",
+            "matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 1,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": null,
+        "coverage_complete": false,
+        "known_counts_lower_bound": {
+          "pending_width2": 0,
+          "pending_width3": 1,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": null,
+        "required_available": null,
+        "selected_prefixes": null,
+        "selectors": null,
+        "unknown_population_ordinals": [
+          0
+        ]
+      },
+      "expected_exception": null,
+      "id": "unknown_population_blocks_all_selectors",
+      "ledgers": [
+        null,
+        {
+          "piece_byte_lengths": [
+            2,
+            3
+          ],
+          "piece_hex": [
+            "41e2",
+            "82ac42"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Known later evidence is only a lower bound when an earlier population ledger is missing.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": false,
+          "id": "excluded_unknown",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "known",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": false,
+        "cases": [
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "excluded_unknown",
+            "matrix": null,
+            "ordinal": 0,
+            "population": false,
+            "qc_reason": "missing_ledger",
+            "qc_status": "unknown",
+            "zero_piece_count": null
+          },
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  1
+                ],
+                "end": 2,
+                "pending_end": 3,
+                "pending_start": 1,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    1,
+                    0,
+                    1
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 4,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 2,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "known",
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 1,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 2,
+            "case_ordinal": 1,
+            "classes": [
+              "pending_width2",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": null,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "excluded_QC_unknown_does_not_change_population",
+      "ledgers": [
+        null,
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Excluded missing ledger remains QCunknown; coverage contribution is declared zero, overall case QC false.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "bad_roundtrip",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": false,
+        "cases": [
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "bad_roundtrip",
+            "matrix": null,
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": "roundtrip",
+            "qc_status": "unknown",
+            "zero_piece_count": null
+          }
+        ],
+        "counts": null,
+        "coverage_complete": false,
+        "known_counts_lower_bound": {
+          "pending_width2": 0,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": null,
+        "required_available": null,
+        "selected_prefixes": null,
+        "selectors": null,
+        "unknown_population_ordinals": [
+          0
+        ]
+      },
+      "expected_exception": null,
+      "id": "roundtrip_failure_is_unknown_not_zero",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            1
+          ],
+          "piece_hex": [
+            "41c2",
+            "a2"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Missing final byte cannot be normalized into known zero boundary counts.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "EOG",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "out_of_range",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": false,
+        "cases": [
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "EOG",
+            "matrix": null,
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": "ordinary_EOG",
+            "qc_status": "unknown",
+            "zero_piece_count": null
+          },
+          {
+            "boundaries": null,
+            "counts": null,
+            "id": "out_of_range",
+            "matrix": null,
+            "ordinal": 1,
+            "population": true,
+            "qc_reason": "token_id",
+            "qc_status": "unknown",
+            "zero_piece_count": null
+          }
+        ],
+        "counts": null,
+        "coverage_complete": false,
+        "known_counts_lower_bound": {
+          "pending_width2": 0,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "matrix": null,
+        "required_available": null,
+        "selected_prefixes": null,
+        "selectors": null,
+        "unknown_population_ordinals": [
+          0,
+          1
+        ]
+      },
+      "expected_exception": null,
+      "id": "ordinary_EOG_and_bounds_are_QC_failures",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            99,
+            1
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            100,
+            1
+          ]
+        }
+      ],
+      "purpose": "Synthetic EOG/out-of-range labels invalidate eligible ledgers before geometry.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "second",
+          "native_byte_eligible": true,
+          "ordinal": 1,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "first",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": "case_order",
+      "expected": null,
+      "expected_exception": "ValueError",
+      "id": "shuffled_case_ordinals_rejected",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Do not silently sort caller cases into favorable selector order.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "first",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        },
+        {
+          "generation_member": true,
+          "id": "duplicate",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": "case_order",
+      "expected": null,
+      "expected_exception": "ValueError",
+      "id": "duplicate_case_ordinals_rejected",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        },
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Duplicate ordinal is a descriptor error, not an ordering fallback.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "forged_outcome",
+          "native_byte_eligible": true,
+          "observed_native_membership": false,
+          "ordinal": 0,
+          "raw_hex": "41c2a242",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": null,
+      "expected_exception": "ValueError",
+      "id": "native_outcome_is_not_an_API_input",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            2,
+            2
+          ],
+          "piece_hex": [
+            "41c2",
+            "a242"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Measured success/failure must never become a population selection switch.",
+      "vocabulary_size": 100
+    },
+    {
+      "cases": [
+        {
+          "generation_member": true,
+          "id": "complete34",
+          "native_byte_eligible": true,
+          "ordinal": 0,
+          "raw_hex": "e282acf09f9880c2a2",
+          "semantic_eligible": true
+        }
+      ],
+      "eog_ids": [
+        99
+      ],
+      "exception_message": null,
+      "expected": {
+        "all_case_QC_complete": true,
+        "cases": [
+          {
+            "boundaries": [
+              {
+                "classes": [
+                  "pending_width2",
+                  "same_piece_complete_scalar_then_pending"
+                ],
+                "complete_widths": [
+                  3,
+                  4
+                ],
+                "end": 8,
+                "pending_end": 9,
+                "pending_start": 7,
+                "start": 0,
+                "token_ordinal": 0,
+                "witnesses": [
+                  [
+                    3,
+                    0,
+                    3
+                  ],
+                  [
+                    4,
+                    3,
+                    7
+                  ]
+                ]
+              },
+              {
+                "classes": [],
+                "complete_widths": [],
+                "end": 9,
+                "pending_end": null,
+                "pending_start": null,
+                "start": 8,
+                "token_ordinal": 1,
+                "witnesses": []
+              }
+            ],
+            "counts": {
+              "pending_width2": 1,
+              "pending_width3": 0,
+              "pending_width4": 0,
+              "same_piece_complete_scalar_then_pending": 1
+            },
+            "id": "complete34",
+            "matrix": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "ordinal": 0,
+            "population": true,
+            "qc_reason": null,
+            "qc_status": "ok",
+            "zero_piece_count": 0
+          }
+        ],
+        "counts": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "coverage_complete": true,
+        "known_counts_lower_bound": {
+          "pending_width2": 1,
+          "pending_width3": 0,
+          "pending_width4": 0,
+          "same_piece_complete_scalar_then_pending": 1
+        },
+        "known_matrix_lower_bound": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "required_available": false,
+        "selected_prefixes": [
+          {
+            "byte_cut": 8,
+            "case_ordinal": 0,
+            "classes": [
+              "pending_width2",
+              "same_piece_complete_scalar_then_pending"
+            ],
+            "take_tokens": 1,
+            "token_ordinal": 0
+          }
+        ],
+        "selectors": {
+          "pending_width2": 0,
+          "pending_width3": null,
+          "pending_width4": null,
+          "same_piece_complete_scalar_then_pending": 0
+        },
+        "unknown_population_ordinals": []
+      },
+      "expected_exception": null,
+      "id": "complete_widths_three_and_four",
+      "ledgers": [
+        {
+          "piece_byte_lengths": [
+            8,
+            1
+          ],
+          "piece_hex": [
+            "e282acf09f9880c2",
+            "a2"
+          ],
+          "token_ids": [
+            1,
+            2
+          ]
+        }
+      ],
+      "purpose": "Wholly contained three/four-byte scalars are both mixed witnesses before a two-byte pending tail.",
+      "vocabulary_size": 100
+    }
+  ]
+}

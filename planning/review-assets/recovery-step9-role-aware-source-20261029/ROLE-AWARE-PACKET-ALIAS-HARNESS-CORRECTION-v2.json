@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "ONE_NAMED_HARNESS_CORRECTION_AUTHORIZED_SOURCE_UNCHANGED",
+  "basis": {
+    "schema_sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a",
+    "source_pause_v3_sha256": "7ea4c1e326904ac9184b296355642b510cdc5a25ce943aec4aec05bc0cec89de",
+    "passing_codec_sha256": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b",
+    "first_legacy_failure_sha256": "dc02853ad550319d50c8361aa073aa0d4ba4ee8577d3b2bc99dc6bf318565a84",
+    "source_localization_sha256": "230f6de681933c8da4a8d6114f8f44d8851cc7bd96c03409ed81a162e6b0e743",
+    "harness_localization_sha256": "6c1ce5076d73c1f583f41f75d60f0b64160c3f839e29dab7c541f39e8d46ad9e"
+  },
+  "finding": "Packet.kind uses the five short aliases fixed by b71. Artifact filenames use a separate mapping. The adapter incorrectly required kind+'.json', rejecting89 schema-conformant publication payloads before callback actions. Forty-one main histories were unmatched; all48 protocol arrays were empty. Four focused late-ACK actions did not reach their clock400 injection, so this result does not establish source ACK loss.",
+  "authorized_delta": "Create a separately named adapterV2 changing only decoded['kind'] comparison from kind+'.json' to kind. Keep the short-alias equality strict. Preserve all other packet version/scope/status/key/qualification/canonical checks, old48 expectations, SAME8/SAME6 assertion bodies, identity monitors, deadlines and clocks.",
+  "source_rule": "Do not change the four V3 producer sources. Their codec PASS remains valid. Preserve the failed Legacy proof, all first bindings/attempts and the old adapter. New runnerV7/extensionsV4 may change only the adapter load identity/pin and fresh result/binding paths while retaining the exact source3 map.",
+  "execution_gate": "Exact finite static peer and a fresh explicit execution binding precede one corrected-harness Legacy validation. No codec replay is required because its source and frozen tests are unchanged. Source extensions remain gated on that Legacy pass; large/native/scientific work remains unauthorized here.",
+  "known_first_main_run_counts": {"histories_completed": 48, "histories_matched": 7, "snapshots": 372, "fake_original_dispatches": 518, "toy_module_execs": 34},
+  "accounting_note": "Focused observation counts are not unique world counts or complete extra-call totals. Preserve their known records without inventing aggregate dispatch counts.",
+  "provider_spend_usd": 0,
+  "qualified": false
+}

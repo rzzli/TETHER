@@ -1,0 +1,116 @@
+{
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v6.json": {
+      "bytes": 3828,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-BINDING-v6.json",
+      "sha256": "e0d0d46367922bcf23eed2edc091549f2460a0de1e0c9e38d28d787311112a7b"
+    },
+    "DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v6.json": {
+      "bytes": 68300,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-NEGATIVE-INTEGRATION-PROOF-v6.json",
+      "sha256": "9aaa761b38c880cd12955ecd2371bf3d6e9b8032749fbe257e221f663c8c8784"
+    },
+    "DETACHED-ABI-OBSERVATION-PEER-REVIEW-v3.json": {
+      "bytes": 13331,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PEER-REVIEW-v3.json",
+      "sha256": "9b4fb00aba8024dd5e407a7ef87e9c085ec14b3dc9c4058b80df851c2510128c"
+    },
+    "DETACHED-ABI-OBSERVATION-PREPARATION-v3.json": {
+      "bytes": 4624,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PREPARATION-v3.json",
+      "sha256": "f6f8d7d4e2291091f601951e3f9eb36d99a4a327185433157bb80823737db00d"
+    },
+    "DETACHED-ABI-OBSERVATION-PROTOCOL-v3.json": {
+      "bytes": 63411,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v3.json",
+      "sha256": "88672320d5969c5dbd32e265155353f31b187b51aeaad39396f40788fdda1fb8"
+    },
+    "DETACHED-ABI-OBSERVATION-PURE-CHECKS-v4.json": {
+      "bytes": 38261,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PURE-CHECKS-v4.json",
+      "sha256": "ee0f4a4f0a0bccd7c2fc6958608ce5f80cb48dbe45d4d9e2f9b3866a23fed3e0"
+    },
+    "TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.json": {
+      "bytes": 21215,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.json",
+      "sha256": "5878717f9048398f4c710fdc4a2b796d81872b9f8d0b3383176108c2ffd4d0c5"
+    },
+    "detached_abi_terminal_observation_v3.py": {
+      "bytes": 10524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+      "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+    },
+    "run_detached_abi_observation_v6.py": {
+      "bytes": 45147,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v6.py",
+      "sha256": "ec985415358e547db31bf988a5027099b2992a06d096f3067136ffa03f858aff"
+    },
+    "typed_public_c_recognizer_v5.cpp": {
+      "bytes": 53407,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+      "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+    }
+  },
+  "automatic_retry": false,
+  "executable": {
+    "bytes": 202752,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-build-v5-20261028T235608Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "a7b4a102959175a674a6664b0027612f1cf0b671e8e8518e9c4cb02497ddda60"
+  },
+  "explicit_target_call_policy": [
+    "llama_version",
+    "llama_model_default_params"
+  ],
+  "fresh_input_hashes_checked": 243,
+  "general_SDK_gates_remain_false": true,
+  "initializer_effects_uninstrumented": true,
+  "interruption_policy": "Cleanup/seal only; no new input reads; poll same running session without redispatch",
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 30,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 60,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 4194304,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "maximum_attempts": 1,
+  "metadata_scope": "One bounded current child-reported rejection, numeric UTF16-unit hex and optionalUTF8; not image-file authenticity or full inventory; preserve old identities unknown",
+  "no_CPU_GGUF_backend_model_vocabulary_grammar_path": true,
+  "no_allowlist_or_predicate_change": true,
+  "no_compilation_or_download": true,
+  "no_reported_unknown_image_file_inspection": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v3-20261029T001629Z",
+  "output_absent": true,
+  "preflight_filename_failure": {
+    "bytes": 696,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ROOT-DIAGNOSTIC-DECISION-PREFLIGHT-FAILURE-v1.json",
+    "sha256": "14cc3e203ca079f8fdd82dc1609ac38035adcc9f4e76f7ce9c05a9a7adb1c270"
+  },
+  "prior_failures_preserved": true,
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T00:21:04.877580+00:00",
+  "required_independent_actual_verification": true,
+  "schema_version": 1,
+  "status": "root_authorizes_one_exact_bounded_rejected_module_context_observation",
+  "target_calls_instrumented": false,
+  "terminal_policy": {
+    "capture_drain_seconds": 0.25,
+    "late_returned_bytes_retained": true,
+    "maximum_capture_polls": 64,
+    "physical_pipe_EOF_is_not_child_exit": true,
+    "skip_new_observations_and_input_rechecks_after_interruption": true,
+    "unknown_creation_is_not_final": true
+  }
+}

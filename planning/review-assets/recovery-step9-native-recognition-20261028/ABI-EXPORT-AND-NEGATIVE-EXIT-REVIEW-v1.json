@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T23:00:58.428544+00:00",
+  "status": "HOLD_v3_bridge_reuse_known_static_owner_defect_source_only_correction_review",
+  "execution_authorized": false,
+  "compiler_dispatch_authorized": false,
+  "consumed_negative_attempt_preserved": true,
+  "anchors": {
+    "static_crosscheck": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-EXPORT-STATIC-CROSSCHECK-v1.json",
+      "bytes": 8883,
+      "sha256": "64c0f7644360b0ddf2983db279ff92dd5e0f89afa34ca3aa4bb406501cb27ae8"
+    },
+    "bridge_v3": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v3.cpp",
+      "bytes": 49260,
+      "sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4"
+    },
+    "build_helper": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_public_c_bridge.py",
+      "bytes": 36739,
+      "sha256": "733a47bb8c047e129560c0c68dd63d97cf09c95c23b3cabd105df7791927c09c"
+    },
+    "old_build_verification": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-RESULT-VERIFICATION.json",
+      "bytes": 63367,
+      "sha256": "5a05e7310a42caebd9fdd6991487424d5cc860fe21bb5a806f5991c4c920f6bc"
+    },
+    "old_static_PE": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-STATIC-PE.json",
+      "bytes": 47047,
+      "sha256": "2e79102c8611adae77b7b1a0e1e636cd294534ed0d4764886908bf17d1bed943"
+    },
+    "old_bridge_review": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-PEER-REVIEW.json",
+      "bytes": 6456,
+      "sha256": "62d8fde49f4fe623519a1ccf081dde233bb5289567e85500f775a7f3502dafd8"
+    },
+    "old_ABI_parent_review": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PEER-REVIEW-v1.json",
+      "bytes": 12316,
+      "sha256": "1688a4a45e6f8211b76a4e5708c44ce371407382728016d3001f51c17eb72dca"
+    },
+    "failed_parent_source": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v1.py",
+      "bytes": 30370,
+      "sha256": "97544efa7e181e2a33d494c0923e3547b4f98f7903c6e0e1db024999736b6437"
+    },
+    "qualified_detached_SDK": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "bytes": 53085,
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    }
+  },
+  "static_findings": {
+    "llama_version_present": true,
+    "llama_version_ordinal": 257,
+    "llama_version_RVA": 1105568,
+    "all15_LLAMA_names_present_in_llama": true,
+    "missing_GGML_names_in_requested_ggml": [
+      "ggml_backend_reg_name",
+      "ggml_backend_reg_dev_count",
+      "ggml_backend_reg_dev_get",
+      "ggml_backend_dev_name",
+      "ggml_backend_dev_type"
+    ],
+    "actual_GGML_owner_groups": {
+      "ggml.dll": [
+        "ggml_backend_load",
+        "ggml_backend_reg_count",
+        "ggml_backend_reg_get",
+        "ggml_backend_dev_count",
+        "ggml_backend_dev_get"
+      ],
+      "ggml-base.dll": [
+        "ggml_backend_reg_name",
+        "ggml_backend_reg_dev_count",
+        "ggml_backend_reg_dev_get",
+        "ggml_backend_dev_name",
+        "ggml_backend_dev_type"
+      ]
+    },
+    "all_required_named_exports_direct_nonzero_no_forwarders": true,
+    "first_predicted_missing_lookup": "ggml.dll!ggml_backend_reg_name",
+    "attribution_limit": "Old failure text does not identify owner/name; first predicted lookup is source/export-table inference, not a captured per-call resolution trace."
+  },
+  "why_earlier_acceptance_missed": [
+    "static_runtime collected PE ordinary/delay imports and hashes, not named exports/owner mapping",
+    "built EXE check validated forbidden static imports and process/network symbols, not dynamic GetProcAddress requirements",
+    "decltype/public header compilation checks declarations/types but runtime names from string literals are not linked against target DLL import libraries",
+    "same ggml-backend.h declares both groups with GGML_API; header does not establish the chosen binary handle",
+    "initial/v3/OpenMP and parent reviews scoped source/layout/loader/lifecycle but did not perform per-DLL named-export crosscheck"
+  ],
+  "acknowledgement": "The independent peer also missed this preventable per-DLL export check. Earlier build/source success is not ABI success and is not rewritten; future reuse is held for this known defect.",
+  "v4_static_design_review": {
+    "proposal_supported_in_source_scope": true,
+    "LLAMA15_unchanged": true,
+    "GGML_registry5_owner": "ggml.dll",
+    "GGML_base5_owner": "ggml-base.dll",
+    "pass_actual_base_handle_to_Api": true,
+    "typed_declarations_unchanged": true,
+    "no_fallback_lookup": true,
+    "missing_export_diagnostic_includes_fixed_owner_and_symbol": true,
+    "no_new_Dll_or_mode_or_call_scope": true,
+    "no_new_runtime_permission": true,
+    "required_static_regressions": [
+      "v3 against pinned PE tables rejects exactly the five missing owner mappings",
+      "v4 groups are disjoint and exactly cover original ten GGML names; all25 total names map to exact pinned owners",
+      "llama_version and defaults explicitly checked; no ordinal/name guessing or case normalization",
+      "bounded PE parser validates RVA/count/name tables and nonzero direct targets; explicit forwarder handling if any",
+      "missing symbol/wrong owner/zero RVA/ambiguous or changed pin fixtures fail before any compile or target load",
+      "missing owner+symbol diagnostic is bounded fixed-table data; no alternate DLL search or export substitution"
+    ]
+  },
+  "parent_negative_exit_gap": {
+    "location": "execute nonzero return check precedes capture EOF/final Job/peak observations; finally immediately calls Owner.cleanup",
+    "actual_unknowns_stay_unknown": true,
+    "SDK3bf_edited": false,
+    "proposal": [
+      "record nonzero exit failure as primary immediately when observed",
+      "before Owner.cleanup, independently attempt bounded capture drain/EOF for known-exited child, raw final Job+generic evaluation, and limits/peaks",
+      "each terminal observation records attempted/return/error/skip state and cannot suppress other observations or owned cleanup",
+      "raw query bytes are durable before validity checks; counter anomaly is secondary and remains negative",
+      "use work cutoff child_end-2/parent reserve; exhausted budget records not_attempted/unknown and preserves cleanup reserve",
+      "unknown creation/no handle/live or failed wait gets explicit pre-cleanup/unknown labels; no final quiescence/exit/EOF is inferred",
+      "reuse unchanged Owner.cleanup for termination/reap/close; do not copy a new termination framework merely to improve the observed nonzero-exit path",
+      "post-close Job/peaks remain unobserved if no earlier observation exists; preserve that limit"
+    ],
+    "tests": [
+      "known exit2 retains exit primary, EOF/capture/final Job/peaks before first close",
+      "each capture/query/publication exception remains separate and later observations/cleanup still attempted",
+      "unknown creation/no process handle cannot become reaped/final-known by inference",
+      "observation deadline exhaustion skips bounded work but cannot skip terminate/reap/close",
+      "existing primary plus recheck/original-lease/sealing close failures retained and veto success"
+    ]
+  },
+  "primary_reference": "https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress",
+  "limitations": [
+    "Static exports prove named availability at pinned file tables, not function ABI correctness or safe initialization.",
+    "No DLL load/API/compiler/child/model/CPU/GGUF execution or protected payload read occurred in this review.",
+    "No old failure, ABI version/default observation, scientific gate or universal containment claim is retroactively established."
+  ]
+}

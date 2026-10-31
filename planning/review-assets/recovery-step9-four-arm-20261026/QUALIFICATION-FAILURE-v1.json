@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "package_version": "0.3.6",
+  "role": "engineering_qualification",
+  "protocol_sha256": "9ee7a7c395f62c4346afcfb4c3c4e55f16c524627c05066aadd566c93bea561e",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-four-arm-qualified-20261027T211935Z",
+  "source_pin_count": 312,
+  "generation_calls": 0,
+  "server_startups": 0,
+  "provider_spend_usd": 0,
+  "retries": 0,
+  "protected_payloads_read": false,
+  "scientific_validation": "not_attempted",
+  "status": "failed",
+  "error_class": "TimeoutError",
+  "message": "Preparation deadline expired",
+  "tokenizer_children": 2,
+  "denied_access": [],
+  "network_attempts": []
+}

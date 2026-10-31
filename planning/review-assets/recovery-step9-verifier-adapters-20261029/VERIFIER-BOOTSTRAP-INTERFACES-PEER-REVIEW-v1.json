@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "HOLD_v1_two_reproduced_source_binding_and_diagnostic_aliasing_gaps",
+  "review_complete": true,
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v1.py",
+    "bytes": 21563,
+    "sha256": "4c5c0ee62c5663e7666094fdccfcd110ab1ed77b420dfc6c6499a12d7a899966"
+  },
+  "author_pure_proof": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-INTERFACES-PURE-PROOF-v1.json",
+    "bytes": 8405,
+    "sha256": "e2e6157b20cb1ac49acf3f959fb71d2148e8cebade99329a7ef7a3397c0ed98c"
+  },
+  "author_proof_methods": 20,
+  "author_proof_anchors_rehashed": 8,
+  "before_fix_probes": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-PEER-FAULTS-BEFORE-v1.json",
+    "bytes": 2211,
+    "sha256": "030ade7137ac35f68ed5966d2ec1de04507ac290c4b16c0db8ecb69f48e6c05c"
+  },
+  "before_fix_checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_bootstrap_peer_faults_before_v1.py",
+    "bytes": 7415,
+    "sha256": "0283b18c867c60ee9e02bee5a7f4025baa4279b483530d4680df899128f61255"
+  },
+  "findings": [
+    {
+      "id": "capture_foreign_read_port",
+      "severity": "blocking_scoped_interface_integrity",
+      "source_method": "BootstrapOwner.capture",
+      "observed": "Original port opened/owned/inspected slot; a foreign port read1/originalread0 supplied bytes and hash_complete becameTrue. Original closer remained bound and closedonce.",
+      "correction": "Require port is owner._port before capture attempt/hash/read mutation and dispatch; test rejectedforeign reader has0calls and originalslot ownership/known bytes remain intact."
+    },
+    {
+      "id": "snapshot_nested_alias",
+      "severity": "blocking_retained_diagnostics_integrity",
+      "source_method": "BootstrapOwner.snapshot",
+      "observed": "Returned primary_error/error-list entries/compile-record entries alias ownerdicts. Ordinary returned-snapshot mutations altered retained owner diagnostics; outerlist/filedict controls remained detached.",
+      "correction": "Detach every nested retained diagnostic container, preserving values/alias-independent failure history; test mutation of all nested returned fields cannot affect nextsnapshot or ownerstate."
+    }
+  ],
+  "nonfindings": [
+    "Origin/handoff keep same object/start295/300 cutoff and once-only adoption; serialized metadata is not the minted authority.",
+    "Open slots precede fake dispatch; defined readcounts precede copy/hash; partial read/hash/close return states stay distinct.",
+    "Current captured source object/roster/live leases gate loader; fixed ownmodule/dependency/stdlib resolution has no loader default/path/sys.modules fallback.",
+    "Late/unknown compile states cannot retry; captured-source execution remains source-reviewed/trusted callback scope rather than hostilePython isolation.",
+    "No additional material blocker found in fullscopedsource/proof review; future real entry/authority/source closure/checker/platform qualification remains explicitly pending."
+  ],
+  "claim_limit": "Both faults affect the pure injected interface. Every snapshot still denies verification_complete and real_profile_qualified; no runtime-success or live-source-authentication exploit is claimed.",
+  "next": "Preserve v1 and before-fix proof; rootauthorized separately namedv2 with these two corrections, regression-first evidence and independent re-review. No liveadapter or oldpayload action.",
+  "elapsed_seconds": 0.015000000013969839,
+  "budget_seconds": 20,
+  "activity": {
+    "author20method_checker_reruns": 0,
+    "livefile_or_SDK_adapters": 0,
+    "oldsource_or_payload_rehashes": 0,
+    "CPU_GGUF_pack_operations": 0,
+    "native_compiler_calls": 0
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "API_note": {
+    "bytes": 2043,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-API-v1.md",
+    "sha256": "dbf5bcd66fe0b49f7ab6bf5074c9cf84736a2f91e77e289490f9882a1031aa4d"
+  },
+  "CPU_GGUF_oldpack_operations": 0,
+  "SDK_native_compiler_operations": 0,
+  "captured_source_context": "Factory-issued immutable exact captured-byte profile only; not live owner, original availability/authentication or serialized ready authority.",
+  "checker": {
+    "bytes": 15299,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\check_unicode_pack_codec_v1.py",
+    "sha256": "26301721139c8186b63a131db20d65ec3545454942c5ee22200dc2260a0e1f57"
+  },
+  "counts": {
+    "callback_faults": 9,
+    "format_mutations": 34,
+    "independent_cases": 84,
+    "literal_fragments": 25,
+    "literal_negative_mutations": 14,
+    "literal_positive_records": 11,
+    "truncation_points": 279
+  },
+  "decision": {
+    "bytes": 2811,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-SOURCE-IMPLEMENTATION-DECISION-v1.json",
+    "sha256": "f31c8f5d411305a9434c225d5075fb829a2d5a4dfdde41fac2d0bccedb18cad8"
+  },
+  "in_memory_pack": {
+    "bytes": 37766,
+    "persisted": false,
+    "sha256": "d2537df43e7e6e8113c4e08f0536c2e3a698bd274963ab71a4efced4fa32c8ab"
+  },
+  "methods": 11,
+  "originals_authenticated": false,
+  "pending": "Independent source/pure peer and root scoped acceptance; no runtimepack persistence/bridge/parent/native or payload authority.",
+  "profile_qualified": false,
+  "proof": {
+    "bytes": 6568,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-PURE-PROOF-v1.json",
+    "sha256": "7b03e75956a905566be264b7d35f8fee05503d524de609a0f383b4c1160f74bf"
+  },
+  "recorded_at_utc": "2026-10-29T09:44:37.754881+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "source": {
+    "bytes": 16663,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-codec-20261029\\unicode_pack_codec_v1.py",
+    "sha256": "c2e579f9a5f0e485d4af1fe5bfeaed75c62debffb5f779391b294d740f1f5b40"
+  },
+  "status": "FROZEN_SOURCE_PURE_CODEC_FOR_INDEPENDENT_REVIEW_NOT_RUNTIME"
+}

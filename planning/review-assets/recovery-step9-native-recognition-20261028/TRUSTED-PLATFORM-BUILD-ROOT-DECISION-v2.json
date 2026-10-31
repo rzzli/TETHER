@@ -1,0 +1,75 @@
+{
+  "CPU_GGUF_model_reads": 0,
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "POST-CENSUS-PLATFORM-POLICY-ROOT-DECISION-v1.json": {
+      "bytes": 3949,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\POST-CENSUS-PLATFORM-POLICY-ROOT-DECISION-v1.json",
+      "sha256": "7e59903195890e06c01a3c1e409ae17b0c71fd38374c291cdf690702e298d50e"
+    },
+    "TRUSTED-PLATFORM-BUILD-PEER-REVIEW-v2.json": {
+      "bytes": 14639,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-PEER-REVIEW-v2.json",
+      "sha256": "d93a67714ec39d3db81d050b1e5b46ab3573f82a7a5175fbf7fe1fb451e09073"
+    },
+    "TRUSTED-PLATFORM-BUILD-PREPARATION-v2.json": {
+      "bytes": 1025,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-PREPARATION-v2.json",
+      "sha256": "83ab316585cb54ab4779096bf6e73556cc266381b0ab086085cc6f3b3dcf7631"
+    },
+    "TRUSTED-PLATFORM-BUILD-PROTOCOL-v2.json": {
+      "bytes": 75179,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-PROTOCOL-v2.json",
+      "sha256": "c1475eb2c42e0b6fbe866c1795ee0a04d853775742b467e0e6ddd3ddfc9f10b5"
+    },
+    "TRUSTED-PLATFORM-BUILD-PURE-CHECKS-v2.json": {
+      "bytes": 677,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-BUILD-PURE-CHECKS-v2.json",
+      "sha256": "3e00042960ee5757b1a5c438c0c01febfdd34df11cf0f775e004a59089fc3392"
+    },
+    "TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json": {
+      "bytes": 9211,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-CHILD-SOURCE-PEER-REVIEW-v1.json",
+      "sha256": "d63f9047a1670026b18e56deea02b8fb1cfa38ac9b9f3c24a7dbff8f21a27e6f"
+    },
+    "build_trusted_platform_bridge_v2.py": {
+      "bytes": 37242,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_trusted_platform_bridge_v2.py",
+      "sha256": "22bf933308ddf5b35a17db9d4c9d5c46d33ba04f6b01f0fa74a2261052b92515"
+    }
+  },
+  "automatic_retry": false,
+  "commands_finalizer_build_AST_unchanged": true,
+  "compiler_scope": "Launched compiler/linker handles only; descendants not independently attested",
+  "execute_compiled_result": false,
+  "fresh_input_hashes_checked": 257,
+  "input_bytes": 76775545,
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserve_seconds": 5,
+    "link_seconds": 10,
+    "maximum_children": 2,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144,
+    "total_seconds": 60
+  },
+  "maximum_compiler_linker_processes": 2,
+  "module_policy_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-trusted-platform-bridge-build-v2-20261029T024601Z",
+  "output_absent": true,
+  "protected_answers_hash_only": true,
+  "provider_spend_usd": 0,
+  "recognition_enabled": false,
+  "recorded_at_utc": "2026-10-29T02:52:37.993796+00:00",
+  "required_independent_output_verification": true,
+  "schema_version": 1,
+  "status": "root_authorizes_one_exact_trusted_platform_compile_link_only",
+  "target_DLL_loads": 0,
+  "toolchain_scope": "Pinned prior direct SDK/STL/tool leaves and libraries; not a complete transitive toolchain closure",
+  "trust_scope": "Declared trusted System32 platform context, not image authentication; new policy not yet runtime-qualified"
+}

@@ -1,0 +1,35 @@
+{
+  "actual_API_calls": 0,
+  "all48_cases_identical": true,
+  "author": {
+    "bytes": 2571,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\correct_shared_owner_hook_wording_v2.py",
+    "sha256": "404e21d38a5a7f069d4e1386b7a88324e65183745e9b03cadb0a28cbe57b5b07"
+  },
+  "baseline_rows_identical": true,
+  "fixture": {
+    "bytes": 300833,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v2.json",
+    "sha256": "45b17a6c737d6dbd914557f698a74ed92bf18077a0d2b86864cec63b72d037c5"
+  },
+  "frames_identical": true,
+  "preserved_fixture": {
+    "bytes": 300841,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v1.json",
+    "sha256": "aba712bc59f5b8411bf356b24469d86f5a71ab624049ca5057e8fb40ec683d15"
+  },
+  "preserved_schema": {
+    "bytes": 11189,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v1.json",
+    "sha256": "166eedbab91179a75d381de92ad8ef1f9c97076036b5dbb7c5008e91fa3fe300"
+  },
+  "schema": {
+    "bytes": 11212,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v2.json",
+    "sha256": "7ea6cb057c749e54a4fa557345ce00076fbd9b6b911eb7d767d9666fd7ddb0c8"
+  },
+  "schema_version": 1,
+  "scope": "Exactly one schema prose hook-count correction and two fixture provenance pins. No field/behavior/schedule/check/input changes.",
+  "source_implementation": false,
+  "status": "passed"
+}

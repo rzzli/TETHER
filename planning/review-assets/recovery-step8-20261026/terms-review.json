@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-26T17:44:35Z",
+  "role": "source_qualification_preparation",
+  "method": "Official provider pages inspected through web tooling; paraphrased policy only.",
+  "providers": [
+    {
+      "id": "hgnc",
+      "url": "https://hgnc.genenames.org/about/license/",
+      "checked_policy": "Data released under CC0; attribution recommended.",
+      "status": "current_provider_policy_checked",
+      "historical_release_specific_terms_verified": false,
+      "source_bytes_or_sealed_catalog_modified": false
+    },
+    {
+      "id": "opentargets",
+      "url": "https://platform-docs.opentargets.org/licence",
+      "checked_policy": "Platform data CC0 1.0; code Apache 2.0; listed sources agreed to unrestricted use by Platform users; Europe PMC table records publication-dependent licenses.",
+      "status": "current_provider_policy_checked",
+      "historical_release_specific_terms_verified": false,
+      "each_selected_article_version_and_passage_license_verified": false,
+      "source_bytes_or_sealed_catalog_modified": false
+    }
+  ],
+  "passage_qualification": "pending_selected_source_set",
+  "historical_availability_established": false,
+  "scientific_validation": "not_established",
+  "new_bulk_downloads": 0,
+  "provider_spending_usd": 0
+}

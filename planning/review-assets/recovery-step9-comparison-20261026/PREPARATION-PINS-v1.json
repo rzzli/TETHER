@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "runtime_changes": false,
+  "dispatchable": false,
+  "files": {
+    "PLAN-v1.json": {
+      "sha256": "2fea56dbb2589252bd4b8cc15edc972719f70d2d7b959ace070405c1a747d4a4",
+      "bytes": 3635
+    },
+    "PLAN.md": {
+      "sha256": "2a5c708411aaf7578f71cab0b7af30e28a39a3ce0901eb62199916edc1136416",
+      "bytes": 12880
+    },
+    "PREPARATION-CHECK-v1.json": {
+      "sha256": "1821027f13ee291fcff2881d35a06fff54656bb976b87e61f21a924006a69bd6",
+      "bytes": 2470
+    },
+    "prepare_spec.py": {
+      "sha256": "25e4554b9f45c858720bba88016fee587556d611aa7482c67550ccec2f6d242d",
+      "bytes": 7769
+    },
+    "synthetic-context-asof_interpretation.json": {
+      "sha256": "2d6de86b55996dc892295790938ed8be7497471e3cd93149c51c3d11844e9e81",
+      "bytes": 11605
+    },
+    "synthetic-context-chief_of_staff.json": {
+      "sha256": "3f61b7c52c044e797f533bc801b89f69ff4ce2e81a1b73f2eab464185ac5ff9f",
+      "bytes": 11592
+    },
+    "synthetic-context-coordinator_delegate.json": {
+      "sha256": "f0edf7a592ee931d5d6ae17f3db7c5e6c3bd5f91ee19a20a6f4849687a9a9202",
+      "bytes": 11742
+    },
+    "synthetic-context-coordinator_synthesize.json": {
+      "sha256": "5b0b9dbbdbc01d07bee87aeadbb2b6cafd6d9a7b8f67d06621817ea952356434",
+      "bytes": 12133
+    },
+    "synthetic-context-mapped_specialist.json": {
+      "sha256": "9641564dd5d31d889d20457a0967dcc98da4116eb8f7ad024a7db1c2429eb35d",
+      "bytes": 11870
+    },
+    "synthetic-context-scientific_reviewer.json": {
+      "sha256": "345da129015d7895a32187789a9a17420fc4b76828a2dad70f61a37dda566f00",
+      "bytes": 11997
+    },
+    "synthetic-orientation-asof_interpretation.json": {
+      "sha256": "32ba773ab867fec9b3870e9e5c90548cf07f0c1fcc836ee8240413390dd35257",
+      "bytes": 10490
+    },
+    "synthetic-orientation-chief_of_staff.json": {
+      "sha256": "adf45c977c369f7e38bf0bcbc16ce02ff3eb09364a34b282e09213d64df86e42",
+      "bytes": 10477
+    },
+    "synthetic-orientation-coordinator_delegate.json": {
+      "sha256": "9089b27f25a7fb60d9ed581512ecd6c89776ba610afd0c66d1e19882b7af3b76",
+      "bytes": 10615
+    },
+    "synthetic-orientation-coordinator_synthesize.json": {
+      "sha256": "0cc4f1126907d0973d074e6763b62c8a96953e08e128264ad240ffe01360c86e",
+      "bytes": 10970
+    },
+    "synthetic-orientation-mapped_specialist.json": {
+      "sha256": "78a2acef06c49f3ddac6f48f4a12e8a8592b3bac897fa8c980ce932b7a8085c6",
+      "bytes": 10731
+    },
+    "synthetic-orientation-scientific_reviewer.json": {
+      "sha256": "c317de574e0afddb80a7512b031547242d4e46f28442f26d2a67b0a1678a0b15",
+      "bytes": 10846
+    }
+  }
+}

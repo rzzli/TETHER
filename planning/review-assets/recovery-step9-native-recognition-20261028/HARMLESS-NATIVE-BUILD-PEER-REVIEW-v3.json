@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "review_id": "native-harmless-build-v3-source-delta-peer-20261028",
+  "recorded_at_utc": "2026-10-28T21:05:20.095823+00:00",
+  "status": "CLEAR_exact_build_only_source_protocol_root_dispatch_decision_pending",
+  "compiler_or_worker_execution_authorized": false,
+  "anchors": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_harmless_native_worker_v3.py",
+      "bytes": 26981,
+      "sha256": "f292b65c6a86a9a70a41a1fb5286e20266281b6749c1583579e64193524af5ae"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-PROTOCOL-v3.json",
+      "bytes": 61858,
+      "sha256": "7cf13e529deb26f147bf0b9358cdc47fe91c4b21b2064a3381db9119f6953aea"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-PREPARATION-v3.json",
+      "bytes": 1471,
+      "sha256": "ffb9e513c5d9f0bdebcff1736571efe3c76dfcac66432298cd2ab7152db3c16e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_harmless_native_build_v3.py",
+      "bytes": 6923,
+      "sha256": "4c0faf1652819216f2338c5b5341604fcfa9c8e989aaf1e0084807e096bc053a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-PURE-CHECKS-v3.json",
+      "bytes": 4583,
+      "sha256": "98c27363bba632a7649d4c3fdae4dec1a6610df30dc3d64064c7e2a4579481ac"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-WORKER-SOURCE-PEER-v3.json",
+      "bytes": 2041,
+      "sha256": "c774ecd0ec98dd529b5494c5137679a59e7d1ae9c525920e9f884a57b1f48ebc"
+    }
+  ],
+  "checks": {
+    "all237_pins_current": true,
+    "all212_and193_prior_pins_preserved": true,
+    "consumed_failed_v2_output_files_preserved": 10,
+    "failed_v2_independent_verification_pinned": true,
+    "no_prior_link_or_worker_exe": true,
+    "new_output_absent": true,
+    "source_copy_exact114908": true,
+    "source_delta_only_explicit_UTF8_conversion": true,
+    "MD_W4_WX_unchanged": true,
+    "finalizer_commands_PE_classifier_pin_verifier_basis_AST_unchanged": true,
+    "two_compile_link_tools_no_result_execution": true,
+    "pure_checks_reported_passed": 16,
+    "reviewer_test_reruns": 0,
+    "pure_artifact_pins_rehashed": 12
+  },
+  "fixtures": [
+    {
+      "kind": "ordinary",
+      "synthetic": true,
+      "files": 5,
+      "journal_events": 3,
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-pure-v3-20261028T210353Z\\ordinary\\terminal-seal.json",
+        "bytes": 966,
+        "sha256": "f557772c3e4eab77142ea0c22b11166127e27fa59162602545e8071b1e42a4bb"
+      },
+      "hashes_chain_complete_universe_valid": true
+    },
+    {
+      "kind": "late",
+      "synthetic": true,
+      "files": 7,
+      "journal_events": 3,
+      "terminal": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-pure-v3-20261028T210353Z\\late\\terminal-seal.json",
+        "bytes": 1249,
+        "sha256": "1055800ee55c353986daa67fd97a90190794cb1b6a2a51b1ec15034804ec32a6"
+      },
+      "hashes_chain_complete_universe_valid": true
+    }
+  ],
+  "material_findings": [],
+  "limitations": [
+    "The one-line fix removes the reported implicit-narrowing construct; no successful compilation is claimed before a new separately authorized build.",
+    "Inherited compiler-handle-only process scope, partial toolchain closure and context-manager-only cleanup attestation remain unchanged.",
+    "No helper/compiler/WinAPI/child ran during review. Actual outputs require independent static PE/dependency/result verification before any harmless or ABI execution candidate."
+  ],
+  "disposition": "No material blocker in the exact build-only delta. Failed c22 build remains failed/preserved; root must separately authorize protocol7cf13. No worker/native/scientific qualification follows.",
+  "activity": {
+    "helper_imports_or_executions": 0,
+    "compiler_dispatches": 0,
+    "Windows_API_calls": 0,
+    "child_dispatches": 0,
+    "pure_test_reruns": 0,
+    "source_or_cache_mutations": 0
+  }
+}

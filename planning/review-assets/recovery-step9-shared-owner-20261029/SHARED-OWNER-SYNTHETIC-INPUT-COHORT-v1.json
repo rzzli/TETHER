@@ -1,0 +1,127 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "blobs": [
+    {
+      "bytes": 58,
+      "capture": true,
+      "content_kind": "toy_python_helper",
+      "encoding": "utf-8",
+      "id": "cohort_leaf",
+      "path": "D:\\FictionalSharedOwnerCohort\\cohort_leaf.py",
+      "phase": "early_source",
+      "role": "software",
+      "sha256": "2afb0c0f5d06cbbeef48871bd0b344aeaa2a47ea61d719e9906fc1cf4862080e",
+      "utf8_hex": "4d41524b4552203d2022636f686f72742d6c6561662d7631220a646566206d61726b657228293a0a2020202072657475726e204d41524b45520a"
+    },
+    {
+      "bytes": 83,
+      "capture": true,
+      "content_kind": "toy_python_helper",
+      "encoding": "utf-8",
+      "id": "cohort_entry",
+      "path": "D:\\FictionalSharedOwnerCohort\\cohort_entry.py",
+      "phase": "early_source",
+      "role": "software",
+      "sha256": "f622ba1a5d566410a4e66fabe2ec13b42cd5ad74a971b67d1c503aadd3aad73d",
+      "utf8_hex": "66726f6d20636f686f72745f6c65616620696d706f7274206d61726b65720a6465662072756e28293a0a2020202072657475726e202822636f686f72742d656e7472792d7631222c206d61726b65722829290a"
+    },
+    {
+      "bytes": 68,
+      "capture": true,
+      "content_kind": "toy_metadata_json",
+      "encoding": "utf-8",
+      "id": "metadata",
+      "path": "D:\\FictionalSharedOwnerCohort\\metadata.json",
+      "phase": "remaining_captured_input",
+      "role": "owner_metadata",
+      "sha256": "713469e98d9e6640dc8daa7cfa23d14457bd625c850ca370e04f585d199d5955",
+      "utf8_hex": "7b22736368656d61223a2273796e7468657469632d636f686f72742d7631222c226d61726b6572223a226d657461646174612d6f6e6c79222c2276616c7565223a377d0a"
+    }
+  ],
+  "closed_modules": [
+    {
+      "blob_id": "cohort_leaf",
+      "dependencies": [],
+      "fullname": "cohort_leaf",
+      "package": false
+    },
+    {
+      "blob_id": "cohort_entry",
+      "dependencies": [
+        "cohort_leaf"
+      ],
+      "fullname": "cohort_entry",
+      "package": false
+    }
+  ],
+  "expected_toy_values": {
+    "entry_run_result_tuple": [
+      "cohort-entry-v1",
+      "cohort-leaf-v1"
+    ],
+    "leaf_marker": "cohort-leaf-v1",
+    "metadata_object": {
+      "marker": "metadata-only",
+      "schema": "synthetic-cohort-v1",
+      "value": 7
+    }
+  },
+  "fixture_behavior_qualified": false,
+  "future_fault_purpose": "Inject one compile callback failure against unchanged valid helper bytes and assert no retry; the failure site/exception and concrete method schedule remain for the separately frozen integration fixtures. This file neither compiles the helpers nor implements a loader.",
+  "history_scope": "These are authored successful-lifecycle whole-input history expectations, not Win32/API/call/event counts or a claim that every failure completes them. Future fault fixtures must preserve observed/unknown partials. No unfrozen machine operation schedule is asserted.",
+  "loader_binding_rule": "The only source import is cohort_entry -> cohort_leaf, resolved by the future source-bound closed loader from these captured bytes. No ordinary import fallback, sys.modules lookup, filesystem source import or actual archive/resource/science checker is part of this cohort.",
+  "no_real_checker_implementation": true,
+  "original_sources_authenticated": false,
+  "path_namespace": "D:\\FictionalSharedOwnerCohort",
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Three invented byte blobs only. Embedded canonical DOS paths are labels, not actual source locations or authority. No blob is persisted as a source/metadata file; only this fixture container is written.",
+  "status": "AUTHORED_LITERAL_SYNTHETIC_INPUTS_NOT_BEHAVIOR_QUALIFIED",
+  "stdlib_dependencies": [],
+  "successful_lifecycle_input_history": [
+    {
+      "blob_id": "cohort_leaf",
+      "capture_histories": 1,
+      "captured_bytes": 58,
+      "continuation_rehashes": 0,
+      "continuation_reopens": 0,
+      "hashed_bytes": 58,
+      "known_read_bytes": 58,
+      "original_acquisition_histories": 1,
+      "whole_blob_hash_histories": 1
+    },
+    {
+      "blob_id": "cohort_entry",
+      "capture_histories": 1,
+      "captured_bytes": 83,
+      "continuation_rehashes": 0,
+      "continuation_reopens": 0,
+      "hashed_bytes": 83,
+      "known_read_bytes": 83,
+      "original_acquisition_histories": 1,
+      "whole_blob_hash_histories": 1
+    },
+    {
+      "blob_id": "metadata",
+      "capture_histories": 1,
+      "captured_bytes": 68,
+      "continuation_rehashes": 0,
+      "continuation_reopens": 0,
+      "hashed_bytes": 68,
+      "known_read_bytes": 68,
+      "original_acquisition_histories": 1,
+      "whole_blob_hash_histories": 1
+    }
+  ],
+  "totals": {
+    "early_bytes": 141,
+    "early_sources": 2,
+    "remaining_bytes": 68,
+    "remaining_captured_inputs": 1,
+    "total_blobs": 3,
+    "total_bytes": 209
+  }
+}

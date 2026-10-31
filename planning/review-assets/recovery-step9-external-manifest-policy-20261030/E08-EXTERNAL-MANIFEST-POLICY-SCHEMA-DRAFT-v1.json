@@ -1,0 +1,429 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:project-recovery:e08-external-manifest-policy:1-draft",
+  "title": "E08 exact declared metadata shapes",
+  "description": "Structural companion only. Exact Python builtin/subclass rules, global reference/role/cycle/ancestry/pin binding, canonical131072 byte cap, graph edge cap, error precedence and genuine same-Core integration are normative in the pinned contract; generic JSON Schema acceptance is not policy success. No schema URI is fetched.",
+  "x_contract": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-DRAFT-v1.json",
+    "sha256": "d3def88c55775ab8ef0b8096c17c3a11a82fb18962d16e37d62daebd808f3d9b"
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "binding",
+    "envelope"
+  ],
+  "properties": {
+    "binding": {
+      "$ref": "#/$defs/binding"
+    },
+    "envelope": {
+      "$ref": "#/$defs/envelope"
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,127}$",
+      "maxLength": 128
+    },
+    "mode": {
+      "enum": [
+        "AUTHORING",
+        "EXECUTION"
+      ]
+    },
+    "pinnedBytes": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9223372036854775807
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "bytes": {
+          "$ref": "#/$defs/pinnedBytes"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "current_decision_id",
+        "current_output_ids",
+        "basis_ids",
+        "external_tcb_pins",
+        "prior_metadata_pins"
+      ],
+      "properties": {
+        "mode": {
+          "$ref": "#/$defs/mode"
+        },
+        "current_decision_id": {
+          "$ref": "#/$defs/id"
+        },
+        "current_output_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 14,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "basis_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "external_tcb_pins": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/pin"
+          }
+        },
+        "prior_metadata_pins": {
+          "type": "array",
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/pin"
+          }
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "role",
+        "state",
+        "bytes",
+        "sha256",
+        "reason",
+        "pin_dependencies"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "role": {
+          "enum": [
+            "EXTERNAL_TCB",
+            "PRIOR_APPROVED_METADATA",
+            "INPUT",
+            "CONSUMER",
+            "CURRENT_DECISION",
+            "CURRENT_OUTPUT"
+          ]
+        },
+        "state": {
+          "enum": [
+            "PINNED",
+            "PLANNED_SOURCE",
+            "UNBUILT",
+            "CURRENT"
+          ]
+        },
+        "bytes": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/pinnedBytes"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 256
+        },
+        "pin_dependencies": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "PINNED"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "EXTERNAL_TCB",
+                  "PRIOR_APPROVED_METADATA",
+                  "INPUT",
+                  "CONSUMER"
+                ]
+              },
+              "bytes": {
+                "$ref": "#/$defs/pinnedBytes"
+              },
+              "sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "reason": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "PLANNED_SOURCE",
+                  "UNBUILT"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "INPUT",
+                  "CONSUMER"
+                ]
+              },
+              "bytes": {
+                "type": "null"
+              },
+              "sha256": {
+                "type": "null"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "CURRENT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "CURRENT_DECISION",
+                  "CURRENT_OUTPUT"
+                ]
+              },
+              "bytes": {
+                "type": "null"
+              },
+              "sha256": {
+                "type": "null"
+              },
+              "reason": {
+                "const": "CURRENT_RUN_NOT_A_STATIC_PIN"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "envelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "mode",
+        "current_decision_id",
+        "current_output_ids",
+        "external_anchor_ids",
+        "basis_ids",
+        "nodes"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "mode": {
+          "$ref": "#/$defs/mode"
+        },
+        "current_decision_id": {
+          "$ref": "#/$defs/id"
+        },
+        "current_output_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 14,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "external_anchor_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "basis_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        }
+      }
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "mode",
+        "status",
+        "node_count",
+        "edge_count",
+        "basis_ids",
+        "external_anchor_ids",
+        "prior_root_ids",
+        "planned_ids",
+        "unbuilt_ids",
+        "binding_sha256",
+        "envelope_sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "mode": {
+          "$ref": "#/$defs/mode"
+        },
+        "status": {
+          "enum": [
+            "AUTHORING_ONLY",
+            "EXECUTION_BASIS_VALIDATED"
+          ]
+        },
+        "node_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "edge_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "basis_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "external_anchor_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "prior_root_ids": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "planned_ids": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "unbuilt_ids": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 256,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "binding_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "envelope_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

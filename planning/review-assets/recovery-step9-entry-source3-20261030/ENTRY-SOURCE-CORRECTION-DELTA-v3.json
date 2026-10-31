@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "status": "FROZEN_MINIMAL_TWO_GUARD_SOURCE_DELTA_BEFORE_EXECUTION",
+  "scope": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE3-CORRECTION-AUTHORING-SCOPE-v1.json",
+    "bytes": 2352,
+    "sha256": "92efd17643ecaf7ed0d303225fe9616d5fa921cce48c365a904a0b9d49381b0b"
+  },
+  "function_deltas": {
+    "kernel": {
+      "before": {
+        "path": "planning/review-assets/recovery-step9-entry-source2-20261030/preflight_entry_kernel_v2.py",
+        "bytes": 120885,
+        "sha256": "b81ebfd53e71963b9f96d1fdef4be5b0fd8e0c7fe80062ddb3c50a097224508f"
+      },
+      "after": {
+        "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_entry_kernel_v3.py",
+        "bytes": 121192,
+        "sha256": "60d266f2a6488fac96fa9e31663052a41b191d56b905a102f96cd7187f732fad"
+      },
+      "changed_functions": [
+        "KernelState._cache_committed_fact",
+        "KernelState._reconcile_native"
+      ],
+      "unchanged_function_AST_count": 218,
+      "added_functions": [],
+      "removed_functions": []
+    },
+    "owner_ops": {
+      "before": {
+        "path": "planning/review-assets/recovery-step9-entry-source2-20261030/preflight_owner_ops_v2.py",
+        "bytes": 39889,
+        "sha256": "e438b8862b84309777c6c97eae79f0d1967c943525fc18b27b28f2c5e0e16a33"
+      },
+      "after": {
+        "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_owner_ops_v3.py",
+        "bytes": 39889,
+        "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7"
+      },
+      "changed_functions": [],
+      "unchanged_function_AST_count": 52,
+      "added_functions": [],
+      "removed_functions": []
+    },
+    "file_view": {
+      "before": {
+        "path": "planning/review-assets/recovery-step9-entry-source2-20261030/preflight_file_view_v2.py",
+        "bytes": 3614,
+        "sha256": "9b782a58d450543989fa79be0325ac24038b4b8a1338cf52069a53e8067c4f0e"
+      },
+      "after": {
+        "path": "planning/review-assets/recovery-step9-entry-source3-20261030/preflight_file_view_v3.py",
+        "bytes": 3614,
+        "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6"
+      },
+      "changed_functions": [],
+      "unchanged_function_AST_count": 13,
+      "added_functions": [],
+      "removed_functions": []
+    }
+  },
+  "namespace_normalization": "Own kernel/Ops/FileView_v2 module spellings only are compared as_v3; codec4 exact.",
+  "behavior_delta": "Current call.stopped guards precede cache derivation/reconciliation, raising the retained original error by explicit None test. Existing fresh CloseHandle exemption from an earlier owner-wide fault remains unchanged.",
+  "unchanged": "No other AST behavior, constants, slots, layout, profile, API, clocks, bank authority, fold, artifact or capability change.",
+  "source2_actual_before": {
+    "path": "planning/review-assets/recovery-step9-entry-source2-20261030/ENTRY-SOURCE2-DIAGNOSTIC-PROOF-v2.json",
+    "bytes": 337633,
+    "sha256": "a1ff84a198834c4fb5660f79693a65539c9e365d97209b03dfc972764268c459"
+  },
+  "subject_imports": 0,
+  "subject_tests": 0
+}

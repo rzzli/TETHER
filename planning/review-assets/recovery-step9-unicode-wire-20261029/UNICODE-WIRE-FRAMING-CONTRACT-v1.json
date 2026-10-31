@@ -1,0 +1,345 @@
+{
+  "activity": {
+    "CPU_GGUF_oldpack_operations": 0,
+    "full_profile_pack_builder_or_bridge_decoder_parent_runtime_implementations": 0,
+    "new_metadata_only": true,
+    "target_native_SDK_compiler_tokenizer_calls": 0
+  },
+  "author": {
+    "bytes": 15406,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\author_unicode_wire_framing_contract_v1.py",
+    "sha256": "b25bd1765b5599cf30ebef04fc155f9ce9909828345fb293d09a3cbb53589ab6"
+  },
+  "base_design": {
+    "bytes": 86124,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+    "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+  },
+  "base_design_semantic_sha256": "9a313df2dca6632a0863f547322e1aeced26346a3ab709686f07c16623c714e3",
+  "effective_wire_semantics_sha256": "75605c03fb5b9bac659538035d8205b34df2ae1781b997a3181a1564676aa6c4",
+  "fingerprint_rule": "SHA256(canonical{base_design_semantic_sha256,framing_semantics}) with sorted compact ensure_asciiFalse UTF8/no nonfinite. Excludes author/time/future code/proof/build/pack hashes.",
+  "fingerprint_usage": "This EFFECTIVE fingerprint replaces the base-only placeholder at every future packheader/row/headerdescriptor wire_semantics_sha256 site. Both preserved contracts remain exact review inputs; no future current-code/proof cycle.",
+  "framing_semantics": {
+    "QC": {
+      "geometry_only": true,
+      "harness_reason_enum": [
+        "harness_raw_nul_rejection",
+        "harness_utf8_rejection"
+      ],
+      "ok_reason": null,
+      "overall": "Any unexpected QCunknown or ambiguous native outcome makes the whole profile unqualified even if all required geometry classes are knownavailable.",
+      "reason_scope": "A native QCunknown reason describes the bounded source observation; the pure analyzer supplied ledgerNone reports missing_ledger. Parent retains the original reason and compares null measurement semantics, not invented reason equivalence.",
+      "status_enum": [
+        "ok",
+        "harness_ineligible",
+        "unknown"
+      ],
+      "unknown_reason_enum": [
+        "raw_NUL",
+        "raw_utf8",
+        "ledger_schema",
+        "ledger_arrays",
+        "ledger_lengths",
+        "token_cap",
+        "token_id",
+        "ordinary_EOG",
+        "piece_length",
+        "piece_hex",
+        "roundtrip",
+        "missing_ledger",
+        "harness_ledger_present",
+        "tokenize_size_invalid",
+        "tokenize_size_changed",
+        "piece_size_invalid",
+        "piece_size_changed"
+      ],
+      "unknown_shape": "QCunknown keeps ledger:null, compact_analysis exact3keys allnull, observation status not_attempted_QC_unknown and other6fieldsnull, matches:null. An already valid ledger/geometry is NEVER nulled by token/EOG membership failure."
+    },
+    "failure": {
+      "JSONL_bytes_including_LF": 8192,
+      "JSONL_exact_body_keys": [
+        "primary_failure_id",
+        "error_class",
+        "reason_code",
+        "diagnostic_file",
+        "profile_qualification"
+      ],
+      "child_error_class_enum": [
+        "BridgeError",
+        "StandardException",
+        "UnknownException"
+      ],
+      "diagnostic": "Exact{kind,value}. kind none=>value null; module_policy_rejection=>the separately retained bounded numeric-UTF16/raw/report metadata schema, same primaryfailure. Metadata is reported/lexical context only, no filesystem/image authenticity. If it cannot fit64KiB, retain bounded primary/no-diagnostic marker rather than clip into a complete diagnostic.",
+      "diagnostic_file_enum": [
+        null,
+        "failure.json"
+      ],
+      "enum_grammar": "Exact listed ASCII identifiers only; no arbitrary exception/document/piece text in JSONL or stdout. Std exception=>StandardException/nonprotocol_cpp_exception; catchall=>UnknownException/unknown_cpp_exception. Unclassified bridge invariant=>BridgeError/bridge_invariant_failed.",
+      "marker": "Separate failure.json<=65536; mandatory failure veto if present. Common bounded native snapshot plus schema_version/statusfailed/profile_id/pid/elapsed_ms/row_sequence_reserved/primary_failure_id/error_class/reason_code/failure_row_publication/diagnostic; no event/body/row_sequence successful-row impersonation.",
+      "order": "Try the bounded JSONLfailure row once, then independently try marker even if rowpublication failed; marker records the observed rowoutcome. Earlier row never hashes a future marker, preventing cycles.",
+      "parent_scope": "These enums describe CHILD wire only. Parent keeps its separately reviewed primary/secondary Python error and interruption identities; this contract never relabels or suppresses them.",
+      "primary_failure_id": "SHA256(canonical{pid,error_class,reason_code,elapsed_ms,row_sequence_reserved}); pid binds the captured child/attempt. Intended failure sequence is known even when publication outcome is unknown.",
+      "profile_qualification": "not_established",
+      "publication": "Three flags strictbool; known_bytes strict uint0..8192 ornull; sha256 lower64hex onlyafter entire exact row+LF knownwritten; otherwise null. error_class null or oneof child_error_class_enum. Returned publication implies attempted+reserved; a pending write is unknown, never zero bytes received.",
+      "publication_exact_keys": [
+        "attempt_reserved",
+        "write_attempted",
+        "return_observed",
+        "known_bytes",
+        "sha256",
+        "error_class"
+      ],
+      "reason_code_enum": [
+        "mode_argv_invalid",
+        "pin_header_ineligible",
+        "version_or_defaults_mismatch",
+        "export_resolution_failed",
+        "module_policy_rejected",
+        "platform_metadata_incomplete",
+        "payload_descriptor_mismatch",
+        "payload_hash_or_lease_failed",
+        "pack_framing_or_binding_failed",
+        "native_call_budget_exceeded",
+        "token_work_budget_exceeded",
+        "cooperative_deadline_expired",
+        "native_call_exception",
+        "native_return_or_shape_invalid",
+        "native_ownership_or_cleanup_unknown",
+        "sampler_or_model_null_return",
+        "native_cleanup_failed",
+        "document_QC_unknown",
+        "case_expectation_mismatch",
+        "required_coverage_unavailable",
+        "required_coverage_unknown",
+        "analyzer_or_selector_disagreement",
+        "selected_prefix_observation_failed",
+        "row_or_artifact_cap_exceeded",
+        "output_publication_failed",
+        "output_commit_failed",
+        "unicode_batch_accounting_incomplete",
+        "bridge_invariant_failed",
+        "nonprotocol_cpp_exception",
+        "unknown_cpp_exception"
+      ],
+      "stdout": "Fixed bounded class/reason/primaryfailureID only; no large module diagnostic copied to stdout. Stream caps remain65536."
+    },
+    "framing_id": "unicode-controls-closed-framing-v1",
+    "harness": {
+      "analyzer_mapping": "The accepted analyzer calls this harness_ineligible/harness_declared when its ledger isNone. The native guard reason remains separately retained; do not require its reason string to equal analyzer harness_declared.",
+      "calls": "Zero per-document tokenizer/piece/sampler/apply/accept calls; common setup calls are not falsely reported as zero.",
+      "case_shape": "QC exact{status:harness_ineligible,reason:same guard status}; ledger:null; compact_analysis PRESENT exact{counts:null,matrix:null,zero_piece_count:null}; matches_authored_native_expectation:null; authored native_member:null.",
+      "counts": "Six declared exclusions have known population contribution0 by frozen declaration, not observed boundary absence. Unexpected QCunknown never changes native-byte eligibility or becomes a seventh harness exclusion.",
+      "exact_observation": {
+        "all_input_tokens_admitted": null,
+        "completion_EOG": null,
+        "first_rejected_byte_end": null,
+        "first_rejected_byte_start": null,
+        "first_rejected_token_index": null,
+        "native_member": null,
+        "status": "harness_raw_nul_rejection OR harness_utf8_rejection"
+      },
+      "observation_wrapper": "Always the exact seven-key OBJECT, never observation:null. Only native_member and other six nonstatus observation fields are null; status is the exact declared guard reason."
+    },
+    "observation": {
+      "EOG_disagreement_does_not_change_geometry": true,
+      "all_union_fields_are_exact_types": true,
+      "exact_keys": [
+        "status",
+        "native_member",
+        "all_input_tokens_admitted",
+        "first_rejected_token_index",
+        "first_rejected_byte_start",
+        "first_rejected_byte_end",
+        "completion_EOG"
+      ],
+      "native_null_is_not_false": true,
+      "native_token_rejection_does_not_drop_ledger": true,
+      "not_attempted_QC_unknown": "Wrapper is PRESENT with all seven keys; status not_attempted_QC_unknown, other6values JSONnull. No sampler call for that document; prior known tokenizer/piece work remains counted. QCunknown is not a declared harness exclusion.",
+      "ordinary_membership_union": {
+        "native_EOG_disagreement": {
+          "EOG": "Every observed EOG exactlyonce, at leastoneTrue and at leastoneFalse",
+          "all_input_tokens_admitted": true,
+          "native_member": null,
+          "rejection_fields": null
+        },
+        "native_eog_rejection": {
+          "EOG": "Every observed EOG exactlyonce, every admittedFalse",
+          "all_input_tokens_admitted": true,
+          "native_member": false,
+          "rejection_fields": null
+        },
+        "native_member": {
+          "EOG": "All observed sorted EOG IDs exactlyonce, every admittedTrue",
+          "all_input_tokens_admitted": true,
+          "native_member": true,
+          "rejection_fields": null
+        },
+        "native_token_rejection": {
+          "EOG": null,
+          "all_input_tokens_admitted": false,
+          "native_member": false,
+          "rejection_fields": "Strict original token ordinalr and exact cumulative original piece interval, including allowed zero-length interval"
+        }
+      },
+      "status_enum": [
+        "native_member",
+        "native_token_rejection",
+        "native_eog_rejection",
+        "native_EOG_disagreement",
+        "not_attempted_QC_unknown",
+        "harness_raw_nul_rejection",
+        "harness_utf8_rejection"
+      ]
+    },
+    "partial_history": {
+      "EOF": "Strict UTF8 and final ASCII LF required to accept any complete row; a truncated final row is a retained unknown tail, not an ignored successful footer.",
+      "declared_population_unchanged": true,
+      "history_expectations": [
+        {
+          "id": "no_capture",
+          "measured_global_counts": null,
+          "profile_qualified": false,
+          "tail": "unknown",
+          "validated_case_rows": 0
+        },
+        {
+          "future_calls": "unknown after last acknowledged snapshot",
+          "id": "typed_setup_prefix_only",
+          "known_setup_vectors": "Exact captured15-stage prefix only",
+          "profile_qualified": false,
+          "validated_case_rows": 0
+        },
+        {
+          "current_case_outcome": null,
+          "id": "before_case_without_result",
+          "profile_qualified": false,
+          "remaining_cases": "unknown",
+          "source_computed_at_last_snapshot": 0,
+          "validated_case_rows": 0
+        },
+        {
+          "current_row_write_increment": "not witnessed until later snapshot",
+          "global_counts": null,
+          "id": "first_result_write_lag",
+          "profile_qualified": false,
+          "source_computed_at_row": 1,
+          "source_written_at_row": 0,
+          "validated_case_rows": 1
+        },
+        {
+          "id": "next_before_case_witness",
+          "profile_qualified": false,
+          "remaining_cases": "unknown",
+          "source_computed_at_row": 1,
+          "source_written_at_row": 1,
+          "validated_case_rows": 1
+        },
+        {
+          "geometry": "retained",
+          "id": "known_member_mismatch",
+          "matches": false,
+          "native_member": false,
+          "population": "still declared",
+          "profile_qualified": false,
+          "validated_geometry_case_rows": 1
+        },
+        {
+          "geometry": "retained",
+          "id": "mixed_EOG_known_geometry",
+          "matches": null,
+          "native_member": null,
+          "population": "still declared",
+          "profile_qualified": false,
+          "validated_geometry_case_rows": 1
+        },
+        {
+          "dependent_model_backend_release": "blocked",
+          "id": "pending_sampler_creation",
+          "owned_pointer": "unknown not guessedNone",
+          "profile_qualified": false,
+          "sampler_init_attempted": 1,
+          "sampler_init_returned": 0
+        },
+        {
+          "backend_free_attempted": 0,
+          "id": "pending_model_release",
+          "model_free_attempted": 1,
+          "model_free_returned": 0,
+          "model_release_unknown": true,
+          "profile_qualified": false
+        },
+        {
+          "coverage_complete": true,
+          "id": "known_required_class_zero",
+          "profile_qualified": false,
+          "replace_or_search": false,
+          "required_available": false,
+          "selectors": "null onlyfor knownzero class, other firstboundaries unchanged"
+        },
+        {
+          "counts": null,
+          "coverage_complete": false,
+          "id": "population_geometry_unknown",
+          "known_lower_bounds": "retained separately",
+          "matrix": null,
+          "profile_qualified": false,
+          "required_available": null,
+          "selected_prefixes": null,
+          "selectors": null
+        },
+        {
+          "id": "wrong_case_body_after_good_snapshot",
+          "profile_qualified": false,
+          "source_computed_instrumentation": 1,
+          "validated_case_rows": 0,
+          "validated_harness_rows": 0,
+          "validated_native_rows": 0
+        },
+        {
+          "child_rows": "may look complete",
+          "failure_marker": true,
+          "id": "complete_rows_then_marker",
+          "profile_qualified": false
+        },
+        {
+          "child_rows": "may be complete",
+          "id": "complete_child_without_owner_gates",
+          "owner_or_external_qualification": "not established",
+          "profile_qualified": false
+        }
+      ],
+      "native_tail": "Attempted-minus-returned and work after last acknowledged snapshot remain unknown. No inferred return, retry, automatic release of an unknown pointer or no-calls claim from absent rows.",
+      "scope": "All scenarios below are literal synthetic framing/history expectations, not observations or a complete native run. Full profile acceptance isfalse for every isolated fragment/history."
+    },
+    "profile_binding": {
+      "cases": 84,
+      "corpus_sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c",
+      "harness_ineligible": 6,
+      "native_byte_eligible": 78,
+      "population": 68,
+      "population_rule": "Exact frozen native-byte-eligible AND authored generation-member AND semantic-eligible. No observed native outcome/QC may filter or replace it.",
+      "profile_id": "actual-v3-fullresponse-unicode-controls-v1"
+    },
+    "schema_version": 1,
+    "scope_and_caps": {
+      "complete_profile_packs": 0,
+      "execution_authorized": false,
+      "fragment_types": [
+        "fixed_header",
+        "grammar_record",
+        "stage_record",
+        "case_record",
+        "ID"
+      ],
+      "implementation_authorized": false,
+      "positive_complete_rows": "188+U<=192 under the base design, U<=4 unique selections; reserved envelope276 unchanged.",
+      "raw_document_population": "All84 frozen rows remain, including78eligible/6declaredharness and68fixedpopulation; no token IDs or native outcomes used to author corpus, classes or selection rule.",
+      "rowcaps": "Each footer/global JSONL row<=8192 inclLF, each case/selected<=65536;16footer rows, no pooled-row exception. attemptfile4096/failurefile65536 are separate files; JSONL7995392/allstructured8065024 reservations unchanged.",
+      "scientific_validation": "not_established",
+      "synthetic_rows": "Datatype/byte/geometry examples may lack their setup prefix or use independent fieldmaxima. Label that scope; never count them as an actual successful native history."
+    }
+  },
+  "recorded_at_utc": "2026-10-29T08:58:28.039227+00:00",
+  "schema_version": 1,
+  "status": "NORMATIVE_FRAMING_CLOSURE_BEFORE_LITERAL_FIXTURES_AND_ANY_IMPLEMENTATION"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T04:22:50.725043+00:00",
+  "reviewer": "os_accounting_peer",
+  "status": "hold_source_v1_unknown_creation_dependent_cleanup",
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_recognition_v1.cpp",
+      "bytes": 94702,
+      "sha256": "104a54fd8ffe1477b77f61d29af66fdf265ccc3afa14eefb71e61331fd9f820a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_child_v1.py",
+      "bytes": 16096,
+      "sha256": "69ea4a5ad9d8c7b3e2ccdb72fd2560e1bfaea47a3f584fdeb9bb5560ceb2a2b0"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PURE-PROOF-v1.json",
+      "bytes": 905,
+      "sha256": "dbf71cebe69e308d016b979e3f967c4651495f2b84c377a9124f320dffa099d5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-UNKNOWN-CREATION-REGRESSIONS-BEFORE-v1.json",
+      "bytes": 866,
+      "sha256": "a824923e7eb053091d7eafd4c1fc4b943299ad8ae49dcf5f4ad2d53177ddc4d4"
+    }
+  ],
+  "finding": {
+    "id": "unknown_creation_allows_dependent_teardown",
+    "locations": [
+      "NativeSession::close",
+      "Sampler::Sampler",
+      "recognize:model_load_from_splits"
+    ],
+    "source_sha256": "104a54fd8ffe1477b77f61d29af66fdf265ccc3afa14eefb71e61331fd9f820a",
+    "branches": [
+      "If sampler initialization is reserved/entered but does not return, construction never completes and no pointer is assigned. Owned/release-unknown counters remain zero; v1 session cleanup nevertheless frees model/backend.",
+      "If model load is reserved/entered but does not return, session.model remains null and model_release_unknown remains false; v1 cleanup nevertheless frees backend."
+    ],
+    "required": "Before dependent teardown, also block on attempted!=returned sampler initialization and model loading. Preserve primary failure and unknown state, never retry uncertain creation/free. Keep known-return cleanup permitted after cooperative expiry.",
+    "evidence_scope": "Independent source control-flow finding; author retained two expected failures in intended Python state model. No C++/target execution occurred."
+  },
+  "activity": {
+    "CPU_GGUF_payload_opens": 0,
+    "SDK_native_compiler_child_calls": 0,
+    "author_checker_executions": 0
+  },
+  "disposition": "Keep v1 source/checker/proof immutable; prospective v2 separately reviewed."
+}

@@ -1,0 +1,142 @@
+{
+  "future_requirements": [
+    "Preserve unbound v1 and known authority/closure gap records.",
+    "New acyclic source/authority/static manifest must bind verified build51c255, EXE559e and exact independent proof bytes without self-dependent pins.",
+    "Final dynamic parent/proof/authority pins belong in final protocol; root must separately review and authorize any one census.",
+    "Review final source delta, finite input roles/no reported-image paths, actual format configuration and constructor precheck before protocol clearance."
+  ],
+  "limits": [
+    "Source-bound format/consistency evidence, not proof against an adversarial child or a permanent/full-system inventory.",
+    "No runtime census, ABI eligibility, module-policy expansion or prior-failure causal conclusion.",
+    "One census only; no broader OS diagnostic expansion follows from this review."
+  ],
+  "material_mechanics_blockers": [],
+  "mechanics_review": [
+    "Terminal observations run once before original Owner cleanup; complete observed exit/raw Job/peaks/physical stream drain are required before positive parsing.",
+    "Preexisting KeyboardInterrupt/SystemExit suppress new terminal observations and input rechecks; original handle/lease cleanup and sealing remain required.",
+    "Unknown creation/deadline never become an observed final state.",
+    "Own child artifact scan requires expected bounded regular non-reparse entries; aggregate2MiB/attempt4KiB/row64KiB/reserve64KiB checked before content reads.",
+    "Positive result requires exactly attempt.json and result.jsonl, exact census attempt/stdout claims, strict bounded JSONL and parser bound to owned child PID and exact self/core4 paths.",
+    "Distinct parser recomputes natural end/full metadata/raw-byte framing/counts/known-module presence; complete unlisted sentinel remains observational ABI=false.",
+    "Tracked leases and input-recheck close outcomes persist; original primary survives first close error and later successful sealer retry.",
+    "Prebound status-only sealer avoids source reads on cancellation; its make_sealer AST has exactly one success-literal delta from frozen4cc.",
+    "Late cleanup/publication, missing or failed seal and after-seal marker veto every earlier success."
+  ],
+  "pins": {
+    "SELF-MODULE-CENSUS-ARTIFACT-PURE-PROOF-v1.json": {
+      "bytes": 9337,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-ARTIFACT-PURE-PROOF-v1.json",
+      "sha256": "4305c7a17d879be3ecf5a051c21966e2ff0032c7614eb87f92b6b8a37dee9a39"
+    },
+    "SELF-MODULE-CENSUS-PARENT-PURE-PROOF-v1.json": {
+      "bytes": 68278,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-PARENT-PURE-PROOF-v1.json",
+      "sha256": "37a4e859555d16ad523b936ba2356b592b190d0640b100cb5b66adadd9dcf542"
+    },
+    "SELF-MODULE-CENSUS-PARSER-INDEPENDENT-PROOF-v1.json": {
+      "bytes": 3711,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-PARSER-INDEPENDENT-PROOF-v1.json",
+      "sha256": "69f20cb3683f818402bdfcc38037d3e8a68bcfdad046c15913dc3a49a1481bb8"
+    },
+    "SELF-MODULE-CENSUS-SEALER-INDEPENDENT-PROOF-v1.json": {
+      "bytes": 3924,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-SEALER-INDEPENDENT-PROOF-v1.json",
+      "sha256": "d55b0ce120056bc8e925a871ef0beb4a74f9def39c86193097c93eaaf55fed78"
+    },
+    "SELF-MODULE-CENSUS-SEALER-PURE-PROOF-v1.json": {
+      "bytes": 8573,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-SEALER-PURE-PROOF-v1.json",
+      "sha256": "5c7b65641baf9a518d8672cb0395fe0014297ceb507f14e0a5cd6faeaad68e1b"
+    },
+    "SELF-MODULE-CENSUS-VALIDATION-PURE-PROOF-v1.json": {
+      "bytes": 2448,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-VALIDATION-PURE-PROOF-v1.json",
+      "sha256": "7f48713863e7345a48ef159d0c6c4c70737139a43a0636a025ab6253320af31b"
+    },
+    "SELF-MODULE-CENSUS-WIRE-v2.json": {
+      "bytes": 9717,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+      "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+    },
+    "check_self_module_census_artifacts_v1.py": {
+      "bytes": 8549,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_artifacts_v1.py",
+      "sha256": "4fa7d30b252145408dd913e6b196738f883055785add75215169915821894c28"
+    },
+    "check_self_module_census_parent_v1.py": {
+      "bytes": 21003,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_self_module_census_parent_v1.py",
+      "sha256": "34ec0e0b24230ec876305e3a9e2482ff6cc9cadef6719bb5f7f52cf850176d02"
+    },
+    "detached_abi_terminal_observation_v3.py": {
+      "bytes": 10524,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+      "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+    },
+    "detached_parent_launch_draft_v1.py": {
+      "bytes": 53085,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+      "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+    },
+    "module_census_status_seal_v1.py": {
+      "bytes": 6025,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_status_seal_v1.py",
+      "sha256": "7794819e3b8013847f0f5e8912d8b8424edfea8c2a95a09354b0918409daf682"
+    },
+    "module_census_validation_v1.py": {
+      "bytes": 17312,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\module_census_validation_v1.py",
+      "sha256": "f5b8b4496018bfa66473bb694c99c3588a49bbb1060b814196f1ba80b32b95db"
+    },
+    "run_self_module_census_v1.py": {
+      "bytes": 32030,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_self_module_census_v1.py",
+      "sha256": "3dfa67eb78baba8e16de0fc685438cbd0082c3c2326e006296f02539e608b9a6"
+    }
+  },
+  "pure_evidence": {
+    "artifact_fake_fixtures": 10,
+    "artifact_fixture_pins_rehashed": 20,
+    "artifact_methods": 7,
+    "independent_parser_methods": 6,
+    "independent_parser_vectors": 19,
+    "independent_sealer_fixture_pins_rehashed": 7,
+    "independent_sealer_methods": 3,
+    "parent_fake_fixtures": 18,
+    "parent_fixture_journal_chains_verified": 18,
+    "parent_fixture_pins_rehashed": 209,
+    "parent_methods": 9,
+    "reviewer_did_not_rerun_author_suites": true,
+    "reviewer_independent_tests_previously_retained": true,
+    "sealer_author_fixture_pins_rehashed": 22,
+    "sealer_author_methods": 6,
+    "validator_author_methods": 11,
+    "validator_author_vectors": 31
+  },
+  "recorded_at_utc": "2026-10-29T01:29:47.971352+00:00",
+  "schema_version": 1,
+  "scope": "Independent source/data/AST and retained pure evidence review; no launcher import, SDK construction, actual API, target DLL, compiler or child execution by reviewer.",
+  "source_findings": {
+    "authority_prepare_CLI_hardblocked": true,
+    "classification_does_not_establish_eligibility": true,
+    "exact_census_only_argv": [
+      "own pinned EXE",
+      "--module-census",
+      "pinned core4 runtime directory",
+      "own reserved child output"
+    ],
+    "fully_read_parent": true,
+    "no_bound_EXE_build_authority_or_protocol": true,
+    "original_SDK_false_unmodified": true,
+    "original_generic_Job_total1_policy_preserved": true,
+    "target_queries_and_export_resolution_zero": true,
+    "typed_binding_specs_AST_exact_prior_ABI_parent": true,
+    "unchanged_ASTs": [
+      "sha",
+      "exact",
+      "terminal_observer",
+      "runtime_pins"
+    ]
+  },
+  "status": "CLEAR_reviewed_disabled_parent_mechanics_only_future_binding_review_required"
+}

@@ -1,0 +1,61 @@
+{
+  "activity": {
+    "CPU_reads": 0,
+    "GGUF_reads": 0,
+    "SDK_constructors": 0,
+    "children": 0
+  },
+  "checker": {
+    "bytes": 3053,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_role_collision_before_v2.py",
+    "sha256": "9ee92e027a30ec73f52a2e20e84dabedf1124a81608f1731c19624a411bf5914"
+  },
+  "contract": {
+    "bytes": 10486,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+    "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+  },
+  "errors": [],
+  "expected_pack_manifest": {
+    "bytes": 90238,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXPECTED-PACK-METADATA-v1.json",
+    "sha256": "096e1234e239d04c3b276295e7176f5886f139a4064c3fc5f207745f8938f64d"
+  },
+  "failures": [
+    "test_CPU_case_alias_cannot_enter_software_role (__main__.Checks.test_CPU_case_alias_cannot_enter_software_role)",
+    "test_CPU_slash_alias_cannot_enter_software_role (__main__.Checks.test_CPU_slash_alias_cannot_enter_software_role)",
+    "test_case_aliases_cannot_duplicate_software_identity (__main__.Checks.test_case_aliases_cannot_duplicate_software_identity)",
+    "test_noncanonical_dot_spelling_cannot_enter_software_role (__main__.Checks.test_noncanonical_dot_spelling_cannot_enter_software_role)"
+  ],
+  "observed_admissions": [
+    {
+      "cap": 134217728,
+      "expected_bytes": 909824,
+      "role": "software"
+    },
+    {
+      "cap": 134217728,
+      "expected_bytes": 909824,
+      "role": "software"
+    },
+    {
+      "cap": 134217728,
+      "expected_bytes": 1,
+      "role": "software"
+    },
+    {
+      "cap": 134217728,
+      "expected_bytes": 1,
+      "role": "software"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Generic pure role-key defect; no future exact-roster runtime bypass asserted",
+  "source": {
+    "bytes": 6193,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_runtime_roles_v1.py",
+    "sha256": "e48463249438e4d85d373e39b06acc4dcfebfc0fc9c6cf61e43159378203a10f"
+  },
+  "status": "failed_expected_before_canonical_role_fix",
+  "tests": 4
+}

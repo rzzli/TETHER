@@ -1,0 +1,69 @@
+{
+  "CPU_GGUF_oldpack_operations": 0,
+  "bridge_decoder_parent_runtime_implementations": 0,
+  "checker": {
+    "bytes": 19374,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\check_unicode_wire_framing_v1.py",
+    "sha256": "adaa16a3fdf127055973abe43f3c8eb75b6e9cb309c10960d4887d0ce45219ed"
+  },
+  "complete_profile_packs": 0,
+  "counts": {
+    "JSONL_rows": 22,
+    "pack_fragments": 25,
+    "partial_history_scenarios": 14
+  },
+  "elapsed_seconds": 0.015000000013969839,
+  "errors": [],
+  "failures": [],
+  "inputs": {
+    "UNICODE-WIRE-DESIGN-CONTRACT-v2.json": {
+      "bytes": 86124,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-CONTRACT-v2.json",
+      "sha256": "ddf9fd360d72def0b91bd99b047422bf8ee623c0f8d6e0ba73535e04a7af1abc"
+    },
+    "UNICODE-WIRE-DESIGN-FREEZE-v2.json": {
+      "bytes": 896,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-DESIGN-FREEZE-v2.json",
+      "sha256": "c127d1dbb4e8ffe433b86629e9984fdba9751691e01b4e2f01287469a7541b8a"
+    },
+    "UNICODE-WIRE-FRAMING-CONTRACT-FREEZE-v1.json": {
+      "bytes": 938,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-CONTRACT-FREEZE-v1.json",
+      "sha256": "83505601fa786f4df1844dd0f45d9ffe10944a1c04e32b6c5326fb7099efbba7"
+    },
+    "UNICODE-WIRE-FRAMING-CONTRACT-v1.json": {
+      "bytes": 16995,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-CONTRACT-v1.json",
+      "sha256": "4c4645f53c878e03cf1f0eaec575b3dcf1dcc006375aadc0080819393e4c3d24"
+    },
+    "UNICODE-WIRE-FRAMING-FIXTURES-v1.json": {
+      "bytes": 363620,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-FIXTURES-v1.json",
+      "sha256": "f81f351e61a5e4bd5c9c9d8475b9d6ad51239b94320156409fff25fde40894eb"
+    },
+    "UNICODE-WIRE-FRAMING-FREEZE-v1.json": {
+      "bytes": 1370,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-FREEZE-v1.json",
+      "sha256": "5a7bd2876fc072a8984646200039751da3af9461356b0d8f34c26ed54419b075"
+    },
+    "author_unicode_wire_framing_v1.py": {
+      "bytes": 12763,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\author_unicode_wire_framing_v1.py",
+      "sha256": "602ec172fd2966184ab3f5965f275647b053cb31273fa58f4e2e2cf3eeba3927"
+    },
+    "author_unicode_wire_framing_v2.py": {
+      "bytes": 15059,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-wire-20261029\\author_unicode_wire_framing_v2.py",
+      "sha256": "482d1c9f2b23a2438cb81d9edda1c008898248e31dd022dceee7413fb650aeed"
+    }
+  },
+  "inputs_unchanged": true,
+  "methods": 7,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T09:03:57.400265+00:00",
+  "schema_version": 1,
+  "scope": "Only frozen literal fragment/row and finite counter/size/schema structural checks. No fullpack parser, real native observation, owner/source or complete profile history validation.",
+  "source_qualification": false,
+  "status": "passed",
+  "target_native_SDK_tokenizer_compiler_calls": 0
+}

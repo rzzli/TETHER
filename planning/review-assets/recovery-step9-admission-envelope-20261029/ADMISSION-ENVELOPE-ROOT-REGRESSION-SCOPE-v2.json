@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_date_utc": "2026-10-29",
+  "status": "AUTHORIZED_FOUR_PRE_FIX_PURE_REGRESSIONS_ONLY_NO_SOURCE_CORRECTION_YET",
+  "source_sha256": "4c86530b2cab406d2a78bb707a9efdfab5533432d64ee34312c2ad6287124242",
+  "source_pause_sha256": "1bf53afac8b3c00399d0ef0a821ed5de9055fd5ac47f3ae1287077c34ee955dd",
+  "corrected_original_30_proof_sha256": "0cf04ddbe83d147ce33b48b8b70e104430d841093a5999ddd9307a3062fa15a1",
+  "unchanged_original_test_sha256": "e670199a7c4c50dc7eb540f8e5a021919464e67a891ef00fa48902d21b783bcc",
+  "unchanged_original_corpus_sha256": "cb4c6dd46cd8e02bc45c9bbec69a52f0a6ee1baea633eefaed85eeb018f57cc7",
+  "confirmed_findings": [
+    "_object traverses all keys and constructs sets before checking key count, violating the bounded closed-shape capture requirement.",
+    "_integer returns INTEGER_DOMAIN for int subclasses despite the exact-built-in TYPE_DOMAIN requirement.",
+    "_steps performs total-byte arithmetic and aggregate consistency before declared graph/binding validation, contrary to the pinned validation order."
+  ],
+  "allowed_regressions": [
+    "One oversized exact built-in dictionary with bounded synthetic string keys: observe the actual _object key-validation generator through trusted CPython profiling. Require zero traversal before size refusal, not a timing estimate. Preserve real source/checks; no source-global replacements or fake input container.",
+    "One int-subclass numeric field must yield TYPE_DOMAIN, with no custom conversion/traversal hook invoked.",
+    "A declared cycle plus aggregate mismatch must yield MODULE_GRAPH.",
+    "A declared cycle plus otherwise overflowing size sum must yield MODULE_GRAPH before arithmetic."
+  ],
+  "execution": "Freeze the four-method regression source and explicit expectations before any corrected implementation. Run these four methods once against preserved V1 source to retain actual before evidence. Trusted UTF-16 codec bootstrap and narrowly instrumented CPython profile setup may precede the audited call; active source I/O/import guards remain. Keep original30/e670 unchanged.",
+  "source_correction_authorized": false,
+  "limits": "No fifth family, actual source/data payload, runtime/native/compiler/model/physical I/O, application change or cap lift. A separately named source successor requires the subsequent finite correction scope. All real qualification flags remain false.",
+  "provider_spending": 0,
+  "actual_runtime_authorized": false
+}

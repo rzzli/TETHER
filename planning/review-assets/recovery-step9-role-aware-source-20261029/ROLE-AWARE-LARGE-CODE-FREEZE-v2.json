@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_CODE_PREPARATION_ONLY_PENDING_STATIC_PEER_AND_ROOT_EXECUTION",
+  "pins": {
+    "ROLE-AWARE-LARGE-CODE-PROTOCOL-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-CODE-PROTOCOL-v1.json",
+      "bytes": 4486,
+      "sha256": "50f7a5fc6f4a1c20b9e0d591be1c6248076c86231e06abf8f776a93e1dda96f8"
+    },
+    "prepare_role_aware_large_reference_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\prepare_role_aware_large_reference_v1.py",
+      "bytes": 8819,
+      "sha256": "773860bbc34e5c4b1e1ee9052da02f64f054ef930076e42c61262e49dabf484e"
+    },
+    "run_role_aware_large_injected_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_large_injected_v1.py",
+      "bytes": 45859,
+      "sha256": "8352d6aada02f0b7fb39164b22ecae5691171eb6a5c492c2fd4eefa8cbbacabf"
+    },
+    "ROLE-AWARE-PRODUCER-SMALL-GATE-INDEPENDENT-PEER-v4.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-INDEPENDENT-PEER-v4.json",
+      "bytes": 10658,
+      "sha256": "ad941fe04c7373bb33cd37dadec1088f3bb6afe2d1c7069f885e9f27f26d2567"
+    },
+    "run_role_aware_large_injected_v2.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_large_injected_v2.py",
+      "bytes": 50016,
+      "sha256": "852767c3a0a66cf9a601eb53f259fa57e16b82d962c16dd81baf9fd442da1601"
+    },
+    "ROLE-AWARE-LARGE-CODE-PROTOCOL-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-CODE-PROTOCOL-v2.json",
+      "bytes": 6894,
+      "sha256": "11b6d069a1e17db06f3d4b1fff213e474b0e44c5622a7259a1e99a0770fc2665"
+    },
+    "ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "bytes": 15180,
+      "sha256": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929"
+    },
+    "ROLE-AWARE-PRODUCER-ALLOCATION-LIFETIME-AUDIT-v4.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-ALLOCATION-LIFETIME-AUDIT-v4.json",
+      "bytes": 21358,
+      "sha256": "9d6f0240b9c2bf2cba533c64775109f8df58736cb1c2c332c307cac52faf7871"
+    },
+    "role_aware_legacy_fixture_adapter_v2.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_aware_legacy_fixture_adapter_v2.py",
+      "bytes": 34130,
+      "sha256": "b0f8cbf326f05c9b868b26fbac2eaee5bdd9ae78fdcc15d1da848d2822abff4f"
+    },
+    "ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-PRODUCER-SMALL-GATE-ACCEPTANCE-v4.json",
+      "bytes": 2985,
+      "sha256": "096f5781b0c5d92208fcbd6a0da21528939f668be62ccd573c433ae7517b7445"
+    },
+    "ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+      "bytes": 84696,
+      "sha256": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+    }
+  },
+  "preservation": "V1 helper and duplicate-key protocol preserved. V2 closes only reported draft metadata, partial setup/first terminal, prepared-versus-actual return, clock and retention requirements.",
+  "actual_activity": {
+    "producer_helper_imports": 0,
+    "producer_runs": 0,
+    "large_original_calls": 0,
+    "reference_run_by_root": 1,
+    "reference_bytes_hashed_by_root": 3991999872,
+    "reference_checkpoints_by_root": 198,
+    "this_command": "Small artifact metadata hashing and JSON parsing only; no helper compile/import/run."
+  },
+  "expected": {
+    "N": 216,
+    "B": 2,
+    "M": 2,
+    "Q": 8799,
+    "R": 12255,
+    "C": 13551,
+    "E": 1496,
+    "candidate_calls": 9879,
+    "terminal_calls": 10095,
+    "reads": 8799,
+    "closes": 216,
+    "bytes": 9017363601,
+    "capture": 209,
+    "query_bytes": 1775088
+  },
+  "qualification": {
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_real_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

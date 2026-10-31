@@ -1,0 +1,91 @@
+{
+  "TODO_updated_after_checks": true,
+  "accepted_source_pin_count": 327,
+  "anchors": {
+    "RECOGNITION-EXECUTION-ROOT-DECISION-v1.json": {
+      "bytes": 6828,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-ROOT-DECISION-v1.json",
+      "sha256": "b6327d4a3457f4319d39a9f600c29e2aba3649b0db3ecb371f54a8de46a4bbe1"
+    },
+    "RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json": {
+      "bytes": 1979,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json",
+      "sha256": "b513793dd960e043bf20cd0f9166268382900ab1173fdc6946ff979b1d030cbd"
+    },
+    "RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.json": {
+      "bytes": 96139,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.json",
+      "sha256": "e49e48f496622406223919ccfae5fc1614c44f8c243c16935b39b3dcf50bb51d"
+    },
+    "RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md": {
+      "bytes": 5842,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md",
+      "sha256": "6f52bf4e7d373e7b89e10e01514e7913b61cefc55f1b46812d2cd1ea1f974ca3"
+    },
+    "RECOGNITION-RESULT-VERIFICATION-v1.json": {
+      "bytes": 16511,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-RESULT-VERIFICATION-v1.json",
+      "sha256": "22cf3294d754845abe5351f9a14278218e5d5a73baf0c9bbbee6092b27748f47"
+    }
+  },
+  "documents": [
+    {
+      "bytes": 35876,
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "sha256": "d15c491acf413e690cf771be562022602cb05cbf4f26dad91959896743d96f37"
+    },
+    {
+      "bytes": 32755,
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "sha256": "5e6019d49b4680f4c0e316f28a99a66feeb5e018a2ce582530bdf7da1f2b166e"
+    },
+    {
+      "bytes": 43854,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "893a7875bbe065371687211f26b80171ae48f853ff26432fea9370bf7a115702"
+    },
+    {
+      "bytes": 34531,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "33403c6ca8a891e0b40d3be0e707d519d1f86b1d4e7806e82cf4433f4df3d516"
+    },
+    {
+      "bytes": 8010,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessments.md",
+      "sha256": "5c73de774e16dedfcf3dc98c6514601262d394a94fc825009caebcd5d20ff443"
+    },
+    {
+      "bytes": 10033,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Recognition Disposition.md",
+      "sha256": "decd368cc1c28c23f6898e7a4a52ea3b7bc41434fc4aa2320b93d922764171db"
+    },
+    {
+      "bytes": 9278,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "sha256": "101561dcc69b7c73d0aa06dea80bec50878b6f4e4fe03f434c9456e8c7d8d622"
+    },
+    {
+      "bytes": 105892,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "sha256": "c011a5af1a598acfd45eb0eb65d8c9f6097b667e670f78f230bcc8c0e13d4ad5"
+    },
+    {
+      "bytes": 42750,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-28-r09-native-build.md",
+      "sha256": "25191e7b0e1a6a5cce1de45acbc5cb35a4788b11684397acf51ce09a30aaa82d"
+    }
+  ],
+  "edited_docs_outside_accepted_source_pins": true,
+  "independent_whole_verification": "INCOMPLETE_TIMEOUT",
+  "local_links_checked": 12,
+  "native_profile": "FAILED_required_partial_UTF8_coverage_unavailable",
+  "new_full_suite_run": false,
+  "new_payload_reads": 0,
+  "new_target_calls": 0,
+  "ordered_next_steps": 10,
+  "posthoc_archive_scope": "Separate metadata-only readability/integrity; does not repair either gate",
+  "recorded_at_utc": "2026-10-29T05:53:51.844677+00:00",
+  "recovery_and_human_rows": 20,
+  "schema_version": 1,
+  "status": "passed_documentation_QA_NOT_native_or_scientific_acceptance"
+}

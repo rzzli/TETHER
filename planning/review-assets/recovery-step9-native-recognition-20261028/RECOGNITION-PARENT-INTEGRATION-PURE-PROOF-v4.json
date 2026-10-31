@@ -1,0 +1,707 @@
+{
+  "CPU_binary_reads": 0,
+  "GGUF_reads": 0,
+  "SDK": {
+    "bytes": 53085,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_parent_launch_draft_v1.py",
+    "sha256": "3bfac51893b60221728ac915516c5e816c0cfc5a82899f5871f7931469d7fdfd"
+  },
+  "actual_children": 0,
+  "checker": {
+    "bytes": 11804,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_recognition_parent_integration_v4.py",
+    "sha256": "f66d73c0919b232d7bbd455baadd4b3effe211f66a2229e8078ebfabb2b7cc47"
+  },
+  "compiler_calls": 0,
+  "contract": {
+    "bytes": 10486,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-CONTRACT-v1.json",
+    "sha256": "30d82a42c5338789644fea00f666e264fb3e4114637c2c37330386a177f17861"
+  },
+  "denied_real_operations": [],
+  "elapsed_seconds": 1.952999999979511,
+  "errors": [],
+  "failures": [],
+  "fixtures": [
+    {
+      "case": "negative",
+      "files": [
+        {
+          "bytes": 3531,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\effective-protocol.json",
+          "sha256": "ccb67066f4430a0be73d3c0b67ca1becdca9b57b1f20140fa179ea27be3ee835"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 9481,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\execution\\journal.jsonl",
+          "sha256": "6bf5a1108a87dc39a52653e840a9a6dcb3a1d08d0d60843018efc9a8cb43fed5"
+        },
+        {
+          "bytes": 103,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\failure.json",
+          "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+        },
+        {
+          "bytes": 10045,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\parent-report.json",
+          "sha256": "8a392880af69ce36ffedc21df6252e9b7df18f8fa99ffc7a7ac24c4725ed6de5"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\parent-reservation.json",
+          "sha256": "b8a80bd6a2edf88c84f528c6cca293636131e275b9963ecbdce19da7f85327f6"
+        },
+        {
+          "bytes": 3019,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\post-lease-cleanup.json",
+          "sha256": "3941e2e56caf52f89680808d6fbf1e039f42de2604438c15b75a39663667eaf5"
+        },
+        {
+          "bytes": 1118,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\receipt.json",
+          "sha256": "324f9295c1fad3b5d3e18931aaf0ee6421d6912a3c825aae5b923fd9a4f0b500"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2159,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative\\terminal-seal.json",
+          "sha256": "6b23501e334005d15b2abee11c0e04bc0326b17a74b37f4daf2ddf461054b87c"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\negative",
+      "status": "failed"
+    },
+    {
+      "case": "actual-format-parser",
+      "files": [
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\actual-format\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281073,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\actual-format\\child\\result.jsonl",
+          "sha256": "ff6d0b090190da67fe02c690a3343a26fd432f34a50c1b5c0cf777f35915672a"
+        }
+      ]
+    },
+    {
+      "case": "unknown-KeyboardInterrupt",
+      "files": [
+        {
+          "bytes": 3616,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\effective-protocol.json",
+          "sha256": "14d25b37842373037c2a7bda265e57339bf0c9ced63bb6a644c9b7e27602c016"
+        },
+        {
+          "bytes": 4407,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\execution\\journal.jsonl",
+          "sha256": "3eb3bb035c1e64f792a7e2ea71f670b59acd808f99bc36ef541f400c590146b6"
+        },
+        {
+          "bytes": 118,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\failure.json",
+          "sha256": "eb0662717b3602dce38375d1b65878a82b9a99df27f5386d5d2eb61644890ee0"
+        },
+        {
+          "bytes": 5266,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\parent-report.json",
+          "sha256": "fe5279dac2d90fc86a44bc9dabb67ed63aa3e3ebacf4391bba30ae4610b6e196"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\parent-reservation.json",
+          "sha256": "2dfa3d503b07c33566a986b1320a3e0476b81080dd91a37e65dbcd4917995d9d"
+        },
+        {
+          "bytes": 1974,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\post-lease-cleanup.json",
+          "sha256": "1002f4bf7f0c23d748ea2c66801ce719cda46c13be863ef4ba22373e0a10442c"
+        },
+        {
+          "bytes": 996,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\receipt.json",
+          "sha256": "0371818c9ac1bbec500126c3d8d912f1f9696850b5658378d51bee235f9d55de"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\stdout.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2086,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt\\terminal-seal.json",
+          "sha256": "9db40eb15589b07db3efb11850a81e01d026acf11c10b41c049e30555fdc9164"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-KeyboardInterrupt",
+      "status": "failed"
+    },
+    {
+      "case": "unknown-SystemExit",
+      "files": [
+        {
+          "bytes": 3581,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\effective-protocol.json",
+          "sha256": "4cc887039feaa90f6ccaebdc107c7d97bfbf0ce1e108ca6ab5215048c055f108"
+        },
+        {
+          "bytes": 4379,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\execution\\journal.jsonl",
+          "sha256": "1171c3f77e1592d01d9724c5043c71528c9d11e5cf3291ad7841dba6d093716b"
+        },
+        {
+          "bytes": 111,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\failure.json",
+          "sha256": "8e5b084495fcbbfcd0de91afef3d108ca2cf300a691e00d01a09537e0372ce55"
+        },
+        {
+          "bytes": 5238,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\parent-report.json",
+          "sha256": "fb99143e5a1a9c90da059516bd0fe81eae36a8d612fbaec7d05eeaf7faca61ed"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\parent-reservation.json",
+          "sha256": "c399438ef75ea016020b0491c147d0f2d08cf5e9cb5a5334f2894d10201d5c3f"
+        },
+        {
+          "bytes": 1939,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\post-lease-cleanup.json",
+          "sha256": "ada412e219a5e81816f17055681142ec1d47184863cdb3c4ca995be988736b47"
+        },
+        {
+          "bytes": 996,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\receipt.json",
+          "sha256": "af4e8a15ae36b399fe35653a0823d55d784adb5e93cc6878bf68678599a06dc4"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\stdout.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2065,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit\\terminal-seal.json",
+          "sha256": "45415d77e253d9b7faa0c96eebb33d38914261d830136142da22786f111a9cbb"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-SystemExit",
+      "status": "failed"
+    },
+    {
+      "case": "unknown-unknown_creation",
+      "files": [
+        {
+          "bytes": 3611,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\effective-protocol.json",
+          "sha256": "1d4f88d893a68d08ea511d0215222d84d0ab371193bed778dc79e3860a0c7098"
+        },
+        {
+          "bytes": 7095,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\execution\\journal.jsonl",
+          "sha256": "0789cac16700ed7400fb7032e2f5c4ee8a5a11bbc2b95be1c601a713f9dabef1"
+        },
+        {
+          "bytes": 108,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\failure.json",
+          "sha256": "3cde20aef6217fd0ff945cc2412c89ac9114e74a94bc2fa13ef6e7600125f0fd"
+        },
+        {
+          "bytes": 9950,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\parent-report.json",
+          "sha256": "f8f80e5f51ee5fdfb183f337e7ac1265214ec959cf9c8c392ed51fb54c8fc6b8"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\parent-reservation.json",
+          "sha256": "42e4534b08a75e2eec5755944d627a6b0a37199da3eddc4bb3c2c647e94be955"
+        },
+        {
+          "bytes": 3137,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\post-lease-cleanup.json",
+          "sha256": "85d2a23d8dc468273e1122f13a2c6713c17a2f7c7a762100b983b77c8a65b7a3"
+        },
+        {
+          "bytes": 997,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\receipt.json",
+          "sha256": "e1b32e70687bf39303e5e2d09b6fd3d4effd296d5f940e83f37c4e09980218a7"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2102,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation\\terminal-seal.json",
+          "sha256": "307207a7ab06fac66ea67181bd86f5e9571298625cf248131a0d0cc57fb4c8e5"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\unknown-unknown_creation",
+      "status": "failed"
+    },
+    {
+      "case": "late-late_close",
+      "files": [
+        {
+          "bytes": 3566,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\effective-protocol.json",
+          "sha256": "defd6edabc20daf01e1353197f1da1876a93069a9e2637a6657bfa57f6c9bec8"
+        },
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\execution\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281073,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\execution\\child\\result.jsonl",
+          "sha256": "ff6d0b090190da67fe02c690a3343a26fd432f34a50c1b5c0cf777f35915672a"
+        },
+        {
+          "bytes": 9510,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\execution\\journal.jsonl",
+          "sha256": "944fcf007a815abba446e8f9ed21b21e530450fe005005a5a372644d4ad23d96"
+        },
+        {
+          "bytes": 751,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\late-failure.json",
+          "sha256": "03179b607adc383bde818338690f1dc245342fc291abf833564831f128b86254"
+        },
+        {
+          "bytes": 19215,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\parent-report.json",
+          "sha256": "d16759da791e6cae3ffefd730ffcc741617075b6d7ba30b4a912fb3b5de73f3a"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\parent-reservation.json",
+          "sha256": "5bbf9769f93a58c44988c54411d388709ec82918923f5704c305602191aeaecb"
+        },
+        {
+          "bytes": 3122,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\post-lease-cleanup.json",
+          "sha256": "68296b4d9a3513ee2b24bfd830fbab76540fca22154763ded087a178895d5866"
+        },
+        {
+          "bytes": 1199,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\receipt.json",
+          "sha256": "d2409fcf6aa89e5463558b8cb4287004c4b841a6b3abb66febb0b83979c6d13e"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2315,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close\\terminal-seal.json",
+          "sha256": "baab7d21203bd4fbc4be4d5ebf76f50b0f485c99c7f22e0aa32940f084e7a8a0"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-late_close",
+      "status": "failed"
+    },
+    {
+      "case": "late-publication",
+      "files": [
+        {
+          "bytes": 3571,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\effective-protocol.json",
+          "sha256": "f9c3da286a58d59fc87268f82242d8ca40c04514fcf4934018669eb8870e56d8"
+        },
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\execution\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281073,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\execution\\child\\result.jsonl",
+          "sha256": "ff6d0b090190da67fe02c690a3343a26fd432f34a50c1b5c0cf777f35915672a"
+        },
+        {
+          "bytes": 9513,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\execution\\journal.jsonl",
+          "sha256": "86780157dfb0320269d8291df2d6a91cbdf80e85d3edae8e26756f96f8c36855"
+        },
+        {
+          "bytes": 142,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\failure.json",
+          "sha256": "c5593003cabf4bc4939d665f880f786952ba2be0488bc1716a3216c386c04383"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\parent-reservation.json",
+          "sha256": "e5df419a690b6bb00b1955153ef3092e72ed515a37c84e516d9e3c7c4a356066"
+        },
+        {
+          "bytes": 2933,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\post-lease-cleanup.json",
+          "sha256": "1c2a5ac2e07ba6e279afadda57f1c91fbb95c89b3068b89c2398e586c2db4197"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 400,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\terminal-publication-error.json",
+          "sha256": "1cc156f97e58aef63261c8755e53fe2a5030fca8bbfa568473becda94c6bd71f"
+        },
+        {
+          "bytes": 1979,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication\\terminal-seal.json",
+          "sha256": "15b1678af17f19327e413a7c11992331ce1f7bbbdb2d296493a165c9c145ff1c"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-publication",
+      "status": "failed"
+    },
+    {
+      "case": "late-after_seal",
+      "files": [
+        {
+          "bytes": 355,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\after-seal-failure.json",
+          "sha256": "1564e4d9ea927ab85637567c1aa0ae9576aa69a0e8abdfcf26b55065cf020fe4"
+        },
+        {
+          "bytes": 3566,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\effective-protocol.json",
+          "sha256": "5a71cfefa47fe737a60dd5659de5f3e25043a141caa2cbce60fd771eb477f10f"
+        },
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\execution\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281073,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\execution\\child\\result.jsonl",
+          "sha256": "ff6d0b090190da67fe02c690a3343a26fd432f34a50c1b5c0cf777f35915672a"
+        },
+        {
+          "bytes": 9510,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\execution\\journal.jsonl",
+          "sha256": "b66154be0985813717fc41afbe3abf712027378900d015f6680457bbd6da1c23"
+        },
+        {
+          "bytes": 19215,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\parent-report.json",
+          "sha256": "8d5269c6818717e009810e00a389464b37cc751d2dbe602ecaca53e95aeb3f9d"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\parent-reservation.json",
+          "sha256": "aef336b29120039ab775e89b4ef82a0cafec664b79e4555d45871c4e6cb8483e"
+        },
+        {
+          "bytes": 2837,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\post-lease-cleanup.json",
+          "sha256": "bf7e3bf2e17e81fbed0c9c401119e41ebd01272854ade86a6d49c4e6f56a253e"
+        },
+        {
+          "bytes": 1199,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\receipt.json",
+          "sha256": "409094ba6c6d9d433d543df5522e4b325186b2afd414c0c3079f7b16d6c994ea"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2029,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal\\terminal-seal.json",
+          "sha256": "07990c1e99d08fc12ee6aa532d5e2fea605186efac8eaaa056cee73aa1fb6c99"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\late-after_seal",
+      "status": "failed"
+    },
+    {
+      "case": "positive",
+      "files": [
+        {
+          "bytes": 3531,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\effective-protocol.json",
+          "sha256": "2a15ac7f69fe3eca9a2fd50077de40647a7bac1818f6bcadaa8468bc7a1ce258"
+        },
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\execution\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281073,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\execution\\child\\result.jsonl",
+          "sha256": "ff6d0b090190da67fe02c690a3343a26fd432f34a50c1b5c0cf777f35915672a"
+        },
+        {
+          "bytes": 9489,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\execution\\journal.jsonl",
+          "sha256": "893bc5adba8dae9bc1674a7670e9aaa6816adcfe5a6600d3891d23aa4ae1edc0"
+        },
+        {
+          "bytes": 19173,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\parent-report.json",
+          "sha256": "7b258662a59273b5d7932cb5ba940c07d2c5737c03377d82b05ea508151bbf44"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\parent-reservation.json",
+          "sha256": "dd98fc916668aab7741d45779949098a85395a8eec0eaa580dc13d7d7fc25ac6"
+        },
+        {
+          "bytes": 2802,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\post-lease-cleanup.json",
+          "sha256": "4429bca4335a372fbc6e887f9928348cc04e9d2bac8610baafb54cdde00bfba0"
+        },
+        {
+          "bytes": 1199,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\receipt.json",
+          "sha256": "25902b15559f89eefd84ec247dd77aae22c827b09e14bc3c8ee44ad28d94b568"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2015,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive\\terminal-seal.json",
+          "sha256": "af190314d114597968c624077b2d293ea5b47b9755b2b66efbcbe16787a4ded0"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\positive",
+      "status": "recognition_observations_retained_independent_qualification_pending"
+    },
+    {
+      "case": "malformed",
+      "files": [
+        {
+          "bytes": 3536,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\effective-protocol.json",
+          "sha256": "e8a97cac8f467fadca9ed630e47b0294b13efd6edbc3894c0971ab01f0562ae2"
+        },
+        {
+          "bytes": 99,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\execution\\child\\attempt.json",
+          "sha256": "4895fabd39f4b664d69d3dfd60b7b8d8c69a45e36b9ae3672db2bfa5aa1239a1"
+        },
+        {
+          "bytes": 1281074,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\execution\\child\\result.jsonl",
+          "sha256": "34e74298af1327d04e0978a8d0aa3798cf4aed27ef3497c9b8c7f5809b21df53"
+        },
+        {
+          "bytes": 9541,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\execution\\journal.jsonl",
+          "sha256": "22dacff70fcd4708a8c94599e3e1e0dc3c253d1800d2cffc9d6f3b2712fe12e6"
+        },
+        {
+          "bytes": 160,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\failure.json",
+          "sha256": "0b5f048595090224428ee6d7f681bcd2749b577aa41916f1a382411de673fb56"
+        },
+        {
+          "bytes": 10579,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\parent-report.json",
+          "sha256": "f6631d96f072b9ef09352074c1c237e6d3bee7543b3cc95987c6119acba55dcc"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\parent-reservation.json",
+          "sha256": "1c6557f584342f375d839aecad879efdf102be5ad9bc993a3f4fe6916487ab5c"
+        },
+        {
+          "bytes": 3082,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\post-lease-cleanup.json",
+          "sha256": "65e150c985a083020cf6200961210462866dffe59549bebb9810024c5a8ca4b3"
+        },
+        {
+          "bytes": 1243,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\receipt.json",
+          "sha256": "dfb56c00700e202458dc044754d360cd7645e4ac39407c13a9d48134646efdc7"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2287,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed\\terminal-seal.json",
+          "sha256": "94465b6cfec66a618f7fb79b19cf3dc4fb828530b13ad8e38fc569ce81e52eee"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\malformed",
+      "status": "failed"
+    },
+    {
+      "case": "deadline",
+      "files": [
+        {
+          "bytes": 3531,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\effective-protocol.json",
+          "sha256": "3285521337328e5b61846e0bc71c511310dd63fc9206a983078137c0c151b01b"
+        },
+        {
+          "bytes": 29,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\execution\\child\\failure.json",
+          "sha256": "68f95c4a8191047956269e0a12486b182fb4e12df32e8ccbbe446880a8614e05"
+        },
+        {
+          "bytes": 7652,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\execution\\journal.jsonl",
+          "sha256": "093aaf14b18d5d624a4bca5e0d9a2fbafc405ad2c778f3c341bd343dfe2eba1f"
+        },
+        {
+          "bytes": 122,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\failure.json",
+          "sha256": "bdac0691eb63b94ab6d37da0b30103bdfe5f4c5f5f3957c719a232a790d0fb4c"
+        },
+        {
+          "bytes": 8118,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\parent-report.json",
+          "sha256": "d560b92abd1b6432aec37b5f7a4a923f5aea12171c7a61c7bd73e1f9b3c2745b"
+        },
+        {
+          "bytes": 121,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\parent-reservation.json",
+          "sha256": "fa5b73a183c568a5db2235bb46186fd329e220a9cee69863e060a2cad87692f8"
+        },
+        {
+          "bytes": 3053,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\post-lease-cleanup.json",
+          "sha256": "1bcee2632c7b46eed9df2377433295f1b31d1453446473c74d8660a829af1fe2"
+        },
+        {
+          "bytes": 1117,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\receipt.json",
+          "sha256": "49f47a6c3b1702107165c6bf2ab80a0488e593de1ffff48289ab9e551d87cc61"
+        },
+        {
+          "bytes": 0,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\stderr.bin",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 18,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\stdout.bin",
+          "sha256": "3a8945e2f5711789799f141385fb72a7e04b845c2ce3aa4cd3d7911d5f110836"
+        },
+        {
+          "bytes": 2173,
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline\\terminal-seal.json",
+          "sha256": "93b787cff72ec93d25055d81a9296e1b769d7cf0e6430a4858ab15c12c2dc23d"
+        }
+      ],
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-parent-integration-pure-1793248765843236600\\deadline",
+      "status": "failed"
+    }
+  ],
+  "helper": {
+    "bytes": 37060,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v4.py",
+    "sha256": "4fc57980d353469e64320a1510207888497e45d36383c8bd738fc9f3f7e531c9"
+  },
+  "legacy_fake_primitives": {
+    "bytes": 21945,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_detached_abi_negative_integration_v6.py",
+    "sha256": "253f1c70fe9c336efded9ef71e5cf38a7a4943027a191a1f301c8780ff8f71a4"
+  },
+  "manifest": {
+    "bytes": 90238,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXPECTED-PACK-METADATA-v1.json",
+    "sha256": "096e1234e239d04c3b276295e7176f5886f139a4064c3fc5f207745f8938f64d"
+  },
+  "real_SDK_constructions": 0,
+  "role_helper": {
+    "bytes": 7527,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_runtime_roles_v2.py",
+    "sha256": "97eb16d55ea84d9e8193e2195e977469e87acbef4d838ad049cc9771ea75a344"
+  },
+  "schema_version": 1,
+  "scope": "Synthetic401-row byte-token files plus fake owned lifecycle only; fake clocks and fake source leases establish no native conformance/resource fit or asset qualification.",
+  "status": "passed",
+  "status_sealer": {
+    "bytes": 6050,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_status_seal_v1.py",
+    "sha256": "652b8ea5a7b612ef16636d114b3e9b8a24dc99b35aede10410ab0fac4f1595aa"
+  },
+  "terminal_component": {
+    "bytes": 10524,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\detached_abi_terminal_observation_v3.py",
+    "sha256": "4ea2c429a8e4d512d42ae449fc3764550421ae8cf6491e3866c8322880d5c96c"
+  },
+  "tests": 6,
+  "validator": {
+    "bytes": 27603,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_validation_v2.py",
+    "sha256": "9a2086ab226a5a7ae70a35b5eec1bf4d4e6f6d2fe9dedfc96092241186380c09"
+  },
+  "wire": {
+    "bytes": 7402,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-WIRE-v2.json",
+    "sha256": "d578bc2179e55f7866dd7b2df3ec3169fdc3bcb0dee58629c2a31b8d366d0d01"
+  }
+}

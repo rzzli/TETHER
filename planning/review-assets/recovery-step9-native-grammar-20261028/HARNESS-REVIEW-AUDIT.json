@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "kind": "ai_engineering_finite_converter_harness_review",
+  "reviewed_at_utc": "2026-10-28T04:28:58.886645+00:00",
+  "scope": "Read-only v2 failure verification and static harness review; not native execution or OS-wide attestation",
+  "v2_failed_before_child_creation": true,
+  "journal_chain_valid": true,
+  "journal_events": 6,
+  "journal_tip_sha256": "ccbbabee8cc88504aff27af72435bc4cb6ed3bdc8deb85d41a209d2b5b3e54c5",
+  "journal_event_names": [
+    "build_reserved",
+    "native_converter_inputs_qualified",
+    "native_converter_attempt_reserved",
+    "native_converter_dispatch",
+    "native_converter_attempt_terminal",
+    "build_failed"
+  ],
+  "subprocess_audit_dispatches": 0,
+  "known_spawned_children": 0,
+  "pid": null,
+  "empty_captures": true,
+  "no_result_terminal_report_or_receipt": true,
+  "shared_once_only_claim_preserved": true,
+  "v2_evidence": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\failure.json",
+      "sha256": "e472a28c368dc2244a588c53eb9fa539b24eeccb75f45b47e211e15b592ee111",
+      "bytes": 488
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\journal.jsonl",
+      "sha256": "722b32f584773ad9629b37b1a7487ee5b0be803bd2ff6b36c8692d926bc8bc6c",
+      "bytes": 3801
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\stages\\00-roundtrip\\parent-attempt.json",
+      "sha256": "11da83e7a49b1ead59f769d2d7329361541000224c7f874969823ac3114b939d",
+      "bytes": 1369
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\stages\\00-roundtrip\\stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\stages\\00-roundtrip\\stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\config\\operator-helper.py",
+      "sha256": "0a7ed19fc9b2ba450a4280efc153da2147ae5d96438a148e084818a8a2e6b1bf",
+      "bytes": 23045
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\config\\protocol.json",
+      "sha256": "30966db2bf9846f3280b3ff881e423cd66adeac175113157e326f196c034ed68",
+      "bytes": 38991
+    }
+  ],
+  "findings": [
+    {
+      "id": "H01",
+      "status": "observed_v2_failure",
+      "summary": "Windows DEVNULL setup was denied before subprocess audit or process creation"
+    },
+    {
+      "id": "H02",
+      "status": "source_level_gap_no_observed_overrun",
+      "summary": "Final global deadline check excluded terminal sealing, inventory hashing and receipt publication"
+    }
+  ],
+  "v3_review_status": "scoped_static_clearance_no_blocking_finding",
+  "review": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\HARNESS-REVIEW.md",
+    "sha256": "a37cc029b6e1b25eb7101fecdcee9ae86ba8e6a09cbba323fedbc6603d27bfa4",
+    "bytes": 7414
+  },
+  "reviewer_native_calls": 0,
+  "reviewer_model_calls": 0,
+  "reviewer_network_calls": 0,
+  "reviewer_framework_test_reruns": 0,
+  "v3_reviewed_at_utc": "2026-10-28T04:39:55.145168+00:00",
+  "v3_scope": "Exact frozen at-most-two-child native diagnostic only; not OS sandbox, successful native execution, grammar/EOG, full-case budget fit, model quality or scientific validation",
+  "v3_evidence": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json",
+      "sha256": "a4f09687d19bc2803a4b419c6c707044d6f0097515a0f5778770563f0f267ce0",
+      "bytes": 44078
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\run_finite_converter_probe_v3.py",
+      "sha256": "ff51edd0007c48a5c4be925f98020491e8ddac3fabe1b8e89e8c6a384567a817",
+      "bytes": 26720
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\test_converter_harness_v3.py",
+      "sha256": "5ba69b5eaf5a0dde550e2ccce897c70dfe915f96a6cd5befb0f0138a752b2b7f",
+      "bytes": 6078
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-harness-v3-regressions-1793162150480679000\\regression-report.json",
+      "sha256": "7353d1c5d4cd635b48ac398623bd3a6ca54d5d20135c7cf980cab1e7ce0956fc",
+      "bytes": 3574
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-dry-run-1793162263194648800\\dry-run-report.json",
+      "sha256": "562f589691c26da9f738d22a972852bb4566cb8896961d4f956c215e11bd0d07",
+      "bytes": 430
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-dry-run-1793162263194648800\\journal.jsonl",
+      "sha256": "f79e2aaaa77d1e8257f9573478357f96672fe5d46395c0c8ada3827128a41b5e",
+      "bytes": 614
+    }
+  ],
+  "v3_author_regression_tests": 3,
+  "v3_harmless_python_children": 1,
+  "v3_regression_native_converter_children": 0,
+  "v3_dry_run_journal_chain_valid": true,
+  "v3_dry_run_journal_events": 2,
+  "v3_dry_run_journal_tip_sha256": "c5feb3e97b0ff53ab8711bd3b436e2527b659250fc97e8fa743e161b928d4544",
+  "v3_fixes": [
+    {
+      "id": "H01",
+      "status": "fixed_in_exact_v3",
+      "basis": "Narrow exact NUL/None/flags130 active-dispatch exception and one harmless child plus three rejected unauthorized writes"
+    },
+    {
+      "id": "H02",
+      "status": "fixed_in_exact_v3",
+      "basis": "Deadline checks through inventory, receipt and seal; synthetic pre-/post-receipt overruns produce authoritative failure marker"
+    }
+  ],
+  "local_link_qa": {
+    "status": "pass",
+    "links": [
+      {
+        "label": "preserved",
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-finite-converter-execution-20261028T041937Z\\failure.json",
+        "exists": true
+      },
+      {
+        "label": "HARNESS-REVIEW-AUDIT.json",
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\HARNESS-REVIEW-AUDIT.json",
+        "exists": true
+      },
+      {
+        "label": "v3 protocol",
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json",
+        "exists": true
+      },
+      {
+        "label": "v3 runner",
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\run_finite_converter_probe_v3.py",
+        "exists": true
+      },
+      {
+        "label": "three-case regression report",
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-harness-v3-regressions-1793162150480679000\\regression-report.json",
+        "exists": true
+      },
+      {
+        "label": "exact-protocol dry-run report",
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-dry-run-1793162263194648800\\dry-run-report.json",
+        "exists": true
+      }
+    ]
+  }
+}

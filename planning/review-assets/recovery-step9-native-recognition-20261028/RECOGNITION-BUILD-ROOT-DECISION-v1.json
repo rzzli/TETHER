@@ -1,0 +1,102 @@
+{
+  "CPU_GGUF_model_reads": 0,
+  "CPU_GGUF_payload_access_authorized": false,
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "RECOGNITION-BUILD-PEER-REVIEW-v1.json": {
+      "bytes": 12146,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PEER-REVIEW-v1.json",
+      "sha256": "4ad375ecfd2f9044747c386f8c7fe8c8610c98a7754074f1e58785ac08ae50fb"
+    },
+    "RECOGNITION-BUILD-PREPARATION-ROOT-DECISION-v1.json": {
+      "bytes": 2364,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PREPARATION-ROOT-DECISION-v1.json",
+      "sha256": "a90c8d1c8e99f803dcde99c3256de226324a7d8b119315329a965b1f09bd3e48"
+    },
+    "RECOGNITION-BUILD-PREPARATION-v1.json": {
+      "bytes": 1015,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PREPARATION-v1.json",
+      "sha256": "2a31e6183cee8e8791a7e42ec3097095d80c4c3f1b60027e3d71c6f3542e7e72"
+    },
+    "RECOGNITION-BUILD-PROTOCOL-v1.json": {
+      "bytes": 84045,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PROTOCOL-v1.json",
+      "sha256": "c1a7de88730d9965003e35701033e12e00c4632625a4f3d54bd88a43bba6ba4f"
+    },
+    "RECOGNITION-BUILD-PURE-CHECKS-v1.json": {
+      "bytes": 672,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-PURE-CHECKS-v1.json",
+      "sha256": "d8c1dce125c035d92ca055a4911ac81a3d481f5c167797a566e09a63147787d6"
+    },
+    "RECOGNITION-CHILD-SOURCE-PEER-REVIEW-v2.json": {
+      "bytes": 8024,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-CHILD-SOURCE-PEER-REVIEW-v2.json",
+      "sha256": "17c6e6b4faadfe6dee4724e292ae434fed8ebcc8ec63953955a71dd2c9adc39f"
+    },
+    "RECOGNITION-SOURCE-ROOT-DECISION-v1.json": {
+      "bytes": 4851,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-SOURCE-ROOT-DECISION-v1.json",
+      "sha256": "20ea58d6626b82dd55c7b823ed1bd729134ecac15470fcc6c4c1ad69d92a5399"
+    },
+    "build_recognition_bridge_v1.py": {
+      "bytes": 41853,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_recognition_bridge_v1.py",
+      "sha256": "7b46d67568e22e34dff048eb7a73abec3578268553d2f32c2550f2bb9919a18d"
+    }
+  },
+  "authorizer": {
+    "bytes": 5624,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\authorize_recognition_compile_v1.py",
+    "sha256": "cac302faf5660f3117fda7e0373823735bccce53ce3958addab49f06f6ec95f1"
+  },
+  "automatic_retry": false,
+  "compiler_scope": "Launched compiler/linker handles only; descendants not independently attested",
+  "execute_compiled_result": false,
+  "fresh_input_hashes_checked": 287,
+  "input_bytes": 77496944,
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserve_seconds": 5,
+    "link_seconds": 10,
+    "maximum_children": 2,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144,
+    "total_seconds": 60
+  },
+  "maximum_compiler_linker_processes": 2,
+  "module_policy_sha256": "4d5e09d70d0f6e4cec6c1754dbbec1add6b2985754ead811128a27eb6a138713",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z",
+  "output_absent": true,
+  "protected_answers_hash_only": true,
+  "provider_spend_usd": 0,
+  "recognition_capability_enabled": true,
+  "recorded_at_utc": "2026-10-29T04:41:22.748759+00:00",
+  "remaining": "Build only. Final parent/parser/profile/asset authority and a new root decision precede any recognition execution.",
+  "required_independent_output_verification": true,
+  "runtime_execution_authorized": false,
+  "schema_version": 1,
+  "status": "root_authorizes_one_exact_recognition_compile_link_only",
+  "target_DLL_loads": 0,
+  "toolchain_scope": "Pinned prior direct SDK/STL/tool leaves and libraries; not a complete transitive toolchain closure",
+  "unchanged_helper_ASTs": [
+    "need",
+    "sha",
+    "basis",
+    "named_exports",
+    "verify_export_mapping",
+    "filtered_basis_inputs",
+    "validate_parent_interpreter",
+    "accepted",
+    "collect_inputs",
+    "verify_pins",
+    "export_tables",
+    "pe_policy",
+    "commands",
+    "finalize"
+  ]
+}

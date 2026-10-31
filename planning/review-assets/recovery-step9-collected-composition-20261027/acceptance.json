@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T23:17:06.911727+00:00",
+  "version": "0.3.7",
+  "status": "accepted_collected_source_four_arm_recorded_engineering_only",
+  "full_tests": {
+    "run": 1660,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "new_regression_tests": 14,
+  "focused_regressions": 26,
+  "new_independent_peer_review": false,
+  "source_pins_rechecked": 314,
+  "protected_hashes_only": 2,
+  "installed_legacy_families": 7,
+  "matching_frozen_verifiers": 6,
+  "original_source_inputs": 27,
+  "case": "exposed_IL6R_RA_inhibit_antibody",
+  "fresh_case": false,
+  "retrieval_policy": "literal_case_overlap_then_id_v1",
+  "declared_candidates": 5,
+  "selected_count": 1,
+  "parent_observations_available": 9,
+  "missing_input_count": 65,
+  "arms": 4,
+  "recorded_cells": 6,
+  "pure_results": 2,
+  "tokenizer_children": 6,
+  "actual_model_calls": 0,
+  "provider_spend_usd": 0,
+  "features": {},
+  "clinical_probability": null,
+  "input_reserved": 22067,
+  "output_reserved": 6144,
+  "execution_outer_seconds": 157.81299999996554,
+  "sealed_elapsed_seconds": 157.81299999996554,
+  "replay_seconds": 23.57799999997951,
+  "peak_parent_working_set_bytes": 484769792,
+  "retained_bundle_bytes": 792175,
+  "child_peak_memory_bytes": null,
+  "scientific_validation": "not_established",
+  "human_reviews": "pending",
+  "entire_R09_complete": false,
+  "native_R07_stop_unchanged": true,
+  "default_byte_policy_unchanged": true,
+  "run_bundle_relocation_only": true,
+  "raw_inputs_restored": false,
+  "source_report_stimuli": "whole verbatim statements, evaluator-only fixtures",
+  "remaining": [
+    "Real retrieval and scientific source/question sufficiency",
+    "Independent source-only references and domain-matched reviewers",
+    "Separately versioned model-backed interpretation design and qualification",
+    "R10-R16 scientific and conditional programme"
+  ],
+  "wheel": {
+    "path": "data/cache/recovery-step9-collected-wheel-20261027/dist/asof_target_agents-0.3.7-py3-none-any.whl",
+    "sha256": "6faf29bbbf2c4332d42c2e9e7fa891510a018d059fc1d39518c445fc6cf98949",
+    "bytes": 247365
+  },
+  "preserved_wheel": {
+    "path": "data/reference/recovery-r09-collected-verifier-037-20261027/asof_target_agents-0.3.7-py3-none-any.whl",
+    "sha256": "6faf29bbbf2c4332d42c2e9e7fa891510a018d059fc1d39518c445fc6cf98949",
+    "bytes": 247365
+  },
+  "evidence": [
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/full-validation.json",
+      "sha256": "642436fa190a1ecd3c1432d17dd7fdb66ce9d86b3ead20af42fafa4024250f43",
+      "bytes": 473
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/code-validation.json",
+      "sha256": "c06e2da83a302c5cf024a9e896f993f26e433009260387067038ae1900f11a2d",
+      "bytes": 35593
+    },
+    {
+      "path": "data/cache/r09-collected-default-installed-20261027/guarded-installed-verification.json",
+      "sha256": "dcfa62a6cc797c5c5530e29a5d189e26e47e7ef08a0d56b3fa9ffb9efae332d1",
+      "bytes": 9526
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-031-AFTER.json",
+      "sha256": "bd901d830309efc70a126c83e7006930f2a2fb3b68192c221e129aeaae60fd7e",
+      "bytes": 965
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-032-AFTER.json",
+      "sha256": "e95511a38fbf253af05ebf2f56e08c1efd58bd237689f0e36a525532ddf321f3",
+      "bytes": 1007
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-033-AFTER.json",
+      "sha256": "4f00e455feda0a5eb22c4a09f304f0ec76b6237e3df9f836ed6ae3d23a564b30",
+      "bytes": 1113
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-034-AFTER.json",
+      "sha256": "23eaedfd8cfb5f7d5c8de9cf065660db8cc904cda5aa135ac7a21441c3fbedd1",
+      "bytes": 930
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-035-AFTER.json",
+      "sha256": "47a67cf4abd939205b90694f6906d4b55556fc8a77bd32ab261c86c6c7e5f3b7",
+      "bytes": 1393
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-036-AFTER.json",
+      "sha256": "a61d7c1b627580f20c8e2697af2c52b17e1c55b93d7566d8bbc04350d7083eda",
+      "bytes": 1897
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/CONTRACT.md",
+      "sha256": "25f8b4d84baf902abf8521fa45240cadd4a3ea969fa843d816661498392747e1",
+      "bytes": 4757
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/compatibility-profile-review.md",
+      "sha256": "90974eee30baccefeb5f925252f425908b4a7e108c5b737bab1482c3e9a67244",
+      "bytes": 999
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FOCUSED-v2.log",
+      "sha256": "ba8c9114b94f483440ec469a1d1b1532016b37d88709104b45376b25a3169a3b",
+      "bytes": 4768
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/QUALIFICATION-PROTOCOL.json",
+      "sha256": "0125782c5dea23b61837ee4280cbacda5e76360205b9d5e1cc874b03d2ad6ba7",
+      "bytes": 1789
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/QUALIFICATION.json",
+      "sha256": "46504e13bf1739ec56334c1e0bdf7b46a722824db5808e9cc5e5994409d8fc66",
+      "bytes": 4665
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/FROZEN-VERIFIER-CHECKS.json",
+      "sha256": "3b859ed7862f0982a9f4caf3c2746fca8e488386b22e059099cb4dcea25afba9",
+      "bytes": 9860
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/installed-verification.json",
+      "sha256": "ce21da5d394a98d6dd2bb3fd2aa5f330a940190958b3dfb044475137f21b6ff4",
+      "bytes": 2283
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/relocation-verification.json",
+      "sha256": "6b966371d4c96b194b4296ab777c165106f6c8b92f5abb68d76db512d5c4b067",
+      "bytes": 2461
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/ARROW-INSTALL.json",
+      "sha256": "667907323447bd9dbe86cacc445b322f3ec88a58d1a75d8406c0a828d7ee778d",
+      "bytes": 141964
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/HELPER-REVIEW.md",
+      "sha256": "bf4963d7f07ffd33dac214c9421569f0a81224722a1e95c6868052830e19ca62",
+      "bytes": 2689
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "sha256": "66339ddb5f5007e9a10dd9aa3f7acb64ecf84bbb8bfa6c268d73212eb21e5654",
+      "bytes": 3253
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T06:36:51.501168+00:00",
+  "status": "SOURCE_PURE_ORCHESTRATION_TESTS_PASS_INDEPENDENT_REVIEW_PENDING",
+  "scope": "In-memory fake leases/bytes/sink/clock and trusted synthetic checkers only. No real archive/core checker correctness, live adapter/bootstrap fit, old gate or scientific claim.",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v1.py",
+    "bytes": 23219,
+    "sha256": "b15142efac14d8beafc19f9c71b5d594737063303f5096f627e08e7f04adac4b"
+  },
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\check_deterministic_verifier_v1.py",
+    "bytes": 20478,
+    "sha256": "156649717f7b870613d6cd81bbd48a0a196cbf1a9b4735d6118a2583c217d9ac"
+  },
+  "retention_writer": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\retain_verifier_pure_proofs_v1.py",
+    "bytes": 5859,
+    "sha256": "d91bd8d997030100f98b9201ccfe7ff6d8a8dcebb37f26e5c392a9187718e70e"
+  },
+  "approved_contract": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-DESIGN-CONTRACT-v2.json",
+    "bytes": 14086,
+    "sha256": "7bff14386239d908ca33fd1a11214e95d90010b312aed3d23ac07b9fd69e3c6f"
+  },
+  "source_addendum": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SOURCE-ADDENDUM-v1.md",
+    "bytes": 1373,
+    "sha256": "0e5b2dd05e9f3789a66d1b042abdd21c9d44625f68fbd20f6307a1ad36b74377"
+  },
+  "initial_replay": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-INITIAL-DRAFT-REGRESSION-REPLAY-v1.json",
+    "bytes": 10418,
+    "sha256": "127ae96e0a29439719ec4766922757855f742330a6af1401a117ebd340d180e9"
+  },
+  "result": {
+    "methods": 19,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 0.0,
+    "passed": true,
+    "output": "test_checker_mutation_and_omitted_gate_cannot_complete (recovery_checker.Checks.test_checker_mutation_and_omitted_gate_cannot_complete) ... ok\ntest_cleanup_journal_error_and_primary_later_preserved (recovery_checker.Checks.test_cleanup_journal_error_and_primary_later_preserved) ... ok\ntest_close_false_unknown_late_no_retry (recovery_checker.Checks.test_close_false_unknown_late_no_retry) ... ok\ntest_complete_order_and_negative (recovery_checker.Checks.test_complete_order_and_negative) ... ok\ntest_context_immutable_nonserializable_foreign (recovery_checker.Checks.test_context_immutable_nonserializable_foreign) ... ok\ntest_every_work_stage_uses_same_deadline (recovery_checker.Checks.test_every_work_stage_uses_same_deadline) ... ok\ntest_factories_under_original_clock_and_reserve (recovery_checker.Checks.test_factories_under_original_clock_and_reserve) ... ok\ntest_hard_expiry_stops_remaining_close_dispatch (recovery_checker.Checks.test_hard_expiry_stops_remaining_close_dispatch) ... ok\ntest_hash_fault_and_late_digest (recovery_checker.Checks.test_hash_fault_and_late_digest) ... ok\ntest_late_checker_return_and_clock_primary (recovery_checker.Checks.test_late_checker_return_and_clock_primary) ... ok\ntest_late_open_owned_and_closed (recovery_checker.Checks.test_late_open_owned_and_closed) ... ok\ntest_max_files_joint_event_headroom_and_capture_cap (recovery_checker.Checks.test_max_files_joint_event_headroom_and_capture_cap) ... ok\ntest_read_late_failed_and_unreturned (recovery_checker.Checks.test_read_late_failed_and_unreturned) ... ok\ntest_required_checker_results_not_ready_markers (recovery_checker.Checks.test_required_checker_results_not_ready_markers) ... ok\ntest_roles_collision_caps_and_exact_claims (recovery_checker.Checks.test_roles_collision_caps_and_exact_claims) ... ok\ntest_same_output_cannot_repeat (recovery_checker.Checks.test_same_output_cannot_repeat) ... ok\ntest_seal_failure_foreign_and_postseal_timeout (recovery_checker.Checks.test_seal_failure_foreign_and_postseal_timeout) ... ok\ntest_shape_before_output_and_failed_reservations (recovery_checker.Checks.test_shape_before_output_and_failed_reservations) ... ok\ntest_synthetic_archive_journal_resource_contradictions (recovery_checker.Checks.test_synthetic_archive_journal_resource_contradictions) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.012s\n\nOK\n",
+    "failures_detail": [],
+    "errors_detail": []
+  },
+  "bounds": {
+    "total_seconds": 300,
+    "work_seconds": 295,
+    "reserved_finalization_seconds": 5,
+    "maximum_files": 256,
+    "maximum_events": 2048,
+    "joint_reservation": 1728
+  },
+  "critical_checks": [
+    "first owner clock before trusted factories",
+    "pure output shape before factory and reserve",
+    "known reservation required for terminal writes",
+    "required typed owner-local gates",
+    "immutable nonserializable captured bytes",
+    "late returned handle/count retained before checks",
+    "undefined and unreturned read outcomes remain unknown",
+    "known bytes separate from hash-updated bytes",
+    "durable bounded finalization and seal reservations",
+    "known failed/uncertain/late close no retry",
+    "primary preserved across journal/close/clock/veto faults",
+    "no complete before final same-clock gate",
+    "consistent source negative never profile pass",
+    "joint event and file cap admission before original open"
+  ],
+  "old_original_or_payload_reads": 0,
+  "SDK_or_native_or_compiler_calls": 0,
+  "real_filesystem_adapter": false,
+  "author_self_clearance": false,
+  "future_integration": "Requires separately reviewed source-bound real checker ports, first-clock bootstrap and original-file adapter. No current authorization."
+}

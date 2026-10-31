@@ -1,0 +1,88 @@
+{
+  "application_tests_rerun": false,
+  "assessment_local_links": [
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SCOPED-ACCEPTANCE-v2.json",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-PEER-v2.json",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-EVIDENCE-FREEZE-v2.json",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v2.py",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v2.py",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v2.py",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-HOLD-v1.json",
+    "planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-SCOPED-ACCEPTANCE-v3.json",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\PRODUCTION-ROSTER-SCALING-PREFLIGHT-v1.md",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\SHARED-OWNER-FULL-ROSTER-FEASIBILITY-INDEPENDENT-v1.json",
+    "planning\\review-assets\\recovery-step9-production-preflight-20261029\\FIRST-ENTRY-AND-REAL-FILE-BINDING-DESIGN-REVIEW-v1.json"
+  ],
+  "documents": {
+    "README.md": {
+      "bytes": 38896,
+      "sha256": "cb8574cb475b4ffb6221ab1cc5adc6e1d1c983e388de161fda2efa97ce116429"
+    },
+    "TODO.md": {
+      "bytes": 45100,
+      "sha256": "43cd9fe153621f46ea55b02abea700ce2f67a2904439c41a1abd8f2343db3c46"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 23948,
+      "sha256": "576c850570437d0410d5d545ec96169a59b0a32c30b685fb5a6fe865db9d386d"
+    },
+    "memory/project-goals.md": {
+      "bytes": 112156,
+      "sha256": "f2f5f3c6730633bca2d3480e4646a9383a14c120cf825f94bc94d398e032fe25"
+    },
+    "memory/research-log-2026-10-29-r09-unicode-controls.md": {
+      "bytes": 22723,
+      "sha256": "8cf6539d3d79618952ff67e1dac7fa3de0edc82895e8aea9dc76d1b34db44e0a"
+    },
+    "planning/Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md": {
+      "bytes": 16024,
+      "sha256": "476a9885636a33aa18cbcd363ab7179eacf4e977dda2c5e56f0a0e22b76a80be"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 15173,
+      "sha256": "4721d1d02c783c1c87208e42916568cde8bee2e113b834b2b090408b43b72b5f"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 44521,
+      "sha256": "218fc0c6a8c62a6ffe3d7594e799eaa5322aa05a5c7195dbfff4614b2e5f4dbb"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 11647,
+      "sha256": "7b33d916f0fda251a3bf24bebe5de399fff2ee0f59b99d9c0ef4c286c3694ad2"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 35202,
+      "sha256": "034ff805231d318fc2895d845a192541641fc3959fe066057268e6db6c14aad5"
+    }
+  },
+  "new_payload_or_native_activity": false,
+  "ordered_next_gates": 5,
+  "recorded_at_utc": "2026-10-29T17:18:47.319999+00:00",
+  "retained_application_source_pins": 327,
+  "retained_application_tests": 1774,
+  "schema_version": 1,
+  "scope": "Ten current UTF8 docs, twenty recovery/human statuses, five next gates, exact limited source/pure acceptance, retained chronology and analytic production barriers. No new whole-code/data/runtime qualification.",
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ]
+}

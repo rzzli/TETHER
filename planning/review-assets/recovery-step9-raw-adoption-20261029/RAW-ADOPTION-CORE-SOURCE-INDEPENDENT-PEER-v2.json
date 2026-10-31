@@ -1,0 +1,69 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "audit_denials": 0,
+  "author_wrapper_before": {
+    "bytes": 3110,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-WRAPPER-RETURN-BEFORE-v2.json",
+    "sha256": "5978ffafd2d635bebe9e8f4a2b4392a117726fb5edd04a9fb9aca666a1d765fb"
+  },
+  "findings": [
+    {
+      "bounded_correction": "Require current early-source slots remain live with available close rights before handoff claim/event increment. Preserve the same existing identity/context objects and prior ownership evidence.",
+      "evidence": "Independent probe: preexisting captured source -> known CloseHandle success -> handoff accepted with claims1/primitive_complete although slot closed_known.",
+      "id": "closed_early_source_handoff"
+    },
+    {
+      "bounded_correction": "Distinguish exact already-latched error identity from exception class. Retain a new injected object as primary/secondary while avoiding duplicate latching of a core guard error.",
+      "evidence": "Independent copy-hook probe raises fresh AdoptionError; exact object escapes but Owner.primary remainsNone and disposition primitive_complete. _component skips latching by class although this object was not already latched.",
+      "id": "injected_core_error_class"
+    },
+    {
+      "bounded_correction": "Preserve the known returned state/count and retain a separate stopped/primary error fact. Do not invent a second native return or erase a known Python-port return.",
+      "evidence": "Author exact5978 witness: wrapper_return then later cleanup_publication raise on the same call changes wrapper_state returned->raised and wrapper return count1->0.",
+      "id": "wrapper_return_monotonicity"
+    }
+  ],
+  "finite_batch_complete": true,
+  "fixture_histories_replayed_by_peer": 0,
+  "independent_before": {
+    "bytes": 1867,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-SOURCE-INDEPENDENT-BEFORE-v2.json",
+    "sha256": "0121b32c00b54af2c1a50c20b74800e96abd9c31f18cba4cb4340d248af1c477"
+  },
+  "independent_probe_source": {
+    "bytes": 5288,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\probe_raw_adoption_source_peer_v2.py",
+    "sha256": "afe2224594f4f0894ff6b0350f9e2dc2a30509832c5a92a7f6e90fe110ab822a"
+  },
+  "literal_correction_peer": {
+    "bytes": 3972,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v3.json",
+    "sha256": "d6a3d8575e3cc4cc8f56ca1518771702cdb87b7f585091de25eb17c59e141e43"
+  },
+  "next_gate": "Root decides the bounded correction batch; one separately named successor and focused before/after proofs, then exact source peer. The already cleared one-field fixture-v3 correction is independent.",
+  "no_additional_material_source_findings_requested": true,
+  "old_payload_or_source_closure_operations": 0,
+  "positive_static_observations": [
+    "No fixture/case/expected lookup or FS/SDK/FFI imports in the core.",
+    "Source-owned first facts precede auxiliary/fold operations; scalar/count definedness and buffer retention are distinct.",
+    "One slot registry/close-right and same object/Origin/context identities are preserved in the modeled interface.",
+    "Snapshots use immutable diagnostic text/opaque identity tokens, with actual exception objects resolved non-owningly.",
+    "All real FFI first-store, production continuation and runtime/profile qualification flags remain false."
+  ],
+  "prior_source_and_fixture_histories_preserved": true,
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T14:33:59.926422+00:00",
+  "reviewer": "/root/native_039_acceptance_audit",
+  "runtime_authorized": false,
+  "schema_version": 2,
+  "scope": "Exact generic injected core source review, two independent synthetic owner probes, and one separately authored monotonicity witness. No actual FFI/Win32/wrapper or production engine was exercised.",
+  "source": {
+    "bytes": 30480,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v2.py",
+    "sha256": "a6877861860ba7a42d22d581d4bfa565984e6ce377d937ff3c4525b04130fd8a"
+  },
+  "status": "HOLD_FOR_THREE_FINITE_SOURCE_CORRECTIONS",
+  "synthetic_owner_probes": 2
+}

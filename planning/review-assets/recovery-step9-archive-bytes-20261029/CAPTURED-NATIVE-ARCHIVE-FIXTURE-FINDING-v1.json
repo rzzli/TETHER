@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "FIXTURE_ONLY_REVISION_REQUESTED_BEFORE_CHECKER_IMPLEMENTATION",
+  "fixtures_sha256": "a911988fe787ba773901ecde2c48703a6dc1127c6434698aa26dadf81715a4bc",
+  "case_id": "early_initialization",
+  "source_basis": "run_recognition_observation_v7.py execute initial report lacks returncode/reaped; those are assigned only after child wait/Owner cleanup.",
+  "finding": "The synthetic early-initialization report authors call_return_observedFalse but also returncode2 and reapedFalse. The actual pre-Owner source branch omits both unobserved fields. The same fixture also inherits one normal cleanup outcome although failure before journal return leaves apiNone and leases[]; actual cleanup outcomes are empty. The source-negative/incomplete expected projection is unchanged, but these fields/outcomes must preserve source-shaped unknown/missing state.",
+  "prospective_minimal_delta": "Preserve v1 author/fixtures/freeze/framing record. A separately named fixture author/data version removes returncode and reaped from this one early-initialization report, makes its cleanup outcomes empty, and rebuilds dependent receipt/cleanup/terminal byte pins. No contract, other expected result, source or runtime-policy change.",
+  "archive_checker_implemented": false,
+  "old_actual_run_replay": false,
+  "profile_qualified": false
+}

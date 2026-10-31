@@ -1,0 +1,121 @@
+{
+  "CPU_GGUF_pack_identity_reads_authorized_only_inside_recorded_owner": true,
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "RECOGNITION-BINDING-PEER-REVIEW-v1.json": {
+      "bytes": 20209,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BINDING-PEER-REVIEW-v1.json",
+      "sha256": "5d7c007e33816c461c691b73bea169a8f805d75a5a06f620ce5e62d4c3d34e23"
+    },
+    "RECOGNITION-BINDING-PURE-PROOF-v1.json": {
+      "bytes": 7480,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BINDING-PURE-PROOF-v1.json",
+      "sha256": "d2b3a667bd6849c35bcd36c85568f69c40f5ca8bb6cfeffc3f1728ac7d27d28d"
+    },
+    "RECOGNITION-BUILD-RESULT-VERIFICATION-v1.json": {
+      "bytes": 24516,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-BUILD-RESULT-VERIFICATION-v1.json",
+      "sha256": "78a4d8c378836be294334801b42d6be16e0ef6c6ed49152014d2d5ded5319ddf"
+    },
+    "RECOGNITION-ONCE-DRIVER-PURE-PROOF-v1.json": {
+      "bytes": 14447,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-ONCE-DRIVER-PURE-PROOF-v1.json",
+      "sha256": "ae25c90d76e2ded823fc09961205394cd2063aa758819766808ce0c07a38a6fc"
+    },
+    "RECOGNITION-PARENT-SOURCE-PEER-REVIEW-v2.json": {
+      "bytes": 10778,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-PARENT-SOURCE-PEER-REVIEW-v2.json",
+      "sha256": "0068a99b6b46f83464ddf1662e532554ec38288e5cced95de0d548a86c949629"
+    }
+  },
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-bridge-build-v1-20261029T043450Z\\typed_public_c_recognizer_abi.exe",
+    "--recognize",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z\\execution\\child",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-pack-v2-20261028T183647Z\\recognition.pack",
+    "ggml-cpu-x64.dll",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00002-of-00003.gguf",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\qwen2.5-14b-instruct-q4_k_m-00003-of-00003.gguf"
+  ],
+  "automatic_retry": false,
+  "clinical_probabilities": null,
+  "download_worker_and_monitor": "untouched",
+  "driver": {
+    "bytes": 8493,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\execute_recognition_once_v1.py",
+    "sha256": "71101d748da93dca8fcf3f888ecb3a57fad9b7619890948e492fae3b9b129681"
+  },
+  "external_verification": {
+    "authorized_after_this_attempt": true,
+    "maximum_fresh_payload_hash_passes": 1,
+    "maximum_seconds": 300,
+    "scope": "Separate timed fresh original-path read leases/hashes for these exact197input records and owner metadata; deterministic artifact/counter/coverage/receipt checks. Approved file identity APIs only; no target DLL/model loading, process launch, replay or further native API calls."
+  },
+  "failure_policy": "Retain all failures, incomplete coverage and unknown tails. No automatic repeated child/experiment, corpus repair, prefix replacement or favorable timing retry. Byte integrity, semantic consistency, resource fit and science remain distinct.",
+  "frozen_pack": {
+    "bytes": 259867,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-pack-v2-20261028T183647Z\\recognition.pack",
+    "sha256": "f75ab9937c57b5f03c2234643a8a9c91cda852ca0cca0de0478369f793e57e5f"
+  },
+  "full_vocabulary_mask_authorized": false,
+  "hash_policy": {
+    "child": 1,
+    "driver_model_passes": 0,
+    "parent_final": 1,
+    "parent_initial": 1,
+    "physical_IO_not_established": true,
+    "successful_path_model_logical_bytes": 26964331488
+  },
+  "helper": {
+    "bytes": 75195,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_recognition_observation_v7.py",
+    "sha256": "b2aafdd98b797f181d4d718b5edab75a4dad4e16a735cbf719baa5c58cb54b09"
+  },
+  "limits": {
+    "active_processes": 1,
+    "attempt_bytes": 4096,
+    "child_cleanup_reserved_seconds": 2,
+    "child_seconds": 120,
+    "finalization_reserved_seconds": 5,
+    "job_pid_capacity": 16,
+    "maximum_children": 1,
+    "maximum_job_snapshots": 40,
+    "parent_seconds": 300,
+    "process_and_job_commit_bytes": 268435456,
+    "result_bytes": 8388608,
+    "row_bytes": 65536,
+    "stream_bytes": 65536
+  },
+  "maximum_attempts": 1,
+  "model_or_tensor_inference_authorized": false,
+  "numerical_prediction_features": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-observation-v1-20261029T051950Z",
+  "output_absent_at_decision": true,
+  "protected_answers": "hash_only_never_decode",
+  "protocol": {
+    "bytes": 96007,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\RECOGNITION-EXECUTION-PROTOCOL-v1.json",
+    "sha256": "b690c63bbcc576dab0ea02b4f6359ed31b24edc39a850bc945789563bf99bbf2"
+  },
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T05:27:34.241090+00:00",
+  "root_checks": {
+    "driver_whole_AST_equal_except_six_bindings": true,
+    "fresh_software_pins": 192,
+    "payload_path_operations_before_decision": 0,
+    "software_bytes": 25413523,
+    "whole_domain_screen_before_opens": true
+  },
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "One vocabulary-only CPU/tokenizer/document/EOG singleton-candidate batch over the unchanged189cases/sixprefixes. No inference or full-vocabulary-mask qualification.",
+  "status": "root_authorizes_one_exact_frozen_pack_singleton_recognition_observation",
+  "success_status": "recognition_observations_retained_independent_qualification_pending",
+  "time_policy": "Driver main-first original monotonic start covers validation/import/hash/child/seal. Parent300s; child120s including2sOS cleanup; native cooperative117s; final bulk work ends5s before parent end. No budget relaxation."
+}

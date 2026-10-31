@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T08:08:14.798888+00:00",
+  "status": "V2_PURE_INTERFACE_CORRECTION_PASS_INDEPENDENT_REVIEW_PENDING",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v2.py",
+    "bytes": 22010,
+    "sha256": "d937599212133ee7c036ee863b8c751885ffe60f7d657ec1ed5e506bf90c74eb"
+  },
+  "checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_verifier_bootstrap_interfaces_v2.py",
+    "bytes": 19108,
+    "sha256": "d516efd3dad05e1895dba1f520a4087b6bef35ef00cc81110c306a9c9913dcb8"
+  },
+  "recorder": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\retain_bootstrap_interface_proof_v2.py",
+    "bytes": 4726,
+    "sha256": "648f8cdd711f3c1af2ca4d15fa882ff7a8cdc76dc331bd0e0bd49d679c033a8a"
+  },
+  "preserved_artifacts": {
+    "verifier_bootstrap_interfaces_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v1.py",
+      "bytes": 21563,
+      "sha256": "4c5c0ee62c5663e7666094fdccfcd110ab1ed77b420dfc6c6499a12d7a899966"
+    },
+    "VERIFIER-BOOTSTRAP-INTERFACES-PURE-PROOF-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-INTERFACES-PURE-PROOF-v1.json",
+      "bytes": 8405,
+      "sha256": "e2e6157b20cb1ac49acf3f959fb71d2148e8cebade99329a7ef7a3397c0ed98c"
+    },
+    "VERIFIER-INTERFACE-SOURCE-IMPLEMENTATION-DECISION-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-INTERFACE-SOURCE-IMPLEMENTATION-DECISION-v1.json",
+      "bytes": 2335,
+      "sha256": "502d4ee99c48bc3dc7f7f20ce9699a9f744e0cc03022f1a9fb07f54a8e116dd5"
+    },
+    "VERIFIER-BOOTSTRAP-PEER-FAULTS-BEFORE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-PEER-FAULTS-BEFORE-v1.json",
+      "bytes": 2211,
+      "sha256": "030ade7137ac35f68ed5966d2ec1de04507ac290c4b16c0db8ecb69f48e6c05c"
+    },
+    "VERIFIER-BOOTSTRAP-INTERFACES-PEER-REVIEW-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-INTERFACES-PEER-REVIEW-v1.json",
+      "bytes": 4054,
+      "sha256": "c54a9439cb8968a26ca73a3cae87ad812de9f1c72415dfab7e0a237833a6296d"
+    },
+    "VERIFIER-BOOTSTRAP-CORRECTION-REGRESSION-BEFORE-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\VERIFIER-BOOTSTRAP-CORRECTION-REGRESSION-BEFORE-v2.json",
+      "bytes": 4492,
+      "sha256": "2982f533bc8ffadd6aed2009e857f757664d85a318bd7c21c138379a4e1b68d5"
+    }
+  },
+  "root_authorization": "Root explicitly authorized separate source/pure v2 after Grammar full review, batching only original read-port identity before hash state/dispatch and detached nested snapshot diagnostics.",
+  "methods": 22,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.0,
+  "output": "test_capture_foreign_port_rejected_before_hash_state_or_dispatch (bootstrap_interface_v2_checks.Checks.test_capture_foreign_port_rejected_before_hash_state_or_dispatch) ... ok\ntest_close_unknown_false_late_and_primary_are_once_only (bootstrap_interface_v2_checks.Checks.test_close_unknown_false_late_and_primary_are_once_only) ... ok\ntest_digest_failure_preserves_known_bytes_and_unknown_hash_tail (bootstrap_interface_v2_checks.Checks.test_digest_failure_preserves_known_bytes_and_unknown_hash_tail) ... ok\ntest_failed_output_reservation_prevents_source_opens_and_writes (bootstrap_interface_v2_checks.Checks.test_failed_output_reservation_prevents_source_opens_and_writes) ... ok\ntest_foreign_closer_rejected_and_continuation_uses_original_port (bootstrap_interface_v2_checks.Checks.test_foreign_closer_rejected_and_continuation_uses_original_port) ... ok\ntest_foreign_context_and_changed_roster_rejected_before_compiler (bootstrap_interface_v2_checks.Checks.test_foreign_context_and_changed_roster_rejected_before_compiler) ... ok\ntest_handoff_rejects_early_close_missing_hash_and_reuse (bootstrap_interface_v2_checks.Checks.test_handoff_rejects_early_close_missing_hash_and_reuse) ... ok\ntest_joint_source_event_admission_and_no_hidden_extra_open (bootstrap_interface_v2_checks.Checks.test_joint_source_event_admission_and_no_hidden_extra_open) ... ok\ntest_journal_delay_prevents_next_identity_dispatch_and_latches (bootstrap_interface_v2_checks.Checks.test_journal_delay_prevents_next_identity_dispatch_and_latches) ... ok\ntest_known_read_count_before_copy_hash_and_deadline_failures (bootstrap_interface_v2_checks.Checks.test_known_read_count_before_copy_hash_and_deadline_failures) ... ok\ntest_late_owned_open_and_identity_return_are_preserved (bootstrap_interface_v2_checks.Checks.test_late_owned_open_and_identity_return_are_preserved) ... ok\ntest_late_setup_and_handoff_do_not_reset_clock (bootstrap_interface_v2_checks.Checks.test_late_setup_and_handoff_do_not_reset_clock) ... ok\ntest_loader_no_sys_modules_path_stdlib_or_relative_fallback (bootstrap_interface_v2_checks.Checks.test_loader_no_sys_modules_path_stdlib_or_relative_fallback) ... ok\ntest_loader_relative_cycle_missing_source_and_late_compile (bootstrap_interface_v2_checks.Checks.test_loader_relative_cycle_missing_source_and_late_compile) ... ok\ntest_loader_uses_same_captured_bytes_and_only_declared_dependencies (bootstrap_interface_v2_checks.Checks.test_loader_uses_same_captured_bytes_and_only_declared_dependencies) ... ok\ntest_no_stub_result_can_claim_real_evidence_success (bootstrap_interface_v2_checks.Checks.test_no_stub_result_can_claim_real_evidence_success) ... ok\ntest_open_failure_null_and_unreturned_are_not_guessed_closed (bootstrap_interface_v2_checks.Checks.test_open_failure_null_and_unreturned_are_not_guessed_closed) ... ok\ntest_origin_and_handoff_not_serialized_or_resettable (bootstrap_interface_v2_checks.Checks.test_origin_and_handoff_not_serialized_or_resettable) ... ok\ntest_raw_owned_handle_survives_allocation_or_identity_failure (bootstrap_interface_v2_checks.Checks.test_raw_owned_handle_survives_allocation_or_identity_failure) ... ok\ntest_same_owner_origin_and_early_leases_no_second_pass (bootstrap_interface_v2_checks.Checks.test_same_owner_origin_and_early_leases_no_second_pass) ... ok\ntest_snapshot_nested_diagnostics_are_detached_from_owner (bootstrap_interface_v2_checks.Checks.test_snapshot_nested_diagnostics_are_detached_from_owner) ... ok\ntest_source_pin_alias_joint_caps_and_context_immutability (bootstrap_interface_v2_checks.Checks.test_source_pin_alias_joint_caps_and_context_immutability) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.005s\n\nOK\n",
+  "before_fix": "Two new regression methods failed against the byte-identical preserved4c5c source before this correction; independent before030ade and full HOLDc54a are retained unchanged.",
+  "source_delta": {
+    "changed_owner_methods": [
+      "capture",
+      "snapshot"
+    ],
+    "new_helper": "_copy_diagnostics",
+    "all_other_module_AST_unchanged": true,
+    "capture_guard": "port is self._port required before hash_attempted, event reservation, read or digest factory",
+    "snapshot": "Copy all nested ordinary primary/error/compile diagnostic containers; returned mutation cannot alter owner records"
+  },
+  "scope": "Pure injected origin/owner/slots/compiler interfaces only; no real first-clock entry, production engine integration, platform adapter, evidence checker or eligibility.",
+  "observed_qualification_flags": "Every snapshot remains verification_completeFalse and real_profile_qualifiedFalse.",
+  "old_original_payload_or_native_operations": 0,
+  "runtime_protocols_created": 0,
+  "previous_negative_and_timeout_unchanged": true,
+  "author_self_clearance": false
+}

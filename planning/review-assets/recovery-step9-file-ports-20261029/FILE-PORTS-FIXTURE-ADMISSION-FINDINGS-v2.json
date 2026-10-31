@@ -1,0 +1,102 @@
+{
+  "actual_API_calls": 0,
+  "admission_records": [
+    {
+      "E_claim": 1713,
+      "E_derived": 1713,
+      "id": "admission_N",
+      "intended_target": "N",
+      "sumWj_ceiling": 2125,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 177,
+      "E_derived": 177,
+      "id": "admission_U",
+      "intended_target": "U",
+      "sumWj_ceiling": 589,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 2049,
+      "E_derived": 177,
+      "id": "admission_E",
+      "intended_target": "E",
+      "sumWj_ceiling": 2461,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 177,
+      "E_derived": 177,
+      "id": "admission_capture",
+      "intended_target": "capture",
+      "sumWj_ceiling": 589,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 177,
+      "E_derived": 177,
+      "id": "admission_report",
+      "intended_target": "report",
+      "sumWj_ceiling": 589,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 177,
+      "E_derived": 177,
+      "id": "admission_read",
+      "intended_target": "read",
+      "sumWj_ceiling": 589,
+      "sumWj_claim": 587
+    },
+    {
+      "E_claim": 177,
+      "E_derived": 177,
+      "id": "admission_write",
+      "intended_target": "write",
+      "sumWj_ceiling": 589,
+      "sumWj_claim": 590
+    }
+  ],
+  "expected_states_authored_not_observed": true,
+  "findings": [
+    "Native peer identified stale non-target E+412 sumWj in admission cases after B/E edits; refresh consistent non-target derivations before freezing successor.",
+    "E/read/write request claims are forged/inconsistent derived plans, not physically coherent independent ceiling overflows under all other source caps; label this distinction explicitly.",
+    "Admission/handoff/DAG operation arguments currently include descriptive fault selectors. Replace with fixed references to actual plan/facts; same-path failure must carry actual duplicate fictional node paths and unknown-veto an explicit operation state, not hints alone."
+  ],
+  "inputs": {
+    "FILE-PORTS-FIXTURE-CALLABLE-PROOF-v1.json": {
+      "bytes": 4635,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-CALLABLE-PROOF-v1.json",
+      "sha256": "8d25998c39b7d024d6d90f655ebe38903a9e926ef25d786d31e729c30323bf3e"
+    },
+    "FILE-PORTS-FIXTURE-FREEZE-v2.json": {
+      "bytes": 1157,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-FREEZE-v2.json",
+      "sha256": "ebceb5c92f5e08a5b0dc2087e9616d368ba6313c9a3906e728ce477cd13104b7"
+    },
+    "FILE-PORTS-FIXTURE-SCHEMA-v2.json": {
+      "bytes": 11662,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v2.json",
+      "sha256": "e3e20e39c08eb9718b03ef65700d375870f6bdf1d77b54279f98465ced454dfc"
+    },
+    "FILE-PORTS-FIXTURES-v2.json": {
+      "bytes": 423789,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURES-v2.json",
+      "sha256": "6eeb21a719df69f3c4fdfaf66dcbdcef4a2b5019feadf94428d1cdf01cc244f3"
+    },
+    "file_port_fixture_script_v1.py": {
+      "bytes": 13561,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\file_port_fixture_script_v1.py",
+      "sha256": "eb4e2a9d4027b11e71ac8a6ef43f07713e472272b9b0e31ccfeb4c77c5b0ee91"
+    }
+  },
+  "old_original_payload_operations": 0,
+  "port_implementation": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:38:24.626188+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Authored fictional input metadata only; callable script echo proof does not establish that a port or control guard evaluated any expected result. No port implementation or actual API was invoked.",
+  "status": "PREACCEPTANCE_FICTIONAL_FIXTURE_DATA_CORRECTION_REQUIRED"
+}

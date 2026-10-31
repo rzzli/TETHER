@@ -1,0 +1,84 @@
+{
+  "application_tests_rerun": false,
+  "assessment_local_links": [
+    "planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-SCOPED-ACCEPTANCE-v2.json",
+    "planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-INDEPENDENT-PEER-REVIEW-v2.json",
+    "planning\\review-assets\\recovery-step9-unicode-codec-20261029\\UNICODE-PACK-CODEC-CALLBACK-BEFORE-v2.json",
+    "planning\\review-assets\\recovery-step9-unicode-wire-20261029\\UNICODE-WIRE-FRAMING-SCOPED-ACCEPTANCE-v1.json",
+    "planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-PREPARATION-ACCEPTANCE-v3.json",
+    "planning\\review-assets\\recovery-step9-archive-bytes-20261029\\CAPTURED-NATIVE-ARCHIVE-INDEPENDENT-PEER-v2.json",
+    "planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-INDEPENDENT-DESIGN-REVIEW-v2.json"
+  ],
+  "documents": {
+    "README.md": {
+      "bytes": 36872,
+      "sha256": "aff5dacb1e1cdd10b0c81dcab0bfeec15b4ca9ddbc56337fc6e373085f0f41bb"
+    },
+    "TODO.md": {
+      "bytes": 38108,
+      "sha256": "4ce21936a0ea79da9c9ff03d066b92c6a3ab734473330b4d47b0fc0de78c4447"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 23673,
+      "sha256": "7426191bcbd3b1a5b15fe73b47076e85c9daac6bb4e488e0523f28a6e77c5396"
+    },
+    "memory/project-goals.md": {
+      "bytes": 111041,
+      "sha256": "56017429d25bcb23610f677a5e0af29d496b15429c1c19614f7a3984bd0935bf"
+    },
+    "memory/research-log-2026-10-29-r09-unicode-controls.md": {
+      "bytes": 6664,
+      "sha256": "7584f3b38ce8fe2776e63c27575ceccc2b3ca64926079bee976cac6659b5cc9f"
+    },
+    "planning/Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md": {
+      "bytes": 9161,
+      "sha256": "7465d3a215509dc31a9b5e7a57f5d3878dfce23f23da85a280a9c1993ebbdd63"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 11256,
+      "sha256": "e2d340d6f847cbc5159137e783cb49efa3593ad40276a75aafe1c2208a82d42b"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 43718,
+      "sha256": "e17d5efeb39dcb711ccdfd0447a8661c47844a4d7c57856cfeab15827da24617"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 10040,
+      "sha256": "2098bbac2ec2949f9e578acacc460d248ceae8e2982ad83d56bcef1758fa5f1c"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 34290,
+      "sha256": "2c888fe35c39cd45f158a187f99f963d4f2815674a5a6b5d5463fe9967366c08"
+    }
+  },
+  "new_payload_or_native_activity": false,
+  "ordered_next_gates": 5,
+  "recorded_at_utc": "2026-10-29T10:56:40.158391+00:00",
+  "retained_application_source_pins": 327,
+  "retained_application_tests": 1774,
+  "schema_version": 1,
+  "scope": "Ten current UTF8 documents, the new assessment's local links/status/order and source-only acceptance consistency.",
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ]
+}

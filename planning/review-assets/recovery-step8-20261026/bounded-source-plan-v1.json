@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-26T17:50:29.919830+00:00",
+  "role": "evaluation_only",
+  "purpose": "Prospective development-only source qualification, not fresh cases or model requests",
+  "exposure_v4_sha256": "7fa00b8859b8c196b429981d3e0a32ab45c068e79d08eb38053c1e3eb743905d",
+  "input_metadata_sha256": "f8fa0b7deaebb534cc8d08ebf89ba433d84a26c0662876771ef5f6c31a52a488",
+  "file_checks_sha256": "fba3e94435448be75205969dc61793ed74771b166ae6ff888e3869eced37c37e",
+  "contexts": [
+    {
+      "symbol": "BTK",
+      "target_id": "ENSG00000010671",
+      "indication_id": "EFO_0000676",
+      "action": null,
+      "modality": null,
+      "tissue": null,
+      "purpose": "Target–disease source-reporting qualification only; no intervention conclusion",
+      "total_matching_metadata_rows": 9,
+      "selected_article_ids": [
+        "40571861",
+        "31019502",
+        "32697884"
+      ],
+      "selected_record_locators": [
+        {
+          "article_id": "40571861",
+          "source_id": "raw-1a77d0296fb00ad520257226",
+          "source_sha256": "2adc02d3f4f6504215b3fd6398bc71fb6e8ec50028a27fa9cd0a5e70bdda6a55",
+          "row_group": 0,
+          "row": 1849,
+          "record": {
+            "id": "020db7f1cd3abd2452d22efeb0cce9d8d69ab03f",
+            "targetId": "ENSG00000010671",
+            "diseaseId": "EFO_0000676",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "40571861"
+            ],
+            "pmcIds": null,
+            "publicationDate": "2025-06-26",
+            "publicationYear": 2025,
+            "evidenceDate": "2025-06-26",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        },
+        {
+          "article_id": "31019502",
+          "source_id": "raw-6119b566a07792ecf1ea7d90",
+          "source_sha256": "d8d599a158285dd69c1ab18c1504189d847c68802e5fce69379a0f22c87853b7",
+          "row_group": 0,
+          "row": 10611,
+          "record": {
+            "id": "0bdff5eb46a8df1453249728aaf9fce0db192eca",
+            "targetId": "ENSG00000010671",
+            "diseaseId": "EFO_0000676",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "31019502"
+            ],
+            "pmcIds": [
+              "PMC6458264"
+            ],
+            "publicationDate": "2019-04-04",
+            "publicationYear": 2019,
+            "evidenceDate": "2019-04-04",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        },
+        {
+          "article_id": "32697884",
+          "source_id": "raw-a6725195f5e006e4da0bf266",
+          "source_sha256": "b19b423c04aa4a2f5a858a26a3d0fd311d1f4ccc1e564c0118378d56684936fb",
+          "row_group": 0,
+          "row": 26201,
+          "record": {
+            "id": "1d5382c5036594cb06ef2cef9629827a6090c9ca",
+            "targetId": "ENSG00000010671",
+            "diseaseId": "EFO_0000676",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "32697884"
+            ],
+            "pmcIds": null,
+            "publicationDate": "2020-09-01",
+            "publicationYear": 2020,
+            "evidenceDate": "2020-09-01",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "CTLA4",
+      "target_id": "ENSG00000163599",
+      "indication_id": "EFO_0000384",
+      "action": null,
+      "modality": null,
+      "tissue": null,
+      "purpose": "Target–disease source-reporting qualification only; no intervention conclusion",
+      "total_matching_metadata_rows": 18,
+      "selected_article_ids": [
+        "35784333",
+        "15059373",
+        "22284131"
+      ],
+      "selected_record_locators": [
+        {
+          "article_id": "35784333",
+          "source_id": "raw-11cc64b14117ccacd8a6db14",
+          "source_sha256": "504a87cca9dc768fb8b0421dfe1898fed7cf84b8f011d0bfd1c87af52fd81c43",
+          "row_group": 0,
+          "row": 19467,
+          "record": {
+            "id": "15a8188e8d2c7c65ef76da3a9b6dfdb31cc5d22e",
+            "targetId": "ENSG00000163599",
+            "diseaseId": "EFO_0000384",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "35784333"
+            ],
+            "pmcIds": [
+              "PMC9243421"
+            ],
+            "publicationDate": "2022-06-16",
+            "publicationYear": 2022,
+            "evidenceDate": "2022-06-16",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        },
+        {
+          "article_id": "15059373",
+          "source_id": "raw-6d239c38c571bf7b2f39487e",
+          "source_sha256": "71e9c1a57d1b86cbd04369853119454dbc75838c9f004ae279f86a4f8a99883c",
+          "row_group": 0,
+          "row": 21796,
+          "record": {
+            "id": "18770602aad6af40c4cd20ea5eac63069a56eb26",
+            "targetId": "ENSG00000163599",
+            "diseaseId": "EFO_0000384",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "15059373"
+            ],
+            "pmcIds": null,
+            "publicationDate": "2004-03-01",
+            "publicationYear": 2004,
+            "evidenceDate": "2004-03-01",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        },
+        {
+          "article_id": "22284131",
+          "source_id": "raw-45889d1ebb3e873ba3f735b7",
+          "source_sha256": "a74125aa5f8bd8b278fd33098247f2fe7b262bc15eafee2392f310b1ec826fcd",
+          "row_group": 0,
+          "row": 33392,
+          "record": {
+            "id": "251521cd416a17c4d6ff1ed154e73059b24160f8",
+            "targetId": "ENSG00000163599",
+            "diseaseId": "EFO_0000384",
+            "datasourceId": "europepmc",
+            "datatypeId": "literature",
+            "literature": [
+              "22284131"
+            ],
+            "pmcIds": [
+              "PMC3334554"
+            ],
+            "publicationDate": "2012-01-27",
+            "publicationYear": 2012,
+            "evidenceDate": "2012-01-27",
+            "studyId": null,
+            "ancestry": null,
+            "ancestryId": null,
+            "cellType": null,
+            "biosamplesFromSource": null
+          }
+        }
+      ]
+    }
+  ],
+  "target_family_definition": "Distinct approved HGNC/Ensembl target identity groups; no inferred paralog grouping",
+  "selection_rule": "First two distinct targets by approved symbol then intended disease ID after v4 conservative exclusions. First three unique article IDs by evidence ID, article ID, source ID, row-group and row. First intact nonempty snippets in source list order across those fixed records. No source success or model-performance selection.",
+  "limits": {
+    "contexts": 2,
+    "unique_articles_per_context": 3,
+    "intact_snippets_per_context": 6,
+    "source_words_per_context": 1500
+  },
+  "text_handling": "Copy exact source text. Count words with whitespace split. Preserve empty/duplicate records and flags in audit. Never clip; stop and record if next intact snippet would exceed word cap; no replacement article/context. At six snippets, retain remaining snippet counts as unreviewed, not absent.",
+  "published_source_accession_flags": [
+    "GSE12251",
+    "GSE16879",
+    "GSE92415",
+    "GSE206285",
+    "GSE73661"
+  ],
+  "source_exposure": "Prior article and GEO-to-PMID crosswalk unresolved. Detect explicit flagged accessions in offered text; withhold flagged snippet/article without replacement. No freshness certification.",
+  "date_policy": "Retain original conflicting dates; no chronology conclusions or silent repair. Contemporary availability only via verified observation <= selected cutoff; future source information excluded.",
+  "metadata_lookup_limit": "At most six unique selected articles, official Europe PMC/PubMed identity/date/license metadata only; no full-text fetch",
+  "no_generation": true,
+  "no_case_or_split_freeze": true,
+  "human_gate": "HR3 source-only judgments and coverage pending; reviewer names do not block this preparation"
+}

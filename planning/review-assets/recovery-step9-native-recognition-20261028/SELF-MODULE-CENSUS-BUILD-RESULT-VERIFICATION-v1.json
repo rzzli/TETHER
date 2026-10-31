@@ -1,0 +1,556 @@
+{
+  "PE": {
+    "ASLR_NX_high_entropy": true,
+    "added_imported_functions": {
+      "MSVCP140.dll": [
+        "?__ExceptionPtrAssign@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrCopy@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrCreate@@YAXPEAX@Z",
+        "?__ExceptionPtrCurrentException@@YAXPEAX@Z",
+        "?__ExceptionPtrDestroy@@YAXPEAX@Z",
+        "?__ExceptionPtrRethrow@@YAXPEBX@Z",
+        "?__ExceptionPtrToBool@@YA_NPEBX@Z"
+      ]
+    },
+    "delay_imports": {},
+    "machine": "0x8664",
+    "optional": "PE32+",
+    "ordinary_DLL_name_set_unchanged_from_v5": true,
+    "ordinary_imports": {
+      "KERNEL32.dll": [
+        "SetUnhandledExceptionFilter",
+        "InitializeSListHead",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "QueryPerformanceCounter",
+        "GetFileInformationByHandleEx",
+        "GetEnvironmentVariableW",
+        "CreateFileW",
+        "FlushFileBuffers",
+        "GetDriveTypeW",
+        "GetFileAttributesW",
+        "GetFileInformationByHandle",
+        "GetFileSizeEx",
+        "GetFullPathNameW",
+        "ReadFile",
+        "SetFilePointerEx",
+        "WriteFile",
+        "CloseHandle",
+        "GetLastError",
+        "GetCurrentProcess",
+        "GetCurrentProcessId",
+        "GetTickCount64",
+        "GetSystemDirectoryW",
+        "ReadProcessMemory",
+        "GetModuleFileNameW",
+        "GetModuleHandleW",
+        "GetModuleHandleExW",
+        "GetProcAddress",
+        "LoadLibraryExW",
+        "AddDllDirectory",
+        "RemoveDllDirectory",
+        "SetDefaultDllDirectories",
+        "MoveFileExW",
+        "MultiByteToWideChar",
+        "WideCharToMultiByte",
+        "CreateToolhelp32Snapshot",
+        "Module32FirstW",
+        "Module32NextW",
+        "FormatMessageA",
+        "GetLocaleInfoEx",
+        "FindClose",
+        "FindFirstFileW",
+        "FindFirstFileExW",
+        "FindNextFileW",
+        "GetFileAttributesExW",
+        "CreateFile2",
+        "AreFileApisANSI",
+        "LocalFree"
+      ],
+      "MSVCP140.dll": [
+        "?width@ios_base@std@@QEAA_J_J@Z",
+        "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z",
+        "?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z",
+        "?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z",
+        "?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+        "?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+        "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD0@Z",
+        "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+        "?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ",
+        "??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+        "?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z",
+        "?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ",
+        "?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ",
+        "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ",
+        "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAADD@Z",
+        "??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+        "??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z",
+        "??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+        "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAVios_base@1@AEAV21@@Z@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_N@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@G@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@I@Z",
+        "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_K@Z",
+        "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ",
+        "?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z",
+        "?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z",
+        "?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+        "?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z",
+        "?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z",
+        "?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z",
+        "?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+        "?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ",
+        "?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+        "?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+        "?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A",
+        "?width@ios_base@std@@QEBA_JXZ",
+        "?setf@ios_base@std@@QEAAHHH@Z",
+        "?setf@ios_base@std@@QEAAHH@Z",
+        "?flags@ios_base@std@@QEBAHXZ",
+        "?good@ios_base@std@@QEBA_NXZ",
+        "?_Winerror_map@std@@YAHH@Z",
+        "?_Syserror_map@std@@YAPEBDH@Z",
+        "?__ExceptionPtrRethrow@@YAXPEBX@Z",
+        "?__ExceptionPtrCurrentException@@YAXPEAX@Z",
+        "?__ExceptionPtrToBool@@YA_NPEBX@Z",
+        "?__ExceptionPtrAssign@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrCopy@@YAXPEAXPEBX@Z",
+        "?__ExceptionPtrDestroy@@YAXPEAX@Z",
+        "?__ExceptionPtrCreate@@YAXPEAX@Z",
+        "?uncaught_exception@std@@YA_NXZ",
+        "?_Xout_of_range@std@@YAXPEBD@Z",
+        "?_Xlength_error@std@@YAXPEBD@Z",
+        "??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+        "??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_exception_destroy",
+        "__std_terminate",
+        "memmove",
+        "_CxxThrowException",
+        "memset",
+        "__C_specific_handler",
+        "__current_exception",
+        "__current_exception_context",
+        "memcpy",
+        "__std_exception_copy",
+        "memcmp"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "malloc",
+        "free",
+        "_set_new_mode",
+        "_callnewh"
+      ],
+      "api-ms-win-crt-locale-l1-1-0.dll": [
+        "_configthreadlocale",
+        "___lc_codepage_func"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "_fdclass",
+        "__setusermatherr"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_crt_atexit",
+        "_register_onexit_function",
+        "_initialize_onexit_table",
+        "abort",
+        "_register_thread_local_exe_atexit_callback",
+        "_c_exit",
+        "_cexit",
+        "__p___wargv",
+        "__p___argc",
+        "_exit",
+        "exit",
+        "_initterm_e",
+        "_initterm",
+        "_get_initial_wide_environment",
+        "_initialize_wide_environment",
+        "_configure_wide_argv",
+        "_set_app_type",
+        "_seh_filter_exe",
+        "terminate"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "_set_fmode",
+        "__p__commode"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "wcslen",
+        "strlen",
+        "towlower"
+      ],
+      "bcrypt.dll": [
+        "BCryptOpenAlgorithmProvider",
+        "BCryptDestroyHash",
+        "BCryptFinishHash",
+        "BCryptHashData",
+        "BCryptCreateHash",
+        "BCryptCloseAlgorithmProvider",
+        "BCryptGetProperty"
+      ]
+    },
+    "removed_imported_functions": {},
+    "static_policy_passed": true,
+    "subsystem": 3
+  },
+  "activity": {
+    "CPU_DLL_GGUF_or_protected_reads": 0,
+    "bridge_or_target_API_calls": 0,
+    "compiler_or_verifier_reruns": 0,
+    "original_artifact_edits": 0
+  },
+  "build_peer": {
+    "bytes": 10784,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-PEER-REVIEW-v1.json",
+    "sha256": "eeb347c09464a190650ea2bbe5b9f9680146784b9280f318b44fb9e9b595ca83"
+  },
+  "census_provenance": {
+    "census_branch_returns_before_Api": true,
+    "classification_is_eligibility": false,
+    "compiled_copy_exact": true,
+    "explicit_target_C_queries_in_census": 0,
+    "header_unchanged": true,
+    "marker_presence_is_not_runtime_format_evidence": true,
+    "metadata_ascii_marker_presence": {
+      "--module-census": true,
+      "ABI_eligibility_established": true,
+      "module_census_complete": true,
+      "module_metadata": true,
+      "utf16_code_units_hex": true
+    },
+    "original_module_policy_and_16_System32_list_unchanged": true,
+    "scope": "One future same-process post-core4 module snapshot only; no census was executed by build or verifier.",
+    "source_sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18"
+  },
+  "child_pure_proof": {
+    "bytes": 965,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-PURE-PROOF-v3.json",
+    "sha256": "b3100c72f6a8fd3a8d462d1aca0659e1d8c48a8e08cc3557b8a33f52de1bb652"
+  },
+  "child_regression_proof": {
+    "bytes": 521,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-REGRESSIONS-AFTER-v4.json",
+    "sha256": "10a775571390abb7e25d039da24deb45d483478c1052b027fff0c7b094c61246"
+  },
+  "cleanup": {
+    "bytes": 554,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\post-lease-cleanup.json",
+    "sha256": "e849d2eaf11aefd56ae8645f74eb2ace11c8bcc78841f909a6d31776af13f9ea"
+  },
+  "cleanup_observation": {
+    "close_attempted": true,
+    "close_error": null,
+    "close_returned": true,
+    "deadline_expired": false,
+    "prior_primary_failure": null
+  },
+  "cleanup_scope": "ExitStack.close/stable_files context-manager outcome only; no individual-handle close attestation",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/nologo",
+        "/Bv",
+        "/std:c++17",
+        "/MD",
+        "/O2",
+        "/DNDEBUG",
+        "/D_ITERATOR_DEBUG_LEVEL=0",
+        "/EHsc",
+        "/Zp8",
+        "/Gd",
+        "/W4",
+        "/WX",
+        "/utf-8",
+        "/c",
+        "/DR09_PIN_HEADER=\"recognizer_runtime_pins.hpp\"",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\headers",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\typed_public_c_recognizer.cpp",
+        "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\bridge.obj",
+        "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\compiler.pdb"
+      ],
+      "cleanup_errors": [],
+      "effective_seconds": 45.0,
+      "full_process_elapsed_seconds": 1.937999999965541,
+      "pid": 9916,
+      "process_scope": "Launched compiler/linker handle only; descendants not independently attested",
+      "reaped": true,
+      "returncode": 0,
+      "spawned": true,
+      "stage": "compile",
+      "stderr": {
+        "bytes": 1156,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\compile.stderr.bin",
+        "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9"
+      },
+      "stdout": {
+        "bytes": 31,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\compile.stdout.bin",
+        "sha256": "b9f5e2f37c9b22a686fa484d5fde626c03a8dcfeed831563bf0d88ea1956d23a"
+      },
+      "streams": {
+        "stderr": {
+          "error_class": null,
+          "observed_bytes_at_least": 1156,
+          "retained_bytes": 1156,
+          "truncated": false
+        },
+        "stdout": {
+          "error_class": null,
+          "observed_bytes_at_least": 31,
+          "retained_bytes": 31,
+          "truncated": false
+        }
+      },
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+        "/NOLOGO",
+        "/MACHINE:X64",
+        "/SUBSYSTEM:CONSOLE",
+        "/INCREMENTAL:NO",
+        "/MANIFEST:NO",
+        "/DYNAMICBASE",
+        "/NXCOMPAT",
+        "/HIGHENTROPYVA",
+        "/OUT:D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\bridge.obj",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.lib"
+      ],
+      "cleanup_errors": [],
+      "effective_seconds": 10.0,
+      "full_process_elapsed_seconds": 0.0470000000204891,
+      "pid": 23384,
+      "process_scope": "Launched compiler/linker handle only; descendants not independently attested",
+      "reaped": true,
+      "returncode": 0,
+      "spawned": true,
+      "stage": "link",
+      "stderr": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\link.stderr.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\link.stdout.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "streams": {
+        "stderr": {
+          "error_class": null,
+          "observed_bytes_at_least": 0,
+          "retained_bytes": 0,
+          "truncated": false
+        },
+        "stdout": {
+          "error_class": null,
+          "observed_bytes_at_least": 0,
+          "retained_bytes": 0,
+          "truncated": false
+        }
+      },
+      "timed_out": false
+    }
+  ],
+  "compiled_source_copy": {
+    "bytes": 69930,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\typed_public_c_recognizer.cpp",
+    "sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18"
+  },
+  "elapsed_before_terminal_seal_seconds": 4.656000000075437,
+  "exception_header": {
+    "bytes": 13765,
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\exception",
+    "sha256": "49c3ebe69f8fd1947c6a05f7de89dd17fc962e4c229b8bf1a5b0d040e5dcb0cb"
+  },
+  "executable": {
+    "bytes": 249344,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe",
+    "sha256": "559e4e9a654c9487679c551eebf73d6a279416d0990f491d0918d99cdb6f6183"
+  },
+  "header": {
+    "bytes": 2468,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-preparation-v1-20261029T011510Z\\recognizer_runtime_pins.hpp",
+    "sha256": "dee857596074375218a3c3f8d11130f4066fbfb07b7ae08e454f1f12306a1784"
+  },
+  "helper": {
+    "bytes": 35092,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_self_module_census_v1.py",
+    "sha256": "3e994b65e1373ac4a57ec6582131d245e3c420f461f7746428f242df3634a845"
+  },
+  "inputs": {
+    "CPU_DLL_GGUF_reads": false,
+    "all_hashes_sizes_match": true,
+    "bytes": 76213854,
+    "count": 234,
+    "exact_input_role_set_previously_reviewed": true,
+    "lstat_entries": 315,
+    "reparse_free": true
+  },
+  "journal": {
+    "chain_valid": true,
+    "created_at_utc": "2026-10-29T01:23:01.385079+00:00",
+    "events": 8,
+    "legacy_terminal_event_deliberately_unchanged": "typed_ABI_bridge_v5_build_terminal",
+    "owner_pid": 13804,
+    "stages_once_each": [
+      "compile",
+      "link"
+    ],
+    "tip_sha256": "ae84152d1a7a55825107bfc2f0abb165e14bf1a1098afd6875c35cec6619d38e"
+  },
+  "limits": [
+    "Generated executable was not executed; census/source-pure evidence does not establish runtime census completeness.",
+    "Owned compiler/linker handles recorded exited0 and reaped; descendants/transitive toolchain not attested.",
+    "Context-manager cleanup returned; no individual-handle close attestation.",
+    "Parent reports zero network requests; tool processes were not independently network-attested.",
+    "Existing module policy unchanged; old failures and unknown identities remain unchanged.",
+    "No ABI eligibility, target API, native/scientific or recognition conformance follows."
+  ],
+  "object": {
+    "bytes": 1567922,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\bridge.obj",
+    "sha256": "f314b034daa8a395feb300eb60a2354018fc8a52ec22b35c139fa4a63d7fad14"
+  },
+  "output_directory": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z",
+  "outputs": [
+    {
+      "bytes": 1567922,
+      "path": "bridge.obj",
+      "sha256": "f314b034daa8a395feb300eb60a2354018fc8a52ec22b35c139fa4a63d7fad14"
+    },
+    {
+      "bytes": 10187,
+      "path": "build-report.json",
+      "sha256": "e746a0566a475e1969726616e97264eecde6c0bd35ff250339d8e440af197da5"
+    },
+    {
+      "bytes": 1800,
+      "path": "compile-attempt.json",
+      "sha256": "8510652ccae38dc2e3f966ad54f5393d1fee4eb3fe7009bbaa658c572c1707bc"
+    },
+    {
+      "bytes": 1156,
+      "path": "compile.stderr.bin",
+      "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9"
+    },
+    {
+      "bytes": 31,
+      "path": "compile.stdout.bin",
+      "sha256": "b9f5e2f37c9b22a686fa484d5fde626c03a8dcfeed831563bf0d88ea1956d23a"
+    },
+    {
+      "bytes": 68041,
+      "path": "effective-protocol.json",
+      "sha256": "c9ceb5bd7ce11e54f02ceaaaf70dc56ac5c926be04f2c2458d026d2ffa9634f3"
+    },
+    {
+      "bytes": 7363,
+      "path": "journal.jsonl",
+      "sha256": "f2e817a2a9b5939c57795a275497a9c1a2ef3a7f9566735d32bebb771b83d0e3"
+    },
+    {
+      "bytes": 1577,
+      "path": "link-attempt.json",
+      "sha256": "b873e171d7bf3cfe3e58f006051ff1a7786b65b859965106175e1c6633729591"
+    },
+    {
+      "bytes": 0,
+      "path": "link.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "link.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 554,
+      "path": "post-lease-cleanup.json",
+      "sha256": "e849d2eaf11aefd56ae8645f74eb2ace11c8bcc78841f909a6d31776af13f9ea"
+    },
+    {
+      "bytes": 1704,
+      "path": "receipt.json",
+      "sha256": "8aafc9ce443c4931c3c8eed89c084865372cb3e3ea4f70f3f9769b81d3bc203c"
+    },
+    {
+      "bytes": 2005,
+      "path": "terminal-seal.json",
+      "sha256": "a75437f03a22f04df65e6caa175caaf622c7d2e119ea48c0eb0715f369e373d4"
+    },
+    {
+      "bytes": 249344,
+      "path": "typed_public_c_recognizer_abi.exe",
+      "sha256": "559e4e9a654c9487679c551eebf73d6a279416d0990f491d0918d99cdb6f6183"
+    }
+  ],
+  "protocol": {
+    "bytes": 68041,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-PROTOCOL-v1.json",
+    "sha256": "c9ceb5bd7ce11e54f02ceaaaf70dc56ac5c926be04f2c2458d026d2ffa9634f3"
+  },
+  "receipt": {
+    "bytes": 1704,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\receipt.json",
+    "sha256": "8aafc9ce443c4931c3c8eed89c084865372cb3e3ea4f70f3f9769b81d3bc203c"
+  },
+  "recorded_at_utc": "2026-10-29T01:27:08.332000+00:00",
+  "review_type": "Independent read-only actual compile/link artifact verification; not census execution, ABI or recognition qualification",
+  "root_decision": {
+    "bytes": 3858,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-BUILD-ROOT-DECISION-v1.json",
+    "sha256": "65471faf6d785741faab832babaa14a09d69fbff72e396a2ba29ab57e87d2a80"
+  },
+  "schema_version": 1,
+  "source": {
+    "bytes": 69930,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v8.cpp",
+    "sha256": "28a515c2e7d8301f7648152014e481c9a98de1559ea76d3d23ca533e1cfb8a18"
+  },
+  "source_peer": {
+    "bytes": 7947,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-CHILD-SOURCE-PEER-REVIEW-v1.json",
+    "sha256": "c1217de687887ab3c6b612673ef35283d17ac57577df34c085368f4fd84ca766"
+  },
+  "status": "VERIFIED_module_census_bridge_compiled_recognition_disabled_NOT_EXECUTED",
+  "terminal": {
+    "bytes": 2005,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\terminal-seal.json",
+    "sha256": "a75437f03a22f04df65e6caa175caaf622c7d2e119ea48c0eb0715f369e373d4"
+  },
+  "universe": {
+    "directory_note": "Three empty compiler-created telemetry-named directories; no payload files. Tool descendants/network are not independently attested.",
+    "early_receipted": 11,
+    "empty_compiler_created_directory_entries": [
+      "Microsoft",
+      "Microsoft/VSApplicationInsights",
+      "Microsoft/VSApplicationInsights/vstelf3e86b4023cc43f0be495508d51f588a"
+    ],
+    "exact": true,
+    "files": 14,
+    "no_failure_late_or_postseal_markers": true,
+    "terminal_receipted": 13
+  },
+  "wire": {
+    "bytes": 9717,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-WIRE-v2.json",
+    "sha256": "228e8af00e3da2cba05cdc4d2523a99812ce84fb43968cd65d6bc08021843934"
+  }
+}

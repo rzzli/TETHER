@@ -1,0 +1,148 @@
+{
+  "activity": {
+    "CPU_GGUF_model_payload_reads": 0,
+    "SDK_API_calls": 0,
+    "allowlist_changes": 0,
+    "compiler_or_child_calls": 0,
+    "own_bounded_static_PE_parser": true,
+    "real_DLL_loads": 0,
+    "unknown_inferred_path_opens": 0
+  },
+  "actual_evidence_scope": "Selected technical failure bytes only; full actual run verification is owned independently by Native039",
+  "alternative_options": [
+    "Stop here and retain the negative result; no new identity evidence is available.",
+    "If root separately authorizes a future diagnostic build, collect one bounded rejection context using existing current-process metadata before the unchanged abort; independently review source/protocol before any compiler or launch.",
+    "API-set schema research could improve static prediction only under separately declared input scope; it would still not retroactively identify this rejected module and is unnecessary for the minimal diagnostic."
+  ],
+  "conclusions": [
+    "Exact rejected module basename and path are unavailable in this consumed run. failure.json and stdout contain only unapproved_non_native_module; partial JSONL contains the pre-OpenMP row and generic failure record, with no module inventory.",
+    "Runtime.modules obtains p/name but tests allowed_runtime/approved_system before appending that entry to its local JSON array. The exception prevents the entire caller exact_core_modules_loaded_exports_resolved row from being published. Even earlier accumulated rows are lost with the local string stream.",
+    "approved_system requires both exact normalized System32 parent directory and membership in the sixteen candidate basenames. The generic rejection does not distinguish wrong directory from an absent basename, and does not prove the basename itself was novel.",
+    "The guard occurs while constructing the before-query module row, before the explicit version/default statements. This code path remains negative; no initializer-effect or full module-inventory claim follows.",
+    "The finite candidate list was a prospective ordinary import/CRT/startup/BCrypt prediction, not an observed loaded inventory. The old static ordinary_missing check excludes API-set contracts and does not establish dynamic/delay/API-host closure.",
+    "Static import, API-set and delay names below are candidates/contracts only. None identifies the actual rejected module; no inferred unknown module image was opened, hashed or approved."
+  ],
+  "future_source_review_checks": [
+    "Predicate/allowlist/header unchanged, no extra load/lease/hash/API family.",
+    "Distinct missing-name and wrong-directory fake metadata cases both still fail with bounded context.",
+    "Quotes/backslashes/Unicode/long paths produce valid bounded JSON and explicit truncation; conversion failure preserves original generic tag.",
+    "Broken/full partial output cannot suppress independent failure marker; any publication failure vetoes success.",
+    "Partial snapshot context is explicitly reported metadata, not a complete inventory, trusted file identity or retrospective actual observation."
+  ],
+  "header": {
+    "bytes": 2468,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-preparation-v4-20261028T231155Z\\recognizer_runtime_pins.hpp",
+    "sha256": "dee857596074375218a3c3f8d11130f4066fbfb07b7ae08e454f1f12306a1784"
+  },
+  "primary_references": [
+    {
+      "supports": "API-set contract names are not files and are resolved through the device schema to physical hosts.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/apiindex/windows-apisets"
+    },
+    {
+      "supports": "Dependent DLLs use module-name resolution; full path for one DLL does not establish dependent file identity, and API sets/loaded modules/redirection affect resolution.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order"
+    },
+    {
+      "supports": "A process module snapshot supplies module entries through Module32First/Next; retaining returned metadata is different from opening a module image.",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/toolhelp/module-walking"
+    }
+  ],
+  "prospective_minimum_option": {
+    "caps": "Predeclare small UTF8 field and total diagnostic bounds below existing row/capture caps, with explicit truncation and valid UTF8 boundaries. Never silently call a truncated path an exact identity.",
+    "fields": [
+      "stable_reason_tag",
+      "guard_branch",
+      "reported_name",
+      "reported_path",
+      "original_lengths",
+      "name_truncated",
+      "path_truncated",
+      "current_process_snapshot_only",
+      "module_file_identity_not_verified",
+      "inventory_incomplete"
+    ],
+    "forbidden": [
+      "automatic allowlist expansion",
+      "hash/open inferred unknown module file",
+      "global PID/module scan",
+      "diagnostic success treated as ABI acceptance",
+      "new compile or native attempt under this review"
+    ],
+    "publication": "Carry context through independent failure marker/stdout paths as well as any optional partial diagnostic row; diagnostic serialization/publication failure must leave the original rejection authoritative.",
+    "recommendation": "Preserve original predicate and failure tag; attach bounded already-obtained basename/path context on the rejection path, without another module/image open or hash.",
+    "unchanged": [
+      "sixteen candidate names/header bytes",
+      "System32 directory predicate",
+      "core DLL pins",
+      "generic total1 Job policy",
+      "two-query ABI scope",
+      "existing source/outputs",
+      "no automatic retry"
+    ]
+  },
+  "protocol": {
+    "bytes": 53696,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v2.json",
+    "sha256": "58154061a1a2dff9e3369a01662cb2b8be601012ba16c2b694f98255067adf6d"
+  },
+  "recorded_at_utc": "2026-10-28T23:43:33.744296+00:00",
+  "schema_version": 1,
+  "selected_actual_evidence": [
+    {
+      "bytes": 151,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\failure.json",
+      "sha256": "4f2d7a72c55578ab04c5c6c930cad08db774fb8b67e87e3ca464130b64445fd1"
+    },
+    {
+      "bytes": 260,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\result.partial.jsonl",
+      "sha256": "ae4d20b662a8cc4bcbeb48716ae6037a1cac3481b077c3960a9b8e347b00f481"
+    },
+    {
+      "bytes": 62,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\stdout.bin",
+      "sha256": "9f9aefea7e9b75ff3b13cff5234e179493b3d4c9c0f022da5d3f51a1ac03fb86"
+    }
+  ],
+  "source": {
+    "bytes": 49559,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v4.cpp",
+    "sha256": "2f34035545c6d7bd742b8932a95449aeb76ebc48084e8dc170cbea6b740794ae"
+  },
+  "static_findings": {
+    "API_host_mapping_or_runtime_load_attestation": false,
+    "all21_delay_outside_names": [
+      "crypt32.dll",
+      "iphlpapi.dll",
+      "ntasn1.dll",
+      "oleaut32.dll",
+      "sspicli.dll",
+      "user32.dll",
+      "userenv.dll",
+      "wintrust.dll",
+      "ws2_32.dll"
+    ],
+    "all21_literal_ordinary_outside_names": [],
+    "ordinary_dependency_physical_names_closed_within_selected_graph": true,
+    "ordinary_only_known_reachable_images": 13,
+    "ordinary_only_unresolved_API_contracts": 117,
+    "permitted_pinned_images_read": 21,
+    "potential_delay_known_reachable_images": 15,
+    "potential_delay_outside_names_from_roots": [
+      "iphlpapi.dll",
+      "oleaut32.dll",
+      "sspicli.dll",
+      "wintrust.dll",
+      "ws2_32.dll"
+    ],
+    "potential_delay_unresolved_API_contracts": 181,
+    "roots": "Compiled c5df EXE plus exact core4"
+  },
+  "static_graph": {
+    "bytes": 160465,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-MODULE-IMPORT-GRAPH-STATIC-REVIEW-v1.json",
+    "sha256": "7292675bc3e6ab3b5152520f8a9349fac9b8f488a04ce169425a78f01bec963e"
+  },
+  "status": "source_only_negative_module_guard_identity_unavailable_no_allowlist_change"
+}

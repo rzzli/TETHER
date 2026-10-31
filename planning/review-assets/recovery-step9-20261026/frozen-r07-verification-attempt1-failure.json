@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "kind": "verification_helper_failure_record",
+  "status": "terminal_helper_failure_not_native_dispatch",
+  "progress_file_preserved": "frozen-r07-verification-before.json",
+  "command_exit_code": 1,
+  "failure": "TypeError: Object of type mappingproxy is not JSON serializable",
+  "stage": "Writing helper report after trusted verifier returned; no retained success asserted for this failed helper attempt.",
+  "correction": "Serialize the trusted verifier's immutable result using its existing encode function.",
+  "runtime_or_original_run_modified": false,
+  "new_native_calls": 0,
+  "automatic_generation_retry": false
+}

@@ -1,0 +1,205 @@
+{
+  "activity": {
+    "artifact_payload_bulk_reads": 0,
+    "native_or_original_target_operations": 0,
+    "producer_replays": 0,
+    "source_calls": 0,
+    "subject_imports": 0,
+    "subject_runs": 0
+  },
+  "author_role": "Native authored the assertion harness, independently reviews retained source behavior here; Grammar supplied independent source/harness static and artifact-byte peers. This record is not Root acceptance.",
+  "branch_check": {
+    "bytes": 34650,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-BRANCH-CONSISTENCY-PROOF-v1.json",
+    "sha256": "3496f92c4660e9c66f1068edf8ed37628bb282d7c5b344b52037a1180828f633"
+  },
+  "branch_checker": {
+    "bytes": 14581,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\check_entry_e08_actual_branches_v1.py",
+    "sha256": "043d343c97e36ee4102fbdd981cac0d385996a880f1813c0244684c900c1b309"
+  },
+  "byte_peer": {
+    "bytes": 9007,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-BYTE-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+    "sha256": "7ae5e826430d47780cc88dbcaab035af46155bc0e24843d2078121383cce911e"
+  },
+  "check_summary": {
+    "checks": 131,
+    "failed": 0,
+    "passed": 131
+  },
+  "corrected_metadata_freeze": {
+    "bytes": 7074,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-FREEZE-v2.json",
+    "sha256": "cf4d6aac69665e5829f00004225058028d6af67792e31429b859323e460fc36d"
+  },
+  "declared_and_actual": {
+    "actual_entry_attempts": 123,
+    "deferred": 0,
+    "dispatches": 122,
+    "failed": 0,
+    "identity_comparisons_available": 63,
+    "identity_comparisons_true": 63,
+    "passed": 122,
+    "retained_Core_objects": 119,
+    "unknown": 0,
+    "worlds": 128
+  },
+  "findings": [
+    {
+      "finding": "Exact source/harness/execution binding and ordered122 dispatches match corrected metadataV2. Active Kernel TCB is145042B/e389db4e; actual captured codec/Ops/FileView prefix is99000B. Old unused Source3 active-pin defect is preserved in the unexecuted metadataV1/HOLD, not carried into this run.",
+      "id": "B01"
+    },
+    {
+      "finding": "All52 literal outcomes match the unchanged frozen corpus:10 exact twelve-field reports and42 exact policy refusals after the original clock/Core. Six EXECUTION metadata reports remain issued/eligible while the independently specified minimal executable plan later refuses INVALID_INPUT; these are not six successful full entries. Four AUTHORING reports return before executable plan requirements. Every literal has zero original/output/compiler callbacks and no asserted executed helper geometry.",
+      "id": "B02"
+    },
+    {
+      "finding": "I01/I03 use genuine captured helper modules importing the executing Kernel4 object and the same Core/Origin/nonce/Registry/raw-store/facades. I03 completes with37 original callbacks, three actual helper compiler callbacks and five once-close attempts. All63 available baseline identity comparisons are true;65 unavailable comparisons remain explicitly null rather than asserted equal.",
+      "id": "B03"
+    },
+    {
+      "finding": "I02 AUTHORING public output/original/compiler/continuation attempts refuse without dispatch. I04 detachment/read-only/foreign-namespace checks, I05 once-only cached observations and I08 report-data non-capability checks pass through actual implementation classes. A status/digest dictionary does not acquire a binding, continuation, native lease or execution gate.",
+      "id": "B04"
+    },
+    {
+      "finding": "I06 original MemoryError before report return retains no prepared or issued report. I07 final work-clock395 and post-return MemoryError retain actual prepared EXECUTION-status values while issued report remains absent and eligibility false. Public reserve attempts refuse; cold reads/revalidation cannot retry/heal. Selected genuine snapshot policy-error tokens agree with original diagnostic tokens; actual is-identity evidence is in the frozen executed assertions, not recreated by JSON labels.",
+      "id": "B05"
+    },
+    {
+      "finding": "I09 retains a previously issued policy despite a later unrelated work MemoryError. Fresh known-right cleanup at396 dispatches one CloseHandle; the independent400 branch dispatches none. Old stopped-call/cache facts and the original error remain. Policy failure is distinct from later work failure.",
+      "id": "B06"
+    },
+    {
+      "finding": "I10 genuine constructor structural refusal has no entry sample/Core; semantic invalid-mode binding passes the bounded shell then refuses POLICY_DOMAIN after the original clock and actual Core. No forged typed object or partial Core is used.",
+      "id": "B07"
+    },
+    {
+      "finding": "The five correction regressions pass on five genuine worlds/entries with61 original callbacks and nine close attempts. All50 prior causal branches have the same ordered original callback/helper-completion shapes as their accepted Source3 counterparts; original Source3 E08 defer and two historical E16 defers remain unchanged and excluded from this new50 subset.",
+      "id": "B08"
+    },
+    {
+      "finding": "E32 is one actual new Source4 periodic-byte stream, not descriptor-only evidence or an old run replay:3991999872 bulk bytes;3992098940 total known/hashed;99068 captured;3812 ReadFile and3842 original callbacks; five once-closes. Genuine full evidence-context bulk membership reaches CAPTURE_NOT_REQUESTED and a live ref reaches NATIVE_ROUTE_UNAVAILABLE. No bulk assembly/blob or qualified native input authority is claimed.",
+      "id": "B09"
+    },
+    {
+      "finding": "Grammar independently hash-verified844 artifacts/20134324B,4562 canonical reservations=4561 registered+one explicit E05 missing,74 immutable snapshots/4583 copied rows/18332 axes,312 query frames/854672B,119 policy observations and66 complete raw/API/file/total projections. This branch lane did not duplicate every artifact hash or independently re-decode every ROLE1 table semantic.",
+      "id": "B10"
+    }
+  ],
+  "groups": {
+    "CAUSAL": {
+      "actual_entry_attempts": 49,
+      "close_attempts": 84,
+      "cores": 45,
+      "dispatches": 50,
+      "original_callback_counts": {
+        "CloseHandle": 84,
+        "CreateFileW": 96,
+        "GetFileInformationByHandleEx": 85,
+        "GetFileSizeEx": 85,
+        "GetFileType": 85,
+        "GetFinalPathNameByHandleW": 85,
+        "ReadFile": 3898
+      },
+      "original_callbacks": 4418,
+      "worlds": 52
+    },
+    "CORRECTIONS": {
+      "actual_entry_attempts": 5,
+      "close_attempts": 9,
+      "cores": 5,
+      "dispatches": 5,
+      "original_callback_counts": {
+        "CloseHandle": 9,
+        "CreateFileW": 10,
+        "GetFileInformationByHandleEx": 8,
+        "GetFileSizeEx": 8,
+        "GetFileType": 8,
+        "GetFinalPathNameByHandleW": 8,
+        "ReadFile": 10
+      },
+      "original_callbacks": 61,
+      "worlds": 5
+    },
+    "INTEGRATION": {
+      "actual_entry_attempts": 17,
+      "close_attempts": 12,
+      "cores": 17,
+      "dispatches": 15,
+      "original_callback_counts": {
+        "CloseHandle": 12,
+        "CreateFileW": 13,
+        "GetFileInformationByHandleEx": 11,
+        "GetFileSizeEx": 11,
+        "GetFileType": 11,
+        "GetFinalPathNameByHandleW": 11,
+        "ReadFile": 13
+      },
+      "original_callbacks": 82,
+      "worlds": 19
+    },
+    "LITERALS": {
+      "actual_entry_attempts": 52,
+      "close_attempts": 0,
+      "cores": 52,
+      "dispatches": 52,
+      "original_callback_counts": {},
+      "original_callbacks": 0,
+      "worlds": 52
+    }
+  },
+  "inputs": {
+    "bytes": 55828,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INPUTS-v2.json",
+    "sha256": "23708be2b0e78dac2ae34dba6178086f6a053efd380a6c5ce5ec8a2b7a4c26d1"
+  },
+  "policy_observations": {
+    "attempted": 119,
+    "eligible": 64,
+    "issued": 70,
+    "original_policy_errors": 49,
+    "prepared": 72
+  },
+  "proof": {
+    "bytes": 14195595,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-PROOF-v1.json",
+    "sha256": "f1c1e9803e1128acbfd6343aa038d1ba81c902c075c770c3f8adf4b3f35073db"
+  },
+  "qualification": {
+    "full_real_roster": false,
+    "native": false,
+    "new84_runtime": false,
+    "physical": false,
+    "real_first_entry": false,
+    "resource_fit": false,
+    "scientific": false,
+    "source_pure_finite_E08_supported": true,
+    "whole_entry_gate": false
+  },
+  "retained_scope_limits": [
+    "External binding/configuration remains an explicit pre-entry TCB assumption, not authenticated launcher or live-file authority.",
+    "The original53 Source3 result remains50PASS/3DEFERRED; this Source4 E08 closure does not rewrite that history or exercise the two excluded historical E16 actions.",
+    "Native25, actual14-API/physical writer/readback, qualified NativeInput/launch, true operational first-entry, complete real roster/new84 integration remain unqualified.",
+    "RSS/commit/VRAM/hardware fit and physical I/O are not measured by these synthetic source tests; scientific/human gates remain pending."
+  ],
+  "schema_version": 1,
+  "scope": "Source4 retained actual branch/source-binding/genuine-policy review only; no subject replay.",
+  "source_pause": {
+    "bytes": 6910,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-SOURCE-PAUSE-v4.json",
+    "sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67"
+  },
+  "static_peer": {
+    "bytes": 15687,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source4-20261030\\ENTRY-E08-SUITE-INDEPENDENT-STATIC-REVIEW-v2.json",
+    "sha256": "fe105a5bb328376300747eb2f16a9fb607c4a610a51e1e8c298a6db0a7639ec6"
+  },
+  "status": "CLEAR",
+  "timing": {
+    "cooperative_deadline_seconds": 60,
+    "meaning": "Elapsed includes per-world harness evidence copies; final proof serialization/write is outside reported elapsed and unmeasured. This is not a hard preemption guarantee or production/resource-fit measurement.",
+    "reported_elapsed_seconds": 13.358999999938533,
+    "setup_audit_pin_cleanup_evidence_deadline_errors": 0
+  }
+}

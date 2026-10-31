@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "role": "prospective_collected_source_recorded_qualification",
+  "created_at_utc": "2026-10-27T23:11:52.923025+00:00",
+  "version": "0.3.7",
+  "helper_sha256": "2c26d2b11b52be291d7e74cc140acc212d58650ab30ec3bebdeefb1a81fb9407",
+  "code_validation": {
+    "path": "data/cache/recovery-step9-collected-validation-20261027/code-validation.json",
+    "sha256": "c06e2da83a302c5cf024a9e896f993f26e433009260387067038ae1900f11a2d"
+  },
+  "source_authority": {
+    "path": "planning/review-assets/recovery-step9-real-retrieval-20261027/SOURCE-AUTHORITY-v1.json",
+    "sha256": "84ff16c264c48daf995dc9533bb42227c7c53964edd4c039eae468286b3d6520"
+  },
+  "raw_root": "E:\\projects_data\\drug_target_agents_data",
+  "model_root": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-tokenizer-mirror-20261027T212545Z",
+  "inventory_path": "planning/review-assets/recovery-step5-20261026/inventory.json",
+  "model_mirror_sha256": "920da7c14c0ddc19ba602c8aed4eed289aa2bef28304cbb1b3497ab7ef3841a9",
+  "maximum_tokenizer_children": 6,
+  "actual_model_calls": 0,
+  "provider_cost_usd": 0,
+  "automatic_retries": false,
+  "budget": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0,
+    "max_seconds": 300,
+    "max_retries": 1
+  },
+  "case": "existing_exposed_IL6R_RA_inhibit_antibody",
+  "fresh_case": false,
+  "declared_candidate_count": 5,
+  "original_source_files": 27,
+  "selected_strategy": "literal_case_overlap_then_id_v1",
+  "features": {},
+  "clinical_probability": null,
+  "scientific_validation": "not_attempted",
+  "new_downloads": 0,
+  "interpretation": "Exact source-report copying is a recorded transport fixture, not an expert judgment or native model result"
+}

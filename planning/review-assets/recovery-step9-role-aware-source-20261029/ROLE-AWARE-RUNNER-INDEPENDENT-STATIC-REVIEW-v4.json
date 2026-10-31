@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_RUNNER_STATIC_PHASE_RETENTION_DELTA_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "runner": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/run_role_aware_independent_v4.py",
+    "bytes": 14587,
+    "sha256": "b75a2872293941398738492fa252f01dea7c19b364ca21f099d0d968f9961353"
+  },
+  "preparation": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-HARNESS-PREPARATION-v4.json",
+    "bytes": 8056,
+    "sha256": "e8fccf3a0d92713a3eb163ed36188cdf605fc88d4b3ed6fa947cc49a05ce971e"
+  },
+  "unbound_outline": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-BINDING-OUTLINE-v4.json",
+    "bytes": 7255,
+    "sha256": "46a15afbbbfd1349b7684648c94a965c8c45e0c58d322da831e269088678087b"
+  },
+  "preserved_prior_review": {
+    "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-RUNNER-INDEPENDENT-STATIC-REVIEW-v3.json",
+    "sha256": "c4f0b97739c6704170163571c6443be8242a8b6e857ed0103645d81f2c7e27cd"
+  },
+  "method": "Read exact new metadata and runner text, and compare V3/V4 text lines. No AST parsing, compilation, source/test imports or execution.",
+  "verified_delta": [
+    "--phase is required and restricted to CODEC_FIRST or LEGACY48_FIRST.",
+    "The selected input is the fixed HERE/ROLE-AWARE-INDEPENDENT-{phase}-SOURCE-BINDING-v4.json path. The phase cannot supply a path component outside the closed choices.",
+    "The supplied SHA256 must match that exact phase input, and the parsed binding phase must equal the command-line phase before any subject import.",
+    "Validated phases retain separate exclusive-create v4 attempt and proof paths; an existing attempt or proof forbids a replay.",
+    "The six changed text lines are confined to phase argument/binding consistency and versioned retention paths. Other runner lines, including the actual deadline facade, common post-suite veto, source map, audit setup and actual identity adapters, are unchanged from V3.",
+    "The shared UNBOUND-ERROR-v4 path is an unbound setup-error record, not a codec or legacy phase result. It does not claim successful source execution."
+  ],
+  "deadline_scope": "The earlier cooperative started+60 checks and common late veto remain. This review adds no hard watchdog or callback-free hang claim.",
+  "pending": [
+    "Exact coherent four-module source pause and source peer.",
+    "Root-issued execution scope and exact separate phase bindings.",
+    "First actual results with all failures preserved."
+  ],
+  "activities": {
+    "subject_imports": 0,
+    "compilation_or_AST_parsing": 0,
+    "subject_or_test_execution": 0,
+    "original_payload_operations": 0,
+    "native_or_physical_operations": 0,
+    "author_source_fixture_or_runner_edits": 0
+  },
+  "qualification": {
+    "source_behavior": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "full_roster": false,
+    "new84_runtime": false,
+    "resource_fit": false,
+    "scientific": false
+  }
+}

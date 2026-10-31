@@ -1,0 +1,20 @@
+{
+  "status": "passed_interface_qa_scientific_review_pending",
+  "source_passages": 13,
+  "questions": 10,
+  "blank_defaults": true,
+  "desktop_mobile_browser": "passed",
+  "screenshots_visually_inspected": true,
+  "source_content_unchanged": true,
+  "form_html_sha256": "16063a14e76df1fcd98c1d9a55b8f2e1641d179fcd688e103ec38f4227692c67",
+  "share_bundle_sha256": "f94194f676fbd09b05e40005f29916025f619c730e6d6eb11f21bfb8edc02fc7",
+  "human_reviews_received": 0,
+  "existing_mechanism_packet_modified": false,
+  "model_calls": 0,
+  "fixture_export_is_human_submission": false,
+  "files": {
+    "Expert-source-review.html": "16063a14e76df1fcd98c1d9a55b8f2e1641d179fcd688e103ec38f4227692c67",
+    "README.md": "68d2b7987f6d00d4d2243c8f4822ba698181c491b11f2a831bf85623d96455a9",
+    "Recruitment.md": "49c80d98a263af00470e2158c25587dfb00b121682ac2d31387fe2d4ace9ec38"
+  }
+}

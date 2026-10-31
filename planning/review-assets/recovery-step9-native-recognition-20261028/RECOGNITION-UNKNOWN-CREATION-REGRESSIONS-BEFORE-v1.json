@@ -1,0 +1,12 @@
+{
+  "status": "failed_expected_regression_first",
+  "tests": 2,
+  "failures": [
+    "(<__main__.Regression testMethod=test_unreturned_model_creation_blocks_backend>, 'Traceback (most recent call last):\\n  File \"<stdin>\", line 14, in test_unreturned_model_creation_blocks_backend\\nAssertionError: 1 != 0\\n')",
+    "(<__main__.Regression testMethod=test_unreturned_sampler_creation_blocks_dependents>, 'Traceback (most recent call last):\\n  File \"<stdin>\", line 9, in test_unreturned_sampler_creation_blocks_dependents\\nAssertionError: 1 != 0\\n')"
+  ],
+  "errors": [],
+  "source_sha256": "104a54fd8ffe1477b77f61d29af66fdf265ccc3afa14eefb71e61331fd9f820a",
+  "model_checker_sha256": "69ea4a5ad9d8c7b3e2ccdb72fd2560e1bfaea47a3f584fdeb9bb5560ceb2a2b0",
+  "scope": "Own Python intended-state regression only, no C++/SDK/payload/compiler execution"
+}

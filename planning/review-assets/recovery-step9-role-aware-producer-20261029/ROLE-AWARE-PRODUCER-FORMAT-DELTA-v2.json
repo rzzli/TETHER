@@ -1,0 +1,100 @@
+{
+  "activity": {
+    "encoder_or_producer_source": false,
+    "golden_generation": false,
+    "original_native_runtime_operations": 0,
+    "subject_tests": 0
+  },
+  "changed_paths": [
+    "api.decoded_surface",
+    "api.value_shape.atoms",
+    "call_record.fields[21].type",
+    "correction_scope",
+    "document_version_rule",
+    "files_modules.expected_size",
+    "flag_state_rules.error_definition",
+    "framing.descriptor_sizes",
+    "legacy_projection.BOOL_mapping",
+    "legacy_projection.input_error_id",
+    "live_first_fact.additional_live_accounting_kind",
+    "live_first_fact.additional_live_payload_terms_label",
+    "live_first_fact.budget",
+    "memory_scope",
+    "preserved_hold",
+    "preserved_schema",
+    "publication.constant_rules",
+    "publication.constants",
+    "raw_atoms.applicability",
+    "raw_atoms.error_definition_rule",
+    "raw_atoms.error_definition_states",
+    "raw_atoms.error_transport",
+    "raw_atoms.input_handle_domain",
+    "raw_atoms.per_API_error_probe_table",
+    "schema_version",
+    "sections[0].descriptor_count",
+    "sections[0].descriptor_record_size",
+    "sections[1].descriptor_count",
+    "sections[1].descriptor_record_size",
+    "sections[2].descriptor_count",
+    "sections[2].descriptor_record_size",
+    "sections[2].record_bytes",
+    "sections[3].descriptor_count",
+    "sections[3].descriptor_record_size",
+    "sections[4].descriptor_count",
+    "sections[4].descriptor_record_size",
+    "sections[5].descriptor_count",
+    "sections[5].descriptor_record_size",
+    "sections[6].descriptor_count",
+    "sections[6].descriptor_record_size",
+    "sections[7].descriptor_count",
+    "sections[7].descriptor_record_size",
+    "status",
+    "validation.FormatError_surface",
+    "value_api_details.call_exact_keys",
+    "value_api_details.files",
+    "value_api_details.optional_error_id"
+  ],
+  "groups": {
+    "S1": "Uniform byte-pool descriptor counts",
+    "S2": "Absent size/input HANDLE tag domain",
+    "S3": "Independent three-state error definition and14 exact API branches",
+    "S4": "Canonical decode/error/publication/error_id/BOOL32 value surfaces",
+    "S5": "Logical-only live bit allowances; boxed implementation memory unknown"
+  },
+  "hold": {
+    "bytes": 9624,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-INDEPENDENT-REVIEW-v1.json",
+    "sha256": "44eee60666d9ee62e2e821bfd0710c754e1934c68f14fff59d4a8b97a7bc4c3b"
+  },
+  "preserved_freeze": {
+    "bytes": 2659,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-FREEZE-v1.json",
+    "sha256": "dfc9be92fb02ee06663d9c2d81d52f45cf8d6664bc83b3a4edc456e41c70047d"
+  },
+  "preserved_schema": {
+    "bytes": 72400,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v1.json",
+    "sha256": "d5f28f0b5aa151515941b6a39b03d3a811c6012fa055490a4103927871fa69e4"
+  },
+  "root_choice": {
+    "bytes": 4349,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-ROOT-CLARIFICATION-CHOICE-v2.json",
+    "sha256": "97c2c67232660c6c5e9a457a62aec07afef2a1754e6bc28ba87a67b51d2dd9d4"
+  },
+  "schema_version": 2,
+  "status": "FIVE_APPROVED_SCHEMA_GROUPS_ONLY_NO_CODE_OR_GOLDENS",
+  "successor": {
+    "bytes": 89573,
+    "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-PRODUCER-FORMAT-CONTRACT-v2.json",
+    "sha256": "b71cd8f49ccc8d4dc56b31915a3ed20465f58b08bb35b54df63a73a49e655b7a"
+  },
+  "unchanged": {
+    "artifact_store40139776": true,
+    "live_allowance13823488_and_combined127809034": true,
+    "offsets_and_widths": true,
+    "only_layout_annotation": "call.error_id optional_u32, same104/4",
+    "physical_and_full84_gates_pending": true,
+    "role_capture_first_fact_clock_DIAG_F1_rules": true,
+    "scientific_and_inactive_profile_limits": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "actual_API_calls": 0,
+  "actual_subject_observation": null,
+  "contract": "Effective57ff requires exact built-in capture without arbitrary input protocols; the explicit check callable is the only intended injected callback. Rejecting the value afterward does not erase a hook invocation.",
+  "existing_family": "F2 exact built-in numeric capture without producer hooks",
+  "expression": "type(value) in (int, bool, float, str, type(None))",
+  "finite_probe_plan": "One root-authorized analyze call on the frozen V2 using a numeric int-subclass field and a metaclass equality hook that records calls and returns False. Expected TYPE_DOMAIN with zero producer-hook calls. Preserve current source, original30/four regression modules and all first results. No source-global substitution or new contract family.",
+  "further_families_requested": 0,
+  "inputs": {
+    "ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-HOLD-v1.json": {
+      "bytes": 9209,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-INDEPENDENT-HOLD-v1.json",
+      "sha256": "da3b47e59aca5d28971d55c1fe9cfc5157e487e18940f12c93b9ac6d02615b7b"
+    },
+    "ADMISSION-ENVELOPE-SOURCE-PAUSE-v2.json": {
+      "bytes": 1482,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\ADMISSION-ENVELOPE-SOURCE-PAUSE-v2.json",
+      "sha256": "075026212bb247cc0655ed4fb517b2b8d28059adbb0dfd8c415b9276f84d971b"
+    },
+    "admission_envelope_v2.py": {
+      "bytes": 17098,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-admission-envelope-20261029\\admission_envelope_v2.py",
+      "sha256": "ea676476f37974e7e7c6c63062b27c798dec6874a3f8802f20229d13a0a71191"
+    }
+  },
+  "original_payload_operations": 0,
+  "other_review_scope": "The three planned V2 corrections are present. Original30 plus four regressions and author controls remain distinct evidence; final clearance is withheld pending first independent V2 proof and the single observation.",
+  "possible_minimal_correction": "Only if confirmed: use exact identity alternatives for the existing whitelist, in a separately named successor. No API/schema/formula/cap/role/vector change.",
+  "profile_qualified": false,
+  "reviewer": "native_039_acceptance_audit",
+  "reviewer_subject_imports": 0,
+  "reviewer_subject_tests": 0,
+  "risk": "Tuple membership uses equality rather than exact identity. A supplied int subclass whose metaclass overrides equality may execute that hook while the numeric whitelist is tested, before TYPE_DOMAIN refusal.",
+  "root_direction": "Delivered root message agrees this is within F2, authorizes retention of this finite addendum and will separately authorize one pre-fix observation before any source change.",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "source_correction_authorized": false,
+  "source_edits": 0,
+  "source_line": 43,
+  "status": "HOLD_EXISTING_F2_GUARD_RISK_PENDING_ONE_PREFX_OBSERVATION",
+  "verification_complete": false
+}

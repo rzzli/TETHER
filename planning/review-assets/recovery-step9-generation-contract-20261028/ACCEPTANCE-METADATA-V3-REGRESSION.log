@@ -1,0 +1,14 @@
+Focused metadata assertions only. Acceptance main NOT EXECUTED.
+Command: D:\Projects\drug_target_agents\.venv\Scripts\python.exe -B planning\review-assets\recovery-step9-generation-contract-20261028\test_acceptance_metadata_v3.py
+test_actual_exact_ingest_name_and_pinned_version_pass (__main__.AcceptanceMetadataTests.test_actual_exact_ingest_name_and_pinned_version_pass) ... ok
+test_original_observed_failure_and_v2_bytes_remain_preserved (__main__.AcceptanceMetadataTests.test_original_observed_failure_and_v2_bytes_remain_preserved) ... ok
+test_provides_extra_and_project_must_agree_on_ingest (__main__.AcceptanceMetadataTests.test_provides_extra_and_project_must_agree_on_ingest) ... ok
+test_unconditional_default_dependency_is_rejected (__main__.AcceptanceMetadataTests.test_unconditional_default_dependency_is_rejected) ... ok
+test_wrong_or_unpinned_optional_version_is_rejected (__main__.AcceptanceMetadataTests.test_wrong_or_unpinned_optional_version_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK
+
+Exit code: 0

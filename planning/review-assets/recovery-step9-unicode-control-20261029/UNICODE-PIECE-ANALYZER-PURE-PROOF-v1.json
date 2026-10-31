@@ -1,0 +1,36 @@
+{
+  "checker": {
+    "bytes": 11154,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\check_unicode_piece_analyzer_v1.py",
+    "sha256": "908e9be5d299e59dc4eb811c927cd8487815d4bc54a93388db963da2e042018b"
+  },
+  "elapsed_seconds": 0.0779999999795109,
+  "errors": [],
+  "failures": [],
+  "frozen_pins": {
+    "UNICODE-CONTROL-CORPUS-v1.json": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c",
+    "UNICODE-PIECE-ANALYZER-CONTRACT-v1.json": "05c214f42e9214691b5675cca58e67a6265dd069d2e7829f604df23c7ccca3e6",
+    "UNICODE-PIECE-ANALYZER-FREEZE-v1.json": "125d1474ed8498e7dd5bf00f7209fa36660d1326634e0e257b0b2c82f9578a10",
+    "UNICODE-PIECE-ANALYZER-VECTORS-v1.json": "150a6f0597c226f9aaddcb3f6a3506e9a0513a5cdd2f7da839b25cf56c0f9a79"
+  },
+  "full_frozen_documents_with_synthetic_one_byte_pieces": 84,
+  "independent_synthetic_scenarios": 15,
+  "methods": 8,
+  "native_or_tokenizer_calls": 0,
+  "native_row_fit_or_runtime_qualification": false,
+  "old_profile_or_model_operations": 0,
+  "oracle_dependency": {
+    "bytes": 5647,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-utf8-oracle-20261029\\strict_utf8_oracle_v1.py",
+    "sha256": "4e5d36afa001339735a349a8ebab88a312cde1cb57fa43336e38ee4195134c21"
+  },
+  "recorded_at_utc": "2026-10-29T07:57:15.512991+00:00",
+  "schema_version": 1,
+  "scope": "Pure supplied-piece geometry/QC/count/selector tests. Synthetic labels/pieces are not tokenizer or native observations; AST check is not hostile-code isolation.",
+  "source": {
+    "bytes": 10137,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\unicode_piece_analyzer_v1.py",
+    "sha256": "537a780a3d2d3b95d5fe4976cd8a073cf528db908badf3edf3e861e729ff8f9d"
+  },
+  "status": "passed"
+}

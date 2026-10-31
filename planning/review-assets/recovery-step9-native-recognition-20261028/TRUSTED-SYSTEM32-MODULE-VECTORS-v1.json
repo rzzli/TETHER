@@ -1,0 +1,3101 @@
+{
+  "activity": {
+    "SDK_or_target_calls": 0,
+    "children": 0,
+    "new_census_or_tracing": 0,
+    "reported_image_reads": 0
+  },
+  "cases": [
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime"
+      ],
+      "id": "exact_self_core4",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context"
+      ],
+      "id": "platform_apphelp.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context"
+      ],
+      "id": "platform_KERNEL32.DLL",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\Windows\\System32\\KERNEL32.DLL"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context"
+      ],
+      "id": "platform_api-ms-win-core-example-l1-1-0.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "api-ms-win-core-example-l1-1-0.dll",
+          "path": "C:\\Windows\\System32\\api-ms-win-core-example-l1-1-0.dll"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context"
+      ],
+      "id": "platform_new_platform_component.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "new_platform_component.dll",
+          "path": "C:\\Windows\\System32\\new_platform_component.dll"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context"
+      ],
+      "id": "ASCII_case_slash_equivalence",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "APPHELP.DLL",
+          "path": "c:/WINDOWS/SYSTEM32/apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context"
+      ],
+      "id": "maximum64",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "platform_0.dll",
+          "path": "C:\\Windows\\System32\\platform_0.dll"
+        },
+        {
+          "name": "platform_1.dll",
+          "path": "C:\\Windows\\System32\\platform_1.dll"
+        },
+        {
+          "name": "platform_2.dll",
+          "path": "C:\\Windows\\System32\\platform_2.dll"
+        },
+        {
+          "name": "platform_3.dll",
+          "path": "C:\\Windows\\System32\\platform_3.dll"
+        },
+        {
+          "name": "platform_4.dll",
+          "path": "C:\\Windows\\System32\\platform_4.dll"
+        },
+        {
+          "name": "platform_5.dll",
+          "path": "C:\\Windows\\System32\\platform_5.dll"
+        },
+        {
+          "name": "platform_6.dll",
+          "path": "C:\\Windows\\System32\\platform_6.dll"
+        },
+        {
+          "name": "platform_7.dll",
+          "path": "C:\\Windows\\System32\\platform_7.dll"
+        },
+        {
+          "name": "platform_8.dll",
+          "path": "C:\\Windows\\System32\\platform_8.dll"
+        },
+        {
+          "name": "platform_9.dll",
+          "path": "C:\\Windows\\System32\\platform_9.dll"
+        },
+        {
+          "name": "platform_10.dll",
+          "path": "C:\\Windows\\System32\\platform_10.dll"
+        },
+        {
+          "name": "platform_11.dll",
+          "path": "C:\\Windows\\System32\\platform_11.dll"
+        },
+        {
+          "name": "platform_12.dll",
+          "path": "C:\\Windows\\System32\\platform_12.dll"
+        },
+        {
+          "name": "platform_13.dll",
+          "path": "C:\\Windows\\System32\\platform_13.dll"
+        },
+        {
+          "name": "platform_14.dll",
+          "path": "C:\\Windows\\System32\\platform_14.dll"
+        },
+        {
+          "name": "platform_15.dll",
+          "path": "C:\\Windows\\System32\\platform_15.dll"
+        },
+        {
+          "name": "platform_16.dll",
+          "path": "C:\\Windows\\System32\\platform_16.dll"
+        },
+        {
+          "name": "platform_17.dll",
+          "path": "C:\\Windows\\System32\\platform_17.dll"
+        },
+        {
+          "name": "platform_18.dll",
+          "path": "C:\\Windows\\System32\\platform_18.dll"
+        },
+        {
+          "name": "platform_19.dll",
+          "path": "C:\\Windows\\System32\\platform_19.dll"
+        },
+        {
+          "name": "platform_20.dll",
+          "path": "C:\\Windows\\System32\\platform_20.dll"
+        },
+        {
+          "name": "platform_21.dll",
+          "path": "C:\\Windows\\System32\\platform_21.dll"
+        },
+        {
+          "name": "platform_22.dll",
+          "path": "C:\\Windows\\System32\\platform_22.dll"
+        },
+        {
+          "name": "platform_23.dll",
+          "path": "C:\\Windows\\System32\\platform_23.dll"
+        },
+        {
+          "name": "platform_24.dll",
+          "path": "C:\\Windows\\System32\\platform_24.dll"
+        },
+        {
+          "name": "platform_25.dll",
+          "path": "C:\\Windows\\System32\\platform_25.dll"
+        },
+        {
+          "name": "platform_26.dll",
+          "path": "C:\\Windows\\System32\\platform_26.dll"
+        },
+        {
+          "name": "platform_27.dll",
+          "path": "C:\\Windows\\System32\\platform_27.dll"
+        },
+        {
+          "name": "platform_28.dll",
+          "path": "C:\\Windows\\System32\\platform_28.dll"
+        },
+        {
+          "name": "platform_29.dll",
+          "path": "C:\\Windows\\System32\\platform_29.dll"
+        },
+        {
+          "name": "platform_30.dll",
+          "path": "C:\\Windows\\System32\\platform_30.dll"
+        },
+        {
+          "name": "platform_31.dll",
+          "path": "C:\\Windows\\System32\\platform_31.dll"
+        },
+        {
+          "name": "platform_32.dll",
+          "path": "C:\\Windows\\System32\\platform_32.dll"
+        },
+        {
+          "name": "platform_33.dll",
+          "path": "C:\\Windows\\System32\\platform_33.dll"
+        },
+        {
+          "name": "platform_34.dll",
+          "path": "C:\\Windows\\System32\\platform_34.dll"
+        },
+        {
+          "name": "platform_35.dll",
+          "path": "C:\\Windows\\System32\\platform_35.dll"
+        },
+        {
+          "name": "platform_36.dll",
+          "path": "C:\\Windows\\System32\\platform_36.dll"
+        },
+        {
+          "name": "platform_37.dll",
+          "path": "C:\\Windows\\System32\\platform_37.dll"
+        },
+        {
+          "name": "platform_38.dll",
+          "path": "C:\\Windows\\System32\\platform_38.dll"
+        },
+        {
+          "name": "platform_39.dll",
+          "path": "C:\\Windows\\System32\\platform_39.dll"
+        },
+        {
+          "name": "platform_40.dll",
+          "path": "C:\\Windows\\System32\\platform_40.dll"
+        },
+        {
+          "name": "platform_41.dll",
+          "path": "C:\\Windows\\System32\\platform_41.dll"
+        },
+        {
+          "name": "platform_42.dll",
+          "path": "C:\\Windows\\System32\\platform_42.dll"
+        },
+        {
+          "name": "platform_43.dll",
+          "path": "C:\\Windows\\System32\\platform_43.dll"
+        },
+        {
+          "name": "platform_44.dll",
+          "path": "C:\\Windows\\System32\\platform_44.dll"
+        },
+        {
+          "name": "platform_45.dll",
+          "path": "C:\\Windows\\System32\\platform_45.dll"
+        },
+        {
+          "name": "platform_46.dll",
+          "path": "C:\\Windows\\System32\\platform_46.dll"
+        },
+        {
+          "name": "platform_47.dll",
+          "path": "C:\\Windows\\System32\\platform_47.dll"
+        },
+        {
+          "name": "platform_48.dll",
+          "path": "C:\\Windows\\System32\\platform_48.dll"
+        },
+        {
+          "name": "platform_49.dll",
+          "path": "C:\\Windows\\System32\\platform_49.dll"
+        },
+        {
+          "name": "platform_50.dll",
+          "path": "C:\\Windows\\System32\\platform_50.dll"
+        },
+        {
+          "name": "platform_51.dll",
+          "path": "C:\\Windows\\System32\\platform_51.dll"
+        },
+        {
+          "name": "platform_52.dll",
+          "path": "C:\\Windows\\System32\\platform_52.dll"
+        },
+        {
+          "name": "platform_53.dll",
+          "path": "C:\\Windows\\System32\\platform_53.dll"
+        },
+        {
+          "name": "platform_54.dll",
+          "path": "C:\\Windows\\System32\\platform_54.dll"
+        },
+        {
+          "name": "platform_55.dll",
+          "path": "C:\\Windows\\System32\\platform_55.dll"
+        },
+        {
+          "name": "platform_56.dll",
+          "path": "C:\\Windows\\System32\\platform_56.dll"
+        },
+        {
+          "name": "platform_57.dll",
+          "path": "C:\\Windows\\System32\\platform_57.dll"
+        },
+        {
+          "name": "platform_58.dll",
+          "path": "C:\\Windows\\System32\\platform_58.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "65_reports",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "platform_0.dll",
+          "path": "C:\\Windows\\System32\\platform_0.dll"
+        },
+        {
+          "name": "platform_1.dll",
+          "path": "C:\\Windows\\System32\\platform_1.dll"
+        },
+        {
+          "name": "platform_2.dll",
+          "path": "C:\\Windows\\System32\\platform_2.dll"
+        },
+        {
+          "name": "platform_3.dll",
+          "path": "C:\\Windows\\System32\\platform_3.dll"
+        },
+        {
+          "name": "platform_4.dll",
+          "path": "C:\\Windows\\System32\\platform_4.dll"
+        },
+        {
+          "name": "platform_5.dll",
+          "path": "C:\\Windows\\System32\\platform_5.dll"
+        },
+        {
+          "name": "platform_6.dll",
+          "path": "C:\\Windows\\System32\\platform_6.dll"
+        },
+        {
+          "name": "platform_7.dll",
+          "path": "C:\\Windows\\System32\\platform_7.dll"
+        },
+        {
+          "name": "platform_8.dll",
+          "path": "C:\\Windows\\System32\\platform_8.dll"
+        },
+        {
+          "name": "platform_9.dll",
+          "path": "C:\\Windows\\System32\\platform_9.dll"
+        },
+        {
+          "name": "platform_10.dll",
+          "path": "C:\\Windows\\System32\\platform_10.dll"
+        },
+        {
+          "name": "platform_11.dll",
+          "path": "C:\\Windows\\System32\\platform_11.dll"
+        },
+        {
+          "name": "platform_12.dll",
+          "path": "C:\\Windows\\System32\\platform_12.dll"
+        },
+        {
+          "name": "platform_13.dll",
+          "path": "C:\\Windows\\System32\\platform_13.dll"
+        },
+        {
+          "name": "platform_14.dll",
+          "path": "C:\\Windows\\System32\\platform_14.dll"
+        },
+        {
+          "name": "platform_15.dll",
+          "path": "C:\\Windows\\System32\\platform_15.dll"
+        },
+        {
+          "name": "platform_16.dll",
+          "path": "C:\\Windows\\System32\\platform_16.dll"
+        },
+        {
+          "name": "platform_17.dll",
+          "path": "C:\\Windows\\System32\\platform_17.dll"
+        },
+        {
+          "name": "platform_18.dll",
+          "path": "C:\\Windows\\System32\\platform_18.dll"
+        },
+        {
+          "name": "platform_19.dll",
+          "path": "C:\\Windows\\System32\\platform_19.dll"
+        },
+        {
+          "name": "platform_20.dll",
+          "path": "C:\\Windows\\System32\\platform_20.dll"
+        },
+        {
+          "name": "platform_21.dll",
+          "path": "C:\\Windows\\System32\\platform_21.dll"
+        },
+        {
+          "name": "platform_22.dll",
+          "path": "C:\\Windows\\System32\\platform_22.dll"
+        },
+        {
+          "name": "platform_23.dll",
+          "path": "C:\\Windows\\System32\\platform_23.dll"
+        },
+        {
+          "name": "platform_24.dll",
+          "path": "C:\\Windows\\System32\\platform_24.dll"
+        },
+        {
+          "name": "platform_25.dll",
+          "path": "C:\\Windows\\System32\\platform_25.dll"
+        },
+        {
+          "name": "platform_26.dll",
+          "path": "C:\\Windows\\System32\\platform_26.dll"
+        },
+        {
+          "name": "platform_27.dll",
+          "path": "C:\\Windows\\System32\\platform_27.dll"
+        },
+        {
+          "name": "platform_28.dll",
+          "path": "C:\\Windows\\System32\\platform_28.dll"
+        },
+        {
+          "name": "platform_29.dll",
+          "path": "C:\\Windows\\System32\\platform_29.dll"
+        },
+        {
+          "name": "platform_30.dll",
+          "path": "C:\\Windows\\System32\\platform_30.dll"
+        },
+        {
+          "name": "platform_31.dll",
+          "path": "C:\\Windows\\System32\\platform_31.dll"
+        },
+        {
+          "name": "platform_32.dll",
+          "path": "C:\\Windows\\System32\\platform_32.dll"
+        },
+        {
+          "name": "platform_33.dll",
+          "path": "C:\\Windows\\System32\\platform_33.dll"
+        },
+        {
+          "name": "platform_34.dll",
+          "path": "C:\\Windows\\System32\\platform_34.dll"
+        },
+        {
+          "name": "platform_35.dll",
+          "path": "C:\\Windows\\System32\\platform_35.dll"
+        },
+        {
+          "name": "platform_36.dll",
+          "path": "C:\\Windows\\System32\\platform_36.dll"
+        },
+        {
+          "name": "platform_37.dll",
+          "path": "C:\\Windows\\System32\\platform_37.dll"
+        },
+        {
+          "name": "platform_38.dll",
+          "path": "C:\\Windows\\System32\\platform_38.dll"
+        },
+        {
+          "name": "platform_39.dll",
+          "path": "C:\\Windows\\System32\\platform_39.dll"
+        },
+        {
+          "name": "platform_40.dll",
+          "path": "C:\\Windows\\System32\\platform_40.dll"
+        },
+        {
+          "name": "platform_41.dll",
+          "path": "C:\\Windows\\System32\\platform_41.dll"
+        },
+        {
+          "name": "platform_42.dll",
+          "path": "C:\\Windows\\System32\\platform_42.dll"
+        },
+        {
+          "name": "platform_43.dll",
+          "path": "C:\\Windows\\System32\\platform_43.dll"
+        },
+        {
+          "name": "platform_44.dll",
+          "path": "C:\\Windows\\System32\\platform_44.dll"
+        },
+        {
+          "name": "platform_45.dll",
+          "path": "C:\\Windows\\System32\\platform_45.dll"
+        },
+        {
+          "name": "platform_46.dll",
+          "path": "C:\\Windows\\System32\\platform_46.dll"
+        },
+        {
+          "name": "platform_47.dll",
+          "path": "C:\\Windows\\System32\\platform_47.dll"
+        },
+        {
+          "name": "platform_48.dll",
+          "path": "C:\\Windows\\System32\\platform_48.dll"
+        },
+        {
+          "name": "platform_49.dll",
+          "path": "C:\\Windows\\System32\\platform_49.dll"
+        },
+        {
+          "name": "platform_50.dll",
+          "path": "C:\\Windows\\System32\\platform_50.dll"
+        },
+        {
+          "name": "platform_51.dll",
+          "path": "C:\\Windows\\System32\\platform_51.dll"
+        },
+        {
+          "name": "platform_52.dll",
+          "path": "C:\\Windows\\System32\\platform_52.dll"
+        },
+        {
+          "name": "platform_53.dll",
+          "path": "C:\\Windows\\System32\\platform_53.dll"
+        },
+        {
+          "name": "platform_54.dll",
+          "path": "C:\\Windows\\System32\\platform_54.dll"
+        },
+        {
+          "name": "platform_55.dll",
+          "path": "C:\\Windows\\System32\\platform_55.dll"
+        },
+        {
+          "name": "platform_56.dll",
+          "path": "C:\\Windows\\System32\\platform_56.dll"
+        },
+        {
+          "name": "platform_57.dll",
+          "path": "C:\\Windows\\System32\\platform_57.dll"
+        },
+        {
+          "name": "platform_58.dll",
+          "path": "C:\\Windows\\System32\\platform_58.dll"
+        },
+        {
+          "name": "platform_59.dll",
+          "path": "C:\\Windows\\System32\\platform_59.dll"
+        }
+      ],
+      "reason_if_isolated": "module_count_limit"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "empty_inventory",
+      "modules": [],
+      "reason_if_isolated": "module_count_limit"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "missing_self",
+      "modules": [
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "missing_required_reports"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "missing_libomp.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "missing_required_reports"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "missing_ggml-base.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "missing_required_reports"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "missing_ggml.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "missing_required_reports"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "missing_llama.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        }
+      ],
+      "reason_if_isolated": "missing_required_reports"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "reserved_self_in_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "C:\\Windows\\System32\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "reserved_self_wrong_path"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "wrong_path_libomp.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "C:\\Windows\\System32\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "wrong_path_ggml-base.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "C:\\Windows\\System32\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "wrong_path_ggml.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "C:\\Windows\\System32\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "wrong_path_llama.dll",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "C:\\Windows\\System32\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml-cpu-x64.dll_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml-cpu-x64.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-cpu-x64.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml-cpu-x64.dll_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml-cpu-x64.dll",
+          "path": "C:\\Windows\\System32\\ggml-cpu-x64.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml-vulkan.dll_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml-vulkan.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-vulkan.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml-vulkan.dll_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml-vulkan.dll",
+          "path": "C:\\Windows\\System32\\ggml-vulkan.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml_extra.dll_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml_extra.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml_extra.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_ggml_extra.dll_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "ggml_extra.dll",
+          "path": "C:\\Windows\\System32\\ggml_extra.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_llama_helper.dll_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "llama_helper.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama_helper.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_llama_helper.dll_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "llama_helper.dll",
+          "path": "C:\\Windows\\System32\\llama_helper.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_libomp140.dll_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "libomp140.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp140.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "protected_libomp140.dll_System32",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "libomp140.dll",
+          "path": "C:\\Windows\\System32\\libomp140.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unknown_inside_runtime",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "extra.dll",
+          "path": "D:\\PolicyFixture\\runtime\\extra.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "outside_C:\\NeverOpen",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\NeverOpen\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "outside_declared_roots"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "outside_C:\\Windows\\SysWOW64",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\SysWOW64\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "outside_declared_roots"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "outside_C:\\Windows\\System32extra",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32extra\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "outside_declared_roots"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "outside_C:\\Windows\\System32\\subdir",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\subdir\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "outside_declared_roots"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_34",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:Windows\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_35",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "\\Windows\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_36",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "\\\\server\\share\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_37",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "\\\\?\\C:\\Windows\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_38",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "\\\\.\\C:\\Windows\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_39",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_40",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\.\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_41",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\..\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_42",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll:stream"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_43",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll."
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_44",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll "
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_45",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\WINDOW~1\\System32\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_46",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\NUL\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_47",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\COM1\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_48",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\bad\u007f\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "noncanonical_49",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll\u0000"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_50",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "NUL.dll",
+          "path": "C:\\Windows\\System32\\NUL.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_51",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "CON.dll",
+          "path": "C:\\Windows\\System32\\CON.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_52",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "COM1.dll",
+          "path": "C:\\Windows\\System32\\COM1.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_53",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "LPT9.dll",
+          "path": "C:\\Windows\\System32\\LPT9.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_54",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "APPHEL~1.DLL",
+          "path": "C:\\Windows\\System32\\APPHEL~1.DLL"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_55",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll ",
+          "path": "C:\\Windows\\System32\\apphelp.dll "
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_56",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": ".hidden.dll",
+          "path": "C:\\Windows\\System32\\.hidden.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_57",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "safe+.dll",
+          "path": "C:\\Windows\\System32\\safe+.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_58",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "Unicode_\u212a.dll",
+          "path": "C:\\Windows\\System32\\Unicode_\u212a.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unsafe_leaf_59",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "Unicode_\uff47\uff47\uff4d\uff4c.dll",
+          "path": "C:\\Windows\\System32\\Unicode_\uff47\uff47\uff4d\uff4c.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "name_path_mismatch",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "different.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "name_path_mismatch"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "duplicate_exact_row",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        }
+      ],
+      "reason_if_isolated": "duplicate_report"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "duplicate_name_precedes_wrong_path",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "LLAMA.DLL",
+          "path": "C:\\Windows\\System32\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "duplicate_report"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "duplicate_case_slash_platform",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\apphelp.dll"
+        },
+        {
+          "name": "APPHELP.DLL",
+          "path": "c:/windows/system32/APPHELP.DLL"
+        }
+      ],
+      "reason_if_isolated": "duplicate_report"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "extra_row_field",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "extra": "untrusted_category",
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "invalid_metadata"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "wrong_scalar_type",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": true
+        }
+      ],
+      "reason_if_isolated": "invalid_path"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "unpaired_path_surrogate",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\System32\\\ud800\\apphelp.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "name256_UTF16_units",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn.dll",
+          "path": "C:\\Windows\\System32\\nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn.dll"
+        }
+      ],
+      "reason_if_isolated": "invalid_name"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\runtime",
+        "expected_self": "D:\\PolicyFixture\\app.exe"
+      },
+      "id": "path_over32767_units",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\runtime\\llama.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\apphelp.dll"
+        }
+      ],
+      "reason_if_isolated": "invalid_path"
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime",
+        "expected_self": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime"
+      ],
+      "id": "exact_scalar_native_context",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\llama.dll"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime",
+        "expected_self": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+      },
+      "id": "no_Unicode_normalization",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\Cafe\u0301\\\ud83d\ude00\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": false,
+      "context": {
+        "expected_runtime": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime",
+        "expected_self": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+      },
+      "id": "no_nonASCII_casefold",
+      "modules": [
+        {
+          "name": "app.exe",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\app.exe"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\libomp.dll"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00e9\\\ud83d\ude00\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\PolicyFixture\\Caf\u00c9\\\ud83d\ude00\\runtime\\llama.dll"
+        }
+      ],
+      "reason_if_isolated": "protected_native_not_eligible"
+    },
+    {
+      "accepted": true,
+      "context": {
+        "expected_runtime": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime",
+        "expected_self": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe"
+      },
+      "expected_classes": [
+        "self_executable",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "trusted_platform_context",
+        "pinned_runtime",
+        "trusted_platform_context",
+        "pinned_runtime",
+        "pinned_runtime",
+        "pinned_runtime"
+      ],
+      "id": "verified_current_census17_metadata_only",
+      "modules": [
+        {
+          "name": "typed_public_c_recognizer_abi.exe",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-module-census-build-v1-20261029T011510Z\\typed_public_c_recognizer_abi.exe"
+        },
+        {
+          "name": "ntdll.dll",
+          "path": "C:\\Windows\\SYSTEM32\\ntdll.dll"
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\Windows\\System32\\KERNEL32.DLL"
+        },
+        {
+          "name": "KERNELBASE.dll",
+          "path": "C:\\Windows\\System32\\KERNELBASE.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\Windows\\SYSTEM32\\apphelp.dll"
+        },
+        {
+          "name": "ucrtbase.dll",
+          "path": "C:\\Windows\\System32\\ucrtbase.dll"
+        },
+        {
+          "name": "MSVCP140.dll",
+          "path": "C:\\Windows\\SYSTEM32\\MSVCP140.dll"
+        },
+        {
+          "name": "bcrypt.dll",
+          "path": "C:\\Windows\\SYSTEM32\\bcrypt.dll"
+        },
+        {
+          "name": "VCRUNTIME140_1.dll",
+          "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll"
+        },
+        {
+          "name": "sechost.dll",
+          "path": "C:\\Windows\\System32\\sechost.dll"
+        },
+        {
+          "name": "VCRUNTIME140.dll",
+          "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll"
+        },
+        {
+          "name": "bcryptprimitives.dll",
+          "path": "C:\\Windows\\System32\\bcryptprimitives.dll"
+        },
+        {
+          "name": "libomp.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll"
+        },
+        {
+          "name": "PSAPI.DLL",
+          "path": "C:\\Windows\\System32\\PSAPI.DLL"
+        },
+        {
+          "name": "ggml-base.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll"
+        },
+        {
+          "name": "ggml.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll"
+        },
+        {
+          "name": "llama.dll",
+          "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll"
+        }
+      ]
+    }
+  ],
+  "census_verification": {
+    "bytes": 86265,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.json",
+    "sha256": "4b628df880898e892482399585436b5fa2a068aed607947cd59e5f3d2f8b3f1e"
+  },
+  "generator": {
+    "bytes": 9228,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\make_trusted_system32_vectors_v1.py",
+    "sha256": "c774eed98f22db842f3edd5a988f4d5d2141e83da7a2c1ac656370a5fc7cd29c"
+  },
+  "module_policy_id": "trusted-System32-platform-v1",
+  "module_policy_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589",
+  "observed_metadata_artifact": {
+    "bytes": 29596,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-self-module-census-v1-20261029T015746Z\\execution\\child\\result.jsonl",
+    "sha256": "1846f66c33bdd418804e5e8a9b98d8fdd3f36ac8eb96ab65ef3f25ceedc593c1"
+  },
+  "reason_grading": "Admission/categories/fingerprint normative; exact reason only for explicitly isolated predicate; omitted reasons are intentionally ungraded",
+  "schema_version": 1,
+  "semantic_contract": {
+    "bytes": 4912,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-POLICY-v1.json",
+    "sha256": "fdd15d4f551efbd3c1ecb515b2724b4ee68cf08d3ea1ed2f5c2a576774da2ca4"
+  },
+  "status": "finite_shared_source_pure_policy_vectors_not_native_conformance"
+}

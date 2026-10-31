@@ -1,0 +1,93 @@
+{
+  "activity": {
+    "CPP_execution": 0,
+    "CPU_GGUF_model_payload_reads": 0,
+    "DLL_or_SDK_calls": 0,
+    "compiler_or_child_calls": 0,
+    "source_and_retained_data_reads": true,
+    "unknown_image_opens": 0
+  },
+  "consumed_actual_failure": {
+    "bytes": 8935,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-V2-RESULT-VERIFICATION.json",
+    "sha256": "4b2a3cd7b09c14a8dc3d444ea6e815c8fefeeb9952cfa9724615af77769e9c24"
+  },
+  "design": {
+    "bytes": 4316,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-DRAFT-DESIGN-v5.md",
+    "sha256": "8b9cd796998f14e1882b8a9b153891ac7a1b54102efd31fd4f68fad193674ca6"
+  },
+  "material_blockers": [],
+  "previous_source": {
+    "bytes": 49559,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v4.cpp",
+    "sha256": "2f34035545c6d7bd742b8932a95449aeb76ebc48084e8dc170cbea6b740794ae"
+  },
+  "pure_checker": {
+    "bytes": 14685,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_module_policy_diagnostics_v5.py",
+    "sha256": "10ca668ccf5f9dc792da41eee3babf9785dcf8fc5f0d477595234c8311254af3"
+  },
+  "pure_evidence": {
+    "all_four_proof_input_hashes_match": true,
+    "edge_cases": [
+      "directory/name conjunction truth table",
+      "GetSystemDirectory failure tag unchanged",
+      "numericUTF16hex",
+      "surrogatepair cut",
+      "unpaired surrogate conversion null",
+      "empty/exactcap/longprefix distinction",
+      "complete framing worstcases",
+      "row+marker publication failure",
+      "fallback originaltag",
+      "unchanged success/APIblock/header"
+    ],
+    "maximum_modelled_bytes": {
+      "failure": 23928,
+      "fields": 23738,
+      "row": 23774,
+      "stdout": 23790
+    },
+    "scope": "Independent intended-format model plus static source checks; C++ formatter was not compiled or executed",
+    "tests": 11,
+    "tests_rerun_by_reviewer": false
+  },
+  "pure_proof": {
+    "bytes": 1997,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\MODULE-POLICY-DIAGNOSTIC-PURE-PROOF-v5.json",
+    "sha256": "96a8b68c5bf7671988432435a814da2fa134601c874cc749daf286966b2a64b4"
+  },
+  "recorded_at_utc": "2026-10-28T23:55:08.282274+00:00",
+  "schema_version": 1,
+  "scope_limits": [
+    "This is source and intended-format model review; no compiled C++ formatter behavior is established.",
+    "The design explicitly treats the data as incomplete current-process reported metadata before policy acceptance, not unknown-file eligibility/hash/loaded-byte identity.",
+    "No exact rejected identity can be recovered from the consumed actual failure. Static dependency/delay candidates remain candidates and do not become an allowlist.",
+    "Fresh v5 owner proof and exact build helper/protocol/input/cleanup review remain separate prerequisites. No compiler, result or native attempt is authorized by this record."
+  ],
+  "source": {
+    "bytes": 53407,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+    "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+  },
+  "static_graph": {
+    "bytes": 160465,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-MODULE-IMPORT-GRAPH-STATIC-REVIEW-v1.json",
+    "sha256": "7292675bc3e6ab3b5152520f8a9349fac9b8f488a04ce169425a78f01bec963e"
+  },
+  "static_review": {
+    "bytes": 8390,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-MODULE-GUARD-FAILURE-PEER-REVIEW-v1.json",
+    "sha256": "3eecb227af12ede7dd43553c4dd69fa0b0d39ac19b19caa17b9c4f81ffdd2cad"
+  },
+  "status": "CLEAR_exact_v5_module_diagnostic_source_only",
+  "verified_source_properties": [
+    "SystemApproval retains exactly one GetSystemDirectoryW call, original system_directory_failed admission and the same normalized directory AND sixteen-name conjunction. Native-module branch and all other failure predicates remain unchanged.",
+    "Rejection context is optional owned BridgeError data; the original unapproved_non_native_module message/tag remains unchanged and authoritative. Only existing Output references are threaded to the inventory calls.",
+    "Name256/path2048 UTF16-unit prefixes preserve full lengths, prefix counts and truncation. A split valid surrogate pair backs up one code unit. Four numeric lowercase hex digits represent each selected UTF16 unit, not UTF16LE byte order. Strict prefix UTF8 conversion failure yields null plus failed status while code units remain.",
+    "The diagnostic fields are bounded to32768bytes, with independent analytical worst-case2304*(six JSON bytes+four hex digits)+8192fixed/framing bytes=31232. Complete failure/row/stdout framing stays below65536bytes. The proof model exercised controls, quotes/backslashes, CJK, astral pairs and long inputs; modeled maxima are below the enforced source cap.",
+    "Exactly one optional rejection row is attempted before the same throw. That row records attempt_reserved; owned error context is then updated to returned/failed for independent failure marker and stdout. Construction/cap/publication exceptions retain the original tag and bounded fallback or empty context.",
+    "Success event/schema/default/layout/version/module behavior and complete typed Api block are unchanged. Inventory call-site edits add only an existing Output reference. No new target calls, loader path, unknown image file open/hash, global process scan or API family is introduced.",
+    "The unchanged header keeps recognition false, unknown expected version, four-runtime/sixteen-System32 policy. No automatic allowlist expansion or generic Job total exception is added."
+  ]
+}

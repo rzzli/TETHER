@@ -1,0 +1,122 @@
+{
+  "schema_version": 2,
+  "reviewer": "/root/native_039_acceptance_audit",
+  "status": "CLEAR_LITERAL_PREPARATION_EXACT_FOUR_POINT_DELTA",
+  "material_blockers": [],
+  "scope": "The four root-selected preparation corrections only. No codec or producer source is accepted by this record. The original schema, corpus, test source, HOLD and first structural failure remain preserved.",
+  "pins": [
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-CORPUS-v2.json",
+      "bytes": 1044085,
+      "sha256": "55e01082063f23128780cf47f6f8275f360a7e896e400fa4b1271cd081a5581c"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-CORPUS-TEST-CONTRACT-v2.json",
+      "bytes": 5146,
+      "sha256": "2440a67acfa164d1ea163abc7c43a98075097fee8b8aca8f196bdd8da3e10bf7"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/role_ledger_independent_tests_v2.py",
+      "bytes": 11494,
+      "sha256": "a3051f08375fd412d49a9a69ce180b65de69214500c787f9562a23cc3859beea"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-FREEZE-v2.json",
+      "bytes": 9251,
+      "sha256": "e0d636af4501544f3fd8aba77b061633a5052be81f06f8fa0ab8fded41cb4e53"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-DELTA-v2.json",
+      "bytes": 44786,
+      "sha256": "7f5937aef8fbc46acdbab664d63947ae79f123848bfada4d59bfe0d2576d190d"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-STRUCTURE-PROOF-v2.json",
+      "bytes": 3043,
+      "sha256": "8eddfefbfa2c7f4a2d9102754f90871606606f19c4613e5c0d2c8f69800f61f5"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-ROOT-CORRECTION-v2.json",
+      "bytes": 1695,
+      "sha256": "9f4f3c413f8524cd0a33f036b24f38234d83f6f9b52bed966734342becca801a"
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-role-aware-producer-20261029/ROLE-AWARE-FORMAT-LITERAL-INDEPENDENT-REVIEW-v1.json",
+      "bytes": 7776,
+      "sha256": "5fe0235e1713494c84a5aa6e43ac2f3cad338b37222fb595f304f8c7d7bddbe0"
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "L1_EMPTY_DIGEST_SOURCE_FIDELITY",
+      "status": "resolved",
+      "evidence": "All eight expected/actual digest fields in the four complete empty-file occurrences now equal SHA256(empty). The same authoring rule corrects 128 zero-size shape-only expected digests. The terminal previous-ledger pin equals the corrected candidate hash, and dependent raw/section/negative hashes are rebound. The API0 full-cap case remains invalid shape-only data."
+    },
+    {
+      "id": "L2_PRISTINE_CALLER_INPUT_ASSERTION",
+      "status": "resolved",
+      "evidence": "test01 takes a deep copy before encode, directly compares the caller value to the pristine copy after encode, and uses the pristine value for both decoded/getter comparisons. Exact raw goldens, detached-output mutation and all other methods remain intact."
+    },
+    {
+      "id": "L3_OBSERVED_UNDEFINED_COUNT_ZERO",
+      "status": "resolved",
+      "evidence": "Existing fragment_13_observed retains COUNT32 zero with COUNT_OBSERVED/domain-valid true and COUNT_DEFINED false under failed WriteFile. This remains intended format-accepted unqualified negative data."
+    },
+    {
+      "id": "L4_PRESENT_INPUT_HANDLE_ZERO",
+      "status": "resolved",
+      "evidence": "Existing fragment_14_observed retains input HANDLE0 with INPUT_HANDLE_PRESENT=true, distinct from returned scalar zero and unobserved input. It confers no owned-handle or physical success authority."
+    }
+  ],
+  "independent_metadata_and_source_static_checks": {
+    "bases": 40,
+    "changed_bases": 6,
+    "byte_identical_bases": 34,
+    "changed_base_ids": ["fragment_13_observed", "fragment_14_observed", "n4_candidate_captured", "n4_terminal_captured", "prospective_mixed_roles", "prospective_full_cap_shape_invalid_api"],
+    "semantic_field_changes_exactly_equal_declared_delta": 139,
+    "semantic_field_breakdown": {"complete_empty_digest_fields": 8, "shape_zero_expected_digests": 128, "terminal_previous_pin": 1, "undefined_count_zero": 1, "present_input_handle_zero": 1},
+    "byte_negative_recipes_and_expected_outcomes_identical": 225,
+    "dependent_byte_negative_SHA_updates": 8,
+    "all_reconstructed_negative_lengths_and_hashes_match": true,
+    "anchors_checked_and_identical": 134,
+    "section_length_products_and_hashes_checked": 320,
+    "only_changed_test_method_AST": "test01_literal_encode_decode_and_anchors",
+    "other_test_method_ASTs_identical": 3,
+    "future_method_count_unchanged": 4,
+    "intended_format_positive_bases": 39,
+    "shape_only_negative_bases": 1,
+    "author_structural_proof": {"methods": 6, "passed": 6, "failures": 0, "errors": 0, "scope": "data-only; no target subject"},
+    "source_schema_unchanged": true
+  },
+  "claim_limits": [
+    "This verdict clears preparation for a separately authorized concrete codec and genuine producer integration slice; it is not implementation acceptance or runtime permission.",
+    "The compressed literal/semantic transport was decoded only as fixture data. No reusable reference ledger codec or target subject was imported, constructed or executed.",
+    "Forty authored bases and 225 byte negatives are distinct from actual method invocations. The planned 387 entrypoint calls, 66 callback-exception controls and 158 getters are prospective harness counts, not executed subject results.",
+    "Format-positive fragments may describe negative or incomplete observations. They are not genuine native API histories, handle ownership or source/file capabilities.",
+    "The full-cap API0 fixture proves prepared representation extents and rejection intent only; it cannot establish a valid full roster, measured RSS, timing or physical fit.",
+    "First-slot ordering, diagnostic borrow/release, actual GeneratedArtifactBytes/context identity and unchanged legacy48+8+16 parity still require the real producer source and integration tests.",
+    "The physical reservation map, core4 role resolution, complete new84 roster, true first entry/FFI/output, new child/parent/protocol and scientific/human gates remain separate existing work.",
+    "No schema/F1 reopening, cap lift, new family, old experiment replay or automatic retry follows."
+  ],
+  "activity": {
+    "metadata_literal_transport_and_AST_review_only": true,
+    "author_or_test_module_execution_by_reviewer": 0,
+    "target_codec_or_producer_execution": 0,
+    "reference_codec_created": false,
+    "original_model_header_source_payload_operations": 0,
+    "old_run_replay": 0,
+    "native_Win32_FFI_SDK_calls": 0,
+    "author_artifact_changes": 0
+  },
+  "qualification": {
+    "preparation_only": true,
+    "implementation_accepted": false,
+    "full_roster": false,
+    "real_entry": false,
+    "real_FFI": false,
+    "physical_IO": false,
+    "resource_fit": false,
+    "new84_runtime": false,
+    "scientific": false
+  }
+}

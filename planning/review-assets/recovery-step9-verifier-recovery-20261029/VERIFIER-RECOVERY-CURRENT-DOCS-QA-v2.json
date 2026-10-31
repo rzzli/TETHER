@@ -1,0 +1,80 @@
+{
+  "anchors": {
+    "VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v2.json": {
+      "bytes": 7927,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-INDEPENDENT-PEER-REVIEW-v2.json",
+      "sha256": "1d3b6143195e978d8df320bfb4983df9b34fc2b331c33bac653d67d82c1e5c9f"
+    },
+    "VERIFIER-RECOVERY-SCOPED-ACCEPTANCE-v2.json": {
+      "bytes": 4431,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SCOPED-ACCEPTANCE-v2.json",
+      "sha256": "28d251f451de774cc0c3358beb7fa84f64ce00c175b90328e085ce3089d26ff5"
+    },
+    "VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json": {
+      "bytes": 7481,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\VERIFIER-RECOVERY-SOURCE-PURE-PROOF-v2.json",
+      "sha256": "f6ddcadf030230dc24672836b2a1d430286148fc06169b6210a5f3af79ba6a10"
+    }
+  },
+  "critical_next_gates": 5,
+  "documents": [
+    {
+      "bytes": 36154,
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "sha256": "f58d74cea58a6bb695a03407a0a402c7f4f84948c5596eeb07027bbe84fa038e"
+    },
+    {
+      "bytes": 34568,
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "sha256": "5b0315b42ad07bde1e89501f276e8ced4851027fea3762304c4019b3891011f5"
+    },
+    {
+      "bytes": 43879,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md",
+      "sha256": "a3feee97fba93df86bd6399a64d6106672da21d176fbb2ceca3deab4755a0c5a"
+    },
+    {
+      "bytes": 34360,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "sha256": "6eaf57d82d4382b9739ae85ef493ac171f397e3e378c8edf73b411d7d0c98d2f"
+    },
+    {
+      "bytes": 9002,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessments.md",
+      "sha256": "c77af4497b02206f3330aa39abfe24744a1c27c804ac63edec8884e60ef873d8"
+    },
+    {
+      "bytes": 10644,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md",
+      "sha256": "44b861054803d17ca91543d687c07efbb0bfc73e23201b7a8d8522b76643e8a0"
+    },
+    {
+      "bytes": 10115,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "sha256": "a4229caaec88a82e72d7920707d8d8f74f5aac93db94fd076d71c4f9897ed19c"
+    },
+    {
+      "bytes": 107799,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "sha256": "0b28faddd8dd4d1d145264123d4b5c91ef8a7734c96ed8cd3f64e22398a00ece"
+    },
+    {
+      "bytes": 47013,
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-28-r09-native-build.md",
+      "sha256": "b649f45226e714f17e246a0cb1145efc8babd95b280c84cbfa9713f2d0d4fd96"
+    }
+  ],
+  "edited_docs_outside_accepted327sourcepins": true,
+  "full_application_suite_rerun": false,
+  "live_bootstrap_and_real_checkers": "not_implemented",
+  "local_links_checked": 15,
+  "old_external_verification": "INCOMPLETE_TIMEOUT",
+  "old_native_profile": "FAILED",
+  "original_payload_reads": 0,
+  "recorded_at_utc": "2026-10-29T07:05:43.383180+00:00",
+  "recovery_human_rows": 20,
+  "schema_version": 1,
+  "status": "passed_current_docs_scope_QA_NOT_live_qualification",
+  "synthetic_orchestration_methods": 23,
+  "target_calls": 0
+}

@@ -1,0 +1,9 @@
+{
+  "status": "legacy_helpers_unchanged_before_version",
+  "prior_profile_sha256": "cd138598ab50f1dccba42f903714f7ce555dbacede8f778d351d6d44edeefdab",
+  "legacy_helpers": 22,
+  "changed_existing_source_pins": [
+    "src/asof/study/authority_four_arm.py"
+  ],
+  "preserved_036_wheel": "data/reference/recovery-r09-four-arm-verifier-036-20261027/asof_target_agents-0.3.6-py3-none-any.whl"
+}

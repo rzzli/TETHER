@@ -1,0 +1,38 @@
+{
+  "after": {
+    "bytes": 14210,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v2.py",
+    "sha256": "d76e1a2d7c70a9a42fa70c5f4989f08f2e291e79f12fa53b454250998c74bf5b"
+  },
+  "author": {
+    "bytes": 5964,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\author_indexed_accounting_precode_v2.py",
+    "sha256": "743149270cf9eb8e180594741f306e1d9eb1480065e58f39a01272d109e39e6a"
+  },
+  "before": {
+    "bytes": 12787,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v1.py",
+    "sha256": "bd7ea044253609c74396190658ddaadedd4d1bcc997e81391db7ded079e0d86e"
+  },
+  "changes": [
+    "CTRL3 includes zero slice_copied_items and len_calls<=32 in addition to the unchanged iteration/membership/index assertions.",
+    "Indexed CTRL5/6 require otherwise-valid owner.check() clock100 before original work395/hard400 to refuse after canonical reports with same original fault and no binding/sink callback. Existing acquire guard explicitly not an isolated quarantine proof when file already open.",
+    "No fixture/source/API/cap/control-family/expected raw-fact change; baseline still uses real V2 append/store boundaries. All original failed-baseline results retained."
+  ],
+  "contract": {
+    "bytes": 16359,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v2.json",
+    "sha256": "cccf8a1f4f6219ff51ade0279e82f587cfbe76c969e1be69125c0cc72ff2a3bd"
+  },
+  "implementation_authorized": false,
+  "schema_version": 2,
+  "status": "TWO_HARNESS_COVERAGE_CLOSURES_ONLY_NOT_SUBJECT_BUGS",
+  "subject_runs_before_v2_freeze": 0,
+  "unchanged": [
+    "six control families",
+    "V2 three source bytes",
+    "209B cohort/frozen48/publicDATA/caps",
+    "six original method names",
+    "all baseline raw facts and expected four hot failures"
+  ]
+}

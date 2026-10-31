@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "DECLARATIVE_PRECODE_ONLY_NOT_EXECUTED",
+  "scope": "Existing E08 genuine-entry integration clauses; separate from the 52 metadata literal outcomes.",
+  "contract": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-EXTERNAL-MANIFEST-POLICY-CONTRACT-v1.json",
+    "sha256": "a55b839b5b1fb038e8f0348d7fc5570abc36415db9a8f94ff6cb32269071f656"
+  },
+  "literal_corpus": {
+    "path": "planning/review-assets/recovery-step9-external-manifest-policy-20261030/E08-INDEPENDENT-LITERAL-CORPUS-v1.json",
+    "sha256": "ea2fc0966d45f95e97e995e9477c89fe3d2c6d9f647c7ed7dfaf1710b8c25b4c"
+  },
+  "genuine_object_rule": "K_A and K_B mean actual separately executed future kernel namespaces; A means the actual Core returned or retained by K_A entry. Bindings, reports, snapshots and refs must come from those actual implementations. No object.__new__, object.__setattr__, decoded dictionary, serialized ready flag or imitation type may manufacture a binding/Core/report/lease to reach a guard.",
+  "counts": {
+    "named_scenarios": 10,
+    "planned_expanded_branches": 15,
+    "executed_scenarios": 0,
+    "subject_imports": 0
+  },
+  "scenarios": [
+    {
+      "id": "I01",
+      "branches": ["original_entry_order"],
+      "setup": "Genuine K_A services with one immutable valid binding, independent envelope and matching actual EntryPlan; original provider starts at 100.",
+      "action": "Observe actual entry through policy validation and the first subsequent output/original/helper operation.",
+      "expected": [
+        "The original first sample and sole Origin/Core/Registry/raw-store/facades exist before bounded policy capture or graph work.",
+        "Policy attempted/error/prepared/issued observations belong to that same Core; no helper import is needed to validate policy.",
+        "No reserve-output callback, original-file open, compiler/helper execution or continuation occurs before timely EXECUTION policy issuance.",
+        "The start 100, work end 395, hard end 400 and original provider identity remain unchanged."
+      ]
+    },
+    {
+      "id": "I02",
+      "branches": ["authoring_only_barrier"],
+      "setup": "Genuine AUTHORING binding/envelope containing the frozen planned/unbuilt literal data; final binary hashes remain null with reasons.",
+      "action": "Enter, observe the cached AUTHORING_ONLY report, then attempt each ordinary output-reservation, original7, captured-compiler and continuation surface.",
+      "expected": [
+        "The same Core may return an immutable AUTHORING_ONLY data report without constructing fictitious executable FileSpecs or final output hashes.",
+        "All output/original/compiler/continuation attempts refuse before dispatch; all corresponding callback counts remain zero.",
+        "Readonly snapshot/report observation remains possible and does not imply runtime admission."
+      ]
+    },
+    {
+      "id": "I03",
+      "branches": ["execution_same_core_handoff"],
+      "setup": "Genuine EXECUTION binding/envelope and independently frozen actual helper source pins/FileSpecs in the ordered basis; the selected future implementation supplies the concrete helper prefix.",
+      "action": "Validate, reserve the original output namespace, capture/load actual selected helpers, and attach their non-owning adapters.",
+      "expected": [
+        "The timely public report is the same object retained as prepared, and actual policy eligibility remains Core-owned.",
+        "One Core, Origin, nonce, Registry, raw store, port/sink/journal facades and original clock provider survive the complete prefix and helper handoff by is identity.",
+        "Helper execution uses captured authenticated bytes and the actual K_A namespace; it does not create a replacement owner or rely on an old Source3/Source4 constructor.",
+        "Policy acceptance supplements existing FileSpec, captured-DAG, quotas, output ownership, live identity/hash and lease checks; it does not replace them."
+      ]
+    },
+    {
+      "id": "I04",
+      "branches": ["caller_container_alias", "ordinary_rebinding", "foreign_equal_source_binding"],
+      "setup": "Actual immutable K_A binding construction plus its caller-owned input lists; for the foreign branch construct a genuine equal-valued binding from separately executed K_B.",
+      "action": "Mutate original containers after construction/capture; try ordinary field/service/class selection rebinding; or supply the genuine K_B binding to K_A entry.",
+      "expected": [
+        "Detached immutable binding/envelope/report values do not alias mutable caller containers.",
+        "Ordinary rebinding refuses or cannot alter the already selected Core binding/class reference; no replacement callable/class is followed.",
+        "A same-name/equal-source/equal-value foreign binding is refused through the genuine namespace/type boundary before policy/output/original progress.",
+        "The original state, start sample, prior observations and first error remain retained; no numeric-start adoption or alternate binding/check/clock argument is accepted."
+      ]
+    },
+    {
+      "id": "I05",
+      "branches": ["once_only_and_cold_observation"],
+      "setup": "Actual policy success or first refusal is already retained in a genuine Core.",
+      "action": "Call validate_external_policy again; repeatedly read public report, detached report data and actual cached snapshots; offer corrected/favorable metadata after a failed attempt.",
+      "expected": [
+        "Validation remains once-only, including after an earlier refusal or incomplete attempt; a second attempt cannot replace the binding/report or retry graph work.",
+        "Cold getters/snapshots do not call the provider, validator, report constructor, output backend or original-file backend.",
+        "No corrected metadata or favorable clock heals failure, creates eligibility or renews the original budget; the retained first error remains the original object."
+      ]
+    },
+    {
+      "id": "I06",
+      "branches": ["report_allocation_before_return"],
+      "setup": "Actual valid metadata on the genuine Core; a controlled original MemoryError occurs before the actual immutable report constructor returns.",
+      "action": "Run policy issuance through that real allocation boundary and inspect retained diagnostics/snapshot data after unwind.",
+      "expected": [
+        "The same original MemoryError and original clock/Core remain retained.",
+        "Prepared report, public issued report and execution eligibility remain absent/false because no report return was observed.",
+        "There is no output/original/compiler/continuation dispatch, retry, fabricated report or replacement state."
+      ]
+    },
+    {
+      "id": "I07",
+      "branches": ["prepared_then_final_work_clock", "prepared_then_issuance_bookkeeping_failure"],
+      "setup": "The actual immutable report constructor has returned a valid 12-field report; the final original work-clock check reaches 395 or an original allocation/bookkeeping error interrupts subsequent issuance.",
+      "action": "Observe actual retained prepared versus issued policy state and the genuine diagnostic token resolver after unwind.",
+      "expected": [
+        "The original returned report object is retained as prepared before the throwable final eligibility step; its values are inspectable in immutable snapshot data.",
+        "Public manifest_policy_report remains None and actual execution eligibility remains false; no successful status in prepared data opens a gate.",
+        "The original clock/deadline or original allocation exception is preserved, with no output/original/compiler dispatch or retry.",
+        "Cold reads preserve the same prepared data and do not heal, resample or republish it."
+      ]
+    },
+    {
+      "id": "I08",
+      "branches": ["data_report_is_not_capability"],
+      "setup": "Actual detached report data, or an ordinary dictionary carrying EXECUTION_BASIS_VALIDATED, exists without an issued same-Core eligibility fact.",
+      "action": "Use only ordinary public surfaces to try treating the data/status/digests as a binding, state view, continuation, native lease, child binding or execution gate.",
+      "expected": [
+        "No parsed report, hash, approved/ready flag or successful status creates an Origin/nonce/Core/ref/continuation/lease/child/image authority or actual file admission.",
+        "The report retains exactly its 12 declared data keys; provenance/control authority remains the genuine live Core.",
+        "Unsupported native/physical routes remain unavailable; no fake typed object is constructed to simulate a positive authority branch."
+      ]
+    },
+    {
+      "id": "I09",
+      "branches": ["fresh_cleanup_after_later_work_error", "cleanup_blocked_at_original_hard_end"],
+      "setup": "A genuine timely EXECUTION report is issued; later original work retains a known committed usable handle and an unrelated original failure in the same Core.",
+      "action": "Attempt a different fresh known-right CloseHandle below the original hard end, then the separate branch at hard end 400.",
+      "expected": [
+        "An already valid policy gate does not become a blanket primary-is-None check; a fresh nonstopped cleanup call below the original hard end retains its legal once-only opportunity.",
+        "Stopped same-call caches remain quarantined and committed raw facts stay known; cleanup does not heal/retry failed work or replace the original error.",
+        "At the original hard boundary all dispatch remains blocked, with known rights honestly unclosed/unknown and no renewed timer or policy validation."
+      ]
+    },
+    {
+      "id": "I10",
+      "branches": ["constructor_structural_refusal", "valid_shell_bad_semantics_reaches_core"],
+      "setup": "Use only the genuine public immutable-binding constructor: either a wrong exact list/pin shape or an otherwise valid bounded shell containing a semantic/domain fault from the frozen literals.",
+      "action": "Attempt ordinary construction and, only if an actual binding returns, the genuine entry call.",
+      "expected": [
+        "Constructor-only wrong shape/container/custom-leaf refusals occur before entry; no original-clock/Core facts are claimed for them.",
+        "All 52 current literal bindings satisfy the constructor shell, so their semantic/domain/graph refusals occur after original sample/Core policy entry as predeclared.",
+        "No object.__new__, object.__setattr__, counterfeit holder or decoded data is used to force unreachable binding states through Core."
+      ]
+    }
+  ],
+  "activity": {
+    "implementation_authored": false,
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "native25_executed": false,
+    "original_targets_followed": false
+  },
+  "limitations": [
+    "These are declarative future integration scenarios, not another set of executed tests or metadata literal outcomes.",
+    "Concrete future source/helper pins and actual fault seams must be frozen under a later implementation/test scope.",
+    "External configuration remains an explicit TCB assumption, not launcher authentication, live resource admission or a physical/native capability.",
+    "Historical E16 actions, native25, full real roster/new84, resource fit, science and human gates remain unqualified."
+  ],
+  "qualification": false
+}

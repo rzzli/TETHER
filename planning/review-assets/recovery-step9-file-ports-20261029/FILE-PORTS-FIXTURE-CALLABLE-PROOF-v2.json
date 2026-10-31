@@ -1,0 +1,77 @@
+{
+  "actual_API_calls": 0,
+  "checker": {
+    "bytes": 15764,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_file_port_fixture_script_v2.py",
+    "sha256": "ca8b4ab2a9ed51cd55f50c682b62f63c31281b87916bc35583f2e265e5e4f7bd"
+  },
+  "counts": {
+    "additional_BOOL_controls": 15,
+    "api_script_exceptions": 7,
+    "api_script_returns": 183,
+    "cases": 84,
+    "clock_samples": 459,
+    "hook_calls": 19,
+    "required_families": 16
+  },
+  "errors": [],
+  "expected_port_states_are_authored_not_observed": true,
+  "failures": [],
+  "inputs": {
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-FREEZE-v3.json": {
+      "bytes": 1157,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-FREEZE-v3.json",
+      "sha256": "8c0aba4e04a065d6b832c4bc90df57eaffce3539a0c51640712149b5d5ce20f0"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-FREEZE-v3.json": {
+      "bytes": 1347,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-FREEZE-v3.json",
+      "sha256": "ba297c877b6a60a3c4a3451a9076a0f08bda1810cd640c52a3d7eea68d868963"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v3.json": {
+      "bytes": 13088,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURE-SCHEMA-v3.json",
+      "sha256": "e3069b89cca7e9b04c630de994f24392054daf341c280f50778aea3d0f81657b"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURES-v3.json": {
+      "bytes": 429712,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-FIXTURES-v3.json",
+      "sha256": "9e445e2e230689aa7c36e7eba666959dcac87478caf27252154eb02e978109b7"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ROOT-BOOL-DOMAIN-REVIEW-v1.json": {
+      "bytes": 1712,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ROOT-BOOL-DOMAIN-REVIEW-v1.json",
+      "sha256": "7b742b9cd286924ed6c03e2445f91619970ba8825a3e7ea5f0cee4fe89e36ad2"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ROOT-FIXTURE-SCOPE-v1.json": {
+      "bytes": 2261,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\FILE-PORTS-ROOT-FIXTURE-SCOPE-v1.json",
+      "sha256": "0253bda8bdd7169329f074bd568b4b54c9774731df3bcf0168a42a34bfe1cc89"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_file_port_fixture_script_v2.py": {
+      "bytes": 15764,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\check_file_port_fixture_script_v2.py",
+      "sha256": "ca8b4ab2a9ed51cd55f50c682b62f63c31281b87916bc35583f2e265e5e4f7bd"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\file_port_fixture_script_v2.py": {
+      "bytes": 14654,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\file_port_fixture_script_v2.py",
+      "sha256": "d6ec279a90b5424d30a2239a7305d04b8cbd059dbff6bbf3107c4cfb9c503e51"
+    }
+  },
+  "inputs_unchanged": true,
+  "methods": 10,
+  "old_original_payload_operations": 0,
+  "port_implementation_under_test": false,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T11:42:02.095524+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Fixture interchange/closed source-domain and authored-data checks only. Fake echo calls return planned data; they do not validate any file port or compute expected ownership results.",
+  "source": {
+    "bytes": 14654,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-file-ports-20261029\\file_port_fixture_script_v2.py",
+    "sha256": "d6ec279a90b5424d30a2239a7305d04b8cbd059dbff6bbf3107c4cfb9c503e51"
+  },
+  "status": "passed"
+}

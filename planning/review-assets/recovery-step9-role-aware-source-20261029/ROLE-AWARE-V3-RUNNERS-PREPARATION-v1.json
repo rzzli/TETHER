@@ -1,0 +1,83 @@
+{
+  "activity": {
+    "V3_subject_imports": 0,
+    "V3_subject_tests": 0,
+    "oracle_or_harness_logic_changes": 0,
+    "original_payload_native_physical_operations": 0,
+    "prior_source_replays": 0,
+    "subject_sources_read_or_hashed": 0
+  },
+  "author": {
+    "bytes": 1761,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\prepare_role_aware_v3_source_runners_v1.py",
+    "sha256": "b087047e9cc04613d885eeaf608c618be155ff1f2ac0cbc549b971729f6cc50e"
+  },
+  "exact_reverse_text_equality": true,
+  "execution_order": "CODEC first; actual genuine legacy48/same8 immediately after a passing codec decision, then extensions after pass. Large remains held.",
+  "extensions_runner": {
+    "bytes": 13912,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_extensions_v3.py",
+    "sha256": "29b1511874f8b83aec68b872051ce8fa289c723939ca9032609f897a86f71073"
+  },
+  "freeze_author": {
+    "bytes": 5830,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\freeze_role_aware_v3_runners_v1.py",
+    "sha256": "2a6a6c45798d76e92cbdb8b4e49b3efc5f40586191308b9efab8d4a0a343b103"
+  },
+  "independent_runner": {
+    "bytes": 18096,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v6.py",
+    "sha256": "1c2a9e5a9dbe372e25d6537f6714276b1f2100169e61284fda1e6b152f636018"
+  },
+  "invariant": "Only the four source module spellings and new binding/attempt/proof filenames change. Tests, corpusV3, adapters/assertions, deadline facade, audit, original identity checks and abort/count accounting remain byte-identical after reversing those spellings.",
+  "outlines": [
+    {
+      "bytes": 9581,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-INDEPENDENT-BINDING-OUTLINE-v6.json",
+      "sha256": "a38b3ab52d4f9e67d50dc712ec1b7fc3bc8bd448bae198aaeaaa0c92fc0e2cc1"
+    },
+    {
+      "bytes": 10426,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-EXTENSIONS-BINDING-OUTLINE-v3.json",
+      "sha256": "988ef5f0f837457409391a311d7f94e8f7df0f19aa3a66797dad8b07f833579c"
+    }
+  ],
+  "pending": [
+    "coherent V3 source pause",
+    "Root finite source correction scope",
+    "Native narrow mechanical runner peer",
+    "exclusive phase-specific binding and Root execution"
+  ],
+  "preserved_runners": [
+    {
+      "bytes": 18096,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_independent_v5.py",
+      "sha256": "ba767e126b1a07f215095f9c6e13d573b486b7df909537f4d85981df66b41d9a"
+    },
+    {
+      "bytes": 13912,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\run_role_aware_extensions_v2.py",
+      "sha256": "5694ec9898c385c8ae825d2b88dcaea0b5e73684c9a9d6984d975aed68064aa8"
+    }
+  ],
+  "qualification": {
+    "full_roster": false,
+    "new84_runtime": false,
+    "physical_IO": false,
+    "real_FFI": false,
+    "real_entry": false,
+    "resource_fit": false,
+    "scientific": false
+  },
+  "retained_actual_tail": {
+    "bytes": 182204,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\ROLE-AWARE-CODEC-DISJOINT-TAIL-PROOF-v1.json",
+    "sha256": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97"
+  },
+  "retained_tail_calls": 125,
+  "retained_tail_mismatches": 0,
+  "retained_tail_unknowns": 0,
+  "root_correction": "Only header count-cap order before module-repeat; codec reservation/shape semantics and frozen oracles unchanged. All4source imports get freshv3 names.",
+  "schema_version": 1,
+  "status": "MECHANICAL_V3_MAP_ONLY_FROZEN_UNEXECUTED"
+}

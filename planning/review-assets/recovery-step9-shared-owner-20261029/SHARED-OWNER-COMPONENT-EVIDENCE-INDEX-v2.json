@@ -1,0 +1,153 @@
+{
+  "actual_target_API_calls": 0,
+  "baseline": {
+    "B": 2,
+    "C": 69,
+    "E": 218,
+    "M": 2,
+    "N": 3,
+    "R": 51,
+    "actual_calls": 21,
+    "actual_journal_rows": 53,
+    "early_bytes": 141,
+    "remaining_bytes": 68,
+    "total_bytes": 209
+  },
+  "evidence": [
+    {
+      "bytes": 6178,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-SOURCE-SCOPE-v1.json",
+      "sha256": "4db8622f185edb1488a0066205b6248f0eb37b539e0806d04d748f277ea8e6ee"
+    },
+    {
+      "bytes": 5687,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-CORRECTION-SCOPE-v2.json",
+      "sha256": "298d42f4ab955513a1fe6a8a8cfdd70428199918d25e1147151d9c0fb3f37b48"
+    },
+    {
+      "bytes": 15693,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-INDEPENDENT-HOLD-v1.json",
+      "sha256": "66b588bf4f077d7d876be73a6a7db6ded99c1bd7b688f03da1091e8472c72845"
+    },
+    {
+      "bytes": 2113,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SOURCE-PAUSE-v2.json",
+      "sha256": "2e8511699985dc84d944aa710a8d4d4b30f7df2d924aa86ceaa236dfc9d42629"
+    },
+    {
+      "bytes": 11604,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-EVIDENCE-FREEZE-v2.json",
+      "sha256": "071cb83afb207185715fe7df3d1403dbad765041c64ae33d8e96c9df56a2a4af"
+    },
+    {
+      "bytes": 5024279,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-ACTUAL-PROOF-v2.json",
+      "sha256": "14d78f96fbdb20e2c40e1884c278704f9da93b02c46cd502df87cf1f756698e3"
+    },
+    {
+      "bytes": 1802,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-CONTROLS-PURE-PROOF-v2.json",
+      "sha256": "59240694c2153b4691ad113e69ebd16431511ebed92869e19fc2e793078e301f"
+    },
+    {
+      "bytes": 1033,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-SUPPLEMENT-PURE-PROOF-v2.json",
+      "sha256": "6532cf40eb19359c9dfdbcba4257413d9a77a512e84ddd87ac0e010907f5e1cf"
+    },
+    {
+      "bytes": 4680,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-AUTHOR-DELTA-BINDING-v2.json",
+      "sha256": "266c67860a008181c2b89b33303d0131cba491615f033d47976c52ce0e99f765"
+    },
+    {
+      "bytes": 2973,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ADJACENT-IDENTITY-RETURN-AFTER-v2.json",
+      "sha256": "fa5981c865a4ac3fb5925e8927e637306c53e8d21e35cbda77a444d708257e93"
+    },
+    {
+      "bytes": 37533,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+      "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+    }
+  ],
+  "implemented": {
+    "controller": "Continuation-only exact same-owner factory/context/gate reconciliation; no new owner, timer, namespace reservation, early lease acquisition or early rehash.",
+    "owner": "One canonical owner, original injected Origin and nonce, original registry/file/call refs, one buffer/loader/journal/sink from beginning through terminal.",
+    "ports": "Non-owning seven-operation original-file view with scalar/count/wrapper axes, four-query identity gate, bounded hash/copy commits and one closer ledger."
+  },
+  "joint_limits": {
+    "B": 2,
+    "C": 92,
+    "E": 224,
+    "M": 2,
+    "N": 4,
+    "R": 68,
+    "captured_bytes": 16384,
+    "hard_seconds": 300,
+    "output_byte_ceiling": 524288,
+    "publication_bytes_per_kind": 8192,
+    "publication_kinds": [
+      "candidate",
+      "cleanup",
+      "failure",
+      "receipt",
+      "seal"
+    ],
+    "query_work_buffer_bytes": 8202,
+    "raw_storage_ceiling": 131072,
+    "retained_read_buffer_bytes": 65536,
+    "row_bytes_including_LF": 1024,
+    "work_seconds": 295
+  },
+  "limits": [
+    "Injected clock starts before synthetic setup; no real first-entry/import-bootstrap clock qualification.",
+    "Raw hooks consume trusted synthetic observations; actual native-to-Python conversion/first-store window remains unproved.",
+    "Seven active injected exports only; fictional sink callback ACKs never attest physical create/write/flush/close/durability.",
+    "Two captured toy modules total141B execute in memory via closed resolver; marker functions are not real authority/checker factories.",
+    "Four checker ports are expressly fixture-only; real archive/journal/resource/core checker/source binding remains pending.",
+    "Three-file209B cohort and joint limits establish only this finite pure seam, not full production-roster fit.",
+    "No original/model/CPU/GGUF/oldpack/source-closure/target/native/SDK/runtime invocation. No real file-port or production activation."
+  ],
+  "observed_pure_results": {
+    "adjacent_independent_after_probes": 2,
+    "author_controls": 12,
+    "author_supplemental_controls": 4,
+    "independent_actual_toy_marker_execs": 34,
+    "independent_fake_original_dispatches": 518,
+    "independent_focused_regressions": 8,
+    "independent_histories_executed": 48,
+    "independent_histories_matched": 48,
+    "independent_strict_snapshots": 372
+  },
+  "preservation": "All v1 sources/first-run failures and eight retrospective before regressions remain immutable. Full48 oracle and public DATA unchanged. Corrected five source boundaries only plus coherent import versioning.",
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "recorded_at_utc": "2026-10-29T16:58:24.176582+00:00",
+  "review": "Native final source peer and root acceptance are separate external records. This index neither self-approves nor lifts any runtime/profile gate.",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "bytes": 36956,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_owner_v2.py",
+      "sha256": "0ecb8c02e3a8016f2de3a69650b34776de312ffca6f37ded85a31eba9c50c24b"
+    },
+    {
+      "bytes": 10595,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\shared_file_ports_v2.py",
+      "sha256": "a224bfb9e9f33bf2f6b9329f0b337d0076bdab418083d05deb3f59b52722a059"
+    },
+    {
+      "bytes": 4258,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\continue_verification_v2.py",
+      "sha256": "1d05a7398fe215cae987a76ab3960e0dc3730b89fad79caca64c466bac1f4b2f"
+    }
+  ],
+  "status": "AUTHOR_SOURCE_PURE_COMPONENT_EVIDENCE_INDEX_NOT_EXECUTION_AUTHORITY"
+}

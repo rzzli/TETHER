@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T15:09:51.351393+00:00",
+  "decision": "authorize_exact_v4_aggregation_only_if_every_unchanged_and_amended_gate_passes",
+  "helper_sha256": "85cc6cc3ca359a0558773724bc976049f6c1a1480a515ac2c38dee90c1c60a28",
+  "root_changed_function_and_main_review": "passed",
+  "independent_cache_derivation_review_sha256": "53f96fc28eec3296ca9183dcda8f7c1e8b54739faa4e4eab71f9a85c11e93e85",
+  "cache_policy_root_decision_sha256": "8b7f1b3fababf691bacf86d7dc33a73562b0a7b8aa9ed47e26be72316cbbc24a",
+  "combined_sha256": "17afefc0ac2b83c76bc8974c68a366ea779379fb42199911c494da5967d9d5eb",
+  "completion_protocol_sha256": "75b44d1b2bfbafb7910d8e894d77dba550aae4970b1c5931bcaa9e7f6da34087",
+  "changes_from_v3": "optional755+exact5qualifiedcachegate_and_disclosure_only",
+  "original_failed_helpers_and_observations": "preserved",
+  "source_runtime_wheel_environment_or_receipt_rewrites": false,
+  "new_v3_execution_authorized": false,
+  "scientific_validation": "not_established",
+  "entire_project_complete": false
+}

@@ -1,0 +1,68 @@
+{
+  "actual_API_calls": 0,
+  "checker": {
+    "bytes": 11228,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\check_shared_owner_integration_literals_v2.py",
+    "sha256": "4ddca3fdb972854cb3295ab5d7a7f558bd7496c65eb9aeb5d32d1fee52f6f35c"
+  },
+  "cohort": {
+    "bytes": 4876,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-SYNTHETIC-INPUT-COHORT-v1.json",
+    "sha256": "eb5147d200bcc0108b71968d69f6b251c29b56dd52d926a8606504682134d9b8"
+  },
+  "current_fake_dispatches": 0,
+  "errors": [],
+  "expected_baseline_fake_calls": 21,
+  "expected_baseline_journal_rows": 53,
+  "failures": [],
+  "fixture": {
+    "bytes": 300833,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURES-v2.json",
+    "sha256": "45b17a6c737d6dbd914557f698a74ed92bf18077a0d2b86864cec63b72d037c5"
+  },
+  "fixture_behavior_qualified": false,
+  "groups": 14,
+  "histories": 48,
+  "methods": 6,
+  "public_peer": {
+    "bytes": 6686,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-DATA-INDEPENDENT-PEER-v2.json",
+    "sha256": "3b32ba1bb0f3ebbd33be91aeb190e86b4da575a05196ff5d9950c69c042d0f6a"
+  },
+  "public_schema": {
+    "bytes": 37533,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-PUBLIC-OBSERVATION-SCHEMA-v2.json",
+    "sha256": "50ee2d7a9285370e6a3f0d18801c43e441b327f7ceac9eb46ebdf0463eff28d6"
+  },
+  "qualification": {
+    "FFI_registration_proven": false,
+    "originals_authenticated": false,
+    "production_owner_bound": false,
+    "profile_qualified": false,
+    "real_checkers_bound": false,
+    "runtime_authorized": false,
+    "verification_complete": false
+  },
+  "reserved_call_capacity": 69,
+  "reserved_event_capacity": 218,
+  "root_scope": {
+    "bytes": 5276,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-ROOT-PREPARATION-SCOPE-v2.json",
+    "sha256": "ba6328a7a22d43af33e1e1c15265cb87960fe3b1354bee0434474bedfd91fa16"
+  },
+  "schema": {
+    "bytes": 11212,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-FIXTURE-SCHEMA-v2.json",
+    "sha256": "7ea6cb057c749e54a4fa557345ce00076fbd9b6b911eb7d767d9666fd7ddb0c8"
+  },
+  "schema_version": 1,
+  "scope": "Literal schema/frame/count/callback/expected-projection checks ONLY. No transition interpreter, generic fake binding, source helper, reviewed component or native code was executed.",
+  "status": "passed",
+  "toy_helpers_executed": false,
+  "under_test_imported": false,
+  "wording_delta": {
+    "bytes": 1748,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-INTEGRATION-WORDING-DELTA-PROOF-v2.json",
+    "sha256": "7617b483b79d0a76dec152527ff569f04f9cf700700717bd09ba545a8e857ee5"
+  }
+}

@@ -1,0 +1,2603 @@
+{
+  "application_tests_rerun": false,
+  "assessment_local_link_count": 13,
+  "checker_sha256": "eb07058be6d11d74898d6cc827f7935eaf25fef171da72e8534e172fe34c2c42",
+  "checks": [
+    {
+      "check": "README.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "memory/MEMORY.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "memory/research-log-2026-10-29-large-injected-producer.md: accepted current scope attributed",
+      "passed": true
+    },
+    {
+      "check": "README.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "README.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "README.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: one current assessment pointer",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: R09 completion not claimed",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: next real roster/entry/physical composition",
+      "passed": true
+    },
+    {
+      "check": "memory goals current pointer and scoped next",
+      "passed": true
+    },
+    {
+      "check": "memory current large log indexed",
+      "passed": true
+    },
+    {
+      "check": "large log frontmatter",
+      "passed": true
+    },
+    {
+      "check": "assessment final acceptance rather than draft",
+      "passed": true
+    },
+    {
+      "check": "all20 ordered R/HR statuses",
+      "passed": true
+    },
+    {
+      "check": "R01: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R02: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R03: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R04: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R05: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R06: accepted engineering scope",
+      "passed": true
+    },
+    {
+      "check": "R07 negative / humans pending",
+      "passed": true
+    },
+    {
+      "check": "R08 partial / no scientific fresh case",
+      "passed": true
+    },
+    {
+      "check": "R09 large narrow acceptance / unfinished remainder",
+      "passed": false
+    },
+    {
+      "check": "R10: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R11: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R12: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R13: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R14: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R15: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "R16: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "HR1: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "HR2: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "HR3: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "HR4: pending or conditional",
+      "passed": true
+    },
+    {
+      "check": "five critical next gates in order",
+      "passed": true
+    },
+    {
+      "check": "gate 1: existing bounded critical path",
+      "passed": true
+    },
+    {
+      "check": "gate 2: existing bounded critical path",
+      "passed": true
+    },
+    {
+      "check": "gate 3: existing bounded critical path",
+      "passed": true
+    },
+    {
+      "check": "gate 4: existing bounded critical path",
+      "passed": true
+    },
+    {
+      "check": "gate 5: existing bounded critical path",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 9017363601",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 8799",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 10095",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 216",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 209",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 1331",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 9879",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 19974",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 10.094",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 0.359",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 4373152",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 4428448",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 1775088",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 11575490",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 8980699",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 14410009",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 23390708",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 15",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 0.3.11/defaultv2",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 1774passingfulltests",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 327source/resourcepins",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: tenpreserved-version",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 65missinginputs",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 36unqualifiedendpointlabels",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 17/32",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: 0/12",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: featuresareempty",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: probabilitiesnull",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: humanreviewspending",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: $0",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: stoppedperiodicmonitor",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: failed",
+      "passed": true
+    },
+    {
+      "check": "retained assessment fact: incomplete_timeout",
+      "passed": true
+    },
+    {
+      "check": "resource observations not RSS/fit",
+      "passed": true
+    },
+    {
+      "check": "earlier report-phase prefix is intentional",
+      "passed": true
+    },
+    {
+      "check": "reference separate / 198 checkpoints",
+      "passed": true
+    },
+    {
+      "check": "reviewer setup failure is not producer failure or replay",
+      "passed": true
+    },
+    {
+      "check": "all authority flags remain false",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V3-RESULT-VERIFICATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-ABI-RESULT-VERIFICATION-v1.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step8-20261026/source-feasibility.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Recovery Status and Next Gates 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/expert-review-20261026/Expert-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/expert-review-genetics-20261026/Expert-source-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/question-native-transport-20261025/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Source%20Readiness%20Closeout%20and%20T6%20Quality%20Next%20Stage%202026-10-24.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Prospective%20Frame%20Preparation%202026-10-24.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Primary%20Report%20Lookup%20and%20Source%20Readiness%202026-10-22.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Existing-trial%20Document%20History%202026-10-22.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Existing-trial%20Protocol%20Audit%202026-10-22.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Publisher%20Discovery%20Amendment%202026-10-21.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Exact-trial%20Retrieval%20Calibration%202026-10-21.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Endpoint-specific%20Origin%20Sample%202026-10-21.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/run-registry.json",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Task%206%20Development%20Comparisons%202026-10-18.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Clinical%20Label%20Readiness%202026-10-21.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/review-assets/registry-sizing-20261017/README.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link TODO.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Scientific%20Prerequisites%20Execution%202026-10-18.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Ordered%20Execution%20Progress%202026-10-17.md",
+      "passed": true
+    },
+    {
+      "check": "README.md: local link planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: local link planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: local link docs/history/TODO-before-recovery-20261026.md",
+      "passed": true
+    },
+    {
+      "check": "TODO.md: local link planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - R09 Generation.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Module Identity.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link ../TODO.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link ../docs/Opus_20261026T050236Z_review.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link ../docs/Independent%20Project%20Review%202026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step7-20261026/gate-correction.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link review-assets/recovery-step8-20261026/bounded-source-qualification.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Recovery%20Status%20and%20Next%20Gates%202026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link ../docs/Expert%20Review%20Coordinator%20Guide%202026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: local link Project%20Progress%20Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/Independent%20Project%20Review%202026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Native Launcher.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Console Identity.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project Progress Reassessment 2026-10-28 - Native Build.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/exposure-v4-report.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/source-feasibility.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/date-and-review-addendum.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/bounded-source-qualification.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/metadata-followup-v1.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/expert-review-20261026/Expert-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/expert-review-genetics-20261026/Expert-source-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-comparison-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-token-aware-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link ../docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-duration-20261028/CONTRACT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project%20Progress%20Reassessment%202026-10-28%20-%20R09%20Duration.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link Project%20Progress%20Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: local link review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - R09 Integration.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - R09 Duration.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - R09 Converter.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - R09 Generation.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - Native Build.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - Native Launcher.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - Console Identity.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - ABI Export Failure.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-28 - ABI Module Policy.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Module Identity.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Recognition Build.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Recognition Disposition.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Unicode Controls.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Unicode Coverage Analyzer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Verifier Byte Checks.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Resource Byte Decoder.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Captured Archive Checker.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Portable File Ports.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Indexed Accounting.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Admission Envelope.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Producer Storage Design.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Producer Format Schema.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: local link Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: local link review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: local link review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.md",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: local link review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: local link Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Large%20Injected%20Producer.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Injected%20Producer.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Literal%20Freeze.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Format%20Schema.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Verifier%20Orchestration.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20UTF8%20Oracle.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Disposition.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/R09%20Unicode%20Coverage%20and%20Verifier%20Recovery%20Plan%202026-10-29.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link ../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Build.md",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: local link D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-ROOT-ACCEPTANCE-v3.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/candidate-ledger.bin",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/terminal-ledger.bin",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v2.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/independent-canonical-raw-facts.jsonl",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-ACTUAL-ACCOUNTING-RESOURCE-REVIEW-v3.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-HARNESS-RAW-SIDECAR-CHECK-v3.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-production-preflight-20261029/NEXT-REAL-ROSTER-ENTRY-METADATA-PREPARATION-v1.json",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: local link review-assets/recovery-step9-role-aware-producer-20261029/DISTINCT84-INTEGRATION-AND-PHYSICAL-RESERVATION-MAP-v1.md",
+      "passed": true
+    },
+    {
+      "check": "exact evidence pin: ROLE-AWARE-LARGE-INJECTED-ROOT-ACCEPTANCE-v3.json",
+      "passed": true
+    },
+    {
+      "check": "exact evidence pin: ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json",
+      "passed": true
+    },
+    {
+      "check": "exact evidence pin: ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v2.json",
+      "passed": true
+    },
+    {
+      "check": "exact evidence pin: ROLE-AWARE-LARGE-ACTUAL-ACCOUNTING-RESOURCE-REVIEW-v3.json",
+      "passed": true
+    },
+    {
+      "check": "exact evidence pin: ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json",
+      "passed": true
+    },
+    {
+      "check": "root accepted only generated source/pure",
+      "passed": true
+    },
+    {
+      "check": "all root authority/fit flags false",
+      "passed": true
+    },
+    {
+      "check": "exact storage categories",
+      "passed": true
+    },
+    {
+      "check": "timing categories distinct",
+      "passed": true
+    },
+    {
+      "check": "actual proof narrow PASS and immutable/source-audit clean",
+      "passed": true
+    },
+    {
+      "check": "proof exact raw/dispatch/read/close/capture/hash counts",
+      "passed": true
+    },
+    {
+      "check": "independent actual peer finite clear",
+      "passed": true
+    },
+    {
+      "check": "resource accounting clear / physical fit unknown",
+      "passed": true
+    },
+    {
+      "check": "reference separately complete, not producer calls",
+      "passed": true
+    },
+    {
+      "check": "one exact large reassessment checkbox pending",
+      "passed": true
+    },
+    {
+      "check": "broad R09 / humans remain pending",
+      "passed": true
+    },
+    {
+      "check": "full producer qualification remains pending",
+      "passed": false
+    },
+    {
+      "check": "README.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Recovery and Evaluation Plan 2026-10-26.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "planning/Recovery Status and Next Gates 2026-10-26.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessments.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "memory/MEMORY.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "memory/project-goals.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md: unchanged by QA",
+      "passed": true
+    },
+    {
+      "check": "memory/research-log-2026-10-29-large-injected-producer.md: unchanged by QA",
+      "passed": true
+    }
+  ],
+  "document_count": 10,
+  "documents": {
+    "README.md": {
+      "bytes": 38501,
+      "sha256": "4fb02b7605cfb617ea5548cf805bc023e4109faa93a76c76b0f0313be21ed000"
+    },
+    "TODO.md": {
+      "bytes": 50506,
+      "sha256": "5a4a5178e697c3ab3f4279de313f5cc8ff09832bf7dcdd4d091233e026ee70f6"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 25781,
+      "sha256": "c4b810af0581161bf62ee38962cf70f70500ee200414fe01fe564cf0499106e7"
+    },
+    "memory/project-goals.md": {
+      "bytes": 113877,
+      "sha256": "a0674bee6223b405a83eb899d0b1a1d9aa91dd926ca2e282ce5d94a61a864e02"
+    },
+    "memory/research-log-2026-10-29-large-injected-producer.md": {
+      "bytes": 4537,
+      "sha256": "cbb7feb0d233b7d577db88b0b893dfeff4bdd934013c7a6c4f2e3c45c8e62ebd"
+    },
+    "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md": {
+      "bytes": 16747,
+      "sha256": "df98f8731e67e2f8936496e42bf6faf3c6bf3f4d7e6d7acf5f436ab38b7c0ea5"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 17799,
+      "sha256": "cf8f43c1f741409c078a135305abd9ab80170784d013bb22ea844a43243c5156"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 44255,
+      "sha256": "6991afcdb30a81220986d418564a87835aa8f75e044f61c2c7dd968388f41d6f"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 11381,
+      "sha256": "7f11967a799947c1a00b4cce75902030a17ea6c6f23bc709c3139b1dc4090cbe"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 34936,
+      "sha256": "20686a3a2327d426062dd30774df7b5693b8d565d804cf78a71a6b52ee1adb4d"
+    }
+  },
+  "evidence_pins": {
+    "ROLE-AWARE-LARGE-ACTUAL-ACCOUNTING-RESOURCE-REVIEW-v3.json": "674cdf3471c133153882752a948b8515ce8518efee0472bb2834607cad1edd24",
+    "ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v2.json": "fa6b4375559d310587cd7ea53a0679bd1434182a78c8984e1723337ecbb0f2a5",
+    "ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json": "7cefbe0e5dc71f950a3537be9f30790d0c7501ca7c5c3446c3c331567a98cedf",
+    "ROLE-AWARE-LARGE-INJECTED-ROOT-ACCEPTANCE-v3.json": "93eeaef97a34bc07d99e00dc4c0cb84b24cee4fd8a19cde7342301579e7872e0",
+    "ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json": "1a3e47ec28b1f96c4ac0d5c9c9eb7c2f13288cf5a6df4e3c4f6853d07a56aa03"
+  },
+  "failures": [
+    "R09 large narrow acceptance / unfinished remainder",
+    "full producer qualification remains pending"
+  ],
+  "local_link_count": 217,
+  "local_links": [
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/INTERPRETATION_GENERATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TYPED-ABI-BUILD-V5-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V3-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-BUILD-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/SELF-MODULE-CENSUS-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-29 - Module Census.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-ABI-RESULT-VERIFICATION-v1.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-29 - Typed ABI.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-28 - Detached Launch.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-native-recognition-20261028/PACK-V2-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-29 - Injected Producer.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessments.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Project Recovery and Evaluation Plan 2026-10-26.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step8-20261026/source-feasibility.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Recovery Status and Next Gates 2026-10-26.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/expert-review-20261026/Expert-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/expert-review-genetics-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/QUESTION_PILOT.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/QUESTION_LOCAL.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/question-native-transport-20261025/acceptance.json"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/QUESTION_RUNTIME.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/QUESTION_INTERPRETATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/BOUNDED_INTERPRETATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Interpretation Qualification Closeout and Next Design 2026-10-25.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/T6_DOSSIER_BINDING.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/T6_CLAIM_AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Source%20Readiness%20Closeout%20and%20T6%20Quality%20Next%20Stage%202026-10-24.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Prospective%20Frame%20Preparation%202026-10-24.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Harder%20T6%20Source%20Prioritization%202026-10-23.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Remaining%20Scientific%20Gates%20and%20Prospective%20Design%202026-10-23.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/B0%20Registry%20Content%20Feasibility%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Primary%20Report%20Lookup%20and%20Source%20Readiness%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Public%20Chronology%20and%20Primary%20Report%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Existing-trial%20Document%20History%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Existing-trial%20Protocol%20Audit%202026-10-22.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Publisher%20Discovery%20Amendment%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Exact-trial%20Retrieval%20Calibration%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Endpoint-specific%20Follow-up%20Feasibility%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Endpoint-specific%20Origin%20Sample%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/V02_MIGRATION.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "docs/FRAMEWORK.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/run-registry.json"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Task%206%20Development%20Comparisons%202026-10-18.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Clinical%20Label%20Readiness%202026-10-21.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/review-assets/registry-sizing-20261017/README.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "TODO.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Scientific%20Prerequisites%20Execution%202026-10-18.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Ordered%20Execution%20Progress%202026-10-17.md"
+    },
+    {
+      "document": "README.md",
+      "exists": true,
+      "target": "planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md"
+    },
+    {
+      "document": "TODO.md",
+      "exists": true,
+      "target": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "TODO.md",
+      "exists": true,
+      "target": "docs/history/TODO-before-recovery-20261026.md"
+    },
+    {
+      "document": "TODO.md",
+      "exists": true,
+      "target": "planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Generation.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Detached Launch.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Module Identity.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Module Census.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Typed ABI.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessments.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-retrieval-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "../TODO.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/Opus_20261026T050236Z_review.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/Independent%20Project%20Review%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step7-20261026/gate-correction.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/bounded-source-qualification.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Recovery%20Status%20and%20Next%20Gates%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/Expert%20Review%20Coordinator%20Guide%202026-10-26.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true,
+      "target": "Project%20Progress%20Reassessments.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/Independent%20Project%20Review%202026-10-26.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Launcher.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Console Identity.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Detached Launch.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Module Census.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Typed ABI.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Build.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step7-20261026/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/exposure-v4-report.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/source-feasibility.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/date-and-review-addendum.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/bounded-source-qualification.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/metadata-followup-v1.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/expert-review-20261026/Expert-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/expert-review-genetics-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-comparison-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-token-aware-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/SOURCE_AND_TOKEN_PREPARATION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-retrieval-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-four-arm-20261026/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "../docs/INTERPRETATION_INTERFACE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-integration-20261027/CONTRACT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-duration-20261028/CONTRACT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project%20Progress%20Reassessment%202026-10-28%20-%20R09%20Duration.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "Project%20Progress%20Reassessments.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Integration.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Duration.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Converter.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Generation.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Build.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Launcher.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Console Identity.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - Detached Launch.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - ABI Export Failure.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-28 - ABI Module Policy.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Module Identity.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Module Census.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Typed ABI.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Recognition Build.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Recognition Disposition.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Controls.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Coverage Analyzer.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Verifier Byte Checks.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Resource Byte Decoder.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Captured Archive Checker.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Portable File Ports.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Indexed Accounting.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Admission Envelope.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Storage Design.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Format Schema.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Injected Producer.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-PARTIAL-UTF8-COVERAGE-REVIEW-v1.md"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-COVERAGE-RECONSTRUCTION-v1.md"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-native-recognition-20261028/RECOGNITION-NEGATIVE-ARCHIVE-METADATA-AUDIT-v1.json"
+    },
+    {
+      "document": "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Large%20Injected%20Producer.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Injected%20Producer.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Literal%20Freeze.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Producer%20Format%20Schema.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Verifier%20Orchestration.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20UTF8%20Oracle.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Disposition.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/R09%20Unicode%20Coverage%20and%20Verifier%20Recovery%20Plan%202026-10-29.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Recognition%20Build.md"
+    },
+    {
+      "document": "memory/project-goals.md",
+      "exists": true,
+      "target": "D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-ROOT-ACCEPTANCE-v3.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "Project Progress Reassessment 2026-10-29 - Injected Producer.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-PROOF-v3.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-REFERENCE-PROOF-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/candidate-ledger.bin"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/terminal-ledger.bin"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-INJECTED-INDEPENDENT-ACTUAL-PEER-v2.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/large-injected-evidence-v3/independent-canonical-raw-facts.jsonl"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-PRODUCER-SOURCE-PAUSE-v4.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-ACTUAL-ACCOUNTING-RESOURCE-REVIEW-v3.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-LARGE-HARNESS-RAW-SIDECAR-CHECK-v3.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-production-preflight-20261029/NEXT-REAL-ROSTER-ENTRY-METADATA-PREPARATION-v1.json"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "exists": true,
+      "target": "review-assets/recovery-step9-role-aware-producer-20261029/DISTINCT84-INTEGRATION-AND-PHYSICAL-RESERVATION-MAP-v1.md"
+    }
+  ],
+  "mutation_scope": "Only the pending large reassessment checkbox after successful QA; no other document/TODO/source/test/pause changes.",
+  "ordered_next_gates": 5,
+  "original_payload_or_native_operations": 0,
+  "producer_replay": 0,
+  "reassessment_todo_completed": false,
+  "recorded_at_utc": "2026-10-29T23:43:23.041117+00:00",
+  "schema_version": 1,
+  "status": "FAIL",
+  "status_rows": [
+    {
+      "item": "R01",
+      "text": "Accepted scope, governance and exposure boundaries."
+    },
+    {
+      "item": "R02",
+      "text": "Accepted tested checkpoint and restoration inventory."
+    },
+    {
+      "item": "R03",
+      "text": "Accepted scoped archive compatibility/relocation; complete raw/model/host restoration remains separate."
+    },
+    {
+      "item": "R04",
+      "text": "Accepted reproduced core correctness fixes."
+    },
+    {
+      "item": "R05",
+      "text": "Accepted bounded diagnostic preparation; stronger-model sufficiency remains unresolved."
+    },
+    {
+      "item": "R06",
+      "text": "Accepted reusable infrastructure slice."
+    },
+    {
+      "item": "R07",
+      "text": "Technical diagnostic closed negative; independent human assessment remains pending."
+    },
+    {
+      "item": "R08",
+      "text": "Partial source/exposure preparation; no scientifically qualified fresh case."
+    },
+    {
+      "item": "R09",
+      "text": "Small injected producer and selected 216-input generated control accepted under root 93eeaef9 with actual-byte/accounting peers. Maximum-capacity, complete real new-84 roster, true entry/FFI, physical outputs, native/masking and integrated-resource qualification remain unfinished."
+    },
+    {
+      "item": "R10",
+      "text": "Independent human development pilot pending qualified sources, mechanics and reviewers."
+    },
+    {
+      "item": "R11",
+      "text": "H5 estimand, power, amended protocol/preregistration and analysis freeze pending."
+    },
+    {
+      "item": "R12",
+      "text": "Locked H5 execution/report pending qualified mechanics, protocol and final panel."
+    },
+    {
+      "item": "R13",
+      "text": "Alternative clinical outcome source conditional and unqualified."
+    },
+    {
+      "item": "R14",
+      "text": "Regional genetics/compatible LD, causal features, predictors and scoring/calibration conditional and unqualified."
+    },
+    {
+      "item": "R15",
+      "text": "Original clinical comparisons and ablations conditional and pending."
+    },
+    {
+      "item": "R16",
+      "text": "Individually gated T2\u2013T5/H6 extensions and reproducible release pending."
+    },
+    {
+      "item": "HR1",
+      "text": "Human recruitment, domain matching, conflicts and exposure records pending."
+    },
+    {
+      "item": "HR2",
+      "text": "Two independent orientation submissions and measured workload pending."
+    },
+    {
+      "item": "HR3",
+      "text": "Fresh source-only references, reviewer coverage and masked ratings pending."
+    },
+    {
+      "item": "HR4",
+      "text": "Sized final panel and independent adjudication pending."
+    }
+  ],
+  "subject_imports": 0,
+  "subject_runs": 0,
+  "todo_after_sha256": "5a4a5178e697c3ab3f4279de313f5cc8ff09832bf7dcdd4d091233e026ee70f6",
+  "todo_before_sha256": "5a4a5178e697c3ab3f4279de313f5cc8ff09832bf7dcdd4d091233e026ee70f6"
+}

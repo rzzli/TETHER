@@ -1,0 +1,50 @@
+{
+  "added_terminal_regressions": 13,
+  "author_methods": 10,
+  "execution_authorized": false,
+  "former_false_positives_now_rejected": 5,
+  "frozen_fixture_cases": 30,
+  "inputs": {
+    "CAPTURED-JOURNAL-FIXTURE-FREEZE-v1.json": {
+      "bytes": 1711,
+      "sha256": "cd4f6b3f381a837d790dfcad84e92231111456e3eb6648a0ebd7617c84980140"
+    },
+    "CAPTURED-JOURNAL-INDEPENDENT-AFTER-PROOF-v2.json": {
+      "bytes": 2965,
+      "sha256": "3be918806ea84853c1802d41cd375c7d7882f68d1d91fa005007461efe96c49c"
+    },
+    "CAPTURED-JOURNAL-INDEPENDENT-PEER-v1.json": {
+      "bytes": 13824,
+      "sha256": "d7b6c1d13e96ed6236b0a5acb9e3a37ef35ee9d36e4d87974f0ca26a53d5ae97"
+    },
+    "CAPTURED-JOURNAL-INDEPENDENT-PEER-v2.json": {
+      "bytes": 5871,
+      "sha256": "36d149366aa6687654bbf41daca961f685339afb28c786eb4d888ba0292cb0b3"
+    },
+    "CAPTURED-JOURNAL-SOURCE-PURE-PROOF-v2.json": {
+      "bytes": 9699,
+      "sha256": "3be62ccf191f57714c61760d44bb43928b23a692f528f8550bd348755c16a7a6"
+    },
+    "captured_journal_v2.py": {
+      "bytes": 26149,
+      "sha256": "d6c2f8ef61ffda069f7cbb41c5c06417d2e0fd530ce490e9488442131e385d91"
+    },
+    "check_captured_journal_v2.py": {
+      "bytes": 17930,
+      "sha256": "3bd8261596694995c40fc67d07f7cdeefd805b33ed5ea6522b7b723700f60609"
+    }
+  },
+  "old_negative_and_timeout_unchanged": true,
+  "peer_methods": 7,
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T08:25:38.380857+00:00",
+  "remaining": [
+    "New Unicode source/event policy",
+    "Actual raw-resource/archive/receipt/seal/profile checker binding",
+    "Real first-clock/platform/output/production engine and exact authority/budgets"
+  ],
+  "resource_qualified": false,
+  "schema_version": 1,
+  "scope": "Captured canonical chain integrity plus exact known-launched v7 event/reference completeness; source-negative terminals may be complete without profile acceptance. No actual old run is replayed or qualified.",
+  "status": "ACCEPTED_SOURCE_PURE_CAPTURED_JOURNAL_V2_ONLY"
+}

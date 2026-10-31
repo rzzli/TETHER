@@ -1,0 +1,92 @@
+{
+  "CPU_GGUF_model_reads": 0,
+  "accepted_parent": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "anchors": {
+    "BRIDGE-DIAGNOSTIC-SOURCE-PEER-REVIEW-v5.json": {
+      "bytes": 6092,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-DIAGNOSTIC-SOURCE-PEER-REVIEW-v5.json",
+      "sha256": "4723ad98d3a138f0e6c423afd165a6eaa088996dd0fde845acf39e9cf08efd66"
+    },
+    "BRIDGE-SYMBOL-OWNERS-PURE-PROOF-v5.json": {
+      "bytes": 7786,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BRIDGE-SYMBOL-OWNERS-PURE-PROOF-v5.json",
+      "sha256": "122f7f8545d296127a7aa8c337d8ddec63f27f8c9166ae3f08c53f5a130e4897"
+    },
+    "MODULE-POLICY-DIAGNOSTIC-PURE-PROOF-v5.json": {
+      "bytes": 1997,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\MODULE-POLICY-DIAGNOSTIC-PURE-PROOF-v5.json",
+      "sha256": "96a8b68c5bf7671988432435a814da2fa134601c874cc749daf286966b2a64b4"
+    },
+    "TYPED-ABI-BUILD-PREPARATION-v5.json": {
+      "bytes": 1011,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PREPARATION-v5.json",
+      "sha256": "b890818f3ec22cff9814c3eca44d029d1c091b6deb8c49e46fa70ff0440e2ce4"
+    },
+    "TYPED-ABI-BUILD-PROTOCOL-v5.json": {
+      "bytes": 60066,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PROTOCOL-v5.json",
+      "sha256": "371b1791ba413173ecfab132ea6f9a22994a0d601981367553a3a94cf8d85222"
+    },
+    "TYPED-ABI-BUILD-PURE-CHECKS-v5.json": {
+      "bytes": 670,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-PURE-CHECKS-v5.json",
+      "sha256": "94cb65dc5a0de3fef42dd9d17f4ce1fdd47651155f9b974a6027789700842e98"
+    },
+    "TYPED-ABI-BUILD-V5-INDEPENDENT-REVIEW.json": {
+      "bytes": 9683,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TYPED-ABI-BUILD-V5-INDEPENDENT-REVIEW.json",
+      "sha256": "6b62fa894e57bf2907baf8b826bae612ad48fdd1ecde835e5091ef848e8eddb6"
+    },
+    "build_typed_abi_bridge_v4.py": {
+      "bytes": 29926,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_typed_abi_bridge_v4.py",
+      "sha256": "988b48fbfd8e0e07011669906ce8670727257a7fda7847f62f6ed4c282c400f9"
+    },
+    "build_typed_abi_bridge_v5.py": {
+      "bytes": 33564,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_typed_abi_bridge_v5.py",
+      "sha256": "e865831fab5513b48a8dabfa018083d61a025df5c4394badf794c90b9c4e135b"
+    },
+    "typed_public_c_recognizer_v5.cpp": {
+      "bytes": 53407,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v5.cpp",
+      "sha256": "c2b802507dd135c33df512a386250d0781bbee0673ed6276bb5512f42adead8c"
+    }
+  },
+  "automatic_retry": false,
+  "cleanup_scope": "Context-manager outcomes, not individual handle attestation",
+  "compiler_scope": "Launched compiler/linker handles only; descendants not independently attested",
+  "diagnostic_scope": "Bounded child-reported rejected-module name/path/context only; no image-file identity, complete inventory, permission or actual formatter qualification",
+  "excluded_old_inputs": 25,
+  "execute_compiled_result": false,
+  "finalizer_AST_equal_except_terminal_event": true,
+  "fresh_input_hashes_checked": 204,
+  "isolated": 1,
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserve_seconds": 5,
+    "link_seconds": 10,
+    "maximum_children": 2,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144,
+    "total_seconds": 60
+  },
+  "maximum_compiler_linker_processes": 2,
+  "module_policy_and_allowlist_unchanged": true,
+  "network_requests": 0,
+  "no_bytecode": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-ABI-build-v5-20261028T235608Z",
+  "output_absent": true,
+  "provider_spend_usd": 0,
+  "recorded_at_utc": "2026-10-29T00:00:17.147877+00:00",
+  "required_independent_output_verification": true,
+  "schema_version": 1,
+  "status": "root_authorizes_one_exact_diagnostic_bridge_compile_link_only",
+  "target_DLL_loads": 0,
+  "toolchain_scope": "Pinned prior direct SDK/STL/tool leaves and libraries; not a complete transitive toolchain closure"
+}

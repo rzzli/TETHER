@@ -1,0 +1,39 @@
+{
+  "activity": {
+    "SDK_constructors": 0,
+    "children": 0,
+    "compiler_calls": 0,
+    "new_census_or_tracing": 0,
+    "reported_image_operations": 0
+  },
+  "checker": {
+    "bytes": 6048,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_trusted_system32_module_policy_v1.py",
+    "sha256": "a355a3b3e826a6b05ab098cf48ca5d7c57c465568c03a72858e1e1f47ff848ce"
+  },
+  "contract": {
+    "bytes": 4912,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-POLICY-v1.json",
+    "sha256": "fdd15d4f551efbd3c1ecb515b2724b4ee68cf08d3ea1ed2f5c2a576774da2ca4"
+  },
+  "denied_real_operations": [],
+  "errors": [],
+  "failures": [],
+  "matcher": {
+    "bytes": 6362,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\trusted_system32_module_policy_v1.py",
+    "sha256": "77e39b3bb82fb83049aba9956da0251b4a8d914f167dc6d6512d554ad7bfb3a8"
+  },
+  "module_policy_id": "trusted-System32-platform-v1",
+  "module_policy_sha256": "807995f6061d7a2c85144c58668fc2e4ecb79a4fb51d462e43d0a8dfc586d589",
+  "schema_version": 1,
+  "scope": "Pure rule/category checks and intended source semantics only; not native guard execution, image authenticity or ABI qualification",
+  "shared_vectors": 73,
+  "status": "passed",
+  "tests": 6,
+  "vectors": {
+    "bytes": 119983,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-SYSTEM32-MODULE-VECTORS-v1.json",
+    "sha256": "b7e762b56a67370eeb82f8d9e1df1e3300fc9a9b9f729e8813a563c58c23634a"
+  }
+}

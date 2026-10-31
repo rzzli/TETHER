@@ -1,0 +1,25 @@
+{
+  "status": "ATTEMPT_CONSUMED_BEFORE_FIRST_SUBJECT_IMPORT",
+  "binding": {
+    "schema_version": 2,
+    "status": "ROOT_BOUND_NATIVE25_COMPONENT_ONE_SHOT",
+    "run_authorized": true,
+    "deadline_seconds": 60,
+    "freeze": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-FREEZE-v2.json",
+      "bytes": 6162,
+      "sha256": "fd479a87b768be50d39dda27f0ad85c931753f171aeef5b4e1e37f7dc435e1e8"
+    },
+    "execution_scope": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-EXECUTION-SCOPE-v2.json",
+      "bytes": 1965,
+      "sha256": "4d2647149af34d18203cc16147e718b86b4f2e78cbfb6604c654ee3422995fe7"
+    },
+    "independent_peer": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native25-component-20261030\\NATIVE25-COMPONENT-INDEPENDENT-STATIC-REVIEW-v2.json",
+      "bytes": 10675,
+      "sha256": "97d47d457fe737a8c88ec2c0d30446d28a127f9ddf7092ce77dde64fa7463f4e"
+    }
+  },
+  "deadline_seconds": 60
+}

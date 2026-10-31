@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z",
+  "role": "build_only_no_native_execution_authorized",
+  "installs": 0,
+  "downloads": 0,
+  "resulting_bridge_executions": 0,
+  "native_libraries_loaded": 0,
+  "model_calls": 0,
+  "servers": 0,
+  "vocabulary_loads": 0,
+  "gguf_reads": 0,
+  "network_calls": 0,
+  "provider_spend_usd": 0,
+  "compilation_is_not_abi_qualification": true,
+  "native_grammar_conformance": "unverified",
+  "error_class": "AssertionError",
+  "message": "('compile-link-only', 2)",
+  "elapsed_seconds": 1.452999999979511,
+  "commands": [
+    {
+      "label": "create-narrow-importlib",
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\lib.exe",
+        "/nologo",
+        "/machine:x64",
+        "/def:D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\llama-common-typed.def",
+        "/out:D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\llama-common-typed.lib"
+      ],
+      "cwd": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0470000000204891,
+      "stdout": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\create-narrow-importlib.stdout",
+        "sha256": "fae411447bdac570f0f915fde35165ef47a2d9caf948bebf096d9a6c007cab84",
+        "bytes": 262
+      },
+      "stderr": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\create-narrow-importlib.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "label": "compile-link-only",
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/nologo",
+        "/Bv",
+        "/std:c++17",
+        "/MD",
+        "/O2",
+        "/DNDEBUG",
+        "/D_ITERATOR_DEBUG_LEVEL=0",
+        "/EHsc",
+        "/W4",
+        "/WX",
+        "/utf-8",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\headers",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\typed_converter_bridge.cpp",
+        "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\typed_converter_bridge.obj",
+        "/FeD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\typed_converter_bridge.exe",
+        "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\bridge.pdb",
+        "/link",
+        "/MACHINE:X64",
+        "/INCREMENTAL:NO",
+        "/DELAYLOAD:llama-common.dll",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\llama-common-typed.lib",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\delayimp.lib",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib"
+      ],
+      "cwd": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z",
+      "exit_code": 2,
+      "elapsed_seconds": 1.2969999999040738,
+      "stdout": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\compile-link-only.stdout",
+        "sha256": "5937b63e13d847282f0920e9f0a216ed3a562572867b0081dbb45d6f038a9804",
+        "bytes": 1527
+      },
+      "stderr": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T032930Z\\compile-link-only.stderr",
+        "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9",
+        "bytes": 1156
+      }
+    }
+  ],
+  "guards": []
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-28T05:02:54.240187+00:00",
+  "decision": "approve_pure_versioned_implementation_only",
+  "contract_sha256": "be4e2362c2a2d5a035b3567e80464b0d139cd479d8f5412ff2e916a13cf7dc4a",
+  "working_version": "0.3.11",
+  "accepted_version_unchanged": "0.3.10",
+  "design_basis": "Root and independent AI reviews agree on disjoint bounded nonblank/length construction and linear distinct-reference partition tree; preserve decoded scalar domain and complete old semantic validation",
+  "preimplementation_regression": "New module import fails as expected; retain subsequent focused tests and any failures",
+  "preserve": [
+    "old v2 modules and payload fingerprints",
+    "closed converter negative and original109cases",
+    "old wheels and matching verifiers",
+    "unchanged data/model/spend/budget boundaries"
+  ],
+  "native_calls_authorized": 0,
+  "vocabulary_loads_authorized": 0,
+  "model_calls_authorized": 0,
+  "dispatcher_activation": false,
+  "reviewer_report_precondition": "Builder author retains formal proof/sizing review before production module; no design changes without root review"
+}

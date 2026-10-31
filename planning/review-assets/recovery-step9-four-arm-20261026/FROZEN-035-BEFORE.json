@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "version": "0.3.5",
+  "isolated": true,
+  "bundle": "D:\\Projects\\drug_target_agents\\data\\reference\\recovery-r09-retrieval-restored-20261026",
+  "receipt_sha256": "11dcbbed608beea93abb4303ff2d77b988994205b133b2d07aaa465143c01b50",
+  "result": {
+    "actual_model_calls": 0,
+    "automatic_retries": false,
+    "elapsed_seconds": 8.297000000020489,
+    "fixture_declared_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 128,
+      "output_tokens": 128
+    },
+    "four_arm_manifests": "preparation_only_no_four_arm_outputs",
+    "input_reserved": 15656,
+    "native_processes": 0,
+    "observed_model_usage": {
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "output_reserved": 2048,
+    "recorded_adapter_cells": 2,
+    "retrieval_preparations": 2,
+    "role": "evaluation_only",
+    "run_id": "c68ad8b9-eaf0-4baa-a96e-3b371bcee31e",
+    "schema_version": 1,
+    "scientific_validation": "not_attempted",
+    "status": "recorded_contract_completed_not_scientific_validation",
+    "tokenizer_processes": 0,
+    "track": "bounded_collected_corpus_recorded_integration",
+    "receipt_sha256": "11dcbbed608beea93abb4303ff2d77b988994205b133b2d07aaa465143c01b50"
+  },
+  "attempts": {
+    "reads": [],
+    "imports": [],
+    "dispatch": []
+  },
+  "elapsed_seconds": 4.936999999976251
+}

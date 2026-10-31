@@ -1,0 +1,51 @@
+{
+  "boundaries": "One real cooperative deadline; fresh synthetic worlds and the actual pinned helper prefix. No callback-free hard-timeout guarantee. Kernel is explicit pre-entry trusted code.",
+  "deadline_seconds": 60,
+  "execution": "Run only the exact five named methods once through the frozen runner. Retain all first outcomes, original failures, raw facts and cleanup evidence. An expected fifth FAIL is a failed source diagnostic, never source acceptance.",
+  "freeze": {
+    "bytes": 3213,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-FREEZE-v2.json",
+    "sha256": "09607fb5a47cd6813933fb5a315564a8172d135f4a3176c5d64772c0121040e3"
+  },
+  "independent_harness_peer": {
+    "bytes": 5293,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-HARNESS-INDEPENDENT-STATIC-REVIEW-v2.json",
+    "sha256": "f71f8e1e5409af7f75ba8882f063f52f61120a429ff973485a87fda48da47226"
+  },
+  "methods": [
+    "test01_valid_entry",
+    "test02_normal_captured_helpers_finish",
+    "test03_staged_scalar_has_no_cleanup_authority",
+    "test04_committed_scalar_survives_cache_boundary_failure",
+    "test05_stopped_close_normal_return_does_not_heal_cache"
+  ],
+  "not_authorized": [
+    "frozen source edits",
+    "native/compiler/SDK/FFI/model execution",
+    "original or protected data targets",
+    "full32/53 or native25 run",
+    "downloads or paid calls",
+    "application/default changes",
+    "replay of any retained actual experiment"
+  ],
+  "outline": {
+    "bytes": 3491,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-BINDING-OUTLINE-v2.json",
+    "sha256": "c14ec0c0146a4395a0c3f8e706a473b315c3d0969ffbe7237bc0775e157752b1"
+  },
+  "preparation": {
+    "bytes": 7266,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE2-DIAGNOSTIC-PREPARATION-v2.json",
+    "sha256": "fd26ceb15c5a226e7a888e974ccab6f143b942c05d0a920a5bc8764657679251"
+  },
+  "provider_spend_usd": 0,
+  "qualification": false,
+  "schema_version": 1,
+  "source_disposition": "HOLD: accepted independent stopped-CloseHandle F2 finding",
+  "source_pause": {
+    "bytes": 5308,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source2-20261030\\ENTRY-SOURCE-PAUSE-v2.json",
+    "sha256": "2fc856163278a6521325b4865f8be77c148f72e09f35050fd6b54d60c635a54c"
+  },
+  "status": "ROOT_AUTHORIZED_ONE_SOURCE2_FIVE_CHECK_DIAGNOSTIC"
+}

@@ -1,0 +1,53 @@
+{
+  "actual_target_API_calls": 0,
+  "all_real_qualification_flags_false": true,
+  "author": {
+    "bytes": 5964,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\author_indexed_accounting_precode_v2.py",
+    "sha256": "743149270cf9eb8e180594741f306e1d9eb1480065e58f39a01272d109e39e6a"
+  },
+  "delta": {
+    "bytes": 2109,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-CONTROL-DELTA-v2.json",
+    "sha256": "f98ed86bb84484c3afb0a6d59ec5b46c95f2b8de7279edcd39aa46984c0e4bcc"
+  },
+  "implementation_authorized": false,
+  "original_payload_operations": 0,
+  "preserved_v1": {
+    "INDEXED-ACCOUNTING-ACTUAL-V2-BEFORE-PROOF-v1.json": {
+      "bytes": 24882,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-ACTUAL-V2-BEFORE-PROOF-v1.json",
+      "sha256": "88dd26aa673997a99c53ce526b69e2d0286d6cc6f72999b180355d222213c1dc"
+    },
+    "INDEXED-ACCOUNTING-PRECODE-CONTROL-FREEZE-v1.json": {
+      "bytes": 2206,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-CONTROL-FREEZE-v1.json",
+      "sha256": "888c7bec39a5b59861409c71bbd2cdfbb7b500a91755e82fc196fd886c478fed"
+    },
+    "INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v1.json": {
+      "bytes": 14180,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v1.json",
+      "sha256": "a693c8f1529732e40792a1aefb00f3dae2997eb0998663665db6a1b684680115"
+    },
+    "indexed_accounting_controls_v1.py": {
+      "bytes": 12787,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v1.py",
+      "sha256": "bd7ea044253609c74396190658ddaadedd4d1bcc997e81391db7ded079e0d86e"
+    }
+  },
+  "prospective_source_present": false,
+  "protocol": {
+    "bytes": 16359,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\INDEXED-ACCOUNTING-PRECODE-TEST-CONTRACT-v2.json",
+    "sha256": "cccf8a1f4f6219ff51ade0279e82f587cfbe76c969e1be69125c0cc72ff2a3bd"
+  },
+  "recorded_at_utc": "2026-10-29T17:46:39.534096+00:00",
+  "schema_version": 2,
+  "status": "FROZEN_TESTS_BEFORE_V3_IMPLEMENTATION_AND_BEFORE_V2_CLOSURE_REPLAY",
+  "subject_runs_before_this_freeze": 0,
+  "test_source": {
+    "bytes": 14210,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\indexed_accounting_controls_v2.py",
+    "sha256": "d76e1a2d7c70a9a42fa70c5f4989f08f2e291e79f12fa53b454250998c74bf5b"
+  }
+}

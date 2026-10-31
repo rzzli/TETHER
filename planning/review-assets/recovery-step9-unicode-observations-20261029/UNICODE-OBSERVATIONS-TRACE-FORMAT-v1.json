@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "PROSPECTIVE_LITERAL_TRACE_VALUE_CLARIFICATIONS_BEFORE_FREEZE",
+  "design_sha256": "edacdc2bddbceab5735699ee9d973f89bad46b64713b193fe43ab80ed989101f",
+  "selected_prefix_fields": {
+    "pending_interval": "Exact two strict-int array [start,end] for the FULL source scalar interval; start<byte_cut<end.",
+    "piece_interval": "Exact two strict-int array [start,end] for the selected original piece; end==byte_cut; an empty piece is never a pending boundary.",
+    "complete_widths": "Sorted distinct strict integers1..4 for complete scalars wholly inside the SAME selected piece before the pending scalar.",
+    "witnesses": "Width-sorted triples [width,start,end], earliest wholly-contained scalar interval per distinct complete width. No scalar begun in a preceding piece is a mixed witness."
+  },
+  "literal_histories": "Four full base byte histories: complete positive, all84 known mixed-unavailable, all84 one-known-membership-conflict, all84 one-known-returned tokenizer-QCunknown. Base traces are exact LF JSONL bytes stored as hex in a fixture container, never native/runtime output files.",
+  "scenario_representation": "Each scenario references one pinned base trace, a contiguous row prefix and zero or more literal complete replacement/append rows or an exact unterminated tail. It records final materialized length/SHA and optional exact marker bytes. No future validator result authors an expected classification.",
+  "callbacks": "Separate API vectors require original supplied exception identity at first/middle/final observed callback ordinals of a no-op baseline. Include UnicodeError-family, ValueError,JSONDecodeError,RecursionError,TimeoutError,KI,SystemExit and customBaseException; no successful result on stop. This is a future pure-test instruction, not a callback implementation or runtime experiment.",
+  "ordinary_piece_table": "The separately frozen117-entry fixture-only global table fixes one byte string per ID across all84/prefixes. EOG1022/1023 disjoint. It is NOT a real vocabulary or an extra production-validator authority/input.",
+  "diagnostic_kind_convention": "Authored synthetic bookkeeping follows retained-text meanings: unobserved0,void1,integer2,pointer3,trivially-copyable aggregate4; finiteadmitted logit2/rejected negative-infinity1. These are invented typed results, not an actual ABI observation.",
+  "source_convention_consultation": "Native wire author confirmed the two-int half-open intervals and sorted witness triples. Root was notified before fixture generation/freeze. No frozen base/framing field names changed.",
+  "validator_implemented": false,
+  "native_or_model_observations": 0,
+  "pack_file_created": false
+}

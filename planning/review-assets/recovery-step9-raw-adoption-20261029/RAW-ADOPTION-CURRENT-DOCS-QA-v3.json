@@ -1,0 +1,84 @@
+{
+  "application_tests_rerun": false,
+  "assessment_local_links": [
+    "planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-SCOPED-ACCEPTANCE-v3.json",
+    "planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-CORE-SOURCE-INDEPENDENT-PEER-v3.json",
+    "planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-INDEPENDENT-THREE-REGRESSIONS-BEFORE-v3.json",
+    "planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v3.json",
+    "planning\\review-assets\\recovery-step9-file-ports-20261029\\PORTABLE-FILE-PORTS-SCOPED-ACCEPTANCE-v2.json",
+    "planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\ENGINE-CONTINUATION-INTEGRATION-GAP-v1.md",
+    "planning\\review-assets\\recovery-step9-shared-owner-20261029\\SHARED-OWNER-CONTINUATION-INTERFACE-REVIEW-v1.json"
+  ],
+  "documents": {
+    "README.md": {
+      "bytes": 37567,
+      "sha256": "752c84c6195667d557c8cead68ec6c11a39d9dae665c539406b1b19c093e58a5"
+    },
+    "TODO.md": {
+      "bytes": 42363,
+      "sha256": "13e15ec22bb013099b0a14aea1dea18d31b392c89a40500340f6262d16277855"
+    },
+    "memory/MEMORY.md": {
+      "bytes": 23874,
+      "sha256": "e70c3ee7fc8bf95de7018b1e2922ac71c2d2e913d85cefd201e9ac806eb0f9ea"
+    },
+    "memory/project-goals.md": {
+      "bytes": 110589,
+      "sha256": "0a8df76f73f6c054cccf4bb6f256df256051f68b8c181cfb28c58e2e8b73b97c"
+    },
+    "memory/research-log-2026-10-29-r09-unicode-controls.md": {
+      "bytes": 14232,
+      "sha256": "e33a4ce8fa7a931e79bb493de52d0c1eb69b05ca7bbd5573618d5ef23e5aa86c"
+    },
+    "planning/Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md": {
+      "bytes": 11652,
+      "sha256": "4157c2f8640bdd86e35d25e82832a39a7ee5bf70e8efab65c41a19e50c454d67"
+    },
+    "planning/Project Progress Reassessments.md": {
+      "bytes": 13086,
+      "sha256": "33f4f942809a55c76119c74e01723bac5a9bf2b0737f1489db6d90f8c852ad8e"
+    },
+    "planning/Project Recovery and Evaluation Plan 2026-10-26.md": {
+      "bytes": 43732,
+      "sha256": "ec76aae842f977192ed1614ef96ffcb8e368b37411be33943ef24d8b3ecc1961"
+    },
+    "planning/R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md": {
+      "bytes": 10741,
+      "sha256": "293bd6d561ef01a2a72b3bbd4a68bd53b322a3fb12e523f377e185da2e31b5f7"
+    },
+    "planning/Recovery Status and Next Gates 2026-10-26.md": {
+      "bytes": 34337,
+      "sha256": "027bbb9ef74c05366cd902538834dbc34060a25f605340b683e5f1f4e6872fb2"
+    }
+  },
+  "new_payload_or_native_activity": false,
+  "ordered_next_gates": 5,
+  "recorded_at_utc": "2026-10-29T14:49:11.216919+00:00",
+  "retained_application_source_pins": 327,
+  "retained_application_tests": 1774,
+  "schema_version": 1,
+  "scope": "Ten current UTF8 docs, twenty recovery/human statuses, five critical next gates, local links and exact portable source-only acceptance. This is no new whole-code/data/old-run qualification.",
+  "status": "passed",
+  "status_rows": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "HR1",
+    "HR2",
+    "HR3",
+    "HR4"
+  ]
+}

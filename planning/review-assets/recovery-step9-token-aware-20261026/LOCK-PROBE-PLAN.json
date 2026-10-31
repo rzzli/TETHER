@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "role": "planning_only",
+  "status": "prospective_before_execution",
+  "scope": "One Windows stable-read compatibility probe, no runtime implementation",
+  "asset_authority": "Existing recovery-step5-20261026 inventory; exact tokenizer, all DLLs, all three GGUF shards",
+  "file_handles": "CreateFileW GENERIC_READ, FILE_SHARE_READ, OPEN_EXISTING; held until child exit and post-hash",
+  "directory_handles": "Read handles to each asset ancestor from the approved model root, FILE_SHARE_READ|FILE_SHARE_WRITE without FILE_SHARE_DELETE; not a directory-write prohibition",
+  "mutation_checks": "Invented workspace fixture only: write/delete/rename must fail while locked and succeed after release; no mutation attempt on real assets",
+  "child": "One exact already-measured prompt, unchanged approved tokenizer argv and 30 second timeout; count must match retained measurement",
+  "maximum_generation_calls": 0,
+  "maximum_tokenizer_processes": 1,
+  "provider_spend_usd": 0,
+  "network": false,
+  "source_changes": false,
+  "runtime_changes": false,
+  "failure_policy": "Stop, retain partial result; no retry or weaker-lock fallback",
+  "limitations": [
+    "Tests Windows sharing compatibility, not a hostile-user security sandbox",
+    "Directory read handles prevent rename but not all creation of extra children",
+    "OS/system DLLs remain trusted external dependencies",
+    "File sharing cannot establish cryptographic CPU execution attestation"
+  ],
+  "primary_reference": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew"
+}

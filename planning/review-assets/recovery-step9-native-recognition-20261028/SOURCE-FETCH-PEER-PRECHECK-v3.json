@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "held_unexecuted_pending_meaningful_zero_retained_fixture",
+  "helper_sha256": "f923e3bd31b5bc970f9428baef75a89a9075dd0a8c509a059b1975880387bc0f",
+  "protocol_sha256": "8b07e457c183093c0deeff95a82959519f3a2a49239aa4595839e3d731f85158",
+  "pins_checked": 139,
+  "path_components_checked": 179,
+  "pin_mismatches": [],
+  "reparse_violations": [],
+  "external_pins": [
+    "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe"
+  ],
+  "unchanged_twelve_paths_and_limits": true,
+  "v3_output_unconsumed": true,
+  "source_review": "No additional material source-control defect found: canonical direct interpreter, controlled venv environment, strict PPID/PID sidecar, leased base hash, before-HTTP checks and prior failure preservation are consistent.",
+  "blocking_validation_finding": {
+    "id": "zero_retained_fixture_rejected_before_receipt",
+    "scope": "fixture evidence rather than unsafe fetch source logic",
+    "observed": "Zero-retained scenario lacks valid worker identity sidecars; retained journal proves FileNotFoundError on spawned-worker.json before the incomplete child receipt is inspected.",
+    "required": "Retain corrected no-network fixture evidence with valid identity metadata and otherwise qualifying attempt for zero-retained incomplete receipt; bind it in a separately reviewed prospective protocol without overwriting frozen evidence."
+  },
+  "fault_cases": [
+    {
+      "scenario": "interrupted_read_zero_retained",
+      "journal_sha256": "356bdb185fa01abf2b7c78d7cf287c659c86959d2fb0c8888b076e764504ccf0",
+      "events": 2,
+      "terminal_error_class": "FileNotFoundError",
+      "terminal_error": "[Errno 2] No such file or directory: 'D:\\\\Projects\\\\drug_target_agents\\\\data\\\\cache\\\\r09-native-source-accounting-fault-v3-1793204148667232600\\\\interrupted_read_zero_retained\\\\attempts\\\\00\\\\spawned-worker.json'",
+      "unknown_received": true,
+      "conservative_reservation_bytes": 1048576
+    },
+    {
+      "scenario": "completed_child_parent_interrupt",
+      "journal_sha256": "59eafe7bb16f3ff089830252622c6fbaac54bb8055f13e8b952d142a425760d9",
+      "events": 2,
+      "terminal_error_class": "RuntimeError",
+      "terminal_error": "Owned child/capture/deadline failed",
+      "unknown_received": true,
+      "conservative_reservation_bytes": 1048576
+    },
+    {
+      "scenario": "completed_child_wrong_worker_pid",
+      "journal_sha256": "ad950f85a599de9c3b5e8b8d6bf53885154430431d04098ffcde43cd1f2f0c01",
+      "events": 2,
+      "terminal_error_class": "RuntimeError",
+      "terminal_error": "Actual worker identity differs",
+      "unknown_received": true,
+      "conservative_reservation_bytes": 1048576
+    }
+  ],
+  "timing_limit": "Two-second handshake is a poll-wait budget within the full measured20-second child cap; no hard OS scheduling guarantee.",
+  "activity": {
+    "helper_imports_or_execution": 0,
+    "requests": 0,
+    "fetch_children": 0,
+    "native_calls": 0,
+    "gguf_reads": 0
+  }
+}

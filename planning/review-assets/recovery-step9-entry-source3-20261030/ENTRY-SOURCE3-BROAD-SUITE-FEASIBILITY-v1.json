@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "status": "READ_ONLY_NEXT_SUITE_FEASIBILITY_NOT_EXECUTION_AUTHORITY",
+  "baseline": {
+    "acceptance": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE3-FIVE-REGRESSION-ROOT-ACCEPTANCE-v1.json",
+      "bytes": 3568,
+      "sha256": "0d9c42a2f8c3575f4706ce43d189e56a680ed26eb9ef60737e9453d7b2bd4fb4"
+    },
+    "pause": {
+      "path": "planning/review-assets/recovery-step9-entry-source3-20261030/ENTRY-SOURCE-PAUSE-v3.json",
+      "bytes": 4114,
+      "sha256": "225e8baf3aea76240e934eb1f80ad85478ba404a1e38a0a26cba5d65bd11973a"
+    },
+    "qualification": "Exactly five Source3 regressions accepted. Entry32/53/native25 remain unexecuted as a broad suite; all real/native/physical/full-roster/new84/resource/science flags remain false."
+  },
+  "contract_inputs": {
+    "entry": {
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json",
+      "bytes": 28509,
+      "sha256": "9e65fec645260308ed8847bed74381e39c167b8188600b59113088ba5ad19863"
+    },
+    "entry32_53": {
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json",
+      "bytes": 13864,
+      "sha256": "cdfeaa338f387c18039818e7d414c9c13252ee916f872ff42e400da48012a95b"
+    },
+    "native25": {
+      "path": "planning/review-assets/recovery-step9-production-preflight-20261029/NATIVE-RAW-CARRIER-AND-BULK-LEASE-CONTRACT-v1.json",
+      "bytes": 43817,
+      "sha256": "16aae7f07b34f55eae3bc26962d7e02d4512c8a7b499c59284f309bec5e3189a"
+    }
+  },
+  "coverage_rows": [
+    {
+      "cases": "E01-E07, E09-E15, E17-E28",
+      "coverage": "GENUINE_SOURCE_EXECUTABLE_WITH_EXISTING_TRUSTED_FIXTURE_SEAMS",
+      "boundary": "Actual entry/Origin/Registry/RawCallStore, same-owner refs/contexts/closed compiler and captured helpers; synthetic original7 and callback facts only. New tests must freeze actual full helper prefix, not force209B/21calls."
+    },
+    {
+      "cases": "E08",
+      "coverage": "PARTIAL_SOURCE_GRAPH_AND_STATIC_MANIFEST_POLICY",
+      "boundary": "Source3 can reject a captured dependency cycle and its reserved executing-kernel dependency key. It has no final execution-manifest/current-decision/current-output path-policy API; do not label generic DAG rejection as those path-specific checks. Those remain staged manifest/admission metadata work."
+    },
+    {
+      "cases": "E16 foreign_attach",
+      "coverage": "GENUINE_SOURCE_EXECUTABLE",
+      "boundary": "Use two genuine entry states and actual captured attach callables. Same-value fields do not bypass exact callable/namespace identities."
+    },
+    {
+      "cases": "E16 Source4_constructor / Source4_start_injected",
+      "coverage": "STATIC_EXCLUSION_NO_OLD_OWNER_IMPORT_OR_EXECUTION",
+      "boundary": "Do not import/execute historical owner to manufacture these inputs. The source map/AST excludes those constructors, while genuine foreign captured factories test the exact-callable refusal. Report the two literal historical-reference branches as unexecuted/static, not as actual old-owner tests. Old-source activation is not a prerequisite."
+    },
+    {
+      "cases": "E29-E30",
+      "coverage": "STAGED_METADATA_AND_SOURCE_STRUCTURE_WITH_RUNTIME_IDENTITY_SUPPORT",
+      "boundary": "Authoring-versus-UNBUILT state and Source4 lineage/import exclusion are metadata/AST assertions. Genuine is-identity/full-prefix tests support continuation behavior; they do not finalize the real roster/build/physical execution plan."
+    },
+    {
+      "cases": "E31",
+      "coverage": "GENUINE_CAPTURED_CODEC_DATA_AND_ISSUER_REFUSAL",
+      "boundary": "Use the actual captured codec and genuine KernelSnapshot; decoded dictionaries cannot mint state/ref/capsule/lease. New enriched/profile1MiB observations may typed-refuse legacy rather than fabricate old50ee shape."
+    },
+    {
+      "cases": "E32",
+      "coverage": "PARTIAL_METADATA_ADMISSION_AND_GENUINE_UNAVAILABLE_ROUTE",
+      "boundary": "A4GB hash-only descriptor can prove admission/no body assembly/no capture promotion before reads. A separately genuine completed small/zero hash-only input can prove bytes_for refusal and NATIVE_ROUTE_UNAVAILABLE. Do not claim4GB hash completion from descriptor-only checks, prior Source4 large evidence or a tiny stream. Any new large generated run needs its own frozen geometry/scope."
+    },
+    {
+      "cases": "N01-N15,N17,N21,N25",
+      "coverage": "SYNTHETIC_BANK_OR_GENUINE_ORIGINAL7_SOURCE_EXECUTABLE",
+      "boundary": "Use actual RawCallStore/refs/carriers/snapshots and real committed/staged cells, plus exact public actor/profile refusal. N25 layout/capacity checks qualify only source byte representation, not native pointer alignment/C ABI/release-acquire."
+    },
+    {
+      "cases": "N16",
+      "coverage": "GENUINE_KERNEL_CLOCK_AND_SYNTHETIC_DISPATCH",
+      "boundary": "Use the original source-issued Origin/provider and actual known cleanup right; no second timebase or reset. No physical Win32 deadline qualification follows."
+    },
+    {
+      "cases": "N18-N20",
+      "coverage": "UNQUALIFIED_RAW_EXERCISE_SEARCH_DATA_EXECUTABLE",
+      "boundary": "SyntheticExercise.establish_search issues actual source SyntheticSearchRef from a committed usable FindFirst fragment. FindNext end/error18 and wrong/once closer guards can be tested there. This is not an OS search handle, full14 dispatch, directory enumeration or native lease."
+    },
+    {
+      "cases": "N22",
+      "coverage": "GENUINE_NEGATIVE_NATIVE_ROUTE_EXECUTABLE",
+      "boundary": "Use an active genuine canonical FileRef with identity/hash complete and no native binding; request_native_inputs always refuses NATIVE_ROUTE_UNAVAILABLE. No capability is issued."
+    },
+    {
+      "cases": "N23",
+      "coverage": "PARTIAL_BYTE_REFUSAL_AND_ORDINARY_FOREIGN_OBJECT_GUARD",
+      "boundary": "Actual hash-only CapturedContext.bytes_for refusal is executable. Any nonNone launch object is rejected as FOREIGN_LAUNCH_BINDING. No genuine ChildLaunchBinding issuer exists, so equal-valued foreign qualified-launch-versus-approved-own-launch identity cannot yet be exercised or claimed."
+    },
+    {
+      "cases": "N24",
+      "coverage": "PARTIAL_GENUINE_CONSUMED_FILE_GUARD",
+      "boundary": "Close a source-issued FileRef while state is still active, then request native input: LEASE_NOT_LIVE_OR_PATH_UNKNOWN is executable. Calling after finalize would only test FINALIZED_MISUSE. A live qualified NativeInputLease/path-lifetime-specific guard is unavailable because those issuers/policy do not exist."
+    }
+  ],
+  "unavailable_positive_issuers": [
+    "NativeInputLease/NativeInputSet",
+    "NativeConsumerBinding",
+    "ChildLaunchBinding",
+    "PathLifetimeBinding / qualified image/module policy",
+    "Native C shim/typed14-API dispatcher and physical bank from bootstrap"
+  ],
+  "prerequisites_for_deferred_positive_native_controls": [
+    "Author/build/qualify the named raw C shim and exact typed wrapper: native widths/offsets/alignment/commit ordering and conversion/interruption boundaries. Python synthetic bank evidence does not prove atomic OS-return capture.",
+    "Provide genuine same-kernel/Origin/nonce/Registry consumer/image/launch/path-lifetime capabilities and complete actual child/native completion/cleanup policy. Digest+path/read sharing alone is not that authority.",
+    "Resolve the staged new84 source/import/content-consumer roster, unbuilt CPP/parent/pack artifacts and final execution hashes through staged authoring/build before final admission; do not require nonexistent binary hashes to start source authoring.",
+    "Freeze the joint original/output/readback/ancestry/search/namespace/tail budget and physical publication format/first-entry binding. Current original7 Cmax16384 and illustrative joint19079 warning do not establish physical fit."
+  ],
+  "next_pure_suite_scope": {
+    "subjects": "Exact Source3 kernel/Ops/FileView plus byte-identical captured codec4. Genuine Core from entry only; no old-owner construction, cached source fallback, second origin, decoded brand or serialized ready capability.",
+    "fixtures": "Actual authored helpers and any additional toy leaves/metadata/hash-only bytes at invented paths. Count the full admitted bootstrap/capture/compile/close prefix and independently frozen descriptor sizes/hashes.",
+    "case_manifest": "Retain all32 named/53 expanded entry branches and25 native rows as inventory, each with coverage_class and actual reached assertion status. Separate genuine source runtime, synthetic raw-data, static metadata and deferred capability rows; do not report53+25 actual PASS from mixed evidence.",
+    "faults": "Use existing private method wrapping/real callback seams, frozen before execution. No new source test hook is needed.",
+    "unavailable_route": "Do not fabricate NativeInput/child objects to turn N23/N24 into positive identity/liveness tests. Ordinary foreign-object rejection is narrower and must be labeled.",
+    "result": "One separately authorized broad source/pure suite after frozen fixtures/static peer. Keep existing five regression acceptance as its exact limited baseline, not whole-project completion."
+  },
+  "existing_fixture_seams": {
+    "E02": "Wrap actual Registry.__init__ on the same class; raise original MemoryError after first sample. Do not replace the Registry global or fabricate partial Core.",
+    "E05": "Install CountingList in original Registry during real init before any facts, append a prepared canonical row then raise before native registration/invoke. Report raw row missing/partial explicitly.",
+    "E21": "Wrap actual _fold_read_fact before versus after its real body only once committed count58 exists. A legitimate short58-byte fixture return can use the actual helper descriptor/request; all prefix work remains counted.",
+    "E27": "Existing output callback hook namespace_stored raises original error after carrier namespace observation; no original opens or replacement facade/backend.",
+    "E28": "Use genuine snapshot diagnostic identity token and actual exception_for_token resolver; mutate args/detached copies after issuing without resampling time."
+  },
+  "activity": {
+    "source_text_and_metadata_only": true,
+    "new_source_or_tests_authored": 0,
+    "subject_imports": 0,
+    "subject_runs": 0,
+    "original_or_native_operations": 0
+  },
+  "new_requirements_or_caps": false,
+  "resource_boundary": "All retained byte/cell limits are logical representations. Python boxed heap/RSS, native child/image/model/KV/GPU allocations and production time/fit remain unmeasured/unqualified."
+}

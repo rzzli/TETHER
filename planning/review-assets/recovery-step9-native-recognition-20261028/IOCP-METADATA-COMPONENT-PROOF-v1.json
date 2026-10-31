@@ -1,0 +1,35 @@
+{
+  "actual_native_or_API_or_worker_calls": 0,
+  "checker": {
+    "bytes": 13474,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\check_iocp_metadata_adversarial_v1.py",
+    "sha256": "e36b086a06022da2e9fc8568121b807b99a70740ff47dea87c12c38bc9443139"
+  },
+  "limits": [
+    "Whole helper remains unfrozen; orchestration/config/preparation are outside this proof.",
+    "Final source must retain these exact tested component AST hashes or receive separately retained tests.",
+    "Fake typed outputs establish boundary behavior, not actual Windows API semantics or process containment."
+  ],
+  "recorded_at_utc": "2026-10-28T21:43:16.079838+00:00",
+  "schema_version": 1,
+  "source_at_test": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\diagnose_native_job_iocp_v1.py",
+    "sha256": "54e00582c6acba5142f56001ac451f89e04a64c11dabe78abfa2b46ce5781fa1"
+  },
+  "status": "passed_12_exploratory_pure_tests_component_scope_not_final_helper_qualification",
+  "test_report": {
+    "bytes": 957,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\IOCP-METADATA-ADVERSARIAL-PROOF-v1.json",
+    "sha256": "22ac943f3eba94a2b919f5e6d8a589dd55f4e437c445c006417f27caf0e85253"
+  },
+  "tested_components": {
+    "Observer": {
+      "AST_bytes": 41381,
+      "normalized_AST_sha256": "032e32ad57282d1a92c5e46fc344e2c080e66a3b7a5933100b45ad8669707d9d"
+    },
+    "query_reported": {
+      "AST_bytes": 11898,
+      "normalized_AST_sha256": "aacdd2836b1bde5e003be38484d163599667be33835c49935a2f98c63b977713"
+    }
+  }
+}

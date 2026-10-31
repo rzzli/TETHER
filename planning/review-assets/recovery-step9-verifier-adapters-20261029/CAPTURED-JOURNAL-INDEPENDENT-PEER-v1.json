@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-29T08:19:56.261140+00:00",
+  "status": "HOLD_KNOWN_LAUNCHED_TERMINAL_COMPLETENESS_SOURCE_PURE_ONLY",
+  "artifacts": {
+    "captured_journal_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\captured_journal_v1.py",
+      "bytes": 24796,
+      "sha256": "5b86f70a57dd1b51d7fe74829b032ddd954f656075ec585c062d5c6dc5e3cf37"
+    },
+    "check_captured_journal_v1.py": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_v1.py",
+      "bytes": 15384,
+      "sha256": "dc5c7b4d9ff98c9d84f4f117a586bfcd5eb9fff9f134ad62905c830252753856"
+    },
+    "CAPTURED-JOURNAL-SOURCE-PURE-PROOF-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-SOURCE-PURE-PROOF-v1.json",
+      "bytes": 8923,
+      "sha256": "7f87a5bdfc05f4443074e743df6ab5dbb0608b04e0202483bb7478cf8bd06076"
+    },
+    "CAPTURED-JOURNAL-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-CONTRACT-v1.json",
+      "bytes": 13091,
+      "sha256": "2993cf83b8768f2324feb495bae65217d627135f0ce4d20fb341d537893d71ff"
+    },
+    "CAPTURED-JOURNAL-FIXTURE-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-FIXTURE-FREEZE-v1.json",
+      "bytes": 1711,
+      "sha256": "cd4f6b3f381a837d790dfcad84e92231111456e3eb6648a0ebd7617c84980140"
+    },
+    "CAPTURED-JOURNAL-FIXTURES-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\CAPTURED-JOURNAL-FIXTURES-v1.json",
+      "bytes": 2749847,
+      "sha256": "1448873002dc5350be8ca835254ff283b734d04bda88382273b1c4b4319fe28c"
+    }
+  },
+  "independent_checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py",
+    "bytes": 8779,
+    "sha256": "5fc7e50d0fcf9bc660d7110e9af7dbdda437715daa9160ce375804cd2f08a30c"
+  },
+  "recorder": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\retain_captured_journal_peer_v1.py",
+    "bytes": 5439,
+    "sha256": "1f9025738f8c8c4d466087a202fcbb02643b0cf663dd7031601cc3b37540539f"
+  },
+  "methods": 7,
+  "failing_methods": 2,
+  "assertion_failures": 5,
+  "errors": 0,
+  "elapsed_seconds": 0.23499999998603016,
+  "test_output": "test_deadline_same_exception_and_no_late_return (journal_independent_probes.PeerChecks.test_deadline_same_exception_and_no_late_return) ... ok\ntest_immutability_input_detachment_and_no_filesystem_callback (journal_independent_probes.PeerChecks.test_immutability_input_detachment_and_no_filesystem_callback) ... ok\ntest_observed_EOF_requires_terminal_none_availability (journal_independent_probes.PeerChecks.test_observed_EOF_requires_terminal_none_availability) ... FAIL\ntest_raw_LF_canonical_scalar_and_bool_framing (journal_independent_probes.PeerChecks.test_raw_LF_canonical_scalar_and_bool_framing) ... ok\ntest_rechained_source_order_reference_and_bool_attacks_reject (journal_independent_probes.PeerChecks.test_rechained_source_order_reference_and_bool_attacks_reject) ... ok\ntest_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) ... \n  test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='terminal_errors_nonempty') ... FAIL\n  test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_failed_status') ... FAIL\n  test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_bool_polls_reserved') ... FAIL\n  test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_missing_status_and_count') ... FAIL\ntest_thirty_frozen_chain_and_policy_expectations (journal_independent_probes.PeerChecks.test_thirty_frozen_chain_and_policy_expectations) ... ok\n\n======================================================================\nFAIL: test_observed_EOF_requires_terminal_none_availability (journal_independent_probes.PeerChecks.test_observed_EOF_requires_terminal_none_availability)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 96, in test_observed_EOF_requires_terminal_none_availability\n    self.assert_source_reject(\"observed_EOF_without_None_availability\", raw, bindings)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 71, in assert_source_reject\n    self.fail(\"Contradictory terminal observation was accepted: \" + label)\nAssertionError: Contradictory terminal observation was accepted: observed_EOF_without_None_availability\n\n======================================================================\nFAIL: test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='terminal_errors_nonempty')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 85, in test_terminal_completeness_does_not_override_nested_failures_or_counts\n    self.assert_source_reject(label, raw, bindings)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 71, in assert_source_reject\n    self.fail(\"Contradictory terminal observation was accepted: \" + label)\nAssertionError: Contradictory terminal observation was accepted: terminal_errors_nonempty\n\n======================================================================\nFAIL: test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_failed_status')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 85, in test_terminal_completeness_does_not_override_nested_failures_or_counts\n    self.assert_source_reject(label, raw, bindings)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 71, in assert_source_reject\n    self.fail(\"Contradictory terminal observation was accepted: \" + label)\nAssertionError: Contradictory terminal observation was accepted: drain_failed_status\n\n======================================================================\nFAIL: test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_bool_polls_reserved')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 85, in test_terminal_completeness_does_not_override_nested_failures_or_counts\n    self.assert_source_reject(label, raw, bindings)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 71, in assert_source_reject\n    self.fail(\"Contradictory terminal observation was accepted: \" + label)\nAssertionError: Contradictory terminal observation was accepted: drain_bool_polls_reserved\n\n======================================================================\nFAIL: test_terminal_completeness_does_not_override_nested_failures_or_counts (journal_independent_probes.PeerChecks.test_terminal_completeness_does_not_override_nested_failures_or_counts) (fault='drain_missing_status_and_count')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 85, in test_terminal_completeness_does_not_override_nested_failures_or_counts\n    self.assert_source_reject(label, raw, bindings)\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\check_captured_journal_peer_v1.py\", line 71, in assert_source_reject\n    self.fail(\"Contradictory terminal observation was accepted: \" + label)\nAssertionError: Contradictory terminal observation was accepted: drain_missing_status_and_count\n\n----------------------------------------------------------------------\nRan 7 tests in 0.215s\n\nFAILED (failures=5)\n",
+  "incorrect_acceptances": [
+    {
+      "id": "observed_EOF_without_None_availability",
+      "status": "complete_known_launched_native_journal",
+      "source_order_validated": true,
+      "profile_qualified": false,
+      "resource_semantics_validated": false
+    },
+    {
+      "id": "terminal_errors_nonempty",
+      "status": "complete_known_launched_native_journal",
+      "source_order_validated": true,
+      "profile_qualified": false,
+      "resource_semantics_validated": false
+    },
+    {
+      "id": "drain_failed_status",
+      "status": "complete_known_launched_native_journal",
+      "source_order_validated": true,
+      "profile_qualified": false,
+      "resource_semantics_validated": false
+    },
+    {
+      "id": "drain_bool_polls_reserved",
+      "status": "complete_known_launched_native_journal",
+      "source_order_validated": true,
+      "profile_qualified": false,
+      "resource_semantics_validated": false
+    },
+    {
+      "id": "drain_missing_status_and_count",
+      "status": "complete_known_launched_native_journal",
+      "source_order_validated": true,
+      "profile_qualified": false,
+      "resource_semantics_validated": false
+    }
+  ],
+  "bounded_passes": [
+    "All30frozen chain/native-policy fixture expectations reproduced",
+    "Rechained duplicate resume/unknown event/protocol mismatch/bool resume attacks rejected",
+    "Raw Unicode separators preserved; missing LF/BOM/CRLF/blank/duplicate JSON/bool sequence rejected",
+    "Required callback deadline exceptions propagated by identity at early/middle/final checkpoints",
+    "Frozen nested results detached from inputs; no filesystem callback invoked by either API"
+  ],
+  "finding": {
+    "scope": "One known-launched source-terminal completeness family, not byte-chain/raw-resource/profile truth",
+    "problem": "terminal.complete/EOF flags can override contradictory errors, invalid/missing drain status/poll metadata and a non-EOF terminal availability result.",
+    "confirmed": [
+      "nonempty terminal.errors",
+      "drain.statusfailed",
+      "polls_reservedTrue",
+      "missing status/polls_reserved",
+      "observed_pipe_EOF with known nonempty calls ending available0 instead ofNone"
+    ],
+    "EOF_probe": "Uses normal observed_pipe_EOF, call.statusreturned, valid contiguouspoll1, correct rechained matching capture_available event and exact updated journal digest. No raw resource truth was inferred.",
+    "consequence": "The API returns source_order_validatedTrue/statuscomplete_known_launched_native_journal for internally inconsistent terminal bindings. profile_qualified/resource_semantics_validated remainFalse, limiting the false claim but not repairing it.",
+    "correction": "Version a narrow terminal-projection rule: require empty errors; required source-normal statuses and strict poll counts; alreadyEOF zero calls; observed_pipe_EOF nonempty known calls with final availabilityNone and no earlierNone; retain exact flag/type/call/reference checks. Preserve chain-only/raw-resource/profile boundaries."
+  },
+  "chain_only_disposition": "No material blocker found in this bounded chain-only review; not live qualification or a formal proof of every input.",
+  "author_proof_disposition": "Original9-method/30fixture pass remains preserved as baseline evidence; it did not exercise these five contradictory nested terminal cases.",
+  "activity": {
+    "author_source_or_fixture_edits": 0,
+    "old_archive_replays": 0,
+    "old_source_closure_or_original_rehashes": 0,
+    "CPU_GGUF_pack_model_operations": 0,
+    "SDK_native_target_compiler_calls": 0,
+    "only_new_pure_component_and_synthetic_fixture_bytes": true
+  },
+  "current_or_future_profile_qualified": false,
+  "previous_negative_and_timeout_unchanged": true
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "decided_at": "2026-10-28T20:59:15.725473+00:00",
+  "decision": "build_exact_own_harmless_native_fixture_once",
+  "reviewed_pins": {
+    "build_harmless_native_worker_v2.py": "e74464d145c0e675c09189ed3882ede12665489aa11f307ec674b964e124b055",
+    "HARMLESS-NATIVE-BUILD-PROTOCOL-v2.json": "82e7e1e217a44e2b3118aeb0041f6e61e741a139589731a61b1b1bc1ab0cd469",
+    "HARMLESS-NATIVE-BUILD-PEER-REVIEW-v2.json": "4352d10192bd184a6374b9858677935e9e4b59ca0c593e915d5a66ee3343b94e",
+    "HARMLESS-NATIVE-WORKER-SOURCE-PEER-v2.json": "bc9c8740c05ca0af16bb4b20841878d908a6d233cd6ecf39cdc79a4ebd694763"
+  },
+  "inputs_verified": 212,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v2-20261028T205613Z",
+  "scope": "Two trusted compiler/linker processes only; no fixture/ABI EXE execution, target DLL load, GGUF, model, server or network.",
+  "automatic_retry": false,
+  "prior_preparation_preserved": true,
+  "result_execution_allowed": false
+}

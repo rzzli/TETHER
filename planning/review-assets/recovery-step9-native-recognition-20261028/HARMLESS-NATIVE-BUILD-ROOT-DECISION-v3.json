@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "decided_at": "2026-10-28T21:06:06.503169+00:00",
+  "decision": "build_exact_corrected_own_native_fixture_once",
+  "reviewed_pins": {
+    "build_harmless_native_worker_v3.py": "f292b65c6a86a9a70a41a1fb5286e20266281b6749c1583579e64193524af5ae",
+    "HARMLESS-NATIVE-BUILD-PROTOCOL-v3.json": "7cf13e529deb26f147bf0b9358cdc47fe91c4b21b2064a3381db9119f6953aea",
+    "HARMLESS-NATIVE-BUILD-PEER-REVIEW-v3.json": "c420cb6de3202727b17af100408e4cd6a31fafb5f863413eccc38c65b24ad800",
+    "HARMLESS-NATIVE-WORKER-SOURCE-PEER-v3.json": "c774ecd0ec98dd529b5494c5137679a59e7d1ae9c525920e9f884a57b1f48ebc"
+  },
+  "inputs_verified": 237,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-harmless-native-build-v3-20261028T210353Z",
+  "scope": "Two trusted compiler/linker processes only; explicit source conversion correction, /WX retained. No fixture/ABI execution, target DLL load, GGUF, model, server or network.",
+  "automatic_retry": false,
+  "prior_failed_build_preserved": true,
+  "result_execution_allowed": false
+}

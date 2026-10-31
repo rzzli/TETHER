@@ -1,0 +1,40 @@
+{
+  "actual_API_calls": 0,
+  "current_prototypes_are_not_live_entry": true,
+  "implementation_authorized_by_note": false,
+  "key_gap": "EngineContinuation keeps bootstrap owner but run_once always samples a new start, creates a new owner/token/registry and reserves output again.",
+  "minimal_prospective_changes": [
+    "Continuation-only adoption entry using exact current owner/Origin/nonce, not numeric t0 or serialized ready state.",
+    "Single registry/output/port/journal ownership with reporting views; no copied close rights or duplicate reservation.",
+    "Current owner-local early source bytes/digests/live slots matched to full role roster, then freshly hash only remaining originals under original deadlines.",
+    "Factories/checkers from same captured loader; one event sequence and joint admission, no reset or fake-checker gate.",
+    "Candidate/cleanup/journal/receipt/seal/final-clock order with same central cleanup; no real failure I/O after hard cutoff.",
+    "Preallocated raw handle/count slot registration inside a separately reviewed real adapter before throwable work; typed return/fake scripts alone are insufficient."
+  ],
+  "note": {
+    "bytes": 5832,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\ENGINE-CONTINUATION-INTEGRATION-GAP-v1.md",
+    "sha256": "385d32d07e4a9eec5cf514e4577591000d394123655735aff53372bce5c6da95"
+  },
+  "old_timeout_repaired": false,
+  "profile_qualified": false,
+  "real_FFI_and_production_binding_pending": true,
+  "recorded_at_utc": "2026-10-29T11:49:19.666004+00:00",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "Only two accepted NEW pure source files read and hashed for this note; no imports/execution, old payload/path/closure/SDK or original-input operations.",
+  "source_modified": false,
+  "sources": [
+    {
+      "bytes": 24716,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-recovery-20261029\\deterministic_verifier_v2.py",
+      "sha256": "98ef68ee1bd0a5bb8fd2cf2c780a0dd0c294f7f24654d169280831cca5d4b725"
+    },
+    {
+      "bytes": 22010,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-verifier-adapters-20261029\\verifier_bootstrap_interfaces_v2.py",
+      "sha256": "d937599212133ee7c036ee863b8c751885ffe60f7d657ec1ed5e506bf90c74eb"
+    }
+  ],
+  "status": "READ_ONLY_FINITE_INTEGRATION_GAP_NOTE_NO_IMPLEMENTATION"
+}

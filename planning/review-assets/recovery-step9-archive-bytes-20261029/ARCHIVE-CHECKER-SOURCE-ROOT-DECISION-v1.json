@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_SOURCE_PURE_IMPLEMENTATION_AUTHORIZATION_RETAINED_BEFORE_CODE",
+  "authority_basis": "Explicit delivered /root NEW_TASK authorizes only captured_archive_v1.py, its checker/proof and a short effective-v3 note after accepted design/literal preparation.",
+  "preparation_acceptance": {
+    "file": "CAPTURED-NATIVE-ARCHIVE-PREPARATION-ACCEPTANCE-v3.json",
+    "sha256": "629216db5cc43a60ef068222e7fcc9a55ab71873b963efe3c54e7ef6309e9a0d"
+  },
+  "contract_sha256": "ce077d5bfd2e12bd5de7a84d17094572a15286e0cb44bdc224513206f305e3d2",
+  "fixtures_sha256": "3e75447d4d3a01c56833d089bf23dab52e5e53bc49a9ea33e9de689eef9b5dcd",
+  "fixture_freeze_sha256": "7663f2edfff3d0c4365bbe9d4336895b56f2e5b5001bb69717eeeab06bfd96b9",
+  "independent_preparation_review_sha256": "0f411d7ef3749bc8dd38e5eede604d64169babcbde5c72e704ccbd23c8b3d43b",
+  "authorized": [
+    "Pure captured-byte archive graph checker with exact typed immutable capture/bindings/result and fresh serialization",
+    "Required injected deadline callback, strict bounded JSON/pins/roles/nineargv/maps/acyclic conditional publications and filename vetoes",
+    "Frozen32 expected projections plus finite mutation/cap/deadline/immutability/unsupported-locator checks",
+    "Effective-v3 note preserving early unknown fields, empty roster, unchanged earlier positive bytes and late exception semantics"
+  ],
+  "not_authorized": [
+    "Filesystem/path/API/model/native operations in the module",
+    "Actual old archive capture or replay",
+    "Fresh original-source, payload or owner qualification",
+    "File-port or runtime implementation or execution"
+  ],
+  "profile_qualified": false,
+  "originals_authenticated": false,
+  "actual_directory_complete": false,
+  "source_qualified": false,
+  "root_review_required_after_frozen_source_and_pure_proof": true
+}

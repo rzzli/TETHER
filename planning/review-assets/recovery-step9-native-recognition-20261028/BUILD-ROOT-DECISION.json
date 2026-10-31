@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-28T18:33:13.199697+00:00",
+  "decision": "proceed_once_compile_and_link_ABI_disabled_bridge_only",
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\build_public_c_bridge.py",
+    "bytes": 36739,
+    "sha256": "733a47bb8c047e129560c0c68dd63d97cf09c95c23b3cabd105df7791927c09c"
+  },
+  "protocol": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-PROTOCOL.json",
+    "bytes": 78846,
+    "sha256": "5c6086e48ca9fb3b3f1f61a2eea780e64f1392bbdc819216e37b09935acc345e"
+  },
+  "peer": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-PEER-REVIEW.json",
+    "bytes": 6114,
+    "sha256": "7d16e7d1a8b4737aeada2127ad656159b4d95e4b6a8a8c20fa2f76fd69025aa7"
+  },
+  "root_checks": {
+    "193_pins_rehashed": true,
+    "output_absent": true,
+    "source_copies_and_metadata_header_match": true,
+    "audit_dispatch_and_cleanup_source_reviewed": true,
+    "commands_only_cl_then_link": true,
+    "source_deltas_reviewed": true
+  },
+  "scope_limits": "Trusted MSVC/SDK build; owned launched handles and cooperative deadlines, not complete descendant/memory/write containment. No EXE invocation, target DLL load, GGUF/model read, tokenizer, inference or network. Runtime Job anomaly remains open.",
+  "recognition_enabled": false,
+  "execute_result": false,
+  "limits": {
+    "compile_seconds": 45,
+    "execute_result": false,
+    "finalization_reserve_seconds": 5,
+    "link_seconds": 10,
+    "maximum_children": 2,
+    "stderr_bytes": 262144,
+    "stdout_bytes": 262144,
+    "total_seconds": 60
+  },
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z"
+}

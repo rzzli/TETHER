@@ -1,0 +1,96 @@
+{
+  "actual_API_calls": 0,
+  "after": {
+    "counters": {
+      "FFI_invocations_reserved": 1,
+      "known_count_values": 1,
+      "known_scalar_returns": 1,
+      "logical_call_reservations": 1,
+      "portable_wrapper_returns": 0,
+      "unique_reconciled_ordinals": 0
+    },
+    "known_read_bytes": 3,
+    "records": [
+      {
+        "api": "ReadFile",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "count_state": "known_defined",
+        "error_defined": false,
+        "invocation_reserved": true,
+        "ordinal": 0,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 3
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "wrapper_state": "raised"
+      }
+    ]
+  },
+  "before": {
+    "counters": {
+      "FFI_invocations_reserved": 1,
+      "known_count_values": 1,
+      "known_scalar_returns": 1,
+      "logical_call_reservations": 1,
+      "portable_wrapper_returns": 1,
+      "unique_reconciled_ordinals": 0
+    },
+    "known_read_bytes": 3,
+    "records": [
+      {
+        "api": "ReadFile",
+        "count_aux_ack": false,
+        "count_defined": true,
+        "count_state": "known_defined",
+        "error_defined": false,
+        "invocation_reserved": true,
+        "ordinal": 0,
+        "raw_count": {
+          "tag": "COUNT32",
+          "value": 3
+        },
+        "raw_error": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "raw_scalar": {
+          "tag": "BOOL32",
+          "value": 1
+        },
+        "right_transfer_ack": false,
+        "scalar_aux_ack": false,
+        "wrapper_state": "returned"
+      }
+    ]
+  },
+  "original_exception_identity_preserved": true,
+  "probe": {
+    "bytes": 2549,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\probe_raw_adoption_wrapper_return_v2.py",
+    "sha256": "e382d5631cb5a623fe6d8322d9d665b2773101f5c36092a55e3ff9e502b0cee4"
+  },
+  "profile_qualified": false,
+  "recorded_at_utc": "2026-10-29T14:27:45.044530+00:00",
+  "required": "A later error must not erase a previously observed wrapper return: either reject the post-return wrapper-outcome rewrite before mutation, or preserve its known return axis and separately record the later stop.",
+  "runtime_authorized": false,
+  "schema_version": 1,
+  "scope": "One new synthetic call/clock/bytes only; no frozen fixture modified, no actual FFI, native API or old archive/source operation.",
+  "source": {
+    "bytes": 30480,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\raw_adoption_core_v2.py",
+    "sha256": "a6877861860ba7a42d22d581d4bfa565984e6ce377d937ff3c4525b04130fd8a"
+  },
+  "source_unchanged": true,
+  "status": "KNOWN_WRAPPER_RETURN_COUNTER_DECREASE_REPRODUCED"
+}

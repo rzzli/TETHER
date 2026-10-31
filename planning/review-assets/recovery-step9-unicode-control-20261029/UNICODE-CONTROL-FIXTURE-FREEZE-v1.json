@@ -1,0 +1,153 @@
+{
+  "QA": {
+    "all_expected_pins_current": true,
+    "local_links_checked": [],
+    "python_sources_syntax_valid": 4,
+    "text_UTF8_valid": true
+  },
+  "activity": {
+    "CPU_GGUF_oldpack_operations": 0,
+    "bridge_pack_runtime_implementations": 0,
+    "downloads": 0,
+    "old_profile_edits_or_retries": 0,
+    "target_native_SDK_tokenizer_compiler_calls": 0
+  },
+  "activity_scope": "Zero counts refer targetDLL/SDK/process/compiler/tokenizer/network profile actions; ordinary Python/stdlib/loader/OS activity is not universally attested.",
+  "artifacts": {
+    "UNICODE-CONTROL-AUTHORING-FAILURE-v1.json": {
+      "bytes": 505,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-AUTHORING-FAILURE-v1.json",
+      "sha256": "44b40c3ba031da8d42fa53114b695f6de30da606dc12a9b9c6b1ee2792e74d88"
+    },
+    "UNICODE-CONTROL-CONTRACT-v2.json": {
+      "bytes": 9809,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CONTRACT-v2.json",
+      "sha256": "65a34539dd1bdecb20ed85724c58f80e362113cb4db969f5edf60b48af9a111d"
+    },
+    "UNICODE-CONTROL-CORPUS-MANUAL-PRECHECK-v1.json": {
+      "bytes": 3401,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-MANUAL-PRECHECK-v1.json",
+      "sha256": "77b7f3f9ec2d069ae6b4357ff16ea2f4ced9e520ee3b2230995c7aa9038dc04a"
+    },
+    "UNICODE-CONTROL-CORPUS-v1.json": {
+      "bytes": 233438,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-CORPUS-v1.json",
+      "sha256": "13e2c2f2900802729c0d39fa9b7851c56ab3db6afdc45c4b15c2f7f80bd6523c"
+    },
+    "UNICODE-CONTROL-GENERATION-CHECKS-v1.json": {
+      "bytes": 25630,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-GENERATION-CHECKS-v1.json",
+      "sha256": "9f1c4636d15706cc9fa628f55d0c668ce622d96d1ca5f02e7fcb2b7f9a252a4c"
+    },
+    "UNICODE-CONTROL-PROFILE-DRAFT-REVIEW-v1.json": {
+      "bytes": 4893,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROFILE-DRAFT-REVIEW-v1.json",
+      "sha256": "42400ed622240bff8a4243bd1ab48aab274f56a29f2664b49ddd2d58f3c86d11"
+    },
+    "UNICODE-CONTROL-PROFILE-PRECHECK-v2.json": {
+      "bytes": 3476,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROFILE-PRECHECK-v2.json",
+      "sha256": "7fbce38480668e8eb99d7761c0c2c2bccef83ad7b969840af28d1c5aaebfd8b4"
+    },
+    "UNICODE-CONTROL-PROFILE-v1.md": {
+      "bytes": 8898,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROFILE-v1.md",
+      "sha256": "88c55e0f64099053711caac53c67216a169343567fee55c30b1084c76654b945"
+    },
+    "UNICODE-CONTROL-PROFILE-v2.md": {
+      "bytes": 9951,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROFILE-v2.md",
+      "sha256": "f6512f48ffd58756e96ea1655df05824e4ccb2588cbe19264cd21e8b1bd27dbf"
+    },
+    "UNICODE-CONTROL-PROVENANCE-v1.json": {
+      "bytes": 9684,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-PROVENANCE-v1.json",
+      "sha256": "e6adbfe5e754a02ebe223e548b418b7a7fc8008926aadda8b17cddf1e6fe80f8"
+    },
+    "UNICODE-CONTROL-STAGES-v1.json": {
+      "bytes": 227662,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STAGES-v1.json",
+      "sha256": "ad688168a366d5e95413ec69731d030c54431663e6574fb93445ced2b580413a"
+    },
+    "UNICODE-CONTROL-STRUCTURAL-CHECKS-v1.json": {
+      "bytes": 2229,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\UNICODE-CONTROL-STRUCTURAL-CHECKS-v1.json",
+      "sha256": "6e62f04b8f701e9a358c9bc8ab2c3872723a59d2218cc4bedfd23a0c06c0b3da"
+    },
+    "author_unicode_controls_v1.py": {
+      "bytes": 19113,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\author_unicode_controls_v1.py",
+      "sha256": "e68a56905dfc8dc6ec195d65a0c46f2651cd5c2cd858c37c5d2224f4c8a85a6f"
+    },
+    "author_unicode_controls_v2.py": {
+      "bytes": 19121,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\author_unicode_controls_v2.py",
+      "sha256": "001b864fbaa81937020ca9a0a081896e1ae191a024935c068f44d9a4cbc34a06"
+    },
+    "check_unicode_control_structure_v1.py": {
+      "bytes": 12517,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\check_unicode_control_structure_v1.py",
+      "sha256": "16d884117d05ffa8b0b1862872adf9143cc479118c67290c125fb4314e581c1a"
+    }
+  },
+  "corpus": {
+    "authored_native_membership_expectations": {
+      "ineligible_null": 6,
+      "member": 69,
+      "nonmember": 9
+    },
+    "cases": 84,
+    "coverage_population": 68,
+    "maximum_document_bytes": 420,
+    "measured_native_or_token_results": 0,
+    "native_byte_eligible_cases": 78,
+    "scalar_pairs": 14,
+    "stage_payload_instances": 4,
+    "unique_actual_GBNF_hashes": 2
+  },
+  "execution_authorized": false,
+  "fixed_coverage_policy": [
+    "Entire fixed corpus, all outcomes/piece data and boundary counts; no favorable subset or observed-success filter",
+    "Width2/3/4 and same-piece wholly-contained complete scalar plus pending tail; matrix distinct-width unit and witness intervals explicit",
+    "Deterministic first(case,token) selector after fullscan; overlapping classes de-duplicate; original token prefix is never retokenized",
+    "Unavailable/unknown requiredclass or any expected outcome/QC/record failure stays negative/incomplete; no automatic extra corpus or native rerun"
+  ],
+  "freezer": {
+    "bytes": 7001,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-unicode-control-20261029\\freeze_unicode_controls_v1.py",
+    "sha256": "1557951dc2a1a7b86c680105a44e095eb175c9be448b777a41699890aba0d6b6"
+  },
+  "limits_not_increased": {
+    "EOG": 64,
+    "JSONL_bytes": 8388608,
+    "case_ceiling": 96,
+    "child_seconds": 120,
+    "commit_bytes": 268435456,
+    "cooperative_ms": 117000,
+    "grammar_instances": 4,
+    "owner_seconds": 300,
+    "pack_bytes": 20971520,
+    "row_bytes": 65536,
+    "token_work": 1000000,
+    "vocabulary": 262144
+  },
+  "native_conformance": "unverified",
+  "preserved_drafts_and_failure": {
+    "initial_authoring_failure": "Frozen mapping passed to a dict-only pointer; stopped before corpus/stage output. Separatev2helper encodes the pointer input. No expectations/profile cases changed.",
+    "original_HOLD_preserved": true,
+    "original_profile_v1_restored_to_reviewed_bytes": true
+  },
+  "profile_id": "actual-v3-fullresponse-unicode-controls-v1",
+  "recorded_at_utc": "2026-10-29T07:34:18.095767+00:00",
+  "remaining": "Independent frozen rawbyte/JSON/v3 semantic reference review, then separate source/bridge/row-wire/pack/parent/verifier/resource gates and root decisions. No runtime authority follows.",
+  "review_and_checks": {
+    "independent_postfreeze_semantic_run": "pending",
+    "manual_profile_and_corpus_precheck_clear": true,
+    "rawbyte_actual_v3_semantic_author_checks": 84,
+    "structural_methods": 7
+  },
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "Exact accepted v3 fullresponse/string-branch fixtures and source-only contracts, not an extracted language or native pack.",
+  "status": "FROZEN_DISTINCT_SOURCE_ONLY_UNICODE_CORPUS_BEFORE_RUNTIME_CODE"
+}

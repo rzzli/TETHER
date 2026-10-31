@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "recorded_date_utc": "2026-10-29",
+  "status": "AUTHORIZED_ONE_PRE_FIX_F2_METACLASS_REGRESSION_ONLY",
+  "source_sha256": "ea676476f37974e7e7c6c63062b27c798dec6874a3f8802f20229d13a0a71191",
+  "source_pause_sha256": "075026212bb247cc0655ed4fb517b2b8d28059adbb0dfd8c415b9276f84d971b",
+  "parent_correction_scope_sha256": "82ff068c7ab2d6864da45a6f547b1266adbb5e278e4412092a3c23930fe3f39b",
+  "finding": "Within original F2, tuple membership over type(value) may invoke producer-supplied metaclass equality. The contract requires exact built-in refusal without arbitrary input protocols.",
+  "allowed": "Freeze one additional focused method before any source change. Use the existing synthetic baseline with one int subclass whose metaclass __eq__ records harmless in-memory observations and returns False. Invoke actual frozen V2 through the existing active audit/codec/bootstrap/import guard. Require TYPE_DOMAIN and zero producer hook calls. Retain actual BEFORE result and source/test hashes. No source-global replacement or fake calculator.",
+  "unchanged": "Original30/e670 and originalfour/5644 remain immutable. This is one regression case within F2, not a new contract or family. Retain the V2 first original/focused proof and author8 result.",
+  "source_correction_authorized": false,
+  "limits": "No source edit, actual I/O/native/compiler/model/original source closure/application change or cap lift. All real qualification flags remain false; provider spending0. A confirmed regression requires a subsequent named source correction scope."
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "CLEAR_SOURCE_PURE_SMALL_GATE_ONLY",
+  "material_blockers": [],
+  "reviewer": "native_039_acceptance_audit",
+  "scope": "Exact frozen source4 and corrected-test2 small SOURCE/PURE gate. Evidence is retained actual independent execution plus prior exact static source/harness reviews. This does not qualify the whole R09, large/full-roster operation or any real input/FFI/physical/runtime/scientific path.",
+  "sources": {
+    "role_ledger_codec_v4": {"bytes": 55497, "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"},
+    "role_owner_v4": {"bytes": 77221, "sha256": "16f63faee01182d06bcec83e2c2178afcdecb02cca443e9afac4d7447b736acb"},
+    "role_file_ports_v4": {"bytes": 21279, "sha256": "c99113ca9b2b60e9699ed564877e56a116ce9da47c3ab416b260d9229271c5d7"},
+    "continue_role_verification_v4": {"bytes": 4273, "sha256": "403adec1f4389eb29d08b14f8da24989c8cdde50f20882629ed1a5cbb81292f7"}
+  },
+  "source_pause": "a746e552d5fb6a2eef7c80d5a593a9f4a5a606456d4fae63acfb8905cb14e929",
+  "static_source_harness_peer": "e68f706ffcab97c02e201eb27593991ee4f1b30a5fa4f2d62c976237cacf8216",
+  "actual_evidence": {
+    "legacy": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-INDEPENDENT-LEGACY48_FIRST-PROOF-v8.json",
+      "bytes": 9690627,
+      "sha256": "f53e3db06b69337d2a8ce4b34fe851dab1338806bfe9aba0bba7b89261f22c6f",
+      "binding": "bef53ec00cb79027bf6d99fba78280898a2932159ad95c759dfa55c64c784898",
+      "execution_scope": "fbc285aab577793fe0460f0718b74b1f72fce90b9a73d08917820f0733c2d08f",
+      "methods_passed": 9,
+      "histories_completed_and_matched": 48,
+      "main_history_snapshots": 372,
+      "main_history_fake_dispatches": 518,
+      "main_history_toy_module_executions": 34,
+      "same8_focused_observations": 9,
+      "genuine_projector_calls": 383,
+      "audit_denials": 0,
+      "source_and_harness_unchanged": true,
+      "post_suite_late_veto": false
+    },
+    "extensions": {
+      "path": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-role-aware-source-20261029/ROLE-AWARE-EXTENSIONS-EXTENSIONS_FIRST-PROOF-v5.json",
+      "bytes": 66266,
+      "sha256": "cd0caf2efce5e8899c6275d1f82df7c0a63b4f7713e4e5235f48e2ee0bf125ae",
+      "binding": "44f8b0b59cc3b68db88fa34744efe6a48ae777599e671d51938345e02f82cf60",
+      "execution_scope": "bf72ed30ea96a8b64002b76f08c6bd80438fff300401fb007faac4a179e0d31c",
+      "methods_passed": 13,
+      "old_indexed_methods": 6,
+      "new_producer_methods": 7,
+      "indexed_observations": 27,
+      "producer_observations": 11,
+      "genuine_projector_calls": 25,
+      "audit_denials": 0,
+      "source_and_harness_unchanged": true,
+      "post_suite_late_veto": false
+    },
+    "carried_codec": {
+      "proof": "8cb7b87d3e2dc8dd931fd7a2dd7c9957446a09eae1180f59ca3f587b57af2b3b",
+      "basis": "Codec4 is byte-identical to codec3. This is a carried exact-byte conformance result, not a new codec4 execution or four additional owner methods.",
+      "methods": 4,
+      "bases": 40,
+      "byte_negatives": 225,
+      "entrypoint_calls": 387,
+      "callback_identity_cases": 66,
+      "type_cases": 15,
+      "getter_calls": 158
+    }
+  },
+  "source_and_context_assessment": [
+    "Actual fresh four-module loading constructs genuine owner/Origin/nonce/registry/continuation/context objects. Existing external is-identity checks, original diagnostic token resolution, once-only cleanup and original synthetic-clock monitors pass; diagnostic tags alone are not used as proof.",
+    "The captured 141 B marker chain executes with the actual source loader and exact retained early bytes. This is a fictional closed-import exercise, not a real checker/source closure.",
+    "Captured empty data and hash-only empty data remain distinct. The latter has no assembly/blob and its bytes getter refuses; captured empty data is an actual complete b'' capture.",
+    "Raw NULL and an opaque malformed original scalar retain actual canonical first-object identity without guessed close. Independent error definition/value interruption preserves exactly the delivered axis and leaves the other UNOBSERVED. These are injected Python-return controls; the real native-to-Python conversion window is not tested.",
+    "The actual row packer is interrupted after canonical facts. The original MemoryError/token and freeze phase remain, known/read/hash/capture totals remain 209, every owned original closes once, and candidate bytes/receipt/seal are unavailable. Projecting this new phase now refuses LEGACY_NOT_REPRESENTABLE without altering the genuine snapshot or original error.",
+    "Captured state refs are held while active. Their post-final inspection verifies state without reopening work; a new file_state call still refuses FINALIZED_MISUSE.",
+    "Generated artifact objects/bytes are genuinely issued by the same owner and are immutable, cached and distinct by phase. The delegated actual parser exhausts every fixed row, edge and query/path/module-name pool. Foreign genuine artifacts refuse without dispatch or gate advancement."
+  ],
+  "indexed_metrics": {
+    "clean_hot_global_iterations_membership_and_slices": 0,
+    "handle_direct_index_visits": 1,
+    "read_known_direct_index_visits": 0,
+    "reference_guard_direct_index_visits": 1,
+    "read_admission": {"direct_index_visits": 4, "len_calls": 6, "append_calls": 1},
+    "canonical_reports": 18,
+    "each_canonical_report_visits_exactly_its_record_count": true,
+    "otherwise_valid_clock100_quarantine_controls": 5,
+    "quarantine_controls_refuse_without_IO_or_progress_and_keep_original": true,
+    "scope": "HARNESS_ONLY list-access metrics and bounded canonical reports. No timing, general asymptotic or full-roster fit measurement is inferred."
+  },
+  "diagnostic_reuse": {
+    "capacity": 506,
+    "outer_successful_guard_operations": 16384,
+    "nested_successful_entries": 16384,
+    "successful_context_entries": 32768,
+    "committed_after_healthy_operations": 0,
+    "borrowed_after_each_success": 0,
+    "first_failure_committed": 1,
+    "formatter_world_committed": 2,
+    "original_primary_and_secondary_formatter_identity_preserved": true,
+    "scope": "Actual reusable source guards in small owners, not 16384 native/API calls, 16384 populated call cells or full 5056-slot physical memory qualification."
+  },
+  "small_stream": {
+    "profile": "Explicit prospective1MiB profile instantiated on four fictional descriptors; default N4/caps are unchanged.",
+    "hash_only_bytes": 2097169,
+    "captured_bytes": 209,
+    "known_and_hashed_bytes": 2097378,
+    "fake_original_calls": 30,
+    "reads": 6,
+    "once_only_closures": 4,
+    "context_specs_and_digests": 4,
+    "context_blobs": 3,
+    "bulk_assembly_and_blob": "None; NOT_REQUESTED",
+    "bulk_getter": "Typed CaptureNotRequested",
+    "same_owner_nonce_early_context_and_early_byte_identities": true,
+    "preparation": "Independent 64 KiB reference hashing and 256 B periodic seed/source-buffer doubling; no whole bulk reference blob. A measured reference preparation of 0.0 s is clock resolution, not zero cost.",
+    "resource_or_scale_fit": false
+  },
+  "actual_full_consumption": [
+    {"world": "captured209B", "phase": "CANDIDATE", "bytes": 34411, "files": 3, "calls": 18, "modules": 2, "edges": 1, "queries": 24654, "paths": 132, "module_names": 23, "exhausted_passes": 1},
+    {"world": "captured209B", "phase": "TERMINAL", "bytes": 35179, "files": 3, "calls": 21, "modules": 2, "edges": 1, "queries": 24654, "paths": 132, "module_names": 23, "exhausted_passes": 1},
+    {"world": "small1MiBstream", "phase": "CANDIDATE", "bytes": 44959, "files": 4, "calls": 26, "modules": 2, "edges": 1, "queries": 32872, "paths": 158, "module_names": 23, "exhausted_passes": 1},
+    {"world": "small1MiBstream", "phase": "TERMINAL", "bytes": 45983, "files": 4, "calls": 30, "modules": 2, "edges": 1, "queries": 32872, "paths": 158, "module_names": 23, "exhausted_passes": 1}
+  ],
+  "count_limits": "The 518 fake-call and 34 marker-exec counts cover the 48 main legacy histories only. Focused observations may repeat worlds or precede cleanup; their counters are not summed as a complete global call count. Candidate/terminal row counts overlap and are not independent unique API calls. Extension runner legacy-specific zero fields mean that phase did not run the legacy loop, not that producer tests did no work.",
+  "preserved_prior_evidence": {
+    "first_V1_codec_abort": "7e01d1288d29c229f473524a5b9ece22a0578513fc2fc43911dc2c5a78bcd0aa",
+    "V2_count_order_failure": "8184541d030cf578918859509963085c70b3eb7cfb0715ec9901714a982ba968",
+    "disjoint_tail": "05582b847e3ca8625692979cefd41d098123c64733004d63a1cf4bf49f524c97",
+    "first_V3_legacy_harness_failure": "dc02853ad550319d50c8361aa073aa0d4ba4ee8577d3b2bc99dc6bf318565a84",
+    "corrected_source3_legacy_pass": "8b9708d6c778505c387188bb39b5078186392deda5e1acd7c6d65d4d2d2206e7",
+    "first_extension_errors": "ca8b142d6e9a96dcc7ea0518b3571e87617fda66953e3ae09830c2c276791e98",
+    "chronology": "All original source/oracle/harness failures and named corrections remain separate. The nine refusal-code correction and three test corrections follow observed failures; no pre-fix chronology or missing runtime BEFORE is invented."
+  },
+  "remaining_scope": [
+    "No large input/control preparation or run is authorized by this peer. The separate actual allocation/serialization review must inform root's next scope.",
+    "Complete new84 source/input/import/consumer roster and distinct physical child/parent/pack/checker integration remain pending.",
+    "True first-entry kernel and clock handoff, actual14-export FFI/Win32 binding, original identity/ancestry/search and physical output/write/flush/readback remain unqualified.",
+    "Named logical byte reservations are not measured CPython heap/RSS, inference RAM/VRAM or runtime resource fit.",
+    "Original failed 189 experiment remains consumed and failed; overall R09, the full 16-step objective, and scientific/human objectives are unfinished."
+  ],
+  "activities": {"reviewer_retained_metadata_and_new_source_inspection": true, "reviewer_subject_imports_or_execution": 0, "reviewer_replays_or_new_probes": 0, "source_harness_or_fixture_edits": 0, "original_native_or_physical_subject_operations": 0},
+  "qualification": {"small_source_pure_gate_clear": true, "whole_R09_complete": false, "large_run_authorized": false, "real_entry": false, "real_FFI": false, "physical_IO": false, "full_roster": false, "new84_runtime": false, "resource_fit": false, "scientific": false}
+}

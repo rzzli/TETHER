@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "source_sha256": "63a6ba5105457ec4f80e324226cc2c9cbb977cc95f7d2f5ab45c61ef115e5a29",
+  "checker_sha256": "8769e6023805537aa15fa710b7c51aa3ba15adff3c2ef414a27fccd3cc39d1a6",
+  "source_unchanged": true,
+  "tests": 6,
+  "failures": [
+    "(<__main__.Cases testMethod=test_wrong_helper_protocol_and_role_block>, 'Traceback (most recent call last):\\n  File \"D:\\\\Projects\\\\drug_target_agents\\\\planning\\\\review-assets\\\\recovery-step9-native-recognition-20261028\\\\check_census_once_driver_v1.py\", line 98, in test_wrong_helper_protocol_and_role_block\\n    with self.assertRaises(RuntimeError, msg=field): case.run()\\nAssertionError: RuntimeError not raised : maximum_attempts_bool\\n')"
+  ],
+  "errors": [],
+  "scenarios": [
+    {
+      "name": "failed_execution_False",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute",
+        "print"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "failed_execution_True",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "KeyboardInterrupt",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "SystemExit",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "preconsumed_output",
+      "calls": [
+        "exists"
+      ],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "success",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute",
+        "print"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    },
+    {
+      "name": "wrong_decision_hash",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_driver",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_helper",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_protocol",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_status",
+      "calls": [],
+      "execute_calls": 0,
+      "fake_imports": 0
+    },
+    {
+      "name": "wrong_maximum_attempts_bool",
+      "calls": [
+        "exists",
+        "fake_import",
+        "validate_role",
+        "execute",
+        "print"
+      ],
+      "execute_calls": 1,
+      "fake_imports": 1
+    }
+  ],
+  "actual_parent_imports": 0,
+  "actual_SDK_constructions": 0,
+  "actual_child_dispatches": 0,
+  "scope": "Only AST-extracted driver main with authored fake pins/files/import boundary/helper; no real parent import or native execution"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "status": "FROZEN_NARROW_CANONICAL_AXIS_FIELD_COMPATIBILITY",
+  "pins": {
+    "ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-FREEZE-v1.json",
+      "bytes": 3571,
+      "sha256": "90a9d734561b498d0df4c6bfcb5bd24d970356c7b7fb1e6bae85fa4a6bcbb039"
+    },
+    "ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-PRECODE-CASES-v1.json",
+      "bytes": 13864,
+      "sha256": "cdfeaa338f387c18039818e7d414c9c13252ee916f872ff42e400da48012a95b"
+    },
+    "ENTRY-KERNEL-OWNEROPS-FREEZE-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-FREEZE-v1.json",
+      "bytes": 3213,
+      "sha256": "27aa7b41b4810cca57bb620745a7795f80d2c0bd17bd014400950c7d80ea0f47"
+    },
+    "NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\NATIVE-RAW-CARRIER-COMPATIBILITY-ADDENDUM-v2.json",
+      "bytes": 9184,
+      "sha256": "08e80ef53ee512a63c5585059176d19bba8c0d48c21b9db0f9976628f3da64e5"
+    },
+    "ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v2.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v2.json",
+      "bytes": 11247,
+      "sha256": "0a5737767104a5297097414146d42205d1855764ba49a2c61fb4d895bea35a77"
+    },
+    "ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-CONTRACT-v1.json",
+      "bytes": 28509,
+      "sha256": "9e65fec645260308ed8847bed74381e39c167b8188600b59113088ba5ad19863"
+    },
+    "ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v1.json": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ENTRY-KERNEL-OWNEROPS-COMPATIBILITY-ADDENDUM-v1.json",
+      "bytes": 10080,
+      "sha256": "edd2b5e4f0eddeabf2376e6caee6a25f68cd7cd10065af3fdc57fdb6491f6dda"
+    }
+  },
+  "effective": "Base9e65/casescdfe preserved; ENTRY compatibility addendumV2 is normative for the snapshot join and supersedes addendumV1 vocabulary only",
+  "checks": {
+    "json_parse": "PASS",
+    "canonical_axis_fields": [
+      "native_state",
+      "kind",
+      "width",
+      "epoch",
+      "stage_hint",
+      "commit",
+      "raw_payload_bits",
+      "known_value"
+    ],
+    "named_controls": 32,
+    "planned_literal_branches": 53,
+    "new_cases": 0,
+    "source_imports": 0,
+    "native_or_original_operations": 0
+  },
+  "scope": "OS08e80 exact8 fields; row.capture_state/raw_row256 retain missing/full bytes; known_value None for uncommitted, valid committed native domains preserved; Source4 unchanged"
+}

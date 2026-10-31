@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "terminal_report_serialization_failure",
+  "command_exit_code": 1,
+  "log_preserved": "data/cache/recovery-step9-installed-20261026.log",
+  "partial_outputs_preserved": "data/cache/recovery-step9-installed-20261026/",
+  "failure": "TypeError: Object of type mappingproxy is not JSON serializable",
+  "stage": "Final report serialization; no completed installed-check acceptance asserted for this helper attempt.",
+  "correction": "Encode the immutable baseline verification result through the existing trusted serializer before adding it to the report.",
+  "runtime_code_changed": false,
+  "new_native_calls": 0,
+  "next_attempt_uses_fresh_directory": true
+}

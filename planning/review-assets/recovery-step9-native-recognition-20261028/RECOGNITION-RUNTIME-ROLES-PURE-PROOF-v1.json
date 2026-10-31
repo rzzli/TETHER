@@ -1,0 +1,21 @@
+{
+  "activity": {
+    "CPU_binary_reads": 0,
+    "GGUF_reads": 0,
+    "SDK_constructors": 0,
+    "children": 0,
+    "compiler_calls": 0
+  },
+  "checker_sha256": "36c478c1acd14cd50d49954c094d7d403938da79499e3111bc15b3b8398b36c5",
+  "denied_real_operations": [],
+  "elapsed_seconds": 0.0,
+  "errors": [],
+  "failures": [],
+  "recorded_at_utc": "2026-10-29T03:54:44.145082+00:00",
+  "schema_version": 1,
+  "scope": "Pure descriptors and fake typed buffer writes; no payload/API access, live lease, OS ownership or runtime qualification",
+  "source_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\recognition_runtime_roles_v1.py",
+  "source_sha256": "e48463249438e4d85d373e39b06acc4dcfebfc0fc9c6cf61e43159378203a10f",
+  "status": "passed",
+  "tests": 7
+}

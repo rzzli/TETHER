@@ -1,0 +1,80 @@
+{
+  "FFI_registration_proven": false,
+  "actual_API_calls": 0,
+  "adopter_implementation_imports_or_executions": 0,
+  "all_32_raw_record_and_counter_projections_unchanged": true,
+  "all_32_step_streams_and_checkpoints_unchanged": true,
+  "author_correction_proof": {
+    "bytes": 2665,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-LITERAL-CORRECTION-PROOF-v3.json",
+    "sha256": "734587b3feeb8bd89a85ee2000293e4ad152cb34c15d64904e4945c40c654710"
+  },
+  "changed_case_ids": [
+    "conflicting_reserve_keeps_original"
+  ],
+  "checker": {
+    "bytes": 4623,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\check_raw_adoption_fixture_peer_v3.py",
+    "sha256": "bf9cd60ad7e5a21fd139a34056756451f54c84008954f1604598c3eeedbf38f2"
+  },
+  "exact_change": "Only the already registered, unused buf0 is added to expected.buffers as retained/reusable. A rejected duplicate reservation neither references nor erases that buffer. The schema now explicitly includes every owner-registered buffer in the snapshot.",
+  "fixtures": {
+    "bytes": 257088,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURES-v3.json",
+    "sha256": "37e3c0d614a5aaeca2125c05e8d94c42707d901e039c41ac02978bb23caacc64"
+  },
+  "freeze": {
+    "bytes": 2749,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-FREEZE-v3.json",
+    "sha256": "f82b4ad090a4a669ba8568fabe7f9fbd856980ad1b07eecde3533edc2a148e58"
+  },
+  "material_blockers": [],
+  "old_payload_or_source_closure_operations": 0,
+  "other_31_cases_identical": true,
+  "prior_whole_fixture_peer": {
+    "bytes": 7682,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURE-INDEPENDENT-PEER-v2.json",
+    "sha256": "9dd25010c0e248fd249ef9a6607b6d5ed3bac0a36a8768568ba46775e67976d4"
+  },
+  "production_owner_bound": false,
+  "profile_qualified": false,
+  "projection": {
+    "actual_API_calls": 0,
+    "adopter_implementation_imports_or_executions": 0,
+    "fixtures": {
+      "bytes": 257088,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\RAW-ADOPTION-FIXTURES-v3.json",
+      "sha256": "37e3c0d614a5aaeca2125c05e8d94c42707d901e039c41ac02978bb23caacc64"
+    },
+    "profile_qualified": false,
+    "schema": {
+      "bytes": 21443,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-v3.json",
+      "sha256": "1dfc199ced5a8f055cd82557b1f38defb5fa49d37b31e330e03d6c78f1dfc0ec"
+    },
+    "structural_projection_checks": "passed",
+    "totals": {
+      "cases": 32,
+      "checkpoints": 9,
+      "records": 45,
+      "steps": 256
+    }
+  },
+  "recorded_at_utc": "2026-10-29T14:30:54.435510+00:00",
+  "reused_projection_checker": {
+    "bytes": 5575,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\check_raw_adoption_fixture_peer_v1.py",
+    "sha256": "23d9b5a8f39c24e74c6b23b50523c96811036c04fa5af9ae0f878067c8a989aa"
+  },
+  "reviewer": "/root/native_039_acceptance_audit",
+  "runtime_authorized": false,
+  "schema": {
+    "bytes": 21443,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-raw-adoption-20261029\\ADOPTION-FIXTURE-SCHEMA-v3.json",
+    "sha256": "1dfc199ced5a8f055cd82557b1f38defb5fa49d37b31e330e03d6c78f1dfc0ec"
+  },
+  "schema_version": 3,
+  "scope": "Independent exact v2-to-v3 schema/data delta and structural projections only. This does not accept the separate core implementation or its current counter finding.",
+  "status": "CLEAR_EXACT_ONE_FIELD_LITERAL_CORRECTION_ONLY",
+  "verified_freeze_pin_records": 8
+}

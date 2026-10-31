@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "passed_all_six_matching_installed_verifiers",
+  "current_source_version_under_test": "0.3.7",
+  "verification_only": true,
+  "records": [
+    {
+      "version": "031",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-031-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step7-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_frozen_r07.py",
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-031-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed_frozen_installed_verifier_without_live_source",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-031-AFTER.json",
+      "report_sha256": "bd901d830309efc70a126c83e7006930f2a2fb3b68192c221e129aeaae60fd7e"
+    },
+    {
+      "version": "032",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-baseline-restored-20261026",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-032-after-20261027",
+        "2905efda200e259a57b8950050cbec94a4acfc534e1b7c18a1d157e321b356a2",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-032-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-20261026/verify_baseline_relocation.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-baseline-restored-20261026",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-032-after-20261027",
+        "2905efda200e259a57b8950050cbec94a4acfc534e1b7c18a1d157e321b356a2",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-032-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed_synthetic_bundle_relocation",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-032-AFTER.json",
+      "report_sha256": "e95511a38fbf253af05ebf2f56e08c1efd58bd237689f0e36a525532ddf321f3"
+    },
+    {
+      "version": "033",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-comparison-restored-20261026",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-033-after-20261027",
+        "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-033-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-comparison-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-comparison-20261026/verify_relocation.py",
+        "D:/Projects/drug_target_agents",
+        "D:/Projects/drug_target_agents/data/reference/recovery-r09-comparison-restored-20261026",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-033-after-20261027",
+        "438f32639a5995d0efd42ce66a726bad64fbdca21b977965ba325df386f7bad9",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-033-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed_recorded_comparison_relocation",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-033-AFTER.json",
+      "report_sha256": "4f00e455feda0a5eb22c4a09f304f0ec76b6237e3df9f836ed6ae3d23a564b30"
+    },
+    {
+      "version": "034",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-034-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-token-aware-wheel-20261026/environment-v2/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-token-aware-20261026/verify_preparation_installed.py",
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-034-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed_installed_source_and_token_replay",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-034-AFTER.json",
+      "report_sha256": "23eaedfd8cfb5f7d5c8de9cf065660db8cc904cda5aa135ac7a21441c3fbedd1"
+    },
+    {
+      "version": "035",
+      "python": "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+      "helper": "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py",
+      "args": [
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-035-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:/Projects/drug_target_agents/data/cache/recovery-step9-retrieval-wheel-20261026/environment/Scripts/python.exe",
+        "-I",
+        "D:/Projects/drug_target_agents/planning/review-assets/recovery-step9-four-arm-20261026/verify_frozen_035.py",
+        "D:/Projects/drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-035-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-035-AFTER.json",
+      "report_sha256": "47a67cf4abd939205b90694f6906d4b55556fc8a77bd32ab261c86c6c7e5f3b7"
+    },
+    {
+      "version": "036",
+      "python": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-four-arm-wheel-20261026\\environment\\Scripts\\python.exe",
+      "helper": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-four-arm-20261026\\verify_relocation.py",
+      "args": [
+        "D:\\Projects\\drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\data\\reference\\recovery-r09-four-arm-restored-20261027",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-036-after-20261027",
+        "d637c2ca382740500f7f849a603a101ec58a47258d019dbc0618b09447b05697",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-036-AFTER.json"
+      ],
+      "version_check_exit_code": 0,
+      "argv": [
+        "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-four-arm-wheel-20261026\\environment\\Scripts\\python.exe",
+        "-I",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-four-arm-20261026\\verify_relocation.py",
+        "D:\\Projects\\drug_target_agents",
+        "D:\\Projects\\drug_target_agents\\data\\reference\\recovery-r09-four-arm-restored-20261027",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-collected-frozen-036-after-20261027",
+        "d637c2ca382740500f7f849a603a101ec58a47258d019dbc0618b09447b05697",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-036-AFTER.json"
+      ],
+      "exit_code": 0,
+      "status": "passed_authority_four_arm_relocation",
+      "report": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-collected-composition-20261027\\FROZEN-036-AFTER.json",
+      "report_sha256": "a61d7c1b627580f20c8e2697af2c52b17e1c55b93d7566d8bbc04350d7083eda"
+    }
+  ]
+}

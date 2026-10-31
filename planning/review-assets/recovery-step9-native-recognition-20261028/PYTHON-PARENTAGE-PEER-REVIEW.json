@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "direct_worker_transport_preparation_supported_timeout_qualification_still_required",
+  "probe": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\PYTHON-PARENTAGE-PROBE.json",
+    "sha256": "261e96221be0898cd29f982c7c8b339574bc9c9926c5d93cc97be86a9f3df69a",
+    "helper_sha256": "932e731bb7219bb42aa8a27281fae868d7141cd019aa8e37ccc8cf1a414b17cd",
+    "records": 3,
+    "raw_stdout_stderr_pairs_checked": 3
+  },
+  "v2_failure": {
+    "cache": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-source-20261028T160234Z",
+    "receipt_sha256": "da608eb10930d1ce7374d11ee7165300ed5edcc4613ce386e7f29e20614d92a4",
+    "output_hashes_checked": 8,
+    "journal_events": 7,
+    "journal_tip_sha256": "dcc5436450cc25f96ee7e975e83a616b60a5272592052bb47660204e544e2647",
+    "source_files": 0,
+    "child_started_marker_present": false,
+    "owned_launched_handle_reaped": true,
+    "actual_worker_pid_not_captured": true,
+    "location": "strict parent PID reservation check before urllib import or request"
+  },
+  "accepted_source_closure": {
+    "files_checked": 85,
+    "hash_mismatches": []
+  },
+  "prospective_direct_worker": {
+    "base_executable": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+    "base_sha256": "d2ec5b9401b6471874373fe3e4329da1da85014d98f8abedd4e0f02ffdaa21a1",
+    "venv_launcher": "D:\\Projects\\drug_target_agents\\data\\cache\\recovery-step9-generation-wheel-20261028\\environment\\Scripts\\python.exe",
+    "venv_launcher_sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d",
+    "only_additional_environment_key": "__PYVENV_LAUNCHER__",
+    "value": "pinned accepted venv launcher path",
+    "observed_pid": 18132,
+    "observed_parent_pid": 32896,
+    "observed_launch_pid": 18132,
+    "observed_version": "0.3.11",
+    "isolated": true,
+    "dont_write_bytecode": true
+  },
+  "required_before_v3_fetch": [
+    "Separate frozen helper/protocol and root exact-hash decision; do not resume failed v2 output",
+    "Pin and lease canonical base EXE through a narrow read-only external-path exception; retain accepted venv cfg/launcher and all85package hashes",
+    "Change fixed argv and parent audit executable to the pinned base path; set only controlled __PYVENV_LAUNCHER__ in minimal subprocess environment",
+    "Keep strict PPID owner equality; require reported child PID equals Popen PID, expected base path/prefix/version/-I-B flags before source qualification",
+    "Harmless forced-timeout fixture using identical launch transport must establish direct worker identity, then prove owned kill/wait/reap, capture/cleanup and no surviving worker via that retained handle",
+    "No HTTP/native/model calls until the new exact helper/protocol and timeout evidence are reviewed"
+  ],
+  "retrospective_wording": {
+    "supported": "Prior Popen records prove launched handles were waited/reaped; successful byte-verified replay outputs are unchanged.",
+    "not_established": "Where a venv launcher could delegate, those records alone do not prove descendant worker termination on timeout.",
+    "avoid": "Do not claim a proven orphan/leak, process-tree cleanup, or invalidate successful replays without evidence.",
+    "native_bridge_children": "Native EXE children are a separate transport; this Python launcher observation does not itself invalidate their direct-handle records."
+  },
+  "limitations": [
+    "Probe measured normal exits only; no forced-timeout proof yet.",
+    "sys.executable under controlled venv context is a logical venv path; actual argv uses pinned base executable.",
+    "No OS process-tree sandbox or full interpreter/OS attestation is established by these observations."
+  ],
+  "activity": {
+    "network_requests": 0,
+    "subprocesses_by_reviewer": 0,
+    "helper_imports_or_execution": 0,
+    "native_calls": 0,
+    "gguf_reads": 0
+  }
+}

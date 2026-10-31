@@ -1,0 +1,64 @@
+{
+  "activity": {
+    "original_payload_reads": 0,
+    "source_implementation": 0,
+    "subject_imports": 0,
+    "subject_tests": 0,
+    "target_API_calls": 0
+  },
+  "effective_result_rules": [
+    "For a valid files=None request, work_buffer_bytes is still the known fixed73738; aggregate_R_range/aggregate_C_range are informational, and all exact vector-dependent fields/comparisons remain unresolved.",
+    "Aggregate range fields are None whenever a full vector is supplied. Null optional aggregate hints then cause no unknowns; exact vector sums/counts derive those values.",
+    "Known exceedance means an exact-vector computed term in limit_comparisons. Do not enforce caps from aggregate hint/range lower bounds. Aggregate-only cannot reach WITHIN_DECLARED_BOUNDS_ONLY.",
+    "Malformed result keeps the five fixed reference constants; other derived fields (including work_buffer_bytes) are None, unknowns=[], one deterministic invalid violation.",
+    "Status precedence remains invalid metadata/checked overflow, then exact known cap exceedance even if other terms unknown, then indeterminate, then conditional within-declared only."
+  ],
+  "no_change": [
+    "Request/result keys,32derived fields,roles,limits andrepresentation coefficients unchanged",
+    "No aggregate-range admission,new coefficient, runtime cap/role/stream/output or production feature",
+    "All current runtime/actual verification and profile gates remain unchanged; old FAILED/INCOMPLETE_TIMEOUT preserved"
+  ],
+  "numeric_code_mapping": {
+    "bad_SHA_string": "DIGEST_FORMAT",
+    "bad_path_lexical_string": "PATH_IDENTITY",
+    "bulk_or_wrong_role_module_and_coverage_binding": "MODULE_BINDING",
+    "duplicate_normalized_path": "DUPLICATE_PATH",
+    "duplicate_or_nonpermutation_file_ID_set_after_numeric_validation": "FILE_IDS",
+    "extra_or_missing_key": "SCHEMA_KEYS",
+    "nonclosed_or_cyclic_declared_graph": "MODULE_GRAPH",
+    "nonnull_aggregate_vector_mismatch_or_impossible_zero_count_positive_bytes": "AGGREGATE_MISMATCH",
+    "numeric_not_exact_int_including_bool_float_string": "INTEGER_DOMAIN",
+    "numeric_out_of_range_wrong_version_or_forbidden_zero": "INTEGER_DOMAIN",
+    "unknown_role_string": "ROLE",
+    "wrong_container_string_or_required_bool_type": "TYPE_DOMAIN"
+  },
+  "overflow": [
+    "Use exact integer comparisons, never float coercion, wrapping, clamping or default zero.",
+    "Input and returned derived integer domain is0..2^63-1. A mathematically unrepresentable required sum/product returns REFUSED_INVALID_METADATA with ARITHMETIC_OVERFLOW.",
+    "Ceil division must use quotient plus a remainder indicator (or equivalent safe arithmetic), not size+65535. Valid size/total at2^63-1 must not fail solely from an avoidable intermediate ceil addition.",
+    "A null coefficient leaves its dependent product unknown; do not evaluate that unknown product as0 or overflow. Known exact limits still exceed independently."
+  ],
+  "packet_and_units": [
+    "Metadata IDs may be permuted; each sizing array file_id is the canonical list ordinal.",
+    "The closure sizing row uses file_id,invoked:false,return_observed:false,success:false; this is a longest-bool mathematical bound, not a valid observed-history claim. Digest rows use ordinal,size,sha256. Compact sorted ASCII JSON array lengths exclude LF.",
+    "The8192 value is an unchanged current-runtime reference. Caller max_packet_bytes is compared with the declared packet bound, not silently replaced by8192; a larger declared envelope grants no current runtime support.",
+    "All representation coefficients are strictly positive declared logical payload assumptions; zero refuses, unknown remains unknown. An absent structure can yield a zero multiplied term. No RSS/layout/timing qualification.",
+    "J retained rows plus J join workspace are counted separately in2J. Five distinct packet capacity slots are reserved once each, not a claim allfive occur in one history. Report output V is included in output reservation and within report_copies*V for memory, not added to memory again. Physical report transport remains unselected."
+  ],
+  "precode": "At most30 explicit calculator-only metadata vectors, including all12 isolated limit boundaries, exact known-exceeds+unknown and checked-overflow cases; no implementation before root scope.",
+  "preserved_base": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-production-preflight-20261029\\ADMISSION-ENVELOPE-CALCULATOR-PROPOSAL-v1.json",
+    "sha256": "038611daa69c5749def12d64dedc0b9afebdbfba2aff7d0e93981551e08d2cb8"
+  },
+  "recorded_at_utc": "2026-10-29T18:24:00.611919+00:00",
+  "schema_version": 1,
+  "snapshot_and_checks": [
+    "Invoke check at entry, then build the bounded closed-shape detached immutable snapshot before further callbacks. The initial callback may change caller data before that capture; semantic work then uses only the captured snapshot.",
+    "Invoke check at least once immediately after the detached snapshot; this is the second callback. Later callback mutation of caller lists/dicts must not alter captured inputs or result consistency.",
+    "Invoke checks during bounded per-file, graph and derivation work. Callback return values are ignored; BaseExceptions retain identity and are never translated as metadata errors.",
+    "Prepare the complete immutable report and its canonical encoded bytes, then invoke a final check immediately before returning it. No caller metadata is reread after capture.",
+    "Report to_dict/to_json_bytes getters are cached read-only operations: detached containers or retained immutable bytes, no callbacks, recalculation, I/O or authority."
+  ],
+  "status": "FINITE_SCHEMA_CLARIFICATIONS_ONLY_NOT_SOURCE_AUTHORITY",
+  "validation_order": "Closed schema/key checks, bounded exact structural/type/numeric capture in declared request/record field order, file identity/role/digest semantics, declared graph/binding, optional aggregate consistency, then checked arithmetic/comparisons. Exact-code vectors isolate one defect; multiple-invalid inputs receive the earliest deterministic validation error."
+}

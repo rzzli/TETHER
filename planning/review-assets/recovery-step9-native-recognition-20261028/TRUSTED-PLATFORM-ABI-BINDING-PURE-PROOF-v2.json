@@ -1,0 +1,109 @@
+{
+  "actual_SDK_constructors": 0,
+  "actual_children": 0,
+  "actual_execution_protocols_created": 0,
+  "checker_sha256": "60d64fc988bdcbce6c9c21e0e75dbdc366d917b776d999d774d2443684024d9a",
+  "combined_inputs": 177,
+  "compiler_calls": 0,
+  "denied_real_operations": [],
+  "elapsed_seconds": 1.0310000000754371,
+  "errors": [],
+  "failures": [],
+  "helper": {
+    "bytes": 59541,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_platform_abi_observation_v2.py",
+    "sha256": "f2682469f48919698d4ba702920888e8b2175b63161080afc62604668d639ef5"
+  },
+  "helper_sha256": "f2682469f48919698d4ba702920888e8b2175b63161080afc62604668d639ef5",
+  "old_parent": {
+    "bytes": 27588,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_platform_abi_observation_v1.py",
+    "sha256": "caf3e69c38bdd06b4786122adba4e79b4e683c264621d64f5a516347082d53cc"
+  },
+  "publication_fixtures": [
+    {
+      "case": "full-prepare",
+      "protocol": {
+        "bytes": 46258,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-platform-ABI-binding-pure-1793242819087876500\\prepare-protocol.json",
+        "sha256": "d747a817ee06985d144f2f141bfa786a8d08673950b37525ce022f5bfe84234a"
+      },
+      "report": {
+        "bytes": 1106,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-platform-ABI-binding-pure-1793242819087876500\\prepare-report.json",
+        "sha256": "d09ac7f0710f403666b05740b500ee977b41d4222516d2fece9d8563e55ef0c1"
+      }
+    },
+    {
+      "case": "report-write-failure",
+      "protocol": {
+        "bytes": 46266,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-platform-ABI-binding-pure-1793242819087876500\\failed-prepare-protocol.json",
+        "sha256": "123c0ace77256c6506131b17d15d327f1d733e21aad11abad0b38c85c4fcf028"
+      },
+      "repeat_rejected": true,
+      "report_absent": true
+    }
+  ],
+  "real_sdk_constructions": 0,
+  "reported_platform_image_operations": 0,
+  "schema_version": 1,
+  "scope": "Exact acyclic metadata preparation and unchanged qualified mechanics. Patched private cache publication fixtures only; no candidate protocol, SDK constructor or child dispatched.",
+  "static_authority": {
+    "bytes": 41865,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\TRUSTED-PLATFORM-ABI-STATIC-AUTHORITY-v1.json",
+    "sha256": "130ab496826afcef74236bfddae5386b267a7c788fe4496682c3f57338c0f8d2"
+  },
+  "static_inputs": 173,
+  "status": "passed",
+  "tests": 10,
+  "unchanged_runtime_parser_functions": 12,
+  "vector_labels": [
+    "173-exact-acyclic-static-inputs",
+    "static-missing",
+    "static-extra",
+    "static-self",
+    "static-authority",
+    "static-checker",
+    "static-proof",
+    "static-protocol",
+    "static-output",
+    "static-unknown-platform",
+    "static-old-census-EXE",
+    "static-malformed-bytes",
+    "static-malformed-bytes",
+    "static-malformed-sha256",
+    "static-malformed-sha256",
+    "static-malformed-path",
+    "static-duplicate",
+    "static-extra-field",
+    "current-static-hash-check",
+    "dynamic-collision-run_platform_abi_observation_v2.py",
+    "dynamic-collision-TRUSTED-PLATFORM-ABI-STATIC-AUTHORITY-v1.json",
+    "dynamic-collision-check_platform_abi_binding_v2.py",
+    "dynamic-collision-TRUSTED-PLATFORM-ABI-BINDING-PURE-PROOF-v2.json",
+    "dynamic-bytes",
+    "dynamic-bytes",
+    "dynamic-sha256",
+    "dynamic-sha256",
+    "role-mode",
+    "role-mode",
+    "role-module_policy_sha256",
+    "role-platform_image_authentication",
+    "role-reported_platform_path_filesystem_operations",
+    "role-recognition_enabled",
+    "role-no_model_or_CPU_paths_supplied",
+    "role-maximum_attempts",
+    "role-automatic_retry",
+    "role-execution_authorized_by_preparation",
+    "role-explicit_target_calls",
+    "role-creation_flags",
+    "argv-0",
+    "argv-1",
+    "argv-2",
+    "full-prepare-two-exclusive-publications",
+    "failed-report-no-repeat",
+    "finite-ABI-only-leaves",
+    "12-components-unchanged-no-real-constructor"
+  ]
+}

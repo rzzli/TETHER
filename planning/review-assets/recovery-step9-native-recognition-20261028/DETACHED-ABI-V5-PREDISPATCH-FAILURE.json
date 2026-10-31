@@ -1,0 +1,200 @@
+{
+  "status": "failed_before_constructor_due_to_provenance_row_schema_assumption",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v5.py",
+    "bytes": 43541,
+    "sha256": "7a3ecd755bb4f0d060b09cb6619ec0f6579f4c6b2f3ac837f1f653c9021bfce4"
+  },
+  "exception": "RuntimeError: Preserved second-attempt artifact changed",
+  "actual_cause": "All13 output rows include relative_path; integrity pins only contain path/bytes/sha256. Expected whole-dict equality was wrong.",
+  "all_byte_hashes_match": true,
+  "rows": [
+    {
+      "expected": {
+        "bytes": 53696,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\effective-protocol.json",
+        "relative_path": "effective-protocol.json",
+        "sha256": "58154061a1a2dff9e3369a01662cb2b8be601012ba16c2b694f98255067adf6d"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\effective-protocol.json",
+        "bytes": 53696,
+        "sha256": "58154061a1a2dff9e3369a01662cb2b8be601012ba16c2b694f98255067adf6d"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 87,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\attempt.json",
+        "relative_path": "execution/child/attempt.json",
+        "sha256": "d655bf5fe07bdb11b9cfdffc7e0131bf2c7fb658325c275ed8997647a5e4a157"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\attempt.json",
+        "bytes": 87,
+        "sha256": "d655bf5fe07bdb11b9cfdffc7e0131bf2c7fb658325c275ed8997647a5e4a157"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 151,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\failure.json",
+        "relative_path": "execution/child/failure.json",
+        "sha256": "4f2d7a72c55578ab04c5c6c930cad08db774fb8b67e87e3ca464130b64445fd1"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\failure.json",
+        "bytes": 151,
+        "sha256": "4f2d7a72c55578ab04c5c6c930cad08db774fb8b67e87e3ca464130b64445fd1"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 260,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\result.partial.jsonl",
+        "relative_path": "execution/child/result.partial.jsonl",
+        "sha256": "ae4d20b662a8cc4bcbeb48716ae6037a1cac3481b077c3960a9b8e347b00f481"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\child\\result.partial.jsonl",
+        "bytes": 260,
+        "sha256": "ae4d20b662a8cc4bcbeb48716ae6037a1cac3481b077c3960a9b8e347b00f481"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 9591,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\journal.jsonl",
+        "relative_path": "execution/journal.jsonl",
+        "sha256": "1db237ea0cfd9bcae52ff4bb5c68fe192b05a211210e4bab3168d4f253b0a490"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\execution\\journal.jsonl",
+        "bytes": 9591,
+        "sha256": "1db237ea0cfd9bcae52ff4bb5c68fe192b05a211210e4bab3168d4f253b0a490"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 103,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\failure.json",
+        "relative_path": "failure.json",
+        "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\failure.json",
+        "bytes": 103,
+        "sha256": "ab1d2dca3247ff436e3fffd2ebda683a8e28a6002bd745214b64e5fe17858b6a"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 157803,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\parent-report.json",
+        "relative_path": "parent-report.json",
+        "sha256": "219611c1f661706e3eb8e4567c89b28f69a9ec8a386d18d19f042dc7d4c4ea36"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\parent-report.json",
+        "bytes": 157803,
+        "sha256": "219611c1f661706e3eb8e4567c89b28f69a9ec8a386d18d19f042dc7d4c4ea36"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 121,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\parent-reservation.json",
+        "relative_path": "parent-reservation.json",
+        "sha256": "a623c46d1ed6e26b73626deb0fee0b769be761f20cc50d747223583a96df3a94"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\parent-reservation.json",
+        "bytes": 121,
+        "sha256": "a623c46d1ed6e26b73626deb0fee0b769be761f20cc50d747223583a96df3a94"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 152705,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\post-lease-cleanup.json",
+        "relative_path": "post-lease-cleanup.json",
+        "sha256": "4385725dddf3d8db275bbb13457adf36c89f3715e7ff2725b256baa619cba941"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\post-lease-cleanup.json",
+        "bytes": 152705,
+        "sha256": "4385725dddf3d8db275bbb13457adf36c89f3715e7ff2725b256baa619cba941"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 1370,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\receipt.json",
+        "relative_path": "receipt.json",
+        "sha256": "29bd56db90817a7d6d64f1d5b9770fadbc2a7c27787e1273da2e39dcb122ac26"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\receipt.json",
+        "bytes": 1370,
+        "sha256": "29bd56db90817a7d6d64f1d5b9770fadbc2a7c27787e1273da2e39dcb122ac26"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 0,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\stderr.bin",
+        "relative_path": "stderr.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\stderr.bin",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 62,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\stdout.bin",
+        "relative_path": "stdout.bin",
+        "sha256": "9f9aefea7e9b75ff3b13cff5234e179493b3d4c9c0f022da5d3f51a1ac03fb86"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\stdout.bin",
+        "bytes": 62,
+        "sha256": "9f9aefea7e9b75ff3b13cff5234e179493b3d4c9c0f022da5d3f51a1ac03fb86"
+      },
+      "whole_mapping_equal": false
+    },
+    {
+      "expected": {
+        "bytes": 2366,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\terminal-seal.json",
+        "relative_path": "terminal-seal.json",
+        "sha256": "33bd40f4f35d6a08f1659d11bef79d7e65cd7ce827d8058f144ef87250f2a24f"
+      },
+      "current_integrity_pin": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v2-20261028T233241Z\\terminal-seal.json",
+        "bytes": 2366,
+        "sha256": "33bd40f4f35d6a08f1659d11bef79d7e65cd7ce827d8058f144ef87250f2a24f"
+      },
+      "whole_mapping_equal": false
+    }
+  ],
+  "protocol_created": false,
+  "real_SDK_constructors": 0,
+  "target_or_child_calls": 0,
+  "GGUF_reads": 0,
+  "network": 0
+}

@@ -1,0 +1,505 @@
+{
+  "schema_version": 1,
+  "status": "typed_actual_converter_bridge_built_not_executed",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z",
+  "role": "build_only_no_native_execution_authorized",
+  "installs": 0,
+  "downloads": 0,
+  "resulting_bridge_executions": 0,
+  "native_libraries_loaded": 0,
+  "model_calls": 0,
+  "servers": 0,
+  "vocabulary_loads": 0,
+  "gguf_reads": 0,
+  "network_calls": 0,
+  "provider_spend_usd": 0,
+  "compilation_is_not_abi_qualification": true,
+  "native_grammar_conformance": "unverified",
+  "elapsed_seconds": 1.5310000000754371,
+  "contract": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\CONVERTER-BRIDGE-BUILD-CONTRACT.md",
+    "sha256": "8da8961895616872e2b3fa5825aee731fe350725cf1374077190e079c29f5ba5",
+    "bytes": 3483
+  },
+  "helper": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\build_typed_converter_bridge_v2.py",
+    "sha256": "c60bfed19a0470ae2e52de94b612938e268e3e6d25661be71581f0909a799dbd",
+    "bytes": 15670
+  },
+  "authored_source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\typed_converter_bridge.cpp",
+    "sha256": "e4c9532b74532e548192304324cae139b5883d9a25def4c6588ae909e4b90867",
+    "bytes": 15755
+  },
+  "compiled_source": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.cpp",
+    "sha256": "e4c9532b74532e548192304324cae139b5883d9a25def4c6588ae909e4b90867",
+    "bytes": 15755
+  },
+  "closure_report": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\CONVERTER-HEADER-CLOSURE.json",
+    "sha256": "c66884e79fb75d82d6fe6932883de44b988c008d9de486ca2e634acb4bb4779e",
+    "bytes": 4108
+  },
+  "source_commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+  "headers": [
+    {
+      "source": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-converter-source-20261028T030704Z\\sources\\common\\json-schema-to-grammar.h",
+        "sha256": "7dc12dd8b3513b97293f22c2f87f0918e476fac3ba8895e8cb9671110401ea07",
+        "bytes": 743
+      },
+      "copied": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json-schema-to-grammar.h",
+        "sha256": "7dc12dd8b3513b97293f22c2f87f0918e476fac3ba8895e8cb9671110401ea07",
+        "bytes": 743
+      }
+    },
+    {
+      "source": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-converter-source-20261028T030704Z\\sources\\common\\json-schema.h",
+        "sha256": "57933a181ec0e84cbba1abea7fd898dc03e452d7de1a35795b787cee679d02af",
+        "bytes": 6095
+      },
+      "copied": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json-schema.h",
+        "sha256": "57933a181ec0e84cbba1abea7fd898dc03e452d7de1a35795b787cee679d02af",
+        "bytes": 6095
+      }
+    },
+    {
+      "source": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-converter-source-20261028T030704Z\\sources\\common\\json.h",
+        "sha256": "a352f31307f1be2bdb34c027b876f42a1c5d1ea775cc8e4f11d703b16c40d22f",
+        "bytes": 13476
+      },
+      "copied": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers\\json.h",
+        "sha256": "a352f31307f1be2bdb34c027b876f42a1c5d1ea775cc8e4f11d703b16c40d22f",
+        "bytes": 13476
+      }
+    }
+  ],
+  "toolchain_probe": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\TOOLCHAIN-LOCAL-PROBE-v2.json",
+    "sha256": "85b437a0e3cb98995ec08d54d966e0a705f6aa80376ae0e690d40593b5d2d7eb",
+    "bytes": 16900
+  },
+  "filtered_environment": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-installed-toolchain-probe-20261028T025723Z\\filtered-build-environment.json",
+    "sha256": "b6777f390be6e92041f557c6217531725ef3096249bfc80960f9145a88159cff",
+    "bytes": 5379
+  },
+  "tools": [
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+      "sha256": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+      "bytes": 893288
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\lib.exe",
+      "sha256": "d8dae02a50c7571c6c0ea5cd7a853830aaca8fad13f8f4be147828d51dd4adec",
+      "bytes": 23384
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+      "sha256": "a8c42e25c91ca2453e1110540ac08f0fc12d7539454a11b9af8baeecb469837d",
+      "bytes": 3701088
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\delayimp.lib",
+      "sha256": "ce6671047abb001e1545c09df57ff966065944f96c634c0309d3a49d9e40553e",
+      "bytes": 138422
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib",
+      "sha256": "9fe31df255d17b0339391ff80a71bf2c5d442cc301bd2fe6eeea00b626f10785",
+      "bytes": 14576
+    }
+  ],
+  "existing_tool_inputs": [
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe",
+      "sha256": "c54f3b7c9164ea9a0db8641e81ecdda80c2664ef5a47c4191406f848cc07c662",
+      "bytes": 469456
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\Tools\\VsDevCmd.bat",
+      "sha256": "a7815e85d636828e5cf70fe4235b11fcb41750896a4d2d60756b43bacaf4f0b2",
+      "bytes": 11526
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+      "sha256": "b0a1818ebae6da7f18230a84e76ce839212584ac4c2ab55b97a0d5268085da57",
+      "bytes": 893288
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+      "sha256": "a8c42e25c91ca2453e1110540ac08f0fc12d7539454a11b9af8baeecb469837d",
+      "bytes": 3701088
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\string",
+      "sha256": "dafa5ec4d069f7e85001d6a03fdcac5bde1d18eb7412240aa5cc7e10c7cddf05",
+      "bytes": 16455
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\vector",
+      "sha256": "b254d6fc250164a9f4e71ea66e2c1e9401cb2bf8b0056550fd92135518450b51",
+      "bytes": 169028
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\include\\yvals_core.h",
+      "sha256": "10b59d42bde2105e76cf16735e34dd0f1d45a943cb1b789c4a0406c67c2bd684",
+      "bytes": 100570
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\msvcprt.lib",
+      "sha256": "6ac60dce9dda8b39f082cdbaeada4601342e1b257e87bb2e20228f6fcf441277",
+      "bytes": 5571166
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\vcruntime.lib",
+      "sha256": "d772e963458246dd6dd5a7969c0f08e461ccb8b64cb54e9a67317cafffc22ec9",
+      "bytes": 287794
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\Windows.h",
+      "sha256": "b337d661d03a4abefb7b86a2742ce1ad5d19b57cd8b858bd13e7bbcc1dbeeaaa",
+      "bytes": 7511
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h",
+      "sha256": "06cbab3a501306fdd9176a00a83e5bb92ea4d7863cfd666355743527cf99edc6",
+      "bytes": 81489
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.Lib",
+      "sha256": "842f5ce7ad8cf5aab7491b791e7968d2be510ae93f4019d3311797289399d221",
+      "bytes": 311908
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\x64\\ucrt.lib",
+      "sha256": "7ef4eac926bf597d2f243f16cdfed7e0db22cb3ca34a1d7e088a84c994a03d66",
+      "bytes": 285588
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c1.dll",
+      "sha256": "49bd8b0b1c3d814b6b39cf0d649ac8a7ffc8fea021b0c5fd363f787b158d39a5",
+      "bytes": 3623736
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c1xx.dll",
+      "sha256": "de129befb4cfeca19ea62c4d72162f19f2b7952545cc64b7b3f1fcfd4981c5f1",
+      "bytes": 13249848
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\c2.dll",
+      "sha256": "1477c03a2a267effe4a40d8debb846f3e4ab42547c5b966d7d5187bb2823e2f5",
+      "bytes": 11492664
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\mspdbcore.dll",
+      "sha256": "91c61f30fafb3324b03070c4ee85f370902cf3d80240a210f7240e89777bf6be",
+      "bytes": 1446240
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\mspdb140.dll",
+      "sha256": "429b03bbecf0851bd7f1922448c4ff4184d5e521af13a5ce0da6e8c54b033dff",
+      "bytes": 386912
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\1033\\clui.dll",
+      "sha256": "5271e867c8fd4f87a8c74de583ea90e81773334db1769ff7f9dcf8917ec603cf",
+      "bytes": 630072
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\lib.exe",
+      "sha256": "d8dae02a50c7571c6c0ea5cd7a853830aaca8fad13f8f4be147828d51dd4adec",
+      "bytes": 23384
+    }
+  ],
+  "approved_common_dll": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama-common.dll",
+    "sha256": "d4840df1870ff0ac5dd88c3a43f32d8b1ef7af97d95a802e2c9d3b98066d0505",
+    "bytes": 8161792
+  },
+  "model_mirror_report": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-integration-20261027\\NATIVE-MODEL-MIRROR.json",
+    "sha256": "5ec132da880d016ecc36a0e0207386d1c802964bbaead7fe392bbdf617839b8d",
+    "bytes": 12080
+  },
+  "approved_runtime_manifest": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\approved_runtime.hpp",
+    "sha256": "025f2b9553080f9acc71832a5642ae41a91c2199ee9d34cecd9c045250b1b7a8",
+    "bytes": 3409
+  },
+  "native_runtime_dll_count": 30,
+  "import_definition": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.def",
+    "sha256": "63d52034dd9415d9401cc50d6ce361c8ec46817ec07ec026bd7434c9741ee261",
+    "bytes": 378
+  },
+  "imported_methods": {
+    "parse": "?parse@common_json@@SA?AV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+    "dump": "?dump@common_json@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z",
+    "destructor": "??1common_json@@QEAA@XZ",
+    "convert": "?json_schema_to_grammar@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBVcommon_json@@_N@Z"
+  },
+  "import_library": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.lib",
+    "sha256": "812d7ef41ef393122a9943b261e426d76bdf24b35a381c07fa3adeb63713175c",
+    "bytes": 3786
+  },
+  "executable": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.exe",
+    "sha256": "ecfe2421a1b2006b5a10c076a654fd627e0582bab116cae69a6857aa5ea64af6",
+    "bytes": 89600
+  },
+  "object": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.obj",
+    "sha256": "a773826a7b910d776f67444d8041edc86024bdd9c61cdaa5c72059d389175c6b",
+    "bytes": 434791
+  },
+  "static_ordinary_imports": {
+    "bcrypt.dll": [
+      "BCryptHashData",
+      "BCryptCreateHash",
+      "BCryptCloseAlgorithmProvider",
+      "BCryptGetProperty",
+      "BCryptFinishHash",
+      "BCryptDestroyHash",
+      "BCryptOpenAlgorithmProvider"
+    ],
+    "MSVCP140.dll": [
+      "?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z",
+      "?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ",
+      "?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ",
+      "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ",
+      "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAADD@Z",
+      "??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+      "??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z",
+      "??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+      "?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ",
+      "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAVios_base@1@AEAV21@@Z@Z",
+      "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@I@Z",
+      "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_K@Z",
+      "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ",
+      "?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z",
+      "?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z",
+      "?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+      "?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z",
+      "?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z",
+      "?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z",
+      "?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+      "?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ",
+      "?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+      "?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+      "?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A",
+      "?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A",
+      "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+      "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD0@Z",
+      "?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z",
+      "?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z",
+      "?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ",
+      "?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z",
+      "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z",
+      "??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+      "??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+      "?width@ios_base@std@@QEAA_J_J@Z",
+      "?width@ios_base@std@@QEBA_JXZ",
+      "?setf@ios_base@std@@QEAAHHH@Z",
+      "?flags@ios_base@std@@QEBAHXZ",
+      "?good@ios_base@std@@QEBA_NXZ",
+      "?uncaught_exception@std@@YA_NXZ",
+      "?_Xout_of_range@std@@YAXPEBD@Z",
+      "?_Xlength_error@std@@YAXPEBD@Z",
+      "??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+      "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ"
+    ],
+    "KERNEL32.dll": [
+      "AddDllDirectory",
+      "VirtualProtect",
+      "SetUnhandledExceptionFilter",
+      "InitializeSListHead",
+      "GetSystemTimeAsFileTime",
+      "GetCurrentThreadId",
+      "QueryPerformanceCounter",
+      "GetSystemInfo",
+      "RaiseException",
+      "Module32NextW",
+      "Module32FirstW",
+      "CreateToolhelp32Snapshot",
+      "WideCharToMultiByte",
+      "MultiByteToWideChar",
+      "SetDefaultDllDirectories",
+      "RemoveDllDirectory",
+      "GetProcAddress",
+      "LoadLibraryExW",
+      "GetModuleHandleW",
+      "GetModuleFileNameW",
+      "FreeLibrary",
+      "GetCurrentProcessId",
+      "GetLastError",
+      "CloseHandle",
+      "WriteFile",
+      "ReadFile",
+      "GetFullPathNameW",
+      "GetFileSizeEx",
+      "GetFileAttributesW",
+      "GetDriveTypeW",
+      "FlushFileBuffers",
+      "CreateFileW",
+      "LoadLibraryExA",
+      "VirtualQuery"
+    ],
+    "VCRUNTIME140.dll": [
+      "_CxxThrowException",
+      "memcmp",
+      "__current_exception_context",
+      "__current_exception",
+      "__C_specific_handler",
+      "memset",
+      "memmove",
+      "__std_terminate",
+      "__std_exception_copy",
+      "__std_exception_destroy",
+      "memcpy"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "strlen",
+      "wcslen",
+      "towlower"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "free",
+      "_set_new_mode",
+      "malloc",
+      "_callnewh"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_register_onexit_function",
+      "_seh_filter_exe",
+      "_set_app_type",
+      "_c_exit",
+      "_initialize_onexit_table",
+      "_configure_wide_argv",
+      "_initialize_wide_environment",
+      "_get_initial_wide_environment",
+      "_initterm",
+      "_initterm_e",
+      "exit",
+      "_exit",
+      "__p___argc",
+      "__p___wargv",
+      "_cexit",
+      "_register_thread_local_exe_atexit_callback",
+      "terminate",
+      "_crt_atexit"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "__setusermatherr"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "_set_fmode",
+      "__p__commode"
+    ],
+    "api-ms-win-crt-locale-l1-1-0.dll": [
+      "_configthreadlocale"
+    ]
+  },
+  "static_delay_imports": {
+    "llama-common.dll": [
+      "?json_schema_to_grammar@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBVcommon_json@@_N@Z",
+      "?parse@common_json@@SA?AV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+      "?dump@common_json@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z",
+      "??1common_json@@QEAA@XZ"
+    ]
+  },
+  "commands": [
+    {
+      "label": "create-narrow-importlib",
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\lib.exe",
+        "/nologo",
+        "/machine:x64",
+        "/def:D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.def",
+        "/out:D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.lib"
+      ],
+      "cwd": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z",
+      "exit_code": 0,
+      "elapsed_seconds": 0.03100000007543713,
+      "stdout": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\create-narrow-importlib.stdout",
+        "sha256": "5d0e424f5e2436b2a54226378fe3756b9e6875829a7d00c4829264593ab9d6c3",
+        "bytes": 262
+      },
+      "stderr": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\create-narrow-importlib.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "label": "compile-link-only",
+      "argv": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+        "/nologo",
+        "/Bv",
+        "/std:c++17",
+        "/MD",
+        "/O2",
+        "/DNDEBUG",
+        "/D_ITERATOR_DEBUG_LEVEL=0",
+        "/EHsc",
+        "/W4",
+        "/WX",
+        "/utf-8",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\headers",
+        "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.cpp",
+        "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.obj",
+        "/FeD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\typed_converter_bridge.exe",
+        "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\bridge.pdb",
+        "/link",
+        "/MACHINE:X64",
+        "/INCREMENTAL:NO",
+        "/DELAYLOAD:llama-common.dll",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\llama-common-typed.lib",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\lib\\x64\\delayimp.lib",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib"
+      ],
+      "cwd": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z",
+      "exit_code": 0,
+      "elapsed_seconds": 1.3429999999934807,
+      "stdout": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\compile-link-only.stdout",
+        "sha256": "363d8813f68f45c96c062afdcd4114ce43a5ea355f582465b0cd68b26e608439",
+        "bytes": 28
+      },
+      "stderr": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-typed-converter-bridge-build-20261028T033101Z\\compile-link-only.stderr",
+        "sha256": "8513b82d7df53b110513306933773e4e62c6d0ea067e23d2032a0032d81f0ca9",
+        "bytes": 1156
+      }
+    }
+  ],
+  "guards": [],
+  "global_environment_unchanged": true,
+  "diagnostics_policy": "Any native stderr warnings fail future external qualification",
+  "source_limits": {
+    "max_input_bytes": 2097152,
+    "max_output_bytes": 4194304,
+    "max_native_dll_bytes": 134217728
+  },
+  "force_gbnf": false,
+  "execution_authorization": "Not granted by this report"
+}

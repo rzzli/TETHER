@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "passed_current_native_canary_documentation_checks",
+  "documents": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "bytes": 33239,
+      "sha256": "a47a56b24c2e9c310f1bd5ffa40868bb304c41cffc34b2d35fd93c812d4a2891"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "bytes": 21723,
+      "sha256": "69c09ed31d3e67cdd51b1c433619ffc814995b83c80bf63f719810b0fd404876"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "bytes": 101191,
+      "sha256": "e321b8ee2ed5518c1ca6b9884461d25758ceff6efeaf7547e7c84b174269ac1f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-10-28-r09-native-build.md",
+      "bytes": 14349,
+      "sha256": "9400f70054f4fdd28b37db39e2ef7b27dd9f582b8475851f20e890f15f74cf76"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessments.md",
+      "bytes": 3694,
+      "sha256": "e1bfb7a2525b709de53f52b9269ba4b54c12524c04a16760b6a4da554728a5cf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md",
+      "bytes": 41854,
+      "sha256": "4e036a593d1ee7deec1a3623f37ad40e5e0d0559faddf0f2a7499c85c61aa2c2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 32116,
+      "sha256": "4ebaced7908b4bb81fce58cc126b2d19ca14997f1ca59e3ffa71484664d970bb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "bytes": 13393,
+      "sha256": "c2861f75fcf3c7d5b0994edb5defa841d0db832dbc104fd4f817dfac4de6dbd3"
+    }
+  ],
+  "new_local_links": [
+    {
+      "document": "README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-V3-RESULT-VERIFICATION.json"
+    },
+    {
+      "document": "README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "memory/research-log-2026-10-28-r09-native-build.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-V3-RESULT-VERIFICATION.json"
+    },
+    {
+      "document": "memory/research-log-2026-10-28-r09-native-build.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.json"
+    },
+    {
+      "document": "memory/research-log-2026-10-28-r09-native-build.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\JOB-IOCP-OBSERVER-DESIGN-v1.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessments.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-28 - Native Canary.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-BUILD-V3-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\HARMLESS-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.md"
+    },
+    {
+      "document": "planning/Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\JOB-IOCP-OBSERVER-DESIGN-v1.md"
+    }
+  ],
+  "human_gates_pending": 4,
+  "scope": "Current status/UTF-8/links; not actual observer, native ABI, or scientific acceptance"
+}

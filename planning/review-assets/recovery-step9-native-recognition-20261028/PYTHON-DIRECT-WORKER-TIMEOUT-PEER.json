@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "verified_recorded_direct_worker_forced_timeout_within_fixture_scope",
+  "timeout_record": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\PYTHON-DIRECT-WORKER-TIMEOUT.json",
+    "sha256": "63a39f568d531c29e1327a00422ee6e7bddd86df41167597ed4c2a287ec67017",
+    "helper_sha256": "752844ce6c36aa598fc49527467345c32287bcf81fa036f76e53b1d90fbdcd19"
+  },
+  "raw_stdout": {
+    "sha256": "d3ee49967950ab9aed26a11ab26ba8223d8963ad2a6975ec39a75e8daed8ad54",
+    "bytes": 470
+  },
+  "raw_stderr": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "base_executable": {
+    "path": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+    "sha256": "d2ec5b9401b6471874373fe3e4329da1da85014d98f8abedd4e0f02ffdaa21a1",
+    "canonical_ancestors_checked": 9,
+    "reparse_violations": []
+  },
+  "identity": {
+    "worker_pid": 13808,
+    "launched_pid": 13808,
+    "worker_ppid": 38280,
+    "owner_pid": 38280,
+    "version": "0.3.11",
+    "flags": [
+      "-I",
+      "-B"
+    ],
+    "expected_venv_context": true
+  },
+  "termination": {
+    "timed_out": true,
+    "owned_actual_worker_killed": true,
+    "handle_reaped": true,
+    "returncode": 1,
+    "elapsed_seconds": 1.0310000000754371,
+    "fixture_timeout_seconds": 1,
+    "cleanup_communicate_seconds": 3
+  },
+  "accepted_package_files_rechecked": 85,
+  "conclusion": "Evidence satisfies the narrow forced-timeout prerequisite for preparing the same pinned direct-base/controlled-venv transport; it does not authorize a fetch or prove general descendant containment.",
+  "v3_requirement": "Bind the canonical cpython-3.11.15 base path/hash and this exact timeout record; preserve strict parent equality and require reported PID equal to owned Popen PID. Review separately frozen helper/protocol before any request.",
+  "limitations": [
+    "Normal Python alias cpython-3.11 and canonical cpython-3.11.15 names must not be conflated; v3 should bind the canonical path used here.",
+    "One authored print-and-sleep worker, not an HTTP or source-fetch execution test.",
+    "No general process-tree/Job Object containment, OS attestation or native-model qualification is established.",
+    "Fixture output is statically small; its post-capture size assertion is not a generalized live-stream cap."
+  ],
+  "activity": {
+    "helper_imports_or_execution_by_peer": 0,
+    "child_dispatches_by_peer": 0,
+    "network_requests_by_peer": 0,
+    "native_calls_by_peer": 0,
+    "gguf_reads_by_peer": 0
+  }
+}

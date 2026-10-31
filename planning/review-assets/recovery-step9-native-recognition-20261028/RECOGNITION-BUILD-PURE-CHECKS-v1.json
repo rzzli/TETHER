@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "helper_sha256": "7b46d67568e22e34dff048eb7a73abec3578268553d2f32c2550f2bb9919a18d",
+  "checker_sha256": "8d0e26fe3b246b41fc10ef75817f7838a0b73c1ef62489bafedf8754d2afcefd",
+  "tests": 24,
+  "failures": 0,
+  "errors": 0,
+  "actual_compiler_dispatches": 0,
+  "actual_children": 0,
+  "target_DLL_loads": 0,
+  "CPU_binary_reads": 0,
+  "GGUF_model_reads": 0,
+  "denied_real_operations": [],
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-recognition-build-v1-pure-1793248483626189700",
+  "scope": "Own fake compiler/leases/finalizer plus bounded source/PE data; no build or target execution"
+}

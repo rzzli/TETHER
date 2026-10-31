@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "acceptance_sha256": "27f33a36fd01d48b79e1492ad6b4b185a60e4bd662bb1ee0d955e5a284079cdc",
+  "source_pins_rechecked": 324,
+  "evidence_hashes_rechecked": 34,
+  "protected_hashes_only": 2,
+  "documents_checked": 20,
+  "local_links_checked": 207,
+  "missing_links": [],
+  "json_reports_parsed": 24,
+  "full_tests": {
+    "run": 1737,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "major_completion_reassessment": {
+    "path": "planning/Project Progress Reassessment 2026-10-28 - R09 Duration.md",
+    "sha256": "bd89fc699ac822b9b2b8d7c623e04c4625abcd335df3644802e773b0deec0cf5"
+  },
+  "actual_native_case_feasibility": "not_established",
+  "observed_time_margin_seconds": 4.078000000095926,
+  "human_reviews": "pending",
+  "native_grammar": "not_tested",
+  "model_calls": 0,
+  "provider_spend_usd": 0
+}

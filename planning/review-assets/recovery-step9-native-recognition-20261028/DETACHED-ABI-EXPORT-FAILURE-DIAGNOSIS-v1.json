@@ -1,0 +1,1496 @@
+{
+  "schema_version": 1,
+  "status": "static_diagnosis_five_required_exports_resolved_against_wrong_module",
+  "scope": "Source/PE/retained-metadata inspection; independent full actual-run verification belongs to its separate result report.",
+  "source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v3.cpp",
+    "bytes": 49260,
+    "sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4"
+  },
+  "protocol_sha256": "dc7de124b9f64a5cce688f91857d960e27549fa2df9c27fd667517da4c980672",
+  "original_attempt_preserved": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v1-20261028T225049Z",
+  "symbol_requirements": [
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 0,
+      "symbol": "llama_version",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 257,
+          "RVA": 1105568,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 1,
+      "symbol": "llama_model_default_params",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 107,
+          "RVA": 2238240,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 2,
+      "symbol": "llama_backend_init",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 41,
+          "RVA": 1105584,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 3,
+      "symbol": "llama_backend_free",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 40,
+          "RVA": 1105776,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 4,
+      "symbol": "llama_model_load_from_splits",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 120,
+          "RVA": 1112080,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 5,
+      "symbol": "llama_model_free",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 109,
+          "RVA": 2238336,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 6,
+      "symbol": "llama_model_get_vocab",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 111,
+          "RVA": 2238288,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 7,
+      "symbol": "llama_vocab_n_tokens",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 278,
+          "RVA": 2513232,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 8,
+      "symbol": "llama_vocab_is_eog",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 276,
+          "RVA": 2513664,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 9,
+      "symbol": "llama_tokenize",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 256,
+          "RVA": 2514896,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 10,
+      "symbol": "llama_token_to_piece",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 255,
+          "RVA": 2514912,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 11,
+      "symbol": "llama_sampler_init_grammar",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 186,
+          "RVA": 2372800,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 12,
+      "symbol": "llama_sampler_apply",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 171,
+          "RVA": 2367440,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 13,
+      "symbol": "llama_sampler_accept",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 170,
+          "RVA": 2367408,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "LLAMA_APIS",
+      "group_index": 14,
+      "symbol": "llama_sampler_free",
+      "requested_owner": "llama.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "llama.dll": {
+          "ordinal": 180,
+          "RVA": 2367664,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 0,
+      "symbol": "ggml_backend_load",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "ggml.dll": {
+          "ordinal": 9,
+          "RVA": 8496,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 1,
+      "symbol": "ggml_backend_reg_count",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "ggml.dll": {
+          "ordinal": 13,
+          "RVA": 5776,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 2,
+      "symbol": "ggml_backend_reg_get",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "ggml.dll": {
+          "ordinal": 14,
+          "RVA": 5920,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 3,
+      "symbol": "ggml_backend_reg_name",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": false,
+      "actual_exports": {
+        "ggml-base.dll": {
+          "ordinal": 129,
+          "RVA": 130672,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": true
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 4,
+      "symbol": "ggml_backend_reg_dev_count",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": false,
+      "actual_exports": {
+        "ggml-base.dll": {
+          "ordinal": 126,
+          "RVA": 130736,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": true
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 5,
+      "symbol": "ggml_backend_reg_dev_get",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": false,
+      "actual_exports": {
+        "ggml-base.dll": {
+          "ordinal": 127,
+          "RVA": 130800,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": true
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 6,
+      "symbol": "ggml_backend_dev_count",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "ggml.dll": {
+          "ordinal": 3,
+          "RVA": 6576,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 7,
+      "symbol": "ggml_backend_dev_get",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": true,
+      "actual_exports": {
+        "ggml.dll": {
+          "ordinal": 4,
+          "RVA": 6720,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": false
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 8,
+      "symbol": "ggml_backend_dev_name",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": false,
+      "actual_exports": {
+        "ggml-base.dll": {
+          "ordinal": 93,
+          "RVA": 130096,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": true
+    },
+    {
+      "group": "GGML_APIS",
+      "group_index": 9,
+      "symbol": "ggml_backend_dev_type",
+      "requested_owner": "ggml.dll",
+      "requested_owner_exports_symbol": false,
+      "actual_exports": {
+        "ggml-base.dll": {
+          "ordinal": 97,
+          "RVA": 130272,
+          "forwarder": null
+        }
+      },
+      "ggml_dll_imports_from_base": true
+    }
+  ],
+  "wrong_owner_count": 5,
+  "first_wrong_owner_symbol": "ggml_backend_reg_name",
+  "module_inventory": {
+    "llama.dll": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+      "bytes": 3581952,
+      "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d",
+      "named_export_count": 282,
+      "named_export_names_sha256": "0c1acf8947f60beaf2df61bf2606a646d161fa1f740b6ce27e37f0788a9404c2",
+      "imports": {
+        "ggml.dll": [
+          "ggml_backend_dev_by_type",
+          "ggml_backend_dev_count",
+          "ggml_backend_dev_get",
+          "ggml_backend_init_by_type",
+          "ggml_backend_load_all",
+          "ggml_backend_reg_by_name",
+          "ggml_backend_reg_count",
+          "ggml_backend_reg_get"
+        ],
+        "ggml-base.dll": [
+          "ggml_abort",
+          "ggml_abs",
+          "ggml_add",
+          "ggml_add_id",
+          "ggml_add_inplace",
+          "ggml_arange",
+          "ggml_are_same_shape",
+          "ggml_argmax",
+          "ggml_argsort",
+          "ggml_argsort_top_k",
+          "ggml_backend_alloc_ctx_tensors_from_buft",
+          "ggml_backend_alloc_ctx_tensors_from_buft_size",
+          "ggml_backend_buffer_clear",
+          "ggml_backend_buffer_free",
+          "ggml_backend_buffer_get_base",
+          "ggml_backend_buffer_get_size",
+          "ggml_backend_buffer_get_type",
+          "ggml_backend_buffer_get_usage",
+          "ggml_backend_buffer_is_host",
+          "ggml_backend_buffer_name",
+          "ggml_backend_buffer_set_usage",
+          "ggml_backend_buft_alloc_buffer",
+          "ggml_backend_buft_get_alignment",
+          "ggml_backend_buft_get_device",
+          "ggml_backend_buft_name",
+          "ggml_backend_cpu_buffer_type",
+          "ggml_backend_dev_backend_reg",
+          "ggml_backend_dev_buffer_from_host_ptr",
+          "ggml_backend_dev_buffer_type",
+          "ggml_backend_dev_description",
+          "ggml_backend_dev_get_props",
+          "ggml_backend_dev_host_buffer_type",
+          "ggml_backend_dev_init",
+          "ggml_backend_dev_memory",
+          "ggml_backend_dev_name",
+          "ggml_backend_dev_supports_op",
+          "ggml_backend_dev_type",
+          "ggml_backend_event_free",
+          "ggml_backend_event_new",
+          "ggml_backend_event_record",
+          "ggml_backend_event_synchronize",
+          "ggml_backend_free",
+          "ggml_backend_get_default_buffer_type",
+          "ggml_backend_get_device",
+          "ggml_backend_meta_device",
+          "ggml_backend_name",
+          "ggml_backend_reg_dev_count",
+          "ggml_backend_reg_dev_get",
+          "ggml_backend_reg_get_proc_address",
+          "ggml_backend_reg_name",
+          "ggml_backend_sched_alloc_graph",
+          "ggml_backend_sched_free",
+          "ggml_backend_sched_get_buffer_size",
+          "ggml_backend_sched_get_buffer_type",
+          "ggml_backend_sched_get_n_copies",
+          "ggml_backend_sched_get_n_splits",
+          "ggml_backend_sched_get_tensor_backend",
+          "ggml_backend_sched_graph_compute_async",
+          "ggml_backend_sched_new",
+          "ggml_backend_sched_reserve",
+          "ggml_backend_sched_reserve_size",
+          "ggml_backend_sched_reset",
+          "ggml_backend_sched_set_copy_callback",
+          "ggml_backend_sched_set_eval_callback",
+          "ggml_backend_sched_set_realloc_callback",
+          "ggml_backend_sched_set_tensor_backend",
+          "ggml_backend_sched_split_graph",
+          "ggml_backend_sched_synchronize",
+          "ggml_backend_supports_op",
+          "ggml_backend_synchronize",
+          "ggml_backend_tensor_alloc",
+          "ggml_backend_tensor_copy",
+          "ggml_backend_tensor_copy_async",
+          "ggml_backend_tensor_get",
+          "ggml_backend_tensor_get_async",
+          "ggml_backend_tensor_memset",
+          "ggml_backend_tensor_set",
+          "ggml_backend_tensor_set_async",
+          "ggml_backend_view_init",
+          "ggml_bf16_to_fp32_row",
+          "ggml_blck_size",
+          "ggml_build_forward_expand",
+          "ggml_build_forward_order",
+          "ggml_build_forward_select",
+          "ggml_cast",
+          "ggml_clamp",
+          "ggml_concat",
+          "ggml_cont",
+          "ggml_cont_1d",
+          "ggml_cont_2d",
+          "ggml_cont_3d",
+          "ggml_cont_4d",
+          "ggml_conv_1d_dw_ph",
+          "ggml_conv_1d_ph",
+          "ggml_cpy",
+          "ggml_cumsum",
+          "ggml_diag",
+          "ggml_div",
+          "ggml_dsv4_hc_comb",
+          "ggml_dsv4_hc_post",
+          "ggml_dsv4_hc_pre",
+          "ggml_dsv4_hc_pre_gated",
+          "ggml_dup",
+          "ggml_dup_tensor",
+          "ggml_element_size",
+          "ggml_exp",
+          "ggml_fill",
+          "ggml_flash_attn_ext",
+          "ggml_flash_attn_ext_add_sinks",
+          "ggml_flash_attn_ext_set_n_kv_max",
+          "ggml_fopen",
+          "ggml_format_name",
+          "ggml_fp16_to_fp32",
+          "ggml_fp16_to_fp32_row",
+          "ggml_fp32_to_fp16",
+          "ggml_free",
+          "ggml_gated_delta_net",
+          "ggml_gated_linear_attn",
+          "ggml_geglu",
+          "ggml_geglu_erf",
+          "ggml_geglu_erf_split",
+          "ggml_geglu_split",
+          "ggml_gelu",
+          "ggml_gelu_erf",
+          "ggml_get_first_tensor",
+          "ggml_get_max_tensor_size",
+          "ggml_get_name",
+          "ggml_get_next_tensor",
+          "ggml_get_rows",
+          "ggml_get_tensor",
+          "ggml_get_type_traits",
+          "ggml_graph_n_nodes",
+          "ggml_graph_node",
+          "ggml_graph_overhead_custom",
+          "ggml_graph_size",
+          "ggml_group_norm",
+          "ggml_im2col",
+          "ggml_init",
+          "ggml_is_contiguous",
+          "ggml_is_matrix",
+          "ggml_is_quantized",
+          "ggml_l2_norm",
+          "ggml_lightning_indexer",
+          "ggml_log",
+          "ggml_log_get",
+          "ggml_log_set",
+          "ggml_mean",
+          "ggml_mul",
+          "ggml_mul_mat",
+          "ggml_mul_mat_id",
+          "ggml_mul_mat_set_hint",
+          "ggml_n_dims",
+          "ggml_nbytes",
+          "ggml_neg",
+          "ggml_nelements",
+          "ggml_new_graph_custom",
+          "ggml_new_tensor_1d",
+          "ggml_new_tensor_2d",
+          "ggml_new_tensor_3d",
+          "ggml_new_tensor_4d",
+          "ggml_norm",
+          "ggml_nrows",
+          "ggml_op_name",
+          "ggml_opt_alloc",
+          "ggml_opt_dataset_get_batch_host",
+          "ggml_opt_dataset_ndata",
+          "ggml_opt_default_params",
+          "ggml_opt_eval",
+          "ggml_opt_free",
+          "ggml_opt_init",
+          "ggml_opt_labels",
+          "ggml_opt_prepare_alloc",
+          "ggml_out_prod",
+          "ggml_pad",
+          "ggml_pad_ext",
+          "ggml_permute",
+          "ggml_pool_2d",
+          "ggml_prec_set_acc",
+          "ggml_prec_set_src",
+          "ggml_quantize_chunk",
+          "ggml_quantize_free",
+          "ggml_reglu",
+          "ggml_reglu_split",
+          "ggml_relu",
+          "ggml_repeat",
+          "ggml_repeat_4d",
+          "ggml_reset",
+          "ggml_reshape_1d",
+          "ggml_reshape_2d",
+          "ggml_reshape_3d",
+          "ggml_reshape_4d",
+          "ggml_rms_norm",
+          "ggml_rope",
+          "ggml_rope_ext",
+          "ggml_rope_ext_back",
+          "ggml_rope_ext_inplace",
+          "ggml_rope_multi",
+          "ggml_rope_set_offset",
+          "ggml_round",
+          "ggml_row_size",
+          "ggml_rwkv_wkv6",
+          "ggml_rwkv_wkv7",
+          "ggml_scale",
+          "ggml_scale_bias",
+          "ggml_scale_inplace",
+          "ggml_set_1d",
+          "ggml_set_inplace",
+          "ggml_set_input",
+          "ggml_set_name",
+          "ggml_set_output",
+          "ggml_set_param",
+          "ggml_set_rows",
+          "ggml_set_zero",
+          "ggml_sgn",
+          "ggml_sigmoid",
+          "ggml_silu",
+          "ggml_soft_max",
+          "ggml_soft_max_add_sinks",
+          "ggml_soft_max_ext",
+          "ggml_softplus",
+          "ggml_solve_tri",
+          "ggml_sqr",
+          "ggml_sqrt",
+          "ggml_ssm_conv",
+          "ggml_ssm_scan",
+          "ggml_step",
+          "ggml_sub",
+          "ggml_sum",
+          "ggml_sum_rows",
+          "ggml_swiglu",
+          "ggml_swiglu_clamp",
+          "ggml_swiglu_oai",
+          "ggml_swiglu_split",
+          "ggml_tallocr_alloc",
+          "ggml_tallocr_new",
+          "ggml_tanh",
+          "ggml_tensor_overhead",
+          "ggml_time_init",
+          "ggml_time_us",
+          "ggml_top_k",
+          "ggml_transpose",
+          "ggml_tri",
+          "ggml_type_name",
+          "ggml_type_size",
+          "ggml_unary",
+          "ggml_validate_row_data",
+          "ggml_view_1d",
+          "ggml_view_2d",
+          "ggml_view_3d",
+          "ggml_view_4d",
+          "ggml_xielu",
+          "gguf_add_tensor",
+          "gguf_find_key",
+          "gguf_find_tensor",
+          "gguf_free",
+          "gguf_get_arr_data",
+          "gguf_get_arr_n",
+          "gguf_get_arr_str",
+          "gguf_get_arr_type",
+          "gguf_get_data_offset",
+          "gguf_get_key",
+          "gguf_get_kv_type",
+          "gguf_get_meta_data",
+          "gguf_get_meta_size",
+          "gguf_get_n_kv",
+          "gguf_get_n_tensors",
+          "gguf_get_tensor_offset",
+          "gguf_get_tensor_size",
+          "gguf_get_tensor_type",
+          "gguf_get_val_bool",
+          "gguf_get_val_data",
+          "gguf_get_val_f32",
+          "gguf_get_val_i32",
+          "gguf_get_val_str",
+          "gguf_get_val_u16",
+          "gguf_get_val_u32",
+          "gguf_get_version",
+          "gguf_init_empty",
+          "gguf_init_from_file",
+          "gguf_init_from_file_ptr",
+          "gguf_remove_key",
+          "gguf_set_arr_data",
+          "gguf_set_arr_str",
+          "gguf_set_kv",
+          "gguf_set_tensor_type",
+          "gguf_set_val_bool",
+          "gguf_set_val_f32",
+          "gguf_set_val_i32",
+          "gguf_set_val_str",
+          "gguf_set_val_u16",
+          "gguf_set_val_u32",
+          "gguf_set_val_u64",
+          "gguf_type_name",
+          "gguf_write_to_file",
+          "gguf_write_to_file_ptr"
+        ],
+        "KERNEL32.dll": [
+          "AcquireSRWLockExclusive",
+          "CloseHandle",
+          "CreateFileMappingA",
+          "DisableThreadLibraryCalls",
+          "FormatMessageA",
+          "GetCurrentProcess",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetLastError",
+          "GetModuleHandleW",
+          "GetProcAddress",
+          "GetProcessWorkingSetSize",
+          "GetSystemInfo",
+          "GetSystemTimeAsFileTime",
+          "InitOnceBeginInitialize",
+          "InitOnceComplete",
+          "InitializeSListHead",
+          "LocalFree",
+          "MapViewOfFile",
+          "QueryPerformanceCounter",
+          "ReadFile",
+          "ReleaseSRWLockExclusive",
+          "SetFilePointerEx",
+          "SetProcessWorkingSetSize",
+          "SleepConditionVariableSRW",
+          "UnmapViewOfFile",
+          "VirtualLock",
+          "WakeAllConditionVariable",
+          "WriteFile"
+        ],
+        "MSVCP140.dll": [
+          "??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ",
+          "??0_Locinfo@std@@QEAA@PEBD@Z",
+          "??0_Lockit@std@@QEAA@H@Z",
+          "??0facet@locale@std@@IEAA@_K@Z",
+          "??0ios_base@std@@IEAA@XZ",
+          "??0task_continuation_context@Concurrency@@AEAA@XZ",
+          "??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ",
+          "??1_Locinfo@std@@QEAA@XZ",
+          "??1_Lockit@std@@QEAA@XZ",
+          "??1facet@locale@std@@MEAA@XZ",
+          "??1ios_base@std@@UEAA@XZ",
+          "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z",
+          "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@I@Z",
+          "?GetCurrentThreadId@platform@details@Concurrency@@YAJXZ",
+          "?ReportUnhandledError@_ExceptionHolder@details@Concurrency@@AEAAXXZ",
+          "?_CallInContext@_ContextCallback@details@Concurrency@@QEBAXV?$function@$$A6AXXZ@std@@_N@Z",
+          "?_Capture@_ContextCallback@details@Concurrency@@AEAAXXZ",
+          "?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ",
+          "?_Fiopen@std@@YAPEAU_iobuf@@PEBDHH@Z",
+          "?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z",
+          "?_Getcat@?$ctype@D@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z",
+          "?_Getcat@?$ctype@_W@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z",
+          "?_Getcoll@_Locinfo@std@@QEBA?AU_Collvec@@XZ",
+          "?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ",
+          "?_Id_cnt@id@locale@std@@0HA",
+          "?_Incref@facet@locale@std@@UEAAXXZ",
+          "?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z",
+          "?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+          "?_LogCancelTask@_TaskEventLogger@details@Concurrency@@QEAAXXZ",
+          "?_LogScheduleTask@_TaskEventLogger@details@Concurrency@@QEAAX_N@Z",
+          "?_LogTaskCompleted@_TaskEventLogger@details@Concurrency@@QEAAXXZ",
+          "?_LogTaskExecutionCompleted@_TaskEventLogger@details@Concurrency@@QEAAXXZ",
+          "?_LogWorkItemCompleted@_TaskEventLogger@details@Concurrency@@QEAAXXZ",
+          "?_LogWorkItemStarted@_TaskEventLogger@details@Concurrency@@QEAAXXZ",
+          "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ",
+          "?_Random_device@std@@YAIXZ",
+          "?_Release_chore@details@Concurrency@@YAXPEAU_Threadpool_chore@12@@Z",
+          "?_ReportUnobservedException@details@Concurrency@@YAXXZ",
+          "?_Reset@_ContextCallback@details@Concurrency@@AEAAXXZ",
+          "?_Schedule_chore@details@Concurrency@@YAHPEAU_Threadpool_chore@12@@Z",
+          "?_Syserror_map@std@@YAPEBDH@Z",
+          "?_Throw_Cpp_error@std@@YAXH@Z",
+          "?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ",
+          "?_Xbad_alloc@std@@YAXXZ",
+          "?_Xbad_function_call@std@@YAXXZ",
+          "?_Xinvalid_argument@std@@YAXPEBD@Z",
+          "?_Xlength_error@std@@YAXPEBD@Z",
+          "?_Xout_of_range@std@@YAXPEBD@Z",
+          "?_Xregex_error@std@@YAXW4error_type@regex_constants@1@@Z",
+          "?__ExceptionPtrAssign@@YAXPEAXPEBX@Z",
+          "?__ExceptionPtrCopy@@YAXPEAXPEBX@Z",
+          "?__ExceptionPtrCreate@@YAXPEAX@Z",
+          "?__ExceptionPtrCurrentException@@YAXPEAX@Z",
+          "?__ExceptionPtrDestroy@@YAXPEAX@Z",
+          "?__ExceptionPtrRethrow@@YAXPEBX@Z",
+          "?__ExceptionPtrToBool@@YA_NPEBX@Z",
+          "?clear@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z",
+          "?exceptions@ios_base@std@@QEAAXH@Z",
+          "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ",
+          "?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEBA?AVlocale@2@XZ",
+          "?good@ios_base@std@@QEBA_NXZ",
+          "?id@?$codecvt@DDU_Mbstatet@@@std@@2V0locale@2@A",
+          "?id@?$collate@D@std@@2V0locale@2@A",
+          "?id@?$collate@_W@std@@2V0locale@2@A",
+          "?id@?$ctype@D@std@@2V0locale@2@A",
+          "?id@?$ctype@_W@std@@2V0locale@2@A",
+          "?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z",
+          "?init@?$basic_ios@DU?$char_traits@D@std@@@std@@IEAAXPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@_N@Z",
+          "?seekp@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@V?$fpos@U_Mbstatet@@@2@@Z",
+          "?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z",
+          "?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ",
+          "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z",
+          "?swap@?$basic_ostream@DU?$char_traits@D@std@@@std@@IEAAXAEAV12@@Z",
+          "?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+          "?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ",
+          "?uncaught_exception@std@@YA_NXZ",
+          "?write@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEBD_J@Z",
+          "?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z",
+          "?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z",
+          "_Cnd_broadcast",
+          "_Cnd_do_broadcast_at_thread_exit",
+          "_Cnd_register_at_thread_exit",
+          "_Cnd_unregister_at_thread_exit",
+          "_Cnd_wait",
+          "_Mtx_lock",
+          "_Mtx_unlock",
+          "_Strcoll",
+          "_Strxfrm",
+          "_Thrd_hardware_concurrency",
+          "_Thrd_id",
+          "_Thrd_join",
+          "_Wcscoll",
+          "_Wcsxfrm",
+          "__crtLCMapStringA",
+          "__crtLCMapStringW"
+        ],
+        "VCRUNTIME140.dll": [
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "__CxxFrameHandler3",
+          "__RTDynamicCast",
+          "__RTtypeid",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "__std_terminate",
+          "__std_type_info_compare",
+          "__std_type_info_destroy_list",
+          "_purecall",
+          "memchr",
+          "memcmp",
+          "memcpy",
+          "memmove",
+          "memset",
+          "strstr"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-locale-l1-1-0.dll": [
+          "___lc_collate_cp_func",
+          "___lc_locale_name_func"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__acrt_iob_func",
+          "__stdio_common_vfprintf",
+          "__stdio_common_vsprintf",
+          "__stdio_common_vsprintf_s",
+          "__stdio_common_vsscanf",
+          "_fileno",
+          "_fseeki64",
+          "_get_osfhandle",
+          "_get_stream_buffer_pointers",
+          "fclose",
+          "fflush",
+          "fgetc",
+          "fgetpos",
+          "fputc",
+          "fputs",
+          "fread",
+          "fsetpos",
+          "fwrite",
+          "setvbuf",
+          "ungetc"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_beginthreadex",
+          "_cexit",
+          "_configure_narrow_argv",
+          "_crt_atexit",
+          "_errno",
+          "_execute_onexit_table",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_register_onexit_function",
+          "_seh_filter_dll",
+          "abort",
+          "strerror",
+          "terminate"
+        ],
+        "api-ms-win-crt-filesystem-l1-1-0.dll": [
+          "_lock_file",
+          "_unlock_file"
+        ],
+        "api-ms-win-crt-convert-l1-1-0.dll": [
+          "atoi",
+          "strtol",
+          "strtoul",
+          "strtoull"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "ceilf",
+          "cos",
+          "exp",
+          "exp2f",
+          "expf",
+          "floorf",
+          "log",
+          "log1p",
+          "log2f",
+          "logf",
+          "pow",
+          "powf",
+          "round",
+          "sin",
+          "sqrt",
+          "sqrtf"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_callnewh",
+          "free",
+          "malloc",
+          "realloc"
+        ],
+        "api-ms-win-crt-environment-l1-1-0.dll": [
+          "getenv"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "isspace",
+          "isxdigit",
+          "strcmp",
+          "strlen",
+          "strncpy",
+          "tolower",
+          "toupper"
+        ]
+      }
+    },
+    "ggml.dll": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+      "bytes": 78848,
+      "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba",
+      "named_export_count": 16,
+      "named_export_names_sha256": "eb7265b777c4e589698ebef5dd72326024626ec8d66ebbd8e1943cdc976db524",
+      "imports": {
+        "ggml-base.dll": [
+          "ggml_abort",
+          "ggml_backend_dev_backend_reg",
+          "ggml_backend_dev_init",
+          "ggml_backend_dev_name",
+          "ggml_backend_dev_type",
+          "ggml_backend_reg_dev_count",
+          "ggml_backend_reg_dev_get",
+          "ggml_backend_reg_name",
+          "ggml_log_internal"
+        ],
+        "KERNEL32.dll": [
+          "AcquireSRWLockExclusive",
+          "AreFileApisANSI",
+          "CloseHandle",
+          "CreateFile2",
+          "DisableThreadLibraryCalls",
+          "FindClose",
+          "FindFirstFileExW",
+          "FindFirstFileW",
+          "FindNextFileW",
+          "FormatMessageA",
+          "FreeLibrary",
+          "GetCurrentDirectoryW",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetFileAttributesExW",
+          "GetFileInformationByHandleEx",
+          "GetLastError",
+          "GetLocaleInfoEx",
+          "GetModuleFileNameW",
+          "GetProcAddress",
+          "GetSystemTimeAsFileTime",
+          "InitializeSListHead",
+          "LoadLibraryW",
+          "LocalFree",
+          "MultiByteToWideChar",
+          "QueryPerformanceCounter",
+          "ReleaseSRWLockExclusive",
+          "SetErrorMode",
+          "SleepConditionVariableSRW",
+          "WakeAllConditionVariable",
+          "WideCharToMultiByte"
+        ],
+        "MSVCP140.dll": [
+          "?_Syserror_map@std@@YAPEBDH@Z",
+          "?_Winerror_map@std@@YAHH@Z",
+          "?_Xlength_error@std@@YAXPEBD@Z",
+          "?_Xout_of_range@std@@YAXPEBD@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "__CxxFrameHandler3",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "__std_terminate",
+          "__std_type_info_destroy_list",
+          "memcmp",
+          "memcpy",
+          "memmove",
+          "memset"
+        ],
+        "api-ms-win-crt-locale-l1-1-0.dll": [
+          "___lc_codepage_func"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_configure_narrow_argv",
+          "_crt_atexit",
+          "_execute_onexit_table",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_register_onexit_function",
+          "_seh_filter_dll",
+          "abort"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_callnewh",
+          "free",
+          "malloc"
+        ],
+        "api-ms-win-crt-environment-l1-1-0.dll": [
+          "getenv"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strlen",
+          "tolower",
+          "wcslen"
+        ]
+      }
+    },
+    "ggml-base.dll": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+      "bytes": 803840,
+      "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3",
+      "named_export_count": 689,
+      "named_export_names_sha256": "a652c54877836e3d1048b8e1f33a06c4f29b3a3b535aef2646d4e52c7e5d71e1",
+      "imports": {
+        "libomp.dll": [
+          "__kmpc_barrier",
+          "__kmpc_dispatch_deinit",
+          "__kmpc_dispatch_init_4",
+          "__kmpc_dispatch_next_4",
+          "__kmpc_end_reduce_nowait",
+          "__kmpc_fork_call",
+          "__kmpc_reduce_nowait"
+        ],
+        "KERNEL32.dll": [
+          "AcquireSRWLockExclusive",
+          "DisableThreadLibraryCalls",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime",
+          "InitOnceExecuteOnce",
+          "InitializeSListHead",
+          "MultiByteToWideChar",
+          "QueryPerformanceCounter",
+          "QueryPerformanceFrequency",
+          "ReleaseSRWLockExclusive",
+          "SleepConditionVariableSRW",
+          "WakeAllConditionVariable"
+        ],
+        "MSVCP140.dll": [
+          "?_Throw_Cpp_error@std@@YAXH@Z",
+          "?_Xlength_error@std@@YAXPEBD@Z",
+          "_Mtx_lock",
+          "_Mtx_unlock"
+        ],
+        "VCRUNTIME140.dll": [
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "__CxxFrameHandler3",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "__std_terminate",
+          "__std_type_info_destroy_list",
+          "memcmp",
+          "memcpy",
+          "memmove",
+          "memset"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__acrt_iob_func",
+          "__stdio_common_vfprintf",
+          "__stdio_common_vsprintf",
+          "_fseeki64",
+          "_ftelli64",
+          "_wfopen",
+          "fclose",
+          "fflush",
+          "fputc",
+          "fputs",
+          "fread",
+          "fwrite",
+          "putchar",
+          "puts"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_aligned_free",
+          "_aligned_malloc",
+          "_callnewh",
+          "calloc",
+          "free",
+          "malloc",
+          "realloc"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_configure_narrow_argv",
+          "_crt_atexit",
+          "_errno",
+          "_execute_onexit_table",
+          "_get_terminate",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_register_onexit_function",
+          "_seh_filter_dll",
+          "abort",
+          "set_terminate",
+          "strerror"
+        ],
+        "api-ms-win-crt-convert-l1-1-0.dll": [
+          "atoi"
+        ],
+        "api-ms-win-crt-time-l1-1-0.dll": [
+          "clock"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "ceil",
+          "ceilf",
+          "expf",
+          "floorf",
+          "ldexp",
+          "log2",
+          "log2f",
+          "logf",
+          "lroundf",
+          "powf",
+          "roundf",
+          "sqrt",
+          "sqrtf"
+        ],
+        "api-ms-win-crt-environment-l1-1-0.dll": [
+          "getenv"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "isprint",
+          "strcmp",
+          "strcpy",
+          "strlen"
+        ],
+        "api-ms-win-crt-utility-l1-1-0.dll": [
+          "qsort"
+        ]
+      }
+    },
+    "libomp.dll": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+      "bytes": 768000,
+      "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c",
+      "named_export_count": 756,
+      "named_export_names_sha256": "4a0449081fbc63b71a7ed61708310a9bcae9cbfb9e31feb4f44c4b76fb886187",
+      "imports": {
+        "KERNEL32.dll": [
+          "AllocConsole",
+          "CloseHandle",
+          "CompareStringW",
+          "CreateEventA",
+          "CreateFileW",
+          "CreateThread",
+          "DeleteCriticalSection",
+          "DuplicateHandle",
+          "EncodePointer",
+          "EnterCriticalSection",
+          "ExitProcess",
+          "FindClose",
+          "FindFirstFileExW",
+          "FindNextFileW",
+          "FlsAlloc",
+          "FlsFree",
+          "FlsGetValue",
+          "FlsSetValue",
+          "FlushFileBuffers",
+          "FormatMessageA",
+          "FormatMessageW",
+          "FreeEnvironmentStringsA",
+          "FreeEnvironmentStringsW",
+          "FreeLibrary",
+          "GetACP",
+          "GetCPInfo",
+          "GetCommandLineA",
+          "GetCommandLineW",
+          "GetComputerNameA",
+          "GetConsoleMode",
+          "GetConsoleOutputCP",
+          "GetCurrentProcess",
+          "GetCurrentProcessId",
+          "GetCurrentThread",
+          "GetCurrentThreadId",
+          "GetEnvironmentStrings",
+          "GetEnvironmentStringsW",
+          "GetEnvironmentVariableA",
+          "GetExitCodeThread",
+          "GetFileType",
+          "GetLastError",
+          "GetModuleFileNameA",
+          "GetModuleFileNameW",
+          "GetModuleHandleA",
+          "GetModuleHandleExA",
+          "GetModuleHandleExW",
+          "GetModuleHandleW",
+          "GetOEMCP",
+          "GetProcAddress",
+          "GetProcessAffinityMask",
+          "GetProcessHeap",
+          "GetStartupInfoW",
+          "GetStdHandle",
+          "GetStringTypeW",
+          "GetSystemDirectoryA",
+          "GetSystemInfo",
+          "GetSystemTimeAsFileTime",
+          "GetThreadLocale",
+          "HeapAlloc",
+          "HeapFree",
+          "HeapReAlloc",
+          "HeapSize",
+          "InitializeCriticalSection",
+          "InitializeCriticalSectionAndSpinCount",
+          "InitializeSListHead",
+          "InterlockedFlushSList",
+          "IsDebuggerPresent",
+          "IsProcessorFeaturePresent",
+          "IsValidCodePage",
+          "LCMapStringW",
+          "LeaveCriticalSection",
+          "LoadLibraryA",
+          "LoadLibraryExA",
+          "LoadLibraryExW",
+          "LocalFree",
+          "MultiByteToWideChar",
+          "QueryPerformanceCounter",
+          "QueryPerformanceFrequency",
+          "RaiseException",
+          "ReadConsoleW",
+          "ReadFile",
+          "ResetEvent",
+          "RtlCaptureContext",
+          "RtlLookupFunctionEntry",
+          "RtlPcToFileHeader",
+          "RtlUnwind",
+          "RtlUnwindEx",
+          "RtlVirtualUnwind",
+          "SetConsoleCtrlHandler",
+          "SetEndOfFile",
+          "SetEnvironmentVariableA",
+          "SetEnvironmentVariableW",
+          "SetErrorMode",
+          "SetEvent",
+          "SetFilePointerEx",
+          "SetLastError",
+          "SetProcessAffinityMask",
+          "SetStdHandle",
+          "SetThreadAffinityMask",
+          "SetUnhandledExceptionFilter",
+          "Sleep",
+          "SleepEx",
+          "SwitchToThread",
+          "TerminateProcess",
+          "TlsAlloc",
+          "TlsFree",
+          "TlsGetValue",
+          "TlsSetValue",
+          "TryEnterCriticalSection",
+          "UnhandledExceptionFilter",
+          "VirtualQuery",
+          "WaitForSingleObject",
+          "WideCharToMultiByte",
+          "WriteConsoleW",
+          "WriteFile",
+          "lstrcmpA"
+        ],
+        "PSAPI.DLL": [
+          "EnumProcessModules"
+        ]
+      }
+    }
+  },
+  "retained_build_source_identity": {
+    "runtime_tag": "b11717",
+    "source_tag": "b11717",
+    "source_commit": "848bbda9041decd87904f7eb5a2990863ecce03b",
+    "runtime_short_commit": "848bbda90",
+    "correspondence_limit": "Short commit/tag identity observed; exact compiler/dependency/build equivalence not established.",
+    "own_build_source_sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4",
+    "own_executable": {
+      "bytes": 188416,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\typed_public_c_recognizer_abi.exe",
+      "sha256": "9f955aec8310ded1cd26648c7d9828369751219975893d5f45b35073b6927696"
+    },
+    "compiler_argv": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe",
+      "/nologo",
+      "/Bv",
+      "/std:c++17",
+      "/MD",
+      "/O2",
+      "/DNDEBUG",
+      "/D_ITERATOR_DEBUG_LEVEL=0",
+      "/EHsc",
+      "/Zp8",
+      "/Gd",
+      "/W4",
+      "/WX",
+      "/utf-8",
+      "/c",
+      "/DR09_PIN_HEADER=\"recognizer_runtime_pins.hpp\"",
+      "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-preparation-20261028T175036Z\\headers",
+      "/ID:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-preparation-20261028T175036Z",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-preparation-20261028T175036Z\\typed_public_c_recognizer.cpp",
+      "/FoD:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\bridge.obj",
+      "/FdD:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\compiler.pdb"
+    ],
+    "linker_argv": [
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe",
+      "/NOLOGO",
+      "/MACHINE:X64",
+      "/SUBSYSTEM:CONSOLE",
+      "/INCREMENTAL:NO",
+      "/MANIFEST:NO",
+      "/DYNAMICBASE",
+      "/NXCOMPAT",
+      "/HIGHENTROPYVA",
+      "/OUT:D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\typed_public_c_recognizer_abi.exe",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\bridge.obj",
+      "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\bcrypt.lib",
+      "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.lib"
+    ]
+  },
+  "observed_failure": {
+    "message": "required_export_missing",
+    "child_final_result_exists": false,
+    "partial_event_count": 2,
+    "version_query_result": "unavailable",
+    "default_query_result": "unavailable",
+    "explicit_query_invocations_source_inferred": 0,
+    "basis": "Api constructor eagerly resolves15 llama then10 ggml symbols before either query; first unavailable lookup is GGML_APIS index3. DLL/CRT initializers may already have run; this is not call interception or OS attestation."
+  },
+  "acceptance_gap": {
+    "compile": "decltype verifies header function types; dynamic GetProcAddress owner strings are not checked by the linker.",
+    "static_PE": "Own executable ordinary/delay import policy did not compare the complete dynamic symbol requirement table with each exact target DLL export table.",
+    "pure": "ABI result/lifecycle tests synthesize the expected result and did not require a prospective dynamic-symbol owner preflight."
+  },
+  "options": [
+    {
+      "preferred": true,
+      "change": "New versioned bridge: explicit llama/ggml/base owner tables; resolve5 base APIs from exact already-approved ggml-base module, no fallback; retain25 requirements, typed decltype, only2 ABI queries, disabled recognition; static exact-PE mapping regression before compile."
+    },
+    {
+      "preferred": false,
+      "change": "Separate2-query ABI API object and deferred recognition API object; narrower ABI resolution but a larger source behavior refactor requiring new review. Not necessary to repair the five owner errors."
+    }
+  ],
+  "inputs": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\typed_public_c_recognizer_v3.cpp",
+      "bytes": 49260,
+      "sha256": "0d6d7c8bf7495d35811fda56df805dba4e0cf7aa5470776df0903cd5215ad9f4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\DETACHED-ABI-OBSERVATION-PROTOCOL-v1.json",
+      "bytes": 40286,
+      "sha256": "dc7de124b9f64a5cce688f91857d960e27549fa2df9c27fd667517da4c980672"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-grammar-20261028\\build_typed_converter_bridge_v3.py",
+      "bytes": 15670,
+      "sha256": "0567591358da2bc70134a480e3bc4310561e843a4a7872c4eea6ece087ac49b6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\llama.dll",
+      "bytes": 3581952,
+      "sha256": "166e8de1bd07573dc0f51ab1f429ab5df0d08492e7302bbe41a39014248f5e6d"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml.dll",
+      "bytes": 78848,
+      "sha256": "2a49a0f2d3c58b182bfa5267950cef2e4f3378a12e9ebbc6b36554bf5ca016ba"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\ggml-base.dll",
+      "bytes": 803840,
+      "sha256": "84e3057e6fe2c581a9d194d27e5510b1a71723074e01dfb9b34926e4d5af52f3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\runtime\\libomp.dll",
+      "bytes": 768000,
+      "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-PREPARATION.json",
+      "bytes": 5842,
+      "sha256": "b879cbef8e783fc240fa1cc37c514c7536af61856f5def7a32a30740720bb366"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-PROTOCOL.json",
+      "bytes": 78846,
+      "sha256": "5c6086e48ca9fb3b3f1f61a2eea780e64f1392bbdc819216e37b09935acc345e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\BUILD-RESULT-VERIFICATION.json",
+      "bytes": 63367,
+      "sha256": "5a05e7310a42caebd9fdd6991487424d5cc860fe21bb5a806f5991c4c920f6bc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\SOURCE-QUALIFICATION.json",
+      "bytes": 10616,
+      "sha256": "ace2041e0da3830945317b39e3970afaf440e44693d48bff8a746cb984f34f0c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\LOCAL-SOURCE-INVENTORY.json",
+      "bytes": 25073,
+      "sha256": "595973441abacc48b9e340f5d4df1a15f3abfb000d1409d0f47fa5672398633c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-public-c-bridge-build-20261028T175036Z\\build-report.json",
+      "bytes": 9932,
+      "sha256": "9744eaa977413036d562570e5ec7734ca8161a1adb9a4691d1474f8e2a852210"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\approved-native-mirror-20261028T004531Z\\acquisition.json",
+      "bytes": 11163,
+      "sha256": "cc95c56ce1f497b36d6b9ed62b22721d8af7eaccc0a8c50da91439c5b076acbf"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-source-20261028T161554Z\\sources\\ggml\\include\\ggml-backend.h",
+      "bytes": 27570,
+      "sha256": "0e5e8e1f16d11ebbf501e38bc6705d79eee819b5f0b17476533f2100ed9674e2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\run_detached_abi_observation_v1.py",
+      "bytes": 30370,
+      "sha256": "97544efa7e181e2a33d494c0923e3547b4f98f7903c6e0e1db024999736b6437"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-native-recognition-20261028\\ABI-EXPORT-STATIC-CROSSCHECK-v1.json",
+      "bytes": 8883,
+      "sha256": "64c0f7644360b0ddf2983db279ff92dd5e0f89afa34ca3aa4bb406501cb27ae8"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v1-20261028T225049Z\\execution\\child\\attempt.json",
+      "bytes": 87,
+      "sha256": "d655bf5fe07bdb11b9cfdffc7e0131bf2c7fb658325c275ed8997647a5e4a157"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v1-20261028T225049Z\\execution\\child\\failure.json",
+      "bytes": 145,
+      "sha256": "6b0ed54192ebb6ba1329d048505e24a7e71ba78ea6984f0a5c49603f8abd13c1"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-detached-ABI-observation-v1-20261028T225049Z\\execution\\child\\result.partial.jsonl",
+      "bytes": 254,
+      "sha256": "0ec034aee61b705b9f2e5437fab5166c8722d17fa2725b398cf672250e842ac8"
+    }
+  ],
+  "activity": {
+    "native_calls": 0,
+    "DLL_loads": 0,
+    "compiler_calls": 0,
+    "child_or_model_runs": 0,
+    "GGUF_reads": 0,
+    "network_requests": 0
+  },
+  "limits": [
+    "Export presence does not establish signature correctness or safe ABI execution.",
+    "Header/tag/short-commit correspondence is not reproducible vendor binary/source build identity.",
+    "No retry, build, execution or CPU/vocabulary permission follows from this report."
+  ]
+}

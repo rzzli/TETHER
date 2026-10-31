@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "status": "verified_followup_source_fetch_integrity_identity_accounting_and_journal",
+  "receipt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-native-recognition-followup-source-20261028T164431Z\\receipt.json",
+    "sha256": "6e479bdaf3a0cf58b3afd1869c2317b9799e7dfa2e92c1fc9332730e7a7f86e9",
+    "outputs_verified": 75,
+    "exact_cache_file_count": 76,
+    "failure_marker": false,
+    "unlisted_files": []
+  },
+  "terminal_report_sha256": "448b9d7c682fd51588258d6ac850cdb9aa952028a5f7440b0eae639fd80cc3bc",
+  "protocol_sha256": "f2036eea64d02e61fed222615c830cd79a34798d14eb9e308dd474149c5b862d",
+  "helper_sha256": "d9fe3d0807d997bc1c1493b518237b55f2e75f65cdc1a537caa896f5fdd57c47",
+  "root_decision_sha256": "5bca70cc0fe26ed3581f0410d5b011dd0d938029658b12b2944d7cc3575d3a33",
+  "input_pins_verified": 269,
+  "cache_paths_checked_for_reparse": 92,
+  "journal": {
+    "events": 35,
+    "sha256": "e5c4107403d73d937fc6ed552608af525204c5067a5479a108f92dbdb70f2b74",
+    "tip_sha256": "b27eb23eb046225ff5d7a4a5b0b98b661e88f74d9855a7af93381f14b95d21d7",
+    "expected_order": true
+  },
+  "source_files": 8,
+  "source_bytes": 490241,
+  "records": [
+    {
+      "index": 0,
+      "path": "ggml/include/ggml-alloc.h",
+      "bytes": 3689,
+      "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d",
+      "worker_pid": 12428,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 1.1410000000614673,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 1,
+      "path": "ggml/src/gguf.cpp",
+      "bytes": 58995,
+      "sha256": "7505d6a434dc740941a682fd3b476ef9bd9893ab76adf18c9969daa528bd5be5",
+      "worker_pid": 36956,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.9370000000344589,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 2,
+      "path": "src/llama-model-loader.h",
+      "bytes": 9885,
+      "sha256": "4eb5318f7b70333015386d612738f507153770e4e5635895b2c1d8355ff22103",
+      "worker_pid": 30988,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.9370000000344589,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 3,
+      "path": "src/llama-mmap.h",
+      "bytes": 2215,
+      "sha256": "0fff03ce62bc51b1649833f6017fbd84dc0aac7fce3b38484439153fc13ba8f5",
+      "worker_pid": 31980,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.75,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 4,
+      "path": "src/llama-mmap.cpp",
+      "bytes": 30403,
+      "sha256": "130601ff8c2b6e16668b70a1dca07cc09ae84328d91bbd5bd259aea5658103e7",
+      "worker_pid": 28476,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.8120000000344589,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 5,
+      "path": "ggml/src/ggml.c",
+      "bytes": 261602,
+      "sha256": "42b238412cda218552812a37329fab95a2f94be6d8bff5139083450d432f796d",
+      "worker_pid": 13368,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 1.0929999999934807,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 6,
+      "path": "src/models/models.h",
+      "bytes": 117958,
+      "sha256": "243c07302980a2d88d4a9ba0359512497dc2cbe5ae2cf771b5252d1a209ca0d3",
+      "worker_pid": 17100,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.7189999999245629,
+      "effective_seconds": 20.0,
+      "reaped": true
+    },
+    {
+      "index": 7,
+      "path": "src/models/qwen2.cpp",
+      "bytes": 5494,
+      "sha256": "7f7f9df9bdaaf7c8aaab900fe046c97936b67d656f66dea445735f1beec695f4",
+      "worker_pid": 32468,
+      "parent_pid": 18360,
+      "http_status": 200,
+      "full_child_seconds": 0.8599999999860302,
+      "effective_seconds": 20.0,
+      "reaped": true
+    }
+  ],
+  "ownership": {
+    "owner_pid": 18360,
+    "workers": 8,
+    "distinct_worker_pids": 8,
+    "all_worker_pids_match_owned_handles": true,
+    "all_ppids_match_owner": true,
+    "all_actual_workers_reaped": true,
+    "process_tree_containment_claimed": false
+  },
+  "limits": {
+    "maximum_child_seconds": 1.1410000000614673,
+    "maximum_body_bytes": 261602,
+    "per_body_cap_bytes": 1048576,
+    "retained_body_cap_bytes": 4194304,
+    "stream_cap_bytes_each": 65536,
+    "elapsed_seconds_before_finalization": 8.593999999924563,
+    "full_elapsed_operator_reported_seconds": 8.781,
+    "independently_retained_final_elapsed": null
+  },
+  "unknown_receipts": false,
+  "prior_evidence_unchanged": "All269pins include original source success and prior failed/rejected attempts.",
+  "limitations": [
+    "Local retained-evidence consistency review, not a second network request or TLS attestation.",
+    "Final wall time is root execution-output measurement; terminal report retains pre-finalization interval.",
+    "Source acquisition does not compile fetched code, qualify native/model behavior or validate science.",
+    "Retained body bytes do not measure network traffic."
+  ],
+  "reviewer_activity": {
+    "helper_imports_or_execution": 0,
+    "requests": 0,
+    "child_dispatches": 0,
+    "native_calls": 0,
+    "gguf_reads": 0
+  }
+}

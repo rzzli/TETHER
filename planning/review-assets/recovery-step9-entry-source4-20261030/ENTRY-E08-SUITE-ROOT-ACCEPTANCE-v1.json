@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "ACCEPTED_E08_ENTRY_INTEGRATION_SOURCE_PURE_ONLY",
+  "actual_proof": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-PROOF-v1.json",
+    "bytes": 14195595,
+    "sha256": "f1c1e9803e1128acbfd6343aa038d1ba81c902c075c770c3f8adf4b3f35073db"
+  },
+  "independent_branch_review": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-BRANCH-SOURCE-ACTUAL-REVIEW-v1.json",
+    "bytes": 10508,
+    "sha256": "01e92b724e7caf5174d3af5d0ac426e65b1ce8de5ce0f1207b2f30cd50a4ea8f"
+  },
+  "independent_byte_review": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-BYTE-INDEPENDENT-ACTUAL-REVIEW-v1.json",
+    "bytes": 9007,
+    "sha256": "7ae5e826430d47780cc88dbcaab035af46155bc0e24843d2078121383cce911e"
+  },
+  "author_accounting_review": {
+    "path": "planning/review-assets/recovery-step9-entry-source4-20261030/ENTRY-E08-SUITE-ACCOUNTING-RESOURCE-REVIEW-v1.json",
+    "bytes": 10853,
+    "sha256": "56f92e0030ba7f439c5cb8cf6e6b1c1dfa802d4926994160d372dd4bb28dedaf"
+  },
+  "source_pause_sha256": "c38df4b3133133805e7a13c30e2d65d21748e4c1ce1a320929c0871f05dfab67",
+  "source_kernel_sha256": "e389db4ec1e667f1b81694575ba1ba0d1d7ceed3e642cf43504766f331c759f8",
+  "corrected_metadata_freeze_sha256": "cf4d6aac69665e5829f00004225058028d6af67792e31429b859323e460fc36d",
+  "independent_static_peer_sha256": "fe105a5bb328376300747eb2f16a9fb607c4a610a51e1e8c298a6db0a7639ec6",
+  "execution_scope_sha256": "7e1caa16335389e42f979054bb7b48c17856584bdbf8b635693362c47d7f24e0",
+  "execution_binding_sha256": "9787b72d7799cc8a3d394ef03232da684756dc3608c53d88d4e8eccde5fe0975",
+  "actual": {
+    "passed_dispatches": 122,
+    "corrections": 5,
+    "policy_literals": 52,
+    "genuine_integration_branches": 15,
+    "prior_causal_assertions": 50,
+    "failed_deferred_unreached_deadline_unknown": 0,
+    "worlds_constructed": 128,
+    "ordinary_entry_attempts": 123,
+    "retained_cores": 119,
+    "reported_elapsed_seconds": 13.359,
+    "cooperative_deadline_seconds": 60,
+    "setup_cleanup_evidence_audit_pin_deadline_errors": 0,
+    "policy_attempts": 119,
+    "prepared_reports": 72,
+    "issued_reports": 70,
+    "prepared_only_noneligible_reports": 2,
+    "issued_execution_reports": 64,
+    "issued_authoring_reports": 6,
+    "available_identity_comparisons": 63,
+    "identity_comparisons_true": 63
+  },
+  "literal_boundary": "All52 genuine policy outcomes equal the frozen expectations:42 exact policy refusals,6 EXECUTION metadata reports followed by separate INVALID_INPUT plan refusals,4 AUTHORING_ONLY returns. Every literal context has zero original/output/compiler callbacks. Positive metadata reports are not full entry success.",
+  "integration": "Original Core/clock precedes policy work; AUTHORING cannot dispatch; exact selected roots and content dependency policy are enforced; immutable aliases/foreign namespace and once-only/cold observations pass. Two prepared-report failures retain actual immutable values/original clock or MemoryError while public report/eligibility remain absent/false. Later valid-policy cleanup permits one known close at396 and none at400 under original hard clock. All50 causal callback sequences match accepted Source3 counterparts after declared versioned path changes.",
+  "retained_evidence": {
+    "artifact_files": 844,
+    "artifact_bytes": 20134324,
+    "run_evidence_files_including_proof_attempt": 846,
+    "run_evidence_bytes_including_proof_attempt": 34330393,
+    "source_generated_copy_files": 72,
+    "source_generated_copy_bytes": 3121169,
+    "other_harness_copy_files": 772,
+    "other_harness_copy_bytes": 17013155,
+    "canonical_reservations": 4562,
+    "registered_raw_rows": 4561,
+    "explicit_missing_registration_rows": 1,
+    "immutable_snapshots": 74,
+    "copied_raw_rows": 4583,
+    "copied_axes": 18332,
+    "query_files": 312,
+    "query_bytes": 854672
+  },
+  "measurement_limits": "Reported13.359s includes source/harness setup and per-world retained evidence; final proof write/startup/exit are outside or unmeasured. File lengths/logical metrics are not RSS, physical output/readback/durability, whole-process or inference fit. Copies are not extra reads. E21's116B source-known/spy-completed difference is two committed58B returns before spy acknowledgment.",
+  "preservation": "Source3's original50-pass/three-defer proof remains unchanged. E08 is implemented/tested only in the separately pinned Source4 successor; both historical E16 invocations remain excluded/unexecuted. V1 metadata provenance HOLD2d497 is retained; corrected v2 metadata names active Source4 TCB and labels inherited Source3 history. No subject ran before the corrected freeze/peer/binding. One Source4 run only; no native experiment replay.",
+  "next": "Close the prospective real-route source/admission/consumer and physical-profile design; exercise native25 as a bounded source/data/refusal component gate before native wrapper qualification. Neither supplies positive native carrier/lease/child, real new84 closure or joint physical resource admission by assertion.",
+  "qualification": {
+    "finite_E08_entry_integration": true,
+    "complete_entry_gate": false,
+    "native25_executed": false,
+    "real_first_entry": false,
+    "target_native_or_physical": false,
+    "full_real_roster": false,
+    "resource_fit": false,
+    "scientific": false,
+    "R09_complete": false,
+    "project_complete": false
+  },
+  "provider_spend_usd": 0,
+  "application_defaults_changed": false,
+  "downloader_or_periodic_monitor_changed": false
+}

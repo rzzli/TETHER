@@ -1,0 +1,1037 @@
+{
+  "capture_error": null,
+  "copied_native_bytes": 5376,
+  "data": {
+    "api_counters": {
+      "CloseHandle": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "CreateFileW": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "GetFileInformationByHandleEx": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "GetFileSizeEx": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "GetFileType": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "GetFinalPathNameByHandleW": {
+        "count_values": 0,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      },
+      "ReadFile": {
+        "count_values": 3,
+        "invocations": 3,
+        "reserved": 3,
+        "scalar_returns": 3,
+        "wrapper_returns": 3
+      }
+    },
+    "assembly_live": 0,
+    "assembly_peak": 55497,
+    "byte_totals": {
+      "captured_bytes": 99000,
+      "early_captured_bytes": 99000,
+      "early_hashed_bytes": 99000,
+      "early_known_read_bytes": 99000,
+      "early_rehashes_after_claim": 0,
+      "early_reopens_after_claim": 0,
+      "hashed_bytes": 99000,
+      "known_read_bytes": 99000,
+      "read_count_unknown": false,
+      "remaining_captured_bytes": 0,
+      "remaining_hashed_bytes": 0,
+      "remaining_known_read_bytes": 0
+    },
+    "calls": null,
+    "early_context": {
+      "captured_bytes": 99000,
+      "complete": true,
+      "digests": {
+        "D:\\EntrySynthetic3\\helpers\\preflight_file_view_v3.py": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6",
+        "D:\\EntrySynthetic3\\helpers\\preflight_owner_ops_v3.py": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7",
+        "D:\\EntrySynthetic3\\helpers\\role_ledger_codec_v4.py": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+      },
+      "file_ids": [
+        0,
+        1,
+        2
+      ]
+    },
+    "errors": {
+      "primary": null,
+      "secondary": []
+    },
+    "evidence_context": null,
+    "files": [
+      {
+        "actual_sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+        "capture_complete": true,
+        "capture_state": "COMPLETE",
+        "captured_bytes": 55497,
+        "close_invocations": 1,
+        "close_reserved": true,
+        "close_return_observed": true,
+        "close_state": "returned_success",
+        "close_success": true,
+        "copy_unknown": false,
+        "early": true,
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 1000
+        },
+        "hash_complete": true,
+        "hash_unknown": false,
+        "hashed_bytes": 55497,
+        "id": 0,
+        "identity_queries": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "identity_state": "verified",
+        "known_read_bytes": 55497,
+        "open_invocations": 1,
+        "open_state": "owned",
+        "read_count_unknown": false,
+        "read_generation": 0,
+        "read_invocations": 1,
+        "read_scalar_returns": 1,
+        "spec": {
+          "capture": true,
+          "path": "D:\\EntrySynthetic3\\helpers\\role_ledger_codec_v4.py",
+          "role": "captured_software",
+          "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e",
+          "size": 55497
+        }
+      },
+      {
+        "actual_sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7",
+        "capture_complete": true,
+        "capture_state": "COMPLETE",
+        "captured_bytes": 39889,
+        "close_invocations": 1,
+        "close_reserved": true,
+        "close_return_observed": true,
+        "close_state": "returned_success",
+        "close_success": true,
+        "copy_unknown": false,
+        "early": true,
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 1001
+        },
+        "hash_complete": true,
+        "hash_unknown": false,
+        "hashed_bytes": 39889,
+        "id": 1,
+        "identity_queries": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "identity_state": "verified",
+        "known_read_bytes": 39889,
+        "open_invocations": 1,
+        "open_state": "owned",
+        "read_count_unknown": false,
+        "read_generation": 1,
+        "read_invocations": 1,
+        "read_scalar_returns": 1,
+        "spec": {
+          "capture": true,
+          "path": "D:\\EntrySynthetic3\\helpers\\preflight_owner_ops_v3.py",
+          "role": "captured_software",
+          "sha256": "e3a6e5177989b319cfe8e3080b9e511004bd5d7f392fabf9aef1a702e03b7cb7",
+          "size": 39889
+        }
+      },
+      {
+        "actual_sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6",
+        "capture_complete": true,
+        "capture_state": "COMPLETE",
+        "captured_bytes": 3614,
+        "close_invocations": 1,
+        "close_reserved": true,
+        "close_return_observed": true,
+        "close_state": "returned_success",
+        "close_success": true,
+        "copy_unknown": false,
+        "early": true,
+        "handle_fact": {
+          "tag": "HANDLE",
+          "value": 1002
+        },
+        "hash_complete": true,
+        "hash_unknown": false,
+        "hashed_bytes": 3614,
+        "id": 2,
+        "identity_queries": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "identity_state": "verified",
+        "known_read_bytes": 3614,
+        "open_invocations": 1,
+        "open_state": "owned",
+        "read_count_unknown": false,
+        "read_generation": 2,
+        "read_invocations": 1,
+        "read_scalar_returns": 1,
+        "spec": {
+          "capture": true,
+          "path": "D:\\EntrySynthetic3\\helpers\\preflight_file_view_v3.py",
+          "role": "captured_software",
+          "sha256": "96490b91af55567a5f76f3d54da1a83788076d5c5c03ed2f27b77ab4ea586ce6",
+          "size": 3614
+        }
+      },
+      {
+        "actual_sha256": null,
+        "capture_complete": false,
+        "capture_state": "PENDING",
+        "captured_bytes": 0,
+        "close_invocations": 0,
+        "close_reserved": false,
+        "close_return_observed": false,
+        "close_state": "not_attempted",
+        "close_success": null,
+        "copy_unknown": false,
+        "early": false,
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "hash_complete": false,
+        "hash_unknown": false,
+        "hashed_bytes": 0,
+        "id": 3,
+        "identity_queries": [],
+        "identity_state": "not_attempted",
+        "known_read_bytes": 0,
+        "open_invocations": 0,
+        "open_state": "unopened",
+        "read_count_unknown": false,
+        "read_generation": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "spec": {
+          "capture": true,
+          "path": "D:\\EntrySynthetic3\\fixture-metadata.json",
+          "role": "captured_metadata",
+          "sha256": "7f13dffb198124f829d88cff67462b6f454ccead4642b0287973da53ff0bb708",
+          "size": 68
+        }
+      },
+      {
+        "actual_sha256": null,
+        "capture_complete": false,
+        "capture_state": "NOT_REQUESTED",
+        "captured_bytes": 0,
+        "close_invocations": 0,
+        "close_reserved": false,
+        "close_return_observed": false,
+        "close_state": "not_attempted",
+        "close_success": null,
+        "copy_unknown": false,
+        "early": false,
+        "handle_fact": {
+          "tag": "UNOBSERVED",
+          "value": null
+        },
+        "hash_complete": false,
+        "hash_unknown": false,
+        "hashed_bytes": 0,
+        "id": 4,
+        "identity_queries": [],
+        "identity_state": "not_attempted",
+        "known_read_bytes": 0,
+        "open_invocations": 0,
+        "open_state": "unopened",
+        "read_count_unknown": false,
+        "read_generation": 0,
+        "read_invocations": 0,
+        "read_scalar_returns": 0,
+        "spec": {
+          "capture": false,
+          "path": "D:\\EntrySynthetic3\\periodic-bulk.bin",
+          "role": "hash_only_bulk",
+          "sha256": "6f8b1421035dcde6d517143914932e7996c17ae9a6c30042b1142b1b8b5f0557",
+          "size": 2097169
+        }
+      }
+    ],
+    "finalized": true,
+    "gates": [],
+    "generated": {
+      "candidate-ledger.bin": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "candidate.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "child/attempt.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "child/failure.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "child/result.partial.jsonl": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "cleanup.json": {
+        "bytes": 838,
+        "eligible": true,
+        "sha256": "ae71cf3687b2ea057a8de2e7fe0b824631deb1fd177be86177ace6106b2c7c00",
+        "state": "ISSUED"
+      },
+      "failure.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "journal.jsonl": {
+        "bytes": 4307,
+        "eligible": true,
+        "sha256": "265655aaf398fc527a1d88c06c20a7b31dd18ea128f65afd40b26d1b5377fa0e",
+        "state": "ISSUED"
+      },
+      "producer-report.json": {
+        "bytes": 2965,
+        "eligible": true,
+        "sha256": "7087b515dedefdc35b2fb3c720b4a51dc11b170e1524489bfdfef740298ff06a",
+        "state": "ISSUED"
+      },
+      "receipt.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "seal.json": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "stderr.bin": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "stdout.bin": {
+        "bytes": null,
+        "eligible": false,
+        "sha256": null,
+        "state": "RESERVED"
+      },
+      "terminal-ledger.bin": {
+        "bytes": 52330,
+        "eligible": true,
+        "sha256": "b97c94f8cf77bd994e5baeb13fb8a920af578558383fd1ef4b58dae8f7d5a5c0",
+        "state": "ISSUED"
+      }
+    },
+    "journal": {
+      "close_acknowledged": true,
+      "close_return_observed": true,
+      "closed": true,
+      "events": [
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "output_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 0,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_reserved",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 1,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_returned",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 2,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_reserved",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 3,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_returned",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 4,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_reserved",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 5,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_returned",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 6,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_reserved",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 7,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_returned",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 8,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_reserved",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 9,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_returned",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 10,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_reserved",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 11,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_returned",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 12,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_reserved",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 13,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_open_returned",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 14,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_reserved",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 15,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_identity_returned",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 16,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_reserved",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 17,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_hash_returned",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 18,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": "preflight_owner_ops_v3",
+          "return_observed": true,
+          "sequence": 19,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": "role_ledger_codec_v4",
+          "return_observed": true,
+          "sequence": 20,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_returned",
+          "file_id": null,
+          "kind": null,
+          "module": "role_ledger_codec_v4",
+          "return_observed": true,
+          "sequence": 21,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_returned",
+          "file_id": null,
+          "kind": null,
+          "module": "preflight_owner_ops_v3",
+          "return_observed": true,
+          "sequence": 22,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": "preflight_file_view_v3",
+          "return_observed": true,
+          "sequence": 23,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "source_compile_returned",
+          "file_id": null,
+          "kind": null,
+          "module": "preflight_file_view_v3",
+          "return_observed": true,
+          "sequence": 24,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "handoff_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 25,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "handoff_claimed",
+          "file_id": null,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 26,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "finalization_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 27,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_reserved",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 28,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_returned_or_unknown",
+          "file_id": 2,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 29,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_reserved",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 30,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_returned_or_unknown",
+          "file_id": 1,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 31,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_reserved",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 32,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "original_close_returned_or_unknown",
+          "file_id": 0,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 33,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "publication_reserved",
+          "file_id": null,
+          "kind": "cleanup",
+          "module": null,
+          "return_observed": true,
+          "sequence": 34,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "publication_returned",
+          "file_id": null,
+          "kind": "cleanup",
+          "module": null,
+          "return_observed": true,
+          "sequence": 35,
+          "stage": null,
+          "state": "return_observed"
+        },
+        {
+          "acknowledged": true,
+          "elapsed": 0,
+          "event": "journal_close_reserved",
+          "file_id": null,
+          "kind": null,
+          "module": null,
+          "return_observed": true,
+          "sequence": 36,
+          "stage": null,
+          "state": "return_observed"
+        }
+      ],
+      "next_sequence": 37,
+      "reservation": 234,
+      "tip": {
+        "bytes": 4307,
+        "sha256": "265655aaf398fc527a1d88c06c20a7b31dd18ea128f65afd40b26d1b5377fa0e"
+      }
+    },
+    "loader": {
+      "attempted": [
+        "preflight_owner_ops_v3",
+        "role_ledger_codec_v4",
+        "preflight_file_view_v3"
+      ],
+      "bound": true,
+      "cache_hits": [],
+      "declared_dependencies": {
+        "preflight_file_view_v3": [
+          "preflight_entry_kernel_v3"
+        ],
+        "preflight_owner_ops_v3": [
+          "dataclasses",
+          "json",
+          "preflight_entry_kernel_v3",
+          "role_ledger_codec_v4",
+          "types"
+        ],
+        "role_ledger_codec_v4": [
+          "hashlib",
+          "json",
+          "math",
+          "re",
+          "struct",
+          "types"
+        ]
+      },
+      "records": [
+        {
+          "accepted": true,
+          "compiler_return": null,
+          "module": "preflight_owner_ops_v3",
+          "return_observed": true,
+          "state": "return_observed"
+        },
+        {
+          "accepted": true,
+          "compiler_return": null,
+          "module": "role_ledger_codec_v4",
+          "return_observed": true,
+          "state": "return_observed"
+        },
+        {
+          "accepted": true,
+          "compiler_return": null,
+          "module": "preflight_file_view_v3",
+          "return_observed": true,
+          "state": "return_observed"
+        }
+      ],
+      "returned": [
+        "role_ledger_codec_v4",
+        "preflight_owner_ops_v3",
+        "preflight_file_view_v3"
+      ],
+      "trusted_dependency_names": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "math",
+        "preflight_entry_kernel_v3",
+        "re",
+        "struct",
+        "types"
+      ]
+    },
+    "origin": {
+      "clock_state": "ok",
+      "hard_end": 400,
+      "now": 100,
+      "start": 100,
+      "work_end": 395
+    },
+    "outputs": {
+      "journal_close": {
+        "acknowledged": true,
+        "attempted": true,
+        "prepared_bytes": 0,
+        "prepared_sha256": null,
+        "return_observed": true,
+        "semantics": "fictional_callback_not_physical_IO"
+      },
+      "publications": {
+        "candidate": {
+          "acknowledged": false,
+          "attempted": false,
+          "prepared_bytes": 0,
+          "prepared_sha256": null,
+          "return_observed": false,
+          "semantics": "fictional_callback_not_physical_IO"
+        },
+        "cleanup": {
+          "acknowledged": true,
+          "attempted": true,
+          "prepared_bytes": 838,
+          "prepared_sha256": "ae71cf3687b2ea057a8de2e7fe0b824631deb1fd177be86177ace6106b2c7c00",
+          "return_observed": true,
+          "semantics": "fictional_callback_not_physical_IO"
+        },
+        "failure": {
+          "acknowledged": false,
+          "attempted": false,
+          "prepared_bytes": 0,
+          "prepared_sha256": null,
+          "return_observed": false,
+          "semantics": "fictional_callback_not_physical_IO"
+        },
+        "receipt": {
+          "acknowledged": false,
+          "attempted": false,
+          "prepared_bytes": 0,
+          "prepared_sha256": null,
+          "return_observed": false,
+          "semantics": "fictional_callback_not_physical_IO"
+        },
+        "seal": {
+          "acknowledged": false,
+          "attempted": false,
+          "prepared_bytes": 0,
+          "prepared_sha256": null,
+          "return_observed": false,
+          "semantics": "fictional_callback_not_physical_IO"
+        }
+      },
+      "reservation": {
+        "acknowledged": true,
+        "attempted": true,
+        "prepared_bytes": 0,
+        "prepared_sha256": null,
+        "return_observed": true,
+        "semantics": "fictional_callback_not_physical_IO"
+      },
+      "total_reserved_bytes": 5145
+    },
+    "phase": "FINALIZED",
+    "plan": {
+      "B": 3,
+      "C": 117,
+      "E": 234,
+      "M": 3,
+      "N": 5,
+      "R": 87,
+      "calls_used": 21,
+      "capture_used": 99000,
+      "events_used": 37,
+      "output_reserved_bytes": 5145,
+      "raw_storage_peak": 1180500,
+      "raw_storage_used": 1180500,
+      "read_buffer_capacity": 1048576,
+      "read_generation": 3
+    },
+    "pure_seam_complete": false,
+    "qualification": {
+      "FFI_registration_proven": false,
+      "originals_authenticated": false,
+      "production_owner_bound": false,
+      "profile_qualified": false,
+      "real_checkers_bound": false,
+      "runtime_authorized": false,
+      "verification_complete": false
+    },
+    "refusal_code": null,
+    "schema_version": 2,
+    "scope": "entry_kernel_producer_seam",
+    "stages": [],
+    "status": "INCOMPLETE",
+    "terminal": {
+      "candidate_acknowledged": false,
+      "cleanup_acknowledged": true,
+      "final_clock_passed": false,
+      "journal_closed": true,
+      "original_closures_complete": true,
+      "pure_owner_ack": false,
+      "receipt_acknowledged": false,
+      "result_issued": true,
+      "seal_acknowledged": false,
+      "started": true
+    }
+  },
+  "genuine_source_snapshot": true,
+  "immutable_raw_artifacts": [
+    {
+      "bytes": 5376,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.first_wrapper_observed.native-rows.bin",
+      "semantics": "ALREADY_COPIED_IMMUTABLE_KERNEL_SNAPSHOT_ROWS",
+      "sha256": "a550f70bd5e4962050ee2b323e7cd497a976ebcde3c1a60d7bc57fd473b8d77f"
+    },
+    {
+      "bytes": 32409,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-contract-tests-20261030\\ENTRY-CONTRACT-SUITE-ARTIFACTS-v2\\branch-12-world-01.first_wrapper_observed.native-rows.jsonl",
+      "semantics": "CACHED_IMMUTABLE_SNAPSHOT_FACTS_NOT_LATEST_BANK",
+      "sha256": "d332b19b428ccc36cf36aa912edc91f8fba24202edf2154f61b5d0697c123128"
+    }
+  ],
+  "label": "first_wrapper_observed",
+  "partial_capture": false,
+  "raw_call_count": 21
+}

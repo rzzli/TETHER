@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "status": "source_and_token_preparation_verified",
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-token-aware-preparation-20261026T203613Z",
+  "generation_calls": 0,
+  "provider_spend_usd": 0,
+  "children": [
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    },
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    },
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    },
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    },
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    },
+    {
+      "executable": "None",
+      "argv": [
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\runtime\\llama-tokenize.exe",
+        "--offline",
+        "--model",
+        "E:\\projects_data\\drug_target_agents_data\\models\\qwen25-14b-q4km-20261018T032528Z\\qwen2.5-14b-instruct-q4_k_m-00001-of-00003.gguf",
+        "--no-escape",
+        "--no-bos",
+        "--stdin",
+        "--ids",
+        "--show-count"
+      ]
+    }
+  ],
+  "protected_read_attempts": [],
+  "network_attempts": [],
+  "native_execution_authorized": false,
+  "scientific_validation": "not_performed",
+  "source_receipt_sha256": "44df195c2744bad2d3d7203e92e24512b1599736abb804a8cd2e425ebc63eeec",
+  "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+  "elapsed_preparation_seconds": 98.5,
+  "records": [
+    {
+      "index": 0,
+      "arm": "asof_interpretation",
+      "stage_name": "asof_interpretation",
+      "prompt_sha256": "6fe64c19acae1591397bf03229a8a92195ba5648bfc6be0ab8155fb216fae6bf",
+      "payload_sha256": "53acc8a08bf0a606ed3ce8fb952396c9389688113f68ca7c59ab6556b21f09e9",
+      "receipt_sha256": "6ed66d4282f3943f757fe2ac55ec36c9841c1a839af2e4315b56b8809a1c93aa",
+      "token_count": 4656,
+      "input_reservation": 4688,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14076,
+      "http_payload_bytes": 17274
+    },
+    {
+      "index": 1,
+      "arm": "adapted_virtual_biotech_interpretation",
+      "stage_name": "chief_of_staff",
+      "prompt_sha256": "3441c185908d815413d78405dcb297d85ef3f97739ce2b301b4a37033c5bad93",
+      "payload_sha256": "fe23fba1da5a80c2c1c68c652dbf95d0c4ae42ce362ce9531b71f58f97312757",
+      "receipt_sha256": "4831eb638cea91d163c273de0a9daf4d016ce0ef48d51c734d060d3b3db6dda4",
+      "token_count": 4650,
+      "input_reservation": 4682,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14054,
+      "http_payload_bytes": 17252
+    },
+    {
+      "index": 2,
+      "arm": "adapted_virtual_biotech_interpretation",
+      "stage_name": "coordinator_delegate",
+      "prompt_sha256": "a0cd9b86096120c8561b40fe6bb17d0322f2f4afb7635223fe02f3719d0af5d1",
+      "payload_sha256": "949aa7a26fa6d26af8ad075953eb9cd00cbe685c77cdaa028ced4f7117a4bf32",
+      "receipt_sha256": "1b366b2e42f55671c8f74a832a9eabf5aa1a7f402519e5b827fee321f5b411f9",
+      "token_count": 4665,
+      "input_reservation": 4697,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14126,
+      "http_payload_bytes": 17332
+    },
+    {
+      "index": 3,
+      "arm": "adapted_virtual_biotech_interpretation",
+      "stage_name": "mapped_specialist",
+      "prompt_sha256": "fe36dca36d97e2f5357f9203e8ee341336eba23a52da017090a472373ede0c35",
+      "payload_sha256": "e1b053aeef7de0c32fa8ca3c728151dba1065bd342b8d4fb4bf25059b620d1b9",
+      "receipt_sha256": "6aff3e6d24a6b58f0800730dc7c207a423126de256ebe5ba2f9663d89b899625",
+      "token_count": 4678,
+      "input_reservation": 4710,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14187,
+      "http_payload_bytes": 17401
+    },
+    {
+      "index": 4,
+      "arm": "adapted_virtual_biotech_interpretation",
+      "stage_name": "scientific_reviewer",
+      "prompt_sha256": "fa0cfdd0efe0be03ba0a3aad21a9380fc570a6b773fa2a5ce42098ec805ef531",
+      "payload_sha256": "56c91eaf9c502bc9bbaf7ef5bc3ecafce124b08c11e7bb684de3a0e81c97af58",
+      "receipt_sha256": "4dcf55f0555fea3e2d964cdf438880dd794d5472f0e482ded1ed67cbed31548d",
+      "token_count": 4694,
+      "input_reservation": 4726,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14240,
+      "http_payload_bytes": 17462
+    },
+    {
+      "index": 5,
+      "arm": "adapted_virtual_biotech_interpretation",
+      "stage_name": "coordinator_synthesize",
+      "prompt_sha256": "e74d8f80f1379ad7f8d7219d0885f1b11f4adefe5c0a40c9a2d17fcd1209bcfd",
+      "payload_sha256": "f7ca74fb2a3f0ed77abc92df822845325102eb4006c3512494df8431b7509e61",
+      "receipt_sha256": "c40af244434cd2a5dc1e5757a4c737e767ce3ce5c07e2159fa10f45bb9a2100d",
+      "token_count": 4706,
+      "input_reservation": 4738,
+      "output_reservation": 1024,
+      "prompt_utf8_bytes": 14298,
+      "http_payload_bytes": 17528
+    }
+  ],
+  "input_reservation": 28241,
+  "output_reservation": 6144,
+  "tokenizer_spec_sha256": "78a233a4a0070a60e56ee62c1eb1a4e4ef577613fde17a004ab81cf1fe041518",
+  "history_scope": "exact_hypothetical_only_not_a_token_maximum",
+  "original_source_complete": true,
+  "raw_row_reconstruction": "whole_method2.2_equal",
+  "source_replay": {
+    "status": "verified",
+    "request_sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a",
+    "model_calls": 0,
+    "scientific_validation": "not_performed"
+  },
+  "verification_seconds": 2.844000000040978,
+  "protocol_sha256": "5b800201813d027d125db2f83500798bd59072b3263a0f8f3f43d88d1458f7a7",
+  "source_authority_sha256": "8a98d96c14193e5298384f90982ae30943de6927de80654c6b99eed9ae7f027a",
+  "whole_R09_complete": false,
+  "independent_human_review": "pending",
+  "numerical_features": {},
+  "clinical_probability": null,
+  "receipt_sha256": "eca1e49f6a1d23555938aaa6dfbfdb091501b4d8e0e886cf4bea8c4d8e5784b1"
+}

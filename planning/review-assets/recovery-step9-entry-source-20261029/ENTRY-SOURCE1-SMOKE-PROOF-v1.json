@@ -1,0 +1,190 @@
+{
+  "actual_entry_attempts": 1,
+  "audit_denials": [],
+  "binding": {
+    "bytes": 3589,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\ENTRY-SOURCE1-SMOKE-BINDING-v1.json",
+    "sha256": "d373705fa84bd88c3ff46daee123114d7b84fdaaea7f25a4784e889d10273d9a"
+  },
+  "call_gate": {
+    "attempts": 2,
+    "deadline_checks": 4,
+    "normal_returns": 1
+  },
+  "changed_pins": [],
+  "cleanup_error": null,
+  "clock_events": [
+    [
+      "clock",
+      1
+    ]
+  ],
+  "cooperative_deadline_late": false,
+  "downstream_source_defects_reproduced": false,
+  "elapsed_seconds": 0.0470000000204891,
+  "entry_error": {
+    "args": [
+      "INVALID_INPUT"
+    ],
+    "code": "INVALID_INPUT",
+    "frames": [
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\run_entry_source1_smoke_v1.py",
+        "function": "main",
+        "line": 105
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_initial_regressions_v1.py",
+        "function": "test01_valid_entry",
+        "line": 11
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_independent_world_v1.py",
+        "function": "enter",
+        "line": 106
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_independent_test_support_v1.py",
+        "function": "invoke",
+        "line": 99
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+        "function": "entry",
+        "line": 1819
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+        "function": "__init__",
+        "line": 1413
+      },
+      {
+        "file": "<string>",
+        "function": "__init__",
+        "line": 5
+      },
+      {
+        "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+        "function": "__post_init__",
+        "line": 1157
+      }
+    ],
+    "type": "preflight_entry_kernel_v1.KernelRefusal"
+  },
+  "entry_return_observed": false,
+  "inputs": {
+    "bytes": 5176,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\ENTRY-ACTUAL-HELPER-INPUTS-v1.json",
+    "sha256": "10d0d0dd66ab858e3e893f8c8ca096f5d5cf8cdd5fe21f75c1bc10dc0301c605"
+  },
+  "intended_checks": {
+    "test01_valid_entry": "FAIL",
+    "test02_normal_captured_helpers_finish": "NOT_REACHED",
+    "test03_staged_scalar_has_no_cleanup_authority": "NOT_REACHED"
+  },
+  "observations": {
+    "actual_read_dispatches": 0,
+    "helper_compiler_callbacks": 0,
+    "helper_completed_delivery_bytes": 0,
+    "namespace_callback_attempts": 0,
+    "original_clock_calls": 1,
+    "original_dispatches": 0,
+    "original_first_error": {
+      "args": [
+        "INVALID_INPUT"
+      ],
+      "code": "INVALID_INPUT",
+      "frames": [
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\run_entry_source1_smoke_v1.py",
+          "function": "main",
+          "line": 105
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_initial_regressions_v1.py",
+          "function": "test01_valid_entry",
+          "line": 11
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_independent_world_v1.py",
+          "function": "enter",
+          "line": 106
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\entry_independent_test_support_v1.py",
+          "function": "invoke",
+          "line": 99
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+          "function": "entry",
+          "line": 1819
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+          "function": "__init__",
+          "line": 1413
+        },
+        {
+          "file": "<string>",
+          "function": "__init__",
+          "line": 5
+        },
+        {
+          "file": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+          "function": "__post_init__",
+          "line": 1157
+        }
+      ],
+      "type": "preflight_entry_kernel_v1.KernelRefusal"
+    },
+    "prepared_output_callbacks": 0,
+    "scripted_close_attempts": 0
+  },
+  "original_first_clock_observed": true,
+  "preparation": {
+    "bytes": 4590,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\ENTRY-INITIAL-REGRESSION-PREPARATION-v1.json",
+    "sha256": "88ee40834682483046ad053a0cedbaac63a0e5ca7e04f672f0f705ea941f567c"
+  },
+  "qualification": {
+    "native": false,
+    "physical_io": false,
+    "pure_synthetic": true,
+    "real_first_entry": false,
+    "source_only": true,
+    "whole_r09": false
+  },
+  "schema_version": 1,
+  "scope": "SOURCE1_SINGLE_ENTRY_SMOKE_NO_DOWNSTREAM_EXECUTION",
+  "setup_error": null,
+  "source_import_completed": true,
+  "source_map": {
+    "preflight_entry_kernel_v1": {
+      "bytes": 117371,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_entry_kernel_v1.py",
+      "sha256": "88ff0b2782b02b9cb96d94e6981df6911e87d73f6280f2838eed8c97d42ece20"
+    },
+    "preflight_file_view_v1": {
+      "bytes": 3614,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_file_view_v1.py",
+      "sha256": "79c371a201c9450bb7f50cef3ac0340fee782e744bf00390c4683e66d4c34daf"
+    },
+    "preflight_owner_ops_v1": {
+      "bytes": 39530,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\preflight_owner_ops_v1.py",
+      "sha256": "40ee3dbd2fceca14ad94ec19be6a2e81807b8ed366b61fb9062cba526cccfeda"
+    },
+    "role_ledger_codec_v4": {
+      "bytes": 55497,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-role-aware-source-20261029\\role_ledger_codec_v4.py",
+      "sha256": "c0b3c5a689e72803487c9c3504513bc2bc0e4a4466b91128393fdbc4436f5b5e"
+    }
+  },
+  "source_pause": {
+    "bytes": 5271,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\recovery-step9-entry-source-20261029\\ENTRY-SOURCE-PAUSE-v1.json",
+    "sha256": "5594746b7d9687a7a386f4188564726f8ab000f1ec4ba38e557b7696373687fb"
+  },
+  "status": "EXPECTED_ENTRY_SETUP_FAILURE_RETAINED"
+}
