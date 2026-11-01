@@ -1,0 +1,32 @@
+{
+  "schema": "p09.bytecache_allowlist_boundary_probe.v1",
+  "status": "PASS",
+  "results": [
+    {
+      "unlisted_cache_files": 0,
+      "passed": true,
+      "findings": [
+        "after_allowlist_marker"
+      ],
+      "provider_projection_calls": 0,
+      "code_pin_calls": 1,
+      "source_inclusive": false,
+      "logical_original_compressed_bytes_scanned": 0
+    },
+    {
+      "unlisted_cache_files": 4,
+      "passed": true,
+      "findings": [
+        "explicit_bundle_allowlist"
+      ],
+      "provider_projection_calls": 0,
+      "code_pin_calls": 0,
+      "source_inclusive": false,
+      "logical_original_compressed_bytes_scanned": 0
+    }
+  ],
+  "interpretation": "Four invented unlisted pyc files fail the explicit whole-bundle allowlist before code pins, report/reference processing or provider source projection. Clean metadata passes that boundary and deliberately stops at a mocked next-stage marker.",
+  "actual_original_reads": 0,
+  "actual_source_audit_runs": 0,
+  "production_mutations": 0
+}

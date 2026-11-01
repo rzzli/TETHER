@@ -1,0 +1,11 @@
+# README bytecode-instruction revision review
+
+**PASS: 3,149 checks, no unresolved or privacy findings.** New draft protocol SHA-256 is `6b46ffd6fa9f01ace8f6e395230e61fe68b486496ce4908887fd954d6d9a97ed`. Its 311 public members total 20,486,682 bytes.
+
+Only `README.md` changed: the unittest command adds `-B`, and an appended paragraph explains bytecode-cache prevention and whole-file inventory checks. Reverting both changes restores the exact prior README; replacing only its descriptor restores exact prior protocol `f451c523...`. The other 310 members, including all 100 core/replay package payloads, four replay test files, source-policy and comparison bytes, are unchanged. The complete prior metadata/hash/receipt/wheel/control/presentation/privacy review passed again; HGNC was hashed without parsing and no external originals were read.
+
+The root reports that the original non-`-B` installed tests left four `.pyc` files in the temporary execution copy, while the canonical D: bundle remained exactly 312 files. A tiny invented-bundle API probe independently confirms that four unlisted caches trigger `explicit_bundle_allowlist` before code pins or external-original source projection. The clean control passes that boundary and intentionally stops at a mocked next stage. Declared bundle integrity hashing precedes this guard in the real auditor and includes bundled HGNC bytes; the probe does not claim otherwise. It performed no actual source audit or provider read.
+
+The corrected 82-test run with `-B` and pristine 312-file invariant remains pending root terminal evidence. This review does not infer that outcome. The initial v4 checker failure is retained: it incorrectly assumed the README had only the three-byte flag insertion, omitting the intended explanatory paragraph. The final v5 checker validates the complete exact 161-byte delta. No bundle file changed during review.
+
+The original `6508...` authority and its successful reconstruction/audit remain retained. Root must freeze a new READY authority before any new authorized actual execution; old outputs must not be relabeled with the new authority. This passing draft review grants no publication or scientific validation.

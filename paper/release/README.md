@@ -126,9 +126,12 @@ fixtures are invented; their passing does not substitute for the actual-input
 reconstruction and independent audit above.
 
 ```powershell
-& $python -I -m unittest discover -s (Join-Path $bundle 'source/replay/tests') -v
+& $python -B -I -m unittest discover -s (Join-Path $bundle 'source/replay/tests') -v
 if ($LASTEXITCODE -ne 0) { throw 'Installed fictional tests failed.' }
 ```
 
 The retained manuscript PDF is supplied as an output. Its original renderer and
 font environment are not bundled, so PDF regeneration is a separate operation.
+
+Use `-B` for source tests to prevent bytecode cache files inside the read-only
+bundle. The final audit checks its whole file set as well as declared hashes.

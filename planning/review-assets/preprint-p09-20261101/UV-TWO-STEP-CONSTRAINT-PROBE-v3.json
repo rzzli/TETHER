@@ -1,0 +1,109 @@
+{
+  "schema": "p09.uv_two_step_constraint_probe.v3",
+  "status": "PASS",
+  "probe_root": "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535",
+  "uv_version": "uv 0.11.2 (02036a8ba 2026-03-26 x86_64-pc-windows-msvc)",
+  "build_constraints_sha256": "dfc2947f4dce3fa1c1905ef60bd8ee5b286177f603a13645cc2f003188c7d70c",
+  "project_inputs_before": {
+    "pyproject.toml": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a",
+    "uv.lock": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12",
+    ".venv\\pyvenv.cfg": "de2f46998d270081e5dfc714d5a30a68410de7166a8657a8dd422bd6b17477c4"
+  },
+  "project_inputs_after": {
+    "pyproject.toml": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a",
+    "uv.lock": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12",
+    ".venv\\pyvenv.cfg": "de2f46998d270081e5dfc714d5a30a68410de7166a8657a8dd422bd6b17477c4"
+  },
+  "results": [
+    {
+      "label": "positive",
+      "passed": true,
+      "phases": [
+        {
+          "command": [
+            "uv",
+            "sync",
+            "--offline",
+            "--locked",
+            "--no-install-project",
+            "--project",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\positive",
+            "--python",
+            "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "3ecb9b12ebb3eb6ff91864df9f6fdf3bbbd65ba795939cf90097621d4489e67e"
+        },
+        {
+          "command": [
+            "uv",
+            "pip",
+            "install",
+            "--offline",
+            "--no-deps",
+            "--python",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\positive\\.venv\\Scripts\\python.exe",
+            "--editable",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\positive",
+            "--build-constraints",
+            "D:\\Projects\\drug_target_agents\\paper\\release\\build-constraints.txt"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "d8edee1d95ac6817ca015533711d26f4ba8f972f7b2e854029c5e43ffcf0ac7d"
+        }
+      ],
+      "wall_seconds": 2.797000000020489,
+      "editable_dist_info_wheel": "Wheel-Version: 1.0\nGenerator: setuptools (84.0.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "fixture_lock_unchanged": true
+    },
+    {
+      "label": "negative",
+      "passed": true,
+      "phases": [
+        {
+          "command": [
+            "uv",
+            "sync",
+            "--offline",
+            "--locked",
+            "--no-install-project",
+            "--project",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\negative",
+            "--python",
+            "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "3ecb9b12ebb3eb6ff91864df9f6fdf3bbbd65ba795939cf90097621d4489e67e"
+        },
+        {
+          "command": [
+            "uv",
+            "pip",
+            "install",
+            "--offline",
+            "--no-deps",
+            "--python",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\negative\\.venv\\Scripts\\python.exe",
+            "--editable",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\negative",
+            "--build-constraints",
+            "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-two-step-probe-20261101T211337Z-ef2535\\impossible-build-constraints.txt"
+          ],
+          "exit_code": 1,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "32ce599c7be4ab2a3d03ceb3280b45ed74603d10c3a32689db674496ad0e4e0d"
+        }
+      ],
+      "wall_seconds": 0.35900000005494803,
+      "editable_dist_info_wheel": null,
+      "fixture_lock_unchanged": true
+    }
+  ],
+  "network_calls": 0,
+  "provider_source_reads": 0,
+  "project_environment_targeted": false,
+  "scope": "Existing C: offline cache; new exclusive D: fictional environments. Exact copied root pyproject/uv.lock, invented one-file package. No actual provider sources."
+}

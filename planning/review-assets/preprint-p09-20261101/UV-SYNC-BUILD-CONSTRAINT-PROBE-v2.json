@@ -1,0 +1,70 @@
+{
+  "schema": "p09.uv_sync_build_constraint_probe.v1",
+  "status": "FAIL",
+  "uv_version": "uv 0.11.2 (02036a8ba 2026-03-26 x86_64-pc-windows-msvc)",
+  "config_path": "paper/release/uv-build-constraints.toml",
+  "config_sha256": "ea6b03ec9b1b84b8719b58349fca8041cd335e0625f3bb98cc3164205e65eb6b",
+  "probe_root": "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-sync-config-probe-20261101T211154Z-7325eb",
+  "cache_scope": "Existing local C: uv cache only; offline and Python downloads disabled",
+  "project_inputs_before": {
+    "pyproject.toml": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a",
+    "uv.lock": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12",
+    ".venv\\pyvenv.cfg": "de2f46998d270081e5dfc714d5a30a68410de7166a8657a8dd422bd6b17477c4"
+  },
+  "project_inputs_after": {
+    "pyproject.toml": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a",
+    "uv.lock": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12",
+    ".venv\\pyvenv.cfg": "de2f46998d270081e5dfc714d5a30a68410de7166a8657a8dd422bd6b17477c4"
+  },
+  "project_environment_targeted": false,
+  "reports": [
+    {
+      "label": "positive",
+      "command": [
+        "uv",
+        "--config-file",
+        "D:\\Projects\\drug_target_agents\\paper\\release\\uv-build-constraints.toml",
+        "sync",
+        "--offline",
+        "--locked",
+        "--project",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-sync-config-probe-20261101T211154Z-7325eb\\positive",
+        "--python",
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.8589999999385327,
+      "expected_constraint": "setuptools==84.0.0",
+      "passed": false,
+      "editable_dist_info_wheel": "Wheel-Version: 1.0\nGenerator: setuptools (84.2.1)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "fixture_lock_unchanged": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1fa410fda4a507fb06f5b2bc5129d668fbc0d1ac3ca26c3d5fd3ed5aaa77a015"
+    },
+    {
+      "label": "negative",
+      "command": [
+        "uv",
+        "--config-file",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-sync-config-probe-20261101T211154Z-7325eb\\impossible-build-constraint.toml",
+        "sync",
+        "--offline",
+        "--locked",
+        "--project",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\p09-uv-sync-config-probe-20261101T211154Z-7325eb\\negative",
+        "--python",
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.812999999965541,
+      "expected_constraint": "setuptools==999999",
+      "passed": false,
+      "editable_dist_info_wheel": "Wheel-Version: 1.0\nGenerator: setuptools (84.2.1)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "fixture_lock_unchanged": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "385e5ed4919a3b3b2cb2956fbc145df75ecbd82a3323858be4a3a0955d20d677"
+    }
+  ],
+  "network_calls": 0,
+  "provider_source_reads": 0
+}
