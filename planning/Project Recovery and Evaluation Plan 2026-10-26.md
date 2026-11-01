@@ -1,5 +1,7 @@
 # Project recovery and evaluation plan
 
+**Superseded for current execution, 31 October 2026 Los Angeles:** use the [AI only evaluation plan](AI%20Only%20Evaluation%20Plan%202026-10-31.md) and [owner scope amendment](decisions/2026-10-31-no-external-expert-input.md). All human-response, recruitment, follow-up and panel dependencies below are retired, not completed. Existing responses/derivatives are archive-only; H5-A has an automated source-reporting endpoint. This dated plan body and its former next-action text are retained as history; they do not override the new plan.
+
 **Prepared:** 26 October 2026 UTC / 25 October Los Angeles. **Status updated:** 31 October UTC / 30 October Los Angeles. **Initial code baseline:** `cc0042c`. Execution remains authorized; R01–R06 engineering/preparation are accepted.
 
 Current checkpoint, 31 October UTC: [Expert returns](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>). All three supplied mechanism returns are preserved and normalized (54 selections; 95 integrity and 549 conversion checks; six selected isolation regressions pass). The owner confirms three different human reviewers: R1 without AI, R2/R3 with disclosed AI assistance/outside sources (Claude Code). R2/R3 report statistical genetics/epidemiology, independence and source-first order. Each reports 45 minutes estimated, not measured. Authorship/disclosure intake is complete for this exposed orientation; no fresh/blinded H5 or genetics/source-feasibility review is implied.

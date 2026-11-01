@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October Los Angeles genetics-source returns](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>). Two additional TXT source reviews are preserved/normalized; candidate follow-up and GE's source-first declaration are next. Older rows retain their dated state and do not override subsequent owner corrections or new receipts.
+Current checkpoint: [31 October Los Angeles AI only scope](<Project Progress Reassessment 2026-10-31 - AI Only Scope.md>). The owner retired all external expert-response dependencies and excluded bespoke returns/derivatives from new workflows. [A01–A09](AI%20Only%20Evaluation%20Plan%202026-10-31.md) governs future execution; A02 evaluator implementation is next. Older rows preserve dated findings and superseded human workstreams.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

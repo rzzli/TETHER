@@ -10,27 +10,44 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Genetics Source Returns]].
-Two additional genetics source returns are received and normalized, not missing:
-ds_response.txt / GSR-20261031-01 and ge_respomse.txt / GSR-20261031-02, 8,329 bytes,
-20 valid selections. Eight selections coincide; attribution and sufficiency differ,
-without scoring or adjudication. The owner describes two PhD-level backgrounds:
-non-computational biology for DS; mixed bioinformatics/genetics for GE. Possible AI
-finalization assistance, degree unknown. Do not infer R1/R2/R3 mapping or confirmed
-unassisted authorship. DS reports source-first independent preparation and 25 minutes,
-measured versus estimated unknown; GE workflow/conflicts/time remain unknown.
-Originals/normalized records are evaluator-only under ignored
-data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/. TXT instrument
-binding is coordinator-established, not native JSON export metadata. All327 app pins
-match;1,774 tests retained, no rerun. Separate agent scope notes are AI annotations,
-not a human reference. Next candidate follow-up per retained source ID; obtain GE's
-source-first declaration before release. Preserve old references after exposure.
-Prior mechanism intake remains processed for three owner-confirmed people, one without
-AI/two assisted, with45-minute estimates; no source-feasibility exercise returned.
-R07 technical diagnostic stays negative; H5/clinical/capability/freshness gates open,
-native expansion deferred, v2/$0/downloader/stopped monitor unchanged.
-See [[research-log-2026-10-31-genetics-source-returns]] and the prior
-[[research-log-2026-10-31-expert-returns]].
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - AI Only Scope]].
+Owner explicitly removes human responses/external expert inputs. HR1–HR4,
+GE confirmation and candidate-follow-up dependencies are retired, not completed.
+No further reviewer submission or scheduling is required. Current execution plan:
+planning/AI Only Evaluation Plan 2026-10-31.md; scope decision:
+planning/decisions/2026-10-31-no-external-expert-input.md.
+
+Original responses/addenda/normalizations/comparisons/answer-aware AI notes and all
+derivatives stay archive-only, excluded from new reference building, generation,
+judging, tuning and source/case/arm selection. Preserve originals/provenance.
+Fresh reference agents receive an allowlisted pre-response source bundle without
+conversation fork, this memory, candidates or old answer-aware analyses.
+This is procedural separation, not independent model errors or OS isolation.
+
+H5-A measures mechanically verified completion and typed-fact coverage; AI semantic
+concordance/preference is secondary. Original expert-preference H5 remains untested.
+No AI consensus establishes clinical truth, causality or human equivalence.
+Existing public curated dataset labels may be assessed without soliciting experts.
+
+Next A02: small versioned evaluator adapter/validator for the ten-item genetics
+question, source/hash/role/unknown/provenance/seal tests and human-response lineage
+exclusion. Existing panel/Q1/top-one tools are not silently repurposed. Preserve
+legacy pending-human fields/verifiers. A03 then creates clean AI source proposals
+and retrospective exposed R07 content audit; old candidates predate references.
+A04–A08 qualify sources, evaluator controls, bounded pilot, sizing/freeze and locked
+automated comparison. A09 reassesses original conditional branches/release.
+
+Retain 0.3.11/default v2, 1,774 retained tests (no prose-only rerun), original R07
+six outputs/zero contract passes, native FAILED/INCOMPLETE_TIMEOUT, optional native
+defer, 65 missing inputs, 36 unqualified labels, 17/32 states and 0/12 joint readiness,
+empty numerical features/null probabilities, $0 provider spending and unchanged
+downloader/stopped monitor. Unknown platform costs are not zero. No new download,
+paid access or model/native execution is authorized by this planning revision.
+Only actual file/access/permission/resource needs can require owner intervention.
+See [[research-log-2026-10-31-ai-only-replan]].
+
+All subsequent memory sections are historical checkpoints; their expert-response
+and panel prerequisites are superseded by this owner decision.
 
 ### Prior scientific-readiness checkpoint (retained history)
 

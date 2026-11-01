@@ -1,5 +1,7 @@
 # Project progress reassessment: genetics source returns
 
+**Retired human workflow, later owner decision on 31 October 2026:** the [AI only evaluation plan](AI%20Only%20Evaluation%20Plan%202026-10-31.md) supersedes all requests below for external responses, GE confirmation or candidate follow-up. No further submissions are needed. This document retains the earlier intake/assignment history; its response-bearing inputs and derivatives are archive-only, not new evaluation inputs.
+
 31 October 2026, America/Los_Angeles. The two newly supplied genetics source reviews are received, preserved and normalized. **Source-review receipt is complete; candidate assessment and R07 scientific closeout are unfinished.** The previous blocker was missing source responses. It is now replaced by the separate follow-up and its reviewer-specific exposure checks.
 
 The files are `ds_response.txt` and `ge_respomse.txt` under `docs/expert-review-genetics-20261026/responses/`. Their original names and bytes are unchanged. They are plain-text returns, not native form JSON exports; the coordinator matched their numbered answers to the pinned instrument. No duplicate or reformatted submission is needed.

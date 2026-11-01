@@ -1,7 +1,7 @@
 ---
 title: AsOf Data Workspace
 date: 2026-10-09
-updated: 2026-10-22
+updated: 2026-10-31
 tags:
   - asof
   - data
@@ -10,6 +10,8 @@ status: acquisition-started
 ---
 
 # AsOf data workspace
+
+**Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Catalog collection/validation statuses and original data are unchanged; technical manifest enforcement is planned in A02.
 
 October22 primary report lookup: one official SID program original is collected
 and source-verified (317,171B;24pages). Physical page13 binds control4509282 to

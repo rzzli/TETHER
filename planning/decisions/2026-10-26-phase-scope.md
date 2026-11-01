@@ -1,5 +1,7 @@
 # Phase scope and execution decision
 
+**Prospective amendment, 31 October 2026:** the [no-external-expert decision](2026-10-31-no-external-expert-input.md) supersedes the human-reference requirements and human-preference endpoint below. Original scope and failed findings remain historical records; current execution follows the [AI only plan](../AI%20Only%20Evaluation%20Plan%202026-10-31.md).
+
 Recorded 26 October 2026 UTC by Codex under the user's instruction to continue
 the sixteen-step plan until a blocker or completion. This records the accepted
 plan defaults; it is not a fabricated human signature or a new spending approval.

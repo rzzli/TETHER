@@ -1,5 +1,7 @@
 # Orientation review disposition and next round
 
+**Retired human workflow, later owner decision on 31 October 2026:** the [AI only evaluation plan](AI%20Only%20Evaluation%20Plan%202026-10-31.md) supersedes all requests below for external responses, GE confirmation or candidate follow-up. No further submissions are needed. This document retains the earlier intake/assignment history; its response-bearing inputs and derivatives are archive-only, not new evaluation inputs.
+
 Later update, 31 October Los Angeles: the two additional genetics source files are now received and processed. See the [new assessment](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>) for reference IDs, round-specific provenance and candidate-release order. The owner describes DS as non-computational PhD-level biology and GE as mixed bioinformatics/genetics PhD-level, with possible AI assistance of unknown extent. Their mapping to earlier aliases is unknown; the original proposed R2/R3 assignment below is not an established mapping. Do not request these source files again.
 
 The following records the completed orientation disposition and original next-round assignment; the new assessment governs current genetics status.

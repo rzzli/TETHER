@@ -1,7 +1,7 @@
 ---
 title: AsOf Full Data Requirements and Acquisition Plan
 date: 2026-10-09
-updated: 2026-10-22
+updated: 2026-10-31
 tags:
   - asof
   - data-plan
@@ -10,6 +10,8 @@ status: acquisition-started
 ---
 
 # AsOf full data requirements and acquisition plan
+
+**Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Catalog collection/validation statuses and original data are unchanged; technical manifest enforcement is planned in A02.
 
 October22 current source-readiness disposition: revise/defer. The bounded primary
 report lookup collected the official SID poster0507 program, but no target DOI,

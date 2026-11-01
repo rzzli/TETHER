@@ -1,14 +1,19 @@
 # Recovery execution status and remaining gates
 
-Updated 31 October 2026 UTC. This is the current execution report for the
+Updated 31 October 2026, America/Los_Angeles. This records the current amendment to the
 [sixteen-step recovery plan](Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md).
 The initial [independent review](../docs/Independent%20Project%20Review%202026-10-26.md)
 remains a dated pre-correction assessment. Original proposals and failed results
 remain preserved.
 
-Current checkpoint, 31 October Los Angeles: [Genetics source returns](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>). Two additional source-review files are preserved and normalized: 20 valid selections, eight matching and two differing items. DS and GE have separate reference IDs. The owner describes two PhD-level reviewers (non-computational biology; mixed bioinformatics/genetics) with possible AI finalization assistance, extent unknown. DS reports independent source-first preparation and 25 minutes, measured versus estimated unknown; GE's workflow/time remain unknown. These are received development source records, not missing files or native JSON exports.
+Current checkpoint: [AI only scope](<Project Progress Reassessment 2026-10-31 - AI Only Scope.md>). The owner removed external expert participation and human responses as inputs. HR1–HR4, GE confirmation and candidate follow-up are retired, not waiting or completed. Earlier responses and their derivatives are archive-only and excluded from future references, generation, judging, tuning and selection.
 
-Next: separate candidate follow-up linked to GSR-20261031-01 (DS) and GSR-20261031-02 (GE). DS supplies the source-first self-report; obtain GE's declaration before release. Record assistance, exposure and timing basis; keep unknowns explicit. Prior mechanism orientation intake remains complete for three owner-confirmed people (one unassisted, two AI-assisted), with 45-minute estimates. Neither round certifies fresh/blinded H5 or measured workload. No model replay, repaired candidate or native expansion; v2/$0 and downloader/stopped-monitor boundaries remain.
+Current execution follows [A01–A09](AI%20Only%20Evaluation%20Plan%202026-10-31.md). Next is A02: the minimal versioned ten-item genetics evaluator contract and isolation tests, followed by clean source-only AI proposals and retrospective R07 content assessment. H5-A is mechanically verified completion/typed-fact coverage, with AI judgments secondary; original expert-preference H5 stays untested. No runtime, data or model execution is claimed by this planning revision.
+
+## Historical checkpoints before the no external expert amendment
+
+All following checkpoint and next-action text is dated history. In particular, later human-response requests in this retained body do not apply to current execution; the controlling plan above retires them.
+
 
 The native-build checkpoint verifies compilation, static imports and the format-2 input pack; the executable remains unexecuted. The [launcher terminal disposition](<Project Progress Reassessment 2026-10-28 - Native Launcher.md>) now records both preserved Python-worker failures. Resources passes a narrowly corrected negative-test predicate; overflow still has unexplained lifetimeTotal2 with Active0/emptyPIDs. A standalone `/MD` C++ worker is in source/build preparation to test the compiled-child architecture; generic total1, ABI, document/EOG, full-case resources and all scientific/human gates remain open.
 

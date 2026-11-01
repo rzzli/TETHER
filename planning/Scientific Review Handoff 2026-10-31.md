@@ -1,5 +1,7 @@
 # Scientific review handoff
 
+**Retired human workflow, later owner decision on 31 October 2026:** the [AI only evaluation plan](AI%20Only%20Evaluation%20Plan%202026-10-31.md) supersedes all requests below for external responses, GE confirmation or candidate follow-up. No further submissions are needed. This document retains the earlier intake/assignment history; its response-bearing inputs and derivatives are archive-only, not new evaluation inputs.
+
 31 October 2026, Los Angeles. Three mechanism-orientation returns and two additional genetics-source returns are processed. The next input is separate genetics candidate follow-up, with GE's source-first workflow confirmed before release. This is a coordinator checklist; send reviewers only the appropriate clean material, not this repository, AI judgments or internal answer guidance. Current [genetics assessment and reference IDs](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>).
 
 ## Current returns
