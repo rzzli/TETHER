@@ -195,6 +195,34 @@ class PureAnalysisTests(unittest.TestCase):
         self.assertIsNone(result["native_secondary"]["qualified_nonzero_denominator"])
         self.assertEqual(result["decision_verdict_counts"],{"no_decision":90})
 
+    def test_producer_serialized_fictional_c02_metrics_integration(self):
+        # This exercises serialization interoperability, not an actual study.
+        # The independent expected denominator=1 comes from frozen C02's single
+        # answerable exponent, not from a producer verdict or compiler oracle.
+        spec=importlib.util.spec_from_file_location("producer_metrics_shape_only",ROOT/"tools/science/run_source_validation_experiment.py")
+        producer=importlib.util.module_from_spec(spec); spec.loader.exec_module(producer)
+        with fictional_directory() as folder:
+            root=Path(folder)/"fixtures"
+            manifest=producer.author_fictional_fixtures(root)
+            bounds=producer.Bounds(Path(folder))
+            scenario,packet=producer.load_fictional(root,"C02",manifest,bounds)
+            raw=producer.fictional_candidate(packet,"C02")
+            metrics=producer.evaluate_fictional(scenario,packet,raw,bounds,approved_fixture_root=root)
+            outs,decs=producer.blank_ledgers()
+            outs["S-C02"].update(terminal="returned",received_terminal="returned")
+            producer.retain_fictional_metrics(outs["S-C02"],metrics)
+            for item in metrics["decisions"]:
+                decs[item["decision_id"]].update(item)
+            ledger=synthetic_ledger()
+            ledger.update(status="FAILED_PARTIAL_NOT_QUALIFIED",output_cells=list(outs.values()),decision_cells=list(decs.values()),
+                native_qualification={case:dict(disposition="unverified",measurement_answerable_facts=None,measurement_answerable_groups=None) for case in a.CASES})
+            result=a.analyze(ledger)
+            c02=next(row for row in result["fictional_cases"] if row["scenario_id"]=="C02")
+            self.assertEqual(c02["answerable_measurement_groups"],1)
+            self.assertEqual(c02["measurement_coverage"],1.0)
+            self.assertTrue(c02["measurement_completion"])
+            self.assertEqual(result["native_primary"]["completion_80_count"],0)
+
 
 class AuditedCLIContractTests(unittest.TestCase):
     def audit(self,path,sha):

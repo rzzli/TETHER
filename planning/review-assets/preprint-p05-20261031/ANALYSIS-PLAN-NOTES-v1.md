@@ -97,7 +97,7 @@ No post-result code edit may be reused silently under this version.
 
 ## Fictional checks
 
-Sixteen preparation tests pass with the absolute workspace `.venv` interpreter.
+Seventeen preparation tests pass with the absolute workspace `.venv` interpreter.
 They use arbitrary, explicitly synthetic ledgers rather than actual results.
 Coverage includes omitted/duplicate/unscheduled cells, wrong policy bindings,
 nonreturn accounting, null denominators, exact 80% fractions, distinct exactness,
@@ -106,9 +106,13 @@ discordance, source/scientific consistency, independent audit/hash gates,
 frozen analyzer pin mismatch, fresh output/no overwrite and duplicate/nonfinite
 JSON rejection. One integration test imports **only** producer `blank_ledgers`
 serialization defaults, with independently specified zero/unknown expectations;
-it does not use producer guard results as an oracle. The first test invocation
+it does not use producer guard results as an oracle. A second interoperability
+test serializes the wholly fictional generic-JSON C02 result through the actual
+producer shape and checks its independently specified one-answerable-exponent
+denominator. It creates no native output and makes no actual-study claim.
+The first test invocation
 had two filesystem errors from sandbox TEMP; fixtures were moved into the
-workspace cache and all sixteen checks then passed. These preparatory checks
+workspace cache and all preparation checks then passed. These preparatory checks
 are not experimental observations.
 
 Root's independent code/test review and final freeze are separate. Actual P07

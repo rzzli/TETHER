@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "artifact_id": "preprint-p05d-independent-experiment-code-review-v1",
+  "created_at_utc": "2026-11-01T08:55:16Z",
+  "status": "PASS_CODE_AND_FICTIONAL_TEST_REVIEW",
+  "method": "p05.independent_pre_execution_experiment_code_review.v1",
+  "reviewed_code_sha256": "9a63d63eacbfb71712376862d38d77f72dd4edf616521073ad287e53eb275bf8",
+  "reviewed_test_sha256": "3021bae44c47dac6356d4498f7e06ef069243cb964b604555fe0fb208bfd08f9",
+  "issues": [],
+  "findings": [],
+  "unresolved_findings": [],
+  "actual_execution_authorized_by_review": false,
+  "scientific_validation": "not_established",
+  "access": {
+    "actual_native_outputs_executed": 0,
+    "actual_reference_values_read": 0,
+    "actual_generation_packet_rows_read": 0,
+    "actual_original_value_rows_read": 0,
+    "human_or_protected_clinical_material_read": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "fictional_tests_only": true,
+    "producer_or_core_files_edited_by_reviewer": false
+  },
+  "pins": {
+    "tools/science/run_source_validation_experiment.py": "9a63d63eacbfb71712376862d38d77f72dd4edf616521073ad287e53eb275bf8",
+    "planning/review-assets/preprint-p05-20261031/test_source_validation_experiment.py": "3021bae44c47dac6356d4498f7e06ef069243cb964b604555fe0fb208bfd08f9",
+    "planning/review-assets/preprint-p05-20261031/EXPERIMENT-DESIGN-v1.md": "23689f8cb29cd1633f662150c4cec97a1871878b7795b5627e580d53a3c44a55",
+    "planning/review-assets/preprint-p05-20261031/EXPERIMENT-PLAN-DRAFT-v1.json": "ee32abb54d6285ef314ef28fedf5e3ae7d79086cc775778e58a03e68535f2894",
+    "planning/review-assets/preprint-p05-20261031/EXPERIMENT-IMPLEMENTATION-NOTES-v1.md": "5e2c0d0930e9f3e2d18d0e1747ef4440305c926f39107a965b4addcd3a1db92a"
+  },
+  "freeze_review": {
+    "draft_status": "DRAFT_NOT_EXECUTABLE",
+    "draft_actual_execution_authorized": false,
+    "READY_present_at_review": false,
+    "active_code_pin_count": 71,
+    "canonical_code_pin_map_sha256": "1ab3f657ecf7b06bca78fc459c0ec0e54b8b7e594cf27ee6a9eea7be126f9f8a",
+    "schedule_output_count": 38,
+    "schedule_decision_count": 90,
+    "draft_output_IDs_match_code": true,
+    "draft_decisions_match_code": true,
+    "environment": {
+      "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+      "python": "3.11.15",
+      "pyarrow": "21.0.0",
+      "platform": "win32"
+    },
+    "remaining_execution_gate": "Root must freeze exact design/plan/main code/extra analysis-audit code, fixtures, oracles, independent audits, native task/reference/packet and denominator bindings under an external exact READY hash before actual outputs."
+  },
+  "test_evidence": {
+    "command": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe -B D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p05-20261031\\test_source_validation_experiment.py -q",
+    "cwd": "D:\\Projects\\drug_target_agents",
+    "independent_final_run": true,
+    "tests_run": 36,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "reported_seconds": 16.068,
+    "coverage": [
+      "all fourteen wholly fictional JSON scenarios and actual guard outcomes rather than assigned oracle verdicts",
+      "real source/receipt integrity, InputGraph roles/chronology, applicable wrapper predicates, core compile/replay, adapter and scorer",
+      "C02 null/absent/empty reasons; C03 duplicate/conflicting physical rows and finite negative SE without scientific endorsement; C04 null denominator",
+      "complete exact status, omitted unknown slot and separation from 80 percent completion",
+      "packet-only assembler with no reference-valued input, exact native types and bindings",
+      "external READY/code/fixture/schedule guards and explicit trusted fictional root",
+      "real fresh publication/reservation, concurrent output rejection, no overwrite",
+      "KeyboardInterrupt, ledger write, journal append/close, independent failure-seal fallback",
+      "secondary aggregate/resource failure and minimal full38/90 serialization fallback"
+    ],
+    "preparatory_failures": "Author notes retain the earlier23/24 qualification outcome that exposed prospective-leaf reservation. It was corrected before this final fictional test run; no native experiment result was produced."
+  },
+  "resolved_review_findings": [
+    {
+      "id": "EXP-01",
+      "finding": "C02 missing-schema SE cannot pass the native Parquet builder's required projection.",
+      "resolution": "Design/code explicitly classify the fourteen scenarios as generic JSON/core controls with applicable pure P05 predicates; no native scanner weakening or native-build success claim.",
+      "verified": true
+    },
+    {
+      "id": "EXP-02",
+      "finding": "Prospective output/publication leaf checks required nonexistent paths to exist.",
+      "resolution": "Existing approved parents and fresh exclusive leaves are validated separately, with real publication/reservation regressions.",
+      "verified": true
+    },
+    {
+      "id": "EXP-03",
+      "finding": "Serialized fictional Snapshot root could grant its own file authority.",
+      "resolution": "Fictional evaluation requires a separately supplied approved fixture root and binds its scenario originals before reads.",
+      "verified": true
+    },
+    {
+      "id": "EXP-04",
+      "finding": "Strict exactness and declared anchor authority differed from the frozen complete-report/core semantics.",
+      "resolution": "Exact complete reports require answered status and every slot; anchors use task identities. Unknown-slot omission, partial status and zero-denominator regressions separate exact admission from grouped completion.",
+      "verified": true
+    },
+    {
+      "id": "EXP-05",
+      "finding": "Terminal writes and aggregate/resource serialization could escape protected failure retention.",
+      "resolution": "Terminal ledger/journal/close/seal attempts are independent; aggregate/resource errors are explicit; full serialization/size failure retains a primitive38/90 terminal frame and failure metadata. No success seal qualifies a cleanup failure.",
+      "verified": true
+    },
+    {
+      "id": "EXP-06",
+      "finding": "Collected core scores could be mistaken for all38 scheduled outputs or qualified denominator availability.",
+      "resolution": "Outer38/90 ledger remains primary; core aggregate names intended/included/excluded subset IDs. All12 native qualification entries preserve compiled/blocked/unverified dispositions and null qualified counts when unavailable.",
+      "verified": true
+    }
+  ],
+  "design_assessment": {
+    "native_outputs": 24,
+    "fictional_outputs": 14,
+    "native_decisions": 48,
+    "fictional_decisions": 42,
+    "paired_reuse_is_not_replication": true,
+    "native_primary_denominator": 12,
+    "strict_verified_exact_reporting_separate_from_80_percent_completion": true,
+    "unknown_only_measurement_groups_remain_null_and_noncomplete": true,
+    "weakened_policies": "Diagnostic projections of actually attempted residual guards; no new qualified framework mode or original-AsOf superiority claim.",
+    "genuine_objects_only": "Core scores/aggregates are obtained only from genuine source-verified reference objects; no fabricated VerifiedReference or ScoredCell.",
+    "inference": "Descriptive paired counts/coverage only; no CI, significance, power or independent-study generalization."
+  },
+  "analysis_preparation": {
+    "module": "tools/science/analyze_source_validation_experiment.py",
+    "module_sha256": "e61d18dcc8f571766e419b4c535f3e18ef0c2a00531a620a8a9cbba6c8dfaeed",
+    "test_sha256": "2fdc0b766d62f35f06f0671a954bf740c759210c758fc4197c891e8fbfa3bf21",
+    "notes_sha256": "fc9fe0553333127ede33a2a4e230238c77bac9d16134210beafbfc31dc9a358e",
+    "fictional_tests_passed": 17,
+    "actual_P07_executed": false,
+    "review_independence": "This reviewer authored the pure analysis module. Root separately reviewed it and ran its synthetic tests; this peer PASS is for the experiment runner/design, not an independent certification of the reviewer's own analyzer.",
+    "P07_gate": "External ledger byte SHA plus external PASS_INDEPENDENT_EXPERIMENT_AUDIT byte SHA, source-inclusive independent projection, no unresolved findings and exact ledger subject binding; analyzer code/environment/anchors retained."
+  },
+  "limitations_and_next_gate": [
+    "This is code/fictional-test review, not source-inclusive actual experiment audit or execution authority.",
+    "Producer/reference helper algorithms are shared; provenance-isolated rereads do not establish algorithmic independence.",
+    "Python caller, OS and filesystem integrity remain trusted; pure function boundaries and sharing locks are not a hostile-code sandbox.",
+    "Resource limits are cooperative and unknown readings/partial failed hash work remain explicit.",
+    "Later P06 must independently project actual originals and fictional bytes, reconstruct decisions/terminals/denominators/resources, and verify retained seals before P07 analysis.",
+    "The model branch remains closed; clinical, causal and scientific validation are not established."
+  ]
+}
