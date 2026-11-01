@@ -10,7 +10,16 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Technical Study Result]].
+Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Audited Paper Results]].
+P07done:351independentpresentationchecks,11CSV/11MD/3vectorfigures. Rootrebuild
+39filesbyteidenticallocally. NativeL12/12exact/completion;designedinvalidadmit
+FULL0/10,wrapperomission2/10,wire7/10,validreject0/4each. Scientificvalidation
+andindependenceunestablished. P08manuscript/ownerdisclosures,nextP09lawful
+portableexact-releasechecks/P10localpackage pending. See [[research-log-2026-11-01-paper-results]].
+
+### Prior technical result checkpoint (retained history)
+
+Checkpoint: [[Project Progress Reassessment 2026-11-01 - Technical Study Result]].
 P06complete: one38output/90decisionrun source-audited2,414checks PASS, noissues.
 Producer203.828s/processpeak305,827,840B; audit7.125s/333,893,632Bownpeak.
 P07actualfrozenanalysis/tables/figures next; P07–P10/paperunfinished. No new

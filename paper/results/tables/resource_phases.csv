@@ -1,0 +1,6 @@
+phase,basis,wall_seconds,cpu_seconds,sampled_process_rss_bytes,process_lifetime_peak_bytes,logical_completed_hash_bytes,partial_failed_hash_bytes,physical_io_bytes,platform_cost_usd,overlap,scientific_validation
+producer_total,all 38 outputs/90 decisions plus source verification/retention,203.8279999999795,198.984375,241364992,305827840,140452303784,unknown,unknown,unknown,none,not_established
+native_generation_pairs,12 shared packet-read/literal+abstain pairs; counted once per case,0.18599999975413084,0.171875,unknown,unknown,unknown,unknown,unknown,unknown,subphase within producer_total,not_established
+native_scoring,24 retained native output scoring calls,0.07900000002700835,0.0625,unknown,unknown,unknown,unknown,unknown,unknown,subphase within producer_total,not_established
+amortized_source_verification,one source-inclusive wrapper replay shared across native cells/policies,197.81200000003446,unknown,unknown,unknown,140451850210,unknown,unknown,unknown,subphase within producer_total,not_established
+independent_source_audit,separate source-inclusive audit of all 38 outputs/90 decisions,7.125,7.046875,327589888,333893632,2897268566,unknown,unknown,unknown,none,not_established

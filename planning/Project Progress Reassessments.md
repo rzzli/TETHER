@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [1 November technical study execution](<Project Progress Reassessment 2026-11-01 - Technical Study Result.md>). P06 complete: single38output/90decisionrun source-audited2,414checks PASS, noissues.203.828s/processpeak305,827,840B, independent audit7.125s. P07actualdescriptiveanalysis/tables/figures next; P07–P10unfinished. Prior preparation/negative model results remain, model scaling closed. No independent-study, fresh exposure or biological-validation claim. No external expert input or native revival.
+Current checkpoint: [1 November audited paper results](<Project Progress Reassessment 2026-11-01 - Audited Paper Results.md>). P07complete:351independent checks on11CSV/11MD/3figures; rootfreshrebuild39files byteidentical. Literal12/12;designedinvalidadmissions0/10,2/10,7/10;no biological/inferentialclaim. P08manuscript/metadata,P09lawfulrelease,P10localpackageunfinished. Prior negative model results remain, scalingclosed. No external expert input or native revival.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

@@ -1,0 +1,85 @@
+{
+  "answerable_total": 40,
+  "denominator_note": "40/48 slots answerable; native nulls are excluded from reporting denominators.",
+  "height_pt": 370,
+  "independent_studies": "not_established",
+  "measurement_groups": 12,
+  "native_null_total": 8,
+  "requested_total": 48,
+  "rows": [
+    {
+      "answerable": 3,
+      "case_id": "p05-01",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 3,
+      "case_id": "p05-02",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 4,
+      "case_id": "p05-03",
+      "native_null": 0,
+      "requested": 4
+    },
+    {
+      "answerable": 4,
+      "case_id": "p05-04",
+      "native_null": 0,
+      "requested": 4
+    },
+    {
+      "answerable": 4,
+      "case_id": "p05-05",
+      "native_null": 0,
+      "requested": 4
+    },
+    {
+      "answerable": 3,
+      "case_id": "p05-06",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 3,
+      "case_id": "p05-07",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 2,
+      "case_id": "p05-08",
+      "native_null": 2,
+      "requested": 4
+    },
+    {
+      "answerable": 4,
+      "case_id": "p05-09",
+      "native_null": 0,
+      "requested": 4
+    },
+    {
+      "answerable": 3,
+      "case_id": "p05-10",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 3,
+      "case_id": "p05-11",
+      "native_null": 1,
+      "requested": 4
+    },
+    {
+      "answerable": 4,
+      "case_id": "p05-12",
+      "native_null": 0,
+      "requested": 4
+    }
+  ],
+  "title": "Native measurement-slot availability",
+  "width_pt": 504
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="410" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 410" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="410"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-410)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="504" height="410" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="24" y="394" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,788) scale(1,-1)">Separate source-only branches</text>
+			<path d="M 188,335 L 126,304 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="126 304, 130.1591 309.0982, 132.574 304.2683" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 316,335 L 378,304 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="378 304, 371.426 304.2683, 373.8409 309.0982" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 126,250 L 126,216 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="126 216, 123.3 222, 128.7 222" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 378,250 L 378,216 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="378 216, 375.3 222, 380.7 222" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 228,189 L 276,189 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="276 189, 270 186.3, 270 191.7" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 228,100 L 252,100 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 252,100 L 252,175 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 252,175 L 276,175 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="276 175, 270 172.3, 270 177.7" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 378,162 L 378,124 Z" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="378 124, 375.3 130, 380.7 130" style="stroke: rgb(31%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(31%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="160" y="335" width="184" height="43" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="201.155" y="362" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,724) scale(1,-1)">Frozen original frame</text>
+			<text x="211.37" y="349" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,698) scale(1,-1)">137 retained originals</text>
+			<text x="200.269" y="338" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,676) scale(1,-1)">receipt / role / cutoff checks</text>
+			<rect x="24" y="250" width="204" height="54" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="81.545" y="288" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,576) scale(1,-1)">Generation branch</text>
+			<text x="73.32974999999999" y="275" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,550) scale(1,-1)">original-only source packets</text>
+			<text x="63.64825" y="264" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,528) scale(1,-1)">literal assembler / always abstain</text>
+			<rect x="276" y="250" width="204" height="54" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="337.155" y="288" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,576) scale(1,-1)">Evaluator branch</text>
+			<text x="330.995" y="275" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,550) scale(1,-1)">separate original rereads</text>
+			<text x="326.27325" y="264" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,528) scale(1,-1)">source-replayed references</text>
+			<rect x="24" y="162" width="204" height="54" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="79.605" y="200" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,400) scale(1,-1)">Native output bytes</text>
+			<text x="68.608" y="187" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,374) scale(1,-1)">12 units x 2 deterministic arms</text>
+			<text x="77.09525" y="176" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,352) scale(1,-1)">24 retained native outputs</text>
+			<rect x="276" y="162" width="204" height="54" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,96%); fill-rule: evenodd;"/>
+			<text x="309.92" y="200" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,400) scale(1,-1)">Source-inclusive verification</text>
+			<text x="305.24424999999997" y="187" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,374) scale(1,-1)">exact facts / unknowns / guard policies</text>
+			<text x="317.99425" y="176" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,352) scale(1,-1)">38 outputs / 90 paired decisions</text>
+			<rect x="24" y="76" width="204" height="48" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(97%,95%,90%); fill-rule: evenodd;"/>
+			<text x="69.045" y="108" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,216) scale(1,-1)">Constructed candidates</text>
+			<text x="62.69625" y="95" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,190) scale(1,-1)">14 exposed JSON/core scenarios</text>
+			<text x="75.2125" y="84" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,168) scale(1,-1)">untrusted fictional attempts</text>
+			<rect x="276" y="76" width="204" height="48" rx="5" ry="5" style="stroke: rgb(87%,90%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(90%,94%,96%); fill-rule: evenodd;"/>
+			<text x="312.695" y="108" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(9%,20%,26%); stroke:none;" transform="translate(0,216) scale(1,-1)">Frozen descriptive analysis</text>
+			<text x="307.722" y="95" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,190) scale(1,-1)">12 native units + 14 control scenarios</text>
+			<text x="314.454" y="84" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,168) scale(1,-1)">source-audited retained metadata</text>
+			<text x="24" y="48" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,96) scale(1,-1)">Preparation helpers are shared; the independent audit projects originals separately.</text>
+			<text x="24" y="33" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,66) scale(1,-1)">Arrows show custody paths, not independent data sets or biological validation.</text>
+			<text x="24" y="18" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(31%,40%,45%); stroke:none;" transform="translate(0,36) scale(1,-1)">Twelve native source units are not twelve independent studies.</text>
+		</g>
+	</g>
+</svg>
