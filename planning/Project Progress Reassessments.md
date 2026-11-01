@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [1 November technical study freeze](<Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md>). P05 complete within its bounded technical scope; READY49c2ce67 binds71runtime/7extra pins, twelve units,38outputs/90decisions, sources/references/register/fixtures/analysis. Preparation36runner/25auditor/17analysis tests pass; persistentfictionalqualification passes with zero nativeoutputs. P06–P10 unfinished. Prior registry/input/reference checks and negative model results remain; model scaling closed. No independent-study, fresh exposure or biological-validation claim. No external expert input or native revival.
+Current checkpoint: [1 November technical study execution](<Project Progress Reassessment 2026-11-01 - Technical Study Result.md>). P06 complete: single38output/90decisionrun source-audited2,414checks PASS, noissues.203.828s/processpeak305,827,840B, independent audit7.125s. P07actualdescriptiveanalysis/tables/figures next; P07–P10unfinished. Prior preparation/negative model results remain, model scaling closed. No independent-study, fresh exposure or biological-validation claim. No external expert input or native revival.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

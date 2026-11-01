@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-study-freeze]] - Current: P05 complete technicalscope; READY49c2ce67 binds71runtime/7extra pins,12units/38outputs/90decisions.36runner/25auditor/17analysis tests pass, persistentfictionalqualification passes with0nativeoutputs. P06once+sourceaudit next; P06–P10unfinished. Modelbranchclosed/no experts/downloads/monitor/clinicaltruthclaim.
+- [[research-log-2026-11-01-study-result]] - Current: P06single38output/90decision run source-audited2,414checks PASS/noissues;203.828s/processpeak305,827,840B. P07actualanalysis/tables/figures next, P07–P10unfinished. All livehandlesclosed; no modelcalls/downloads/experts/monitor or clinicaltruth/independenceclaim.
+
+- [[research-log-2026-11-01-study-freeze]] - Prior checkpoint: READY49c2ce67 binds71runtime/7extra pins,12units/38outputs/90decisions.36runner/25auditor/17analysis tests pass; P06 thenpending.
 
 - [[research-log-2026-11-01-source-references]] - Prior checkpoint: twelve refs/180facts/all24source rows independently verified (1,163checks),41fictionaltests pass. Production342.75s; producer memory unmeasured. Register sealed (772builder/478rootchecks); experimentfreeze thenpending.
 
