@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "COMMITTED_FROZEN_PILOT_LAUNCHED",
+  "launched_at_utc": "2026-11-01T05:17:18+00:00",
+  "recorded_at_utc": "2026-11-01T05:18:29.319537+00:00",
+  "pre_run_commit": "fc6a9c9",
+  "protocol_sha256": "9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4",
+  "exec_session_id": 68838,
+  "run_dir": "runs\\preprint-p04-typed-report-20261101T051718Z",
+  "scheduled_cells": 12,
+  "recovery": "Poll this exact exec session; observation timeout is not terminal. Never automatically repeat a dispatched or unresolved call. Do not modify pinned code while run owns source locks.",
+  "periodic_monitor_created": false,
+  "old_download_worker_untouched": true,
+  "new_download_batch_separately_owner_approved": true
+}
