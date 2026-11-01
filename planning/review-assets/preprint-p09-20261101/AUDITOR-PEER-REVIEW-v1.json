@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "method": "p09.independent_auditor_code_peer_review.v1",
+  "status": "PASS_CODE_AND_FICTIONAL_TEST_REVIEW",
+  "reviewed_at_utc": "2026-11-01T20:34:15+00:00",
+  "reviewer": "/root/p05_registry_design_review",
+  "review_scope": "Read-only review of the separately authored installed P09 auditor and current CLI/authority contracts before actual-source freeze.",
+  "final_subject": {
+    "paper/release/code/src/asof_p05_replay/audit_v1.py": "f61263a9a1fb11572c0ddeb0c1f5e8b7cdebee1cc81f6395468fdb14f3d72738",
+    "paper/release/code/tests/test_audit_v1.py": "125a059ec1e5be63fabea390771be38905974c36bb295df0935ab4cdd211721b",
+    "paper/release/code/src/asof_p05_replay/cli.py": "70a22a50386bcae3d6f5a9eebd62447d0cb6a64a73e97698ed800dd9c9ab541e",
+    "paper/release/code/src/asof_p05_replay/authority_v1.py": "bdb615d12175c0fc23e79d8c1021113caa2d4b6d74b9cde67ddabdf00b5a941e"
+  },
+  "initial_subject": {
+    "audit_v1.py": "6c3e1ad21f843b5b0fe9de9d5008dbec1e17552e7c65f2e7bc16d98949ce3780",
+    "test_audit_v1.py": "e6a1d1dc07a98cfd6aff5b24bf23462891db7606e9009e32d4fe3f6513e889e5"
+  },
+  "actions": {
+    "production_or_auditor_edits_by_reviewer": false,
+    "actual_original_values_read": false,
+    "actual_reconstruction_or_reference_values_read": false,
+    "human_or_protected_clinical_files_read": false,
+    "actual_source_replay": false,
+    "study_or_model_rerun": false,
+    "network_or_downloads": false
+  },
+  "contract_checks": [
+    "No producer policy_v1, baseline_v1 or controls_v1 imports, old dynamic tool imports, compiler calls or scorer calls inside the auditor.",
+    "Fresh expected native facts are derived directly from complete originals, independently reconstructed tasks and literal one-to-many locus joins.",
+    "The production entry requires the exact 137-file family frame: 100 GWAS, 25 credible-set, 10 target, one disease and one HGNC original, with ordered unique logical paths and exact payload/receipt bytes.",
+    "Receipt-only Windows separator normalization preserves strict identity; fresh receipt dates, flat original ancestry, role catalog and InputGraph admission precede value scans.",
+    "Full schemas, Parquet footers, row groups, physical row counts, all canonical mapping rows and every selected-locus physical match are scanned; date, annotation, exposure and mapping exclusions are retained.",
+    "Tasks, complete eligible/excluded inventories, normalization proofs, source coverage and all genuine compiled native-reference fields are checked against independent projections.",
+    "Historical reference projection removes only method.catalog_sha256. Source snapshot, task, facts, source proofs, joins and all other fields remain bound.",
+    "All 38 ordered unique raw outputs, 90 decisions, G0-G4 records, genuine core-score serialization, strict exactness, unknown accounting and descriptive counts are independently checked.",
+    "Constructed control sources and malformed candidate bytes are independently authored and checked; expected labels do not assign guard outcomes.",
+    "External protocol bytes, exact READY authorization, environment, complete installed code/resource inventories, bundle descriptors, whole final receipt inventory, precomparison seal inventory and journal ordering are checked.",
+    "Stable original handles span independent native projection and comparison; cleanup exceptions occur before PASS assignment. The auditor writes no artifacts; CLI transaction tests cover failure/interruption receipt behavior."
+  ],
+  "findings": [
+    {
+      "id": "P09-AUDITOR-PEER-01",
+      "status": "resolved",
+      "problem": "A rechained and resealed journal could omit or contradict the terminal report SHA and authorized comparison SHA.",
+      "resolution": "_journal_and_receipt now requires reconstruction_completed.details.report_sha256 to equal exact retained report bytes and comparison_started.details.comparison_sha256 to equal the externally authorized comparator descriptor.",
+      "regression": "Changed and missing report/comparator bindings fail after journal rechain and receipt reseal."
+    },
+    {
+      "id": "P09-AUDITOR-PEER-02",
+      "status": "resolved",
+      "problem": "Matching artifact hashes did not reject contradictory schema, scientific-validation, model/activity or historical-archive scope claims.",
+      "resolution": "Receipt, seal and report require integer schema version 1; canonical typed comparisons enforce the existing no-model/no-network/no-download/no-spending and not-established scientific scope, precomparison flag, exact all-38/all-90 comparison claim and explicit absence of original private-archive integrity.",
+      "regression": "Resealed schema booleans and contradictory scope flags fail."
+    },
+    {
+      "id": "P09-AUDITOR-PEER-03",
+      "status": "resolved",
+      "problem": "Historical decision rows were compared only over supplied keys, permitting empty rows; extra historical guard IDs were ignored, and Python numeric equality allowed boolean/float denominator substitutions.",
+      "resolution": "Bridge decisions now require the exact exported field set and canonical equality; guards require exactly the 38 scheduled IDs; all native historical denominator values use canonical typed equality.",
+      "regression": "Empty, missing-field or extra-field decisions, extra guard IDs, and True/1.0 count substitutions fail."
+    }
+  ],
+  "test_evidence": [
+    {
+      "phase": "independent full synthetic run before narrow peer corrections",
+      "subject": "initial_subject",
+      "command": ".venv/Scripts/python.exe -m unittest discover -s paper/release/code/tests -p test_audit_v1.py -v",
+      "result": "PASS",
+      "tests": 18,
+      "seconds": 100.758,
+      "includes": "Real Windows stable paths and locks; invented 137-original Parquet/TSV frame; all 38 outputs/90 decisions; genuine core reference/scoring comparisons; resealed score-tamper failure."
+    },
+    {
+      "phase": "independent final changed-contract regression run",
+      "subject": "final_subject",
+      "command": ".venv/Scripts/python.exe -m unittest test_audit_v1.TransactionAuditTests test_audit_v1.BridgeAuditTests -v",
+      "result": "PASS",
+      "tests": 12,
+      "seconds": 0.482,
+      "includes": "Real transaction files, exact byte hashes, resealed/rechained tampering, authority denials, complete typed bridge and failure cases."
+    }
+  ],
+  "test_environment": "Workspace .venv; workspace TEMP/TMP; explicit development PYTHONPATH for src and release/code/src, plus test path for focused classes. This is not installed-wheel qualification.",
+  "test_limits": "The full 137-file synthetic test passed at initial pins. Its final metadata migration was read and found consistent with the current CLI; the full long test was not repeated after the bounded metadata-only corrections. Final changed-contract classes were independently rerun.",
+  "author_failing_before_evidence": {
+    "path": "planning/review-assets/preprint-p09-20261101/AUDITOR-PEER-REGRESSIONS-before-v1.txt",
+    "sha256": "590ec63abe94c1e3b0a10a2638bf23ac4f710f7fcd6b91f683a506c12f2445ea",
+    "reported_result": "12 tests exposed 28 false-accept subfailures before the fixes."
+  },
+  "independence_and_limits": [
+    "Auditor expected facts and decisions are independent of producer modules. Core contracts, provenance, canonical serialization, field taxonomy, stable reads and the Windows/Python/Arrow environment remain shared software dependencies.",
+    "The peer reviewer previously implemented the separate P09 producer policy and baseline modules; this is a review of a different author's auditor, not a blinded independent study or an actual-source audit.",
+    "New public G0 authority does not attest the original private journals or full private archive. Exact historical-output reconstruction and optional original-archive verification remain distinct.",
+    "Trusted local installed code and operating-system behavior remain assumptions; no hostile-host sandbox guarantee is made.",
+    "Actual installed reconstruction and independent source-inclusive auditing remain separate later gates. Scientific, biological and clinical validation are not established."
+  ],
+  "unresolved_findings": []
+}

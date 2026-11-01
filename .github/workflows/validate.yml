@@ -21,9 +21,9 @@ jobs:
           python-version: '3.11'
       - name: Install core
         if: matrix.mode == 'core'
-        run: uv sync --locked --python 3.11
+        run: uv sync --locked --python 3.11 --build-constraints paper/release/build-constraints.txt
       - name: Install ingestion extra
         if: matrix.mode == 'full'
-        run: uv sync --locked --python 3.11 --extra ingest
+        run: uv sync --locked --python 3.11 --extra ingest --build-constraints paper/release/build-constraints.txt
       - name: Validate clean checkout
         run: uv run --no-sync python tools/validate.py --mode ${{ matrix.mode }} --package

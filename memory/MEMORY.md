@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-manuscript-draft]] - Current: main/supplement, 13 references and 17-page PDF reviewed; 118 content checks, positioning, 273-unit text retention, eight negative formatter cases and byte repeat pass. P08 blocked on factual owner declarations. P09 release/P10 package not started under ordered execution; no expert input, new model/data or scientific truth claim.
+- [[research-log-2026-11-01-release-preparation]] - Current: owner defers declarations, P09 proceeds with P08c pending. New separately versioned adapter and positive allowlist in development; bridge metadata passes 3,251 checks, focused source/control/CLI/auditor tests pass. No actual native reconstruction/full release gate yet; frozen P05/core unchanged.
+
+- [[research-log-2026-11-01-manuscript-draft]] - Prior checkpoint: main/supplement, 13 references and 17-page PDF reviewed; 118 content checks, positioning, 273-unit text retention, eight negative formatter cases and byte repeat pass. Owner subsequently defers declarations and permits P09 work; no expert input or scientific truth claim.
 
 - [[research-log-2026-11-01-paper-results]] - Prior checkpoint: P07complete;351independent checks pass on11CSVs/11MD/3figures,rootrebuild39files byteidentical. Literal12/12;designedinvalidadmissions0/10,2/10,7/10. P08manuscript/metadata, P09release andP10packageunfinished; no newmodel/data/experts/monitor or scientifictruthclaim.
 

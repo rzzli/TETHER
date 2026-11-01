@@ -1,0 +1,436 @@
+{
+  "builder": {
+    "bytes": 49116,
+    "sha256": "d7ec760acc0b96f0d90194ad2e82b81ddd4316108207f585b2e69e59ce6e916d"
+  },
+  "checks": [
+    {
+      "check": "relocated_fresh_process_build",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure1-flow-caption.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure1-flow-data.json",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure1-flow-preview.png",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure1-flow.pdf",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure1-flow.svg",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure2-availability-caption.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure2-availability-data.json",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure2-availability-preview.png",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure2-availability.pdf",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure2-availability.svg",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure3-controls-caption.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure3-controls-data.json",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure3-controls-preview.png",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure3-controls.pdf",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:figures/figure3-controls.svg",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/constructed_control_verdicts.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/constructed_control_verdicts.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/constructed_policy_summary.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/constructed_policy_summary.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/decision_schedule.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/decision_schedule.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_case_results.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_case_results.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_fact_accounting.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_fact_accounting.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_missingness.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_missingness.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_operation_resources.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/native_operation_resources.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/output_schedule.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/output_schedule.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/paired_discordance.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/paired_discordance.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/paired_verdict_cells.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/paired_verdict_cells.md",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/resource_phases.csv",
+      "pass": true
+    },
+    {
+      "check": "historical_payload:tables/resource_phases.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:README.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure1-flow-caption.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure1-flow-data.json",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure1-flow-preview.png",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure1-flow.pdf",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure1-flow.svg",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure2-availability-caption.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure2-availability-data.json",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure2-availability-preview.png",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure2-availability.pdf",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure2-availability.svg",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure3-controls-caption.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure3-controls-data.json",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure3-controls-preview.png",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure3-controls.pdf",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:figures/figure3-controls.svg",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/constructed_control_verdicts.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/constructed_control_verdicts.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/constructed_policy_summary.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/constructed_policy_summary.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/decision_schedule.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/decision_schedule.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_case_results.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_case_results.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_fact_accounting.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_fact_accounting.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_missingness.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_missingness.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_operation_resources.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/native_operation_resources.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/output_schedule.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/output_schedule.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/paired_discordance.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/paired_discordance.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/paired_verdict_cells.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/paired_verdict_cells.md",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/resource_phases.csv",
+      "pass": true
+    },
+    {
+      "check": "portable_repeat_payload:tables/resource_phases.md",
+      "pass": true
+    },
+    {
+      "check": "new_manifest_not_impersonating_old",
+      "pass": true
+    },
+    {
+      "check": "public_manifest_source_code_binding",
+      "pass": true
+    },
+    {
+      "check": "exact37_prior_commitments_and38_portable_payloads",
+      "pass": true
+    },
+    {
+      "check": "no_owner_paths_in_public_manifest",
+      "pass": true
+    },
+    {
+      "check": "no_owner_paths_in_public_portable_readme",
+      "pass": true
+    },
+    {
+      "check": "old_P07_manifest_unchanged",
+      "pass": true
+    },
+    {
+      "check": "old_P07_builder_unchanged",
+      "pass": true
+    },
+    {
+      "check": "existing_output_not_overwritten",
+      "pass": true
+    },
+    {
+      "check": "tampered_input_fails_before_output_reservation",
+      "pass": true
+    },
+    {
+      "check": "resource_copy_restored",
+      "pass": true
+    }
+  ],
+  "checks_passed": 86,
+  "checks_total": 86,
+  "code_readme": {
+    "bytes": 3541,
+    "sha256": "ee630a89749dab8d76dd39cc8cf08d9f49c8a5e08359ab2f96ddb22870dca983"
+  },
+  "created_at_utc": "2026-11-01T20:26:18.906669+00:00",
+  "historical_payload_count": 37,
+  "historical_resource_warning": "All resource-phase/table measurements remain historical; new rendering wall/CPU values are separate in each new manifest.",
+  "input_anchors": {
+    "comparison": {
+      "bytes": 203992,
+      "filename": "comparison.json",
+      "sha256": "1fc123d3c368d355c1f3d66a76eeaacea9ae954c6a6fad9aa3d05390d225cce0"
+    },
+    "expected_payloads": {
+      "bytes": 4950,
+      "filename": "expected-payloads.json",
+      "sha256": "30dfdeceabe87bf4db58ec78e5106cf4a73f3286d788962d21033f27312b48c8"
+    },
+    "historical_resources": {
+      "bytes": 7244,
+      "filename": "historical-resources.json",
+      "sha256": "af588a157854752e66ff4de8393d000af727d1c15a1542fb6a01b9ba4ddb2970"
+    },
+    "source_policy": {
+      "bytes": 501584,
+      "filename": "source-policy.json",
+      "sha256": "8d88c5dca9dfbebfd7851a6e50b5d668bdedd0a6f35bd0b77aebdff01fabf6c1"
+    }
+  },
+  "license": {
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "marker": {
+    "evidence_file": "PORTABLE-PRESENTATION-PDF-MARKER-v1.txt",
+    "expected_pdf_outputs": 3,
+    "invocations_this_operation": 1,
+    "observed_tool_exit_code": 0,
+    "stdout": "empty"
+  },
+  "model_calls": 0,
+  "native_source_reconstructions": 0,
+  "negative_checks": {
+    "reuse": "rejected before authoring",
+    "tampered_resource_metadata": "rejected before output reservation; copied metadata restored"
+  },
+  "network_calls": 0,
+  "new_downloads": 0,
+  "new_manifests_compared_as_payloads": false,
+  "new_portable_payload_count": 38,
+  "original_payload_reads": 0,
+  "portable_readme": {
+    "bytes": 3014,
+    "sha256": "c5ef3797266cfbec263ab7dd6936f5afd361ee198aa0591f9b29f6b7774f848a"
+  },
+  "primary_manifest": {
+    "bytes": 43927,
+    "sha256": "da802210539141fd7e25418d1440b1f749c3e5d16e6b62ddc7562db01cc11eb4"
+  },
+  "primary_output_root": "data/cache/p09-portable-presentation-20261101T202322Z",
+  "qualification_wall_seconds": 1.25,
+  "raw_output_reads": 0,
+  "readme_exception": "root-approved replacement of owner-specific historical README; not included among37 historical byte commitments",
+  "reference_fact_reads": 0,
+  "relocated_manifest": {
+    "bytes": 43927,
+    "sha256": "b6d38df14136e7b0e265f8e94d164784115f090a6dce4cf9eb920db81d619066"
+  },
+  "relocated_output_root": "data/cache/p09-portable-presentation-relocated-20261101T202600Z/results",
+  "schema_version": 1,
+  "scope": "37 historical presentation payload commitments plus38-payload relocated reproduction; no new source execution",
+  "status": "PASS_PORTABLE_PRESENTATION_QUALIFICATION",
+  "unresolved_findings": [],
+  "visual_review": {
+    "all_preview_bytes_match_historical": true,
+    "latest_previews_viewed": [
+      "figure1-flow-preview.png",
+      "figure2-availability-preview.png",
+      "figure3-controls-preview.png"
+    ],
+    "result": "PASS: readable labels/captions; clean arrows/bars; no clipping or overlap"
+  }
+}

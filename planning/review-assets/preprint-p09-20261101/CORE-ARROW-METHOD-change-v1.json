@@ -1,0 +1,7 @@
+{
+  "path": "tests/test_study_source_fact_sources.py",
+  "before_sha256": "11d56c9a8e1364615f13de768d9956cc0b6933e03f13ce47c491a684a5ffdc3f",
+  "after_sha256": "42acace06fe4e53dc3c3c9f4a05d093aa890809ba36ae0c038b504bdf108fdcc",
+  "only_delta": "one absent-Arrow skip reason replaced with the existing canonical source-audit reason",
+  "wrong_version_reason_retained": "Source-fact Parquet replay requires optional Arrow 21.0.0"
+}

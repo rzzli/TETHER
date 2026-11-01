@@ -318,7 +318,7 @@ class SourceFactSourceTests(unittest.TestCase):
             import pyarrow as pa
             import pyarrow.parquet as pq
         except ImportError:
-            self.skipTest("Optional Arrow extra unavailable")
+            self.skipTest("install the ingest extra for source-audit tests")
         if pa.__version__ != "21.0.0":
             self.skipTest("Source-fact Parquet replay requires optional Arrow 21.0.0")
         node = self.source("s", {})

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "tests/test_science_t6_contextual_audit.py",
+    "before_sha256": "a5b7bb109ea6c55e824ff07719386dd7b600dec66571a695e985d6b259ef69be",
+    "after_sha256": "fe288288604dfc353847d67a06e5d3a8e2b701731b6fbab869e04a3d5e0f514a",
+    "before_reason": "install the pinned ingestion extra",
+    "after_reason": "install the ingest extra for source-audit tests",
+    "replacement_occurrences": 1,
+    "only_delta": "one exact reason-string replacement; byte/line endings otherwise preserved"
+  },
+  {
+    "path": "tests/test_science_t6_dossier_binding.py",
+    "before_sha256": "302b8092807c4a34fac068f5780066c280aa0beaded23622185b93af6efb8711",
+    "after_sha256": "d610028f468d9a4b82b58273317dbd6f2f7d6d8fff5d87567fe598ddc3c27461",
+    "before_reason": "install the pinned ingest extra",
+    "after_reason": "install the ingest extra for source-audit tests",
+    "replacement_occurrences": 1,
+    "only_delta": "one exact reason-string replacement; byte/line endings otherwise preserved"
+  }
+]

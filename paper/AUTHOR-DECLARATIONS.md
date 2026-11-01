@@ -1,5 +1,10 @@
 # Owner-confirmed publication facts
 
+**Owner decision, 1 November 2026:** handle these declarations later. They remain
+unconfirmed. Independent release/reproducibility work can proceed while the paper
+stays a working draft; complete the declarations before final submission preparation.
+Do not infer answers or send repeated requests during that work.
+
 The scientific draft does not need an external expert or new review responses.
 It does need the following factual author declarations. No
 names, affiliations, funding or absence of conflicts have been inferred.

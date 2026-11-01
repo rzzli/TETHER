@@ -1,0 +1,301 @@
+EXIT: 1
+test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) ... 
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C01') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C02') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C03') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C04') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F01') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F02') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F03') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F04') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F05') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F06') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F07') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F08') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F09') ... ERROR
+  test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F10') ... ERROR
+test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) ... FAIL
+test_auditor_has_no_producer_or_dynamic_old_tool_import (test_audit_v1.ControlAuditTests.test_auditor_has_no_producer_or_dynamic_old_tool_import) ... ok
+test_control_source_mutation_is_independent_of_declared_guard (test_audit_v1.ControlAuditTests.test_control_source_mutation_is_independent_of_declared_guard) ... ERROR
+test_unknown_output_reason_and_duplicate_key_are_not_repaired (test_audit_v1.ControlAuditTests.test_unknown_output_reason_and_duplicate_key_are_not_repaired) ... ERROR
+test_zero_answerable_group_and_negative_standard_error_keep_limits (test_audit_v1.ControlAuditTests.test_zero_answerable_group_and_negative_standard_error_keep_limits) ... ERROR
+test_catalog_only_projection_is_narrow (test_audit_v1.NativeAuditTests.test_catalog_only_projection_is_narrow) ... ok
+test_direct_projection_matches_genuine_core_and_native_unknowns (test_audit_v1.NativeAuditTests.test_direct_projection_matches_genuine_core_and_native_unknowns) ... ok
+test_evaluator_role_cannot_be_laundered_by_catalog (test_audit_v1.NativeAuditTests.test_evaluator_role_cannot_be_laundered_by_catalog) ... ok
+test_future_receipt_cannot_be_newly_pinned_as_eligible (test_audit_v1.NativeAuditTests.test_future_receipt_cannot_be_newly_pinned_as_eligible) ... ok
+test_payload_tamper_fails_before_source_row_scan (test_audit_v1.NativeAuditTests.test_payload_tamper_fails_before_source_row_scan) ... ok
+test_public_entry_frame_cannot_be_downgraded_to_five_files (test_audit_v1.NativeAuditTests.test_public_entry_frame_cannot_be_downgraded_to_five_files) ... ok
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C02')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C03')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='C04')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F02')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F03')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F04')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F05')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F06')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F07')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F08')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F09')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts) (key='F10')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 199, in test_all_fourteen_source_derived_guard_contrasts
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_control_source_mutation_is_independent_of_declared_guard (test_audit_v1.ControlAuditTests.test_control_source_mutation_is_independent_of_declared_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 219, in test_control_source_mutation_is_independent_of_declared_guard
+    spec, root, raw = self.one("C01")
+                      ^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_unknown_output_reason_and_duplicate_key_are_not_repaired (test_audit_v1.ControlAuditTests.test_unknown_output_reason_and_duplicate_key_are_not_repaired)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 214, in test_unknown_output_reason_and_duplicate_key_are_not_repaired
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+ERROR: test_zero_answerable_group_and_negative_standard_error_keep_limits (test_audit_v1.ControlAuditTests.test_zero_answerable_group_and_negative_standard_error_keep_limits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 227, in test_zero_answerable_group_and_negative_standard_error_keep_limits
+    spec, root, raw = self.one(key)
+                      ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 185, in one
+    groups = audit.json_groups(case, documents, declared_subset=key == "F04")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\paper\release\code\src\asof_p05_replay\audit_v1.py", line 505, in json_groups
+    reasons = eligible(row, index, utc(CUTOFF))[0] if family == "gwas_credible_sets" else dates(row, utc(CUTOFF))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+
+======================================================================
+FAIL: test_all_fourteen_source_derived_guard_contrasts (test_audit_v1.ControlAuditTests.test_all_fourteen_source_derived_guard_contrasts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\paper\release\code\tests\test_audit_v1.py", line 209, in test_all_fourteen_source_derived_guard_contrasts
+    self.assertEqual(admissions, {"FULL": 0, "WITHOUT_WRAPPER": 2, "WIRE_ONLY": 7})
+AssertionError: {'FULL': 0, 'WITHOUT_WRAPPER': 0, 'WIRE_ONLY': 0} != {'FULL': 0, 'WITHOUT_WRAPPER': 2, 'WIRE_ONLY': 7}
+- {'FULL': 0, 'WIRE_ONLY': 0, 'WITHOUT_WRAPPER': 0}
+?                          ^                     ^
+
++ {'FULL': 0, 'WIRE_ONLY': 7, 'WITHOUT_WRAPPER': 2}
+?                          ^                     ^
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.878s
+
+FAILED (failures=1, errors=17)

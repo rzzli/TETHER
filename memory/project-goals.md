@@ -10,6 +10,16 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
+Current work: [[Research Release Qualification Plan 2026-11-01]]. Owner deferred
+declarations, so P08c stays pending while independent P09 preparation proceeds.
+New installed Windows source-reconstruction adapter, metadata bridge, rights/
+allowlist and release-gate corrections are in development. Metadata audit passes
+3,251 checks and focused tests pass; no actual native reconstruction or final full
+release qualification yet. Do not repeat the deferred author request or claim
+publication readiness. See [[research-log-2026-11-01-release-preparation]].
+
+### Prior manuscript checkpoint
+
 Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Manuscript Working Draft]].
 P08a scientific text/supplement and 13 references done: 118 independent content
 checks and positioning pass; all method/scope findings resolved. The 17-page PDF

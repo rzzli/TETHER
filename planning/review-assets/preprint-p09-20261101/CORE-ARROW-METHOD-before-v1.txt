@@ -1,0 +1,15 @@
+EXIT: 1
+test_parquet_optional_skip_keeps_wrong_arrow_version_rejected (tests.test_validation.ValidationGateTests.test_parquet_optional_skip_keeps_wrong_arrow_version_rejected) ... FAIL
+
+======================================================================
+FAIL: test_parquet_optional_skip_keeps_wrong_arrow_version_rejected (tests.test_validation.ValidationGateTests.test_parquet_optional_skip_keeps_wrong_arrow_version_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_validation.py", line 60, in test_parquet_optional_skip_keeps_wrong_arrow_version_rejected
+    self.assertEqual(validate.successful_tests(result, 'core'), expected_core)
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 1 test in 0.028s
+
+FAILED (failures=1)

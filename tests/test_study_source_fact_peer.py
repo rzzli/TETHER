@@ -8,11 +8,14 @@ from __future__ import annotations
 
 import hashlib
 import math
+import os
 import tempfile
 import time
 import unittest
+from contextlib import contextmanager
 from datetime import date, datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
@@ -20,6 +23,8 @@ from asof.serde import ContractError, canonical, encode, sha256_file
 from asof.study.source_fact_adapters import adapt_output
 from asof.study.source_fact_evaluation import aggregate_cells, score_cell
 from asof.study.source_fact_sources import compile_reference, verify_reference
+from asof.study import source_fact_sources as source_module
+from asof.study import stable_read as stable_module
 
 
 _FACT_KEYS = ("fact_id", "value", "unit", "source", "unknown_reason")
@@ -479,6 +484,69 @@ class SourceFactPeerTests(unittest.TestCase):
     """Use unittest so the default installed package needs no testing extra."""
 
 
+@contextmanager
+def _fictional_posix_locks(paths, *, deadline, fixture_root):
+    """Only test-owned temporary files may use this fictional lock boundary."""
+    if type(deadline) not in (int, float) or not math.isfinite(deadline):
+        raise ContractError("Invalid fictional fixture deadline")
+    if time.monotonic() >= deadline:
+        raise TimeoutError("Fictional fixture deadline expired")
+    root = Path(fixture_root).resolve()
+    paths = tuple(Path(path).absolute() for path in paths)
+    if not paths or any(not path.is_relative_to(root) or path.is_symlink()
+                        or not path.resolve().is_relative_to(root) or not path.is_file()
+                        for path in paths):
+        raise ContractError("Fictional locks require files inside the test fixture")
+    yield
+
+
+@contextmanager
+def _fixture_lock_boundary(fixture_root):
+    # Production stable_files keeps its Windows-only guarantee. This trusted
+    # Python injection exercises JSON/core behavior for POSIX fictional tests.
+    if os.name == "nt":
+        yield
+    else:
+        def scoped(paths, *, deadline):
+            return _fictional_posix_locks(paths, deadline=deadline,
+                                          fixture_root=fixture_root)
+        with patch.object(source_module, "stable_files", scoped):
+            yield
+
+
+class SourceFactPeerBoundaryTests(unittest.TestCase):
+    def test_posix_fixture_replay_preserves_native_fail_closed_boundary(self):
+        original = source_module.stable_files
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            posix = SimpleNamespace(name="posix", fstat=os.fstat)
+            with patch(__name__ + ".os", posix), patch.object(stable_module, "os", posix):
+                with _fixture_lock_boundary(root):
+                    reference, *_ = _fixture(root)
+                    self.assertIsNotNone(reference)
+                    with self.assertRaises(ContractError):
+                        with original((root / "fictional-0.json",),
+                                      deadline=time.monotonic() + 30):
+                            self.fail("Native stable reads must fail outside Windows")
+            self.assertIs(source_module.stable_files, original)
+
+    def test_fictional_lock_scope_rejects_files_outside_its_fixture(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "fixture"
+            root.mkdir()
+            inside, outside = root / "invented.json", Path(temporary) / "outside.json"
+            inside.write_bytes(b"{}")
+            outside.write_bytes(b"{}")
+            with _fictional_posix_locks((inside,), deadline=time.monotonic() + 30,
+                                        fixture_root=root):
+                pass
+            for paths in ((outside,), (root / "missing.json",), ()):
+                with self.subTest(paths=paths), self.assertRaises(ContractError):
+                    with _fictional_posix_locks(paths, deadline=time.monotonic() + 30,
+                                                fixture_root=root):
+                        self.fail("Only existing test-owned files may be admitted")
+
+
 def _install_cases():
     workspace = Path(__file__).resolve().parents[1]
     temp_root = (workspace / "data" / "cache" / "preprint-p03-peer-tmp").resolve()
@@ -493,7 +561,8 @@ def _install_cases():
             parameters = dict(zip(names, (value,) if len(names) == 1 else value))
             def run(self, original=function, arguments=parameters):
                 with tempfile.TemporaryDirectory(dir=temp_root) as directory:
-                    original(Path(directory), **arguments)
+                    with _fixture_lock_boundary(Path(directory)):
+                        original(Path(directory), **arguments)
             run.__name__ = name + (f"_{index:02d}" if names else "")
             setattr(SourceFactPeerTests, run.__name__, run)
 

@@ -1,0 +1,38 @@
+{
+  "schema": "p09.independent_auditor_peer_fix_review.v2",
+  "created_at": "2026-11-01T20:33:47+00:00",
+  "status": "SCOPED_SYNTHETIC_REGRESSIONS_PASS_PENDING_INDEPENDENT_CLOSEOUT",
+  "prior_review": {
+    "path": "planning/review-assets/preprint-p09-20261101/INDEPENDENT-AUDITOR-IMPLEMENTATION-v1.json",
+    "sha256": "a83ad63c0e96155a9f98d4ce234376bb5244d09a8bc9779b9da8359eeaa13938",
+    "code_sha256": "6c3e1ad21f843b5b0fe9de9d5008dbec1e17552e7c65f2e7bc16d98949ce3780",
+    "test_sha256": "e6a1d1dc07a98cfd6aff5b24bf23462891db7606e9009e32d4fe3f6513e889e5"
+  },
+  "code": [
+    {"path": "paper/release/code/src/asof_p05_replay/audit_v1.py", "sha256": "f61263a9a1fb11572c0ddeb0c1f5e8b7cdebee1cc81f6395468fdb14f3d72738", "bytes": 87745},
+    {"path": "paper/release/code/tests/test_audit_v1.py", "sha256": "125a059ec1e5be63fabea390771be38905974c36bb295df0935ab4cdd211721b", "bytes": 51413}
+  ],
+  "fixed_findings": [
+    "Bind reconstruction_completed.details.report_sha256 to exact retained reconstruction.json bytes.",
+    "Bind comparison_started.details.comparison_sha256 to the externally byte-pinned protocol comparison descriptor.",
+    "Require exact int1 schema_version for receipt, output seal and reconstruction report.",
+    "Require existing output-seal scope fields: comparison_inputs_parsed=false, exact int0 model_calls and scientific_validation=not_established.",
+    "Require existing reconstruction scope fields, fixed coverage path, absence of historical archive-integrity claim and exact int0 model/network/download/spend fields.",
+    "Require exactly the fixed38 historical guard keys.",
+    "Require complete exact historical decision field sets and values; the public bridge omits output_cell_id by contract.",
+    "Compare source-derived historical fact/group denominators using canonical type-sensitive equality."
+  ],
+  "validation": {
+    "classes": ["test_audit_v1.TransactionAuditTests", "test_audit_v1.BridgeAuditTests"],
+    "before": {"path": "planning/review-assets/preprint-p09-20261101/AUDITOR-PEER-REGRESSIONS-before-v1.txt", "sha256": "590ec63abe94c1e3b0a10a2638bf23ac4f710f7fcd6b91f683a506c12f2445ea", "bytes": 26825, "tests": 12, "false_accept_subtest_failures": 28, "seconds": 0.921, "exit_code": 1},
+    "after": {"path": "planning/review-assets/preprint-p09-20261101/AUDITOR-PEER-REGRESSIONS-after-v1.txt", "sha256": "1525c7b69486881ef68e46fd7fd5225addfbff599db8a63729c084dc168a11fe", "bytes": 2132, "tests": 12, "seconds": 0.573, "exit_code": 0},
+    "tamper_isolation": "Journal substitutions/missing fields are rechained and final receipt hashes renewed; scope mutations also synchronize legitimate seal/report/journal byte anchors. Failures therefore isolate contract contradictions rather than stale checksum detection.",
+    "full_synthetic_fixture": "Migrated to real schema/scope fields and comparator/report byte anchors. No complete137/38/90 rerun after this narrow peer fix yet, per root request while peer review remains open.",
+    "prior_peer_full_suite": {"status": "Reported PASS by independent peer", "tests": 18, "seconds": 100.758, "scope": "Pre-fix code; not claimed as validation of current changed guards."}
+  },
+  "source_operations": {"actual_original_reads": 0, "actual_reconstruction_runs": 0, "actual_independent_audits": 0, "network_calls": 0, "model_calls": 0, "downloads": 0},
+  "independence": "No producer imports or native projection/scoring algorithm changes. All new evidence uses invented transaction and value-free bridge fixtures.",
+  "pending": ["Independent peer inspection and focused test closeout", "Root freeze and any later explicit actual-source authorization", "Final installed/package qualification under root ownership"],
+  "scientific_validation": "not_established",
+  "study_independence": "not_established"
+}

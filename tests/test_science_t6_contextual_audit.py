@@ -354,7 +354,7 @@ class ContextualContractTests(unittest.TestCase):
             with self.assertRaises(ContractError):self.assess()
 
 
-@unittest.skipUnless(importlib.util.find_spec('pyarrow'),'install the pinned ingestion extra')
+@unittest.skipUnless(importlib.util.find_spec('pyarrow'),'install the ingest extra for source-audit tests')
 class ContextualOriginalIntegrationTests(unittest.TestCase):
     def setUp(self):
         from tests.test_science_t6_dossier_binding import DossierSourceBindingTests

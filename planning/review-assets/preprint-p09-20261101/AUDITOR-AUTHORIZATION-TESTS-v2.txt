@@ -1,0 +1,12 @@
+EXIT: 0
+test_draft_wrong_version_and_nonboolean_authorization_fail_before_sources (test_audit_v1.TransactionAuditTests.test_draft_wrong_version_and_nonboolean_authorization_fail_before_sources) ... ok
+test_external_protocol_pin_is_exact_bytes_not_json_fingerprint (test_audit_v1.TransactionAuditTests.test_external_protocol_pin_is_exact_bytes_not_json_fingerprint) ... ok
+test_extra_file_and_output_mutation_cannot_hide_behind_receipt (test_audit_v1.TransactionAuditTests.test_extra_file_and_output_mutation_cannot_hide_behind_receipt) ... ok
+test_receipt_uses_exact_bytes_and_journal_orders_bridge_after_seal (test_audit_v1.TransactionAuditTests.test_receipt_uses_exact_bytes_and_journal_orders_bridge_after_seal) ... ok
+test_rechained_comparison_before_output_seal_is_rejected (test_audit_v1.TransactionAuditTests.test_rechained_comparison_before_output_seal_is_rejected) ... ok
+test_summary_uses_all_scheduled_cells_and_preserves_unknown_slots (test_audit_v1.TransactionAuditTests.test_summary_uses_all_scheduled_cells_and_preserves_unknown_slots) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.076s
+
+OK

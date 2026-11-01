@@ -22,7 +22,7 @@ from tools.science.t6_dossier_binding import (audit_bound_claims, bind_manifest,
                                              build_binding, verify_binding, _dossier_bytes)
 
 
-@unittest.skipUnless(importlib.util.find_spec('pyarrow'), 'install the pinned ingest extra')
+@unittest.skipUnless(importlib.util.find_spec('pyarrow'), 'install the ingest extra for source-audit tests')
 class DossierSourceBindingTests(unittest.TestCase):
     setUp = fixtures.IngestTests.setUp
     tearDown = fixtures.IngestTests.tearDown

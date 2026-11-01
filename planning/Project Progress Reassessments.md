@@ -1,5 +1,11 @@
 # Project progress reassessments
 
+Latest steering: the owner deferred declarations on 1 November. P08c remains
+pending, while independent [P09 release qualification](<Research Release Qualification Plan 2026-11-01.md>)
+now proceeds. Metadata bridge audit and focused adapter/gate tests pass; actual
+installed native reconstruction, source audit and complete release checks remain
+unfinished. The manuscript checkpoint below is retained for its completed scope.
+
 Current checkpoint: [1 November manuscript working draft](<Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md>). Scientific text/supplement and thirteen references pass 118 independent content checks and positioning review. The 17-page PDF passes text/visual/repeat checks. Factual owner declarations block P08; P09 lawful release and P10 local package follow in order. P07's 351 checks/39-file rebuild and all negative model results remain unchanged. No external expert input or native revival.
 
 At each major completion, retain a dated assessment of the complete recovery

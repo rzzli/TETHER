@@ -98,7 +98,9 @@ def powershell_check():
 
 
 def package_check(directory):
-    subprocess.run(['uv','build','--wheel','--out-dir',str(directory/'dist')],cwd=ROOT,check=True,capture_output=True)
+    constraints = ROOT/'paper/release/build-constraints.txt'
+    subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
+                    '--python',sys.executable,'--wheel','--out-dir',str(directory/'dist')],cwd=ROOT,check=True,capture_output=True)
     wheel = next((directory/'dist').glob('*.whl'))
     with zipfile.ZipFile(wheel) as archive:
         names = archive.namelist()
@@ -107,13 +109,15 @@ def package_check(directory):
         if any(n.startswith(('data/','runs/','tests/')) for n in names):
             raise ContractError('Non-runtime payload in wheel')
     environment = directory/'wheel-environment'
-    subprocess.run(['uv','venv','--python',sys.executable,str(environment)],check=True,capture_output=True)
+    subprocess.run(['uv','venv','--offline','--python',sys.executable,str(environment)],check=True,capture_output=True)
     python = environment/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
-    subprocess.run(['uv','pip','install','--python',str(python),'--no-deps',str(wheel)],check=True,capture_output=True)
+    subprocess.run(['uv','pip','install','--offline','--no-index','--python',str(python),'--no-deps',str(wheel)],check=True,capture_output=True)
     run = directory/'wheel-demo'
     subprocess.run([str(python),'-I','-m','asof','demo','--output',str(run)],cwd=directory,check=True,capture_output=True)
     subprocess.run([str(python),'-I','-m','asof','verify','--run-dir',str(run)],cwd=directory,check=True,capture_output=True)
-    return {'wheel':wheel.name,'dependency_free_demo':'passed'}
+    return {'wheel':wheel.name,'wheel_sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),
+            'build_constraints_sha256':hashlib.sha256(constraints.read_bytes()).hexdigest(),
+            'package_network_policy':'offline','dependency_free_demo':'passed'}
 
 
 def main(argv=None):
