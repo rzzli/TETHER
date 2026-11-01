@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FINITE_GWAS_METADATA_AND_SELECTED_ROW_CHECK_NOT_SCIENTIFIC_VALIDATION",
+  "created_at_utc": "2026-11-01T03:10:38.320868+00:00",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "artifact_pins": [
+    {
+      "path": "planning/review-assets/preprint-p02-20261031/GWAS-SCAN-PLAN-v1.json",
+      "bytes": 430686,
+      "sha256": "4ab2833f32598607a296ae6317a5f4783b207df3e28d5c0926cbd498d98dbf06"
+    },
+    {
+      "path": "planning/review-assets/preprint-p02-20261031/GWAS-SCAN-REPORT-v1.json",
+      "bytes": 40651,
+      "sha256": "aea3bd23443ace6305016dbfcb86a8cead068018a9ad159460f92eb1090740b3"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/gwas-availability.json",
+      "bytes": 325832,
+      "sha256": "b700a763613927e808b475243c0c94c09d4f29a15204f543183496fbec434a99"
+    },
+    {
+      "path": "planning/review-assets/preprint-p02-20261031/scan_gwas.py",
+      "bytes": 35154,
+      "sha256": "2bfb7641f776421bfd7934fa49d56c9ae84e66ed34ca1b6a4a2d11ac03b5899f"
+    },
+    {
+      "path": "data/derived/literature-coverage-20261017T082208Z/inspection.json",
+      "bytes": 9277743,
+      "sha256": "f523b156957107afa0bfcd2fc111d70ef269950e367006ff70349effc56f1226"
+    },
+    {
+      "path": "data/catalog/sources.json",
+      "bytes": 1222375,
+      "sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/PLAN-FROZEN.json",
+      "bytes": 319,
+      "sha256": "78c2d6c108d7b62cdc06e2ac174e50d8c939130a21b082aa466e587637d46dfb"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/RUN-STARTED.json",
+      "bytes": 300,
+      "sha256": "a97105fb54c903fb7252a2a813bac0565ac80ab500b3230720043f7492813223"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/attempt.json",
+      "bytes": 193,
+      "sha256": "877f307a98d6c43c51cbe05e973ee076c7812ceaaa1e841e557e3bec7d3b82d8"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/file-events.jsonl",
+      "bytes": 20600,
+      "sha256": "93a06df8792bb063a1bd05c543d7d716ab7ce035d694de88f423ca4f820b42a8"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-gwas-20261101T025951484714Z/terminal.json",
+      "bytes": 559,
+      "sha256": "4aa0aab6f0cff5995a0cac9254c7350a425e8ac020aa6426a29a6a83fb1e612a"
+    },
+    {
+      "path": "planning/review-assets/preprint-p02-20261031/PROTOTYPE-REPORT-v1.json",
+      "bytes": 3429,
+      "sha256": "3f5c2e441cb511865aafb33f31c3d4296a98c159ab3ffff07ff1d35cbf99ac61"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/preprint-p02-20261101T025132Z/prototype.json",
+      "bytes": 188656,
+      "sha256": "611b9fe1fbfa5a06ef575cd8a0ed352cc7c065d1b236a28a49994f3af4016863"
+    },
+    {
+      "path": "planning/review-assets/preprint-p02-20261031/INDEPENDENT-CHECK-v1.json",
+      "bytes": 10921,
+      "sha256": "f6df742acad16561212dc4350faa51e87700412ac703465d228019b1e64ce69e"
+    }
+  ],
+  "checks": {
+    "plan_frozen_before_recorded_scan_start": true,
+    "same_three_exact_pre_response_development_pairs": true,
+    "single_CTLA4_original_row_44_slots_exact": true,
+    "nine_nonnull_baseline_fields_exact": true,
+    "only_populated_legacy_scientific_field_is_linkage_studyLocusId": true,
+    "all_ten_measurement_fields_schema_present_and_source_null": true,
+    "measurement_primary_coverage_and_pass_remain_null": true,
+    "report_manifest_units_scores_and_resources_agree": true,
+    "retained_100_event_proof_counts_and_terminal_complete": true,
+    "no_biological_absence_or_independent_study_count_inference": true,
+    "evaluator_only_outputs_and_no_agent_manifest_in_output": true,
+    "earlier_literature_v1_report_manifest_and_independent_check_unchanged": true,
+    "all_100_original_and_receipt_hashes_sizes_and_bindings": true,
+    "all_100_source_metadata_equal_frozen_inspection": true,
+    "all_100_parent_free_roles_current_catalog_and_contemporary_availability": true,
+    "all_100_schema_names_fingerprints_typed_schema_hashes_and_footer_rows": true,
+    "footer_and_compressed_column_resource_counters_match": true
+  },
+  "counts": {
+    "files": 100,
+    "receipts": 100,
+    "footer_rows": 1753850,
+    "retained_match_counts": {
+      "btk-efo_0000676": 0,
+      "ctla4-efo_0000384": 1,
+      "fcgrt-efo_0000384": 0
+    },
+    "selected_rows_independently_reconstructed": 1,
+    "selected_slots": 44,
+    "nonnull_identity_fields": 6,
+    "nonnull_reporting_date_fields": 2,
+    "nonnull_legacy_scientific_fields": 1,
+    "nonnull_legacy_scientific_field_names": [
+      "studyLocusId"
+    ],
+    "measurement_fields": 10,
+    "measurement_schema_absent_fields": 0,
+    "measurement_source_null_fields": 10,
+    "measurement_answerable_components": 0,
+    "measurement_coverage": null,
+    "measurement_pass": null
+  },
+  "selected_row_check": {
+    "source_id": "raw-b7a0617719960624a653c097",
+    "row_group": 0,
+    "row": 14254,
+    "slots": 44,
+    "nonnull_slots": 9,
+    "null_slots": 35,
+    "linkage_identifier_is_not_a_measurement": true
+  },
+  "unit_checks": [
+    {
+      "unit_id": "btk-efo_0000676",
+      "retained_matched_rows": 0,
+      "selected_rows": 0,
+      "nonnull_fields": 0,
+      "measurement_answerable_components": 0,
+      "measurement_coverage": null,
+      "measurement_pass": null
+    },
+    {
+      "unit_id": "ctla4-efo_0000384",
+      "retained_matched_rows": 1,
+      "selected_rows": 1,
+      "nonnull_fields": 9,
+      "measurement_answerable_components": 0,
+      "measurement_coverage": null,
+      "measurement_pass": null
+    },
+    {
+      "unit_id": "fcgrt-efo_0000384",
+      "retained_matched_rows": 0,
+      "selected_rows": 0,
+      "nonnull_fields": 0,
+      "measurement_answerable_components": 0,
+      "measurement_coverage": null,
+      "measurement_pass": null
+    }
+  ],
+  "arrow_selection_accounting": {
+    "method": "Arrow take of the retained original row index before Python conversion, matching the scan selection representation",
+    "selected_arrow_bytes": 444,
+    "slice_only_bytes_for_same_values": 434,
+    "interpretation": "Take and slice preserve the same values but count different validity-buffer bytes; reported 444 matches the actual take representation."
+  },
+  "reported_resource_measurements": {
+    "elapsed_seconds": 13.20393379998859,
+    "process_cpu_seconds": 3.0625,
+    "python_traced_peak_bytes": 48064831,
+    "arrow_allocator_peak_bytes": 12374976,
+    "timing_and_allocator_values_independently_remeasured": false,
+    "instrumentation_statically_verified": true,
+    "process_RSS_measured": false,
+    "physical_storage_IO_measured": false
+  },
+  "independence_and_limits": {
+    "prototype_or_scan_module_imported_or_executed": false,
+    "all_row_key_scan_reexecuted": false,
+    "zero_match_claim_basis": "Completed retained 100-file scan events/source-proof accounting; this independent check rehashes all originals/receipts and footers and reconstructs the retained matching row. It does not repeat 1,753,850 row-key comparisons.",
+    "clinical_or_biological_truth_validation": false,
+    "model_calls": 0,
+    "new_downloads": 0,
+    "credible_set_row_values_read": false,
+    "expression_atlas_rows_scanned": false,
+    "human_response_or_AI_reference_or_candidate_payloads_read": false,
+    "protected_outcomes_read": false,
+    "writes": [
+      "planning/review-assets/preprint-p02-20261031/GWAS-INDEPENDENT-CHECK-v1.json"
+    ]
+  },
+  "limitations": [
+    "The one populated legacy scientific field is a study-locus linkage identifier, so its copying score is not measurement coverage.",
+    "All ten measurement components are source-null; measurement coverage and pass are not estimable.",
+    "Partition-bounded zeros establish neither biological absence, global coverage nor independent biomedical replication.",
+    "These checks confer no source redistribution rights, freshness certification or clinical validity."
+  ],
+  "metadata_verification": {
+    "metadata_files_verified": 100,
+    "receipts_verified": 100,
+    "all_fields_present": true,
+    "metrics": {
+      "original_file_bytes_rehashed": 180049263,
+      "receipt_bytes_rehashed": 84100,
+      "physical_parquet_rows_scanned": 1753850,
+      "key_projection_row_group_rows": 1753850,
+      "field_projection_row_group_rows": 17712,
+      "unique_projected_compressed_column_bytes_estimate": 80594692
+    },
+    "retained_proof_matches": {
+      "btk-efo_0000676": 0,
+      "ctla4-efo_0000384": 1,
+      "fcgrt-efo_0000384": 0
+    },
+    "positive_source_proofs": [
+      {
+        "source_id": "raw-b7a0617719960624a653c097",
+        "matches": {
+          "btk-efo_0000676": 0,
+          "ctla4-efo_0000384": 1,
+          "fcgrt-efo_0000384": 0
+        },
+        "row_groups": 1,
+        "rows": 17712
+      }
+    ]
+  },
+  "independent_resource_counters": {
+    "original_file_bytes_rehashed": 180049263,
+    "receipt_bytes_rehashed": 84100,
+    "physical_parquet_rows_scanned": 1753850,
+    "key_projection_row_group_rows": 1753850,
+    "field_projection_row_group_rows": 17712,
+    "unique_projected_compressed_column_bytes_estimate": 80594692,
+    "all_matched_projected_arrow_bytes": 444,
+    "selected_arrow_bytes": 444,
+    "selected_original_rows": 1
+  },
+  "checker_iteration_note": "An initial check compared the raw slice allocation count with the scan's take allocation count and stopped without writing; reproducing the scan's Arrow take selection verified the reported 444 bytes. No prototype change was needed."
+}

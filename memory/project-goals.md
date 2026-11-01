@@ -10,59 +10,62 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current checkpoint: [[Preprint Readiness Review and Completion Plan 2026-10-31]].
-The project has retained engineering and exposed source-selection experiments,
-not a complete preprint. No tracked manuscript/bibliography or complete research
-release found. H5-A typed-fact coverage/critical-distortion/80% scoring is specified
-but not implemented. No fresh evaluation cohort is qualified.
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Source Fact Feasibility]].
+P02 bounded prototype complete with source-gap finding, not a qualified scientific
+primary. Three exposed development units BTK/psoriasis, CTLA4/Crohn, FCGRT/Crohn:
+six fixed literature rows yield 57/57 identity/date facts and 204 scientific nulls;
+coverage/pass null, no 0/0 success. Ten synthetic tests pass after explicit-null fix.
+All 264 slots independently reconstructed. Commit f769add retains this first phase.
 
-Next P02: source-to-fact feasibility on 2–4 development units, including answerable
-and insufficient-input conditions, lawful source lineage/exposure, nontrivial fact
-families and reproducible expected derivations. Then P03 shared objective evaluator
-and common arm adapters/controls; P04 bounded actual-comparison pilot. The categorical
-ten-item genetics adapter and A03 exposed old-pair audit are optional appendix work,
-not paper gates. The preprint plan refines that implementation order while retaining
-the AI-only input/claim policy. P05 freezes cohort/analysis, P06 experiments,
-P07 analysis/figures, P08 manuscript, P09 research release, P10 final package.
+Additive same-pair GWAS scan: 100 files/1,753,850 rows, 180,049,263 bytes verified;
+BTK 0/CTLA4 one/FCGRT 0. Only studyLocusId is populated in the broad legacy-scientific
+bucket; it is linkage, not measurement. All ten measurement components are null.
+Independent metadata/row QA does not claim a second full-key scan.
 
-Current evidence: 0.3.11/default v2, retained 1,774 tests/327 accepted pins;
-ten canonical dossiers, 31,554 observations across overlapping case worlds and
-a 20-original-row technical audit. Actual source-selection study: 60 cells and
-114 calls; AsOf completed 10/10 while the adaptation completed 3/10 and exhausted
-its budget on 7/10. Top-one: eight tasks across five exposed cases, 32 cells and
-48 calls; both model arms show 6/8 AI-reference agreement. These are not generated
-interpretation quality or independent truth. R07 has six complete responses and
-zero contract passes; recorded four-arm/pure v3 preparation is not actual inference.
-No new application test or model run was performed during this review.
+Exact CTLA4 locus join against two local credible_set files/230,761 rows finds zero.
+Local coverage is 2 of inventory 25, so no absence inference. Lexical-first row 0
+parser control contains native beta/p-value components/standardError; unlinked
+control is not an extra biomedical case or gene/drug effect. Original receipts
+archived privately and current worker/state/receipts left unchanged.
 
-No external expert input or GE confirmation is required. HR1–HR4 retired.
-Responses/addenda/normalizations/ratings/answer-aware annotations and descendants
-archive-only; excluded from new references, generation, judging, tuning and selection.
-Fresh source annotators use no-fork contexts and allowlisted sources, without chat,
-this memory, candidates or old answer-aware analysis. AI semantic audits secondary;
-original expert-preference H5 untested. Public curated labels optional after checks.
+Concrete next input: 23 missing same-release public files, HEAD-verified exact
+2,430,231,014 bytes. Prepared isolated queue under data/manifests/private/
+preprint-p02-credible-completion-20261101T031842Z/, cap 3 GiB/concurrency 2/reserve 373 GiB,
+new E: paths/receipt IDs/state. Automatic approval explicitly rejected starting
+Start-DownloadBatch.ps1 under leave-existing-worker-untouched rule. BEFORE process
+creation: no session/live worker/new batch state/payload transfer. One-time owner
+approval question pending. DO NOT bypass using another downloader or infer approval
+from elapsed time/preselected option. After explicit approval, verify same queue,
+check no live/existing batch, request escalated named execution, verify 23 receipts/
+files then repeat exact join under NEW versioned outputs. No old runs backfilled;
+new observations use present-day bounds. A full table may still reveal a provider gap.
+P02a is a conditional input branch, not a universal paper gate. Task-contract and
+manuscript preparation can proceed without this transfer; it cannot qualify a
+multicase study or overcome the exact-copy ceiling by itself.
 
-Preprint needs a bounded claim/related-work argument, objective reusable evaluation,
-informative controlled multicase results (negative valid), all failures/uncertainty,
-manuscript/source/PDF/figures/bibliography/disclosures and lawful reproducible release.
-Clinical/MR/scorer/T2–T5/H6/fullVBTreproduction/native-bank branches remain conditional
-future programmes, not preprint prerequisites. No clinicaltruth/humanequivalence claim.
-Current nearest peers already do source verification and deterministic grading;
-novelty must come from the specific scoped benchmark/experiment, not quote checks
-alone. The pinned VBT supports headless/evidence-coverage audit; a prompt adaptation
-is not the full released system.
+P03 specification prepared, implementation pending. Separate linkage/context/
+measurement/provider facts, enforce raw-source binding plus scope/unknown/units/
+strict type and role/lineage/source exclusion, common adapters and null denominator.
+Expected-answer hash alone does not prove source truth. Identifier accuracy cannot
+rescue measurement coverage. Next freeze the bounded task/join/granularity and
+failure/partial-output scoring, then implement only its required evaluator and P04
+pilot. Use a prospective candidate/exclusion/exposure/cluster register for P05;
+insufficient fresh counts/precision require an explicit exploratory fallback.
+P03–P10/paper remain unfinished; no qualified fresh
+cohort, manuscript or release package. Old genetics questionnaire optional.
 
-Keep exact code/legacy failures, FAILED/INCOMPLETE_TIMEOUT, 65 missing inputs,
-36 unqualified labels, 17/32 primary registry states, 0/12 joint-ready packages,
-empty features/null probabilities, $0 provider spending with unknown platform
-costs explicit, no unapproved acquisition and unchanged downloader/stopped monitor.
-The current CI 20-minute job limit versus a retained local full run of about
-42.4 minutes is a measurement risk, not proof that hosted jobs fail. Exact-release
-SHA needs applicable tests/CI and installed study smokes/replay beyond the demo.
-Only actual file/access/permission/resource issues or final owner publication/
-author metadata can require owner action.
-See [[research-log-2026-10-31-preprint-readiness]]. All subsequent sections are
-historical checkpoints; superseded human tasks/ten-item-first priorities do not apply.
+No external expert responses/GE confirmation needed. Human returns/derivatives
+archive-only and excluded from references, generation, evaluation, tuning/selection.
+Fresh source contexts are no-fork/source-only; AI semantic audits secondary.
+Original expert-preference H5 and clinical claims untested. Keep 0.3.11/default v2,
+retained 1,774 tests/327 unchanged pins, R07 six responses/zero contracts, native FAILED/
+INCOMPLETE_TIMEOUT, 65 missing interpretation inputs, 36 unqualified labels, 17/32
+primary states, 0/12 joint-ready, empty features/null probabilities, $0 provider
+spending/unknown platform cost, no new models or protected outcomes.
+Existing downloader/stopped monitor unchanged.
+See [[research-log-2026-10-31-source-fact-feasibility]]. The preprint roadmap remains
+planning/Preprint Readiness Review and Completion Plan 2026-10-31.md.
+Subsequent sections are history; prior expert/ten-item-first gates retired.
 
 ### Prior scientific-readiness checkpoint (retained history)
 

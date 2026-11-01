@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October preprint readiness review](<Preprint Readiness Review and Completion Plan 2026-10-31.md>). Current paper-critical work is P02 source-to-fact feasibility, P03 the common objective evaluator and P04 a bounded pilot. The genetics questionnaire/old-pair audit are optional, not gates. No external expert input is required; original failures and conditional clinical branches remain. Earlier snapshots preserve dated findings and superseded priorities.
+Current checkpoint: [31 October source-fact feasibility](<Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md>). P02 is measured; target-linked measurements are not yet available in the inspected subset, and the local credible-set table is incomplete. A prepared 23-file/2.43GB batch was rejected by automatic approval before launch; one-time approval is pending. P03 task/scoring-contract work and the evaluator remain unfinished; input completion is a conditional branch, not a universal paper gate. No external expert input or native revival is needed.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current
@@ -14,9 +14,16 @@ next major step with prerequisites, failure/stop conditions and acceptance.
 Targeted new checks are appropriate; another full test run solely to refresh
 prose is not required. This creates no periodic monitoring task.
 
-Current checkpoint, 31 October UTC: [Expert returns](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>). All three supplied mechanism returns are preserved and normalized (54 selections; 95 integrity and 549 conversion checks; six selected isolation regressions pass). The owner confirms three different human reviewers: R1 without AI, R2/R3 with disclosed AI assistance/outside sources (Claude Code). R2/R3 report statistical genetics/epidemiology, independence and source-first order. Each reports 45 minutes estimated, not measured. Authorship/disclosure intake is complete for this exposed orientation; no fresh/blinded H5 or genetics/source-feasibility review is implied.
+## Retained historical checkpoints
 
-Next: give the existing clean genetics-source ZIP to R2/R3, collect their source-only exports first, then release the separate candidate follow-up per reviewer. Record assistance and actual timing; estimates and undisclosed assistant costs are not measured workload/budget. Preserve the orientation feedback/old responses; no model replay, repaired candidate or native expansion. Fresh-case/H5/clinical gates remain separate. See the orientation disposition/next-round plan; unchanged v2, $0, original failures and downloader/stopped-monitor boundaries remain.
+The entries below preserve earlier results and their then-current next actions.
+Their expert-intake requests, HR1–HR4 gates and implementation priorities are
+superseded by the current paper roadmap and no-external-expert decision. They
+do not authorize new review requests or make response-derived data eligible.
+
+Historical checkpoint, 31 October UTC: [Expert returns](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>). All three supplied mechanism returns are preserved and normalized (54 selections; 95 integrity and 549 conversion checks; six selected isolation regressions pass). The owner confirms three different human reviewers: R1 without AI, R2/R3 with disclosed AI assistance/outside sources (Claude Code). R2/R3 report statistical genetics/epidemiology, independence and source-first order. Each reports 45 minutes estimated, not measured. Authorship/disclosure intake is complete for this exposed orientation; no fresh/blinded H5 or genetics/source-feasibility review is implied.
+
+Historical next action: give the existing clean genetics-source ZIP to R2/R3, collect their source-only exports first, then release the separate candidate follow-up per reviewer. Record assistance and actual timing; estimates and undisclosed assistant costs are not measured workload/budget. Preserve the orientation feedback/old responses; no model replay, repaired candidate or native expansion. Fresh-case/H5/clinical gates remain separate. See the orientation disposition/next-round plan; unchanged v2, $0, original failures and downloader/stopped-monitor boundaries remain.
 
 | Checkpoint | Assessment | Practical status |
 |---|---|---|

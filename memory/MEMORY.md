@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-source-fact-feasibility]] - Current checkpoint: P02 measured three-unit feasibility, 57/57 context/ID projection, no target-linked measurements; missing locus in partial 2/25 credible-set input. Prepared 23-file/2.43GB isolated batch explicitly auto-review REJECTED before launch; one-time owner approval pending, no workaround. Ten tests and independent source checks pass; P03 spec prepared, P03–P10 unfinished. No expert input.
+
 - [[research-log-2026-10-31-preprint-readiness]] - Current paper roadmap: P02 source-to-fact feasibility → P03 objective evaluator → P04 bounded pilot, then freeze/experiments/analysis/manuscript/release. Ten-item genetics adapter/old-pair review optional. Engineering and real selection studies retained; no runnable H5-A evaluator, qualified fresh set or manuscript package yet. No external expert dependency.
 
 - [[research-log-2026-10-31-ai-only-replan]] - Owner input policy remains current: no further external expert inputs or human-response dependencies; bespoke responses/derivatives archive-only and AI judgments secondary. The ten-item-first implementation order is superseded by the preprint roadmap. Older entries are history, not active reviewer requests.
