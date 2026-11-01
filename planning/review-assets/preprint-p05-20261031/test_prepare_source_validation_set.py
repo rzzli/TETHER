@@ -348,6 +348,84 @@ class ArrowAndProductTests(Fixture):
 
 
 class IntegrityAndGuardTests(Fixture):
+    def test_fresh_production_entry_reaches_guard_with_real_path_and_stable_apis(self):
+        derived = self.root / "entry-derived"
+        derived.mkdir()
+        output = derived / "preprint-p05-source-validation-20250101T010000Z"
+        plan_path, ready_path = self.root / "entry-plan.json", self.root / "entry-ready.json"
+        plan_path.write_bytes(b"{}")
+        ready_path.write_bytes(b"{}")
+        with patch.object(b, "OUTPUT_ROOT", derived), patch.object(b, "PLAN_PATH", plan_path), patch.object(b, "READY_PATH", ready_path), \
+             patch.object(b, "load_guard", side_effect=RuntimeError("fictional guard stop")) as guard, \
+             patch.object(b, "verify_originals") as source_read:
+            # checked_path and stable_files are the actual production implementations.
+            with self.assertRaisesRegex(RuntimeError, "fictional guard stop"):
+                b.execute(output)
+            guard.assert_called_once()
+            source_read.assert_not_called()
+        self.assertFalse(output.exists())
+
+    def test_reserved_fresh_leaf_is_checked_before_source_access_with_real_journal(self):
+        derived = self.root / "reservation-derived"
+        derived.mkdir()
+        output = derived / "preprint-p05-source-validation-20250101T010001Z"
+        plan_path, ready_path = self.root / "reservation-plan.json", self.root / "reservation-ready.json"
+        plan_path.write_bytes(b"{}")
+        ready_path.write_bytes(b"{}")
+        original = self.source("credible_set", [credible()], filename="reservation-fictional.parquet")
+        plan = {"selected_units": 12, "row_guard_cutoff_utc": "2025-01-01T23:59:59.999999+00:00"}
+        actual_checked = b.checked_path
+        with patch.object(b, "OUTPUT_ROOT", derived), patch.object(b, "PLAN_PATH", plan_path), patch.object(b, "READY_PATH", ready_path), \
+             patch.object(b, "load_guard", return_value=(plan, [original], self.catalog())), \
+             patch.object(b, "checked_path", wraps=actual_checked) as checked, \
+             patch.object(b, "verify_originals", side_effect=RuntimeError("fictional source stop")) as source_read:
+            with self.assertRaisesRegex(RuntimeError, "fictional source stop"):
+                b.execute(output)
+            source_read.assert_called_once()
+            checked_paths = [call.args[1] for call in checked.call_args_list]
+            self.assertIn(derived.relative_to(ROOT).as_posix(), checked_paths)
+            self.assertIn(output.relative_to(ROOT).as_posix(), checked_paths)
+        self.assertEqual(read_chain(output / "journal.jsonl")[-1]["event"], "build_failed")
+        self.assertEqual(parse_json((output / "failure-seal.json").read_bytes())["stage"], "source_integrity")
+        rejected = derived / "preprint-p05-source-validation-20250101T010004Z"
+        def reject_reserved_leaf(root, relative):
+            if relative == rejected.relative_to(ROOT).as_posix():
+                raise ContractError("fictional reserved leaf rejection")
+            return actual_checked(root, relative)
+        with patch.object(b, "OUTPUT_ROOT", derived), patch.object(b, "PLAN_PATH", plan_path), patch.object(b, "READY_PATH", ready_path), \
+             patch.object(b, "load_guard", return_value=(plan, [original], self.catalog())), \
+             patch.object(b, "checked_path", side_effect=reject_reserved_leaf), patch.object(b, "verify_originals") as source_read:
+            with self.assertRaisesRegex(ContractError, "reserved leaf rejection"):
+                b.execute(rejected)
+            source_read.assert_not_called()
+        self.assertEqual(read_chain(rejected / "journal.jsonl")[-1]["event"], "build_failed")
+        self.assertEqual(parse_json((rejected / "failure-seal.json").read_bytes())["stage"], "output_reservation_validation")
+
+    def test_entry_rejects_existing_unapproved_and_reparse_parents(self):
+        derived = self.root / "rejection-derived"
+        derived.mkdir()
+        output = derived / "preprint-p05-source-validation-20250101T010002Z"
+        output.mkdir()
+        with patch.object(b, "OUTPUT_ROOT", derived), patch.object(b, "load_guard") as guard:
+            with self.assertRaisesRegex(ContractError, "already exists"):
+                b.execute(output)
+            with self.assertRaises(ContractError):
+                b.execute(self.root / output.name)
+            with self.assertRaises(ContractError):
+                b.execute(derived / "unapproved-name")
+            guard.assert_not_called()
+        actual_lstat = Path.lstat
+        def reparse_parent(member, *args, **kwargs):
+            info = actual_lstat(member, *args, **kwargs)
+            if member == derived:
+                # Emulate the OS reparse attribute; checked_path/_no_links remain real.
+                return b.SimpleNamespace(st_mode=info.st_mode, st_file_attributes=getattr(info, "st_file_attributes", 0) | 0x400)
+            return info
+        with patch.object(b, "OUTPUT_ROOT", derived), patch.object(Path, "lstat", new=reparse_parent), patch.object(b, "load_guard") as guard:
+            with self.assertRaisesRegex(ContractError, "symlink/reparse"):
+                b.execute(derived / "preprint-p05-source-validation-20250101T010003Z")
+            guard.assert_not_called()
+
     def ready_pair(self):
         plan = {"status": "DRAFT", "code_sha256": {"builder": "a" * 64}, "environment": {"python": "synthetic"},
                 "limits": b.LIMITS, "frame": b.EXPECTED, "selection_seed": b.SEED, "selected_units": 12,
@@ -455,20 +533,15 @@ class IntegrityAndGuardTests(Fixture):
     def test_execute_fictional_success_and_failure_never_read_actual_originals(self):
         inventory = self.full_inventory()
         derived = self.root / "derived"
+        derived.mkdir()
         plan = {"selected_units": 12, "row_guard_cutoff_utc": "2025-01-01T23:59:59.999999+00:00"}
         plan_path, ready_path = self.root / "plan.json", self.root / "ready.json"
         plan_path.write_bytes(canonical(plan))
         ready_path.write_bytes(b"{}")
         expected = {**b.EXPECTED, "gwas_credible_sets": {"files": 1, "bytes": 0, "rows": 4}}
-        @contextmanager
-        def fixture_stable(paths, *, deadline):
-            # Trusted test seam only; serialized inputs cannot select alternate locking.
-            self.assertTrue(all(Path(p).is_absolute() for p in paths))
-            yield
         patches = [patch.object(b, "RAW_ROOT", self.raw), patch.object(b, "OUTPUT_ROOT", derived),
                    patch.object(b, "PLAN_PATH", plan_path), patch.object(b, "READY_PATH", ready_path),
-                   patch.object(b, "EXPECTED", expected), patch.object(b, "load_guard", return_value=(plan, inventory, self.catalog())),
-                   patch.object(b, "stable_files", fixture_stable), patch.object(b, "checked_path", side_effect=lambda root, relative: Path(root) / relative)]
+                   patch.object(b, "EXPECTED", expected), patch.object(b, "load_guard", return_value=(plan, inventory, self.catalog()))]
         from contextlib import ExitStack
         with ExitStack() as stack:
             for item in patches:

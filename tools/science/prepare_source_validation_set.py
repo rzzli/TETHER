@@ -32,8 +32,8 @@ from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
 from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
 
 ASSETS = WORKSPACE / "planning/review-assets/preprint-p05-20261031"
-PLAN_PATH = ASSETS / "REGISTRY-PLAN-DRAFT-v1.json"
-READY_PATH = ASSETS / "REGISTRY-READY-v1.json"
+PLAN_PATH = ASSETS / "REGISTRY-PLAN-DRAFT-v2.json"
+READY_PATH = ASSETS / "REGISTRY-READY-v2.json"
 RAW_ROOT = Path(r"E:\projects_data\drug_target_agents_data")
 OUTPUT_ROOT = WORKSPACE / "data/derived"
 OUTPUT_PREFIX = "preprint-p05-source-validation-"
@@ -188,7 +188,7 @@ def make_plan():
     with stable_files([p for p, _ in PINS.values()], deadline=deadline):
         docs = pinned_documents(deadline)
     inventory = inventory_from_metadata(docs["frame"], docs["acquisition"])
-    return {"schema_version": 1, "artifact_id": "preprint-p05-registry-plan-v1", "status": "DRAFT",
+    return {"schema_version": 1, "artifact_id": "preprint-p05-registry-plan-v2", "status": "DRAFT",
             "purpose": "deterministic technical source validation; stage 1 source-only originals, never gold",
             "neutral_inputs": {name: {"path": str(path), "sha256": sha} for name, (path, sha) in PINS.items()},
             "code_sha256": code_pins(), "environment": environment(),
@@ -818,7 +818,16 @@ def execute(output):
     output = Path(output).absolute()
     need(output.parent == OUTPUT_ROOT and re.fullmatch(OUTPUT_PREFIX + r"\d{8}T\d{6}Z", output.name),
          "Output must be a fresh ignored data/derived/preprint-p05-source-validation-<UTC> directory")
-    need(checked_path(WORKSPACE, output.relative_to(WORKSPACE).as_posix()) == output, "Unsafe output path")
+    # The approved parent must already exist and have no links/reparse components.
+    # The prospective leaf is deliberately absent until RunJournal reserves it.
+    need(checked_path(WORKSPACE, output.parent.relative_to(WORKSPACE).as_posix()) == output.parent and
+         output.parent.is_dir(), "Unsafe output parent")
+    try:
+        output.lstat()
+    except FileNotFoundError:
+        pass
+    else:
+        raise ContractError("Output leaf already exists; a fresh reservation is required")
     deadline = time.monotonic() + LIMITS["seconds"]
     guard_paths = [PLAN_PATH, READY_PATH, Path(__file__).resolve()] + [p for p, _ in PINS.values()]
     guard_paths += framework_paths()
@@ -833,6 +842,9 @@ def execute(output):
         ready_hash = digest_bytes(read_file(READY_PATH, deadline, 1024**2))
         row_cutoff = datetime.fromisoformat(plan["row_guard_cutoff_utc"])
         journal = RunJournal(output, kind="build")
+        stage = "output_reservation_validation"
+        need(checked_path(WORKSPACE, output.relative_to(WORKSPACE).as_posix()) == output and output.is_dir(),
+             "Unsafe reserved output path")
         bounds = Bounds(output, deadline=deadline)
         stage = "source_integrity"
         paths = [Path(x["path"]) for x in inventory] + [Path(x["receipt"]["path"]) for x in inventory]
