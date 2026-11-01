@@ -1,0 +1,21 @@
+test_producer_qualification_mapping_contract (test_audit_source_validation_experiment.IndependentAuditorTests.test_producer_qualification_mapping_contract) ... ERROR
+
+======================================================================
+ERROR: test_producer_qualification_mapping_contract (test_audit_source_validation_experiment.IndependentAuditorTests.test_producer_qualification_mapping_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\preprint-p05-20261031\test_audit_source_validation_experiment.py", line 54, in test_producer_qualification_mapping_contract
+    result = audit.qualification_index({"native_qualification": qualification})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tools\science\audit_source_validation_experiment.py", line 575, in qualification_index
+    return {c["case_id"]: c for c in ledger["native_qualification"]}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tools\science\audit_source_validation_experiment.py", line 575, in <dictcomp>
+    return {c["case_id"]: c for c in ledger["native_qualification"]}
+            ~^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

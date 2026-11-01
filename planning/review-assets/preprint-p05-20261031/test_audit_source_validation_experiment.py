@@ -48,6 +48,24 @@ def evidence(key):
 
 
 class IndependentAuditorTests(unittest.TestCase):
+    def test_producer_qualification_mapping_contract(self):
+        qualification = {key: dict(case_id=key, disposition="compiled",
+            measurement_answerable_facts=3, measurement_answerable_groups=1) for key in audit.CASES}
+        result = audit.qualification_index({"native_qualification": qualification})
+        self.assertEqual(result, qualification)
+        self.assertEqual(list(result), list(audit.CASES))
+
+    def test_qualification_wrong_shape_missing_and_mismatched_keys_rejected(self):
+        qualification = {key: dict(case_id=key, disposition="compiled") for key in audit.CASES}
+        missing = deepcopy(qualification)
+        missing.pop(audit.CASES[0])
+        mismatch = deepcopy(qualification)
+        mismatch[audit.CASES[0]]["case_id"] = audit.CASES[1]
+        for wrong in (list(qualification.values()), missing, mismatch):
+            with self.subTest(kind=type(wrong).__name__):
+                with self.assertRaises(audit.WireFailure):
+                    audit.qualification_index({"native_qualification": wrong})
+
     def test_schedule_counts_unique_and_paired(self):
         outputs, decisions = audit.fixed_schedule()
         self.assertEqual((len(outputs), len(decisions)), (38, 90))

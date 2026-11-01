@@ -10,7 +10,18 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Reference Completion]].
+Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Technical Study Freeze]].
+P05 complete technicalscope. READY49c2ce672356bfcfd572a7b6c963c56bd5c96e3d042a9972f2c36434ebb8de3f
+binds71runtime/7extra pins,12nativeunits/38outputs/90decisions. Finaltests36runner,
+25auditor and17analysis methods pass. Persistentfictionalqualification passes
+withzero nativeoutputs; repeatedknowncontrols do notcreateindependent samples.
+P06once +independentoriginalsourceaudit next, thenP07actualanalysis. P06–P10
+andpaperunfinished. No modelbranchreopening, experts/downloads/monitor or
+biological/clinical validationclaim. See [[research-log-2026-11-01-study-freeze]].
+
+### Prior source-reference checkpoint (retained history)
+
+Checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Reference Completion]].
 P05c complete: twelve references verified and independently projected from24
 original rows/180facts;1,163checks pass,41fictional regressions pass. Native
 identity108/132 and measurement40/48 components populated,32native-null unknowns.

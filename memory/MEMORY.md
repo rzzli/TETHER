@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-source-references]] - Current: P05c complete, twelve refs/180facts/all24source rows independently verified (1,163checks),41fictionaltests pass. Production342.75s; producer memory unmeasured. P05d register sealed (772builder/478rootchecks); runner/auditor/analyzer qualification and experimentfreeze pending, P06–P10 unfinished. Modelbranchclosed; no experts/downloads/monitor or biological truth claim.
+- [[research-log-2026-11-01-study-freeze]] - Current: P05 complete technicalscope; READY49c2ce67 binds71runtime/7extra pins,12units/38outputs/90decisions.36runner/25auditor/17analysis tests pass, persistentfictionalqualification passes with0nativeoutputs. P06once+sourceaudit next; P06–P10unfinished. Modelbranchclosed/no experts/downloads/monitor/clinicaltruthclaim.
+
+- [[research-log-2026-11-01-source-references]] - Prior checkpoint: twelve refs/180facts/all24source rows independently verified (1,163checks),41fictionaltests pass. Production342.75s; producer memory unmeasured. Register sealed (772builder/478rootchecks); experimentfreeze thenpending.
 
 - [[research-log-2026-11-01-source-registry-inputs]] - Prior checkpoint: P05a/P05b complete: all137 originals/receipts, full1.75m-row registry/twelve identity-ranked units verified (789checks); original-only12packets/180bindings independently verified (1,238checks). References then pending.
 

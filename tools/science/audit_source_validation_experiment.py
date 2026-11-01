@@ -571,6 +571,15 @@ def native_projection(ready, manifest, budget):
     return references, query, selected_all, nodes
 
 
+def qualification_index(ledger):
+    qualification = ledger.get("native_qualification")
+    require(type(qualification) is dict and list(qualification) == list(CASES),
+            "Exactly twelve ordered native qualification mappings required")
+    require(all(type(row) is dict and row.get("case_id") == key
+                for key, row in qualification.items()), "Qualification key/row identity differs")
+    return dict(qualification)
+
+
 def audit_actual(args):
     """Actual audit only after the user's separately pinned terminal run exists."""
     ledger_path = Path(args.ledger).absolute()
@@ -644,7 +653,7 @@ def audit_actual(args):
         rawrows = [{"record_key": request["record_key"], **row} for request, row in zip(task["records"], groups["gwas_credible_sets"] + groups["credible_set"])]
         skeleton = [{k: f[k] for k in ("fact_id", "record_key", "field", "source")} for f in ref["facts"]]
         check("native_original_to_packet_" + cid, s.same(packet["neutral_task"], task) and s.same(packet["source_records"], rawrows) and s.same(packet["fact_skeleton"], skeleton) and s.same(packet["source_nodes"], encode(nodes)) and packet["lineage"]["reference_inputs"] == packet["lineage"]["evaluation_inputs"] == [] and packet["role"] == "agent_evidence" and packet["agent_visible"] is True)
-    qualification = {c["case_id"]: c for c in ledger["native_qualification"]}
+    qualification = qualification_index(ledger)
     need("all12_qualification_rows", list(qualification) == list(CASES))
     for cid, row in qualification.items():
         check("source_qualified_denominator_" + cid, row["disposition"] == "compiled" and all(row[k] == ready["native_cases"][cid][k] for k in ("task_sha256", "reference_sha256", "measurement_answerable_facts", "measurement_answerable_groups", "requested_facts")))

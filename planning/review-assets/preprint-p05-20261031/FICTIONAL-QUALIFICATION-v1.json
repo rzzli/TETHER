@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "PASS_PERSISTENT_FICTIONAL_QUALIFICATION_NOT_STUDY",
+  "recorded_at_utc": "2026-11-01T09:02:21.511500+00:00",
+  "preparation_commit": "5e264be",
+  "fixture_root": "data/cache/preprint-p05-fixtures-20261101T090035Z",
+  "fixture_manifest_sha256": "b6a43312e68cb26951124ab8a30507d47cb4c00e5b7f6f57be725f2fb1360040",
+  "qualification_root": "data/cache/preprint-p05-fictional-qualification-20261101T090042Z",
+  "qualification_ledger_sha256": "fadf013f8fdb2f196c191561b1bafe96ef542f95b07a8deae05dd94f781ce7f7",
+  "qualification_seal_sha256": "1d8af7f56f0c17c7eb6bd1f266f3d40c9651951bbaceea93813b09425ed7e914",
+  "artifact_hashes_checked": 15,
+  "runner_code_sha256": "9a63d63eacbfb71712376862d38d77f72dd4edf616521073ad287e53eb275bf8",
+  "native_outputs_executed": 0,
+  "fictional_scenarios": 14,
+  "fictional_decisions": 42,
+  "output_terminal_counts": {
+    "unexecuted": 24,
+    "returned": 12,
+    "malformed": 2
+  },
+  "decision_verdict_counts": {
+    "no_decision": 48,
+    "admitted": 21,
+    "rejected": 21
+  },
+  "resources": {
+    "cpu_seconds": 4.4375,
+    "enforcement": "cooperative checkpoints; process peak may precede this run; physical/cache effects unmeasured",
+    "limits": {
+      "accepted_wire_bytes": 262144,
+      "audit_seconds": 3600,
+      "fictional_source_bytes": 4194304,
+      "logical_completed_hash_bytes": 549755813888,
+      "memory_bytes": 2147483648,
+      "original_files": 137,
+      "output_bytes": 268435456,
+      "retained_raw_bytes": 524288,
+      "row_enumeration_passes": 4,
+      "seconds": 3600,
+      "unique_original_bytes": 4294967296
+    },
+    "logical_completed_hash_bytes": 453574,
+    "model_calls": 0,
+    "network_calls": 0,
+    "new_downloads": 0,
+    "original_row_enumeration_pass_attempts": 0,
+    "original_row_enumeration_passes": 0,
+    "partial_failed_hash_bytes": null,
+    "partial_original_row_enumeration_status": "none_observed",
+    "peak_sampled_process_rss_bytes": 37912576,
+    "physical_io_bytes": null,
+    "physical_io_status": "not_measured",
+    "process_lifetime_peak_bytes": 104980480,
+    "provider_spending_usd": 0,
+    "retained_bytes_read": 337105,
+    "wall_seconds": 4.484000000054948
+  },
+  "scientific_validation": "not_established",
+  "actual_study_execution_authorized": false,
+  "interpretation": "Known constructed qualification controls. Reuse in the later locked study is paired technical demonstration, not new independent samples or natural error prevalence."
+}

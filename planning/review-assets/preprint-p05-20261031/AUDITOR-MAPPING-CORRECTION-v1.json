@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ROOT_AUDITOR_MAPPING_CORRECTION",
+  "reviewed_at_utc": "2026-11-01T09:07:30.218132+00:00",
+  "prior_review_sha256": "c9ae7f3dfe6e883cf9a89fad475417c8dfdc4a5126f8338b6d37019c3b4ca831",
+  "finding": "Auditor treated keyed native_qualification dictionary as a list; original inline code raises TypeError on the actual producer schema.",
+  "regression_before_fix": {
+    "path": "AUDITOR-MAPPING-REGRESSION-BEFORE-v1.txt",
+    "sha256": "de232fff2ddfe7f4c7af8ee8497c573507b1cb1f49c0cf8a13b06648d602ce12",
+    "tests": 1,
+    "errors": 1
+  },
+  "correction": "Require exactly12ordered keys and matching rowcase_id, reject legacy list/missing/mismatched keys, then compare all source-qualified denominators.",
+  "code_sha256": {
+    "tools/science/audit_source_validation_experiment.py": "aae8db1bf4bc2da1d14836a18cfb8d4273815f8659c7ea9064f2ea620371fe0f",
+    "planning/review-assets/preprint-p05-20261031/test_audit_source_validation_experiment.py": "001f6168f3f603940c3ec7df1c7725d1eae362b172b8f7c44e57b34d1377b2d1"
+  },
+  "tests_after_fix": {
+    "methods": 25,
+    "failures": 0,
+    "skips": 0,
+    "seconds": 4.375,
+    "log_sha256": "eba3b8b160b29dbfab3ebb2fa70260130d52f7ec24cd74cabbf898574f0f6c2a"
+  },
+  "runner_unchanged_sha256": "9a63d63eacbfb71712376862d38d77f72dd4edf616521073ad287e53eb275bf8",
+  "analyzer_unchanged_sha256": "e61d18dcc8f571766e419b4c535f3e18ef0c2a00531a620a8a9cbba6c8dfaeed",
+  "native_study_outputs_created": 0,
+  "actual_execution_authorized": false,
+  "issues": [],
+  "scientific_validation": "not_established"
+}
