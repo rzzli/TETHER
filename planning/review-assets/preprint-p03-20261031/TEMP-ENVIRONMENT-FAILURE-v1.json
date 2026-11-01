@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "TEST_ENVIRONMENT_FAILURE_BEFORE_SCORING",
+  "observed_at_utc": "2026-11-01T03:50:45.297153+00:00",
+  "command": ".venv/Scripts/python.exe -B -m unittest discover -s tests -p test_study_source_fact_evaluation.py -v",
+  "tests_run": 4,
+  "errors": 8,
+  "reason": "Default sandbox TEMP allowed directory creation but denied payload writes and cleanup before evaluator assertions. No production test assertion failed in this attempt.",
+  "correction": "Use a child-process TEMP/TMP directory within the authorized workspace; no operating-system setting changed."
+}

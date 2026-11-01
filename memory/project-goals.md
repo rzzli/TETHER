@@ -10,6 +10,46 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Source Fact Evaluator]].
+P03 accepted in targeted engineering scope: source-inclusive compiler/replay,
+common retained-byte adapters, grouped source-reporting coverage/errors/unknowns,
+strict types/units/sources and complete terminal accounting. Reporting groups
+are not the original unweighted H5-A statistic. Measurement denominator zero
+stays null, and no scientific/clinical truth or expert alignment is inferred.
+
+173 targeted methods pass (99 new/74 relevant legacy, zero skips), including 60
+independent controls; installed JSON-only smoke outside checkout and direct
+actual-row replay pass. Old 326/327 pins unchanged; one validation-gate correction and six gate tests
+also pass; failed-source archive preserved. Three study modules additional;
+no whole-suite or final release qualification. Development wheel metadata remains
+0.3.11: identify its exact hash, never replace old same-version archives.
+
+One fixed exposed CTLA4/Crohn row: 15 fields, identity 7/9, context 2/2,
+measurement 0/4 (three null, one schema absent); reference hash
+a0e18937d15603cd3008b613ec1bd3ef23df2383a7b43ff037d6e164b563c41e.
+One separately authorized 841-byte E: content-addressed receipt archive created,
+original transport receipt/source/state/worker unchanged. No download/model call.
+P02a's 23-file/2.43 GB batch approval still pending; archive permission does not
+authorize it. No indirect downloader workaround or monitor restart.
+
+Next P04: qualify existing permitted generator/config/runtime and live state;
+independent agent-visible raw-source packets, a new named frozen reporting
+protocol, genuine feasible arms, exact assembler/always-abstain controls and
+complete resource/terminal accounting. References and descendants cannot enter
+generation. No inherited native/v3 conformance, old failure replay, paid access or
+new model download. Negative generation feasibility remains reportable without
+opening more native infrastructure. P05 cohort/precision freeze and P06–P10
+experiments/analysis/manuscript/release/preprint package remain incomplete.
+
+HR1–HR4 retired; bespoke returns and answer-aware descendants archive-only.
+Source-only references use fresh no-fork contexts; semantic AI audit secondary.
+Keep original R07 six/zero, native FAILED/INCOMPLETE_TIMEOUT, empty real features,
+null probabilities, $0 provider spending with platform costs unknown, 65 missing
+interpretation inputs, 36 unqualified labels, 17/32 observable primary states and
+0/12 joint-ready packages separate. See [[research-log-2026-10-31-source-fact-evaluator]].
+
+### Prior source-fact feasibility checkpoint (retained history)
+
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Source Fact Feasibility]].
 P02 bounded prototype complete with source-gap finding, not a qualified scientific
 primary. Three exposed development units BTK/psoriasis, CTLA4/Crohn, FCGRT/Crohn:

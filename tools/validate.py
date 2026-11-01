@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import ast
+import hashlib
 import importlib.util
 import io
 import json
@@ -25,6 +26,28 @@ from tools.review.probe_framework import main as probe_main
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
     'install the ingest extra for source-audit tests', 'PowerShell 7 required for utility integration'}
 
+# Failed originals are retained as audit data, never imported/executed. Only an
+# exact path AND byte hash is exempt from the active-source syntax requirement.
+ARCHIVED_INVALID_PYTHON = {
+    'planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py':
+        '5aa964d861635aaf01c50ec05f83618d5bfb7307f6e591630991f34070d05253',
+}
+
+
+def validate_python_artifact(name, raw):
+    """Parse active code while preserving sealed intentionally invalid originals."""
+    expected = ARCHIVED_INVALID_PYTHON.get(name)
+    if expected is not None:
+        if hashlib.sha256(raw).hexdigest() != expected:
+            raise ContractError('Preserved invalid-source archive changed: '+name)
+        try:
+            ast.parse(raw.decode('utf-8-sig'), filename=name)
+        except SyntaxError:
+            return 'archived_invalid_source'
+        raise ContractError('Expected failed-source archive unexpectedly parses: '+name)
+    ast.parse(raw.decode('utf-8-sig'), filename=name)
+    return 'active_python'
+
 
 def successful_tests(result, mode):
     return (result.testsRun > 0 and result.wasSuccessful() and
@@ -34,6 +57,7 @@ def successful_tests(result, mode):
 def structural_checks():
     files = subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard'],cwd=ROOT).decode().split('\0')
     files = sorted(set(name for name in files if name))
+    archived_invalid = []
     for name in files:
         parts = Path(name).parts
         if any(key in parts for key in ('.venv','runs','private')):
@@ -41,7 +65,8 @@ def structural_checks():
         if name.startswith(('data/raw/','data/reference/','data/derived/','data/cache/','data/benchmark/')) and Path(name).name != '.gitkeep':
             raise ContractError('Bulk/benchmark payload entered tracking scope: '+name)
         if name.endswith('.py'):
-            ast.parse((ROOT/name).read_text(encoding='utf-8-sig'))
+            if validate_python_artifact(name, (ROOT/name).read_bytes()) == 'archived_invalid_source':
+                archived_invalid.append(name)
     for name in ('runs/probe.json','data/derived/probe.json','data/raw/probe.parquet',
                  'data/manifests/private/probe.json','.venv/probe','.env','data/benchmark/labels/probe.json'):
         if subprocess.run(['git','check-ignore','-q',name],cwd=ROOT).returncode:
@@ -60,7 +85,8 @@ def structural_checks():
     from asof.serde import safe_child
     for row in entries:
         safe_child(ROOT,row['path'])
-    return {'tracked_scope_files':len(files),'providers':len(catalog['providers']),'datasets':len(catalog['datasets'])}
+    return {'tracked_scope_files':len(files),'providers':len(catalog['providers']),'datasets':len(catalog['datasets']),
+            'preserved_invalid_python_archives':archived_invalid}
 
 
 def powershell_check():

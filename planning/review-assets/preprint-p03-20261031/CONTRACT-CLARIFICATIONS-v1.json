@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "DEVELOPMENT_CONTRACT_CLARIFIED_BEFORE_NEW_GENERATION",
+  "recorded_at_utc": "2026-11-01T03:54:04.313474+00:00",
+  "initial_contract_sha256": "f6e2f92ab471d34dfb57a0216a09fc1fb8eda4b70784831aa03ab6dcbb58081a",
+  "current_document": {
+    "path": "docs\\SOURCE_FACT_EVALUATION.md",
+    "bytes": 11864,
+    "sha256": "ff6a748594c8dbd21f2b7d7ad48ce530f76a0afba45c4f3505c5073a372a0fd8"
+  },
+  "clarifications": [
+    "Equal weight for each answerable group across primary families; not a family-average-of-averages.",
+    "Scoring reparses retained bytes; no normalized output/hash injection.",
+    "Stable source verification is at reference compilation/replay, not live rehash on every score.",
+    "Returned malformed bytes normalize terminal but retain transport disposition.",
+    "Explicit bounded all-unknown handling has a separate outcome, never coverage success.",
+    "Native measurement QC excludes Boolean/container/string values and requires integer p-value exponent.",
+    "Compiler must accept a complete exact output under shared adapter bounds.",
+    "External raw roots require explicit trusted approval; logical paths permit same-byte relocation.",
+    "Effective catalog, explicit deny policy and logical source snapshot are fingerprint-bound; exact selected joins are same-release."
+  ],
+  "scientific_effect": "No biomedical conclusion or qualified measurement endpoint added. No task/source/arm selected from new candidate performance.",
+  "new_candidate_generation_calls": 0,
+  "provider_spending_usd": 0,
+  "controls": "Fictional engineering fixtures only; initial missing-module, sandbox TEMP and fixture-group failures retained separately. Independent representability failures are retained before correction."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-01T03:57:37.998644+00:00",
+  "exit_code": 0,
+  "modules": [
+    "test_study_source_fact_sources",
+    "test_study_source_fact_adapters",
+    "test_study_source_fact_evaluation",
+    "test_study_source_fact_peer",
+    "test_v02_hardening",
+    "test_v02_regressions",
+    "test_store_temporal_hardening",
+    "test_study_source_rows",
+    "test_study_interpretation_interface",
+    "test_study_baselines",
+    "test_wire"
+  ],
+  "elapsed_seconds": 5.078000000095926,
+  "full_suite": false,
+  "stdout_log": "planning\\review-assets\\preprint-p03-20261031\\TARGETED-TESTS-v1.txt"
+}

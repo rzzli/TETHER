@@ -1,0 +1,73 @@
+test_group_means_prevent_component_rich_record_dominance (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_group_means_prevent_component_rich_record_dominance) ... ERROR
+test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule) ... ERROR
+test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts) ... ERROR
+test_wrong_native_types_sign_units_or_source_are_critical (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_wrong_native_types_sign_units_or_source_are_critical) ... ERROR
+
+======================================================================
+ERROR: test_group_means_prevent_component_rich_record_dominance (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_group_means_prevent_component_rich_record_dominance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_evaluation.py", line 68, in setUp
+    self.reference = compile_reference(self.task, self.snapshot, self.root,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 334, in compile_reference
+    task = validate_task(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 182, in validate_task
+    _need(group not in groups or groups[group] == group_identity, "Group crosses records or families")
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 59, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Group crosses records or families
+
+======================================================================
+ERROR: test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_evaluation.py", line 68, in setUp
+    self.reference = compile_reference(self.task, self.snapshot, self.root,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 334, in compile_reference
+    task = validate_task(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 182, in validate_task
+    _need(group not in groups or groups[group] == group_identity, "Group crosses records or families")
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 59, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Group crosses records or families
+
+======================================================================
+ERROR: test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_evaluation.py", line 68, in setUp
+    self.reference = compile_reference(self.task, self.snapshot, self.root,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 334, in compile_reference
+    task = validate_task(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 182, in validate_task
+    _need(group not in groups or groups[group] == group_identity, "Group crosses records or families")
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 59, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Group crosses records or families
+
+======================================================================
+ERROR: test_wrong_native_types_sign_units_or_source_are_critical (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_wrong_native_types_sign_units_or_source_are_critical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_evaluation.py", line 68, in setUp
+    self.reference = compile_reference(self.task, self.snapshot, self.root,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 334, in compile_reference
+    task = validate_task(task)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 182, in validate_task
+    _need(group not in groups or groups[group] == group_identity, "Group crosses records or families")
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_sources.py", line 59, in _need
+    raise ContractError(message)
+asof.serde.ContractError: Group crosses records or families
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+FAILED (errors=4)

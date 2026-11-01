@@ -17,7 +17,7 @@ Neither task should delay the paper's objective multicase evaluation.
 - [x] P01 Validate the preprint scope/evidence/related-work review and current status/TODO/memory updates. Retain historical facts, failed attempts and the preceding checklist.
 - [x] P02 Complete the bounded three-unit source-to-fact feasibility prototype and baseline-ceiling check: 57/57 literature identity/date facts, zero populated literature measurements; GWAS locus identifier distinguished from measurements; incomplete local credible-set join and parser control retained. Ten tests and independent source checks pass. Scientific primary remains unqualified.
 - [ ] P02a Conditional input-completion branch: if the one-time batch is approved and the linked-locus task is retained, complete the isolated 23-file Open Targets 25.09 credible-set batch (2.43 GB; 3 GiB cap), verify inputs and repeat the exact locus join under new outputs. Do not bypass the rejection or overwrite old inputs. This branch does not block task-contract or manuscript preparation and cannot qualify a multicase study by itself.
-- [ ] P03 First freeze the bounded reporting task, source grain/join rules, fact groups, common denominator and failure/partial-output scoring; choose a source-reporting tradeoff study or explicitly narrower feasibility paper if measurements remain unavailable or projection reaches the ceiling. Then implement/test only the required shared typed-fact evaluator and arm adapters, coverage/error/missing-input/failure scoring, quote/temporal/role/lineage checks and direct/derived response exclusion. Preserve original outputs and legacy verifiers.
+- [x] P03 Freeze the development source-reporting task and grouped scoring contract; implement the source-inclusive compiler/replay, common retained-byte adapters, grouped coverage/errors/unknowns and all-cell accounting. All 173 targeted tests pass (99 new/74 legacy, zero skips); actual-format selected-row replay and fresh installed JSON-only smoke pass. Core/legacy interfaces retained; this is not a new model result or qualified measurement endpoint.
 - [ ] P04 Run the bounded development comparison with genuine eligible arms; measure actual generation/resource feasibility and baseline ceiling. Retain all failures; narrow the paper if model interpretation remains infeasible.
 - [ ] P05 Qualify and freeze the separate evaluation cohort through a prospective candidate/exclusion register, exposure crosswalk, study/article/locus/family clusters and actual answerable/insufficient-input counts. Freeze sources/references, primary contrast, conservative sizing/precision objective, masks/order swaps, budgets, ablation/control schedules and analysis. Declare exploratory scope when evidence cannot support stronger inference.
 - [ ] P06 Execute all frozen clean-input, ablation and controlled fault conditions once, with complete all-cell terminal accounting and source-inclusive verification; keep AI audits secondary.
@@ -26,19 +26,19 @@ Neither task should delay the paper's objective multicase evaluation.
 - [ ] P09 Qualify the lawful public artifact package: source/data/model cards, redistribution allowlist, exact-SHA release manifest, frozen protocols/adapters/evaluator/analysis, clean installed study/baseline replay, relocation and appropriate local/hosted checks. Measure CI time budget.
 - [ ] P10 Perform final manuscript-to-artifact consistency and preprint-package validation; prepare the local submission-ready package. Actual publication and final author metadata remain owner-controlled.
 
-**Immediate execution tranche: P03 task/score contract → minimal evaluator → P04 pilot.** P02a is a conditional data branch awaiting approval, not a universal paper gate. The measured P02 source-gap report and P03 specification are in the
-[current assessment](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md>). The endpoint must become executable on eligible inputs before another questionnaire or broad infrastructure task.
+**Immediate execution tranche: P04 generator/access preflight → independent generation packets and frozen pilot → all-cell execution/analysis.** P02a is a conditional data branch awaiting approval, not a universal paper gate. The P03 acceptance and detailed next-stage prerequisites are in the
+[current assessment](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). The primary scientific measurements remain unqualified; the implemented endpoint is grouped literal source reporting.
 A complete preprint needs an empirical argument and manuscript, not only more tests.
 
 ## Current evidence and limits
 
 | Area | Current status |
 |---|---|
-| Engineering | 0.3.11/default v2; retained 1,774 tests/327 accepted pins; no new full-suite run for this review |
+| Engineering | 0.3.11/default v2 base retained; 326 old pins unchanged; one exact-hash archive-validation correction tested. New source-reporting study modules pass 173 targeted tests and installed smoke; no new full-suite/release qualification |
 | Development dossiers | Ten canonical integrity-verified dossiers; 20 original rows technically audited; no full scientific validation |
 | Real selection studies | 60-cell/114-call selection experiment and 32-cell/48-call top-one study exist; exposed development/AI-reference limits retained |
 | Interpretation | Six complete R07 responses/zero contract passes; recorded comparisons/preparation are not successful generated answers |
-| H5-A primary | Typed-fact coverage/critical-distortion/80% rule not implemented; P02/P03 are paper-critical |
+| Paper reporting endpoint | Grouped typed-fact coverage/critical-error/80% completion implemented; original unweighted H5-A and measurement-data qualification are not inferred; new empirical comparison pending |
 | Fresh evaluation | No qualified fresh cohort; existing cases/source frame do not establish holdout status or adequate information |
 | Manuscript/release | No complete tracked manuscript/bibliography or paper-specific release package; exact-current-SHA hosted checks pending |
 | External experts | HR1–HR4 and future responses retired, not waiting or completed; prior returns/derivatives archive-only |

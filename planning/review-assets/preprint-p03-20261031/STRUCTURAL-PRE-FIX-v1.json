@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_INTENTIONAL_ARCHIVED_SYNTAX_TREATED_AS_ACTIVE",
+  "failures": [
+    {
+      "path": "planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py",
+      "line": 55,
+      "reason": "unterminated string literal (detected at line 55) (planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py, line 55)",
+      "bytes": 8982,
+      "sha256": "5aa964d861635aaf01c50ec05f83618d5bfb7307f6e591630991f34070d05253"
+    }
+  ]
+}

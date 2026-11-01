@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "status": "PASS_P03_SOURCE_REPORTING_ENGINEERING_ONLY",
+  "recorded_at_utc": "2026-11-01T04:09:52.076880+00:00",
+  "base_commit": "6489ea0040d011df863653345d0372683c71b41e",
+  "stage_P03_complete": true,
+  "paper_complete": false,
+  "new_model_comparison_executed": false,
+  "new_model_calls": 0,
+  "new_dataset_downloads": 0,
+  "provider_spending_usd": 0,
+  "core": {
+    "version": "0.3.11",
+    "old_source_pins": 327,
+    "unchanged_old_pins": 326,
+    "intentional_changes": [
+      {
+        "path": "tools/validate.py",
+        "old_sha256": "a3f6538f09589be23cca1572d71b099bece4b6456b528fd87834246b56afa30c",
+        "new_pin": {
+          "path": "tools\\validate.py",
+          "bytes": 7893,
+          "sha256": "97ebb25f2f58f11ee04878b19e12d85d0765431052969ff4930e78a99ccb4873"
+        },
+        "reason": "Preserve exact-hash intentionally invalid archive as audit data; retain active source syntax gate"
+      }
+    ],
+    "old_full_tests_retained": 1774,
+    "full_suite_executed_now": false,
+    "new_study_modules": 3,
+    "development_wheel_not_final_release": true
+  },
+  "tests": {
+    "targeted_study_and_core": {
+      "run": 173,
+      "new": 99,
+      "independently_authored_new": 60,
+      "relevant_legacy": 74,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "separate_validation_gate": {
+      "run": 6,
+      "new": 4,
+      "relevant_legacy": 2,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "full_suite": false
+  },
+  "structure": {
+    "tracked_scope_files": 6823,
+    "providers": 83,
+    "datasets": 178,
+    "preserved_invalid_python_archives": [
+      "planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py"
+    ]
+  },
+  "current_local_links_checked": 172,
+  "broken_links": [],
+  "acceptance_checks": [
+    {
+      "check": "frozen contract and pre-generation clarifications retained",
+      "passed": true
+    },
+    {
+      "check": "complete source graph, receipt, role, scope and temporal controls pass",
+      "passed": true
+    },
+    {
+      "check": "response/evaluator ancestor denial and trusted explicit deny policy bound",
+      "passed": true
+    },
+    {
+      "check": "field taxonomy prevents identifiers/provider scores becoming measurements",
+      "passed": true
+    },
+    {
+      "check": "raw-byte-only scoring and explicitly unscorable legacy prose",
+      "passed": true
+    },
+    {
+      "check": "explicit unknowns no credit and zero denominator null",
+      "passed": true
+    },
+    {
+      "check": "group weighting and common denominators, no component-count inflation",
+      "passed": true
+    },
+    {
+      "check": "all scheduled terminal cells reconciled with no rescue after failure",
+      "passed": true
+    },
+    {
+      "check": "strict type, signed zero, units and source matching",
+      "passed": true
+    },
+    {
+      "check": "compiler common-wire representability closure",
+      "passed": true
+    },
+    {
+      "check": "explicit external raw roots and logical same-byte relocation",
+      "passed": true
+    },
+    {
+      "check": "same-release selected zero/one/many/conflicting joins",
+      "passed": true
+    },
+    {
+      "check": "independent original-row check and source-inclusive replay",
+      "passed": true
+    },
+    {
+      "check": "fresh installed JSON-only dependency-free smoke outside checkout",
+      "passed": true
+    },
+    {
+      "check": "old outputs/default/runtime source unchanged",
+      "passed": true
+    },
+    {
+      "check": "one exact-hash archive validation correction independently reviewed",
+      "passed": true
+    },
+    {
+      "check": "P04-P10 and scientific validation remain incomplete",
+      "passed": true
+    }
+  ],
+  "actual_source_independent_check": {
+    "agent": "/root/p03_actual_replay_check",
+    "original_row_group": 0,
+    "original_row": 14254,
+    "fields": 15,
+    "identity_answerable": 7,
+    "identity_fields": 9,
+    "context_answerable": 2,
+    "context_fields": 2,
+    "measurement_answerable": 0,
+    "measurement_fields": 4,
+    "reference_sha256": "a0e18937d15603cd3008b613ec1bd3ef23df2383a7b43ff037d6e164b563c41e",
+    "receipt_copies_equal": true,
+    "receipt_archive_bytes": 841,
+    "new_E_archive_files": 1,
+    "scope": "pins and exact selected original row plus public source-inclusive replay; no author script/scorer/model/corpus scan",
+    "unverified": [
+      "earlier author execution timing/order",
+      "resource counters",
+      "publisher checksum authenticity",
+      "unknown upstream namespace/first-public history",
+      "undisclosed ancestry",
+      "scientific validity",
+      "full-collection coverage"
+    ]
+  },
+  "retained_pre_fix_findings": {
+    "independent_representability_assertion_failures": 4,
+    "source_author_measurement_type_same_release_subtest_failures_reported": 7,
+    "source_author_root_closure_failures_reported": 2,
+    "source_author_unit_join_conflict_failure_reported": 1,
+    "scope": "Pre-fix author/peer tool logs retained; final targeted run independently executes corrected tests. Counts not scientific units.",
+    "environment_or_fixture_events": [
+      "initial missing module",
+      "default sandbox TEMP payload and cleanup denied",
+      "fixture globally exclusive group label reused",
+      "pytest absent before peer unittest conversion",
+      "stale measurement source types moved to context after explicit numeric-QC amendment",
+      "initial uv interpreter cache persistence denied",
+      "exact intentionally invalid archived Python blocked structural gate"
+    ]
+  },
+  "new_or_corrected_code_and_test_pins": [
+    {
+      "path": "src\\asof\\study\\source_fact_sources.py",
+      "bytes": 30373,
+      "sha256": "18d059744b39390a12f84d4cf1b92fee00f86438b4a7574ec2cd202c9ab76ec8"
+    },
+    {
+      "path": "src\\asof\\study\\source_fact_adapters.py",
+      "bytes": 10934,
+      "sha256": "4651cfdaef34f4e51e89c7df61d5db884edfa90baf7c4f5b41645d596bc299e0"
+    },
+    {
+      "path": "src\\asof\\study\\source_fact_evaluation.py",
+      "bytes": 12892,
+      "sha256": "81b58e7ab2b90dd14c13796a918dc52a4a795dfa86e9b994ecb47a70d3f299c2"
+    },
+    {
+      "path": "tests\\test_study_source_fact_sources.py",
+      "bytes": 26309,
+      "sha256": "11d56c9a8e1364615f13de768d9956cc0b6933e03f13ce47c491a684a5ffdc3f"
+    },
+    {
+      "path": "tests\\test_study_source_fact_adapters.py",
+      "bytes": 13526,
+      "sha256": "5f4dfc37f15998c3dab937b58dd494aeaac4bc7a64bf0fbe2aacde7bf1833d9c"
+    },
+    {
+      "path": "tests\\test_study_source_fact_evaluation.py",
+      "bytes": 8334,
+      "sha256": "5a84eeccec3d3ad5f817ad61faab9c79165c0315e346710833ad7f17f18d67a2"
+    },
+    {
+      "path": "tests\\test_study_source_fact_peer.py",
+      "bytes": 24338,
+      "sha256": "db764e964d62a68d611aa168641a9758fdd172870da6cffc59eaf620fed13f2e"
+    },
+    {
+      "path": "tools\\validate.py",
+      "bytes": 7893,
+      "sha256": "97ebb25f2f58f11ee04878b19e12d85d0765431052969ff4930e78a99ccb4873"
+    },
+    {
+      "path": "tests\\test_validation_archived_syntax.py",
+      "bytes": 1800,
+      "sha256": "b2efccd90b371fd9df1e283ee8e20aa57cf5fa9bede9c71918b9857266717961"
+    }
+  ],
+  "document_pins": [
+    {
+      "path": "README.md",
+      "bytes": 11551,
+      "sha256": "62d0a879d5c7d712ed64466f23c4b0b967050b12dc3bacff797fb74d4eed39cf"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 7766,
+      "sha256": "5e2cb60173c23c70494c166abe32c912d1c12660338d944c791e4d0e5a74c0c5"
+    },
+    {
+      "path": "docs\\SOURCE_FACT_EVALUATION.md",
+      "bytes": 11864,
+      "sha256": "ff6a748594c8dbd21f2b7d7ad48ce530f76a0afba45c4f3505c5073a372a0fd8"
+    },
+    {
+      "path": "data\\README.md",
+      "bytes": 21869,
+      "sha256": "7ba6d3a6821bdc93cdab84f011b847fe5ca3c3e4d7b6f6439b56f436c809b94b"
+    },
+    {
+      "path": "data\\DATA_PLAN.md",
+      "bytes": 73323,
+      "sha256": "fd4b0b1a6f4ece243ceef5175d63bc0f2cb5f4fd528400af6fb2392366be06b0"
+    },
+    {
+      "path": "memory\\MEMORY.md",
+      "bytes": 31457,
+      "sha256": "1ff612cda294fbb6af0aca3b2377e5725e4ba29a7f96d62f2579c03d5eaf5a6d"
+    },
+    {
+      "path": "memory\\project-goals.md",
+      "bytes": 130655,
+      "sha256": "90e12172ac565f9c2a6fb06202c159a18bc13f16c4c95c00e7c0b34187d26c3d"
+    },
+    {
+      "path": "memory\\research-log-2026-10-31-source-fact-evaluator.md",
+      "bytes": 4474,
+      "sha256": "0f26db5b541eab3dac5e0e1d7d267f2bbab7f79aaf06d8b73f3a8d70c6a82530"
+    },
+    {
+      "path": "planning\\Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "bytes": 10918,
+      "sha256": "db648ca019771ed5e263495979c474c2f0cc7e2599e8a183efc4e84ddc7b43d8"
+    },
+    {
+      "path": "planning\\Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "bytes": 31008,
+      "sha256": "1b94bcf82ecadca18f2cdb1f845dafaef33457a4c85a4a4c880e3c2fceb5b787"
+    },
+    {
+      "path": "planning\\Project Progress Reassessments.md",
+      "bytes": 21969,
+      "sha256": "a41fbc550a2c50381bb8328cf1bf62ae23c0f42cbc822fa7e8a2cbe8a79fd514"
+    },
+    {
+      "path": "planning\\Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35197,
+      "sha256": "8d4c78c4dfc202fcc35a7ec4e7ac6d54fcec20b2a12daa750a623ace28f8027f"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\README.md",
+      "bytes": 2159,
+      "sha256": "bfe5a6ecf0ebd74e8a09300b93d4eb96d77a995d4ae6d0cef5444552949a07e5"
+    }
+  ],
+  "evidence_pins": [
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\ACTUAL-SOURCE-REPLAY-v1.json",
+      "bytes": 6175,
+      "sha256": "dbfd8dfcacfa4eee0a5eeef1035c9b6c1c39cda1d8ade7a747c1b87e72490cfd"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\ARCHIVE-GATE-FINAL-v1.txt",
+      "bytes": 1193,
+      "sha256": "ae0e21611176ccb740d635ca95e9a63ae1c7bdbfd2b0489646f964d3ee0484d5"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\ARCHIVE-GATE-PRE-FIX-v1.txt",
+      "bytes": 6334,
+      "sha256": "21a6a5514e43c43df0d2a5132accf0e9c7787d970e2918a4b7e22c2eddce769a"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\BUILD-ENVIRONMENT-FAILURE-v1.json",
+      "bytes": 592,
+      "sha256": "0999566cf0130a20cddd40b7346b4d4bce4f94ddd07718284f9ff170a43e4a86"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\CONTRACT-CLARIFICATIONS-v1.json",
+      "bytes": 1800,
+      "sha256": "4b651363fa3c462caeaeb95a6d1c1915811a572bf4cd4df1407a01bdef630bed"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\CONTRACT-FREEZE-v1.json",
+      "bytes": 953,
+      "sha256": "8b9d83bd96d93f125500a79c43af2e12e1396bcb31d78b7cac2ab753754494c0"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\EVALUATOR-TESTS-v1.txt",
+      "bytes": 5782,
+      "sha256": "54b889d98b8513a8b5dfd55cf17ff07df9a670b05ddff8a2b81cf7208bf489fc"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\EVALUATOR-TESTS-v2.txt",
+      "bytes": 893,
+      "sha256": "7d12990533f2ead9848574a07c8aa8bcf5a61a799e1003b5a6e2d50eb2a8e59f"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\INITIAL-EVALUATOR-TESTS-v1.txt",
+      "bytes": 1249,
+      "sha256": "990a4eb29433bec0554e7b18d787cc5f72b6d32f4836ffcbe8b22e2214236dc9"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\INSTALLED-SMOKE-v1.json",
+      "bytes": 4106,
+      "sha256": "1e531b9920d8c86552e81e6d9f8645a63693c09442be3794d9718c701fa622db"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\installed_smoke.py",
+      "bytes": 4697,
+      "sha256": "b84a3e67cdb834b0864b20d58494c77268c866a28d93256213f8bd8bce0c3a69"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\README.md",
+      "bytes": 2159,
+      "sha256": "bfe5a6ecf0ebd74e8a09300b93d4eb96d77a995d4ae6d0cef5444552949a07e5"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\replay_actual_source.py",
+      "bytes": 21765,
+      "sha256": "309389e1c4eff4a1189b51f81c1f531d91f64c185601918a09808d85b854ce60"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\STRUCTURAL-PRE-FIX-v1.json",
+      "bytes": 571,
+      "sha256": "0170f91ffad67aadd26d35e6a8c5419ca4ad7b7981b2efba0873d782f74d8332"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\TARGETED-TESTS-v1.json",
+      "bytes": 655,
+      "sha256": "02b6b4460803c5ed343e6e1569a094a151165f281507e8deb2ae33771d05e9d1"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\TARGETED-TESTS-v1.txt",
+      "bytes": 31460,
+      "sha256": "c7df861ec0c2da847199b29b2a43d64c62c116021432531e9b9fc6ebeac6aaf6"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\TASK-CONTRACT-v1.md",
+      "bytes": 9524,
+      "sha256": "f6e2f92ab471d34dfb57a0216a09fc1fb8eda4b70784831aa03ab6dcbb58081a"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\TEMP-ENVIRONMENT-FAILURE-v1.json",
+      "bytes": 609,
+      "sha256": "6de61f03e752ac2da2575a670ace714a8c8660bc528253b6b4a21c6a6d4c5d96"
+    },
+    {
+      "path": "planning\\review-assets\\preprint-p03-20261031\\WHEEL-BUILD-v2.txt",
+      "bytes": 14426,
+      "sha256": "b9111af7300fd69483e8a7528447036da1c545a72d9439fb01800334ca09a16a"
+    }
+  ],
+  "limits": [
+    "Source fidelity not biomedical truth/entailment",
+    "Trusted explicit provenance not undisclosed ancestry detector",
+    "Windows stable reads not an OS sandbox",
+    "Cooperative deadlines",
+    "Measurement data endpoint unqualified",
+    "References evaluator-only; generation packets not built",
+    "Full suite and exact-SHA release/CI pending",
+    "No fresh cohort or new actual model comparison"
+  ],
+  "next_stage": "P04 generator/access preflight, independent generation packets and frozen bounded pilot"
+}

@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October source-fact feasibility](<Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md>). P02 is measured; target-linked measurements are not yet available in the inspected subset, and the local credible-set table is incomplete. A prepared 23-file/2.43GB batch was rejected by automatic approval before launch; one-time approval is pending. P03 task/scoring-contract work and the evaluator remain unfinished; input completion is a conditional branch, not a universal paper gate. No external expert input or native revival is needed.
+Current checkpoint: [31 October source-fact evaluator](<Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). P03 targeted engineering acceptance is complete: 173 tests, installed JSON-only smoke and one actual source row replay pass. Measurement coverage remains null in that row. Next P04 generator/access preflight, independent generation packets and a frozen bounded pilot. The optional 23-file batch remains pending approval; no external expert input or native revival is needed.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

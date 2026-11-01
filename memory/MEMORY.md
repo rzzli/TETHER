@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-source-fact-evaluator]] - Current checkpoint: P03 source compiler/replay, retained-byte adapters, grouped scorer and all-cell accounting implemented; 173 targeted tests pass, installed JSON-only smoke and one actual-row replay pass. Scientific measurements still unavailable in that selected row. Next P04 generator/access preflight, independent generation packets and frozen bounded pilot; no external experts or new model calls. Optional batch approval still pending.
+
 - [[research-log-2026-10-31-source-fact-feasibility]] - Current checkpoint: P02 measured three-unit feasibility, 57/57 context/ID projection, no target-linked measurements; missing locus in partial 2/25 credible-set input. Prepared 23-file/2.43GB isolated batch explicitly auto-review REJECTED before launch; one-time owner approval pending, no workaround. Ten tests and independent source checks pass; P03 spec prepared, P03–P10 unfinished. No expert input.
 
 - [[research-log-2026-10-31-preprint-readiness]] - Current paper roadmap: P02 source-to-fact feasibility → P03 objective evaluator → P04 bounded pilot, then freeze/experiments/analysis/manuscript/release. Ten-item genetics adapter/old-pair review optional. Engineering and real selection studies retained; no runnable H5-A evaluator, qualified fresh set or manuscript package yet. No external expert dependency.

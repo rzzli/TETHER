@@ -6,18 +6,21 @@ failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
 **Current software: 0.3.11, with v2 execution contracts.** The retained acceptance
-has 1,774 tests; all 327 accepted source/resource pins matched at the latest resume.
+has 1,774 tests; 326 accepted source/resource pins remain unchanged. The validation
+gate has one reviewed correction preserving an exact-hash failed-source archive.
 The source includes optional study preparation, recorded comparison and bounded
 model interfaces. Recorded fixtures and passing software tests are not scientific
 performance measurements.
 
 ## Current status and next step
 
-The [preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>) is the current execution roadmap. The framework and exposed source-selection experiments are retained; the paper-critical gaps are an objective typed-fact evaluator, a new multicase experiment, reproducible analysis and the manuscript/release package. This is a source-reporting/methods paper, with no validated clinical-prediction or expert-equivalence claim.
+The [preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>) is the current execution roadmap. The framework, shared literal-reporting evaluator and exposed source-selection experiments are retained; the remaining paper-critical gaps are a qualified new multicase experiment, reproducible analysis and the manuscript/release package. This is a source-reporting/methods paper, with no validated clinical-prediction or expert-equivalence claim.
 
 The [P02 source-feasibility result](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md>) is now retained: identity/date projection reaches its ceiling, while the intended target-linked measurements remain unavailable in the inspected subset. The CTLA4 locus is absent from the partial two-of-25 local credible-set collection; this is an input gap, not biological absence. A prepared isolated 23-file completion batch awaits one-time approval after automatic review rejected starting the existing downloader under the leave-worker-untouched boundary. No batch or dataset transfer started.
 
-Next: P03 freezes the reporting task and scoring contract, implements the minimal shared evaluator, then P04 runs a bounded pilot. P02a is a conditional input-completion branch; its pending approval does not block contract or manuscript preparation and cannot establish a multicase study alone. The [AI-only policy](<planning/AI Only Evaluation Plan 2026-10-31.md>) still requires no external expert input. The old genetics questionnaire/retrospective pair audit remain optional; original expert-preference H5 is untested. See [TODO](TODO.md) and the current assessment for details.
+The [P03 source-reporting evaluator](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>) is now implemented: 173 targeted tests pass (99 new/74 legacy, zero skips), one actual source row replays, and a dependency-free installed smoke passes outside the checkout. See the [contract and API](docs/SOURCE_FACT_EVALUATION.md). These are mechanical engineering results, not a model-quality comparison or qualified scientific measurement endpoint.
+
+Next: P04 generator/access preflight, independent agent-visible source packets and a frozen bounded pilot. P02a remains a conditional input branch awaiting approval; it cannot establish a multicase study alone. The [AI-only policy](<planning/AI Only Evaluation Plan 2026-10-31.md>) still requires no external expert input. Original expert-preference H5 is untested. See [TODO](TODO.md) for the full paper checklist.
 
 - Ten canonical contemporary development dossiers and their retained source audit exist; see the [run registry](planning/run-registry.json).
 - R07's technical diagnostic remains negative: six complete responses, zero frozen-contract passes. The former human gate is retired; a separate AI retrospective assessment is planned. A stronger-model control remains unqualified.
