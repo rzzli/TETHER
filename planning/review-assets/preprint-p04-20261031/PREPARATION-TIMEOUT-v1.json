@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "terminal_original_authentication_timeout_preserved",
+  "run_directory": "data/derived/preprint-p04-inputs-20261101T042852037040Z",
+  "failure": {
+    "elapsed_seconds": 120.03200000000652,
+    "error": "Preparation deadline expired",
+    "exception_type": "TimeoutError",
+    "generation_authority": false,
+    "implementation_hashes": {
+      "planning/review-assets/preprint-p04-20261031/prepare_generation_inputs.py": "4f5ba039e2da4f915f675e2b201188f13c56e6af09806125aaa7493780329c9b",
+      "src/asof/study/source_fact_inputs.py": "cabbeedaef7723eda57f19ad66c1c1e322555c088feaa6d05a67cc893456000c",
+      "tests/test_study_source_fact_inputs.py": "90e894b66d8a5e998008a562e3333e412215b6a333d46b96beab7276491473f1"
+    },
+    "model_calls": 0,
+    "plan_sha256": "b6afc39926f50cfa3396daff0c786568f0c35d1a8776d4b4a15ee4edbbadb467",
+    "reference_inputs": [],
+    "schema_version": 1,
+    "status": "preparation_failed"
+  },
+  "journal": {
+    "pin": {
+      "path": "data/derived/preprint-p04-inputs-20261101T042852037040Z/journal.jsonl",
+      "sha256": "2699e525b24aaab489fb97a4aedac4ffdc58cf60ae4e5c24cad8c9471c2c70a7",
+      "bytes": 27554
+    },
+    "hash_chain_verified": true,
+    "events": 76,
+    "terminal_event": "build_failed",
+    "terminal_event_sha256": "6c0e1add2bd16db131707c4ebac2a24942d7d38ab16f4c6ce19a12b74a0baa6c",
+    "inspection": {
+      "schema_version": 2,
+      "kind": "build",
+      "last_event": "build_failed",
+      "durable_events": 76,
+      "stage": "verify_original_inventory",
+      "progress": {
+        "source_id": "raw-ab7a9c18dadb44ed3c08e8da",
+        "stage": "verify_original_inventory",
+        "total_sources": 111,
+        "verified_source_bytes": 5176582463,
+        "verified_sources": 71
+      },
+      "failure": {
+        "error_class": "TimeoutError",
+        "message": "Preparation deadline expired",
+        "stage": "source_input_preparation"
+      },
+      "build_report_present": false,
+      "recovery_action": "inspect only; start any replacement build in a new output directory"
+    }
+  },
+  "failure_artifact": {
+    "path": "data/derived/preprint-p04-inputs-20261101T042852037040Z/FAILURE.json",
+    "sha256": "62cddefc817de625552223b4ef34b100fa62b4f3e74a88759979d0193010e0b3",
+    "bytes": 689
+  },
+  "plan": {
+    "path": "planning/review-assets/preprint-p04-20261031/DEVELOPMENT-INPUT-PLAN-v3.json",
+    "sha256": "b6afc39926f50cfa3396daff0c786568f0c35d1a8776d4b4a15ee4edbbadb467",
+    "bytes": 5175
+  },
+  "inspection": {
+    "path": "data/derived/literature-coverage-20261017T082208Z/inspection.json",
+    "sha256": "f523b156957107afa0bfcd2fc111d70ef269950e367006ff70349effc56f1226",
+    "bytes": 9277743
+  },
+  "catalog": {
+    "path": "data/catalog/sources.json",
+    "sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb",
+    "bytes": 1222375
+  },
+  "declared_original_sources": 111,
+  "declared_original_bytes": 8216226905,
+  "fully_verified_original_sources": 71,
+  "fully_verified_original_bytes": 5176582463,
+  "preparation_cap_seconds": 120,
+  "elapsed_seconds": 120.03200000000652,
+  "original_mapping_value_scans": 0,
+  "original_evidence_value_scans": 0,
+  "generation_packets_created": 0,
+  "evaluator_references_created": 0,
+  "model_calls": 0,
+  "generation_authority": false,
+  "selection_or_originals_changed": false,
+  "resource_scope": "Whole original inventory authentication timed out before any value scan; separate from future per-case modelexecution budgets."
+}

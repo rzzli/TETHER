@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "status": "passed_finite_source_fidelity_audit",
+  "audit_kind": "independent finite source fidelity; not candidate grading or scientific validation",
+  "created_at_utc": "2026-11-01T04:54:03.181478+00:00",
+  "source_values_in_report": false,
+  "inputs": {
+    "generation_manifest": {
+      "sha256": "c7c2fdf706b8f96759816e618f35cee8f6926d49ee6fae95d1fe75981aa766f1",
+      "bytes": 3274
+    },
+    "references_manifest": {
+      "sha256": "32321dab80f05c51cf482adeac8e51e54bb14903066589d3f9806b795774ddad",
+      "bytes": 9143
+    },
+    "plan_sha256": "815f23b10f15bb6e68967aaed05e532c35b286160c5f89f65b9105a98b10b761",
+    "catalog_sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb",
+    "source_snapshot_sha256": "d58bcdf0d433c95aa74a3e71e1b8ea7d1cdfb817ec9c5f8b6130978d75accc70",
+    "generation_seal": {
+      "sha256": "b4aa4bd2fa27f9489f13ff9a2c71f34d89dda4400b097a3c1279114f7222767e",
+      "bytes": 1640
+    },
+    "reference_seal": {
+      "sha256": "6487625483b5bb06ed6338aeedbf893bcc6b4525affdae14f19f1dd8725a4612",
+      "bytes": 2980
+    },
+    "implementation_hashes": {
+      "planning/review-assets/preprint-p04-20261031/prepare_generation_inputs.py": "49753df7cabed4df7192ec5f2db30c39e43e693d8aec1a97b0c6bb3739326551",
+      "src/asof/study/source_fact_inputs.py": "29f760dc20cdaf6357411c629ea48e9919a78ffd68f62d36ce5da3597b65ae04",
+      "tests/test_study_source_fact_inputs.py": "0460200aabd2d0d126b71cafdb09212eb87bd07b974dbaa18250ff874e614e44",
+      "planning/review-assets/preprint-p04-20261031/prepare_references.py": "e8c24f725ccc33dfea7b416e3bf256d5caa2e78960c3775ac32ff3b5a8b81174",
+      "src/asof/contracts.py": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+      "src/asof/journal.py": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "src/asof/provenance.py": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+      "src/asof/serde.py": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+      "src/asof/study/proofs.py": "4d5e7170dafb15b1c701d77e639cb1acf7ecfcdc4546f6c9ce4e7ba9ea649b0f",
+      "src/asof/study/source_fact_adapters.py": "4651cfdaef34f4e51e89c7df61d5db884edfa90baf7c4f5b41645d596bc299e0",
+      "src/asof/study/source_fact_sources.py": "18d059744b39390a12f84d4cf1b92fee00f86438b4a7574ec2cd202c9ab76ec8",
+      "src/asof/study/source_rows.py": "977c3b898da1796a18830854ab086f3d94469597bf07c16c3204a1865aa36138",
+      "src/asof/study/stable_read.py": "40d71fa950422e8f19fd863952b3e7ea39237c12d1c92a9d38b0a9c23a2f4a0b",
+      "src/asof/wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4"
+    }
+  },
+  "journals": {
+    "generation": {
+      "sha256": "866a42403f05c57622a9c73286e2abb8d684a7d337f3077c333066563758bdc5",
+      "bytes": 80183,
+      "events": 221,
+      "terminal_sha256": "c830773ad5fec8c60118f3b68f6080a517ef0cb4fec2ccc141b474cb72b834c0"
+    },
+    "references": {
+      "sha256": "ab61418fc046dc4f92eff003e4b0bda638f691bd7777923a210d4f15a580553c",
+      "bytes": 7633,
+      "events": 17,
+      "terminal_sha256": "0229063ba93d42eab1c7ba932b2a2ed8b69a2e266efa8c43696fa79784396c28"
+    },
+    "all_links_and_event_hashes_recomputed": true,
+    "generation_sealed_before_reference_reservation": true
+  },
+  "check_counts": {
+    "environment": 1,
+    "pin": 20,
+    "sealed_file": 16,
+    "code_pin": 14,
+    "journal": 244,
+    "boundary": 26,
+    "inventory_metadata": 3,
+    "lineage": 1342,
+    "original": 36,
+    "receipt": 14,
+    "task": 11,
+    "namespace": 5,
+    "direct_row": 22,
+    "mapping": 2,
+    "fact": 19,
+    "summary": 3,
+    "missing": 1
+  },
+  "checks_total": 1779,
+  "defects": [],
+  "direct_original_checks": {
+    "evidence_rows": 4,
+    "hgnc_tsv_rows": 2,
+    "target_rows": 2,
+    "unique_original_files_hashed": 7,
+    "archived_receipts_hashed": 7,
+    "selected_original_hash_bytes": 357076542,
+    "native_state_fact_counts": {
+      "present_nonempty": 12,
+      "null_source_value": 4
+    },
+    "selected_file_pins": [
+      {
+        "source_id": "raw-115510de311703211b7a1e23",
+        "dataset_id": "ot_evidence",
+        "sha256": "77d8137a72e1ea62aa07d8c168c9b05669222026f8d1ca6c6daa63ea71952291",
+        "bytes": 80990612,
+        "receipt_sha256": "eb85ffe47d00f9d9cfaa803b655d1404f2b959cb6fadec0f7d3abb5fda36e655",
+        "receipt_bytes": 824
+      },
+      {
+        "source_id": "raw-158bc8a9fd09453600314255",
+        "dataset_id": "ot_evidence",
+        "sha256": "d6db5f02258f85f45f8bca3a8f76946b1f1aea4c91b717bf023bfd1b383c774b",
+        "bytes": 81216250,
+        "receipt_sha256": "1b3f06f10e4756959d4cf0a4a45495d070d69d213a9208cce4981a14927ab692",
+        "receipt_bytes": 925
+      },
+      {
+        "source_id": "raw-1dc45cc17ebfd56074dbeb5f",
+        "dataset_id": "ot_target",
+        "sha256": "dc1454c39eb3d0fb781aaf82d87e2c933be25c235d309a30b003a2b23e06fcd2",
+        "bytes": 7852176,
+        "receipt_sha256": "90f2f825f46aa1fc3d8fa095d17c25c282d1de60df9b10c6d4f956b849bcf652",
+        "receipt_bytes": 778
+      },
+      {
+        "source_id": "raw-4449463f6e3a4069406ccc0d",
+        "dataset_id": "ot_evidence",
+        "sha256": "4d5f0a6494654a02cbbf5edc4b553c2508b36da9ba2fe532d669fe5ba152a71e",
+        "bytes": 81074751,
+        "receipt_sha256": "5623f0801770e187c0ddd80185ed60d92558c391f0401d6f6e7a921378192f69",
+        "receipt_bytes": 824
+      },
+      {
+        "source_id": "raw-4e614170a2c144f3846bb357",
+        "dataset_id": "ot_target",
+        "sha256": "12efa29df5e206032bf58b1fc332f7a80f55e651d3afec1617455a2f63fa9d98",
+        "bytes": 7536292,
+        "receipt_sha256": "53248682b387a28055cde75ddeee5894fd7cb64f3fef606e528f102efab8d7f5",
+        "receipt_bytes": 778
+      },
+      {
+        "source_id": "raw-c9d4704c92bd0cd6a11f4e67",
+        "dataset_id": "ot_evidence",
+        "sha256": "f550777bf46cd0e7733d1e1e7ba223ba4e0889b8406a8aa9760768fb613b9b64",
+        "bytes": 81433302,
+        "receipt_sha256": "74a64f80645aef0941bedcf969e9ccf92db227df9b4246e12fe6e30f6615778c",
+        "receipt_bytes": 925
+      },
+      {
+        "source_id": "raw-e0a9b38e278f8d69713b010f",
+        "dataset_id": "hgnc_symbols",
+        "sha256": "64fcdfcdf9bc0853ec502e0e4c7d6eb12647b2ca8b0e635ea04bdb584856baf7",
+        "bytes": 16973159,
+        "receipt_sha256": "2bb6c48fd9d5585b8ed5690ad69046cf4ed55ffd2de47f525332e69eeab92076",
+        "receipt_bytes": 755
+      }
+    ],
+    "row_method": "Direct pyarrow.ParquetFile.read_row_group with allowlisted columns then exact positional slice; TSV DictReader positional locators. No author pipeline/compiler/projection invoked."
+  },
+  "conditions": {
+    "cd276-clean": {
+      "records": 2,
+      "facts": 8,
+      "task_sha256": "fdaa7c74f39b4279e797c571c5dd5553c62d2d11bdb289850eccf6fc8fd36d55",
+      "reference_sha256": "b7cc5bb557dd6e879c6e3bb414fb3aa7ec4eedbb8acf6945f0e757f3e0df8178",
+      "families": {
+        "identity_linkage": {
+          "facts": 2,
+          "answerable_facts": 2,
+          "unknown_facts": 0,
+          "groups": 2,
+          "answerable_groups": 2
+        },
+        "reported_context": {
+          "facts": 6,
+          "answerable_facts": 4,
+          "unknown_facts": 2,
+          "groups": 4,
+          "answerable_groups": 2
+        },
+        "reported_measurement": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        },
+        "provider_metric": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        }
+      },
+      "unknown_reasons": {
+        "null_source_value": 2
+      },
+      "collection_status": "selected_records",
+      "native_selected_rows_match": true
+    },
+    "osmr-clean": {
+      "records": 2,
+      "facts": 8,
+      "task_sha256": "d08280d1f3aa2802e9b4cc657d73695503608b438dc7fd71ba620fab7be9f374",
+      "reference_sha256": "a4db18ef8dfdc913bc21b9a456d38727ee8551a77e3e83a0f268afef906f8d67",
+      "families": {
+        "identity_linkage": {
+          "facts": 2,
+          "answerable_facts": 2,
+          "unknown_facts": 0,
+          "groups": 2,
+          "answerable_groups": 2
+        },
+        "reported_context": {
+          "facts": 6,
+          "answerable_facts": 4,
+          "unknown_facts": 2,
+          "groups": 4,
+          "answerable_groups": 2
+        },
+        "reported_measurement": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        },
+        "provider_metric": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        }
+      },
+      "unknown_reasons": {
+        "null_source_value": 2
+      },
+      "collection_status": "selected_records",
+      "native_selected_rows_match": true
+    },
+    "cd276-controlled-missing": {
+      "records": 0,
+      "facts": 0,
+      "task_sha256": "cd3ac9911e7708959c0d22f29d8b12bfb44d95af9bb0fc8405b2a7331d833ee7",
+      "reference_sha256": "def3fa3a3220afc4ebd528c7251e4fa6c754118bbcaeced355fe51a97a8e4481",
+      "families": {
+        "identity_linkage": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        },
+        "reported_context": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        },
+        "reported_measurement": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        },
+        "provider_metric": {
+          "facts": 0,
+          "answerable_facts": 0,
+          "unknown_facts": 0,
+          "groups": 0,
+          "answerable_groups": 0
+        }
+      },
+      "unknown_reasons": {},
+      "collection_status": "incomplete",
+      "native_selected_rows_match": true
+    }
+  },
+  "scope_and_exposure": {
+    "independent_biomedical_contexts": 2,
+    "condition_units": 3,
+    "evaluator_references_read": true,
+    "generator_eligibility_after_this_audit": false,
+    "original_selected_source_values_read": true,
+    "old_experts_responses_candidates_read": false,
+    "clinical_outcomes_or_model_outputs_read": false,
+    "model_calls": 0,
+    "network_download_server_worker_actions": 0,
+    "packet_skeleton_expected_answers": false,
+    "references_evaluation_only": true,
+    "controlled_missing": "Artificial all-record withholding within an existing case: zero source rows, mappings, slots and facts; incomplete collection, no biological absence or independent third case.",
+    "namespace_and_truth": "Artifact/release identifier bindings verified; true upstream Ensembl/EFO versions remain unknown. Literal source fidelity does not establish scientific truth."
+  },
+  "limitations": [
+    "All 111 inventory nodes/proofs checked as sealed metadata; only seven selected original files and their seven archived receipts rehashed/read. The other 104 originals and receipts were not independently reopened or rehashed.",
+    "Global first-two lexical selection and 188/5 matching/distinct-row counts remain author-algorithm/history claims. No full 100-file evidence rescan was performed; no global minimality or duplicate-conflict exclusion independently established.",
+    "Selected HGNC/target rows and equality were checked at exact locators; global symbol uniqueness across all mapping originals was not independently rescanned.",
+    "Null, empty and absent rules were independently implemented, but these 16 selected facts exercise 12 present/nonempty and four null values, with zero empty and zero absent selected fields.",
+    "Journal hashes and ordering authenticate retained artifacts and declared build history; they cannot prove undisclosed process reads or ancestry outside the retained provenance.",
+    "Pinned inspection hash was checked for agreement through retained plan/manifests, without reopening its separate historical inspection file.",
+    "Reference compiler replay and full-inventory hash passes were historical author actions; this audit did not invoke the compiler or repeat those full passes.",
+    "No candidates were generated or graded, and no biomedical effect, absence, clinical outcome, publisher checksum authority, or scientific validity was inferred."
+  ],
+  "resources": {
+    "elapsed_seconds": 0.6869999999180436,
+    "full_inventory_rescan": false,
+    "full_inventory_rehash": false,
+    "peak_rss_measured": false,
+    "physical_io_measured": false
+  },
+  "checker_sha256": "b2b69d7a13ba530bf3a8707f46a74f75e2f1ed4b7c96289275062a263b35a970"
+}

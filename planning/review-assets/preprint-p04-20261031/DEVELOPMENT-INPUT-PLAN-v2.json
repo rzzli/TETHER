@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "status": "PREPARATION_ONLY_NOT_GENERATION_AUTHORITY",
+  "created_at_utc": "2026-11-01T04:16:44.712807+00:00",
+  "base_commit": "77d2455",
+  "scope": "exposed development feasibility for literal source-reporting eligibility/composition/missingness/resources, not biomedical interpretation or a locked test",
+  "case_selector": "first two contexts explicitly listed in original user fixed ten-case pack; no response/performance/measurement-based selection",
+  "cases": [
+    {
+      "case_id": "cd276-nsclc-development",
+      "target_symbol": "CD276",
+      "target_id": null,
+      "indication_id": "EFO_0003060",
+      "action": "delivery_antigen",
+      "modality": "ADC",
+      "tissue": null
+    },
+    {
+      "case_id": "osmr-uc-development",
+      "target_symbol": "OSMR",
+      "target_id": null,
+      "indication_id": "EFO_0000729",
+      "action": "inhibit",
+      "modality": "antibody",
+      "tissue": null
+    }
+  ],
+  "identifier_policy": "Resolve only pinned approved HGNC symbol/Ensembl and selected Open Targets target records; missing/conflicting canonical ID blocks affected case, no replacement. Record mapping originals/versions as source ancestors.",
+  "source_policy": {
+    "release": "25.09",
+    "partition": "europepmc",
+    "inspection_manifest": "data/derived/literature-coverage-20261017T082208Z/inspection.json",
+    "inspection_sha256": "f523b156957107afa0bfcd2fc111d70ef269950e367006ff70349effc56f1226",
+    "catalog_sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb",
+    "raw_root": "E:\\projects_data\\drug_target_agents_data",
+    "scope": "already receipt-pinned selected inventory, not whole release",
+    "record_selector": "per exact targetId/diseaseId choose first two distinct native record IDs in lexical order; tie locator source_id,row_group,row; conflicting duplicate IDs block affected case without favorable substitution",
+    "requested_fields": [
+      "id",
+      "publicationDate",
+      "evidenceDate",
+      "cellType"
+    ],
+    "primary_families": [
+      "identity_linkage",
+      "reported_context"
+    ],
+    "grouping": "per-record identity and reported-date groups; cell context separate, unknown-only groups excluded",
+    "field_projection": "identity selectors plus requested columns; no clinical/status/outcome fields; Arrow filter before Python conversion",
+    "max_existing_evidence_files": 100,
+    "max_source_bytes": 5368709120,
+    "max_selected_records_per_case": 2,
+    "selection_source_disallowed": [
+      "bespoke responses",
+      "response-aware derivatives",
+      "P02/P03 references or expected projections",
+      "old candidate outputs",
+      "evaluation labels"
+    ],
+    "declared_evidence_files": 49,
+    "declared_evidence_bytes": 3989106270,
+    "declared_mapping_reference_bytes": 92541726,
+    "selection_wall_seconds": 120
+  },
+  "conditions": [
+    {
+      "id": "cd276-clean",
+      "case": "cd276-nsclc-development",
+      "kind": "real_selected_sources"
+    },
+    {
+      "id": "osmr-clean",
+      "case": "osmr-uc-development",
+      "kind": "real_selected_sources"
+    },
+    {
+      "id": "cd276-controlled-missing",
+      "case": "cd276-nsclc-development",
+      "kind": "synthetic_input_withholding",
+      "records_available": 0,
+      "collection_status": "incomplete",
+      "biological_absence": false
+    }
+  ],
+  "planned_arms": [
+    "exact_literal_assembler",
+    "always_abstain",
+    "plain_same_model_typed_report",
+    "asof_declared_two_stage_typed_report"
+  ],
+  "planned_cells": 12,
+  "independent_biomedical_contexts": 2,
+  "condition_units": 3,
+  "model_calls_authorized_by_this_preparation": 0,
+  "future_protocol_required": true,
+  "future_model_path": "separately named typed-report-postvalidation-v1; ordinary local completion, no v2/v3 grammar inheritance",
+  "existing_budget_defaults": {
+    "max_calls": 16,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 8000,
+    "max_cost_usd": 0,
+    "max_seconds": 300
+  },
+  "packet_isolation": "Generation packet builder reads only eligible originals, neutral task and source provenance. It seals agent-visible packets before evaluator references are separately compiled; references and expected values never flow back.",
+  "missing_asset_policy": "Report specific missing/denied file or permission, do not acquire or substitute. Optional23filebatch remains pending; no worker/monitor changes.",
+  "supersedes": {
+    "path": "planning\\review-assets\\preprint-p04-20261031\\DEVELOPMENT-INPUT-PLAN-v1.json",
+    "sha256": "2c64a9ba2ef3ddd007484fccf08cd11efebd5eeda998799d2e3067918da43366",
+    "reason": "Metadata-only inventory sizing before any new original-value scan: actual selected EuropePMC frame is49files/3,989,106,270B; initial600MB preparation bound insufficient. No model outputs or values used to revise cap."
+  }
+}

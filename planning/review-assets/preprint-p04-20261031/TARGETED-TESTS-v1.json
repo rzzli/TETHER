@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-01T05:01:18.856323+00:00",
+  "exit_code": 0,
+  "source_fact_pattern": "test_study_source_fact*.py",
+  "additional_modules": [
+    "test_study_process",
+    "test_wire",
+    "test_validation",
+    "test_validation_archived_syntax"
+  ],
+  "elapsed_seconds": 7.0,
+  "full_suite": false,
+  "actual_model_or_HTTP_calls": 0,
+  "failure_logs_preserved": true
+}

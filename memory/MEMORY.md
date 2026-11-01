@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-reporting-pilot-preparation]] - Current checkpoint: P04 source/reference bundles sealed and independently checked, 217 targeted tests/installed mock smoke pass, READY twelve-cell protocol frozen; actual model execution/results pending. Owner approved isolated credible-set batch, live exec session 18695 (no restart on observation timeout); old worker/monitor untouched. No external experts.
+
 - [[research-log-2026-10-31-source-fact-evaluator]] - Current checkpoint: P03 source compiler/replay, retained-byte adapters, grouped scorer and all-cell accounting implemented; 173 targeted tests pass, installed JSON-only smoke and one actual-row replay pass. Scientific measurements still unavailable in that selected row. Next P04 generator/access preflight, independent generation packets and frozen bounded pilot; no external experts or new model calls. Optional batch approval still pending.
 
 - [[research-log-2026-10-31-source-fact-feasibility]] - Current checkpoint: P02 measured three-unit feasibility, 57/57 context/ID projection, no target-linked measurements; missing locus in partial 2/25 credible-set input. Prepared 23-file/2.43GB isolated batch explicitly auto-review REJECTED before launch; one-time owner approval pending, no workaround. Ten tests and independent source checks pass; P03 spec prepared, P03–P10 unfinished. No expert input.

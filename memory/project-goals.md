@@ -10,6 +10,26 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Reporting Pilot Preparation]].
+P04 source packets (111 originals/8.216 GB, two exposed real contexts + controlled
+missing condition) sealed before three separate evaluator references. Independent
+source audit passes; 217 targeted tests and fresh installed mock smoke pass.
+READY protocol SHA 9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4,
+12 cells, 69 pinned code files; no actual model calls yet. Next one owned existing
+model run, all-cell terminal/usage retention, confirmed cleanup then source-inclusive
+scores. No source/reference values may flow from evaluator to generation.
+
+Owner now approved the separate 23-file/2.43 GB credible-set batch; root live exec
+session 18695, reported worker PID 23724. Poll existing handle, no automatic
+restart. Verify terminal 23 files and complete-table join before P02a completion.
+Earlier rejection remains history; exception only this named batch, old worker,
+receipts and stopped monitor untouched. No recurring checking task created.
+P04 remains incomplete; P05–P10 and clinical/conditional branches remain as below.
+See [[research-log-2026-10-31-reporting-pilot-preparation]].
+
+### Prior P03 evaluator checkpoint (retained history)
+
+
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Source Fact Evaluator]].
 P03 accepted in targeted engineering scope: source-inclusive compiler/replay,
 common retained-byte adapters, grouped source-reporting coverage/errors/unknowns,

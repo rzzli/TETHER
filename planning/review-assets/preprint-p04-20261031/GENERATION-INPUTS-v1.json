@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "sealed_source_inputs",
+  "cutoff": "2026-11-01T04:32:21.990523+00:00",
+  "plan_sha256": "815f23b10f15bb6e68967aaed05e532c35b286160c5f89f65b9105a98b10b761",
+  "inspection_sha256": "f523b156957107afa0bfcd2fc111d70ef269950e367006ff70349effc56f1226",
+  "catalog_sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb",
+  "inventory": {
+    "files": 111,
+    "source_bytes": 8216226905
+  },
+  "selection": {
+    "cd276-nsclc-development": {
+      "matching_rows": 188,
+      "distinct_ids": 188
+    },
+    "osmr-uc-development": {
+      "matching_rows": 5,
+      "distinct_ids": 5
+    }
+  },
+  "blocked_cases": {},
+  "conditions": {
+    "cd276-clean": {
+      "packet_path": "cd276-clean.packet.json",
+      "task_path": "cd276-clean.task.json",
+      "task_sha256": "fdaa7c74f39b4279e797c571c5dd5553c62d2d11bdb289850eccf6fc8fd36d55",
+      "records": 2,
+      "fact_slots": 8,
+      "collection_status": "selected_records",
+      "synthetic": false
+    },
+    "osmr-clean": {
+      "packet_path": "osmr-clean.packet.json",
+      "task_path": "osmr-clean.task.json",
+      "task_sha256": "d08280d1f3aa2802e9b4cc657d73695503608b438dc7fd71ba620fab7be9f374",
+      "records": 2,
+      "fact_slots": 8,
+      "collection_status": "selected_records",
+      "synthetic": false
+    },
+    "cd276-controlled-missing": {
+      "packet_path": "cd276-controlled-missing.packet.json",
+      "task_path": "cd276-controlled-missing.task.json",
+      "task_sha256": "cd3ac9911e7708959c0d22f29d8b12bfb44d95af9bb0fc8405b2a7331d833ee7",
+      "records": 0,
+      "fact_slots": 0,
+      "collection_status": "incomplete",
+      "synthetic": true
+    }
+  },
+  "source_scan_elapsed_seconds": 110.39099999994505,
+  "preparation_elapsed_seconds": 110.39099999994505,
+  "peak_working_set_bytes": 120262656,
+  "implementation_hashes": {
+    "src/asof/study/source_fact_inputs.py": "29f760dc20cdaf6357411c629ea48e9919a78ffd68f62d36ce5da3597b65ae04",
+    "planning/review-assets/preprint-p04-20261031/prepare_generation_inputs.py": "49753df7cabed4df7192ec5f2db30c39e43e693d8aec1a97b0c6bb3739326551",
+    "tests/test_study_source_fact_inputs.py": "0460200aabd2d0d126b71cafdb09212eb87bd07b974dbaa18250ff874e614e44"
+  },
+  "original_value_output": "data/derived/preprint-p04-inputs-20261101T043317717926Z",
+  "input_interface": "source-fact-generation-input-v1",
+  "application_evidence_packet": false,
+  "role": "agent_evidence",
+  "agent_visible": true,
+  "content_parents": "allowlisted pinned originals and neutral frozen input plan only",
+  "reference_inputs": [],
+  "evaluator_artifacts_read": false,
+  "public_compiler_code_exposure": "Read public source_fact_sources.py algorithm during API/schema inspection; no compiler invocation or retained reference/expected artifacts read.",
+  "model_calls": 0,
+  "generation_authority": false,
+  "scientific_interpretation": "not_performed",
+  "controlled_missing": "Synthetic evidence withholding within the CD276 context; incomplete collection, no biological-absence claim, not a third independent case",
+  "seal": {
+    "sha256": "b4aa4bd2fa27f9489f13ff9a2c71f34d89dda4400b097a3c1279114f7222767e",
+    "bytes": 1640
+  }
+}

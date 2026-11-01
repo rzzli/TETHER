@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "P04_INPUTS_REFERENCES_SEALED_RUNNER_QUALIFICATION_IN_PROGRESS",
+  "recorded_at_utc": "2026-11-01T04:50:02.439154+00:00",
+  "base_commit": "77d2455",
+  "P03_complete_in_engineering_scope": true,
+  "P04_complete": false,
+  "source_preparation": {
+    "status": "sealed_source_inputs",
+    "files": 111,
+    "bytes": 8216226905,
+    "conditions": 3,
+    "independent_biomedical_contexts": 2,
+    "model_calls": 0,
+    "manifest_sha256": "c7c2fdf706b8f96759816e618f35cee8f6926d49ee6fae95d1fe75981aa766f1",
+    "failures_preserved": [
+      "v2 metadata inventory undercount",
+      "v3 cooperative120s timeout"
+    ],
+    "v4_success_seconds": 110.391,
+    "warm_cache": true
+  },
+  "references": {
+    "status": "sealed_source_only_references",
+    "manifest_sha256": "32321dab80f05c51cf482adeac8e51e54bb14903066589d3f9806b795774ddad",
+    "compile_and_replay_calls": 6,
+    "logical_hash_bytes": 98594722860,
+    "physical_IO": null,
+    "role": "evaluation_only",
+    "model_calls": 0
+  },
+  "transport": {
+    "author_mock_tests": 22,
+    "peer_mock_tests": 19,
+    "passed": 41,
+    "actual_server_launches": 0,
+    "actual_HTTP_generation_calls": 0,
+    "new_parser_explicitly_separate_from_native_v2": true
+  },
+  "reporting_view": {
+    "fictional_tests": 5,
+    "real_prompt_bytes": [
+      8179,
+      8194,
+      3155
+    ],
+    "preflight": "deterministic size/format only; no study score or modelcall"
+  },
+  "next": [
+    "finish percell runner and controller tests",
+    "independent selected-source/packet/reference audit",
+    "freeze READY protocol and exactcode/environment pins",
+    "qualify fresh installed newfunctions",
+    "one bounded ordinary-loopback pilot execution with allcellaccounting",
+    "sourceinclusive score/replay and retained report"
+  ],
+  "download_batch": {
+    "owner_approved": true,
+    "exec_session_id": 18695,
+    "worker_pid_reported": 23724,
+    "status_at_observation": "running",
+    "completed_files_at_observation": 13,
+    "failed_files_at_observation": 0,
+    "recovery": "Poll the same live exec session; never restart from an observation timeout. User authorization only the named isolated batch. No periodic monitor."
+  },
+  "boundaries": [
+    "no external expert input",
+    "no old expert response or derived reference inputs",
+    "no source/clinical/scorer feature promotion",
+    "modelprovider spending$0; platform costsunknown",
+    "existing originalworker and stoppedmonitor unchanged",
+    "newbatch specificallyownerapproved"
+  ]
+}

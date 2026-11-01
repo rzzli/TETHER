@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "USER_APPROVED_ISOLATED_BATCH_LAUNCHED",
+  "recorded_at_utc": "2026-11-01T04:26:50.106736+00:00",
+  "exec_session_id": 18695,
+  "worker_pid": 23724,
+  "batch_id": "preprint-p02-credible-completion-20261101T031842Z",
+  "state_path": "E:\\projects_data\\drug_target_agents_data\\manifests\\preprint-p02-credible-completion-20261101T031842Z-state.json",
+  "queue_sha256": "2c976d24830472e40271db98363bf5cb6d9c54a47e83974a26fa3422c988b5a2",
+  "files": 23,
+  "exact_payload_bytes": 2430231014,
+  "cap_bytes": 3221225472,
+  "concurrency": 2,
+  "scope": "one owner-approved new batch; old worker/state/receipts and stopped monitor untouched",
+  "recovery": "Poll existing exec session18695; observation timeout is not terminal. Never start another copy solely because polling timed out.",
+  "periodic_monitor_created": false
+}

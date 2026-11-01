@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "USER_APPROVED_QUEUE_REVALIDATED_NOT_YET_LAUNCHED",
+  "recorded_at_utc": "2026-11-01T04:24:47.160987+00:00",
+  "owner_reply": "Approve isolated batch",
+  "approval_scope": "One separate23fileOpenTargets25.09credible-set batch,exactpayload2430231014B,maximum3GiB,concurrency2; newpaths/receipts/state only. Oldworker/receipts and stopped periodicmonitor untouched.",
+  "overrides": "Earlier leave-downloader-untouched boundary only for this single explicitly approved invocation; prior automatic rejection retained.",
+  "queue_sha256": "2c976d24830472e40271db98363bf5cb6d9c54a47e83974a26fa3422c988b5a2",
+  "new_targets_partials_receipts_absent": true,
+  "new_state_absent": true,
+  "free_bytes": 1684970074112,
+  "reserve_bytes": 400505700352,
+  "old_state_sha256_before": "f7f238e92db035232f8273a18ec2182d99ad6571d570bff50b3899dbc56c15ea",
+  "no_periodic_monitor_created": true
+}
