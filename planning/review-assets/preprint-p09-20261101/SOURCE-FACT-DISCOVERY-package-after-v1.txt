@@ -1,0 +1,51 @@
+test_asof_structural_proposal_then_audit_without_semantic_grading (tests.test_study_source_fact_cell.SourceFactCellTests.test_asof_structural_proposal_then_audit_without_semantic_grading) ... ok
+test_audit_failed_keeps_proposal_but_never_promotes_it_to_final (tests.test_study_source_fact_cell.SourceFactCellTests.test_audit_failed_keeps_proposal_but_never_promotes_it_to_final) ... ok
+test_call_or_token_budget_blocks_before_dispatch_and_does_not_bill (tests.test_study_source_fact_cell.SourceFactCellTests.test_call_or_token_budget_blocks_before_dispatch_and_does_not_bill) ... ok
+test_deadline_expiring_during_factory_or_request_retention_never_opens (tests.test_study_source_fact_cell.SourceFactCellTests.test_deadline_expiring_during_factory_or_request_retention_never_opens) ... ok
+test_deadline_includes_rendering_and_each_stage_without_retry (tests.test_study_source_fact_cell.SourceFactCellTests.test_deadline_includes_rendering_and_each_stage_without_retry) ... ok
+test_deterministic_arms_make_no_calls_and_preserve_exact_output (tests.test_study_source_fact_cell.SourceFactCellTests.test_deterministic_arms_make_no_calls_and_preserve_exact_output) ... ok
+test_duplicate_output_and_unknown_arm_never_dispatch (tests.test_study_source_fact_cell.SourceFactCellTests.test_duplicate_output_and_unknown_arm_never_dispatch) ... ok
+test_exception_attachment_refusal_preserves_original_failure (tests.test_study_source_fact_cell.SourceFactCellTests.test_exception_attachment_refusal_preserves_original_failure) ... ok
+test_final_clock_interruption_is_recorded_as_interrupted (tests.test_study_source_fact_cell.SourceFactCellTests.test_final_clock_interruption_is_recorded_as_interrupted) ... ok
+test_final_clock_sample_cannot_publish_a_late_completed_cell (tests.test_study_source_fact_cell.SourceFactCellTests.test_final_clock_sample_cannot_publish_a_late_completed_cell) ... ok
+test_interruption_retains_attempt_and_terminal_then_propagates (tests.test_study_source_fact_cell.SourceFactCellTests.test_interruption_retains_attempt_and_terminal_then_propagates) ... ok
+test_missing_asof_is_source_only_preflight_without_client (tests.test_study_source_fact_cell.SourceFactCellTests.test_missing_asof_is_source_only_preflight_without_client) ... ok
+test_over_quote_usage_is_preserved_and_prevents_audit (tests.test_study_source_fact_cell.SourceFactCellTests.test_over_quote_usage_is_preserved_and_prevents_audit) ... ok
+test_owned_listener_denial_records_zero_actual_dispatches_and_usage (tests.test_study_source_fact_cell.SourceFactCellTests.test_owned_listener_denial_records_zero_actual_dispatches_and_usage) ... ok
+test_plain_call_records_exact_files_before_open_and_accounts_measured_once (tests.test_study_source_fact_cell.SourceFactCellTests.test_plain_call_records_exact_files_before_open_and_accounts_measured_once) ... ok
+test_postdispatch_retention_failure_still_accounts_actual_usage_and_stops (tests.test_study_source_fact_cell.SourceFactCellTests.test_postdispatch_retention_failure_still_accounts_actual_usage_and_stops) ... ok
+test_stage_one_malformed_stops_without_audit_or_repair (tests.test_study_source_fact_cell.SourceFactCellTests.test_stage_one_malformed_stops_without_audit_or_repair) ... ok
+test_terminal_journal_failure_attaches_known_usage_and_exact_final_bytes (tests.test_study_source_fact_cell.SourceFactCellTests.test_terminal_journal_failure_attaches_known_usage_and_exact_final_bytes) ... ok
+test_write_failure_aborts_before_http_with_retained_cell_terminal (tests.test_study_source_fact_cell.SourceFactCellTests.test_write_failure_aborts_before_http_with_retained_cell_terminal) ... ok
+test_atomic_output_reservation_denies_concurrent_owner (tests.test_study_source_fact_controller.PilotControllerTests.test_atomic_output_reservation_denies_concurrent_owner) ... ok
+test_cleanup_failure_is_partial_after_cleanup_and_never_silent_success (tests.test_study_source_fact_controller.PilotControllerTests.test_cleanup_failure_is_partial_after_cleanup_and_never_silent_success) ... ok
+test_code_hash_denial_reserves_complete_schedule_but_no_launch (tests.test_study_source_fact_controller.PilotControllerTests.test_code_hash_denial_reserves_complete_schedule_but_no_launch) ... ok
+test_draft_independent_hash_and_exact_model_schedule_caps_deny_before_launch (tests.test_study_source_fact_controller.PilotControllerTests.test_draft_independent_hash_and_exact_model_schedule_caps_deny_before_launch) ... ok
+test_execute_flag_required_and_cli_validation_never_reserves (tests.test_study_source_fact_controller.PilotControllerTests.test_execute_flag_required_and_cli_validation_never_reserves) ... ok
+test_interruption_stops_dependent_cells_retains_accounting_and_cleans (tests.test_study_source_fact_controller.PilotControllerTests.test_interruption_stops_dependent_cells_retains_accounting_and_cleans) ... ok
+test_netstat_callback_requires_retained_live_pid_and_retains_bounded_evidence (tests.test_study_source_fact_controller.PilotControllerTests.test_netstat_callback_requires_retained_live_pid_and_retains_bounded_evidence) ... ok
+test_netstat_interruption_survives_secondary_diagnostic_failure (tests.test_study_source_fact_controller.PilotControllerTests.test_netstat_interruption_survives_secondary_diagnostic_failure) ... ok
+test_real_sealed_admission_metadata_and_source_only_boundary (tests.test_study_source_fact_controller.PilotControllerTests.test_real_sealed_admission_metadata_and_source_only_boundary) ... ERROR
+test_report_write_failure_leaves_terminal_journal_and_failure_receipt (tests.test_study_source_fact_controller.PilotControllerTests.test_report_write_failure_leaves_terminal_journal_and_failure_receipt) ... ok
+test_source_role_denial_happens_before_any_cell_or_launch (tests.test_study_source_fact_controller.PilotControllerTests.test_source_role_denial_happens_before_any_cell_or_launch) ... ok
+test_startup_failure_preserves_six_controls_and_all_six_model_cells (tests.test_study_source_fact_controller.PilotControllerTests.test_startup_failure_preserves_six_controls_and_all_six_model_cells) ... ok
+test_success_has_exact_counterbalanced_order_and_verifiable_receipt (tests.test_study_source_fact_controller.PilotControllerTests.test_success_has_exact_counterbalanced_order_and_verifiable_receipt) ... ok
+
+======================================================================
+ERROR: test_real_sealed_admission_metadata_and_source_only_boundary (tests.test_study_source_fact_controller.PilotControllerTests.test_real_sealed_admission_metadata_and_source_only_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_controller.py", line 192, in test_real_sealed_admission_metadata_and_source_only_boundary
+    admitted = REAL_ADMIT_INPUTS(protocol, output, time.monotonic() + 30)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tools\science\run_source_fact_pilot.py", line 288, in _admit_inputs
+    need(digest(catalog_raw) == generation["catalog_sha256"] == reference["pins"]["catalog_sha256"]
+  File "D:\Projects\drug_target_agents\tools\science\run_source_fact_pilot.py", line 68, in need
+    raise ContractError(message)
+asof.serde.ContractError: Original catalog pin differs
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.247s
+
+FAILED (errors=1)
+READY protocol structure validated; no output reservation, asset hashing, server or HTTP. preprint-p04-typed-report-postvalidation-v1

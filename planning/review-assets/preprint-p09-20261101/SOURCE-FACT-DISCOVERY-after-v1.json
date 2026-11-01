@@ -1,0 +1,58 @@
+{
+  "actual_source_reads": false,
+  "checker_sha256": "025fcba92fe8da2727936381d26f2a7bd9671ac43e3862855a0e15a72a14d8a4",
+  "method": "p09.fictional_test_discovery_regression.v1",
+  "model_calls": 0,
+  "network_calls": 0,
+  "results": [
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        ".",
+        "-p",
+        "test_study_source_fact_c*.py",
+        "-v"
+      ],
+      "log": "SOURCE-FACT-DISCOVERY-package-after-v1.txt",
+      "log_sha256": "0363d025f5aa967b5b0e01257a05b5e324e74fa2d57c70ca68c65ed6471343ac",
+      "mode": "package",
+      "returncode": 1,
+      "seconds": 1.247,
+      "status": "FAIL",
+      "tests": 32
+    },
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_source_fact_c*.py",
+        "-v"
+      ],
+      "log": "SOURCE-FACT-DISCOVERY-top-level-after-v1.txt",
+      "log_sha256": "778d15d946d4b879a5d5407da987ac0dd78ec4b26568e19ceed297d2244aacc6",
+      "mode": "top-level",
+      "returncode": 1,
+      "seconds": 1.244,
+      "status": "FAIL",
+      "tests": 32
+    }
+  ],
+  "runtime_source_changes": false,
+  "schema_version": 1,
+  "status": "FAIL",
+  "subjects": {
+    "tests/test_study_source_fact_cell.py": "85d0f72dc32f5e5b39ddf36e578965be7cbb57949b04511acc03f740b45d7603",
+    "tests/test_study_source_fact_controller.py": "b450a9e15e473562a1f3edfb94ed28658a8be94c20554a9afc91b5faf220543e"
+  }
+}

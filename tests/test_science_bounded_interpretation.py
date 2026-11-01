@@ -26,8 +26,11 @@ class InterpretationTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.inputs = self.root / 'inputs'
-        shutil.copytree(ROOT / 'src/asof/demo/v2', self.inputs)
-        self.case = replace(decode(Case, read_json(self.inputs/'case.json')), task='T6', endpoint=None)
+        fixture = ROOT / 'src/asof/demo/v2'
+        # Create the adapted case once; the other fixture inputs remain exact copies.
+        shutil.copytree(fixture, self.inputs, ignore=shutil.ignore_patterns('case.json'))
+        self.case = replace(decode(Case, read_json(fixture/'case.json')), task='T6', endpoint=None)
+        self.assertFalse((self.inputs/'case.json').exists())
         write_json(self.inputs/'case.json', encode(self.case))
         self.prepared = self.prepare()
 

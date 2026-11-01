@@ -1,0 +1,83 @@
+{
+  "actual_source_reads": false,
+  "checker_sha256": "426f5a38750486a4ea75137e149387cc75853bc712be841f398bf0261b5857ac",
+  "core_package_mode": "-S removes site packages; source imports use only the explicit src PYTHONPATH",
+  "method": "p09.fictional_test_discovery_regression.v1",
+  "model_calls": 0,
+  "network_calls": 0,
+  "results": [
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        ".",
+        "-p",
+        "test_study_source_fact_c*.py",
+        "-v"
+      ],
+      "log": "SOURCE-FACT-DISCOVERY-package-after-v2.txt",
+      "log_sha256": "fb2c4ae09fc3635abd5152913f669075c842febb15383c72ee788ef31e4fe565",
+      "mode": "package",
+      "returncode": 0,
+      "seconds": 1.353,
+      "status": "PASS",
+      "tests": 32
+    },
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_source_fact_c*.py",
+        "-v"
+      ],
+      "log": "SOURCE-FACT-DISCOVERY-top-level-after-v2.txt",
+      "log_sha256": "e83651ffc6ec5b6f4adbca733d14789081fb60b5ebf4187fc1fa035695cffaf5",
+      "mode": "top-level",
+      "returncode": 0,
+      "seconds": 1.351,
+      "status": "PASS",
+      "tests": 32
+    },
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+        "-S",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        ".",
+        "-p",
+        "test_study_source_fact_c*.py",
+        "-v"
+      ],
+      "log": "SOURCE-FACT-DISCOVERY-core-package-after-v2.txt",
+      "log_sha256": "d64ebfd58eec6fe1a191676c14168b3d4ad52a59610f92f569fe753e20773f9c",
+      "mode": "core-package",
+      "returncode": 0,
+      "seconds": 1.363,
+      "status": "PASS",
+      "tests": 32
+    }
+  ],
+  "retained_production_packet_reads": false,
+  "runtime_source_changes": false,
+  "schema_version": 1,
+  "status": "PASS",
+  "subjects": {
+    "tests/test_study_source_fact_cell.py": "85d0f72dc32f5e5b39ddf36e578965be7cbb57949b04511acc03f740b45d7603",
+    "tests/test_study_source_fact_controller.py": "998434189057f53c4c3fdc640d1923ab226f26ab42efc3d25e68ac30607c8589"
+  }
+}

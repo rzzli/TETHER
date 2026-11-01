@@ -1,0 +1,81 @@
+{
+  "schema": "p09.interpretation_fixture_setup_review.v1",
+  "status": "PASS_TARGETED_FIXTURE_CORRECTION_ORIGINAL_TRANSIENT_CAUSE_UNKNOWN",
+  "created_at_utc": "2026-11-01T21:43:46.122281+00:00",
+  "changed_file": {
+    "path": "tests/test_science_bounded_interpretation.py",
+    "before_sha256": "27715e1d14da662dc7a9593057b9688d2732a3c2fefb3476b1d4671af018a3a0",
+    "after_sha256": "eed543dbd1c0c4aa0a40dbd023a300c5412e4f2fa386f29a9864edc12ac3c683"
+  },
+  "observations": {
+    "full_log_quote_test_error": true,
+    "core_partial_log_quote_test_pass": true,
+    "source_case_attributes": "Archive32; no read-only flag",
+    "read_json_handle": "with path.open(...): closes before replace",
+    "actual_transient_root_cause": "UNKNOWN; spontaneous error not reproduced by targeted unmodified run"
+  },
+  "change": "Exclude case.json from the seven-file copy, read the original case read-only, create the same T6/endpoint=None adapted payload once at a new destination; assert destination absence. Other six files remain exact copies.",
+  "test_scope": {
+    "module_methods": 32,
+    "added_removed_methods": 0,
+    "test_body_assertions_weakened": false,
+    "production_source_changes": false,
+    "retries_added": false,
+    "exceptions_suppressed": false
+  },
+  "validation": {
+    "uncontrolled_before": {
+      "log": {
+        "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-TARGETED-before-v1.txt",
+        "sha256": "6258b3f513406d38ef282014d7003e2620b9873f386de44e90be2a1f774dc650"
+      },
+      "tests": 33,
+      "seconds": 7.722,
+      "exit_code": 0,
+      "description": "Target quote once plus complete32methodmodule; original failure did not recur."
+    },
+    "controlled_before": {
+      "evidence": {
+        "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-CONTROLLED-LOCK-before-v1.json",
+        "sha256": "5ccc1a96efd488571b6bf79ce62f8e32bbe7750d44b64231f4ccba2754f2aac1"
+      },
+      "outcome": "PermissionError WinError5 at copied-case setup replace",
+      "mechanism": "Actual Windows read handle permits read/write sharing but denies delete sharing on copiedcase; no production I/O mocked."
+    },
+    "controlled_after": {
+      "evidence": {
+        "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-CONTROLLED-LOCK-after-v1.json",
+        "sha256": "ea35fde71a9809c32ed932cf2dfb51c2cc67d9c696f2a2850f0f1b4517d4fb69"
+      },
+      "outcome": "Setup and quote/foreign-premise behavior PASS; no copied-case target is created/locked."
+    },
+    "after": {
+      "log": {
+        "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-TARGETED-after-v1.txt",
+        "sha256": "e5ec7b9c4a6c526546baab42f8d30d73d87d6f41bbb79414b35c441fe7f17127"
+      },
+      "tests": 32,
+      "seconds": 7.017,
+      "exit_code": 0
+    },
+    "equivalence": {
+      "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-FIXTURE-EQUIVALENCE-v1.json",
+      "sha256": "a49c9e5eeaad9f244d8adba105966c4f829834979adb73e9b6b2688aa61207cd"
+    },
+    "controlled_probe": {
+      "path": "planning/review-assets/preprint-p09-20261101/probe_interpretation_setup_lock_v1.py",
+      "sha256": "b80cd9b9286dd6b182c2537dd84e629e6a886ae3e5fe6e6fd6b0470c9a33c328"
+    },
+    "supplemental_probe_environment_failure": {
+      "path": "planning/review-assets/preprint-p09-20261101/INTERPRETATION-EQUIVALENCE-ENV-attempt1.txt",
+      "sha256": "2291fcf0a9531ef642d3fa8247263d2cf55e96d42583804730b14460a23dd4b8"
+    }
+  },
+  "limitations": [
+    "A controlled equivalent destination-handle failure does not identify the actual original handle owner or cause; no antivirus/process attribution is made.",
+    "Later intentional fixture mutations and all production write_json failure behavior remain unchanged.",
+    "No broad shared gate rerun was performed by this task; second root core/full qualification remains separate."
+  ],
+  "provider_original_reads": 0,
+  "models_called": 0
+}

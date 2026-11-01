@@ -3,6 +3,7 @@
 import copy
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import ExitStack, nullcontext
+from datetime import datetime, timezone
 import tempfile
 import threading
 import time
@@ -12,11 +13,16 @@ from pathlib import Path
 from unittest.mock import patch
 
 from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, parse_json
+from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
 from asof.study.source_fact_evaluation import TERMINALS
+from asof.study.source_fact_inputs import make_packet
 from asof.study.source_fact_reporting import literal_report
 from tools.science import run_source_fact_pilot as pilot
-from test_study_source_fact_reporting import packet
+if __package__:
+    from .test_study_source_fact_reporting import packet
+else:
+    from test_study_source_fact_reporting import packet
 
 
 class FakeServer:
@@ -56,6 +62,8 @@ class PilotControllerTests(unittest.TestCase):
         self.stack = ExitStack()
         self.addCleanup(self.stack.close)
         self.stack.enter_context(patch.object(pilot, "OUTPUT_PARENT", self.output_parent))
+        self.stack.enter_context(patch.object(pilot, "capture_environment", return_value={
+            "fictional_environment": True, "dependencies": {"pyarrow": "21.0.0"}}))
         self.protocol = parse_json((pilot.ROOT / pilot.ASSETS / "EXECUTION-PROTOCOL-DRAFT-v1.json").read_bytes())
         self.protocol.update(status="READY", evaluation_seconds=3600,
             roots=dict(workspace=str(pilot.ROOT), approved_raw_root=str(pilot.RAW_ROOT),
@@ -168,39 +176,124 @@ class PilotControllerTests(unittest.TestCase):
         self.assertEqual(FakeServer.entered, [])
         self.evaluate.assert_not_called()
 
-    def test_real_sealed_admission_metadata_and_source_only_boundary(self):
-        # Only the eight generation files and reference SEAL/journal metadata are
-        # read. No evaluator member, raw source, weight, or HTTP request is used.
-        for phase, directory in (("source", pilot.GENERATION_ROOT), ("reference", pilot.REFERENCE_ROOT)):
-            raw = (directory / "journal.jsonl").read_bytes()
-            self.protocol[phase + "_journal_sha256"] = pilot.digest(raw)
-            self.protocol[phase + "_journal_terminal_sha256"] = read_chain(directory / "journal.jsonl")[-1]["sha256"]
-        raw = canonical(self.protocol)
-        protocol = pilot.validate_protocol(raw, pilot.digest(raw))
-        output = self.directory / "real-sealed-admission"
-        output.mkdir()
-        opened = []
-        original_read = pilot.read_file
-        def track(path, *args, **kwargs):
-            opened.append(Path(path))
-            return original_read(path, *args, **kwargs)
-        with patch.object(pilot, "_verified_bytes", REAL_VERIFIED_BYTES), \
-                patch.object(pilot, "read_file", side_effect=track):
-            admitted = REAL_ADMIT_INPUTS(protocol, output, time.monotonic() + 30)
-        self.assertEqual(set(admitted["packets"]), set(pilot.CONDITIONS))
-        private_reads = [path.name for path in opened if path.parent == pilot.REFERENCE_ROOT]
-        self.assertEqual(set(private_reads), {"SEAL.json", "journal.jsonl"})
-        self.assertEqual(FakeServer.entered, [])
-        self.popen.assert_not_called()
-        self.http.assert_not_called()
+    def fictional_admission_fixture(self, stack):
+        """Invented111-node metadata; real hashes, journals and admission guards."""
+        root = self.directory / "fictional-workspace"
+        generation, reference, raw_root = root / "generation", root / "reference", root / "originals"
+        assets = "fixture-manifests/"
+        (root / assets).mkdir(parents=True)
+        for name, value in (("ROOT", root), ("GENERATION_ROOT", generation), ("REFERENCE_ROOT", reference),
+                            ("RAW_ROOT", raw_root), ("ASSETS", assets)):
+            stack.enter_context(patch.object(pilot, name, value))
+        observed = datetime(2000, 1, 1, tzinfo=timezone.utc)
+        cutoff = datetime(2001, 1, 1, tzinfo=timezone.utc)
+        nodes, proofs, source_nodes = {}, [], []
+        identifiers = ["raw-evidence", "raw-hgnc", "raw-target"] + [f"invented-{i:03d}" for i in range(108)]
+        for index, sid in enumerate(identifiers):
+            dataset = "hgnc_symbols" if sid == "raw-hgnc" else "ot_target" if sid == "raw-target" else "ot_evidence"
+            receipt_hash = pilot.digest((sid + "-invented-receipt").encode())
+            availability = Availability(None, None, None, None, observed.date(), "public_download_receipt", "Invented fixture only", observed, receipt_hash)
+            node = SourceNode(sid, dataset, "25.09", "invented/" + sid + ".json", pilot.digest(sid.encode()),
+                "reference" if sid == "raw-hgnc" else "agent_evidence", availability, TemporalClass.CONTEMPORARY,
+                "https://example.invalid/" + sid, receipt_path="invented/" + sid + ".receipt.json", receipt_sha256=receipt_hash)
+            nodes[sid] = encode(node)
+            source_nodes.append(node)
+            # Symbolic metadata satisfies the controller's fixed legacy inventory;
+            # no source payload of this size is created or opened.
+            proofs.append(dict(source_id=sid, bytes=8216226905 - 110 if index == 0 else 1,
+                **{key: nodes[sid][key] for key in ("sha256", "dataset_id", "release_id", "path", "receipt_path", "receipt_sha256")}))
+        catalog = dict(schema_version=1, datasets=[dict(dataset_id=key, roles=[role]) for key, role in
+            (("ot_evidence", "agent_evidence"), ("ot_target", "agent_evidence"), ("hgnc_symbols", "reference"))])
+        catalog_path = root / "data/catalog/sources.json"
+        catalog_path.parent.mkdir(parents=True)
+        catalog_raw = canonical(catalog)
+        catalog_path.write_bytes(catalog_raw)
+        catalog_hash = pilot.digest(catalog_raw)
+        plan = dict(source_policy=dict(catalog_sha256=catalog_hash, primary_families=["identity_linkage", "reported_context"]))
+        plan_hash = fingerprint(plan)
+        snapshot = Snapshot(2, "invented-controller", Profile.CONTEMPORARY, cutoff.date(), False, (),
+            tuple(source_nodes), str(raw_root), {}, cutoff)
+        packets, tasks = {}, {}
+        for condition in pilot.CONDITIONS:
+            case = dict(case_id="invented", target_symbol="CONTROL", indication_id="EFO_CONTROL", action=None, modality=None, tissue=None)
+            missing = condition.endswith("controlled-missing")
+            condition_spec = dict(id=condition, kind="synthetic_input_withholding" if missing else "real_selected_sources",
+                records_available=0, collection_status="incomplete", biological_absence=False)
+            resolution = dict(target_id="CONTROL", mappings=[dict(source_id=key, locator=dict(format="json", pointer=""), row={}) for key in ("raw-hgnc", "raw-target")])
+            selected = [dict(source_id="raw-evidence", locator=dict(format="parquet", row_group=0, row=7), row=dict(id="invented-record",
+                targetId="CONTROL", diseaseId="EFO_CONTROL", datasourceId="europepmc", datatypeId="literature", publicationDate="2000-01-01", cellType=None))]
+            packets[condition] = make_packet(case, condition_spec, resolution, selected, nodes, proofs, cutoff=cutoff.isoformat(), plan_sha256=plan_hash)
+            tasks[condition] = packets[condition]["neutral_task"]
+        inventory = dict(role="agent_evidence", agent_visible=True, reference_inputs=[], plan_sha256=plan_hash,
+            source_snapshot=encode(snapshot), inventory_proofs=proofs)
+        payloads = {condition + suffix: canonical(packets[condition] if suffix == ".packet.json" else tasks[condition])
+                    for condition in pilot.CONDITIONS for suffix in (".packet.json", ".task.json")}
+        payloads.update({"source-inventory.json": canonical(inventory), "preparation-summary.json": canonical(dict(evaluator_artifacts_read=False, reference_inputs=[], blocked_cases={}))})
+        protocol = copy.deepcopy(self.protocol)
+        seals = {}
+        for phase, directory in (("source", generation), ("reference", reference)):
+            with_journal = RunJournal(directory, kind="build")
+            if phase == "source":
+                for name, raw in payloads.items(): (directory / name).write_bytes(raw)
+                seal = dict(model_calls=0, phase="generation_inputs_sealed_before_evaluator_reference_creation", reference_inputs=[], generation_authority=False,
+                    plan_sha256=plan_hash, files={name: dict(sha256=pilot.digest(raw), bytes=len(raw)) for name, raw in payloads.items()})
+            else:
+                (directory / "never-read-evaluator.json").write_bytes(b'{"invented_evaluator_only":true}')
+                seal = dict(model_calls=0, phase="source_only_evaluator_references_sealed_before_model_calls", role="evaluation_only", agent_visible=False,
+                    generation_seal_sha256=seals["generation_seal_sha256"], reference_count=3, source_inclusive_replays_per_reference=1)
+            seal_raw = canonical(seal)
+            (directory / "SEAL.json").write_bytes(seal_raw)
+            seals["generation_seal_sha256" if phase == "source" else "reference_seal_sha256"] = pilot.digest(seal_raw)
+            with_journal.append("build_completed", seal_sha256=pilot.digest(seal_raw))
+            with_journal.close()
+            protocol[phase + "_journal_sha256"] = pilot.digest((directory / "journal.jsonl").read_bytes())
+            protocol[phase + "_journal_terminal_sha256"] = read_chain(directory / "journal.jsonl")[-1]["sha256"]
+        conditions = {key: dict(task_sha256=fingerprint(tasks[key]), reference_sha256=pilot.digest(("invented-ref-" + key).encode()), fact_slots=len(packets[key]["fact_skeleton"])) for key in pilot.CONDITIONS}
+        manifests = dict(generation_manifest=dict(status="sealed_source_inputs", role="agent_evidence", agent_visible=True, blocked_cases={}, reference_inputs=[],
+            evaluator_artifacts_read=False, generation_authority=False, model_calls=0, original_value_output=generation.relative_to(root).as_posix(),
+            catalog_sha256=catalog_hash, cutoff=cutoff.isoformat(), plan_sha256=plan_hash, inventory=dict(source_bytes=8216226905), conditions=conditions),
+            reference_manifest=dict(status="sealed_source_only_references", role="evaluation_only", agent_visible=False, output=reference.relative_to(root).as_posix(),
+                pins=dict(approved_raw_root=str(raw_root), catalog_sha256=catalog_hash), conditions=conditions), input_plan=plan)
+        manifest_pins = {}
+        for key, document in manifests.items():
+            name, raw = key + ".json", canonical(document)
+            (root / assets / name).write_bytes(raw)
+            manifest_pins[key] = (name, pilot.digest(raw), len(raw))
+            protocol[key] = dict(path=assets + name, sha256=pilot.digest(raw), bytes=len(raw))
+        protocol.update(seals, roots=dict(workspace=str(root), approved_raw_root=str(raw_root), generation=str(generation), reference=str(reference), output_parent=str(pilot.OUTPUT_PARENT)),
+            code_bundle={name: dict(sha256="0" * 64, bytes=0) for name in pilot.code_inventory()})
+        for cell in protocol["scheduled_cells"]:
+            cell.update({key: conditions[cell["condition"]][key] for key in ("task_sha256", "reference_sha256")})
+        for name, value in (("MANIFEST_PINS", manifest_pins), ("SEALS", seals), ("PINNED_COMPONENTS", {key: fingerprint(protocol[key]) for key in pilot.PINNED_COMPONENTS})):
+            stack.enter_context(patch.object(pilot, name, value))
+        raw = canonical(protocol)
+        return pilot.validate_protocol(raw, pilot.digest(raw)), root, reference, catalog_path
 
-        # A hash change in the immutable source seal cannot enter generation.
-        wrong = dict(protocol)
-        wrong["generation_seal_sha256"] = "f" * 64
-        denied_output = self.directory / "denied-real-seal"
-        denied_output.mkdir()
-        with patch.object(pilot, "_verified_bytes", REAL_VERIFIED_BYTES), self.assertRaises(ContractError):
-            REAL_ADMIT_INPUTS(wrong, denied_output, time.monotonic() + 30)
+    def test_real_sealed_admission_metadata_and_source_only_boundary(self):
+        with ExitStack() as stack:
+            protocol, root, reference, catalog_path = self.fictional_admission_fixture(stack)
+            opened = []
+            original_read = pilot.read_file
+            def track(path, *args, **kwargs):
+                opened.append(Path(path))
+                return original_read(path, *args, **kwargs)
+            output = self.directory / "fictional-sealed-admission"
+            output.mkdir()
+            with patch.object(pilot, "_verified_bytes", REAL_VERIFIED_BYTES), patch.object(pilot, "read_file", side_effect=track):
+                admitted = REAL_ADMIT_INPUTS(protocol, output, time.monotonic() + 30)
+            self.assertEqual(set(admitted["packets"]), set(pilot.CONDITIONS))
+            self.assertTrue(all(path.is_relative_to(root) for path in opened))
+            self.assertEqual({path.name for path in opened if path.parent == reference}, {"SEAL.json", "journal.jsonl"})
+            self.assertEqual(FakeServer.entered, [])
+            self.popen.assert_not_called()
+            self.http.assert_not_called()
+            wrong = dict(protocol, generation_seal_sha256="f" * 64)
+            for name, candidate, message in (("denied-seal", wrong, "seal hash differs"), ("denied-catalog", protocol, "catalog pin differs")):
+                if name == "denied-catalog": catalog_path.write_bytes(b'{"fictional_catalog_changed":true}')
+                denied = self.directory / name
+                denied.mkdir()
+                with patch.object(pilot, "_verified_bytes", REAL_VERIFIED_BYTES), self.assertRaisesRegex(ContractError, message):
+                    REAL_ADMIT_INPUTS(candidate, denied, time.monotonic() + 30)
 
     def test_startup_failure_preserves_six_controls_and_all_six_model_cells(self):
         FakeServer.fail_start = True

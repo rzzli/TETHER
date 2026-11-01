@@ -1,0 +1,19 @@
+{
+  "schema": "p09.interpretation_setup_lock_probe.v1",
+  "test_module_sha256": "27715e1d14da662dc7a9593057b9688d2732a3c2fefb3476b1d4671af018a3a0",
+  "controlled_fault": "After fixture copy, hold a read handle that permits read/write sharing but denies delete sharing on copied case.json. No production I/O is mocked.",
+  "observed_original_root_cause": "UNKNOWN: uncontrolled targeted run and core gate pass the original setup.",
+  "provider_reads": 0,
+  "setup_and_behavior": "FAIL",
+  "exception_type": "PermissionError",
+  "winerror": 5,
+  "errno": 13,
+  "error_stage": "setup copied-case replace",
+  "copied_case_handles": 1,
+  "copied_case_metadata": [
+    {
+      "attributes": 32,
+      "bytes": 1695
+    }
+  ]
+}

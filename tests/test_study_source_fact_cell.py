@@ -12,7 +12,10 @@ from asof.study import source_fact_cell
 from asof.study.source_fact_reporting import literal_report
 from asof.study.source_fact_transport import TypedReportingClient
 from asof.workflow import Budget
-from test_study_source_fact_reporting import packet
+if __package__:
+    from .test_study_source_fact_reporting import packet
+else:
+    from test_study_source_fact_reporting import packet
 
 
 PLAIN = "plain_same_model_typed_report"
