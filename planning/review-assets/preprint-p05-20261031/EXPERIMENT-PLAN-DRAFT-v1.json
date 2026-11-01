@@ -1,0 +1,1122 @@
+{
+  "schema_version": 1,
+  "artifact_id": "preprint-p05d-deterministic-experiment-plan-v1",
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "actual_execution_authorized": false,
+  "model_branch": "P04/P04b CLOSED_NEGATIVE; no further calls or scaling",
+  "date": "2026-11-01",
+  "timezone": "America/Los_Angeles",
+  "design": "EXPERIMENT-DESIGN-v1.md",
+  "claim": "Bounded technical native literal source fidelity, source composition and constructed guard discrimination; scientific validation not established.",
+  "information_cutoff_utc": "2026-11-01T07:16:26.101448+00:00",
+  "constraints": {
+    "model_calls": 0,
+    "provider_spending_usd": 0,
+    "network_calls": 0,
+    "new_downloads": 0,
+    "external_experts": 0,
+    "cohort_expansion": false,
+    "core_api_mutations": false,
+    "prior_protocol_mutations": false,
+    "automatic_retries": 0
+  },
+  "native_frame": {
+    "units": 12,
+    "case_ids": [
+      "p05-01",
+      "p05-02",
+      "p05-03",
+      "p05-04",
+      "p05-05",
+      "p05-06",
+      "p05-07",
+      "p05-08",
+      "p05-09",
+      "p05-10",
+      "p05-11",
+      "p05-12"
+    ],
+    "selection": "unchanged sealed identity hash rank; no replacement or numeric selection",
+    "holdout_status": "not_established",
+    "other_project_exposure": "UNKNOWN",
+    "known_exposed_symbol_exclusions": 9,
+    "independent_studies": "not_established",
+    "original_files": 137,
+    "unique_compressed_original_bytes": 2866248239,
+    "gwas_physical_rows": 1753850,
+    "policy_eligible_rows": 1681738,
+    "excluded_rows": 72112,
+    "each_case": {
+      "gwas_anchors": 1,
+      "credible_rows": 1,
+      "requested_fact_slots": 15,
+      "identity_fact_slots": 11,
+      "measurement_fact_slots": 4,
+      "measurement_groups": 1
+    },
+    "requested_fact_slots_total": 180,
+    "requested_measurement_slots_total": 48,
+    "join": "exact locus-only one_to_many; native study/variant agreement unresolved",
+    "scope": {
+      "action": null,
+      "modality": null,
+      "tissue": null
+    },
+    "scientific_validation": "not_established"
+  },
+  "readiness": {
+    "input_audit": "INPUT-AUDIT-v1.json reports PASS_ORIGINAL_SOURCE_INPUTS_AND_NEUTRAL_TASKS; bind its exact hash at READY",
+    "reference_seal_sha256": null,
+    "reference_audit_sha256": null,
+    "actual_answerable_denominators": null,
+    "exposure_dependence_register_sha256": null,
+    "experiment_adapter_and_guard_code_sha256": null,
+    "fictional_fixture_manifest_sha256": null,
+    "independent_fixture_oracle_sha256": null,
+    "analysis_code_sha256": null,
+    "environment_sha256": null,
+    "ready_sha256": null,
+    "unresolved_policy": "Any null readiness entry blocks READY and execution; no output needed for this draft."
+  },
+  "policy_definitions": {
+    "FULL": "Require G0-G4 for qualified exact source acceptance; score 80% measurement completion separately.",
+    "WITHOUT_WRAPPER": "Diagnostic omission of G2 only; unchanged base G3/G4 guards remain enforced.",
+    "WIRE_ONLY": "Diagnostic G0 plus schema/bounds only; no source-fidelity or scientific qualification."
+  },
+  "stages": {
+    "G0": "External schedule/code/environment/retention/source hash pins and bounds",
+    "G1": "Trusted roots, original/receipt identity and chronology, complete role/deny ancestry",
+    "G2": "P05 mapping/exposure/date/inventory/packet consistency wrapper",
+    "G3": "Unchanged core source/reference identity/join/native-type/representability replay",
+    "G4": "Retained bytes adapter and exact fact/binding/unknown/collection scoring"
+  },
+  "schedule": {
+    "native_output_cells": 24,
+    "fictional_output_cells": 14,
+    "total_output_cells": 38,
+    "native_decision_cells": 48,
+    "fictional_decision_cells": 42,
+    "total_decision_cells": 90,
+    "independent_unit_count": null,
+    "independence_reason": "Twelve native technical units, fourteen designed scenarios and paired policies are not independent study observations.",
+    "output_cells": [
+      {
+        "cell_id": "N-L-p05-01",
+        "stratum": "native",
+        "case_id": "p05-01",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-01",
+        "stratum": "native",
+        "case_id": "p05-01",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-02",
+        "stratum": "native",
+        "case_id": "p05-02",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-02",
+        "stratum": "native",
+        "case_id": "p05-02",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-03",
+        "stratum": "native",
+        "case_id": "p05-03",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-03",
+        "stratum": "native",
+        "case_id": "p05-03",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-04",
+        "stratum": "native",
+        "case_id": "p05-04",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-04",
+        "stratum": "native",
+        "case_id": "p05-04",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-05",
+        "stratum": "native",
+        "case_id": "p05-05",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-05",
+        "stratum": "native",
+        "case_id": "p05-05",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-06",
+        "stratum": "native",
+        "case_id": "p05-06",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-06",
+        "stratum": "native",
+        "case_id": "p05-06",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-07",
+        "stratum": "native",
+        "case_id": "p05-07",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-07",
+        "stratum": "native",
+        "case_id": "p05-07",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-08",
+        "stratum": "native",
+        "case_id": "p05-08",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-08",
+        "stratum": "native",
+        "case_id": "p05-08",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-09",
+        "stratum": "native",
+        "case_id": "p05-09",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-09",
+        "stratum": "native",
+        "case_id": "p05-09",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-10",
+        "stratum": "native",
+        "case_id": "p05-10",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-10",
+        "stratum": "native",
+        "case_id": "p05-10",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-11",
+        "stratum": "native",
+        "case_id": "p05-11",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-11",
+        "stratum": "native",
+        "case_id": "p05-11",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "N-L-p05-12",
+        "stratum": "native",
+        "case_id": "p05-12",
+        "producer": "p05_exact_literal_assembler"
+      },
+      {
+        "cell_id": "N-A-p05-12",
+        "stratum": "native",
+        "case_id": "p05-12",
+        "producer": "always_abstain"
+      },
+      {
+        "cell_id": "S-C01",
+        "stratum": "constructed_fictional",
+        "case_id": "C01",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-C02",
+        "stratum": "constructed_fictional",
+        "case_id": "C02",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-C03",
+        "stratum": "constructed_fictional",
+        "case_id": "C03",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-C04",
+        "stratum": "constructed_fictional",
+        "case_id": "C04",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F01",
+        "stratum": "constructed_fictional",
+        "case_id": "F01",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F02",
+        "stratum": "constructed_fictional",
+        "case_id": "F02",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F03",
+        "stratum": "constructed_fictional",
+        "case_id": "F03",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F04",
+        "stratum": "constructed_fictional",
+        "case_id": "F04",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F05",
+        "stratum": "constructed_fictional",
+        "case_id": "F05",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F06",
+        "stratum": "constructed_fictional",
+        "case_id": "F06",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F07",
+        "stratum": "constructed_fictional",
+        "case_id": "F07",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F08",
+        "stratum": "constructed_fictional",
+        "case_id": "F08",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F09",
+        "stratum": "constructed_fictional",
+        "case_id": "F09",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      },
+      {
+        "cell_id": "S-F10",
+        "stratum": "constructed_fictional",
+        "case_id": "F10",
+        "producer": "frozen_untrusted_fictional_candidate_recipe"
+      }
+    ],
+    "decision_cells": [
+      {
+        "decision_id": "D-N-L-p05-01-FULL",
+        "output_cell_id": "N-L-p05-01",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-01-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-01",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-01-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-01",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-01-FULL",
+        "output_cell_id": "N-A-p05-01",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-02-FULL",
+        "output_cell_id": "N-L-p05-02",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-02-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-02",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-02-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-02",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-02-FULL",
+        "output_cell_id": "N-A-p05-02",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-03-FULL",
+        "output_cell_id": "N-L-p05-03",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-03-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-03",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-03-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-03",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-03-FULL",
+        "output_cell_id": "N-A-p05-03",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-04-FULL",
+        "output_cell_id": "N-L-p05-04",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-04-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-04",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-04-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-04",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-04-FULL",
+        "output_cell_id": "N-A-p05-04",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-05-FULL",
+        "output_cell_id": "N-L-p05-05",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-05-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-05",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-05-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-05",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-05-FULL",
+        "output_cell_id": "N-A-p05-05",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-06-FULL",
+        "output_cell_id": "N-L-p05-06",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-06-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-06",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-06-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-06",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-06-FULL",
+        "output_cell_id": "N-A-p05-06",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-07-FULL",
+        "output_cell_id": "N-L-p05-07",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-07-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-07",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-07-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-07",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-07-FULL",
+        "output_cell_id": "N-A-p05-07",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-08-FULL",
+        "output_cell_id": "N-L-p05-08",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-08-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-08",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-08-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-08",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-08-FULL",
+        "output_cell_id": "N-A-p05-08",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-09-FULL",
+        "output_cell_id": "N-L-p05-09",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-09-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-09",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-09-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-09",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-09-FULL",
+        "output_cell_id": "N-A-p05-09",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-10-FULL",
+        "output_cell_id": "N-L-p05-10",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-10-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-10",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-10-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-10",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-10-FULL",
+        "output_cell_id": "N-A-p05-10",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-11-FULL",
+        "output_cell_id": "N-L-p05-11",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-11-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-11",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-11-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-11",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-11-FULL",
+        "output_cell_id": "N-A-p05-11",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-12-FULL",
+        "output_cell_id": "N-L-p05-12",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-N-L-p05-12-WITHOUT_WRAPPER",
+        "output_cell_id": "N-L-p05-12",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-N-L-p05-12-WIRE_ONLY",
+        "output_cell_id": "N-L-p05-12",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-N-A-p05-12-FULL",
+        "output_cell_id": "N-A-p05-12",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-C01-FULL",
+        "output_cell_id": "S-C01",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-C01-WITHOUT_WRAPPER",
+        "output_cell_id": "S-C01",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-C01-WIRE_ONLY",
+        "output_cell_id": "S-C01",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-C02-FULL",
+        "output_cell_id": "S-C02",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-C02-WITHOUT_WRAPPER",
+        "output_cell_id": "S-C02",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-C02-WIRE_ONLY",
+        "output_cell_id": "S-C02",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-C03-FULL",
+        "output_cell_id": "S-C03",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-C03-WITHOUT_WRAPPER",
+        "output_cell_id": "S-C03",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-C03-WIRE_ONLY",
+        "output_cell_id": "S-C03",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-C04-FULL",
+        "output_cell_id": "S-C04",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-C04-WITHOUT_WRAPPER",
+        "output_cell_id": "S-C04",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-C04-WIRE_ONLY",
+        "output_cell_id": "S-C04",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F01-FULL",
+        "output_cell_id": "S-F01",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F01-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F01",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F01-WIRE_ONLY",
+        "output_cell_id": "S-F01",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F02-FULL",
+        "output_cell_id": "S-F02",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F02-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F02",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F02-WIRE_ONLY",
+        "output_cell_id": "S-F02",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F03-FULL",
+        "output_cell_id": "S-F03",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F03-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F03",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F03-WIRE_ONLY",
+        "output_cell_id": "S-F03",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F04-FULL",
+        "output_cell_id": "S-F04",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F04-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F04",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F04-WIRE_ONLY",
+        "output_cell_id": "S-F04",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F05-FULL",
+        "output_cell_id": "S-F05",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F05-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F05",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F05-WIRE_ONLY",
+        "output_cell_id": "S-F05",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F06-FULL",
+        "output_cell_id": "S-F06",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F06-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F06",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F06-WIRE_ONLY",
+        "output_cell_id": "S-F06",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F07-FULL",
+        "output_cell_id": "S-F07",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F07-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F07",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F07-WIRE_ONLY",
+        "output_cell_id": "S-F07",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F08-FULL",
+        "output_cell_id": "S-F08",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F08-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F08",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F08-WIRE_ONLY",
+        "output_cell_id": "S-F08",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F09-FULL",
+        "output_cell_id": "S-F09",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F09-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F09",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F09-WIRE_ONLY",
+        "output_cell_id": "S-F09",
+        "policy": "WIRE_ONLY"
+      },
+      {
+        "decision_id": "D-S-F10-FULL",
+        "output_cell_id": "S-F10",
+        "policy": "FULL"
+      },
+      {
+        "decision_id": "D-S-F10-WITHOUT_WRAPPER",
+        "output_cell_id": "S-F10",
+        "policy": "WITHOUT_WRAPPER"
+      },
+      {
+        "decision_id": "D-S-F10-WIRE_ONLY",
+        "output_cell_id": "S-F10",
+        "policy": "WIRE_ONLY"
+      }
+    ],
+    "raw_output_reuse": "Same immutable raw candidate bytes are evaluated under paired policies; no extra generation or independent replication.",
+    "execution_order": "Native case IDs ascending, literal then abstain; fictional C01-C04 then F01-F10; policy order FULL, WITHOUT_WRAPPER, WIRE_ONLY; no retries.",
+    "blocked_reference_policy": "Retain case and schedule. Native outputs unexecuted and decisions no-decision; no substitute case, reference, fabricated score or numeric coverage."
+  },
+  "fictional_scenarios": [
+    {
+      "id": "C01",
+      "truth": "VALID_REPORT",
+      "mutation": "Fictional complete native projection: beta float 1.25, standardError float 0.25, pValueMantissa float 2.0, pValueExponent int -6.",
+      "stage": null,
+      "expected_by_policy": {
+        "FULL": "admit",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "C02",
+      "truth": "VALID_REPORT",
+      "mutation": "C01 with beta native null, standardError absent from schema, mantissa empty string, exponent int -6. Distinct unknown reasons.",
+      "stage": null,
+      "expected_by_policy": {
+        "FULL": "admit",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "C03",
+      "truth": "VALID_REPORT",
+      "mutation": "Two eligible same-locus physical credible rows with different native study/variant identifiers; second standardError native float -0.5.",
+      "stage": null,
+      "scientific_status": "not_established; finite native type does not establish valid standard error or composite identity",
+      "expected_by_policy": {
+        "FULL": "admit",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "C04",
+      "truth": "VALID_REPORT",
+      "mutation": "Four native measurement nulls with answerable identity fields.",
+      "stage": null,
+      "measurement_coverage": null,
+      "measurement_completion": false,
+      "expected_by_policy": {
+        "FULL": "admit",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F01",
+      "truth": "INVALID",
+      "mutation": "Append one ASCII JSON whitespace byte to fictional original after source-anchor hash; preserve original expected anchor and separately freeze observed corrupt-fixture hash.",
+      "stage": "G0",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "reject"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F02",
+      "truth": "INVALID",
+      "mutation": "Fabricated evaluation_only source ancestor with internally consistent fixture retention hashes; no actual evaluator or forbidden data.",
+      "stage": "G1",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F03",
+      "truth": "INVALID",
+      "mutation": "Sole required anchor releaseDate 2026-11-02 beyond cutoff; base-native publication fields eligible; source/receipt hash consistency preserved.",
+      "stage": "G2",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F04",
+      "truth": "INVALID",
+      "mutation": "Omit second eligible fictional credible physical row from packet/task while claiming complete selected inventory.",
+      "stage": "G2",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "admit",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F05",
+      "truth": "INVALID",
+      "mutation": "C01 candidate report beta only: 1.25 to 2.25; preserve IDs and bindings.",
+      "stage": "G4",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F06",
+      "truth": "INVALID",
+      "mutation": "Change one source locator to another well-shaped locator; preserve fact ID and value.",
+      "stage": "G4",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F07",
+      "truth": "INVALID",
+      "mutation": "C02 native-null beta reason only: null_source_value to field_not_in_schema.",
+      "stage": "G4",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F08",
+      "truth": "INVALID",
+      "mutation": "Duplicate top-level status JSON key.",
+      "stage": "G4",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "reject"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F09",
+      "truth": "INVALID",
+      "mutation": "Fictional native beta Boolean true with corresponding schema-valid literal candidate report.",
+      "stage": "G3",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "admit"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    },
+    {
+      "id": "F10",
+      "truth": "INVALID",
+      "mutation": "Append trailing JSON whitespace to valid fictional report for exactly 262145 retained bytes.",
+      "stage": "G4",
+      "expected_by_policy": {
+        "FULL": "reject",
+        "WITHOUT_WRAPPER": "reject",
+        "WIRE_ONLY": "reject"
+      },
+      "fixture_sha256": null,
+      "task_sha256": null,
+      "source_anchor_sha256": null,
+      "oracle_sha256": null
+    }
+  ],
+  "fictional_oracle_policy": "Independently authored directly from scenario descriptions/fixture bytes before execution, never derived solely using producer assembler/compiler. Consistent fixture retention hashes do not establish source-policy eligibility.",
+  "primary_native_descriptive_estimands": [
+    {
+      "measure": "FULL verified complete exact literal report",
+      "denominator": 12
+    },
+    {
+      "measure": "FULL 80% reported_measurement completion",
+      "denominator": 12
+    }
+  ],
+  "secondary_estimands": [
+    "Raw/schema-valid/exact/verified return separation",
+    "Actual nonzero measurement denominator count and qualified-subset completion",
+    "Equal-group component coverage and 60/80/100% flags",
+    "Requested/answerable/matched/omitted/correct-unknown/false-asserted fact and group counts",
+    "Always-abstain coverage, errors and completion",
+    "Each fictional scenario earliest failure stage and expected-versus-observed verdict",
+    "Paired policy discordance counts",
+    "Wall/CPU/memory/logical bytes/output and failed-cell resources"
+  ],
+  "fault_denominators": {
+    "planned_invalid_scenarios_per_policy": 10,
+    "planned_valid_scenarios_per_policy": 4,
+    "report_attempted_and_no_decision_separately": true,
+    "no_decision_is_not_successful_rejection": true,
+    "all_unknown_measurement_case_is_not_false_rejection": true
+  },
+  "coverage_contract": {
+    "primary_families": [
+      "reported_measurement"
+    ],
+    "group_weights": "equal among answerable groups; fraction of native answerable components per group",
+    "zero_answerable_group_coverage": null,
+    "zero_denominator_completion": false,
+    "unknown_credit": 0,
+    "thresholds_percent": [
+      60,
+      80,
+      100
+    ],
+    "default_completion_percent": 80,
+    "strict_exact_report": "answered status; all requested fact slots once, exact typed value/unit/source/unknown_reason and correct collection; no omission or duplicate",
+    "semantic_match_is_source_byte_identity": false
+  },
+  "analysis": {
+    "inferential_statistics": "none",
+    "confidence_intervals": "none; unresolved independence and designed faults",
+    "comparisons": "paired case/scenario displays, discordance counts, descriptive coverage differences",
+    "scientific_generalization": false,
+    "scientific_validation": "not_established",
+    "unknown_relationships_do_not_establish_independence": true,
+    "upstream_failures_stay_in_fixed_native_denominator": true
+  },
+  "terminals": [
+    "returned",
+    "malformed",
+    "failed",
+    "timeout",
+    "interrupted",
+    "unexecuted"
+  ],
+  "decision_verdicts": [
+    "admitted",
+    "rejected",
+    "no_decision"
+  ],
+  "accounting": "P05-only outer ledger preserves all 90 decisions and 38 outputs; unchanged core score/aggregate only genuinely source-verified subset. No fabricated ScoredCell.",
+  "resources": {
+    "execution_seconds": 3600,
+    "independent_audit_seconds": 3600,
+    "combined_seconds": 7200,
+    "sequential_workers": 1,
+    "unique_compressed_input_byte_cap": 4294967296,
+    "original_file_cap": 137,
+    "fictional_source_receipt_bytes": 4194304,
+    "retained_raw_bytes_per_cell": 524288,
+    "accepted_wire_bytes": 262144,
+    "total_retained_output_bytes": 268435456,
+    "process_memory_checkpoint_bytes": 2147483648,
+    "completed_logical_hash_bytes_combined": 549755813888,
+    "complete_original_row_enumeration_pass_cap": 4,
+    "physical_io_bytes": null,
+    "platform_cost_usd": null,
+    "enforcement": "cooperative checkpoints, no hard OS watchdog; unknown partial failed hash bytes explicit; unavailable memory readings do not qualify the memory bound"
+  },
+  "pre_execution_verification": "Complete verify_p05_references wrapper with external hashes and explicit trusted roots, including newer mapping/native precision-date/full-inventory replay then unchanged core. Verified refs private; no expected values to assembler.",
+  "independent_final_audit": "Fresh independent actual original projection plus independent fictional oracle check; replay actual bytes; independently reconstruct grouped denominators, exactness, guard decisions, terminals, analysis and resources. Shared helper/compiler replay alone is insufficient.",
+  "baseline_ceiling": "Conditional literal ceiling 100% answerable facts/groups with exact unknowns. Abstain no coverage and no unsupported fact assertions. These are analytic, not observed P05 results.",
+  "limitations": [
+    "One anchor/one match in every selected native case",
+    "Unresolved study/cohort/article/family dependence",
+    "Other exposure UNKNOWN; no holdout assertion",
+    "Locus-only linkage; native study/variant agreement unresolved",
+    "Unknown units/alleles/build/ancestry/intervention context",
+    "Constructed faults do not estimate natural prevalence or general sensitivity",
+    "Shared producer/reference helper algorithms require independent original projection",
+    "Perfect literal copying alone has limited scientific novelty beyond reproducible bounded integration"
+  ],
+  "implementation_changelog": [
+    {
+      "date": "2026-11-01",
+      "status": "DRAFT clarification; no execution authorization",
+      "changes": [
+        "Fictional suite is generic JSON/core controls plus applicable pure P05 predicates; C02 absent schema does not claim native Parquet scanner admission.",
+        "Strict exact report requires answered status and every requested slot, including unknowns; core coverage/completion alone is insufficient.",
+        "Fictional qualification artifacts execute zero native outputs and do not enlarge or execute the 38-output/90-decision study."
+      ],
+      "unchanged": [
+        "14 fictional scenarios",
+        "38 output cells",
+        "90 paired verification decisions",
+        "12 native units",
+        "unchanged core/native scanner",
+        "resource limits",
+        "no model/network/acquisition/spend"
+      ]
+    }
+  ]
+}
