@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [1 November audited paper results](<Project Progress Reassessment 2026-11-01 - Audited Paper Results.md>). P07complete:351independent checks on11CSV/11MD/3figures; rootfreshrebuild39files byteidentical. Literal12/12;designedinvalidadmissions0/10,2/10,7/10;no biological/inferentialclaim. P08manuscript/metadata,P09lawfulrelease,P10localpackageunfinished. Prior negative model results remain, scalingclosed. No external expert input or native revival.
+Current checkpoint: [1 November manuscript working draft](<Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md>). Scientific text/supplement and thirteen references pass 118 independent content checks and positioning review. The 17-page PDF passes text/visual/repeat checks. Factual owner declarations block P08; P09 lawful release and P10 local package follow in order. P07's 351 checks/39-file rebuild and all negative model results remain unchanged. No external expert input or native revival.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

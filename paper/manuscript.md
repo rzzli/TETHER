@@ -48,6 +48,8 @@ The registry enumerates 1,753,850 physical GWAS evidence rows. Its fixed identit
 
 Broader prior project exposure is unknown for all twelve selected units. They are not certified fresh cases or twelve independent studies. One repeated disease-identifier group is recorded; source-study and cohort dependence remain unresolved. After execution their identities and results are exposed development material. We preserve the pre-run exposure register rather than rewriting it with hindsight.
 
+The rank is ascending SHA-256 of the UTF-8 string seed|release|targetId|diseaseId|studyLocusId, with seed preprint-p05-deterministic-v1 and release 25.09. Lexical target, disease, locus and release fields break hash ties. Missing, conflicting or blocked selected units retain their position and disposition; they are not replaced or reranked to improve answerability or results.
+
 ### 3.2 Inputs and independent references
 
 Each unit requests fifteen fields across its original GWAS and matched credible-set rows: eleven identity/linkage fields and four measurement fields. The measurement components are beta, standard error, p-value mantissa and p-value exponent, all in one declared measurement group per unit. We report these native components without calculating a p-value, assigning effect units, interpreting direction or converting provider scores into support weights. Sample size and other context can be retained without becoming graded facts.
@@ -64,7 +66,7 @@ The constructed set has four technically valid and ten deliberately invalid scen
 
 ### 3.4 Endpoints, accounting and resources
 
-For each answerable record/family/group, coverage is the fraction of exact matched non-null components. Family coverage averages these fractions equally across answerable groups. Native nulls are excluded from reporting denominators and separately counted. An all-unknown group has undefined coverage, not zero or automatic success. Completion requires an eligible answered/partial report, correct collection status, no mechanically identified critical errors and at least 80% primary measurement coverage. Frozen sensitivities use 60% and 100%. Exact-report verification additionally requires every declared fact, including correct unknown reasons; it is stronger than the coverage threshold.
+For each answerable record/family/group, coverage is the fraction of exact matched non-null components. Family coverage averages these fractions equally across answerable groups. Native nulls are excluded from reporting denominators and separately counted. An all-unknown group has undefined coverage, not zero or automatic success. Completion requires an eligible answered/partial report, correct collection status, no mechanically identified critical errors and at least 80% primary measurement coverage. Frozen sensitivities use 60% and 100%. Exact-report verification requires status answered and exactly one correct emission of every declared fact, including correct unknown reasons. A partial report may satisfy coverage but cannot be exact under this stricter rule.
 
 The primary accounting includes every scheduled output and decision. Failed, malformed, interrupted, timed-out or unexecuted cells cannot disappear from a favorable subset. A core-scored subset is secondary and explicitly labeled. We use descriptive counts and paired decision tables only. We report no confidence interval, power calculation, significance test or independent-study inference for this selected set.
 
@@ -87,7 +89,7 @@ The literal assembler emits all fifteen requested facts per unit with exact bind
 | Measurement completion at 80% | 12/12 | 0/12 |
 | Completion at 60% and 100% | 12/12 at both | 0/12 at both |
 | Mechanically identified factual errors | 0 | 0 |
-| Emitted assertions | 180 fact entries, including 32 unknowns | 0 |
+| Emitted fact entries | 180, including 32 unknowns | 0 |
 
 Source availability of 40/48 measurement slots is distinct from 100% reporting coverage over the answerable components. Missing fields remain unavailable rather than being supplied from another source or inferred from related measurements.
 

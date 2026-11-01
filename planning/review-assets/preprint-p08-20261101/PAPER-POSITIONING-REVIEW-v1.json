@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "method": "p08.independent_paper_positioning_claim_scope_review.v1",
+  "status": "PASS_POSITIONING_REVIEW_WITH_EXPLICIT_LIMITS",
+  "reviewed_at_utc": "2026-11-01T10:08:12Z",
+  "reviewer": "/root/p05_registry_design_review",
+  "review_scope": "Independent manuscript positioning and claim-scope review; not an independent numerical audit, exhaustive novelty survey, scientific adjudication or publication approval.",
+  "scientific_validation": "not_established",
+  "initial_subject_sha256": {
+    "paper/manuscript.md": "079a9bc8e5c4b59fd7c46c97dfd13675acaa98b5acb2f9ba786ead4abb8c7606",
+    "paper/supplement.md": "ddf74c083acf2a5156c0f3155d6ff1aafa860cedeb9bb5c64c6d44ebe87f7f9a"
+  },
+  "closeout_subject_sha256": {
+    "paper/manuscript.md": "82f2285e9364f86ee6323154c329745df68f344a334550e01d3e699ea1db027c",
+    "paper/supplement.md": "24646d961713192633629041366ba5525e0e45a3a86e72890366fbafddc0251e",
+    "paper/AUTHOR-DECLARATIONS.md": "e545dd5d450f38f3eb3b2d3e73370697c4f82d82b9bcde456e0c3bac59fbf39f"
+  },
+  "supporting_inputs_sha256": {
+    "paper/references.json": "d7cf590dd04f094c83931182517ec5d755e5309e87891e9b1c05c1fd70b5bed2",
+    "paper/references.bib": "8804ee43da0da28b71773eb9a55ad0e7b78fb7d881e8b8423562473a2b87d05f",
+    "paper/RELATED-WORK-SOURCE-AUDIT.md": "e7adea0f9302389248627c969397827e9f8db3d224713577d3d4b655ad05422c",
+    "paper/results/README.md": "e090b2b903fbac17d7771faec2957ad62d46635ff8ef713943526a86225a6dc0",
+    "paper/results/figures/figure1-flow-caption.md": "253ad225733c4e6a74d394157a0980a99454947fc0b6e7f541ee0de0248950eb",
+    "paper/results/figures/figure2-availability-caption.md": "39dabc12f8bdf75f620a616c6bd68a7ebe819f46988e31f53fc75ad838a370de",
+    "paper/results/figures/figure3-controls-caption.md": "b6a2dd0b48317ad9a13faa92ab95068d442356b5c658d955751e81ba92fa896a"
+  },
+  "findings": [
+    {
+      "id": "P08-POS-01",
+      "severity": "required_scope_clarification",
+      "initial_locations": ["paper/manuscript.md:47", "paper/supplement.md:47"],
+      "issue": "The initial text disclaimed study/cohort/allele agreement but did not explicitly identify unresolved cross-source variant-identifier agreement. A reader could overinterpret the exact locus match as a composite study-and-variant match.",
+      "requested_change": "State that matching is locus-only and cross-source variant agreement remains unresolved, in both the main text and source interpretation card.",
+      "disposition": "RESOLVED",
+      "closeout_locations": ["paper/manuscript.md:47", "paper/supplement.md:47"],
+      "closeout_evidence": "Both locations now explicitly state that variant-identifier agreement is unresolved and that the join is not a qualified composite study-and-variant match."
+    },
+    {
+      "id": "P08-POS-02",
+      "severity": "required_scope_clarification",
+      "initial_locations": ["paper/manuscript.md:63", "paper/supplement.md:67"],
+      "issue": "Generic JSON labeling alone did not explicitly prevent C02 absent-field success being read as successful native P05 Parquet absent-column ingestion.",
+      "requested_change": "State that C02 exercises the generic JSON/core path, while the unchanged native scanner requires its declared measurement columns; native missing measurement observations are present-column nulls.",
+      "disposition": "RESOLVED",
+      "closeout_locations": ["paper/manuscript.md:63", "paper/supplement.md:65"],
+      "closeout_evidence": "The main text now denies native absent-column qualification. The supplement explicitly preserves the required-column policy and identifies the eight native unavailable slots as present-column nulls."
+    }
+  ],
+  "claim_checks": [
+    {"claim": "Incremental contribution", "result": "PASS", "evidence": "Introduction and Discussion present an inspectable implementation/integration and bounded source-reporting feasibility result; no first-system or generic-verification novelty claim is made."},
+    {"claim": "Related-work fairness", "result": "PASS", "evidence": "Existing tool access, evidence verification, citation evaluation, structured grading and process rubrics are credited. The pinned Virtual Biotech headless/evidence-coverage capabilities are acknowledged. No unreviewed capability is marked absent and no comparator was executed."},
+    {"claim": "Native endpoint", "result": "PASS", "evidence": "Expected literal-copy success is explicitly distinguished from biomedical reasoning, causal interpretation, target ranking and clinical usefulness. Locus-only and missing-context limits are explicit."},
+    {"claim": "Availability, exactness and completion", "result": "PASS", "evidence": "40/48 source availability is separated from answerable-group coverage; exact all-fact reporting is stronger than threshold completion; all-unknown C04 remains exact but uncompleted."},
+    {"claim": "Constructed controls and policy comparisons", "result": "PASS", "evidence": "The fourteen scenarios are exposed and designed. Policies are paired diagnostic projections, not independently run complete agents. The text denies prevalence, sensitivity/specificity and natural-fault generalization."},
+    {"claim": "Selection, exposure and dependence", "result": "PASS", "evidence": "Identity ranking, prior-use exclusions, UNKNOWN broader exposure, repeated identifiers and unresolved study/cohort dependence are disclosed. Twelve units and ninety decisions are not independent studies."},
+    {"claim": "Negative model evidence", "result": "PASS", "evidence": "P04/P04b are separate exposed development probes with model/interface/configuration and stop rule disclosed. The text denies native GWAS model evaluation, model-family ranking, failure-cause attribution and broad LLM inability."},
+    {"claim": "Audit and role isolation", "result": "PASS", "evidence": "Shared reference/replay algorithms and the separate direct-projection audit are distinguished. Audit counts and AI collaborator agreement are not independent scientific validation or external expert adjudication."},
+    {"claim": "Time, provenance and trust", "result": "PASS", "evidence": "Contemporary cutoff and receipt bounds do not become historical first availability. Later HGNC acquisition designation is not certified annotation release. Provider authenticity, metadata correctness and OS sandbox protection are not claimed."},
+    {"claim": "Resources and reproduction", "result": "PASS", "evidence": "Wrapper timing is included in production; audit is separate; shared work and logical rather than physical I/O are disclosed. Local bundle rebuild is separated from unqualified installed/relocated full-study replay and public release."},
+    {"claim": "Expert-input dependency and declarations", "result": "PASS", "evidence": "No new external scientific expert input is required or claimed. Owner-confirmed authorship/funding/conflict/ethics metadata remain unresolved submission facts rather than inferred negatives."}
+  ],
+  "strongest_skeptical_concerns_remaining": [
+    "The task is deliberately literal and its perfect copying result is expected; incremental utility beyond existing verification systems and scientific value remain unestablished.",
+    "A small identity-ranked local subset with unknown prior exposure and unqualified study/cohort dependence cannot establish generalization or a clean holdout result.",
+    "Exposed hand-authored controls exercise named contract mechanisms; shared helpers and trusted local execution leave unmodeled faults, adversarial combinations and external implementation replication unmeasured.",
+    "Faithful source fields can reproduce upstream errors. Missing study/variant, allele, units and other context prevents causal or therapeutic interpretation.",
+    "Public access, rights, exact-release/relocated replay and factual author declarations remain separate unfinished qualification work."
+  ],
+  "structural_checks": {
+    "reference_entry_count": 13,
+    "reference_keys_unique": true,
+    "references_json_bib_sha256_matches": true,
+    "body_citation_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "bibliography_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "new_primary_source_retrieval": false,
+    "exhaustive_novelty_claim": false,
+    "independent_numeric_reaudit": false
+  },
+  "access_and_mutation_scope": {
+    "actual_original_value_rows_read": false,
+    "actual_generation_packets_or_reference_values_read": false,
+    "human_or_protected_clinical_material_read": false,
+    "old_candidate_or_model_response_contents_read": false,
+    "model_or_network_execution": false,
+    "producer_core_or_manuscript_edits_by_reviewer": false,
+    "reviewer_writes": [
+      "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v1.json",
+      "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v1.md"
+    ]
+  },
+  "unresolved_findings": [],
+  "publication_approval": false,
+  "note": "PASS applies only to claim scope and positioning of the closeout bytes above. It does not establish scientific validity, numerical correctness, exhaustive novelty, external reproducibility or readiness to submit. Later paper edits require a new retained comparison."
+}

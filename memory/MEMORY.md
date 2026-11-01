@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-paper-results]] - Current: P07complete;351independent checks pass on11CSVs/11MD/3figures,rootrebuild39files byteidentical. Literal12/12;designedinvalidadmissions0/10,2/10,7/10. P08manuscript/metadata, P09release andP10packageunfinished; no newmodel/data/experts/monitor or scientifictruthclaim.
+- [[research-log-2026-11-01-manuscript-draft]] - Current: main/supplement, 13 references and 17-page PDF reviewed; 118 content checks, positioning, 273-unit text retention, eight negative formatter cases and byte repeat pass. P08 blocked on factual owner declarations. P09 release/P10 package not started under ordered execution; no expert input, new model/data or scientific truth claim.
+
+- [[research-log-2026-11-01-paper-results]] - Prior checkpoint: P07complete;351independent checks pass on11CSVs/11MD/3figures,rootrebuild39files byteidentical. Literal12/12;designedinvalidadmissions0/10,2/10,7/10. P08manuscript/metadata, P09release andP10packageunfinished; no newmodel/data/experts/monitor or scientifictruthclaim.
 
 - [[research-log-2026-11-01-study-result]] - Prior checkpoint: single38output/90decision run source-audited2,414checks PASS/noissues;P07thenpending.
 

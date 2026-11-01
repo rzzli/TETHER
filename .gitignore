@@ -9,6 +9,9 @@ runs/
 .env.*
 !.env.example
 
+# Regenerable page renders used to check manuscript PDF layout.
+/tmp/pdfs/
+
 /research_notes/IL6R dossier scientific audit/
 /reports/IL6R dossier scientific audit.md
 

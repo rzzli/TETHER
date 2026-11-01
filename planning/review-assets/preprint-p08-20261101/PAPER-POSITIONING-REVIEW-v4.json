@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "method": "p08.independent_paper_positioning_claim_scope_review.v1",
+  "review_revision": 4,
+  "review_date_utc": "2026-11-01",
+  "reviewer": "/root/p05_registry_design_review",
+  "status": "PASS_POSITIONING_REVIEW_WITH_EXPLICIT_LIMITS",
+  "review_scope": "Exact supplementary spacing-only delta; prior review records are preserved.",
+  "prior_review_sha256": {
+    "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v3.json": "2ed48d2993360b925520b41609912fcd5e60ad0789bde144efbc85d8c1d47a7d",
+    "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v3.md": "995b41aa8eba3883ad5ccb67eb19f86444f8682ccead95cf07925f7941c7460f"
+  },
+  "closeout_subject_sha256": {
+    "paper/manuscript.md": "b01d42fccaf046ad0db52d0becd36be994eac440759f23aefaa0673bf7a9ce29",
+    "paper/supplement.md": "977aba2fc3cab68513a78fde08b3cacf0a375af52c908c0fd46bbf1818337200"
+  },
+  "exact_literal_changes": [
+    {"before": "Identity108/132", "after": "Identity 108/132"},
+    {"before": "measurement40/48", "after": "measurement 40/48"},
+    {"before": "Nulls24+8", "after": "Nulls 24+8"},
+    {"before": "36,25 and17", "after": "36, 25 and 17"},
+    {"before": "RSS327,589,888", "after": "RSS 327,589,888"},
+    {"before": "peak333,893,632", "after": "peak 333,893,632"}
+  ],
+  "exact_delta_evidence": "Each replacement occurs once. Reversing only these six spacing edits reproduces the v3 supplementary SHA256 4288a19c6f013101bef424f9fb0a9d228457bb106908d786fe22a6c62914d712. The main text remains unchanged.",
+  "assessment": "All six changes improve spacing and readability. No number, endpoint, scope limitation or substantive claim changes; prior positioning assessments carry forward.",
+  "unresolved_findings": [],
+  "scientific_validation": "not_established",
+  "publication_approval": false,
+  "actual_source_or_protected_values_read": false,
+  "model_or_network_execution": false,
+  "note": "Renderer and numerical acceptance, owner declarations, rights, public release and relocated full-study replay remain separate gates."
+}

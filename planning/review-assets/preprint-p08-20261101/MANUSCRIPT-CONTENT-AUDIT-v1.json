@@ -1,0 +1,249 @@
+{
+  "schema": "p08.manuscript_content_audit.v1",
+  "version": 1,
+  "created_at": "2026-11-01T10:15:39.581886+00:00",
+  "status": "CHANGES_REQUESTED",
+  "subjects": [
+    {
+      "path": "paper/manuscript.md",
+      "sha256": "7d2abe8fa389c0eeab365160bbca8bfd6e76c67b176cdb31049094f694defc27",
+      "bytes": 30057
+    },
+    {
+      "path": "paper/supplement.md",
+      "sha256": "24646d961713192633629041366ba5525e0e45a3a86e72890366fbafddc0251e",
+      "bytes": 17590
+    }
+  ],
+  "source_metadata_pins": [
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/EXPERIMENT-READY-v1.json",
+      "sha256": "49c2ce672356bfcfd572a7b6c963c56bd5c96e3d042a9972f2c36434ebb8de3f",
+      "bytes": 33416
+    },
+    {
+      "path": "data/derived/preprint-p05-experiment-20261101T091345Z/ledger.json",
+      "sha256": "b2a9727ca9ce89865b80ffe80b21a325ea6d91d8844247740ac2c2ecc9a4faa0",
+      "bytes": 235076
+    },
+    {
+      "path": "data/derived/preprint-p05-experiment-20261101T091345Z/seal.json",
+      "sha256": "84b1e87b187dd5704c143f0da0fcac41103a88affe8c8b022c2890c8dc89c70f",
+      "bytes": 5213
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/EXPERIMENT-AUDIT-v1.json",
+      "sha256": "f10f15959f8497821115f65268808c98ae345079c7361722390a479b15506922",
+      "bytes": 143933
+    },
+    {
+      "path": "data/derived/preprint-p05-analysis-20261101T092110Z/analysis.json",
+      "sha256": "ee9f02ea3c3692bbd8b7d63d2d2cd545cfd769ccee9ee7454b4ed00c7ac87312",
+      "bytes": 76553
+    },
+    {
+      "path": "paper/results/ARTIFACTS.json",
+      "sha256": "84d4a31e842d3085133d384429729ef2501425d33bf2b92f65d9c64699a87428",
+      "bytes": 30693
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/ANALYSIS-PRESENTATION-AUDIT-v1.json",
+      "sha256": "80815c8fafd7e2225930f3ea54fbccdca926269c872f893a9f841386c14ce031",
+      "bytes": 29659
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/REGISTER-MANIFEST-v1.json",
+      "sha256": "2c363c14a03b94ed39e285f9fac502fd8eff9bd3f3c81dc7faebe0309897c414",
+      "bytes": 11129
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/REGISTRY-AUDIT-v3.json",
+      "sha256": "5c06b998ae0fc22137c5ab9d7806f21d440c594ffc3ddb1c5989ee1baccfae19",
+      "bytes": 59522
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/INPUT-AUDIT-v1.json",
+      "sha256": "08f8c7ae7703a6d43533a97500f30f56b5c0946cb80b6ae7b3de38d29a12fd01",
+      "bytes": 80458
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/REFERENCE-AUDIT-v1.json",
+      "sha256": "02242b6e59dad8a000fcb13b52d8fc884852efa129e8781c724732797e08d28d",
+      "bytes": 83217
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/REGISTER-ROOT-AUDIT-v1.json",
+      "sha256": "fbc8b8865dd070a994183d9f57bdb334801490cc7d7e85db4a21f55e572d5604",
+      "bytes": 892
+    },
+    {
+      "path": "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+      "sha256": "c1302afe00be9bf820dd7c1f3176e55a55b0666d77abf8bb911062b7ab3fce8a",
+      "bytes": 8248
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+      "sha256": "dc3f5574878278c0844dc8f1192f121e8fbd3dc9fb7b4ab4e87fd0e7f979a026",
+      "bytes": 5232
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json",
+      "sha256": "4cccae4954d2362329adef8a6090fc24ef6e083af775944d8a718360d08a0974",
+      "bytes": 43147
+    },
+    {
+      "path": "runs/preprint-p04b-20261101T055950Z/report.json",
+      "sha256": "a3786fef71b8f9a49d17c7e78f7f41238f752121a5753c313881d700965de5ed",
+      "bytes": 2805
+    }
+  ],
+  "method": "Independent text-to-frozen-protocol/ledger/audit/results metadata comparison; earlier independent ledger quantity recomputation retained in P07 presentation audit. No fresh study/analyzer execution or raw expected-fact/source rereads.",
+  "quantitative_status": "PASS_METADATA_COMPARISON",
+  "quantitative_checks": [
+    {
+      "category": "source_inventory",
+      "verified": "137 originals; 100 GWAS,25 credible,10 target,1 disease,1 HGNC; 2866248239 bytes; table row totals match retained audit metadata",
+      "status": "PASS"
+    },
+    {
+      "category": "selection",
+      "verified": "1753850 GWAS rows =1681738 eligible +72112 excluded; overlapping reasons are not additive;12 fixed units,9 development symbols excluded",
+      "status": "PASS"
+    },
+    {
+      "category": "source_binding",
+      "verified": "2862043 credible rows; one exact locus match per selected unit;24 selected source rows;180 bound requested slots",
+      "status": "PASS"
+    },
+    {
+      "category": "availability",
+      "verified": "132 identity slots:108 populated24 null;48 measurement slots:40 populated8 null;148 populated32 null total",
+      "status": "PASS"
+    },
+    {
+      "category": "measurement_groups",
+      "verified": "12 native answerable groups; answerable components 3,3,4,4,4,3,3,2,4,3,3,4; histogram2:1,3:6,4:5",
+      "status": "PASS"
+    },
+    {
+      "category": "missing_context",
+      "verified": "native beta null1,standardError null7,sampleSize unavailable10; sampleSize not a requested measurement",
+      "status": "PASS"
+    },
+    {
+      "category": "native_results",
+      "verified": "literal12/12 exact and12/12 completion at60,80,100 percent; abstain0/12 with0 emitted assertions and0 mismatch errors; literal180 entries includes32 unknowns",
+      "status": "PASS"
+    },
+    {
+      "category": "schedules",
+      "verified": "38 outputs=24 native+14 constructed;90 decisions=48 native+42 constructed;36 normalized returned2 malformed;57 admitted33 rejected",
+      "status": "PASS"
+    },
+    {
+      "category": "constructed_admission",
+      "verified": "four valid and ten invalid; invalid admissions FULL0/10,WITHOUT_WRAPPER2/10,WIRE_ONLY7/10;valid rejections0/4 each",
+      "status": "PASS"
+    },
+    {
+      "category": "paired_discordance",
+      "verified": "constructed FULL-v-WITHOUT2/14,FULL-v-WIRE7/14,WITHOUT-v-WIRE5/14; paired logical policies on same bytes",
+      "status": "PASS"
+    },
+    {
+      "category": "secondary_denominator",
+      "verified": "35 core-scored outputs; all-output denominators retained separately; zero-answerable group coverage undefined",
+      "status": "PASS"
+    },
+    {
+      "category": "producer_resources",
+      "verified": "203.828s wall,198.984375s CPU,305827840B process peak;197.812s shared wrapper included, not added again;140452303784 logical source-hash bytes",
+      "status": "PASS"
+    },
+    {
+      "category": "audit_resources",
+      "verified": "7.125s wall,7.046875s CPU,333893632B peak;2897268566 logical bytes; combined143349572350; physical I/O/platform cost unmeasured",
+      "status": "PASS"
+    },
+    {
+      "category": "P04_negative_probe",
+      "verified": "12 scheduled cells;5 actual calls;4 malformed1 output-limit failure;0 strict success;13582 input5726 output tokens;424.516s; two earlier zero-call setup attempts retained",
+      "status": "PASS"
+    },
+    {
+      "category": "P04b_negative_probe",
+      "verified": "2 calls;two-field control passes,eight-field malformed;1/2 observed control pass and both gate-closed;2501 input1881 output tokens;38.563s;no retry/scaling/native-model study",
+      "status": "PASS"
+    },
+    {
+      "category": "audit_and_presentation",
+      "verified": "source audit2414 checks; presentation351 checks;11 CSV392 rows,11 Markdown316 rows,3 figure-data/caption/vector sets;39 rebuild files including manifest",
+      "status": "PASS"
+    },
+    {
+      "category": "exact_hash_table",
+      "verified": "all seven presented exact-byte SHA256 values match named frozen artifacts, including READY49c2ce672356bfcfd572a7b6c963c56bd5c96e3d042a9972f2c36434ebb8de3f",
+      "status": "PASS"
+    }
+  ],
+  "findings": [
+    {
+      "id": "MCA-01",
+      "priority": "P2",
+      "subjects": [
+        "paper/manuscript.md:47",
+        "paper/supplement.md:53"
+      ],
+      "title": "Specify reproducible hash selection and no replacement",
+      "finding": "Identity-only ranking is described, but the seed, release inclusion, hash encoding/tie order and no-replacement treatment of selected missing/conflicting/blocked records are not explicit.",
+      "requested_change": "State SHA256 of UTF-8 pipe-separated seed preprint-p05-deterministic-v1, release, targetId, diseaseId, studyLocusId; eligible unique units sort by unit_hash,target_id,disease_id,study_locus_id,release_id. Retain all fixed selected units without reranking or replacement for missingness, conflicts, blocking or candidate performance."
+    },
+    {
+      "id": "MCA-02",
+      "priority": "P2",
+      "subjects": [
+        "paper/manuscript.md:67",
+        "paper/supplement.md:67"
+      ],
+      "title": "Distinguish exact answered status from partial completion",
+      "finding": "Completion correctly permits answered/partial reports. The exactness definition says every fact and correct unknown reasons but does not explicitly require status answered and every slot exactly once.",
+      "requested_change": "State that strict exact verification additionally requires answer_status answered, every requested slot exactly once, no critical error, and exact values/bindings/unknown reasons. A partial report cannot be exact even if its populated-value coverage reaches the threshold."
+    },
+    {
+      "id": "MCA-03",
+      "priority": "P3",
+      "subjects": [
+        "paper/manuscript.md:55",
+        "paper/supplement.md:59"
+      ],
+      "title": "Make the permitted parent boundary explicit",
+      "finding": "Separate source rereads and excluded answer-aware derivatives are described; the exact original-only value-parent rule and quarantine restriction are implicit.",
+      "requested_change": "Clarify that value parents are approved original payloads/receipts plus validated neutral Task/Snapshot/case-plan/routing/config. Registry captures, mapping/coverage audits, SQL values, old candidate/gold/P02 selected-join descendants and evaluator registers cannot become generation/reference value parents. Distinguish neutral configuration from source-valued InputGraph parents."
+    }
+  ],
+  "addressed_before_this_version": [
+    {
+      "item": "Emitted assertions label",
+      "result": "Current main table says emitted fact entries, distinguishing unknown entries from asserted values."
+    },
+    {
+      "item": "Variant identity",
+      "result": "Main3.1 and supplementS2 explicitly limit join to locus-only and leave cross-source study/variant agreement unresolved."
+    },
+    {
+      "item": "Generic JSON boundary",
+      "result": "Main3.3 and supplementS4 now distinguish C02 absent-field core path from unchanged native Parquet measurement-column policy."
+    }
+  ],
+  "scope_boundaries": {
+    "scientific_validation": "not_established",
+    "study_independence": "not_established",
+    "provider_authenticity": "not_established",
+    "protected_or_human_inputs_read": false,
+    "raw_originals_or_reference_values_read": false,
+    "model_or_network_execution": false,
+    "manuscript_or_results_mutated": false,
+    "bibliographic_network_verification": "not_performed_in_this_audit; separately retained bibliography review exists"
+  },
+  "limitations": "This version retains findings against the stated reviewed byte hashes. It is not a publication-readiness, clinical, causal, rights-clearance, external-expert or independent-study certification."
+}

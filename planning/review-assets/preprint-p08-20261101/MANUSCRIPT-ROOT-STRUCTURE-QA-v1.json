@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ROOT_MANUSCRIPT_STRUCTURE_QA",
+  "created_at_utc": "2026-11-01T10:25:51.455365+00:00",
+  "checks_passed": 108,
+  "checks": [
+    {
+      "check": "content_PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "content_subject:paper/manuscript.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "content_subject:paper/supplement.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "positioning_PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "positioning_subject:paper/manuscript.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "positioning_subject:paper/supplement.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ASCII_typography",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citations_1_to_13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "bibliography_byte_anchor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "figure:results/figures/figure1-flow.pdf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "figure:results/figures/figure2-availability.pdf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "figure:results/figures/figure3-controls.pdf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:EXPERIMENT-READY-v1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:Study ledger.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:Study seal.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:EXPERIMENT-AUDIT-v1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:Analysis analysis.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:Results ARTIFACTS.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "supplement_SHA:ANALYSIS-PRESENTATION-AUDIT-v1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/test_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/__init__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/__main__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/agents.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/__init__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/__main__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/core.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/interpretation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/paths.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/archive/restore.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/artifacts.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/atomic.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/chrono.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/cli.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/contracts.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/evaluation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/features.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/ingest.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/journal.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/ledger.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/local_model.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/maintenance.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/provenance.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/retrieval.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/scorer.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/semantics.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/serde.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/__init__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/__main__.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/authority_four_arm.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/baseline_smoke.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/baselines.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/collected_source.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/diagnostic.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/diagnostic_codec.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/diagnostic_resources.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/fixed_evidence.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/fixed_evidence_smoke.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/interpretation_generation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/interpretation_grammar.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/interpretation_interface.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/native.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/native_accounting.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/native_diagnostic.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/native_interpretation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/native_mode.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/preparation_payloads.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/process.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/proofs.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/recorded.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/retrieval_preparation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/retrieval_smoke.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/session.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_adapters.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_cell.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_evaluation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_inputs.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_reporting.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_sources.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_fact_transport.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_preparation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/source_rows.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/stable_read.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/token_capacity.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/study/tokenization.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/wire.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:src/asof/workflow.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/build_source_validation_references.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/prepare_source_validation_inputs.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/prepare_source_validation_set.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/run_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/audit_source_inputs_v1.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/audit_source_references_v1.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/audit_source_registry_v3.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/test_analyze_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:planning/review-assets/preprint-p05-20261031/test_audit_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/analyze_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_frozen_pin:tools/science/audit_source_validation_experiment.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_catalog",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "catalog_counts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_source:paper/manuscript.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_source:paper/supplement.md",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_renderer",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_retention_273",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF_geometry",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_repeat",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "renderer_self_test:publication",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "renderer_self_test:retention",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "subjects": {
+    "paper/manuscript.md": "b01d42fccaf046ad0db52d0becd36be994eac440759f23aefaa0673bf7a9ce29",
+    "paper/supplement.md": "977aba2fc3cab68513a78fde08b3cacf0a375af52c908c0fd46bbf1818337200",
+    "paper/asof-source-reporting-preprint.pdf": "4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588"
+  },
+  "root_visual_review": {
+    "latest_pdf_pages": [
+      1,
+      6,
+      13,
+      16
+    ],
+    "result": "clean at inspected resolution; no clipping/overlap/missing glyphs; full 17-page author/peer visual review remains separately retained"
+  },
+  "root_renderer_self_test_observation": {
+    "command": "bundled Python tools/science/build_preprint_manuscript.py --self-test",
+    "exit_code": 0,
+    "negative_retention_cases": [
+      "omission",
+      "duplicate",
+      "reorder",
+      "repeated_word_loss",
+      "table_cell_change",
+      "caption_loss"
+    ],
+    "negative_publication_cases": [
+      "invalid_preview_path",
+      "render_failure"
+    ],
+    "all_pass": true
+  },
+  "scope": "Document and immutable-artifact consistency, not full release/framework or scientific validation",
+  "owner_declarations": "pending; P08 not complete",
+  "unresolved_structural_findings": [],
+  "source_or_reference_raw_values_read": false,
+  "model_calls": 0,
+  "new_downloads": 0,
+  "network_calls": 0
+}

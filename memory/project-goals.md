@@ -10,7 +10,19 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Audited Paper Results]].
+Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Manuscript Working Draft]].
+P08a scientific text/supplement and 13 references done: 118 independent content
+checks and positioning pass; all method/scope findings resolved. The 17-page PDF
+passes 273-unit text retention, eight negative formatter cases, all-page visual
+review and a fresh-process byte repeat. Factual owner declarations block P08. No new
+external expert input is required. P09 lawful release/portable actual-format replay
+and P10 local package remain unstarted in requested order. Do not invent owner facts,
+publish, infer data rights or claim full study relocation from JSON/figure rebuild.
+See [[research-log-2026-11-01-manuscript-draft]].
+
+### Prior audited paper results checkpoint (retained history)
+
+Checkpoint: [[Project Progress Reassessment 2026-11-01 - Audited Paper Results]].
 P07done:351independentpresentationchecks,11CSV/11MD/3vectorfigures. Rootrebuild
 39filesbyteidenticallocally. NativeL12/12exact/completion;designedinvalidadmit
 FULL0/10,wrapperomission2/10,wire7/10,validreject0/4each. Scientificvalidation

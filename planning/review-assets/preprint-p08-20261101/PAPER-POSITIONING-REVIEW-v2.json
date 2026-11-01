@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "method": "p08.independent_paper_positioning_claim_scope_review.v1",
+  "review_revision": 2,
+  "status": "PASS_POSITIONING_REVIEW_WITH_EXPLICIT_LIMITS",
+  "reviewed_at_utc": "2026-11-01T10:10:36Z",
+  "reviewer": "/root/p05_registry_design_review",
+  "review_scope": "Supplemental exact-delta closeout after the retained v1 positioning review. No new empirical or scientific validation.",
+  "prior_review_sha256": {
+    "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v1.json": "887d2d0c1bf0ee73792528d62efa34d14d2d95a640459633f578c6a35ef95bd2",
+    "planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v1.md": "ab2a9516d5b7fe03539e9247e0ae805656e66d39903a2c68e25e0c849d156fa6"
+  },
+  "closeout_subject_sha256": {
+    "paper/manuscript.md": "7d2abe8fa389c0eeab365160bbca8bfd6e76c67b176cdb31049094f694defc27",
+    "paper/supplement.md": "24646d961713192633629041366ba5525e0e45a3a86e72890366fbafddc0251e"
+  },
+  "delta": {
+    "path": "paper/manuscript.md",
+    "before": "| Emitted assertions | 180 fact entries, including 32 unknowns | 0 |",
+    "after": "| Emitted fact entries | 180, including 32 unknowns | 0 |",
+    "occurrences": 1,
+    "validation": "Replacing the one exact new byte sequence with the old sequence reproduces the v1 reviewed manuscript SHA256 82f2285e9364f86ee6323154c329745df68f344a334550e01d3e699ea1db027c.",
+    "result": "PASS",
+    "assessment": "The revised label avoids implying that explicit unknown entries are factual assertions. Counts, endpoints, limitations and claims are unchanged."
+  },
+  "unchanged_v1_inputs_verified": 9,
+  "v1_findings": {
+    "P08-POS-01": "RESOLVED_AND_UNCHANGED",
+    "P08-POS-02": "RESOLVED_AND_UNCHANGED"
+  },
+  "v1_assessment_carried_forward": true,
+  "unresolved_findings": [],
+  "scientific_validation": "not_established",
+  "publication_approval": false,
+  "actual_source_or_protected_values_read": false,
+  "model_or_network_execution": false,
+  "note": "The prior review files and their initial/closeout subject hashes are preserved. PASS applies only to positioning and claim scope of these final subject bytes. Numerical verification, author declarations, rights, public release and full-study relocated replay remain separate gates."
+}
