@@ -1,0 +1,1822 @@
+{
+  "schema_version": 2,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "protocol": "preprint_p02_completed_credible_literal_join.v2",
+  "created_at_utc": "2026-11-01T05:26:42.563637+00:00",
+  "cutoff_utc": "2026-11-01T05:26:42.563637+00:00",
+  "raw_source_values_scanned_before_freeze": 0,
+  "parents": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\manifests\\private\\preprint-p02-credible-completion-20261101T031842Z\\queue.json",
+      "bytes": 14557,
+      "sha256": "2c976d24830472e40271db98363bf5cb6d9c54a47e83974a26fa3422c988b5a2"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\CREDIBLE-COMPLETION-VERIFY-v1.json",
+      "bytes": 951,
+      "sha256": "f3eecbed36348dea04eb05654b095d10047454aa2810953745ff619f9211f090"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\manifests\\public\\2026-10-10-download-size-inventory.json",
+      "bytes": 12814723,
+      "sha256": "118ec4818b623d6bd7e0e8ce78d9c7cecd7123dfe218942fae1d599311bd66c4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\catalog\\sources.json",
+      "bytes": 1222375,
+      "sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\GWAS-SCAN-PLAN-v1.json",
+      "bytes": 430686,
+      "sha256": "4ab2833f32598607a296ae6317a5f4783b207df3e28d5c0926cbd498d98dbf06"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\GWAS-SCAN-REPORT-v1.json",
+      "bytes": 40651,
+      "sha256": "aea3bd23443ace6305016dbfcb86a8cead068018a9ad159460f92eb1090740b3"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-gwas-20261101T025951484714Z\\gwas-availability.json",
+      "bytes": 325832,
+      "sha256": "b700a763613927e808b475243c0c94c09d4f29a15204f543183496fbec434a99"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\CREDIBLE-JOIN-PLAN-v1.json",
+      "bytes": 7124,
+      "sha256": "d5132d4522754225ca164b965b34fe1ee7c2a74f0a46b33b8fd0713475dc7ef6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\CREDIBLE-JOIN-REPORT-v1.json",
+      "bytes": 4700,
+      "sha256": "28ec5916dd69fd05e2dc65f60744ba38a600b98bb5aa4c1d28d62a807e27361a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p02-20261031\\completed_join.py",
+      "bytes": 26439,
+      "sha256": "3e7759cbde920eacd4a5c031cfc5838a281ece1db9f447e7a5fd84df122a439e"
+    }
+  ],
+  "private_output": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z",
+  "files": [
+    {
+      "basename": "part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-bbdfd1f42e5781834be8",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 94152785,
+        "expected_sha256": null,
+        "planning_upper_bytes": 94152785
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "90M",
+        "estimated_bytes": 94371840,
+        "planning_upper_bytes": 95420416,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 94152785,
+        "sha256": "58505828491db4c0be21b4325c164c6bc5f5aa146e72b9edc18fc6eaa0c504f2"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-bbdfd1f42e5781834be8.json",
+        "bytes": 919,
+        "sha256": "af6ca657a46377b73785d34e02ccab2d6a7eb4d65779fb9f962c7c3eb25caa58"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\af6ca657a46377b73785d34e02ccab2d6a7eb4d65779fb9f962c7c3eb25caa58.json",
+        "bytes": 919,
+        "sha256": "af6ca657a46377b73785d34e02ccab2d6a7eb4d65779fb9f962c7c3eb25caa58"
+      },
+      "receipt_observation_utc": "2026-11-01T04:31:18.2157924+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9037,
+      "footer_sha256": "5dda18046482fab63a2977c3c953993d5c9943aec60109e77a8d4bdace9a3f9d",
+      "rows": 106526,
+      "row_groups": [
+        106526
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-61ba3a0c7813f17d9b1b",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 99539128,
+        "expected_sha256": null,
+        "planning_upper_bytes": 99539128
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "95M",
+        "estimated_bytes": 99614720,
+        "planning_upper_bytes": 100663296,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 99539128,
+        "sha256": "34abe9135bfc21b93c23aebb164876f64848819cd82c5296c39f5f57c0d1f16f"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-61ba3a0c7813f17d9b1b.json",
+        "bytes": 919,
+        "sha256": "af3b311b49d859cb88b30784e61aa313b3d3020652e226ac0f37827d9bffd468"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\af3b311b49d859cb88b30784e61aa313b3d3020652e226ac0f37827d9bffd468.json",
+        "bytes": 919,
+        "sha256": "af3b311b49d859cb88b30784e61aa313b3d3020652e226ac0f37827d9bffd468"
+      },
+      "receipt_observation_utc": "2026-11-01T04:30:09.5697495+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9052,
+      "footer_sha256": "33ff31f9232beda7756a15786404bccc44b14738f648898f1dc69b3dd781c550",
+      "rows": 112306,
+      "row_groups": [
+        112306
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-99e41de3fe5fada0916b",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 107148319,
+        "expected_sha256": null,
+        "planning_upper_bytes": 107148319
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "102M",
+        "estimated_bytes": 106954752,
+        "planning_upper_bytes": 108003328,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 107148319,
+        "sha256": "02ca661c2dcd1417bb5ab91fe0282f13e5bab35e05ccfc76fe754ba92d3e75e2"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-99e41de3fe5fada0916b.json",
+        "bytes": 920,
+        "sha256": "b58cfb49dab0cca36348ef870696f2a57a0b3c1e0f5d4f2c26dd0ea139eefe0d"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\b58cfb49dab0cca36348ef870696f2a57a0b3c1e0f5d4f2c26dd0ea139eefe0d.json",
+        "bytes": 920,
+        "sha256": "b58cfb49dab0cca36348ef870696f2a57a0b3c1e0f5d4f2c26dd0ea139eefe0d"
+      },
+      "receipt_observation_utc": "2026-11-01T04:34:44.5394149+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 8984,
+      "footer_sha256": "4e2a4b921811f8993d0ba43dd4c6602265186d416af20d1f758a1b5d8a34ad04",
+      "rows": 120230,
+      "row_groups": [
+        120230
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "old_two_file_plan",
+      "source": {
+        "receipt_id": "ot25-f01fc0d46d1d4872d84ab6e5",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "status": "completed",
+        "bytes": 80206362,
+        "sha256": "5149a6774148ae10451e251afa883d1547fcb7fce5e2746e70423c9dd3ba331e",
+        "publisher_hash_verified": false,
+        "format_check": "PAR1_header_and_footer_only",
+        "completed_at_utc": "2026-10-11T04:15:50.4296287+00:00",
+        "cache_hit": false,
+        "parse_status": "not_run",
+        "scientific_validation": "not_run"
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "76M",
+        "estimated_bytes": 79691776,
+        "planning_upper_bytes": 80740352,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 80206362,
+        "sha256": "5149a6774148ae10451e251afa883d1547fcb7fce5e2746e70423c9dd3ba331e"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\ot25-f01fc0d46d1d4872d84ab6e5.json",
+        "bytes": 797,
+        "sha256": "563935e9a220b025d64db9dcbbc894a2b1a655e9637b4cc11b30617379b15d36"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\563935e9a220b025d64db9dcbbc894a2b1a655e9637b4cc11b30617379b15d36.json",
+        "bytes": 797,
+        "sha256": "563935e9a220b025d64db9dcbbc894a2b1a655e9637b4cc11b30617379b15d36"
+      },
+      "receipt_observation_utc": "2026-10-11T04:15:50.4296287+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9044,
+      "footer_sha256": "984fb8c11ae438d1323a1d465075c6b108f165399ea7d5a9d5f1e84ab10966ae",
+      "rows": 105318,
+      "row_groups": [
+        105318
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-7c17496e665a8cb52b45",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 98493085,
+        "expected_sha256": null,
+        "planning_upper_bytes": 98493085
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "94M",
+        "estimated_bytes": 98566144,
+        "planning_upper_bytes": 99614720,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 98493085,
+        "sha256": "ffa00583a2327675d7a4e9fdc154e180e9c92e7022e220893950102b6d7bc652"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-7c17496e665a8cb52b45.json",
+        "bytes": 919,
+        "sha256": "640e7a6e5a6781aa5553266f0e583aaad22e366f16ad8f077dca74571ca463a2"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\640e7a6e5a6781aa5553266f0e583aaad22e366f16ad8f077dca74571ca463a2.json",
+        "bytes": 919,
+        "sha256": "640e7a6e5a6781aa5553266f0e583aaad22e366f16ad8f077dca74571ca463a2"
+      },
+      "receipt_observation_utc": "2026-11-01T04:34:44.0221729+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9031,
+      "footer_sha256": "fff5130bb6c5eb982741282b4951c1a0935116afdb3b5f7ec788c9e1aedc6b89",
+      "rows": 105862,
+      "row_groups": [
+        105862
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-e6349da395dbe909bbad",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 104844273,
+        "expected_sha256": null,
+        "planning_upper_bytes": 104844273
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "100M",
+        "estimated_bytes": 104857600,
+        "planning_upper_bytes": 105906176,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 104844273,
+        "sha256": "e0b5018b214b34967c3f257e10c7b2cfa93e141c03ab5b84c274d6c0eb3e2972"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-e6349da395dbe909bbad.json",
+        "bytes": 920,
+        "sha256": "e32ee5ddd1211bcdf6d8a54ee0ae41d8edfa2dd958070ec1569be8c2c179de99"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\e32ee5ddd1211bcdf6d8a54ee0ae41d8edfa2dd958070ec1569be8c2c179de99.json",
+        "bytes": 920,
+        "sha256": "e32ee5ddd1211bcdf6d8a54ee0ae41d8edfa2dd958070ec1569be8c2c179de99"
+      },
+      "receipt_observation_utc": "2026-11-01T04:37:39.1964283+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9069,
+      "footer_sha256": "fc42f1b2ba6923b1f7afd83ef29a591bb8fb8e281a5e1af8b4a0587a6c1e464b",
+      "rows": 123832,
+      "row_groups": [
+        123832
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-8b6b17995590ad84265e",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 90085401,
+        "expected_sha256": null,
+        "planning_upper_bytes": 90085401
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "86M",
+        "estimated_bytes": 90177536,
+        "planning_upper_bytes": 91226112,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 90085401,
+        "sha256": "ff6c2bb716eacb71624692b307ff8ae1a444774771463c9983b54f8e46993068"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-8b6b17995590ad84265e.json",
+        "bytes": 919,
+        "sha256": "92dd670a8f85e75be1df8db7f26554da9937fa1923156bd95b917bd0d23d7fad"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\92dd670a8f85e75be1df8db7f26554da9937fa1923156bd95b917bd0d23d7fad.json",
+        "bytes": 919,
+        "sha256": "92dd670a8f85e75be1df8db7f26554da9937fa1923156bd95b917bd0d23d7fad"
+      },
+      "receipt_observation_utc": "2026-11-01T04:37:10.6029430+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9036,
+      "footer_sha256": "fa3d395decc70b3831e76a4a636c05ecf48231132d896d3c80a8a0183b3ea5d7",
+      "rows": 111699,
+      "row_groups": [
+        111699
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-98f25f87ef0264a2a361",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 96795091,
+        "expected_sha256": null,
+        "planning_upper_bytes": 96795091
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "92M",
+        "estimated_bytes": 96468992,
+        "planning_upper_bytes": 97517568,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 96795091,
+        "sha256": "abc1918b6f349f804a180f9d46b325b8e45ee3e2e1125f6794ae44ebfed31653"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-98f25f87ef0264a2a361.json",
+        "bytes": 919,
+        "sha256": "39bf60db4cfd8e46fad9eda44796409fc7cc51fce08523ca34fc0e5031fb0f28"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\39bf60db4cfd8e46fad9eda44796409fc7cc51fce08523ca34fc0e5031fb0f28.json",
+        "bytes": 919,
+        "sha256": "39bf60db4cfd8e46fad9eda44796409fc7cc51fce08523ca34fc0e5031fb0f28"
+      },
+      "receipt_observation_utc": "2026-11-01T04:40:13.7643805+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9054,
+      "footer_sha256": "5e8cb7fe0fd197668915caa8f00237c389d50cfeae321ef8c51a10dd3782810b",
+      "rows": 106437,
+      "row_groups": [
+        106437
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-b545182f58699270bb1f",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 83307131,
+        "expected_sha256": null,
+        "planning_upper_bytes": 83307131
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "79M",
+        "estimated_bytes": 82837504,
+        "planning_upper_bytes": 83886080,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 83307131,
+        "sha256": "86f76e3b6d602d496934e80b67c871bb0b2abf3f37c0c88af2006ec963415d87"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-b545182f58699270bb1f.json",
+        "bytes": 919,
+        "sha256": "b8ac80d97129c53738b109f031584a017e2e693773d5aa543e0999ef9fa2c35e"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\b8ac80d97129c53738b109f031584a017e2e693773d5aa543e0999ef9fa2c35e.json",
+        "bytes": 919,
+        "sha256": "b8ac80d97129c53738b109f031584a017e2e693773d5aa543e0999ef9fa2c35e"
+      },
+      "receipt_observation_utc": "2026-11-01T04:40:36.4083866+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9018,
+      "footer_sha256": "60b5d2c4a3f788a2efdc3947370581646d3b79fd87cb03627a562f63a416b824",
+      "rows": 114968,
+      "row_groups": [
+        114968
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-b50db8a4c48b7cc6bdeb",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 85228950,
+        "expected_sha256": null,
+        "planning_upper_bytes": 85228950
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "81M",
+        "estimated_bytes": 84934656,
+        "planning_upper_bytes": 85983232,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 85228950,
+        "sha256": "cbc84be4afa3cb6bd6d6e1dcaca38d9262d85e701676da495e25d3ccf2a89b5e"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-b50db8a4c48b7cc6bdeb.json",
+        "bytes": 919,
+        "sha256": "04641093ec387703d6cf6f705ce9cedba4e29b945918d7d79a10a9b866d92575"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\04641093ec387703d6cf6f705ce9cedba4e29b945918d7d79a10a9b866d92575.json",
+        "bytes": 919,
+        "sha256": "04641093ec387703d6cf6f705ce9cedba4e29b945918d7d79a10a9b866d92575"
+      },
+      "receipt_observation_utc": "2026-11-01T04:42:04.1332614+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9042,
+      "footer_sha256": "7afd03aab4d39449707c56cde41f2814b38ff9468cdc77d2274245a988663fa4",
+      "rows": 112134,
+      "row_groups": [
+        112134
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-d97782e6532537b8eacf",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 265023370,
+        "expected_sha256": null,
+        "planning_upper_bytes": 265023370
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "253M",
+        "estimated_bytes": 265289728,
+        "planning_upper_bytes": 266338304,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 265023370,
+        "sha256": "e72bf58b9c414527840caf9f18e76d750f3b85246ee76425e00c3343c1c791d0"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-d97782e6532537b8eacf.json",
+        "bytes": 920,
+        "sha256": "5acbfd6eb6b2c134e6572f104e5ae1460b54c72cc6d0d196e3e23ab83b0a4ce5"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\5acbfd6eb6b2c134e6572f104e5ae1460b54c72cc6d0d196e3e23ab83b0a4ce5.json",
+        "bytes": 920,
+        "sha256": "5acbfd6eb6b2c134e6572f104e5ae1460b54c72cc6d0d196e3e23ab83b0a4ce5"
+      },
+      "receipt_observation_utc": "2026-11-01T04:48:08.0700058+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 14052,
+      "footer_sha256": "a77f24800cfbd9f511238925b52153eeb92f87e02b2925a2ddb12a2b2348c0f9",
+      "rows": 109329,
+      "row_groups": [
+        70100,
+        39229
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "old_two_file_plan",
+      "source": {
+        "receipt_id": "ot25-99b6086482ae7ebeb936f2fe",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "status": "completed",
+        "bytes": 77674319,
+        "sha256": "faf1cdb89818324ba1a989b0caa8a7c629af4ab0e8b7c52331d37f2f8f9d2c05",
+        "publisher_hash_verified": false,
+        "format_check": "PAR1_header_and_footer_only",
+        "completed_at_utc": "2026-10-11T04:16:09.2400071+00:00",
+        "cache_hit": false,
+        "parse_status": "not_run",
+        "scientific_validation": "not_run"
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "74M",
+        "estimated_bytes": 77594624,
+        "planning_upper_bytes": 78643200,
+        "source_modified_text": "2025-08-19 11:35",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 77674319,
+        "sha256": "faf1cdb89818324ba1a989b0caa8a7c629af4ab0e8b7c52331d37f2f8f9d2c05"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\ot25-99b6086482ae7ebeb936f2fe.json",
+        "bytes": 797,
+        "sha256": "e24ca9ae8d87acd80d8d775de2961f63dafaf3f8a332cc9d77f34932c0a5129b"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\e24ca9ae8d87acd80d8d775de2961f63dafaf3f8a332cc9d77f34932c0a5129b.json",
+        "bytes": 797,
+        "sha256": "e24ca9ae8d87acd80d8d775de2961f63dafaf3f8a332cc9d77f34932c0a5129b"
+      },
+      "receipt_observation_utc": "2026-10-11T04:16:09.2400071+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9046,
+      "footer_sha256": "ae03f82e31723c4ab56981369abbfd8aee553e9d0e57871afdd9a7d5ef2799f5",
+      "rows": 125443,
+      "row_groups": [
+        125443
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-32ab7e2c952dda52c367",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 81395318,
+        "expected_sha256": null,
+        "planning_upper_bytes": 81395318
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "78M",
+        "estimated_bytes": 81788928,
+        "planning_upper_bytes": 82837504,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 81395318,
+        "sha256": "16a8deae54ff4a3797d3a7430904c44d7ae2323f4053063511f5bc5e2a01f80c"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-32ab7e2c952dda52c367.json",
+        "bytes": 919,
+        "sha256": "deb741504a5d5767c7adf88551e2e120fa55e28a776c29917d65564944deaa47"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\deb741504a5d5767c7adf88551e2e120fa55e28a776c29917d65564944deaa47.json",
+        "bytes": 919,
+        "sha256": "deb741504a5d5767c7adf88551e2e120fa55e28a776c29917d65564944deaa47"
+      },
+      "receipt_observation_utc": "2026-11-01T04:44:22.2723478+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9018,
+      "footer_sha256": "c820e90333283e53a4d78693b501a53b0880a074f46a158dbaf9359e611ed20c",
+      "rows": 121354,
+      "row_groups": [
+        121354
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-8d8a4f0c91f403626fdf",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 96106949,
+        "expected_sha256": null,
+        "planning_upper_bytes": 96106949
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "92M",
+        "estimated_bytes": 96468992,
+        "planning_upper_bytes": 97517568,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 96106949,
+        "sha256": "7765c8af1e635bb2251d2611300c7ff88dc5333eb3a33b2552863afc592a7506"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-8d8a4f0c91f403626fdf.json",
+        "bytes": 919,
+        "sha256": "300f738bb4c39830dd7eb6ade18244dc2c09731d0bdcd9a60bf0f074baf45faf"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\300f738bb4c39830dd7eb6ade18244dc2c09731d0bdcd9a60bf0f074baf45faf.json",
+        "bytes": 919,
+        "sha256": "300f738bb4c39830dd7eb6ade18244dc2c09731d0bdcd9a60bf0f074baf45faf"
+      },
+      "receipt_observation_utc": "2026-11-01T04:46:56.7885049+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9040,
+      "footer_sha256": "fae68e87653dad9ac9720cab87a54900d25b21efb108f897542b70f4aa8129d3",
+      "rows": 127950,
+      "row_groups": [
+        127950
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-a024f70699b28fc82258",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 112268066,
+        "expected_sha256": null,
+        "planning_upper_bytes": 112268066
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "107M",
+        "estimated_bytes": 112197632,
+        "planning_upper_bytes": 113246208,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 112268066,
+        "sha256": "441182c6ca9db41dcebdafc09f4d39dd77d661461ef4061d2ae586c63719a0f2"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-a024f70699b28fc82258.json",
+        "bytes": 920,
+        "sha256": "e8bbfce3e967cf8b303bc65fc18315b01791b9fe7be8ced64190e1a4dcc8bf64"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\e8bbfce3e967cf8b303bc65fc18315b01791b9fe7be8ced64190e1a4dcc8bf64.json",
+        "bytes": 920,
+        "sha256": "e8bbfce3e967cf8b303bc65fc18315b01791b9fe7be8ced64190e1a4dcc8bf64"
+      },
+      "receipt_observation_utc": "2026-11-01T04:49:38.0303312+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9041,
+      "footer_sha256": "fe0c7bc344622877141598b7392a94d4ebb4f9cb56251ca05e8d2e76b9d5fca3",
+      "rows": 111086,
+      "row_groups": [
+        111086
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-df2064aca7f5975f75d8",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 83955951,
+        "expected_sha256": null,
+        "planning_upper_bytes": 83955951
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "80M",
+        "estimated_bytes": 83886080,
+        "planning_upper_bytes": 84934656,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 83955951,
+        "sha256": "cd84b2813266d78e1d2c3216f4eeb2d95e5d6fcd70c1fc56a3b89f03cc026491"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-df2064aca7f5975f75d8.json",
+        "bytes": 919,
+        "sha256": "9468316886f283ad9f97fbf5024554288184b103b10a3caa7b5d0a736419068d"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\9468316886f283ad9f97fbf5024554288184b103b10a3caa7b5d0a736419068d.json",
+        "bytes": 919,
+        "sha256": "9468316886f283ad9f97fbf5024554288184b103b10a3caa7b5d0a736419068d"
+      },
+      "receipt_observation_utc": "2026-11-01T04:50:14.7744282+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9048,
+      "footer_sha256": "12e3cf28619a0491083fe863c7caf287742a61c49c9a0478ac2255c4e3f3c7ab",
+      "rows": 107918,
+      "row_groups": [
+        107918
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-77fa79b82219e1e9c56e",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 95068653,
+        "expected_sha256": null,
+        "planning_upper_bytes": 95068653
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "91M",
+        "estimated_bytes": 95420416,
+        "planning_upper_bytes": 96468992,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 95068653,
+        "sha256": "cfa1393bdecfef646dbc849f1acd3e4c2253433c4a68063d254a0f8a66a40779"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-77fa79b82219e1e9c56e.json",
+        "bytes": 919,
+        "sha256": "fa3381758900dc24c4e035fca8ac860b5a3808b277816f79ee937bc59cd2f320"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\fa3381758900dc24c4e035fca8ac860b5a3808b277816f79ee937bc59cd2f320.json",
+        "bytes": 919,
+        "sha256": "fa3381758900dc24c4e035fca8ac860b5a3808b277816f79ee937bc59cd2f320"
+      },
+      "receipt_observation_utc": "2026-11-01T04:52:36.5785871+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9066,
+      "footer_sha256": "d1ced471d7bb79ea12dc7612fe47d55989d0c96da0f12d6092fc1cd5446cc360",
+      "rows": 120678,
+      "row_groups": [
+        120678
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-26fc6dae11ef4a473b31",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 128208905,
+        "expected_sha256": null,
+        "planning_upper_bytes": 128208905
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "122M",
+        "estimated_bytes": 127926272,
+        "planning_upper_bytes": 128974848,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 128208905,
+        "sha256": "39a9f97e96793ee094290a8bd075d63e5bca2d68adec84f0beb794af6f336e5a"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-26fc6dae11ef4a473b31.json",
+        "bytes": 920,
+        "sha256": "69e9c64f23be73e72810ff972fa141bdfef1fa9b3faca7b5825af570a68dbe4c"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\69e9c64f23be73e72810ff972fa141bdfef1fa9b3faca7b5825af570a68dbe4c.json",
+        "bytes": 920,
+        "sha256": "69e9c64f23be73e72810ff972fa141bdfef1fa9b3faca7b5825af570a68dbe4c"
+      },
+      "receipt_observation_utc": "2026-11-01T04:56:56.9233989+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9037,
+      "footer_sha256": "650e54ad1a135e305016b6cbd80637d89c0ec062c59e5bbbf829876ec44aa57b",
+      "rows": 113785,
+      "row_groups": [
+        113785
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-db6004f3aaa9cdd0ce88",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 103734324,
+        "expected_sha256": null,
+        "planning_upper_bytes": 103734324
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "99M",
+        "estimated_bytes": 103809024,
+        "planning_upper_bytes": 104857600,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 103734324,
+        "sha256": "98d4faf853938d1965fb61558d7b3e25e16e257b13258c7df3540f0652730a1f"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-db6004f3aaa9cdd0ce88.json",
+        "bytes": 920,
+        "sha256": "52185d4f3449b95e51be3d5dc7f494dbcb308441b2cb4ebd21e99d13eb148c6d"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\52185d4f3449b95e51be3d5dc7f494dbcb308441b2cb4ebd21e99d13eb148c6d.json",
+        "bytes": 920,
+        "sha256": "52185d4f3449b95e51be3d5dc7f494dbcb308441b2cb4ebd21e99d13eb148c6d"
+      },
+      "receipt_observation_utc": "2026-11-01T04:59:35.0904439+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9040,
+      "footer_sha256": "7d21d0ffa2f32b173f177f1ec3286b2357e5aa89443db34212813028bc47adec",
+      "rows": 108482,
+      "row_groups": [
+        108482
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-17ee9a3cd9d7baef9fda",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 104957738,
+        "expected_sha256": null,
+        "planning_upper_bytes": 104957738
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "100M",
+        "estimated_bytes": 104857600,
+        "planning_upper_bytes": 105906176,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 104957738,
+        "sha256": "aa578e0b7a354f8b292bd9881d35e41546ae6b07b1d4af073a4d4d2f7c50e334"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-17ee9a3cd9d7baef9fda.json",
+        "bytes": 920,
+        "sha256": "7e0dd2305f52c9d7867138200ea7e9c9ae606c24454a75b285fe1cb39e322e91"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\7e0dd2305f52c9d7867138200ea7e9c9ae606c24454a75b285fe1cb39e322e91.json",
+        "bytes": 920,
+        "sha256": "7e0dd2305f52c9d7867138200ea7e9c9ae606c24454a75b285fe1cb39e322e91"
+      },
+      "receipt_observation_utc": "2026-11-01T05:02:56.7820239+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9043,
+      "footer_sha256": "2cc790295f4eefcb1159344b5621952f32585a4c2ad1119c6bf0c013d0915317",
+      "rows": 113084,
+      "row_groups": [
+        113084
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-9b95cf5b682c006d2527",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 96717155,
+        "expected_sha256": null,
+        "planning_upper_bytes": 96717155
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "92M",
+        "estimated_bytes": 96468992,
+        "planning_upper_bytes": 97517568,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 96717155,
+        "sha256": "310237f24a86ee0c6deb62c98529240e77a90148b1b1f8965dc023230353a23a"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-9b95cf5b682c006d2527.json",
+        "bytes": 919,
+        "sha256": "d3ffd55265621a10cba712ffb2e73a99fdb36805bc7aed8e2b19522d765cb010"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\d3ffd55265621a10cba712ffb2e73a99fdb36805bc7aed8e2b19522d765cb010.json",
+        "bytes": 919,
+        "sha256": "d3ffd55265621a10cba712ffb2e73a99fdb36805bc7aed8e2b19522d765cb010"
+      },
+      "receipt_observation_utc": "2026-11-01T05:04:10.2819656+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9032,
+      "footer_sha256": "fa9817e55342b696f4c634d23a417ec714c9ae52c20e2978f0eda897c5585fb7",
+      "rows": 113319,
+      "row_groups": [
+        113319
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-a7bca840e6190fc8f916",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 111140638,
+        "expected_sha256": null,
+        "planning_upper_bytes": 111140638
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "106M",
+        "estimated_bytes": 111149056,
+        "planning_upper_bytes": 112197632,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 111140638,
+        "sha256": "bca0b735d3b6f47d286bdea70753a95255cd49c666870f049516c6c4636e5a18"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-a7bca840e6190fc8f916.json",
+        "bytes": 920,
+        "sha256": "247eda1aab3f8d9bb279f3cebc0de55abffbc12c38480efd99fd0594507065d1"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\247eda1aab3f8d9bb279f3cebc0de55abffbc12c38480efd99fd0594507065d1.json",
+        "bytes": 920,
+        "sha256": "247eda1aab3f8d9bb279f3cebc0de55abffbc12c38480efd99fd0594507065d1"
+      },
+      "receipt_observation_utc": "2026-11-01T05:06:35.5526470+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9053,
+      "footer_sha256": "627527e80a53c675be6deffd0aed0a8aaed49be00518bdcad9844e0f8d5d3532",
+      "rows": 126062,
+      "row_groups": [
+        126062
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-4a3c650f439cc8bb780d",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 99968952,
+        "expected_sha256": null,
+        "planning_upper_bytes": 99968952
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "95M",
+        "estimated_bytes": 99614720,
+        "planning_upper_bytes": 100663296,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 99968952,
+        "sha256": "9d002e7775e1debc7f72752f169fd95debb2849c7c64adfdefa3b8935e9706ae"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-4a3c650f439cc8bb780d.json",
+        "bytes": 919,
+        "sha256": "ef9d0c2ace691eea070b0d05b3877d88cc72c6446b10235988e66e3b8ee6b0a5"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\ef9d0c2ace691eea070b0d05b3877d88cc72c6446b10235988e66e3b8ee6b0a5.json",
+        "bytes": 919,
+        "sha256": "ef9d0c2ace691eea070b0d05b3877d88cc72c6446b10235988e66e3b8ee6b0a5"
+      },
+      "receipt_observation_utc": "2026-11-01T05:07:44.5033504+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9038,
+      "footer_sha256": "fbbae5afa0d8fc782214a4bdff117c11f16c2745b36f67267ceef683a945da2c",
+      "rows": 111963,
+      "row_groups": [
+        111963
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-2f76ec4fec9ca1df3b3a",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 98301736,
+        "expected_sha256": null,
+        "planning_upper_bytes": 98301736
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "94M",
+        "estimated_bytes": 98566144,
+        "planning_upper_bytes": 99614720,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 98301736,
+        "sha256": "4bc5cfedff8f08d4a572384786dbabcc219158073fcb753eab633530024561de"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-2f76ec4fec9ca1df3b3a.json",
+        "bytes": 919,
+        "sha256": "c295751ebe5fa73897ff9296d81f2e0c3d30a95e0f66ac2b29856cdfb043bf18"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\c295751ebe5fa73897ff9296d81f2e0c3d30a95e0f66ac2b29856cdfb043bf18.json",
+        "bytes": 919,
+        "sha256": "c295751ebe5fa73897ff9296d81f2e0c3d30a95e0f66ac2b29856cdfb043bf18"
+      },
+      "receipt_observation_utc": "2026-11-01T05:09:28.2479711+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 8946,
+      "footer_sha256": "26db8fdfd0e2ea6b1b1d0c0c0431a4ac46b0cf8cce980af54c0dee40c576bdc0",
+      "rows": 114359,
+      "row_groups": [
+        114359
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    },
+    {
+      "basename": "part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+      "origin": "approved_isolated_23_file_batch",
+      "source": {
+        "receipt_id": "p02-credible-9c4f677934fb646c0aca",
+        "dataset_id": "ot_credible_set",
+        "release_id": "25.09",
+        "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "format": "parquet",
+        "expected_bytes": 93789096,
+        "expected_sha256": null,
+        "planning_upper_bytes": 93789096
+      },
+      "official_inventory_entry": {
+        "relative_path": "credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "listed_size": "89M",
+        "estimated_bytes": 93323264,
+        "planning_upper_bytes": 94371840,
+        "source_modified_text": "2025-08-19 11:36",
+        "component": "credible_set"
+      },
+      "original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\preprint-p02-credible-completion-20261101T031842Z\\credible_set\\part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "bytes": 93789096,
+        "sha256": "a306db80e38541450b699b6fa3916f8dc82b8ae249ef1891128d90da8bac421e"
+      },
+      "receipt_original": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\p02-credible-9c4f677934fb646c0aca.json",
+        "bytes": 919,
+        "sha256": "a379e098373345a6412f4f44c474dc5c65a3433307e9ff6150668ddf3291b5f3"
+      },
+      "receipt_archive": {
+        "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\a379e098373345a6412f4f44c474dc5c65a3433307e9ff6150668ddf3291b5f3.json",
+        "bytes": 919,
+        "sha256": "a379e098373345a6412f4f44c474dc5c65a3433307e9ff6150668ddf3291b5f3"
+      },
+      "receipt_observation_utc": "2026-11-01T05:09:54.8685058+00:00",
+      "publisher_hash_verified": false,
+      "footer_bytes": 9051,
+      "footer_sha256": "445804284f0d3ee8cd39414267e94fe108b1a417d3c44d18c82c7647f336bfa7",
+      "rows": 117919,
+      "row_groups": [
+        117919
+      ],
+      "arrow_schema": "studyLocusId: string\nstudyId: string\nvariantId: string\nchromosome: string\nposition: int32\nregion: string\nbeta: double\nzScore: double\npValueMantissa: float\npValueExponent: int32\neffectAlleleFrequencyFromSource: float\nstandardError: double\nsubStudyDescription: string\nqualityControls: list<element: string>\n  child 0, element: string\nfinemappingMethod: string\ncredibleSetIndex: int32\ncredibleSetlog10BF: double\npurityMeanR2: double\npurityMinR2: double\nlocusStart: int32\nlocusEnd: int32\nsampleSize: int32\nldSet: list<element: struct<tagVariantId: string, r2Overall: double>>\n  child 0, element: struct<tagVariantId: string, r2Overall: double>\n      child 0, tagVariantId: string\n      child 1, r2Overall: double\nlocus: list<element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbabili (... 133 chars omitted)\n  child 0, element: struct<is95CredibleSet: bool, is99CredibleSet: bool, logBF: double, posteriorProbability: double, va (... 118 chars omitted)\n      child 0, is95CredibleSet: bool\n      child 1, is99CredibleSet: bool\n      child 2, logBF: double\n      child 3, posteriorProbability: double\n      child 4, variantId: string\n      child 5, pValueMantissa: float\n      child 6, pValueExponent: int32\n      child 7, beta: double\n      child 8, standardError: double\n      child 9, r2Overall: double\nconfidence: string not null\nstudyType: string\nisTransQtl: bool\n-- schema metadata --\norg.apache.spark.version: '3.5.3'\norg.apache.spark.sql.parquet.row.metadata: '{\"type\":\"struct\",\"fields\":[{\"' + 2910",
+      "arrow_schema_serialized_sha256": "404daec05ecdefded58a10dd6a59aa9e7f82cfc7ce3b3e664dd7566498f95105",
+      "projected_fields": [
+        "studyLocusId",
+        "studyId",
+        "variantId",
+        "chromosome",
+        "position",
+        "beta",
+        "zScore",
+        "pValueMantissa",
+        "pValueExponent",
+        "standardError",
+        "sampleSize"
+      ],
+      "schema_absent_fields": []
+    }
+  ],
+  "case": {
+    "unit_id": "ctla4-efo_0000384",
+    "target_id": "ENSG00000163599",
+    "disease_id": "EFO_0000384",
+    "studyLocusId": "7b5b34e8143f8fdfbed3c10a83a163b2",
+    "previous_locator": {
+      "source_id": "raw-b7a0617719960624a653c097",
+      "row_group": 0,
+      "row": 14254
+    }
+  },
+  "original_gwas_source": {
+    "source": {
+      "source_id": "raw-b7a0617719960624a653c097",
+      "dataset_id": "ot_evidence",
+      "release_id": "25.09",
+      "path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00009-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+      "sha256": "44727015a4a3fd5d894bb877a6a3924c16c790366f66bed2ac5f71e84eed877e",
+      "role": "agent_evidence",
+      "availability": {
+        "first_public_at": null,
+        "release_public_at": null,
+        "record_public_at": null,
+        "annotation_public_at": null,
+        "retrieved_at": "2026-10-11",
+        "basis": "public_download_receipt",
+        "uncertainty": "Known public by download observation; earliest publisher availability remains unknown",
+        "known_public_by": "2026-10-11T02:44:31.252956+00:00",
+        "evidence_ref": "40e35071484945484202e30821854237f2a9008a59b04b65f9aba93ad8157f5c"
+      },
+      "temporal_classification": "contemporary_only",
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00009-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+      "parents": [],
+      "computed_at": null,
+      "method_id": null,
+      "method_version": null,
+      "receipt_path": "manifests/receipt-archive/40e35071484945484202e30821854237f2a9008a59b04b65f9aba93ad8157f5c.json",
+      "receipt_sha256": "40e35071484945484202e30821854237f2a9008a59b04b65f9aba93ad8157f5c"
+    },
+    "original": {
+      "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00009-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+      "bytes": 1816029,
+      "sha256": "44727015a4a3fd5d894bb877a6a3924c16c790366f66bed2ac5f71e84eed877e"
+    },
+    "receipt": {
+      "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipt-archive\\40e35071484945484202e30821854237f2a9008a59b04b65f9aba93ad8157f5c.json",
+      "bytes": 841,
+      "sha256": "40e35071484945484202e30821854237f2a9008a59b04b65f9aba93ad8157f5c"
+    }
+  },
+  "key_evidence": {
+    "manifest": {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-gwas-20261101T025951484714Z\\gwas-availability.json",
+      "bytes": 325832,
+      "sha256": "b700a763613927e808b475243c0c94c09d4f29a15204f543183496fbec434a99"
+    },
+    "source_locator": {
+      "source_id": "raw-b7a0617719960624a653c097",
+      "row_group": 0,
+      "row": 14254,
+      "field": "studyLocusId"
+    },
+    "slot_id": "cd8e86b25a0ff5a2914b6ce405c2ddd669d4b110:studyLocusId"
+  },
+  "fields": [
+    "studyLocusId",
+    "studyId",
+    "variantId",
+    "chromosome",
+    "position",
+    "beta",
+    "zScore",
+    "pValueMantissa",
+    "pValueExponent",
+    "standardError",
+    "sampleSize"
+  ],
+  "numeric_fields": [
+    "beta",
+    "zScore",
+    "pValueMantissa",
+    "pValueExponent",
+    "standardError",
+    "sampleSize"
+  ],
+  "batch_size": 65536,
+  "collection": {
+    "release_id": "25.09",
+    "official_parquet_files": 25,
+    "old_files": 2,
+    "newly_completed_files": 23,
+    "verified_files": 25,
+    "original_bytes": 2588111695,
+    "physical_rows": 2862043,
+    "scope": "Complete pinned 25-file credible_set Parquet release inventory; _SUCCESS is not a payload"
+  },
+  "matching": "Exact studyLocusId equality in Arrow batches before Python conversion; retain every matching physical row and original file/row-group/row locator; no first-choice selection",
+  "duplicate_policy": "Keep all matches; report multiplicity and per-field disagreements without resolving them",
+  "native_value_policy": "Retain reported native values with source types, nulls and component names; no transformations, gene/drug direction, MR, prediction features or clinical claims",
+  "unknowns": {
+    "units": null,
+    "units_reason": "Not established by bounded native credible_set fields",
+    "ancestry": null,
+    "ancestry_reason": "Not requested or inferred from another dataset",
+    "upstream_study": null,
+    "upstream_study_reason": "Native studyId may be retained but original upstream study identity/metadata were not verified"
+  },
+  "temporal_policy": "New UTC cutoff after all download observations; contemporary evaluation-only descendant; no backfill into earlier runs or earlier cutoffs",
+  "preservation_before_scan": {
+    "core_state": {
+      "observed": {
+        "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\core-25-09-chembl35-2026-10-10-state.json",
+        "bytes": 2978344,
+        "sha256": "f7f238e92db035232f8273a18ec2182d99ad6571d570bff50b3899dbc56c15ea"
+      },
+      "prior_sha256": "f7f238e92db035232f8273a18ec2182d99ad6571d570bff50b3899dbc56c15ea",
+      "unchanged": true
+    },
+    "old_two_files": [
+      {
+        "basename": "part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "original_unchanged": true,
+        "receipt_unchanged": true,
+        "expected_original": {
+          "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "bytes": 80206362,
+          "sha256": "5149a6774148ae10451e251afa883d1547fcb7fce5e2746e70423c9dd3ba331e"
+        },
+        "expected_receipt": {
+          "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\ot25-f01fc0d46d1d4872d84ab6e5.json",
+          "bytes": 797,
+          "sha256": "563935e9a220b025d64db9dcbbc894a2b1a655e9637b4cc11b30617379b15d36"
+        }
+      },
+      {
+        "basename": "part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+        "original_unchanged": true,
+        "receipt_unchanged": true,
+        "expected_original": {
+          "path": "E:\\projects_data\\drug_target_agents_data\\raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "bytes": 77674319,
+          "sha256": "faf1cdb89818324ba1a989b0caa8a7c629af4ab0e8b7c52331d37f2f8f9d2c05"
+        },
+        "expected_receipt": {
+          "path": "E:\\projects_data\\drug_target_agents_data\\manifests\\receipts\\ot25-99b6086482ae7ebeb936f2fe.json",
+          "bytes": 797,
+          "sha256": "e24ca9ae8d87acd80d8d775de2961f63dafaf3f8a332cc9d77f34932c0a5129b"
+        }
+      }
+    ]
+  },
+  "receipt_policy": "Exact inspected bytes copied into a private content-addressed archive; transport originals and state remain read-only",
+  "resource_policy": "Record verification and scan time separately, logical bytes/rows/selected packet bytes; actual physical I/O unknown; Windows process peak RSS measured when available",
+  "verification_elapsed_seconds": 6.408256700029597,
+  "self_test": {
+    "role": "evaluation_only",
+    "agent_visible": false,
+    "adjudicated_gold": false,
+    "fixture": "fictional_literal_strings_only_no_biological_data",
+    "shapes_passed": [
+      "zero",
+      "one",
+      "many_identical",
+      "many_conflicting",
+      "null",
+      "case_and_whitespace_exact",
+      "physical_batch_offsets"
+    ]
+  },
+  "new_downloads": 0,
+  "model_calls": 0
+}

@@ -1,0 +1,20 @@
+{
+  "batch_id": "preprint-p02-credible-completion-20261101T031842Z",
+  "checked_at_utc": "2026-11-01T05:23:37.9157661+00:00",
+  "scope": "Every queued file, current bytes, source receipt identity, SHA-256, size and basic format signature.",
+  "expected_files": 23,
+  "verified_files": 23,
+  "failed_files": 0,
+  "verified_bytes": 2430231014,
+  "complete": true,
+  "failures": [],
+  "limitations": "Transport/content integrity only; no scientific/schema/temporal-validity claim.",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "unmodified_tool_output_archive": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\gold_evidence\\preprint-p02-completed-credible-20261101T052636222047Z\\receipt-archive\\f60e9b8b0a5dfbbae32448c1a8272e88fb4d3622142a7f4cb45496abf3358c23.json",
+    "bytes": 493,
+    "sha256": "f60e9b8b0a5dfbbae32448c1a8272e88fb4d3622142a7f4cb45496abf3358c23"
+  }
+}
