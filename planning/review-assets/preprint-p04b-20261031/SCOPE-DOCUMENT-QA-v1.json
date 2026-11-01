@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "SCOPE-DOCUMENT-QA-v1",
+  "created_at_utc": "2026-11-01T06:28:59.805580+00:00",
+  "status": "PASS_CURRENT_DOCUMENTATION_CONSISTENT",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "review_mode": "independent read-only current-documentation and allowed metadata QA",
+  "scope_limits": {
+    "workspace": "D:\\Projects\\drug_target_agents",
+    "markdown_scope": "Only listed current documents; DATA_PLAN lines 1-16; reassessment index before retained historical checkpoints; project-goals before Prior P04 result.",
+    "allowed_metadata_scope": "Listed P04/P04b/P05 public audit/protocol/metadata artifacts and current catalog; retained outcomes treated as evidence, not rerun.",
+    "excluded": [
+      "human returns and all response-aware descendants",
+      "raw private candidate or biological rows",
+      "clinical outcomes",
+      "old project-goals history",
+      "older DATA_PLAN logs as fresh current claims",
+      "new source-data payloads",
+      "internet and external services"
+    ],
+    "actions": {
+      "network_calls": 0,
+      "model_calls": 0,
+      "source_value_reads": 0,
+      "payload_hashes": 0,
+      "tests_run": 0,
+      "source_or_data_mutations": 0,
+      "document_edits_by_qa": 0,
+      "only_written_file": "planning/review-assets/preprint-p04b-20261031/SCOPE-DOCUMENT-QA-v1.json"
+    },
+    "limits": [
+      "No source-code audit or fresh 70-code-pin replay was performed; allowed independent audit/protocol metadata is cited.",
+      "No scientific accuracy, clinical truth, fresh-cohort status or independent sample size is established.",
+      "No full test run requested solely for prose.",
+      "Relative-link checks verify local target existence, not linked content or anchor semantics."
+    ]
+  },
+  "checks": [
+    {
+      "check_id": "p04_all_cell_and_call_denominators",
+      "passed": true,
+      "observed": {
+        "cells": 12,
+        "calls": 5,
+        "clean_context_calls": 4,
+        "controlled_missing_calls": 1,
+        "independent_inferential_groups": null,
+        "terminal_counts": {
+          "failed": 1,
+          "interrupted": 0,
+          "malformed": 4,
+          "returned": 7,
+          "timeout": 0,
+          "unexecuted": 0
+        }
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+        "planning/review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md"
+      ]
+    },
+    {
+      "check_id": "p04_no_accepted_model_reports_literal_clean_ceiling",
+      "passed": true,
+      "observed": {
+        "strict_model_successes": 0,
+        "literal_clean_completions": "2/2",
+        "model_failures": "4 malformed; 1 output-limit failure",
+        "not_independent_n12": true
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md"
+      ]
+    },
+    {
+      "check_id": "p04_independent_check_count",
+      "passed": true,
+      "observed": {
+        "audit_flags": 2216,
+        "passing": 2216,
+        "audit_network_calls": 0,
+        "audit_model_calls": 0
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04-20261031/ATTEMPT-AUDIT-v1.json"
+      ]
+    },
+    {
+      "check_id": "p04_diagnosis_not_new_test_suite",
+      "passed": true,
+      "observed": {
+        "structural_checks": 9,
+        "test_suite_executed": false,
+        "biological_correctness_assessed": false
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md"
+      ]
+    },
+    {
+      "check_id": "p04b_fictional_outcomes_and_closed_gate",
+      "passed": true,
+      "observed": {
+        "fictional_calls": 2,
+        "passed_controls": 1,
+        "malformed_controls": 1,
+        "gate": {
+          "both_controls_passed": false,
+          "model_scale_allowed": false,
+          "retry_authorized": false,
+          "scientific_validation": "not_established",
+          "status": "failed_branch_closed"
+        }
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "planning/review-assets/preprint-p04b-20261031/README.md"
+      ]
+    },
+    {
+      "check_id": "p04b_pins_and_journal",
+      "passed": true,
+      "observed": {
+        "ready_code_pins": 70,
+        "independent_audit_pins": 70,
+        "journal_events": 79,
+        "audit_reports_all_current_archived_match": true,
+        "fresh_code_pin_verification_by_this_qa": false
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+        "planning/review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json"
+      ]
+    },
+    {
+      "check_id": "p04b_offline_tests_retained",
+      "passed": true,
+      "observed": {
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "test_rerun_by_this_qa": false
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md"
+      ]
+    },
+    {
+      "check_id": "separate_studies_no_combined_scientific_accuracy",
+      "passed": true,
+      "observed": {
+        "p04": "0 strict successes/5 exposed pilot calls",
+        "p04b": "1 pass/2 fictional conformance calls",
+        "combined_scientific_accuracy": null
+      },
+      "evidence": [
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+        "memory/project-goals.md"
+      ]
+    },
+    {
+      "check_id": "catalog_reconciliation_and_counts",
+      "passed": true,
+      "observed": {
+        "providers": 83,
+        "datasets": 178,
+        "changed_dataset": "ot_credible_set",
+        "other_datasets_unchanged_recorded": 177,
+        "current_catalog_matches_reconciliation_hash": true,
+        "evaluation_answer_parents": [],
+        "new_source_value_reads": 0
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p05-20261031/CATALOG-RECONCILIATION-v1.json",
+        "data/catalog/sources.json"
+      ]
+    },
+    {
+      "check_id": "credible_collection_not_scientific_validation",
+      "passed": true,
+      "observed": {
+        "collection_status": "collected",
+        "parse_status": "not_run",
+        "validation_status": "not_run",
+        "files": 25,
+        "bytes": 2588111695
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p05-20261031/CATALOG-RECONCILIATION-v1.json",
+        "data/catalog/sources.json",
+        "data/DATA_PLAN.md",
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md"
+      ]
+    },
+    {
+      "check_id": "metadata_frame_totals",
+      "passed": true,
+      "observed": {
+        "files": 137,
+        "bytes": 2866248239,
+        "direct_frame_entries": 112,
+        "reused_credible_metadata_files": 25,
+        "gwas_files": 100,
+        "gwas_footer_rows_metadata_only": 1753850
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p05-20261031/FRAME-METADATA-PREFLIGHT-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+        "memory/project-goals.md"
+      ]
+    },
+    {
+      "check_id": "preflight_does_not_qualify_hashes_values_or_science",
+      "passed": true,
+      "observed": {
+        "new_payload_hashes_in_preflight": 0,
+        "source_data_rows_read_in_preflight": 0,
+        "source_mutations": 0,
+        "fresh_hash_verification_and_value_scan": "pending frozen source-only plan",
+        "fresh_cohort_and_independence": "unqualified",
+        "ot_study_catalog_path": "missing; no global absence claim"
+      },
+      "evidence": [
+        "planning/review-assets/preprint-p05-20261031/FRAME-METADATA-PREFLIGHT-v1.json",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+        "memory/project-goals.md"
+      ]
+    },
+    {
+      "check_id": "builder_work_distinct_from_actual_scan",
+      "passed": true,
+      "observed": {
+        "metadata_preflight": "complete",
+        "builder_and_fictional_validation": "in progress, not independently audited here",
+        "actual_source_value_scan": "unfrozen/unexecuted",
+        "paper_and_p05_to_p10": "incomplete"
+      },
+      "evidence": [
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+        "memory/project-goals.md"
+      ]
+    },
+    {
+      "check_id": "historical_preparation_is_labeled",
+      "passed": true,
+      "observed": {
+        "p04b_readme": "current negative banner plus retained preparation",
+        "pilot_result_assessment": "historical checkpoint with current-scope link",
+        "older_data_plan_logs": "excluded from current-claim review"
+      },
+      "evidence": [
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+        "planning/review-assets/preprint-p04b-20261031/README.md"
+      ]
+    },
+    {
+      "check_id": "normal_relative_markdown_local_links",
+      "passed": true,
+      "observed": {
+        "links_checked": 52,
+        "missing": [],
+        "targets_opened": false,
+        "wiki_links_and_external_urls": "outside this check"
+      },
+      "evidence": [
+        "README.md",
+        "TODO.md",
+        "data/DATA_PLAN.md",
+        "planning/Project Progress Reassessments.md",
+        "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+        "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+        "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+        "memory/project-goals.md",
+        "planning/review-assets/preprint-p04b-20261031/README.md"
+      ]
+    }
+  ],
+  "checks_total": 15,
+  "checks_passed": 15,
+  "findings": [],
+  "resolved_during_review": [
+    {
+      "issue": "P04b README still presented only unexecuted draft preparation",
+      "resolution": "Root added current verified-negative outcome and historical preparation heading; re-read passed."
+    },
+    {
+      "issue": "Reporting Pilot Result retained prospective P04b steps without current historical pointer",
+      "resolution": "Root added retained-checkpoint banner and link to the current closed-branch scope; re-read passed."
+    },
+    {
+      "issue": "Deterministic scope described metadata preflight as active after its completion",
+      "resolution": "Root updated preflight completion and builder-in-progress wording, leaving actual value scans unfrozen."
+    }
+  ],
+  "local_link_validation": [
+    {
+      "path": "README.md",
+      "normal_relative_markdown_links": 27,
+      "missing": []
+    },
+    {
+      "path": "TODO.md",
+      "normal_relative_markdown_links": 6,
+      "missing": []
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "normal_relative_markdown_links": 4,
+      "missing": []
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "normal_relative_markdown_links": 1,
+      "missing": []
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+      "normal_relative_markdown_links": 9,
+      "missing": []
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "normal_relative_markdown_links": 3,
+      "missing": []
+    },
+    {
+      "path": "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+      "normal_relative_markdown_links": 0,
+      "missing": []
+    },
+    {
+      "path": "memory/project-goals.md",
+      "normal_relative_markdown_links": 0,
+      "missing": []
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/README.md",
+      "normal_relative_markdown_links": 2,
+      "missing": []
+    }
+  ],
+  "evidence_pins": [
+    {
+      "path": "README.md",
+      "scope": "whole_file",
+      "reviewed_lines": 160,
+      "reviewed_bytes": 12226,
+      "reviewed_sha256": "6983f2f23c24a2e018d99ff8cf75d48eecef013fbb748f9bf3b25a11e0fc9556"
+    },
+    {
+      "path": "TODO.md",
+      "scope": "whole_file",
+      "reviewed_lines": 71,
+      "reviewed_bytes": 8900,
+      "reviewed_sha256": "8bbf54a689f4908b66e5d3bc7224693786ac5336c42da37fab26ff7504467df1"
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "scope": "current_prefix_only",
+      "reviewed_lines": 16,
+      "reviewed_bytes": 2647,
+      "reviewed_sha256": "904c42ba711c75612d0b37ba31c7daf9ac761c59d9258212c2dcc42807d4160e"
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "scope": "current_prefix_only",
+      "reviewed_lines": 16,
+      "reviewed_bytes": 1436,
+      "reviewed_sha256": "88d745f4b995808605bd24a0da4e06e45dde8f4673dce8f0aea4a7f44183070c"
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md",
+      "scope": "whole_file",
+      "reviewed_lines": 156,
+      "reviewed_bytes": 10851,
+      "reviewed_sha256": "5052626637e9d9dacb498dfaa3e4027a158b1e7ca689c5031b2976f497614baf"
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "scope": "whole_file",
+      "reviewed_lines": 120,
+      "reviewed_bytes": 8499,
+      "reviewed_sha256": "22a431639803b9b85a37b5cb5dc2bddf32190355d8914ed571bae26dfed6105e"
+    },
+    {
+      "path": "memory/research-log-2026-10-31-deterministic-paper-scope.md",
+      "scope": "whole_file",
+      "reviewed_lines": 40,
+      "reviewed_bytes": 2215,
+      "reviewed_sha256": "7ebbbfefde46f69efe5549dc89dcb0eb20251f793a37447cb1d938156bc12f56"
+    },
+    {
+      "path": "memory/project-goals.md",
+      "scope": "current_prefix_only",
+      "reviewed_lines": 27,
+      "reviewed_bytes": 1251,
+      "reviewed_sha256": "7c43954540569c42835596850ffe7b218ee8cf48cc51cd4360254b47b1fa8a9c"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/README.md",
+      "scope": "whole_file",
+      "reviewed_lines": 91,
+      "reviewed_bytes": 5855,
+      "reviewed_sha256": "80ab53565cc11b37fbd6d2c1b1c0b4757dcd5eb122d4c8266cae6cf5e53749be"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 8248,
+      "sha256": "c1302afe00be9bf820dd7c1f3176e55a55b0666d77abf8bb911062b7ab3fce8a"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04-20261031/ATTEMPT-AUDIT-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 290130,
+      "sha256": "daae41b26d29f9a2e830d5fa524ec24f7d4f9c248081b4911ca7a7aa9ea66314"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 39913,
+      "sha256": "1b586c3ec840a7d7b51c6e32a60ff12488a7f68d852c077e97aac430d8a3b448"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 5232,
+      "sha256": "dc3f5574878278c0844dc8f1192f121e8fbd3dc9fb7b4ab4e87fd0e7f979a026"
+    },
+    {
+      "path": "planning/review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 43147,
+      "sha256": "4cccae4954d2362329adef8a6090fc24ef6e083af775944d8a718360d08a0974"
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/FRAME-METADATA-PREFLIGHT-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 1276739,
+      "sha256": "c9af0da5ff7a07b95372383d73c493faef0ba4081a34768d88393a881ff26551"
+    },
+    {
+      "path": "planning/review-assets/preprint-p05-20261031/CATALOG-RECONCILIATION-v1.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 1257,
+      "sha256": "7df129e28ca0c2e6fb07b3adc0beb128a0b278a5baf6c5b2299ebde344920280"
+    },
+    {
+      "path": "data/catalog/sources.json",
+      "scope": "public_or_catalog_metadata_only",
+      "bytes": 1229616,
+      "sha256": "3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109"
+    }
+  ]
+}

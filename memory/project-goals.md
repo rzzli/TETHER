@@ -10,6 +10,23 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope]].
+P04b is verified negative: two fictional calls, one pass and one malformed value/
+unknown-reason result; all 70 code pins, journal, usage and cleanup verify. The
+model branch is closed with no further prompt retries or larger model cohort.
+Original P04 exposed-pilot 0/5 (four clean calls plus one controlled-missing call)
+stays separate from fictional conformance 1/2.
+
+P05 now prepares a deterministic source-validation and technical feasibility
+study. Neutral metadata frame covers 137 files/2,866,248,239 bytes; no new source
+values or payload hashes have been read in this preflight. Source-only registry/
+builder code and tests precede an actual source/selection freeze. Study metadata,
+fresh exposure and independence remain unqualified. P05–P10 and the paper remain
+unfinished; no expert inputs, new downloads, paid access or monitor restart.
+See [[research-log-2026-10-31-deterministic-paper-scope]].
+
+### Prior P04 result checkpoint (retained history)
+
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Reporting Pilot Result]].
 P02a acquisition and complete 25-file join accepted; catalog reconciled from neutral
 receipt/schema metadata without evaluator-answer ancestors. One developmental

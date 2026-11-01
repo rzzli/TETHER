@@ -1,5 +1,10 @@
 # Research memory index
 
+The first entry is current. Older entries retain their then-current status and
+next actions; they do not reactivate superseded tasks or expert gates.
+
+- [[research-log-2026-10-31-deterministic-paper-scope]] - Current: P04b verified negative (fictional 1/2, all70 pins/79 events/usage/cleanup pass); model branch closed with no further prompt retries. P05 deterministic source-validation registry/builder preparation active from neutral137file/2.866GB metadata frame; no value scans, fresh cohort or independence qualified. P05–P10/paper unfinished; no experts/downloads/monitor.
+
 - [[research-log-2026-10-31-reporting-pilot-result]] - Current: P02a/P04 complete in bounded scopes. Negative model pilot: twelve cells/five calls retained, literal clean2/2, model clean0/2 each; independent audit2,216 checks passes. Neutral25file catalog reconciliation complete; originalstudy metadata gap remains. Next two fictional conformance controls, then P05 source/cohort/exposure/dependence scope decision; paper incomplete, no experts.
 
 - [[research-log-2026-10-31-credible-set-completion]] - P02a accepted: approved isolated 23/23 downloads and complete 25-file exact join verified; 13 hardened regression shapes pass. One exposed locus has beta/SE/p-value components; sample size/units/ancestry/upstream-study verification remain unresolved. P04 host-view pilot has reached all twelve terminal cells/five calls and is source-verifying; no final acceptance yet. Old worker/receipts and stopped monitor unchanged; no experts.

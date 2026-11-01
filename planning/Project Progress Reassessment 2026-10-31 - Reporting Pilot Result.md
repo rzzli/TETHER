@@ -1,5 +1,7 @@
 # Reporting pilot result and the next execution decision
 
+This is the retained checkpoint before P04b execution. The [current scope decision](<Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>) records its later negative result and closed model branch. The original result and then-planned steps below remain historical.
+
 31 October 2026, America/Los_Angeles. **P02a and P04 are complete in their
 bounded scopes. The model-backed P04 result is negative. The paper, fresh cohort
 and wider clinical project remain incomplete.** This pass examined the new

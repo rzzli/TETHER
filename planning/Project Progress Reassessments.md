@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October reporting pilot result](<Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md>). P02a and P04 are complete in their bounded scopes: verified 25-file data inventory; negative model pilot with all twelve cells/five calls retained and 2,216 independent audit checks passing. Literal clean-case completion is 2/2; neither model arm completes a clean case. Next is one two-control fictional interface qualification, then P05 source/candidate/exposure/dependence qualification or a narrower technical scope. No external expert input or native revival is needed.
+Current checkpoint: [31 October deterministic paper scope](<Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>). P02a, P04 and P04b are complete in their bounded scopes. Verified negative model pilot: all twelve cells/five calls retained and 2,216 audit checks pass. Subsequent fictional controls yield one pass/one malformed result; model scaling is closed. Next P05 qualifies a deterministic source-validation set from the neutral 137-file metadata frame, with no fresh-cohort/independence claim yet. Paper and wider scientific routes remain unfinished. No external expert input or native revival is needed.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

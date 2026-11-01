@@ -1,4 +1,12 @@
-# P04b fictional interface qualification — DRAFT
+# P04b fictional interface qualification
+
+**Current outcome: verified negative; branch closed.** The once-only READY-v2
+run made two calls: the two-fact control passed and the eight-fact control was
+malformed on value/unknown-reason agreement. The [independent audit](RUN-AUDIT-v1.json)
+verifies code, retained bytes, usage and cleanup. No retry or model scaling
+follows. Continue with the [deterministic paper scope](<../../Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>).
+
+## Retained preparation instructions
 
 This is a small engineering qualification of one prompt revision. It is not a
 scientific study, biological evaluation, or fresh cohort. Accepted P04 remains

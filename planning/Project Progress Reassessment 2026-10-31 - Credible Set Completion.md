@@ -1,5 +1,7 @@
 # Credible set completion and the next scientific gate
 
+This retained checkpoint precedes final P04/P04b acceptance. See the [current scope decision](<Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>) for the subsequent negative model results and next technical study. Its data-completion findings remain valid in their stated scope.
+
 31 October 2026, America/Los_Angeles. Checkpoint `cd4c258` completes P02a.
 **The owner-approved 23-file download and complete 25-file exact join are verified.
 The preprint and P04 model comparison remain unfinished.**
