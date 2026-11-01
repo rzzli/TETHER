@@ -1,0 +1,137 @@
+{
+  "actual_source_reads": false,
+  "checker_sha256": "698b807d9f4d3773b156c6fe73c9026a896b846ad226be0d2aef0f8795a26ec2",
+  "method": "p09.source_fact_inputs_optional_boundary.v1",
+  "model_calls": 0,
+  "network_calls": 0,
+  "optional_reason": "install the ingest extra for adapter tests",
+  "package_installs": 0,
+  "parquet_methods": [
+    "test_metadata_role_lineage_and_caps_fail_before_scan",
+    "test_wrong_provider_type_and_frozen_scope_cutoff_fail_closed",
+    "test_inventory_declaration_mismatch_and_unapproved_expanded_cap_precede_values",
+    "test_unapproved_arbitrary_deadline_precedes_original_access",
+    "test_progress_journal_and_callback_write_failure_stop_source_work",
+    "test_fictional_preparation_source_only_and_slot_closure",
+    "test_source_tamper_precedes_any_original_value_scan",
+    "test_receipt_tamper_and_deadline"
+  ],
+  "pure_methods": 4,
+  "results": [
+    {
+      "error_details": [],
+      "errors": 0,
+      "failures": 0,
+      "installed_version": null,
+      "interpreter": "C:\\Users\\zzric\\AppData\\Local\\Temp\\asof-p09-20261101T204845Z\\env-core\\Scripts\\python.exe",
+      "log": "SOURCE-FACT-INPUTS-OPTIONAL-core-absent-after-v1.txt",
+      "log_sha256": "d490cff480a40850927d51b746c94f7ffc5ed5011678bf0dbb9e8688ae5e6406",
+      "mode": "core-absent",
+      "pyarrow_spec_found": false,
+      "returncode": 0,
+      "skipped": [
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_fictional_preparation_source_only_and_slot_closure"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_inventory_declaration_mismatch_and_unapproved_expanded_cap_precede_values"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_metadata_role_lineage_and_caps_fail_before_scan"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_progress_journal_and_callback_write_failure_stop_source_work"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_receipt_tamper_and_deadline"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_source_tamper_precedes_any_original_value_scan"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_unapproved_arbitrary_deadline_precedes_original_access"
+        },
+        {
+          "reason": "install the ingest extra for adapter tests",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_wrong_provider_type_and_frozen_scope_cutoff_fail_closed"
+        }
+      ],
+      "status": "PASS",
+      "tests": 12
+    },
+    {
+      "error_details": [],
+      "errors": 0,
+      "failures": 0,
+      "installed_version": "21.0.0",
+      "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+      "log": "SOURCE-FACT-INPUTS-OPTIONAL-arrow21-after-v1.txt",
+      "log_sha256": "5cdbc85d8a0e7c12e8ad0f62ab0984ba027416ff9a44502e340645815ae4ea61",
+      "mode": "arrow21",
+      "pyarrow_spec_found": true,
+      "returncode": 0,
+      "skipped": [],
+      "status": "PASS",
+      "tests": 12
+    },
+    {
+      "error_details": [
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_fictional_preparation_source_only_and_slot_closure"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_inventory_declaration_mismatch_and_unapproved_expanded_cap_precede_values"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_metadata_role_lineage_and_caps_fail_before_scan"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_progress_journal_and_callback_write_failure_stop_source_work"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_receipt_tamper_and_deadline"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_source_tamper_precedes_any_original_value_scan"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_unapproved_arbitrary_deadline_precedes_original_access"
+        },
+        {
+          "error": "asof.serde.ContractError: Parquet fixture requires pinned pyarrow 21.0.0; installed version differs",
+          "test": "tests.test_study_source_fact_inputs.InputTests.test_wrong_provider_type_and_frozen_scope_cutoff_fail_closed"
+        }
+      ],
+      "errors": 8,
+      "failures": 0,
+      "installed_version": "21.0.0",
+      "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+      "log": "SOURCE-FACT-INPUTS-OPTIONAL-wrong-version-after-v1.txt",
+      "log_sha256": "230c94ab88764dcf9f2b2004291d9488f82e13d312a901c3dcfa32507a404859",
+      "mode": "wrong-version",
+      "pyarrow_spec_found": true,
+      "returncode": 0,
+      "skipped": [],
+      "status": "PASS",
+      "tests": 12
+    }
+  ],
+  "runtime_source_changes": false,
+  "schema_version": 1,
+  "status": "PASS",
+  "test_sha256": "4d2313e402e07e3621635485478b8fa8ac0af1d32f4103f2c89cd101d68e77e6"
+}

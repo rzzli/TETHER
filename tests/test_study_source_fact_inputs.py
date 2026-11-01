@@ -2,6 +2,7 @@
 from contextlib import contextmanager
 from datetime import datetime, timezone
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import tempfile
@@ -16,6 +17,8 @@ from asof.study import source_fact_inputs as inputs
 ROOT = Path(__file__).resolve().parents[1]
 TEST_ROOT = ROOT / "data" / "cache" / "test-source-fact-inputs"
 CUTOFF = "2026-10-31T23:00:00+00:00"
+requires_parquet = unittest.skipUnless(importlib.util.find_spec("pyarrow") is not None,
+    "install the ingest extra for adapter tests")
 
 
 def row(identifier="a", *, source="source-a", offset=0, **extra):
@@ -26,6 +29,8 @@ def row(identifier="a", *, source="source-a", offset=0, **extra):
 
 def fixture(root):
     import pyarrow as pa
+    if pa.__version__ != "21.0.0":
+        raise ContractError("Parquet fixture requires pinned pyarrow 21.0.0; installed version differs")
     import pyarrow.parquet as pq
     raw = root / "originals"
     files = []
@@ -152,6 +157,7 @@ class InputTests(unittest.TestCase):
         self.assertTrue(all(set(slot).isdisjoint({"value", "unit", "unknown_reason", "expected"})
                             for slot in packet["fact_skeleton"]))
 
+    @requires_parquet
     def test_metadata_role_lineage_and_caps_fail_before_scan(self):
         f = fixture(self.root)
         for change in (lambda: f["files"][0]["source"].update(role="evaluation_only"),
@@ -169,6 +175,7 @@ class InputTests(unittest.TestCase):
                     workspace_root=self.root, approved_raw_root=f["raw"], cutoff=cutoff,
                     deadline=time.monotonic() + 120, progress=progress)
 
+    @requires_parquet
     def test_wrong_provider_type_and_frozen_scope_cutoff_fail_closed(self):
         for field in ("datasourceId", "datatypeId"):
             candidate = row()
@@ -185,6 +192,7 @@ class InputTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, "case scope"):
                 self.run_preparation(f)
 
+    @requires_parquet
     def test_inventory_declaration_mismatch_and_unapproved_expanded_cap_precede_values(self):
         f = fixture(self.root)
         f["plan"]["source_policy"]["declared_evidence_files"] = 2
@@ -198,6 +206,7 @@ class InputTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, "exact v3 full-inventory"):
                 self.run_preparation(f)
 
+    @requires_parquet
     def test_unapproved_arbitrary_deadline_precedes_original_access(self):
         f = fixture(self.root)
         f["plan"]["source_policy"]["selection_wall_seconds"] = 600
@@ -206,6 +215,7 @@ class InputTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, "exact approved v4"):
                 self.run_preparation(f)
 
+    @requires_parquet
     def test_progress_journal_and_callback_write_failure_stop_source_work(self):
         from asof.journal import RunJournal, read_chain
         f = fixture(self.root)
@@ -233,6 +243,7 @@ class InputTests(unittest.TestCase):
         self.assertEqual(receipt_calls.call_count, 1)
         self.assertEqual(sum(event == "build_progress" for event, _ in callback_events), 1)
 
+    @requires_parquet
     def test_fictional_preparation_source_only_and_slot_closure(self):
         f = fixture(self.root)
         import builtins
@@ -271,6 +282,7 @@ class InputTests(unittest.TestCase):
         self.assertFalse(missing["condition"]["independent_biomedical_context"])
         self.assertFalse(missing["condition"]["biological_absence_claim"])
 
+    @requires_parquet
     def test_source_tamper_precedes_any_original_value_scan(self):
         f = fixture(self.root)
         victim = f["raw"] / f["files"][-1]["source"]["path"]
@@ -279,6 +291,7 @@ class InputTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, "Original hash/bytes"):
                 self.run_preparation(f)
 
+    @requires_parquet
     def test_receipt_tamper_and_deadline(self):
         f = fixture(self.root)
         receipt = f["raw"] / f["files"][0]["source"]["receipt_path"]
