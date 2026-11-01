@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "status": "PASS_DOCUMENTATION_READINESS_REVIEW_ONLY",
+  "created_at_utc": "2026-11-01T02:19:10.903091+00:00",
+  "reviewed_research_checkpoint": "10c7ba6b228cc01d88a08b42a70cccc68de30697",
+  "documentation_commit": "0659c3b6e28cab2ea658db6e01e50b62d15bb47f",
+  "output": "planning/review-assets/preprint-readiness-20261031/READINESS-CHECK-v1.json",
+  "purpose": "Finite internal-agent validation of the new preprint roadmap and current-status documents; not scientific qualification or a declaration of a complete paper.",
+  "preprint_package_complete": false,
+  "peer_review": {
+    "kind": "internal agent peer review, not external expert input",
+    "empirical_peer": "preprint_empirical_readiness",
+    "disposition": "No factual or method-blocking errors; final P02 baseline-ceiling priority incorporated before P03.",
+    "positioning_peer": "preprint_positioning",
+    "positioning_scope": "Focused seed-based primary-source positioning, not exhaustive novelty or independent biomedical truth."
+  },
+  "summary": {
+    "documents_pinned": 13,
+    "checks_passed": 26,
+    "checks_failed": 0,
+    "new_current_local_markdown_links": 25,
+    "new_current_wikilinks": 5,
+    "external_positioning_urls": 10,
+    "metadata_digests_matching": 8,
+    "source_pins_matching": 327,
+    "findings": []
+  },
+  "checks": [
+    {
+      "id": "bounded_scope",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "The current controlled source-reporting paper and narrower technical/feasibility fallback are distinct; manuscript and benchmark-performance completion are not asserted."
+    },
+    {
+      "id": "critical_priority",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "P02 source-to-fact feasibility includes a cheap deterministic baseline-ceiling check before P03 evaluator coding; P04 is a bounded actual pilot."
+    },
+    {
+      "id": "optional_old_genetics",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "The categorical ten-item adapter and exposed R07 pair audit are optional supplementary work; source/provenance/isolation protections are reused where applicable."
+    },
+    {
+      "id": "no_external_expert_gate",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "No human response, recruitment, panel, GE confirmation or external expert approval gates current paper completion."
+    },
+    {
+      "id": "archive_only_input_policy",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Bespoke human returns and response-aware descendants are archive-only and excluded from new references, generation, evaluation, tuning and selection; source builders get fresh no-fork allowlisted contexts."
+    },
+    {
+      "id": "measurement_layers",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Typed facts, quotation mechanics, semantic support and biological truth are separated; AI judgments remain secondary model-conditioned measurements, and zero-slot cases do not pass undefined coverage."
+    },
+    {
+      "id": "common_evaluation",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Common denominators and faithful arm adapters are required; adapters cannot add facts or repair outputs. The primary comparable contrast is frozen before generation."
+    },
+    {
+      "id": "empirical_scope_qualifications",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "The retained 60-cell/114-call selection study and 32-result/48-call top-one study are actual selection studies. Six R07 HTTP responses/zero contracts, recorded mechanics and preparation-only artifacts remain separate."
+    },
+    {
+      "id": "denominators_and_exposure",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "31,554 observations across overlapping case worlds, 20 original audited rows, eight tasks across five exposed cases, and zero qualified fresh cases are qualified without independent-sample or truth claims."
+    },
+    {
+      "id": "primary_evaluator_missing",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Typed-fact coverage, critical-distortion scoring and the 80% H5-A rule remain unimplemented; existing Q1/selection/copy mechanics or categorical schemas do not supply them."
+    },
+    {
+      "id": "negative_and_clinical_limits",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Original H5 remains untested; unsupported clinical predictions stay withheld. The failed 28-cell/58-call attempt, R07 negative result, FAILED/INCOMPLETE_TIMEOUT and no-retry boundaries remain preserved."
+    },
+    {
+      "id": "analysis_and_manuscript",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Reproducible analyses, manuscript/PDF, bibliography, figures/tables, supplements and disclosures remain pending. Artifact-absence claims are repository-scoped."
+    },
+    {
+      "id": "lawful_public_release",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "A public asset allowlist and per-asset redistribution decisions are required. Response histories/derivatives, credentials and private paths stay outside the public scientific package."
+    },
+    {
+      "id": "code_data_rights",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Apache-2.0 code licensing does not license third-party source text/data. Unknown source rights require withholding source bytes and supplying lawful identifiers/locators/instructions."
+    },
+    {
+      "id": "portable_installed_replay",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "The release needs installed study/baseline/comparison smoke and lawful fixture replay beyond demo/verify, fresh-root portability, a correctly rejected invalid control and honest old-format matching-version limits."
+    },
+    {
+      "id": "ci_risk",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Exact-release-SHA validation/hosted evidence remains pending. The 20-minute workflow budget versus about 42.4-minute retained local full run is a risk to measure, not evidence that hosted jobs fail."
+    },
+    {
+      "id": "ai_usage_and_cost",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "AI-use/availability/contribution/funding/conflict disclosures and unknown or unmetered platform cost/usage are required. Zero provider spend does not establish total-cost or human-time superiority."
+    },
+    {
+      "id": "positioning_limits",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "The primary-source URLs are focused seed-based related-work positioning, not an exhaustive gap survey, independent AsOf truth validation or established novelty."
+    },
+    {
+      "id": "deferred_programmes",
+      "method": "manual_document_review_with_internal_empirical_and_positioning_peer_context",
+      "status": "passed",
+      "observation": "Clinical prediction/scorer/MR, T2-T5, H6, full original Virtual Biotech reproduction, new models, deployment and optional native expansion remain separate conditional work rather than paper gates."
+    },
+    {
+      "id": "checklist_states",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "P01 alone is checked; P02-P10 remain pending."
+    },
+    {
+      "id": "new_current_links",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "All 25 added/current local Markdown targets and five added/current wikilinks resolve; ten external positioning URLs are inventoried, not fetched/access-qualified. Historical unrelated wikilinks are outside scope."
+    },
+    {
+      "id": "exact_archive",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "The 4,877-byte prior TODO is exactly preserved from the reviewed checkpoint."
+    },
+    {
+      "id": "metadata_identity",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "Eight named metadata files exist and match empirical-peer digests; only byte hashing occurred here, with no candidate/human/protected-outcome payload inspection."
+    },
+    {
+      "id": "accepted_sources",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "All 327 accepted application/test/tool/resource pins match, totaling 3,825,227 bytes. The 1,774-test pass is retained, not freshly executed."
+    },
+    {
+      "id": "no_runtime_delta",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "No runtime, tests, tools, package/lock, catalog, workflow or license change since the reviewed baseline. Documentation-only scope does not require a new full application suite."
+    },
+    {
+      "id": "document_stability",
+      "method": "mechanical",
+      "status": "passed",
+      "observation": "All thirteen final reviewed document identities remained stable during validation, including through the root documentation commit."
+    }
+  ],
+  "archive_check": {
+    "path": "docs/history/TODO-before-preprint-review-20261031.md",
+    "bytes": 4877,
+    "sha256": "1b2f80ba86323297933d365f051afe33516a7099986c262c7b79665c80ae750a",
+    "git_source": "10c7ba6b228cc01d88a08b42a70cccc68de30697:TODO.md",
+    "byte_identical": true
+  },
+  "accepted_source_check": {
+    "acceptance_manifest": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+    "version": "0.3.11",
+    "pin_count": 327,
+    "bytes": 3825227,
+    "matching_pins": 327,
+    "mismatches": [],
+    "retained_tests": {
+      "run": 1774,
+      "failures": 0,
+      "errors": 0,
+      "skipped": []
+    },
+    "application_tests_executed_for_this_review": false
+  },
+  "reviewed_document_pins": [
+    {
+      "path": "README.md",
+      "bytes": 10420,
+      "sha256": "d402e917364581a94de1b9b2a0f2d307b648dd9e7520c9060b2be42804f6c022"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 6298,
+      "sha256": "1457b5c33500407e032126c6a28fc799bf817da1d889ca421a1240b5f289b3c2"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 21298,
+      "sha256": "fd18081dd154331402860e5a508d24897b64743874661df4cb6a65246e97a5b2"
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "bytes": 72752,
+      "sha256": "6022f47879a53b5e8557bf710c204843945e98c40ffd148255a2d813a04e1c4b"
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "bytes": 30496,
+      "sha256": "6a9fabb11638a3ae7fb9b73ba923f23f10443987b101df5a6aa196bbf39fec43"
+    },
+    {
+      "path": "memory/project-goals.md",
+      "bytes": 127690,
+      "sha256": "bb25a66a648eb3abf76053c7404c8e228ef8f34845e5707fd8a912be22d55e11"
+    },
+    {
+      "path": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "bytes": 28070,
+      "sha256": "f1d077ddb7f0f34b14eb1ce0d8815ee115aac06fa70ca26cf83a65465fec1734"
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - AI Only Scope.md",
+      "bytes": 8544,
+      "sha256": "4aa3ef4b17219d535ead17623d91e2673ccd12da4037a2c2fcbf8f6a8c778abc"
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 21574,
+      "sha256": "d3a73ad6ee18464d9cc6f6094ba4788362f5dfebb3c22052a4aa06fd847c6cc9"
+    },
+    {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35316,
+      "sha256": "c971c810d72bb6fef4dab99bbf69e5c92d0601e1e1d114917141a20cd8f7897b"
+    },
+    {
+      "path": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "bytes": 30190,
+      "sha256": "fe6c45ad46d2d73dedf67dcd47a27a479cb00489a8d4c9a1890d833ec365477c"
+    },
+    {
+      "path": "memory/research-log-2026-10-31-preprint-readiness.md",
+      "bytes": 4471,
+      "sha256": "3c0717e8e9bf75d87f70a4ea07efdc02ce654e325e44a4f58b2f159dfee10ea3"
+    },
+    {
+      "path": "docs/history/TODO-before-preprint-review-20261031.md",
+      "bytes": 4877,
+      "sha256": "1b2f80ba86323297933d365f051afe33516a7099986c262c7b79665c80ae750a"
+    }
+  ],
+  "supporting_configuration_pins": [
+    {
+      "path": "pyproject.toml",
+      "bytes": 606,
+      "sha256": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 9641,
+      "sha256": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 983,
+      "sha256": "e796e74623581cd1ba4da267995d681d23c5005bcc1d3389fdae338db0bb6d9c"
+    },
+    {
+      "path": "planning/decisions/2026-10-31-no-external-expert-input.md",
+      "bytes": 4507,
+      "sha256": "7c0a6a6cbaa2bf7d2c8a99b34ddde58b50fa1b594ca567c0cb3f3e889771f9ed"
+    }
+  ],
+  "empirical_metadata_pins": [
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/pilot-report.json",
+      "bytes": 10898,
+      "sha256": "b788e21338390cd858d3dd9f530ef407aedb73f34edb4e6b0bdd7fa6c167cc7e",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "runs/literature-coverage-20261017T082208Z/source-review.json",
+      "bytes": 74662,
+      "sha256": "306da2a9474422ef6c006850e66ace272b88cf4b6378a6f87d78594cb289db69",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "runs/science7-v02-20261021T005551Z/execution-report.json",
+      "bytes": 83664,
+      "sha256": "40029051e7ca4adc4b1365302265bbed0c1e20f6360376b7933646dff9ecaedd",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "planning/review-assets/t6-topone-20261023/final-acceptance.json",
+      "bytes": 5208,
+      "sha256": "c1650d237c90b694a2cf0226120064fe5c4a77c68416f6abe7f7264035f7cd1b",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "planning/review-assets/recovery-step7-20261026/technical-closeout.json",
+      "bytes": 3907,
+      "sha256": "d2d0570fce6326d714d030e2520f3e568f4e7c4aafa7d5e91b1a7608ab677b5d",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "bytes": 6736,
+      "sha256": "eec489c6296256501578241cee9004a174444926c681351e9ceab6ca82af701c",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "bytes": 597934,
+      "sha256": "491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b",
+      "matches_empirical_peer_digest": true
+    },
+    {
+      "path": "planning/review-assets/resume-checkpoint-20261031/ACCEPTED-SOURCE-RESUME-CHECK-v1.json",
+      "bytes": 69249,
+      "sha256": "cf5fc3d32e4693c62a2d9706fc79152064fc1864d65215ec36f34e100044b87b",
+      "matches_empirical_peer_digest": true
+    }
+  ],
+  "new_current_local_links": [
+    {
+      "from": "README.md",
+      "target": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "TODO.md",
+      "exists": true
+    },
+    {
+      "from": "TODO.md",
+      "target": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "TODO.md",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "TODO.md",
+      "target": "planning/decisions/2026-10-31-no-external-expert-input.md",
+      "exists": true
+    },
+    {
+      "from": "TODO.md",
+      "target": "docs/history/TODO-before-preprint-review-20261031.md",
+      "exists": true
+    },
+    {
+      "from": "data/README.md",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "data/DATA_PLAN.md",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "target": "Preprint%20Readiness%20Review%20and%20Completion%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Project Progress Reassessment 2026-10-31 - AI Only Scope.md",
+      "target": "Preprint%20Readiness%20Review%20and%20Completion%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Project Progress Reassessments.md",
+      "target": "Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "target": "Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "target": "AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "decisions/2026-10-31-no-external-expert-input.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "../runs/literature-coverage-20261017T082208Z/pilot-report.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "../runs/literature-coverage-20261017T082208Z/source-review.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "../runs/science7-v02-20261021T005551Z/execution-report.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "review-assets/t6-topone-20261023/final-acceptance.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "review-assets/recovery-step7-20261026/technical-closeout.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "review-assets/recovery-step8-20261026/source-feasibility.md",
+      "exists": true
+    },
+    {
+      "from": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "target": "../.github/workflows/validate.yml",
+      "exists": true
+    }
+  ],
+  "new_current_wikilinks": [
+    {
+      "from": "memory/MEMORY.md",
+      "target": "research-log-2026-10-31-preprint-readiness",
+      "resolved": "memory/research-log-2026-10-31-preprint-readiness.md",
+      "exists": true
+    },
+    {
+      "from": "memory/MEMORY.md",
+      "target": "research-log-2026-10-31-ai-only-replan",
+      "resolved": "memory/research-log-2026-10-31-ai-only-replan.md",
+      "exists": true
+    },
+    {
+      "from": "memory/project-goals.md",
+      "target": "Preprint Readiness Review and Completion Plan 2026-10-31",
+      "resolved": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "from": "memory/project-goals.md",
+      "target": "research-log-2026-10-31-preprint-readiness",
+      "resolved": "memory/research-log-2026-10-31-preprint-readiness.md",
+      "exists": true
+    },
+    {
+      "from": "memory/research-log-2026-10-31-preprint-readiness.md",
+      "target": "research-log-2026-10-31-ai-only-replan",
+      "resolved": "memory/research-log-2026-10-31-ai-only-replan.md",
+      "exists": true
+    }
+  ],
+  "reviewed_primary_source_positioning_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/42752167/",
+    "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/README.md",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12773016/",
+    "https://arxiv.org/html/2606.19245v1",
+    "https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2.full",
+    "https://aclanthology.org/2023.emnlp-main.398/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13252682/",
+    "https://aclanthology.org/2024.naacl-long.20/",
+    "https://arxiv.org/abs/2306.05685",
+    "https://arxiv.org/html/2402.04068v4"
+  ],
+  "url_qualification": "These URLs were reviewed by the focused positioning peer and are retained as related-work positioning. This QA did not fetch/access-qualify them, certify AsOf semantic validity, or establish exhaustive novelty.",
+  "boundaries": {
+    "application_imports": false,
+    "application_tests": false,
+    "model_or_native_execution": false,
+    "candidate_or_mask_content_read": false,
+    "human_response_or_derivative_payload_read": false,
+    "protected_clinical_outcome_read": false,
+    "new_downloads": false,
+    "paid_access": false,
+    "outreach": false,
+    "push_or_publication": false,
+    "other_files_written_by_this_validation": false,
+    "source_pin_reads": "Only accepted source/test/tool/resource files and data/.gitignore; no biomedical payload source pin was followed.",
+    "metadata_handling": "Named metadata bytes were hashed; no candidate or human-response text is retained in this sanitized report."
+  }
+}
