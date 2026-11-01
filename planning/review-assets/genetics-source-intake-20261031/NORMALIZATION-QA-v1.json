@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_MECHANICAL_NORMALIZATION_QA",
+  "at_utc": "2026-11-01T00:07:58.812048+00:00",
+  "scope": "Independent actual-data preservation, instrument binding and normalization QA; no scientific adjudication or independent-human-reference certification.",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "independent_reference_certified": false,
+  "full_tests_rerun": false,
+  "model_calls": 0,
+  "provider_spending_usd": 0,
+  "interpreter": "data/cache/recovery-step9-generation-wheel-20261028/environment/Scripts/python.exe",
+  "checks": [
+    {
+      "check": "independently_retained_input_anchors",
+      "passed": true,
+      "count": 5
+    },
+    {
+      "check": "receipt_qualification_limits",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "private_manifest_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "owner_provenance_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "coordinator_normalizer_pin_only_not_executed",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "manifest_receipt_records_equal",
+      "passed": true,
+      "count": 2
+    },
+    {
+      "check": "manifest_source_parents_equal",
+      "passed": true,
+      "count": 3
+    },
+    {
+      "check": "manifest_evaluation_only_boundary",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "owner_provenance_separate_evaluation_record",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "owner_round_unknowns_preserved",
+      "passed": true,
+      "count": 6
+    },
+    {
+      "check": "owner_background_qualifications_retained",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "source_cards_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "source_request_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_item_ids_and_cardinality",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "instrument_option_ids_and_cardinality",
+      "passed": true,
+      "count": 70
+    },
+    {
+      "check": "instrument_meta_source_pins",
+      "passed": true,
+      "count": 3
+    },
+    {
+      "check": "instrument_question_case_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_source_identity_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "source_cards_request_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_rendered_choices_equal_items",
+      "passed": true,
+      "count": 70
+    },
+    {
+      "check": "instrument_confidence_vocabulary",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "instrument_no_preselected_choices",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_embedded_record_equals_source_cards",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "instrument_structured_context_equals_source",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "source_record_and_passage_cardinality",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "rendered_passages_exact_source_order_and_text",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "source_passages_equal_retained_scientific_record",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "source_passage_text_hashes_equal",
+      "passed": true,
+      "count": 13
+    },
+    {
+      "check": "intake_record_ids_and_cardinality",
+      "passed": true,
+      "count": 2
+    },
+    {
+      "check": "record_01_source_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_preserved_original_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_normalized_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_byte_identical_original",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_full_raw_text_preserved",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_crlf_and_unterminated_last_line_preserved",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_parse_cardinality",
+      "passed": true,
+      "count": 40
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_block_field_alignment",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_admin_field_cardinality",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_all_response_values_and_exact_schema",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_all_admin_values_and_locators",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "record_01_instrument_meta_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_form_and_original_metadata",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_return_identity_not_inferred",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_01_evaluator_only_unadjudicated",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_reference_id_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_coordinator_binding_labeled",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_locator_convention",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_01_passage_ids_valid_and_order_preserved",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_selection_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_confidence_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_passage_field_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_rationale_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_01_admin_locator_slice_recheck",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "record_02_source_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_preserved_original_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_normalized_file_pin",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_byte_identical_original",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_full_raw_text_preserved",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_crlf_and_unterminated_last_line_preserved",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_parse_cardinality",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_02_midline_heading_preservation",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "record_02_nested_label_parentheses_preservation",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_optional_admin_fields_absent",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "record_02_optional_confidence_passage_fields_absent",
+      "passed": true,
+      "count": 20
+    },
+    {
+      "check": "record_02_all_response_values_and_exact_schema",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_02_all_admin_values_and_locators",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "record_02_instrument_meta_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_form_and_original_metadata",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_return_identity_not_inferred",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "check": "record_02_evaluator_only_unadjudicated",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_reference_id_binding",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_coordinator_binding_labeled",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_locator_convention",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "record_02_passage_ids_valid_and_order_preserved",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_02_selection_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_02_confidence_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 0
+    },
+    {
+      "check": "record_02_passage_field_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 0
+    },
+    {
+      "check": "record_02_rationale_locator_independent_slice_recheck",
+      "passed": true,
+      "count": 10
+    },
+    {
+      "check": "record_02_admin_locator_slice_recheck",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "check": "owner_elapsed_matches_returned_self_report",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "explicit_blank_reviewer_id_preserved_without_alias",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "receipt_aggregate_counts_recomputed",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "private_artifacts_git_ignored",
+      "passed": true,
+      "count": 8
+    },
+    {
+      "check": "private_artifacts_not_git_tracked",
+      "passed": true,
+      "count": 8
+    },
+    {
+      "check": "evaluation_directory_ignore_policy",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "check": "catalog_evaluation_roles_and_agent_exclusion",
+      "passed": true,
+      "count": 2
+    },
+    {
+      "check": "application_pin_cardinality",
+      "passed": true,
+      "count": 327
+    },
+    {
+      "check": "all_application_pins_unchanged",
+      "passed": true,
+      "count": 327
+    }
+  ],
+  "counts": {
+    "instrument_items": 10,
+    "instrument_rendered_options": 70,
+    "source_passages": 13,
+    "originals": 2,
+    "original_bytes": 8329,
+    "items_per_return": 10,
+    "valid_selections": 20,
+    "same_selections": 8,
+    "confidence_missing": 10,
+    "confidence_nonstandard_preserved": 2,
+    "different_selections": 2,
+    "returned_label_exact": 13,
+    "returned_label_variants": 7,
+    "rationales_checked": 20,
+    "passage_fields_missing": 10,
+    "admin_fields_checked": 18,
+    "private_artifacts_checked": 8,
+    "application_pins_checked": 327,
+    "application_pins_matched": 327,
+    "catalog_evaluation_roles_checked": 2
+  },
+  "pins": [
+    {
+      "path": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json",
+      "bytes": 60493,
+      "sha256": "c357932046d01014bb377ca3c3d7cb71d9550c43362e32a919555a167f8e8e40"
+    },
+    {
+      "path": "planning/review-assets/genetics-source-intake-20261031/check_return_normalization.py",
+      "bytes": 28713,
+      "sha256": "09dd3c50be58489c65c4fd15feabcd5ad05b8a7f0eabb5a0731ba1348e0921d3"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/intake-manifest.json",
+      "bytes": 3260,
+      "sha256": "a8ce94f656b762cc01bfffcac8791cd182e7449231d4e7a1322cfe1ed4aa0693"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/owner-round-provenance-v1.json",
+      "bytes": 1256,
+      "sha256": "23b4d3bc7ff224179dd63e6607c5baa6686142369d089dd337ac61550a9a986d"
+    },
+    {
+      "path": "planning/review-assets/genetics-source-intake-20261031/intake_genetics_source_returns.py",
+      "bytes": 13048,
+      "sha256": "79c2b7bb542b434025a8cd8ab34a24fe3a684bc658b4a8bdd36c26c8015cd236"
+    },
+    {
+      "path": "docs/expert-review-genetics-20261026/Expert-source-review.html",
+      "bytes": 68610,
+      "sha256": "16063a14e76df1fcd98c1d9a55b8f2e1641d179fcd688e103ec38f4227692c67"
+    },
+    {
+      "path": "data/cache/r07-source-revalidation-20261026-v2/source-cards.json",
+      "bytes": 20265,
+      "sha256": "cd5889023713fe5a8b6bc0b1de5f06c38706b3f2d750d22902bf534d215fa2fa"
+    },
+    {
+      "path": "data/cache/r07-source-revalidation-20261026-v2/prepared-request.json",
+      "bytes": 12149,
+      "sha256": "14b735ef940bde56c04ea964cf145f3f7d1e343b2fe1e35de157cc8a5af2d61a"
+    },
+    {
+      "path": "docs/expert-review-genetics-20261026/responses/ds_response.txt",
+      "bytes": 5238,
+      "sha256": "2920e189e50f161b9690217123e68fea924c3b03ad1182f45286e358b3b09ce5"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/originals/ds_response.txt",
+      "bytes": 5238,
+      "sha256": "2920e189e50f161b9690217123e68fea924c3b03ad1182f45286e358b3b09ce5"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/normalized/GSR-20261031-01.json",
+      "bytes": 32313,
+      "sha256": "fd2098832c1f1da4c585d3aea3899c2a598b2bb25653599dd1638f35a7dc8eb7"
+    },
+    {
+      "path": "docs/expert-review-genetics-20261026/responses/ge_respomse.txt",
+      "bytes": 3091,
+      "sha256": "4bb0719846f1fad99d7c54b660e96f319e4df05a7fe31856a42ed5aa3665ef63"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/originals/ge_respomse.txt",
+      "bytes": 3091,
+      "sha256": "4bb0719846f1fad99d7c54b660e96f319e4df05a7fe31856a42ed5aa3665ef63"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/normalized/GSR-20261031-02.json",
+      "bytes": 21513,
+      "sha256": "11533095db3954442a3670b1d69c74a67e36f3bccb0a64e6c98bc637de15d612"
+    },
+    {
+      "path": "data/catalog/sources.json",
+      "bytes": 1222375,
+      "sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb"
+    },
+    {
+      "path": "data/.gitignore",
+      "bytes": 1175,
+      "sha256": "e5702455925a3e54695b1a974c862543e64f0f039dd641b41f901106cc2177e0"
+    },
+    {
+      "path": "receipt_application_pin_set",
+      "sha256": "97d70711945d0cb359a3f1cc7ea05c3a67da964aa8ddd12b143f50bcad2a2b69"
+    }
+  ],
+  "failure_check_names": [],
+  "infrastructure_error_type": null,
+  "sanitization": "Check names, aggregate counts and input pins only; no reviewer selections, rationales, labels, confidence strings or owner statement text."
+}
