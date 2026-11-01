@@ -1,6 +1,8 @@
 # Research memory index
 
-- [[research-log-2026-10-31-ai-only-replan]] - Current owner decision: no further external expert inputs or human-response dependencies. Bespoke responses/derivatives archive-only; H5-A automated source-reporting metrics plus disclosed secondary AI judgments. A01–A09 plan; next A02 minimal ten-item evaluator contract. Older entries are history, not active reviewer requests.
+- [[research-log-2026-10-31-preprint-readiness]] - Current paper roadmap: P02 source-to-fact feasibility → P03 objective evaluator → P04 bounded pilot, then freeze/experiments/analysis/manuscript/release. Ten-item genetics adapter/old-pair review optional. Engineering and real selection studies retained; no runnable H5-A evaluator, qualified fresh set or manuscript package yet. No external expert dependency.
+
+- [[research-log-2026-10-31-ai-only-replan]] - Owner input policy remains current: no further external expert inputs or human-response dependencies; bespoke responses/derivatives archive-only and AI judgments secondary. The ten-item-first implementation order is superseded by the preprint roadmap. Older entries are history, not active reviewer requests.
 
 - [[research-log-2026-10-31-genetics-source-returns]] - Prior checkpoint: two new genetics-source TXT returns preserved, 20 valid selections and distinct source IDs; actual-record normalization QA and all327 app pins pass. Owner describes two PhD backgrounds, possible AI finalization assistance unknown. DS source-first/25min self-report; GE exposure/time unknown. Candidate follow-up next, GE declaration before release; no new model/scientific completion.
 

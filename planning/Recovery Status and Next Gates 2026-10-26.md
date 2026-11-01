@@ -6,9 +6,10 @@ The initial [independent review](../docs/Independent%20Project%20Review%202026-1
 remains a dated pre-correction assessment. Original proposals and failed results
 remain preserved.
 
-Current checkpoint: [AI only scope](<Project Progress Reassessment 2026-10-31 - AI Only Scope.md>). The owner removed external expert participation and human responses as inputs. HR1–HR4, GE confirmation and candidate follow-up are retired, not waiting or completed. Earlier responses and their derivatives are archive-only and excluded from future references, generation, judging, tuning and selection.
+Current checkpoint: [preprint readiness and completion roadmap](<Preprint Readiness Review and Completion Plan 2026-10-31.md>). The framework, ten development dossiers, source audit, actual source-selection studies and negative interpretation diagnostic are retained. The preprint lacks an objective typed-fact evaluator, a qualified new evaluation cohort, complete empirical analysis, manuscript and research-release package.
 
-Current execution follows [A01–A09](AI%20Only%20Evaluation%20Plan%202026-10-31.md). Next is A02: the minimal versioned ten-item genetics evaluator contract and isolation tests, followed by clean source-only AI proposals and retrospective R07 content assessment. H5-A is mechanically verified completion/typed-fact coverage, with AI judgments secondary; original expert-preference H5 stays untested. No runtime, data or model execution is claimed by this planning revision.
+Next is P02 source-to-fact feasibility on 2–4 development units, P03 the shared evaluator/adapters/isolation checks and P04 a bounded actual pilot. The old ten-item genetics adapter and retrospective pair assessment are optional appendix work. No external expert responses, GE confirmation or human panel are required. The [AI-only input/claim policy](AI%20Only%20Evaluation%20Plan%202026-10-31.md) still excludes response-derived inputs and keeps AI semantic audits secondary; original H5 and clinical claims remain untested. No runtime, test or model execution is claimed by this review.
+
 
 ## Historical checkpoints before the no external expert amendment
 

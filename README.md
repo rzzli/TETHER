@@ -13,9 +13,9 @@ performance measurements.
 
 ## Current status and next step
 
-The [AI only evaluation plan](<planning/AI Only Evaluation Plan 2026-10-31.md>) now governs the project. The owner has removed external expert responses and review participation as inputs and dependencies. Existing expert returns and answer-aware derivatives stay archived and are excluded from future references, generation, evaluation, tuning and case selection. The active H5-A endpoint measures mechanically verified completion and typed-fact coverage; AI semantic judgments are secondary proxies. Original expert-preference H5 remains untested.
+The [preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>) is the current execution roadmap. The framework and exposed source-selection experiments are retained; the paper-critical gaps are an objective typed-fact evaluator, a new multicase experiment, reproducible analysis and the manuscript/release package. This is a source-reporting/methods paper, with no validated clinical-prediction or expert-equivalence claim.
 
-Next: implement the small versioned genetics evaluator contract (A02), then use clean source-only AI contexts for an exposed retrospective R07 content assessment. No reviewer return or GE confirmation is needed. See the [scope decision](planning/decisions/2026-10-31-no-external-expert-input.md) and [current project reassessment](<planning/Project Progress Reassessment 2026-10-31 - AI Only Scope.md>).
+Next: **P02 source-to-fact feasibility on 2–4 development units, then P03 the shared evaluator and P04 a bounded pilot**. The old genetics questionnaire/retrospective pair audit are optional appendix work. The [AI-only policy](<planning/AI Only Evaluation Plan 2026-10-31.md>) still excludes bespoke expert responses/derivatives and requires no external expert input. Original expert-preference H5 remains untested. See [TODO](TODO.md) for the complete preprint checklist.
 
 - Ten canonical contemporary development dossiers and their retained source audit exist; see the [run registry](planning/run-registry.json).
 - R07's technical diagnostic remains negative: six complete responses, zero frozen-contract passes. The former human gate is retired; a separate AI retrospective assessment is planned. A stronger-model control remains unqualified.

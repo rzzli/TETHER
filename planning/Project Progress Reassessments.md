@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October Los Angeles AI only scope](<Project Progress Reassessment 2026-10-31 - AI Only Scope.md>). The owner retired all external expert-response dependencies and excluded bespoke returns/derivatives from new workflows. [A01–A09](AI%20Only%20Evaluation%20Plan%202026-10-31.md) governs future execution; A02 evaluator implementation is next. Older rows preserve dated findings and superseded human workstreams.
+Current checkpoint: [31 October preprint readiness review](<Preprint Readiness Review and Completion Plan 2026-10-31.md>). Current paper-critical work is P02 source-to-fact feasibility, P03 the common objective evaluator and P04 a bounded pilot. The genetics questionnaire/old-pair audit are optional, not gates. No external expert input is required; original failures and conditional clinical branches remain. Earlier snapshots preserve dated findings and superseded priorities.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

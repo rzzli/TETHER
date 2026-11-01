@@ -1,5 +1,7 @@
 # Project progress reassessment after removing external expert inputs
 
+**Later preprint-readiness refinement:** the [current paper roadmap](Preprint%20Readiness%20Review%20and%20Completion%20Plan%202026-10-31.md) puts P02 source-to-fact feasibility and P03 objective evaluator implementation first. The ten-item genetics adapter and old-pair content audit described below are optional supplementary work. The no-external-expert scope and preserved failure states remain unchanged.
+
 31 October 2026, America/Los_Angeles. **The owner has retired external expert responses and review participation as project inputs and dependencies.** The prior human-response blocker no longer applies. Planning has moved to the [AI only evaluation plan](AI%20Only%20Evaluation%20Plan%202026-10-31.md) and its [scope decision](decisions/2026-10-31-no-external-expert-input.md). This is a change in the evaluation protocol and claim, not successful completion of the previous human study.
 
 ## Completed in this revision

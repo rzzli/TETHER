@@ -10,44 +10,59 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-31 - AI Only Scope]].
-Owner explicitly removes human responses/external expert inputs. HR1–HR4,
-GE confirmation and candidate-follow-up dependencies are retired, not completed.
-No further reviewer submission or scheduling is required. Current execution plan:
-planning/AI Only Evaluation Plan 2026-10-31.md; scope decision:
-planning/decisions/2026-10-31-no-external-expert-input.md.
+Current checkpoint: [[Preprint Readiness Review and Completion Plan 2026-10-31]].
+The project has retained engineering and exposed source-selection experiments,
+not a complete preprint. No tracked manuscript/bibliography or complete research
+release found. H5-A typed-fact coverage/critical-distortion/80% scoring is specified
+but not implemented. No fresh evaluation cohort is qualified.
 
-Original responses/addenda/normalizations/comparisons/answer-aware AI notes and all
-derivatives stay archive-only, excluded from new reference building, generation,
-judging, tuning and source/case/arm selection. Preserve originals/provenance.
-Fresh reference agents receive an allowlisted pre-response source bundle without
-conversation fork, this memory, candidates or old answer-aware analyses.
-This is procedural separation, not independent model errors or OS isolation.
+Next P02: source-to-fact feasibility on 2–4 development units, including answerable
+and insufficient-input conditions, lawful source lineage/exposure, nontrivial fact
+families and reproducible expected derivations. Then P03 shared objective evaluator
+and common arm adapters/controls; P04 bounded actual-comparison pilot. The categorical
+ten-item genetics adapter and A03 exposed old-pair audit are optional appendix work,
+not paper gates. The preprint plan refines that implementation order while retaining
+the AI-only input/claim policy. P05 freezes cohort/analysis, P06 experiments,
+P07 analysis/figures, P08 manuscript, P09 research release, P10 final package.
 
-H5-A measures mechanically verified completion and typed-fact coverage; AI semantic
-concordance/preference is secondary. Original expert-preference H5 remains untested.
-No AI consensus establishes clinical truth, causality or human equivalence.
-Existing public curated dataset labels may be assessed without soliciting experts.
+Current evidence: 0.3.11/default v2, retained 1,774 tests/327 accepted pins;
+ten canonical dossiers, 31,554 observations across overlapping case worlds and
+a 20-original-row technical audit. Actual source-selection study: 60 cells and
+114 calls; AsOf completed 10/10 while the adaptation completed 3/10 and exhausted
+its budget on 7/10. Top-one: eight tasks across five exposed cases, 32 cells and
+48 calls; both model arms show 6/8 AI-reference agreement. These are not generated
+interpretation quality or independent truth. R07 has six complete responses and
+zero contract passes; recorded four-arm/pure v3 preparation is not actual inference.
+No new application test or model run was performed during this review.
 
-Next A02: small versioned evaluator adapter/validator for the ten-item genetics
-question, source/hash/role/unknown/provenance/seal tests and human-response lineage
-exclusion. Existing panel/Q1/top-one tools are not silently repurposed. Preserve
-legacy pending-human fields/verifiers. A03 then creates clean AI source proposals
-and retrospective exposed R07 content audit; old candidates predate references.
-A04–A08 qualify sources, evaluator controls, bounded pilot, sizing/freeze and locked
-automated comparison. A09 reassesses original conditional branches/release.
+No external expert input or GE confirmation is required. HR1–HR4 retired.
+Responses/addenda/normalizations/ratings/answer-aware annotations and descendants
+archive-only; excluded from new references, generation, judging, tuning and selection.
+Fresh source annotators use no-fork contexts and allowlisted sources, without chat,
+this memory, candidates or old answer-aware analysis. AI semantic audits secondary;
+original expert-preference H5 untested. Public curated labels optional after checks.
 
-Retain 0.3.11/default v2, 1,774 retained tests (no prose-only rerun), original R07
-six outputs/zero contract passes, native FAILED/INCOMPLETE_TIMEOUT, optional native
-defer, 65 missing inputs, 36 unqualified labels, 17/32 states and 0/12 joint readiness,
-empty numerical features/null probabilities, $0 provider spending and unchanged
-downloader/stopped monitor. Unknown platform costs are not zero. No new download,
-paid access or model/native execution is authorized by this planning revision.
-Only actual file/access/permission/resource needs can require owner intervention.
-See [[research-log-2026-10-31-ai-only-replan]].
+Preprint needs a bounded claim/related-work argument, objective reusable evaluation,
+informative controlled multicase results (negative valid), all failures/uncertainty,
+manuscript/source/PDF/figures/bibliography/disclosures and lawful reproducible release.
+Clinical/MR/scorer/T2–T5/H6/fullVBTreproduction/native-bank branches remain conditional
+future programmes, not preprint prerequisites. No clinicaltruth/humanequivalence claim.
+Current nearest peers already do source verification and deterministic grading;
+novelty must come from the specific scoped benchmark/experiment, not quote checks
+alone. The pinned VBT supports headless/evidence-coverage audit; a prompt adaptation
+is not the full released system.
 
-All subsequent memory sections are historical checkpoints; their expert-response
-and panel prerequisites are superseded by this owner decision.
+Keep exact code/legacy failures, FAILED/INCOMPLETE_TIMEOUT, 65 missing inputs,
+36 unqualified labels, 17/32 primary registry states, 0/12 joint-ready packages,
+empty features/null probabilities, $0 provider spending with unknown platform
+costs explicit, no unapproved acquisition and unchanged downloader/stopped monitor.
+The current CI 20-minute job limit versus a retained local full run of about
+42.4 minutes is a measurement risk, not proof that hosted jobs fail. Exact-release
+SHA needs applicable tests/CI and installed study smokes/replay beyond the demo.
+Only actual file/access/permission/resource issues or final owner publication/
+author metadata can require owner action.
+See [[research-log-2026-10-31-preprint-readiness]]. All subsequent sections are
+historical checkpoints; superseded human tasks/ten-item-first priorities do not apply.
 
 ### Prior scientific-readiness checkpoint (retained history)
 
