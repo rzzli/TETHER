@@ -1,5 +1,7 @@
 # Project progress reassessments
 
+Current checkpoint: [31 October Los Angeles genetics-source returns](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>). Two additional TXT source reviews are preserved/normalized; candidate follow-up and GE's source-first declaration are next. Older rows retain their dated state and do not override subsequent owner corrections or new receipts.
+
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current
 validation, scientific readiness, deferrals and external constraints. Inspect

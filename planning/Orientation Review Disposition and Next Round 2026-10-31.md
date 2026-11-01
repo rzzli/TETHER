@@ -1,5 +1,9 @@
 # Orientation review disposition and next round
 
+Later update, 31 October Los Angeles: the two additional genetics source files are now received and processed. See the [new assessment](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>) for reference IDs, round-specific provenance and candidate-release order. The owner describes DS as non-computational PhD-level biology and GE as mixed bioinformatics/genetics PhD-level, with possible AI assistance of unknown extent. Their mapping to earlier aliases is unknown; the original proposed R2/R3 assignment below is not an established mapping. Do not request these source files again.
+
+The following records the completed orientation disposition and original next-round assignment; the new assessment governs current genetics status.
+
 31 October 2026. **Authorship/disclosure intake for the three mechanism-orientation returns is complete.** The owner confirms three different people. R1 is human-authored without AI by owner correction; R2 and R3 disclose human authorship with AI assistance. The latest [provenance record](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v3.json) preserves all prior files and statements.
 
 | Reviewer alias | Reported field | Assistance | Source-first disclosure | Time |

@@ -1,5 +1,7 @@
 # Research memory index
 
+- [[research-log-2026-10-31-genetics-source-returns]] - Current checkpoint: two new genetics-source TXT returns preserved, 20 valid selections and distinct source IDs; actual-record normalization QA and all327 app pins pass. Owner describes two PhD backgrounds, possible AI finalization assistance unknown. DS source-first/25min self-report; GE exposure/time unknown. Candidate follow-up next, GE declaration before release; no new model/scientific completion.
+
 - [[research-log-2026-10-31-expert-returns]] - Current checkpoint: three mechanism files preserved/normalized, 54 selections; 95 integrity/549 conversion checks and six selected regressions pass. Three different people confirmed: R1 without AI (owner-corrected), R2/R3 human-with-AI-assistance self-reported. Authorship/disclosure intake complete; source-first reported for R2/R3 and 45-minute estimates recorded. No fresh/blinded H5 or measured-workload claim. Existing sealed coverage reused/102 checks; source-credibility concern checked separately against primary literature. No new model, repaired answer or scientific gate acceptance.
 
 - [[Project Progress Reassessment 2026-10-31 - Scientific Readiness]] - Current priority: actual independent reviewer submissions and source/question/capability readiness. Optional native-bank/physical14/new84 branch deferred pending demonstrated study need; Source5 43 PASS/four DEFERRED/one STATIC and C79 scopes preserved. No scientific completion or new model run. Review handoff and empty evaluator-only inbox prepared.

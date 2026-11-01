@@ -6,9 +6,9 @@ The initial [independent review](../docs/Independent%20Project%20Review%202026-1
 remains a dated pre-correction assessment. Original proposals and failed results
 remain preserved.
 
-Current checkpoint, 31 October UTC: [Expert returns](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>). All three supplied mechanism returns are preserved and normalized (54 selections; 95 integrity and 549 conversion checks; six selected isolation regressions pass). The owner confirms three different human reviewers: R1 without AI, R2/R3 with disclosed AI assistance/outside sources (Claude Code). R2/R3 report statistical genetics/epidemiology, independence and source-first order. Each reports 45 minutes estimated, not measured. Authorship/disclosure intake is complete for this exposed orientation; no fresh/blinded H5 or genetics/source-feasibility review is implied.
+Current checkpoint, 31 October Los Angeles: [Genetics source returns](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>). Two additional source-review files are preserved and normalized: 20 valid selections, eight matching and two differing items. DS and GE have separate reference IDs. The owner describes two PhD-level reviewers (non-computational biology; mixed bioinformatics/genetics) with possible AI finalization assistance, extent unknown. DS reports independent source-first preparation and 25 minutes, measured versus estimated unknown; GE's workflow/time remain unknown. These are received development source records, not missing files or native JSON exports.
 
-Next: give the existing clean genetics-source ZIP to R2/R3, collect their source-only exports first, then release the separate candidate follow-up per reviewer. Record assistance and actual timing; estimates and undisclosed assistant costs are not measured workload/budget. Preserve the orientation feedback/old responses; no model replay, repaired candidate or native expansion. Fresh-case/H5/clinical gates remain separate. See the orientation disposition/next-round plan; unchanged v2, $0, original failures and downloader/stopped-monitor boundaries remain.
+Next: separate candidate follow-up linked to GSR-20261031-01 (DS) and GSR-20261031-02 (GE). DS supplies the source-first self-report; obtain GE's declaration before release. Record assistance, exposure and timing basis; keep unknowns explicit. Prior mechanism orientation intake remains complete for three owner-confirmed people (one unassisted, two AI-assisted), with 45-minute estimates. Neither round certifies fresh/blinded H5 or measured workload. No model replay, repaired candidate or native expansion; v2/$0 and downloader/stopped-monitor boundaries remain.
 
 The native-build checkpoint verifies compilation, static imports and the format-2 input pack; the executable remains unexecuted. The [launcher terminal disposition](<Project Progress Reassessment 2026-10-28 - Native Launcher.md>) now records both preserved Python-worker failures. Resources passes a narrowly corrected negative-test predicate; overflow still has unexplained lifetimeTotal2 with Active0/emptyPIDs. A standalone `/MD` C++ worker is in source/build preparation to test the compiled-child architecture; generic total1, ABI, document/EOG, full-case resources and all scientific/human gates remain open.
 
@@ -147,18 +147,22 @@ open. No model expansion follows from this preparation.
 
 ## Separate owner workstream
 
-Human submissions are still pending. The clean
-[mechanism orientation bundle](../docs/expert-review-20261026/Expert-review-share.zip)
-and [source-only genetics bundle](../docs/expert-review-genetics-20261026/Expert-source-review-share.zip)
-are ready for appropriately matched reviewers. The latter has ten multiple-choice
-items and thirteen supplied excerpts. Desktop/mobile blank-default and downloaded
-answer round-trip checks pass. QA exports are fixtures, not completed reviews.
+Three mechanism returns and two additional genetics-source returns are now
+preserved and processed. Genetics source references GSR-20261031-01 (DS) and
+GSR-20261031-02 (GE) each contain ten valid selections. The owner describes two
+PhD-level backgrounds and possible AI assistance of unknown degree. DS reports
+independent source-first preparation and25minutes with unknown timing basis;
+GE's workflow/conflicts/time remain unknown. Source-feasibility/fresh-case reviews
+and candidate follow-up remain pending. QA dummy exports remain fixtures and are
+not counted as submissions. See the current genetics-source assessment above.
 
-Keep the genetics candidate follow-up coordinator-held until each reviewer has
-submitted an independent source-only reference. Do not distribute mask keys, AI
+Use the separate genetics candidate follow-up linked to each retained reference;
+obtain GE's source-first declaration before release. Unknown or exposed provenance
+cannot close the strict independent-reference gate. Do not distribute mask keys, AI
 triage or suggested interpretations with either clean packet. Later fresh R10/R12
 cases require references before generation, not just before human candidate viewing.
-Actual review time, domain coverage, disagreement and adjudication are unmeasured.
+Measured workload, broader domain coverage and final adjudication remain open;
+the two attribution/sufficiency differences are retained without majority voting.
 
 For the fixed two-context feasibility exercise, share only the
 [clean source-only bundle](../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip).

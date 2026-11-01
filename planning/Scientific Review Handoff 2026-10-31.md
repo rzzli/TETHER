@@ -1,12 +1,14 @@
 # Scientific review handoff
 
-31 October 2026. The three distinct human mechanism-orientation returns are processed; the next requested scientific input is the separate genetics-source review. The clean exercises are already prepared. This is a coordinator checklist; send reviewers only the appropriate clean bundle, not this repository, AI judgments or internal answer guidance.
+31 October 2026, Los Angeles. Three mechanism-orientation returns and two additional genetics-source returns are processed. The next input is separate genetics candidate follow-up, with GE's source-first workflow confirmed before release. This is a coordinator checklist; send reviewers only the appropriate clean material, not this repository, AI judgments or internal answer guidance. Current [genetics assessment and reference IDs](<Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md>).
 
 ## Current returns
 
+Genetics returns `ds_response.txt` / `ge_respomse.txt` are preserved separately as **GSR-20261031-01** / **GSR-20261031-02**, 20 valid selections. The owner describes two PhD-level backgrounds (non-computational biology; mixed bioinformatics/genetics) and possible AI assistance, extent unknown. DS reports independent source-first preparation, no conflicts and 25 minutes without measured/estimated basis. GE's exposure, independence, conflicts and time are unknown. Obtain that reviewer's source-first declaration before releasing the existing follow-up; unknown/exposed records cannot satisfy the strict independent-reference gate. Do not infer prior R2/R3 aliases or copy their old disclosures. Use the clean [reviewer instructions](../docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md). No duplicate TXT/JSON source submission is needed.
+
 The three files supplied under `docs/expert-response10312026/` are already preserved and processed. They all address the mechanism orientation. The owner confirms the Word response was human-authored without AI and identifies its AI disclosure as a typo. The owner confirms three different people. R2/R3 now disclose human authorship with AI assistance, statistical genetics/epidemiology, independence, source-first order and outside sources/Claude Code. Each reviewer reports 45 minutes estimated, not measured. R1's viewing order/material scope remains unresolved, without invalidating useful orientation feedback. Do not request those same files again or count them as completed genetics/source-feasibility reviews.
 
-Authorship/disclosure collection for this orientation is complete. Keep the completed [provenance addenda](../docs/expert-review-admin-20261031/Review-provenance-addendum.md) evaluator-only; disclosures cannot retrospectively create blind/fresh status. Follow the [next-round assignment](<Orientation Review Disposition and Next Round 2026-10-31.md>): R2/R3 receive the clean genetics-source ZIP first, and candidate follow-up only after each reference returns. See the [current assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for qualification limits.
+Authorship/disclosure collection for this orientation is complete. Keep the completed [provenance addenda](../docs/expert-review-admin-20261031/Review-provenance-addendum.md) evaluator-only; disclosures cannot retrospectively create blind/fresh status. The [original next-round assignment](<Orientation Review Disposition and Next Round 2026-10-31.md>) is retained as history; the newly received genetics references advance receipt, with reviewer-specific release conditions above. See the [prior mechanism assessment](<Project Progress Reassessment 2026-10-31 - Expert Returns.md>) for its scope.
 
 ## What to send and collect
 
@@ -22,7 +24,7 @@ The [coordinator guide](../docs/Expert%20Review%20Coordinator%20Guide%202026-10-
 
 ## Where returned files belong
 
-A local return inbox is available at the path below. Current responses are already preserved in the separate ignored `expert-intake-20261031T160538Z` directory; no duplicate copy is needed:
+A local return inbox is available at the path below. Current mechanism responses are preserved in ignored `expert-intake-20261031T160538Z`; genetics responses are in `genetics-source-intake-20261101T000412Z`, both under `data/benchmark/gold_evidence/`. No duplicate copy is needed:
 
 ```text
 D:\Projects\drug_target_agents\data\benchmark\gold_evidence\human-review-inbox-20261031\

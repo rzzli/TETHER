@@ -8,6 +8,8 @@ updated: 2026-10-31
 
 # Returned mechanism reviews
 
+Later genetics-round receipt is recorded separately in [[research-log-2026-10-31-genetics-source-returns]]. Two additional source responses are now processed; statements below about the then-missing genetics returns describe the earlier mechanism checkpoint. Their new filenames do not establish the old proposed R2/R3 mapping.
+
 Current update (OWNER-PROVENANCE-NOTE-v3.json): the owner confirms three different people, R1/R2/R3. R1 remains owner-confirmed without AI. R2/R3 disclose human authorship with AI assistance, statistical genetics/epidemiology, independence/source-first order, outside sources and Claude Code; no separate first-pass export. Each reviewer estimates 45 minutes; total 135 reviewer-minutes is an estimate, not measured workload or an assistance-cost bound. Authorship/disclosure intake closes for this exposed orientation; useful development feedback is accepted without certifying fresh/blinded H5. Identical addendum bytes for R2/R3 do not override owner-confirmed distinctness. Next: existing clean genetics-source packet to R2/R3, first-pass exports before candidate follow-up, assistance/context and actual timing disclosed. See planning/Orientation Review Disposition and Next Round 2026-10-31.md.
 
 ## Prior clarification and intake observations

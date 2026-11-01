@@ -10,17 +10,27 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Expert Returns]].
-The three supplied files are received and processed, not missing: 54 mechanism selections,
-95 integrity/549 conversion checks and six isolation regressions pass. The owner reports
-three different people. R1 is human-authored without AI by owner correction; R2/R3 disclose human-authored work with AI assistance/outside sources (Claude Code), statistical genetics/epidemiology, independence and source-first order. All 45-minute figures are estimates, not measurements.
-Authorship/disclosure intake is complete for the exposed orientation, with assistance strata retained. No genetics
-or source-feasibility exercise was returned. Existing sealed Candidate A coverage is
-reused (102 checks); primary-literature source credibility is a separate AI annotation.
-Next give R2/R3 the existing clean genetics-source ZIP, receive source-only exports, then
-release its candidate follow-up per reviewer. See planning/Orientation Review Disposition and Next Round 2026-10-31.md. Do not infer authorship from agreement or
-retrofit blind/fresh status. H5/clinical/capability/source gates remain open, optional
-native work deferred, default v2 and $0 unchanged. See [[research-log-2026-10-31-expert-returns]].
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Genetics Source Returns]].
+Two additional genetics source returns are received and normalized, not missing:
+ds_response.txt / GSR-20261031-01 and ge_respomse.txt / GSR-20261031-02, 8,329 bytes,
+20 valid selections. Eight selections coincide; attribution and sufficiency differ,
+without scoring or adjudication. The owner describes two PhD-level backgrounds:
+non-computational biology for DS; mixed bioinformatics/genetics for GE. Possible AI
+finalization assistance, degree unknown. Do not infer R1/R2/R3 mapping or confirmed
+unassisted authorship. DS reports source-first independent preparation and 25 minutes,
+measured versus estimated unknown; GE workflow/conflicts/time remain unknown.
+Originals/normalized records are evaluator-only under ignored
+data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/. TXT instrument
+binding is coordinator-established, not native JSON export metadata. All327 app pins
+match;1,774 tests retained, no rerun. Separate agent scope notes are AI annotations,
+not a human reference. Next candidate follow-up per retained source ID; obtain GE's
+source-first declaration before release. Preserve old references after exposure.
+Prior mechanism intake remains processed for three owner-confirmed people, one without
+AI/two assisted, with45-minute estimates; no source-feasibility exercise returned.
+R07 technical diagnostic stays negative; H5/clinical/capability/freshness gates open,
+native expansion deferred, v2/$0/downloader/stopped monitor unchanged.
+See [[research-log-2026-10-31-genetics-source-returns]] and the prior
+[[research-log-2026-10-31-expert-returns]].
 
 ### Prior scientific-readiness checkpoint (retained history)
 

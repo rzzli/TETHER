@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INDEPENDENT_CURRENT_DOCUMENT_QA",
+  "at_utc": "2026-11-01T00:09:57.295116+00:00",
+  "scope": "Independent read-only consistency and local-link QA for current genetics-source intake summaries and clean reviewer instructions; evidence artifact counts observed, no normalization rerun or scientific adjudication.",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "adjudicated_gold": false,
+  "independent_reference_certified": false,
+  "R07_complete": false,
+  "full_tests_rerun": false,
+  "model_calls": 0,
+  "provider_spending_usd": 0,
+  "candidate_content_read": false,
+  "mask_content_read": false,
+  "source_originals_read": false,
+  "checks": [
+    {
+      "name": "receipt_originals_bytes_choices",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "receipt_matching_and_different_counts",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "receipt_distinct_source_reference_bindings",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "receipt_application_pins_retained_test_scope",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "normalization_qa106_passed_no_adjudication",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/NORMALIZATION-QA-v1.json"
+    },
+    {
+      "name": "receipt_no_runtime_catalog_model_or_spending_change",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "receipt_scientific_gates_remain_open",
+      "passed": true,
+      "evidence": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json"
+    },
+    {
+      "name": "private_owner_note_pin_and_round_uncertainty",
+      "passed": true,
+      "evidence": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/owner-round-provenance-v1.json"
+    },
+    {
+      "name": "current_report_receipt_and_transcription_counts",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "current_report_txt_coordinator_binding_not_native_export",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "current_report_owner_attested_backgrounds_and_ai_uncertainty",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "current_report_ds_self_report_timing_basis_unknown",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "current_report_ge_workflow_conflicts_time_unknown",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "current_report_alias_mapping_unknown_rounds_separate",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "source_receipt_no_longer_current_missing_blocker",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "candidate_followup_and_ge_declaration_pending",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "all20_project_status_rows_present_once",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "r07_technical_negative_scientific_open",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "native_deferred_v2_zero_spending_and_original_failures",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "clinical_denominators_distinct",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "retained_tests_and_isolation_not_rerun",
+      "passed": true,
+      "evidence": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md"
+    },
+    {
+      "name": "prior_mechanism_three_people_one_unassisted_two_assisted_estimates",
+      "passed": true,
+      "evidence": "planning/Scientific Review Handoff 2026-10-31.md"
+    },
+    {
+      "name": "current_owner_workstream_receipt_status_corrected",
+      "passed": true,
+      "evidence": "planning/Recovery Status and Next Gates 2026-10-26.md"
+    },
+    {
+      "name": "clean_reviewer_instructions_no_key_verdicts_or_other_responses_manual_review",
+      "passed": true,
+      "evidence": "docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md"
+    },
+    {
+      "name": "clean_reviewer_instructions_source_preservation_provenance_timing",
+      "passed": true,
+      "evidence": "docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md"
+    },
+    {
+      "name": "clean_reviewer_instructions_companion_exists_without_read",
+      "passed": true,
+      "evidence": "docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md"
+    },
+    {
+      "name": "original_review_directories_gitignored",
+      "passed": true,
+      "evidence": ".gitignore"
+    },
+    {
+      "name": "all_local_markdown_and_wikilinks_resolve",
+      "passed": true,
+      "evidence": "13 reviewed documents; existence only"
+    },
+    {
+      "name": "older_dated_checkpoints_explicitly_superseded",
+      "passed": true,
+      "evidence": "Current indexes and earlier-round prefaces"
+    }
+  ],
+  "counts": {
+    "documents_checked": 13,
+    "checks_passed": 29,
+    "checks_failed": 0,
+    "source_originals_per_receipt": 2,
+    "source_original_bytes_per_receipt": 8329,
+    "source_choices_per_receipt": 20,
+    "matching_selections_per_receipt": 8,
+    "different_selections_per_receipt": 2,
+    "normalization_qa_checks_observed": 106,
+    "application_pins_matched_per_receipt": 327,
+    "retained_application_tests": 1774,
+    "project_status_rows": 20,
+    "local_markdown_links_checked": 147,
+    "wikilinks_checked": 218,
+    "unresolved_links": 0
+  },
+  "link_checks": [
+    {
+      "path": "README.md",
+      "local_markdown_links": 20,
+      "wikilinks": 0
+    },
+    {
+      "path": "TODO.md",
+      "local_markdown_links": 3,
+      "wikilinks": 0
+    },
+    {
+      "path": ".gitignore",
+      "local_markdown_links": 0,
+      "wikilinks": 0
+    },
+    {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "local_markdown_links": 10,
+      "wikilinks": 0
+    },
+    {
+      "path": "planning/Orientation Review Disposition and Next Round 2026-10-31.md",
+      "local_markdown_links": 5,
+      "wikilinks": 0
+    },
+    {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "local_markdown_links": 50,
+      "wikilinks": 0
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "local_markdown_links": 44,
+      "wikilinks": 0
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "local_markdown_links": 0,
+      "wikilinks": 110
+    },
+    {
+      "path": "memory/project-goals.md",
+      "local_markdown_links": 11,
+      "wikilinks": 103
+    },
+    {
+      "path": "memory/research-log-2026-10-31-expert-returns.md",
+      "local_markdown_links": 0,
+      "wikilinks": 3
+    },
+    {
+      "path": "memory/research-log-2026-10-31-genetics-source-returns.md",
+      "local_markdown_links": 0,
+      "wikilinks": 2
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md",
+      "local_markdown_links": 4,
+      "wikilinks": 0
+    },
+    {
+      "path": "docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md",
+      "local_markdown_links": 0,
+      "wikilinks": 0
+    }
+  ],
+  "pins": [
+    {
+      "path": "README.md",
+      "bytes": 10329,
+      "sha256": "5d2b8a23bfa0714e405a9a7e9eaa52b082549fbc4f01da44474d823b86baa135"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 58708,
+      "sha256": "09bfff2bcbbf7b9b8fcdb6710ce2eca3cecfe1784379522e724b5756e4ed359d"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 438,
+      "sha256": "fa5ee67b365ffff2f8f2eec96598e9c85b7ffb8b69a87ec703b8ef6dd122f2ee"
+    },
+    {
+      "path": "planning/Scientific Review Handoff 2026-10-31.md",
+      "bytes": 8128,
+      "sha256": "d28f34b1f5a56904b195a4b94ad9d5d0d0601beca152c76bcc6164d3a7b43c50"
+    },
+    {
+      "path": "planning/Orientation Review Disposition and Next Round 2026-10-31.md",
+      "bytes": 6639,
+      "sha256": "7ff2920c4eb9d8037a7b4d7a2083615d06f1fb39c14624ff8f48315b3c2a8099"
+    },
+    {
+      "path": "planning/Recovery Status and Next Gates 2026-10-26.md",
+      "bytes": 35265,
+      "sha256": "022b8087ebbf5c46b59e31f945aa49a15801373dba47d46007f0efb4b1ac3269"
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "bytes": 21463,
+      "sha256": "98d7c046c06375d958989035553cc25af861ac0bc739dfed103bae69bd4cd13f"
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "bytes": 29706,
+      "sha256": "b99c83c1383ca4be5d42bd6b558723a2a9f0e0d2e674a536e1124415a7cc2ade"
+    },
+    {
+      "path": "memory/project-goals.md",
+      "bytes": 125548,
+      "sha256": "a0cec772256f8f8cd3940ca56c8e27d1b126b3c2bd0a8dd214d5a7208f30fe78"
+    },
+    {
+      "path": "memory/research-log-2026-10-31-expert-returns.md",
+      "bytes": 5561,
+      "sha256": "44dfc307e683c9bf210a533b292caff6633b7d80f243f495f65070e554a48432"
+    },
+    {
+      "path": "memory/research-log-2026-10-31-genetics-source-returns.md",
+      "bytes": 3683,
+      "sha256": "a684167c9010462336b475b1a555d76be1d21e72c20f5a1f977b99f7f1bfe292"
+    },
+    {
+      "path": "planning/Project Progress Reassessment 2026-10-31 - Genetics Source Returns.md",
+      "bytes": 11711,
+      "sha256": "424e2ee3464242a90bc1254973cc5763230cafc0aa0a667510a233a231fe5c40"
+    },
+    {
+      "path": "docs/expert-review-genetics-followup-20261026/Reviewer-instructions-20261031.md",
+      "bytes": 1690,
+      "sha256": "07602b39d3865a133bf9534ce534c75163e6b4d71f9c5fddf3dc0999c86f7261"
+    },
+    {
+      "path": "planning/review-assets/genetics-source-intake-20261031/INTAKE-RECEIPT-v1.json",
+      "bytes": 60493,
+      "sha256": "c357932046d01014bb377ca3c3d7cb71d9550c43362e32a919555a167f8e8e40"
+    },
+    {
+      "path": "planning/review-assets/genetics-source-intake-20261031/NORMALIZATION-QA-v1.json",
+      "bytes": 16391,
+      "sha256": "1c7038863389e9a81c7a04c664432284e476ca112ee07936629c17c0523ffb79"
+    },
+    {
+      "path": "data/benchmark/gold_evidence/genetics-source-intake-20261101T000412Z/owner-round-provenance-v1.json",
+      "bytes": 1256,
+      "sha256": "23b4d3bc7ff224179dd63e6607c5baa6686142369d089dd337ac61550a9a986d"
+    }
+  ],
+  "failure_check_names": [],
+  "sanitization": "Check names, aggregate counts and file pins only. No reviewer selections, rationales, confidence strings, owner statement text, candidate content or internal mask.",
+  "method_note": "Manual reading plus targeted consistency assertions and path-existence checks; earlier dated superseded checkpoint narratives retained as history. One current-looking stale owner-workstream passage was reported to root and corrected before final pinning.",
+  "clinical_outcome_content_read": false,
+  "owner_round_provenance_read": true
+}
