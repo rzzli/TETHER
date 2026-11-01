@@ -1,0 +1,13 @@
+# P02 source to fact feasibility
+
+The first bounded prototype is complete and independently checked. It replays the six original, pre-response-fixed Open Targets 25.09 Europe PMC rows for BTK/psoriasis and CTLA4/Crohn's disease, plus the metadata-selected FCGRT/Crohn's missing-input unit. All generated products and descendants are evaluator-only, exposed development material; no generation manifest or model call was created.
+
+The exact field-projection baseline reports **57/57 identity/date facts**, while **all 204 scientific-field values are null**. Scientific coverage and pass are null, not a successful `0/0`. The missing-input result is bounded to the retained literature inventory; it does not establish biological absence or full-release completeness. No narrative, clinical-status field, old AI assessment, candidate or bespoke expert response is projected.
+
+Ten fictional-control tests pass after correcting explicit unknown handling: `None` for an expected unknown is permitted without coverage credit, while invented values remain errors. The first 9-pass/1-fail log is retained. Independent reconstruction checks all 264 slots, 57 baseline answers, six original/receipt hashes, source roles, nulls, counters and the unchanged 327 application pins.
+
+See [prototype report](PROTOTYPE-REPORT-v1.json), [independent check](INDEPENDENT-CHECK-v1.json), [study code](prototype.py), [tests](test_prototype.py), [first test log](FIRST-TESTS-v1.txt) and [passing test log](FINAL-TESTS-v1.txt). The report binds the ignored private artifact by hash; source values are not republished here.
+
+Measured run: 486,979,325 original bytes rehashed; projected columns cover 1,373,560 row-group rows before selecting six Arrow rows and converting to Python; selected Arrow arrays total 2,364 bytes. The 81,671,893 compressed-column bytes are a metadata estimate, not physical I/O. Elapsed time was 0.814 seconds; Python-traced peak was 11,434,310 bytes and Arrow allocator peak 193,640,192 bytes. These separate allocator peaks are not process peak RSS, which was not measured. No cold-cache timing or total-cost claim is made.
+
+The literature-only result does not establish corpus-wide infeasibility. A separately frozen additive scan of the already-collected `gwas_credible_sets` partition is the next bounded check for the same contexts. It must preserve v1, distinguish field-schema presence from populated values and study/context fields from reported measurements, and avoid choosing records by favorable values or model performance. This source-family check is part of P02, not a new model benchmark or completion of the paper.
