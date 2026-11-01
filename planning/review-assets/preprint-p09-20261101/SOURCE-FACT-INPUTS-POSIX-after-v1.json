@@ -1,0 +1,51 @@
+{
+  "actual_source_reads": false,
+  "checker_sha256": "cbbdb22e29c28355e578de87367de6c6e56babb41a9e9da7cfc5ae6c5a317ab8",
+  "linux_qualification": false,
+  "method": "p09.input_fixture_platform_boundary.v1",
+  "model_calls": 0,
+  "native_source_read_guarantee": "Windows actual tests use genuine stable_files; POSIX fixture seam claims no OS locking guarantee",
+  "negative_shape_checks": [
+    "existing_inside_regular_file_admitted",
+    "missing_denied",
+    "outside_denied",
+    "empty_denied",
+    "directory_denied",
+    "relative_denied",
+    "traversal_denied",
+    "symlink_shape_denied",
+    "reparse_shape_denied",
+    "hardlink_shape_denied",
+    "linked_parent_shape_denied",
+    "expired_deadline_denied",
+    "native_unsupported_platform_remains_rejected"
+  ],
+  "network_calls": 0,
+  "results": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "log": "SOURCE-FACT-INPUTS-POSIX-windows-native-after-v1.txt",
+      "log_sha256": "43364387ab2b298b88943ef5fa6c117249b73183c5f7f750ff7c567df3bba897",
+      "mode": "windows-native",
+      "skips": 0,
+      "status": "PASS",
+      "tests": 12
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "log": "SOURCE-FACT-INPUTS-POSIX-simulated-posix-fixture-after-v1.txt",
+      "log_sha256": "050744263374fb0aaadc134074bc673acbf51c96015661ae7739b1ca980b9ac9",
+      "mode": "simulated-posix-fixture",
+      "skips": 0,
+      "status": "PASS",
+      "tests": 12
+    }
+  ],
+  "runtime_source_changes": false,
+  "schema_version": 1,
+  "simulation": "Only the test module os binding and explicit lstat shapes are simulated; Windows OS and production source policy unchanged",
+  "status": "PASS",
+  "test_sha256": "d4cec8bff8944c1c9c96519e9526473b648e5982d3b3768d774eac02342713eb"
+}

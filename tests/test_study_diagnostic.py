@@ -1,8 +1,6 @@
 """Offline diagnostic parity and adversarial validation; no scientific scoring."""
 
 import copy
-import json
-from pathlib import Path
 import unittest
 from unittest.mock import patch
 
@@ -90,32 +88,18 @@ class StudyDiagnosticTests(unittest.TestCase):
                         fingerprint(request),
                     )
 
-    def test_local_retained_real_payload_parity_when_available(self):
-        # Real requests are explicit caller inputs, never required installed resources.
-        root = Path(__file__).resolve().parents[1]
-        manifest = (
-            root
-            / "planning/review-assets/recovery-step5-20261026/paired-preflight-v2.json"
-        )
-        if not manifest.exists():
-            # Clean installations still exercise caller-supplied requests.
-            request = encode(self.request)
-            self.assertEqual(
-                fingerprint(request_from_payload(prepare_payload(request))),
-                fingerprint(request),
-            )
-            return
-        report = json.loads(manifest.read_bytes())
-        for case in report["cases"]:
-            source = Path(case["request"]["path"])
-            if not source.exists():
-                continue
-            request = json.loads(source.read_bytes())
-            for interface, arm in zip(("current", "simplified"), case["arms"]):
-                self.assertEqual(
-                    fingerprint(prepare_payload(request, interface)),
-                    arm["http_payload"]["sha256"],
-                )
+    def test_explicit_synthetic_context_orientation_payload_parity(self):
+        # Retained real-request parity is separate, unqualified local integration
+        # scope; default tests never discover a manifest or caller request path.
+        requests = [(name, encode(load_synthetic_request(name))) for name in
+                    ("synthetic-context", "synthetic-orientation")]
+        with patch("pathlib.Path.exists", side_effect=AssertionError("No live request discovery")), \
+                patch("pathlib.Path.read_bytes", side_effect=AssertionError("No implicit request reads")):
+            for name, request in requests:
+                for interface in ("current", "simplified"):
+                    with self.subTest(name=name, interface=interface):
+                        payload = prepare_payload(request, interface)
+                        self.assertEqual(canonical(request_from_payload(payload, interface)), canonical(request))
 
     def test_escaped_control_unicode_quotes_and_null_roundtrip(self):
         source = encode(self.request["source_request"])

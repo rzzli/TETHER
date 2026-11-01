@@ -1,10 +1,12 @@
 """Fictional original-only controls; no retained study values or candidates."""
-from contextlib import contextmanager
+from contextlib import contextmanager, ExitStack
 from datetime import datetime, timezone
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
+import stat
 import tempfile
 import time
 import unittest
@@ -19,6 +21,51 @@ TEST_ROOT = ROOT / "data" / "cache" / "test-source-fact-inputs"
 CUTOFF = "2026-10-31T23:00:00+00:00"
 requires_parquet = unittest.skipUnless(importlib.util.find_spec("pyarrow") is not None,
     "install the ingest extra for adapter tests")
+
+
+@contextmanager
+def _fictional_posix_locks(paths, *, deadline, fixture_root):
+    """Only existing regular files beneath this invented fixture may enter."""
+    inputs.deadline_check(deadline)
+    root = Path(fixture_root)
+    if not root.is_absolute():
+        raise ContractError("Explicit fictional fixture root required")
+    observed = root.lstat()
+    if not stat.S_ISDIR(observed.st_mode) or stat.S_ISLNK(observed.st_mode) or \
+            getattr(observed, "st_file_attributes", 0) & 0x400 or root.resolve() != root:
+        raise ContractError("Linked fictional fixture root denied")
+    paths = tuple(Path(path) for path in paths)
+    if not paths:
+        raise ContractError("Fictional fixture file inventory cannot be empty")
+    for path in paths:
+        if not path.is_absolute() or not path.is_relative_to(root):
+            raise ContractError("Fictional lock path escapes its fixture")
+        relative = path.relative_to(root)
+        if any(part in (".", "..") for part in relative.parts):
+            raise ContractError("Aliased fictional fixture path denied")
+        current = root
+        for part in relative.parts:
+            current /= part
+            observed = current.lstat()
+            if stat.S_ISLNK(observed.st_mode) or getattr(observed, "st_file_attributes", 0) & 0x400:
+                raise ContractError("Linked fictional fixture path denied")
+        if not stat.S_ISREG(observed.st_mode) or getattr(observed, "st_nlink", 1) != 1 or path.resolve() != path:
+            raise ContractError("Fictional locks require unlinked regular fixture files")
+    yield
+    inputs.deadline_check(deadline)
+
+
+@contextmanager
+def _fixture_lock_boundary(fixture_root):
+    # This Python-only seam exercises invented Parquet/metadata logic on POSIX.
+    # Windows tests retain real sharing locks; production remains fail closed.
+    if os.name == "nt":
+        yield
+    else:
+        def scoped(paths, *, deadline):
+            return _fictional_posix_locks(paths, deadline=deadline, fixture_root=fixture_root)
+        with patch.object(inputs, "stable_files", scoped):
+            yield
 
 
 def row(identifier="a", *, source="source-a", offset=0, **extra):
@@ -109,6 +156,9 @@ class InputTests(unittest.TestCase):
         TEST_ROOT.mkdir(parents=True, exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(dir=TEST_ROOT)
         self.root = Path(self.temp.name)
+        self.fixture_locks = ExitStack()
+        self.addCleanup(self.fixture_locks.close)
+        self.fixture_locks.enter_context(_fixture_lock_boundary(self.root))
 
     def tearDown(self):
         self.temp.cleanup()

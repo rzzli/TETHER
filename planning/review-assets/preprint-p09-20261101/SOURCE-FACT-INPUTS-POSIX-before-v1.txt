@@ -1,0 +1,25 @@
+test_fictional_preparation_source_only_and_slot_closure (tests.test_study_source_fact_inputs.InputTests.test_fictional_preparation_source_only_and_slot_closure) ... ERROR
+
+======================================================================
+ERROR: test_fictional_preparation_source_only_and_slot_closure (tests.test_study_source_fact_inputs.InputTests.test_fictional_preparation_source_only_and_slot_closure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_inputs.py", line 256, in test_fictional_preparation_source_only_and_slot_closure
+    prepared = self.run_preparation(f)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tests\test_study_source_fact_inputs.py", line 173, in run_preparation
+    return inputs.prepare_generation_inputs(f["plan_path"], f["inspection_path"], f["catalog_path"],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\source_fact_inputs.py", line 334, in prepare_generation_inputs
+    with stable_files(metadata_paths, deadline=deadline):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\study\stable_read.py", line 122, in stable_files
+    raise ContractError("Stable original-path reads require Windows sharing locks")
+asof.serde.ContractError: Stable original-path reads require Windows sharing locks
+
+----------------------------------------------------------------------
+Ran 1 test in 0.103s
+
+FAILED (errors=1)

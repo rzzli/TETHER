@@ -1,0 +1,56 @@
+{
+  "actual_source_reads": false,
+  "arrows": [
+    {
+      "core_gate": true,
+      "error_details": [],
+      "errors": 0,
+      "failures": 0,
+      "full_gate": false,
+      "kind": "absent",
+      "skips": [
+        "install the ingest extra for source-audit tests"
+      ],
+      "tests": 1
+    },
+    {
+      "core_gate": false,
+      "error_details": [],
+      "errors": 0,
+      "failures": 0,
+      "full_gate": false,
+      "kind": "wrong",
+      "skips": [
+        "Source-fact Parquet replay requires optional Arrow 21.0.0"
+      ],
+      "tests": 1
+    },
+    {
+      "core_gate": true,
+      "error_details": [],
+      "errors": 0,
+      "failures": 0,
+      "full_gate": false,
+      "kind": "broken",
+      "skips": [
+        "install the ingest extra for source-audit tests"
+      ],
+      "tests": 1
+    }
+  ],
+  "diagnostic": {
+    "actual_archived_reads": 0,
+    "blocked_reads": 1,
+    "implicit_archived_read_attempted": true
+  },
+  "model_calls": 0,
+  "network_calls": 0,
+  "phase": "before",
+  "schema_version": 1,
+  "source_hashes": {
+    "tests/test_study_diagnostic.py": "2d5da677e9ad9896b03e608d10303949d67882a1e1b25cbba43c8e4b149e9c73",
+    "tests/test_study_source_fact_sources.py": "42acace06fe4e53dc3c3c9f4a05d093aa890809ba36ae0c038b504bdf108fdcc",
+    "tests/test_validation.py": "65230f33691386a24dd6382bf15e7901c9820fefde89d4099a6329965329beb8"
+  },
+  "status": "EXPECTED_BOUNDARY_REPRODUCED"
+}

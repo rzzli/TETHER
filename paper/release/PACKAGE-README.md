@@ -22,7 +22,7 @@ Evaluation metadata is evaluator-only and must not become agent-visible inputs.
 The independently retained reconstruction protocol SHA-256 is:
 
 ```text
-650859b151bee4a98d6da8c779a7b498720929bfe1e7218d5e6f426f78cea123
+e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529
 ```
 
 Check the complete ZIP hash against its separate release record before trusting
@@ -37,7 +37,7 @@ all 137 complete, exact originals and their receipts. The source-inclusive
 independent auditor passes 6,862 checks. The additional 2,400-check sealed-file
 review checks metadata and artifacts; it is not another provider-source replay.
 
-The new reproduction took 229.422 seconds; its separate audit took 14.953 seconds.
+The final reproduction took 289.938 seconds; its separate audit took 15.187 seconds.
 These are post-result qualification operations. The frozen P06 study retains its
 original 203.828-second production and 7.125-second audit measurements. Policy-only
 I/O counters exclude repeated compiler reads; total physical I/O and platform

@@ -26,6 +26,20 @@ from tools.review.probe_framework import main as probe_main
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
     'install the ingest extra for source-audit tests', 'PowerShell 7 required for utility integration'}
 
+
+class LiveErrorResult(unittest.TextTestResult):
+    """Retain unittest accounting while printing diagnostic tracebacks promptly."""
+
+    def addError(self, test, error):
+        super().addError(test, error)
+        self.stream.write('\nCaptured test error: ' + self.getDescription(test) + '\n' + self.errors[-1][1])
+        self.stream.flush()
+
+    def addFailure(self, test, error):
+        super().addFailure(test, error)
+        self.stream.write('\nCaptured assertion failure: ' + self.getDescription(test) + '\n' + self.failures[-1][1])
+        self.stream.flush()
+
 # Failed originals are retained as audit data, never imported/executed. Only an
 # exact path AND byte hash is exempt from the active-source syntax requirement.
 ARCHIVED_INVALID_PYTHON = {
@@ -125,6 +139,7 @@ def main(argv=None):
     parser.add_argument('--mode',choices=('core','full'),default='full')
     parser.add_argument('--report',type=Path)
     parser.add_argument('--package',action='store_true')
+    parser.add_argument('--failfast',action='store_true',help='Stop failed test execution after recording its first traceback')
     args = parser.parse_args(argv)
     if args.mode=='full':
         import pyarrow
@@ -134,7 +149,7 @@ def main(argv=None):
     report = {'schema_version':1,'mode':args.mode,'structural':structural_checks(),
               'powershell_syntax':powershell_check()}
     suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
+    result = unittest.TextTestRunner(verbosity=2, failfast=args.failfast, resultclass=LiveErrorResult).run(suite)
     report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),
                      'skipped':[{'test':t.id(),'reason':reason} for t,reason in result.skipped]}
     success = successful_tests(result,args.mode)

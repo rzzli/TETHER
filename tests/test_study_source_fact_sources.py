@@ -3,6 +3,7 @@ from contextlib import nullcontext
 from dataclasses import replace
 from datetime import date, datetime, timezone
 import hashlib
+import importlib.util
 import os
 from pathlib import Path
 import tempfile
@@ -314,13 +315,12 @@ class SourceFactSourceTests(unittest.TestCase):
             self.compile(task, replace(snap, sources=(changed,)))
 
     def test_fictional_parquet_selected_row_and_absent_schema(self):
-        try:
-            import pyarrow as pa
-            import pyarrow.parquet as pq
-        except ImportError:
+        if importlib.util.find_spec("pyarrow") is None:
             self.skipTest("install the ingest extra for source-audit tests")
+        import pyarrow as pa
         if pa.__version__ != "21.0.0":
-            self.skipTest("Source-fact Parquet replay requires optional Arrow 21.0.0")
+            raise ContractError("Source-fact Parquet replay requires pyarrow 21.0.0; installed version differs")
+        import pyarrow.parquet as pq
         node = self.source("s", {})
         parquet_path = self.root / "fictional.parquet"
         pq.write_table(pa.table({"targetId": ["T", "T"], "diseaseId": ["D", "D"],

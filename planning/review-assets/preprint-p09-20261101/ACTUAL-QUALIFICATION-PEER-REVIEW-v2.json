@@ -1,0 +1,345 @@
+{
+  "schema": "p09.actual_qualification_peer_review.v2",
+  "status": "PASS_SEALED_ACTUAL_QUALIFICATION_METADATA_REVIEW",
+  "check_count": 3481,
+  "unresolved_findings": [],
+  "external_READY_sha256": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529",
+  "archive_relative_path": "data/derived/preprint-p09-installed-20261101T205500Z/revision2",
+  "file_counts": {
+    "reconstruct": 156,
+    "audit": 3
+  },
+  "reference_hashes": {
+    "p05-01": {
+      "byte_sha256": "e5526aaafd50d782e9c240b4682ec82264b7e5340baf5e050b7b2a8ed415ce98",
+      "canonical_sha256": "daca005eebb6421886e90817d9393a047e59e1bb197f1efd7279327b1fb3579f",
+      "projection_sha256": "5f8eec4b9e95a2222e0fe97bdd6b4cfaab057a0df38b517390b12e3c12828129",
+      "task_sha256": "536297721cbc13ba8bc3f0e18cc8c48c36bf1072296a21408c1e98303584c65b"
+    },
+    "p05-02": {
+      "byte_sha256": "759b57cc1063dc29dcd31127dd31b2d1cdbe01c0ff29597eb41c487494cdf681",
+      "canonical_sha256": "7f06e580ca1cebebe787934e2c5dfa3596d76980197df89876e70d972134208a",
+      "projection_sha256": "ac09720edff0bec356dff0f0e46dd11eeb14d4a4f4b111d06a6eef87113ecadb",
+      "task_sha256": "9e2b82860d8e37974a79f3260e2fd743ece40de0a4a28d94d7c15e7944fb4119"
+    },
+    "p05-03": {
+      "byte_sha256": "8f245434374a0aeec297af7b9821d8359c5d269d7eb361eee4bba2519bf81ee1",
+      "canonical_sha256": "5a7130fa46417a822b514ed8d9d49ccd1b814fad7b1bde543fedf6940ef8cae5",
+      "projection_sha256": "a7ef4b420b498a409b5e1901720e3c9da981a69c9e20b5edfbf1aa47f18c9702",
+      "task_sha256": "134b5de98ddfe53642ecb1989a37fd151999e76240c6c3801f42df77a8473381"
+    },
+    "p05-04": {
+      "byte_sha256": "c688e904426d1cee7240af2876a90e9e3f7457c524dd1e59283fbd6f8e2e7306",
+      "canonical_sha256": "9488bde572f285b3b9794482995b8b618a33f75ffca7cf764b63ef6612510e84",
+      "projection_sha256": "1a3bdd70629c1e03b87adf1fe5fb930fe9e0e922f4fa5c53348c1dcf47a04d5c",
+      "task_sha256": "c644a4bd712fcc974b13dc0a6ca4319492be6e68b69e7c1d96bb6ecd0966dcee"
+    },
+    "p05-05": {
+      "byte_sha256": "b419b0eca8ee225b587ef1645137932c3d575a1562112f70772af709c91eea97",
+      "canonical_sha256": "29c36a6029f374605925406c595ac27bb01fb20c24b98db8a399f9b85a004d47",
+      "projection_sha256": "7555c24e4e632d2c32a267da8f937d725c0e83737930a58ee17e379faea114d9",
+      "task_sha256": "a1668236400fe4bf851002cd11a474fdd07ca5f4661fcf83aa80f8fec1d21b2d"
+    },
+    "p05-06": {
+      "byte_sha256": "6fb067f16462652ff87ba24c89be9ca56c248847d5606be6720d20a4f99c8eb3",
+      "canonical_sha256": "abb68ee40dbc724503ec80bd36bdbab2e04971678d3fea94eb2a7ba80a9658e6",
+      "projection_sha256": "fce1379811830227607ced9502d31fd06a8c0e9428cd68a597f4730c4b4b949e",
+      "task_sha256": "3872b23659a5e1b57e29b70ed47ff3061db44565bb17c6bd281bd0409ea039e7"
+    },
+    "p05-07": {
+      "byte_sha256": "2acf70eb50cf340fa7643140f043dea38f9177d2905bc6025bef8c8c44a7d230",
+      "canonical_sha256": "fbcb56b91a9fa0edef18958769a5f9a226865636fb8a64c8f7fe59bb7e3ab68f",
+      "projection_sha256": "ad393ec2e8341ecd5a4c0a824bf52e639a4509510691834ad3dbe7d1a3a13d4d",
+      "task_sha256": "5454d4eb52067b5ba9d7228bb1d2624a3448f49e1fbf27d68fb2a2f065ff8421"
+    },
+    "p05-08": {
+      "byte_sha256": "cfe0ab743f1d91adb8558dfab18462ab51718f56041e56dd0e1220585f513655",
+      "canonical_sha256": "ed8b37a28b6f9e13048ebf0b6573327453987ddbc910675d5ebbbddef94de2dd",
+      "projection_sha256": "f0f55b5c81d14fe2b032242ee57861c6f97dc033ca74e23db3b00429159ff812",
+      "task_sha256": "083299814544940768b98871a5fc25237852995c05782aee7301a2f6a7429bbe"
+    },
+    "p05-09": {
+      "byte_sha256": "8bd170a83e3da4209e5e962de7b45564c33402af2b5bf95cd94410ddbe148a63",
+      "canonical_sha256": "fe874c8f6a62eac57f40e0fbf8ac5de7dc608963561070540709f6932bcff6b8",
+      "projection_sha256": "62a91ebe779d31f8d6b26951a1e3c112b0fed0a68bf3e95321355eda609a559f",
+      "task_sha256": "e4edda614b25d3e2295b2ab077efa4ce5fd0584ce83fee9aa19840357b96ccca"
+    },
+    "p05-10": {
+      "byte_sha256": "a1c1ca4f0b81c5caae045089e88b570703f86c9d63be2ebb98dc8cba6ab46fe7",
+      "canonical_sha256": "5e81d10de1a044bc646116a1d59120c9d69e8fdbd5eb8d82aae63473187c37a3",
+      "projection_sha256": "3da19ef244714902d9de10f75d616848513c05369d20208e6d5d2259cc8a57af",
+      "task_sha256": "afaf881ce8e4d6cb47426a16b7c4ebfb2e3a035ddf320629b1ccf36417ba87cf"
+    },
+    "p05-11": {
+      "byte_sha256": "214ae7198faecad5ca5d03163393ad264039f86eac9b240816e7069069d6c0c8",
+      "canonical_sha256": "b332668dfb177963a232fdb6c0c8fb7f3b9b446ff679b2b9a788f8b51a768310",
+      "projection_sha256": "78e5c0429c72af1a5d24b6b796fe7b39b9ec1f191fce583dfb5b1a5c6a13d1fa",
+      "task_sha256": "a1d0027865d8214a6d273965587be1866dada97ee4b03c610724aacf33030902"
+    },
+    "p05-12": {
+      "byte_sha256": "7e3f40dd8efbd409fbb5d157ded6c5bc44486af92f4bade1c0b2609a0c430c39",
+      "canonical_sha256": "afa19d385dab34bc110db2704041fdd94eec8a579be063991e9942f092ea6a28",
+      "projection_sha256": "2f2ef86dfabafaceb84f829d39e82a2342461605cbd96b0d3245628e29440b9a",
+      "task_sha256": "55214d78b1b9d7c16ee194de1208be1a9790a16c2aefe5fde9c2d601d6b36a6e"
+    }
+  },
+  "recomputed_descriptive_counts": {
+    "planned_output_cells": 38,
+    "planned_decisions": 90,
+    "output_terminal_counts": {
+      "returned": 36,
+      "malformed": 2
+    },
+    "decision_verdict_counts": {
+      "admitted": 57,
+      "rejected": 33
+    },
+    "core_scored_outputs": 35,
+    "native_literal": {
+      "cases": 12,
+      "verified_exact": 12,
+      "complete_60": 12,
+      "complete_80": 12,
+      "complete_100": 12,
+      "critical_errors": 0
+    },
+    "native_abstain": {
+      "cases": 12,
+      "completion_80": 0,
+      "emitted_facts": 0,
+      "critical_errors": 0
+    },
+    "native_availability": {
+      "identity_requested": 132,
+      "identity_answerable": 108,
+      "measurement_requested": 48,
+      "measurement_answerable": 40,
+      "native_nulls": 32,
+      "absent": 0,
+      "empty": 0
+    },
+    "controls": {
+      "scenarios": 14,
+      "valid": 4,
+      "invalid": 10,
+      "invalid_admissions": {
+        "FULL": 0,
+        "WITHOUT_WRAPPER": 2,
+        "WIRE_ONLY": 7
+      },
+      "valid_rejections": {
+        "FULL": 0,
+        "WITHOUT_WRAPPER": 0,
+        "WIRE_ONLY": 0
+      }
+    },
+    "paired_control_discordance": {
+      "FULL__WITHOUT_WRAPPER": 2,
+      "FULL__WIRE_ONLY": 7,
+      "WITHOUT_WRAPPER__WIRE_ONLY": 5
+    }
+  },
+  "proposed_public_status_projection": {
+    "schema_version": 1,
+    "method": "p09.installed_native_reconstruction_qualification.v1",
+    "status": "PASS_NATIVE_RECONSTRUCTION_AND_INDEPENDENT_AUDIT",
+    "protocol_sha256": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529",
+    "platform": {
+      "os": "Windows x64",
+      "python": "3.11.15",
+      "pyarrow": "21.0.0"
+    },
+    "reconstruction": {
+      "report_sha256": "a0f4e0e76ad5dfd746664c69023549cb0bf23fd74316b02a40ef85c54bfd8acb",
+      "receipt_sha256": "b184839bdedea102e022786de51bd7fcec062e2eb232c45699b6d55444814b8e",
+      "journal_sha256": "ac18359acb7ee2b2b7b7ce402a1fbc85dc23354ace7b96be692ab277b1333e7e",
+      "output_seal_sha256": "a2d8ec1450d0160c5446f89b3520f74897eb0dbe2633b25a4e2ff5739dceef40",
+      "source_coverage_sha256": "c1c793ee23297751a1c6d996e954cb878c30ad91712e616c799f0e0da026e1e4",
+      "status": "COMPLETED_PENDING_AUDIT",
+      "files": 156,
+      "operation_resources": {
+        "checkpoint_process_lifetime_peak_bytes": 481636352,
+        "cpu_seconds": 269.390625,
+        "physical_io_bytes": null,
+        "platform_cost_usd": null,
+        "wall_seconds": 289.93799999996554
+      }
+    },
+    "independent_audit": {
+      "report_sha256": "b7e8bdd49fe0a29a78277a65ba627e405b652b6aa5e060f930796421958f62ca",
+      "receipt_sha256": "c981dfe9d5964b8be6d2fd49ccdfc5300be3eeb60628c2ae8f998c1fbbbe1977",
+      "journal_sha256": "c26cd94c08c3abb70bea1c6ad85741c1f651c108ae3266ac4966782f7109f148",
+      "status": "PASS_INDEPENDENT_SOURCE_RECONSTRUCTION_AUDIT",
+      "checks": 6862,
+      "source_inclusive": true,
+      "independent_projection": true,
+      "unresolved_findings": [],
+      "operation_resources": {
+        "checkpoint_process_lifetime_peak_bytes": 298418176,
+        "cpu_seconds": 14.578125,
+        "physical_io_bytes": null,
+        "platform_cost_usd": null,
+        "wall_seconds": 15.187000000034459
+      }
+    },
+    "original_file_count": 137,
+    "native_reference_count": 12,
+    "analysis_counts": {
+      "planned_output_cells": 38,
+      "planned_decisions": 90,
+      "output_terminal_counts": {
+        "returned": 36,
+        "malformed": 2
+      },
+      "decision_verdict_counts": {
+        "admitted": 57,
+        "rejected": 33
+      },
+      "core_scored_outputs": 35,
+      "native_literal": {
+        "cases": 12,
+        "verified_exact": 12,
+        "complete_60": 12,
+        "complete_80": 12,
+        "complete_100": 12,
+        "critical_errors": 0
+      },
+      "native_abstain": {
+        "cases": 12,
+        "completion_80": 0,
+        "emitted_facts": 0,
+        "critical_errors": 0
+      },
+      "native_availability": {
+        "identity_requested": 132,
+        "identity_answerable": 108,
+        "measurement_requested": 48,
+        "measurement_answerable": 40,
+        "native_nulls": 32,
+        "absent": 0,
+        "empty": 0
+      },
+      "controls": {
+        "scenarios": 14,
+        "valid": 4,
+        "invalid": 10,
+        "invalid_admissions": {
+          "FULL": 0,
+          "WITHOUT_WRAPPER": 2,
+          "WIRE_ONLY": 7
+        },
+        "valid_rejections": {
+          "FULL": 0,
+          "WITHOUT_WRAPPER": 0,
+          "WIRE_ONLY": 0
+        }
+      },
+      "paired_control_discordance": {
+        "FULL__WITHOUT_WRAPPER": 2,
+        "FULL__WIRE_ONLY": 7,
+        "WITHOUT_WRAPPER__WIRE_ONLY": 5
+      }
+    },
+    "policy_session_counters": {
+      "enforcement": "cooperative Windows sharing locks and checkpoints; not an OS sandbox",
+      "logical_bytes_hashed": 2866364290,
+      "logical_original_compressed_bytes_scanned": 2866248239,
+      "max_batch_arrow_bytes": 1858154,
+      "physical_io_bytes": null,
+      "wall_seconds_before_caller_replay": 28.68799999996554,
+      "scope": "Policy session only; repeated reference-compiler/caller source reads are excluded, so this is not total reconstruction I/O."
+    },
+    "model_calls": 0,
+    "network_calls": 0,
+    "new_downloads": 0,
+    "provider_spending_usd": 0,
+    "scientific_validation": "not_established",
+    "study_independence": "not_established",
+    "old_private_archive_integrity": "not_provided_by_public_reconstruction",
+    "reference_comparison_projection": "remove_only_method_catalog_sha256.v1",
+    "other_test_lanes": {
+      "installed82": {
+        "status": "PASS_ROOT_REPORTED",
+        "wall_seconds": 182.26,
+        "command_uses_B": true,
+        "pristine_bundle_files": 312,
+        "provenance": "Root terminal report; no separate test-log reread in this sealed-output review."
+      },
+      "main_core": "PENDING_SECOND_TERMINAL_EVIDENCE",
+      "main_full": "PENDING_SECOND_TERMINAL_EVIDENCE"
+    }
+  },
+  "public_projection_review": "Metadata/counts/hashes only; no private root or expected native fact values. Pending second main test lanes must be updated only from separate terminal evidence.",
+  "revision_comparison": {
+    "original_READY": "650859b151bee4a98d6da8c779a7b498720929bfe1e7218d5e6f426f78cea123",
+    "final_READY": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529",
+    "all38_raw_bytes_identical": true,
+    "all12_reference_bytes_identical": true,
+    "unchanged_files": 137,
+    "changed_files": [
+      "fictional/C01/scenario.json",
+      "fictional/C02/scenario.json",
+      "fictional/C03/scenario.json",
+      "fictional/C04/scenario.json",
+      "fictional/F01/scenario.json",
+      "fictional/F02/scenario.json",
+      "fictional/F03/scenario.json",
+      "fictional/F04/scenario.json",
+      "fictional/F05/scenario.json",
+      "fictional/F06/scenario.json",
+      "fictional/F07/scenario.json",
+      "fictional/F08/scenario.json",
+      "fictional/F09/scenario.json",
+      "fictional/F10/scenario.json",
+      "journal.jsonl",
+      "output-seal.json",
+      "receipt.json",
+      "reconstruction.json",
+      "source-coverage.json"
+    ],
+    "source_coverage_original_proofs_dispositions_identical": true,
+    "runtime_metadata_deltas": "Fourteen local scenario documents differ only generation/evaluation raw_root. Guard metadata differs only measured cpu_seconds/wall_seconds; all status/schema/decision semantics match. This run-metadata comparison adds no exception to the catalog-only reference comparison.",
+    "private_runtime_scenario_documents": "Contain execution roots; keep in ignored private archives, outside the public qualification projection and frozen neutral bundle.",
+    "README_revision_review": "DRAFT-BUNDLE-REVIEW-v2.json proves README-only161byte correction;310othermembers and100packagepayloads/fourtests unchanged.",
+    "original_temporary_cache_files": "Root-reported four unlisted pyc files in original temporary C: test copy remain preserved; canonical frozen bundle and sealed v1 archives are retained.",
+    "main_gates": "Initial full1941/3errors and core1941/10errors were not successful; tests-only corrections precede still-pending second gates at commit31a98ed.",
+    "primary_P06_wall_seconds": {
+      "production": 203.828,
+      "source_audit": 7.125
+    },
+    "source_reread_for_this_review": false,
+    "individual_outputs_decisions_guard_semantics_and_denominators_identical": true
+  },
+  "limitations": [
+    "This is an independent sealed-output consistency review, not a new provider-source replay. The already sealed source-inclusive audit supplies source-projection attestation.",
+    "READY exact byte SHA is externally supplied and matched across retained reports/journals; protocol bytes were not reread under this sealed-output-only task.",
+    "No copy comparison back to the original C: execution root was performed here; archive exact receipt/file/journal bindings were verified.",
+    "Policy logical hash/scan counters exclude repeated compiler/caller reads; total physical I/O and platform cost remain unknown.",
+    "Model/science/independence claims remain limited. A native positive reconstruction is not future external URL availability or scientific validation."
+  ],
+  "resources": {
+    "wall_seconds": 0.6870000000344589,
+    "logical_sealed_output_bytes_read": 14137811
+  },
+  "provider_originals_opened": 0,
+  "production_files_modified": 0,
+  "scientific_validation": "not_established",
+  "detailed_checks": {
+    "path": "planning/review-assets/preprint-p09-20261101/ACTUAL-QUALIFICATION-CHECKS-v3.json",
+    "sha256": "fe84037b33cf5d2cc9a859d024b10771ba6e2f615fe0ba0fe8dea5c05c0846cd",
+    "bytes": 341309
+  },
+  "checker": {
+    "path": "planning/review-assets/preprint-p09-20261101/review_actual_qualification_v3.py",
+    "sha256": "826b92f560c2e1b4644e8f8b17eb3b5234f5875d37a750714416b8fbf791e816"
+  },
+  "retained_initial_comparator_failure": {
+    "path": "planning/review-assets/preprint-p09-20261101/ACTUAL-QUALIFICATION-CHECKS-v2.json",
+    "sha256": "454ce4ebb25273e18b36b829259495fc0fdda6a8d599d2f006c4931dbbc92a2f",
+    "cause": "Overbroad equality expectations for runtime scenario roots and measured guard times; corrected by checking only these explicit run-metadata deltas, with no exception to exact native output/reference comparison."
+  },
+  "prior_peer_review": {
+    "path": "planning/review-assets/preprint-p09-20261101/ACTUAL-QUALIFICATION-PEER-REVIEW-v1.json",
+    "sha256": "ba31d2c0dc153b8af2f781276d56f2a7b4ccc2dfd7b197183c2638ed858a8733"
+  }
+}

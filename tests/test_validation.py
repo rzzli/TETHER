@@ -1,6 +1,7 @@
 """The validation command must fail when required checks fail or disappear."""
 import io
 import importlib.util
+from importlib.machinery import ModuleSpec
 import runpy
 import sys
 import tempfile
@@ -43,20 +44,35 @@ class ValidationGateTests(unittest.TestCase):
     def test_parquet_optional_skip_keeps_wrong_arrow_version_rejected(self):
         from tests.test_study_source_fact_sources import SourceFactSourceTests
         wrong_arrow = ModuleType('pyarrow')
+        wrong_arrow.__spec__ = ModuleSpec('pyarrow', loader=None, is_package=True)
+        wrong_arrow.__path__ = []
         wrong_arrow.__version__ = '24.0.0'
         wrong_arrow.parquet = ModuleType('pyarrow.parquet')
-        for arrow, parquet, expected_core in (
-            (None, None, True),
-            (wrong_arrow, wrong_arrow.parquet, False),
+        wrong_arrow.parquet.__spec__ = ModuleSpec('pyarrow.parquet', loader=None)
+        broken_arrow = ModuleType('pyarrow')
+        broken_arrow.__spec__ = ModuleSpec('pyarrow', loader=None, is_package=True)
+        broken_arrow.__path__ = []
+        broken_arrow.__version__ = '21.0.0'
+        for kind, arrow, parquet, expected_core in (
+            ('absent', None, None, True),
+            ('wrong_version', wrong_arrow, wrong_arrow.parquet, False),
+            ('broken_import', broken_arrow, None, False),
         ):
-            with self.subTest(arrow_available=arrow is not None), patch.dict(
+            with self.subTest(kind=kind), patch.dict(
                 sys.modules, {'pyarrow': arrow, 'pyarrow.parquet': parquet}
             ):
                 suite = unittest.TestSuite([SourceFactSourceTests(
                     'test_fictional_parquet_selected_row_and_absent_schema')])
                 result = unittest.TextTestRunner(stream=io.StringIO()).run(suite)
             self.assertEqual(result.testsRun, 1)
-            self.assertEqual(len(result.skipped), 1)
+            self.assertEqual(result.failures, [])
+            if expected_core:
+                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for source-audit tests'])
+                self.assertEqual(result.errors, [])
+            else:
+                self.assertEqual(result.skipped, [])
+                self.assertEqual(len(result.errors), 1)
+                self.assertIn('requires pyarrow 21.0.0' if kind == 'wrong_version' else 'pyarrow.parquet', result.errors[0][1])
             self.assertEqual(validate.successful_tests(result, 'core'), expected_core)
             self.assertFalse(validate.successful_tests(result, 'full'))
 
