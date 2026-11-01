@@ -28,8 +28,14 @@ absent/nofallback; no retroestimate/rerun. Audit7.531s/308,641,792Bownpeak.
 PhysicalI/O/platformcostunknown. Next experiment must qualify nativeWindows
 RSS/peak fallback and resourcefailgate.
 
-P05a–c complete onlytechnicalscopes. P05d dependence/exposure/denominator
-register, P05-only packetassembler/runner and final38output/90decision protocol
-freeze pending. No actual study output yet. P06–P10/paperunfinished. Modelbranch
+P05a–c complete onlytechnicalscopes. P05d original-derived register nowsealed at
+data/benchmark/cohorts/preprint-p05-register-20261101T083548Z:
+registerSHA9108838b4611f356111807c6bfbfe5c319a11bdebbf6366233852e840d6463ec,
+publicmanifestSHA2c363c14a03b94ed39e285f9fac502fd8eff9bd3f3c81dc7faebe0309897c414.
+772builderchecks plus478separate rootchecks pass, all24originalrows reread.
+Groupanswerabilityhistogram2components:1,3:6,4:5. All12exposureUNKNOWN;
+equalstrings implyno studyindependence. Runner/auditor/analyzer qualification
+and final38output/90decision protocol freeze pending. No actual study output yet.
+P06–P10/paperunfinished. Modelbranch
 closed, no experts/downloads/spending/monitor. Widerclinical/MR/T2–T5/H6 deferred
 without marking complete. See current planning source-reference assessment.

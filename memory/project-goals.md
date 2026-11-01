@@ -16,8 +16,9 @@ original rows/180facts;1,163checks pass,41fictional regressions pass. Native
 identity108/132 and measurement40/48 components populated,32native-null unknowns.
 Producer342.75s; RSS/peak unmeasured due absentoptionalpsutil/nofallback. Original
 run preserved; upcomingrunner memory fallback must qualify before READY.
-P05d exposure/dependence/denominator register, packet-only assembler/runner and
-38output/90decision protocol freeze pending. No actual study output. No further
+P05d register now sealed (772builder+478rootchecks, all24originalrows); packet-only
+runner, independent finalauditor/analyzer qualification and38output/90decision
+protocol freeze pending. No actual study output. No further
 modelcalls, downloads or experts; P06–P10/paper and wider programmes unfinished.
 See [[research-log-2026-11-01-source-references]].
 
