@@ -20,9 +20,6 @@ from asof_p05_replay import policy_v1 as policy
 from asof_p05_replay.baseline_v1 import literal_report
 
 
-ROOT = Path(__file__).resolve().parents[4]
-
-
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
@@ -116,7 +113,7 @@ def fixture(root, *, gwas_rows=None, credible_rows=None, target_rows=None, hgnc_
 
 class PolicyTests(unittest.TestCase):
     def setUp(self):
-        self.parent = ROOT / "tmp/p09-policy-tests"
+        self.parent = Path(tempfile.gettempdir()) / "asof-p05-replay-policy-tests"
         self.parent.mkdir(parents=True, exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(prefix="fictional-", dir=self.parent)
         self.root = Path(self.temp.name)

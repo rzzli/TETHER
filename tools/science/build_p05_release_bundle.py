@@ -5,11 +5,11 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import platform
 import shutil
 import sys
-import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT / "tools/science"))
 from asof.serde import canonical, parse_json
 from asof.journal import RunJournal
 from prepare_p05_public_bridge import safe_public
+from p05_wheel_allowlist import verify_wheel
 
 POLICY_SHA = "8d88c5dca9dfbebfd7851a6e50b5d668bdedd0a6f35bd0b77aebdff01fabf6c1"
 COMPARISON_SHA = "1fc123d3c368d355c1f3d66a76eeaacea9ae954c6a6fad9aa3d05390d225cce0"
@@ -46,13 +47,6 @@ def payload_inventory(directory):
             if p.is_file() and p.suffix in (".py", ".json")}
 
 
-def wheel_payloads(path, prefix):
-    with zipfile.ZipFile(path) as wheel:
-        names = [n for n in wheel.namelist() if n.startswith(prefix + "/") and n.endswith((".py", ".json"))]
-        need(len(names) == len(set(names)) and names, "Wheel package payload absent/duplicated")
-        return {n[len(prefix) + 1:]: sha(wheel.read(n)) for n in sorted(names)}
-
-
 def _prepare(bridge_root, output, core_wheel, replay_wheel, include_hgnc, presentation_root, presentation_metadata_root, journal):
     files, origins = {}, {}
     def write(logical, raw, role, origin):
@@ -61,6 +55,9 @@ def _prepare(bridge_root, output, core_wheel, replay_wheel, include_hgnc, presen
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("xb") as stream:
             stream.write(raw)
+            stream.flush()
+            os.fsync(stream.fileno())
+        need(path.read_bytes() == raw, "Bundle member readback differs: " + logical)
         files[logical] = dict(path=logical, sha256=sha(raw), bytes=len(raw), role=role)
         origins[logical] = origin
         if len(files) % 25 == 0:
@@ -99,6 +96,7 @@ def _prepare(bridge_root, output, core_wheel, replay_wheel, include_hgnc, presen
         write("included-originals/" + item["relative_path"], raw, "reference_original_CC0", "HGNC_official_CC0_and_exact_replay_addendum")
     for source in sorted((ROOT / "paper/release/cards").glob("*.md")):
         copy("cards/" + source.name, source, "rights_documentation")
+    copy("README.md", ROOT / "paper/release/README.md", "public_reproduction_instructions")
     for name in ("manuscript.md", "supplement.md", "references.bib", "references.json", "RELATED-WORK-SOURCE-AUDIT.md", "asof-source-reporting-preprint.pdf"):
         copy("paper/" + name, ROOT / "paper" / name, "working_draft_documentation")
     expected = parse_json(checked_read(presentation_metadata_root / "expected-payloads.json",
@@ -133,12 +131,14 @@ def _prepare(bridge_root, output, core_wheel, replay_wheel, include_hgnc, presen
         if source.is_file() and "__pycache__" not in rel.parts and allowed:
             copy("source/replay/" + rel.as_posix(), source, "project_reconstruction_code_or_fictional_test")
     copy("build-constraints.txt", ROOT / "paper/release/build-constraints.txt", "pinned_build_configuration")
-    for wheel, name, prefix in ((core_wheel, "core", "asof"), (replay_wheel, "replay", "asof_p05_replay")):
+    for wheel in (core_wheel, replay_wheel):
         copy("wheels/" + wheel.name, wheel, "project_wheel")
     core_files = payload_inventory(ROOT / "src/asof")
     replay_files = payload_inventory(ROOT / "paper/release/code/src/asof_p05_replay")
-    need(wheel_payloads(core_wheel, "asof") == core_files, "Core wheel differs from current pinned source")
-    need(wheel_payloads(replay_wheel, "asof_p05_replay") == replay_files, "Replay wheel differs from current reviewed source")
+    need(payload_inventory(output / "source/core/src/asof") == core_files, "Copied core source differs from code proof")
+    need(payload_inventory(output / "source/replay/src/asof_p05_replay") == replay_files, "Copied replay source differs from code proof")
+    verify_wheel(output / "wheels" / core_wheel.name, "asof", core_files, (output / "source/core/LICENSE").read_bytes())
+    verify_wheel(output / "wheels" / replay_wheel.name, "asof_p05_replay", replay_files, (output / "source/replay/LICENSE").read_bytes())
     import pyarrow
     protocol = dict(schema_version=1, method="p09.public_reconstruction_protocol.v1", status="DRAFT_ROOT_AUTHORIZATION_PENDING",
         actual_reconstruction_authorized=False, source_policy=files["config/source-policy.json"], comparison=files["evaluation/comparison.json"],
@@ -184,8 +184,8 @@ def main(argv=None):
     parser.add_argument("--presentation-root", type=Path, required=True)
     parser.add_argument("--presentation-metadata-root", type=Path, required=True)
     args = parser.parse_args(argv)
-    output = args.output.absolute()
-    need(output.is_relative_to(ROOT / "data/cache"), "Draft bundle preparation stays in ignored workspace cache")
+    output = args.output.resolve()
+    need(output.is_relative_to((ROOT / "data/cache").resolve()), "Draft bundle preparation stays in ignored workspace cache")
     print(json.dumps(prepare(args.bridge_root.absolute(), output, args.core_wheel.absolute(), args.replay_wheel.absolute(), args.include_hgnc,
         args.presentation_root.absolute(), args.presentation_metadata_root.absolute()), indent=2))
 

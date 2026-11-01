@@ -60,3 +60,17 @@ then independent source audit; record resource/data/byte evidence. Run full
 exact-release framework/P05/P09 lanes after code stabilizes, with appropriate
 CI scope/timing. Source copies and actual reconstruction have NOT started.
 See [[Research Release Qualification Plan 2026-11-01]] and [[project-goals]].
+
+P09b closes at independently audited draft f451c523387eec94155b0f24b62762adffc380a73cf83401f099530efce43d1c.
+All311 allowlisted files20,486,521B pass3,144 independent checks in DRAFT-BUNDLE-AUDIT-v3;
+earlier2 checker-only wording/counter falsefailures retained. New strict whole-wheel
+allowlist rejects injected members/metadata/entrypoint defects (9testsPASS; legacy
+rule reproduced11 falseaccepts). Copies have fsync/readback and entire copied
+source/wheel closure. PublicREADME states external dependencies/136OT exact-byte
+reacquisition untested, retained-only manuscriptPDF and publicG0 boundaries.
+All137 receipts and approved HGNC included; preparation journal/report excluded
+from runtime allowlist. Full auditor24PASS82.978s; testpath correction42PASS18.557s;
+policy23/control16/CLI19/auditor24 =82 production-module test methods. Root18
+exporter/wheel/relocation tests pass. Actual P09c still requires separate READY,
+fresh C: installed environment and complete copied originals, then independent
+source audit. All78 original P05 code pins remain unchanged.

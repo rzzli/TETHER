@@ -29,9 +29,6 @@ from asof_p05_replay import cli
 from asof_p05_replay import policy_v1
 from test_audit_v1 import native_fixture
 
-ROOT = Path(__file__).resolve().parents[4]
-
-
 def schedules():
     cells = [f"N-{arm}-p05-{i:02d}" for i in range(1, 13) for arm in ("L", "A")]
     cells += ["S-" + key for key in [*(f"C{i:02d}" for i in range(1, 5)), *(f"F{i:02d}" for i in range(1, 11))]]
@@ -46,7 +43,7 @@ def descriptor(root, name, payload):
 
 class CliTests(unittest.TestCase):
     def setUp(self):
-        parent = ROOT / "tmp/p09-cli-tests"
+        parent = Path(tempfile.gettempdir()) / "asof-p05-replay-cli-tests"
         parent.mkdir(parents=True, exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(prefix="fictional-", dir=parent)
         self.root = Path(self.temp.name)
