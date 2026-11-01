@@ -1,10 +1,29 @@
 # Installed source reconstruction checkpoint
 
-1 November 2026. **P09c passes; P09d remains in progress.** Author declarations
+1 November 2026. **P09c and P09d pass in their explicit local scopes.** Author declarations
 remain deferred by the owner, and the paper remains a working draft. No external
 expert input is required. Nothing is published or pushed.
 
-## Result and evidence
+**Revision 2 update:** the final protocol is
+`e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529`.
+Its separate reconstruction/audit took 289.938s/15.187s and passed 6,862 source
+checks; the metadata review passed 3,481 checks. All 38 raw outputs and 12 reference
+files are byte-identical to the first revision. The corrected `-B` test command
+passes 82 tests/182.260s and leaves its 312-file bundle unchanged. Only the frozen
+README and new authority changed; all 310 other bundle members remain identical.
+The revised draft passes 3,149 checks for 311 members/20,486,682 bytes.
+
+The first two broad full/core attempts exposed test-harness issues and Windows
+file-access failures; those failed reports remain retained. Third full/core runs
+at `3629337` now pass: full 1,973 tests/zero skips; core 1,973 collected/94 approved
+optional skips. Both pass probes and offline package/demo. Independent gate review
+passes 349 checks. Two fresh 315-member ZIP builds match (`f4d7ab4b`);
+independent archive review passes 1,595 checks with no unresolved findings.
+The archive is 20,712,230 bytes; its external hash and qualification records are
+under `paper/release/`. No public deposit or current hosted result exists.
+The initial revision's metrics below are retained historical evidence.
+
+## Initial revision retained for history
 
 The separately versioned `asof-p05-replay` 0.1.0 was built with cached setuptools 84.0.0
 and installed with unchanged AsOf 0.3.11 and Arrow 21.0.0 into a fresh C: environment,
@@ -85,7 +104,7 @@ study independence, genetic causality and clinical utility remain unestablished.
 | P04 model pilot and conformance control |Closed negative; no more calls/scaling |
 | P05-P07 deterministic study and original results |Complete/audited; 78 code pins, results, catalog and working PDF unchanged |
 | P08 manuscript/supplement/PDF |Technical checks passed; author declarations deferred |
-| P09 installed source reconstruction |Passed; complete framework gates/final archive still in progress |
+| P09 installed source reconstruction |Passed, including final full/core gates and deterministic allowlist ZIP; local Windows scope only |
 | P10 local submission preparation |Pending release checks and owner facts; no publication authorized |
 | Clinical H1-H4, MR/scorer/full Virtual Biotech, T2-T5/H6 |Conditional later programmes, not completed by this preprint |
 | Original expert-preference H5/HR1-HR4 |Retired dependency and untested; no new response collection |
@@ -95,7 +114,7 @@ Recovery-plan accounting (original definitions retained in the dated recovery pl
 | Item | Current disposition |
 |---|---|
 | R01 Scope |Bounded technical preprint accepted; broader hypotheses remain separate |
-| R02 Checkpoint |Historical pins intact; new installed evidence passes, whole release gates running |
+| R02 Checkpoint |78 P05/100 package pins intact; installed evidence and final local release gates pass |
 | R03 Archive/relocation |New Windows public reconstruction qualifies; old private archive G0 explicitly separate |
 | R04 Correctness |Base fixes retained; new auditor journal/bridge and wheel-closure defects reproduced and fixed |
 | R05 Diagnostic design |Frozen rules retained; no further model branch |
@@ -109,12 +128,11 @@ Recovery-plan accounting (original definitions retained in the dated recovery pl
 | R13 Clinical feasibility |Earlier 17/32 observable registry states are not qualified clinical labels |
 | R14 Genetics/scorer |MR, causal features, training/calibration deferred; real predictions null |
 | R15 Clinical comparison |Locked clinical/full Virtual Biotech evaluation uncompleted |
-| R16 Extensions/release |T2-T5/H6 conditional; P08 factual declarations deferred, P09d running, P10 pending |
+| R16 Extensions/release |T2-T5/H6 conditional; P08 factual declarations deferred, P09 complete locally, P10 pending |
 | HR1-HR4 |Retired as dependencies; response descendants archive-only and excluded from new inputs |
 
-Next: finish full core/Arrow gates and offline package/probe checks, resolve failures,
-qualify the positive-allowlist ZIP/instructions, then perform paper-to-artifact checks
-and local working submission preparation. P08c/P10 facts remain pending. Keep 65
+Next: perform paper-to-artifact checks, separately version the updated working
+paper/PDF and prepare the local working package. P08c/P10 facts remain pending. Keep 65
 missing interpretation inputs, 36 unqualified clinical endpoints, 17/32 observable
 registry states and 0/12 jointly source-ready packages distinct. No new acquisitions,
 models, paid queries, original-worker changes or monitor restart occurred. Provider spending remains $0.

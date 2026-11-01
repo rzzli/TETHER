@@ -34,7 +34,7 @@ No declaration of scientific correctness follows from a matching hash.
 The installed Windows reconstruction reproduces all 38 retained output byte
 hashes and 90 policy decisions from the original deterministic study. It uses
 all 137 complete, exact originals and their receipts. The source-inclusive
-independent auditor passes 6,862 checks. The additional 2,400-check sealed-file
+independent auditor passes 6,862 checks. The additional 3,481-check sealed-file
 review checks metadata and artifacts; it is not another provider-source replay.
 
 The final reproduction took 289.938 seconds; its separate audit took 15.187 seconds.
@@ -44,8 +44,9 @@ I/O counters exclude repeated compiler reads; total physical I/O and platform
 cost remain unknown. All operations here make zero model/provider calls.
 
 The minimal public catalog produces genuine new reference fingerprints. Historical
-reference comparison removes only `method.catalog_sha256`. New G0 authenticates
-the new protocol, code, sources and outputs. It does not verify unavailable old
+reference comparison removes only `method.catalog_sha256`. New G0 checks declared
+protocol, code, input and output byte bindings under independently retained authority.
+It does not establish publisher authenticity or verify unavailable old
 private journal/seal archives. Shared core dependencies remain disclosed; an
 independent implementation audit is not independent scientific adjudication.
 

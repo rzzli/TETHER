@@ -1,9 +1,34 @@
 # P09 research release qualification
 
-1 November 2026, America/Los_Angeles. **In progress; no release or publication is
-claimed.** The owner deferred declarations, so P08c remains pending while this
-independent engineering work proceeds. Keep the scientific draft unchanged until
-new release results justify a versioned manuscript update.
+1 November 2026, America/Los_Angeles. **P09 completed in the supported local
+Windows scope; no public deposit or publication.** The owner deferred declarations,
+so P08c/P10a remain pending. The terminal evidence now permits a separate P10
+working-paper/PDF revision; never change the frozen inner paper or original study.
+
+## Final local acceptance
+
+All eight ordered steps below are technically complete locally. The detailed
+step descriptions retain the original design and intermediate checkpoints; this
+table supersedes their then-current progress language.
+
+| Gate | Retained result |
+| --- | --- |
+| Rights/bridge/installed adapter | Product-specific cards, explicit file allowlist, 100 frozen code payloads; 3,251 bridge checks |
+| Final authority | `e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529`, frozen before execution |
+| Relocated installed source reconstruction | 137 originals/137 receipts, 38 output hashes and 90 decisions reproduced; 289.938 s |
+| Separate installed source audit | 6,862 checks, no unresolved finding; 15.187 s; metadata peer review 3,481 checks |
+| Final framework gates at3629337 | Full 1,973/zero skips; core 1,973 collected/94 approved optional skips; probes/offline wheel/demo pass |
+| Separate suites | P05 199, installed `-B` P09 82 and final preparation/package 40 tests pass |
+| Local archive | 315 members/20,712,230 bytes; two builds byte-identical; SHA `f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e` |
+| Independent final checks | Gate review 349, archive review 1,595 checks; no unresolved findings |
+
+See `paper/release/RELEASE-RECORD.json`, `qualification.json`, and the final gate
+and archive reviews under `planning/review-assets/preprint-p09-20261101/`.
+Earlier failed broad runs, sandbox-temp preparation failure, first reconstruction
+and bytecode-cache drift remain retained. Current hosted jobs, native Linux replay
+and fresh exact-byte reacquisition of136 external Open Targets originals are not
+qualified. Exact CC0 HGNC bytes are the explicit inclusion exception. Scientific
+validity/study independence remain unestablished. Provider spending remains $0.
 
 ## Required result
 
@@ -36,7 +61,9 @@ Every other fact, value/type/unit/unknown reason, join, receipt/source proof,
 root-neutral snapshot policy and deny/field map remains covered. Do not spoof an
 old reference fingerprint or construct a trusted core object manually.
 
-New G0 authenticates new protocol/code/source/output bytes. Public reconstruction
+New G0 checks declared protocol/code/source/output byte bindings under an
+independently retained external authority. It does not establish publisher
+authenticity. Public reconstruction
 does not byte-verify unavailable old private journal/seal/file sets; those remain
 intact and separately verified under matching original versions. Keep this scope
 explicit. All G1-G4 source/reporting requirements remain mandatory. The new run is

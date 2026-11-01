@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "method": "p09.local_release_record.v1",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "PACKAGED_AND_READBACK_VERIFIED",
+  "publication_authorized": false,
+  "owner_declarations": "deferred",
+  "archive": {
+    "name": "asof-research-artifact-0.1.0.zip",
+    "workspace_path": "data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip",
+    "sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+    "bytes": 20712230,
+    "members": 315,
+    "compression": "ZIP_STORED",
+    "fresh_second_build_bytes_equal": true
+  },
+  "release_manifest_sha256": "30f9cca157eff20d250d89dbc91497290936e27d64fb5038754a813a6fc4c40e",
+  "public_qualification_sha256": "e166e3e8de8a138b0e4cbb6412a4e105850bd6b2a4e001eef419f77873e994ba",
+  "reconstruction_protocol_sha256": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529",
+  "qualified_scope": "Local Windows x64 CPython 3.11.15 and PyArrow 21.0.0 installed reconstruction; separate native source audit; core/full framework gates; portable result presentation",
+  "not_established": [
+    "independent scientific validation",
+    "source-study independence",
+    "native Linux replay",
+    "current hosted CI",
+    "fresh exact-byte reacquisition of 136 external Open Targets originals",
+    "public deposit or publication",
+    "submission readiness"
+  ],
+  "paper_relationship": "The frozen inner artifact retains the P08 working-paper snapshot. Later P10 source/PDF revisions are separate and do not modify that protocol."
+}

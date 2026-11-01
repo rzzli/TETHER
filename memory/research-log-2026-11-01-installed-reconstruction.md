@@ -1,12 +1,28 @@
 ---
 name: research-log-2026-11-01-installed-reconstruction
-description: Installed Windows source reconstruction accepted; whole framework gates still running
+description: Final local P09 release accepted; original revision and failed broad attempts retained
 metadata:
   type: project
 updated: 2026-11-01
 ---
 
-# P09c accepted; P09d in progress
+# Final P09 local release update
+
+Final revision2 authority e28461a5 reconstructs38output hashes/90decisions from137
+complete originals/receipts. Reconstruction289.938s/481636352Bpeak; separate audit
+6862checks15.187s/298418176Bpeak; metadata peer3481checks. Source-only generation,
+catalog-only reference projection and newG0/old-private-archive boundary retained.
+
+Final full1973/no skips andcore1973collected/94approvedskips pass at3629337;
+both probes/offline package/demo pass. Separate P05/P09/preparation199/82/40tests
+pass. Gate349/archive1595independentchecks pass. Two315-member20712230B ZIPs match
+f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e.
+Public qualification/record underpaper/release;136OToriginals external/reacquisition
+untested, exactCC0HGNCexception included. No hosted/nativeLinux/scientifictruth
+qualification. P09localcomplete; nextP10workingpaper/PDF/package. Authorfacts
+explicitlydeferred; P08/P10notcomplete; nothingpublished. Allfailuresretained.
+
+## Initial revision checkpoint, retained history
 
 External READY650859b151bee4a98d6da8c779a7b498720929bfe1e7218d5e6f426f78cea123.
 First installed reconstruction passes38 rawbyte hashes/90 decisions. Complete137

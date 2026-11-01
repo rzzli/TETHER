@@ -3,7 +3,7 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-installed-reconstruction]] - Current: P09c passes first installed38-output/90-decision reconstruction from137 relocated originals,6,862 source-audit checks and2,400 sealed-run peer checks;82 installed tests/199 P05 regressions pass. Core/full gates/final ZIP pending; declarations deferred, P05 unchanged.
+- [[research-log-2026-11-01-installed-reconstruction]] - Current P09 complete locally: e28461a5 reconstructs38 outputs/90decisions,6,862source/3,481metadata checks; final full1973/core1973with94approvedskips pass. Gate/archive peers349/1595checks; deterministic315-member ZIP f4d7ab4b. Next P10 working-paper/PDF revision; declarations deferred;100package/78P05pins unchanged. Earlier failures retained.
 
 - [[research-log-2026-11-01-release-preparation]] - Prior P09 preparation: audited source-only bridge, separately versioned adapter and311-member allowlist; actual reconstruction subsequently accepted in the current entry. Owner declarations remain deferred.
 

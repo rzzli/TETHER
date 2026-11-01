@@ -2,10 +2,12 @@
 
 Latest steering: the owner deferred declarations on 1 November. P08c remains
 pending, while independent [P09 release qualification](<Research Release Qualification Plan 2026-11-01.md>)
-now proceeds. The [installed-source checkpoint](<Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md>)
+has completed locally. The [installed-source checkpoint](<Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md>)
 passes all38 output hashes/90 decisions and6,862 independent source-audit checks.
-All82 installed replay tests and199 original study regressions pass. Complete
-core/full framework gates and final archive remain in progress. The manuscript
+All82 installed replay tests and199 original study regressions pass. Final full1973
+andcore1973with94approvedskips pass; the315-member archive has an identical repeat
+and1,595independent checks. Next P10 working-paper/PDF/package; owner facts remain
+deferred. No public deposit or hosted result is claimed. The manuscript
 checkpoint below is retained for its completed scope.
 
 Current checkpoint: [1 November manuscript working draft](<Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md>). Scientific text/supplement and thirteen references pass 118 independent content checks and positioning review. The 17-page PDF passes text/visual/repeat checks. Factual owner declarations block P08; P09 lawful release and P10 local package follow in order. P07's 351 checks/39-file rebuild and all negative model results remain unchanged. No external expert input or native revival.

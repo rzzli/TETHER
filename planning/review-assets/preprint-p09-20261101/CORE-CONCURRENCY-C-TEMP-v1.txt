@@ -1,0 +1,12 @@
+test_concurrent_first_receipt_directory_initialization (tests.test_windows_path_identity.WindowsPathIdentityTests.test_concurrent_first_receipt_directory_initialization) ... ok
+test_extended_candidate_normal_root (tests.test_windows_path_identity.WindowsPathIdentityTests.test_extended_candidate_normal_root) ... ok
+test_extended_resolved_escape_rejected (tests.test_windows_path_identity.WindowsPathIdentityTests.test_extended_resolved_escape_rejected) ... ok
+test_non_equivalent_extended_names_rejected (tests.test_windows_path_identity.WindowsPathIdentityTests.test_non_equivalent_extended_names_rejected) ... ok
+test_normal_candidate_extended_root (tests.test_windows_path_identity.WindowsPathIdentityTests.test_normal_candidate_extended_root) ... ok
+test_unc_equivalence (tests.test_windows_path_identity.WindowsPathIdentityTests.test_unc_equivalence) ... ok
+test_unsupported_device_roots_rejected_before_resolution (tests.test_windows_path_identity.WindowsPathIdentityTests.test_unsupported_device_roots_rejected_before_resolution) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.556s
+
+OK

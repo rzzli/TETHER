@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "mode": "full",
+  "structural": {
+    "tracked_scope_files": 7280,
+    "providers": 83,
+    "datasets": 178,
+    "preserved_invalid_python_archives": [
+      "planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py"
+    ]
+  },
+  "powershell_syntax": true,
+  "tests": {
+    "run": 1973,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "asof_target_agents-0.3.11-py3-none-any.whl",
+    "wheel_sha256": "69037a0dd1a8b1758d3130dc56d928a47f450f624772f0a9e7b54e04af201737",
+    "build_constraints_sha256": "dfc2947f4dce3fa1c1905ef60bd8ee5b286177f603a13645cc2f003188c7d70c",
+    "package_network_policy": "offline",
+    "dependency_free_demo": "passed"
+  },
+  "status": "passed",
+  "elapsed_seconds": 1983.859000000055
+}

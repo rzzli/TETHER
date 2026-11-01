@@ -1,0 +1,63 @@
+{
+  "schema": "p09.independent_release_zip_review.v1",
+  "status": "PASS_POSITIVE_ALLOWLIST_ZIP_REVIEW",
+  "check_count": 1595,
+  "unresolved_findings": [],
+  "privacy_findings": [],
+  "archive": {
+    "path": "data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip",
+    "sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+    "bytes": 20712230,
+    "members": 315,
+    "repeat_byte_identical": true,
+    "manifest_sha256": "30f9cca157eff20d250d89dbc91497290936e27d64fb5038754a813a6fc4c40e",
+    "protocol_sha256": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529"
+  },
+  "public_qualification_sha256": "e166e3e8de8a138b0e4cbb6412a4e105850bd6b2a4e001eef419f77873e994ba",
+  "release_record_sha256": "a7382b2d50246247f6f98f18e672543d2f5b656fe3bdc4f4166382bbd9ffab13",
+  "outer_README_sha256": "a4f95279ed1bf982a775a37e9c3e28f66d57886a6fb4ad9526f80d4b224fcc0d",
+  "roles": {
+    "public_release_instructions": 1,
+    "public_reproduction_instructions": 1,
+    "pinned_build_configuration": 1,
+    "rights_documentation": 6,
+    "fictional_source_configuration": 1,
+    "source_only_configuration": 1,
+    "evaluation_only": 4,
+    "exact_transport_receipt": 137,
+    "reference_original_CC0": 1,
+    "working_draft_documentation": 6,
+    "portable_presentation_metadata": 2,
+    "aggregated_technical_results": 37,
+    "root_protocol_authority": 1,
+    "project_build_metadata": 3,
+    "project_code_or_synthetic_resource": 92,
+    "project_portable_presentation_code": 3,
+    "project_reconstruction_code_or_fictional_test": 15,
+    "project_wheel": 2
+  },
+  "scope": [
+    "Archive exact closure/hash/role/readback/retained-rights-document consistency; no legal certification or publication authorization.",
+    "CC0HGNC bytes were hashed inside the approved archive only, never parsed; no external originals reopened.",
+    "PDF/PNG bytes match reviewed commitments; no new PDF visual or font-rights review performed.",
+    "Current local qualification is supported Windows scope, not hosted CI/native Linux/fresh acquisition/scientific independence.",
+    "Frozen inner paper bytes remain older P08snapshot; future P10source/PDF versions must remain separate."
+  ],
+  "originals_reopened": false,
+  "provider_payloads_parsed": false,
+  "tests_rerun": false,
+  "production_mutations": false,
+  "detailed_checks": {
+    "path": "planning/review-assets/preprint-p09-20261101/RELEASE-ZIP-CHECKS-v1.json",
+    "sha256": "248db9daf19be4c67fd0d885d7bb9a1784c9af1cfc08c839d9710b1ab6b8dfbb"
+  },
+  "checker": {
+    "path": "planning/review-assets/preprint-p09-20261101/review_release_zip_v1.py",
+    "sha256": "85bb144909341edbf4daf0bf6ae2874b9da504c3626f28e4e4e57900d5bdb16e"
+  },
+  "final_gate_review": {
+    "path": "planning/review-assets/preprint-p09-20261101/FINAL-GATE-PEER-REVIEW-v1.json",
+    "sha256": "817870e7e5f952a435e66061a879cb6f8f995a7f700c43af2e4bfd47398393ec",
+    "checks": 349
+  }
+}

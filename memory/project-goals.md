@@ -11,12 +11,17 @@ updated: 2026-11-01
 ## Current recovery execution
 
 Current work: [[Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction]].
-P09c passes first installed Windows reconstruction38hashes/90decisions from137
-complete relocated originals/receipts,6,862 independent source checks and2,400
-sealed-output peer checks.82 shipped tests/199 original study regressions pass.
-P09d core/full framework gates and final ZIP remain in progress. Owner deferred
+P09c final revision e28461a5 passes installed Windows reconstruction of 38 output
+hashes/90 decisions from 137 complete originals/receipts, 6,862 source checks and
+3,481 metadata checks. The corrected -B suite passes 82 tests with its 312-file
+bundle unchanged; 199 original study regressions pass. Initial revision retained.
+P09d passes at3629337: full1973/zero skips; core1973collected/94approvedskips;
+probes/offline wheel-demo pass. Gate/archive peers pass349/1595 checks. The two
+315-member ZIP builds match f4d7ab4b (20,712,230B). Earlier failures remain retained.
+Next P10 separately versioned working-paper/PDF and local package. Owner deferred
 declarations: P08c/P10 facts stay pending; do not repeat the request or claim
-submission/publication readiness. All78 original code pins/results unchanged.
+submission/publication readiness. All 78 P05 code pins and 100 package payloads
+remain unchanged; tests/helpers differ.
 See [[research-log-2026-11-01-installed-reconstruction]].
 
 ### Prior manuscript checkpoint

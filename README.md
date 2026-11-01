@@ -5,9 +5,11 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-**Current software: 0.3.11, with v2 execution contracts.** The retained acceptance
-has 1,774 tests; 326 accepted source/resource pins remain unchanged. The validation
-gate has one reviewed correction preserving an exact-hash failed-source archive.
+**Current software: 0.3.11, with v2 execution contracts.** The earlier 1,774-test
+acceptance is retained with its matching historical code. Final local gates at
+`3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
+optional skips. All 78 frozen P05 code pins and 100 package payloads remain
+unchanged; test/validation helpers differ. The gate preserves the exact-hash failed-source archive.
 The source includes optional study preparation, recorded comparison and bounded
 model interfaces. Recorded fixtures and passing software tests are not scientific
 performance measurements.

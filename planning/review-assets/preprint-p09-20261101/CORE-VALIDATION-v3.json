@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "mode": "core",
+  "structural": {
+    "tracked_scope_files": 7282,
+    "providers": 83,
+    "datasets": 178,
+    "preserved_invalid_python_archives": [
+      "planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py"
+    ]
+  },
+  "powershell_syntax": true,
+  "tests": {
+    "run": 1973,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_comparison_rejects_scientific_or_source_mutation",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_context_only_conflicts_cannot_be_coalesced",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_dossier_surfaces_relevance_boundary_and_missing_qualifications",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_null_context_and_case_qualifications_stay_unresolved",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_oversized_packet_still_fails_without_truncation",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_context_revision.ContextRevisionTests.test_passages_and_variant_classifications_preserve_exact_source_context",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_all_ten_cases_audit_twenty_distinct_original_rows_and_mappings",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_cached_source_hash_does_not_hide_later_file_changes",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_identifier_mapping_and_namespace_tampering_are_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_invalid_physical_locator_and_insufficient_distinct_rows_fail_explicitly",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_normalized_statement_metrics_locators_and_unknowns_cannot_be_tampered",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_pilot_audit.PilotAuditTests.test_source_audit_reads_sealed_ledger_above_input_packet_limit",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_comparison_evaluation.OriginalSelectedRowAuditTests.test_audit_allows_explicitly_pinned_execution_catalog_after_build_metadata_update",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_comparison_evaluation.OriginalSelectedRowAuditTests.test_audit_rejects_report_membership_selected_scope_receipt_and_raw_drift",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_comparison_evaluation.OriginalSelectedRowAuditTests.test_full_postseal_audit_reads_only_final_selections_from_original_rows",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_comparison_evaluation.OriginalSelectedRowAuditTests.test_late_case_snapshot_raw_receipt_and_parsed_reference_drift_cannot_complete",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_comparison_evaluation.OriginalSelectedRowAuditTests.test_trusted_launcher_proofs_model_bytes_and_PID_fail_before_answers",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_adjudication_bound_to_exact_review_bytes",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_adjudicator_cannot_reuse_an_initial_context",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_full_source_fidelity_reference_remains_evaluator_only",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_missing_adjudicated_row_cannot_be_silently_skipped",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_review_mutation_cannot_rebind_already_parsed_judgments",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_finalize_reference.FinalizeReferenceTests.test_source_changed_after_review_validation_is_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_archived_pack_mutation_is_rejected_even_if_original_is_unchanged",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_custom_case_scopes_are_source_bound_and_archive_exact_metadata",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_default_original_ten_and_case_ids_remain_unchanged",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_duplicate_pack_failure_and_output_reservation_remain_inspectable",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_initial_anchor_failure_is_preserved_before_source_inspection",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_mismatched_declared_or_missing_canonical_ids_block_without_replacement",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_new_symbol_and_disease_not_in_default_pack_are_selected_explicitly",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_ingest_cases.ScienceCaseBuildTests.test_original_pack_mutation_during_build_is_rejected_and_original_copy_retained",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_byte_tampering_and_wrong_external_build_anchor_fail_durably",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_complete_original_row_audit_retains_whole_observation_and_unknowns",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_no_overwrite_and_interruptions_leave_records_without_success_report",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_resealed_duplicate_and_invalid_locator_are_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_resealed_metrics_missingness_and_projection_tampering_are_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_scope_change_features_and_missing_lineage_fail",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_reference_packets.ReferencePacketBuildTests.test_zero_evidence_has_explicit_coverage_without_absence_claim",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_build_retains_draft_scope_and_refuses_existing_output",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_changed_original_is_not_replaced_by_surface_snapshot",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_concurrent_reservation_does_not_repeat_source_compile",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_interrupt_and_write_failure_leave_terminal_journal",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_oversized_output_fails_without_truncating_values",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_contextual_audit.ContextualOriginalIntegrationTests.test_surface_and_audit_replay_actual_format_originals",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_actual_dossier_read_is_bounded_even_if_a_file_grows",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_actual_format_binding_replays_sources_and_preserves_draft_scope",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_approved_roots_apply_before_original_reads",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_bound_review_uses_original_parquet_without_json_extract_substitution",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_changed_binding_cannot_substitute_for_original_replay",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_changed_dossier_or_receipt_does_not_replay",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_changed_original_receipt_and_mapping_are_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_claim_text_and_question_must_match_actual_dossier_bytes",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_concurrent_output_reservation_allows_only_one_builder",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_existing_output_cannot_be_overwritten_or_resumed",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_interrupt_preserves_terminal_journal",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_legacy_receipts_do_not_acquire_v2_scientific_guarantees",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_multiline_source_quote_preserves_native_line_endings",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_noncontiguous_or_duplicate_pieces_cannot_manufacture_a_claim",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_original_parquet_drift_is_rejected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_output_cannot_modify_sealed_run_inventory",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_oversized_binding_fails_without_dropping_rows",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_resealed_dossier_quote_and_citation_drift_are_detected",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_transport_receipt_rewrite_does_not_replace_archived_parent",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_unselected_or_invented_section_citations_fail",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_utf8_span_cannot_cut_a_character",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_science_t6_dossier_binding.DossierSourceBindingTests.test_write_failure_keeps_failed_journal_and_no_success_report",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_fictional_preparation_source_only_and_slot_closure",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_inventory_declaration_mismatch_and_unapproved_expanded_cap_precede_values",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_metadata_role_lineage_and_caps_fail_before_scan",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_progress_journal_and_callback_write_failure_stop_source_work",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_receipt_tamper_and_deadline",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_source_tamper_precedes_any_original_value_scan",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_unapproved_arbitrary_deadline_precedes_original_access",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_inputs.InputTests.test_wrong_provider_type_and_frozen_scope_cutoff_fail_closed",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_study_source_fact_sources.SourceFactSourceTests.test_fictional_parquet_selected_row_and_absent_schema",
+        "reason": "install the ingest extra for source-audit tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_actual_format_fixtures_build_all_ten_and_verify_semantics",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_archived_receipts_retain_exact_inspected_bytes_after_transport_rewrite",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_arrow_filter_preserves_physical_batch_and_row_group_offsets",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_bad_hash_receipt_identity_and_raw_schema_fail_closed",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_clinical_columns_do_not_enter_packets_and_unknowns_stay_null",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_concurrent_build_reservation_never_reuses_output",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_future_source_release_date_is_excluded",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_future_unknown_datatype_and_known_drug_records_are_excluded",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_identical_duplicate_coalesces_and_conflicting_duplicate_fails",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_inspection_failure_and_interruption_leave_durable_terminal_records",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_missing_canonical_identifier_blocks_cases_without_replacement",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_missing_evidence_file_reports_partial_coverage",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_missing_inputs_are_not_biological_absence",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_opt_in_bounded_packets_preserve_all_records_and_verify",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_oversized_single_record_still_fails_with_bounded_layout",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_packet_write_failure_retains_progress_and_failure",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_scientific_source_context_is_preserved_without_tissue_inference",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_single_packet_default_does_not_implicitly_shard",
+        "reason": "install the ingest extra for adapter tests"
+      },
+      {
+        "test": "tests.test_v02_ingest.IngestTests.test_wrong_release_path_escape_and_evaluator_source_are_denied",
+        "reason": "install the ingest extra for adapter tests"
+      }
+    ]
+  },
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "asof_target_agents-0.3.11-py3-none-any.whl",
+    "wheel_sha256": "b2a5732b76042ef5e0bbe2b5401fe8fe22a602cc1ded6ecc7c27f75bce913061",
+    "build_constraints_sha256": "dfc2947f4dce3fa1c1905ef60bd8ee5b286177f603a13645cc2f003188c7d70c",
+    "package_network_policy": "offline",
+    "dependency_free_demo": "passed"
+  },
+  "status": "passed",
+  "elapsed_seconds": 2021.140000000014
+}
