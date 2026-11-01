@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import calendar
 from collections import Counter, defaultdict
+from collections.abc import Mapping
 from contextlib import ExitStack
 from datetime import datetime, timezone
 import hashlib
@@ -32,8 +33,8 @@ from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
 from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
 
 ASSETS = WORKSPACE / "planning/review-assets/preprint-p05-20261031"
-PLAN_PATH = ASSETS / "REGISTRY-PLAN-DRAFT-v2.json"
-READY_PATH = ASSETS / "REGISTRY-READY-v2.json"
+PLAN_PATH = ASSETS / "REGISTRY-PLAN-DRAFT-v3.json"
+READY_PATH = ASSETS / "REGISTRY-READY-v3.json"
 RAW_ROOT = Path(r"E:\projects_data\drug_target_agents_data")
 OUTPUT_ROOT = WORKSPACE / "data/derived"
 OUTPUT_PREFIX = "preprint-p05-source-validation-"
@@ -188,7 +189,7 @@ def make_plan():
     with stable_files([p for p, _ in PINS.values()], deadline=deadline):
         docs = pinned_documents(deadline)
     inventory = inventory_from_metadata(docs["frame"], docs["acquisition"])
-    return {"schema_version": 1, "artifact_id": "preprint-p05-registry-plan-v2", "status": "DRAFT",
+    return {"schema_version": 1, "artifact_id": "preprint-p05-registry-plan-v3", "status": "DRAFT",
             "purpose": "deterministic technical source validation; stage 1 source-only originals, never gold",
             "neutral_inputs": {name: {"path": str(path), "sha256": sha} for name, (path, sha) in PINS.items()},
             "code_sha256": code_pins(), "environment": environment(),
@@ -323,6 +324,40 @@ class Bounds:
                 "output_bytes_before_report_and_seal": self.check()}
 
 
+def check_receipt_identity(document, record, *, source_id=None):
+    """Pure exact receipt check; normalize only relative-path separators.
+
+    The expected relative path is the trusted canonical descriptor spelling.
+    No path resolution, alias collapse, case folding, or byte rewriting occurs.
+    """
+    need(isinstance(record, Mapping), "Receipt check requires a neutral source descriptor")
+    if source_id is None:
+        source_id = str(record.get("dataset_id", "unknown")) + ":" + str(record.get("sha256", "unknown"))[:16]
+    need(type(source_id) is str and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}", source_id),
+         "Receipt check requires a neutral source_id")
+    expected = {"status": "completed", "dataset_id": record.get("dataset_id"),
+                "release_id": record.get("release_id"), "sha256": record.get("sha256"),
+                "bytes": record.get("bytes"), "url": record.get("source_url")}
+    mismatched = []
+    normalized = None
+    raw_relative = None
+    if not isinstance(document, Mapping):
+        mismatched.append("receipt_document")
+    else:
+        for field, value in expected.items():
+            observed = document.get(field)
+            required_type = int if field == "bytes" else str
+            if type(observed) is not required_type or observed != value:
+                mismatched.append(field)
+        raw_relative = document.get("relative_path")
+        if type(raw_relative) is str:
+            normalized = raw_relative.replace("\\", "/")
+        if normalized != record.get("relative_path") or type(raw_relative) is not str:
+            mismatched.append("relative_path")
+    need(not mismatched, "Receipt identity mismatch: source_id=" + source_id + "; fields=" + ",".join(sorted(mismatched)))
+    return {"source_id": source_id, "relative_path_separator_normalized": raw_relative != normalized}
+
+
 def verify_originals(inventory, output, bounds):
     """Caller holds all original and receipt locks through the final parse and seal."""
     proofs = []
@@ -334,17 +369,14 @@ def verify_originals(inventory, output, bounds):
         need(dict(measured) == {"sha256": record["sha256"], "bytes": record["bytes"]}, "Original payload checksum/size mismatch")
         proofs.append({**record, "verified_payload": dict(measured)})
         bounds.check()
-    for record in proofs:
+    for index, record in enumerate(proofs):
         receipt = record["receipt"]
         relative = Path(receipt["path"]).relative_to(RAW_ROOT).as_posix()
         path = checked_path(RAW_ROOT, relative)
         payload = read_file(path, bounds.deadline, min(1024**2, receipt["bytes"]))
         need(len(payload) == receipt["bytes"] and digest_bytes(payload) == receipt["sha256"], "Original receipt checksum/size mismatch")
         document = parse_json(payload)
-        need(document.get("status") == "completed" and document.get("dataset_id") == record["dataset_id"] and
-             document.get("release_id") == record["release_id"] and document.get("sha256") == record["sha256"] and
-             document.get("bytes") == record["bytes"] and document.get("relative_path") == record["relative_path"] and
-             document.get("url") == record["source_url"], "Original receipt identity/status mismatch")
+        check_receipt_identity(document, record, source_id=f"original-{index:03d}")
         timestamp = datetime.fromisoformat(document["completed_at_utc"].replace("Z", "+00:00"))
         need(timestamp.tzinfo is not None, "Receipt timestamp lacks timezone")
         record["completed_at_utc"] = timestamp.astimezone(timezone.utc).isoformat()

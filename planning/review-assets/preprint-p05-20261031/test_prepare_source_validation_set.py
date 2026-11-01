@@ -348,6 +348,80 @@ class ArrowAndProductTests(Fixture):
 
 
 class IntegrityAndGuardTests(Fixture):
+    def receipt_identity_pair(self):
+        relative = "raw/open_targets_platform/25.09/output/credible_set/part-fictional.parquet"
+        record = {"dataset_id": "ot_credible_set", "release_id": "25.09", "sha256": "a" * 64,
+                  "bytes": 1234, "source_url": "https://invalid.example/fictional/part-fictional.parquet",
+                  "relative_path": relative}
+        document = {"status": "completed", "dataset_id": record["dataset_id"], "release_id": record["release_id"],
+                    "sha256": record["sha256"], "bytes": record["bytes"], "url": record["source_url"],
+                    "relative_path": relative, "completed_at_utc": "2025-01-01T00:00:00+00:00"}
+        return document, record
+
+    def test_receipt_identity_accepts_exact_posix_and_legacy_windows_separators(self):
+        document, record = self.receipt_identity_pair()
+        proof = b.check_receipt_identity(document, record, source_id="fictional-original-000")
+        self.assertFalse(proof["relative_path_separator_normalized"])
+        for relative in (record["relative_path"].replace("/", "\\"),
+                         record["relative_path"].replace("/", "\\", 2)):
+            legacy = {**document, "relative_path": relative}
+            proof = b.check_receipt_identity(legacy, record, source_id="fictional-original-000")
+            self.assertTrue(proof["relative_path_separator_normalized"])
+            self.assertEqual(legacy["relative_path"], relative)
+
+    def test_receipt_path_comparison_never_collapses_aliases_or_traversal(self):
+        document, record = self.receipt_identity_pair()
+        relative = record["relative_path"]
+        invalid = (relative.replace("credible_set", "changed_component"),
+                   "raw/../" + relative, "raw\\..\\" + relative.replace("/", "\\"),
+                   "./" + relative, relative.replace("/output/", "/./output/"),
+                   "/" + relative, "C:/" + relative, "C:" + relative,
+                   "C:\\" + relative.replace("/", "\\"), "\\\\server\\share\\" + relative.replace("/", "\\"),
+                   "//server/share/" + relative, relative.replace("/", "//", 1),
+                   relative.replace("raw/", "Raw/", 1), relative + ".", relative + " ",
+                   relative.replace("/", "%2F", 1), relative + "\x00", None, 123, [relative])
+        for path in invalid:
+            with self.subTest(path=repr(path)):
+                with self.assertRaisesRegex(ContractError, "source_id=fictional-original-000; fields=relative_path"):
+                    b.check_receipt_identity({**document, "relative_path": path}, record, source_id="fictional-original-000")
+
+    def test_receipt_other_identity_fields_stay_exact_and_errors_name_only_fields(self):
+        document, record = self.receipt_identity_pair()
+        for field in ("status", "dataset_id", "release_id", "sha256", "bytes", "url"):
+            for value in (None, [], "changed_fictional_value"):
+                with self.subTest(field=field, value=value):
+                    with self.assertRaises(ContractError) as caught:
+                        b.check_receipt_identity({**document, field: value}, record, source_id="fictional-original-000")
+                    self.assertIn("fields=" + field, str(caught.exception))
+                    self.assertNotIn("changed_fictional_value", str(caught.exception))
+                    self.assertNotIn(record["source_url"], str(caught.exception))
+            missing = dict(document)
+            missing.pop(field)
+            with self.assertRaisesRegex(ContractError, "fields=" + field):
+                b.check_receipt_identity(missing, record, source_id="fictional-original-000")
+        with self.assertRaisesRegex(ContractError, "fields=bytes"):
+            b.check_receipt_identity({**document, "bytes": True}, {**record, "bytes": 1})
+        with self.assertRaisesRegex(ContractError, "fields=receipt_document"):
+            b.check_receipt_identity([], record)
+        with self.assertRaisesRegex(ContractError, "fields=dataset_id,url"):
+            b.check_receipt_identity({**document, "dataset_id": "changed", "url": "changed"}, record)
+
+    def test_legacy_windows_receipt_is_verified_and_archived_as_exact_original_bytes(self):
+        (self.raw / "legacy").mkdir()
+        record = self.source("credible_set", [credible()], filename="legacy/legacy-fictional.parquet")
+        receipt_path = Path(record["receipt"]["path"])
+        document = parse_json(receipt_path.read_bytes())
+        document["relative_path"] = document["relative_path"].replace("/", "\\")
+        legacy_bytes = canonical(document) + b"\n"
+        receipt_path.write_bytes(legacy_bytes)
+        record["receipt"] = {**record["receipt"], "sha256": b.digest_bytes(legacy_bytes), "bytes": len(legacy_bytes)}
+        with patch.object(b, "RAW_ROOT", self.raw):
+            proofs = b.verify_originals([record], self.out, self.bounds)
+        archived = (self.out / proofs[0]["receipt_archive"]).read_bytes()
+        self.assertEqual(archived, legacy_bytes)
+        self.assertEqual(b.digest_bytes(archived), record["receipt"]["sha256"])
+        self.assertIn("\\", parse_json(archived)["relative_path"])
+
     def test_fresh_production_entry_reaches_guard_with_real_path_and_stable_apis(self):
         derived = self.root / "entry-derived"
         derived.mkdir()
