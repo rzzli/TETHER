@@ -1,0 +1,25 @@
+test_actual_draft_fixtures_and_prompt_pins (__main__.QualificationTests.test_actual_draft_fixtures_and_prompt_pins) ... ok
+test_bounded_journal_rejects_oversized_and_excess_events (__main__.QualificationTests.test_bounded_journal_rejects_oversized_and_excess_events) ... ok
+test_cleanup_not_affirmed_blocks_all_grading (__main__.QualificationTests.test_cleanup_not_affirmed_blocks_all_grading) ... ok
+test_deadline_reservation_retention_and_actual_dispatch_bounds (__main__.QualificationTests.test_deadline_reservation_retention_and_actual_dispatch_bounds) ... ok
+test_draft_execute_denied_before_side_effects (__main__.QualificationTests.test_draft_execute_denied_before_side_effects) ... ok
+test_dry_qualification_has_no_server_or_http (__main__.QualificationTests.test_dry_qualification_has_no_server_or_http) ... ok
+test_exact_native_values_and_source_binding_required (__main__.QualificationTests.test_exact_native_values_and_source_binding_required) ... ok
+test_exclusive_outputs_and_explicit_mock_requirements (__main__.QualificationTests.test_exclusive_outputs_and_explicit_mock_requirements) ... ok
+test_existing_adapter_source_and_status_invariants (__main__.QualificationTests.test_existing_adapter_source_and_status_invariants) ... ok
+test_fixture_and_schedule_mutations_rejected (__main__.QualificationTests.test_fixture_and_schedule_mutations_rejected) ... ok
+test_literal_caps_wire_runtime_mutations_rejected (__main__.QualificationTests.test_literal_caps_wire_runtime_mutations_rejected) ... ok
+test_malformed_source_retained_without_binding_repair (__main__.QualificationTests.test_malformed_source_retained_without_binding_repair) ... ok
+test_production_guards_deny_before_output_server_or_transport (__main__.QualificationTests.test_production_guards_deny_before_output_server_or_transport) ... ok
+test_prompt_only_source_and_value_free_slots (__main__.QualificationTests.test_prompt_only_source_and_value_free_slots) ... ok
+test_startup_and_ownership_failure_retains_unexecuted_cells (__main__.QualificationTests.test_startup_and_ownership_failure_retains_unexecuted_cells) ... ok
+test_stop_limit_never_graded_or_rescued (__main__.QualificationTests.test_stop_limit_never_graded_or_rescued) ... ok
+test_success_exact_two_calls_plain_seed_cap_cleanup_order (__main__.QualificationTests.test_success_exact_two_calls_plain_seed_cap_cleanup_order) ... ok
+test_timeout_retained_and_second_cell_unexecuted (__main__.QualificationTests.test_timeout_retained_and_second_cell_unexecuted) ... ok
+test_two_originals_expected_from_native_input (__main__.QualificationTests.test_two_originals_expected_from_native_input) ... ok
+test_unknown_envelope_retained_estimate_not_zero_and_no_retry (__main__.QualificationTests.test_unknown_envelope_retained_estimate_not_zero_and_no_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.370s
+
+OK
