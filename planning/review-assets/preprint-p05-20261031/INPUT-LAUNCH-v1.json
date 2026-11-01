@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "LAUNCHED_ORIGINAL_ONLY_INPUT_BUILD",
+  "launched_at_utc": "2026-11-01T07:49:42+00:00",
+  "recorded_at_utc": "2026-11-01T07:50:55.511622+00:00",
+  "pre_run_commit": "98346a9a6732cad2fc66db838f6cdf3c634ee054",
+  "ready_sha256": "3dbac487bd7fdaf7e7d9470ad9e522d34b5595911387f9dad0971b80f38a291d",
+  "draft_sha256": "4d1cfd81f9755a8f63bc737c3aab71b7756c100982724c482c44a7c03b37814c",
+  "exec_session_id": 43613,
+  "output": "data/derived/preprint-p05-source-inputs-20261101T074942Z",
+  "information_cutoff_utc": "2026-11-01T07:16:26.101448+00:00",
+  "model_calls_permitted": 0,
+  "reference_and_baseline_construction_permitted": false,
+  "source_rule": "Re-read137originals and neutral routing only; no quarantinedcaptures,oldanswers or referencevalueparents.",
+  "recovery": "Observe this exact exec/journal; no restart from observation timeout. Keep originals/receipts/oldworker/monitor unchanged."
+}

@@ -3,14 +3,26 @@ name: project-goals
 description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Project goals
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope]].
+Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Validation Registry]].
+P05a/P05b complete: all137 originals/receipts, complete1,753,850-row registry,
+twelve identity-ranked units and all original-only input packets verified.
+Independent registry checks789; separate input checks1,238, reconstructing
+180 fact bindings. Missing beta1/12, SE7/12, sample size10/12; cross-source
+study/variant agreement unresolved. No independent-study or biological truth
+qualification. P05c original-derived references and P05d experiment/analysis
+freeze are next, before any baseline/fault outputs. Paper/P06–P10 unfinished.
+See [[research-log-2026-11-01-source-registry-inputs]].
+
+### Prior deterministic scope checkpoint (retained history)
+
+Checkpoint: [[Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope]].
 P04b is verified negative: two fictional calls, one pass and one malformed value/
 unknown-reason result; all 70 code pins, journal, usage and cleanup verify. The
 model branch is closed with no further prompt retries or larger model cohort.

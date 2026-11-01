@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October deterministic paper scope](<Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>). P02a, P04 and P04b are complete in their bounded scopes. Verified negative model pilot: all twelve cells/five calls retained and 2,216 audit checks pass. Subsequent fictional controls yield one pass/one malformed result; model scaling is closed. Next P05 qualifies a deterministic source-validation set from the neutral 137-file metadata frame, with no fresh-cohort/independence claim yet. Paper and wider scientific routes remain unfinished. No external expert input or native revival is needed.
+Current checkpoint: [1 November source registry and input completion](<Project Progress Reassessment 2026-11-01 - Source Validation Registry.md>). P05a/P05b are verified: full physical-row registry and twelve identity-ranked units pass 789 independent checks; twelve original-only packets and 180 fact bindings pass 1,238 further checks. P05c/P05d references and experiment freeze are next. P02a, P04 and P04b retain their bounded acceptance and negative model results; model scaling remains closed. No fresh-cohort/independence or biological-validation claim. Paper and wider scientific routes remain unfinished. No external expert input or native revival is needed.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current
