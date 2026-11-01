@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "artifact_id": "preprint-p05-reference-independent-code-review-v1",
+  "created_at_utc": "2026-11-01T08:18:01Z",
+  "reviewer": "p05_registry_design_review",
+  "status": "pre_execution_code_review_passed",
+  "actual_build_authorized_by_this_review": false,
+  "scope": "Independent code, retained-context/provenance guard, and fictional-test review of the P05 original-source reference wrapper; no actual reference construction or scientific validation.",
+  "access_boundary": {
+    "actual_source_value_rows_read": 0,
+    "generation_packets_read": 0,
+    "stage1_capture_mapping_coverage_values_read": 0,
+    "actual_evaluator_answers_read": 0,
+    "old_candidates_human_responses_or_clinical_outcomes_read": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "actual_reference_builds": 0,
+    "fictional_reference_compilation_and_verification": "Performed only by the reviewed fictional test suite.",
+    "reviewer_file_writes": ["REFERENCE-INDEPENDENT-REVIEW-v1.json"],
+    "producer_or_public_API_files_edited_by_reviewer": false
+  },
+  "pins": {
+    "tools/science/build_source_validation_references.py": "c6850eb84953a7102f68bbfbb11550602267046f0eef3533636b65d8731aa9c6",
+    "planning/review-assets/preprint-p05-20261031/test_build_source_validation_references.py": "dc5e42335c71b97299600edc5ca1d1989ee461f1fdd77f4a74ce9e536347d86f",
+    "planning/review-assets/preprint-p05-20261031/REFERENCE-PLAN-DRAFT-v1.json": "f8dbfd218f99fb2d694b78b606cb7d183fd267639159e0895c1bafb93741617b",
+    "planning/review-assets/preprint-p05-20261031/REFERENCE-BUILDER-NOTES-v1.md": "c41a93e8849e744059dd3d71fd841bcbfb272b0ef28a66fc9ed7a7e9c82ee822"
+  },
+  "freeze_checks": {
+    "draft_status": "DRAFT",
+    "draft_actual_build_authorized": false,
+    "reference_READY_present_at_review": false,
+    "all_live_code_pins_match_DRAFT": true,
+    "active_code_pin_count": 69,
+    "canonical_code_pin_map_sha256": "c5be46affdfce7decc3b836b7eb5c1b0b8ef1d61e476828caa5bb2d40ca44944",
+    "environment": {
+      "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+      "platform": "win32",
+      "python": "3.11.15",
+      "pyarrow": "21.0.0"
+    },
+    "actual_neutral_task_content_not_opened_by_reviewer": true,
+    "runtime_neutral_metadata_equivalence": "Enforced by reviewed build guards and fictional tests; author reports make_plan equality. This review independently checks the DRAFT, code/environment pins, and guard implementation without loading actual task content."
+  },
+  "test_evidence": {
+    "command": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe -B D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p05-20261031\\test_build_source_validation_references.py -q",
+    "cwd": "D:\\Projects\\drug_target_agents",
+    "independently_executed": true,
+    "exit_code": 0,
+    "tests_run": 41,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "reported_test_seconds": 23.189,
+    "real_implementations_exercised": [
+      "Windows checked_path and stable_files",
+      "production output-parent checks and exclusive RunJournal reservation",
+      "unchanged compile_reference and verify_reference",
+      "literal Parquet/TSV reads from newly created fictional originals",
+      "legacy Windows receipt separator checks and exact-byte receipt archives"
+    ],
+    "coverage": [
+      "full fictional execute, source replay, base compilation, standalone wrapper verification and terminal seal",
+      "external READY and wrapper hashes; retained exact DRAFT/READY/task/Snapshot/routing/catalog/frame context tampering",
+      "reviewed code/environment and runtime catalog mismatch before original values",
+      "ordered original/receipt declarations against frozen frame and fresh admitted proofs before row parsing",
+      "selected count/full case set, scientific context and bounded UTC computation timestamp consistency",
+      "fresh mapping, original-only parent roles, excluded future/annotation/precision-date duplicates",
+      "all physical locus matches, identical duplicates and conflicting measurements without deduplication",
+      "zero credible matches, explicit unknowns, native finite numeric/type/date checks and unchanged task/wire caps",
+      "post-reservation path checks; real lock cleanup and journal-close failures before success publication",
+      "independent terminal failure metadata attempts and resource accounting"
+    ]
+  },
+  "resolved_findings": [
+    {
+      "id": "REF-CODE-01",
+      "severity": "P1",
+      "finding": "Success seal could precede journal close, allowing a cleanup exception to leave apparent success without terminal failure metadata.",
+      "resolution": "Stable-lock exit, build_completed binding and journal close occur inside protected handling before success-seal publication; failure append/close/seal are attempted independently.",
+      "verified": true
+    },
+    {
+      "id": "REF-CODE-02",
+      "severity": "P2",
+      "finding": "The freshly reserved output leaf required explicit protected revalidation.",
+      "resolution": "Existing approved parent and absent strict leaf are checked before reservation; created output is checked inside failure handling before guards or original access.",
+      "verified": true
+    },
+    {
+      "id": "REF-CODE-03",
+      "severity": "P1",
+      "finding": "Standalone replay did not validate all redundant authoritative provenance fields, including declared READY and original-input bindings.",
+      "resolution": "Retained READY is bound to the external hash, declared hash is checked, selected count/case set and scientific context are checked, and ordered original/receipt bindings are checked both against frozen configuration and fresh admitted proofs before row parsing.",
+      "verified": true
+    },
+    {
+      "id": "REF-CODE-04",
+      "severity": "P2",
+      "finding": "Standalone code-policy validation and replay needed a stable lock scope over the current reviewed implementation.",
+      "resolution": "Standalone verification locks current code paths across retained-context validation and original replay; archived code is never dynamically executed.",
+      "verified": true
+    },
+    {
+      "id": "REF-CODE-05",
+      "severity": "P2",
+      "finding": "Recipe declarations and scan-byte counters needed explicit verification scope.",
+      "resolution": "Recipe inventory is explicitly descriptive; archive-file integrity belongs to the retained output seal. Completed mapping-source scans are included in logical compressed scan bytes, and failed partial base hashing remains explicitly unmeasured.",
+      "verified": true
+    }
+  ],
+  "unresolved_code_findings": [],
+  "reviewed_properties": {
+    "source_values_follow_external_ROOT_READY_and_retained_context_guards": true,
+    "all_original_payload_and_receipt_hashes_roles_and_cutoff_admitted_before_rows": true,
+    "receipt_normalization_changes_only_separator_comparison_not_bytes": true,
+    "neutral_metadata_remains_config_outside_raw_InputGraph": true,
+    "no_generation_packet_or_audit_capture_value_parent": true,
+    "unchanged_base_API_and_task_Snapshot_representability": true,
+    "case_failures_retained_without_replacement_or_truncation": true,
+    "outputs_evaluation_only_agent_invisible_unadjudicated": true,
+    "fixed_resource_bounds_and_cooperative_deadlines_disclosed": true
+  },
+  "limitations_and_next_gate": {
+    "provenance_isolation_and_fresh_original_rereads": true,
+    "algorithmic_independence": false,
+    "shared_algorithms": "Selection, mapping and task helpers from source_inputs/stage1, plus the unchanged base compiler/verifier, are shared. Independent authorship and rereads do not establish algorithmic independence.",
+    "actual_fact_correctness_audit_performed": false,
+    "required_after_actual_build": "An independent actual reference audit must project facts directly from original sources without importing the producer/compiler algorithm, and separately verify the retained output seal and recipe archive files.",
+    "execution_gate": "Root must independently freeze exact reviewed DRAFT/code/environment in READY and supply its external byte hash before any actual build. This code-review record does not authorize a build or establish scientific validation."
+  }
+}
