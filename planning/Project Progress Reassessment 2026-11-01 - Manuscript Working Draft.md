@@ -105,13 +105,22 @@ model call or clinical conclusion was introduced by paper preparation.
 
 ## Remaining P08 requirement
 
-The [owner declaration checklist](../paper/AUTHOR-DECLARATIONS.md) requests author
-names/order/affiliations/contact, actual contributions, funding/support,
-competing interests, acknowledgments and applicable institutional declarations.
-Those are factual owner-controlled inputs, not an external scientific review.
-Missing information cannot be converted into a no-funding/no-conflict statement,
-and agents cannot infer authorship. The owner was asked while formatting and
-technical validation continued. Until the facts arrive, P08 stays unchecked.
+The [owner declaration checklist](../paper/AUTHOR-DECLARATIONS.md) requests actual
+contributions, funding/support, competing interests, acknowledgments and applicable
+institutional declarations for P08. Those are factual owner-controlled inputs,
+not an external scientific review. Missing information cannot be converted into
+a no-funding/no-conflict statement. The owner was asked while formatting and
+technical validation continued. Until these facts arrive, P08 stays unchecked.
+
+A continuation audit against the original roadmap corrected an overly broad
+metadata hold: final author names/order/affiliations/contact are explicitly
+owner-controlled final P10 details and can wait until that stage. They must not
+become another P08 scientific gate. The real P08 blocker is the unresolved
+contribution/funding/conflict statements required by its original acceptance.
+The worktree and reviewed PDF/source hashes were rechecked unchanged; all agents
+had completed. No independent P08 technical work remains. Repeating rendering or
+tests would not resolve these facts. No P09 implementation or new review request
+was introduced by the continuation audit.
 
 ## Critical review of P09 and P10
 

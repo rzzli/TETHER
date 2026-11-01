@@ -28,8 +28,11 @@ are unchanged. No new source/reference/model/protected values or network/data
 acquisition was needed for the manuscript audits.
 
 P08a text/bibliography and P08b PDF technical acceptance are checked; P08c factual
-owner declarations remain. Owner was asked for names/order/affiliations/contact,
-contributions, funding/conflicts/acknowledgments and applicable declarations.
+owner contribution/funding/conflict statements remain. The existing owner
+question also includes final names/order/affiliations/contact, but a continuation
+audit clarified those final metadata may wait until P10. Do not treat them as an
+extra P08 scientific gate. Acknowledgments and applicable declarations also need
+factual confirmation where relevant.
 This is not an external-expert gate. Never infer no funding/conflicts or invent
 authorship. Follow requested order: finish P08 before P09 release work, then P10.
 
