@@ -1,0 +1,1166 @@
+{
+  "artifact_type": "sanitized_structural_interface_diagnosis",
+  "bounded_next_development_option": {
+    "bounds": "Do not change this frozen protocol, overwrite retained outputs, fill omitted bindings, regrade candidates, call a model, increase the output cap, or infer scientific correctness as part of this diagnosis. Any subsequent measurement requires its own new protocol/run and records failures unchanged.",
+    "justification": "Three outputs repeat source_id in place of an available complete source object, and one breaks an explicitly stated status branch. A more explicit nested output template is a testable interface hypothesis; success is unestablished.",
+    "option": "Prepare a separately versioned prompt/schema candidate that explicitly requires source to be the entire fact_skeleton[i].source object, lists its five exact keys and nested locator types, and shows status/facts/reason branches. Check it offline on synthetic value-free fixtures, including no-record input and a size-feasibility preflight for a complete eight-fact report under the unchanged cap.",
+    "outcome_claim": "No repair effectiveness or future successful completion is claimed.",
+    "status": "option_only_not_executed"
+  },
+  "cells": [
+    {
+      "attribution": "Available complete binding objects were reduced to their source_id string. This violates the copy-complete-binding instruction and adapter object requirement. No missing source-key information is demonstrated.",
+      "audit_dispatched": false,
+      "cell_id": "cell-07-cd276-clean-plain_same_model_typed_report",
+      "cell_terminal": "malformed",
+      "dispatches": 1,
+      "engine_assessment": "Observed rejection and retained terminal agree with frozen code; no engine bug is demonstrated by this structural review.",
+      "envelope_end_conditions": {
+        "stop": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        },
+        "stop_type": {
+          "present": true,
+          "type": "string",
+          "value": "eos"
+        },
+        "stopped_eos": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_limit": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_word": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopping_word": {
+          "present": true,
+          "type": "string",
+          "value": ""
+        },
+        "truncated": {
+          "present": true,
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "error": "ContractError: Invalid complete emitted source binding",
+      "error_class": "model_output_source_binding_type_mismatch",
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "file_pins": [
+        {
+          "bytes": 9063,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-07-cd276-clean-plain_same_model_typed_report/plain/raw-request.bin",
+          "sha256": "a16f21ba463e8e7c7214e6867e066f03e6d91060df0802e3af06f4bd4ed10f2b"
+        },
+        {
+          "bytes": 13003,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-07-cd276-clean-plain_same_model_typed_report/plain/raw-envelope.bin",
+          "sha256": "57203b23d582cc8e531690f7a81141c9971edf8c83ffa147bb502137d71d8fa4"
+        },
+        {
+          "bytes": 2167,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-07-cd276-clean-plain_same_model_typed_report/plain/content.bin",
+          "sha256": "fe68d41e51e2a526b73a6ae5e587942623fa23b95c53cc43352f8a92115d256a"
+        },
+        {
+          "bytes": 2167,
+          "equals_retained_stage_content": true,
+          "matches_report_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-07-cd276-clean-plain_same_model_typed_report/final-response.bin",
+          "sha256": "fe68d41e51e2a526b73a6ae5e587942623fa23b95c53cc43352f8a92115d256a"
+        }
+      ],
+      "final_retained": true,
+      "journal_cell_terminal_sequence": 94,
+      "journal_structure_checked": [
+        {
+          "semantic_reference_grading": false,
+          "sequence": 93,
+          "status": "malformed"
+        }
+      ],
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 3182,
+        "output_tokens": 1178
+      },
+      "output_cap_tokens": 2048,
+      "output_shape": {
+        "collection_status_matches_prompt": true,
+        "fact_count": 8,
+        "fact_keysets_match": true,
+        "fact_shapes": [
+          {
+            "count": 6,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "null",
+              "value": "string"
+            }
+          },
+          {
+            "count": 2,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "string",
+              "value": "null"
+            }
+          }
+        ],
+        "reason_characters": null,
+        "reason_type": "null",
+        "root": {
+          "keys": [
+            "collection_status",
+            "facts",
+            "reason",
+            "schema_version",
+            "status",
+            "task_id",
+            "task_sha256"
+          ],
+          "types": {
+            "collection_status": "string",
+            "facts": "array",
+            "reason": "null",
+            "schema_version": "integer",
+            "status": "string",
+            "task_id": "string",
+            "task_sha256": "string"
+          }
+        },
+        "root_keyset_matches": true,
+        "status": "answered",
+        "task_id_binding_matches_prompt": true,
+        "task_sha256_binding_matches_prompt": true
+      },
+      "prompt_bytes": 8179,
+      "prompt_contract_availability": {
+        "complete_binding_copy_instruction_present": true,
+        "fact_keyset_listed": true,
+        "locator_keysets_and_types_match_adapter": true,
+        "nested_source_keyset_separately_enumerated_in_system_guide": false,
+        "root_keyset_listed": true,
+        "source_keysets_match_adapter_exactly": true,
+        "source_types_match_adapter": true,
+        "supplied_locator_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "format",
+              "row",
+              "row_group"
+            ],
+            "types": {
+              "format": "string",
+              "row": "integer",
+              "row_group": "integer"
+            }
+          }
+        ],
+        "supplied_skeleton_count": 8,
+        "supplied_source_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "field",
+              "locator",
+              "release_id",
+              "sha256",
+              "source_id"
+            ],
+            "types": {
+              "field": "string",
+              "locator": "object",
+              "release_id": "string",
+              "sha256": "string",
+              "source_id": "string"
+            }
+          }
+        ]
+      },
+      "stage": "plain",
+      "structural_failure": {
+        "actual_string_characters": {
+          "28": 8
+        },
+        "actual_type": "string",
+        "affected_fact_count": 8,
+        "all_emitted_source_strings_equal_corresponding_supplied_source_id": true,
+        "candidate_fact_values_examined_for_correctness": false,
+        "json_path": "$.facts[*].source",
+        "required_binding_members_unrepresented_as_object_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_exact_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_type": "object"
+      },
+      "transport_terminal": "returned"
+    },
+    {
+      "attribution": "Available complete binding objects were reduced to their source_id string. This violates the copy-complete-binding instruction and adapter object requirement. No missing source-key information is demonstrated.",
+      "audit_dispatched": false,
+      "cell_id": "cell-08-cd276-clean-asof_declared_two_stage_typed_report",
+      "cell_terminal": "malformed",
+      "dispatches": 1,
+      "engine_assessment": "Observed rejection and retained terminal agree with frozen code; no engine bug is demonstrated by this structural review.",
+      "envelope_end_conditions": {
+        "stop": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        },
+        "stop_type": {
+          "present": true,
+          "type": "string",
+          "value": "eos"
+        },
+        "stopped_eos": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_limit": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_word": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopping_word": {
+          "present": true,
+          "type": "string",
+          "value": ""
+        },
+        "truncated": {
+          "present": true,
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "error": "ContractError: Invalid complete emitted source binding",
+      "error_class": "model_output_source_binding_type_mismatch",
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "file_pins": [
+        {
+          "bytes": 9144,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-08-cd276-clean-asof_declared_two_stage_typed_report/proposal/raw-request.bin",
+          "sha256": "4b3901c35bd98ff5736276d4c62b385bc8287c478ae687118feb55580688cad8"
+        },
+        {
+          "bytes": 13081,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-08-cd276-clean-asof_declared_two_stage_typed_report/proposal/raw-envelope.bin",
+          "sha256": "8a14d126d9bacd16c0f4581394a1ab8670484aed5ceca98f00586c31137da08b"
+        },
+        {
+          "bytes": 2167,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-08-cd276-clean-asof_declared_two_stage_typed_report/proposal/content.bin",
+          "sha256": "fe68d41e51e2a526b73a6ae5e587942623fa23b95c53cc43352f8a92115d256a"
+        }
+      ],
+      "final_retained": false,
+      "journal_cell_terminal_sequence": 102,
+      "journal_structure_checked": [
+        {
+          "semantic_reference_grading": false,
+          "sequence": 101,
+          "status": "malformed"
+        }
+      ],
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 3196,
+        "output_tokens": 1178
+      },
+      "output_cap_tokens": 2048,
+      "output_shape": {
+        "collection_status_matches_prompt": true,
+        "fact_count": 8,
+        "fact_keysets_match": true,
+        "fact_shapes": [
+          {
+            "count": 6,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "null",
+              "value": "string"
+            }
+          },
+          {
+            "count": 2,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "string",
+              "value": "null"
+            }
+          }
+        ],
+        "reason_characters": null,
+        "reason_type": "null",
+        "root": {
+          "keys": [
+            "collection_status",
+            "facts",
+            "reason",
+            "schema_version",
+            "status",
+            "task_id",
+            "task_sha256"
+          ],
+          "types": {
+            "collection_status": "string",
+            "facts": "array",
+            "reason": "null",
+            "schema_version": "integer",
+            "status": "string",
+            "task_id": "string",
+            "task_sha256": "string"
+          }
+        },
+        "root_keyset_matches": true,
+        "status": "answered",
+        "task_id_binding_matches_prompt": true,
+        "task_sha256_binding_matches_prompt": true
+      },
+      "prompt_bytes": 8260,
+      "prompt_contract_availability": {
+        "complete_binding_copy_instruction_present": true,
+        "fact_keyset_listed": true,
+        "locator_keysets_and_types_match_adapter": true,
+        "nested_source_keyset_separately_enumerated_in_system_guide": false,
+        "root_keyset_listed": true,
+        "source_keysets_match_adapter_exactly": true,
+        "source_types_match_adapter": true,
+        "supplied_locator_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "format",
+              "row",
+              "row_group"
+            ],
+            "types": {
+              "format": "string",
+              "row": "integer",
+              "row_group": "integer"
+            }
+          }
+        ],
+        "supplied_skeleton_count": 8,
+        "supplied_source_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "field",
+              "locator",
+              "release_id",
+              "sha256",
+              "source_id"
+            ],
+            "types": {
+              "field": "string",
+              "locator": "object",
+              "release_id": "string",
+              "sha256": "string",
+              "source_id": "string"
+            }
+          }
+        ]
+      },
+      "stage": "proposal",
+      "structural_failure": {
+        "actual_string_characters": {
+          "28": 8
+        },
+        "actual_type": "string",
+        "affected_fact_count": 8,
+        "all_emitted_source_strings_equal_corresponding_supplied_source_id": true,
+        "candidate_fact_values_examined_for_correctness": false,
+        "json_path": "$.facts[*].source",
+        "required_binding_members_unrepresented_as_object_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_exact_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_type": "object"
+      },
+      "transport_terminal": "returned"
+    },
+    {
+      "attribution": "The provider reports a limit end condition at the frozen 2048-token cap; retained content is not complete JSON. The strict transport rejects this condition before typed adaptation. This is a generation/end-condition failure, not evidence of a missing source key or an engine contract bug.",
+      "audit_dispatched": false,
+      "cell_id": "cell-09-osmr-clean-asof_declared_two_stage_typed_report",
+      "cell_terminal": "failed",
+      "dispatches": 1,
+      "engine_assessment": "Observed rejection and retained terminal agree with frozen code; no engine bug is demonstrated by this structural review.",
+      "envelope_end_conditions": {
+        "stop": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        },
+        "stop_type": {
+          "present": true,
+          "type": "string",
+          "value": "limit"
+        },
+        "stopped_eos": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_limit": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_word": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopping_word": {
+          "present": true,
+          "type": "string",
+          "value": ""
+        },
+        "truncated": {
+          "present": true,
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "error": "ContractError: Completion stop type is unqualified",
+      "error_class": "model_generation_output_limit_end_condition",
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "file_pins": [
+        {
+          "bytes": 9159,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-09-osmr-clean-asof_declared_two_stage_typed_report/proposal/raw-request.bin",
+          "sha256": "fb52a45a7cd7a2818706bda93d2f3f94138db323740e327a2eb605cb1bdba62b"
+        },
+        {
+          "bytes": 15305,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-09-osmr-clean-asof_declared_two_stage_typed_report/proposal/raw-envelope.bin",
+          "sha256": "26a5d15e6605e3f8aadb7d7f7caa19197f0924f2ea8f5230957a9f5d3a26f1d0"
+        },
+        {
+          "bytes": 4138,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-09-osmr-clean-asof_declared_two_stage_typed_report/proposal/content.bin",
+          "sha256": "37568b93dc4d347a20cf01aa6933a0b29f4470f41a45e9549b029e31ece5aa82"
+        }
+      ],
+      "final_retained": false,
+      "journal_cell_terminal_sequence": 109,
+      "journal_structure_checked": [],
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 3214,
+        "output_tokens": 2048
+      },
+      "output_cap_tokens": 2048,
+      "prompt_bytes": 8275,
+      "prompt_contract_availability": {
+        "complete_binding_copy_instruction_present": true,
+        "fact_keyset_listed": true,
+        "locator_keysets_and_types_match_adapter": true,
+        "nested_source_keyset_separately_enumerated_in_system_guide": false,
+        "root_keyset_listed": true,
+        "source_keysets_match_adapter_exactly": true,
+        "source_types_match_adapter": true,
+        "supplied_locator_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "format",
+              "row",
+              "row_group"
+            ],
+            "types": {
+              "format": "string",
+              "row": "integer",
+              "row_group": "integer"
+            }
+          }
+        ],
+        "supplied_skeleton_count": 8,
+        "supplied_source_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "field",
+              "locator",
+              "release_id",
+              "sha256",
+              "source_id"
+            ],
+            "types": {
+              "field": "string",
+              "locator": "object",
+              "release_id": "string",
+              "sha256": "string",
+              "source_id": "string"
+            }
+          }
+        ]
+      },
+      "stage": "proposal",
+      "structural_failure": {
+        "actual_enum_value": "limit",
+        "actual_type": "string",
+        "envelope_complete_does_not_assert_generation_complete": true,
+        "json_path": "$.stop_type in provider envelope",
+        "predicted_tokens_equal_output_cap": true,
+        "required_enum": [
+          "eos",
+          "word"
+        ],
+        "required_type": "string",
+        "retained_content_json_parse": {
+          "byte_length": 4138,
+          "character_position": 4138,
+          "column": 21,
+          "error_at_end_of_text": true,
+          "error_class": "JSONDecodeError",
+          "line": 134
+        },
+        "stop_is_true": true,
+        "typed_adapter_invoked_in_run": false
+      },
+      "transport_terminal": "failed"
+    },
+    {
+      "attribution": "Available complete binding objects were reduced to their source_id string. This violates the copy-complete-binding instruction and adapter object requirement. No missing source-key information is demonstrated.",
+      "audit_dispatched": false,
+      "cell_id": "cell-10-osmr-clean-plain_same_model_typed_report",
+      "cell_terminal": "malformed",
+      "dispatches": 1,
+      "engine_assessment": "Observed rejection and retained terminal agree with frozen code; no engine bug is demonstrated by this structural review.",
+      "envelope_end_conditions": {
+        "stop": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        },
+        "stop_type": {
+          "present": true,
+          "type": "string",
+          "value": "eos"
+        },
+        "stopped_eos": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_limit": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_word": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopping_word": {
+          "present": true,
+          "type": "string",
+          "value": ""
+        },
+        "truncated": {
+          "present": true,
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "error": "ContractError: Invalid complete emitted source binding",
+      "error_class": "model_output_source_binding_type_mismatch",
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "file_pins": [
+        {
+          "bytes": 9078,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-10-osmr-clean-plain_same_model_typed_report/plain/raw-request.bin",
+          "sha256": "3c7a643e5c6a13b2201fc23f347be47f82fe58c8ff2dbe48251ad42546b6247f"
+        },
+        {
+          "bytes": 12972,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-10-osmr-clean-plain_same_model_typed_report/plain/raw-envelope.bin",
+          "sha256": "6112fb2b965693e429d5440ca3424f4a5c57f3e679e3afee4b200f6c758cfd89"
+        },
+        {
+          "bytes": 2132,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-10-osmr-clean-plain_same_model_typed_report/plain/content.bin",
+          "sha256": "41c29d981a0d4f1c58d09ecab740febf86339fdfeca0f5ccea170fe260ca362c"
+        },
+        {
+          "bytes": 2132,
+          "equals_retained_stage_content": true,
+          "matches_report_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-10-osmr-clean-plain_same_model_typed_report/final-response.bin",
+          "sha256": "41c29d981a0d4f1c58d09ecab740febf86339fdfeca0f5ccea170fe260ca362c"
+        }
+      ],
+      "final_retained": true,
+      "journal_cell_terminal_sequence": 117,
+      "journal_structure_checked": [
+        {
+          "semantic_reference_grading": false,
+          "sequence": 116,
+          "status": "malformed"
+        }
+      ],
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 3200,
+        "output_tokens": 1169
+      },
+      "output_cap_tokens": 2048,
+      "output_shape": {
+        "collection_status_matches_prompt": true,
+        "fact_count": 8,
+        "fact_keysets_match": true,
+        "fact_shapes": [
+          {
+            "count": 2,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "null",
+              "value": "null"
+            }
+          },
+          {
+            "count": 6,
+            "keys": [
+              "fact_id",
+              "source",
+              "unit",
+              "unknown_reason",
+              "value"
+            ],
+            "types": {
+              "fact_id": "string",
+              "source": "string",
+              "unit": "null",
+              "unknown_reason": "null",
+              "value": "string"
+            }
+          }
+        ],
+        "reason_characters": null,
+        "reason_type": "null",
+        "root": {
+          "keys": [
+            "collection_status",
+            "facts",
+            "reason",
+            "schema_version",
+            "status",
+            "task_id",
+            "task_sha256"
+          ],
+          "types": {
+            "collection_status": "string",
+            "facts": "array",
+            "reason": "null",
+            "schema_version": "integer",
+            "status": "string",
+            "task_id": "string",
+            "task_sha256": "string"
+          }
+        },
+        "root_keyset_matches": true,
+        "status": "answered",
+        "task_id_binding_matches_prompt": true,
+        "task_sha256_binding_matches_prompt": true
+      },
+      "prompt_bytes": 8194,
+      "prompt_contract_availability": {
+        "complete_binding_copy_instruction_present": true,
+        "fact_keyset_listed": true,
+        "locator_keysets_and_types_match_adapter": true,
+        "nested_source_keyset_separately_enumerated_in_system_guide": false,
+        "root_keyset_listed": true,
+        "source_keysets_match_adapter_exactly": true,
+        "source_types_match_adapter": true,
+        "supplied_locator_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "format",
+              "row",
+              "row_group"
+            ],
+            "types": {
+              "format": "string",
+              "row": "integer",
+              "row_group": "integer"
+            }
+          }
+        ],
+        "supplied_skeleton_count": 8,
+        "supplied_source_shapes": [
+          {
+            "count": 8,
+            "keys": [
+              "field",
+              "locator",
+              "release_id",
+              "sha256",
+              "source_id"
+            ],
+            "types": {
+              "field": "string",
+              "locator": "object",
+              "release_id": "string",
+              "sha256": "string",
+              "source_id": "string"
+            }
+          }
+        ]
+      },
+      "stage": "plain",
+      "structural_failure": {
+        "actual_string_characters": {
+          "28": 8
+        },
+        "actual_type": "string",
+        "affected_fact_count": 8,
+        "all_emitted_source_strings_equal_corresponding_supplied_source_id": true,
+        "candidate_fact_values_examined_for_correctness": false,
+        "json_path": "$.facts[*].source",
+        "required_binding_members_unrepresented_as_object_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_exact_keys": [
+          "field",
+          "locator",
+          "release_id",
+          "sha256",
+          "source_id"
+        ],
+        "required_type": "object"
+      },
+      "transport_terminal": "returned"
+    },
+    {
+      "attribution": "The explicit status/facts invariant was not followed. This is independent of the reason text and of any scientific interpretation.",
+      "audit_dispatched": false,
+      "cell_id": "cell-11-cd276-controlled-missing-plain_same_model_typed_report",
+      "cell_terminal": "malformed",
+      "dispatches": 1,
+      "engine_assessment": "Observed rejection and retained terminal agree with frozen code; no engine bug is demonstrated by this structural review.",
+      "envelope_end_conditions": {
+        "stop": {
+          "present": true,
+          "type": "boolean",
+          "value": true
+        },
+        "stop_type": {
+          "present": true,
+          "type": "string",
+          "value": "eos"
+        },
+        "stopped_eos": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_limit": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopped_word": {
+          "present": false,
+          "type": null,
+          "value": null
+        },
+        "stopping_word": {
+          "present": true,
+          "type": "string",
+          "value": ""
+        },
+        "truncated": {
+          "present": true,
+          "type": "boolean",
+          "value": false
+        }
+      },
+      "error": "ContractError: Typed-facts status, facts and reason disagree",
+      "error_class": "model_output_status_facts_reason_invariant_mismatch",
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "file_pins": [
+        {
+          "bytes": 3407,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-11-cd276-controlled-missing-plain_same_model_typed_report/plain/raw-request.bin",
+          "sha256": "8b89c1270322b9dc42f242088bf51421a817bd23d37a1123c598253381d0a832"
+        },
+        {
+          "bytes": 5399,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-11-cd276-controlled-missing-plain_same_model_typed_report/plain/raw-envelope.bin",
+          "sha256": "867a338fdc60f56b127749023a00d5aea1dbcfa920eceb95b738f20212b151c0"
+        },
+        {
+          "bytes": 410,
+          "matches_report_stage_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-11-cd276-controlled-missing-plain_same_model_typed_report/plain/content.bin",
+          "sha256": "8dfd79471d334817fd6ec285b4e127cd78717a3f5df72cd94b006f67a46ec1d2"
+        },
+        {
+          "bytes": 410,
+          "equals_retained_stage_content": true,
+          "matches_report_pin": true,
+          "path": "runs/preprint-p04-typed-report-20261101T053531Z/cell-11-cd276-controlled-missing-plain_same_model_typed_report/final-response.bin",
+          "sha256": "8dfd79471d334817fd6ec285b4e127cd78717a3f5df72cd94b006f67a46ec1d2"
+        }
+      ],
+      "final_retained": true,
+      "journal_cell_terminal_sequence": 125,
+      "journal_structure_checked": [
+        {
+          "semantic_reference_grading": false,
+          "sequence": 124,
+          "status": "malformed"
+        }
+      ],
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 790,
+        "output_tokens": 153
+      },
+      "output_cap_tokens": 2048,
+      "output_shape": {
+        "collection_status_matches_prompt": true,
+        "fact_count": 0,
+        "fact_keysets_match": true,
+        "fact_shapes": [],
+        "reason_characters": 151,
+        "reason_type": "string",
+        "root": {
+          "keys": [
+            "collection_status",
+            "facts",
+            "reason",
+            "schema_version",
+            "status",
+            "task_id",
+            "task_sha256"
+          ],
+          "types": {
+            "collection_status": "string",
+            "facts": "array",
+            "reason": "string",
+            "schema_version": "integer",
+            "status": "string",
+            "task_id": "string",
+            "task_sha256": "string"
+          }
+        },
+        "root_keyset_matches": true,
+        "status": "partial",
+        "task_id_binding_matches_prompt": true,
+        "task_sha256_binding_matches_prompt": true
+      },
+      "prompt_bytes": 3155,
+      "prompt_contract_availability": {
+        "complete_binding_copy_instruction_present": true,
+        "fact_keyset_listed": true,
+        "locator_keysets_and_types_match_adapter": true,
+        "nested_source_keyset_separately_enumerated_in_system_guide": false,
+        "root_keyset_listed": true,
+        "source_keysets_match_adapter_exactly": true,
+        "source_types_match_adapter": true,
+        "supplied_locator_shapes": [],
+        "supplied_skeleton_count": 0,
+        "supplied_source_shapes": []
+      },
+      "stage": "plain",
+      "structural_failure": {
+        "actual_fact_count": 0,
+        "actual_facts_type": "array",
+        "actual_reason_characters": 151,
+        "actual_reason_type": "string",
+        "actual_status": "partial",
+        "json_paths": [
+          "$.status",
+          "$.facts",
+          "$.reason"
+        ],
+        "rule_explicit_in_retained_system_prompt": true,
+        "violated_rule": "partial requires nonempty facts and a nonnull reason"
+      },
+      "transport_terminal": "returned"
+    }
+  ],
+  "contract": {
+    "full_formal_schema_appended": false,
+    "required_fact_exact_keys": [
+      "fact_id",
+      "source",
+      "unit",
+      "unknown_reason",
+      "value"
+    ],
+    "required_root_exact_keys": [
+      "collection_status",
+      "facts",
+      "reason",
+      "schema_version",
+      "status",
+      "task_id",
+      "task_sha256"
+    ],
+    "required_source_exact_keys": [
+      "field",
+      "locator",
+      "release_id",
+      "sha256",
+      "source_id"
+    ],
+    "required_source_member_types": {
+      "field": "string",
+      "locator": "object",
+      "release_id": "string",
+      "sha256": "64 lowercase hexadecimal characters",
+      "source_id": "string"
+    },
+    "required_source_type": "object",
+    "source_schema_availability": "The retained prompt has complete concrete source bindings in fact_skeleton and an instruction to copy the complete binding. The guide lists top-level/fact keys and status invariants, but does not append a full formal nested schema or enumerate every adapter bound. The observed source-type failures do not demonstrate missing nested key information.",
+    "supplied_locator_exact_keys": [
+      "format",
+      "row",
+      "row_group"
+    ],
+    "supplied_locator_member_types": {
+      "format": "string",
+      "row": "nonnegative integer",
+      "row_group": "nonnegative integer"
+    }
+  },
+  "cross_cell_observations": {
+    "audit_suppression": "Invalid proposal structure and failed proposal transport prevent the audit stage by design. No undeclared repair or retry occurred.",
+    "cells_07_08_content_bytes_identical": true,
+    "classification_counts": {
+      "model_generation_output_limit_end_condition": 1,
+      "model_output_source_binding_type_mismatch": 3,
+      "model_output_status_facts_reason_invariant_mismatch": 1
+    },
+    "engine_bug_established": false,
+    "transport_vs_cell": "Four transport-returned payloads fail the typed contract. One fully retained provider envelope has an unaccepted limit end condition; envelope_complete describes capture size, not generation success."
+  },
+  "frozen_outcome_preserved": {
+    "actual_model_calls": 5,
+    "meaning": "A completed run is a terminal execution status. The five model calls remain unsuccessful under the frozen strict contract. Deterministic control/preflight returns do not establish model success.",
+    "model_call_cell_terminals": {
+      "failed": 1,
+      "malformed": 4
+    },
+    "no_run_artifacts_rewritten": true,
+    "report_status": "completed",
+    "reported_all_12_cell_terminal_counts": {
+      "failed": 1,
+      "interrupted": 0,
+      "malformed": 4,
+      "returned": 7,
+      "timeout": 0,
+      "unexecuted": 0
+    },
+    "scientific_validation": "not_established",
+    "strict_contract_successes_among_model_calls": 0
+  },
+  "input_pins": [
+    {
+      "bytes": 27366,
+      "path": "planning/review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json",
+      "sha256": "9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4"
+    },
+    {
+      "bytes": 37869,
+      "path": "runs/preprint-p04-typed-report-20261101T053531Z/report.json",
+      "sha256": "4b4222de1281a7eb5082b77cb4efcdc43e6ecf12c9d77392a366b6b9fa7dcfc0"
+    },
+    {
+      "bytes": 92875,
+      "path": "runs/preprint-p04-typed-report-20261101T053531Z/journal.jsonl",
+      "sha256": "8fd32bb743c6489f7b41db5a8e2a938b51eab82c69c418d5c55033b87392aca2"
+    },
+    {
+      "bytes": 423,
+      "path": "runs/preprint-p04-typed-report-20261101T053531Z/receipt.json",
+      "sha256": "e2e63abc3ec467ab9f38e9cf3626fe5608852b82861d25a097241fac2b94a732"
+    },
+    {
+      "bytes": 10512,
+      "matches_frozen_protocol": true,
+      "path": "src/asof/study/source_fact_reporting.py",
+      "sha256": "8c81e9589566346d7345bbb7d8d10e5bbdf811c7a89180065ee5d1d05e91f742"
+    },
+    {
+      "bytes": 10934,
+      "matches_frozen_protocol": true,
+      "path": "src/asof/study/source_fact_adapters.py",
+      "sha256": "4651cfdaef34f4e51e89c7df61d5db884edfa90baf7c4f5b41645d596bc299e0"
+    },
+    {
+      "bytes": 15495,
+      "matches_frozen_protocol": true,
+      "path": "src/asof/study/source_fact_transport.py",
+      "sha256": "1ac7c16b26e4fb065e40fa689fdbfec5fa101a289677c61cc7f6a9a446b6dc99"
+    },
+    {
+      "bytes": 17456,
+      "matches_frozen_protocol": true,
+      "path": "src/asof/study/source_fact_cell.py",
+      "sha256": "c8bcc688e59ec2f2c1428476ede3301a1c0040d64bb3e5c1347c9028dcfb5437"
+    }
+  ],
+  "run_id": "preprint-p04-typed-report-20261101T053531Z",
+  "schema_version": 1,
+  "scope": {
+    "biological_correctness_assessed": false,
+    "evaluator_references_or_expected_answers_read": false,
+    "frozen_run_or_code_modified": false,
+    "generation_source_packet_files_read": false,
+    "new_model_calls": 0,
+    "old_human_returns_or_clinical_outcomes_read": false,
+    "only_new_output": "planning/review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json",
+    "outputs_regraded": false,
+    "raw_biological_values_retained": false,
+    "retries": 0,
+    "review_mode": "offline retained-byte structural analysis only"
+  },
+  "verification": {
+    "automated_structural_checks": [
+      "Four inspected interface code byte/hash pins equal frozen protocol pins.",
+      "Report and journal hashes equal terminal receipt; last journal entry matches receipt terminal hash.",
+      "All five retained request/envelope/content byte/hash pins equal stage records.",
+      "All retained malformed plain-stage final bytes equal their stage content and report pins.",
+      "All 32 supplied clean-cell source skeleton bindings have the exact adapter keyset and matching JSON types; all corresponding Parquet locators match keysets/types.",
+      "All 24 source values in three binding-failure outputs are 28-character strings equal to the corresponding supplied source_id; no candidate fact values were compared.",
+      "Cell 11 partial/empty-facts/string-reason invariant violation is explicit in the retained prompt.",
+      "Cell 09 reports limit at 2048/2048 output tokens and JSON parse error at retained content EOF; no typed adaptation was recorded.",
+      "Cell terminals agree with journal; no audit dispatch occurred; retained server terminal affirms server_stopped."
+    ],
+    "checks_passed": 9,
+    "limitations": [
+      "First-error adapter outcomes remain those of the run; this review does not certify candidate fact values or full source fidelity.",
+      "No claim about general model quality or scientific utility follows from these exposed development cells."
+    ],
+    "test_suite_executed": false,
+    "test_suite_note": "No pytest suite, model tests, replay scoring, or biological validation ran. Verification consists of the listed offline byte/hash/shape/invariant assertions."
+  }
+}

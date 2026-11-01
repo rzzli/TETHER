@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "TERMINAL_ZERO_DISPATCH_OWNED_SERVER_STOPPED",
+  "recorded_at_utc": "2026-11-01T05:35:21.769514+00:00",
+  "run_dir": "runs\\preprint-p04-typed-report-20261101T052735Z",
+  "process_exit_code": 1,
+  "report_sha256": "1f7ebc9191f7b21466d77a54046422a6a9c2c3744697e5f6d555927c16dd55c2",
+  "receipt_sha256": "bee404e8a521b4edfc58cb228c2ac18b6144a604f546ea797c66b503dbecfbe3",
+  "actual_calls": 0,
+  "terminal_counts": {
+    "failed": 0,
+    "interrupted": 0,
+    "malformed": 0,
+    "returned": 6,
+    "timeout": 0,
+    "unexecuted": 6
+  },
+  "server": {
+    "elapsed_seconds": 188.76500000001397,
+    "error_class": "TimeoutError",
+    "exit_code": 1,
+    "peak_native_memory_bytes": null,
+    "peak_native_memory_reason": "Not instrumented",
+    "pid": 24836,
+    "secondary_failures": [],
+    "server_stopped": true,
+    "started": true
+  },
+  "setup_resources": {
+    "cap_seconds": 900,
+    "elapsed_seconds": 189.46900000004098,
+    "native_peak_rss_bytes": null,
+    "physical_io_bytes": null
+  },
+  "evaluation_resources": {
+    "cap_seconds": 3600,
+    "elapsed_seconds": 257.89099999994505,
+    "estimated_logical_source_hash_bytes": 49297361430,
+    "peak_native_rss_bytes": null,
+    "physical_io_bytes": null,
+    "reference_replays": 3,
+    "source_graph_nodes_per_replay": 111
+  },
+  "errors": [
+    {
+      "error": "TimeoutError: Owned server startup timed out; no automatic relaunch",
+      "stage": "owned_server_setup"
+    }
+  ],
+  "correction_scope": "Run unchanged frozen protocol in real host loopback/process view after restricted visibility was demonstrated. No candidate, reference, code, case or budget changes. No dispatched call is repeated.",
+  "prior_run_unchanged": true
+}

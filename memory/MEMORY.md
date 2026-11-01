@@ -1,5 +1,9 @@
 # Research memory index
 
+- [[research-log-2026-10-31-reporting-pilot-result]] - Current: P02a/P04 complete in bounded scopes. Negative model pilot: twelve cells/five calls retained, literal clean2/2, model clean0/2 each; independent audit2,216 checks passes. Neutral25file catalog reconciliation complete; originalstudy metadata gap remains. Next two fictional conformance controls, then P05 source/cohort/exposure/dependence scope decision; paper incomplete, no experts.
+
+- [[research-log-2026-10-31-credible-set-completion]] - P02a accepted: approved isolated 23/23 downloads and complete 25-file exact join verified; 13 hardened regression shapes pass. One exposed locus has beta/SE/p-value components; sample size/units/ancestry/upstream-study verification remain unresolved. P04 host-view pilot has reached all twelve terminal cells/five calls and is source-verifying; no final acceptance yet. Old worker/receipts and stopped monitor unchanged; no experts.
+
 - [[research-log-2026-10-31-reporting-pilot-preparation]] - Current checkpoint: P04 source/reference bundles sealed and independently checked, 217 targeted tests/installed mock smoke pass, READY twelve-cell protocol frozen; actual model execution/results pending. Owner approved isolated credible-set batch, live exec session 18695 (no restart on observation timeout); old worker/monitor untouched. No external experts.
 
 - [[research-log-2026-10-31-source-fact-evaluator]] - Current checkpoint: P03 source compiler/replay, retained-byte adapters, grouped scorer and all-cell accounting implemented; 173 targeted tests pass, installed JSON-only smoke and one actual-row replay pass. Scientific measurements still unavailable in that selected row. Next P04 generator/access preflight, independent generation packets and frozen bounded pilot; no external experts or new model calls. Optional batch approval still pending.

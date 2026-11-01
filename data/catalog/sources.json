@@ -1601,16 +1601,16 @@
         }
       ],
       "temporal": {
-        "classification": "unverified",
+        "classification": "contemporary_only",
         "study_publication_date": null,
         "dataset_public_release_date": null,
         "annotation_version": null,
         "annotation_release_date": null,
         "retrieved_at": null,
-        "eligibility_note": "25.09 is the reproduction reference, not an automatically eligible historical input; field-level source/annotation dates remain unresolved.",
+        "eligibility_note": "Selected 25.09 originals are completely acquired as contemporary evidence. This does not establish source/annotation availability at historical origins or historical input eligibility.",
         "unknowns": [
-          "No acquired artifact in this scaffold.",
-          "Selected artifact release and annotation availability have not been verified."
+          "Field-level source and annotation availability at historical origins remains unverified.",
+          "Scientific semantics, source overlap and historical compatibility remain unvalidated."
         ]
       },
       "access": {
@@ -1639,30 +1639,62 @@
         "policy": "Deduplicate shared upstream studies/cohorts and acquisition bundles; multiple database entries are not independent replication."
       },
       "storage": {
-        "compressed_bytes": null,
+        "compressed_bytes": 2588111695,
         "expanded_bytes": null,
         "index_bytes": null,
         "working_bytes": null,
         "cache_bytes": null,
         "backup_bytes": null,
         "quoted_estimate": null,
-        "estimate_basis": "No selected artifact has been sized; null values are unknown, not zero.",
-        "basis_urls": []
+        "estimate_basis": "Measured sum of 25 independently SHA-256-reconciled 25.09 Parquet originals (2 original core paths plus 23 approved completion paths); excludes expanded/index/cache/backup bytes.",
+        "basis_urls": [
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet"
+        ]
       },
       "verification": {
-        "level": "directory_checked",
-        "checked_at": "2026-10-09",
+        "level": "sample_inspected",
+        "checked_at": "2026-10-31",
         "evidence": [
           {
             "kind": "directory_listing",
             "checked_at": "2026-10-09",
             "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/",
             "result": "Named component directory present; no Parquet payload loaded."
+          },
+          {
+            "kind": "local_transport_footer_schema_metadata",
+            "checked_at": "2026-11-01",
+            "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p05-20261031\\ACQUISITION-METADATA-v1.json",
+            "result": "25/25 official-inventory payload names locally present, exact bytes and SHA-256 match receipts/state; readable Parquet footers and one common schema. No scientific rows inspected; no publisher checksum supplied."
           }
         ],
-        "next_acquisition_check": "Inspect the exact legacy/current component schema and metadata, verify release dates and field-level temporal restrictions, then design the compatibility projection without future data."
+        "next_acquisition_check": "Review raw schema semantics, normalized-output mapping, row validity and field-level temporal compatibility separately; whole-product parse_status and scientific validation remain not_run."
       },
-      "collection_status": "queued",
+      "collection_status": "collected",
       "parse_status": "not_run",
       "validation_status": "not_run",
       "profile_policy": {
@@ -1672,8 +1704,8 @@
         "evaluation_only": "not_a_label_source"
       },
       "blockers": [
-        "Legacy schemas and per-origin component availability require inspection.",
-        "No full payload was downloaded, parsed or validated; selected release/date and transformation coverage remain unverified."
+        "Legacy schemas and per-origin component availability still require historical compatibility verification.",
+        "25.09 transport and footer/schema metadata are checked; full parsing and scientific validation remain not_run."
       ],
       "compatibility": [
         {
@@ -1710,45 +1742,72 @@
         }
       ],
       "acquisition_snapshot": {
-        "integrity_note": "Byte/format signatures and SHA-256 receipts; publisher checksum only where supplied. Parsing and scientific validation remain not_run.",
+        "integrity_note": "All 25 payloads independently byte-hashed against readonly receipts; PAR1 header/footer and footer/schema metadata checked. Publisher hashes were not supplied. Full parsing and scientific validation remain not_run.",
         "storage_role": "external_bulk_E",
         "expected_files": 25,
-        "batch_id": "core-25-09-chembl35-2026-10-10",
-        "snapshot_date": "2026-10-10",
-        "authority": "Live receipts/state under the authorized E storage root; catalog is a point-in-time snapshot.",
-        "completed_bytes": null,
-        "in_progress_files": 0,
-        "status": "queued",
-        "relative_paths": [
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
-          "raw\\open_targets_platform\\25.09\\output\\credible_set\\part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet"
+        "batch_id": null,
+        "source_batch_ids": [
+          "core-25-09-chembl35-2026-10-10",
+          "preprint-p02-credible-completion-20261101T031842Z"
         ],
-        "completed_files": 0,
+        "source_batches": [
+          {
+            "batch_id": "core-25-09-chembl35-2026-10-10",
+            "selected_completed_files": 2,
+            "selected_completed_bytes": 157880681,
+            "state_path": "E:\\projects_data\\drug_target_agents_data\\manifests\\core-25-09-chembl35-2026-10-10-state.json"
+          },
+          {
+            "batch_id": "preprint-p02-credible-completion-20261101T031842Z",
+            "selected_completed_files": 23,
+            "selected_completed_bytes": 2430231014,
+            "state_path": "E:\\projects_data\\drug_target_agents_data\\manifests\\preprint-p02-credible-completion-20261101T031842Z-state.json"
+          }
+        ],
+        "snapshot_date": "2026-11-01",
+        "authority": "Independently reconciled originals, readonly receipts and both readonly batch states; 2 original paths plus 23 isolated completion paths.",
+        "completed_bytes": 2588111695,
+        "in_progress_files": 0,
+        "status": "completed",
+        "relative_paths": [
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00000-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00001-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00002-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/output/credible_set/part-00003-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00004-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00005-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00006-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00007-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00008-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00009-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00010-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/output/credible_set/part-00011-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00012-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00013-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00014-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00015-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00016-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00017-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00018-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00019-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00020-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00022-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00023-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00024-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet"
+        ],
+        "completed_files": 25,
         "release_ids": [
           "25.09"
+        ],
+        "metadata_artifact_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p05-20261031\\ACQUISITION-METADATA-v1.json",
+        "earliest_receipt_completed_at_utc": "2026-10-11T04:15:50.4296287+00:00",
+        "latest_receipt_completed_at_utc": "2026-11-01T05:09:54.8685058+00:00",
+        "selected_availability": "contemporary_only",
+        "historical_eligibility": "not_verified",
+        "batch_ids": [
+          "core-25-09-chembl35-2026-10-10",
+          "preprint-p02-credible-completion-20261101T031842Z"
         ]
       }
     },
@@ -26104,7 +26163,7 @@
       ]
     }
   ],
-  "last_updated": "2026-10-19",
+  "last_updated": "2026-10-31",
   "contract_policy": {
     "conditional_fields": "Required only when the stated scientific condition applies; unknown/non-applicable values remain explicit and never become zero.",
     "dependency_semantics": "dependencies describe unconditional inputs needed to normalize/interpret/validate a product; they are not permission grants or a required order for metadata lookup/raw-file access.",
@@ -26112,13 +26171,13 @@
     "outcome_gwas": "Clinical outcome GWAS do not require a gene-specific assay or gene assignment."
   },
   "last_maintenance_update": {
-    "expected_prior_sha256": "d4946be2bf76da79925cef15e86f6b33a486aff19ca3376c63a0de6734aed355",
-    "report": "data/manifests/public/2026-10-18-aact-seven-status-observation.json",
-    "report_sha256": "7d5fba6e857b116411cc44e40e134efdccebb0139e5cd38e1da6d3039b694e1d",
-    "kind": "status_correction",
+    "expected_prior_sha256": "cac453e30dd3f21c9684ef2e84132fd3ab373949501ca349619567c8c6f345fb",
+    "report": "planning/review-assets/preprint-p05-20261031/ACQUISITION-METADATA-v1.json",
+    "report_sha256": "428ab3be53abffb24f8d2e95e457f603012b8e66a3ee02575e696f996b00a405",
+    "kind": "neutral_acquisition_metadata_reconciliation",
     "datasets": [
-      "aact_snapshots"
+      "ot_credible_set"
     ],
-    "created_at_utc": "2026-10-19T02:31:02.712868+00:00"
+    "created_at_utc": "2026-11-01T05:44:45.615807+00:00"
   }
 }

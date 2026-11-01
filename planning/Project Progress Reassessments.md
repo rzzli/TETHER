@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [31 October source-fact evaluator](<Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). P03 targeted engineering acceptance is complete: 173 tests, installed JSON-only smoke and one actual source row replay pass. Measurement coverage remains null in that row. Next P04 generator/access preflight, independent generation packets and a frozen bounded pilot. The optional 23-file batch remains pending approval; no external expert input or native revival is needed.
+Current checkpoint: [31 October reporting pilot result](<Project Progress Reassessment 2026-10-31 - Reporting Pilot Result.md>). P02a and P04 are complete in their bounded scopes: verified 25-file data inventory; negative model pilot with all twelve cells/five calls retained and 2,216 independent audit checks passing. Literal clean-case completion is 2/2; neither model arm completes a clean case. Next is one two-control fictional interface qualification, then P05 source/candidate/exposure/dependence qualification or a narrower technical scope. No external expert input or native revival is needed.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

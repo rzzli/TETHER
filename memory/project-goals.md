@@ -10,6 +10,28 @@ updated: 2026-10-31
 
 ## Current recovery execution
 
+Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Reporting Pilot Result]].
+P02a acquisition and complete 25-file join accepted; catalog reconciled from neutral
+receipt/schema metadata without evaluator-answer ancestors. One developmental
+locus has native beta/SE/p-value components, unresolved scientific context.
+
+P04 accepted negative: twelve terminal cells/five actual calls, zero model report
+successes; literal clean 2/2, both model clean 0/2. Independent audit: 2,216 checks
+and source-inclusive score reconstruction pass. Two earlier zero-call failures
+retained; original outputs/code/protocol unchanged. Source binding serialization,
+status rule and output-cap failures are not biological correctness measurements.
+
+Next P04b: exactly two fictional prompt-conformance checks, frozen and once each,
+with the same v1 adapter, model and caps. Require both strict passes before a
+larger model study; failure selects a narrower deterministic/technical paper
+scope. P05 design exists but actual source, candidate, exposure, dependence and
+precision qualification is pending. P06–P10 and original clinical/conditional
+branches remain unfinished. No external experts, real clinical features or
+probabilities, model downloads, paid access or new
+monitor. See [[research-log-2026-10-31-reporting-pilot-result]].
+
+### Prior P04 preparation checkpoint (retained history)
+
 Current checkpoint: [[Project Progress Reassessment 2026-10-31 - Reporting Pilot Preparation]].
 P04 source packets (111 originals/8.216 GB, two exposed real contexts + controlled
 missing condition) sealed before three separate evaluator references. Independent

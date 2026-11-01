@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "ONE_HOST_VIEW_ATTEMPT_AFTER_TERMINAL_ZERO_DISPATCH_FAILURES",
+  "launched_at_utc": "2026-11-01T05:35:31+00:00",
+  "recorded_at_utc": "2026-11-01T05:35:59.301563+00:00",
+  "pre_run_commit": "cd4c2585194ca887ad47e6c633c9fa2978d639e1",
+  "protocol_sha256": "9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4",
+  "exec_session_id": 22139,
+  "run_dir": "runs/preprint-p04-typed-report-20261101T053531Z",
+  "execution_context": "Approved host process/loopback view, restricted view cannot observe owned listener",
+  "prior_attempts": [
+    {
+      "path": "runs/preprint-p04-typed-report-20261101T051718Z",
+      "terminal": true,
+      "actual_calls": 0,
+      "reason": "missing local runtime helpers before server spawn"
+    },
+    {
+      "path": "runs/preprint-p04-typed-report-20261101T052735Z",
+      "terminal": true,
+      "actual_calls": 0,
+      "server_stopped": true,
+      "reason": "restricted netstat visibility"
+    }
+  ],
+  "correction": "Execution context only; exact protocol/code/environment/cases/budgets preserved",
+  "scheduled_cells": 12,
+  "recovery": "Observe exec22139; no automatic repetition of dispatched or unresolved calls; no response-dependent changes.",
+  "separate_not_independent_replicates": true,
+  "provider_spending_usd": 0,
+  "network": "owned 127.0.0.1:55591 only; no acquisition",
+  "old_worker_and_monitor_unchanged": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "ONE_NEW_ATTEMPT_AFTER_ZERO_DISPATCH_ASSET_FAILURE",
+  "launched_at_utc": "2026-11-01T05:27:35+00:00",
+  "recorded_at_utc": "2026-11-01T05:27:35.947230+00:00",
+  "pre_run_commit": "227fcffcd32eaa9fd60a9651ce86ee6201608487",
+  "protocol_sha256": "9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4",
+  "exec_session_id": 29770,
+  "run_dir": "runs/preprint-p04-typed-report-20261101T052735Z",
+  "prior_run_retained": "runs/preprint-p04-typed-report-20261101T051718Z",
+  "prior_actual_calls": 0,
+  "prior_failure_stage": "owned_server_setup",
+  "correction": "Only added 20 missing hash-pinned runtime helper files from existing originals; no code/protocol/case/budget changes",
+  "repair_record_sha256": "ecae103ac7b8cd97aef0908aedc4fed978873c68696742f8e7f3494857c1e529",
+  "scheduled_cells": 12,
+  "recovery": "Observe this exact process and journal; no automatic repeat of dispatched or unresolved calls. All-cell counters across attempts remain separate; not independent replications.",
+  "periodic_monitor_created": false,
+  "old_download_worker_untouched": true
+}

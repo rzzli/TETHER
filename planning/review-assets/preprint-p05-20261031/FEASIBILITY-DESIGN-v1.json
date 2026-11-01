@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "prospective_source_fact_feasibility_design",
+  "design_id": "preprint-p05-source-composition-feasibility-design-v1",
+  "status": "DESIGN_NOT_LOCKED",
+  "design_date": "2026-10-31",
+  "design_date_timezone": "America/Los_Angeles",
+  "purpose": "Specify a source-neutral feasibility and implementation gate for a later fresh source-reporting study. This artifact is neither an execution protocol nor a data-readiness or precision acceptance.",
+  "authority": {
+    "permitted_now": [
+      "Write this prospective requirements artifact and its API notes inside the new P05 asset directory.",
+      "Read previously allowed planning, source-fact code, catalog and sanitized P02/P04 metadata.",
+      "Parse these new artifacts and compute their file hashes."
+    ],
+    "not_performed_or_authorized_by_this_artifact": [
+      "New original biological-row or candidate-universe scans.",
+      "Actual candidate selection, source-file pinning, cohort locking or generation.",
+      "Reading candidate outputs, human-response descendants, private reference values or clinical outcomes.",
+      "New downloads, model acquisition, model calls, paid provider spending or network work.",
+      "Changes to src, the current P04 code inventory, P04 protocol or P04 endpoint."
+    ],
+    "new_downloads": 0,
+    "model_calls": 0,
+    "provider_spending_usd": 0,
+    "execution_authority": false
+  },
+  "current_evidence_boundary": {
+    "p04": {
+      "scope": "Two exposed development contexts and one synthetic input-withholding condition; the synthetic condition is not an independent third biological context.",
+      "endpoint": "The existing P04 reporting endpoint and its source/reference/code seals remain unchanged.",
+      "measurement_status": "P04 does not study answerable measurement groups.",
+      "current_terminal_status": {
+        "value": null,
+        "reason": "This design does not inspect P04 candidate outputs or assert that the current pilot has reached a terminal closeout."
+      }
+    },
+    "p02": {
+      "sanitized_availability_only": "The completed credible-set report records a complete 25-file inventory and one developmental exact match with nonnull beta, standardError and pValueMantissa/pValueExponent. sampleSize is native null; units and ancestry are not established; upstream study identity was not independently verified.",
+      "interpretation": "A source-feasibility observation, not a fresh evaluation cohort, independent replication, scientific validation, causal genetics, MR qualification or clinical outcome.",
+      "original_or_reference_values_in_this_design": false,
+      "selected_row_packet_eligible_for_generation": false,
+      "selected_row_packet_reason": "The retained P02 selected-row descendant is evaluator-only. Any later generation packet must be constructed separately from newly admitted original bytes and a neutral plan."
+    },
+    "code": {
+      "current_input_builder": "source_fact_inputs.py is an intentionally fixed P04 builder with two development scopes, a fixed EuropePMC inventory, lexical record selection and id/date/cellType requests.",
+      "existing_generic_support": "source_fact_sources.py already supports bounded original fields, exact-key same-release joins and finite native reported_measurement fields; source_fact_evaluation.py provides group-weighted coverage, failure accounting and separate null measurement completion.",
+      "implementation_consequence": "Implement a separately versioned generic source-only builder after P04 terminal closeout. Do not loosen the current P04 builder or claim the proposed interfaces already exist."
+    },
+    "catalog": {
+      "observed_issue": "The reviewed catalog still describes credible-set/study products with queued/not_run acquisition blockers. Completed credible-set acquisition metadata must be reconciled before a later scan plan pins actual files.",
+      "not_inferred": "Complete credible-set acquisition does not establish study-table acquisition, lawful redistribution, date eligibility, upstream study identity or scientific qualification."
+    }
+  },
+  "actual_readiness": {
+    "candidate_universe": {"value": null, "reason": "No new source-neutral candidate inventory has been scanned or selected."},
+    "eligible_fresh_candidate_count": {"value": null, "reason": "Exposure, source admission, measurements and dependence groups have not been established for a new universe."},
+    "independent_group_count": {"value": null, "reason": "No verified study/article/locus/family dependence register exists for new candidates."},
+    "answerable_measurement_group_count": {"value": null, "reason": "No fresh candidate field-availability scan or independent reference derivation has been performed."},
+    "actual_source_file_pins": {"value": null, "reason": "Do not freeze actual source-file pins until P04 has a terminal closeout and source catalog/acquisition metadata have been reconciled."},
+    "eligible_original_source_snapshot": {"value": null, "reason": "A new admitted original-only snapshot has not been compiled."},
+    "cutoff_utc": {"value": null, "reason": "A new contemporary cutoff must follow admitted download/annotation availability; no historical backfill is assumed."},
+    "final_arm_schedule": {"value": null, "reason": "Actual feasible counts, task sizes, controls and resource fit are unknown."},
+    "final_resource_budget": {"value": null, "reason": "The illustrative envelope below is not an execution budget or measured fit."},
+    "precision_acceptance": {"value": null, "reason": "An independent-group count and a prospective inferential target are required before any precision claim."},
+    "reference_set": {"value": null, "reason": "No fresh source-derived references have been built or inspected for this design."}
+  },
+  "ordered_gates": [
+    {
+      "gate": "G0_P04_TERMINAL_CLOSEOUT",
+      "required_evidence": "Retained terminal accounting and immutable closeout for every scheduled current P04 cell, including failures/unexecuted dispositions, before implementing source changes or reconciling metadata for a new scan.",
+      "current_status": "unknown",
+      "unknown_reason": "No P04 candidate or terminal-output artifact was inspected in this design."
+    },
+    {
+      "gate": "G1_METADATA_RECONCILIATION",
+      "required_evidence": "Reconcile exact existing receipt/index acquisition evidence with catalog collection/parse/validation states without promoting acquisition to scientific validation. Record unresolved source families separately.",
+      "current_status": "not_done_by_this_design",
+      "unknown_reason": "This artifact does not modify the catalog or acquire sources."
+    },
+    {
+      "gate": "G2_GENERIC_BUILDER_CONTRACT_AND_ACCEPTANCE",
+      "required_evidence": "Implement the proposed source-only declarative builder and admission/register interfaces with meaningful synthetic negative controls, independent original-to-fact checks and exact legacy P04 regressions. Version all changed contracts.",
+      "current_status": "not_implemented",
+      "unknown_reason": "Only design and API notes are authorized now; the live P04 protocol pins the complete src inventory."
+    },
+    {
+      "gate": "G3_BOUNDED_FULL_INVENTORY_FEASIBILITY",
+      "required_evidence": "Approve a neutral scan plan after G0-G2; declare its complete existing inventory, projections, budgets, exposure policy and exclusions before reading candidate values. Retain counts and every terminal scan disposition.",
+      "current_status": "not_run",
+      "unknown_reason": "No new original-row scan is performed or authorized by this design."
+    },
+    {
+      "gate": "G4_SCOPE_AND_PRECISION_DECISION",
+      "required_evidence": "Use actual admitted fresh measurement tasks and conservative dependence groups to select the reporting claim, precision objective, all-cell schedule, controls, resources and fallback. Check exact-projection ceiling before locking on exposed development only.",
+      "current_status": "pending_data",
+      "unknown_reason": "The actual fresh universe, study mappings and local task-size/resource fit are unknown."
+    },
+    {
+      "gate": "G5_SEPARATE_PROSPECTIVE_LOCK",
+      "required_evidence": "Create a separate immutable execution protocol only after prior gates pass; include actual source/reference/code/runtime pins, complete schedule, all exclusions, primary contrast, intervals, budgets and no-retry rules before any new candidate generation.",
+      "current_status": "not_locked",
+      "unknown_reason": "This design is explicitly not a lock and contains no eligible-cohort assertion."
+    }
+  ],
+  "proposed_interfaces": {
+    "status": "requirements_only_not_existing_public_api",
+    "declarative_source_spec": {
+      "required_fields": ["schema_version", "spec_id", "source_families", "scope_frame_rule", "record_selector", "field_requests", "join_specs", "collection_policy", "exposure_policy_version", "dependence_policy_version", "resource_limits"],
+      "source_family_spec": ["dataset_id", "release_policy", "allowed_roles", "original_only", "schema_requirements", "receipt_requirements", "date_requirements", "rights_requirements"],
+      "scope_frame_rule": "Specify the entire finite metadata-defined frame independently of observed candidate/model success; do not embed selected biological IDs in this design.",
+      "record_selector": {
+        "allowed_operations": ["exact_native_key_match", "declared_exact_key_join", "stable_native_key_order", "stable_physical_locator_tiebreak", "explicit_bounded_inventory_enumeration"],
+        "forbidden_operations": ["arbitrary_code_or_expressions", "fuzzy_or_nearest_locus_resolution", "AI_semantic_selection", "first_successful_or_best_scoring_candidate", "implicit_first_row_for_multiplicity", "unrecorded_partial_inventory"],
+        "requirements": "Same rule for every eligible member of the declared frame; fully enumerate matches within the declared inventory before applying a prespecified count cap. Conflicting duplicate identities block or retain an explicit conflict, without favorable substitution."
+      },
+      "field_requests": "Literal original top-level fields, existing known family labels, deterministic group rules, original unit_field or null, and explicit empty policy. No derived direction, effect conversion, numeric coercion or invented context.",
+      "join_specs": "Explicit left/right keys, native exact type/value matching, same-release requirement in the current reference contract, cardinality and bounded inventory completeness. Retain zero, one, multiple and conflicting matches with all selected locators."
+    },
+    "metadata_reconciliation": {
+      "proposed_name": "reconcile_source_inventory_metadata",
+      "inputs": ["catalog", "existing_receipt_and_index_metadata", "explicit_approved_roots", "declared_source_families"],
+      "outputs": ["reconciled_metadata_report", "separate_gate_blockers", "unresolved_source_families"],
+      "boundary": "Metadata-only; never infer row content, scientific readiness or source eligibility from a completion count alone. Actual source pins are a later artifact after reconciliation."
+    },
+    "feasibility_scan_plan": {
+      "proposed_name": "plan_source_fact_feasibility",
+      "inputs": ["declarative_source_spec", "reconciled_metadata_report", "exposure_register", "explicit_resource_limits"],
+      "outputs": ["bounded_complete_inventory_plan", "projected_columns", "candidate_register_schema", "planned_scan_terminal_dispositions"],
+      "boundary": "Requires G0-G2. Plans inventory/projections and constraints; does not select actual candidates or assert measurements."
+    },
+    "feasibility_scan": {
+      "proposed_name": "scan_source_fact_feasibility",
+      "inputs": ["separately_approved_scan_plan", "authenticated_original_inventory", "catalog_and_deny_policy", "explicit_approved_roots", "deadline_and_caps"],
+      "outputs": ["candidate_and_exclusion_register", "exposure_and_dependence_register", "sanitized_field_availability_counts", "complete_scan_accounting", "resource_accounting"],
+      "boundary": "Not implemented or runnable by this artifact. No model calls, reference grading, output-aware selection or biological outcomes. Keep any value-bearing intermediate restricted and outside generation/reference contexts."
+    },
+    "source_only_generation": {
+      "proposed_name": "prepare_source_fact_generation_inputs_v2",
+      "inputs": ["neutral_task_plan", "admitted_original_inventory", "catalog_and_deny_policy", "explicit_approved_roots", "expected_plan_and_inventory_hashes", "deadline_and_caps"],
+      "outputs": ["agent_visible_original_only_packets", "value_free_binding_skeletons", "source_ancestry_and_receipt_proofs", "blocked_task_dispositions"],
+      "forbidden_inputs": ["compiled_references", "reference_manifests_containing_answers", "scores", "candidate_outputs", "human_response_or_response_derived_ancestors", "P02_evaluator_only_selected_row_packets"],
+      "boundary": "Read originals independently; every source, mapping and neutral-plan ancestor must be admitted. Packets may contain requested original source values but never expected reference answers. The selector and task slots must have clean prospective provenance."
+    },
+    "independent_reference": {
+      "proposed_name": "prepare_source_fact_references_v2",
+      "inputs": ["same_neutral_task_plan", "independently_admitted_original_inventory", "catalog_and_deny_policy", "explicit_approved_roots", "independent_task_source_hash_anchors", "deadline_and_caps"],
+      "outputs": ["evaluator_only_verified_references", "independent_original_to_slot_derivation_checks", "source_and_method_seals", "unresolved_reference_dispositions"],
+      "forbidden_inputs": ["candidate_outputs", "candidate_scores", "generation_emitted_values", "human_response_descendants", "clinical_outcomes"],
+      "boundary": "Reconstruct locators, joins and expected literal facts directly from admitted originals under the same neutral rule; do not derive expected facts from the generation packet. Reuse compile_reference/verify_reference only with independently checked selection/derivation and externally supplied approved roots. Seal references before new generation; never feed them to generation or stage control."
+    },
+    "scoring_and_analysis": {
+      "proposed_name": "score_source_fact_study_v2",
+      "inputs": ["later_frozen_complete_cell_schedule", "original_emitted_bytes_or_terminal_events", "source_verified_references", "frozen_dependence_register", "frozen_analysis_spec"],
+      "outputs": ["all_cell_accounting", "measurement_and_context_components", "paired_group_level_summaries", "missing_input_and_fault_control_summaries", "resources_and_unknowns"],
+      "boundary": "The common adapter reads emitted bytes only and does not repair/insert values. Preserve unreadable and unsuccessful cells in the planned-cell denominator. No inherited acceptance is claimed for this proposed API."
+    }
+  },
+  "register_schema": {
+    "schema_kind": "requirements_schema_v1_not_an_instantiated_register",
+    "unknown_value_contract": "An unavailable field is represented by value:null plus a nonblank reason; unknown is never zero, a negative biological result or an independent-group assertion.",
+    "candidate_row": {
+      "required": ["candidate_id", "neutral_spec_id", "scope", "source_bindings", "selection_rule_version", "requested_field_families", "field_availability", "join_status", "gate_statuses", "exposure_event_ids", "dependence_node_ids", "group_assignment", "disposition", "disposition_reason", "decision_provenance"],
+      "scope": "Target/indication IDs and namespace versions with nullable action/modality/tissue and explicit reasons; preserve source context without inferring intervention biology.",
+      "source_bindings": "Dataset/source/release ID, logical path, bytes/hash/receipt hash/schema hash and physical locator. Bind actual values only in a later restricted instantiated register.",
+      "requested_field_families": "identity_linkage, reported_context, reported_measurement and provider_metric are separate. Provider scores are never effect measurements.",
+      "field_availability": "Per requested literal field: schema presence, native type class, null/empty/nonempty status, finite-number QC, original unit-field availability and unknown reason. Sanitized exports contain counts/status, not reference values.",
+      "join_status": "Declared key/cardinality/inventory scope, counts of zero/one/multiple/conflicting exact matches, duplicate physical occurrences and unresolved reasons. Completeness is bounded to the declared inventory.",
+      "gate_statuses": "Separate rights, date, admission, publication, exposure, study_identity and source_role assessments. Each has pass/fail/unknown/not_applicable, evidence metadata and a reason; no omnibus ready Boolean substitutes for them.",
+      "group_assignment": "All available study/cohort/article/locus/target-family nodes and conservative connected dependence-group ID, with verification status and unknown reasons.",
+      "disposition_enum": ["considered", "blocked", "excluded_development_exposure", "excluded_source_gate", "excluded_unresolved_identity", "excluded_resource_limit", "eligible_pending_lock", "selected_by_later_frozen_rule", "not_selected_by_later_frozen_rule"],
+      "decision_provenance": "Metadata rule/version and timestamp; no candidate outcome, reference score or post-generation repair criterion. Preserve every considered candidate and exclusion."
+    },
+    "exposure_event": {
+      "required": ["event_id", "subject_kind", "subject_id", "exposure_category", "actor_role", "evidence_artifact", "event_time", "content_extent", "propagation_rule_version", "unknown_reason"],
+      "exposure_category_enum": ["source_inventory_metadata_only", "sealed_reference_preparation_only", "development_source_content", "prompt_or_tuning_use", "candidate_output_inspection", "response_derived", "unknown"],
+      "content_extent": "Distinguish filenames/counts from original row content, reference answers and generated output. Metadata-only access is not silently equated to answer exposure.",
+      "propagation": "Apply the later declared policy through duplicate records, studies/cohorts/articles/loci/related hypotheses and response-derived descendants. Known development/tuning items and used controls cannot become fresh locked cases. Sealed reference preparation is permitted only under enforced generation isolation.",
+      "freshness_claim": "Project exposure under this declared policy only; public-source absence from model training is unknown."
+    },
+    "dependence_node": {
+      "required": ["node_id", "node_kind", "native_identifier_or_unknown", "namespace_or_release", "verification_status", "evidence_metadata", "unknown_reason"],
+      "node_kind_enum": ["source_record", "upstream_study", "cohort", "article", "study_locus", "variant_region", "target_family", "hypothesis"],
+      "verification": "Retain native studyId separately from verified upstream study/cohort identity. Unverified native IDs do not establish independent studies. Article equivalences need deterministic metadata evidence; locus/family rules must be declared without inferred causal interpretation."
+    },
+    "dependence_edge": {
+      "required": ["left_node", "right_node", "edge_kind", "evidence_metadata", "confidence_status", "policy_version", "unknown_reason"],
+      "edge_kind_enum": ["duplicate_original_record", "same_verified_study", "shared_cohort", "same_article", "same_declared_locus_or_region", "same_source_defined_target_family", "same_related_hypothesis", "possible_dependence_unknown"],
+      "grouping_rule": "Conservative connected components of declared dependence edges; allocate entire components to development or evaluation. Keep multiway identifiers for sensitivity analyses. Shared release or Parquet file alone is not biological dependence.",
+      "unresolved_policy": "Do not count unresolved study/article/locus/family relationships as proven independence. Exclude from inferential groups or retain under a declared conservative coalescing sensitivity; report exploratory case-level results separately."
+    },
+    "scan_disposition": {
+      "required": ["scan_unit_id", "planned_inventory_id", "terminal", "reason", "rows_or_groups_processed", "coverage_completeness", "elapsed_seconds", "logical_bytes", "unknown_counters"],
+      "terminal_enum": ["completed", "blocked_before_values", "failed", "timeout", "interrupted", "unexecuted"],
+      "rule": "Every planned inventory unit has one terminal disposition; partial enumeration cannot be relabeled complete or treated as an exhaustive zero."
+    }
+  },
+  "neutral_full_inventory_feasibility_plan": {
+    "status": "NOT_RUN_NOT_FROZEN",
+    "inventory_basis": "Only existing acquired originals in later reconciled source-family inventories, selected by neutral metadata requirements; no new download or response-derived packet.",
+    "actual_filenames_hashes_and_counts": {"value": null, "reason": "Freeze these in a separate scan artifact only after current P04 terminal closeout and catalog reconciliation."},
+    "candidate_scope_ids": {"value": null, "reason": "No candidate selection or biological source-value scan is performed by this design."},
+    "steps": [
+      "Declare the source-family/frame rule, exact schemas/columns, exposure policy, dependence policy and finite byte/file/row/time/memory caps before reading original candidate values.",
+      "Authenticate the whole declared inventory, receipt bindings, roles, deny ancestry, availability and schemas before any candidate value projection; retain separate gate failures.",
+      "Enumerate key columns across every planned eligible file and row group, with a stable physical locator. Do not stop at a promising shard or first useful candidate.",
+      "Project requested literal measurements/context for all exact matches admitted by the declared key rule; enumerate every match before any prespecified stable count cap.",
+      "Preserve duplicates, conflicting values and unresolved joins; zero within a complete declared inventory remains collection-bounded and never biological absence.",
+      "Construct sanitized availability and full candidate/exclusion/exposure/dependence registers. Keep original values in their restricted source context, not this design or general planning prose.",
+      "Measure preparation, hashing, projected logical bytes, peak-memory counters and time. Leave physical I/O and unobserved platform/reference costs null with reasons.",
+      "Reconcile every planned scan unit to a terminal disposition; if inventory/budget completion fails, stop the completeness claim without favorable replacement scans."
+    ],
+    "resource_caps": {"value": null, "reason": "A later metadata-sized plan must set actual caps; P04 preparation bounds do not establish fit for new measurement joins."},
+    "output_boundary": "Feasibility counts and gates precede candidate generation. Any actually examined development content is exposure-tagged; no observed successful candidate is silently promoted to fresh evaluation."
+  },
+  "proposed_reporting_task_and_endpoint": {
+    "status": "PROPOSED_NOT_LOCKED",
+    "endpoint_id": "source_composed_measurement_reporting_completion.proposed_v1",
+    "p04_endpoint_changed": false,
+    "task": "Compose eligible original records under an exact target/indication anchor and declared same-release study/locus joins, then report requested native measurements, context and explicit collection-bounded unknowns with original bindings.",
+    "nontrivial_scope_gate": "A later measurement task must demonstrate actual exact-key multi-record composition and answerable measurement groups beyond identifiers/dates. Predeclare minimum measurement-content requirements on exposed development before the fresh scan/lock; do not choose them using new candidate output performance.",
+    "minimum_content_rule": {"value": null, "reason": "Whether effect, uncertainty and significance groups can all be supported across fresh sources is unknown. A development contract decision is required before fresh selection."},
+    "primary_family": "reported_measurement",
+    "supporting_families": ["identity_linkage", "reported_context"],
+    "provider_metric_policy": "Descriptive only; no primary measurement credit, effect-size substitution or scientific importance inference.",
+    "measurement_group_policy": {
+      "group_identity": "One record and one family per group, as required by the current compiler; preserve every requested field and source binding.",
+      "proposed_groups": [
+        {"semantic_role": "reported_effect", "literal_field_examples": ["beta", "oddsRatio"], "rule": "Use the applicable original field only; do not convert scales or infer direction on a gene/drug."},
+        {"semantic_role": "reported_uncertainty", "literal_field_examples": ["standardError", "betaConfidenceIntervalLower", "betaConfidenceIntervalUpper"], "rule": "Group a requested interval's lower/upper components together; no computed interval substitutes for missing originals."},
+        {"semantic_role": "reported_significance", "literal_field_examples": ["pValue", "pValueMantissa", "pValueExponent"], "rule": "Use a frozen native representation; group mantissa/exponent together rather than creating two independent outcomes. Do not reconstruct or round a p-value."}
+      ],
+      "weights": "Average matched-slot fractions equally across answerable predeclared measurement groups. Unknown-only groups have no coverage denominator. Preserve group/slot/family counts and full coverage distributions.",
+      "critical_error_policy": "Retain the current common mechanical policy for wrong native values/types, units, sources, unknown reasons, duplicate/conflicting emissions and invented facts. Correct facts do not offset errors.",
+      "completion_rule_proposal": "Valid answered/partial output, correct collection disposition, zero mechanical critical errors and at least 80% answerable measurement-group coverage. Freeze 60/80/100% sensitivity reporting before generation.",
+      "zero_measurement_groups": "Measurement coverage and completion remain null; no identifier, date, provider score or correct unknown can rescue a measurement endpoint.",
+      "unknown_only_task": "Score bounded insufficient-input handling separately; 0/0 never passes coverage.",
+      "independence": "Facts, groups, repeated passages, records, conditions, judges and arms are not independent biological cases."
+    },
+    "exact_unknowns": {
+      "current_wire_fact_reasons": ["field_not_in_schema", "null_source_value", "empty_source_value", "unavailable_join", "conflicting_join", "failed_qc"],
+      "collection_states": ["selected_records", "zero_matches_selected_collection", "incomplete", "failed_qc"],
+      "join_states": ["matched", "unavailable_key", "missing_input_in_partial_collection", "zero_matches_selected_collection", "unresolved_multiplicity", "conflicting_values"],
+      "unit_policy": "unit is the literal original unit_field value or null. The current wire has no unit-specific unknown-reason field; distinguish absent/unrequested/null/unverified units in source/register metadata with value:null plus a reason. Do not invent unit reasons or new wire fields without a separately versioned, tested contract.",
+      "sample_size_and_ancestry": "Request only supported literal original context fields. Preserve native schema absence/null/empty distinctions; do not borrow context from unrelated records or infer it from locus/study IDs.",
+      "native_measurement_qc": "Finite native integers/floats excluding Boolean; pValueExponent is an integer. Incompatible types fail QC rather than being coerced. Preserve native typed values and signed zero.",
+      "study_identity": "Unknown verified upstream study identity is a dependence/admission metadata blocker, not a fabricated unknown measurement or proof of independence.",
+      "semantic_limit": "Native source reporting does not establish unit validity, causal target relevance, biological direction, clinical efficacy, scientific truth, MR validity or therapeutic usefulness."
+    },
+    "ceiling_check": "On exposed development only, run exact literal projection under the same admitted sources/slots/common bounds. If it reaches the reporting ceiling, frame later work as verification/completion/resource tradeoffs; do not claim biomedical reasoning gains or alter locked tasks after seeing arm outcomes."
+  },
+  "separate_gate_blockers": [
+    {"gate": "rights", "question": "Are exact artifact access, use, attribution and redistribution dispositions established?", "status": "unknown", "reason": "Provider visibility/code licensing do not establish every source asset's rights; no new rights review is performed here."},
+    {"gate": "date", "question": "Do source/annotation/public availability and receipt instants qualify under the exact new cutoff?", "status": "unknown", "reason": "No new cutoff or source snapshot is frozen; complete acquisition alone is insufficient."},
+    {"gate": "admission", "question": "Do whole-ancestry hashes, receipts, trusted roots, deny lists, schemas and scope pass?", "status": "unknown", "reason": "No new source inventory has undergone admission under a P05 contract."},
+    {"gate": "publication", "question": "Are original publication identity/date and reported evidence provenance established separately from data-release dates?", "status": "unknown", "reason": "Native study identifiers and file receipt dates do not verify an upstream article or publication context."},
+    {"gate": "exposure", "question": "Is each candidate and related group eligible under the prospective project-exposure policy?", "status": "unknown", "reason": "The new candidate universe and exposure register are not instantiated; existing development units stay exposed."},
+    {"gate": "study_identity", "question": "Can upstream studies/cohorts/articles/loci/families be verified well enough for the declared grouping and precision claim?", "status": "unknown", "reason": "The developmental credible-set native studyId was retained without verified upstream study metadata; no new independent-group count is available."},
+    {"gate": "source_role", "question": "Are original source/mapping ancestors lawfully admitted to agent_evidence/reference roles and all evaluator/response descendants excluded?", "status": "unknown", "reason": "Catalog roles are necessary but do not promote evaluator-only descendants or substitute for a new ancestry check."}
+  ],
+  "analysis_and_precision_requirements": {
+    "status": "NOT_LOCKED",
+    "primary_contrast_proposal": "AsOf reporting adaptation versus plain evidence-grounded reporting using the same one existing pinned local model and common source view.",
+    "primary_estimand": {"value": null, "reason": "Decide between a finite selected-frame descriptive estimand and a defensible independent-group generalization target after actual source feasibility; convenience selection does not imply population representativeness."},
+    "proposed_unit": "At most one primary task per conservative independent dependence component where practical; otherwise predeclare component aggregation/weighting. Conditions and repeated records remain paired within that component.",
+    "reporting": "Report all paired outcomes, discordances, case/group counts, coverage distribution, mechanical critical errors, abstention, missing-input handling and terminal failures. Distinguish actual from synthetic conditions.",
+    "desired_half_width": {"value": null, "reason": "A precision objective must be chosen prospectively with the intended claim and actual feasible independent-group count."},
+    "interval_method": {"value": null, "reason": "Predeclare and implement the exact paired/group-aware method before lock. Do not use a slot-level binomial interval or a small-cluster bootstrap as automatic precision acceptance."},
+    "conservative_planning_example": "For independent group-level paired differences bounded in [-1,1], Hoeffding gives a two-sided 95% half-width sqrt(2*ln(40)/N); half-width <=0.20 requires N>=185. This illustrative distribution-free calculation is not a sample-size promise, assumes independent admitted groups and does not establish representativeness.",
+    "small_group_policy": "If fresh coverage, verified independence or attainable precision is inadequate, freeze exploratory source-reporting/technical feasibility scope before generation and report selection limitations. Do not multiply slots, variants, synthetic conditions or judges into a larger N.",
+    "sensitivity_requirements": ["Frozen 60/80/100% completion thresholds.", "Measurement-only versus supporting-context components.", "Conservative unresolved-dependence coalescing/exclusion.", "Every planned terminal cell retained; no successful-output-only completion denominator."]
+  },
+  "illustrative_resource_envelope_only": {
+    "status": "ILLUSTRATIVE_NOT_SCHEDULED_NOT_AUTHORIZED_FOR_EXECUTION",
+    "fresh_clean_groups": 12,
+    "synthetic_withholding_conditions": 3,
+    "independent_biological_context_increment_from_withholding": 0,
+    "arm_types": ["exact_literal_assembler", "always_abstain", "plain_same_model_typed_report", "asof_declared_two_stage_typed_report"],
+    "illustrative_scheduled_cells": 60,
+    "scheduled_cells_formula": "4 * (12 clean + 3 withheld)",
+    "illustrative_max_generation_calls": 39,
+    "generation_calls_formula": "12 * (1 plain + at most 2 AsOf) + 3 * (1 plain + 0 AsOf missing-input preflight); deterministic arms make no model calls.",
+    "assumptions": "Same one existing acquired local model/runtime; source-only packets; AsOf second stage only under a prospectively declared structural gate, never reference-score feedback. This equation is not evidence that 12 fresh groups exist or that task sizes fit.",
+    "controls_and_ablations": "Additional synthetic fault/valid-control/ablation cells are not included in 60/39. A later protocol must enumerate their full conditions, calls, matched valid controls, independent-case status and aggregate limits before execution.",
+    "resource_limits": {"value": null, "reason": "Per-cell/aggregate time, token, byte and memory caps require new task-size and measured access preflight; current P04 caps are historical design inputs only."},
+    "fixed_constraints": ["One already acquired local model; no new downloads or stronger-model assumption.", "Provider spending stays $0; that is not total cost.", "Sequential owned local server and bounded launch/termination if a later qualified runner is used.", "No response-dependent retry, repair, case substitution or unreported expansion.", "Count source preparation failures, independent reference construction, hashing/indexing/setup, every stage and scoring overhead separately.", "Keep unmeasured physical I/O, native peak-memory and platform/reference costs null with reasons."]
+  },
+  "verification_for_this_design": {
+    "required": ["Parse the new design as strict JSON.", "Check DESIGN_NOT_LOCKED and absence of a concrete cohort/source pin/schedule.", "Check the illustrative 60-cell/39-call arithmetic without asserting feasibility.", "Compute SHA-256 and byte sizes of the two new P05 assets."],
+    "not_claimed": "No application tests, data replay, source scans, model runs, P04 acceptance changes, cohort qualification or prospective lock."
+  },
+  "reviewed_source_paths": [
+    "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+    "planning/AI Only Evaluation Plan 2026-10-31.md",
+    "docs/SOURCE_FACT_EVALUATION.md",
+    "src/asof/study/source_fact_sources.py",
+    "src/asof/study/source_fact_inputs.py",
+    "src/asof/study/source_fact_evaluation.py",
+    "data/catalog/sources.json",
+    "planning/review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json",
+    "planning/review-assets/preprint-p02-20261031/COMPLETED-JOIN-REPORT-v2.json"
+  ]
+}
