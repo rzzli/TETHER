@@ -10,7 +10,20 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
-Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Validation Registry]].
+Current checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Reference Completion]].
+P05c complete: twelve references verified and independently projected from24
+original rows/180facts;1,163checks pass,41fictional regressions pass. Native
+identity108/132 and measurement40/48 components populated,32native-null unknowns.
+Producer342.75s; RSS/peak unmeasured due absentoptionalpsutil/nofallback. Original
+run preserved; upcomingrunner memory fallback must qualify before READY.
+P05d exposure/dependence/denominator register, packet-only assembler/runner and
+38output/90decision protocol freeze pending. No actual study output. No further
+modelcalls, downloads or experts; P06–P10/paper and wider programmes unfinished.
+See [[research-log-2026-11-01-source-references]].
+
+### Prior registry/input checkpoint (retained history)
+
+Checkpoint: [[Project Progress Reassessment 2026-11-01 - Source Validation Registry]].
 P05a/P05b complete: all137 originals/receipts, complete1,753,850-row registry,
 twelve identity-ranked units and all original-only input packets verified.
 Independent registry checks789; separate input checks1,238, reconstructing

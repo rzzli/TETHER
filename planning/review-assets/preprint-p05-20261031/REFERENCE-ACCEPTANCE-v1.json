@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "ACCEPTED_TECHNICAL_P05C",
+  "recorded_at_utc": "2026-11-01T08:30:43.403822+00:00",
+  "scope": "Twelve source references only; P05d and paper unfinished",
+  "run": "data/benchmark/gold_evidence/preprint-p05-references-20261101T081933Z",
+  "pins": {
+    "builder_sha256": "c6850eb84953a7102f68bbfbb11550602267046f0eef3533636b65d8731aa9c6",
+    "independent_input_audit_script_sha256": "785158a9ecd424bbec5da6897a55dfc996bcfc1387e1265b6c983a06829dd592",
+    "independent_registry_audit_primitives_sha256": "88a10f870ff75ca7445ba5fe4e6823afe9b7575e80e74e53210fd67c217f61fa",
+    "journal_sha256": "8d0a69e63b1e2662875775c69f4f38634249752e61620c8153b0cdffd7a73d7b",
+    "manifest_sha256": "f29444743dfa2acc9cb0a555d5f39ce866a5da04ec919280cb17afe2f82ab13a",
+    "plan_sha256": "f8dbfd218f99fb2d694b78b606cb7d183fd267639159e0895c1bafb93741617b",
+    "pre_run_commit": "f4897f6c4482e2f56d2dae7d01bdcea89b3d4456",
+    "ready_sha256": "8dcd3a4a0b328a48d6ad2bb2ceaa73660f757cdf23daf546a761025123cf7800",
+    "seal_sha256": "2729ed34cd863f369be4804e849b5dacead45152962acac3cdb5c289a3435ae4"
+  },
+  "audit_sha256": "02242b6e59dad8a000fcb13b52d8fc884852efa129e8781c724732797e08d28d",
+  "independent_checks": 1163,
+  "byte_integrity": "verified",
+  "semantic_consistency": "verified against independent original projection",
+  "scientific_validation": "not_established",
+  "original_rows_checked": 24,
+  "facts_checked": 180,
+  "fact_family_counts": {
+    "identity_linkage": 132,
+    "reported_measurement": 48
+  },
+  "fact_unknown_reason_counts": {
+    "known": 148,
+    "null_source_value": 32
+  },
+  "group_counts": {
+    "identity_linkage": 24,
+    "reported_measurement": 12
+  },
+  "root_targeted_tests": {
+    "methods": 41,
+    "failures": 0,
+    "skips": 0,
+    "wall_seconds": 23.967,
+    "log_sha256": "6c184b4606e5b617b359ed6006eacbd5f08ea30329d082809633bff10106c232"
+  },
+  "producer_resources": {
+    "base_failed_calls_with_unmeasured_partial_hash_bytes": 0,
+    "base_hash_accounting": "two completed hash passes per retained source_proof: InputGraph.verify and stable source/receipt hash",
+    "bounds": {
+      "fields_per_task": 512,
+      "fresh_compressed_input_bytes": 4294967296,
+      "joins_per_task": 32,
+      "original_files": 137,
+      "output_bytes": 536870912,
+      "records_per_task": 64,
+      "seconds": 2400
+    },
+    "enforcement": "cooperative; no hard OS watchdog",
+    "fresh_original_compressed_bytes": 2866248239,
+    "logical_base_completed_hash_bytes": 206378228880,
+    "logical_bytes_hashed_by_wrapper": 5732728580,
+    "logical_original_compressed_bytes_scanned": 5732496478,
+    "model_calls": 0,
+    "output_bytes_before_report_and_seal": 9179294,
+    "peak_sampled_process_rss_bytes": null,
+    "physical_io_bytes": null,
+    "physical_io_status": "not_measured",
+    "process_peak_working_set_bytes": null,
+    "provider_cost_usd": 0,
+    "scan_accounting": "completed HGNC/target/disease and GWAS/credible projection passes; failed partial passes unmeasured",
+    "wall_seconds": 342.75
+  },
+  "resource_limitation_sha256": "2bca580bc4f4a4507924b3fba96e8226f95f739e79d0b7bda25dee2e8af726f1",
+  "retained_audit_attempts": [
+    {
+      "cause": "missing platform module import in checker",
+      "checker": "audit_source_references_v1_attempt1.py",
+      "checker_sha256": "dee19d6f880e135b48d50f5526fbbf7382f7581e9be86035df86ee155ef6a334",
+      "error_class": "NameError",
+      "original_source_values_read": 0,
+      "report": "REFERENCE-AUDIT-v1-attempt1.json",
+      "sha256": "8362d3e26a692a97a3a4d79d09d1cbfb53e52e324b88dbf4630f27b80384015f",
+      "status": "INCOMPLETE_OR_FAILED_REFERENCE_AUDIT",
+      "tool_process_wall_seconds": 1.0755454
+    }
+  ],
+  "model_calls": 0,
+  "provider_cost_usd": 0,
+  "originals_and_transport_receipts_modified": false,
+  "next_gate": "P05d native metadata register, experiment-only runner/fictional qualification and final pre-execution protocol freeze"
+}

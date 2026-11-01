@@ -1,6 +1,6 @@
 # Project progress reassessments
 
-Current checkpoint: [1 November source registry and input completion](<Project Progress Reassessment 2026-11-01 - Source Validation Registry.md>). P05a/P05b are verified: full physical-row registry and twelve identity-ranked units pass 789 independent checks; twelve original-only packets and 180 fact bindings pass 1,238 further checks. P05c/P05d references and experiment freeze are next. P02a, P04 and P04b retain their bounded acceptance and negative model results; model scaling remains closed. No fresh-cohort/independence or biological-validation claim. Paper and wider scientific routes remain unfinished. No external expert input or native revival is needed.
+Current checkpoint: [1 November source-reference completion](<Project Progress Reassessment 2026-11-01 - Source Reference Completion.md>). P05a–P05c verified: registry789checks, inputs1,238checks, references1,163checks. All twelve references/180facts match24distinct original rows. Producer memory remains unmeasured; upcomingrunner must qualify its fallback. P05d register/runner/protocol freeze and P06–P10 unfinished. P02a/P04/P04b bounded acceptances and negative model results remain; model scaling closed. No independent-study, fresh exposure or biological-validation claim. No external expert input or native revival.
 
 At each major completion, retain a dated assessment of the complete recovery
 plan and original project scope. Separate accepted implementation, current

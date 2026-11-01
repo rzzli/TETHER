@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "scope": "post_run_reference_resource_instrumentation_limitation",
+  "run": "data/benchmark/gold_evidence/preprint-p05-references-20261101T081933Z",
+  "seal_byte_sha256": "2729ed34cd863f369be4804e849b5dacead45152962acac3cdb5c289a3435ae4",
+  "producer_wall_seconds": 342.75,
+  "producer_peak_sampled_rss_bytes": null,
+  "producer_process_peak_working_set_bytes": null,
+  "reason": "The frozen v1 reference wrapper uses optional psutil for both memory fields and has no dependency-free fallback. psutil is absent in the pinned interpreter. Both fields are unmeasured, rather than zero or a qualified memory bound.",
+  "independent_probe": {
+    "psutil_available": false,
+    "existing_asof_ingest_windows_peak_helper_returned_bytes": 21467136,
+    "basis": "A separate post-run Python process; this is a helper-availability check only and cannot measure or reconstruct producer memory."
+  },
+  "preservation": "No production artifact or frozen v1 builder was changed and no reference build repeated. Producer memory cannot be recovered after process closure.",
+  "future_requirement": "The experiment runner must qualify dependency-free Windows RSS/peak collection before READY, record its own readings and fail its memory-resource gate if readings are unavailable. Audit memory remains separate from producer memory.",
+  "physical_io_bytes": null,
+  "scientific_validation": "not_established"
+}

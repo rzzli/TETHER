@@ -1,3 +1,5 @@
+Historical checkpoint: references were pending at this stage. The [later source-reference completion](<Project Progress Reassessment 2026-11-01 - Source Reference Completion.md>) is current.
+
 # Source registry completion and remaining validation work
 
 1 November 2026, America/Los_Angeles. **The prospective source registry is built

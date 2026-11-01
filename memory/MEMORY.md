@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-source-registry-inputs]] - Current: P05a/P05b complete: all137 originals/receipts, full1.75m-row registry/twelve identity-ranked units verified (789checks); original-only12packets/180bindings independently verified (1,238checks). References/experiment freeze and P06–P10 unfinished. Model branch closed; no biological truth/independent study claim, experts/downloads/monitor.
+- [[research-log-2026-11-01-source-references]] - Current: P05c complete, twelve refs/180facts/all24source rows independently verified (1,163checks),41fictionaltests pass. Production342.75s; producer memory unmeasured. P05d dependence/denominator register and experimentrunner/freeze pending, P06–P10 unfinished. Modelbranchclosed; no experts/downloads/monitor or biological truth claim.
+
+- [[research-log-2026-11-01-source-registry-inputs]] - Prior checkpoint: P05a/P05b complete: all137 originals/receipts, full1.75m-row registry/twelve identity-ranked units verified (789checks); original-only12packets/180bindings independently verified (1,238checks). References then pending.
 
 - [[research-log-2026-10-31-deterministic-paper-scope]] - Historical scope checkpoint: P04b verified negative (fictional 1/2, all70 pins/79 events/usage/cleanup pass); model branch closed with no further prompt retries. P05 source-validation registry/builder preparation from neutral137file/2.866GB metadata frame then pending.
 
