@@ -10,13 +10,14 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
-Current work: [[Research Release Qualification Plan 2026-11-01]]. Owner deferred
-declarations, so P08c stays pending while independent P09 preparation proceeds.
-New installed Windows source-reconstruction adapter, metadata bridge, rights/
-allowlist and release-gate corrections are in development. Metadata audit passes
-3,251 checks and focused tests pass; no actual native reconstruction or final full
-release qualification yet. Do not repeat the deferred author request or claim
-publication readiness. See [[research-log-2026-11-01-release-preparation]].
+Current work: [[Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction]].
+P09c passes first installed Windows reconstruction38hashes/90decisions from137
+complete relocated originals/receipts,6,862 independent source checks and2,400
+sealed-output peer checks.82 shipped tests/199 original study regressions pass.
+P09d core/full framework gates and final ZIP remain in progress. Owner deferred
+declarations: P08c/P10 facts stay pending; do not repeat the request or claim
+submission/publication readiness. All78 original code pins/results unchanged.
+See [[research-log-2026-11-01-installed-reconstruction]].
 
 ### Prior manuscript checkpoint
 

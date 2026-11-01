@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-release-preparation]] - Current: owner defers declarations, P09 proceeds with P08c pending. New separately versioned adapter and positive allowlist in development; bridge metadata passes 3,251 checks, focused source/control/CLI/auditor tests pass. No actual native reconstruction/full release gate yet; frozen P05/core unchanged.
+- [[research-log-2026-11-01-installed-reconstruction]] - Current: P09c passes first installed38-output/90-decision reconstruction from137 relocated originals,6,862 source-audit checks and2,400 sealed-run peer checks;82 installed tests/199 P05 regressions pass. Core/full gates/final ZIP pending; declarations deferred, P05 unchanged.
+
+- [[research-log-2026-11-01-release-preparation]] - Prior P09 preparation: audited source-only bridge, separately versioned adapter and311-member allowlist; actual reconstruction subsequently accepted in the current entry. Owner declarations remain deferred.
 
 - [[research-log-2026-11-01-manuscript-draft]] - Prior checkpoint: main/supplement, 13 references and 17-page PDF reviewed; 118 content checks, positioning, 273-unit text retention, eight negative formatter cases and byte repeat pass. Owner subsequently defers declarations and permits P09 work; no expert input or scientific truth claim.
 
