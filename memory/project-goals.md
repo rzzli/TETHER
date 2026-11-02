@@ -12,10 +12,10 @@ updated: 2026-11-02
 
 The owner has now activated [[TETHER Benchmark Execution Plan 2026-11-02]] as a
 sequential execution goal. [[research-log-2026-11-02-benchmark-execution]] and BG01–BG06
-in TODO are current. The three fixes and focused checks pass; a reviewed 0.3.12
-archive dependency profile corrects the first full gate's stale-profile failures.
-Fresh full and installed qualification are pending, so BG01 is incomplete. After
-it passes, implement and compare an independent equal-policy validator, add and
+in TODO are current. BG01 is complete locally: full2020/facade138 tests,
+current installed qualification and742 aggregate evidence checks pass on Windows.
+The three fixes, bounded replacement correction and reviewed profile migrations
+retain all earlier failures and old release bytes. Next, implement and compare an independent equal-policy validator, add and
 evaluate SciFact, add one LAB-Bench task family, and test an Inspect implementation.
 Earlier recommendation-only/inactive wording below retains its date-specific
 scope; it does not block the new goal. Historical failures/results, retired expert

@@ -2,7 +2,7 @@
 
 This table distinguishes the interface, version, input anchor and property being checked. A passing check establishes the stated consistency property; it does not establish biological truth, source authenticity or clinical validity. The [current corrective plan](<../planning/TETHER Corrective Execution Plan 2026-11-02.md>) and [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) retain the counterexamples that motivated these distinctions.
 
-The [new execution plan](<../planning/TETHER Benchmark Execution Plan 2026-11-02.md>) is active. TETHER 0.5.1/AsOf 0.3.12 are undergoing separate qualification for receipt-time consistency and failed-call usage accounting; the supporting transport verifier also gains non-replacing report publication. The qualified historical rows below do not certify this working revision. Preserve matching 0.5.0/0.3.11 wheels for older outer runs.
+The [execution plan](<../planning/TETHER Benchmark Execution Plan 2026-11-02.md>) is active. TETHER 0.5.1/AsOf 0.3.12 are [locally qualified](../planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md) for all-supplied-raw receipt-time consistency, retained failed-call usage and bounded Windows replacement; the supporting transport verifier prevents report/input aliasing and publishes without replacement. Full2020/facade138 tests and742 aggregate checks pass on Windows. Historical rows keep their stated scopes. Preserve matching 0.5.0/0.3.11 wheels for older outer runs; same-version development candidates also require matching code hashes.
 
 ## Qualified interfaces
 
@@ -32,16 +32,16 @@ Windows qualification uses the CLI polling loop with one reader per pipe. Micros
 
 Workflow token/cost/time budgets, individual filesystem read limits and a child-process envelope are different limits. An elapsed-time bound does not estimate scientific feasibility or guarantee that a large source build will fit. Neither the facade nor the frozen engine is an operating-system sandbox. Host compromise, malicious native code, forced termination, filesystem unavailability and unreported remote billing are outside these consistency guarantees.
 
-The unpublished 0.5.1/0.3.12 candidate adds bounded retry to mutable JSON file
+The locally qualified 0.5.1/0.3.12 build adds bounded retry to mutable JSON file
 replacement on Windows: native access/sharing/lock errors permit three attempts
 on the same staged bytes, with 50/100 ms requested waits. Permanent failures and
 interruptions still propagate; cleanup errors cannot replace the primary error.
 This neither retries model calls nor changes the no-clobber publisher. It does
 not guarantee write availability, wall-clock completion, or version ordering
 under contention. The [retained peer probes](../planning/review-assets/tether-ce-fixes-20261102/integration/windows-replace-peer/REVIEW.md)
-include explicit failed writes and last-completing-writer-wins behavior. Full
-candidate qualification remains pending; earlier same-version candidate wheels
-have different code hashes and must be treated separately.
+include explicit failed writes and last-completing-writer-wins behavior. The
+full Windows gate passes; earlier same-version candidate wheels have different
+code hashes and must be treated separately.
 
 ## Verifying historical artifacts
 

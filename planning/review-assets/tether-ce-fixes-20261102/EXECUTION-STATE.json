@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-02T21:08:50.102830+00:00",
+  "updated_at_utc": "2026-11-02T21:25:50.254012+00:00",
   "goal_status": "active",
   "stage": "BG01",
   "completed": [
@@ -13,20 +13,11 @@
     "Bounded Windows atomic replacement:10 new,72 related,21 publication tests; peer safety controls with explicit contention failures",
     "Second reviewed archive-profile migration:52 tests and3 old-run controls",
     "Fresh facade suite:138 tests",
-    "Fresh installed qualification attempt02:14 commands; changed source/wheel proof"
+    "Fresh installed qualification attempt02:14 commands; changed source/wheel proof",
+    "Full-gate04:2020tests,zero failures/errors/skips,required probes/package checks,unchanged source bracket",
+    "Final aggregate:742checks PASS, including current candidate and preserved historical artifacts"
   ],
-  "in_progress": {
-    "operation": "Full-gate04: exact2020tests, failfast driver, fresh source bracket",
-    "unified_exec_session_id": 40947,
-    "validator_pid_at_launch": 15348,
-    "started_record": "integration/full-gate-04.started.json",
-    "source_bracket": "integration/full-gate-04.source-bracket.json",
-    "log": "integration/full-gate-04.log",
-    "report": "integration/full-gate-04.json",
-    "before_sha256": "1f3aafcab76de3d497ab7817cd5b8dd2e3c45c6f3cbcfbdd41cd9cf8829b6f91",
-    "last_observation": "Started and progressing; no terminal pass asserted. No runtime/test/tool source edits while it runs.",
-    "resumption_rule": "Poll exact session40947 and inspect report/log/PID before any restart. A saved record is not liveness; timeout is not terminal."
-  },
+  "in_progress": null,
   "installed_qualification": {
     "status": "PASS",
     "unified_exec_session_id": 97395,
@@ -35,15 +26,13 @@
     "sha256": "16fec5a9d5092fde373e72b0c7fa7eaa3b520750b515a82d908774e14d8c1f00",
     "scope": "Current candidate bytes including bounded retry and second profile. No aggregate completion claim."
   },
-  "next_if_gate_passes": "Run check_stage.py with full-gate04, archive-profile-v2/VALIDATION.json, windows-replace/VALIDATION.json, package-tests-02.log, installed attempt02 and original preservation records. Update docs/TODO and commit, then BG02.",
   "not_started": [
     "BG02 independent equal-policy validator comparison",
     "BG03 SciFact native integration/evaluation",
     "BG04 one LAB-Bench task family",
     "BG05 Inspect implementation/comparison"
   ],
-  "limitations": "Overlapping targeted test counts are not summed. No new benchmark/model execution has occurred. BG01 remains incomplete until full and installed validation pass.",
-  "next_if_gate_fails": "Investigate actual recorded failure; do not waive errors or restart blindly. Retain failures, primary causes and source pins.",
+  "limitations": "BG01 complete for local Windows/offline software. Overlapping counts are not summed. No benchmark/model/scientific result, Linux qualification or whole-goal completion.",
   "failed_attempts": [
     {
       "id": "full-gate-02",
@@ -90,5 +79,28 @@
       "Require exact committed preservation proof hashes and complete196-check inventory"
     ],
     "full_gate_pinset_unchanged": true
-  }
+  },
+  "stage_status": "complete",
+  "terminal_full_gate": {
+    "operation": "Full-gate04: exact2020tests, failfast driver, fresh source bracket",
+    "unified_exec_session_id": 40947,
+    "validator_pid_at_launch": 15348,
+    "started_record": "integration/full-gate-04.started.json",
+    "source_bracket": "integration/full-gate-04.source-bracket.json",
+    "log": "integration/full-gate-04.log",
+    "report": "integration/full-gate-04.json",
+    "before_sha256": "1f3aafcab76de3d497ab7817cd5b8dd2e3c45c6f3cbcfbdd41cd9cf8829b6f91",
+    "last_observation": "Session40947 returned exit0; ordinary report and source bracket PASS; final aggregate742 PASS.",
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 2204.375
+  },
+  "aggregate_validation": {
+    "status": "PASS",
+    "path": "VALIDATION.json",
+    "checks": 742,
+    "sha256": "1792d94ed55e806dc0f3fdcbf8c08684b899ad5ddd6c8e420bde4aba63a4b90d",
+    "checked_at_utc": "2026-11-02T21:21:53.208393+00:00"
+  },
+  "next": "BG02: independent validator enforcing the same declared policies, frozen expectations and paired execution."
 }

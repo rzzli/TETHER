@@ -1,6 +1,6 @@
 # BG01 implementation review
 
-Status: the three fixes and the further Windows file-replacement correction pass focused checks. The second profile, fresh facade suite and current installed candidate pass their checks; full-gate04 and the final aggregate remain pending. This is not the BG01 completion record. Baseline for the fixes is `114fecf`; the activated execution plan was committed as `749f296`.
+Status: BG01 passes locally. Full-gate04 passes all 2,020 tests and required probes/package checks; the final aggregate passes 742 checks. The [completion record](COMPLETION.md) identifies the current installed artifacts and limits. The review history below retains the investigations and intermediate states. Baseline for the fixes is `114fecf`; the activated execution plan was committed as `749f296`.
 
 ## Reviewed changes
 

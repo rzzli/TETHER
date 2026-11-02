@@ -22,14 +22,14 @@ Neither task should delay the paper's objective multicase evaluation.
 
 The owner now authorizes sequential implementation and evaluation of the recommendations below. This supersedes the earlier recommendation-only wording for these stages; it does not reopen historical failed model cells or change their results. Retain regular timestamped commits and a checkpoint after each validated major stage.
 
-- [ ] BG01 Fix CE01–CE03 with failing-first regressions, versioned software, applicable full checks and installed qualification. **In progress.**
+- [x] BG01 Fix CE01–CE03 with failing-first regressions, versioned software, applicable full checks and installed qualification. TETHER 0.5.1/AsOf 0.3.12 pass 2,020 full tests, 138 facade tests and 742 aggregate checks; see the [completion record](planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md).
 - [ ] BG02 Specify and execute an independent validator comparison enforcing identical policies; retain frozen valid/invalid cases, complete results and an independently reconstructed analysis.
 - [ ] BG03 Implement native SciFact adapters and a task-capable evidence/entailment route; execute and validate the declared evaluation with reference isolation and all-case accounting.
 - [ ] BG04 Implement and evaluate one LAB-Bench task family (LitQA2 or DbQA), including source access, answering, native scoring and matched harness comparison.
 - [ ] BG05 Implement and test the same obligations within Inspect; measure policy parity, retained execution evidence, cost and implementation complexity.
 - [ ] BG06 Audit all five stages against the full goal, reconcile documentation/memory and retain a final report. No stage is complete merely because a narrower test passes.
 
-Current checkpoint: implementation/focused checks are committed as `5cd633b`; first installed candidate qualification and failed-attempt evidence are committed as `4aa3328`. Full-gate02/03 encountered distinct Windows replacement access errors and remain terminal/interrupted with their evidence retained. The bounded Windows correction now passes 10 new, 72 related and 21 publication tests; peer checks retain explicit contention failures and complete JSON. A reviewed second archive profile passes 52 tests and three old-run controls; fresh facade tests (138) and installed attempt02 (14 commands) pass. Full-gate04 is running all 2,020 tests with ordinary fail-fast reporting; BG01 remains incomplete until its clean result and aggregate check pass. Candidate versions remain unpublished 0.5.1/0.3.12; same-version old attempts remain separately identified by hashes. State and evidence are in `planning/review-assets/tether-ce-fixes-20261102/EXECUTION-STATE.json`. The independent comparator and external benchmarks have not yet been implemented or run; historical results and downloader/monitor remain preserved.
+Current checkpoint: BG01 is complete in its Windows/offline scope. Full-gate04 passes all 2,020 tests with zero failures/errors/skips, required probes and packaging; its before/after/current source inventories agree. The stricter aggregate checker passes 742 checks, including current installed attempt02, facade138, both archive-profile migrations and preservation evidence. Earlier failed gates, the first same-version candidate and peer contention failures remain retained. The authoritative local versions are TETHER 0.5.1/AsOf 0.3.12 with the hashes in the completion record; no public release is implied. BG02 is next. The independent comparator and external benchmarks have not yet been implemented or run; historical scientific results and downloader/monitor remain preserved.
 
 ## Benchmark and methodology review — 2 November 2026
 
@@ -47,13 +47,13 @@ The [benchmark and methodology report](<reports/TETHER benchmarks and methodolog
 
 The [completed report](<reports/TETHER efficiency and comparative value.md>) and [validation record](<research_notes/TETHER efficiency and comparative value/REPORT-VALIDATION.json>) retain three new P2 findings, current/source-version boundaries, targeted overlapping test scopes and measured repeated work. No runtime fix or sealed-paper change was made. These findings supplement the earlier dated qualification; Q/P completion statuses below retain their original scopes.
 
-### Corrections from the audit — qualification in progress
+### Corrections from the audit — qualified locally
 
-CE01–CE03 implementations and focused checks pass. Their boxes remain open until the full BG01 gate and installed qualification pass. CE04 remains a separate proposed optimization.
+CE01–CE03 and the supporting Windows replacement correction pass the full BG01 gate and installed qualification. CE04 remains a separate proposed optimization.
 
-- [ ] CE01 Prevent transport verification reports from aliasing input receipts, queues or sources; use fresh exclusive publication and preserve inputs on collision/failure.
-- [ ] CE02 Preserve validated adapter-reported over-reservation usage through failed local-model calls, reconcile retained archives and stop subsequent dispatch. Version the correction separately from frozen engine artifacts; no closed model retry.
-- [ ] CE03 Reconcile receipt-derived availability for every supplied raw policy node, including unused granted nodes, with paired used/unused negative controls and valid near misses.
+- [x] CE01 Prevent transport verification reports from aliasing input receipts, queues or sources; use fresh exclusive publication and preserve inputs on collision/failure.
+- [x] CE02 Preserve validated adapter-reported over-reservation usage through failed local-model calls, reconcile retained archives and stop subsequent dispatch. Version the correction separately from frozen engine artifacts; no closed model retry.
+- [x] CE03 Reconcile receipt-derived availability for every supplied raw policy node, including unused granted nodes, with paired used/unused negative controls and valid near misses.
 - [ ] CE04 After correctness fixes, qualify operation-scoped task-fingerprint and bounded source-parse reuse. Define the stability lifetime before reducing cross-boundary hash passes; retain independent verification and historical pins.
 
 Optional research proposals are ranked in the report. A policy-equivalent simple-validator comparison is needed to assess architectural value; a hash/schema-only ablation is insufficient. These proposals do not activate Q04/Q05, reopen the model branch, acquire new data, reinstate external experts or request deferred author facts.
