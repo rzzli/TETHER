@@ -1,0 +1,35 @@
+test_all_approved_normal_imports_preserve_legacy_metadata (__main__.FrontDoorIndependentTests.test_all_approved_normal_imports_preserve_legacy_metadata) ... ok
+test_core_metadata_control_rejects_before_open (__main__.FrontDoorIndependentTests.test_core_metadata_control_rejects_before_open) ... ok
+test_duplicate_keys_and_nonfinite_metadata_rejected (__main__.FrontDoorIndependentTests.test_duplicate_keys_and_nonfinite_metadata_rejected) ... ok
+test_interrupt_timeout_kills_and_reaps_once (__main__.FrontDoorIndependentTests.test_interrupt_timeout_kills_and_reaps_once) ... ok
+test_metadata_schema_bool_cannot_alias_one (__main__.FrontDoorIndependentTests.test_metadata_schema_bool_cannot_alias_one) ... ok
+test_noninterrupt_communicate_failure_reaps_owned_child (__main__.FrontDoorIndependentTests.test_noninterrupt_communicate_failure_reaps_owned_child) ... FAIL
+test_oversize_metadata_rejected_before_open (__main__.FrontDoorIndependentTests.test_oversize_metadata_rejected_before_open) ... ok
+test_private_reference_token_and_class_are_same_identity (__main__.FrontDoorIndependentTests.test_private_reference_token_and_class_are_same_identity) ... ok
+test_read_detects_file_changed_during_read (__main__.FrontDoorIndependentTests.test_read_detects_file_changed_during_read) ... FAIL
+test_unsafe_logical_paths_rejected (__main__.FrontDoorIndependentTests.test_unsafe_logical_paths_rejected) ... ok
+test_wrong_runtime_distribution_rejects_code_proof (__main__.FrontDoorIndependentTests.test_wrong_runtime_distribution_rejects_code_proof) ... ok
+
+======================================================================
+FAIL: test_noninterrupt_communicate_failure_reaps_owned_child (__main__.FrontDoorIndependentTests.test_noninterrupt_communicate_failure_reaps_owned_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-rename-20261101\test_frontdoor_independent_v1.py", line 49, in test_noninterrupt_communicate_failure_reaps_owned_child
+    spawn.assert_called_once();p.terminate.assert_called_once();self.assertGreaterEqual(p.communicate.call_count,2)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 918, in assert_called_once
+    raise AssertionError(msg)
+AssertionError: Expected 'terminate' to have been called once. Called 0 times.
+
+======================================================================
+FAIL: test_read_detects_file_changed_during_read (__main__.FrontDoorIndependentTests.test_read_detects_file_changed_during_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-rename-20261101\test_frontdoor_independent_v1.py", line 43, in test_read_detects_file_changed_during_read
+    with patch.object(Path,'open',new=changing),self.assertRaises(ContractError):layer._read(p)
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.331s
+
+FAILED (failures=2)

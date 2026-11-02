@@ -1,27 +1,38 @@
 ---
-title: AsOf Full Data Requirements and Acquisition Plan
+title: TETHER Full Data Requirements and Acquisition Plan
 date: 2026-10-09
 updated: 2026-11-01
 tags:
-  - asof
+  - tether
   - data-plan
   - temporal-benchmarking
 status: acquisition-started
 ---
 
-# AsOf full data requirements and acquisition plan
+# TETHER full data requirements and acquisition plan
 
-**1 November paper checkpoint:** the bounded source-reporting manuscript and
-supplement now pass 118 independent content checks and separate scope review;
-see the [working-draft assessment](<../planning/Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md>).
-This creates no data acquisition, whole-product scientific validation or public
-redistribution clearance. The working PDF passes technical checks; author
-declarations and release qualification remain unfinished. Original clinical/genetics
-gaps below remain unresolved.
+**Current TETHER checkpoint, 1 November 2026:** the bounded source-reporting
+study, P09 installed Windows reconstruction and P10b local working packet are
+complete within their declared technical scopes. The retained P09 run reproduces
+38 output hashes and 90 policy decisions from 137 complete originals; the separate
+source audit passes 6,862 checks. The historical pre-rename 53-member P10b packet
+repeats byte-for-byte and passes 200 independent archive checks. The current
+72-member TETHER review packet also repeats byte-for-byte and passes 946
+independent archive checks; see the [TETHER packet record](../paper/release/tether/RELEASE-RECORD.json)
+and [current rename/status review](<../planning/TETHER Rename Completion and Project Status 2026-11-01.md>).
+Owner declarations and final author
+acceptance remain deferred, so P08/P10 and submission readiness remain incomplete.
+No public deposit, current hosted-CI result or new scientific validation is claimed.
+See the [pre-rename local-package assessment](<../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>).
+The rename changes no collection status, original, receipt, dataset role or study
+selection. Earlier dated acquisition and development checkpoints below retain
+their original scope.
+
+TETHER means Target Evidence Tracking Harness for Evaluation and Reproducibility. See [catalog identity and history](catalog/README.md); the frozen AsOf engine and temporal/dataset identifiers remain compatible.
 
 **Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Collection metadata changes only with retained neutral acquisition evidence; scientific validation and original data remain separate. P03 enforces source/receipt/role/lineage rules; generation packets never consume evaluator references or descendants.
 
-Current implementation: [P02a credible-set completion](<../planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md>) verifies the owner-approved isolated 23-file batch and complete 25-file exact join. One exposed development locus has beta/SE/p-value components; sample size, units, ancestry and upstream-study verification remain unresolved. All original files/receipts and the old core state are unchanged. Selected packets remain evaluator-only; scientific validation and historical eligibility are not promoted. Independent neutral receipt/schema metadata reconciles `ot_credible_set` collection to 25 files/2,588,111,695 bytes; whole-product parsing and scientific validation remain not_run. P04's negative result is source-verified (twelve cells/five calls, 2,216 audit checks), and the subsequent fictional conformance branch closed negative. The [current source-reference checkpoint](<../planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md>) verifies all 137 originals/receipts, a complete physical-row GWAS registry and twelve identity-ranked units (789 independent registry checks). Twelve original-only input packets pass 1,238 separate audit checks. All twelve references and 180 facts now match 24 distinct original rows in a further 1,163-check independent audit; 41 fictional reference regressions pass. The [P05 technical study](<../planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md>) is now frozen: register772builder/478rootchecks, runner36/auditor25/analyzer17 preparation tests and persistentfictional qualification pass. The single38-output/90-decision study now passes2,414 independent source-audit checks; [P06 result](<../planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md>). P07 descriptive tables/figures now pass351 independent checks and local byte-identical rebuild; manuscript/release remain pending. Reference preparation memory is unmeasured and is not substituted from audit memory; study identity, exposure and scientific validity remain unqualified. This bounded parsing does not promote whole-product catalog status or historical availability. No further model calls. The [P03 evaluator](<../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>) and earlier unavailable selected-row measurements remain retained evidence for their original scopes.
+Retained source-preparation chronology: [P02a credible-set completion](<../planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md>) verifies the owner-approved isolated 23-file batch and complete 25-file exact join. One exposed development locus has beta/SE/p-value components; sample size, units, ancestry and upstream-study verification remain unresolved. All original files/receipts and the old core state are unchanged. Selected packets remain evaluator-only; scientific validation and historical eligibility are not promoted. Independent neutral receipt/schema metadata reconciles `ot_credible_set` collection to 25 files/2,588,111,695 bytes; whole-product parsing and scientific validation remain not_run. P04's negative result is source-verified (twelve cells/five calls, 2,216 audit checks), and the subsequent fictional conformance branch closed negative. The [current source-reference checkpoint](<../planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md>) verifies all 137 originals/receipts, a complete physical-row GWAS registry and twelve identity-ranked units (789 independent registry checks). Twelve original-only input packets pass 1,238 separate audit checks. All twelve references and 180 facts now match 24 distinct original rows in a further 1,163-check independent audit; 41 fictional reference regressions pass. The [P05 technical study](<../planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md>) is now frozen: register772builder/478rootchecks, runner36/auditor25/analyzer17 preparation tests and persistentfictional qualification pass. The single38-output/90-decision study now passes2,414 independent source-audit checks; [P06 result](<../planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md>). At that checkpoint, P07 descriptive tables/figures passed351 independent checks and local byte-identical rebuild; manuscript/release were still pending. The current checkpoint above records their later technical completion and remaining owner facts. Reference preparation memory is unmeasured and is not substituted from audit memory; study identity, exposure and scientific validity remain unqualified. This bounded parsing does not promote whole-product catalog status or historical availability. No further model calls. The [P03 evaluator](<../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>) and earlier unavailable selected-row measurements remain retained evidence for their original scopes.
 
 October22 current source-readiness disposition: revise/defer. The bounded primary
 report lookup collected the official SID poster0507 program, but no target DOI,

@@ -1,4 +1,4 @@
-# Project execution checklist
+# TETHER project execution checklist
 
 Updated 1 November 2026, America/Los_Angeles. Current paper roadmap:
 [Preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>).
@@ -13,7 +13,16 @@ The old categorical genetics adapter and retrospective old-pair audit are option
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
 
-## Next stage and paper completion
+## TETHER renaming — completion checkpoint
+
+- [x] N01 Retain the pre-rename baseline, immutable proof/artifact inventory and naming decision: 118 file pins/100 legacy payloads and all three sealed authorities/archives match `7625f8c`. Current branding and compatibility identifiers are explicitly distinguished.
+- [x] N02 Add TETHER 0.4.0 distribution, namespace and CLI with type/proof identity and sealed outer run presentation. All 49 tests pass in full/core environments; 12 independent probes pass after fixing bounded/stable reads and owned-child cleanup. Isolated two-wheel installation/demo/source verification passes without checkout imports or optional libraries; documented offline project sync and dependency checks pass.
+- [x] N03 Rebrand 20 current guides, README, data summaries, catalog display metadata and current planning/memory entry points. Catalog changes only two display fields, with original bytes retained. Documentation/layout checks 221/210 pass; dated research records and technical identifiers remain preserved.
+- [x] N04 Produce the current TETHER manuscript/PDF and named review packet: 18 pages/274 ordered units, naming continuity, all-page visual/repeat checks, 1,222 independent paper comparisons and 946 independent archive checks pass. The 72-member/21,552,273-byte packet repeats byte for byte; scientific results and legacy archive remain unchanged.
+- [x] N05 Validate installation, both namespaces/entrypoints, source/case behavior, catalog/link consistency and applicable regressions; resolve actual failures.
+- [x] N06 Retain the completed rename audit, current status/memory and timestamped local commit. Deferred author facts and scientific programmes remain deferred.
+
+## Earlier paper completion checkpoint
 
 - [x] P01 Validate the preprint scope/evidence/related-work review and current status/TODO/memory updates. Retain historical facts, failed attempts and the preceding checklist.
 - [x] P02 Complete the bounded three-unit source-to-fact feasibility prototype and baseline-ceiling check: 57/57 literature identity/date facts, zero populated literature measurements; GWAS locus identifier distinguished from measurements; incomplete local credible-set join and parser control retained. Ten tests and independent source checks pass. Scientific primary remains unqualified.
@@ -41,7 +50,7 @@ Neither task should delay the paper's objective multicase evaluation.
 - [ ] P10a **Deferred by owner, 1 November:** finalize author names/order, affiliations, corresponding-author contact and author acceptance/responsibility before submission. These facts are not an additional external-expert scientific gate.
 - [x] P10b Finish the revised local working-paper packet: four status/release edits with exact inverse continuity, separately named 18-page PDF, 273 freshly checked ordered units, all-page visual/geometry/repeat and eight negative controls. Independent source/PDF review evaluates 30 items (28 pass, two conditional quantities absent), no findings. The 53-member/21,438,223-byte packet `e5c9478c` repeats byte-for-byte in a fresh process and passes 200 independent archive checks. Five invented packaging boundary checks and final structural/catalog checks pass. Owner facts/declarations remain pending; this is not submission readiness.
 
-**Current engineering work is complete for this bounded working-paper milestone.** See the [local package assessment](<planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>) and [packet hash record](paper/release/WORKING-PACKET-RECORD.json). P09/P10b pass their stated local scopes. On 1 November the owner said to do the declarations later; P08c/P10a and overall P08/P10 remain pending. Keep the paper a working draft, without another request during engineering. After facts arrive, make and validate a new final metadata/PDF/packet version and obtain author acceptance; no scientific experiment rerun is implied by metadata-only edits. P06/P07 are independently audited and unchanged. The model branch is closed. P02a is a completed data branch, not a universal paper gate. The P03 acceptance and detailed next-stage prerequisites are in the
+**The bounded working-paper engineering and subsequent TETHER naming checks pass locally.** See the [current rename/status assessment](<planning/TETHER Rename Completion and Project Status 2026-11-01.md>) and [TETHER packet record](paper/release/tether/RELEASE-RECORD.json). The [pre-rename local package assessment](<planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>) and [old packet record](paper/release/WORKING-PACKET-RECORD.json) retain their original P09/P10b scopes. On 1 November the owner said to do the declarations later; P08c/P10a and overall P08/P10 remain pending. Keep the paper a working draft, without another request during engineering. After facts arrive, make and validate a new final metadata/PDF/packet version and obtain author acceptance; no scientific experiment rerun is implied by metadata-only edits. P06/P07 are independently audited and unchanged. The model branch is closed. P02a is a completed data branch, not a universal paper gate. The P03 acceptance and detailed next-stage prerequisites are in the
 [current assessment](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). The primary scientific measurements remain unqualified; the implemented endpoint is grouped literal source reporting.
 A complete preprint needs an empirical argument and manuscript, not only more tests.
 
@@ -49,13 +58,13 @@ A complete preprint needs an empirical argument and manuscript, not only more te
 
 | Area | Current status |
 |---|---|
-| Engineering | 0.3.11/v2 runtime retained; 100 frozen package payloads and 78 P05 code pins unchanged. Test/validation helpers have changed; full/core framework gates and installed source replay pass in their explicit local scopes |
+| Engineering | Canonical TETHER 0.4.0 interface over retained 0.3.11/v2 engine; 49 interface tests in each profile, 12 independent probes and isolated installation pass. All 100 frozen engine payloads and 78 P05 code pins unchanged; historical full/core gates and installed source replay retain their explicit local scopes |
 | Development dossiers | Ten canonical integrity-verified dossiers; 20 original rows technically audited; no full scientific validation |
 | Real selection studies | 60-cell/114-call selection experiment and 32-cell/48-call top-one study exist; exposed development/AI-reference limits retained |
 | Interpretation | Six complete R07 responses/zero contract passes; recorded comparisons/preparation are not successful generated answers |
 | Paper reporting endpoint | Grouped typed-fact coverage/critical-error/80% completion implemented; exposed P04 pilot negative for both model arms, literal clean-case ceiling 2/2; no measurement fields studied in P04 |
 | Fresh evaluation | No qualified fresh cohort; existing cases/source frame do not establish holdout status or adequate information |
-| Manuscript/release | Revised main/supplement, thirteen references, 18-page working PDF and 53-member local packet technically reviewed; P09 local release qualified; factual declarations/final author acceptance pending; current hosted checks unexecuted |
+| Manuscript/release | Current TETHER main/supplement, thirteen references, 18-page/274-unit working PDF and 72-member local packet technically reviewed; 946 independent archive checks pass. P09 legacy release unchanged; factual declarations/final author acceptance pending; current hosted checks unexecuted |
 | External experts | HR1–HR4 and future responses retired, not waiting or completed; prior returns/derivatives archive-only |
 
 ## Boundaries and separate future work

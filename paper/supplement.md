@@ -1,6 +1,6 @@
 # Supplementary methods and artifact guide
 
-Companion to the working AsOf source-reporting draft, 1 November 2026. Public deposit and owner declarations remain pending. The separately qualified local artifact is described in S8. Paths below describe this local research checkout, not a public data deposit. No external expert response is required or used.
+Companion to the working TETHER source-reporting draft, 1 November 2026. Public deposit and owner declarations remain pending. The separately qualified local artifact is described in S8. Paths below describe this local research checkout, not a public data deposit. No external expert response is required or used.
 
 ## S1. Frozen chronology and immutable anchors
 

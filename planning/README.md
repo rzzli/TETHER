@@ -1,0 +1,25 @@
+# TETHER planning
+
+**Target Evidence Tracking Harness for Evaluation and Reproducibility.**
+
+The current project name is TETHER. Start with the
+[naming and compatibility plan](<TETHER Naming and Compatibility Plan 2026-11-01.md>),
+[completed rename/status review](<TETHER Rename Completion and Project Status 2026-11-01.md>),
+[live checklist](../TODO.md), [project status index](<Project Progress Reassessments.md>)
+and [current paper guide](../paper/README.md).
+
+The canonical software interface is `packages/tether/` (`tether` command and
+Python namespace). The unchanged `src/asof/` engine and its historical identifiers
+remain available for reproducible verification. Old proposal filenames, dated
+assessments, research logs, protocols, source/receipt hashes and archived releases
+record the project name used at the time. They are historical records, not a
+second active project identity.
+
+The bounded source-reporting experiment and its local compatibility release were
+completed before this naming revision. The TETHER interface, paper and local
+review packet now pass their separate naming/installation/archive checks.
+This introduces no new scientific result,
+clinical probability, causal analysis, model run, source download or publication.
+Author/declaration facts and final acceptance remain deferred by the owner.
+Broader clinical, MR/scorer, competitor, T2-T5 and H6 programmes remain conditional
+and uncompleted. Historical external expert responses are excluded from new inputs.

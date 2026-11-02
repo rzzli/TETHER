@@ -10,17 +10,17 @@ dataset or model was acquired. Bibliographic records are in [references.bib](ref
 
 | BibTeX key | Primary record and version checked | Supported comparison |
 | --- | --- | --- |
-| `zhang2026virtualbiotech` | [Science record](https://pubmed.ncbi.nlm.nih.gov/42752167/), DOI 10.1126/science.aeg6779, 22 October 2026 | Organizes agents around therapeutic-development functions. AsOf's current study measures bounded source reporting, not reproduction of its scientific analyses. |
+| `zhang2026virtualbiotech` | [Science record](https://pubmed.ncbi.nlm.nih.gov/42752167/), DOI 10.1126/science.aeg6779, 22 October 2026 | Organizes agents around therapeutic-development functions. TETHER's current study measures bounded source reporting, not reproduction of its scientific analyses. |
 | `virtualbiotech71f9` | [Pinned README](https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/README.md), revision 71f9da68 | Documents headless execution and separate artifact-integrity/evidence-coverage verification. Claims that this baseline is interactive-only or checks hashes alone are incorrect. |
-| `sokolova2025alvessa` | [Primary preprint](https://pmc.ncbi.nlm.nih.gov/articles/PMC12773016/), version 1, DOI 10.64898/2025.12.30.697073 | Already verifies generated statements against retrieved records and tests deliberate corruptions. Neither generic verification nor corruption controls establish novelty for AsOf. |
-| `le2026txbench` | [arXiv version 2](https://arxiv.org/abs/2606.19245v2), 18 June 2026 | Uses structured answers and deterministic grading for preclinical decisions. AsOf's literal native-field task has a narrower endpoint. |
+| `sokolova2025alvessa` | [Primary preprint](https://pmc.ncbi.nlm.nih.gov/articles/PMC12773016/), version 1, DOI 10.64898/2025.12.30.697073 | Already verifies generated statements against retrieved records and tests deliberate corruptions. Neither generic verification nor corruption controls establish novelty for TETHER. |
+| `le2026txbench` | [arXiv version 2](https://arxiv.org/abs/2606.19245v2), 18 June 2026 | Uses structured answers and deterministic grading for preclinical decisions. TETHER's literal native-field task has a narrower endpoint. |
 | `qu2026biomnibench` | [Primary indexed version-2 page](https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2), DOI 10.64898/2026.05.12.724604 | Reports expert-built process rubrics. Those judgments and their validation cannot be inherited by this source-fidelity study. Direct page/full-text fetches returned 403; only indexed primary metadata/abstract are used here. |
 | `gao2023alce` | [EMNLP publication](https://aclanthology.org/2023.emnlp-main.398/), DOI 10.18653/v1/2023.emnlp-main.398 | Separates answer correctness and citation quality. Their distinction is established prior work. |
 | `saadfalcon2024ares` | [NAACL publication](https://aclanthology.org/2024.naacl-long.20/), DOI 10.18653/v1/2024.naacl-long.20 | Combines learned judging with human annotations for inference. The present descriptive counts do not acquire its human-calibrated guarantees. |
 | `windisch2026show` | [Cureus article](https://pmc.ncbi.nlm.nih.gov/articles/PMC13252682/), DOI 10.7759/cureus.108666 | Separately checks quotations and support judgments. A mechanically valid source binding does not settle scientific meaning. |
 | `patel2025r2e` | [ACL publication](https://aclanthology.org/2025.acl-long.167/), DOI 10.18653/v1/2025.acl-long.167 | Predicts and explains target rankings against outcomes. No comparable clinical endpoint is evaluated here. Cite the 2025 publication, retaining the 2024 preprint relation. |
 | `huang2026biomni` | [Science publication](https://pubmed.ncbi.nlm.nih.gov/42424436/), DOI 10.1126/science.adz4351 | Reports broad biomedical workflow execution under the Biomni name. The related 2025 preprint is separately identified; an indexed publication-update relation was not found. |
-| `jin2024genegpt` | [Bioinformatics article](https://pubmed.ncbi.nlm.nih.gov/38341654/), DOI 10.1093/bioinformatics/btae075 | Uses domain APIs for genomic questions. Tool-based access to biomedical databases predates AsOf. |
+| `jin2024genegpt` | [Bioinformatics article](https://pubmed.ncbi.nlm.nih.gov/38341654/), DOI 10.1093/bioinformatics/btae075 | Uses domain APIs for genomic questions. Tool-based access to biomedical databases predates TETHER. |
 
 The two dataset entries identify the archived platform and normalization
 reference. They are acquisition pointers, not proof of first-public availability,
@@ -58,7 +58,7 @@ limitation rather than silently converted into a full-text review.
 ## Claim-safe manuscript framing
 
 Existing work already supplies tool orchestration, retrieved-record verification,
-structured scientific benchmarks and citation evaluation. The supportable AsOf
+structured scientific benchmarks and citation evaluation. The supportable TETHER
 contribution is a bounded implementation and technical feasibility study combining
 time/ancestor/scope admission, typed literal facts, evaluator-role separation and
 durable source-inclusive replay. It is not established as the first system with

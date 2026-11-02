@@ -1,83 +1,80 @@
-# AsOf technical paper working draft
+# TETHER technical paper working draft
 
-This is a bounded source-reporting feasibility paper. It is not a clinical,
-causal-genetics, independent-study or model-superiority result. External expert
-responses are excluded from the study. No publication or public artifact deposit
-has occurred.
+**Target Evidence Tracking Harness for Evaluation and Reproducibility.**
+TETHER is the current project name; the original software and frozen artifacts
+used AsOf. The naming revision changes no experiment, result, cost or source fact.
+This is a bounded source-reporting feasibility paper. Clinical, causal-genetics,
+independent-study and model-superiority conclusions remain unestablished.
 
-Read [the manuscript](manuscript.md), [supplementary methods](supplement.md),
-[the revised 18-page working PDF](asof-source-reporting-preprint-v2.pdf),
-[results and rebuild instructions](results/README.md),
-[bibliographic records](references.bib) and the
-[primary-source positioning audit](RELATED-WORK-SOURCE-AUDIT.md).
+Read the [manuscript](manuscript.md), [supplement](supplement.md),
+[current 18-page TETHER PDF](tether-source-reporting-preprint.pdf),
+[bibliography](references.bib), [reference metadata](references.json),
+[related-work source audit](RELATED-WORK-SOURCE-AUDIT.md) and
+[results](results/README.md). The [naming plan](<../planning/TETHER Naming and Compatibility Plan 2026-11-01.md>)
+explains compatibility identifiers and retained history.
 
-The study retains 38 outputs/90 policy decisions and an independent source audit.
-Its twelve native units demonstrate the literal copy ceiling and preserve
-missingness. Fourteen exposed controls demonstrate the exercised guard behavior.
-Earlier local-model development failures remain reported separately. These
-quantities and their limits must stay attached to every presentation.
+The frozen study retains 38 outputs/90 decisions, twelve native reporting units
+and fourteen exposed constructed controls. Earlier local-model failures remain
+reported separately. Provider spending is $0; total platform cost and physical
+I/O remain unknown. Numerical prediction features remain empty and clinical
+probabilities null. Historical expert responses and their descendants are excluded.
 
-A separate post-result P09 qualification covers installed, relocated Windows
-source reconstruction and independent source audit. It reproduces the retained
-P06 outputs and decisions; it adds no study, model result or scientific validation.
-The [qualification record](release/qualification.json) and
-[external release hash record](release/RELEASE-RECORD.json) specify the supported
-environment, exact authorities, separate costs and missing external availability.
-The inner frozen P09 bundle intentionally retains its earlier paper bytes. This
-P10 source/PDF revision is a separate version. No public deposit is claimed.
+The post-result P09 installed reconstruction/audit remains separately qualified
+on Windows x64, CPython 3.11.15 and PyArrow 21.0.0. It reproduces original outputs
+and decisions; it introduces no scientific validation. Its exact
+[qualification](release/qualification.json) and [hash record](release/RELEASE-RECORD.json)
+retain legacy names because those are immutable historical artifacts. The new
+TETHER review packet uses a separate current paper and manifest; its nested P09
+archive remains byte-identical. The new [standalone packet guide](release/tether/README.md),
+[qualification](release/tether/QUALIFICATION.json) and
+[external hash record](release/tether/RELEASE-RECORD.json) identify the 72-member
+TETHER packet: two builds are byte-identical and 946 independent archive checks
+pass. It remains a local review artifact with owner facts deferred.
+Current hosted jobs, native Linux replay and
+fresh exact-byte reacquisition of 136 external Open Targets originals are not
+qualified. The exact CC0 HGNC inclusion remains explicit.
 
-The scientific text and rendered working draft are reviewable artifacts;
-submission readiness additionally requires the factual
-[author declarations](AUTHOR-DECLARATIONS.md) and final owner acceptance. The
-local P09 artifact is qualified within its explicit Windows scope; final P10
-working-packet checks are recorded separately. Unconfirmed author facts are not silently
-converted into no-funding or no-conflict declarations. See the live
-[project checklist](../TODO.md) for remaining P08-P10 work.
+The current PDF passes 274 freshly checked ordered visible-text units, all-page
+visual review, local byte repetition and eight negative retention/publication
+controls. Three figures remain vector; no raster images or out-of-page glyphs
+are present. New build metadata is [TETHER-PDF-BUILD.json](TETHER-PDF-BUILD.json).
+PDF SHA-256: `c5cd6d70d5d4c85a64baf82b59b98618b9714d52840217fe77790c5ce9d4b0b1`.
+Main source SHA-256: `99ee5893568d4734a393669a88e06920c882d65aa064e7f20a9ad689488e096f`.
+Supplement SHA-256: `1f5c2073c7736d7a1b300c375bf84fb574d31df89ff57fa35b45feb60f80daa6`.
 
-The renderer uses the already available ReportLab/pypdf runtime; the default
-AsOf runtime remains dependency-free. Rendered figures use the vector files in
-results/figures. The PDF build manifest records exact source/renderer/figure
-hashes, rendering versions and text-preservation checks. Layout must also pass
-visual inspection of every page; a successful text extraction alone does not
-certify layout.
+Exact inverse checks recover the pre-rename scientific text after reversing
+project-name substitutions and removing the explicit naming note. Original
+methods, numbers, hypotheses, protocol anchors and limitations are unchanged.
+The [pre-rename source copies](history/pre-tether-20261101/) and the
+[old 17-page](asof-source-reporting-preprint.pdf) /
+[old 18-page](asof-source-reporting-preprint-v2.pdf) PDFs remain historical evidence.
+Their former text/visual checks are not proof of this TETHER version.
 
-The revised PDF passes all 273 freshly checked ordered visible-text units,
-all-page visual review and a byte-identical local repeat. Three figures remain vector;
-no raster images or out-of-page glyphs are present. The formatter's six negative
-retention cases and two failed-publication-path cases pass. This qualifies local
-presentation only. P09 source reconstruction has its own separate evidence.
-Current PDF SHA-256: `c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d`.
-Its [build manifest](PDF-BUILD-v2.json) records the new source hashes:
-main `79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507`;
-supplement `d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85`.
-The [prior 17-page P08 PDF](asof-source-reporting-preprint.pdf) and its build
-manifest remain unchanged historical artifacts; their old checks are not proof
-of this revision. Four release/status paragraphs changed; all remaining source
-bytes, primary results and original protocol anchors are unchanged by exact
-inverse-delta verification.
+The versioned local renderer is `tools/presentation/build_tether_manuscript.py`.
+It preserves the original renderer's layout/retention/publication logic; its
+recorded changes are branding and new output filenames. Under the existing
+ReportLab/pypdf/pdfplumber/fonts/Poppler environment, `--check-inputs` validates
+parsing, `--self-test` runs controls and `--build --marker-confirmed --repeat-check`
+builds the new pair after the PDF skill marker succeeds once per authoring
+operation. The source/renderer/figure/font hashes are recorded. This is local
+presentation qualification; a portable manuscript-PDF renderer/font distribution
+is not supplied. Raw build metadata contains local environment paths and is
+excluded from review packet exports.
 
-The unchanged local renderer is `tools/science/build_preprint_manuscript.py`. In an existing
-environment with the recorded ReportLab/pypdf/pdfplumber, fonts and Poppler,
-`--check-inputs` validates parsing without writing and `--self-test` runs the
-retention/failure controls. After the PDF skill marker succeeds once for the
-authoring operation, the explicit
-`planning/review-assets/preprint-p10-20261101/build_working_pdf_v2.py` wrapper
-with `--build --marker-confirmed --repeat-check` renders both sources, validates
-them and writes only the versioned PDF/PDF-BUILD-v2.json pair. Its effective
-output overrides and code hash are retained in that manifest. The local paths are recorded
-in code; a portable public renderer is not claimed. Source edits require a new
-render and review; never reuse a previous source's successful manifest.
+The default TETHER interface needs no third-party runtime libraries. It depends
+on the frozen internal AsOf 0.3.11 compatibility engine and offers the new
+`tether` command/import namespace. Legacy source/wire/schema names remain
+where required to verify old outputs. This rebranding does not change the
+scientific guarantees of those interfaces.
 
-The exact P05 protocol, run, source-audit and analysis hashes are in Supplement S1.
-Post-result manuscript/formatting edits do not modify that frozen experiment.
-The original paper-content/positioning audits live under
-planning/review-assets/preprint-p08-20261101/; current revision evidence is under
-planning/review-assets/preprint-p10-20261101/. The qualified P09 allowlist has one
-explicit CC0 HGNC original and exact project receipt metadata; 136 Open Targets
-originals remain external. Other raw datasets, model weights or historical
-response archives are not licensed for redistribution by this paper directory.
+Original paper/content/release audits remain under the dated preprint review
+folders. Current naming/presentation evidence is under
+`planning/review-assets/tether-rename-20261101/`. Figures/tables retain their
+historical bytes; portable packet README/manifest metadata is separately versioned.
+The code license does not grant general rights to provider data, model weights,
+standalone fonts or historical response archives.
 
-The [renderer peer review](../planning/review-assets/preprint-p08-20261101/PDF-RENDERER-PEER-REVIEW-v1.md)
-retains independent text inventory, vector/body geometry, local repetition and
-caught-failure rollback evidence. It qualifies this trusted local rendering
-operation, with no crash-atomic or hostile-filesystem guarantee.
+[Author facts/declarations](AUTHOR-DECLARATIONS.md) and final author acceptance
+remain explicitly deferred. See [TODO](../TODO.md). No public deposit, DOI,
+publication, repository push, new external expert input or patient recruitment
+is introduced by this naming revision. The document remains a working draft.

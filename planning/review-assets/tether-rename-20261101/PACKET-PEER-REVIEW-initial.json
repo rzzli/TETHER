@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "method": "tether.independent_actual_packet_review.v1",
+  "status": "PASS_ACTUAL_TETHER_REVIEW_PACKET",
+  "reviewed_at_utc": "2026-11-02T05:08:18.399625+00:00",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "check_count": 858,
+  "unresolved_findings": [],
+  "archive_sha256": "e57af7f4e99cf879f9944c83a19d2106f013935ff99f8681803124ed63443b8c",
+  "archive_bytes": 21552273,
+  "members": 72,
+  "fresh_process_repeat_bytes_equal": true,
+  "manifest_sha256": "667e3a19c366d8cabf178f0dbf74d8e53b74cd68d4f163f948b8a07778bfa904",
+  "qualification_sha256": "69ffeb1b4ac59dd2c5f4dee5afd2a3442d0adf9558fd0d2ba784a8f8e3dfbbdc",
+  "external_record_sha256": "75760183c594c203927d0c92df824a88e091bbad0d73d9041ec76fe0573d816a",
+  "wheel_sha256": "26bb8059ac0eb1e1b9d6c965dedae2409f7d418fbdb48d13f0c524f8354c4ddf",
+  "closure": {
+    "paper": 7,
+    "results": 39,
+    "historical_numerical_payloads": 37,
+    "legacy_reproduction": 4,
+    "new_python_sources": 14,
+    "new_project_metadata": 4,
+    "new_wheel": 1,
+    "top_level": 3,
+    "nested_legacy_members": 315,
+    "wheel_members": 20
+  },
+  "resolved_markdown_links": [
+    {
+      "source": "README.md",
+      "target": "paper/manuscript.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/supplement.md"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/tether-source-reporting-preprint.pdf"
+    },
+    {
+      "source": "README.md",
+      "target": "TETHER-QUALIFICATION.json"
+    },
+    {
+      "source": "README.md",
+      "target": "PACKET-MANIFEST.json"
+    },
+    {
+      "source": "README.md",
+      "target": "paper/results/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "reproduction/asof-research-artifact-0.1.0.zip"
+    },
+    {
+      "source": "README.md",
+      "target": "reproduction/RELEASE-RECORD.json"
+    },
+    {
+      "source": "README.md",
+      "target": "reproduction/qualification.json"
+    },
+    {
+      "source": "README.md",
+      "target": "reproduction/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "software/tether_target_agents-0.4.0-py3-none-any.whl"
+    },
+    {
+      "source": "README.md",
+      "target": "software/source/packages/tether/README.md"
+    },
+    {
+      "source": "paper/RELATED-WORK-SOURCE-AUDIT.md",
+      "target": "paper/references.bib"
+    },
+    {
+      "source": "paper/manuscript.md",
+      "target": "paper/results/figures/figure1-flow.pdf"
+    },
+    {
+      "source": "paper/manuscript.md",
+      "target": "paper/results/figures/figure2-availability.pdf"
+    },
+    {
+      "source": "paper/manuscript.md",
+      "target": "paper/results/figures/figure3-controls.pdf"
+    }
+  ],
+  "publication_authorized": false,
+  "submission_ready": false,
+  "owner_declarations": "deferred",
+  "scientific_validation": "not_established",
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "external_provider_or_protected_or_human_originals_opened": 0,
+  "scope": "ZIP/metadata/source/wheel/CRC/hash/link/permissions inspection only; no source-building/runtime/model/scientific execution. Previously allowed nested HGNC bytes hashed opaquely under the immutable P09 exception.",
+  "source_build_instructions": "Layout/path and offline/fresh-worktree commands inspected; not executed in this independent packet review.",
+  "check_count_scope": "Overlapping implementation and byte-consistency checks; not independent biomedical observations.",
+  "script_sha256": "242baaf29cdb1758a21355bc92ca19ef40f3752205b5c86de35969e37098a3de"
+}

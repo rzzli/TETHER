@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "method": "tether.active_documentation_branding.v1",
+  "changed_files": [
+    {
+      "path": "data/catalog/sources.json",
+      "before_sha256": "3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109",
+      "after_sha256": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac",
+      "before_bytes": 1229616,
+      "after_bytes": 1229620
+    },
+    {
+      "path": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "before_sha256": "b2c5a522f977d01c50be9d046dd7b93fb033de35c87e731731a93418a704ad57",
+      "after_sha256": "0beb073fc840c1d33738831cd59ad87962147c66bbb32a3d77d870c2a50bfc13",
+      "before_bytes": 10769,
+      "after_bytes": 11286
+    },
+    {
+      "path": "docs/BOUNDED_INTERPRETATION.md",
+      "before_sha256": "c072a5ab22b71d9b3731c0d3ecc837af952f68d7b429549b84fd5054d5d7c5d3",
+      "after_sha256": "352d5eaf5ddfe82d73316ae3602a44ee0665bf47686b48a5a61773f8a94948a9",
+      "before_bytes": 9487,
+      "after_bytes": 10004
+    },
+    {
+      "path": "docs/BOUNDED_RETRIEVAL.md",
+      "before_sha256": "d430abceeb825db112010b994b27ac23a50188b0cfc4d9edb2fe4f702383f1c6",
+      "after_sha256": "0b82d8a712e45912e66013e5696b8834ed458ca8d61c50bcfd4bbc9ed06c8c96",
+      "before_bytes": 8191,
+      "after_bytes": 8708
+    },
+    {
+      "path": "docs/DETERMINISTIC_BASELINES.md",
+      "before_sha256": "93680a4dfa9e4e80844b391ef55418b0ac4e450133e3b3788fce6c37acec3d65",
+      "after_sha256": "ac69b3aef3fa9d011243dd133f129469a2ae4dcec44809983ca0841df2eef7fb",
+      "before_bytes": 5691,
+      "after_bytes": 6206
+    },
+    {
+      "path": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "before_sha256": "a8495247f36e3db418181ad7113e6d9cb48e51782ffd12530b22faccbfd01e82",
+      "after_sha256": "8448b34617bb0cdbbf2079deace67387f2d3706e7f3b240f53e2426d28282e8d",
+      "before_bytes": 6730,
+      "after_bytes": 7245
+    },
+    {
+      "path": "docs/FRAMEWORK.md",
+      "before_sha256": "c8f7273d1e8e968d4ff8ba8bfbb86c24ceaae3170ddc6a6050bd27c8a9c0d6da",
+      "after_sha256": "ca263698080a1883bb61c24fd6e0d3a9f602d2bd55739276effbc4f665ee77bf",
+      "before_bytes": 24232,
+      "after_bytes": 24831
+    },
+    {
+      "path": "docs/INTERPRETATION_GENERATION.md",
+      "before_sha256": "a6695d01fed8066a0d386115d2584e436f89762c62a0f3364ae80e814b2c3d01",
+      "after_sha256": "7e38ff9bdf255af66286ec7492d491ca036729585227275324bc76cdb4e04186",
+      "before_bytes": 5550,
+      "after_bytes": 6067
+    },
+    {
+      "path": "docs/INTERPRETATION_INTERFACE.md",
+      "before_sha256": "9a516850d72bf0d8c886ebce7b2b12419293a5301c2a38eeec8ec0f22588cab5",
+      "after_sha256": "045451be428da1530e0a681aa754e601bbc834c61538189957245d0bd233b93a",
+      "before_bytes": 6133,
+      "after_bytes": 6650
+    },
+    {
+      "path": "docs/MAINTENANCE.md",
+      "before_sha256": "894d7aa3b569a018ed78de05625de9c991bf098e8b7f633864c84ea330ab672b",
+      "after_sha256": "d2f0af93cb851071469fc0b4a86e717e8e9133b609eb88bbe94a7b54e886ca5a",
+      "before_bytes": 5350,
+      "after_bytes": 5865
+    },
+    {
+      "path": "docs/NATIVE_INTERPRETATION.md",
+      "before_sha256": "572c741163c21293f838a0080d246a26b2ba014bd0a5b22b10ac707690b4ca62",
+      "after_sha256": "76649b7239e8e806e3244889cd7fbcd536c20f35d1505acf20a9d7a861d0019d",
+      "before_bytes": 6956,
+      "after_bytes": 7473
+    },
+    {
+      "path": "docs/QUESTION_INTERPRETATION.md",
+      "before_sha256": "1f7743a19d2fada73a8314c013af0c4424bc78a55895e351fb9393a47650d9d2",
+      "after_sha256": "6a4a1ad05df2044c1e4b2241e887effbef7bfdad80e9692f0952aff23a1d01ea",
+      "before_bytes": 5308,
+      "after_bytes": 5825
+    },
+    {
+      "path": "docs/QUESTION_LOCAL.md",
+      "before_sha256": "0c31c1959c9765954699aa7cd7c133315fd2825a039268a4df038b879b324373",
+      "after_sha256": "cf323a831f54b76a96268887dd9044c7208e537a106d8cbb99bd57975c01b085",
+      "before_bytes": 4515,
+      "after_bytes": 5030
+    },
+    {
+      "path": "docs/QUESTION_PILOT.md",
+      "before_sha256": "ebe83d79130445d0fce0a6331b69b76baac30c8ef4c5855dbe1aa95870c02f82",
+      "after_sha256": "c0b97b97a3d1d07334bb842f18b164ed380992d37e82efa4b9200aa380077c68",
+      "before_bytes": 5921,
+      "after_bytes": 6436
+    },
+    {
+      "path": "docs/QUESTION_RUNTIME.md",
+      "before_sha256": "9e83508eaac3daffffc2e9845030a65afbe7ea25efb2bc113674747fffe94f4f",
+      "after_sha256": "24367d9ea234a6e486a69bc1a902c801f22c6f4076db23a8a6e5cc51f731b868",
+      "before_bytes": 6452,
+      "after_bytes": 6969
+    },
+    {
+      "path": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "before_sha256": "0848672cd3ad0335e38575de7b316b49ab01238b53f8399ddc93e7d41a2ede4c",
+      "after_sha256": "3c9ab2731589dba732f021ef51308fdbe01d4f4c11c9db81e9cc8c559d147402",
+      "before_bytes": 8696,
+      "after_bytes": 9211
+    },
+    {
+      "path": "docs/SOURCE_FACT_EVALUATION.md",
+      "before_sha256": "ff6a748594c8dbd21f2b7d7ad48ce530f76a0afba45c4f3505c5073a372a0fd8",
+      "after_sha256": "308ebfde79444fb6b85dc825ca0a1d782be447205dd110a47f49036aeb297786",
+      "before_bytes": 11864,
+      "after_bytes": 12379
+    },
+    {
+      "path": "docs/STUDY_RUNTIME.md",
+      "before_sha256": "83d82a3d7ca9794bb00cd967429ba6c38baa7b8cd733f520b4cbb6d8f76ff14f",
+      "after_sha256": "a898125753c9e324946b1af958a4a878a5358da7014624afd419b449bbe7f5ef",
+      "before_bytes": 16517,
+      "after_bytes": 17034
+    },
+    {
+      "path": "docs/T6_CLAIM_AUDIT.md",
+      "before_sha256": "20686a48011b57bb95a6dd420ba9e74ca2bbb85c76967e87c8f237ff15316698",
+      "after_sha256": "fbda665984984e1e35f24f93bc335eb211cac90635ce9be512bb14a969512dd7",
+      "before_bytes": 6518,
+      "after_bytes": 7033
+    },
+    {
+      "path": "docs/T6_DOSSIER_BINDING.md",
+      "before_sha256": "1cd6d1aaa37e6296520fdb71724d5c4db96232278737f8a71b20f58fa37160de",
+      "after_sha256": "436f9824e078f7f61277cf9337aa9df105db2b1a09c402c318f9b510b896c3d2",
+      "before_bytes": 6650,
+      "after_bytes": 7165
+    },
+    {
+      "path": "docs/V02_MIGRATION.md",
+      "before_sha256": "e6fe1832f39d1cf191846af1ff4510ff60d9b42d00a2cf0c53555eb1e635662c",
+      "after_sha256": "5299c05d24def2f9b4931f3842abcd292a2565a429a3098214bfd7c58e82d4d0",
+      "before_bytes": 9254,
+      "after_bytes": 9950
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "ebb6100592da76acef6501529b5366b35f4a072721de992e4225745da06fd176",
+      "after_sha256": "bf1a5b137e4967ad14ee12461003195ba1964537124add350583f1ad33d34f23",
+      "before_bytes": 15205,
+      "after_bytes": 16830
+    },
+    {
+      "path": "data/README.md",
+      "before_sha256": "7ba6d3a6821bdc93cdab84f011b847fe5ca3c3e4d7b6f6439b56f436c809b94b",
+      "after_sha256": "4203474dc912fcbc9e7246304f570b3bae2c342eb6de406b69531a3d8b44853c",
+      "before_bytes": 21869,
+      "after_bytes": 23000
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "before_sha256": "7a81d8167955f48d1e98bdaf645cc7a87daec20fe9a9b8d6e4d89a0dbf98bf10",
+      "after_sha256": "a804baadcab05e79425f4b1ed1fbb0888b543aed5dad9423b4a1ddc5e586f160",
+      "before_bytes": 75819,
+      "after_bytes": 76585
+    }
+  ],
+  "new_files": [
+    "data/catalog/README.md",
+    "data/catalog/history/sources-pre-tether-20261101.json"
+  ],
+  "catalog": {
+    "history_path": "data/catalog/history/sources-pre-tether-20261101.json",
+    "original_sha256": "3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109",
+    "current_sha256": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac",
+    "original_bytes": 1229616,
+    "current_bytes": 1229620,
+    "changed_json_paths": [
+      "$.title",
+      "$.providers[81].name"
+    ],
+    "all_other_json_values_equal": true,
+    "original_bytes_exact": true
+  },
+  "legacy_exemptions": {
+    "docs": {
+      "Expert Review Coordinator Guide 2026-10-26.md": "expert instrument/coordinator archive",
+      "Independent Project Review 2026-10-26.md": "dated original review",
+      "Opus_20261026T050236Z_review.md": "dated original model review",
+      "T6_PRIMARY_REFERENCE.md": "dated primary-proof checkpoint",
+      "T6_CONTEXTUAL_AUDIT.md": "research-pinned legacy contextual contract"
+    },
+    "directories": [
+      "docs/history",
+      "planning/review-assets (previous evidence)",
+      "paper",
+      "memory",
+      "src",
+      "data originals/receipts/sealed artifacts"
+    ],
+    "identifiers": [
+      "asof imports/module commands",
+      "legacy wheel/distribution names",
+      "wire/schema/method IDs",
+      "asofDate",
+      "asof_release_date",
+      "asof_normalized_packets",
+      "actual src/asof and retained filesystem paths"
+    ],
+    "historical_prose": "Accepted AsOf version statements and fixed study arm names are retained as engine/history labels, not current product branding."
+  },
+  "no_study_or_source_execution": true,
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "scientific_validation": "not_established"
+}

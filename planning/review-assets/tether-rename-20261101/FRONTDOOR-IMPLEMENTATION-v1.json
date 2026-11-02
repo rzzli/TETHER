@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "method": "tether.frontdoor_implementation.v1",
+  "status": "PASS_FICTIONAL_FRONTDOOR_TESTS",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "owned_files": {
+    "packages/tether/pyproject.toml": {
+      "sha256": "2e33b3fde62d219bf4e547499f09bf788c08f3e8cd51ff5fb401c82f0d081662",
+      "bytes": 588
+    },
+    "packages/tether/README.md": {
+      "sha256": "8893b20bc9781cf8f5477a9cf8e2162b282827d2ea466f5634861e7d301b5d1e",
+      "bytes": 2583
+    },
+    "packages/tether/LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "packages/tether/src/tether/_cli.py": {
+      "sha256": "7dd5c292741930b76abe8eb7a75850802fa8bdc478f5eabe9fb31df59bd98a54",
+      "bytes": 2695
+    },
+    "packages/tether/src/tether/_presentation.py": {
+      "sha256": "1469ea0e0565297a517fd0f549dfda0d69b682d10d17131793cb856be6edf785",
+      "bytes": 17083
+    },
+    "packages/tether/tests/test_frontdoor.py": {
+      "sha256": "787b74b0500797a4bb146622622378dd9b7e242fc719c576bf4f2d7cb881e3c2",
+      "bytes": 16619
+    }
+  },
+  "tests": {
+    "methods": 26,
+    "result": "PASS",
+    "seconds": 12.918,
+    "log": "planning/review-assets/tether-rename-20261101/FRONTDOOR-TESTS-v1.txt",
+    "log_sha256": "7e3076b5e68086efed4938d5b42e4000f11c4324cef45aceb68774b763639c67",
+    "scope": "Fresh fictional JSON/demo outputs after editable distribution installation; no provider/model calls."
+  },
+  "environment": {
+    "python": "3.11.15",
+    "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+    "tether_distribution": "0.4.0",
+    "core_distribution": "0.3.11"
+  },
+  "design": [
+    "Independent tether-target-agents 0.4.0 distribution with exact asof-target-agents 0.3.11 compatibility dependency; optional Arrow 21 only.",
+    "Canonical branded parser/CLI/version without mutating legacy globals. Other core commands invoke the installed engine once; normal legacy outputs remain unchanged.",
+    "Demo/run exclusively reserve OUT; legacy execution occurs once in OUT/engine. Outer dossier changes only the exact first header; all remaining bytes match.",
+    "Manifest binds exact launcher code/version, original invocation hash, complete artifact paths/hashes/sizes and original engine receipt. Receipt binds manifest plus closed outer journal.",
+    "Outer verification checks roles, types, complete file/directory closure, current launcher proof, exact five-event dispatch/proof/terminal bindings and genuine current-originals core verification.",
+    "Outer --outputs-only is explicitly rejected; direct legacy outputs retain legacy verification modes.",
+    "External outer receipt SHA is optional but anchoring status is honest; independent retention is required against whole-tree replacement.",
+    "Failure and interruption retain outer failure metadata and available inner attempts; final receipt is published only after journal close. Published receipt bytes on a readback failure are quarantined.",
+    "Inspect tolerates a missing/empty failed journal and never redispatches. Engine130 is an interruption. Supervised subprocess interruption terminates/reaps once without retry."
+  ],
+  "meaningful_regressions": [
+    "Real synthetic demo and copied synthetic run sources verified through genuine legacy admission.",
+    "Header and body substitutions rejected after manifest/journal/receipt rehashing.",
+    "Original source, engine receipt, launcher file, external receipt and role mutations rejected.",
+    "Boolean byte metadata and contradictory rechained launcher-proof event rejected.",
+    "Unlisted files and empty directories rejected.",
+    "Fresh/concurrent/existing output ownership enforced; concurrent test dispatches once.",
+    "Engine failure, interruption, constructor failure, journal-close/failure-append and final readback faults retain failures without a success receipt.",
+    "Branded help/version/errors, unchanged legacy parser, argument rewriting and inspect/verify no-redispatch behavior."
+  ],
+  "legacy_boundary": {
+    "root_pyproject_changed": false,
+    "root_uv_lock_changed": false,
+    "src_asof_changed": false,
+    "license_equals_legacy": true,
+    "prior_sealed_archives_modified": false,
+    "note": "git diff --numstat for root pyproject/uv.lock/src/asof was empty. Parent independently owns full frozen-inventory qualification."
+  },
+  "namespace_coordination": {
+    "agent": "/root/tether_namespace_review",
+    "separate_reported_tests": 13,
+    "result": "PASS reported by namespace author; not rerun in this log.",
+    "cli_contract": "main(argv=None)->int; parser(); canonical tether.cli aliases new tether._cli."
+  },
+  "scope_limits": [
+    "Trusted local wrapper, not an OS sandbox or new hard process/resource isolation promise.",
+    "Code proof matches the current facade installation; None source-checkout metadata and installed metadata are intentionally distinct. Use fresh outputs after installation changes.",
+    "No wheel build, network, source/provider acquisition, model call, scientific study rerun or old protected/human data read by this implementation task.",
+    "Root owns lock/install/CI/isolated-wheel qualification and independent whole-package review.",
+    "New presentation/provenance does not alter historical wire IDs, original data, frozen engine/package proofs, scientific results or publication status."
+  ],
+  "scientific_validation": "not_established",
+  "new_provider_calls": 0,
+  "new_model_calls": 0
+}

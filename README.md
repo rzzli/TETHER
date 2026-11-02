@@ -1,12 +1,14 @@
-# AsOf target-evaluation agents
+# TETHER
 
-AsOf turns dated evidence into auditable target-evaluation dossiers. It provides
+**Target Evidence Tracking Harness for Evaluation and Reproducibility**
+
+TETHER turns dated evidence into auditable target-evaluation dossiers. It provides
 strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-**Current software: 0.3.11, with v2 execution contracts.** The earlier 1,774-test
-acceptance is retained with its matching historical code. Final local gates at
+**Current distribution: `tether-target-agents` 0.4.0 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
+acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
 optional skips. All 78 frozen P05 code pins and 100 package payloads remain
 unchanged; test/validation helpers differ. The gate preserves the exact-hash failed-source archive.
@@ -16,9 +18,11 @@ performance measurements.
 
 ## Current status and next step
 
-The [preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>) is the execution roadmap. The bounded technical experiment and reproducible results are complete. The [original manuscript checkpoint](<planning/Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md>) retains its 118 content checks and positioning review. The current [paper draft](paper/README.md) has a separately versioned 18-page PDF with fresh text, visual and repeat checks; four release/status paragraphs changed while primary study bytes remain unchanged. P09 and P10b are complete locally: the 53-member working packet repeats exactly and passes 200 independent archive checks. Factual owner declarations and final acceptance remain deferred, so P08 and overall P10 are incomplete. The [current assessment](<planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>) records the complete project disposition. This is a source-reporting/methods paper, with no validated clinical-prediction or expert-equivalence claim.
+The active project is now **TETHER**. The [rename/status assessment](<planning/TETHER Rename Completion and Project Status 2026-11-01.md>) and [naming plan](<planning/TETHER Naming and Compatibility Plan 2026-11-01.md>) describe the new interfaces and retained compatibility names. All 49 TETHER tests pass in full/core environments, twelve independent code probes pass, and a source-isolated two-wheel installation/demo/verification succeeds without optional libraries. Targeted legacy regressions pass 115 tests in full and 96 executed plus 19 optional skips in core. The engine and original 100 code payloads remain unchanged.
 
-The [installed-source checkpoint](<planning/Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md>) reconstructs all38 output hashes/90 decisions from137 relocated complete originals. Independent source audit passes6,862 checks;82 shipped tests and199 original study regressions pass. Final full/core gates and offline wheel/demo pass. The315-member release ZIP is byte-identical across two builds and passes1,595 independent archive checks. See the [artifact instructions](paper/release/PACKAGE-README.md) and [external hash record](paper/release/RELEASE-RECORD.json). Qualification covers the stated local Windows scope; current hosted jobs/native Linux replay/fresh external reacquisition remain unqualified. No public deposit or publication occurred.
+The [current paper](paper/README.md) has an 18-page TETHER PDF with 274 fresh visible-text units, independent naming/geometry/repeat checks and unchanged scientific results. A new 72-member TETHER review packet contains the current paper, software wheel/source, exact historical results and immutable legacy reproduction archive. Its two builds match; all 946 independent archive checks pass. See the [packet guide](paper/release/tether/README.md) and [external TETHER packet record](paper/release/tether/RELEASE-RECORD.json). Owner author/declaration facts and final acceptance remain deferred; overall P08/P10 and submission readiness are incomplete.
+
+The earlier [P09 source reconstruction](<planning/Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md>) and [53-member P10 working packet](<planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>) remain historical accepted scopes. P09 reproduces 38 output hashes/90 decisions from 137 complete originals and passes 6,862 source checks. The 315-member compatibility ZIP and all original hashes/costs are unchanged. These technical checks establish no clinical-prediction, causal-genetics, model-superiority or expert-equivalence result. No public deposit, publication or current hosted-CI result is claimed.
 
 ## Retained study chronology
 
@@ -53,18 +57,37 @@ are unchanged. Python interfaces are not an OS sandbox.
 | [Data plan](data/DATA_PLAN.md) / [catalog](data/catalog/sources.json) | Dataset products, versions, permissions and acquisition requirements |
 | [Prior README](docs/history/README-before-scientific-priority-20261031.md) | Exact pre-reassessment history, preserved at its original checkpoint |
 
+## Installation and compatibility
+
+TETHER is the current project and CLI name. Install the canonical local package
+from the repository root with `uv sync --project packages/tether --python 3.11`
+(add `--extra ingest` for the pinned optional Parquet dependency), then use
+`uv run --project packages/tether --no-sync tether ...`.
+
+The public API aliases under `tether.*` expose the same legacy objects as `asof.*`
+with their existing output layouts. They do not automatically create branded
+outer artifacts. The separate `tether._presentation` layer implements that CLI
+presentation for `demo` and `run`.
+The frozen `src/asof/` engine, legacy `asof` command, module entry points,
+distribution IDs in old wheels, schemas, dataset IDs and recorded paths remain
+available for compatibility. Existing receipts, READY authorities and scientific
+results keep their original bytes and names. The earlier AsOf paper/release
+artifacts are historical versions; the rename alone makes no new study or
+qualification claim. The current [catalog and its preserved predecessor](data/catalog/README.md)
+distinguish display names from committed source identities.
+
 ## Run the offline demonstration
 
 From `D:\Projects\drug_target_agents` in PowerShell:
 
 ```powershell
-uv sync --python 3.11
-uv run --no-sync asof demo --output runs/demo-v02-001
-uv run --no-sync asof verify --run-dir runs/demo-v02-001
-uv run --no-sync python -m unittest discover -s tests -v
+uv sync --project packages/tether --python 3.11
+New-Item -ItemType Directory -Path runs -Force | Out-Null
+uv run --project packages/tether --no-sync tether demo --output runs/demo-v02-001
+uv run --project packages/tether --no-sync tether verify --run-dir runs/demo-v02-001
 ```
 
-For the shared local/CI validation command, use `uv run --no-sync python tools/validate.py
+The legacy engine checkout retains its separate root environment (`uv sync --python 3.11`, optionally `--extra ingest`). For its shared local/CI validation command, use `uv run --no-sync python tools/validate.py
 --mode core --package`. Full validation requires the ingestion extra and PowerShell 7:
 `uv run --no-sync python tools/validate.py --mode full --package`. Full mode rejects all
 skips; core mode permits only named optional-dependency skips. Both require the portable
@@ -73,15 +96,51 @@ Windows/Linux core/full hosted CI; the current commits have not been pushed or
 qualified by hosted CI. See the [registry milestone evidence](planning/review-assets/registry-sizing-20261017/README.md)
 for exact commits and hosted results.
 
-Choose a new output directory for each execution. `dossier.md` is the readable report;
-`ledger.json`, `features.json`, `prediction.json`, `inputs.json`, `run.json`,
-`trace.jsonl`, `journal.jsonl` and `receipt.json` retain evidence and accounting.
-CLI runs also archive `request.json`. Save the printed receipt hash independently:
+## TETHER CLI run layout
+
+Choose an existing parent and a new output directory for each `tether demo` or
+`tether run` execution. These commands reserve `OUT` and create a separately
+sealed outer presentation:
+
+```text
+OUT/
+  dossier.md
+  tether-manifest.json
+  tether-receipt.json
+  attempt/journal.jsonl
+  engine-stdout.txt
+  engine-stderr.txt
+  engine/
+    dossier.md
+    receipt.json
+    journal.jsonl
+    ...
+```
+
+The outer `dossier.md` changes only the first engine dossier header to TETHER;
+the rest of its bytes match `engine/dossier.md`. The manifest binds this
+projection, all engine files and the launcher code/version. The outer attempt
+journal closes before `tether-receipt.json` is published. The unchanged engine
+directory contains `ledger.json`, `features.json`, `prediction.json`, `inputs.json`,
+`run.json`, `trace.jsonl`, its journal/receipt and the CLI `request.json`.
+Save the printed **outer** receipt hash independently:
 
 ```powershell
-uv run --no-sync asof verify --run-dir runs/demo-v02-001 --receipt-sha256 <saved-hash>
-uv run --no-sync asof inspect-run --run-dir runs/demo-v02-001
+uv run --project packages/tether --no-sync tether verify --run-dir runs/demo-v02-001 --receipt-sha256 <saved-hash>
+uv run --project packages/tether --no-sync tether inspect-run --run-dir runs/demo-v02-001
 ```
+
+`tether verify --run-dir OUT` checks the outer seal, launcher, inventory, journal
+and exact dossier projection, then performs source-inclusive engine verification.
+`tether inspect-run --run-dir OUT` reads retained outer and engine attempts without
+retrying. Outer verification rejects `--outputs-only`. For a legacy-only check,
+`asof verify --run-dir OUT/engine` remains valid; save/use the separate engine
+receipt hash for that check. `inspect-source`, `build-snapshot` and `evaluate`
+continue to delegate with their existing engine output layouts.
+
+Failures or interruptions preserve `tether-failure.json`, the outer attempt and
+any inner journal. Inspect the failed attempt before choosing a fresh output;
+verification and inspection never automatically repeat execution.
 
 Verification reports byte integrity, semantic consistency, source binding and scientific
 validity separately. Without an independently retained hash, local verification cannot
@@ -94,10 +153,10 @@ Ingestion is optional and pins `pyarrow==21.0.0`; the default runtime has no thi
 dependencies. Install the extra once and retain it with `uv run --no-sync`:
 
 ```powershell
-uv sync --python 3.11 --extra ingest
-uv run --no-sync asof inspect-source --manifest data/manifests/private/v02-inputs.json `
+uv sync --project packages/tether --python 3.11 --extra ingest
+uv run --project packages/tether --no-sync tether inspect-source --manifest data/manifests/private/v02-inputs.json `
   --catalog data/catalog/sources.json --report data/manifests/private/inspection-new.json
-uv run --no-sync asof build-snapshot --manifest data/manifests/private/v02-inputs.json `
+uv run --project packages/tether --no-sync tether build-snapshot --manifest data/manifests/private/v02-inputs.json `
   --catalog data/catalog/sources.json --output data/derived/contemporary-pilot-new
 ```
 
@@ -116,7 +175,7 @@ affected case. A present-day receipt proves a present-day availability bound onl
 ## Run a prepared v2 case
 
 ```powershell
-uv run --no-sync asof run --case path/to/case.json --snapshot path/to/snapshot.json `
+uv run --project packages/tether --no-sync tether run --case path/to/case.json --snapshot path/to/snapshot.json `
   --catalog data/catalog/sources.json --output runs/pilot-case-new
 ```
 
@@ -135,7 +194,8 @@ before dispatch. Applicability mismatches abstain. Recorded selections supplied 
 
 | Location | Purpose |
 | --- | --- |
-| `src/asof/` | Immutable contracts, provenance, workflow, ingestion and CLI |
+| `packages/tether/` | Canonical TETHER distribution, CLI and compatible import namespace |
+| `src/asof/` | Frozen AsOf engine: contracts, provenance, workflow, ingestion and CLI |
 | `docs/FRAMEWORK.md` | Interfaces, guarantees, failures and deferred work |
 | `docs/V02_MIGRATION.md` | Explicit v1-to-v2 conversion requirements |
 | `tests/` | Temporal, provenance, semantic, budget, failure and adapter regressions |

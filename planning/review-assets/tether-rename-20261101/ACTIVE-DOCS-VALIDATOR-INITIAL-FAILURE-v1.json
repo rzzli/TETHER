@@ -1,0 +1,10 @@
+{
+  "method": "tether.scoped_documentation_validator_failure.v1",
+  "command": ".venv/Scripts/python.exe -B planning/review-assets/tether-rename-20261101/validate_active_docs_v1.py",
+  "exception": "UnicodeDecodeError",
+  "location": "data/DATA_PLAN.md read_text() using Windows cp1252 default",
+  "message": "charmap codec cannot decode byte 0x9d in position 25055",
+  "classification": "Reviewer validation code encoding assumption; no document/catalog failure",
+  "correction": "All validator text reads explicitly use UTF-8",
+  "production_mutations": false
+}

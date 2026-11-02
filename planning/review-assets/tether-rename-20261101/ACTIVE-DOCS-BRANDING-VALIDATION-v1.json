@@ -1,0 +1,1520 @@
+{
+  "schema_version": 1,
+  "method": "tether.scoped_active_docs_validation.v1",
+  "status": "PASS",
+  "checks_evaluated": 221,
+  "checks_passed": 221,
+  "unresolved_findings": [],
+  "checks": [
+    {
+      "check": "recorded_current_hash:data/catalog/sources.json",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:README.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:data/README.md",
+      "passed": true
+    },
+    {
+      "check": "recorded_current_hash:data/DATA_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "pre_rename_catalog_exact_pin",
+      "passed": true
+    },
+    {
+      "check": "only_two_display_strings_change",
+      "passed": true
+    },
+    {
+      "check": "both_catalogs_pass_unchanged_core_validator",
+      "passed": true
+    },
+    {
+      "check": "all_178_dataset_ids_documented",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:0",
+      "passed": true
+    },
+    {
+      "check": "local_link:1",
+      "passed": true
+    },
+    {
+      "check": "local_link:2",
+      "passed": true
+    },
+    {
+      "check": "local_link:3",
+      "passed": true
+    },
+    {
+      "check": "local_link:4",
+      "passed": true
+    },
+    {
+      "check": "local_link:5",
+      "passed": true
+    },
+    {
+      "check": "local_link:6",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:7",
+      "passed": true
+    },
+    {
+      "check": "local_link:8",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:9",
+      "passed": true
+    },
+    {
+      "check": "local_link:10",
+      "passed": true
+    },
+    {
+      "check": "local_link:11",
+      "passed": true
+    },
+    {
+      "check": "local_link:12",
+      "passed": true
+    },
+    {
+      "check": "local_link:13",
+      "passed": true
+    },
+    {
+      "check": "local_link:14",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:15",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:16",
+      "passed": true
+    },
+    {
+      "check": "local_link:17",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:18",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:19",
+      "passed": true
+    },
+    {
+      "check": "local_link:20",
+      "passed": true
+    },
+    {
+      "check": "local_link:21",
+      "passed": true
+    },
+    {
+      "check": "local_link:22",
+      "passed": true
+    },
+    {
+      "check": "local_link:23",
+      "passed": true
+    },
+    {
+      "check": "local_link:24",
+      "passed": true
+    },
+    {
+      "check": "local_link:25",
+      "passed": true
+    },
+    {
+      "check": "local_link:26",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:27",
+      "passed": true
+    },
+    {
+      "check": "local_link:28",
+      "passed": true
+    },
+    {
+      "check": "local_link:29",
+      "passed": true
+    },
+    {
+      "check": "local_link:30",
+      "passed": true
+    },
+    {
+      "check": "local_link:31",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:32",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:33",
+      "passed": true
+    },
+    {
+      "check": "local_link:34",
+      "passed": true
+    },
+    {
+      "check": "local_link:35",
+      "passed": true
+    },
+    {
+      "check": "local_link:36",
+      "passed": true
+    },
+    {
+      "check": "local_link:37",
+      "passed": true
+    },
+    {
+      "check": "local_link:38",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:39",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:40",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:41",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:42",
+      "passed": true
+    },
+    {
+      "check": "local_link:43",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:44",
+      "passed": true
+    },
+    {
+      "check": "local_link:45",
+      "passed": true
+    },
+    {
+      "check": "local_link:46",
+      "passed": true
+    },
+    {
+      "check": "local_link:47",
+      "passed": true
+    },
+    {
+      "check": "local_link:48",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:49",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:50",
+      "passed": true
+    },
+    {
+      "check": "local_link:51",
+      "passed": true
+    },
+    {
+      "check": "local_link:52",
+      "passed": true
+    },
+    {
+      "check": "local_link:53",
+      "passed": true
+    },
+    {
+      "check": "local_link:54",
+      "passed": true
+    },
+    {
+      "check": "local_link:55",
+      "passed": true
+    },
+    {
+      "check": "local_link:56",
+      "passed": true
+    },
+    {
+      "check": "local_link:57",
+      "passed": true
+    },
+    {
+      "check": "local_link:58",
+      "passed": true
+    },
+    {
+      "check": "local_link:59",
+      "passed": true
+    },
+    {
+      "check": "local_link:60",
+      "passed": true
+    },
+    {
+      "check": "local_link:61",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:62",
+      "passed": true
+    },
+    {
+      "check": "local_link:63",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:64",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:65",
+      "passed": true
+    },
+    {
+      "check": "legacy_module_commands_preserved:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_identity_and_history_note:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:README.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:66",
+      "passed": true
+    },
+    {
+      "check": "local_link:67",
+      "passed": true
+    },
+    {
+      "check": "local_link:68",
+      "passed": true
+    },
+    {
+      "check": "local_link:69",
+      "passed": true
+    },
+    {
+      "check": "local_link:70",
+      "passed": true
+    },
+    {
+      "check": "local_link:71",
+      "passed": true
+    },
+    {
+      "check": "local_link:72",
+      "passed": true
+    },
+    {
+      "check": "local_link:73",
+      "passed": true
+    },
+    {
+      "check": "local_link:74",
+      "passed": true
+    },
+    {
+      "check": "local_link:75",
+      "passed": true
+    },
+    {
+      "check": "local_link:76",
+      "passed": true
+    },
+    {
+      "check": "local_link:77",
+      "passed": true
+    },
+    {
+      "check": "local_link:78",
+      "passed": true
+    },
+    {
+      "check": "local_link:79",
+      "passed": true
+    },
+    {
+      "check": "local_link:80",
+      "passed": true
+    },
+    {
+      "check": "local_link:81",
+      "passed": true
+    },
+    {
+      "check": "local_link:82",
+      "passed": true
+    },
+    {
+      "check": "local_link:83",
+      "passed": true
+    },
+    {
+      "check": "local_link:84",
+      "passed": true
+    },
+    {
+      "check": "local_link:85",
+      "passed": true
+    },
+    {
+      "check": "local_link:86",
+      "passed": true
+    },
+    {
+      "check": "local_link:87",
+      "passed": true
+    },
+    {
+      "check": "local_link:88",
+      "passed": true
+    },
+    {
+      "check": "local_link:89",
+      "passed": true
+    },
+    {
+      "check": "local_link:90",
+      "passed": true
+    },
+    {
+      "check": "local_link:91",
+      "passed": true
+    },
+    {
+      "check": "local_link:92",
+      "passed": true
+    },
+    {
+      "check": "local_link:93",
+      "passed": true
+    },
+    {
+      "check": "local_link:94",
+      "passed": true
+    },
+    {
+      "check": "local_link:95",
+      "passed": true
+    },
+    {
+      "check": "local_link:96",
+      "passed": true
+    },
+    {
+      "check": "local_link:97",
+      "passed": true
+    },
+    {
+      "check": "local_link:98",
+      "passed": true
+    },
+    {
+      "check": "local_link:99",
+      "passed": true
+    },
+    {
+      "check": "local_link:100",
+      "passed": true
+    },
+    {
+      "check": "local_link:101",
+      "passed": true
+    },
+    {
+      "check": "local_link:102",
+      "passed": true
+    },
+    {
+      "check": "local_link:103",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:data/README.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:104",
+      "passed": true
+    },
+    {
+      "check": "local_link:105",
+      "passed": true
+    },
+    {
+      "check": "local_link:106",
+      "passed": true
+    },
+    {
+      "check": "local_link:107",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:data/DATA_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:108",
+      "passed": true
+    },
+    {
+      "check": "local_link:109",
+      "passed": true
+    },
+    {
+      "check": "local_link:110",
+      "passed": true
+    },
+    {
+      "check": "local_link:111",
+      "passed": true
+    },
+    {
+      "check": "local_link:112",
+      "passed": true
+    },
+    {
+      "check": "local_link:113",
+      "passed": true
+    },
+    {
+      "check": "local_link:114",
+      "passed": true
+    },
+    {
+      "check": "local_link:115",
+      "passed": true
+    },
+    {
+      "check": "current_document_has_TETHER:data/catalog/README.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:116",
+      "passed": true
+    },
+    {
+      "check": "local_link:117",
+      "passed": true
+    },
+    {
+      "check": "local_link:118",
+      "passed": true
+    },
+    {
+      "check": "canonical_main_CLI:README.md",
+      "passed": true
+    },
+    {
+      "check": "canonical_main_CLI:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "canonical_main_CLI:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "excluded_doc_unmodified:docs/Expert Review Coordinator Guide 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "excluded_doc_unmodified:docs/Independent Project Review 2026-10-26.md",
+      "passed": true
+    },
+    {
+      "check": "excluded_doc_unmodified:docs/Opus_20261026T050236Z_review.md",
+      "passed": true
+    },
+    {
+      "check": "excluded_doc_unmodified:docs/T6_PRIMARY_REFERENCE.md",
+      "passed": true
+    },
+    {
+      "check": "excluded_doc_unmodified:docs/T6_CONTEXTUAL_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "retained_scripts_parse_without_execution",
+      "passed": true
+    },
+    {
+      "check": "git_diff_check",
+      "passed": true
+    }
+  ],
+  "local_links": [
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "T6_PRIMARY_REFERENCE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/DETERMINISTIC_BASELINES.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../src/asof/study/interpretation_generation.py",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../src/asof/study/interpretation_grammar.py",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/NEXT-ADAPTER-DESIGN.md",
+      "exists": true
+    },
+    {
+      "source": "docs/MAINTENANCE.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "INTERPRETATION_GENERATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/QUESTION_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/QUESTION_LOCAL.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/QUESTION_PILOT.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "target": "QUESTION_LOCAL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/SOURCE_FACT_EVALUATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "DETERMINISTIC_BASELINES.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "FIXED_EVIDENCE_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "BOUNDED_RETRIEVAL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "target": "T6_DOSSIER_BINDING.md",
+      "exists": true
+    },
+    {
+      "source": "docs/T6_DOSSIER_BINDING.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/release/PACKAGE-README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/release/RELEASE-RECORD.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/SOURCE_FACT_EVALUATION.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Audited Paper Results.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/run-registry.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessments.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/FRAMEWORK.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/V02_MIGRATION.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/STUDY_RUNTIME.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/INTERPRETATION_INTERFACE.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/DATA_PLAN.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/catalog/sources.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/history/README-before-scientific-priority-20261031.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/catalog/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/registry-sizing-20261017/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Scientific%20Prerequisites%20Execution%202026-10-18.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Ordered%20Execution%20Progress%202026-10-17.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md",
+      "exists": true
+    },
+    {
+      "source": "data/README.md",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "exists": true
+    },
+    {
+      "source": "data/README.md",
+      "target": "catalog/README.md",
+      "exists": true
+    },
+    {
+      "source": "data/README.md",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "source": "data/README.md",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "catalog/README.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md",
+      "exists": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "exists": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "target": "sources.json",
+      "exists": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "target": "history/sources-pre-tether-20261101.json",
+      "exists": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "target": "../../README.md#installation-and-compatibility",
+      "exists": true
+    }
+  ],
+  "catalog": {
+    "history_path": "data/catalog/history/sources-pre-tether-20261101.json",
+    "original_sha256": "3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109",
+    "current_sha256": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac",
+    "original_bytes": 1229616,
+    "current_bytes": 1229620,
+    "changed_json_paths": [
+      "$.title",
+      "$.providers[81].name"
+    ],
+    "all_other_json_values_equal": true,
+    "original_bytes_exact": true
+  },
+  "counts": {
+    "changed_existing_files": 24,
+    "current_guides": 20,
+    "local_markdown_links": 119,
+    "providers": 83,
+    "datasets": 178
+  },
+  "limits": [
+    "No package install, CLI execution, original source reads, broad suite, model or network activity. Namespace/CLI agents separately validate the new TETHER entry points.",
+    "Existing frozen study/release artifacts and legacy code remain outside this edit scope.",
+    "Accepted AsOf versions, fixed arm labels, module commands and ID spellings are deliberate compatibility/history exemptions."
+  ],
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "study_rerun": false,
+  "scientific_validation": "not_established"
+}

@@ -1,14 +1,16 @@
 ---
-title: AsOf v0.2 Migration
+title: TETHER v1-to-v2 Contract Migration
 date: 2026-10-11
 updated: 2026-10-16
 tags:
-  - asof
+  - tether
   - contracts
   - migration
 ---
 
-# Explicit migration from v1 to v2
+# TETHER — Explicit migration from v1 to v2
+
+TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
 
 ## Normalization 2.1 to 2.2 within v2 contracts
 
@@ -108,6 +110,11 @@ remains a synthetic fixture.
 
 ## Backends, replay and durable outputs
 
+The receipt and journal details below describe the unchanged engine artifacts.
+For `tether run --output OUT` they live in `OUT/engine`; the outer `dossier.md`,
+`tether-manifest.json`, `tether-receipt.json` and `attempt/journal.jsonl` form a
+separate presentation seal. Direct API aliases preserve the legacy output root.
+
 `Backend.quote()` and `Backend.select()` remain unchanged. Quote a reliable upper usage
 bound and return validated selections/usage. Nested records and results are immutable;
 prepare a new reviewed value instead of mutating an admitted one. Ledger admission binds
@@ -125,8 +132,9 @@ runs/builds and never repeats a potentially billed call.
 V2 receipts retain eight required output hashes and complete artifact/ancestor proofs.
 CLI `request.json`, when present, is bound via optional `auxiliary_outputs`; valid earlier
 v2 receipts without that optional field remain verifiable. Save the receipt hash
-independently. Source-inclusive verification binds current originals; `--outputs-only`
-explicitly supplies the weaker archived-fingerprint check.
+independently. Source-inclusive engine verification binds current originals; legacy
+`--outputs-only` explicitly supplies the weaker archived-fingerprint check. The
+TETHER outer verifier requires source-inclusive verification and rejects that flag.
 
 ## Validate the converted inputs
 
@@ -147,15 +155,15 @@ them, `packet_bytes` totals them and `packet_sha256` is null for multiple packet
 The default single-packet mode and finite runtime/output budgets are unchanged.
 
 ```powershell
-uv sync --python 3.11
-uv run --no-sync asof run --case converted/case.json --snapshot converted/snapshot.json `
+uv sync --project packages/tether --python 3.11
+uv run --project packages/tether --no-sync tether run --case converted/case.json --snapshot converted/snapshot.json `
   --catalog data/catalog/sources.json --output runs/converted-v02-new
-uv run --no-sync asof verify --run-dir runs/converted-v02-new
-uv run --no-sync asof inspect-run --run-dir runs/converted-v02-new
+uv run --project packages/tether --no-sync tether verify --run-dir runs/converted-v02-new
+uv run --project packages/tether --no-sync tether inspect-run --run-dir runs/converted-v02-new
 ```
 
-For supported provider ingestion, install `uv sync --python 3.11 --extra ingest` and
-continue with `uv run --no-sync asof inspect-source --manifest path/to/manifest.json
+For supported provider ingestion, install `uv sync --project packages/tether --python 3.11 --extra ingest` and
+continue with `uv run --project packages/tether --no-sync tether inspect-source --manifest path/to/manifest.json
 --catalog data/catalog/sources.json --report path/to/new-inspection.json` (one shell line).
 
 Mechanical verification establishes retained-input and contract consistency. It does

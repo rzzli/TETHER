@@ -1,15 +1,17 @@
 ---
-title: AsOf Framework Implementation
+title: TETHER Framework Implementation
 date: 2026-10-11
 updated: 2026-10-18
 status: v02-technical-pilot-complete
 tags:
-  - asof
+  - tether
   - framework
   - provenance
 ---
 
-# AsOf framework v0.2
+# TETHER — framework: legacy v2 contracts
+
+TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
 
 The October 17 build adds opt-in `build-snapshot --packet-layout bounded` for
 larger case collections. It partitions whole observations in input order into
@@ -26,7 +28,7 @@ than assume `evidence.json`. Existing snapshots and receipts are unchanged.
 The 256 MiB ledger-output bound and execution budgets remain unchanged, so packet
 partitioning alone does not guarantee arbitrary-sized runs can finalize.
 
-AsOf follows [[AsOf Feasibility Analysis and Peer Survey]]: begin with a bounded
+TETHER follows the retained [[AsOf Feasibility Analysis and Peer Survey]]: begin with a bounded
 extractor and deterministic checks, preserving the useful Virtual Biotech pattern of
 planning, specialist routing, review and provenance. Evidence extraction and numerical
 prediction remain separate. Scientific validation and Virtual Biotech reproduction
@@ -93,8 +95,8 @@ The default runtime has no third-party dependencies. Ingestion requires the opti
 `ingest` extra with exactly `pyarrow==21.0.0`:
 
 ```powershell
-uv sync --python 3.11 --extra ingest
-uv run --no-sync asof --help
+uv sync --project packages/tether --python 3.11 --extra ingest
+uv run --project packages/tether --no-sync tether --help
 ```
 
 | Subsystem | Responsibility |
@@ -197,7 +199,8 @@ llama-server. It is restricted to an IPv4 loopback endpoint, bypasses environmen
 proxies, rejects redirects, applies request deadlines and makes no provider calls.
 The configuration declares pinned weight/runtime hashes; the trusted launcher must
 verify them and own the server. This declaration is not remote model attestation.
-The default CLI behavior and budget caps are unchanged.
+The default engine behavior and budget caps are unchanged; the TETHER CLI adds
+its separately sealed outer presentation for `demo` and `run`.
 
 `RetrievalPolicy` bounds whole admitted records by count and UTF-8 transport bytes.
 The default canonical mode retains the original policy and request fingerprints.
@@ -248,6 +251,10 @@ features remain empty.
 
 ## Durable execution and verification
 
+The engine details below apply inside `OUT/engine` for a TETHER CLI run, or at
+the original output root for legacy API/module commands. TETHER seals the outer
+presentation separately; its source-inclusive verification rejects `--outputs-only`.
+
 Defaults are 16 calls, 32,000 input tokens, 8,000 output tokens, $0, 300 seconds and one
 critic retry per category. Quoted upper usage is reserved before dispatch. Measured
 adapter-reported usage and conservative unmeasured estimates are recorded separately.
@@ -277,7 +284,7 @@ optional `auxiliary_outputs`. Existing valid v1/v2 receipts remain compatible.
 | --- | --- |
 | Byte integrity | Receipt hashes and hash chains agree with retained bytes |
 | Semantic consistency | Identity, configuration, accounting, journal claims, source fingerprints, deterministic features, scorer contributions and final trace agree |
-| Source binding | Complete admitted artifact/ancestor proofs and originals agree; `--outputs-only` checks archived fingerprints instead |
+| Source binding | Complete admitted artifact/ancestor proofs and originals agree; legacy engine `--outputs-only` checks archived fingerprints instead (the TETHER outer verifier rejects it) |
 | Scientific validity | Unestablished until independent scientific review |
 
 Source-inclusive verification reapplies admission using archived policy and snapshot.

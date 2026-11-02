@@ -1,0 +1,5293 @@
+{
+  "schema_version": 1,
+  "method": "tether.independent_paper_naming_review.v1",
+  "status": "PASS_PAPER_NAMING_CONTINUITY_AND_PDF",
+  "reviewed_at_utc": "2026-11-02T04:15:34.500364+00:00",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "unresolved_findings": [],
+  "check_count": 1222,
+  "checks": [
+    {
+      "name": "explicit current and retained subject pins",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md retained pre-rename hash",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md current naming-delta hash",
+      "passed": true
+    },
+    {
+      "name": "single explicit post-result former-name note",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md exact inverse byte continuity",
+      "passed": true
+    },
+    {
+      "name": "supplement.md retained pre-rename hash",
+      "passed": true
+    },
+    {
+      "name": "supplement.md current naming-delta hash",
+      "passed": true
+    },
+    {
+      "name": "supplement.md exact inverse byte continuity",
+      "passed": true
+    },
+    {
+      "name": "RELATED-WORK-SOURCE-AUDIT.md retained pre-rename hash",
+      "passed": true
+    },
+    {
+      "name": "RELATED-WORK-SOURCE-AUDIT.md current naming-delta hash",
+      "passed": true
+    },
+    {
+      "name": "RELATED-WORK-SOURCE-AUDIT.md exact inverse byte continuity",
+      "passed": true
+    },
+    {
+      "name": "renderer branding/filenames-only inverse",
+      "passed": true
+    },
+    {
+      "name": "274 independently inventoried source units",
+      "passed": true
+    },
+    {
+      "name": "source unit0 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit0 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit1 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit1 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit2 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit2 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit3 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit3 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit4 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit4 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit5 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit5 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit6 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit6 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit7 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit7 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit8 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit8 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit9 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit9 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit10 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit10 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit11 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit11 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit12 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit12 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit13 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit13 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit14 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit14 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit15 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit15 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit16 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit16 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit17 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit17 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit18 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit18 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit19 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit19 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit20 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit20 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit21 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit21 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit22 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit22 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit23 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit23 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit24 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit24 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit25 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit25 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit26 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit26 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit27 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit27 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit28 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit28 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit29 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit29 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit30 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit30 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit31 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit31 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit32 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit32 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit33 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit33 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit34 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit34 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit35 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit35 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit36 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit36 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit37 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit37 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit38 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit38 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit39 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit39 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit40 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit40 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit41 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit41 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit42 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit42 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit43 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit43 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit44 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit44 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit45 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit45 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit46 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit46 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit47 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit47 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit48 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit48 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit49 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit49 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit50 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit50 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit51 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit51 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit52 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit52 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit53 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit53 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit54 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit54 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit55 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit55 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit56 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit56 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit57 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit57 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit58 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit58 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit59 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit59 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit60 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit60 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit61 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit61 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit62 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit62 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit63 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit63 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit64 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit64 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit65 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit65 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit66 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit66 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit67 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit67 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit68 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit68 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit69 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit69 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit70 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit70 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit71 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit71 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit72 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit72 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit73 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit73 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit74 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit74 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit75 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit75 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit76 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit76 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit77 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit77 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit78 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit78 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit79 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit79 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit80 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit80 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit81 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit81 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit82 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit82 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit83 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit83 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit84 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit84 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit85 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit85 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit86 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit86 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit87 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit87 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit88 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit88 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit89 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit89 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit90 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit90 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit91 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit91 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit92 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit92 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit93 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit93 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit94 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit94 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit95 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit95 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit96 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit96 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit97 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit97 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit98 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit98 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit99 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit99 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit100 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit100 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit101 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit101 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit102 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit102 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit103 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit103 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit104 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit104 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit105 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit105 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit106 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit106 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit107 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit107 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit108 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit108 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit109 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit109 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit110 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit110 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit111 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit111 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit112 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit112 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit113 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit113 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit114 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit114 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit115 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit115 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit116 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit116 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit117 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit117 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit118 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit118 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit119 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit119 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit120 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit120 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit121 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit121 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit122 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit122 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit123 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit123 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit124 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit124 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit125 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit125 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit126 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit126 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit127 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit127 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit128 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit128 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit129 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit129 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit130 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit130 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit131 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit131 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit132 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit132 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit133 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit133 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit134 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit134 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit135 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit135 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit136 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit136 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit137 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit137 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit138 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit138 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit139 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit139 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit140 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit140 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit141 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit141 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit142 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit142 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit143 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit143 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit144 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit144 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit145 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit145 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit146 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit146 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit147 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit147 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit148 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit148 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit149 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit149 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit150 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit150 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit151 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit151 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit152 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit152 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit153 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit153 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit154 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit154 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit155 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit155 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit156 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit156 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit157 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit157 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit158 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit158 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit159 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit159 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit160 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit160 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit161 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit161 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit162 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit162 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit163 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit163 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit164 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit164 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit165 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit165 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit166 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit166 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit167 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit167 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit168 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit168 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit169 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit169 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit170 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit170 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit171 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit171 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit172 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit172 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit173 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit173 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit174 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit174 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit175 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit175 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit176 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit176 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit177 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit177 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit178 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit178 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit179 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit179 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit180 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit180 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit181 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit181 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit182 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit182 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit183 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit183 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit184 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit184 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit185 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit185 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit186 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit186 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit187 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit187 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit188 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit188 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit189 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit189 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit190 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit190 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit191 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit191 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit192 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit192 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit193 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit193 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit194 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit194 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit195 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit195 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit196 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit196 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit197 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit197 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit198 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit198 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit199 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit199 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit200 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit200 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit201 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit201 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit202 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit202 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit203 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit203 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit204 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit204 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit205 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit205 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit206 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit206 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit207 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit207 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit208 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit208 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit209 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit209 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit210 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit210 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit211 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit211 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit212 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit212 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit213 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit213 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit214 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit214 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit215 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit215 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit216 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit216 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit217 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit217 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit218 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit218 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit219 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit219 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit220 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit220 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit221 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit221 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit222 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit222 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit223 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit223 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit224 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit224 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit225 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit225 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit226 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit226 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit227 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit227 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit228 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit228 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit229 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit229 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit230 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit230 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit231 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit231 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit232 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit232 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit233 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit233 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit234 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit234 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit235 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit235 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit236 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit236 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit237 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit237 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit238 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit238 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit239 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit239 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit240 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit240 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit241 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit241 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit242 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit242 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit243 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit243 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit244 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit244 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit245 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit245 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit246 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit246 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit247 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit247 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit248 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit248 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit249 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit249 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit250 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit250 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit251 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit251 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit252 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit252 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit253 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit253 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit254 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit254 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit255 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit255 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit256 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit256 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit257 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit257 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit258 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit258 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit259 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit259 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit260 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit260 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit261 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit261 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit262 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit262 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit263 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit263 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit264 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit264 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit265 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit265 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit266 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit266 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit267 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit267 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit268 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit268 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit269 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit269 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit270 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit270 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit271 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit271 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit272 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit272 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "source unit273 metadata",
+      "passed": true
+    },
+    {
+      "name": "source unit273 exact visible content",
+      "passed": true
+    },
+    {
+      "name": "18 final pages",
+      "passed": true
+    },
+    {
+      "name": "page1 geometry",
+      "passed": true
+    },
+    {
+      "name": "page1 branded header",
+      "passed": true
+    },
+    {
+      "name": "page1 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page2 geometry",
+      "passed": true
+    },
+    {
+      "name": "page2 branded header",
+      "passed": true
+    },
+    {
+      "name": "page2 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page3 geometry",
+      "passed": true
+    },
+    {
+      "name": "page3 branded header",
+      "passed": true
+    },
+    {
+      "name": "page3 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page4 geometry",
+      "passed": true
+    },
+    {
+      "name": "page4 branded header",
+      "passed": true
+    },
+    {
+      "name": "page4 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page5 geometry",
+      "passed": true
+    },
+    {
+      "name": "page5 branded header",
+      "passed": true
+    },
+    {
+      "name": "page5 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page6 geometry",
+      "passed": true
+    },
+    {
+      "name": "page6 branded header",
+      "passed": true
+    },
+    {
+      "name": "page6 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page7 geometry",
+      "passed": true
+    },
+    {
+      "name": "page7 branded header",
+      "passed": true
+    },
+    {
+      "name": "page7 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page8 geometry",
+      "passed": true
+    },
+    {
+      "name": "page8 branded header",
+      "passed": true
+    },
+    {
+      "name": "page8 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page9 geometry",
+      "passed": true
+    },
+    {
+      "name": "page9 branded header",
+      "passed": true
+    },
+    {
+      "name": "page9 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page10 geometry",
+      "passed": true
+    },
+    {
+      "name": "page10 branded header",
+      "passed": true
+    },
+    {
+      "name": "page10 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page11 geometry",
+      "passed": true
+    },
+    {
+      "name": "page11 branded header",
+      "passed": true
+    },
+    {
+      "name": "page11 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page12 geometry",
+      "passed": true
+    },
+    {
+      "name": "page12 branded header",
+      "passed": true
+    },
+    {
+      "name": "page12 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page13 geometry",
+      "passed": true
+    },
+    {
+      "name": "page13 branded header",
+      "passed": true
+    },
+    {
+      "name": "page13 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page14 geometry",
+      "passed": true
+    },
+    {
+      "name": "page14 branded header",
+      "passed": true
+    },
+    {
+      "name": "page14 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page15 geometry",
+      "passed": true
+    },
+    {
+      "name": "page15 branded header",
+      "passed": true
+    },
+    {
+      "name": "page15 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page16 geometry",
+      "passed": true
+    },
+    {
+      "name": "page16 branded header",
+      "passed": true
+    },
+    {
+      "name": "page16 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page17 geometry",
+      "passed": true
+    },
+    {
+      "name": "page17 branded header",
+      "passed": true
+    },
+    {
+      "name": "page17 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "page18 geometry",
+      "passed": true
+    },
+    {
+      "name": "page18 branded header",
+      "passed": true
+    },
+    {
+      "name": "page18 page-number footer",
+      "passed": true
+    },
+    {
+      "name": "all PDF source MCIDs declared",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "repeated header exact",
+      "passed": true
+    },
+    {
+      "name": "repeated header exact",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "no non-header duplicate/reordered unit",
+      "passed": true
+    },
+    {
+      "name": "all 274 PDF units in source order",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit0 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit1 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit2 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit3 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit4 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit5 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit6 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit7 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit8 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit9 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit10 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit11 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit12 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit13 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit14 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit15 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit16 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit17 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit18 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit19 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit20 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit21 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit22 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit23 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit24 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit25 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit26 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit27 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit28 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit29 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit30 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit31 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit32 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit33 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit34 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit35 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit36 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit37 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit38 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit39 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit40 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit41 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit42 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit43 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit44 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit45 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit46 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit47 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit48 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit49 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit50 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit51 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit52 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit53 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit54 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit55 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit56 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit57 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit58 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit59 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit60 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit61 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit62 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit63 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit64 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit65 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit66 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit67 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit68 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit69 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit70 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit71 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit72 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit73 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit74 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit75 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit76 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit77 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit78 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit79 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit80 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit81 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit82 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit83 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit84 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit85 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit86 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit87 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit88 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit89 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit90 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit91 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit92 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit93 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit94 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit95 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit96 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit97 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit98 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit99 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit100 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit101 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit102 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit103 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit104 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit105 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit106 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit107 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit108 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit109 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit110 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit111 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit112 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit113 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit114 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit115 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit116 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit117 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit118 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit119 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit120 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit121 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit122 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit123 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit124 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit125 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit126 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit127 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit128 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit129 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit130 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit131 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit132 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit133 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit134 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit135 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit136 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit137 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit138 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit139 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit140 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit141 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit142 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit143 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit144 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit145 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit146 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit147 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit148 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit149 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit150 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit151 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit152 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit153 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit154 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit155 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit156 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit157 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit158 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit159 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit160 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit161 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit162 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit163 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit164 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit165 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit166 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit167 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit168 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit169 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit170 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit171 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit172 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit173 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit174 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit175 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit176 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit177 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit178 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit179 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit180 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit181 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit182 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit183 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit184 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit185 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit186 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit187 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit188 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit189 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit190 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit191 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit192 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit193 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit194 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit195 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit196 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit197 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit198 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit199 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit200 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit201 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit202 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit203 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit204 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit205 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit206 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit207 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit208 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit209 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit210 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit211 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit212 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit213 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit214 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit215 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit216 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit217 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit218 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit219 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit220 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit221 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit222 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit223 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit224 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit225 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit226 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit227 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit228 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit229 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit230 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit231 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit232 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit233 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit234 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit235 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit236 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit237 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit238 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit239 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit240 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit241 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit242 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit243 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit244 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit245 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit246 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit247 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit248 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit249 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit250 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit251 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit252 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit253 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit254 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit255 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit256 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit257 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit258 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit259 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit260 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit261 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit262 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit263 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit264 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit265 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit266 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit267 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit268 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit269 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit270 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit271 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit272 retained",
+      "passed": true
+    },
+    {
+      "name": "PDF source unit273 retained",
+      "passed": true
+    },
+    {
+      "name": "no raster/clipping/body-figure overlap",
+      "passed": true
+    },
+    {
+      "name": "three original vector overlays",
+      "passed": true
+    },
+    {
+      "name": "paper/results/figures/figure1-flow.pdf exact consumed figure bytes",
+      "passed": true
+    },
+    {
+      "name": "paper/results/figures/figure2-availability.pdf exact consumed figure bytes",
+      "passed": true
+    },
+    {
+      "name": "paper/results/figures/figure3-controls.pdf exact consumed figure bytes",
+      "passed": true
+    },
+    {
+      "name": "preview page-01.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-02.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-03.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-04.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-05.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-06.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-07.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-08.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-09.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-10.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-11.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-12.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-13.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-14.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-15.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-16.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-17.png",
+      "passed": true
+    },
+    {
+      "name": "preview page-18.png",
+      "passed": true
+    },
+    {
+      "name": "18 final preview bindings",
+      "passed": true
+    },
+    {
+      "name": "metadata current title",
+      "passed": true
+    },
+    {
+      "name": "metadata current creator",
+      "passed": true
+    },
+    {
+      "name": "author metadata remains empty",
+      "passed": true
+    },
+    {
+      "name": "working draft remains explicit",
+      "passed": true
+    },
+    {
+      "name": "29 PDF link annotations",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md local link results/figures/figure1-flow.pdf",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md local link results/figures/figure2-availability.pdf",
+      "passed": true
+    },
+    {
+      "name": "manuscript.md local link results/figures/figure3-controls.pdf",
+      "passed": true
+    },
+    {
+      "name": "README.md local link manuscript.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link supplement.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link tether-source-reporting-preprint.pdf",
+      "passed": true
+    },
+    {
+      "name": "README.md local link references.bib",
+      "passed": true
+    },
+    {
+      "name": "README.md local link references.json",
+      "passed": true
+    },
+    {
+      "name": "README.md local link RELATED-WORK-SOURCE-AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link results/README.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link ../planning/TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link release/qualification.json",
+      "passed": true
+    },
+    {
+      "name": "README.md local link release/RELEASE-RECORD.json",
+      "passed": true
+    },
+    {
+      "name": "README.md local link TETHER-PDF-BUILD.json",
+      "passed": true
+    },
+    {
+      "name": "README.md local link history/pre-tether-20261101/",
+      "passed": true
+    },
+    {
+      "name": "README.md local link asof-source-reporting-preprint.pdf",
+      "passed": true
+    },
+    {
+      "name": "README.md local link asof-source-reporting-preprint-v2.pdf",
+      "passed": true
+    },
+    {
+      "name": "README.md local link AUTHOR-DECLARATIONS.md",
+      "passed": true
+    },
+    {
+      "name": "README.md local link ../TODO.md",
+      "passed": true
+    },
+    {
+      "name": "RELATED-WORK-SOURCE-AUDIT.md local link references.bib",
+      "passed": true
+    },
+    {
+      "name": "fresh-process in-memory PDF byte repeat",
+      "passed": true
+    },
+    {
+      "name": "six retention and two publication negatives",
+      "passed": true
+    },
+    {
+      "name": "root all-page visual evidence bound to this PDF",
+      "passed": true
+    },
+    {
+      "name": "all read-only subject pins remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "current working-paper disclaimer retained",
+      "passed": true
+    }
+  ],
+  "subjects": {
+    "paper/manuscript.md": "99ee5893568d4734a393669a88e06920c882d65aa064e7f20a9ad689488e096f",
+    "paper/supplement.md": "1f5c2073c7736d7a1b300c375bf84fb574d31df89ff57fa35b45feb60f80daa6",
+    "paper/tether-source-reporting-preprint.pdf": "c5cd6d70d5d4c85a64baf82b59b98618b9714d52840217fe77790c5ce9d4b0b1",
+    "paper/TETHER-PDF-BUILD.json": "f0dec66f5f77c9e3f4291afd0629ebd73bfb5a4d9f628983a4727ca67546ac20",
+    "planning/review-assets/preprint-p10-20261101/audit_p10_pdf_inventory_v1.py": "6664e96c42e1306142711a63861e219092b98f9325fe31f768f1d757a46bbbe6",
+    "tools/presentation/build_tether_manuscript.py": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b",
+    "paper/asof-source-reporting-preprint.pdf": "4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588",
+    "paper/asof-source-reporting-preprint-v2.pdf": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d",
+    "paper/references.bib": "8804ee43da0da28b71773eb9a55ad0e7b78fb7d881e8b8423562473a2b87d05f",
+    "paper/references.json": "d7cf590dd04f094c83931182517ec5d755e5309e87891e9b1c05c1fd70b5bed2"
+  },
+  "current_readme": {
+    "path": "paper/README.md",
+    "sha256": "cddde47152f82eca0dfe822d40b6590c6f6357062d58c54cd67d31e66e3ee856",
+    "status": "separately rewritten current guide; intermediate README hash in initial naming delta is historical"
+  },
+  "inverse_scientific_sources": {
+    "manuscript.md": {
+      "before_sha256": "79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507",
+      "current_sha256": "99ee5893568d4734a393669a88e06920c882d65aa064e7f20a9ad689488e096f",
+      "exact_inverse": true
+    },
+    "supplement.md": {
+      "before_sha256": "d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85",
+      "current_sha256": "1f5c2073c7736d7a1b300c375bf84fb574d31df89ff57fa35b45feb60f80daa6",
+      "exact_inverse": true
+    },
+    "RELATED-WORK-SOURCE-AUDIT.md": {
+      "before_sha256": "e7adea0f9302389248627c969397827e9f8db3d224713577d3d4b655ad05422c",
+      "current_sha256": "9561053ed65ebc756eaf4f1e0bfb6a09762fb8efb9877003584308f3ffe438ba",
+      "exact_inverse": true
+    }
+  },
+  "pdf": {
+    "sha256": "c5cd6d70d5d4c85a64baf82b59b98618b9714d52840217fe77790c5ce9d4b0b1",
+    "pages": 18,
+    "independent_visible_units": 274,
+    "unit_kinds": {
+      "heading": 31,
+      "paragraph": 92,
+      "figure": 3,
+      "table": 148
+    },
+    "table_header_repeat_draws": 2,
+    "vector_figures": 3,
+    "raster_images": 0,
+    "out_of_page_glyphs": [],
+    "body_figure_intersections": [],
+    "links": 29,
+    "headers": [
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft",
+      "TETHER - Working research draft"
+    ],
+    "footers": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "metadata": {
+      "/Author": "",
+      "/CreationDate": "D:20000101000000+00'00'",
+      "/Creator": "TETHER deterministic Markdown renderer",
+      "/Keywords": "",
+      "/ModDate": "D:20000101000000+00'00'",
+      "/Producer": "ReportLab + pypdf (invariant local build)",
+      "/Subject": "Working research draft; author declarations pending",
+      "/Title": "TETHER: Auditable Source Reporting for Therapeutic Evidence Workflows",
+      "/Trapped": "/False"
+    },
+    "fresh_process_memory_repeat_bytes_equal": true,
+    "controls": {
+      "retention": {
+        "status": "PASS",
+        "positive": 1,
+        "negative_cases": [
+          "omission",
+          "duplicate",
+          "reorder",
+          "repeated_word_loss",
+          "table_cell_change",
+          "caption_loss"
+        ]
+      },
+      "publication": {
+        "status": "PASS",
+        "negative_cases": [
+          "invalid_preview_path",
+          "render_failure"
+        ],
+        "prior_pair_preserved": true
+      }
+    }
+  },
+  "visual_review": {
+    "root_all_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "root_qa_sha256": "c766445ef6493f0de60c601b75454cc5c694932815b21e3d4e5b28330e32ce5a",
+    "peer_pages": [
+      1,
+      10,
+      12,
+      18
+    ],
+    "peer_scope": "Native image views of final pages1,10,12,18 after independent computational checker; no clipping, missing glyphs, collisions or declaration/status contradiction found. Root separately viewed all18 final pages.",
+    "annotation": "Manual visual metadata added after checker execution; computational check count remains unchanged."
+  },
+  "previews": [
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-01.png",
+      "sha256": "8ffb7c9718434e4e1f713aa08ce4dd5b7b1318cd12bfa2b107ac87324f48e531",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-02.png",
+      "sha256": "bb58b566588e5792dd3904aa3e4c81f0f4a7fff6db39bced9a3d4b43f9453e0e",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-03.png",
+      "sha256": "c5454d194144d49591078c8e28452d35e0e6d9c78c700582c40e79c0643cb472",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-04.png",
+      "sha256": "3090ec2d2581895b625955b95214376848bbf98f5820c551776885cdf0a2a738",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-05.png",
+      "sha256": "fd49f60e6b415b55710a1a875b8d058971a44365b3702c84b261aa97f8c058b8",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-06.png",
+      "sha256": "8a8d13f897972f8144b0b18aecce39a0326e9afe1b0c92337673dc7b99dd9a29",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-07.png",
+      "sha256": "8dec562dbab57ffed86ea68b8cb6cf19d862da2ff0cc65003cbec25335cbaae5",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-08.png",
+      "sha256": "44dbcb8646fc1c76beb309ca4c659d91f67cb848931db5f69da46e4c0773beec",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-09.png",
+      "sha256": "1363d7a23a32e89454a63681caac05363f4e2bdc4889157016920ebcc194a718",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-10.png",
+      "sha256": "ca8f9e84e85da08961b49dda06b424e7b1672e84ea027a741203ed04351726de",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-11.png",
+      "sha256": "fd60487caae865581125ae43357d76b70a624377548eace994c6936f96b4f671",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-12.png",
+      "sha256": "574b13b2d6cd58013170d2ae3199265e1faafac0ce040c9fb4a9f0ebdeef9e33",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-13.png",
+      "sha256": "1ed7021fffa54c41d7031f76d67d6687588beae0765f56121c15af293d9209e4",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-14.png",
+      "sha256": "992ebaf981c41d6fb0a18527cd27a1e8425347ebc8c68492eaf631452dcb1c89",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-15.png",
+      "sha256": "dc8371cfb23b56e906048102a1b026558c5ddd416b51c1d4345caf657c82a92d",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-16.png",
+      "sha256": "b1dff4058f16e5bca598ecfa0e3cee758bef80f1481e9eb64177c4ad7aed954d",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-17.png",
+      "sha256": "cc0f89c7949936d519a4cdd042d23be1e1be5e441ffad0cfd826a7827200e85f",
+      "dimensions": [
+        850,
+        1100
+      ]
+    },
+    {
+      "path": "tmp/pdfs/tether-manuscript-pages/c5cd6d70d5d4c85a/page-18.png",
+      "sha256": "5ef00746b2bfbf5a3377e880ac24eae8957196c3f5aa8ca59b02c4ab63f1caab",
+      "dimensions": [
+        850,
+        1100
+      ]
+    }
+  ],
+  "resolved_local_links": [
+    {
+      "source": "paper/manuscript.md",
+      "target": "results/figures/figure1-flow.pdf"
+    },
+    {
+      "source": "paper/manuscript.md",
+      "target": "results/figures/figure2-availability.pdf"
+    },
+    {
+      "source": "paper/manuscript.md",
+      "target": "results/figures/figure3-controls.pdf"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "manuscript.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "supplement.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "tether-source-reporting-preprint.pdf"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "references.bib"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "references.json"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "RELATED-WORK-SOURCE-AUDIT.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "results/README.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "../planning/TETHER Naming and Compatibility Plan 2026-11-01.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "release/qualification.json"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "release/RELEASE-RECORD.json"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "TETHER-PDF-BUILD.json"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "history/pre-tether-20261101/"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "asof-source-reporting-preprint.pdf"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "asof-source-reporting-preprint-v2.pdf"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "AUTHOR-DECLARATIONS.md"
+    },
+    {
+      "source": "paper/README.md",
+      "target": "../TODO.md"
+    },
+    {
+      "source": "paper/RELATED-WORK-SOURCE-AUDIT.md",
+      "target": "references.bib"
+    }
+  ],
+  "scientific_change": false,
+  "scientific_validation": "not_established",
+  "owner_declarations": "deferred",
+  "publication_authorized": false,
+  "provider_or_protected_or_human_originals_read": 0,
+  "study_or_model_execution": false,
+  "network_calls": 0,
+  "script_sha256": "016add52bb85bd38dd5188a55466d4f349665dbfa5c12687bf74da45fbb1b937",
+  "check_count_scope": "Overlapping software/source/render comparisons, not independent scientific observations or biomedical validation."
+}

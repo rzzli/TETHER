@@ -1,4 +1,4 @@
-name: Validate
+name: Validate TETHER
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
@@ -51,3 +51,34 @@ jobs:
         run: uv run --no-sync python -m unittest discover -s paper/release/code/tests -v
       - name: Validate allowlist and preparation failures
         run: uv run --no-sync python -m unittest discover -s planning/review-assets/preprint-p09-20261101 -p "test_*.py" -v
+  tether-interface:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.11.2'
+          python-version: '3.11.15'
+      - name: Resolve compatibility engine dependencies
+        run: uv sync --locked --python 3.11.15 --no-install-project
+      - name: Install frozen compatibility engine
+        run: uv pip install --python .venv/Scripts/python.exe --no-deps --editable . --build-constraints paper/release/build-constraints.txt
+      - name: Install canonical TETHER interface
+        run: uv pip install --python .venv/Scripts/python.exe --no-deps --editable packages/tether --build-constraints paper/release/build-constraints.txt
+      - name: Check installed dependencies
+        run: uv pip check --python .venv/Scripts/python.exe
+      - name: Validate TETHER namespace and execution boundaries
+        run: uv run --no-sync python -B -m unittest discover -s packages/tether/tests -v
+      - name: Validate TETHER version and offline demo
+        shell: pwsh
+        run: |
+          uv run --no-sync tether --version
+          if ($LASTEXITCODE -ne 0) { throw 'TETHER version failed' }
+          New-Item -ItemType Directory -Path runs -Force -ErrorAction Stop | Out-Null
+          uv run --no-sync tether demo --output runs/tether-ci-demo
+          if ($LASTEXITCODE -ne 0) { throw 'TETHER demo failed' }
+          uv run --no-sync tether verify --run-dir runs/tether-ci-demo
+          if ($LASTEXITCODE -ne 0) { throw 'TETHER verification failed' }

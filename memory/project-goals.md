@@ -1,14 +1,29 @@
 ---
 name: project-goals
-description: Current AsOf implementation, scientific boundaries and remaining feasibility gates
+description: Current TETHER implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
 updated: 2026-11-01
 ---
 
-# Project goals
+# TETHER project goals
 
 ## Current recovery execution
+
+Current identity: **TETHER — Target Evidence Tracking Harness for Evaluation and
+Reproducibility**. The owner explicitly requested rebranding the active project.
+See [[TETHER Naming and Compatibility Plan 2026-11-01]] and
+[[research-log-2026-11-01-tether-renaming]]. N01-N06 track the migration and final local checkpoint. Canonical
+TETHER 0.4.0 interfaces live in packages/tether; frozen AsOf 0.3.11 core/identifiers
+and dated evidence remain unchanged for compatibility. Namespace/front-door
+tests pass 49/49 in full/core; twelve independent probes and isolated wheel
+installation/source verification pass after bounded-read/process-cleanup fixes.
+New 18-page paper QA passes; the 72-member named review packet repeats byte for
+byte and passes all 946 independent archive checks. The rename status report
+records current artifacts, retained compatibility names and all remaining limits.
+Owner facts and scientific extensions remain deferred. No study/data/model rerun.
+
+### Pre-rename working-paper checkpoint (retained history)
 
 Current work: [[Project Progress Reassessment 2026-11-01 - Local Preprint Package]].
 P09 complete locally. P10 revised working paper/PDF independently audited:

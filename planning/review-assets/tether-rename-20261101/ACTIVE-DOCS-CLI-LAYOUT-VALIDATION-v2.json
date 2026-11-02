@@ -1,0 +1,1489 @@
+{
+  "schema_version": 1,
+  "method": "tether.active_cli_layout_documentation_validation.v2",
+  "status": "PASS",
+  "checks_evaluated": 210,
+  "checks_passed": 210,
+  "unresolved_findings": [],
+  "checks": [
+    {
+      "check": "exact_21_owned_files",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:README.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:README.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "v1_to_v2_exact_chain:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_doc_hash:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "data_catalog_unchanged_since_v1:data/catalog/sources.json",
+      "passed": true
+    },
+    {
+      "check": "data_catalog_unchanged_since_v1:data/README.md",
+      "passed": true
+    },
+    {
+      "check": "data_catalog_unchanged_since_v1:data/DATA_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "CLI_contract_code_pin:packages/tether/src/tether/_cli.py",
+      "passed": true
+    },
+    {
+      "check": "CLI_contract_code_pin:packages/tether/src/tether/_presentation.py",
+      "passed": true
+    },
+    {
+      "check": "CLI_contract_code_pin:packages/tether/README.md",
+      "passed": true
+    },
+    {
+      "check": "presentation_exact_filenames",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:## TETHER CLI run layout",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:engine/",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:tether-manifest.json",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:tether-receipt.json",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:attempt/journal.jsonl",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:engine-stdout.txt",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:engine-stderr.txt",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:`asof verify --run-dir OUT/engine`",
+      "passed": true
+    },
+    {
+      "check": "documented_layout:Outer verification rejects `--outputs-only`",
+      "passed": true
+    },
+    {
+      "check": "API_and_CLI_separation",
+      "passed": true
+    },
+    {
+      "check": "delegate_layout_preserved",
+      "passed": true
+    },
+    {
+      "check": "outer_source_and_legacy_receipt_distinct",
+      "passed": true
+    },
+    {
+      "check": "failure_inspection_no_retry",
+      "passed": true
+    },
+    {
+      "check": "relative_link:1",
+      "passed": true
+    },
+    {
+      "check": "relative_link:2",
+      "passed": true
+    },
+    {
+      "check": "relative_link:3",
+      "passed": true
+    },
+    {
+      "check": "relative_link:4",
+      "passed": true
+    },
+    {
+      "check": "relative_link:5",
+      "passed": true
+    },
+    {
+      "check": "relative_link:6",
+      "passed": true
+    },
+    {
+      "check": "relative_link:7",
+      "passed": true
+    },
+    {
+      "check": "relative_link:8",
+      "passed": true
+    },
+    {
+      "check": "relative_link:9",
+      "passed": true
+    },
+    {
+      "check": "relative_link:10",
+      "passed": true
+    },
+    {
+      "check": "relative_link:11",
+      "passed": true
+    },
+    {
+      "check": "relative_link:12",
+      "passed": true
+    },
+    {
+      "check": "relative_link:13",
+      "passed": true
+    },
+    {
+      "check": "relative_link:14",
+      "passed": true
+    },
+    {
+      "check": "relative_link:15",
+      "passed": true
+    },
+    {
+      "check": "relative_link:16",
+      "passed": true
+    },
+    {
+      "check": "relative_link:17",
+      "passed": true
+    },
+    {
+      "check": "relative_link:18",
+      "passed": true
+    },
+    {
+      "check": "relative_link:19",
+      "passed": true
+    },
+    {
+      "check": "relative_link:20",
+      "passed": true
+    },
+    {
+      "check": "relative_link:21",
+      "passed": true
+    },
+    {
+      "check": "relative_link:22",
+      "passed": true
+    },
+    {
+      "check": "relative_link:23",
+      "passed": true
+    },
+    {
+      "check": "relative_link:24",
+      "passed": true
+    },
+    {
+      "check": "relative_link:25",
+      "passed": true
+    },
+    {
+      "check": "relative_link:26",
+      "passed": true
+    },
+    {
+      "check": "relative_link:27",
+      "passed": true
+    },
+    {
+      "check": "relative_link:28",
+      "passed": true
+    },
+    {
+      "check": "relative_link:29",
+      "passed": true
+    },
+    {
+      "check": "relative_link:30",
+      "passed": true
+    },
+    {
+      "check": "relative_link:31",
+      "passed": true
+    },
+    {
+      "check": "relative_link:32",
+      "passed": true
+    },
+    {
+      "check": "relative_link:33",
+      "passed": true
+    },
+    {
+      "check": "relative_link:34",
+      "passed": true
+    },
+    {
+      "check": "relative_link:35",
+      "passed": true
+    },
+    {
+      "check": "relative_link:36",
+      "passed": true
+    },
+    {
+      "check": "relative_link:37",
+      "passed": true
+    },
+    {
+      "check": "relative_link:38",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:39",
+      "passed": true
+    },
+    {
+      "check": "relative_link:40",
+      "passed": true
+    },
+    {
+      "check": "relative_link:41",
+      "passed": true
+    },
+    {
+      "check": "relative_link:42",
+      "passed": true
+    },
+    {
+      "check": "relative_link:43",
+      "passed": true
+    },
+    {
+      "check": "relative_link:44",
+      "passed": true
+    },
+    {
+      "check": "relative_link:45",
+      "passed": true
+    },
+    {
+      "check": "relative_link:46",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:47",
+      "passed": true
+    },
+    {
+      "check": "relative_link:48",
+      "passed": true
+    },
+    {
+      "check": "relative_link:49",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:50",
+      "passed": true
+    },
+    {
+      "check": "relative_link:51",
+      "passed": true
+    },
+    {
+      "check": "relative_link:52",
+      "passed": true
+    },
+    {
+      "check": "relative_link:53",
+      "passed": true
+    },
+    {
+      "check": "relative_link:54",
+      "passed": true
+    },
+    {
+      "check": "relative_link:55",
+      "passed": true
+    },
+    {
+      "check": "relative_link:56",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:57",
+      "passed": true
+    },
+    {
+      "check": "relative_link:58",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:59",
+      "passed": true
+    },
+    {
+      "check": "relative_link:60",
+      "passed": true
+    },
+    {
+      "check": "relative_link:61",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:62",
+      "passed": true
+    },
+    {
+      "check": "relative_link:63",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:64",
+      "passed": true
+    },
+    {
+      "check": "relative_link:65",
+      "passed": true
+    },
+    {
+      "check": "relative_link:66",
+      "passed": true
+    },
+    {
+      "check": "relative_link:67",
+      "passed": true
+    },
+    {
+      "check": "relative_link:68",
+      "passed": true
+    },
+    {
+      "check": "relative_link:69",
+      "passed": true
+    },
+    {
+      "check": "relative_link:70",
+      "passed": true
+    },
+    {
+      "check": "relative_link:71",
+      "passed": true
+    },
+    {
+      "check": "relative_link:72",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:73",
+      "passed": true
+    },
+    {
+      "check": "relative_link:74",
+      "passed": true
+    },
+    {
+      "check": "relative_link:75",
+      "passed": true
+    },
+    {
+      "check": "relative_link:76",
+      "passed": true
+    },
+    {
+      "check": "relative_link:77",
+      "passed": true
+    },
+    {
+      "check": "relative_link:78",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:79",
+      "passed": true
+    },
+    {
+      "check": "relative_link:80",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:81",
+      "passed": true
+    },
+    {
+      "check": "relative_link:82",
+      "passed": true
+    },
+    {
+      "check": "relative_link:83",
+      "passed": true
+    },
+    {
+      "check": "relative_link:84",
+      "passed": true
+    },
+    {
+      "check": "relative_link:85",
+      "passed": true
+    },
+    {
+      "check": "relative_link:86",
+      "passed": true
+    },
+    {
+      "check": "relative_link:87",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:88",
+      "passed": true
+    },
+    {
+      "check": "relative_link:89",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:90",
+      "passed": true
+    },
+    {
+      "check": "relative_link:91",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:92",
+      "passed": true
+    },
+    {
+      "check": "relative_link:93",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:94",
+      "passed": true
+    },
+    {
+      "check": "relative_link:95",
+      "passed": true
+    },
+    {
+      "check": "relative_link:96",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:97",
+      "passed": true
+    },
+    {
+      "check": "relative_link:98",
+      "passed": true
+    },
+    {
+      "check": "relative_link:99",
+      "passed": true
+    },
+    {
+      "check": "relative_link:100",
+      "passed": true
+    },
+    {
+      "check": "relative_link:101",
+      "passed": true
+    },
+    {
+      "check": "relative_link:102",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:103",
+      "passed": true
+    },
+    {
+      "check": "relative_link:104",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:105",
+      "passed": true
+    },
+    {
+      "check": "relative_link:106",
+      "passed": true
+    },
+    {
+      "check": "relative_link:107",
+      "passed": true
+    },
+    {
+      "check": "relative_link:108",
+      "passed": true
+    },
+    {
+      "check": "relative_link:109",
+      "passed": true
+    },
+    {
+      "check": "relative_link:110",
+      "passed": true
+    },
+    {
+      "check": "relative_link:111",
+      "passed": true
+    },
+    {
+      "check": "relative_link:112",
+      "passed": true
+    },
+    {
+      "check": "relative_link:113",
+      "passed": true
+    },
+    {
+      "check": "relative_link:114",
+      "passed": true
+    },
+    {
+      "check": "relative_link:115",
+      "passed": true
+    },
+    {
+      "check": "relative_link:116",
+      "passed": true
+    },
+    {
+      "check": "relative_link:117",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:118",
+      "passed": true
+    },
+    {
+      "check": "relative_link:119",
+      "passed": true
+    },
+    {
+      "check": "relative_link:120",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:121",
+      "passed": true
+    },
+    {
+      "check": "relative_link:122",
+      "passed": true
+    },
+    {
+      "check": "guide_API_scope:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "relative_link:123",
+      "passed": true
+    },
+    {
+      "check": "relative_link:124",
+      "passed": true
+    },
+    {
+      "check": "legacy_receipt_scope:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "legacy_receipt_scope:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "git_diff_check",
+      "passed": true
+    }
+  ],
+  "relative_links": [
+    {
+      "source": "README.md",
+      "target": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/release/PACKAGE-README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "paper/release/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/SOURCE_FACT_EVALUATION.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Audited Paper Results.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/run-registry.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Project Progress Reassessments.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/FRAMEWORK.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/V02_MIGRATION.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/STUDY_RUNTIME.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/DATA_PLAN.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/catalog/sources.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/history/README-before-scientific-priority-20261031.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "data/catalog/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/review-assets/registry-sizing-20261017/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Scientific%20Prerequisites%20Execution%202026-10-18.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Ordered%20Execution%20Progress%202026-10-17.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "target": "planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "target": "T6_PRIMARY_REFERENCE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/DETERMINISTIC_BASELINES.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/DETERMINISTIC_BASELINES.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../src/asof/study/interpretation_generation.py",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../src/asof/study/interpretation_grammar.py",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/NEXT-ADAPTER-DESIGN.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/MAINTENANCE.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/MAINTENANCE.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "INTERPRETATION_GENERATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "target": "../planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_INTERPRETATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_INTERPRETATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_LOCAL.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_LOCAL.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_PILOT.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_PILOT.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "target": "QUESTION_LOCAL.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_FACT_EVALUATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_FACT_EVALUATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "DETERMINISTIC_BASELINES.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "FIXED_EVIDENCE_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "BOUNDED_RETRIEVAL.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "target": "T6_DOSSIER_BINDING.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_DOSSIER_BINDING.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_DOSSIER_BINDING.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    }
+  ],
+  "v1_evidence_carried_forward": "Original221-check report retained unchanged; this v2 checks the21 owned doc changes and unchanged data/catalog hashes without repeating runtime/source qualification.",
+  "v1_validation_sha256": "32edfa7947e5dfa400e169dc0823772c7c1fd5340b73d6dcb14840efae28a168",
+  "change_inventory_sha256": "8e07b0bf5c0dfba42c1db0f4e607637974d2bb2fdf803ab848885d04fe42def0",
+  "contract_sources": {
+    "packages/tether/src/tether/_cli.py": "7dd5c292741930b76abe8eb7a75850802fa8bdc478f5eabe9fb31df59bd98a54",
+    "packages/tether/src/tether/_presentation.py": "1469ea0e0565297a517fd0f549dfda0d69b682d10d17131793cb856be6edf785",
+    "packages/tether/README.md": "8893b20bc9781cf8f5477a9cf8e2162b282827d2ea466f5634861e7d301b5d1e"
+  },
+  "scope_limits": [
+    "Read-only documentation/interface inspection; no TETHER CLI/API invocation, install, broad tests or original-source reads.",
+    "CLI filenames/layout confirmed stable by author; code/API qualification and new package tests are separate.",
+    "Legacy IDs, API objects, engine layouts, old receipts/READY/release artifacts and scientific results retain their identity."
+  ],
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "study_rerun": false,
+  "scientific_validation": "not_established"
+}

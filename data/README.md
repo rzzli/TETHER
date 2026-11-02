@@ -1,19 +1,38 @@
 ---
-title: AsOf Data Workspace
+title: TETHER Data Workspace
 date: 2026-10-09
-updated: 2026-10-31
+updated: 2026-11-01
 tags:
-  - asof
+  - tether
   - data
   - provenance
 status: acquisition-started
 ---
 
-# AsOf data workspace
+# TETHER data workspace
 
-**Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Catalog collection/validation statuses and original data are unchanged. P03 now enforces source/receipt/role/lineage rules for the new typed-reporting references; P04 must build independent agent-visible packets, never consume evaluator references or descendants.
+**Current TETHER checkpoint, 1 November 2026:** the bounded source-reporting
+study, P09 installed Windows reconstruction and P10b local working packet are
+complete within their declared technical scopes. The retained P09 run reproduces
+38 output hashes and 90 policy decisions from 137 complete originals; the separate
+source audit passes 6,862 checks. The historical pre-rename 53-member P10b packet
+repeats byte-for-byte and passes 200 independent archive checks. The current
+72-member TETHER review packet also repeats byte-for-byte and passes 946
+independent archive checks; see the [TETHER packet record](../paper/release/tether/RELEASE-RECORD.json)
+and [current rename/status review](<../planning/TETHER Rename Completion and Project Status 2026-11-01.md>).
+Owner declarations and final author
+acceptance remain deferred, so P08/P10 and submission readiness remain incomplete.
+No public deposit, current hosted-CI result or new scientific validation is claimed.
+See the [pre-rename local-package assessment](<../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>).
+The rename changes no collection status, original, receipt, dataset role or study
+selection. Earlier dated acquisition and development checkpoints below retain
+their original scope.
 
-Current implementation: [P03 source-fact evaluator and P04 prerequisites](<../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). One selected receipt-bound original row replays, but its four measurement components remain unavailable; no new scientific validation, collection-status promotion, dataset download or worker/monitor change. One separately approved content-addressed receipt copy preserves the selected source proof.
+TETHER means Target Evidence Tracking Harness for Evaluation and Reproducibility. The [catalog compatibility note](catalog/README.md) preserves the pre-rename master catalog and explains legacy IDs.
+
+**Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Catalog collection/validation statuses and original data are unchanged. The retained source-reporting path enforces source/receipt/role/lineage rules; generation packets never consume evaluator references or descendants.
+
+Retained P03 development checkpoint: [source-fact evaluator and P04 prerequisites](<../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). One selected receipt-bound original row replays, but its four measurement components remain unavailable; no new scientific validation, collection-status promotion, dataset download or worker/monitor change. One separately approved content-addressed receipt copy preserves the selected source proof.
 
 October22 primary report lookup: one official SID program original is collected
 and source-verified (317,171B;24pages). Physical page13 binds control4509282 to
@@ -113,7 +132,7 @@ unchanged; no partial file is promoted or worker restarted. See
 `planning/review-assets/wp0-20261017/README.md`. The evaluator-only registry sizing
 protocol is frozen at `planning/protocols/registry-sizing-v0.4.json`; counts are pending.
 
-This folder contains the complete data requirements and acquisition inventory for AsOf. The documentation scaffold and authorized public transport are implemented. Originals live under `E:\projects_data\drug_target_agents_data`. [[docs/FRAMEWORK|The v0.2 framework]] now includes a pinned local Open Targets/HGNC adapter, source lineage, bounded offline extraction and semantic verification. MR calculations and a trained/validated clinical scoring pipeline remain later work. See [[Project Audit and v0.2 Completion]] for the current completion evidence and full requirements status.
+This folder contains the complete data requirements and acquisition inventory for TETHER. The documentation scaffold and authorized public transport are implemented. Originals live under `E:\projects_data\drug_target_agents_data`. [[docs/FRAMEWORK|The v0.2 framework]] now includes a pinned local Open Targets/HGNC adapter, source lineage, bounded offline extraction and semantic verification. MR calculations and a trained/validated clinical scoring pipeline remain later work. See [[Project Audit and v0.2 Completion]] for the current completion evidence and full requirements status.
 
 Read [[data/STORAGE_AND_DOWNLOAD_REPORT|the capacity and download report]] first for the storage verdict, measured source sizes, current scope and monitoring/resume commands. The collection uses E: for originals and D: mainly for derived data and scratch; the placeholder `raw/` folders shown below are not where the active bulk worker writes.
 

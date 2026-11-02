@@ -1,0 +1,10 @@
+{
+  "status": "PASS_LOCAL_TETHER_REVIEW_ARTIFACT",
+  "qualification_sha256": "69ffeb1b4ac59dd2c5f4dee5afd2a3442d0adf9558fd0d2ba784a8f8e3dfbbdc",
+  "qualification_bytes": 17830,
+  "qualified_payloads": 70,
+  "expected_zip_members": 72,
+  "wheel": "data/cache/tether-release-build-20261102T043340Z/wheels/tether_target_agents-0.4.0-py3-none-any.whl",
+  "legacy_zip": "data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip",
+  "results_root": "data/cache/p09-portable-presentation-20261101T202322Z"
+}

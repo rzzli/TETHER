@@ -1,0 +1,3916 @@
+{
+  "schema_version": 1,
+  "method": "tether.final_current_documentation_qa.v1",
+  "status": "PASS_CURRENT_DOCS_NAMING_LINKS_STATUS",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "checks_evaluated": 379,
+  "checks_passed": 379,
+  "unresolved_findings": [],
+  "subjects": {
+    "docs/AUTHORITY_FOUR_ARM_COMPARISON.md": {
+      "sha256": "83a0ad8d2007bdc6e503e50b7c3325da8e596d51d50b90010b4f23bb38f3f529",
+      "bytes": 11557
+    },
+    "docs/BOUNDED_INTERPRETATION.md": {
+      "sha256": "b4e3cfbb1f44f5edccbc595b1bbdf84e62b202f49bef81e41dceabcde9fc467f",
+      "bytes": 10275
+    },
+    "docs/BOUNDED_RETRIEVAL.md": {
+      "sha256": "be1d1a8c22551c1720cec3f3f6d4ecb975eee884edc16d3225a184d5deec4536",
+      "bytes": 8979
+    },
+    "docs/DETERMINISTIC_BASELINES.md": {
+      "sha256": "4dc124ba6d5136c30376dcc3192a1cf7d36bf8a30110be32526bd08c01831c3e",
+      "bytes": 6477
+    },
+    "docs/FIXED_EVIDENCE_COMPARISON.md": {
+      "sha256": "d3f644716f85d1609637faa4ffefe5dc06192e3bd1595e3235b03b8234c5ed88",
+      "bytes": 7516
+    },
+    "docs/FRAMEWORK.md": {
+      "sha256": "068f3632650be54e577956cb8578fe1c306142bc7781cb6706203cbb66920922",
+      "bytes": 25486
+    },
+    "docs/INTERPRETATION_GENERATION.md": {
+      "sha256": "bab2430dde44719af018d043b6fc105ded2c81c65f736ef6cbd2a8f2b7d5107c",
+      "bytes": 6338
+    },
+    "docs/INTERPRETATION_INTERFACE.md": {
+      "sha256": "724b20da8f9006dc2fa2a8a9cb557eef716c42784f5fa4ffbdd9c813fcb8295a",
+      "bytes": 6921
+    },
+    "docs/MAINTENANCE.md": {
+      "sha256": "004937088ce47cf89057b830952bfd5c816e57bc9bdc8f14ef87f2ef4b637fea",
+      "bytes": 6136
+    },
+    "docs/NATIVE_INTERPRETATION.md": {
+      "sha256": "c0c0acbb5a45656257965a0cd6499730f28c484c85fd37fb16c8f57127cab4bb",
+      "bytes": 7744
+    },
+    "docs/QUESTION_INTERPRETATION.md": {
+      "sha256": "714463591831c49c8ea53cee1d17729c1f63597300da651cacbb7cb772c129fd",
+      "bytes": 6096
+    },
+    "docs/QUESTION_LOCAL.md": {
+      "sha256": "d8aee30915f8f34f19745b393b35bb3977f25ef2b98ebbd722c987c512c051db",
+      "bytes": 5301
+    },
+    "docs/QUESTION_PILOT.md": {
+      "sha256": "aa826e3704ac4397b12cea307746ce77cc690e4a4291723063ee6d73cb9e40a5",
+      "bytes": 6707
+    },
+    "docs/QUESTION_RUNTIME.md": {
+      "sha256": "8878d1324e0c1a53409f819a453cbd9947439b333656257e11c4ef967a43d274",
+      "bytes": 7240
+    },
+    "docs/SOURCE_AND_TOKEN_PREPARATION.md": {
+      "sha256": "5e7f1d671522a720a955baccc7df7d21b61f486d27cdeea2292d72499414fdd1",
+      "bytes": 9482
+    },
+    "docs/SOURCE_FACT_EVALUATION.md": {
+      "sha256": "23140d1ef653ffa276a0badf73a72837d1a832f54fc7651d65d3dcacff47b756",
+      "bytes": 12650
+    },
+    "docs/STUDY_RUNTIME.md": {
+      "sha256": "f0a9eeece2959000c043a7df4ce9912ad1c2c8eafea9d1a38bdb9b276064bda7",
+      "bytes": 17305
+    },
+    "docs/T6_CLAIM_AUDIT.md": {
+      "sha256": "33d4cb4b0755a7fd1c9baabc43646bfda243f5d8254a2825650c4a9b3d239cc5",
+      "bytes": 7304
+    },
+    "docs/T6_DOSSIER_BINDING.md": {
+      "sha256": "37cf3c35fc131938c90e51e41cf09bf7c4bfdaa97a07cd383c2777854ceeab21",
+      "bytes": 7436
+    },
+    "docs/V02_MIGRATION.md": {
+      "sha256": "a1e8376e43cdd876e01580d232c522bbed697101b6a1ef4cd7f35cc7186a7b64",
+      "bytes": 10645
+    },
+    "README.md": {
+      "sha256": "4501a0e831fe08a2a4e3da917300865af574ab1bb6336a168981ee1e2c0c3897",
+      "bytes": 18546
+    },
+    "TODO.md": {
+      "sha256": "8d7613861f63a3a6464f98b2e5171315a83f75d1f27749a39ed0acb47782b577",
+      "bytes": 17711
+    },
+    "paper/README.md": {
+      "sha256": "7866099d53676aaf963ee08b3fd804526d7e5d87caad526208eb050ac6f644ce",
+      "bytes": 5224
+    },
+    "planning/README.md": {
+      "sha256": "a29b38ba3c5779c2f9574f1bccda38d3ea25b022c286df1233b535ef20076d01",
+      "bytes": 1495
+    },
+    "planning/TETHER Naming and Compatibility Plan 2026-11-01.md": {
+      "sha256": "0162879044f193dc0e97f7365e2d9f7e8945aeb61a1052fc01f45462e6fe6bef",
+      "bytes": 4237
+    },
+    "planning/TETHER Rename Completion and Project Status 2026-11-01.md": {
+      "sha256": "c893da63ceaa73ff3f36b31e4a932c6b0a1c4adb307fa87ece4a379944fac6c3",
+      "bytes": 10284
+    },
+    "planning/Project Progress Reassessments.md": {
+      "sha256": "68dc2563d59fe53cbbe5f32bf79e724370b79871b8cb63e0187b4210a178155d",
+      "bytes": 24180
+    },
+    "memory/MEMORY.md": {
+      "sha256": "5685bd6cc0a83eba94ac8acb069bd83b9ee2712ef54a5820b8310d47703e5464",
+      "bytes": 36548
+    },
+    "memory/project-goals.md": {
+      "sha256": "c21d31700b5cc973505832192b247cea5f0e53544edc26274ed5171daf6d0d15",
+      "bytes": 141636
+    },
+    "memory/research-log-2026-11-01-tether-renaming.md": {
+      "sha256": "80cb8e9e239de34d6058e818902e6a26e2eb3b29cd3f03499d2ef9d4c89c829a",
+      "bytes": 3188
+    },
+    "data/README.md": {
+      "sha256": "51b61c89b893c8267be3e76bcc3d97b23fd9dcbd73d13f2db658ea00805daa10",
+      "bytes": 23325
+    },
+    "data/DATA_PLAN.md": {
+      "sha256": "7ee64e887fa8a55014577b5fe7d3701fb6112fca19d5734c26e2f00e55266439",
+      "bytes": 76908
+    },
+    "data/catalog/README.md": {
+      "sha256": "cdd30c9a94f2a2d1f13559443ab5382d58080ecd8a295066b5de1c8c7add36bf",
+      "bytes": 1754
+    },
+    "packages/tether/README.md": {
+      "sha256": "56b743d3db7de70a01f74fd98e442d3e087e7479faca0ea831ab8d6ac6a8aba3",
+      "bytes": 3374
+    },
+    "planning/review-assets/tether-rename-20261101/ACTIVE-WORK-STATE.md": {
+      "sha256": "c42e6a4c607180634c4b016e1190d6ba0322fad0c75510460a26f86bbe83e491",
+      "bytes": 4839
+    },
+    "paper/release/tether/README.md": {
+      "sha256": "b57f25fc4a8ee4254d2256cbc6fa90e77334ee724e06d1c2c338375ac4f9f3cf",
+      "bytes": 9384
+    },
+    "paper/release/tether/RELEASE-RECORD.json": {
+      "sha256": "75760183c594c203927d0c92df824a88e091bbad0d73d9041ec76fe0573d816a",
+      "bytes": 1632
+    },
+    "paper/release/tether/QUALIFICATION.json": {
+      "sha256": "69ffeb1b4ac59dd2c5f4dee5afd2a3442d0adf9558fd0d2ba784a8f8e3dfbbdc",
+      "bytes": 17830
+    },
+    "data/catalog/sources.json": {
+      "sha256": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac",
+      "bytes": 1229620
+    }
+  },
+  "content_scope": {
+    "current_guides": 20,
+    "text_documents": 36,
+    "memory_review": "Current sections only; whole-file hashes retain exact subject authority.",
+    "historical_targets": "Link names/existence only; old content/protected data not opened."
+  },
+  "checks": [
+    {
+      "check": "current_identity:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:TODO.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:paper/README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:planning/README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:planning/TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:planning/Project Progress Reassessments.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:memory/project-goals.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:memory/research-log-2026-11-01-tether-renaming.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:data/README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:data/DATA_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:data/catalog/README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:packages/tether/README.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:planning/review-assets/tether-rename-20261101/ACTIVE-WORK-STATE.md",
+      "passed": true
+    },
+    {
+      "check": "current_identity:paper/release/tether/README.md",
+      "passed": true
+    },
+    {
+      "check": "local_link:1",
+      "passed": true
+    },
+    {
+      "check": "local_link:2",
+      "passed": true
+    },
+    {
+      "check": "local_link:3",
+      "passed": true
+    },
+    {
+      "check": "local_link:4",
+      "passed": true
+    },
+    {
+      "check": "local_link:5",
+      "passed": true
+    },
+    {
+      "check": "local_link:6",
+      "passed": true
+    },
+    {
+      "check": "local_link:7",
+      "passed": true
+    },
+    {
+      "check": "local_link:8",
+      "passed": true
+    },
+    {
+      "check": "local_link:9",
+      "passed": true
+    },
+    {
+      "check": "local_link:10",
+      "passed": true
+    },
+    {
+      "check": "local_link:11",
+      "passed": true
+    },
+    {
+      "check": "local_link:12",
+      "passed": true
+    },
+    {
+      "check": "local_link:13",
+      "passed": true
+    },
+    {
+      "check": "local_link:14",
+      "passed": true
+    },
+    {
+      "check": "local_link:15",
+      "passed": true
+    },
+    {
+      "check": "local_link:16",
+      "passed": true
+    },
+    {
+      "check": "local_link:17",
+      "passed": true
+    },
+    {
+      "check": "local_link:18",
+      "passed": true
+    },
+    {
+      "check": "local_link:19",
+      "passed": true
+    },
+    {
+      "check": "local_link:20",
+      "passed": true
+    },
+    {
+      "check": "local_link:21",
+      "passed": true
+    },
+    {
+      "check": "local_link:22",
+      "passed": true
+    },
+    {
+      "check": "local_link:23",
+      "passed": true
+    },
+    {
+      "check": "local_link:24",
+      "passed": true
+    },
+    {
+      "check": "local_link:25",
+      "passed": true
+    },
+    {
+      "check": "local_link:26",
+      "passed": true
+    },
+    {
+      "check": "local_link:27",
+      "passed": true
+    },
+    {
+      "check": "local_link:28",
+      "passed": true
+    },
+    {
+      "check": "local_link:29",
+      "passed": true
+    },
+    {
+      "check": "local_link:30",
+      "passed": true
+    },
+    {
+      "check": "local_link:31",
+      "passed": true
+    },
+    {
+      "check": "local_link:32",
+      "passed": true
+    },
+    {
+      "check": "local_link:33",
+      "passed": true
+    },
+    {
+      "check": "local_link:34",
+      "passed": true
+    },
+    {
+      "check": "local_link:35",
+      "passed": true
+    },
+    {
+      "check": "local_link:36",
+      "passed": true
+    },
+    {
+      "check": "local_link:37",
+      "passed": true
+    },
+    {
+      "check": "local_link:38",
+      "passed": true
+    },
+    {
+      "check": "local_link:39",
+      "passed": true
+    },
+    {
+      "check": "local_link:40",
+      "passed": true
+    },
+    {
+      "check": "local_link:41",
+      "passed": true
+    },
+    {
+      "check": "local_link:42",
+      "passed": true
+    },
+    {
+      "check": "local_link:43",
+      "passed": true
+    },
+    {
+      "check": "local_link:44",
+      "passed": true
+    },
+    {
+      "check": "local_link:45",
+      "passed": true
+    },
+    {
+      "check": "local_link:46",
+      "passed": true
+    },
+    {
+      "check": "local_link:47",
+      "passed": true
+    },
+    {
+      "check": "local_link:48",
+      "passed": true
+    },
+    {
+      "check": "local_link:49",
+      "passed": true
+    },
+    {
+      "check": "local_link:50",
+      "passed": true
+    },
+    {
+      "check": "local_link:51",
+      "passed": true
+    },
+    {
+      "check": "local_link:52",
+      "passed": true
+    },
+    {
+      "check": "local_link:53",
+      "passed": true
+    },
+    {
+      "check": "local_link:54",
+      "passed": true
+    },
+    {
+      "check": "local_link:55",
+      "passed": true
+    },
+    {
+      "check": "local_link:56",
+      "passed": true
+    },
+    {
+      "check": "local_link:57",
+      "passed": true
+    },
+    {
+      "check": "local_link:58",
+      "passed": true
+    },
+    {
+      "check": "local_link:59",
+      "passed": true
+    },
+    {
+      "check": "local_link:60",
+      "passed": true
+    },
+    {
+      "check": "local_link:61",
+      "passed": true
+    },
+    {
+      "check": "local_link:62",
+      "passed": true
+    },
+    {
+      "check": "local_link:63",
+      "passed": true
+    },
+    {
+      "check": "local_link:64",
+      "passed": true
+    },
+    {
+      "check": "local_link:65",
+      "passed": true
+    },
+    {
+      "check": "local_link:66",
+      "passed": true
+    },
+    {
+      "check": "local_link:67",
+      "passed": true
+    },
+    {
+      "check": "local_link:68",
+      "passed": true
+    },
+    {
+      "check": "local_link:69",
+      "passed": true
+    },
+    {
+      "check": "local_link:70",
+      "passed": true
+    },
+    {
+      "check": "local_link:71",
+      "passed": true
+    },
+    {
+      "check": "local_link:72",
+      "passed": true
+    },
+    {
+      "check": "local_link:73",
+      "passed": true
+    },
+    {
+      "check": "local_link:74",
+      "passed": true
+    },
+    {
+      "check": "local_link:75",
+      "passed": true
+    },
+    {
+      "check": "local_link:76",
+      "passed": true
+    },
+    {
+      "check": "local_link:77",
+      "passed": true
+    },
+    {
+      "check": "local_link:78",
+      "passed": true
+    },
+    {
+      "check": "local_link:79",
+      "passed": true
+    },
+    {
+      "check": "local_link:80",
+      "passed": true
+    },
+    {
+      "check": "local_link:81",
+      "passed": true
+    },
+    {
+      "check": "local_link:82",
+      "passed": true
+    },
+    {
+      "check": "local_link:83",
+      "passed": true
+    },
+    {
+      "check": "local_link:84",
+      "passed": true
+    },
+    {
+      "check": "local_link:85",
+      "passed": true
+    },
+    {
+      "check": "local_link:86",
+      "passed": true
+    },
+    {
+      "check": "local_link:87",
+      "passed": true
+    },
+    {
+      "check": "local_link:88",
+      "passed": true
+    },
+    {
+      "check": "local_link:89",
+      "passed": true
+    },
+    {
+      "check": "local_link:90",
+      "passed": true
+    },
+    {
+      "check": "local_link:91",
+      "passed": true
+    },
+    {
+      "check": "local_link:92",
+      "passed": true
+    },
+    {
+      "check": "local_link:93",
+      "passed": true
+    },
+    {
+      "check": "local_link:94",
+      "passed": true
+    },
+    {
+      "check": "local_link:95",
+      "passed": true
+    },
+    {
+      "check": "local_link:96",
+      "passed": true
+    },
+    {
+      "check": "local_link:97",
+      "passed": true
+    },
+    {
+      "check": "local_link:98",
+      "passed": true
+    },
+    {
+      "check": "local_link:99",
+      "passed": true
+    },
+    {
+      "check": "local_link:100",
+      "passed": true
+    },
+    {
+      "check": "local_link:101",
+      "passed": true
+    },
+    {
+      "check": "local_link:102",
+      "passed": true
+    },
+    {
+      "check": "local_link:103",
+      "passed": true
+    },
+    {
+      "check": "local_link:104",
+      "passed": true
+    },
+    {
+      "check": "local_link:105",
+      "passed": true
+    },
+    {
+      "check": "local_link:106",
+      "passed": true
+    },
+    {
+      "check": "local_link:107",
+      "passed": true
+    },
+    {
+      "check": "local_link:108",
+      "passed": true
+    },
+    {
+      "check": "local_link:109",
+      "passed": true
+    },
+    {
+      "check": "local_link:110",
+      "passed": true
+    },
+    {
+      "check": "local_link:111",
+      "passed": true
+    },
+    {
+      "check": "local_link:112",
+      "passed": true
+    },
+    {
+      "check": "local_link:113",
+      "passed": true
+    },
+    {
+      "check": "local_link:114",
+      "passed": true
+    },
+    {
+      "check": "local_link:115",
+      "passed": true
+    },
+    {
+      "check": "local_link:116",
+      "passed": true
+    },
+    {
+      "check": "local_link:117",
+      "passed": true
+    },
+    {
+      "check": "local_link:118",
+      "passed": true
+    },
+    {
+      "check": "local_link:119",
+      "passed": true
+    },
+    {
+      "check": "local_link:120",
+      "passed": true
+    },
+    {
+      "check": "local_link:121",
+      "passed": true
+    },
+    {
+      "check": "local_link:122",
+      "passed": true
+    },
+    {
+      "check": "local_link:123",
+      "passed": true
+    },
+    {
+      "check": "local_link:124",
+      "passed": true
+    },
+    {
+      "check": "local_link:125",
+      "passed": true
+    },
+    {
+      "check": "local_link:126",
+      "passed": true
+    },
+    {
+      "check": "local_link:127",
+      "passed": true
+    },
+    {
+      "check": "local_link:128",
+      "passed": true
+    },
+    {
+      "check": "local_link:129",
+      "passed": true
+    },
+    {
+      "check": "local_link:130",
+      "passed": true
+    },
+    {
+      "check": "local_link:131",
+      "passed": true
+    },
+    {
+      "check": "local_link:132",
+      "passed": true
+    },
+    {
+      "check": "local_link:133",
+      "passed": true
+    },
+    {
+      "check": "local_link:134",
+      "passed": true
+    },
+    {
+      "check": "local_link:135",
+      "passed": true
+    },
+    {
+      "check": "local_link:136",
+      "passed": true
+    },
+    {
+      "check": "local_link:137",
+      "passed": true
+    },
+    {
+      "check": "local_link:138",
+      "passed": true
+    },
+    {
+      "check": "local_link:139",
+      "passed": true
+    },
+    {
+      "check": "local_link:140",
+      "passed": true
+    },
+    {
+      "check": "local_link:141",
+      "passed": true
+    },
+    {
+      "check": "local_link:142",
+      "passed": true
+    },
+    {
+      "check": "local_link:143",
+      "passed": true
+    },
+    {
+      "check": "local_link:144",
+      "passed": true
+    },
+    {
+      "check": "local_link:145",
+      "passed": true
+    },
+    {
+      "check": "local_link:146",
+      "passed": true
+    },
+    {
+      "check": "local_link:147",
+      "passed": true
+    },
+    {
+      "check": "local_link:148",
+      "passed": true
+    },
+    {
+      "check": "local_link:149",
+      "passed": true
+    },
+    {
+      "check": "local_link:150",
+      "passed": true
+    },
+    {
+      "check": "local_link:151",
+      "passed": true
+    },
+    {
+      "check": "local_link:152",
+      "passed": true
+    },
+    {
+      "check": "local_link:153",
+      "passed": true
+    },
+    {
+      "check": "local_link:154",
+      "passed": true
+    },
+    {
+      "check": "local_link:155",
+      "passed": true
+    },
+    {
+      "check": "local_link:156",
+      "passed": true
+    },
+    {
+      "check": "local_link:157",
+      "passed": true
+    },
+    {
+      "check": "local_link:158",
+      "passed": true
+    },
+    {
+      "check": "local_link:159",
+      "passed": true
+    },
+    {
+      "check": "local_link:160",
+      "passed": true
+    },
+    {
+      "check": "local_link:161",
+      "passed": true
+    },
+    {
+      "check": "local_link:162",
+      "passed": true
+    },
+    {
+      "check": "local_link:163",
+      "passed": true
+    },
+    {
+      "check": "local_link:164",
+      "passed": true
+    },
+    {
+      "check": "local_link:165",
+      "passed": true
+    },
+    {
+      "check": "local_link:166",
+      "passed": true
+    },
+    {
+      "check": "local_link:167",
+      "passed": true
+    },
+    {
+      "check": "local_link:168",
+      "passed": true
+    },
+    {
+      "check": "local_link:169",
+      "passed": true
+    },
+    {
+      "check": "local_link:170",
+      "passed": true
+    },
+    {
+      "check": "local_link:171",
+      "passed": true
+    },
+    {
+      "check": "local_link:172",
+      "passed": true
+    },
+    {
+      "check": "local_link:173",
+      "passed": true
+    },
+    {
+      "check": "local_link:174",
+      "passed": true
+    },
+    {
+      "check": "local_link:175",
+      "passed": true
+    },
+    {
+      "check": "local_link:176",
+      "passed": true
+    },
+    {
+      "check": "local_link:177",
+      "passed": true
+    },
+    {
+      "check": "local_link:178",
+      "passed": true
+    },
+    {
+      "check": "local_link:179",
+      "passed": true
+    },
+    {
+      "check": "local_link:180",
+      "passed": true
+    },
+    {
+      "check": "local_link:181",
+      "passed": true
+    },
+    {
+      "check": "local_link:182",
+      "passed": true
+    },
+    {
+      "check": "local_link:183",
+      "passed": true
+    },
+    {
+      "check": "local_link:184",
+      "passed": true
+    },
+    {
+      "check": "local_link:185",
+      "passed": true
+    },
+    {
+      "check": "local_link:186",
+      "passed": true
+    },
+    {
+      "check": "local_link:187",
+      "passed": true
+    },
+    {
+      "check": "local_link:188",
+      "passed": true
+    },
+    {
+      "check": "local_link:189",
+      "passed": true
+    },
+    {
+      "check": "local_link:190",
+      "passed": true
+    },
+    {
+      "check": "local_link:191",
+      "passed": true
+    },
+    {
+      "check": "local_link:192",
+      "passed": true
+    },
+    {
+      "check": "local_link:193",
+      "passed": true
+    },
+    {
+      "check": "local_link:194",
+      "passed": true
+    },
+    {
+      "check": "local_link:195",
+      "passed": true
+    },
+    {
+      "check": "local_link:196",
+      "passed": true
+    },
+    {
+      "check": "local_link:197",
+      "passed": true
+    },
+    {
+      "check": "local_link:198",
+      "passed": true
+    },
+    {
+      "check": "local_link:199",
+      "passed": true
+    },
+    {
+      "check": "local_link:200",
+      "passed": true
+    },
+    {
+      "check": "local_link:201",
+      "passed": true
+    },
+    {
+      "check": "local_link:202",
+      "passed": true
+    },
+    {
+      "check": "local_link:203",
+      "passed": true
+    },
+    {
+      "check": "local_link:204",
+      "passed": true
+    },
+    {
+      "check": "local_link:205",
+      "passed": true
+    },
+    {
+      "check": "local_link:206",
+      "passed": true
+    },
+    {
+      "check": "local_link:207",
+      "passed": true
+    },
+    {
+      "check": "local_link:208",
+      "passed": true
+    },
+    {
+      "check": "local_link:209",
+      "passed": true
+    },
+    {
+      "check": "local_link:210",
+      "passed": true
+    },
+    {
+      "check": "local_link:211",
+      "passed": true
+    },
+    {
+      "check": "local_link:212",
+      "passed": true
+    },
+    {
+      "check": "local_link:213",
+      "passed": true
+    },
+    {
+      "check": "local_link:214",
+      "passed": true
+    },
+    {
+      "check": "local_link:215",
+      "passed": true
+    },
+    {
+      "check": "local_link:216",
+      "passed": true
+    },
+    {
+      "check": "local_link:217",
+      "passed": true
+    },
+    {
+      "check": "local_link:218",
+      "passed": true
+    },
+    {
+      "check": "local_link:219",
+      "passed": true
+    },
+    {
+      "check": "local_link:220",
+      "passed": true
+    },
+    {
+      "check": "local_link:221",
+      "passed": true
+    },
+    {
+      "check": "local_link:222",
+      "passed": true
+    },
+    {
+      "check": "local_link:223",
+      "passed": true
+    },
+    {
+      "check": "local_link:224",
+      "passed": true
+    },
+    {
+      "check": "local_link:225",
+      "passed": true
+    },
+    {
+      "check": "local_link:226",
+      "passed": true
+    },
+    {
+      "check": "local_link:227",
+      "passed": true
+    },
+    {
+      "check": "local_link:228",
+      "passed": true
+    },
+    {
+      "check": "local_link:229",
+      "passed": true
+    },
+    {
+      "check": "local_link:230",
+      "passed": true
+    },
+    {
+      "check": "local_link:231",
+      "passed": true
+    },
+    {
+      "check": "local_link:232",
+      "passed": true
+    },
+    {
+      "check": "local_link:233",
+      "passed": true
+    },
+    {
+      "check": "local_link:234",
+      "passed": true
+    },
+    {
+      "check": "local_link:235",
+      "passed": true
+    },
+    {
+      "check": "local_link:236",
+      "passed": true
+    },
+    {
+      "check": "local_link:237",
+      "passed": true
+    },
+    {
+      "check": "local_link:238",
+      "passed": true
+    },
+    {
+      "check": "local_link:239",
+      "passed": true
+    },
+    {
+      "check": "local_link:240",
+      "passed": true
+    },
+    {
+      "check": "local_link:241",
+      "passed": true
+    },
+    {
+      "check": "local_link:242",
+      "passed": true
+    },
+    {
+      "check": "local_link:243",
+      "passed": true
+    },
+    {
+      "check": "local_link:244",
+      "passed": true
+    },
+    {
+      "check": "local_link:245",
+      "passed": true
+    },
+    {
+      "check": "local_link:246",
+      "passed": true
+    },
+    {
+      "check": "local_link:247",
+      "passed": true
+    },
+    {
+      "check": "local_link:248",
+      "passed": true
+    },
+    {
+      "check": "local_link:249",
+      "passed": true
+    },
+    {
+      "check": "local_link:250",
+      "passed": true
+    },
+    {
+      "check": "local_link:251",
+      "passed": true
+    },
+    {
+      "check": "local_link:252",
+      "passed": true
+    },
+    {
+      "check": "local_link:253",
+      "passed": true
+    },
+    {
+      "check": "local_link:254",
+      "passed": true
+    },
+    {
+      "check": "local_link:255",
+      "passed": true
+    },
+    {
+      "check": "local_link:256",
+      "passed": true
+    },
+    {
+      "check": "local_link:257",
+      "passed": true
+    },
+    {
+      "check": "local_link:258",
+      "passed": true
+    },
+    {
+      "check": "local_link:259",
+      "passed": true
+    },
+    {
+      "check": "local_link:260",
+      "passed": true
+    },
+    {
+      "check": "local_link:261",
+      "passed": true
+    },
+    {
+      "check": "local_link:262",
+      "passed": true
+    },
+    {
+      "check": "local_link:263",
+      "passed": true
+    },
+    {
+      "check": "local_link:264",
+      "passed": true
+    },
+    {
+      "check": "local_link:265",
+      "passed": true
+    },
+    {
+      "check": "local_link:266",
+      "passed": true
+    },
+    {
+      "check": "local_link:267",
+      "passed": true
+    },
+    {
+      "check": "local_link:268",
+      "passed": true
+    },
+    {
+      "check": "local_link:269",
+      "passed": true
+    },
+    {
+      "check": "local_link:270",
+      "passed": true
+    },
+    {
+      "check": "local_link:271",
+      "passed": true
+    },
+    {
+      "check": "local_link:272",
+      "passed": true
+    },
+    {
+      "check": "local_link:273",
+      "passed": true
+    },
+    {
+      "check": "local_link:274",
+      "passed": true
+    },
+    {
+      "check": "local_link:275",
+      "passed": true
+    },
+    {
+      "check": "local_link:276",
+      "passed": true
+    },
+    {
+      "check": "local_link:277",
+      "passed": true
+    },
+    {
+      "check": "local_link:278",
+      "passed": true
+    },
+    {
+      "check": "local_link:279",
+      "passed": true
+    },
+    {
+      "check": "local_link:280",
+      "passed": true
+    },
+    {
+      "check": "local_link:281",
+      "passed": true
+    },
+    {
+      "check": "local_link:282",
+      "passed": true
+    },
+    {
+      "check": "local_link:283",
+      "passed": true
+    },
+    {
+      "check": "local_link:284",
+      "passed": true
+    },
+    {
+      "check": "local_link:285",
+      "passed": true
+    },
+    {
+      "check": "local_link:286",
+      "passed": true
+    },
+    {
+      "check": "local_link:287",
+      "passed": true
+    },
+    {
+      "check": "local_link:288",
+      "passed": true
+    },
+    {
+      "check": "local_link:289",
+      "passed": true
+    },
+    {
+      "check": "local_link:290",
+      "passed": true
+    },
+    {
+      "check": "local_link:291",
+      "passed": true
+    },
+    {
+      "check": "local_link:292",
+      "passed": true
+    },
+    {
+      "check": "local_link:293",
+      "passed": true
+    },
+    {
+      "check": "local_link:294",
+      "passed": true
+    },
+    {
+      "check": "local_link:295",
+      "passed": true
+    },
+    {
+      "check": "local_link:296",
+      "passed": true
+    },
+    {
+      "check": "local_link:297",
+      "passed": true
+    },
+    {
+      "check": "local_link:298",
+      "passed": true
+    },
+    {
+      "check": "local_link:299",
+      "passed": true
+    },
+    {
+      "check": "local_link:300",
+      "passed": true
+    },
+    {
+      "check": "local_link:301",
+      "passed": true
+    },
+    {
+      "check": "local_link:302",
+      "passed": true
+    },
+    {
+      "check": "local_link:303",
+      "passed": true
+    },
+    {
+      "check": "local_link:304",
+      "passed": true
+    },
+    {
+      "check": "current_packet_exact_counts_and_pins",
+      "passed": true
+    },
+    {
+      "check": "current_qualification_byte_authority",
+      "passed": true
+    },
+    {
+      "check": "packet_readme_input_unchanged",
+      "passed": true
+    },
+    {
+      "check": "current_pdf_counts",
+      "passed": true
+    },
+    {
+      "check": "reported_suite:tether_full",
+      "passed": true
+    },
+    {
+      "check": "reported_suite:tether_core",
+      "passed": true
+    },
+    {
+      "check": "reported_suite:legacy_targeted_full",
+      "passed": true
+    },
+    {
+      "check": "reported_suite:legacy_targeted_core",
+      "passed": true
+    },
+    {
+      "check": "declared_science_publication_boundaries",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/BOUNDED_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/BOUNDED_RETRIEVAL.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/DETERMINISTIC_BASELINES.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/FIXED_EVIDENCE_COMPARISON.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/INTERPRETATION_GENERATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/INTERPRETATION_INTERFACE.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/MAINTENANCE.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/NATIVE_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/QUESTION_INTERPRETATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/QUESTION_LOCAL.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/QUESTION_PILOT.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/QUESTION_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/SOURCE_FACT_EVALUATION.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/STUDY_RUNTIME.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/T6_CLAIM_AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/T6_DOSSIER_BINDING.md",
+      "passed": true
+    },
+    {
+      "check": "guide_explains_legacy_and_layout:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "canonical_CLI_examples:README.md",
+      "passed": true
+    },
+    {
+      "check": "canonical_CLI_examples:docs/FRAMEWORK.md",
+      "passed": true
+    },
+    {
+      "check": "canonical_CLI_examples:docs/V02_MIGRATION.md",
+      "passed": true
+    },
+    {
+      "check": "outer_layout_and_receipts_clear",
+      "passed": true
+    },
+    {
+      "check": "historical_and_current_packet_separate:data/README.md",
+      "passed": true
+    },
+    {
+      "check": "historical_and_current_packet_separate:data/DATA_PLAN.md",
+      "passed": true
+    },
+    {
+      "check": "present_tense_data_identity_correct",
+      "passed": true
+    },
+    {
+      "check": "memory_no_premature_N01_N06_completion",
+      "passed": true
+    },
+    {
+      "check": "N05_N06_pending_allowed_at_review",
+      "passed": true
+    },
+    {
+      "check": "only_two_catalog_display_changes",
+      "passed": true
+    }
+  ],
+  "local_links": [
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "T6_PRIMARY_REFERENCE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/BOUNDED_RETRIEVAL.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/DETERMINISTIC_BASELINES.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/DETERMINISTIC_BASELINES.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "kind": "markdown",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "wiki",
+      "target": "AsOf Feasibility Analysis and Peer Survey",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "wiki",
+      "target": "Framework Code Review and Next Stage Plan",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "wiki",
+      "target": "V02_MIGRATION",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "wiki",
+      "target": "planning/run-registry.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/FRAMEWORK.md",
+      "kind": "wiki",
+      "target": "Context Revision Completion",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../src/asof/study/interpretation_generation.py",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../src/asof/study/interpretation_grammar.py",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_GENERATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/INTERPRETATION_INTERFACE.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-interface-20261027/NEXT-ADAPTER-DESIGN.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/MAINTENANCE.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/MAINTENANCE.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "INTERPRETATION_GENERATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/NATIVE_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_INTERPRETATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_LOCAL.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_LOCAL.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_PILOT.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_PILOT.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/QUESTION_RUNTIME.md",
+      "kind": "markdown",
+      "target": "QUESTION_LOCAL.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_FACT_EVALUATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/SOURCE_FACT_EVALUATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step7-20261026/DISPOSITION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "DETERMINISTIC_BASELINES.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "FIXED_EVIDENCE_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "SOURCE_AND_TOKEN_PREPARATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "BOUNDED_RETRIEVAL.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "NATIVE_INTERPRETATION.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/STUDY_RUNTIME.md",
+      "kind": "markdown",
+      "target": "../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_CLAIM_AUDIT.md",
+      "kind": "markdown",
+      "target": "T6_DOSSIER_BINDING.md",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_DOSSIER_BINDING.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/T6_DOSSIER_BINDING.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "kind": "markdown",
+      "target": "../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "kind": "markdown",
+      "target": "../README.md#tether-cli-run-layout",
+      "resolved": true
+    },
+    {
+      "source": "docs/V02_MIGRATION.md",
+      "kind": "wiki",
+      "target": "FRAMEWORK",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "paper/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "paper/release/tether/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "paper/release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/SOURCE_FACT_EVALUATION.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Audited Paper Results.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/run-registry.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Recovery and Evaluation Plan 2026-10-26.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessments.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/FRAMEWORK.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/V02_MIGRATION.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/STUDY_RUNTIME.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/INTERPRETATION_INTERFACE.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "data/DATA_PLAN.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "data/catalog/sources.json",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "docs/history/README-before-scientific-priority-20261031.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "data/catalog/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/review-assets/registry-sizing-20261017/README.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Scientific%20Prerequisites%20Execution%202026-10-18.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Matched%20T6%20Comparison%20Execution%202026-10-20.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Ordered%20Execution%20Progress%202026-10-17.md",
+      "resolved": true
+    },
+    {
+      "source": "README.md",
+      "kind": "markdown",
+      "target": "planning/Local%20Model%20Specialist%20Pilot%202026-10-17.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/Preprint Readiness Review and Completion Plan 2026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/AI Only Evaluation Plan 2026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/decisions/2026-10-31-no-external-expert-input.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "docs/history/TODO-before-preprint-review-20261031.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "paper/release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "paper/release/WORKING-PACKET-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "TODO.md",
+      "kind": "markdown",
+      "target": "planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "manuscript.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "supplement.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "tether-source-reporting-preprint.pdf",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "references.bib",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "references.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "RELATED-WORK-SOURCE-AUDIT.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "results/README.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "../planning/TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "release/qualification.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "release/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "release/tether/README.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "release/tether/QUALIFICATION.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "TETHER-PDF-BUILD.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "history/pre-tether-20261101/",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "asof-source-reporting-preprint.pdf",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "asof-source-reporting-preprint-v2.pdf",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "AUTHOR-DECLARATIONS.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/README.md",
+      "kind": "markdown",
+      "target": "../TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/README.md",
+      "kind": "markdown",
+      "target": "TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/README.md",
+      "kind": "markdown",
+      "target": "TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/README.md",
+      "kind": "markdown",
+      "target": "../TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/README.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessments.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/README.md",
+      "kind": "markdown",
+      "target": "../paper/README.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../data/catalog/history/sources-pre-tether-20261101.json",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../packages/tether/README.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../README.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../paper/README.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../paper/tether-source-reporting-preprint.pdf",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../paper/release/tether/README.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../paper/release/tether/QUALIFICATION.json",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "../paper/release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "review-assets/tether-rename-20261101/FRONTDOOR-NAMESPACE-INDEPENDENT-REVIEW-v2.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "review-assets/tether-rename-20261101/WHEEL-PEER-REVIEW-v1.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "review-assets/tether-rename-20261101/PAPER-RENAME-PEER-REVIEW.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "kind": "markdown",
+      "target": "review-assets/tether-rename-20261101/PACKET-PEER-REVIEW.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "../TODO.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Research Release Qualification Plan 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-11-01 - Manuscript Working Draft.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-31 - Expert Returns.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Integration.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Duration.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Converter.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - R09 Generation.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - Native Build.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - Native Launcher.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - Native Canary.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - Console Identity.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - Detached Launch.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - ABI Export Failure.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-28 - ABI Module Policy.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Module Identity.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Module Census.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Typed ABI.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Recognition Build.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Recognition Disposition.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Controls.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Coverage Analyzer.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Verifier Byte Checks.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Resource Byte Decoder.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - In Memory Unicode Codec.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Captured Archive Checker.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Portable File Ports.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Shared Owner Continuation.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Indexed Accounting.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Admission Envelope.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Storage Design.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Format Schema.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Injected Producer.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-29 - Large Injected Producer.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-30 - Entry Corrections.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-30 - E08 Policy.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-30 - C Return Capture.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-31 - Component Guards.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-31 - Scientific Readiness.md",
+      "resolved": true
+    },
+    {
+      "source": "planning/Project Progress Reassessments.md",
+      "kind": "markdown",
+      "target": "Project Progress Reassessment 2026-10-31 - Expert Returns.md",
+      "resolved": true
+    },
+    {
+      "source": "memory/MEMORY.md",
+      "kind": "wiki",
+      "target": "research-log-2026-11-01-tether-renaming",
+      "resolved": true
+    },
+    {
+      "source": "memory/project-goals.md",
+      "kind": "wiki",
+      "target": "TETHER Naming and Compatibility Plan 2026-11-01",
+      "resolved": true
+    },
+    {
+      "source": "memory/project-goals.md",
+      "kind": "wiki",
+      "target": "research-log-2026-11-01-tether-renaming",
+      "resolved": true
+    },
+    {
+      "source": "memory/research-log-2026-11-01-tether-renaming.md",
+      "kind": "wiki",
+      "target": "TETHER Naming and Compatibility Plan 2026-11-01",
+      "resolved": true
+    },
+    {
+      "source": "memory/research-log-2026-11-01-tether-renaming.md",
+      "kind": "wiki",
+      "target": "TETHER Rename Completion and Project Status 2026-11-01",
+      "resolved": true
+    },
+    {
+      "source": "memory/research-log-2026-11-01-tether-renaming.md",
+      "kind": "wiki",
+      "target": "research-log-2026-11-01-working-paper-packet",
+      "resolved": true
+    },
+    {
+      "source": "memory/research-log-2026-11-01-tether-renaming.md",
+      "kind": "wiki",
+      "target": "project-goals",
+      "resolved": true
+    },
+    {
+      "source": "memory/research-log-2026-11-01-tether-renaming.md",
+      "kind": "wiki",
+      "target": "MEMORY",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "../paper/release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "../planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "catalog/README.md",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "docs/FRAMEWORK",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Project Audit and v0.2 Completion",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "data/STORAGE_AND_DOWNLOAD_REPORT",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "data/DATA_PLAN",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "data/catalog/sources.json",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "AsOf Feasibility Analysis and Peer Survey",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Beyond the Virtual Biotech Tooling Gaps and Project Plan",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Agentic Target-Evaluation Frameworks Critical Review",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Context Revision Completion",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "AACT Historical Restoration",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Clinical Long Session Progress",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "data/manifests/public/2026-10-10-completion-audit.json",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "docs/MAINTENANCE",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "data/manifests/public/2026-10-12-v02-normalization.json",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "planning/run-registry.json",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "Clinical and Genetics Feasibility Pilot",
+      "resolved": true
+    },
+    {
+      "source": "data/README.md",
+      "kind": "wiki",
+      "target": "AACT January 2025 Follow-up",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../paper/release/tether/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "catalog/README.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Credible Set Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Source Reference Completion.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-11-01 - Technical Study Result.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "markdown",
+      "target": "../planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Primary Report Lookup and Source Readiness 2026-10-22",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Public Chronology and Primary Report 2026-10-22",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Existing-trial Document History 2026-10-22",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Existing-trial Protocol Audit 2026-10-22",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Publisher Discovery Amendment 2026-10-21",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Exact-trial Retrieval Calibration 2026-10-21",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Endpoint-specific Follow-up Feasibility 2026-10-21",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Endpoint-specific Origin Sample 2026-10-21",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "AsOf Feasibility Analysis and Peer Survey",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "data/STORAGE_AND_DOWNLOAD_REPORT",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "data/catalog/sources.json",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Project Audit and v0.2 Completion",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "AACT Historical Restoration",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Clinical and Genetics Feasibility Pilot",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "AACT January 2025 Follow-up",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Clinical Long Session Progress",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "data/manifests/public/2026-10-12-v02-normalization.json",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Stabilization Completion and Feasibility Gates",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "Feasibility Gate Decision",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "docs/FRAMEWORK",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "data/manifests/public/2026-10-09-source-revalidation.json",
+      "resolved": true
+    },
+    {
+      "source": "data/DATA_PLAN.md",
+      "kind": "wiki",
+      "target": "data/manifests/public/2026-10-10-completion-audit.json",
+      "resolved": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "kind": "markdown",
+      "target": "sources.json",
+      "resolved": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "kind": "markdown",
+      "target": "history/sources-pre-tether-20261101.json",
+      "resolved": true
+    },
+    {
+      "source": "data/catalog/README.md",
+      "kind": "markdown",
+      "target": "../../README.md#installation-and-compatibility",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "paper/manuscript.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "paper/supplement.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "paper/tether-source-reporting-preprint.pdf",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "TETHER-QUALIFICATION.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "PACKET-MANIFEST.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "paper/results/README.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "reproduction/asof-research-artifact-0.1.0.zip",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "reproduction/RELEASE-RECORD.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "reproduction/qualification.json",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "reproduction/README.md",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "software/tether_target_agents-0.4.0-py3-none-any.whl",
+      "resolved": true
+    },
+    {
+      "source": "paper/release/tether/README.md",
+      "kind": "markdown",
+      "target": "software/source/packages/tether/README.md",
+      "resolved": true
+    }
+  ],
+  "remaining_AsOf_occurrences": [
+    {
+      "path": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/AUTHORITY_FOUR_ARM_COMPARISON.md",
+      "line": 76,
+      "text": "The comparison contains one AsOf interpretation stage, five explicitly adapted",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/BOUNDED_INTERPRETATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/BOUNDED_RETRIEVAL.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/BOUNDED_RETRIEVAL.md",
+      "line": 5,
+      "text": "AsOf 0.3.5 adds a receipt-bound bridge from an explicitly qualified candidate",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/DETERMINISTIC_BASELINES.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/FIXED_EVIDENCE_COMPARISON.md",
+      "line": 14,
+      "text": "| AsOf interpretation | One recorded transport fixture |",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/FRAMEWORK.md",
+      "line": 14,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/FRAMEWORK.md",
+      "line": 31,
+      "text": "TETHER follows the retained [[AsOf Feasibility Analysis and Peer Survey]]: begin with a bounded",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/INTERPRETATION_GENERATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/INTERPRETATION_GENERATION.md",
+      "line": 5,
+      "text": "Status: AsOf **0.3.11** is accepted for pure engineering preparation and validation. [Acceptance evidence](../planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json) covers full, installed and preserved-version checks; native conformance and scientific validation remain unestablished.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/INTERPRETATION_INTERFACE.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/INTERPRETATION_INTERFACE.md",
+      "line": 5,
+      "text": "Introduced and accepted in AsOf 0.3.8; retained in 0.3.10. This pure interface prepares prompts and",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/INTERPRETATION_INTERFACE.md",
+      "line": 31,
+      "text": "existing one AsOf/five adapted Virtual Biotech stages and exact source-ID history",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/MAINTENANCE.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/NATIVE_INTERPRETATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/NATIVE_INTERPRETATION.md",
+      "line": 10,
+      "text": "Accepted AsOf 0.3.10, including the separately verified duration correction.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/NATIVE_INTERPRETATION.md",
+      "line": 30,
+      "text": "One AsOf stage, five adapted Virtual Biotech stages and both deterministic",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/QUESTION_INTERPRETATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/QUESTION_LOCAL.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/QUESTION_PILOT.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/QUESTION_RUNTIME.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "line": 5,
+      "text": "Accepted AsOf 0.3.4 adds preparation capabilities separate from execution. The",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/SOURCE_AND_TOKEN_PREPARATION.md",
+      "line": 80,
+      "text": "payloads: one AsOf interpretation and five role-inspired adapted Virtual Biotech",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/SOURCE_FACT_EVALUATION.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/STUDY_RUNTIME.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/STUDY_RUNTIME.md",
+      "line": 5,
+      "text": "AsOf 0.3.0 introduced small reusable helpers and a **recorded synthetic smoke",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/STUDY_RUNTIME.md",
+      "line": 15,
+      "text": "`asof.study.proofs` hashes the complete installed AsOf Python inventory and the",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/T6_CLAIM_AUDIT.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/T6_DOSSIER_BINDING.md",
+      "line": 3,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/T6_DOSSIER_BINDING.md",
+      "line": 6,
+      "text": "native AsOf v2 T6 dossiers normalized from Open Targets 25.09. It reuses the",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "docs/V02_MIGRATION.md",
+      "line": 13,
+      "text": "TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "README.md",
+      "line": 10,
+      "text": "**Current distribution: `tether-target-agents` 0.4.0 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "README.md",
+      "line": 74,
+      "text": "results keep their original bytes and names. The earlier AsOf paper/release",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "README.md",
+      "line": 198,
+      "text": "| `src/asof/` | Frozen AsOf engine: contracts, provenance, workflow, ingestion and CLI |",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/README.md",
+      "line": 5,
+      "text": "used AsOf. The naming revision changes no experiment, result, cost or source fact.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/README.md",
+      "line": 65,
+      "text": "on the frozen internal AsOf 0.3.11 compatibility engine and offers the new",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "planning/TETHER Naming and Compatibility Plan 2026-11-01.md",
+      "line": 39,
+      "text": "`AsOf`, `asof`, `asof-target-agents`, schema/method/backend identifiers and",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "planning/TETHER Rename Completion and Project Status 2026-11-01.md",
+      "line": 55,
+      "text": "AsOf/asof names remain in frozen code, old distribution/contract identifiers,",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "planning/Project Progress Reassessments.md",
+      "line": 5,
+      "text": "use the new name; dated AsOf records and frozen contracts remain unchanged.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "memory/MEMORY.md",
+      "line": 7,
+      "text": "Evaluation and Reproducibility**. Earlier AsOf names are retained in dated",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "memory/project-goals.md",
+      "line": 17,
+      "text": "TETHER 0.4.0 interfaces live in packages/tether; frozen AsOf 0.3.11 core/identifiers",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "memory/research-log-2026-11-01-tether-renaming.md",
+      "line": 3,
+      "text": "description: Owner-selected TETHER identity, current interface migration and immutable AsOf compatibility evidence",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "memory/research-log-2026-11-01-tether-renaming.md",
+      "line": 53,
+      "text": "dated AsOf records as immutable compatibility history.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/README.md",
+      "line": 141,
+      "text": "Related project notes: [[AsOf Feasibility Analysis and Peer Survey]], [[Beyond the Virtual Biotech Tooling Gaps and Project Plan]], [[Agentic Target-Evaluation Frameworks Critical Review]].",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/README.md",
+      "line": 148,
+      "text": "October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; subsequent origin and regional technical pilots are documented below.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/README.md",
+      "line": 261,
+      "text": "January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "line": 31,
+      "text": "TETHER means Target Evidence Tracking Harness for Evaluation and Reproducibility. See [catalog identity and history](catalog/README.md); the frozen AsOf engine and temporal/dataset identifiers remain compatible.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "line": 106,
+      "text": "This is the data implementation of [[AsOf Feasibility Analysis and Peer Survey]] and the revalidated scaffold approved by the user. The initial documentation deliverable was completed without dataset acquisition or analysis. On October 10 the user authorized public downloads, storage sizing and the external E: root; starter data are now collected and the core wave has started. See [[data/STORAGE_AND_DOWNLOAD_REPORT|the acquisition/storage report]] for this subsequent phase. Subsequent technical normalization and regional LD QC are documented below; no adjudicated clinical benchmark labels or validated clinical predictions have been created.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "line": 110,
+      "text": "October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; the resumed program screen and regional technical pilot are described next.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/DATA_PLAN.md",
+      "line": 115,
+      "text": "January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "data/catalog/README.md",
+      "line": 22,
+      "text": "0.4.0 in `packages/tether`; its CLI/import aliases retain the frozen AsOf 0.3.11",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "packages/tether/README.md",
+      "line": 28,
+      "text": "outer `dossier.md` changes only the exact first `AsOf dossier` header to `TETHER",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/release/tether/README.md",
+      "line": 7,
+      "text": "Reproducibility**. The project was previously named AsOf. This naming and software",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/release/tether/README.md",
+      "line": 29,
+      "text": "  AsOf PDFs and snapshots are history, not the current outer paper.",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/release/tether/README.md",
+      "line": 33,
+      "text": "- The immutable [AsOf P09 archive](reproduction/asof-research-artifact-0.1.0.zip),",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    },
+    {
+      "path": "paper/release/tether/README.md",
+      "line": 47,
+      "text": "AsOf artifacts remain valid compatibility identities. The current TETHER PDF",
+      "disposition": "Compatibility engine/version, fixed arm or temporal/schema/dataset identity, historical path/link, or explicitly retained dated chronology; manually reviewed."
+    }
+  ],
+  "closed_initial_findings": [
+    {
+      "id": "CURRENT-01",
+      "initial": "Memory said all N01-N06 implemented/validated and final checkpoint existed while TODO left N05/N06 pending.",
+      "resolution": "Current memory wording now tracks migration/final validation/checkpoint without claiming completion."
+    },
+    {
+      "id": "CURRENT-02",
+      "initial": "Current data summaries gave53/200 without clearly distinguishing the new72/946 packet.",
+      "resolution": "Historical pre-rename53/200 and current72/946 are now explicit with current links."
+    },
+    {
+      "id": "CURRENT-03",
+      "initial": "Unlabeled present-tense data inventory paragraph still named AsOf.",
+      "resolution": "That sentence now names TETHER; dated names/IDs remain preserved."
+    }
+  ],
+  "pending_completion_allowance": {
+    "at_review": [
+      "N05",
+      "N06"
+    ],
+    "permitted_followup": "Root may mark only those completion checkboxes after current-doc/static-CI validation and record the timestamped local commit. This report does not certify a future commit or hosted run."
+  },
+  "retained_quantity_evidence": {
+    "packet_peer_sha256": "4ad41aeae0afdbad01c4107ae7ec14740b6bd3c4ad953ba3f2aacb2e86ef9785",
+    "paper_peer_sha256": "f78713871249911b3735a93901cf89270ec2fe39c1deafd69c4c41c49a93e9de",
+    "wheel_review_sha256": "c99708fc3315e68b43b3f8b0765c3e4b6eb0a5cebdc87276f21da4d69acceb72",
+    "frontdoor_review_sha256": "a2c23240e78b4046bacc774d5f388cfc3f5630aee9a1c5ae1d6c0d3937130f87"
+  },
+  "checker_initial_diagnostic": "Initial report retained separately: eight standalone-packet README links were initially resolved against checkout instead of ZIP root. Corrected virtual-packet resolution changed no document or packet. All other checks were already passing.",
+  "limits": [
+    "No packet input, runtime, source, guide or status file edited by this checker.",
+    "Existing dated logs/proposals, code/module CLIs, schema/method/dataset/temporal IDs and frozen artifacts remain explained historical compatibility exemptions.",
+    "No PDF rerender, original/provider/human/protected input read, install, broad test rerun, network/model/download/publication/hosted execution.",
+    "Static CI is reviewed by a separate agent; current configured jobs do not establish hosted success.",
+    "Original1973 broad acceptance is historical; new49 and115/96+19 scopes and all overlapping audit counts remain distinct."
+  ],
+  "scientific_validation": "not_established",
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "new_downloads": 0
+}

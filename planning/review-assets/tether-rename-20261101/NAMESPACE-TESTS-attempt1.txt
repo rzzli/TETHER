@@ -1,0 +1,48 @@
+test_canonical_cli_alias_is_the_public_front_door (test_namespace.NamespaceTests.test_canonical_cli_alias_is_the_public_front_door) ... ERROR
+test_import_orders_preserve_modules_classes_and_metadata (test_namespace.NamespaceTests.test_import_orders_preserve_modules_classes_and_metadata) ... ok
+test_installer_is_idempotent (test_namespace.NamespaceTests.test_installer_is_idempotent) ... ok
+test_nested_alias_monkeypatch_is_visible_in_engine (test_namespace.NamespaceTests.test_nested_alias_monkeypatch_is_visible_in_engine) ... ok
+test_nested_main_normal_import_does_not_clobber_engine_parent (test_namespace.NamespaceTests.test_nested_main_normal_import_does_not_clobber_engine_parent) ... ok
+test_plain_import_does_not_eagerly_load_optional_scientific_modules (test_namespace.NamespaceTests.test_plain_import_does_not_eagerly_load_optional_scientific_modules) ... ok
+test_public_and_engine_versions_are_separate (test_namespace.NamespaceTests.test_public_and_engine_versions_are_separate) ... ok
+test_resource_aliases_resolve_the_original_files (test_namespace.NamespaceTests.test_resource_aliases_resolve_the_original_files) ... ok
+test_serialization_and_fingerprint_match_original_objects (test_namespace.NamespaceTests.test_serialization_and_fingerprint_match_original_objects) ... ok
+test_subprocess_entrypoint_help_is_canonical_and_offline (test_namespace.NamespaceTests.test_subprocess_entrypoint_help_is_canonical_and_offline) ... FAIL
+test_unapproved_names_fail_before_target_resolution (test_namespace.NamespaceTests.test_unapproved_names_fail_before_target_resolution) ... ok
+
+======================================================================
+ERROR: test_canonical_cli_alias_is_the_public_front_door (test_namespace.NamespaceTests.test_canonical_cli_alias_is_the_public_front_door)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_namespace.py", line 124, in test_canonical_cli_alias_is_the_public_front_door
+    public = importlib.import_module("tether.cli")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1138, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1078, in _find_spec
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 82, in find_spec
+    raise ModuleNotFoundError(f"Required TETHER engine module is unavailable: {legacy_name}", name=legacy_name)
+ModuleNotFoundError: Required TETHER engine module is unavailable: tether._cli
+
+======================================================================
+FAIL: test_subprocess_entrypoint_help_is_canonical_and_offline (test_namespace.NamespaceTests.test_subprocess_entrypoint_help_is_canonical_and_offline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_namespace.py", line 118, in test_subprocess_entrypoint_help_is_canonical_and_offline
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\__main__.py", line 2, in <module>
+    from ._cli import main
+ModuleNotFoundError: No module named 'tether._cli'
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.883s
+
+FAILED (failures=1, errors=1)

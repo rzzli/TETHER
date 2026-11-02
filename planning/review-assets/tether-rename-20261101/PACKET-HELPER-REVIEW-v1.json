@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "method": "tether.review_packet_helper_checks.v1",
+  "status": "PASS_FICTIONAL_HELPER_AND_STATIC_PUBLIC_CODE_PREFLIGHT",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "files": {
+    "tools/presentation/package_tether_review.py": {
+      "sha256": "0b123125f94a39b62504a0277e4595026ee5b698272895798d221691847ddf2d",
+      "bytes": 22908
+    },
+    "paper/release/tether/README.md": {
+      "sha256": "b57f25fc4a8ee4254d2256cbc6fa90e77334ee724e06d1c2c338375ac4f9f3cf",
+      "bytes": 9384
+    },
+    "planning/review-assets/tether-rename-20261101/test_package_tether_review.py": {
+      "sha256": "214a5e63f0236b45df122f7750f36c9237de38974f677217fc7aea0644a52823",
+      "bytes": 16266
+    },
+    "planning/review-assets/tether-rename-20261101/PACKET-HELPER-TESTS-v1.txt": {
+      "sha256": "1e837285910461ce5ccdda61559b0117a2fb89b4678afeffee0f20011ad43b67",
+      "bytes": 2239
+    }
+  },
+  "fictional_tests": {
+    "methods": 12,
+    "passed": 12,
+    "seconds": 11.308,
+    "scope": "Invented small paper/result/container/source/wheel bytes, actual filesystem ZIP/RECORD/no-clobber helpers; no real paper/results/legacy archive bodies."
+  },
+  "static_preflight": {
+    "qualified_payloads": 70,
+    "expected_zip_members": 72,
+    "python_source_files": 14,
+    "wheel_bytes": 24538,
+    "wheel_sha256": "26bb8059ac0eb1e1b9d6c965dedae2409f7d418fbdb48d13f0c524f8354c4ddf",
+    "wheel_source_projection": "PASS",
+    "guide_privacy_and_packet_relative_links": "PASS",
+    "body_reads": "New public TETHER code/license/wheel/guide and pinned portable result manifest metadata only. No actual paper/results/legacy ZIP body read.",
+    "actual_packet_built": false
+  },
+  "qualification_contract": {
+    "required_values": "tools.presentation.package_tether_review.QUALIFICATION",
+    "required_fields": [
+      "qualified_at_utc",
+      "payloads"
+    ],
+    "optional_fields": [
+      "checks",
+      "evidence",
+      "environment",
+      "scope_notes",
+      "new_model_calls",
+      "new_provider_downloads",
+      "provider_spending_usd"
+    ],
+    "optional_types": "checks/evidence/environment objects;scope_notes string list;activity/spending fields exact int 0.",
+    "payload_descriptor": {
+      "sha256": "lowercase 64 hex",
+      "bytes": "exact int 0..64 MiB",
+      "role": "exact fixed source_inventory role"
+    },
+    "payload_closure": "Every source_inventory member including root README; exclude generated TETHER-QUALIFICATION.json/PACKET-MANIFEST.json.",
+    "external_authority": "--qualification-sha256 mandatory exact byte SHA; fixed UTC from qualified_at_utc.",
+    "manifest_method": "tether.review_packet_manifest.v1",
+    "build_status": "PACKAGED_LOCAL_TETHER_REVIEW_AND_READBACK_VERIFIED"
+  },
+  "allowlist_scope": [
+    "Current six paper source/checklist files and TETHER PDF only.",
+    "Exact39 portable result files,37 historical payloads unchanged.",
+    "Exact4 frozen legacy P09 files; nested ZIP opaque, names/protocol/bytes retained.",
+    "New TETHER wheel verified whole closure/metadata/RECORD and exact Python source projection; rejects asof/,pth,extra/bad metadata/padding.",
+    "Only new project pyproject/uv.lock/README/LICENSE and recursive src/tether Python; no tests, caches,raw PDF BUILD,fonts,models, private outputs."
+  ],
+  "meaningful_negative_controls": [
+    "External qualification tamper;wrong bytes/types/roles;unsafe/casealiased/extra/missing member names.",
+    "Scientific/publication/owner flags and credentials/private roots/answer fields rejected in new public metadata.",
+    "Source explanatory credential literals are allowed without generic code privacy scanning.",
+    "Wheel namespace/source/dependency/RECORD/padding substitution rejected even after updated qualification.",
+    "Legacy/result changes cannot be requalified by the new metadata.",
+    "Missing relative links,existing final/partial,protected output trees and readback/publication race rejected."
+  ],
+  "publication": {
+    "compression": "ZIP_STORED",
+    "timestamps": "frozen aware UTC, DOS two-second floor",
+    "readback": "exact physical/member/metadata/byte/CRC closure before no-clobber publication",
+    "failure": "partial ZIP retained,no qualified final advertised",
+    "actual_build": "Reserved for root after final sanitized public qualification; not performed here."
+  },
+  "guide_review_correction": "Root caught initial work location inside packet. Final guide uses a fresh sibling work directory; source/environment/demo/rebuilt wheels all remain below that outside-work tree.",
+  "scope_limits": [
+    "No provider/protected/human reads,downloads,models,scientific reruns or actual packet build.",
+    "Helper reuse is trusted current local code,not execution of archived code.",
+    "Outer full archive audit and actual repeat belong to root and another reviewer after production build.",
+    "Source build instructions need locally cached tools;actual source-build qualification is separate.",
+    "Owner facts/author acceptance remain deferred;no public deposit,science or submission-ready claim."
+  ],
+  "python": "3.11.15",
+  "scientific_validation": "not_established",
+  "publication_authorized": false,
+  "owner_declarations": "deferred"
+}

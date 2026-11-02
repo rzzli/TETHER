@@ -1,4 +1,6 @@
-# Binding claim audits to native v2 dossiers
+# TETHER — Binding claim audits to native v2 dossiers
+
+TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
 
 `tools.science.t6_dossier_binding` adds an evaluator-only integration for existing
 native AsOf v2 T6 dossiers normalized from Open Targets 25.09. It reuses the

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "method": "tether.typed_staged_validation.v1",
+  "status": "PASS_STAGED_TEXT_AND_BINARY_INTEGRITY",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "text_whitespace": "PASS all staged paths except binary PDF",
+  "pdf_path": "paper/tether-source-reporting-preprint.pdf",
+  "staged_and_working_pdf_sha256": "c5cd6d70d5d4c85a64baf82b59b98618b9714d52840217fe77790c5ce9d4b0b1",
+  "initial_diagnostic": "Git global PDF diff driver astextplain treated PDF stream/xref spaces as text whitespace. PDF bytes were preserved; all other staged paths pass. Binary PDF integrity/geometry/content are separately qualified.",
+  "frozen_compatibility_engine_unchanged": true,
+  "unresolved_findings": []
+}

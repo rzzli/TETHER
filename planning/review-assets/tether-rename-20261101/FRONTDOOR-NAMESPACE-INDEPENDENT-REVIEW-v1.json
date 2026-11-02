@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "method": "tether.independent_frontdoor_namespace_review.v1",
+  "status": "CHANGES_REQUIRED",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "subjects": {
+    "packages/tether/src/tether/_cli.py": {
+      "path": "packages/tether/src/tether/_cli.py",
+      "sha256": "7dd5c292741930b76abe8eb7a75850802fa8bdc478f5eabe9fb31df59bd98a54",
+      "bytes": 2695
+    },
+    "packages/tether/src/tether/_presentation.py": {
+      "path": "packages/tether/src/tether/_presentation.py",
+      "sha256": "1469ea0e0565297a517fd0f549dfda0d69b682d10d17131793cb856be6edf785",
+      "bytes": 17083
+    },
+    "packages/tether/src/tether/_aliases.py": {
+      "path": "packages/tether/src/tether/_aliases.py",
+      "sha256": "458d44bc9b7fb7fd6e88b770402e1bcc22baa070aa4e61ca7fc8a2b98fc81a93",
+      "bytes": 4560
+    },
+    "packages/tether/tests/test_frontdoor.py": {
+      "path": "packages/tether/tests/test_frontdoor.py",
+      "sha256": "787b74b0500797a4bb146622622378dd9b7e242fc719c576bf4f2d7cb881e3c2",
+      "bytes": 16619
+    },
+    "packages/tether/tests/test_namespace.py": {
+      "path": "packages/tether/tests/test_namespace.py",
+      "sha256": "cf2796b5869b4abde7055ffc02f4acbc7a4f9da9d4d89b255f44878d57edeb9b",
+      "bytes": 8114
+    }
+  },
+  "independent_tests": {
+    "source": {
+      "path": "planning/review-assets/tether-rename-20261101/test_frontdoor_independent_v1.py",
+      "sha256": "db66b73730ff1d262f5c5b8039919208d97b392364e9870d43eb9029811ca1d5",
+      "bytes": 5715
+    },
+    "failing_before_log": {
+      "path": "planning/review-assets/tether-rename-20261101/FRONTDOOR-INDEPENDENT-PROBES-BEFORE-v4.txt",
+      "sha256": "4087ce7f51671de6cf4fcc522ef1205b47ce3ff8a603d935e0f6dcb045852a15",
+      "bytes": 6692
+    },
+    "methods": 12,
+    "passed": 8,
+    "failed": 4,
+    "elapsed_seconds": 0.331,
+    "command": ".venv/Scripts/python.exe -B planning/review-assets/tether-rename-20261101/test_frontdoor_independent_v1.py"
+  },
+  "findings": [
+    {
+      "id": "TETHER-AUDIT-01",
+      "severity": "material",
+      "status": "open_author_fix_in_progress",
+      "scope": "New presentation read paths",
+      "evidence": [
+        "Oversized outer metadata is opened before the core64MiB metadata limit can reject it.",
+        "Outer journal inspection delegates to unbounded core read_chain(path).",
+        "Mid-read mutation of a2-byte invented metadata file is accepted by _read."
+      ],
+      "required_change": "Use bounded regular-file stable reads for metadata/dossier and outer journal parsing; preserve immutable core code."
+    },
+    {
+      "id": "TETHER-AUDIT-02",
+      "severity": "material",
+      "status": "open_author_fix_in_progress",
+      "scope": "Owned subprocess cleanup",
+      "evidence": [
+        "Mocked communicate OSError with poll=None propagates while terminate is never called and the child is not reaped."
+      ],
+      "required_change": "Terminate/drain then kill/drain/reap as needed for noninterrupt communicate exceptions, retain/rethrow original failure, never redispatch."
+    }
+  ],
+  "positive_evidence": [
+    "All finite approved normal-import aliases retain legacy module metadata/identity.",
+    "VerifiedReference class and private _TOKEN share exact engine identity.",
+    "Duplicate-key/nonfinite metadata and Boolean schema aliases reject.",
+    "Unsafe logical path forms and wrong installed core version reject.",
+    "Interruption timeout takes exactly one Popen, terminate, kill and final drain.",
+    "Existing source-inclusive verification, exact dossier projection, complete artifact/directory inventory and code/version/proof bindings are present in the reviewed implementation."
+  ],
+  "author_suite_evidence": "13namespace+26frontdoor tests reported passing by author; this review adds independent probes rather than claiming those runs as independent.",
+  "prototype_evidence": {
+    "files": [
+      "FRONTDOOR-INDEPENDENT-PROBE-PROTOTYPE-v1.py.txt",
+      "FRONTDOOR-INDEPENDENT-PROBES-BEFORE-v1.txt",
+      "FRONTDOOR-INDEPENDENT-PROBES-BEFORE-v2.txt",
+      "FRONTDOOR-INDEPENDENT-PROBES-BEFORE-v3.txt"
+    ],
+    "explanation": "First mock callbacks handled positional rb but not pathlib keyword mode=rb. BEFORE-v1/v2 therefore have incomplete probes; final v4 handles both and adds outer-journal coverage. An initial sparse65MiB invented file was read during the deficient first size mock; no provider file or scientific payload was opened."
+  },
+  "scope_limits": [
+    "Trusted local Python/OS boundary, not an OS sandbox or protection from privileged whole-tree replacement.",
+    "Optional external receipt hash is correctly distinguished; without it coherent wholesale replacement remains undetectable.",
+    "Engine metering remains its existing contract; source verification/presentation overhead is not newly claimed within that meter.",
+    "New layer does not confer scientific validity, publisher authenticity or model quality."
+  ],
+  "runtime_edits_by_reviewer": false,
+  "provider_originals_opened": 0,
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "new_downloads": 0,
+  "study_rerun": false,
+  "scientific_validation": "not_established"
+}

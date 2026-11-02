@@ -1,0 +1,47 @@
+{
+  "agent_visible": false,
+  "historical_paper_directory": "paper/history/pre-tether-20261101",
+  "method": "tether.paper_naming_delta.v1",
+  "new_naming_paragraph": "TETHER expands to Target Evidence Tracking Harness for Evaluation and Reproducibility. The project was previously named AsOf. This naming revision postdates the experiments; their identifiers, code commitments, results and costs remain unchanged.",
+  "renderer": {
+    "changes": [
+      "AsOf branding to TETHER",
+      "new PDF output filename",
+      "new build-manifest filename"
+    ],
+    "inverse_exact": true,
+    "original_renderer_sha256": "0d6044702a8e6f97de605f7f92acf140c337f7a3f19b1bf6a2c0abb0b432238f",
+    "path": "tools/presentation/build_tether_manuscript.py",
+    "sha256": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b"
+  },
+  "role": "evaluation_only",
+  "schema_version": 1,
+  "scientific_change": false,
+  "sources": {
+    "README.md": {
+      "after_sha256": "6229ad0e46304c16e2a2dfa316fb40f06a3f1d7b32123091e6ae774991be97cc",
+      "before_sha256": "b2380449d281d172211aad75792b60393535facabe1c45331092c9c1187f32ee",
+      "brand_replacements": 2,
+      "numerical_or_scientific_edits": 0
+    },
+    "RELATED-WORK-SOURCE-AUDIT.md": {
+      "after_sha256": "9561053ed65ebc756eaf4f1e0bfb6a09762fb8efb9877003584308f3ffe438ba",
+      "before_sha256": "e7adea0f9302389248627c969397827e9f8db3d224713577d3d4b655ad05422c",
+      "brand_replacements": 5,
+      "numerical_or_scientific_edits": 0
+    },
+    "manuscript.md": {
+      "after_sha256": "99ee5893568d4734a393669a88e06920c882d65aa064e7f20a9ad689488e096f",
+      "before_sha256": "79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507",
+      "brand_replacements": 4,
+      "numerical_or_scientific_edits": 0
+    },
+    "supplement.md": {
+      "after_sha256": "1f5c2073c7736d7a1b300c375bf84fb574d31df89ff57fa35b45feb60f80daa6",
+      "before_sha256": "d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85",
+      "brand_replacements": 1,
+      "numerical_or_scientific_edits": 0
+    }
+  },
+  "status": "PASS_EXACT_INVERSE_NAMING_DELTA"
+}

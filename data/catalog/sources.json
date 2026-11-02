@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_date": "2026-10-09",
   "timezone": "America/Los_Angeles",
-  "title": "AsOf dataset requirements and acquisition inventory",
+  "title": "TETHER dataset requirements and acquisition inventory",
   "scope": "Full requirements catalog with transport and v2 contemporary normalization; scientific/model validation remains separate.",
   "null_policy": "null means unknown or unselected, never zero or absence of scientific evidence. Dataset dates and sizes need exact artifact evidence; minimum fields are normalized-output requirements, not verified raw schemas.",
   "priority_definitions": {
@@ -1319,7 +1319,7 @@
     },
     {
       "provider_id": "project",
-      "name": "AsOf project-generated assets",
+      "name": "TETHER project-generated assets",
       "documentation_urls": [],
       "access_references": [],
       "terms_references": [],
