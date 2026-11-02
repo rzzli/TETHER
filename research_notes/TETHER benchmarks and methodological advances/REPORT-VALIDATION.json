@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "validated_at_utc": "2026-11-02T16:16:15.073390+00:00",
+  "baseline": "bc9d830",
+  "scope": "Documentation-only synthesis, local links/line bounds, source-note hashes, unchanged production and prior task statuses. No benchmark or software test execution.",
+  "report_word_count_excluding_link_targets": 3146,
+  "document_hashes": {
+    "reports/TETHER benchmarks and methodological advances.md": "982e70d07751cde99c20869f545afa1ea0113ff4256f6b9e9c83be18c3b14e00",
+    "README.md": "c73dd692ee056693fe6fa5861d5fba960c7776f9974fcbfca9475a2c8f70d8d8",
+    "TODO.md": "306518f07e523dde13404839aa4200679cc2091ee355f057aab69202bad5b077",
+    "memory/MEMORY.md": "a06cdbf2b39bba3981edc9cb38086b1307e4992dc14163a075867a0db2feb390",
+    "memory/project-goals.md": "3b44fc8a22790a90acde5e9ac7ac9b0b600b928b0f0c67a17c5bf9431b04a9cf",
+    "memory/research-log-2026-11-02-benchmarks-and-methods.md": "6ecf908b1093c4db96173c06dfd819e263bdfbef37730a7c7416f53f397036e3"
+  },
+  "research_note_hashes": {
+    "biomedical_benchmarks.md": "29389783f3b812f1acdb156a1648dbf89473e4e3e8408d52ec8a87e4bf01c43b",
+    "general_benchmarks_methods.md": "1b1123a75ee987273e9309e252a035d03e793a030097f5da67c41100d19c4dcc",
+    "methodology_gap_mapping.md": "718878624c320c8c148cab628cee6381f3192c00d8df93a6504cc0d6e6a8ed1a"
+  },
+  "validator_sha256": "f1525d17b25bfd788adca60adfc63030f6236ef0c1ac7c2b7d6811bf8f76ef18",
+  "links": {
+    "local_count": 16,
+    "local": [
+      {
+        "target": "D:/Projects/drug_target_agents/docs/TETHER-VERIFICATION-SCOPE.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmarks and methodological advances/methodology_gap_mapping.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/reports/TETHER efficiency and comparative value.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/diagnostic_codec.py:603",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/tools/science/t6_claim_audit.py:186",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_evaluation.py:192",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/revisions/20261102/manuscript.md:79",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/features.py:34",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/wire.py:35",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/journal.py:77",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/evaluation.py:118",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_evaluation.py:192",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmarks and methodological advances/biomedical_benchmarks.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmarks and methodological advances/general_benchmarks_methods.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/TODO.md",
+        "exists": true,
+        "line_in_range": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmarks and methodological advances/REPORT-VALIDATION.json",
+        "exists": true,
+        "line_in_range": true
+      }
+    ],
+    "external_occurrences": 43,
+    "external_unique_count": 39,
+    "external_urls": [
+      "https://aclanthology.org/2020.acl-main.442/",
+      "https://aclanthology.org/2020.emnlp-main.609/",
+      "https://aclanthology.org/2023.emnlp-main.398/",
+      "https://aclanthology.org/2024.naacl-long.20/",
+      "https://aclanthology.org/2025.acl-long.167/",
+      "https://arxiv.org/html/2406.12045v1",
+      "https://arxiv.org/html/2406.13352v1",
+      "https://arxiv.org/html/2503.18666v1",
+      "https://arxiv.org/html/2503.18813v1",
+      "https://arxiv.org/html/2606.19245v2",
+      "https://docs.seqera.io/nextflow/cache-and-resume",
+      "https://docs.seqera.io/nextflow/reference/process/directives/cache",
+      "https://github.com/BenevolentAI/r2e-evaluation-data",
+      "https://github.com/Future-House/BixBench",
+      "https://github.com/GENTEL-lab/OriGene/tree/main/TRQA_benchmark",
+      "https://github.com/allenai/scifact",
+      "https://github.com/ethz-spylab/agentdojo",
+      "https://github.com/facebookresearch/CRAG",
+      "https://github.com/latchbio/txbench-pp",
+      "https://github.com/princeton-nlp/ALCE",
+      "https://github.com/youngseungjeon/RAGPPI",
+      "https://huggingface.co/datasets/GENTEL-Lab/TRQA",
+      "https://huggingface.co/datasets/Youngseung/RAGPPI/blob/main/README.md",
+      "https://huggingface.co/datasets/futurehouse/BixBench",
+      "https://huggingface.co/datasets/futurehouse/lab-bench/raw/main/README.md",
+      "https://huggingface.co/datasets/phylobio/BiomniBench-DA",
+      "https://inspect.aisi.org.uk/scoring-policy.html",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12773016/",
+      "https://proceedings.iclr.cc/paper_files/paper/2026/hash/582e9771ac8527cb6390e5e9444a0fee-Abstract-Conference.html",
+      "https://raw.githubusercontent.com/allenai/scifact/master/doc/data.md",
+      "https://raw.githubusercontent.com/allenai/scifact/master/doc/evaluation.md",
+      "https://raw.githubusercontent.com/facebookresearch/CRAG/main/docs/dataset.md",
+      "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/README.md",
+      "https://raw.githubusercontent.com/ksenia007/alvessa_agent/main/README.md",
+      "https://raw.githubusercontent.com/princeton-nlp/ALCE/main/README.md",
+      "https://raw.githubusercontent.com/princeton-nlp/ALCE/main/eval.py",
+      "https://raw.githubusercontent.com/sierra-research/tau-bench/main/README.md",
+      "https://raw.githubusercontent.com/sierra-research/tau2-bench/main/README.md",
+      "https://www.nature.com/articles/s41598-026-47765-3"
+    ],
+    "external_access": "Primary-source access/version limits inherited from completed researcher notes. Writer made no new fetch and did not establish live URL status."
+  },
+  "preservation": {
+    "production_diff": "",
+    "previous_audit_diff": "",
+    "prior_CE_Q_P_C_N_statuses_match": true,
+    "status_rows_compared": 48,
+    "git_diff_check": true,
+    "raw_datasets_read_or_rehashed": false
+  },
+  "limitations": [
+    "No external benchmark, scorer, model or environment executed or acquired.",
+    "Three preceding P2 defects and CE01-CE04 remain pending; Q04/Q05 not activated.",
+    "Native benchmark adapters and task-capable components are proposals, not implemented capabilities.",
+    "Some public dataset previews were development-exposed; see biomedical exposure ledger.",
+    "Model-weight chronology cannot be inferred from eligible retrieved evidence.",
+    "Original benchmark scores and proposed derived conformance tests must remain separate.",
+    "No protected reviewer/clinical files were read; expert recruitment remains retired and author facts deferred."
+  ],
+  "errors": []
+}

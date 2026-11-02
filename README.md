@@ -18,6 +18,8 @@ performance measurements.
 
 ## Current status and next step
 
+The [benchmark and methodology review](<reports/TETHER benchmarks and methodological advances.md>) recommends an independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. It distinguishes native benchmark results from derived tests and maps peer methods to actual code gaps. These are proposals: no benchmark or new model was run, and the corrections below remain open.
+
 The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identifies three new, unpatched P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. It also measures repeated verification/compiler work and proposes a matched policy-equivalent baseline; [TODO](TODO.md) keeps these corrections open. Runtime and sealed paper/results are unchanged, and the existing scientific and owner-deferred limits remain in force.
 
 The [2 November full-project review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) reproduced gaps in legacy coverage/review/dossier verification and corrected receipt and genetics-QC utilities. TETHER 0.4.1 adds stronger verification at the canonical CLI boundary; direct legacy API aliases retain their earlier semantics. The [corrective plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>) is the current execution authority. The earlier 0.4.0 packet remains a version-specific historical artifact, not qualification of the new working tree.

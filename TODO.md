@@ -16,6 +16,14 @@ The old categorical genetics adapter and retrospective old-pair audit are option
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
 
+## Benchmark and methodology review — 2 November 2026
+
+- [x] Assess relevant biomedical and general-purpose benchmarks using primary sources; distinguish original-task performance from derived conformance tests, access limitations and exposure.
+- [x] Map transferable peer methods to current code as implemented, partial, absent or unqualified; avoid proposing duplicate mechanisms.
+- [x] Retain a ranked benchmark/method report and validate its links, source references, planning boundaries and unchanged runtime/results.
+
+The [benchmark and methodology report](<reports/TETHER benchmarks and methodological advances.md>) recommends an independent full-policy conformance comparison first, then SciFact and one LAB-Bench answering task after their missing components are qualified. ALCE is the next citation-focused extension; GenomeArena/RAGPPI/CRAG are conditional alternatives. Native benchmark execution is not available through the current extractor. Existing all-case accounting, paired policy projections, dependence grouping and caches are acknowledged. No benchmark, adapter, model or new dataset was executed/acquired; no runtime fix was made. [Validation](<research_notes/TETHER benchmarks and methodological advances/REPORT-VALIDATION.json>) records documentation checks. This research does not activate Q04/Q05 or change CE01–CE04, and creates no external-expert or author-declaration request.
+
 ## Comparative efficiency audit — 2 November 2026
 
 - [x] Compare TETHER's efficiency and comparative value against relevant research and systems, keeping demonstrated capabilities separate from proposed benefits.

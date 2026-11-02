@@ -10,6 +10,20 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+The benchmark/method review is complete; see [[TETHER benchmarks and methodological advances]]
+and [[research-log-2026-11-02-benchmarks-and-methods]]. Proposed next research is an
+independent equal-policy conformance comparison, followed by SciFact and one
+LAB-Bench literature/database task only after the required semantic/answer adapters
+exist. ALCE is a later citation-quality extension; other benchmarks are conditional.
+No inspected benchmark jointly tests the full temporal/hypothesis/lineage contract,
+and native benchmark execution is not a current extractor capability. Existing
+failure denominators, paired projections, declared dependence grouping and caches
+are preserved strengths. Primary method gaps are independent full-policy comparison,
+qualified entailment and broader utility/false-rejection evaluation. Input chronology
+does not certify model-weight chronology; public preview exposure is recorded.
+This is a research recommendation, not Q04/Q05 activation, adapter implementation,
+benchmark execution, dataset acquisition or a new expert/author input gate.
+
 The comparative efficiency audit is complete; see [[TETHER efficiency and comparative value]]
 and [[research-log-2026-11-02-comparative-efficiency-audit]]. Three newly confirmed P2
 defects remain unpatched: report/receipt aliasing in the transport verifier, discarded
