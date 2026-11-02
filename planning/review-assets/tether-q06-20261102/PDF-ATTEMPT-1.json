@@ -1,0 +1,18 @@
+{
+  "attempt": 1,
+  "time_recorded_utc": "2026-11-02T09:52:55.341579+00:00",
+  "stage": "data/cache/tether-q06/working-v1",
+  "command": "bundled Python build_tether_manuscript.py --build --marker-confirmed --repeat-check",
+  "exit_code": 1,
+  "error": "ValueError: Inline formatting changed source-visible text",
+  "root_cause": "Supplement line150 relative SOFTWARE-QUALIFICATION.json link was left literal by the .md-only formatter; expected visible text correctly required link label.",
+  "pdf_published": false,
+  "build_manifest_published": false,
+  "original_formatter_sha256": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b",
+  "source_stage_report_sha256": "4a430fe19d0e6bec23ec39596fcb5b5d60e8c73eaae8511059afe4789249249e",
+  "marker_succeeded": true,
+  "marker_repeated": false,
+  "correction": "New versioned formatter extends only the relative-link extension alternation from md to md|json; source scientific text unchanged.",
+  "corrected_formatter_sha256": "c695400bf7a411f661d0b3bd8f1771eee3d550bd793e178ad6bd29318916b719",
+  "original_formatter_unchanged": true
+}

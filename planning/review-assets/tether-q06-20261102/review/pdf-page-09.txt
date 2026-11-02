@@ -1,0 +1,42 @@
+TETHER - Working research draft
+9
+Figure 3. Invalid admissions under the three policies. All fourteen scenarios were constructed and exposed before the study.
+4.3 Verification and resource use
+The separate source-inclusive auditor passes 2,414 checks with no unresolved finding. It independently
+reconstructs original-row projections, constructed controls, policy decisions, source proofs and all-output
+accounting. The frozen analyzer runs once against the pinned ledger and audit. A separate presentation audit
+passes 351 checks over quantities, tables, captions, data and figure geometry. A fresh-directory local rebuild
+reproduces all 39 result-bundle files byte-for-byte. Check counts describe implementation verification effort;
+they are not biomedical sample sizes or an estimate of general correctness.
+Production takes 203.828 seconds wall time and 198.984 seconds CPU, with checkpoint-observed
+process-lifetime peak memory 305,827,840 bytes. The 197.812-second source-verification wrapper is included
+within production, not an additional phase to sum. The separate audit takes 7.125 seconds and peaks at
+333,893,632 bytes. Completed logical hash reads total 140,452,303,784 bytes in production and
+2,897,268,566 in the audit; the two phases enumerate source rows twice in total. Physical I/O, partial
+failed-read bytes and platform costs are unmeasured. Provider spending is $0, which is not a claim of zero
+overall cost.
+Source verification accounts for 97.0485% of production wall time (197.812/203.828). Production's completed
+logical hash bytes equal 49.0021 source-frame equivalents (140,452,303,784/2,866,248,239). These are a
+nested wall-time share and a logical-byte ratio, respectively. They measure neither physical disk transfers nor
+agent-only inference cost. The repeated verification work dominates the reported production time; no
+performance improvement is inferred from a later software release.
+Reference construction is a separate preparatory phase: 342.750 seconds, with producer memory
+unmeasured. Its later audit memory does not recover that missing measurement. Native literal/abstain
+Admissions of constructed invalid scenarios
+Ten deliberately invalid, exposed controls; paired policies
+0
+2
+4
+6
+8
+10
+FULL
+0/10
+WITHOUT_WRAPPER
+2/10
+WIRE_ONLY
+7/10
+Constructed invalid scenarios admitted
+Valid reports rejected: 0/4 under every policy.
+Designed generic JSON/core controls; no estimate of natural fault prevalence.
+Paired decisions are not independent studies; scientific validation is not established.

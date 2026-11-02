@@ -1,0 +1,66 @@
+TETHER - Working research draft
+18
+S5. Fixed guards and control inventory
+ID
+Constructed condition
+First full-policy failure
+C01
+Complete valid report
+None
+C02
+Valid null/absent/empty handling
+None
+C03
+Multiple groups and finite negative standard error, interpretation
+unqualified
+None
+C04
+All measurements unavailable, exact report, coverage undefined
+None
+F01
+Changed source hash
+G0
+F02
+Evaluator-only ancestor
+G1
+F03
+Future release metadata
+G2
+F04
+Incomplete declared inventory
+G2
+F05
+Wrong number
+G4
+F06
+Wrong physical locator
+G4
+F07
+Wrong unknown reason
+G4
+F08
+Duplicate JSON key
+G4/schema
+F09
+Boolean in a measurement field
+G3
+F10
+Oversized output
+G4/schema
+FULL requires G0-G4. WITHOUT_WRAPPER requires G0,G1,G3,G4. WIRE_ONLY requires G0 and G4's
+schema status, not G4's exactness status. An unexecuted guard is not automatically a pass. F02 and F09 may
+still be admitted by WIRE_ONLY because their required schema/byte checks pass while stronger source
+checks do not. No policy is credited with factual source fidelity solely because the wire is valid. All intended
+decisions remain in the ledger, including early guard failures.
+There are 24 native outputs: twelve literal plus twelve abstentions. Literal outputs have 36 decisions and
+abstentions twelve. Fourteen controls have 42 decisions. Total: 38 outputs and 90 decisions. All 90 reach a
+terminal verdict; 57 admit and 33 reject under their respective policies. Returned36 and deliberately
+malformed2 is output accounting, not decision accounting. The 35 core-scored-output subset is secondary.
+These denominators must not be mixed.
+S6. Development model card and stopped routes
+The local development model is Qwen/Qwen2.5-14B-Instruct-GGUF, Q4_K_M, revision
+b466e1f8c07172155743e8e1307507d8a4f91fbd, served by the pinned b11717 runtime. Three weight-shard
+hashes are retained in the P04 protocol. No weights are redistributed by this manuscript. The configured
+context is 16,384 tokens, eight threads, seed zero and at most 2,048 output tokens per call. The configured
+GPU-layer count is 99; actual hardware/offload is not inferred from this setting. Ordinary completion is used
+without grammar/schema-constrained decoding.

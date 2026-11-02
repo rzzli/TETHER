@@ -1,6 +1,8 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-02-source-composition-feasibility]] - Current checkpoint: Q03 complete/reporting-only; 125 originals receipt-hashed and1,160 independent source checks pass. Missing study/variant/effect/cohort inputs prevent stronger science; baseline solves composition. Overwritten first-attempt outputs/unavailable executed-code pins disclosed. Q04/Q05 unactivated; Q06 narrow technical working-paper branch active, owner facts deferred.
+- [[research-log-2026-11-02-corrected-working-paper]] - Current checkpoint: Q06a corrected technical paper/0.5.0 review packet qualified; source66/PDF83/packet284 checks pass,23pages/347units,78-member byte-identical ZIP. Original artifacts preserved; failedPDFattempt/fix retained. Q04/Q05 unactivated, Q06b authorfacts/acceptance owner-deferred, broader science unfinished; no new expert/model/download/publication.
+
+- [[research-log-2026-11-02-source-composition-feasibility]] - Prior checkpoint: Q03 complete/reporting-only; 125 originals receipt-hashed and1,160 independent source checks pass. Missing study/variant/effect/cohort inputs prevent stronger science; baseline solves composition. Overwritten first-attempt outputs/unavailable executed-code pins disclosed. Q04/Q05 unactivated; Q06 narrow technical working-paper branch was active, owner facts deferred.
 
 - [[research-log-2026-11-02-artifact-catalog-policy]] - Prior checkpoint: Q02 complete for TETHER 0.5.0 registered Windows/offline policy; 129 package tests/66 independent assertions and installed strong-policy qualification. 178 product statuses unchanged, 266 exact artifacts, ten allowed/seven blocked AACT uses; real OSMR preparation only checks18 originals with zero dispatch. Q03 scientific task/data feasibility was next.
 

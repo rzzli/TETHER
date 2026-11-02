@@ -1,0 +1,38 @@
+TETHER - Working research draft
+7
+4. Results
+4.1 Native availability and reporting
+All twelve native units finalize. Of 180 requested facts, 148 are populated and 32 are native nulls: 108/132
+identity slots and 40/48 measurement slots are populated. There are no missing-schema or native-empty
+measurement slots in this set. One unit has two answerable measurement components, six have three, and
+five have four. Beta is null in one unit and standard error in seven. Sample size is missing in ten units but is not
+a graded measurement component.
+The literal assembler emits all fifteen requested facts per unit with exact bindings and correct unknown
+reasons. It achieves verified exact reporting and measurement completion in 12/12 units at each frozen
+threshold. The abstention control completes 0/12, emitting no fact assertions and incurring no factual mismatch
+errors. Abstention therefore provides error avoidance without useful completion. These contrasts establish the
+expected copy ceiling and the explicit coverage cost of abstention on this task.
+Native outcome
+Literal assembler
+Always abstain
+Scheduled outputs
+12
+12
+Verified exact reports
+12/12
+0/12
+Measurement completion at 80%
+12/12
+0/12
+Completion at 60% and 100%
+12/12 at both
+0/12 at both
+Mechanically identified factual errors
+0
+0
+Emitted fact entries
+180, including 32 unknowns
+0
+Source availability of 40/48 measurement slots is distinct from 100% reporting coverage over the answerable
+components. Missing fields remain unavailable rather than being supplied from another source or inferred from
+related measurements.

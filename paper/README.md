@@ -1,11 +1,37 @@
 # TETHER technical paper working draft
 
-**2 November review update:** read the [technical errata and interpretation notes](REVIEW-ERRATA-20261102.md)
-before sharing this version. The retained quantities recompute, but legacy
-semantic-verification claims need qualification, the native 80/100 thresholds
-coincide, and generator/performance conclusions need their stated limits.
-The paper/PDF/0.4.0 ZIP below remain the original working version; current
-TETHER 0.4.1 corrections require their own release qualification.
+**Current corrected version, 2 November:** read the [revised manuscript](revisions/20261102/manuscript.md),
+[supplement](revisions/20261102/supplement.md), [combined PDF](revisions/20261102/tether-source-reporting-preprint-v2.pdf)
+and [revision notes](revisions/20261102/REVISION-NOTES.md). All five [technical errata](REVIEW-ERRATA-20261102.md)
+are incorporated. The source review passes 66 focused checks; the 23-page PDF
+retains 347 ordered visible units, three vector figures and passes an independent
+83-check/all-page visual review. The original experiment and numerical payloads
+are unchanged; later TETHER 0.5.0 software guarantees are separately scoped.
+
+The corrected [packet record](release/tether-v2/RELEASE-RECORD.json),
+[qualification](release/tether-v2/QUALIFICATION.json) and
+[software scope](release/tether-v2/CURRENT-SOFTWARE.md) identify the new local
+78-member/21,694,289-byte packet. Two fresh-process builds match byte-for-byte;
+284 independent packet checks pass. The old P09 and TETHER 0.4.0 archives are
+preserved. The new outer allowlist excludes raw/source-row and private artifacts;
+the nested P09 archive retains its previously approved CC0 HGNC/project-receipt
+and evaluator-material inclusions.
+
+The first new PDF attempt failed its visible-text check before publication.
+A separately versioned renderer corrects relative JSON-link handling; its four
+focused inline cases and the eight existing negative controls pass. The failed
+stage and both staging-code revisions are retained. Neither this correction nor
+the PDF/package check is a new scientific experiment.
+
+Author facts and acceptance remain deferred, with no external-expert gate or
+submission-ready claim. The [current project assessment](<../planning/Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md>)
+records completed corrections and the conditional scientific backlog.
+
+## Original naming checkpoint (preserved description)
+
+The material below describes the original 1 November naming/paper qualification.
+Its references to the current paper mean that historical version; the dated
+corrected version above is now the current working draft.
 
 **Target Evidence Tracking Harness for Evaluation and Reproducibility.**
 TETHER is the current project name; the original software and frozen artifacts

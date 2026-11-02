@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-02T09:50:52.468110+00:00",
+  "status": "PASS_NAMED_SOURCE_CHECKS",
+  "scope": "Independent arithmetic, retained-result counts, source editing safeguards and qualification anchors. See accompanying manual source review; no scientific validation or PDF/package qualification.",
+  "inputs": {
+    "paper/revisions/20261102/manuscript.md": {
+      "sha256": "064da522c5d07247b86dbc9b3a52bd81579824dc78fa63c83e022651f4b903dc",
+      "bytes": 38190
+    },
+    "paper/revisions/20261102/supplement.md": {
+      "sha256": "769485b53625376fc1d45940ef57c56893d87c42f0de635fbe94825f31700689",
+      "bytes": 32337
+    },
+    "paper/revisions/20261102/REVISION-NOTES.md": {
+      "sha256": "62b66b46e0db8ba1e22a7d87bbab8d2dc8312b51026ccdf187bbb2f204da32b0",
+      "bytes": 6480
+    },
+    "paper/manuscript.md": {
+      "sha256": "99ee5893568d4734a393669a88e06920c882d65aa064e7f20a9ad689488e096f",
+      "bytes": 31479
+    },
+    "paper/supplement.md": {
+      "sha256": "1f5c2073c7736d7a1b300c375bf84fb574d31df89ff57fa35b45feb60f80daa6",
+      "bytes": 20280
+    },
+    "paper/results/tables/native_missingness.csv": {
+      "sha256": "f7064f479b8e69e1195681c61b97b50fc0100e7307a22a971b49967df24b4657",
+      "bytes": 864
+    },
+    "paper/results/tables/native_case_results.csv": {
+      "sha256": "ff60a90221d289fbfae2b2999b84f27725b4456875951c1a4e80f5d396c012bc",
+      "bytes": 2512
+    },
+    "paper/results/tables/output_schedule.csv": {
+      "sha256": "ec7eed5c89cdf4cc323e2ac472d4e92808ab9ca777fc20442306b1577eff55fe",
+      "bytes": 2788
+    },
+    "paper/results/tables/decision_schedule.csv": {
+      "sha256": "a4c9d3b831dc3cc00510e5ffe84cb4794cec32969fc4e721af6ba6b64f9de6a1",
+      "bytes": 5718
+    },
+    "paper/results/tables/constructed_control_verdicts.csv": {
+      "sha256": "7c1402b725491f7012917123db6cbe6650bceaf3d3b8e1134a3218d613739785",
+      "bytes": 5119
+    },
+    "paper/results/tables/resource_phases.csv": {
+      "sha256": "59d418dcef80c084ce4412ef3a08131bcde00cdd7950dff4e47350bc59a4895e",
+      "bytes": 1197
+    },
+    "runs/preprint-p04-typed-report-20261101T053531Z/report.json": {
+      "sha256": "4b4222de1281a7eb5082b77cb4efcdc43e6ecf12c9d77392a366b6b9fa7dcfc0",
+      "bytes": 37869
+    },
+    "planning/review-assets/tether-q01-20261102/VALIDATION.json": {
+      "sha256": "a7a365254b43dd891ea82da43672f9d5a4522ef571769c68f251c7bc93f37e2b",
+      "bytes": 2379
+    },
+    "planning/review-assets/tether-q02-20261102/VALIDATION.json": {
+      "sha256": "9a374a912cb235909cbc5fe7b46da94e7b3566b35b83ebaaa2676e23540f9360",
+      "bytes": 3046
+    },
+    "paper/release/tether-v2/SOFTWARE-QUALIFICATION.json": {
+      "sha256": "65db5977e93281b1e186590ba1116a204ca396052251805798abda9247435e35",
+      "bytes": 3539
+    },
+    "planning/review-assets/tether-q03-20261102/data/SOURCE-AUDIT-ATTEMPTS.json": {
+      "sha256": "db151c3ad44ee3450cd34668858687fe8fa9130a9842c26c43fd9aee5d5a1e2a",
+      "bytes": 5950
+    },
+    "paper/REVIEW-ERRATA-20261102.md": {
+      "sha256": "15bd432503880e96f7d844ea31e9e56b0bd85dce7db886952d81d4528c2f31bd",
+      "bytes": 3296
+    },
+    "docs/TETHER-VERIFICATION-SCOPE.md": {
+      "sha256": "d827f874d95ad15f3d60861c7b16bbdf513a8489edc332b68beb37d6572c5e32",
+      "bytes": 8453
+    },
+    "docs/TETHER-CATALOG-POLICY.md": {
+      "sha256": "9684372c207abed0532b573d3d55451f8ce1421ae1b3297c87be105ebca70fc1",
+      "bytes": 7077
+    },
+    "planning/Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md": {
+      "sha256": "e737f3389c3b47a1216f5706e2b472e25b8ac464f40dd8287cebd2f4a47bdaf0",
+      "bytes": 7336
+    },
+    "planning/Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md": {
+      "sha256": "8d70b1033967a39183202d4ed69980d39311def2e322ac85779cfe84aaa39922",
+      "bytes": 9059
+    },
+    "planning/Project Progress Reassessment 2026-11-02 - Source Composition Feasibility.md": {
+      "sha256": "081dc6dff010a28c8a4751b0cfc98f5853aff7114260ffee998cf92a7feb5ca3",
+      "bytes": 8336
+    },
+    "planning/review-assets/full-project-review-20261102/results/RESULTS-REVIEW.md": {
+      "sha256": "b87fa084094e2e337154fb6803a9089b7159370684027074ba162ceecfbbcdd7",
+      "bytes": 16241
+    },
+    "planning/review-assets/tether-q03-20261102/review/INDEPENDENT-FEASIBILITY-REVIEW.md": {
+      "sha256": "9a0c0931213383d0b9100678a7c3963cd2acf4fe2f9b4b250955bc599c57698a",
+      "bytes": 10808
+    },
+    "planning/review-assets/tether-q03-20261102/review/ROUTE-REVIEW.md": {
+      "sha256": "0a70b55514ead7b1c027803acd3f99c95570013ef8effbfc67df4e543580f655",
+      "bytes": 13531
+    },
+    "planning/review-assets/tether-q03-20261102/data/SOURCE-FEASIBILITY.md": {
+      "sha256": "6183f2f3946d4e8eed3bd9eaea2fdcbbca3a927483e849e786e1736f98b63282",
+      "bytes": 12387
+    },
+    "paper/release/tether-v2/CURRENT-SOFTWARE.md": {
+      "sha256": "656471168909b28466f42b9bb530f1d66a5afadd0802334817b8c071968c11e7",
+      "bytes": 4213
+    }
+  },
+  "computed": {
+    "verification_wall_percent": "97.04849186571734744040684894",
+    "production_logical_source_frame_equivalents": "49.00214219861226751197665542",
+    "p04_dispatches": {
+      "plain": 3,
+      "proposal": 2
+    }
+  },
+  "checks": [
+    {
+      "name": "original_manuscript_pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_supplement_pin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bibliography_exact_text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manuscript_all_original_table_lines_retained",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "name": "manuscript_old_explicit_sha256_anchors_retained",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "supplement_all_original_table_lines_retained",
+      "passed": true,
+      "detail": 43
+    },
+    {
+      "name": "supplement_old_explicit_sha256_anchors_retained",
+      "passed": true,
+      "detail": 7
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/manuscript.md:../../results/figures/figure1-flow.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/manuscript.md:../../results/figures/figure2-availability.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/manuscript.md:../../results/figures/figure3-controls.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/supplement.md:../../results/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/supplement.md:../../release/tether-v2/CURRENT-SOFTWARE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local_link:paper/revisions/20261102/supplement.md:../../release/tether-v2/SOFTWARE-QUALIFICATION.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native_group_distribution",
+      "passed": true,
+      "detail": {
+        "3": 6,
+        "4": 5,
+        "2": 1
+      }
+    },
+    {
+      "name": "one_measurement_group_per_native_unit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native_sum:measurement_requested",
+      "passed": true,
+      "detail": 48
+    },
+    {
+      "name": "native_sum:measurement_answerable",
+      "passed": true,
+      "detail": 40
+    },
+    {
+      "name": "native_sum:measurement_null",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "name": "native_sum:measurement_absent",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "native_sum:measurement_empty",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "native_sum:measurement_other_unknown",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "native_sum:identity_requested",
+      "passed": true,
+      "detail": 132
+    },
+    {
+      "name": "native_sum:identity_answerable",
+      "passed": true,
+      "detail": 108
+    },
+    {
+      "name": "native_sum:identity_null",
+      "passed": true,
+      "detail": 24
+    },
+    {
+      "name": "native_exposure_and_independence_unqualified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=2,matched=0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=2,matched=1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=2,matched=2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "supplement_threshold_table:n=2",
+      "passed": true,
+      "detail": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "native80_equals100:n=3,matched=0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=3,matched=1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=3,matched=2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=3,matched=3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "supplement_threshold_table:n=3",
+      "passed": true,
+      "detail": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "native80_equals100:n=4,matched=0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=4,matched=1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=4,matched=2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=4,matched=3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native80_equals100:n=4,matched=4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "supplement_threshold_table:n=4",
+      "passed": true,
+      "detail": [
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "native_arm:L",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native_arm:A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete_output_schedule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete_decision_schedule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "constructed_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control_results:FULL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control_results:WITHOUT_WRAPPER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "control_results:WIRE_ONLY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wall_share_rounds_97_0485",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "logical_hash_ratio_rounds_49_0021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verification_is_nested",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "physical_io_and_platform_cost_unmeasured",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "combined_logical_hash_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "p04_dispatch_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "p04_terminals",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "p04_reported_tokens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "portable_summary_q01_anchor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "portable_summary_q02_anchor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "portable_wheel_properties",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "software_summary_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "q02_originals_subset_and_zero_dispatches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "q02_policy_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "q03_failed_then_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "q03_executed_code_pins_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "q03_failed_projections_not_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inputs_stable_through_check",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checker_sha256": "1d951d9241c8b3cbc8b0888d551083303931c095a7a625d814ae563f9d7dde39",
+  "prohibited_inputs_read": false,
+  "raw_provider_payloads_read": false,
+  "model_calls": 0,
+  "source_study_rerun": false
+}

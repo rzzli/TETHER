@@ -10,6 +10,18 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+Q06a's corrected technical working paper and TETHER0.5.0 review packet are locally
+qualified. All five errata incorporated; source66/PDF83/packet284 checks pass,
+23pages/347units and all-page visual review;78-member ZIP repeats across processes.
+Originalstudy/results/PDFs/packages preserved. Current authority is
+[[Project Progress Reassessment 2026-11-02 - Corrected Working Paper]] and
+[[research-log-2026-11-02-corrected-working-paper]]. Q04/Q05 remain unactivated;
+broader science conditional. Next paper action Q06b/P08c/P10a is owner-deferred
+factualmetadata/authoracceptance, without re-asking or inventingfacts. A future
+metadata revision needs a new PDF/package, not a study rerun.
+
+### Prior source-composition checkpoint
+
 Q03 is complete as reporting-only source feasibility. Four evidence rows join four
 credible-set objects, but evidence-side study/variant IDs are missing; scientific
 independence/effects remain unqualified and the deterministic baseline solves the

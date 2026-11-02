@@ -1,0 +1,882 @@
+{
+  "status": "PREPARED_SOURCE_STAGE_PDF_AND_QUALIFICATION_PENDING",
+  "prepared_at_utc": "2026-11-02T09:50:57.201074+00:00",
+  "stage_root": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q06\\working-v1",
+  "preparation_script_sha256": "f0bc6758dc0a48854e22e7476d8606c3176c4a074ffb999757ce11f873af6d50",
+  "packager_sha256": "ace4521dec89e2d544b117704ac707604ce89757c691c5669437bf4816718f5c",
+  "formatter_sha256": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b",
+  "copied_inputs": [
+    {
+      "source": "paper/revisions/20261102/manuscript.md",
+      "destination": "paper/manuscript.md",
+      "source_sha256": "064da522c5d07247b86dbc9b3a52bd81579824dc78fa63c83e022651f4b903dc",
+      "staged_sha256": "b18a2b9d0941df2115339adb746fcfbbe2db8a66bbc4803f58b67cc05798e6a4",
+      "source_bytes": 38190,
+      "staged_bytes": 38172,
+      "exact_link_transformations": [
+        {
+          "before": "](../../results/",
+          "after": "](results/",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "source": "paper/revisions/20261102/supplement.md",
+      "destination": "paper/supplement.md",
+      "source_sha256": "769485b53625376fc1d45940ef57c56893d87c42f0de635fbe94825f31700689",
+      "staged_sha256": "e623262e0936a936643a5b8cefa81dab66107f6c8421694c00a18c9dce271e9e",
+      "source_bytes": 32337,
+      "staged_bytes": 32317,
+      "exact_link_transformations": [
+        {
+          "before": "](../../results/",
+          "after": "](results/",
+          "occurrences": 1
+        },
+        {
+          "before": "](../../release/tether-v2/CURRENT-SOFTWARE.md)",
+          "after": "](../documentation/CURRENT-SOFTWARE.md)",
+          "occurrences": 1
+        },
+        {
+          "before": "](../../release/tether-v2/SOFTWARE-QUALIFICATION.json)",
+          "after": "](../documentation/SOFTWARE-QUALIFICATION.json)",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "source": "paper/references.bib",
+      "destination": "paper/references.bib",
+      "source_sha256": "8804ee43da0da28b71773eb9a55ad0e7b78fb7d881e8b8423562473a2b87d05f",
+      "staged_sha256": "8804ee43da0da28b71773eb9a55ad0e7b78fb7d881e8b8423562473a2b87d05f",
+      "source_bytes": 6746,
+      "staged_bytes": 6746,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/references.json",
+      "destination": "paper/references.json",
+      "source_sha256": "d7cf590dd04f094c83931182517ec5d755e5309e87891e9b1c05c1fd70b5bed2",
+      "staged_sha256": "d7cf590dd04f094c83931182517ec5d755e5309e87891e9b1c05c1fd70b5bed2",
+      "source_bytes": 8819,
+      "staged_bytes": 8819,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/RELATED-WORK-SOURCE-AUDIT.md",
+      "destination": "paper/RELATED-WORK-SOURCE-AUDIT.md",
+      "source_sha256": "9561053ed65ebc756eaf4f1e0bfb6a09762fb8efb9877003584308f3ffe438ba",
+      "staged_sha256": "9561053ed65ebc756eaf4f1e0bfb6a09762fb8efb9877003584308f3ffe438ba",
+      "source_bytes": 6721,
+      "staged_bytes": 6721,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/AUTHOR-DECLARATIONS.md",
+      "destination": "paper/AUTHOR-DECLARATIONS.md",
+      "source_sha256": "e7622bc990b3d38c3a1f092d62b520e2b0ed1c558ec2168aacc6f040f16ee2cb",
+      "staged_sha256": "e7622bc990b3d38c3a1f092d62b520e2b0ed1c558ec2168aacc6f040f16ee2cb",
+      "source_bytes": 1820,
+      "staged_bytes": 1820,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/release/tether-v2/README.md",
+      "destination": "paper/release/tether-v2/README.md",
+      "source_sha256": "4e6c76dfe6dc8711e0b883ec313be6287e3be8e91055a9fbc34570e6ce827619",
+      "staged_sha256": "bdb6886f55cc333ae42e59d76ccd7fdaea568992df151f46ce93531d14f6ecb1",
+      "source_bytes": 2780,
+      "staged_bytes": 2770,
+      "exact_link_transformations": [
+        {
+          "before": "](../../revisions/20261102/manuscript.md)",
+          "after": "](paper/manuscript.md)",
+          "occurrences": 1
+        },
+        {
+          "before": "](../../revisions/20261102/supplement.md)",
+          "after": "](paper/supplement.md)",
+          "occurrences": 1
+        },
+        {
+          "before": "](CURRENT-SOFTWARE.md)",
+          "after": "](documentation/CURRENT-SOFTWARE.md)",
+          "occurrences": 1
+        },
+        {
+          "before": "](SOFTWARE-QUALIFICATION.json)",
+          "after": "](documentation/SOFTWARE-QUALIFICATION.json)",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "source": "paper/release/tether-v2/CURRENT-SOFTWARE.md",
+      "destination": "paper/release/tether-v2/CURRENT-SOFTWARE.md",
+      "source_sha256": "656471168909b28466f42b9bb530f1d66a5afadd0802334817b8c071968c11e7",
+      "staged_sha256": "656471168909b28466f42b9bb530f1d66a5afadd0802334817b8c071968c11e7",
+      "source_bytes": 4213,
+      "staged_bytes": 4213,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/release/tether-v2/SOFTWARE-QUALIFICATION.json",
+      "destination": "paper/release/tether-v2/SOFTWARE-QUALIFICATION.json",
+      "source_sha256": "65db5977e93281b1e186590ba1116a204ca396052251805798abda9247435e35",
+      "staged_sha256": "65db5977e93281b1e186590ba1116a204ca396052251805798abda9247435e35",
+      "source_bytes": 3539,
+      "staged_bytes": 3539,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/README.md",
+      "destination": "inputs/portable-results/README.md",
+      "source_sha256": "c5ef3797266cfbec263ab7dd6936f5afd361ee198aa0591f9b29f6b7774f848a",
+      "staged_sha256": "c5ef3797266cfbec263ab7dd6936f5afd361ee198aa0591f9b29f6b7774f848a",
+      "source_bytes": 3014,
+      "staged_bytes": 3014,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure1-flow-caption.md",
+      "destination": "inputs/portable-results/figures/figure1-flow-caption.md",
+      "source_sha256": "253ad225733c4e6a74d394157a0980a99454947fc0b6e7f541ee0de0248950eb",
+      "staged_sha256": "253ad225733c4e6a74d394157a0980a99454947fc0b6e7f541ee0de0248950eb",
+      "source_bytes": 527,
+      "staged_bytes": 527,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure1-flow-data.json",
+      "destination": "inputs/portable-results/figures/figure1-flow-data.json",
+      "source_sha256": "06832be50e5656d014c6732ebec729273f3fe9620e8bdacb880c90a564148118",
+      "staged_sha256": "06832be50e5656d014c6732ebec729273f3fe9620e8bdacb880c90a564148118",
+      "source_bytes": 3647,
+      "staged_bytes": 3647,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure1-flow-preview.png",
+      "destination": "inputs/portable-results/figures/figure1-flow-preview.png",
+      "source_sha256": "0c4dcd1445dff559089457753a4c16262687579ee3bc2e21045bbb4528fb978a",
+      "staged_sha256": "0c4dcd1445dff559089457753a4c16262687579ee3bc2e21045bbb4528fb978a",
+      "source_bytes": 130304,
+      "staged_bytes": 130304,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure1-flow.pdf",
+      "destination": "inputs/portable-results/figures/figure1-flow.pdf",
+      "source_sha256": "f50b31e0892432e8e1460d11783b9ff3b97ec0c25f10065796335b43fa2653e6",
+      "staged_sha256": "f50b31e0892432e8e1460d11783b9ff3b97ec0c25f10065796335b43fa2653e6",
+      "source_bytes": 3636,
+      "staged_bytes": 3636,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure1-flow.svg",
+      "destination": "inputs/portable-results/figures/figure1-flow.svg",
+      "source_sha256": "c42aab83cc9cd19b77756f71cf17002f5356465ca19986f4752a833fe77f31ee",
+      "staged_sha256": "c42aab83cc9cd19b77756f71cf17002f5356465ca19986f4752a833fe77f31ee",
+      "source_bytes": 9252,
+      "staged_bytes": 9252,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure2-availability-caption.md",
+      "destination": "inputs/portable-results/figures/figure2-availability-caption.md",
+      "source_sha256": "39dabc12f8bdf75f620a616c6bd68a7ebe819f46988e31f53fc75ad838a370de",
+      "staged_sha256": "39dabc12f8bdf75f620a616c6bd68a7ebe819f46988e31f53fc75ad838a370de",
+      "source_bytes": 517,
+      "staged_bytes": 517,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure2-availability-data.json",
+      "destination": "inputs/portable-results/figures/figure2-availability-data.json",
+      "source_sha256": "0fa35dde3092af5b84be1a47f322c764163b02db9dc0f2e2697c075583845bd6",
+      "staged_sha256": "0fa35dde3092af5b84be1a47f322c764163b02db9dc0f2e2697c075583845bd6",
+      "source_bytes": 1658,
+      "staged_bytes": 1658,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure2-availability-preview.png",
+      "destination": "inputs/portable-results/figures/figure2-availability-preview.png",
+      "source_sha256": "56c09f5ddcdb7402d0097398e879f9aae15efde4679c5e6d3198789d5da73001",
+      "staged_sha256": "56c09f5ddcdb7402d0097398e879f9aae15efde4679c5e6d3198789d5da73001",
+      "source_bytes": 80139,
+      "staged_bytes": 80139,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure2-availability.pdf",
+      "destination": "inputs/portable-results/figures/figure2-availability.pdf",
+      "source_sha256": "f59c626cf48d1a0c5000b9f93411dcd3812a161f8fd71c145909bb6eba3e6aca",
+      "staged_sha256": "f59c626cf48d1a0c5000b9f93411dcd3812a161f8fd71c145909bb6eba3e6aca",
+      "source_bytes": 2729,
+      "staged_bytes": 2729,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure2-availability.svg",
+      "destination": "inputs/portable-results/figures/figure2-availability.svg",
+      "source_sha256": "f36e6d30396537a5f8e1716d934a163e079731ef657221aec4cbef384d2aa99c",
+      "staged_sha256": "f36e6d30396537a5f8e1716d934a163e079731ef657221aec4cbef384d2aa99c",
+      "source_bytes": 12316,
+      "staged_bytes": 12316,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure3-controls-caption.md",
+      "destination": "inputs/portable-results/figures/figure3-controls-caption.md",
+      "source_sha256": "b6a2dd0b48317ad9a13faa92ab95068d442356b5c658d955751e81ba92fa896a",
+      "staged_sha256": "b6a2dd0b48317ad9a13faa92ab95068d442356b5c658d955751e81ba92fa896a",
+      "source_bytes": 538,
+      "staged_bytes": 538,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure3-controls-data.json",
+      "destination": "inputs/portable-results/figures/figure3-controls-data.json",
+      "source_sha256": "a564024650d78af6373a3c6a4dda4c9edb9137e3c9e2b0766ed527c08270b075",
+      "staged_sha256": "a564024650d78af6373a3c6a4dda4c9edb9137e3c9e2b0766ed527c08270b075",
+      "source_bytes": 1105,
+      "staged_bytes": 1105,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure3-controls-preview.png",
+      "destination": "inputs/portable-results/figures/figure3-controls-preview.png",
+      "source_sha256": "86e56796de40e25d2cec25d006ecbb1bbc97380ee7ada6e78b331c7c490e3b54",
+      "staged_sha256": "86e56796de40e25d2cec25d006ecbb1bbc97380ee7ada6e78b331c7c490e3b54",
+      "source_bytes": 66265,
+      "staged_bytes": 66265,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure3-controls.pdf",
+      "destination": "inputs/portable-results/figures/figure3-controls.pdf",
+      "source_sha256": "663a19e6b523d2bfd782bf326d23609d3cd2cca033b8b9d3736a56ffccf66b43",
+      "staged_sha256": "663a19e6b523d2bfd782bf326d23609d3cd2cca033b8b9d3736a56ffccf66b43",
+      "source_bytes": 2511,
+      "staged_bytes": 2511,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/figures/figure3-controls.svg",
+      "destination": "inputs/portable-results/figures/figure3-controls.svg",
+      "source_sha256": "d9491715a5aa03842439057cc9a5651d7e4f069b50c0f6614987f2b934bcbff7",
+      "staged_sha256": "d9491715a5aa03842439057cc9a5651d7e4f069b50c0f6614987f2b934bcbff7",
+      "source_bytes": 5605,
+      "staged_bytes": 5605,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/constructed_control_verdicts.csv",
+      "destination": "inputs/portable-results/tables/constructed_control_verdicts.csv",
+      "source_sha256": "7c1402b725491f7012917123db6cbe6650bceaf3d3b8e1134a3218d613739785",
+      "staged_sha256": "7c1402b725491f7012917123db6cbe6650bceaf3d3b8e1134a3218d613739785",
+      "source_bytes": 5119,
+      "staged_bytes": 5119,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/constructed_control_verdicts.md",
+      "destination": "inputs/portable-results/tables/constructed_control_verdicts.md",
+      "source_sha256": "9c61926370c986a4fa296da11cf8aae3ab3d6fb5bdfba647f00f9f2010f787c7",
+      "staged_sha256": "9c61926370c986a4fa296da11cf8aae3ab3d6fb5bdfba647f00f9f2010f787c7",
+      "source_bytes": 1453,
+      "staged_bytes": 1453,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/constructed_policy_summary.csv",
+      "destination": "inputs/portable-results/tables/constructed_policy_summary.csv",
+      "source_sha256": "07d19ae50f1468c9e9d4625f005fefb69b08250ecfadacb0bab69cf4b34aa0e6",
+      "staged_sha256": "07d19ae50f1468c9e9d4625f005fefb69b08250ecfadacb0bab69cf4b34aa0e6",
+      "source_bytes": 226,
+      "staged_bytes": 226,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/constructed_policy_summary.md",
+      "destination": "inputs/portable-results/tables/constructed_policy_summary.md",
+      "source_sha256": "8539d8f735827612ac1e9c5c442d54e75a71eafae174da31804103e01aa8dba4",
+      "staged_sha256": "8539d8f735827612ac1e9c5c442d54e75a71eafae174da31804103e01aa8dba4",
+      "source_bytes": 577,
+      "staged_bytes": 577,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/decision_schedule.csv",
+      "destination": "inputs/portable-results/tables/decision_schedule.csv",
+      "source_sha256": "a4c9d3b831dc3cc00510e5ffe84cb4794cec32969fc4e721af6ba6b64f9de6a1",
+      "staged_sha256": "a4c9d3b831dc3cc00510e5ffe84cb4794cec32969fc4e721af6ba6b64f9de6a1",
+      "source_bytes": 5718,
+      "staged_bytes": 5718,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/decision_schedule.md",
+      "destination": "inputs/portable-results/tables/decision_schedule.md",
+      "source_sha256": "750fa724e33168047aac636ca80b1b31c8ff69a0674b8f4fd44c3ca1aefbb01e",
+      "staged_sha256": "750fa724e33168047aac636ca80b1b31c8ff69a0674b8f4fd44c3ca1aefbb01e",
+      "source_bytes": 7259,
+      "staged_bytes": 7259,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_case_results.csv",
+      "destination": "inputs/portable-results/tables/native_case_results.csv",
+      "source_sha256": "ff60a90221d289fbfae2b2999b84f27725b4456875951c1a4e80f5d396c012bc",
+      "staged_sha256": "ff60a90221d289fbfae2b2999b84f27725b4456875951c1a4e80f5d396c012bc",
+      "source_bytes": 2512,
+      "staged_bytes": 2512,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_case_results.md",
+      "destination": "inputs/portable-results/tables/native_case_results.md",
+      "source_sha256": "d1956ce71938b240861e77a38e7faedc1f457c78fca89d8cc15fcae900a3aee1",
+      "staged_sha256": "d1956ce71938b240861e77a38e7faedc1f457c78fca89d8cc15fcae900a3aee1",
+      "source_bytes": 2372,
+      "staged_bytes": 2372,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_fact_accounting.csv",
+      "destination": "inputs/portable-results/tables/native_fact_accounting.csv",
+      "source_sha256": "5fbb56a3be595b40a14789bd501c9b64b377c1fa6018a457e1d10acb401aa677",
+      "staged_sha256": "5fbb56a3be595b40a14789bd501c9b64b377c1fa6018a457e1d10acb401aa677",
+      "source_bytes": 5910,
+      "staged_bytes": 5910,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_fact_accounting.md",
+      "destination": "inputs/portable-results/tables/native_fact_accounting.md",
+      "source_sha256": "6fda96f689d534875dfaeb4e9939d4d5bdad7a8489fc3ac42fb6f21661fb0724",
+      "staged_sha256": "6fda96f689d534875dfaeb4e9939d4d5bdad7a8489fc3ac42fb6f21661fb0724",
+      "source_bytes": 3378,
+      "staged_bytes": 3378,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_missingness.csv",
+      "destination": "inputs/portable-results/tables/native_missingness.csv",
+      "source_sha256": "f7064f479b8e69e1195681c61b97b50fc0100e7307a22a971b49967df24b4657",
+      "staged_sha256": "f7064f479b8e69e1195681c61b97b50fc0100e7307a22a971b49967df24b4657",
+      "source_bytes": 864,
+      "staged_bytes": 864,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_missingness.md",
+      "destination": "inputs/portable-results/tables/native_missingness.md",
+      "source_sha256": "4ebfe96ac4e5de9c102dd4a6c514f018076829e098213726a841d1f312903ad9",
+      "staged_sha256": "4ebfe96ac4e5de9c102dd4a6c514f018076829e098213726a841d1f312903ad9",
+      "source_bytes": 954,
+      "staged_bytes": 954,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_operation_resources.csv",
+      "destination": "inputs/portable-results/tables/native_operation_resources.csv",
+      "source_sha256": "efc024934169bc4d2c70c751dd8890771b62bcc883d78647848334db10a74f9f",
+      "staged_sha256": "efc024934169bc4d2c70c751dd8890771b62bcc883d78647848334db10a74f9f",
+      "source_bytes": 1782,
+      "staged_bytes": 1782,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/native_operation_resources.md",
+      "destination": "inputs/portable-results/tables/native_operation_resources.md",
+      "source_sha256": "cda5c2c392a52f214d75329ba5e3295e07c7fb8062a5fc88e1d0bbee42b4c6d0",
+      "staged_sha256": "cda5c2c392a52f214d75329ba5e3295e07c7fb8062a5fc88e1d0bbee42b4c6d0",
+      "source_bytes": 2029,
+      "staged_bytes": 2029,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/output_schedule.csv",
+      "destination": "inputs/portable-results/tables/output_schedule.csv",
+      "source_sha256": "ec7eed5c89cdf4cc323e2ac472d4e92808ab9ca777fc20442306b1577eff55fe",
+      "staged_sha256": "ec7eed5c89cdf4cc323e2ac472d4e92808ab9ca777fc20442306b1577eff55fe",
+      "source_bytes": 2788,
+      "staged_bytes": 2788,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/output_schedule.md",
+      "destination": "inputs/portable-results/tables/output_schedule.md",
+      "source_sha256": "a538e8f5ff72132ad8cf6dde07e35f7c4f5063b4971c7f74c3068ea281992049",
+      "staged_sha256": "a538e8f5ff72132ad8cf6dde07e35f7c4f5063b4971c7f74c3068ea281992049",
+      "source_bytes": 3938,
+      "staged_bytes": 3938,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/paired_discordance.csv",
+      "destination": "inputs/portable-results/tables/paired_discordance.csv",
+      "source_sha256": "edf391c16e4b760655d0d8b78e82921a9fb9074c99c890db4ad1efa6337ab811",
+      "staged_sha256": "edf391c16e4b760655d0d8b78e82921a9fb9074c99c890db4ad1efa6337ab811",
+      "source_bytes": 462,
+      "staged_bytes": 462,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/paired_discordance.md",
+      "destination": "inputs/portable-results/tables/paired_discordance.md",
+      "source_sha256": "723b617dbb7da18fc27a2424ebc396080b685b5a9e6d6f4211a074bedb31a485",
+      "staged_sha256": "723b617dbb7da18fc27a2424ebc396080b685b5a9e6d6f4211a074bedb31a485",
+      "source_bytes": 826,
+      "staged_bytes": 826,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/paired_verdict_cells.csv",
+      "destination": "inputs/portable-results/tables/paired_verdict_cells.csv",
+      "source_sha256": "6d210bd393480635416ccceec8b3b8aeeefc97bb1a0c981d6c5246e8af09288d",
+      "staged_sha256": "6d210bd393480635416ccceec8b3b8aeeefc97bb1a0c981d6c5246e8af09288d",
+      "source_bytes": 4466,
+      "staged_bytes": 4466,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/paired_verdict_cells.md",
+      "destination": "inputs/portable-results/tables/paired_verdict_cells.md",
+      "source_sha256": "032ff60f7ecf6f0f13a419792f146c4d6a3138d29ffb087f2ab2961b4a7e1c17",
+      "staged_sha256": "032ff60f7ecf6f0f13a419792f146c4d6a3138d29ffb087f2ab2961b4a7e1c17",
+      "source_bytes": 5471,
+      "staged_bytes": 5471,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/resource_phases.csv",
+      "destination": "inputs/portable-results/tables/resource_phases.csv",
+      "source_sha256": "59d418dcef80c084ce4412ef3a08131bcde00cdd7950dff4e47350bc59a4895e",
+      "staged_sha256": "59d418dcef80c084ce4412ef3a08131bcde00cdd7950dff4e47350bc59a4895e",
+      "source_bytes": 1197,
+      "staged_bytes": 1197,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/tables/resource_phases.md",
+      "destination": "inputs/portable-results/tables/resource_phases.md",
+      "source_sha256": "87738ba6b9b8c2e60aa05697663e05e3e3f7a7d98b3b5c53ea30907e0c0b80a6",
+      "staged_sha256": "87738ba6b9b8c2e60aa05697663e05e3e3f7a7d98b3b5c53ea30907e0c0b80a6",
+      "source_bytes": 1052,
+      "staged_bytes": 1052,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/p09-portable-presentation-20261101T202322Z/ARTIFACTS.json",
+      "destination": "inputs/portable-results/ARTIFACTS.json",
+      "source_sha256": "da802210539141fd7e25418d1440b1f749c3e5d16e6b62ddc7562db01cc11eb4",
+      "staged_sha256": "da802210539141fd7e25418d1440b1f749c3e5d16e6b62ddc7562db01cc11eb4",
+      "source_bytes": 43927,
+      "staged_bytes": 43927,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/release/qualification.json",
+      "destination": "paper/release/qualification.json",
+      "source_sha256": "e166e3e8de8a138b0e4cbb6412a4e105850bd6b2a4e001eef419f77873e994ba",
+      "staged_sha256": "e166e3e8de8a138b0e4cbb6412a4e105850bd6b2a4e001eef419f77873e994ba",
+      "source_bytes": 5748,
+      "staged_bytes": 5748,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/release/RELEASE-RECORD.json",
+      "destination": "paper/release/RELEASE-RECORD.json",
+      "source_sha256": "a7382b2d50246247f6f98f18e672543d2f5b656fe3bdc4f4166382bbd9ffab13",
+      "staged_sha256": "a7382b2d50246247f6f98f18e672543d2f5b656fe3bdc4f4166382bbd9ffab13",
+      "source_bytes": 1575,
+      "staged_bytes": 1575,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/release/PACKAGE-README.md",
+      "destination": "paper/release/PACKAGE-README.md",
+      "source_sha256": "a4f95279ed1bf982a775a37e9c3e28f66d57886a6fb4ad9526f80d4b224fcc0d",
+      "staged_sha256": "a4f95279ed1bf982a775a37e9c3e28f66d57886a6fb4ad9526f80d4b224fcc0d",
+      "source_bytes": 4642,
+      "staged_bytes": 4642,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip",
+      "destination": "inputs/legacy/asof-research-artifact-0.1.0.zip",
+      "source_sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+      "staged_sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+      "source_bytes": 20712230,
+      "staged_bytes": 20712230,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "data/cache/tether-050-qualified-build/wheels/tether_target_agents-0.5.0-py3-none-any.whl",
+      "destination": "inputs/wheels/tether_target_agents-0.5.0-py3-none-any.whl",
+      "source_sha256": "b28f2680c675b6266c6ea6cc9cfd2002191af9f7d20396b5b2ec629a9909f8d8",
+      "staged_sha256": "b28f2680c675b6266c6ea6cc9cfd2002191af9f7d20396b5b2ec629a9909f8d8",
+      "source_bytes": 46380,
+      "staged_bytes": 46380,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/pyproject.toml",
+      "destination": "packages/tether/pyproject.toml",
+      "source_sha256": "952719a2a48be931e155edf29bcfb33a007375d35f7c51187705d11ae2635d33",
+      "staged_sha256": "952719a2a48be931e155edf29bcfb33a007375d35f7c51187705d11ae2635d33",
+      "source_bytes": 588,
+      "staged_bytes": 588,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/uv.lock",
+      "destination": "packages/tether/uv.lock",
+      "source_sha256": "57c0de70d00caa6004e359940cbfe1a832b581fae5ba45fbdc172a93c5d6ae8e",
+      "staged_sha256": "57c0de70d00caa6004e359940cbfe1a832b581fae5ba45fbdc172a93c5d6ae8e",
+      "source_bytes": 9947,
+      "staged_bytes": 9947,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/README.md",
+      "destination": "packages/tether/README.md",
+      "source_sha256": "3ce45226eb2d57ddde0164dd693581d19167030464f6228919b089000526b08c",
+      "staged_sha256": "61d1a65447cadc30c2f7bed55a54e000bf5bfc16be861641aa6fb43df831cb53",
+      "source_bytes": 8444,
+      "staged_bytes": 8469,
+      "exact_link_transformations": [
+        {
+          "before": "](../../docs/TETHER-VERIFICATION-SCOPE.md)",
+          "after": "](../../../../documentation/CURRENT-SOFTWARE.md#verification-scope)",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "source": "packages/tether/LICENSE",
+      "destination": "packages/tether/LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "staged_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_bytes": 11358,
+      "staged_bytes": 11358,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/__init__.py",
+      "destination": "packages/tether/src/tether/__init__.py",
+      "source_sha256": "f9f66269f43b65c14a161fbbbeb4942a0962fdc30ad7b42bd67fc93a67afd7c6",
+      "staged_sha256": "f9f66269f43b65c14a161fbbbeb4942a0962fdc30ad7b42bd67fc93a67afd7c6",
+      "source_bytes": 829,
+      "staged_bytes": 829,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/__main__.py",
+      "destination": "packages/tether/src/tether/__main__.py",
+      "source_sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "staged_sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "source_bytes": 118,
+      "staged_bytes": 118,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_aliases.py",
+      "destination": "packages/tether/src/tether/_aliases.py",
+      "source_sha256": "23410cd1288bdffcdf3b78aa037a82e4b14a5635babb28d313475516174ef0f9",
+      "staged_sha256": "23410cd1288bdffcdf3b78aa037a82e4b14a5635babb28d313475516174ef0f9",
+      "source_bytes": 4653,
+      "staged_bytes": 4653,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_catalog_binding.py",
+      "destination": "packages/tether/src/tether/_catalog_binding.py",
+      "source_sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+      "staged_sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+      "source_bytes": 18330,
+      "staged_bytes": 18330,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_catalog_policy.py",
+      "destination": "packages/tether/src/tether/_catalog_policy.py",
+      "source_sha256": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+      "staged_sha256": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+      "source_bytes": 29106,
+      "staged_bytes": 29106,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_cli.py",
+      "destination": "packages/tether/src/tether/_cli.py",
+      "source_sha256": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699",
+      "staged_sha256": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699",
+      "source_bytes": 6825,
+      "staged_bytes": 6825,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_presentation.py",
+      "destination": "packages/tether/src/tether/_presentation.py",
+      "source_sha256": "aee8d5cba2d205bbf4442f75cbfb145f2b6953605966f483e72d126c05b7d79d",
+      "staged_sha256": "aee8d5cba2d205bbf4442f75cbfb145f2b6953605966f483e72d126c05b7d79d",
+      "source_bytes": 24756,
+      "staged_bytes": 24756,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_process.py",
+      "destination": "packages/tether/src/tether/_process.py",
+      "source_sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "staged_sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "source_bytes": 11639,
+      "staged_bytes": 11639,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/_semantics.py",
+      "destination": "packages/tether/src/tether/_semantics.py",
+      "source_sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "staged_sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "source_bytes": 14044,
+      "staged_bytes": 14044,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/archive/__init__.py",
+      "destination": "packages/tether/src/tether/archive/__init__.py",
+      "source_sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "staged_sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "source_bytes": 212,
+      "staged_bytes": 212,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/archive/__main__.py",
+      "destination": "packages/tether/src/tether/archive/__main__.py",
+      "source_sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "staged_sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "source_bytes": 1890,
+      "staged_bytes": 1890,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/__init__.py",
+      "destination": "packages/tether/src/tether/study/__init__.py",
+      "source_sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "staged_sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "source_bytes": 207,
+      "staged_bytes": 207,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/__main__.py",
+      "destination": "packages/tether/src/tether/study/__main__.py",
+      "source_sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "staged_sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "source_bytes": 968,
+      "staged_bytes": 968,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/authority_four_arm.py",
+      "destination": "packages/tether/src/tether/study/authority_four_arm.py",
+      "source_sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "staged_sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "source_bytes": 322,
+      "staged_bytes": 322,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/baseline_smoke.py",
+      "destination": "packages/tether/src/tether/study/baseline_smoke.py",
+      "source_sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "staged_sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "source_bytes": 312,
+      "staged_bytes": 312,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/fixed_evidence_smoke.py",
+      "destination": "packages/tether/src/tether/study/fixed_evidence_smoke.py",
+      "source_sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "staged_sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "source_bytes": 330,
+      "staged_bytes": 330,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/native_diagnostic.py",
+      "destination": "packages/tether/src/tether/study/native_diagnostic.py",
+      "source_sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "staged_sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "source_bytes": 321,
+      "staged_bytes": 321,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "packages/tether/src/tether/study/retrieval_smoke.py",
+      "destination": "packages/tether/src/tether/study/retrieval_smoke.py",
+      "source_sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "staged_sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "source_bytes": 323,
+      "staged_bytes": 323,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "LICENSE",
+      "destination": "LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "staged_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_bytes": 11358,
+      "staged_bytes": 11358,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "tools/presentation/build_tether_manuscript.py",
+      "destination": "tools/presentation/build_tether_manuscript.py",
+      "source_sha256": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b",
+      "staged_sha256": "07330d35414b61d78e4039c03d1ab31e5530f9949e5180d51af9f6f29ed1569b",
+      "source_bytes": 30176,
+      "staged_bytes": 30176,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/results/ARTIFACTS.json",
+      "destination": "paper/results/ARTIFACTS.json",
+      "source_sha256": "84d4a31e842d3085133d384429729ef2501425d33bf2b92f65d9c64699a87428",
+      "staged_sha256": "84d4a31e842d3085133d384429729ef2501425d33bf2b92f65d9c64699a87428",
+      "source_bytes": 30693,
+      "staged_bytes": 30693,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/results/figures/figure1-flow.pdf",
+      "destination": "paper/results/figures/figure1-flow.pdf",
+      "source_sha256": "f50b31e0892432e8e1460d11783b9ff3b97ec0c25f10065796335b43fa2653e6",
+      "staged_sha256": "f50b31e0892432e8e1460d11783b9ff3b97ec0c25f10065796335b43fa2653e6",
+      "source_bytes": 3636,
+      "staged_bytes": 3636,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/results/figures/figure2-availability.pdf",
+      "destination": "paper/results/figures/figure2-availability.pdf",
+      "source_sha256": "f59c626cf48d1a0c5000b9f93411dcd3812a161f8fd71c145909bb6eba3e6aca",
+      "staged_sha256": "f59c626cf48d1a0c5000b9f93411dcd3812a161f8fd71c145909bb6eba3e6aca",
+      "source_bytes": 2729,
+      "staged_bytes": 2729,
+      "exact_link_transformations": []
+    },
+    {
+      "source": "paper/results/figures/figure3-controls.pdf",
+      "destination": "paper/results/figures/figure3-controls.pdf",
+      "source_sha256": "663a19e6b523d2bfd782bf326d23609d3cd2cca033b8b9d3736a56ffccf66b43",
+      "staged_sha256": "663a19e6b523d2bfd782bf326d23609d3cd2cca033b8b9d3736a56ffccf66b43",
+      "source_bytes": 2511,
+      "staged_bytes": 2511,
+      "exact_link_transformations": []
+    }
+  ],
+  "expected_archive_closure": {
+    "paper/manuscript.md": "working_draft_documentation",
+    "paper/supplement.md": "working_draft_documentation",
+    "paper/references.bib": "working_draft_documentation",
+    "paper/references.json": "working_draft_documentation",
+    "paper/RELATED-WORK-SOURCE-AUDIT.md": "working_draft_documentation",
+    "paper/AUTHOR-DECLARATIONS.md": "unfilled_owner_declaration_checklist",
+    "README.md": "working_draft_reviewer_instructions",
+    "documentation/CURRENT-SOFTWARE.md": "portable_current_software_guide",
+    "documentation/SOFTWARE-QUALIFICATION.json": "sanitized_post_study_software_qualification",
+    "paper/results/README.md": "portable_presentation_metadata",
+    "paper/results/figures/figure1-flow-caption.md": "aggregated_technical_results",
+    "paper/results/figures/figure1-flow-data.json": "aggregated_technical_results",
+    "paper/results/figures/figure1-flow-preview.png": "aggregated_technical_results",
+    "paper/results/figures/figure1-flow.pdf": "aggregated_technical_results",
+    "paper/results/figures/figure1-flow.svg": "aggregated_technical_results",
+    "paper/results/figures/figure2-availability-caption.md": "aggregated_technical_results",
+    "paper/results/figures/figure2-availability-data.json": "aggregated_technical_results",
+    "paper/results/figures/figure2-availability-preview.png": "aggregated_technical_results",
+    "paper/results/figures/figure2-availability.pdf": "aggregated_technical_results",
+    "paper/results/figures/figure2-availability.svg": "aggregated_technical_results",
+    "paper/results/figures/figure3-controls-caption.md": "aggregated_technical_results",
+    "paper/results/figures/figure3-controls-data.json": "aggregated_technical_results",
+    "paper/results/figures/figure3-controls-preview.png": "aggregated_technical_results",
+    "paper/results/figures/figure3-controls.pdf": "aggregated_technical_results",
+    "paper/results/figures/figure3-controls.svg": "aggregated_technical_results",
+    "paper/results/tables/constructed_control_verdicts.csv": "aggregated_technical_results",
+    "paper/results/tables/constructed_control_verdicts.md": "aggregated_technical_results",
+    "paper/results/tables/constructed_policy_summary.csv": "aggregated_technical_results",
+    "paper/results/tables/constructed_policy_summary.md": "aggregated_technical_results",
+    "paper/results/tables/decision_schedule.csv": "aggregated_technical_results",
+    "paper/results/tables/decision_schedule.md": "aggregated_technical_results",
+    "paper/results/tables/native_case_results.csv": "aggregated_technical_results",
+    "paper/results/tables/native_case_results.md": "aggregated_technical_results",
+    "paper/results/tables/native_fact_accounting.csv": "aggregated_technical_results",
+    "paper/results/tables/native_fact_accounting.md": "aggregated_technical_results",
+    "paper/results/tables/native_missingness.csv": "aggregated_technical_results",
+    "paper/results/tables/native_missingness.md": "aggregated_technical_results",
+    "paper/results/tables/native_operation_resources.csv": "aggregated_technical_results",
+    "paper/results/tables/native_operation_resources.md": "aggregated_technical_results",
+    "paper/results/tables/output_schedule.csv": "aggregated_technical_results",
+    "paper/results/tables/output_schedule.md": "aggregated_technical_results",
+    "paper/results/tables/paired_discordance.csv": "aggregated_technical_results",
+    "paper/results/tables/paired_discordance.md": "aggregated_technical_results",
+    "paper/results/tables/paired_verdict_cells.csv": "aggregated_technical_results",
+    "paper/results/tables/paired_verdict_cells.md": "aggregated_technical_results",
+    "paper/results/tables/resource_phases.csv": "aggregated_technical_results",
+    "paper/results/tables/resource_phases.md": "aggregated_technical_results",
+    "paper/results/ARTIFACTS.json": "portable_presentation_metadata",
+    "reproduction/qualification.json": "evaluation_only",
+    "reproduction/RELEASE-RECORD.json": "public_P09_release_hash_record",
+    "reproduction/README.md": "P09_reproduction_instructions",
+    "reproduction/asof-research-artifact-0.1.0.zip": "immutable_P09_reproduction_archive",
+    "software/tether_target_agents-0.5.0-py3-none-any.whl": "TETHER_software_wheel",
+    "software/source/packages/tether/pyproject.toml": "TETHER_project_source",
+    "software/source/packages/tether/uv.lock": "TETHER_project_source",
+    "software/source/packages/tether/README.md": "TETHER_project_source",
+    "software/source/packages/tether/LICENSE": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/__init__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/__main__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_aliases.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_catalog_binding.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_catalog_policy.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_cli.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_presentation.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_process.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/_semantics.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/archive/__init__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/archive/__main__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/__init__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/__main__.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/authority_four_arm.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/baseline_smoke.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/fixed_evidence_smoke.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/native_diagnostic.py": "TETHER_project_source",
+    "software/source/packages/tether/src/tether/study/retrieval_smoke.py": "TETHER_project_source",
+    "paper/tether-source-reporting-preprint.pdf": "working_draft_documentation",
+    "TETHER-QUALIFICATION.json": "evaluation_only",
+    "PACKET-MANIFEST.json": "self_excluded_packet_manifest"
+  },
+  "expected_archive_members": 78,
+  "python_source_files": 18,
+  "exact_link_closure_checked": true,
+  "pending": [
+    "paper/tether-source-reporting-preprint.pdf",
+    "TETHER-QUALIFICATION.json",
+    "PACKET-MANIFEST.json"
+  ],
+  "pdf_created": false,
+  "packet_created": false,
+  "source_backend_executed": false,
+  "original_sources_preserved_by_hash": true,
+  "old_pdf_or_review_zip_opened": false,
+  "nested_P09_handling": "opaque exact byte copy under its historical allowlist"
+}

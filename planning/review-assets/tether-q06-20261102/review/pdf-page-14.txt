@@ -1,0 +1,60 @@
+TETHER - Working research draft
+14
+Supplementary methods and artifact guide
+Companion to the revised TETHER technical working paper, 2 November 2026. This dated revision preserves
+the frozen study quantities and anchors. Public deposit, owner declarations and author acceptance remain
+pending. S8 describes the historical P09 artifact; S10 separately describes post-study software qualification
+through TETHER 0.5.0, and S11 records a later source-feasibility boundary. Paths below describe this local
+research checkout, not a public data deposit. No external expert response is required or used.
+S1. Frozen chronology and immutable anchors
+All dates below are UTC. The information cutoff is 2026-11-01T07:16:26.101448+00:00. The run used
+source-only inputs sealed before references; references were finalized before generation. The final experiment
+READY was committed as 31c52d3 before the single native study. Later audits and analysis do not overwrite
+its ledger or pre-run exposure register.
+Stage
+UTC output directory suffix
+Status
+Prospective registry
+20261101T071713Z
+Twelve identity-ranked units; complete physical-row
+enumeration
+Original-only packets
+20261101T074942Z
+Twelve source-only packets; zero blocked
+Neutral tasks
+20261101T075541Z
+Twelve tasks; no evaluator fact values
+References
+20261101T081933Z
+Twelve evaluator-only references; independently
+source checked
+Exposure/denominator register
+20261101T083548Z
+Pre-run UNKNOWN broader exposure; frozen
+answerability
+Fictional source controls
+20261101T090035Z
+Fourteen source-only fixture scenarios
+Fictional qualification
+20261101T090042Z
+Fourteen scenarios/42 decisions; no native outputs
+Actual study
+20261101T091345Z
+Thirty-eight outputs/90 decisions, terminal
+Frozen descriptive analysis
+20261101T092110Z
+Pinned ledger and later source-audit gate
+Exact file SHA-256 anchors are listed below. These are byte hashes, not canonical-object fingerprints. The
+distinction matters because whitespace changes affect byte hashes. The manifest and audit objects record
+additional canonical fingerprints where used.
+Artifact
+Exact SHA-256
+EXPERIMENT-READY-v1.json
+49c2ce672356bfcfd572a7b6c963c56bd5c96e3d042a9972f2c36434eb
+b8de3f
+Study ledger.json
+b2a9727ca9ce89865b80ffe80b21a325ea6d91d8844247740ac2c2ecc
+9a4faa0
+Study seal.json
+84b1e87b187dd5704c143f0da0fcac41103a88affe8c8b022c2890c8dc
+89c70f

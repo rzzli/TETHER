@@ -1,0 +1,45 @@
+TETHER - Working research draft
+3
+2.2 Durable execution and verification
+Output directories are reserved before dispatch. Journals preserve attempts, reservations, terminal results and
+accounting; receipt hashes bind finalized outputs. Measured usage is distinguished from conservative
+reservations. Recovery inspects retained attempts rather than automatically repeating a potentially billed call.
+Byte verification and source/semantic replay have separate dispositions; neither is labeled scientific validation.
+Archived version-one runs retain their original, more limited verification guarantees.
+Post-study adversarial review found that the legacy version-two verifier did not reconstruct all coverage
+terminal states, review-selection versus committed-record relationships, or dossier prose. An internally
+consistent receipt therefore did not prove those properties. Direct legacy APIs, including compatibility aliases,
+retain that earlier scope. From TETHER 0.4.1, the canonical CLI additionally reconstructs category states,
+review/commit consistency, bounded-request membership, known terminal dispositions and deterministic
+dossier rendering. These checks concern declared inputs and relationships; they cannot reveal undeclared
+real-world ancestry, establish custom exception-class inheritance from a serialized name, or certify every
+scientific statement.
+Verification must retain its interface/version, source binding and external anchor. Engine --outputs-only
+verification checks archived fingerprints without rereading current originals; a TETHER outer run requires
+source-inclusive verification and rejects that flag. An independently retained original receipt hash is needed to
+detect replacement of an entire self-consistent artifact tree. Historical outer runs require the matching launcher
+source and version.
+For the paper experiment, a separately frozen runner records all scheduled outputs, guard results, decisions
+and resource checkpoints. It forbids automatic retries and retains failures. A separate auditor reconstructs
+native facts from original source rows, rechecks the controls and reconciles the complete schedule. This audit
+uses a distinct projection implementation rather than treating the producer's expected values as its oracle.
+Authoring and audit agents are software collaborators, not external expert adjudicators or statistically
+independent judges.
+2.3 Typed reporting and scoring
+A report fact contains a stable fact identifier, typed value, unit, source binding and unknown reason. Bindings
+identify the full source file hash, release, physical row locator and field. Task identity includes hypothesis
+scope. Booleans cannot impersonate numerical measurements. Native null, a field absent from schema and a
+native empty value have different reasons. Incomplete collection cannot support a biological absence
+statement.
+The source compiler reconstructs expected facts from originals. Generation receives source-only rows and
+value-free fact bindings, without expected-reference values. References and evaluation artifacts remain
+evaluator-only. In-process verified objects are immutable; serialized results acquire their guarantees through
+replay, not by trusting their own stored status. This is procedural and programmatic isolation, not proof of
+independent model errors or a hostile-process barrier.
+2.4 Separately qualified post-study software
+TETHER 0.5.0 retains the canonical verification additions and the child supervision introduced in 0.4.2. The
+locally qualified Windows CLI applies an absolute deadline and a combined stdout/stderr cap to its owned
+child, with retained failure/accounting records and no automatic redispatch. It does not bound blocked
+operating-system process creation, contain descendants, or supervise in-process outer verification after the
+child returns. Arbitrary embedded multithreaded and POSIX execution are outside this qualification. Workflow
+budgets, bounded reads and child supervision are distinct limits.

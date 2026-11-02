@@ -1,0 +1,76 @@
+TETHER - Working research draft
+21
+S10. Post-study verification and software qualification
+The retained repository authorities paper/REVIEW-ERRATA-20261102.md, docs/TETHER-VERIFICATION-SCOPE.md and
+docs/TETHER-CATALOG-POLICY.md define the corrected scope. The Q01/Q02 assessments and Q03 audit records
+named below remain repository evidence; they are not included wholesale in the review packet. None of the
+additions below was used by the frozen paper experiment. The separate paper source audit and its reported
+arithmetic remain intact; they do not establish properties absent from the legacy verifier.
+The portable current-software guide and software qualification summary summarize the separately qualified
+implementation. They do not replace original study anchors or make the repository-only Q03 audit part of a
+public deposit.
+Interface / version
+Named checked relationships
+Limit
+Frozen version-one receipt verification
+Listed output hashes and available
+source hashes
+No version-two semantic guarantee;
+original external anchor needed for
+replacement detection
+Frozen version-two engine/direct API and
+compatibility aliases
+Original output, lineage, deterministic
+feature, scorer, accounting and trace
+checks
+Review reproduced gaps in
+coverage-state, review-selection/commit
+and dossier-text reconstruction
+Canonical CLI from TETHER 0.4.1
+Original checks plus category-state
+reconstruction, review/commit
+consistency, bounded-request
+membership, known terminal dispositions
+and deterministic dossier rendering
+Declared-input consistency only;
+serialized custom exception names do
+not establish class inheritance
+Engine --outputs-only
+Consistency with archived fingerprints
+and records
+Does not reread current original sources;
+not fresh source verification
+Canonical outer-run verification
+Source-inclusive engine checks, dossier
+first-header projection, file inventory,
+outer journal/manifest and
+launcher/receipt binding
+Matching launcher source/version and
+independently retained receipt anchor
+required; --outputs-only rejected
+Explicit schema-2 policy path from 0.5.0
+Exact artifact/use/parent admission,
+copied control/provenance bindings,
+original catalog anchor and rederived
+compatibility projection against actual
+engine inputs
+Offline extractive run only; current raw
+originals/receipts remain required;
+compatibility runs do not acquire this
+policy
+inspect-run
+Retained attempt, terminal status and
+declared accounting, including
+unresolved calls
+Inspection does not retry, finish or
+successfully verify an interrupted
+execution
+Internal hashes alone cannot detect wholesale replacement of a self-consistent tree without an independent
+original anchor. Neither a receipt nor reconstructed relationships establish source authenticity, correctness of
+undeclared ancestry, biomedical truth or scientific generalization. Exact historical launcher bytes matter even
+when two revisions display the same version.
+The retained Q01 release assessment (Bounded TETHER Release, 2 November 2026) qualifies the 0.4.2
+Windows CLI child supervisor. Defaults are a 3,600-second absolute child deadline and 16 MiB combined
+stdout/stderr cap; the deadline includes pipe EOF and cleanup has a separate five-second wait budget.
+Existing per-file metadata and dossier limits are 64 MiB and 256 MiB. These limits do not bound whole-process
+peak memory or source-artifact size. Workflow token/cost/time budgets remain separate. The supervisor owns

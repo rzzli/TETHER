@@ -84,7 +84,7 @@ Execute each declared cell once, retain failures, reproduce source-derived score
 
 ### Q06 Reconcile manuscript and release
 
-**Active: narrow technical working-paper branch.** The Q03 assessment supports this existing branch; it does not complete Q04/Q05 or remove deferred author obligations.
+**Technical working-paper branch complete (Q06a); author obligations remain deferred (Q06b).** See the [corrected-paper progress/closure assessment](<Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md>), [revised manuscript](../paper/revisions/20261102/manuscript.md), [packet record](../paper/release/tether-v2/RELEASE-RECORD.json) and [independent review](review-assets/tether-q06-20261102/review/PACKET-REVIEW.md). All five errata are incorporated, the new 23-page PDF and 78-member package are locally qualified, and old experiment/result/release bytes are preserved. Q04/Q05 are not completed by this branch. Submission readiness still requires the owner-deferred factual declarations and acceptance.
 
 The current working paper may remain a narrow technical report without Q03–Q05 if its claims stay within the existing evidence. Before a submission-ready version, reconcile the new semantic findings and threshold/resource interpretation; keep the negative model results. Update source, PDF and package together under a new version, recheck numerical/figure/citation consistency and the lawful allowlist, and obtain the owner-supplied author facts/acceptance when the owner resumes that step. Those facts remain deferred now.
 

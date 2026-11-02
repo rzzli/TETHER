@@ -1,0 +1,44 @@
+TETHER - Working research draft
+4
+The explicit schema-2 policy path in 0.5.0 checks exact artifact identity, use, release, temporal context and
+supplied parents before offline extractive execution. It archives controls and receipt copies, produces a
+restricted schema-1 compatibility projection, and rederives that projection against the actual engine inputs
+during verification. A projection alone is not authorization. Direct legacy APIs and schema-1 compatibility runs
+retain their earlier scope; model/replay/scorer use is unsupported by this policy path. Catalog collection and
+scientific statuses remain unchanged. These are separate local software qualifications, not a rerun of the paper
+experiment or evidence that its sources are scientifically sufficient.
+3. Study design
+3.1 Source frame and selection
+We pinned Open Targets 25.09 evidence, credible-set, target and disease files [10] and the locally downloaded
+HGNC normalization snapshot dated 10 October 2026 [11]. The HGNC date is a retained acquisition
+designation, not a provider-certified annotation release. The frozen frame contains 137 original files totaling
+2,866,248,239 bytes: 100 GWAS evidence files, 25 credible-set files, ten target files, one disease file and one
+HGNC file. All source bytes and download receipts were verified. The complete credible-set input contains
+2,862,043 physical rows.
+The registry enumerates 1,753,850 physical GWAS evidence rows. Its fixed identity, temporal, mapping and
+eligibility rules retain 1,681,738 rows and exclude 72,112; individual exclusion reasons can overlap. A
+deterministic identity-only rank over target, disease and locus selects twelve units. Nine previously used target
+symbols are excluded. Selection does not rank numerical values, source answerability or candidate
+performance. Each retained unit has one exact locus-identifier match in the complete credible-set table. A
+locus match is a technical join and does not establish shared study, cohort, allele orientation or biological
+mechanism. Cross-source variant-identifier agreement is also unresolved: this is a locus-only match, not a
+qualified composite study-and-variant match.
+Broader prior project exposure is unknown for all twelve selected units. They are not certified fresh cases or
+twelve independent studies. One repeated disease-identifier group is recorded; source-study and cohort
+dependence remain unresolved. After execution their identities and results are exposed development material.
+We preserve the pre-run exposure register rather than rewriting it with hindsight.
+The rank is ascending SHA-256 of the UTF-8 string seed|release|targetId|diseaseId|studyLocusId, with seed
+preprint-p05-deterministic-v1 and release 25.09. Lexical target, disease, locus and release fields break hash
+ties. Missing, conflicting or blocked selected units retain their position and disposition; they are not replaced or
+reranked to improve answerability or results.
+3.2 Inputs and independent references
+Each unit requests fifteen fields across its original GWAS and matched credible-set rows: eleven
+identity/linkage fields and four measurement fields. The measurement components are beta, standard error,
+p-value mantissa and p-value exponent, all in one declared measurement group per unit. We report these
+native components without calculating a p-value, assigning effect units, interpreting direction or converting
+provider scores into support weights. Sample size and other context can be retained without becoming graded
+facts.
+These are reporting components, not independent biological observations. The p-value mantissa and exponent
+encode one p-value, and beta and standard error describe related properties of an estimate. Identity fields
+account for most requested slots. Equal weighting is a declared reporting contract, not a measure of
+independent evidence or clinical informativeness.

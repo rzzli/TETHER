@@ -1,0 +1,59 @@
+# Project progress reassessment: corrected technical working paper
+
+2 November 2026 UTC. The project-wide critical review and its authorized engineering corrections are complete within the stated review scopes. The result is a stronger **TETHER 0.5.0** interface and a separately versioned technical working paper. This is not completion of the original therapeutic-prediction programme or submission readiness.
+
+Read the [full critical review](<TETHER Full Project Critical Review 2026-11-02.md>) for findings across every pipeline/recovery step, the [current corrective plan](<TETHER Corrective Execution Plan 2026-11-02.md>) for authority, and the [revised manuscript](../paper/revisions/20261102/manuscript.md) / [supplement](../paper/revisions/20261102/supplement.md) for corrected claims. The [new PDF](../paper/revisions/20261102/tether-source-reporting-preprint-v2.pdf) contains the revised main text and supplement. The original experiment, source catalog, frozen engine, results, PDFs and old review archives remain historical authorities.
+
+## Critical findings: current disposition
+
+| Finding / area | Implemented correction or disposition | Remaining practical limit |
+| --- | --- | --- |
+| F01–F02: semantic proof gaps | Canonical CLI reconstructs coverage states, reviewed selections versus commits, request membership, terminal dispositions and deterministic dossier text. Counterexamples became regressions. | Direct frozen legacy/API aliases retain their earlier weaker scope. Checks cover declared inputs and named relationships, not biomedical truth or undeclared ancestry. |
+| F03: receipt identity | Validation now requires receipt, dataset and release identity as well as bytes/URL/path. | The old downloader remains untouched; previously pinned receipts must not be rewritten by retries. Content-addressed copies preserve admitted evidence. |
+| F04: validation failures | Output collisions are checked early; prerequisite/structural errors and interruption retain failure records. | Forced termination, filesystem failure and hostile concurrent mutation are not eliminated. |
+| F05: genetics QC | Identical REF/ALT alleles are rejected. | Orientation QC is not MR, colocalization, causal validity or a calibrated clinical predictor. |
+| F06–F07: data policy | Schema-2 separates input ancestry from validation fixtures, makes LD method-conditional and binds exact artifact/use grants; seven AACT contexts remain blocked. | Registration does not establish collection completeness, historical eligibility, parsing validity or scientific qualification. |
+| F08: study independence | Source study/cohort identity and exposure limitations are explicit; Q03 counts identifier reuse without calling it replication. | No qualified independent cohort or generalization interval; missing study/cohort/build/allele/effect information remains substantive. |
+| F09: threshold design | Paper states that 80% and 100% require the same count for every possible native outcome in groups of size 2–4. | The original prespecified thresholds remain, but their agreement supplies no separate robustness evidence. |
+| F10: copying ceiling | Literal assembly and exposed designed controls are reported as a bounded technical result. Q03's deterministic baseline also fully solves its scoped task. | No demonstrated reasoning, multi-agent, therapeutic or model advantage. Q04/Q05 remain unactivated. |
+| F11: resources | Paper explicitly reports 97.0485% production time in source verification and 49.0021 logical source-frame equivalents. | No performance optimization or physical-I/O measurement was performed. Stable cache reuse needs a separately tested source-stability design before any speed claim. |
+| F12: negative model attribution | Three plain/two proposal/zero audit calls are explicit; serialization bytes do not establish token feasibility. | Closed attempts stay closed. General model incapability or critic efficacy is not inferred. |
+| F13: execution bounds | Owned-child deadline, combined stdout/stderr cap, bounded cleanup accounting and retained failures are qualified on the Windows CLI. | OS spawn/host calls, descendants, in-process outer verification/publication, POSIX and arbitrary embedded multithreading remain outside that qualified envelope. |
+| F14: planning/proof maintenance | One current plan/TODO/index identifies authority. Proofs name revision, property, anchor, checker, result and limits; stale historical plans are not reactivated. | Audit counts are not sample sizes; a risk-based review does not prove absence of every defect. Avoid another generic audit layer without a falsifiable purpose. |
+| Q03 audit-retention defect | Overwritten failed-attempt files and absent contemporaneous measured-code pins are disclosed. Future fresh-ID/exclusive writes pass collision checks. | Lost historical bytes cannot be recovered or claimed equal. The exploratory audit is not a fully sealed new study. |
+| Q06 renderer defect | A separate renderer fixes relative JSON links; the old visible-text failure was reproduced, four inline cases pass, and the first failed build is retained. | The original renderer is unchanged. PDF qualification is local to the pinned fonts/libraries; no portable or cross-platform renderer guarantee. |
+
+## Review coverage and evidence
+
+The baseline review inventoried 7,474 tracked files and AST-parsed all 205 active runtime/tool Python files (55,544 lines). Deep review was risk-based across execution/verification, data ingress/catalog/utilities, clinical/genetics feasibility, scoring/analysis, release and current plans. It did not line-review every historical script, rehash every planned dataset or open protected outcomes/human returns. These boundaries remain explicit in the original coverage inventory.
+
+The corrected software qualification includes **129 package tests**, separately implemented policy/semantic/process probes and an isolated installed-wheel check. That count is not a fresh whole-project 1,973-test certificate and must not be combined with overlapping counts as scientific evidence. Q01 and Q02 retain their exact acceptance records; their guarantees do not retroactively belong to the frozen paper study.
+
+Q03 freshly receipt-hashed 125 evidence/credible-set originals plus two label originals. Its independent selection/source reconstruction passed 1,160 assertions. The resulting four-evidence/four-object example supports source composition only. Evidence-side study/variant IDs are all missing; linked objects reuse study/variant identifiers and lack necessary effect/cohort context. The original catalog still has 178 products, not 178 ready datasets. The 2,206-file development build, older 65-missing interpretation slice, 248 raw policy artifacts and 137-original paper frame are different scopes.
+
+## Corrected working-paper and package qualification
+
+All five manuscript errata are incorporated. The original tables, numerical payloads, thirteen-entry bibliography and frozen experiment anchors are unchanged. The new source review passes **66 focused checks**. The PDF passes an independent **83-check** review: **23 pages, 347 ordered visible source units, three vector figures, no rasterized figures or out-of-page glyphs**. All pages were inspected visually. Eight existing negative retention/publication controls and four new inline-link checks pass. PDF repeat equality was checked in the same process/environment.
+
+The separately versioned packet builder passes **17 fictional boundary tests** and a same-namespace source-byte substitution probe. It preserves the original P09 archive and all 37 historical numerical/figure payloads. Two builds in separate processes produced identical **78-member / 21,694,289-byte** ZIPs. The outer allowlist includes only the corrected paper, portable results, current software/source, scoped guides/proof summary and the explicitly admitted historical reproduction items. The inner P09 archive retains its prior CC0 HGNC, project-receipt and evaluator-material exceptions; outer exclusions must not be misread as excluding those unchanged inner members.
+
+The first PDF attempt failed before publication because the old formatter left a JSON link literal while its retention checker required the visible label. Its stage, source pins and failure record were retained. The new renderer changes exactly one link-extension expression. All 80 nonformatter copied inputs remained identical between stages. Both executed staging-script revisions are retained, avoiding the earlier Q03 retention mistake.
+
+The packet's independent closure review passes **284 focused checks**, with no outstanding findings. Its [external release record](../paper/release/tether-v2/RELEASE-RECORD.json) is retained separately from the ZIP's own hashes. Final ZIP SHA-256: `10a2d79798e5b0ec97042ae3f599df89c75d62b9b46b45b51cd29866c737492d`; PDF SHA-256: `b6a93fadbd309ba03fe2497d0e59fcd5bf4344d7ed7cd3693840ee87485b5f23`. Current evidence is under `planning/review-assets/tether-q06-20261102/`; the [software summary](../paper/release/tether-v2/SOFTWARE-QUALIFICATION.json) and [packet qualification](../paper/release/tether-v2/QUALIFICATION.json) preserve the narrower scopes. They are not public deposits or scientific validation.
+
+## Remaining work and next decision
+
+| Work | Current status | Prerequisite before proceeding |
+| --- | --- | --- |
+| C01–C05 project review/corrections | Complete within reviewed scopes | Retain explicit version and coverage boundaries. |
+| Q01/Q02 runtime and data policy | Complete for qualified Windows/offline paths | Other environments/interfaces require their own qualification. |
+| Q03 meaningful-task feasibility | Complete, reporting-only decision | Stronger science requires the task-specific missing inputs and valid estimand. |
+| Q04/Q05 new evaluation/execution | Not activated, not completed | A genuinely discriminating endpoint, qualified independent units, faithful baseline and feasible resource envelope. No automatic model retry. |
+| Q06a corrected technical paper/package | Locally qualified working artifact | Keep old results and releases unchanged. |
+| Q06b / P08c / P10a author metadata and acceptance | **Owner-deferred** | Confirm names/order, affiliations/contact, contributions, funding/conflicts/acknowledgments and acceptance when the owner resumes this step. |
+| Clinical cohorts/T1, genetics/MR/scorer, full Virtual Biotech, T2–T5/H6 | Conditional, unfinished | Source identity, chronology, ascertainment, causal assumptions and appropriately designed evaluation—not another software test count. |
+| Public release/upload/hosted and Linux checks | Not performed | Separate scope/authorization/environment; no publication or push is implied. |
+
+There is no missing file or permission requiring a new owner request for the completed corrections. The next paper action is the already deferred factual metadata/acceptance step. When resumed, create a new final source/PDF/package version and validate those changes; metadata-only edits do not justify repeating the study. A scientific expansion is a separate decision and cannot be presented as an outstanding mechanical step to obtain automatically.
+
+No provider acquisition, model experiment, paid query, database restore, downloader change, periodic-monitor restart, public upload or repository push occurred in these corrections. Numerical real-data prediction features remain empty and probabilities null. The project is an evidence-workflow framework with a reproducible technical reporting result; its broader scientific ambitions remain unproven.
