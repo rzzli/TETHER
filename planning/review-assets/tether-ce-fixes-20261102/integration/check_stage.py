@@ -10,6 +10,7 @@ import argparse
 import ast
 import base64
 import csv
+from collections import Counter
 from datetime import datetime, timezone
 from email.parser import BytesParser
 import hashlib
@@ -31,6 +32,17 @@ PROFILE_PATH = "src/asof/archive/semantic_dependencies.json"
 OLD_PROFILE_SHA256 = "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5"
 FIRST_PROFILE_SHA256 = "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
 NEW_PROFILE_SHA256 = "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016"
+# Immutable BG01 evidence, matched byte-for-byte against commits 5cd633b and
+# 4aa3328. Pinning the records also prevents a smaller check list being resealed.
+PRESERVATION_SHA256 = "9c6f2a3168b1cd083dbc973a7d15141b5d9ff3e7e3ac6551a4f23010b63f493c"
+PRESERVATION_READBACK_SHA256 = "945faf8789de924d916f2d8ad52355014c73fa92bd2eb0130a3b4b0122e6edfd"
+PRESERVATION_CHECK_COUNTS = {
+    "exact_core_wheel_member": 1, "installed_wheel_payload": 110,
+    "monitor_configuration_disabled": 1, "old_demo_finalized": 1,
+    "old_engine_source_pin": 66, "old_environment_identity": 1,
+    "old-identity_exit": 1, "old-offline-demo_exit": 1, "old-offline-verify_exit": 1,
+    "retained_hash": 12, "tracked_paper_worker_monitor_unchanged": 1,
+}
 
 
 def sha(path):
@@ -72,16 +84,40 @@ class Audit:
                   document.get("failures") == document.get("errors") == document.get(skip_key) == 0,
                   "targeted suite complete", expected_tests=count)
 
-    def unittest_log(self, path, count):
+    def unittest_log(self, path, count, *, driver_report=None):
         path = Path(path).absolute()
         raw = path.read_bytes()
         self.inputs[str(path)] = dict(sha256=hashlib.sha256(raw).hexdigest(), bytes=len(raw))
-        text = raw.decode("utf-8-sig")
-        terminals = re.findall(r"^Ran (\d+) tests? in [^\r\n]+", text, re.MULTILINE)
-        self.need(bool(terminals) and int(terminals[-1]) == count and
-                  re.search(r"^OK\s*$", text, re.MULTILINE) is not None and
+        text = raw.decode("utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+        terminals = list(re.finditer(r"^Ran (\d+) tests? in [^\n]+\n(?:[ \t]*\n)*OK[ \t]*(?:\n|$)",
+                                     text, re.MULTILINE))
+        self.need(len(terminals) == 1 and int(terminals[0].group(1)) == count and
+                  len(re.findall(r"^Ran\b", text, re.MULTILINE)) == 1 and
+                  len(re.findall(r"^OK\b", text, re.MULTILINE)) == 1 and
                   not re.search(r"^FAILED\b|^ERROR:|^FAIL:", text, re.MULTILINE),
                   "unittest terminal log matches", path=str(path), expected_tests=count)
+        trailing = text[terminals[0].end():]
+        if driver_report is None:
+            self.need(not trailing.strip(), "ordinary unittest log ends with successful summary", path=str(path))
+        else:
+            # The full driver prints probe output and its final report after
+            # unittest. Other logs cannot opt into this by merely having text.
+            self.need(isinstance(driver_report, dict), "full driver report is a mapping")
+            candidates = []
+            for start in re.finditer(r"^[ \t]*\{", trailing, re.MULTILINE):
+                try:
+                    value = json.loads(trailing[start.start():])
+                except json.JSONDecodeError:
+                    continue
+                candidates.append((start.start(), value))
+            self.need(len(candidates) == 1 and candidates[0][1] == driver_report,
+                      "full driver log ends with exact supplied report", path=str(path))
+            prefix = trailing[:candidates[0][0]]
+            self.need(re.search(r"^(?:Ran\b|OK\b|FAILED\b|ERROR:|FAIL:|Traceback\b|"
+                                r"KeyboardInterrupt\b|InterruptedError\b|SystemExit\b|"
+                                r"\S[^\n]*\([^\n]+\)[ \t]+\.\.\.|[-=]{5,}[ \t]*$)",
+                                prefix, re.MULTILINE) is None,
+                      "full driver has no later unittest execution or interruption", path=str(path))
 
 
 def current_gate_sources():
@@ -455,6 +491,22 @@ def check_atomic_validation(audit, path):
             audit.unittest_log(log_path, count)
 
 
+def check_preservation_records(audit, preservation_path, readback_path):
+    preserved, readback = audit.read(preservation_path), audit.read(readback_path)
+    audit.need(sha(preservation_path) == PRESERVATION_SHA256 and
+               sha(readback_path) == PRESERVATION_READBACK_SHA256,
+               "exact committed old-release preservation records")
+    checks = preserved["checks"]
+    audit.need(len(checks) == 196 and Counter(row["name"] for row in checks) == PRESERVATION_CHECK_COUNTS,
+               "old preservation complete reviewed check inventory")
+    audit.need(preserved["status"] == readback["status"] == "PASS" and preserved["baseline"] == BASELINE and
+               all(row["passed"] is True for row in checks), "old release preservation passed")
+    audit.need(readback["source_record_sha256"] == sha(preservation_path) and readback["old_semantics"] == "verified" and
+               readback["old_code_identity"] is True and readback["installed_payloads_rehashed_after_demo"] == 110,
+               "old preservation readback binds complete source record")
+    return preserved, readback
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("full-gate", "full-log", "source-bracket", "archive-profile-validation", "atomic-validation", "facade-log", "installed",
@@ -501,18 +553,14 @@ def main():
         audit.need(full["status"] == "passed" and full["stage"] == "complete" and full["mode"] == "full", "full gate terminal pass")
         tests = full["tests"]
         audit.need(tests["run"] == 2020 and tests["failures"] == tests["errors"] == 0 and tests["skipped"] == [], "complete 2020-test gate no failures/skips")
-        audit.unittest_log(args.full_log, tests["run"])
+        audit.unittest_log(args.full_log, tests["run"], driver_report=full)
         audit.need(full["powershell_syntax"] is True and full["required_probes_exit_code"] == 0 and
                    full["packaging"]["dependency_free_demo"] == "passed" and full["packaging"]["package_network_policy"] == "offline" and
                    full["packaging"]["wheel"] == "asof_target_agents-0.3.12-py3-none-any.whl", "full gate required syntax/probes/package pass")
         audit.need(full["packaging"]["build_constraints_sha256"] == sha(ROOT / "paper/release/build-constraints.txt"), "full gate build constraints unchanged")
         audit.unittest_log(args.facade_log, 138)
         check_regressions(audit)
-        preserved, readback = audit.read(args.preservation), audit.read(args.preservation_readback)
-        audit.need(preserved["status"] == readback["status"] == "PASS" and preserved["baseline"] == BASELINE and
-                   all(row["passed"] is True for row in preserved["checks"]), "old release preservation passed")
-        audit.need(readback["source_record_sha256"] == sha(args.preservation) and readback["old_semantics"] == "verified" and
-                   readback["old_code_identity"] is True, "old preservation readback binds source record")
+        preserved, readback = check_preservation_records(audit, args.preservation, args.preservation_readback)
         for row in preserved["checks"]:
             if row["name"] == "retained_hash":
                 path = ROOT / row["path"].replace("\\", "/")

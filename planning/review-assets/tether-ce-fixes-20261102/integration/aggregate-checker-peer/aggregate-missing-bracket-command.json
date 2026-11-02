@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-dev\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\check_stage.py",
+    "--full-gate",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\full-gate-04.json",
+    "--full-log",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\full-gate-04.log",
+    "--source-bracket",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\nonexistent.source-bracket.json",
+    "--archive-profile-validation",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\VALIDATION.json",
+    "--atomic-validation",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\VALIDATION.json",
+    "--facade-log",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\package-tests-02.log",
+    "--installed",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02",
+    "--preservation",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\legacy-preservation\\PRESERVATION-20261102T192818Z.json",
+    "--preservation-readback",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\legacy-preservation\\PRESERVATION-20261102T192818Z-READBACK.json",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\aggregate-missing-bracket.json"
+  ],
+  "exit_code": 1,
+  "stderr": "",
+  "stdout": "{\n  \"status\": \"FAILED\",\n  \"output\": \"D:\\\\Projects\\\\drug_target_agents\\\\planning\\\\review-assets\\\\tether-ce-fixes-20261102\\\\integration\\\\aggregate-checker-peer\\\\aggregate-missing-bracket.json\",\n  \"checks\": 139,\n  \"validation_sha256\": \"7ac82e236ae60557c2d95b39b1dfc0c26bd4fbdc2a730fb2d06df2fe5db746db\",\n  \"failure\": {\n    \"type\": \"ValueError\",\n    \"message\": \"required evidence exists\"\n  }\n}\n"
+}

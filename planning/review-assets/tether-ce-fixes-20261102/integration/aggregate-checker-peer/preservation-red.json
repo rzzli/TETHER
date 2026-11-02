@@ -1,0 +1,56 @@
+{
+  "status": "RED_WITNESS",
+  "scope": "Extracted original preservation predicate only; not an aggregate PASS",
+  "checker_sha256": "0aa626a9a51824336777ff07840576dda0e958a8817fa88de49fca95cb0e75ba",
+  "controls": [
+    {
+      "checks": [],
+      "predicate_accepted": true,
+      "expected_acceptance": false
+    },
+    {
+      "checks": [
+        {
+          "name": "unrelated",
+          "passed": true
+        }
+      ],
+      "predicate_accepted": true,
+      "expected_acceptance": false
+    }
+  ],
+  "committed_evidence": [
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/legacy-preservation/PRESERVATION-20261102T192818Z.json",
+      "commit": "5cd633b",
+      "exit": 0,
+      "working_sha256": "9c6f2a3168b1cd083dbc973a7d15141b5d9ff3e7e3ac6551a4f23010b63f493c",
+      "commit_sha256": "9c6f2a3168b1cd083dbc973a7d15141b5d9ff3e7e3ac6551a4f23010b63f493c",
+      "exact_bytes": true
+    },
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/legacy-preservation/PRESERVATION-20261102T192818Z.json",
+      "commit": "4aa3328",
+      "exit": 0,
+      "working_sha256": "9c6f2a3168b1cd083dbc973a7d15141b5d9ff3e7e3ac6551a4f23010b63f493c",
+      "commit_sha256": "9c6f2a3168b1cd083dbc973a7d15141b5d9ff3e7e3ac6551a4f23010b63f493c",
+      "exact_bytes": true
+    },
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/legacy-preservation/PRESERVATION-20261102T192818Z-READBACK.json",
+      "commit": "5cd633b",
+      "exit": 0,
+      "working_sha256": "945faf8789de924d916f2d8ad52355014c73fa92bd2eb0130a3b4b0122e6edfd",
+      "commit_sha256": "945faf8789de924d916f2d8ad52355014c73fa92bd2eb0130a3b4b0122e6edfd",
+      "exact_bytes": true
+    },
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/legacy-preservation/PRESERVATION-20261102T192818Z-READBACK.json",
+      "commit": "4aa3328",
+      "exit": 0,
+      "working_sha256": "945faf8789de924d916f2d8ad52355014c73fa92bd2eb0130a3b4b0122e6edfd",
+      "commit_sha256": "945faf8789de924d916f2d8ad52355014c73fa92bd2eb0130a3b4b0122e6edfd",
+      "exact_bytes": true
+    }
+  ]
+}

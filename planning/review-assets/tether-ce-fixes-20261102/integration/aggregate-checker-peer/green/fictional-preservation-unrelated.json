@@ -1,0 +1,108 @@
+{
+  "baseline": "114fecf",
+  "calls": [
+    {
+      "argv": [
+        "-I",
+        "-B",
+        "-c",
+        "import tether,asof,sys,json,pathlib; print(json.dumps(dict(tether=tether.__version__,asof=asof.__version__,tether_file=tether.__file__,asof_file=asof.__file__,prefix=sys.prefix)))"
+      ],
+      "name": "old-identity",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6919ee4ac685871090de7cc8585d3a28cf9f332526bcd110bb777d46d491b579"
+    },
+    {
+      "argv": [
+        "-I",
+        "-B",
+        "-m",
+        "tether",
+        "demo",
+        "--output",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\ce02-legacy-preservation-20261102T192818Z\\demo"
+      ],
+      "name": "old-offline-demo",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2b3e455104acc8176ad98ae83102d2471e661fd26e46e2a0766fa865913b8c4c"
+    },
+    {
+      "argv": [
+        "-I",
+        "-B",
+        "-m",
+        "tether",
+        "verify",
+        "--run-dir",
+        "D:\\Projects\\drug_target_agents\\data\\cache\\ce02-legacy-preservation-20261102T192818Z\\demo",
+        "--receipt-sha256",
+        "4e6ad7f38aa5cfee403b95168d91b522f3b196f18c15045ddc319311529d7fe6"
+      ],
+      "name": "old-offline-verify",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f21ff406aac5fbcf4e013152d219a46645d1a80acd7b47d5b7aae6c22eb02f1d"
+    }
+  ],
+  "checked_at_utc": "2026-11-02T19:28:21.318231+00:00",
+  "checks": [
+    {
+      "name": "unrelated",
+      "passed": true
+    }
+  ],
+  "demo": {
+    "brand": "TETHER",
+    "engine_receipt_sha256": "e8ba0942b910671be1288dd82afd5419ec8374decb68c447e18b78c4aa2de98a",
+    "output": "D:\\Projects\\drug_target_agents\\data\\cache\\ce02-legacy-preservation-20261102T192818Z\\demo",
+    "receipt_sha256": "4e6ad7f38aa5cfee403b95168d91b522f3b196f18c15045ddc319311529d7fe6",
+    "scientific_validation": "not_established",
+    "status": "completed"
+  },
+  "limitations": [
+    "Tracked monitor/worker bytes and current disabled configuration checked; no historical process-state attestation",
+    "The expected CE01 Test-DownloadBatch verifier correction is outside the preserved downloader-worker list",
+    "Protected human returns and clinical adjudicated outcomes were not accessed"
+  ],
+  "no_models": true,
+  "no_network": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\ce02-legacy-preservation-20261102T192818Z",
+  "provider_spending_usd": 0,
+  "scope": "Historical software payload/hash preservation plus a fresh fictional offline demo; no scientific requalification",
+  "status": "PASS",
+  "verified": {
+    "artifact_policy": {
+      "scientific_validation": "not_established",
+      "status": "unavailable_schema1_compatibility"
+    },
+    "brand": "TETHER",
+    "engine": {
+      "auxiliary_outputs_checked": 1,
+      "code_matches_current": true,
+      "external_anchor_checked": true,
+      "outputs": 8,
+      "receipt_sha256": "e8ba0942b910671be1288dd82afd5419ec8374decb68c447e18b78c4aa2de98a",
+      "scientific_validity": "not_established",
+      "semantic_consistency": "verified",
+      "source_artifacts_checked": 2,
+      "source_binding": "current_originals",
+      "status": "integrity_verified",
+      "tether_semantics": {
+        "coverage_state_machine": "verified",
+        "dossier_reconstruction": "verified",
+        "method": "tether.execution_semantics.v1",
+        "review_to_claims": "verified"
+      },
+      "trace_events": 37,
+      "unsealed_auxiliary_outputs": []
+    },
+    "external_anchor_checked": true,
+    "launcher_code_verified": true,
+    "presentation_projection": "exact_first_header_v1",
+    "receipt_sha256": "4e6ad7f38aa5cfee403b95168d91b522f3b196f18c15045ddc319311529d7fe6",
+    "scientific_validation": "not_established",
+    "status": "integrity_verified"
+  }
+}

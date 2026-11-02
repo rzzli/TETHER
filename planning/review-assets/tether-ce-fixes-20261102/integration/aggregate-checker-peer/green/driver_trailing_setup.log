@@ -1,0 +1,18 @@
+test_example (fictional.Test) ... ok
+
+----------------------------------------------------------------------
+Ran 2020 tests in 1.000s
+
+OK
+setUpClass (fictional.Test) ... 
+{
+  "status": "passed",
+  "stage": "complete",
+  "mode": "full",
+  "tests": {
+    "run": 2020,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  }
+}

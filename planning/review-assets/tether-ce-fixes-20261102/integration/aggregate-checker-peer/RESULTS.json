@@ -1,0 +1,502 @@
+{
+  "checker_sha256": "7784121f30bdba0e4e90c49b3dd47dd603ab779d42b39a80647bd7deb5cf993f",
+  "checker_stable": true,
+  "completed_at_utc": "2026-11-02T21:03:06.180238+00:00",
+  "controls": [
+    {
+      "checks": 501,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\QUALIFICATION.json": {
+          "bytes": 54765,
+          "sha256": "16fec5a9d5092fde373e72b0c7fa7eaa3b520750b515a82d908774e14d8c1f00"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\build-context-proof.json": {
+          "bytes": 42549,
+          "sha256": "93b0757c5e55f3da5121864e15f615436abe2ebe4093b42b026598492c9c2a99"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\commands\\06-installed-source-proof.stdout.txt": {
+          "bytes": 13277,
+          "sha256": "6759526e482a756fa253aaed17da9ce8777784ff56b45167b6d673ab5c2b6d35"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\commands\\09-asof-verify.stdout.txt": {
+          "bytes": 470,
+          "sha256": "356721d2e697cadb3400948e261c0b6f3ce2b937b9713620105bca72716f660d"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\commands\\11-tether-verify.stdout.txt": {
+          "bytes": 1176,
+          "sha256": "fe41bbc98d95508de6b08c77a5565f5b1f5d364ded7d558f9b4a0322fc7996cd"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\commands\\13-policy-source-verify.stdout.txt": {
+          "bytes": 1415,
+          "sha256": "e22a524c7c096d2eb4f236c62c0f9b6bd5173bfdd5cae9a6977a2141f81035f8"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\fixture-producer-pins.json": {
+          "bytes": 234,
+          "sha256": "10ccdade9178dd0fe96e4494afa99f6b1b19021ac8f2d39e8067ca130e45a209"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\source-manifest.json": {
+          "bytes": 11343,
+          "sha256": "13749c75d070477f8703c0d1e4ad1347a17d82a2031b4e0bcb3126223c084261"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\wheel-proofs.json": {
+          "bytes": 11545,
+          "sha256": "da3a7347722fe9b56db10dddd835466cb033afbb666b5b801c1c90abba1bf045"
+        }
+      },
+      "name": "current_installed_attempt02",
+      "observed": "accepted",
+      "value": "{'asof-target-agents': '91926acf59cdec9c76af70ecc21d0a98ba0db77666113f1d3dfa9afb3dbd2d51', 'tether-target-agents': 'c82267e7114700a417d759926e6b7216fc214ae824eddedd7d9af266d943aa2a'}"
+    },
+    {
+      "checks": 50,
+      "error": {
+        "message": "isolated build member bytes unchanged",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt01\\QUALIFICATION.json": {
+          "bytes": 54778,
+          "sha256": "6ea45e6f05a4b6702a44c81f04a45813b837c88b9313fd7f1f0b66f941531a79"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt01\\build-context-proof.json": {
+          "bytes": 42549,
+          "sha256": "016a130cde7461f11755d7d0a4ad4645416e54e86207420b81b520ac10b403d0"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt01\\source-manifest.json": {
+          "bytes": 11343,
+          "sha256": "0d3e801dc7409daf469a95f71aae0deb0e4b9f53c1883acfd2f61f00f7c67d3f"
+        }
+      },
+      "name": "stale_installed_attempt01",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "required evidence exists",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "missing_installed",
+      "observed": "rejected"
+    },
+    {
+      "checks": 69,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\data\\cache\\ce-archive-profile-v2-attempt01\\old\\manifest.json": {
+          "bytes": 3503,
+          "sha256": "74068823a345716221aa1de722e2b96c74b942577c7cec3153b8475708652955"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\ce-archive-profile-v2-attempt01\\tests.log": {
+          "bytes": 8097,
+          "sha256": "37c5e240884c3e26a2ab13e726f46f39a0799337ab666cd50440bf7ebc7b4cf1"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-archive-profile-0312-v1\\old\\manifest.json": {
+          "bytes": 3500,
+          "sha256": "62ad8b5faf250e4a157cc009ab160ec4adcfe063f6ea0ba80706e8cd9097d893"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-archive-profile-0312-v1\\tests.log": {
+          "bytes": 8097,
+          "sha256": "f576089c881d666deae94c18f82966993890fbbd70e0929e02afaea14a00f69f"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\APPLIED.json": {
+          "bytes": 749,
+          "sha256": "ce56affc32ba61763acd45cc6e1a8517eb29d35ce1636a3a5c2c72b9ec31ac06"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\PREPARED.json": {
+          "bytes": 1042,
+          "sha256": "518855d8cff6f9223a373ce065a1538c1e884c75a8002da7b953fbae83a9ee50"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\VALIDATION.json": {
+          "bytes": 5190,
+          "sha256": "3247bd9532aa26088362fadd078c36b011358ba4df1ece457ede16a33b497045"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\semantic_dependencies-0.3.12-atomic-retry-proposed.json": {
+          "bytes": 2638,
+          "sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\semantic_dependencies-0.3.12-first-candidate.json": {
+          "bytes": 2618,
+          "sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\APPLIED.json": {
+          "bytes": 692,
+          "sha256": "55b53eadb6a38b4d503bbb9e4ce1b3a3d2da24272200630125d6180d89c6aef9"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\PREPARED.json": {
+          "bytes": 1426,
+          "sha256": "aac780ba38f410bb0e8fefc948079509c847b58096ad620e7e9d043c5b3f343d"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\VALIDATION.json": {
+          "bytes": 5151,
+          "sha256": "bf6d7c5ad843209a53fd6f818a5ca05e350456abc6db48b034d0cb766a1e3821"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\semantic_dependencies-0.3.11.json": {
+          "bytes": 2466,
+          "sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\semantic_dependencies-0.3.12-proposed.json": {
+          "bytes": 2618,
+          "sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+        }
+      },
+      "name": "both_reviewed_profile_migrations",
+      "observed": "accepted",
+      "value": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\semantic_dependencies-0.3.11.json"
+    },
+    {
+      "checks": 59,
+      "error": {
+        "message": "archive profile qualification bound",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-archive-profile-0312-v1\\old\\manifest.json": {
+          "bytes": 3500,
+          "sha256": "62ad8b5faf250e4a157cc009ab160ec4adcfe063f6ea0ba80706e8cd9097d893"
+        },
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-archive-profile-0312-v1\\tests.log": {
+          "bytes": 8097,
+          "sha256": "f576089c881d666deae94c18f82966993890fbbd70e0929e02afaea14a00f69f"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\APPLIED.json": {
+          "bytes": 749,
+          "sha256": "ce56affc32ba61763acd45cc6e1a8517eb29d35ce1636a3a5c2c72b9ec31ac06"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\PREPARED.json": {
+          "bytes": 1042,
+          "sha256": "518855d8cff6f9223a373ce065a1538c1e884c75a8002da7b953fbae83a9ee50"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\semantic_dependencies-0.3.12-atomic-retry-proposed.json": {
+          "bytes": 2638,
+          "sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\semantic_dependencies-0.3.12-first-candidate.json": {
+          "bytes": 2618,
+          "sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\APPLIED.json": {
+          "bytes": 692,
+          "sha256": "55b53eadb6a38b4d503bbb9e4ce1b3a3d2da24272200630125d6180d89c6aef9"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\PREPARED.json": {
+          "bytes": 1426,
+          "sha256": "aac780ba38f410bb0e8fefc948079509c847b58096ad620e7e9d043c5b3f343d"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\VALIDATION.json": {
+          "bytes": 5151,
+          "sha256": "bf6d7c5ad843209a53fd6f818a5ca05e350456abc6db48b034d0cb766a1e3821"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\semantic_dependencies-0.3.11.json": {
+          "bytes": 2466,
+          "sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile\\semantic_dependencies-0.3.12-proposed.json": {
+          "bytes": 2618,
+          "sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+        }
+      },
+      "name": "stale_profile_validation_as_current",
+      "observed": "rejected"
+    },
+    {
+      "checks": 44,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\VALIDATION.json": {
+          "bytes": 3282,
+          "sha256": "3ad2b6e8f1f63a1b248c9f14346652e4b8cb932678359557db95773b9e5ef262"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\atomic-maintenance-results.json": {
+          "bytes": 1024,
+          "sha256": "ec07667289b1e014564020da0e92da30fd9430eaafd8238b66f6371474d106db"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\atomic-maintenance-tests.log": {
+          "bytes": 3618,
+          "sha256": "104d5b9231047577115eb013430b06698d07b18387086e84eef7461954a696d0"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\compatibility-results.json": {
+          "bytes": 1158,
+          "sha256": "f3ee29f5715ccd1bd001a3193a801c30e187b0ddbf6eb5b8c54fb3b6671e7bd2"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\compatibility-tests.log": {
+          "bytes": 13598,
+          "sha256": "146ea98b4ba2637735dca8ca71c0a18994c9a7f4a4788b948f58b22200562ea8"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\green-results.json": {
+          "bytes": 983,
+          "sha256": "2ca3041da4ece41f9673dbcda69233abbf07ecfcb0f804ec4e5341fed87cc408"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\green-tests.log": {
+          "bytes": 1842,
+          "sha256": "31b1b3824f128044dceb3d344ede49f6897f4b4ea9b39bb72b3d2eacff85233a"
+        },
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\windows-replace\\red-results.json": {
+          "bytes": 15006,
+          "sha256": "131d6f761002a7eeed7dcb8a0b5dad23cff23c2174f76c22f4d31b8ddf5dfc7f"
+        }
+      },
+      "name": "current_bounded_serde_controls",
+      "observed": "accepted"
+    },
+    {
+      "checks": 2,
+      "error": {
+        "message": "retained source pin matches",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "stale_serde_pin",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\package-tests-02.log": {
+          "bytes": 22101,
+          "sha256": "f88813329f1864639d81bd59cb5ca2871619517e229954a011161e3883fff73c"
+        }
+      },
+      "name": "current_facade_log",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\single_complete.log": {
+          "bytes": 28,
+          "sha256": "d16559564284683e024220379a207fec7ddb6f34dced8119f36c36b1f89a8d00"
+        }
+      },
+      "name": "fictional_log_single_complete",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "unittest terminal log matches",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\interrupted_without_terminal.log": {
+          "bytes": 24,
+          "sha256": "544a0d465a72715ca10d641e3afb47cc401028ee9e60601f58b33097558bff8e"
+        }
+      },
+      "name": "fictional_log_interrupted_without_terminal",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "unittest terminal log matches",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\wrong_count.log": {
+          "bytes": 28,
+          "sha256": "cb62b7494bd66db7c2d2a5bd4992d39527d0990d80dcd0fe5d1049b673161019"
+        }
+      },
+      "name": "fictional_log_wrong_count",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "unittest terminal log matches",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\explicit_skip.log": {
+          "bytes": 40,
+          "sha256": "49e2df56757aa5afc4b9f2c364ee906df1f3bd28d3316508c5ec8286d0055e47"
+        }
+      },
+      "name": "fictional_log_explicit_skip",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": false,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\earlier_ok_latest_interrupted.log": {
+          "bytes": 49,
+          "sha256": "89002509e90f4c526c9c0f393f1817f8c769f2c7e162c71a1d2e3ac63d823e83"
+        }
+      },
+      "name": "fictional_log_earlier_ok_latest_interrupted",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": false,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\earlier_ok_latest_skipped.log": {
+          "bytes": 65,
+          "sha256": "f12f91832cc1e54ec15ebd11a6ea2a0e1edac218058a5cacb2caf7d9bb84b97b"
+        }
+      },
+      "name": "fictional_log_earlier_ok_latest_skipped",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": false,
+      "expected": "rejected",
+      "inputs": {
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\integration\\aggregate-checker-peer\\fictional-logs\\second_suite_started_after_ok.log": {
+          "bytes": 62,
+          "sha256": "5f30542efd81d81ec3bc5459e830323b498fbf75b578d3762b92bda93fec4221"
+        }
+      },
+      "name": "fictional_log_second_suite_started_after_ok",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {},
+      "name": "full_count_predicate_exact_count_zero_skips",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "original exact full-count predicate",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "full_count_predicate_one_fewer_test",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "original exact full-count predicate",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "full_count_predicate_one_more_test",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "original exact full-count predicate",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "full_count_predicate_one_skip",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "original exact full-count predicate",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "full_count_predicate_one_error",
+      "observed": "rejected"
+    },
+    {
+      "checks": 0,
+      "error": {
+        "message": "'skipped'",
+        "type": "KeyError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "full_count_predicate_missing_skip_field",
+      "observed": "rejected"
+    },
+    {
+      "checks": 1,
+      "error": null,
+      "expectation_met": true,
+      "expected": "accepted",
+      "inputs": {},
+      "name": "live_gate_start_inventory_still_current",
+      "observed": "accepted"
+    },
+    {
+      "checks": 1,
+      "error": {
+        "message": "required evidence exists",
+        "type": "ValueError"
+      },
+      "expectation_met": true,
+      "expected": "rejected",
+      "inputs": {},
+      "name": "missing_source_bracket_rejected",
+      "observed": "rejected"
+    },
+    {
+      "checks": 139,
+      "expectation_met": true,
+      "expected": "rejected",
+      "failure": {
+        "message": "required evidence exists",
+        "type": "ValueError"
+      },
+      "name": "real_aggregate_missing_terminal_bracket",
+      "observed": "rejected"
+    }
+  ],
+  "model_calls": 0,
+  "observed_unexpected_acceptances": [
+    "fictional_log_earlier_ok_latest_interrupted",
+    "fictional_log_earlier_ok_latest_skipped",
+    "fictional_log_second_suite_started_after_ok"
+  ],
+  "provider_spending_usd": 0,
+  "runtime_test_tool_pinset_stable": true,
+  "schema_version": 1,
+  "scope": "Independent component checks; NOT full-gate execution or aggregate stage completion",
+  "status": "FINDINGS"
+}
