@@ -1,41 +1,48 @@
-# Active release checkpoint
+# Active checkpoint: local engineering complete
 
-Updated 1 November 2026. P09 is complete within its explicit local Windows scope.
-Owner declarations are deferred; do not ask again during engineering or invent
-facts. P08c/P10a and overall submission readiness remain incomplete.
+Updated 1 November 2026, America/Los_Angeles. P09 and P10b are complete in their
+explicit local scopes. P08c/P10a and overall P08/P10 remain pending because the
+owner deferred author facts and acceptance. Do not ask again during engineering,
+invent facts, mark the whole paper submission-ready, or start unrelated work.
 
-## Qualified evidence
+## Current deliverables
 
-- Final READY e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529;
-  frozen bundle data/cache/p09-runtime-bundle-20261101T213500Z stays unchanged.
-- 137 complete relocated originals/receipts;38 output hashes/90 decisions;
-  reconstruction289.938s/481636352Bpeak; source audit6862checks15.187s/298418176B.
-- Metadata review3481checks; installed no-bytecode suite82PASS;
-  separate P05 suite199PASS; final preparation/package40PASS.
-- At3629337 full1973/zero skips; core1973collected/1879executed/94approvedskips;
-  both probes, syntax and offline package/demo PASS. No live execs remain.
-- Independent final gate349checks and ZIP1595checks PASS, no findings.
-- ZIP315members/20712230B, exact repeat:
+- Working packet: data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip
+  53 members / 21,438,223 bytes / fresh-process repeat identical.
+  SHA e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433.
+  External record: paper/release/WORKING-PACKET-RECORD.json.
+- Current PDF: paper/asof-source-reporting-preprint-v2.pdf,18 pages,
+  SHA c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d.
+  Four status/release edits only; original17-page PDF and study stay unchanged.
+- P10 source/PDF review:30 items evaluated,28 pass/two conditional quantities
+  absent;273 fresh independent text units,18 visual pages,3 vectors,8 negative
+  controls and fresh-process PDF byte repeat pass. Packet peer200 checks pass.
+- P09 ZIP:315 members / 20,712,230 bytes,
   f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e.
-  data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip.
-  External record and qualification: paper/release/RELEASE-RECORD.json,
-  paper/release/qualification.json. Earlier failures/revisions remain retained.
+  Protocol e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529.
+  All137 originals/receipts,38 output hashes/90 decisions;source audit6862checks;
+  gate/archive peers349/1595 pass. Final native costs289.938/15.187s are P09,
+  separate from original P06 production/audit203.828/7.125s.
+- Main gates at3629337:full1973/zero skips,core1879 executed/94 approved skips;
+  syntax/probes/offline wheel/demo pass. Separate199/82/40 suites and five new
+  invented packaging boundaries pass.100 package/78 P05 source pins unchanged.
 
-## Next P10 operation
+Current assessment: planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md.
+Final review records under planning/review-assets/preprint-p10-20261101/.
+No live validation/replay processes remain. Earlier failures/candidates retained.
 
-Apply the conditional POST-P09-WORDING-REVIEW-v2 only to the release scope and
-narrow S9 rights exception, preserving all P06 methods/results/anchors. Produce
-new separately versioned working PDF; preserve the original P08 PDF and inner
-frozen bundle. New PDF marker has NOT yet run. PDF skills have been read.
-Use unchanged renderer through explicit logged output overrides, with fresh
-ordered-text, negative, geometry, visual-every-page and repeat checks. Do not
-reuse the old273-unit audit as proof for revised sources. Independent expected
-checks: preprint-p10-20261101/P10-EXPECTED-CHECKS-v1.json.
+## Next action requires owner facts, intentionally deferred
 
-Prepare a local working package, update full R01-R16/HR status and memory, and
-commit validated stages with timestamps. P08/P10 remain incomplete while factual
-owner declarations/names/contact are deferred. No publication/push/hosted CI.
-No model calls, new downloads, provider spending, protected-outcome/human-return
-reads, downloader changes or periodic-monitor restart. Native Linux replay,
-fresh136-file external reacquisition and scientific validity are not qualified.
-The goal API retains an older blocked state; manual work follows owner steering.
+After factual names/order, affiliations/contact, contributions, funding/conflicts,
+acknowledgments/oversight and author acceptance arrive, create a new final
+metadata/PDF/packet version and run appropriate content/layout/integrity checks.
+Publication/upload/push remains separately owner-controlled. No repeated request
+now. Current work is a bounded technical source-reporting preprint; broader
+clinical/MR/scorer/Virtual Biotech/T2-T5/H6 programmes remain conditional and
+uncompleted. No external expert responses are required or reused.
+
+No new downloads/model/provider calls, protected/human-return reads, original
+worker changes or monitor restart. Native Linux/current hosted jobs/fresh136-file
+external reacquisition/scientific validity remain unqualified. Physical I/O and
+platform cost unknown. Earlier Windows I/O causes remain unknown despite passing
+fresh-temp gates. Goal API retains older blocked state; do not replace/complete it.

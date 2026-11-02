@@ -1,0 +1,14 @@
+{
+  "status": "PASS_LOCAL_WORKING_PACKET_REVIEW",
+  "check_count": 200,
+  "unresolved_findings": [],
+  "privacy_findings": [],
+  "archive": {
+    "path": "data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip",
+    "sha256": "e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433",
+    "bytes": 21438223,
+    "members": 53,
+    "repeat_byte_identical": true,
+    "manifest_sha256": "4015b0dc68f7d6db8a9cbe793cd0e3a481ebd02ead2e09e8b8e50a69e6e8bf13"
+  }
+}

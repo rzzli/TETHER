@@ -10,6 +10,19 @@ updated: 2026-11-01
 
 ## Current recovery execution
 
+Current work: [[Project Progress Reassessment 2026-11-01 - Local Preprint Package]].
+P09 complete locally. P10 revised working paper/PDF independently audited:
+four status/release edits only, original scientific bytes unchanged;18 pages,
+273 fresh text units, all-page visual coverage and byte repeat pass. Independent
+30-item review evaluates28 PASS/2 conditional-not-stated, no findings. The53-member
+working packet e5c9478c repeats exactly;200 independent packet checks pass;P10b complete.
+Owner declarations/names/contact/acceptance remain deferred; P08/P10 incomplete,
+not submission-ready. Next remaining owner-gated work is a factual metadata
+revision and new final PDF/packet checks, not new experts or experiments.
+See [[research-log-2026-11-01-working-paper-packet]].
+
+### Prior installed reconstruction checkpoint (retained history)
+
 Current work: [[Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction]].
 P09c final revision e28461a5 passes installed Windows reconstruction of 38 output
 hashes/90 decisions from 137 complete originals/receipts, 6,862 source checks and

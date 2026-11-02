@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "method": "p10.final_documentation_qa.v1",
+  "status": "PASS_FINAL_DOCUMENTATION_QA",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "reviewed_at_utc": "2026-11-02T00:00:55.221649+00:00",
+  "documents": {
+    "README.md": {
+      "sha256": "ebb6100592da76acef6501529b5366b35f4a072721de992e4225745da06fd176",
+      "bytes": 15205
+    },
+    "TODO.md": {
+      "sha256": "54e86efb977663e73d24c66b0e57db7ea964d358e7c9152f1b16896ab6ee4fc3",
+      "bytes": 15642
+    },
+    "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md": {
+      "sha256": "2872e39c99bed2ef7a702cab6377badd821ecb5eff53d8a36687dfa5fb2889f0",
+      "bytes": 10814
+    },
+    "planning/Project Progress Reassessments.md": {
+      "sha256": "b83b8f2e933f57cb33a1df6e0cde52daeb8fcb62aecfcfdc200b4e2cbe7eb11c",
+      "bytes": 23324
+    },
+    "memory/project-goals.md": {
+      "sha256": "94ff1d5198397fc56789b1a14db62c46cb4528a6b21270fdae81ea036a3ba4a2",
+      "bytes": 140578
+    },
+    "memory/MEMORY.md": {
+      "sha256": "fd145715df4b63aca761eb1fa9cc6d6f94e543626d9a48d03330426c7539d181",
+      "bytes": 35870
+    },
+    "memory/research-log-2026-11-01-working-paper-packet.md": {
+      "sha256": "fe1e04a9e8ce9c32548e9ea2b2e363368de6e1309c98fc2347ee5996697ea73a",
+      "bytes": 2497
+    }
+  },
+  "checks_evaluated": 15,
+  "checks": [
+    {
+      "id": 1,
+      "name": "Current phase status",
+      "status": "PASS",
+      "evidence": "P09/P10b are complete only locally; P08/P08c/P10/P10a remain deferred/uncompleted."
+    },
+    {
+      "id": 2,
+      "name": "Packet and test status",
+      "status": "PASS",
+      "evidence": "No active packet or full/core gate remains falsely pending. Packet numbers and repeat agree with independently pinned 200-check peer metadata."
+    },
+    {
+      "id": 3,
+      "name": "Test accounting",
+      "status": "PASS",
+      "evidence": "Full 1,973 executed/zero skips and core 1,973 collected, 1,879 executed/94 approved skips remain distinct. Overlapping checks are not scientific samples."
+    },
+    {
+      "id": 4,
+      "name": "README continuity",
+      "status": "PASS",
+      "evidence": "Exactly two changed regions invert to the earlier 43a5c3f2 byte pin; all other README bytes remain unchanged."
+    },
+    {
+      "id": 5,
+      "name": "Relative and wiki links",
+      "status": "PASS",
+      "evidence": "All 114 relative inline local links and 256 wiki targets resolve. One historical absolute local report link also exists, with a retained portability caveat."
+    },
+    {
+      "id": 6,
+      "name": "Recovery coverage",
+      "status": "PASS",
+      "evidence": "Latest assessment covers R01-R16 individually and HR1-HR4 as retired dependencies, without calling deferral/retirement a successful experiment."
+    },
+    {
+      "id": 7,
+      "name": "Negative evidence",
+      "status": "PASS",
+      "evidence": "R07 six complete/zero passes, original FAILED/INCOMPLETE_TIMEOUT and closed negative P04/P04b branch remain retained."
+    },
+    {
+      "id": 8,
+      "name": "Conditional science",
+      "status": "PASS",
+      "evidence": "Clinical/original expert H5, MR/scorer, independent-study, Virtual Biotech, T2-T5/H6 and optional native work remain conditional and uncompleted."
+    },
+    {
+      "id": 9,
+      "name": "Population distinctions",
+      "status": "PASS",
+      "evidence": "65 missing inputs, 36 unqualified endpoints, 17/32 states and 0/12 joint-ready clinical packages remain distinct from the twelve paper units."
+    },
+    {
+      "id": 10,
+      "name": "Deferred facts",
+      "status": "PASS",
+      "evidence": "Owner facts/declarations/author acceptance remain deferred; no inferred no-funding/no-conflict fact or new expert dependency appears."
+    },
+    {
+      "id": 11,
+      "name": "Rights and publication",
+      "status": "PASS",
+      "evidence": "No public deposit/publication/push, hosted/Linux or fresh-reacquisition success is claimed; HGNC/OT, new G0 and allowlist limits remain narrow."
+    },
+    {
+      "id": 12,
+      "name": "Costs and failures",
+      "status": "PASS",
+      "evidence": "P06 costs/results and failed attempts stay intact; later passing gates do not establish the old intermittent-I/O root cause; platform cost/physical IO stay unknown."
+    },
+    {
+      "id": 13,
+      "name": "Current versus history",
+      "status": "PASS",
+      "evidence": "Current summaries lead explicitly; old pending/next/expert wording remains scoped as dated/prior history."
+    },
+    {
+      "id": 14,
+      "name": "Remaining action",
+      "status": "PASS",
+      "evidence": "After owner facts arrive, a new metadata/PDF/packet version and author acceptance precede separate owner-controlled publication. No metadata-only scientific rerun is required."
+    },
+    {
+      "id": 15,
+      "name": "Scope of this QA",
+      "status": "PASS",
+      "evidence": "Only status text/link metadata/neutral peer JSON checked; no paper/PDF changes, science replay, protected/human/source reads or broad testing."
+    }
+  ],
+  "unresolved_findings": [],
+  "todo_phase_marks": {
+    "P08": " ",
+    "P08c": " ",
+    "P09": "x",
+    "P09a": "x",
+    "P09b": "x",
+    "P09c": "x",
+    "P09d": "x",
+    "P10": " ",
+    "P10a": " ",
+    "P10b": "x"
+  },
+  "readme_inverse": {
+    "regions": 2,
+    "restored_sha256": "43a5c3f21432ebc9426b7c32fb46485cd5f861dcd5948da1073a31863ae6bdcd",
+    "matches_prior_review_pin": true,
+    "other_bytes_unchanged": true
+  },
+  "recovery_dispositions": {
+    "R01": "Bounded source-reporting technical preprint accepted; original broader hypotheses remain open",
+    "R02": "Frozen scientific/code pins retained; final local release gates pass; later paper revision separately bound",
+    "R03": "New installed Windows reconstruction and source audit qualify; old private archive G0 is a separate unverified public-replay scope",
+    "R04": "v2 hardening retained; reviewed auditor/bridge/wheel defects fixed; whole-suite fixture/optional-boundary corrections pass",
+    "R05": "Predeclared rules/failures retained; no further model branch",
+    "R06": "137-original replay, independent projection, journals, exact outputs and accounting qualify locally",
+    "R07": "Six complete interpretation responses/zero frozen-contract passes remain a negative result",
+    "R08": "No certified fresh scientific cohort or qualified study independence; twelve reporting units are not a clinical holdout",
+    "R09": "Original FAILED/INCOMPLETE_TIMEOUT retained; P04/P04b closed negative; no repair/scaling disguised as evaluation",
+    "R10": "Bounded negative development reported; original expert-aligned scientific pilot remains untested",
+    "R11": "Frozen38/90 descriptive schedule complete; no independent-study power/significance claim",
+    "R12": "Original study/results audited; separately qualified technical reconstruction; P10b working paper/packet independently checked",
+    "R13": "17/32 observable primary registry states do not establish clinical labels;36 endpoints remain unqualified",
+    "R14": "Locus-only linkage/context limitations explicit;MR, causal features, training/calibration remain deferred;probabilities null",
+    "R15": "Locked clinical and full Virtual Biotech comparisons remain uncompleted; literature positioning is not competitor execution",
+    "R16": "P09/P10b complete locally;P08c/P10a and final author acceptance deferred;T2-T5/H6 conditional later programmes"
+  },
+  "HR1_to_HR4": "Retired; historical returns/descendants archive-only and excluded from new inputs/evaluation.",
+  "links": {
+    "relative_inline_local": 114,
+    "historical_absolute_local": 1,
+    "wiki": 256,
+    "unresolved": [],
+    "counts_by_document": {
+      "README.md": {
+        "inline_relative_local": 37,
+        "inline_absolute_local": 0,
+        "wiki": 0,
+        "external": 0
+      },
+      "TODO.md": {
+        "inline_relative_local": 8,
+        "inline_absolute_local": 0,
+        "wiki": 0,
+        "external": 0
+      },
+      "planning/Project Progress Reassessment 2026-11-01 - Local Preprint Package.md": {
+        "inline_relative_local": 11,
+        "inline_absolute_local": 0,
+        "wiki": 0,
+        "external": 0
+      },
+      "planning/Project Progress Reassessments.md": {
+        "inline_relative_local": 47,
+        "inline_absolute_local": 0,
+        "wiki": 0,
+        "external": 0
+      },
+      "memory/project-goals.md": {
+        "inline_relative_local": 11,
+        "inline_absolute_local": 1,
+        "wiki": 126,
+        "external": 0
+      },
+      "memory/MEMORY.md": {
+        "inline_relative_local": 0,
+        "inline_absolute_local": 0,
+        "wiki": 127,
+        "external": 0
+      },
+      "memory/research-log-2026-11-01-working-paper-packet.md": {
+        "inline_relative_local": 0,
+        "inline_absolute_local": 0,
+        "wiki": 3,
+        "external": 0
+      }
+    },
+    "historical_absolute_links": [
+      {
+        "source": "memory/project-goals.md",
+        "target": "D:/Projects/drug_target_agents/reports/IL6R dossier scientific audit.md",
+        "exists": true,
+        "scope": "Retained historical repository guide; not a new packet link or redistributed payload."
+      }
+    ],
+    "method": "Existence/filename metadata only. Relative to document or repository root; otherwise unique exact Markdown basename preserving dots. Linked bodies not read."
+  },
+  "packet_evidence": {
+    "path": "planning/review-assets/preprint-p10-20261101/WORKING-PACKET-PEER-REVIEW-v1.json",
+    "sha256": "d66c3734eebefa0fa66ca85406c8f93cf4df5087462da522694d1b7de9f7089d",
+    "checks_passed": 200,
+    "archive": {
+      "path": "data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip",
+      "sha256": "e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433",
+      "bytes": 21438223,
+      "members": 53,
+      "repeat_byte_identical": true,
+      "manifest_sha256": "4015b0dc68f7d6db8a9cbe793cd0e3a481ebd02ead2e09e8b8e50a69e6e8bf13"
+    },
+    "scope": "Peer-report metadata cross-check; not a repeated ZIP readback/audit."
+  },
+  "independent_scope_crosscheck": {
+    "agent": "/root/p05_registry_design_review/p09_auditor_artifact_review",
+    "status": "GREEN",
+    "scope": "Same current status sections only; no tests/data/edits."
+  },
+  "scope_limits": [
+    "Only the seven requested documentation bodies and expressly supplied neutral packet peer JSON were read.",
+    "Legacy project-goals absolute report link is an existing local-only history reference; it does not establish clean-checkout portability of all historical memory links.",
+    "Old then-current labels remain as history; they do not reactivate superseded engineering/expert tasks.",
+    "No paper/PDF changes, actual packet/source replay, provider/protected/human/model-output reads, network calls or broad suites.",
+    "Facts/author acceptance are deferred; no submission readiness, new scientific validation or publication authorization is inferred."
+  ],
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "broad_tests_rerun": false,
+  "scientific_validation": "not_established",
+  "publication_authorized": false,
+  "owner_declarations": "deferred"
+}

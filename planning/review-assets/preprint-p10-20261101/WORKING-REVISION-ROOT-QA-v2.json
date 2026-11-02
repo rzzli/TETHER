@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "method": "p10.root_working_revision_qa.v2",
+  "status": "PASS_ROOT_PRESENTATION_AND_RETENTION_CHECKS",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "check_count": 73,
+  "checks": [
+    {
+      "check": "four status/release paragraphs only",
+      "passed": true
+    },
+    {
+      "check": "manuscript.md final source hash",
+      "passed": true
+    },
+    {
+      "check": "manuscript.md unique inverse delta",
+      "passed": true
+    },
+    {
+      "check": "manuscript.md all other bytes unchanged",
+      "passed": true
+    },
+    {
+      "check": "supplement.md final source hash",
+      "passed": true
+    },
+    {
+      "check": "supplement.md unique inverse delta",
+      "passed": true
+    },
+    {
+      "check": "supplement.md unique inverse delta",
+      "passed": true
+    },
+    {
+      "check": "supplement.md unique inverse delta",
+      "passed": true
+    },
+    {
+      "check": "supplement.md all other bytes unchanged",
+      "passed": true
+    },
+    {
+      "check": "paper/asof-source-reporting-preprint.pdf historical bytes retained",
+      "passed": true
+    },
+    {
+      "check": "paper/PDF-BUILD.json historical bytes retained",
+      "passed": true
+    },
+    {
+      "check": "paper/results/ARTIFACTS.json historical bytes retained",
+      "passed": true
+    },
+    {
+      "check": "tools/science/build_preprint_manuscript.py historical bytes retained",
+      "passed": true
+    },
+    {
+      "check": "inner frozen protocol unchanged",
+      "passed": true
+    },
+    {
+      "check": "final PDF hash",
+      "passed": true
+    },
+    {
+      "check": "18 pages and three vector figures",
+      "passed": true
+    },
+    {
+      "check": "no raster or out-of-page glyphs",
+      "passed": true
+    },
+    {
+      "check": "273 freshly observed ordered units",
+      "passed": true
+    },
+    {
+      "check": "no changed/missing/duplicate/reordered units",
+      "passed": true
+    },
+    {
+      "check": "local render byte repeat",
+      "passed": true
+    },
+    {
+      "check": "eight negative presentation controls",
+      "passed": true
+    },
+    {
+      "check": "versioned output override recorded",
+      "passed": true
+    },
+    {
+      "check": "source delta binding",
+      "passed": true
+    },
+    {
+      "check": "page1 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page1 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page2 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page2 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page3 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page3 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page4 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page4 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page5 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page5 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page6 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page6 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page7 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page7 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page8 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page8 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page9 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page9 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page10 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page10 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page11 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page11 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page12 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page12 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page13 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page13 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page14 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page14 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page15 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page15 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page16 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page16 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page17 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page17 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "page18 current preview hash",
+      "passed": true
+    },
+    {
+      "check": "page18 visual continuity",
+      "passed": true
+    },
+    {
+      "check": "all18 previews inventoried",
+      "passed": true
+    },
+    {
+      "check": "paper README link manuscript.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link supplement.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link asof-source-reporting-preprint-v2.pdf",
+      "passed": true
+    },
+    {
+      "check": "paper README link results/README.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link references.bib",
+      "passed": true
+    },
+    {
+      "check": "paper README link RELATED-WORK-SOURCE-AUDIT.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link release/qualification.json",
+      "passed": true
+    },
+    {
+      "check": "paper README link release/RELEASE-RECORD.json",
+      "passed": true
+    },
+    {
+      "check": "paper README link AUTHOR-DECLARATIONS.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link ../TODO.md",
+      "passed": true
+    },
+    {
+      "check": "paper README link PDF-BUILD-v2.json",
+      "passed": true
+    },
+    {
+      "check": "paper README link asof-source-reporting-preprint.pdf",
+      "passed": true
+    },
+    {
+      "check": "paper README link ../planning/review-assets/preprint-p08-20261101/PDF-RENDERER-PEER-REVIEW-v1.md",
+      "passed": true
+    }
+  ],
+  "unresolved_findings": [],
+  "visual_pages": [
+    {
+      "page": 1,
+      "sha256": "dafc397e80bc5a484a272a61486437f86f7e34794cc4a9c56aed1e15bb4c02c2",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 2,
+      "sha256": "8510aa351236a6c2d61feb059d7abfbdaa453cb4082ee76547c50f7a553eaa26",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 3,
+      "sha256": "559d022262c94ea0ed7fb98e8caf92103f8855805b454b4d61f2b67ef4752750",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 4,
+      "sha256": "7983debd64b35164e05d4e50dfe3a7089b702aeaa59595e5d1517cee151b85d1",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 5,
+      "sha256": "1d73e92dbe8cb6d629413f31423c2a2a7dd65ba604e7ffa1bc587e53b14cd520",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 6,
+      "sha256": "db2bc43e1122838b1421418296750b163d74b77822ebb0926b895c050f88d06a",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 7,
+      "sha256": "443834490c705901af54b28ed091744dde3b59dcc50c0605c0689d08d9be911c",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 8,
+      "sha256": "9cc86ca7acb00e8bdeb7620f034ce5d4829058ed1465465edd22db862f70ea5a",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 9,
+      "sha256": "259dfdec7703c09984538bb64b92ac4d22b0a20ae6341d4e6ba0a9b133ab8dba",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 10,
+      "sha256": "fc60c5713c04ec8adda63583be32f26328870a03cca4801ab8f82346aca96968",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 11,
+      "sha256": "d9c3a516d9fd07c3e21f8bbcdc268e12cca5d231c721d560e7918797d8356e35",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 12,
+      "sha256": "c60fb9401ae73caa96780c968a66dc3142345cc3924b6ec29f7373b04d1a6a62",
+      "visual_review": "PASS",
+      "basis": "final changed page12 separately viewed"
+    },
+    {
+      "page": 13,
+      "sha256": "050284780b526fbae6be3eb4a278f538a1a08babcc048a1193ccc190b3e851ce",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 14,
+      "sha256": "8b808be72871b108d8102c388d71796af1cbf87922ad1255468dbc2ace4526ef",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 15,
+      "sha256": "2150c9b10c8378f913e941ac557ba1526cdf87b7d3bd68dfc19240aa9c9b94a5",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 16,
+      "sha256": "7a3b1351ad3aedb126f8931c7b0122a81a05b78e362fa9e3ef240e37209ea897",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 17,
+      "sha256": "84b740a65b5947ea1603d8af7030f44ab436701dbd1fef93ad019523ecbe0f15",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    },
+    {
+      "page": 18,
+      "sha256": "c0e4b6c56c86fad3a7eb652dbba3aebb75da9b2077ee26482d926719915d516c",
+      "visual_review": "PASS",
+      "basis": "byte-identical to separately viewed candidate1 page"
+    }
+  ],
+  "visual_scope": "All18candidate1 pages viewed with native image tool;17final previews byte-identical; final changed page12 viewed separately. Sparse reference continuation and intact-control-table pagination accepted for working draft.",
+  "build_manifest_sha256": "2d056ffff02dc8977790408d6f1ead452a929c837c86291d2634ceaf2cb8b2d7",
+  "source_delta_sha256": "974ab8bc140b6531445e75cafa18d3ef1242816aa958c55d938f324f1212f50e",
+  "paper_readme_sha256": "b2380449d281d172211aad75792b60393535facabe1c45331092c9c1187f32ee",
+  "resolved_readme_links": [
+    "manuscript.md",
+    "supplement.md",
+    "asof-source-reporting-preprint-v2.pdf",
+    "results/README.md",
+    "references.bib",
+    "RELATED-WORK-SOURCE-AUDIT.md",
+    "release/qualification.json",
+    "release/RELEASE-RECORD.json",
+    "AUTHOR-DECLARATIONS.md",
+    "../TODO.md",
+    "PDF-BUILD-v2.json",
+    "asof-source-reporting-preprint.pdf",
+    "../planning/review-assets/preprint-p08-20261101/PDF-RENDERER-PEER-REVIEW-v1.md"
+  ],
+  "old_scientific_review_carry_forward": "Exact inverse-delta continuity for unedited bytes; four new status/release paragraphs need separate independent content review.",
+  "owner_declarations": "deferred",
+  "publication_authorized": false,
+  "source_originals_or_protected_records_read": 0,
+  "scientific_validation": "not_established"
+}

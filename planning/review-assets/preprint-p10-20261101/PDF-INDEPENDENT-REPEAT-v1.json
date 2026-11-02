@@ -1,0 +1,156 @@
+{
+  "agent_visible": false,
+  "build_manifest": {
+    "path": "paper/PDF-BUILD-v2.json",
+    "sha256": "2d056ffff02dc8977790408d6f1ead452a929c837c86291d2634ceaf2cb8b2d7"
+  },
+  "controls": {
+    "publication": {
+      "negative_cases": [
+        "invalid_preview_path",
+        "render_failure"
+      ],
+      "prior_pair_preserved": true,
+      "status": "PASS"
+    },
+    "retention": {
+      "negative_cases": [
+        "omission",
+        "duplicate",
+        "reorder",
+        "repeated_word_loss",
+        "table_cell_change",
+        "caption_loss"
+      ],
+      "positive": 1,
+      "status": "PASS"
+    }
+  },
+  "figure_checks": {
+    "D:\\Projects\\drug_target_agents\\paper\\results\\figures\\figure1-flow.pdf": {
+      "path": "paper/results/figures/figure1-flow.pdf",
+      "sha256": "f50b31e0892432e8e1460d11783b9ff3b97ec0c25f10065796335b43fa2653e6"
+    },
+    "D:\\Projects\\drug_target_agents\\paper\\results\\figures\\figure2-availability.pdf": {
+      "path": "paper/results/figures/figure2-availability.pdf",
+      "sha256": "f59c626cf48d1a0c5000b9f93411dcd3812a161f8fd71c145909bb6eba3e6aca"
+    },
+    "D:\\Projects\\drug_target_agents\\paper\\results\\figures\\figure3-controls.pdf": {
+      "path": "paper/results/figures/figure3-controls.pdf",
+      "sha256": "663a19e6b523d2bfd782bf326d23609d3cd2cca033b8b9d3736a56ffccf66b43"
+    }
+  },
+  "figure_manifest": {
+    "path": "paper/results/ARTIFACTS.json",
+    "sha256": "84d4a31e842d3085133d384429729ef2501425d33bf2b92f65d9c64699a87428"
+  },
+  "font_checks": {
+    "Body": {
+      "bytes": 1045720,
+      "embedding_policy": "subset_when_used",
+      "packaged_font_file": false,
+      "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+    },
+    "Body-Bold": {
+      "bytes": 989780,
+      "embedding_policy": "subset_when_used",
+      "packaged_font_file": false,
+      "sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+    },
+    "Body-BoldItalic": {
+      "bytes": 724872,
+      "embedding_policy": "subset_when_used",
+      "packaged_font_file": false,
+      "sha256": "267a411525980d648f10a7222a6ff1ebe4d4feeefbf9b3100cae2b5cfab5594a"
+    },
+    "Body-Italic": {
+      "bytes": 721584,
+      "embedding_policy": "subset_when_used",
+      "packaged_font_file": false,
+      "sha256": "86b32db9a06f9694e2a3760c42e5117bcdc5cc1255bb5186ca8ce0305e22f288"
+    },
+    "Mono": {
+      "bytes": 453088,
+      "embedding_policy": "subset_when_used",
+      "packaged_font_file": false,
+      "sha256": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179"
+    }
+  },
+  "generated_vector_overlays": 3,
+  "generated_visible_units": 273,
+  "independent_raw_text_inventory_geometry_and_visual_review": "Separate parent audit; not claimed here.",
+  "method": "p10.independent_local_pdf_repeat.v1",
+  "model_calls": 0,
+  "network_calls": 0,
+  "operation_marker_not_required": "Read-only in-memory audit; synthetic publication failures only.",
+  "operation_marker_ran": false,
+  "paper_pdf_or_build_published": false,
+  "pdf": {
+    "bytes": 182805,
+    "compared_to_retained_pdf": true,
+    "in_memory_only": true,
+    "path": "paper/asof-source-reporting-preprint-v2.pdf",
+    "render_seconds": 0.3589999999385327,
+    "sha256": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d"
+  },
+  "protected_document_after": {
+    "paper/PDF-BUILD-v2.json": "2d056ffff02dc8977790408d6f1ead452a929c837c86291d2634ceaf2cb8b2d7",
+    "paper/PDF-BUILD.json": "f920afd5ea4259ca8f8f4da4255dc43a0d317978cffabf7434dc8ac4ba77dcb5",
+    "paper/asof-source-reporting-preprint-v2.pdf": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d",
+    "paper/asof-source-reporting-preprint.pdf": "4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588",
+    "paper/manuscript.md": "79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507",
+    "paper/supplement.md": "d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85"
+  },
+  "protected_document_before": {
+    "paper/PDF-BUILD-v2.json": "2d056ffff02dc8977790408d6f1ead452a929c837c86291d2634ceaf2cb8b2d7",
+    "paper/PDF-BUILD.json": "f920afd5ea4259ca8f8f4da4255dc43a0d317978cffabf7434dc8ac4ba77dcb5",
+    "paper/asof-source-reporting-preprint-v2.pdf": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d",
+    "paper/asof-source-reporting-preprint.pdf": "4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588",
+    "paper/manuscript.md": "79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507",
+    "paper/supplement.md": "d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85"
+  },
+  "protected_document_bytes_unchanged": true,
+  "renderer": {
+    "path": "tools/science/build_preprint_manuscript.py",
+    "sha256": "0d6044702a8e6f97de605f7f92acf140c337f7a3f19b1bf6a2c0abb0b432238f"
+  },
+  "role": "evaluation_only",
+  "schema_version": 1,
+  "scientific_validation": "not_established",
+  "scope": "Fresh-process repeat with the retained renderer; not an independent renderer implementation or scientific/source replay.",
+  "source_checks": {
+    "manuscript.md": {
+      "bytes": 31223,
+      "sha256": "79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507"
+    },
+    "supplement.md": {
+      "bytes": 20278,
+      "sha256": "d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85"
+    }
+  },
+  "source_provider_or_reference_values_read": false,
+  "status": "PASS_READONLY_IN_MEMORY_REPEAT",
+  "tool_versions": {
+    "interpreter": "C:\\Users\\zzric\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "pdfplumber": "0.11.9",
+    "pypdf": "6.10.0",
+    "python": "3.12.14",
+    "reportlab": "4.4.9"
+  },
+  "wrapper": {
+    "effective_overrides": {
+      "BUILD": "paper/PDF-BUILD-v2.json",
+      "OUTPUT": "paper/asof-source-reporting-preprint-v2.pdf",
+      "publish_default_output_paths": "explicit versioned paths; test overrides preserved"
+    },
+    "frozen_P09_inner_paper_modified": false,
+    "phase": "P10",
+    "prior_pdf_preserved": "paper/asof-source-reporting-preprint.pdf",
+    "revision": 2,
+    "source_delta_path": "planning/review-assets/preprint-p10-20261101/SOURCE-DELTA-v2.json",
+    "source_delta_sha256": "974ab8bc140b6531445e75cafa18d3ef1242816aa958c55d938f324f1212f50e",
+    "wrapper_path": "planning/review-assets/preprint-p10-20261101/build_working_pdf_v2.py",
+    "wrapper_sha256": "a43fdb5afafcbca44f738ececba3c567c6e12c053153e85b865433e2aaf01e39"
+  },
+  "wrapper_default_and_explicit_destinations_preserved": true
+}

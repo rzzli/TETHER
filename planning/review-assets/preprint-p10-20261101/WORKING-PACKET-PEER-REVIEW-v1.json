@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "method": "p10.independent_working_packet_peer_review.v1",
+  "status": "PASS_LOCAL_WORKING_PACKET_REVIEW",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "reviewed_at_utc": "2026-11-01T23:54:58.946678+00:00",
+  "archive": {
+    "path": "data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip",
+    "sha256": "e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433",
+    "bytes": 21438223,
+    "members": 53,
+    "repeat_byte_identical": true,
+    "manifest_sha256": "4015b0dc68f7d6db8a9cbe793cd0e3a481ebd02ead2e09e8b8e50a69e6e8bf13"
+  },
+  "public_qualification_sha256": "eaed4f5765d83c6814d91d574e85334a74e15edabed8e2f4f039b3b2e02db330",
+  "external_record": {
+    "path": "paper/release/WORKING-PACKET-RECORD.json",
+    "sha256": "e77a562d49ef2b81e0fca7c0c322d621a70df291dc987433e7299e3f55c6fc03",
+    "bytes": 1455
+  },
+  "checker": {
+    "path": "planning/review-assets/preprint-p10-20261101/audit_working_packet_v1.py",
+    "sha256": "5209b11e33555e22a7fa97701ad8515af2c034f20da2d6ee343b9cb2130ff1be",
+    "bytes": 14387
+  },
+  "detailed_checks": {
+    "path": "planning/review-assets/preprint-p10-20261101/WORKING-PACKET-CHECKS-v1.json",
+    "sha256": "58c55d0405cfd445f9dfb6aa2d91b9aad1bd1dc4a917f74b970c4f0327f35864",
+    "bytes": 25179
+  },
+  "execution_log": {
+    "path": "planning/review-assets/preprint-p10-20261101/WORKING-PACKET-CHECKER-v1.txt",
+    "sha256": "13b57bccc575f832c33ff5cd98abdf6154d8737ff7fc459b1719b7c936550166",
+    "bytes": 502
+  },
+  "command": ".venv/Scripts/python.exe -B planning/review-assets/preprint-p10-20261101/audit_working_packet_v1.py",
+  "checks_evaluated": 200,
+  "checks_passed": 200,
+  "unresolved_findings": [],
+  "privacy_findings": [],
+  "closure": {
+    "members": 53,
+    "manifest_file_records": 52,
+    "manifest_self_excluded": true,
+    "portable_results_files": 39,
+    "historical_result_payloads_exact": 37,
+    "relative_links_resolved": 18,
+    "native_manuscript_figure_links_resolved": 3,
+    "role_counts": {
+      "evaluation_only": 2,
+      "working_draft_reviewer_instructions": 1,
+      "unfilled_owner_declaration_checklist": 1,
+      "working_draft_documentation": 6,
+      "portable_presentation_metadata": 2,
+      "aggregated_technical_results": 37,
+      "P09_reproduction_instructions": 1,
+      "public_P09_release_hash_record": 1,
+      "immutable_P09_reproduction_archive": 1
+    }
+  },
+  "nested_P09": {
+    "archive_sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+    "members": 315,
+    "protocol_sha256": "e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529",
+    "immutable": true,
+    "provider_payloads_parsed": false,
+    "prior_independent_review": "planning/review-assets/preprint-p09-20261101/RELEASE-ZIP-PEER-REVIEW-v1.json",
+    "prior_independent_review_sha256": "25926439095239119c9246dda072059e8b64add40ae345031a233546df4d7867"
+  },
+  "source_PDF_evidence": {
+    "independent_audit": {
+      "path": "planning/review-assets/preprint-p10-20261101/P10-INDEPENDENT-AUDIT-v1.json",
+      "sha256": "393d845f8134911778a092679c92dbd9e1c496a4618a186fd09f19817b3c5133",
+      "bytes": 26643
+    },
+    "current_PDF_sha256": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d",
+    "pages": 18,
+    "source_audit_checks": 30,
+    "source_audit_passed": 28,
+    "conditional_quantities_not_stated": 2,
+    "ordered_visible_units": 273,
+    "vector_figures": 3,
+    "all_page_visual_coverage": 18,
+    "new_visual_review_by_this_checker": false
+  },
+  "manual_scope_review": [
+    "Outer README equals the approved standalone WORKING-PACKET-README.md exactly; all 18 relative Markdown links resolve, including the 3 manuscript figure links.",
+    "The six source/checklist pins and reviewed current PDF match the packet. The nested earlier P08 paper is retained as immutable P09 history, not substituted for the outer current paper.",
+    "All 37 historical P07 numerical/table/figure payloads match independently pinned nested expected commitments. The portable README/ARTIFACTS are explicitly new metadata; the historical S1 manifest anchor is not relabeled.",
+    "Current primary P06 timings 203.828/7.125 seconds remain distinct from final P09 qualification timings 289.938/15.187 seconds. Local gates are not claimed hosted; overlapping checks are not scientific observations.",
+    "Provider originals remain external except the explicit nested CC0 HGNC exception; 136 Open Targets exact-byte reacquisition remains untested. Rights cards and limits are inherited unchanged through the immutable nested P09 archive; no new legal certification.",
+    "The raw PDF build manifests, renderer/font files, original/control outputs, reference answers, private journals, protected/human descendants and unconfirmed owner facts are outside the outer positive allowlist.",
+    "PDF qualification is a sanitized new metadata projection with explicit status normalization; it does not impersonate raw build evidence. The post-result packet timestamp is not study preregistration.",
+    "Owner facts and author acceptance remain deferred/pending. Submission-ready, public deposit/publication, current hosted jobs and scientific/study-independence claims are not established."
+  ],
+  "retained_checker_failure": {
+    "prototype": {
+      "path": "planning/review-assets/preprint-p10-20261101/audit_working_packet_INITIAL_prototype.py.txt",
+      "sha256": "66b551c7e27dce954a7e9753c7e0e9b963d21a7c1fb5206dbfa87020ce7fe158",
+      "bytes": 14608
+    },
+    "log": {
+      "path": "planning/review-assets/preprint-p10-20261101/WORKING-PACKET-CHECKER-INITIAL-v1.txt",
+      "sha256": "a50a5d613aa2c8a9824c9dc27671b0e4aa7e3e4da44d2bab7efacf0ea8e1f178",
+      "bytes": 405
+    },
+    "classification": "Checker-only unclosed parenthesis; no packet defect. Corrected before successful audit. The preserved invalid prototype is text, not executable Python.",
+    "prototype_predicate_adjustment": "Fresh PDF repeat status is the declared PASS_BYTE_IDENTICAL string, not Boolean True; redundant dead conditional removed."
+  },
+  "scope_limits": [
+    "This checker imports no packet assembler/helper and uses independently pinned paper/results/P09 commitments.",
+    "No actual provider/human/protected originals read or tests rerun. Nested P09 remains an opaque immutable archive except approved public manifest/expected-payload metadata and retained old PDF hash.",
+    "Current PDF bytes/source/audit bindings were checked; new all-page visual/text/vector review is carried by the separately pinned393d independent audit, not repeated here.",
+    "Rights/disposition consistency is carried by unchanged nested P09 cards/licences; no new legal certification, renderer portability or publication permission.",
+    "30source/PDF checklistitems comprise28PASSplus2conditionalquantities notstated; normalizedqualificationpassed doesnotmean30independentscientificpasses.",
+    "Owner facts/acceptance, submission readiness, public deposit/publication/currenthosted/science remain pending or unestablished."
+  ],
+  "provider_originals_opened": 0,
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "new_downloads": 0,
+  "broad_tests_rerun": false,
+  "production_mutations": false,
+  "packet_mutations": false,
+  "scientific_validation": "not_established",
+  "study_independence": "not_established",
+  "owner_declarations": "deferred",
+  "author_acceptance": "pending",
+  "submission_ready": false,
+  "publication_authorized": false,
+  "public_deposit": null,
+  "current_hosted_ci": "not_executed"
+}

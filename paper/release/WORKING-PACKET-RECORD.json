@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "method": "p10.local_working_packet_record.v1",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "PACKAGED_LOCAL_WORKING_DRAFT_AND_READBACK_VERIFIED",
+  "archive": {
+    "name": "asof-working-paper-v2.zip",
+    "workspace_path": "data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip",
+    "sha256": "e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433",
+    "bytes": 21438223,
+    "members": 53,
+    "fresh_process_second_build_bytes_equal": true
+  },
+  "manifest_sha256": "4015b0dc68f7d6db8a9cbe793cd0e3a481ebd02ead2e09e8b8e50a69e6e8bf13",
+  "public_qualification_sha256": "eaed4f5765d83c6814d91d574e85334a74e15edabed8e2f4f039b3b2e02db330",
+  "source_pdf_audit_sha256": "393d845f8134911778a092679c92dbd9e1c496a4618a186fd09f19817b3c5133",
+  "pdf_sha256": "c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d",
+  "pdf_pages": 18,
+  "nested_p09_archive_sha256": "f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e",
+  "scientific_validation": "not_established",
+  "study_independence": "not_established",
+  "owner_declarations": "deferred",
+  "author_acceptance": "pending",
+  "submission_ready": false,
+  "publication_authorized": false,
+  "public_deposit": null,
+  "scope": "Current editable paper and reviewed PDF, exact historical numerical payloads with portable metadata, and immutable separately qualified P09 artifact; local review only."
+}

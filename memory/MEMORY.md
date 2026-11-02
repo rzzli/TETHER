@@ -3,7 +3,9 @@
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
-- [[research-log-2026-11-01-installed-reconstruction]] - Current P09 complete locally: e28461a5 reconstructs38 outputs/90decisions,6,862source/3,481metadata checks; final full1973/core1973with94approvedskips pass. Gate/archive peers349/1595checks; deterministic315-member ZIP f4d7ab4b. Next P10 working-paper/PDF revision; declarations deferred;100package/78P05pins unchanged. Earlier failures retained.
+- [[research-log-2026-11-01-working-paper-packet]] - Current: P09/P10b complete locally; revised18-page paper passes exact4-edit continuity,273 fresh text units, visual/geometry/repeat and30-item independent review.53-member working packet e5c9478c repeats exactly;200 independent packet checks pass. P08c/P10a/author acceptance deferred; broader scientific routes uncompleted.
+
+- [[research-log-2026-11-01-installed-reconstruction]] - Prior P09 completion: e28461a5 reconstructs38 outputs/90decisions,6,862source/3,481metadata checks; final full1973/core1973with94approvedskips pass. Gate/archive peers349/1595checks; deterministic315-member ZIP f4d7ab4b.100package/78P05pins unchanged; earlier failures retained.
 
 - [[research-log-2026-11-01-release-preparation]] - Prior P09 preparation: audited source-only bridge, separately versioned adapter and311-member allowlist; actual reconstruction subsequently accepted in the current entry. Owner declarations remain deferred.
 

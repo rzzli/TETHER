@@ -1,0 +1,134 @@
+"""Independent P10 archive audit; no packager import, generation or source replay."""
+from collections import Counter
+from datetime import datetime
+import hashlib,io,json,posixpath,re,stat,zipfile
+from pathlib import Path,PurePosixPath
+from urllib.parse import unquote,urlsplit
+
+ROOT=Path(__file__).resolve().parents[3]
+ASSETS=ROOT/'planning/review-assets/preprint-p10-20261101'
+ARCHIVE=ROOT/'data/derived/preprint-p10-packet-20261101T235000Z/asof-working-paper-v2.zip'
+ZIP_PIN='e5c9478c9a55ac6e5c9b3ddfb809b84407cb7876ae1ec28887e19f2b1af88433'
+MANIFEST_PIN='4015b0dc68f7d6db8a9cbe793cd0e3a481ebd02ead2e09e8b8e50a69e6e8bf13'
+QUAL_PIN='eaed4f5765d83c6814d91d574e85334a74e15edabed8e2f4f039b3b2e02db330'
+AUDIT_PIN='393d845f8134911778a092679c92dbd9e1c496a4618a186fd09f19817b3c5133'
+P09_PIN='f4d7ab4bb1a0b79c0ecadbac15891f4cc2925abe624298e8a48a762190b6782e'
+READY='e28461a5681bcaaae89752f0cf7e1ac6fb644c4eebdf501a1f2c2ec7c26dd529'
+PAPER={
+ 'paper/manuscript.md':'79a49c7bbaba7ad65786cc5e1bbfd872ae941396990b2d17315f685e4ca3b507',
+ 'paper/supplement.md':'d1a63bec471b13d44e888c4f40857d67d2cd13e504c2acef856659c3f5fabb85',
+ 'paper/references.bib':'8804ee43da0da28b71773eb9a55ad0e7b78fb7d881e8b8423562473a2b87d05f',
+ 'paper/references.json':'d7cf590dd04f094c83931182517ec5d755e5309e87891e9b1c05c1fd70b5bed2',
+ 'paper/RELATED-WORK-SOURCE-AUDIT.md':'e7adea0f9302389248627c969397827e9f8db3d224713577d3d4b655ad05422c',
+ 'paper/AUTHOR-DECLARATIONS.md':'e7622bc990b3d38c3a1f092d62b520e2b0ed1c558ec2168aacc6f040f16ee2cb',
+ 'paper/asof-source-reporting-preprint-v2.pdf':'c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d'}
+P09={'reproduction/qualification.json':'e166e3e8de8a138b0e4cbb6412a4e105850bd6b2a4e001eef419f77873e994ba',
+ 'reproduction/RELEASE-RECORD.json':'a7382b2d50246247f6f98f18e672543d2f5b656fe3bdc4f4166382bbd9ffab13',
+ 'reproduction/README.md':'a4f95279ed1bf982a775a37e9c3e28f66d57886a6fb4ad9526f80d4b224fcc0d',
+ 'reproduction/asof-research-artifact-0.1.0.zip':P09_PIN}
+
+def sha(raw):return hashlib.sha256(raw).hexdigest()
+def parse(raw):
+ def pairs(items):
+  result={}
+  for k,v in items:
+   if k in result:raise ValueError('Duplicate JSON key')
+   result[k]=v
+  return result
+ def invalid(value):raise ValueError('Nonfinite JSON number')
+ return json.loads(raw,object_pairs_hook=pairs,parse_constant=invalid)
+
+def run():
+ checks=[];findings=[];privacy=[];links=[]
+ def need(name,condition):
+  checks.append(dict(check=name,passed=bool(condition)))
+  if not condition:findings.append(name)
+ raw=ARCHIVE.read_bytes();repeat=ARCHIVE.with_name('asof-working-paper-v2-repeat.zip').read_bytes()
+ need('external_packet_exact_bytes',sha(raw)==ZIP_PIN and len(raw)==21438223)
+ need('fresh_process_repeat_exact_bytes',raw==repeat)
+ record_path=ROOT/'paper/release/WORKING-PACKET-RECORD.json';record_raw=record_path.read_bytes();record=parse(record_raw)
+ need('external_record_matches',record['archive']['sha256']==ZIP_PIN and record['archive']['bytes']==len(raw) and record['archive']['members']==53
+      and record['manifest_sha256']==MANIFEST_PIN and record['public_qualification_sha256']==QUAL_PIN and record['archive']['fresh_process_second_build_bytes_equal'] is True)
+ need('external_record_working_draft_boundaries',record['owner_declarations']=='deferred' and record['author_acceptance']=='pending' and record['submission_ready'] is False and record['publication_authorized'] is False and record['public_deposit'] is None)
+ with zipfile.ZipFile(io.BytesIO(raw)) as z:
+  infos=z.infolist();names=[x.filename for x in infos]
+  need('unique_sorted53_members',len(names)==len(set(names))==len({n.casefold() for n in names})==53 and names==sorted(names) and not z.comment)
+  manifest_raw=z.read('PACKET-MANIFEST.json');manifest=parse(manifest_raw)
+  qraw=z.read('P10-QUALIFICATION.json');q=parse(qraw)
+  need('external_manifest_qualification_pins',sha(manifest_raw)==MANIFEST_PIN and sha(qraw)==QUAL_PIN)
+  need('qualification_exact_current_public_file',qraw==(ROOT/'paper/release/WORKING-PACKET-QUALIFICATION.json').read_bytes())
+  nested_raw=z.read('reproduction/asof-research-artifact-0.1.0.zip')
+  need('nested_P09_exact_immutable_bytes',sha(nested_raw)==P09_PIN and nested_raw==(ROOT/'data/derived/preprint-p09-release-20261101T232900Z/asof-research-artifact-0.1.0.zip').read_bytes())
+  with zipfile.ZipFile(io.BytesIO(nested_raw)) as p09:
+   need('nested315_protocol_and_manifest',len(p09.namelist())==315 and sha(p09.read('artifact/protocol.json'))==READY and sha(p09.read('RELEASE-MANIFEST.json'))=='30f9cca157eff20d250d89dbc91497290936e27d64fb5038754a813a6fc4c40e')
+   expected_raw=p09.read('artifact/presentation-inputs/expected-payloads.json')
+   need('independently_pinned37_expected_commitments',sha(expected_raw)=='30dfdeceabe87bf4db58ec78e5106cf4a73f3286d788962d21033f27312b48c8')
+   expected_results=parse(expected_raw)['payloads']
+   need('old_inner_P08_PDF_unchanged',sha(p09.read('artifact/paper/asof-source-reporting-preprint.pdf'))=='4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588')
+  result_names={'paper/results/'+n for n in expected_results}|{'paper/results/README.md','paper/results/ARTIFACTS.json'}
+  expected_names=set(PAPER)|set(P09)|result_names|{'README.md','P10-QUALIFICATION.json','PACKET-MANIFEST.json'}
+  need('exact53_positive_allowlist',set(names)==expected_names and len(expected_results)==37 and len(result_names)==39)
+  need('manifest_complete52_self_excluded',set(manifest['files'])==set(names)-{'PACKET-MANIFEST.json'} and manifest['manifest_self_excluded'] is True)
+  need('physical_ZIP_STORED_closure',len(raw)==22+sum(76+2*len(i.filename.encode())+i.file_size for i in infos))
+  instant=datetime.fromisoformat(q['frozen_at_utc'].replace('Z','+00:00'));stamp=(instant.year,instant.month,instant.day,instant.hour,instant.minute,instant.second//2*2)
+  expected_roles={n:('unfilled_owner_declaration_checklist' if n.endswith('AUTHOR-DECLARATIONS.md') else 'working_draft_documentation') for n in PAPER}
+  expected_roles.update({n:'aggregated_technical_results' for n in result_names});expected_roles.update({'paper/results/README.md':'portable_presentation_metadata','paper/results/ARTIFACTS.json':'portable_presentation_metadata',
+   'README.md':'working_draft_reviewer_instructions','P10-QUALIFICATION.json':'evaluation_only','reproduction/qualification.json':'evaluation_only','reproduction/README.md':'P09_reproduction_instructions','reproduction/RELEASE-RECORD.json':'public_P09_release_hash_record','reproduction/asof-research-artifact-0.1.0.zip':'immutable_P09_reproduction_archive'})
+  for info in infos:
+   name=info.filename;p=PurePosixPath(name)
+   need('safe_metadata_'+name,not p.is_absolute() and '..' not in p.parts and ':' not in name and '\\' not in name and not info.is_dir()
+        and info.create_system==3 and info.create_version==info.extract_version==20 and info.external_attr==(stat.S_IFREG|0o644)<<16
+        and info.date_time==stamp and info.compress_type==zipfile.ZIP_STORED and not info.extra and not info.comment and info.file_size==info.compress_size)
+   if name=='PACKET-MANIFEST.json':continue
+   payload=z.read(name);anchor=manifest['files'][name]
+   need('file_hash_size_role_'+name,set(anchor)=={'sha256','bytes','role'} and sha(payload)==anchor['sha256'] and len(payload)==anchor['bytes'] and anchor['role']==expected_roles[name])
+  need('all_CRCs_pass',z.testzip() is None)
+  for name,digest in {**PAPER,**P09}.items():need('prior_external_source_pin_'+name,sha(z.read(name))==digest)
+  for name,proof in expected_results.items():need('historical_result_'+name,sha(z.read('paper/results/'+name))==proof['sha256'] and z.getinfo('paper/results/'+name).file_size==proof['bytes'])
+  portable_raw=z.read('paper/results/ARTIFACTS.json');portable=parse(portable_raw)
+  need('portable_metadata_distinct_exact_versions',sha(portable_raw)=='da802210539141fd7e25418d1440b1f749c3e5d16e6b62ddc7562db01cc11eb4' and sha(z.read('paper/results/README.md'))=='c5ef3797266cfbec263ab7dd6936f5afd361ee198aa0591f9b29f6b7774f848a'
+       and portable['manifest_self_excluded'] is True and len(portable['tables_and_outputs'])==38 and len(portable['historical_payload_comparisons'])==37)
+  need('portable_all37_comparisons_exact',all(row['matches_historical'] is True and row['sha256']==expected_results[row['path']]['sha256'] and row['bytes']==expected_results[row['path']]['bytes'] for row in portable['historical_payload_comparisons']))
+  audit_raw=(ASSETS/'P10-INDEPENDENT-AUDIT-v1.json').read_bytes();audit=parse(audit_raw)
+  need('source_PDF_audit_external_binding',sha(audit_raw)==AUDIT_PIN==q['source_pdf_audit_sha256']==manifest['independent_source_pdf_audit_sha256']==record['source_pdf_audit_sha256']
+       and audit['status']=='PASS_SOURCE_PDF_README_REVIEW' and audit['evaluated_checklist_items']==30 and audit['passed_items']==28
+       and audit['conditional_items_not_reported_in_target_text']==2 and audit['unresolved_findings']==[])
+  need('PDF_and_source_qualification_exact_pins',q['paper_sha256']==PAPER and q['pdf_sha256']==PAPER['paper/asof-source-reporting-preprint-v2.pdf'] and q['pdf_pages']==18
+       and q['source_pdf_audit_checks']==30 and q['source_pdf_audit_status']=='passed' and q['source_pdf_audit_method']==audit['method'])
+  need('fresh_PDF_evidence_not_old_carryforward',audit['pdf_summary']['pages']==18 and audit['pdf_summary']['ordered_visible_units']==273 and audit['pdf_summary']['vector_figures']==3
+       and audit['pdf_summary']['raster_images']==0 and audit['pdf_summary']['out_of_page_glyphs']==0 and audit['pdf_summary']['fresh_process_in_memory_repeat']=='PASS_BYTE_IDENTICAL')
+  for name in ('paper/manuscript.md','paper/supplement.md','paper/asof-source-reporting-preprint-v2.pdf'):
+   need('PDF_peer_subject_'+name,audit['subjects'][name]['sha256']==PAPER[name])
+  need('manifest_actual_packager_code_bindings',manifest['packager_sha256']==sha((ASSETS/'package_working_packet_v1.py').read_bytes())
+       and manifest['shared_zip_helpers_sha256']==sha((ROOT/'tools/science/package_p09_release.py').read_bytes()))
+  need('qualification_manifest_roles_scopes',all(doc['role']=='evaluation_only' and doc['agent_visible'] is False and doc['publication_authorized'] is False and doc['public_deposit'] is None and doc['owner_declarations']=='deferred'
+       and doc['scientific_validation']==doc['study_independence']=='not_established' for doc in (q,manifest)))
+  need('qualification_no_new_execution_or_hosted',q['current_hosted_ci']=='not_executed' and q['new_model_calls']==q['new_provider_downloads']==q['provider_spending_usd']==0
+       and q['p09_archive_sha256']==P09_PIN and q['p09_protocol_sha256']==READY and q['portable_results_manifest_sha256']==sha(portable_raw))
+  for name in names:
+   if not name.endswith(('.md','.json','.bib','.csv','.svg')):continue
+   text=z.read(name).decode('utf-8-sig')
+   if re.search(r'(?i)(?:zzric|[A-Z]:[\\/]Users[\\/]|[A-Z]:[\\/]Projects(?:_data)?[\\/]|/Users/|/home/|drug_target_agents_data)',text.replace('\\\\','\\')):privacy.append(dict(path=name,kind='private_machine_root'))
+   if re.search(r'(?:sk-[A-Za-z0-9_-]{24,}|AKIA[A-Z0-9]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)',text):privacy.append(dict(path=name,kind='credential_pattern'))
+   if name.endswith('.md'):
+    for match in re.finditer(r'\[[^\]\n]+\]\((?:<([^>\n]+)>|([^\)\n]+))\)',text):
+     target=(match.group(1) or match.group(2)).strip();parsed=urlsplit(target)
+     if parsed.scheme in ('https','http'):continue
+     if not parsed.path:continue
+     resolved=posixpath.normpath(posixpath.join(posixpath.dirname(name),unquote(parsed.path)))
+     okay=not parsed.scheme and not parsed.netloc and not resolved.startswith('../') and (resolved in names or any(n.startswith(resolved.rstrip('/')+'/') for n in names))
+     need('relative_link_'+str(len(links)),okay);links.append(dict(source=name,target=target,resolved=resolved))
+  need('public_text_privacy_scan',not privacy)
+  readme=z.read('README.md').decode()
+  need('standalone_scope_and_provenance_paths_explained',all(s in readme for s in ('working draft','18-page','earlier P08','historical provenance','203.828/7.125','289.938/15.187','136 Open Targets','not bundled','not a replacement')))
+  need('owner_checklist_and_exclusions',sha(z.read('paper/AUTHOR-DECLARATIONS.md'))==PAPER['paper/AUTHOR-DECLARATIONS.md']
+       and not any('PDF-BUILD' in n or n=='paper/README.md' or n.endswith(('.py','.pyc','.ttf','.otf','.gguf','.parquet')) for n in names))
+ return dict(schema='p10.independent_working_packet_audit.v1',status='PASS_LOCAL_WORKING_PACKET_REVIEW' if not findings else 'FAIL_WORKING_PACKET_REVIEW',check_count=len(checks),checks=checks,unresolved_findings=findings,privacy_findings=privacy,
+  archive=dict(path=ARCHIVE.relative_to(ROOT).as_posix(),sha256=sha(raw),bytes=len(raw),members=53,repeat_byte_identical=raw==repeat,manifest_sha256=sha(manifest_raw)),public_qualification_sha256=sha(qraw),source_PDF_audit_sha256=sha(audit_raw),
+  external_record_sha256=sha(record_raw),nested_P09_sha256=sha(nested_raw),roles=dict(Counter(v['role'] for v in manifest['files'].values())),relative_links=links,
+  limits=['This checker imports no packet assembler/helper and uses independently pinned paper/results/P09 commitments.','No actual provider/human/protected originals read or tests rerun. Nested P09 remains an opaque immutable archive except approved public manifest/expected-payload metadata and retained old PDF hash.','Current PDF bytes/source/audit bindings were checked; new all-page visual/text/vector review is carried by the separately pinned393d independent audit, not repeated here.','Rights/disposition consistency is carried by unchanged nested P09 cards/licences; no new legal certification, renderer portability or publication permission.','30source/PDF checklistitems comprise28PASSplus2conditionalquantities notstated; normalizedqualificationpassed doesnotmean30independentscientificpasses.','Owner facts/acceptance, submission readiness, public deposit/publication/currenthosted/science remain pending or unestablished.'],production_mutations=False)
+
+if __name__=='__main__':
+ report=run();target=ASSETS/'WORKING-PACKET-CHECKS-v1.json'
+ with target.open('xb') as stream:stream.write(json.dumps(report,indent=2).encode()+b'\n')
+ print(json.dumps({k:report[k] for k in ('status','check_count','unresolved_findings','privacy_findings','archive')},indent=2))

@@ -1,0 +1,4 @@
+  File "D:\Projects\drug_target_agents\planning\review-assets\preprint-p10-20261101\audit_working_packet_v1.py", line 104
+    need('qualification_manifest_roles_scopes',all(doc['role']=='evaluation_only' and doc['agent_visible'] is False and doc['publication_authorized'] is False and doc['public_deposit'] is None and doc['owner_declarations']=='deferred'
+        ^
+SyntaxError: '(' was never closed

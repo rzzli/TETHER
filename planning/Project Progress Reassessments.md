@@ -1,6 +1,14 @@
 # Project progress reassessments
 
-Latest steering: the owner deferred declarations on 1 November. P08c remains
+Current checkpoint: [local preprint package](<Project Progress Reassessment 2026-11-01 - Local Preprint Package.md>).
+P09 complete locally; current18-page P10 paper passes source/PDF independent
+review and53-member working packet repeats exactly. All200 independent packet
+checks pass;P10b is complete. Owner declarations and final author acceptance remain
+deferred; P08/P10 and submission readiness remain incomplete. Broader scientific
+programmes remain conditional and uncompleted. Earlier checkpoints below retain
+their own then-current status.
+
+Prior release checkpoint: the owner deferred declarations on 1 November. P08c remains
 pending, while independent [P09 release qualification](<Research Release Qualification Plan 2026-11-01.md>)
 has completed locally. The [installed-source checkpoint](<Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md>)
 passes all38 output hashes/90 decisions and6,862 independent source-audit checks.
