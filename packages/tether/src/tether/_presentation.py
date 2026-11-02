@@ -166,9 +166,9 @@ def code_proof():
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(asof.__version__ == "0.3.11" and __version__ == "0.4.2", "Unsupported TETHER/core version")
+    need(asof.__version__ == "0.3.11" and __version__ == "0.5.0", "Unsupported TETHER/core version")
     need(versions["asof-target-agents"] in (None, "0.3.11")
-         and versions["tether-target-agents"] in (None, "0.4.2"), "Installed distribution version differs")
+         and versions["tether-target-agents"] in (None, "0.5.0"), "Installed distribution version differs")
     return dict(schema_version=1, method="tether.launcher_code.v1", facade_version=__version__,
                 core_version=asof.__version__, installed_distributions=versions, code=proof)
 
@@ -237,24 +237,34 @@ def _retain_streams(root, result):
         _save(root / name, payload)
 
 
-def create_outer(output, argv, *, engine=None, limits=ProcessLimits()):
+def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_request=None):
     """Reserve a fresh leaf, run once, close journal, then publish the final receipt."""
     limits.validate()
     output = Path(output).absolute()
     _no_links(output.parent)
     # Exclusive ownership precedes every write, including failure records.
     output.mkdir(exist_ok=False)
-    journal, stage, result = None, "reservation", None
+    journal, stage, result, policy_binding = None, "reservation", None, None
     try:
         journal = RunJournal(output / "attempt")
         proof = code_proof()
         journal.append("tether_prepared", command=argv[0], launcher_proof_sha256=digest(canonical(proof)),
-                       process_limits=limits.payload())
+                       process_limits=limits.payload(), artifact_policy_requested=policy_request is not None)
+        engine_argv = _engine_args(argv, output / "engine")
+        if policy_request is not None:
+            need(argv[0] == "run", "Artifact policy supports only run")
+            need(not any(token.split("=", 1)[0] in {"--scorer", "--replay", "--local-model"} for token in argv),
+                 "Artifact policy requires offline extractive execution without scorer/replay/local-model")
+            from ._catalog_binding import prepare_policy_run, policy_engine_args, verify_policy_run
+            stage = "artifact_policy_preflight"
+            policy_binding = prepare_policy_run(output, policy_request)
+            engine_argv = policy_engine_args(output, engine_argv, policy_binding)
+            journal.append("artifact_policy_prepared", binding=policy_binding)
+            verify_policy_run(output, policy_binding, check_engine=False)
         stage = "engine_dispatch"
         journal.append("engine_dispatch", argv_sha256=digest(canonical(argv)), output="engine",
                        process_limits=limits.payload())
-        result = (invoke_engine(_engine_args(argv, output / "engine"), limits=limits) if engine is None
-                  else engine(_engine_args(argv, output / "engine")))
+        result = (invoke_engine(engine_argv, limits=limits) if engine is None else engine(engine_argv))
         _retain_streams(output, result)
         journal.append("engine_returned", returncode=result.returncode, supervision=result.supervision)
         if result.returncode == 130:
@@ -264,6 +274,8 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits()):
         stage = "source_verification"
         engine_receipt = digest(_read(output / "engine/receipt.json"))
         _core_check(output, engine_receipt)
+        if policy_binding is not None:
+            verify_policy_run(output, policy_binding)
         validate_success_report(result.supervision, limits, len(result.stdout), len(result.stderr))
         stage = "presentation"
         _save(output / "dossier.md", project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)))
@@ -274,6 +286,7 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits()):
                         role="evaluation_only", agent_visible=False, scientific_validation="not_established",
                         command=argv[0], invocation_sha256=digest(canonical(argv)),
                         process_limits=limits.payload(), supervision=result.supervision,
+                        artifact_policy=policy_binding,
                         engine=dict(path="engine", receipt_sha256=engine_receipt),
                         projection=dict(source="engine/dossier.md", target="dossier.md", transform="exact_first_header_v1"),
                         launcher=proof, artifacts=artifacts)
@@ -331,6 +344,7 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits()):
                        status="interrupted" if isinstance(error, KeyboardInterrupt) else "failed", stage=stage,
                        error_class=type(error).__name__, engine_returncode=result.returncode if result else None,
                        process_limits=limits.payload(), supervision=result.supervision if result else None,
+                       artifact_policy=policy_binding,
                        cleanup_errors=failures, partial_streams=partial_streams,
                        engine_process_reaped=getattr(error, "tether_process_reaped", None),
                        scientific_validation="not_established",
@@ -366,7 +380,7 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(digest(manifest_raw) == receipt["manifest_sha256"], "TETHER manifest hash differs")
     manifest = parse_json(manifest_raw)
     _envelope(manifest, common | {"command", "invocation_sha256", "engine", "projection", "launcher", "artifacts",
-                                  "process_limits", "supervision"})
+                                  "process_limits", "supervision", "artifact_policy"})
     need(type(manifest["process_limits"]) is dict and set(manifest["process_limits"]) ==
          {"timeout_seconds", "max_output_bytes"}, "TETHER process limits differ")
     limits = ProcessLimits(**manifest["process_limits"])
@@ -389,15 +403,21 @@ def verify_outer(output, expected_receipt_sha256=None):
     journal_raw = _read(output / JOURNAL)
     need(digest(journal_raw) == receipt["journal_sha256"], "TETHER journal hash differs")
     events = _journal_events(journal_raw)
-    need([e["event"] for e in events] == ["run_reserved", "tether_prepared", "engine_dispatch", "engine_returned", "tether_completed"]
+    policy_binding = manifest["artifact_policy"]
+    expected_events = ["run_reserved", "tether_prepared"]
+    if policy_binding is not None:
+        expected_events.append("artifact_policy_prepared")
+    expected_events += ["engine_dispatch", "engine_returned", "tether_completed"]
+    need([e["event"] for e in events] == expected_events
          and all(type(e["sequence"]) is int for e in events)
          and events[-1]["details"] == dict(manifest_sha256=receipt["manifest_sha256"], engine_receipt_sha256=receipt["engine_receipt_sha256"]),
          "TETHER journal terminal binding differs")
     need(canonical(events[1]["details"]) == canonical(dict(command=manifest["command"],
-            launcher_proof_sha256=digest(canonical(manifest["launcher"])), process_limits=limits.payload()))
-         and canonical(events[2]["details"]) == canonical(dict(argv_sha256=manifest["invocation_sha256"],
+            launcher_proof_sha256=digest(canonical(manifest["launcher"])), process_limits=limits.payload(),
+            artifact_policy_requested=policy_binding is not None))
+         and canonical(events[-3]["details"]) == canonical(dict(argv_sha256=manifest["invocation_sha256"],
             output="engine", process_limits=limits.payload()))
-         and canonical(events[3]["details"]) == canonical(dict(returncode=0,
+         and canonical(events[-2]["details"]) == canonical(dict(returncode=0,
             supervision=manifest["supervision"])), "TETHER journal dispatch/proof binding differs")
     validate_success_report(manifest["supervision"], limits,
                             len(_read(output / "engine-stdout.txt")), len(_read(output / "engine-stderr.txt")))
@@ -405,9 +425,17 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(_read(output / "dossier.md", max_bytes=MAX_DOSSIER_BYTES)
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")
     engine_result = _core_check(output, receipt["engine_receipt_sha256"])
+    if policy_binding is not None:
+        need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
+        from ._catalog_binding import verify_policy_run
+        policy_result = verify_policy_run(output, policy_binding)
+    else:
+        need(not (output / "catalog-policy").exists(), "Unbound artifact-policy controls")
+        policy_result = dict(status="unavailable_schema1_compatibility", scientific_validation="not_established")
     return dict(brand="TETHER", status="integrity_verified", receipt_sha256=digest(raw),
                 external_anchor_checked=expected_receipt_sha256 is not None, launcher_code_verified=True,
                 presentation_projection="exact_first_header_v1", engine=engine_result,
+                artifact_policy=policy_result,
                 scientific_validation="not_established")
 
 

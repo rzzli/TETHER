@@ -18,10 +18,10 @@ Neither task should delay the paper's objective multicase evaluation.
 
 ## Full project review and corrections
 
-Current execution: Q01 is complete in its stated Windows CLI scope; Q02 migration is next. See the [bounded-release progress assessment](<planning/Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md>). Earlier 0.4.1 qualification remains retained.
+Current execution: Q01 and Q02 are complete in their stated Windows/offline scopes; Q03 scientific task/data feasibility is next. See the [artifact-policy progress assessment](<planning/Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>). Earlier release qualifications remain retained.
 
 - [x] Q01 Bound the canonical launcher's owned child execution and qualify TETHER 0.4.2; 86 package tests and independent adversarial checks pass, installed success/timeout/overflow qualification passes. Retain the explicit capability table, residual host/process-tree limits and matching-version archive instructions.
-- [ ] Q02 Migrate catalog policy to distinguish scientific inputs, validation dependencies and release/artifact roles; reconcile readiness only from retained evidence.
+- [x] Q02 Add artifact/use-specific policy and sealed execution/verification in TETHER 0.5.0; 129 package tests, 66 independent assertions and installed qualification pass. Preserve 178 product statuses; register 248 raw artifacts/11 packets/seven blocked AACT identities with ten allowed/seven blocked uses. Real OSMR preparation checks 18 originals with zero engine dispatches; no scientific status promotion.
 - [ ] Q03 Qualify one scientifically meaningful composition/scoping task using existing eligible sources first, or document why only reporting is supportable.
 - [ ] Q04 Freeze a discriminating, feasible evaluation with independent-unit/exposure limits and mathematically distinct criteria.
 - [ ] Q05 Execute the newly justified study once and independently reconstruct its declared quantities.
@@ -33,7 +33,7 @@ Current execution: Q01 is complete in its stated Windows CLI scope; Q02 migratio
 - [x] C04 Correct current planning authority, data-frame distinctions and proof claims; retain the old plans as historical records and write paper errata.
 - [x] C05 Independently review corrections, verify source/artifact preservation and documentation consistency, then retain a timestamped local checkpoint. Original study/package bytes remain intact; 102 current local links resolve. Remaining Q01–Q06 limitations are explicit.
 
-Q02–Q06 in the corrective plan are the remaining ordered backlog. No new study execution, closed model retry or downloader restart is implied. Broad paper/scientific completion remains pending as specified below.
+Q03–Q06 in the corrective plan are the remaining ordered backlog. No new study execution, closed model retry or downloader restart is implied. Broad paper/scientific completion remains pending as specified below.
 
 ## TETHER renaming — historical completion checkpoint
 

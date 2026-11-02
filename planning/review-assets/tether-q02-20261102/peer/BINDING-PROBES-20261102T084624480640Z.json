@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checks": [
+    {
+      "name": "mutated original controls not reopened",
+      "passed": true
+    },
+    {
+      "name": "single actual offline child",
+      "passed": true
+    },
+    {
+      "name": "nested packet copied",
+      "passed": true
+    },
+    {
+      "name": "nested computed mapping copied",
+      "passed": true
+    },
+    {
+      "name": "child receives sealed case/snapshot/projection",
+      "passed": true
+    },
+    {
+      "name": "child receives no policy wrapper flags",
+      "passed": true
+    },
+    {
+      "name": "qualified policy result separated",
+      "passed": true
+    },
+    {
+      "name": "wrong_frame: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "wrong_frame: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "wrong_frame: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "missing_evidence: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "missing_evidence: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "missing_evidence: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "evidence_hash: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "evidence_hash: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "evidence_hash: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "transport_receipt: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "transport_receipt: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "transport_receipt: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "synthetic_profile: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "synthetic_profile: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "synthetic_profile: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "scorer: zero engine calls",
+      "passed": true
+    },
+    {
+      "name": "scorer: failed outer readable",
+      "passed": true
+    },
+    {
+      "name": "scorer: no success receipt",
+      "passed": true
+    },
+    {
+      "name": "changed original receipt cannot override archived copy",
+      "passed": true,
+      "error": "TETHER sealed policy: original receipt differs from immutable archive"
+    },
+    {
+      "name": "pinned legacy separator spelling accepted without rewriting receipt",
+      "passed": true
+    },
+    {
+      "name": "original receipt separator bytes preserved",
+      "passed": true
+    },
+    {
+      "name": "rehashed generic projection cannot grant optional evaluator product",
+      "passed": true,
+      "error": "TETHER sealed policy: policy projection differs"
+    },
+    {
+      "name": "rehashed omitted policy rejected",
+      "passed": true,
+      "error": "TETHER sealed policy: control inventory differs"
+    },
+    {
+      "name": "rehashed cross-frame binding rejected",
+      "passed": true,
+      "error": "TETHER sealed policy: selected frame differs from use"
+    }
+  ],
+  "fixture_trees": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-toctou-20261102T084620435010Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-wrong_frame-20261102T084622250496Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-missing_evidence-20261102T084622354469Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-evidence_hash-20261102T084622496466Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-transport_receipt-20261102T084622641002Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-synthetic_profile-20261102T084622813514Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-deny-scorer-20261102T084622935924Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-raw-receipt-change-20261102T084623029793Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-legacy-separator-20261102T084623313406Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-projection-substitution-20261102T084623680073Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-binding-omission-20261102T084623973993Z",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\peer-frame-transplant-20261102T084624213478Z"
+  ],
+  "recorded_at_utc": "2026-11-02T08:46:24.480640+00:00",
+  "code_sha256": {
+    "_catalog_policy.py": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+    "_catalog_binding.py": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+    "_presentation.py": "aee8d5cba2d205bbf4442f75cbfb145f2b6953605966f483e72d126c05b7d79d",
+    "_cli.py": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699"
+  }
+}

@@ -10,6 +10,17 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+Q02 is complete in its registered Windows/offline scope. TETHER 0.5.0 adds exact
+artifact/use policy and sealed input/projection checks. All 129 package tests,
+66 independent assertions and installed qualification pass. All 178 product statuses
+remain unchanged; 266 artifacts comprise 248 raw files, 11 packets and seven blocked AACT archives.
+One real OSMR preparation checks 18 originals and one packet with zero engine calls.
+See [[research-log-2026-11-02-artifact-catalog-policy]] and
+[[Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy]].
+Q03 task/data feasibility is next; no new answer set or experiment is frozen.
+
+### Prior bounded-release checkpoint
+
 Q01 is complete in the qualified Windows CLI scope: TETHER 0.4.2 adds absolute
 child deadlines and aggregate output caps; 86 package tests, 116 independent
 assertions and isolated final-wheel success/failure checks pass. See

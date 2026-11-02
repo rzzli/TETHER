@@ -88,6 +88,17 @@ def structural_checks():
             raise ContractError('Required ignore missing: '+name)
     catalog = read_json(ROOT/'data/catalog/sources.json')
     validate_catalog(catalog)
+    artifact_policy = ROOT/'data/catalog/policy-v2.json'
+    if artifact_policy.exists():
+        # The frozen engine remains schema-one. Validate the additive canonical
+        # policy explicitly; file presence never promotes collection/readiness.
+        canonical_source = str(ROOT/'packages/tether/src')
+        if canonical_source not in sys.path:
+            sys.path.insert(0, canonical_source)
+        from tether._catalog_policy import strict_json, validate_policy, validate_source_catalog
+        policy = strict_json(artifact_policy.read_bytes())
+        validate_policy(policy)
+        validate_source_catalog(policy, (ROOT/'data/catalog/sources.json').read_bytes())
     index = set(re.findall(r'^\| `([^`]+)` \|',(ROOT/'data/DATA_PLAN.md').read_text(encoding='utf-8'),re.M))
     if not {row['dataset_id'] for row in catalog['datasets']}.issubset(index):
         raise ContractError('Catalog products missing from documentation index')

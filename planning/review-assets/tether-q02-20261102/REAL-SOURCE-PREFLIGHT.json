@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ONE_REAL_CASE_PREPARATION_ONLY",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "created_at_utc": "2026-11-02T08:50:36.122616+00:00",
+  "output": "data/derived/tether-q02-source-preflight-20261102T085022Z",
+  "case_id": "osmr-efo_0000729-inhibit-antibody",
+  "policy_sha256": "80a8bf5b61b28298081ec16ae1758a4944f0d45ac0e4ea1181e8eb6faa71cd78",
+  "binding": {
+    "path": "catalog-policy/binding.json",
+    "sha256": "6eeb65bcc9356660547c6e2f63319f8b9d580bd7f1b267c1da7061709d9298f3",
+    "bytes": 22776
+  },
+  "raw_source_files_checked": 18,
+  "selected_raw_bytes": 442815104,
+  "normalized_files_copied": 1,
+  "receipt_copies": 18,
+  "metadata_proofs": 19,
+  "elapsed_seconds": 13.140999999945052,
+  "engine_dispatches": 0,
+  "scientific_validation": "not_established",
+  "boundary": "Fresh source-inclusive preparation and record admission for OSMR only; no engine execution, claims, scoring or new dossier. Remaining 230 raw artifacts are not thereby freshly verified.",
+  "correction_note": "Corrects an initial narrative typo (247) to 248 minus 18 = 230. Measured counts unchanged; original preflight-report.json retained in the ignored output directory."
+}

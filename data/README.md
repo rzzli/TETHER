@@ -11,7 +11,7 @@ status: acquisition-started
 
 # TETHER data workspace
 
-**Current review, 2 November 2026 UTC:** the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) distinguishes catalog plans, canonical October 17 dossiers and the selected paper frame. The canonical build reports no missing inputs in its own manifest; 65 missing inputs belong to an older frozen interpretation slice. Catalog role/dependency and status granularity need a versioned migration; no collection/scientific status was promoted here. See the [corrective plan](<../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
+**Current review, 2 November 2026 UTC:** the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) distinguishes catalog plans, canonical October 17 dossiers and the selected paper frame. The canonical build reports no missing inputs in its own manifest; 65 missing inputs belong to an older frozen interpretation slice. The additive schema-2 artifact policy now distinguishes input/validation dependencies and exact artifact/use roles; all 178 original product statuses remain unchanged. See [policy operation and limits](../docs/TETHER-CATALOG-POLICY.md). See the [corrective plan](<../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
 
 **Retained TETHER checkpoint, 1 November 2026:** the bounded source-reporting
 study, P09 installed Windows reconstruction and P10b local working packet are

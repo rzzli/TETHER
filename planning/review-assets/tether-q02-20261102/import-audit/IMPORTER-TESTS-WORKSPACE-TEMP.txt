@@ -1,0 +1,12 @@
+test_canonical_label_cannot_hide_changed_hypothesis_or_omitted_packet (tests.test_tether_policy_import.PolicyImportTests.test_canonical_label_cannot_hide_changed_hypothesis_or_omitted_packet) ... ok
+test_external_metadata_is_denied_before_content_read (tests.test_tether_policy_import.PolicyImportTests.test_external_metadata_is_denied_before_content_read) ... ok
+test_generated_input_cannot_be_relabelled_as_raw_receipt (tests.test_tether_policy_import.PolicyImportTests.test_generated_input_cannot_be_relabelled_as_raw_receipt) ... ok
+test_identical_identity_cannot_silently_replace_conflicting_context (tests.test_tether_policy_import.PolicyImportTests.test_identical_identity_cannot_silently_replace_conflicting_context) ... ok
+test_receipt_archive_path_cannot_redirect_to_other_project_metadata (tests.test_tether_policy_import.PolicyImportTests.test_receipt_archive_path_cannot_redirect_to_other_project_metadata) ... ok
+test_receipt_node_url_path_and_identity_must_agree (tests.test_tether_policy_import.PolicyImportTests.test_receipt_node_url_path_and_identity_must_agree) ... ok
+test_stale_metadata_pin_and_duplicate_json_are_rejected (tests.test_tether_policy_import.PolicyImportTests.test_stale_metadata_pin_and_duplicate_json_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.013s
+
+OK

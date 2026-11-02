@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "created_at_utc": "2026-11-02T08:50:01.703029+00:00",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "source": {
+    "path": "tools/data/build_tether_policy.py",
+    "sha256": "67fdb62a1af449a8afa69b690ef82aa52aa211b3ad7c649eae0566156781c461"
+  },
+  "tests": {
+    "path": "tests/test_tether_policy_import.py",
+    "sha256": "10f2c5a75a0ee9dd94ff56817d1740bdcc6ce67aa40171165dff50d578625bc8"
+  },
+  "log": {
+    "path": "planning/review-assets/tether-q02-20261102/import-audit/IMPORTER-TESTS-WORKSPACE-TEMP.txt",
+    "sha256": "41dafe2a00a0bdc2f8127ff956551cb7f1db8ae5afb390117920173ae4b27274"
+  },
+  "independent_static_findings": [
+    {
+      "finding": "Receipt path could reach other project metadata before receipt-specific validation",
+      "correction": "receipt_archive_path validates exact manifests/receipt-archive/<64lowercaseSHA>.json before loader",
+      "status": "corrected; targeted regression passed; all248 imported paths already conform"
+    },
+    {
+      "finding": "Canonical control metadata needed linkage to pinned case/hypothesis/origin/source count and complete packet inventory",
+      "correction": "check_frame_case validates bound identity, hypothesis key, T6/no program, cutoff, snapshot identity/profile, source count and exact shard set",
+      "status": "corrected by root; independently checked actual10cases and targeted negative fixtures"
+    },
+    {
+      "finding": "Generic metadata approved-root/reparse checks previously occurred after reads",
+      "correction": "MetadataImport.load checks resolved roots and symlink/reparse attributes before checked_json",
+      "status": "corrected; pre-read denial fixture passed"
+    }
+  ],
+  "earlier_test_attempt": {
+    "status": "failed_environment",
+    "tests_run": 7,
+    "errors": 2,
+    "reason": "Default sandbox C: TemporaryDirectory write/cleanup PermissionError in two fixture methods; rerun redirected tempfile.tempdir to approved ignored data/cache. Not interpreted as code failure or passing validation."
+  },
+  "scope": "Fictional fixtures only; latest actual policy metadata audited separately in ACTUAL-IMPORT-AUDIT-v3.json; no pipeline regeneration/provider originals read."
+}

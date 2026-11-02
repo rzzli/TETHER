@@ -1,0 +1,37 @@
+test_conflicting_archive_copy_never_overwrites (test_catalog_binding.CatalogBindingTests.test_conflicting_archive_copy_never_overwrites) ... ok
+test_extra_unused_source_is_checked_before_packet_read_or_dispatch (test_catalog_binding.CatalogBindingTests.test_extra_unused_source_is_checked_before_packet_read_or_dispatch) ... ok
+test_invalid_policy_source_catalog_and_frame_fail_before_dispatch (test_catalog_binding.CatalogBindingTests.test_invalid_policy_source_catalog_and_frame_fail_before_dispatch) ... ok
+test_mutating_original_controls_after_preparation_does_not_change_execution (test_catalog_binding.CatalogBindingTests.test_mutating_original_controls_after_preparation_does_not_change_execution) ... ERROR
+test_projection_mutation_rejected_independently_of_engine (test_catalog_binding.CatalogBindingTests.test_projection_mutation_rejected_independently_of_engine) ... ok
+test_real_policy_run_preserves_nested_inputs_and_verifies (test_catalog_binding.CatalogBindingTests.test_real_policy_run_preserves_nested_inputs_and_verifies) ... FAIL
+test_receipt_mutation_before_child_is_rejected_without_backend_dispatch (test_catalog_binding.CatalogBindingTests.test_receipt_mutation_before_child_is_rejected_without_backend_dispatch) ... ok
+test_unsupported_policy_combinations_never_dispatch (test_catalog_binding.CatalogBindingTests.test_unsupported_policy_combinations_never_dispatch) ... ok
+test_wrong_receipt_identity_fails_even_with_updated_receipt_hash (test_catalog_binding.CatalogBindingTests.test_wrong_receipt_identity_fails_even_with_updated_receipt_hash) ... ok
+
+======================================================================
+ERROR: test_mutating_original_controls_after_preparation_does_not_change_execution (test_catalog_binding.CatalogBindingTests.test_mutating_original_controls_after_preparation_does_not_change_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 135, in test_mutating_original_controls_after_preparation_does_not_change_execution
+    result = layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 278, in create_outer
+    verify_policy_run(output, policy_binding)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 280, in verify_policy_run
+    need(canonical(inputs["case"]) == canonical(encode(case)) and
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 30, in need
+    raise ContractError("TETHER sealed policy: " + message)
+asof.serde.ContractError: TETHER sealed policy: engine consumed controls outside sealed policy
+
+======================================================================
+FAIL: test_real_policy_run_preserves_nested_inputs_and_verifies (test_catalog_binding.CatalogBindingTests.test_real_policy_run_preserves_nested_inputs_and_verifies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 117, in test_real_policy_run_preserves_nested_inputs_and_verifies
+    self.assertEqual(cli.main(argv(self.f, self.output)), 0)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.831s
+
+FAILED (failures=1, errors=1)

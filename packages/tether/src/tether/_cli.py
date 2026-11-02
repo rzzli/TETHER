@@ -32,6 +32,11 @@ def parser():
     for action in result._actions:
         if isinstance(action, argparse._SubParsersAction):
             for name, child in action.choices.items():
+                if name == "run":
+                    child.add_argument("--catalog-policy", type=Path, help="Explicit schema-2 artifact policy; --catalog remains the schema-1 anchor")
+                    child.add_argument("--policy-use", help="Exact allowed policy use ID")
+                    child.add_argument("--policy-roots", type=Path, help="Schema-1 absolute root alias map")
+                    child.add_argument("--policy-frame-sha256", help="Independently selected exact frame SHA-256")
                 if name != "verify":
                     child.add_argument("--process-timeout-seconds", type=float, default=None,
                         help="Owned child absolute deadline, default 3600s; separate from workflow budget")
@@ -81,7 +86,19 @@ def main(argv=None):
                 engine_argv.append(token)
                 index += 1
         if args.command in ("demo", "run"):
-            _print(presentation.create_outer(args.output, argv, limits=limits))
+            policy_request = None
+            flags = ("catalog_policy", "policy_use", "policy_roots", "policy_frame_sha256")
+            supplied = [getattr(args, name, None) is not None for name in flags]
+            if any(supplied):
+                if not all(supplied) or args.catalog is None:
+                    raise ContractError("Artifact policy requires --catalog, --catalog-policy, --policy-use, --policy-roots and --policy-frame-sha256")
+                if args.scorer is not None or args.replay is not None or args.local_model is not None:
+                    raise ContractError("Artifact policy run currently supports offline extractive execution without scorer/replay/local-model")
+                from ._catalog_binding import PolicyRequest
+                policy_request = PolicyRequest(args.catalog_policy, args.policy_roots, args.case,
+                    args.snapshot, args.catalog, args.policy_use, args.policy_frame_sha256)
+                policy_request.validate()
+            _print(presentation.create_outer(args.output, argv, limits=limits, policy_request=policy_request))
             return 0
         if args.command == "verify" and _is_outer(args.run_dir):
             if args.outputs_only:

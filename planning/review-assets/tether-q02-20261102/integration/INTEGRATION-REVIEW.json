@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "PASS_LOCAL_WINDOWS_Q02_INTEGRATION",
+  "base_commit": "78f807c",
+  "version": "0.5.0",
+  "frozen_engine_version": "0.3.11",
+  "scientific_validation": "not_established",
+  "tests": {
+    "package": 129,
+    "passed": 129,
+    "seconds": 39.013,
+    "binding": 14,
+    "policy": 29,
+    "prior": 86
+  },
+  "wheel_sha256": "b28f2680c675b6266c6ea6cc9cfd2002191af9f7d20396b5b2ec629a9909f8d8",
+  "wheel_bytes": 46380,
+  "wheel_members": 24,
+  "runtime_sources_checked": 18,
+  "wheel_report": "WHEEL-QUALIFICATION.json",
+  "source_proofs": {
+    "packages/tether/src/tether/__init__.py": {
+      "sha256": "f9f66269f43b65c14a161fbbbeb4942a0962fdc30ad7b42bd67fc93a67afd7c6",
+      "bytes": 829
+    },
+    "packages/tether/src/tether/__main__.py": {
+      "sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "bytes": 118
+    },
+    "packages/tether/src/tether/_aliases.py": {
+      "sha256": "23410cd1288bdffcdf3b78aa037a82e4b14a5635babb28d313475516174ef0f9",
+      "bytes": 4653
+    },
+    "packages/tether/src/tether/_catalog_binding.py": {
+      "sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+      "bytes": 18330
+    },
+    "packages/tether/src/tether/_catalog_policy.py": {
+      "sha256": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+      "bytes": 29106
+    },
+    "packages/tether/src/tether/_cli.py": {
+      "sha256": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699",
+      "bytes": 6825
+    },
+    "packages/tether/src/tether/_presentation.py": {
+      "sha256": "aee8d5cba2d205bbf4442f75cbfb145f2b6953605966f483e72d126c05b7d79d",
+      "bytes": 24756
+    },
+    "packages/tether/src/tether/_process.py": {
+      "sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "bytes": 11639
+    },
+    "packages/tether/src/tether/_semantics.py": {
+      "sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "bytes": 14044
+    },
+    "packages/tether/src/tether/archive/__init__.py": {
+      "sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "bytes": 212
+    },
+    "packages/tether/src/tether/archive/__main__.py": {
+      "sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "bytes": 1890
+    },
+    "packages/tether/src/tether/study/__init__.py": {
+      "sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "bytes": 207
+    },
+    "packages/tether/src/tether/study/__main__.py": {
+      "sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "bytes": 968
+    },
+    "packages/tether/src/tether/study/authority_four_arm.py": {
+      "sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "bytes": 322
+    },
+    "packages/tether/src/tether/study/baseline_smoke.py": {
+      "sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "bytes": 312
+    },
+    "packages/tether/src/tether/study/fixed_evidence_smoke.py": {
+      "sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "bytes": 330
+    },
+    "packages/tether/src/tether/study/native_diagnostic.py": {
+      "sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "bytes": 321
+    },
+    "packages/tether/src/tether/study/retrieval_smoke.py": {
+      "sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "bytes": 323
+    },
+    "packages/tether/tests/test_catalog_binding.py": {
+      "sha256": "94b81c6bf468a4acf1b3f9894616cd25e36c3267762483db420630f48f60886b",
+      "bytes": 19874
+    },
+    "packages/tether/tests/test_catalog_policy.py": {
+      "sha256": "117455dc7046fa6faa5e94500d247525b07ba6bc1c0a73812e0fadb4ac468083",
+      "bytes": 22642
+    },
+    "packages/tether/README.md": {
+      "sha256": "3ce45226eb2d57ddde0164dd693581d19167030464f6228919b089000526b08c",
+      "bytes": 8444
+    },
+    "packages/tether/pyproject.toml": {
+      "sha256": "952719a2a48be931e155edf29bcfb33a007375d35f7c51187705d11ae2635d33",
+      "bytes": 588
+    },
+    "packages/tether/uv.lock": {
+      "sha256": "57c0de70d00caa6004e359940cbfe1a832b581fae5ba45fbdc172a93c5d6ae8e",
+      "bytes": 9947
+    }
+  },
+  "evidence": {
+    "INTEGRATION-REVIEW.md": "961bd8b7c97fbf1913cc00d835d4af48d0f79aaaff72e1f22bb72f33d23dfe60",
+    "PACKAGE-TESTS-FINAL.txt": "227cdbe949ea92619b720de30f22bcaf48202043b79d3043c70de924940c53b0",
+    "WHEEL-QUALIFICATION.json": "efddbb00d31e9114aa65e8f9caa921140f99c25c9de61c0d6c7bd831968e8c3a"
+  },
+  "limits": [
+    "Offline extractive run only; no scorer, replay, local-model, synthetic-demo profile or schema2 ingestion.",
+    "Original pinned raw receipts remain required; copied receipt evidence does not redirect frozen engine paths.",
+    "No hostile-local-user filesystem sandbox or guarantee of external-original availability.",
+    "Record publication filters remain separate from artifact authorization; newer computation on eligible older information is permitted.",
+    "Each policy pass has a300-second I/O deadline; repeated original-byte checks may be expensive.",
+    "Only Windows installed behavior qualified; historical outer artifacts require their pinned implementations.",
+    "No actual project-case execution, original provider inventory rehash, protected data read, paper rebuild or scientific qualification by this reviewer."
+  ],
+  "new_model_calls": 0,
+  "new_provider_downloads": 0,
+  "provider_spending_usd": 0
+}

@@ -1,0 +1,114 @@
+test_conflicting_archive_copy_never_overwrites (test_catalog_binding.CatalogBindingTests.test_conflicting_archive_copy_never_overwrites) ... ERROR
+test_extra_unused_source_is_checked_before_packet_read_or_dispatch (test_catalog_binding.CatalogBindingTests.test_extra_unused_source_is_checked_before_packet_read_or_dispatch) ... FAIL
+test_invalid_policy_source_catalog_and_frame_fail_before_dispatch (test_catalog_binding.CatalogBindingTests.test_invalid_policy_source_catalog_and_frame_fail_before_dispatch) ... ok
+test_mutating_original_controls_after_preparation_does_not_change_execution (test_catalog_binding.CatalogBindingTests.test_mutating_original_controls_after_preparation_does_not_change_execution) ... ERROR
+test_projection_mutation_rejected_independently_of_engine (test_catalog_binding.CatalogBindingTests.test_projection_mutation_rejected_independently_of_engine) ... ERROR
+test_real_policy_run_preserves_nested_inputs_and_verifies (test_catalog_binding.CatalogBindingTests.test_real_policy_run_preserves_nested_inputs_and_verifies) ... FAIL
+test_receipt_mutation_before_child_is_rejected_without_backend_dispatch (test_catalog_binding.CatalogBindingTests.test_receipt_mutation_before_child_is_rejected_without_backend_dispatch) ... ERROR
+test_unsupported_policy_combinations_never_dispatch (test_catalog_binding.CatalogBindingTests.test_unsupported_policy_combinations_never_dispatch) ... ok
+test_wrong_receipt_identity_fails_even_with_updated_receipt_hash (test_catalog_binding.CatalogBindingTests.test_wrong_receipt_identity_fails_even_with_updated_receipt_hash) ... FAIL
+
+======================================================================
+ERROR: test_conflicting_archive_copy_never_overwrites (test_catalog_binding.CatalogBindingTests.test_conflicting_archive_copy_never_overwrites)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 229, in test_conflicting_archive_copy_never_overwrites
+    binding.prepare_policy_run(self.output, self.f["request"])
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 132, in prepare_policy_run
+    policy = validate_policy(documents["policy"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 342, in validate_policy
+    _need(product["dependency_review_status"] == "reviewed_for_selected_frame",
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 43, in _need
+    raise ContractError("TETHER catalog policy: " + message)
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+======================================================================
+ERROR: test_mutating_original_controls_after_preparation_does_not_change_execution (test_catalog_binding.CatalogBindingTests.test_mutating_original_controls_after_preparation_does_not_change_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 133, in test_mutating_original_controls_after_preparation_does_not_change_execution
+    result = layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 260, in create_outer
+    policy_binding = prepare_policy_run(output, policy_request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 132, in prepare_policy_run
+    policy = validate_policy(documents["policy"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 342, in validate_policy
+    _need(product["dependency_review_status"] == "reviewed_for_selected_frame",
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 43, in _need
+    raise ContractError("TETHER catalog policy: " + message)
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+======================================================================
+ERROR: test_projection_mutation_rejected_independently_of_engine (test_catalog_binding.CatalogBindingTests.test_projection_mutation_rejected_independently_of_engine)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 187, in test_projection_mutation_rejected_independently_of_engine
+    descriptor = binding.prepare_policy_run(self.output, self.f["request"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 132, in prepare_policy_run
+    policy = validate_policy(documents["policy"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 342, in validate_policy
+    _need(product["dependency_review_status"] == "reviewed_for_selected_frame",
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 43, in _need
+    raise ContractError("TETHER catalog policy: " + message)
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+======================================================================
+ERROR: test_receipt_mutation_before_child_is_rejected_without_backend_dispatch (test_catalog_binding.CatalogBindingTests.test_receipt_mutation_before_child_is_rejected_without_backend_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 167, in test_receipt_mutation_before_child_is_rejected_without_backend_dispatch
+    layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"])
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 260, in create_outer
+    policy_binding = prepare_policy_run(output, policy_request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_binding.py", line 132, in prepare_policy_run
+    policy = validate_policy(documents["policy"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 342, in validate_policy
+    _need(product["dependency_review_status"] == "reviewed_for_selected_frame",
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_catalog_policy.py", line 43, in _need
+    raise ContractError("TETHER catalog policy: " + message)
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+======================================================================
+FAIL: test_extra_unused_source_is_checked_before_packet_read_or_dispatch (test_catalog_binding.CatalogBindingTests.test_extra_unused_source_is_checked_before_packet_read_or_dispatch)
+----------------------------------------------------------------------
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 181, in test_extra_unused_source_is_checked_before_packet_read_or_dispatch
+    with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "undeclared"):
+AssertionError: "undeclared" does not match "TETHER catalog policy: selected product requirements not reviewed for frame"
+
+======================================================================
+FAIL: test_real_policy_run_preserves_nested_inputs_and_verifies (test_catalog_binding.CatalogBindingTests.test_real_policy_run_preserves_nested_inputs_and_verifies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 115, in test_real_policy_run_preserves_nested_inputs_and_verifies
+    self.assertEqual(cli.main(argv(self.f, self.output)), 0)
+AssertionError: 2 != 0
+
+======================================================================
+FAIL: test_wrong_receipt_identity_fails_even_with_updated_receipt_hash (test_catalog_binding.CatalogBindingTests.test_wrong_receipt_identity_fails_even_with_updated_receipt_hash)
+----------------------------------------------------------------------
+asof.serde.ContractError: TETHER catalog policy: selected product requirements not reviewed for frame
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_catalog_binding.py", line 209, in test_wrong_receipt_identity_fails_even_with_updated_receipt_hash
+    with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "receipt receipt_id"):
+AssertionError: "receipt receipt_id" does not match "TETHER catalog policy: selected product requirements not reviewed for frame"
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.925s
+
+FAILED (failures=3, errors=4)

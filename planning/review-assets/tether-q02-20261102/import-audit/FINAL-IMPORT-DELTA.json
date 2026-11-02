@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FINAL_METADATA_DELTA",
+  "created_at_utc": "2026-11-02T08:56:02.572958+00:00",
+  "prior_independent_audit": "planning/review-assets/tether-q02-20261102/import-audit/ACTUAL-IMPORT-AUDIT-v3.json",
+  "prior_policy_sha256": "8e6709135e25924f576e33315ff2f36f1cc9745892c5018bbc9a0b382a79ed94",
+  "final_policy_sha256": "80a8bf5b61b28298081ec16ae1758a4944f0d45ac0e4ea1181e8eb6faa71cd78",
+  "final_import": "data/derived/catalog-policy-v2-20261102T084949Z",
+  "allowed_policy_deltas": [
+    "top-level created_at_utc",
+    "artifact provenance metadata-copy directory prefix"
+  ],
+  "metadata_copy_path_replacements": 266,
+  "roots_unchanged": true,
+  "all_other_policy_values_equal": true,
+  "metadata_originals_and_copies_checked": 280,
+  "metadata_bytes_checked_per_copy_set": 1688107,
+  "full_frame_audit_repeated": false,
+  "final_report_sha256": "ec24b3cbbf6986e8c77ec098a731c48e362a8153af1e441824fe949839518eb8",
+  "final_roots_sha256": "8812233fa0059a7ccd1b879e8e19dcdba66d25016cc9e4ace744cccf38e4637b",
+  "importer": {
+    "path": "tools/data/build_tether_policy.py",
+    "sha256": "67fdb62a1af449a8afa69b690ef82aa52aa211b3ad7c649eae0566156781c461"
+  },
+  "importer_tests": {
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0,
+    "log": "planning/review-assets/tether-q02-20261102/import-audit/IMPORTER-TESTS-FINAL.txt",
+    "sha256": "3a4ec3568c8e23f47691383ae4e8df2fee481c59d5cd38f182a216c7a0d66515",
+    "test_code_sha256": "10f2c5a75a0ee9dd94ff56817d1740bdcc6ce67aa40171165dff50d578625bc8"
+  },
+  "checker_initial_attempt": "Standalone checker lacked the project import path for targeted test discovery. Reproduced import failure retained in DELTA-HARNESS-IMPORT-FAILURE.txt; corrected before this passing run.",
+  "code_review_delta": "Exact receipt_archive_path guard precedes receipt loading; normalized packets pass checked_path and strict relative_path before read_file. No provider-source read added.",
+  "retained_real_preflight": {
+    "report_sha256": "5f426ba81554935850c5b66cdd4174074fec38623bbb60e5fddc8906afe90539",
+    "scope": "Root's retained preparation report checked; not reexecuted by this audit",
+    "raw_files": 18,
+    "raw_bytes": 442815104,
+    "normalized_packets": 1,
+    "engine_dispatches": 0,
+    "remaining_raw_not_freshly_hashed": 230,
+    "scientific_validation": "not_established"
+  },
+  "source_payload_reads_or_hashes_by_this_audit": 0,
+  "protected_outcome_or_expert_reads": 0,
+  "checker_sha256": "93c69009f087a8c91719c2cdd821e4ec5608278278e3fca0a379889f7c4965a0"
+}

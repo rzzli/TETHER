@@ -6,6 +6,15 @@ dataset IDs, roles, date fields, acquisition facts and scientific-status values.
 The rename changes only its top-level title and the project-generated-assets
 provider display name. It does not promote collection, parsing or validation.
 
+The separately versioned [schema-2 artifact policy](policy-v2.json) is now the
+explicit canonical TETHER policy for registered uses. It preserves the schema-1
+inventory as its byte-anchored source and indexes the same 178 products; it is not
+178 additional datasets. Its 266 exact artifacts cover the selected ten-case
+lineage/packets and seven blocked AACT identities. Ten uses are permitted and
+seven remain blocked; undeclared artifacts are denied. Product collection,
+parsing and scientific statuses are unchanged. See the
+[policy interface and update procedure](../../docs/TETHER-CATALOG-POLICY.md).
+
 The exact pre-rename bytes are preserved at
 [sources-pre-tether-20261101.json](history/sources-pre-tether-20261101.json):
 `3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109` (SHA-256; 1,229,616 bytes).
@@ -19,7 +28,7 @@ Legacy keys such as `asof_release_date` and `asofDate` express temporal/contract
 semantics. The `asof_normalized_packets` dataset ID, archived paths and all other
 identifiers remain unchanged. They are not instructions to use a new source role
 or replace a sealed artifact. The canonical package is `tether-target-agents`
-0.4.2 in `packages/tether`; its CLI/import aliases retain the frozen AsOf 0.3.11
+0.5.0 in `packages/tether`; its CLI/import aliases retain the frozen AsOf 0.3.11
 engine. See [installation and compatibility](../../README.md#installation-and-compatibility).
 
 The history copy is evidence, not an acquisition queue or a new reference/generation

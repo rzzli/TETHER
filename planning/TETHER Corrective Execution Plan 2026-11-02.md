@@ -38,7 +38,7 @@ These are a prioritized backlog, not completed work and not authorization to res
 
 ### Q02 Make catalog readiness artifact-specific
 
-**Next active milestone.** Use the [prepared migration design and consumer inventory](review-assets/tether-q02-20261102/PROPOSAL.md). Add schema-2 policy beside the preserved schema-1 catalog and frozen engine, with a checked, archived use-specific projection. Indexing all products does not admit all artifacts. Canonical preflight and reverification must bind exact policy/input/artifact identities; a projection alone is insufficient. No implementation or collection promotion is claimed by that design report.
+**Completed for the registered Windows/offline scope:** see the [Q02 assessment](<Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>), [policy interface](../docs/TETHER-CATALOG-POLICY.md) and [proof record](review-assets/tether-q02-20261102/VALIDATION.json). The [original design and consumer inventory](review-assets/tether-q02-20261102/PROPOSAL.md) remains the historical design record. Schema-2 policy sits beside the preserved schema-1 catalog and frozen engine, with a checked, archived use-specific projection. Indexing all products does not admit all artifacts; no collection/scientific status was promoted. The following steps retain the completed acceptance scope.
 
 1. Design a small schema migration with distinct `input_dependencies`, `validation_dependencies` and release/artifact role records. `genetics_qc_cases` is a validation dependency, not scientific ancestry of `genetics_results`. LD belongs to its applicable method condition rather than an unconditional genetics edge. Keep genuine evaluator training ancestry for planned scorers blocked under the current inference policy; do not erase it as a validation dependency.
 2. Split the use of origin AACT snapshots from endpoint/follow-up evaluator snapshots without changing their original receipts or assigning a universal provider role.
@@ -49,6 +49,8 @@ These are a prioritized backlog, not completed work and not authorization to res
 **Done when:** catalog structural checks reject contradictory role/dependency configurations, every promoted product has retained receipt evidence, and all active artifacts have declared release/role/scope. This is not whole-product scientific validation.
 
 ### Q03 Qualify data needed for a meaningful scientific task
+
+**Next active milestone.** Follow the source-only task/field feasibility sequence in the [Q02 assessment](<Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>). No new cohort, answer set or experiment is yet frozen.
 
 1. Choose one task requiring source scoping or multi-record composition beyond direct copying. Specify the expected answer semantics before examining candidate performance.
 2. For a genetics-based task, establish upstream study, locus, variant, build, allele orientation, cohort/ancestry and sample-size identity first. The absent study table and unresolved composite join are explicit inputs, not fields to infer from locus equality.

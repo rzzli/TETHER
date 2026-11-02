@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "tether_artifact_policy_import",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "created_at_utc": "2026-11-02T09:04:21.721639+00:00",
+  "policy": {
+    "path": "data/catalog/policy-v2.json",
+    "sha256": "80a8bf5b61b28298081ec16ae1758a4944f0d45ac0e4ea1181e8eb6faa71cd78",
+    "bytes": 2208732,
+    "products": 178,
+    "artifacts": 266,
+    "allowed_uses": 10,
+    "blocked_uses": 7,
+    "status_promotions": 0
+  },
+  "source_catalog": {
+    "path": "data/catalog/sources.json",
+    "sha256": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac"
+  },
+  "import_report": {
+    "path": "data/derived/catalog-policy-v2-20261102T084949Z/report.json",
+    "sha256": "ec24b3cbbf6986e8c77ec098a731c48e362a8153af1e441824fe949839518eb8"
+  },
+  "validation": {
+    "path": "planning/review-assets/tether-q02-20261102/VALIDATION.json",
+    "sha256": "9a374a912cb235909cbc5fe7b46da94e7b3566b35b83ebaaa2676e23540f9360"
+  },
+  "raw_hash_scope": "Inherited from pinned receipts except separate eighteen-original OSMR preparation check",
+  "normalized_packets_freshly_hashed": 11,
+  "metadata_files_freshly_hashed": 280,
+  "scientific_validation": "not_established",
+  "collection_status_promotions": 0,
+  "provider_spend_usd": 0
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "fixture_root": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q02-peer\\policy-probes-20261102T083348189028Z",
+  "checks": [
+    {
+      "name": "unexpected",
+      "passed": false,
+      "error_class": "ContractError",
+      "error": "TETHER catalog policy: selected product requirements not reviewed for frame"
+    }
+  ],
+  "recorded_at_utc": "2026-11-02T08:33:48.212066+00:00",
+  "code_sha256": "a2afb81484bbf5ecc6649fdc181d642dc94f7f7c85cbe084e9f296d90452c334"
+}

@@ -7,7 +7,7 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-**Current distribution: `tether-target-agents` 0.4.2 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
+**Current distribution: `tether-target-agents` 0.5.0 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
 acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
 optional skips. All 78 frozen P05 code pins and 100 package payloads remain
@@ -23,6 +23,8 @@ The [2 November full-project review](<planning/TETHER Full Project Critical Revi
 Retained paper quantities recompute correctly, but the study remains literal source reporting. Its native 80% and 100% thresholds are equivalent; source verification dominates runtime; study independence and causal/clinical conclusions remain unqualified. Read the [paper review notes](paper/REVIEW-ERRATA-20261102.md) before sharing the current working PDF. Author facts remain deferred.
 
 Version 0.4.2 adds an explicit child-process envelope: a default 3,600-second absolute deadline and 16 MiB aggregate stdout/stderr cap, with bounded cleanup and retained failure diagnostics. These are separate from the unchanged workflow budgets. See the [capability and limit table](docs/TETHER-VERIFICATION-SCOPE.md) for the stronger CLI versus legacy API checks, configurable limits, and the in-process verification and process-tree boundaries. Old outer runs require their exact matching launcher.
+
+Version 0.5.0 adds [artifact-specific catalog policy](docs/TETHER-CATALOG-POLICY.md) for explicit offline runs. The [Q02 checkpoint](<planning/Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>) passes 129 package tests and installed qualification; it preserves all 178 product statuses and keeps the seven AACT uses blocked. Q03 task/data feasibility is next. This migration adds no new scientific result or model call.
 
 ## Retained naming and paper checkpoint
 

@@ -1,7 +1,7 @@
 # TETHER
 
 TETHER is the canonical front door for the evidence-agent framework. This
-distribution is `tether-target-agents` 0.4.2, with Python namespace `tether` and
+distribution is `tether-target-agents` 0.5.0, with Python namespace `tether` and
 command `tether`. It depends on the unchanged `asof-target-agents==0.3.11`
 compatibility engine. The default uses no third-party runtime libraries; the
 optional `ingest` extra pins PyArrow 21.0.0. Local models remain explicit opt-in.
@@ -18,7 +18,7 @@ new outer runs. The aliases `tether.artifacts` and `tether.semantics` continue t
 expose the frozen legacy API; use the CLI or `tether._presentation.verify_engine`
 for the additional boundary. Version-one receipts retain their original scope.
 
-Archived TETHER 0.4.0 and 0.4.1 outer runs require their pinned wheel/source to verify
+Archived TETHER 0.4.0, 0.4.1 and 0.4.2 outer runs require their pinned wheel/source to verify
 their launcher fingerprint. The original review packet remains that historical
 version; this correction does not rewrite its sources, paper or artifacts.
 
@@ -33,6 +33,45 @@ tether demo --output <existing-parent>/fresh-demo
 tether verify --run-dir <existing-parent>/fresh-demo --receipt-sha256 <saved-hash>
 tether inspect-run --run-dir <existing-parent>/fresh-demo
 ```
+
+Version 0.5.0 adds an explicit artifact-policy path for `run`:
+
+```text
+tether run --case <case.json> --snapshot <snapshot.json> --output <fresh-output> \
+  --catalog <original-schema1-catalog.json> --catalog-policy <schema2-policy.json> \
+  --policy-use <exact-use-id> --policy-roots <roots.json> --policy-frame-sha256 <frame-hash>
+```
+
+All five policy/catalog arguments are required together. `roots.json` is a
+schema-1 object with a `roots` mapping of aliases to absolute local paths,
+including `metadata` for the source catalog and selected provenance reports.
+The use record names its raw and snapshot root aliases. Every supplied packet,
+source node and actual parent must match an exact grant, including unused nodes.
+Selected raw/source metadata is checked before packet interpretation or child
+dispatch. Record-level eligibility and publication filters still apply during
+admission; newly computed results may use eligible older informational parents.
+
+This path copies the policy, original catalog, case, snapshot, normalized packets,
+computed mapping inputs and selected provenance evidence into the reserved outer
+attempt, retaining relative packet/mapping paths. The child receives those
+copied controls and a deterministic schema-1 projection limited to the selected
+use. Verification reconstructs the policy decision/projection and compares them
+with actual engine inputs. Raw originals remain external and pinned. Exact
+receipt bytes are archived locally, while the frozen engine continues to read
+the original pinned receipt paths; wrapper checks compare those originals with
+the copies before dispatch, finalization and verification. This is not exclusive
+OS ownership or a guarantee that external originals will always remain available.
+
+Artifact-policy execution currently permits only the offline extractive backend,
+without scorer, replay or local-model configuration. `demo`, `build-snapshot`,
+`inspect-source` and synthetic-demo snapshots do not support this new path; policy
+flags are rejected. Ordinary demo and schema-1 runs remain available with their
+explicitly weaker catalog scope. Direct legacy aliases do not acquire artifact
+authorization by importing the new module, and a projection alone is not an
+artifact grant. These fixture-qualified contracts do not authorize reopening
+closed scientific studies or establish scientific validity. Each policy
+preparation/verification pass uses bounded reads and a 300-second I/O deadline;
+raw proof verification can require substantial repeated streaming I/O.
 
 Version 0.4.2 supervises each engine child with a separate absolute process
 deadline (default 3,600 seconds) and aggregate stdout/stderr capture cap (default
