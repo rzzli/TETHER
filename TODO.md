@@ -1,6 +1,8 @@
 # TETHER project execution checklist
 
-Updated 2 November 2026 UTC. Current review and corrective roadmap:
+Updated 2 November 2026 UTC. Current execution authority:
+[Benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>).
+Earlier review and corrective roadmap:
 [Full critical review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) and
 [corrective execution plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>).
 The following paper roadmap and completed naming tasks are retained history:
@@ -15,6 +17,19 @@ is preserved exactly. This revision prioritizes a complete, reproducible preprin
 The old categorical genetics adapter and retrospective old-pair audit are optional
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
+
+## Authorized benchmark execution — active goal
+
+The owner now authorizes sequential implementation and evaluation of the recommendations below. This supersedes the earlier recommendation-only wording for these stages; it does not reopen historical failed model cells or change their results. Retain regular timestamped commits and a checkpoint after each validated major stage.
+
+- [ ] BG01 Fix CE01–CE03 with failing-first regressions, versioned software, applicable full checks and installed qualification. **In progress.**
+- [ ] BG02 Specify and execute an independent validator comparison enforcing identical policies; retain frozen valid/invalid cases, complete results and an independently reconstructed analysis.
+- [ ] BG03 Implement native SciFact adapters and a task-capable evidence/entailment route; execute and validate the declared evaluation with reference isolation and all-case accounting.
+- [ ] BG04 Implement and evaluate one LAB-Bench task family (LitQA2 or DbQA), including source access, answering, native scoring and matched harness comparison.
+- [ ] BG05 Implement and test the same obligations within Inspect; measure policy parity, retained execution evidence, cost and implementation complexity.
+- [ ] BG06 Audit all five stages against the full goal, reconcile documentation/memory and retain a final report. No stage is complete merely because a narrower test passes.
+
+Current checkpoint: baseline `114fecf` is clean and the three open defects are being corrected. The independent comparator and external benchmarks have not yet been implemented or run. The original source-reporting paper, data receipts, archived releases, downloader and stopped monitor remain preserved.
 
 ## Benchmark and methodology review — 2 November 2026
 
