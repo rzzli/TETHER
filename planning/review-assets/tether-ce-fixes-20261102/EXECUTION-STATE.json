@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-11-02 20:01:08 UTC",
+  "goal_status": "active",
+  "stage": "BG01",
+  "completed": [
+    "CE01 red-to-green and 12 regression tests",
+    "CE02 red-to-green and 12 regression tests; 122 related tests",
+    "CE03 red-to-green and 9 regression tests; 85 related tests",
+    "Independent CE02/CE03 controls and old-release preservation",
+    "Complete TETHER facade suite: 138 tests"
+  ],
+  "in_progress": {
+    "operation": "Fresh full-gate02 prepared after 52 archive tests pass; not yet launched",
+    "unified_exec_session_id": null,
+    "log": "integration/full-gate-02.log",
+    "report": "integration/full-gate-02.json",
+    "last_observation": "Old session78654 is terminal with no matchingPythonprocesses. Profile migration and focused archive checks pass; source-bracketed new gate is prepared.",
+    "resumption_rule": "Poll the exact existing handle and inspect report/log. A saved state alone does not prove liveness or failure. Do not restart on observation timeout."
+  },
+  "next_if_gate_passes": "After archive-focused tests pass, run integration/run_gate.py --stem integration/full-gate-02 (absolute path under this directory), retaining before/after source pins. After that gate passes, run installed qualification, finalcheck, documentation and commit; only then BG02.",
+  "not_started": [
+    "BG02 independent equal-policy validator comparison",
+    "BG03 SciFact native integration/evaluation",
+    "BG04 one LAB-Bench task family",
+    "BG05 Inspect implementation/comparison"
+  ],
+  "limitations": "Overlapping targeted test counts are not summed. No new benchmark/model execution has occurred. BG01 remains incomplete until full and installed validation pass."
+}

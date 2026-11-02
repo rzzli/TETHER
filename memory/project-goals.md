@@ -10,6 +10,17 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+The owner has now activated [[TETHER Benchmark Execution Plan 2026-11-02]] as a
+sequential execution goal. [[research-log-2026-11-02-benchmark-execution]] and BG01–BG06
+in TODO are current. The three fixes and focused checks pass; a reviewed 0.3.12
+archive dependency profile corrects the first full gate's stale-profile failures.
+Fresh full and installed qualification are pending, so BG01 is incomplete. After
+it passes, implement and compare an independent equal-policy validator, add and
+evaluate SciFact, add one LAB-Bench task family, and test an Inspect implementation.
+Earlier recommendation-only/inactive wording below retains its date-specific
+scope; it does not block the new goal. Historical failures/results, retired expert
+inputs, deferred owner facts and the stopped downloader monitor remain unchanged.
+
 The benchmark/method review is complete; see [[TETHER benchmarks and methodological advances]]
 and [[research-log-2026-11-02-benchmarks-and-methods]]. Proposed next research is an
 independent equal-policy conformance comparison, followed by SciFact and one

@@ -1,0 +1,360 @@
+test_future_raw_bound_rejects_even_when_unused (test_ce03_receipt_time.ReceiptAvailabilityTests.test_future_raw_bound_rejects_even_when_unused) ... FAIL
+test_missing_public_download_bound_is_not_replaced_by_unrelated_dates (test_ce03_receipt_time.ReceiptAvailabilityTests.test_missing_public_download_bound_is_not_replaced_by_unrelated_dates) ... 
+  test_missing_public_download_bound_is_not_replaced_by_unrelated_dates (test_ce03_receipt_time.ReceiptAvailabilityTests.test_missing_public_download_bound_is_not_replaced_by_unrelated_dates) (used=False) ... FAIL
+  test_missing_public_download_bound_is_not_replaced_by_unrelated_dates (test_ce03_receipt_time.ReceiptAvailabilityTests.test_missing_public_download_bound_is_not_replaced_by_unrelated_dates) (used=True) ... FAIL
+test_receipt_url_mismatch_rejects_used_and_unused_inputs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_receipt_url_mismatch_rejects_used_and_unused_inputs) ... 
+  test_receipt_url_mismatch_rejects_used_and_unused_inputs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_receipt_url_mismatch_rejects_used_and_unused_inputs) (used=False) ... FAIL
+  test_receipt_url_mismatch_rejects_used_and_unused_inputs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_receipt_url_mismatch_rejects_used_and_unused_inputs) (used=True) ... FAIL
+test_separate_historical_basis_is_not_misrepresented_as_download_time (test_ce03_receipt_time.ReceiptAvailabilityTests.test_separate_historical_basis_is_not_misrepresented_as_download_time) ... ok
+test_used_and_unused_receipt_time_contradictions_fail_before_dispatch (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_receipt_time_contradictions_fail_before_dispatch) ... 
+  test_used_and_unused_receipt_time_contradictions_fail_before_dispatch (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_receipt_time_contradictions_fail_before_dispatch) (used=False) ... FAIL
+  test_used_and_unused_receipt_time_contradictions_fail_before_dispatch (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_receipt_time_contradictions_fail_before_dispatch) (used=True) ... FAIL
+test_used_and_unused_wrong_availability_evidence_refs_fail (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_wrong_availability_evidence_refs_fail) ... 
+  test_used_and_unused_wrong_availability_evidence_refs_fail (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_wrong_availability_evidence_refs_fail) (used=False) ... FAIL
+  test_used_and_unused_wrong_availability_evidence_refs_fail (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_wrong_availability_evidence_refs_fail) (used=True) ... FAIL
+test_valid_exact_and_conservative_bounds_preserve_all_proofs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_valid_exact_and_conservative_bounds_preserve_all_proofs) ... ok
+test_verification_rejects_resealed_unused_evidence_ref (test_ce03_receipt_time.ReceiptAvailabilityTests.test_verification_rejects_resealed_unused_evidence_ref) ... ok
+test_verification_rejects_resealed_used_and_unused_time_contradictions (test_ce03_receipt_time.ReceiptAvailabilityTests.test_verification_rejects_resealed_used_and_unused_time_contradictions) ... ok
+test_aact_manual_archive_is_metadata_only_and_no_invented_receipt (test_catalog_policy.CatalogPolicyTests.test_aact_manual_archive_is_metadata_only_and_no_invented_receipt) ... ok
+test_changed_case_snapshot_or_origin_rejected_even_without_source_read (test_catalog_policy.CatalogPolicyTests.test_changed_case_snapshot_or_origin_rejected_even_without_source_read) ... ok
+test_derived_input_requires_exact_all_parent_edges_not_only_packet_edges (test_catalog_policy.CatalogPolicyTests.test_derived_input_requires_exact_all_parent_edges_not_only_packet_edges) ... ok
+test_evaluator_answer_cannot_be_an_actual_ancestor_with_resealed_policy (test_catalog_policy.CatalogPolicyTests.test_evaluator_answer_cannot_be_an_actual_ancestor_with_resealed_policy) ... ok
+test_evaluator_deny_survives_reference_role_and_optional_classification (test_catalog_policy.CatalogPolicyTests.test_evaluator_deny_survives_reference_role_and_optional_classification) ... ok
+test_extra_grants_and_duplicate_use_rejected (test_catalog_policy.CatalogPolicyTests.test_extra_grants_and_duplicate_use_rejected) ... ok
+test_future_or_unverified_raw_availability_rejected (test_catalog_policy.CatalogPolicyTests.test_future_or_unverified_raw_availability_rejected) ... ok
+test_genetics_edge_migration_does_not_erase_training_inputs (test_catalog_policy.CatalogPolicyTests.test_genetics_edge_migration_does_not_erase_training_inputs) ... ok
+test_history_cannot_be_qualified_by_contemporary_download (test_catalog_policy.CatalogPolicyTests.test_history_cannot_be_qualified_by_contemporary_download) ... ok
+test_input_cycles_unknown_optional_and_components_rejected (test_catalog_policy.CatalogPolicyTests.test_input_cycles_unknown_optional_and_components_rejected) ... ok
+test_migration_preserves_every_product_status_and_source_anchor (test_catalog_policy.CatalogPolicyTests.test_migration_preserves_every_product_status_and_source_anchor) ... ok
+test_mutating_returned_projection_does_not_modify_authority (test_catalog_policy.CatalogPolicyTests.test_mutating_returned_projection_does_not_modify_authority) ... ok
+test_parent_removal_or_fabrication_does_not_pass_rebinding (test_catalog_policy.CatalogPolicyTests.test_parent_removal_or_fabrication_does_not_pass_rebinding) ... ok
+test_raw_and_packet_actual_id_aliasing_rejected (test_catalog_policy.CatalogPolicyTests.test_raw_and_packet_actual_id_aliasing_rejected) ... ok
+test_receipt_path_and_hash_must_equal_artifact_policy (test_catalog_policy.CatalogPolicyTests.test_receipt_path_and_hash_must_equal_artifact_policy) ... ok
+test_schema1_compatibility_is_not_silent_schema2_acceptance (test_catalog_policy.CatalogPolicyTests.test_schema1_compatibility_is_not_silent_schema2_acceptance) ... ok
+test_scientific_status_promotion_and_collected_metadata_edit_denied (test_catalog_policy.CatalogPolicyTests.test_scientific_status_promotion_and_collected_metadata_edit_denied) ... ok
+test_strict_json_rejects_duplicates_nonfinite_and_noninteger_version (test_catalog_policy.CatalogPolicyTests.test_strict_json_rejects_duplicates_nonfinite_and_noninteger_version) ... ok
+test_structural_fingerprint_cannot_replace_byte_anchor (test_catalog_policy.CatalogPolicyTests.test_structural_fingerprint_cannot_replace_byte_anchor) ... ok
+test_supplied_role_changes_and_hidden_unused_nodes_rejected (test_catalog_policy.CatalogPolicyTests.test_supplied_role_changes_and_hidden_unused_nodes_rejected) ... ok
+test_traversal_and_root_alias_collisions_rejected (test_catalog_policy.CatalogPolicyTests.test_traversal_and_root_alias_collisions_rejected) ... ok
+test_undeclared_artifact_identity_field_changes_rejected (test_catalog_policy.CatalogPolicyTests.test_undeclared_artifact_identity_field_changes_rejected) ... ok
+test_unknown_policy_keys_duplicate_products_and_invalid_hashes_rejected (test_catalog_policy.CatalogPolicyTests.test_unknown_policy_keys_duplicate_products_and_invalid_hashes_rejected) ... ok
+test_unreviewed_product_cannot_be_granted_and_alias_location_is_bound (test_catalog_policy.CatalogPolicyTests.test_unreviewed_product_cannot_be_granted_and_alias_location_is_bound) ... ok
+test_valid_selection_has_exact_nodes_and_nonselected_products_denied (test_catalog_policy.CatalogPolicyTests.test_valid_selection_has_exact_nodes_and_nonselected_products_denied) ... ok
+test_consistent_receipt_is_a_transport_check_not_status_promotion (test_catalog_policy.ReceiptReconciliationTests.test_consistent_receipt_is_a_transport_check_not_status_promotion) ... ok
+test_every_identity_and_case_only_mutation_is_rejected (test_catalog_policy.ReceiptReconciliationTests.test_every_identity_and_case_only_mutation_is_rejected) ... ok
+test_legacy_windows_separators_match_without_casefold_or_traversal_repair (test_catalog_policy.ReceiptReconciliationTests.test_legacy_windows_separators_match_without_casefold_or_traversal_repair) ... ok
+test_missing_queue_identity_size_hash_status_and_source_digest_rejected (test_catalog_policy.ReceiptReconciliationTests.test_missing_queue_identity_size_hash_status_and_source_digest_rejected) ... ok
+test_boolean_publication_year_is_contract_error (test_store_temporal_hardening.StoreTemporalHardeningTests.test_boolean_publication_year_is_contract_error) ... ok
+test_direct_finalization_without_base_fails_before_output (test_store_temporal_hardening.StoreTemporalHardeningTests.test_direct_finalization_without_base_fails_before_output) ... ERROR
+test_explicit_based_store_executes_and_finalizes (test_store_temporal_hardening.StoreTemporalHardeningTests.test_explicit_based_store_executes_and_finalizes) ... ERROR
+test_explicit_future_date_or_year_excluded (test_store_temporal_hardening.StoreTemporalHardeningTests.test_explicit_future_date_or_year_excluded) ... ok
+test_explicit_relative_base_is_captured_as_absolute (test_store_temporal_hardening.StoreTemporalHardeningTests.test_explicit_relative_base_is_captured_as_absolute) ... ERROR
+test_inconsistent_publication_date_and_year_excluded (test_store_temporal_hardening.StoreTemporalHardeningTests.test_inconsistent_publication_date_and_year_excluded) ... ok
+test_missing_directory_base_fails_before_backend_use (test_store_temporal_hardening.StoreTemporalHardeningTests.test_missing_directory_base_fails_before_backend_use) ... ERROR
+test_missing_publication_does_not_hide_eligible_context (test_store_temporal_hardening.StoreTemporalHardeningTests.test_missing_publication_does_not_hide_eligible_context) ... ok
+test_new_computation_can_use_older_eligible_information (test_store_temporal_hardening.StoreTemporalHardeningTests.test_new_computation_can_use_older_eligible_information) ... ok
+test_query_only_store_has_explicit_unbased_state (test_store_temporal_hardening.StoreTemporalHardeningTests.test_query_only_store_has_explicit_unbased_state) ... ok
+test_same_year_with_eligible_information_is_not_invented_leakage (test_store_temporal_hardening.StoreTemporalHardeningTests.test_same_year_with_eligible_information_is_not_invented_leakage) ... ok
+test_unbased_store_fails_before_backend_use (test_store_temporal_hardening.StoreTemporalHardeningTests.test_unbased_store_fails_before_backend_use) ... ok
+test_absent_null_empty_and_explicit_empty_value (test_study_source_fact_sources.SourceFactSourceTests.test_absent_null_empty_and_explicit_empty_value) ... ok
+test_compiled_reference_exact_projection_must_fit_common_wire (test_study_source_fact_sources.SourceFactSourceTests.test_compiled_reference_exact_projection_must_fit_common_wire) ... ok
+test_deadline_and_receipt_required_for_real_profile (test_study_source_fact_sources.SourceFactSourceTests.test_deadline_and_receipt_required_for_real_profile) ... ok
+test_duplicate_provider_ids_remain_distinct_across_files (test_study_source_fact_sources.SourceFactSourceTests.test_duplicate_provider_ids_remain_distinct_across_files) ... ok
+test_entire_graph_roles_dates_and_denies_precede_byte_access (test_study_source_fact_sources.SourceFactSourceTests.test_entire_graph_roles_dates_and_denies_precede_byte_access) ... ok
+test_exact_joins_zero_one_multiple_and_conflict (test_study_source_fact_sources.SourceFactSourceTests.test_exact_joins_zero_one_multiple_and_conflict) ... ok
+test_family_map_group_boundaries_and_finite_task_validation (test_study_source_fact_sources.SourceFactSourceTests.test_family_map_group_boundaries_and_finite_task_validation) ... ok
+test_fictional_parquet_selected_row_and_absent_schema (test_study_source_fact_sources.SourceFactSourceTests.test_fictional_parquet_selected_row_and_absent_schema) ... ok
+test_literal_replay_binding_frozen_reference_and_hash (test_study_source_fact_sources.SourceFactSourceTests.test_literal_replay_binding_frozen_reference_and_hash) ... ok
+test_measurements_require_native_finite_numbers_and_integer_exponent (test_study_source_fact_sources.SourceFactSourceTests.test_measurements_require_native_finite_numbers_and_integer_exponent) ... ok
+test_missing_ancestors_cycles_profile_and_cutoff_mismatch (test_study_source_fact_sources.SourceFactSourceTests.test_missing_ancestors_cycles_profile_and_cutoff_mismatch) ... ok
+test_native_units_and_empty_missing_reference (test_study_source_fact_sources.SourceFactSourceTests.test_native_units_and_empty_missing_reference) ... ok
+test_one_to_one_conflict_includes_native_units_and_schema_presence (test_study_source_fact_sources.SourceFactSourceTests.test_one_to_one_conflict_includes_native_units_and_schema_presence) ... ok
+test_receipt_bound_contemporary_replay_and_tampering (test_study_source_fact_sources.SourceFactSourceTests.test_receipt_bound_contemporary_replay_and_tampering) ... ok
+test_reference_relocates_but_catalog_deny_and_snapshot_policy_remain_bound (test_study_source_fact_sources.SourceFactSourceTests.test_reference_relocates_but_catalog_deny_and_snapshot_policy_remain_bound) ... ok
+test_replay_rejects_document_and_original_tampering (test_study_source_fact_sources.SourceFactSourceTests.test_replay_rejects_document_and_original_tampering) ... ok
+test_selected_joins_require_same_release_before_byte_access (test_study_source_fact_sources.SourceFactSourceTests.test_selected_joins_require_same_release_before_byte_access) ... ok
+test_snapshot_cannot_grant_an_additional_raw_root (test_study_source_fact_sources.SourceFactSourceTests.test_snapshot_cannot_grant_an_additional_raw_root) ... ok
+test_strict_pointer_identity_scope_and_dates (test_study_source_fact_sources.SourceFactSourceTests.test_strict_pointer_identity_scope_and_dates) ... ok
+test_unknown_join_chain_cannot_reauthorize_linked_facts (test_study_source_fact_sources.SourceFactSourceTests.test_unknown_join_chain_cannot_reauthorize_linked_facts) ... ok
+test_unpatched_stable_read_fails_closed_outside_windows (test_study_source_fact_sources.SourceFactSourceTests.test_unpatched_stable_read_fails_closed_outside_windows) ... ok
+
+======================================================================
+ERROR: test_direct_finalization_without_base_fails_before_output (test_store_temporal_hardening.StoreTemporalHardeningTests.test_direct_finalization_without_base_fails_before_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp_vytdl9t'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 75, in test_direct_finalization_without_base_fails_before_output
+    with tempfile.TemporaryDirectory() as temporary:
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp_vytdl9t'
+
+======================================================================
+ERROR: test_explicit_based_store_executes_and_finalizes (test_store_temporal_hardening.StoreTemporalHardeningTests.test_explicit_based_store_executes_and_finalizes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 70, in test_explicit_based_store_executes_and_finalizes
+    write_run(output, result, store, None)
+  File "D:\Projects\drug_target_agents\src\asof\artifacts.py", line 133, in write_run
+    output.mkdir(parents=True, exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmphho12cu2\\run'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmphho12cu2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 68, in test_explicit_based_store_executes_and_finalizes
+    with tempfile.TemporaryDirectory() as temporary:
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmphho12cu2'
+
+======================================================================
+ERROR: test_explicit_relative_base_is_captured_as_absolute (test_store_temporal_hardening.StoreTemporalHardeningTests.test_explicit_relative_base_is_captured_as_absolute)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 87, in test_explicit_relative_base_is_captured_as_absolute
+    write_run(output, result, store, None)
+  File "D:\Projects\drug_target_agents\src\asof\artifacts.py", line 133, in write_run
+    output.mkdir(parents=True, exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp9dbv7gic\\run'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp9dbv7gic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 85, in test_explicit_relative_base_is_captured_as_absolute
+    with tempfile.TemporaryDirectory() as temporary:
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp9dbv7gic'
+
+======================================================================
+ERROR: test_missing_directory_base_fails_before_backend_use (test_store_temporal_hardening.StoreTemporalHardeningTests.test_missing_directory_base_fails_before_backend_use)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp8aopcch2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_store_temporal_hardening.py", line 59, in test_missing_directory_base_fails_before_backend_use
+    with tempfile.TemporaryDirectory() as temporary:
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 943, in __exit__
+    self.cleanup()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9aaae4fa-85a7-459d-b782-a31de3906998}\\AC\\Temp\\tmp8aopcch2'
+
+======================================================================
+FAIL: test_future_raw_bound_rejects_even_when_unused (test_ce03_receipt_time.ReceiptAvailabilityTests.test_future_raw_bound_rejects_even_when_unused)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 142, in test_future_raw_bound_rejects_even_when_unused
+    self.assert_preflight_rejects(fixture, output, "raw information unavailable at origin")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "raw information unavailable at origin" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_missing_public_download_bound_is_not_replaced_by_unrelated_dates (test_ce03_receipt_time.ReceiptAvailabilityTests.test_missing_public_download_bound_is_not_replaced_by_unrelated_dates) (used=False)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 131, in test_missing_public_download_bound_is_not_replaced_by_unrelated_dates
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_missing_public_download_bound_is_not_replaced_by_unrelated_dates (test_ce03_receipt_time.ReceiptAvailabilityTests.test_missing_public_download_bound_is_not_replaced_by_unrelated_dates) (used=True)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 131, in test_missing_public_download_bound_is_not_replaced_by_unrelated_dates
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_receipt_url_mismatch_rejects_used_and_unused_inputs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_receipt_url_mismatch_rejects_used_and_unused_inputs) (used=False)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 137, in test_receipt_url_mismatch_rejects_used_and_unused_inputs
+    self.assert_preflight_rejects(fixture, output, "receipt url differs")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "receipt url differs" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_receipt_url_mismatch_rejects_used_and_unused_inputs (test_ce03_receipt_time.ReceiptAvailabilityTests.test_receipt_url_mismatch_rejects_used_and_unused_inputs) (used=True)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 137, in test_receipt_url_mismatch_rejects_used_and_unused_inputs
+    self.assert_preflight_rejects(fixture, output, "receipt url differs")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "receipt url differs" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_used_and_unused_receipt_time_contradictions_fail_before_dispatch (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_receipt_time_contradictions_fail_before_dispatch) (used=False)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 119, in test_used_and_unused_receipt_time_contradictions_fail_before_dispatch
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_used_and_unused_receipt_time_contradictions_fail_before_dispatch (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_receipt_time_contradictions_fail_before_dispatch) (used=True)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 119, in test_used_and_unused_receipt_time_contradictions_fail_before_dispatch
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_used_and_unused_wrong_availability_evidence_refs_fail (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_wrong_availability_evidence_refs_fail) (used=False)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 125, in test_used_and_unused_wrong_availability_evidence_refs_fail
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+======================================================================
+FAIL: test_used_and_unused_wrong_availability_evidence_refs_fail (test_ce03_receipt_time.ReceiptAvailabilityTests.test_used_and_unused_wrong_availability_evidence_refs_fail) (used=True)
+----------------------------------------------------------------------
+asof.serde.ContractError: Installed distribution version differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 125, in test_used_and_unused_wrong_availability_evidence_refs_fail
+    self.assert_preflight_rejects(fixture, output, "availability bound.*receipt")
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_ce03_receipt_time.py", line 106, in assert_preflight_rejects
+    with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
+AssertionError: "availability bound.*receipt" does not match "Installed distribution version differs"
+
+----------------------------------------------------------------------
+Ran 71 tests in 6.688s
+
+FAILED (failures=9, errors=4)

@@ -1,0 +1,17 @@
+{
+  "phase": "green4",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "elapsed_seconds": 1.297000000020489,
+  "failures_detail": [],
+  "errors_detail": [],
+  "source_sha256": {
+    "src\\asof\\local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+    "src\\asof\\workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+    "tests\\test_ce02_usage_accounting.py": "a6ea39c5ade8a4af97cfc4f23fec8cd2aaaa4efeac4534bc06d76f49f477c047"
+  },
+  "scope": "Fictional in-process opener; no actual model/network/provider call"
+}

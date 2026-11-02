@@ -1,0 +1,22 @@
+{
+  "tests": 122,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "elapsed_seconds": 20.437000000150874,
+  "patterns": [
+    "test_local_model.py",
+    "test_backend_hardening.py",
+    "test_runtime_hardening_peer.py",
+    "test_selection_cap.py",
+    "test_framework.py",
+    "test_science_role_backend.py",
+    "test_science_role_constraint_peer.py",
+    "test_science_comparison_workflow.py"
+  ],
+  "source_sha256": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+  "failures_detail": [],
+  "errors_detail": [],
+  "scope": "Existing fictional adapter/framework tests; no actual model/network/provider call"
+}

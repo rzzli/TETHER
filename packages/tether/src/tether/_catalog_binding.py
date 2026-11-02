@@ -11,7 +11,8 @@ import time
 
 from asof.atomic import publish_bytes
 from asof.chrono import load_snapshot
-from asof.contracts import Case, Snapshot
+from asof.contracts import Case, Snapshot, SourceNode
+from asof.provenance import check_receipt_availability
 from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json
 from asof.study.stable_read import checked_path, hash_file, read_file
 
@@ -110,7 +111,7 @@ def _check_hash(path, expected, deadline):
          "source hash/size differs: " + str(path))
 
 
-def _check_receipt(entry, roots, payload, deadline):
+def _check_receipt(entry, roots, payload, deadline, node):
     reference = entry["receipt"]
     receipt = strict_json(payload)
     reconcile_receipt(dict(receipt_id=reference["receipt_id"], dataset_id=entry["dataset_id"],
@@ -119,6 +120,9 @@ def _check_receipt(entry, roots, payload, deadline):
                       receipt, observed_size=entry["bytes"], observed_sha256=entry["sha256"])
     source = checked_path(Path(roots[entry["root_alias"]]), entry["relative_path"])
     need(str(source) == entry["physical_path"], "receipt physical source binding differs")
+    # This boundary promises consistency for every supplied input, including
+    # unused grants that the engine's reachable-ancestry checks do not visit.
+    check_receipt_availability(decode(SourceNode, node), receipt)
 
 
 def _metadata_proofs(output, policy, decision, roots, deadline, *, publish):
@@ -157,6 +161,7 @@ def prepare_policy_run(output, request):
     need(str(source_catalog) == str(originals["source_catalog"]), "schema-one catalog path differs from metadata root")
     case, snapshot = documents["case"], documents["snapshot"]
     decision = _decision(policy, snapshot, case, roots, request.use_id, request.frame_sha256)
+    source_nodes = {node["source_id"]: node for node in snapshot["sources"]}
     use = _selected_use(policy, request.use_id)
     need(str(originals["snapshot"].parent) == str(Path(roots[use["snapshot_root_alias"]])),
          "selected snapshot root differs from actual input location")
@@ -191,7 +196,7 @@ def prepare_policy_run(output, request):
             receipt_path = checked_path(Path(roots[ref["root_alias"]]), ref["relative_path"])
             payload = _read(receipt_path, deadline)
             need(_descriptor("", payload)["sha256"] == ref["sha256"], "original receipt hash differs")
-            _check_receipt(entry, roots, payload, deadline)
+            _check_receipt(entry, roots, payload, deadline, source_nodes[entry["source_id"]])
             receipts.append(dict(source_id=entry["source_id"], original_path=str(receipt_path),
                 **_publish(output, POLICY_DIR + "/receipts/" + ref["sha256"] + ".json", payload,
                            deadline, shared=True)))
@@ -264,6 +269,7 @@ def verify_policy_run(output, descriptor, *, check_engine=True):
          seal["original_control_paths"]["source_catalog"], "original source catalog location differs")
     decision = _decision(controls["policy"], controls["snapshot"], controls["case"], roots,
                          seal["use_id"], seal["frame_sha256"])
+    source_nodes = {node["source_id"]: node for node in controls["snapshot"]["sources"]}
     need(canonical(decision["binding"]) == canonical(controls["decision"]), "policy decision differs")
     need(canonical(decision["projection"]) == canonical(controls["projection"]), "policy projection differs")
     need(canonical(seal["metadata_proofs"]) == canonical(_metadata_proofs(output, controls["policy"],
@@ -291,7 +297,7 @@ def verify_policy_run(output, descriptor, *, check_engine=True):
             archived = _read(checked_path(output, relative), deadline)
             need(original == archived and _descriptor("", archived)["sha256"] == ref["sha256"],
                  "original receipt differs from immutable archive")
-            _check_receipt(entry, roots, archived, deadline)
+            _check_receipt(entry, roots, archived, deadline, source_nodes[entry["source_id"]])
             expected_receipts.append(dict(source_id=entry["source_id"], original_path=str(path),
                                           **_descriptor(relative, archived)))
     for name, expected in (("copies", expected_copies), ("external_sources", expected_external),

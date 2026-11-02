@@ -1,0 +1,70 @@
+{
+  "scope": "Fictional old policy seals; no engine dispatch",
+  "versions": {
+    "tether": "0.5.1",
+    "engine": "0.3.11",
+    "binding_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Lib\\site-packages\\tether\\_catalog_binding.py",
+    "provenance_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Lib\\site-packages\\asof\\provenance.py",
+    "binding_sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+    "provenance_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446"
+  },
+  "cases": [
+    {
+      "name": "unused-valid",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-ce03-legacy-seals-v1\\unused-valid\\outer",
+      "descriptor": {
+        "path": "catalog-policy/binding.json",
+        "sha256": "b2237f455e09184ee6298cf0609d0b8eac9f7ff0ebc57f37c13e17832adba0a0",
+        "bytes": 4897
+      },
+      "old_result": {
+        "method": "tether.sealed_catalog_binding.v1",
+        "status": "artifact_policy_consistency_verified",
+        "policy_id": "fictional-policy",
+        "use_id": "fictional-use",
+        "frame_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "checked_inputs": 4,
+        "scientific_validation": "not_established"
+      },
+      "expected_corrected_result": "accepted"
+    },
+    {
+      "name": "unused-contradictory",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-ce03-legacy-seals-v1\\unused-contradictory\\outer",
+      "descriptor": {
+        "path": "catalog-policy/binding.json",
+        "sha256": "e460560d346b0a30e435432f3ca179a6a7d732c977b31d8c690ed7cdba83b76e",
+        "bytes": 4969
+      },
+      "old_result": {
+        "method": "tether.sealed_catalog_binding.v1",
+        "status": "artifact_policy_consistency_verified",
+        "policy_id": "fictional-policy",
+        "use_id": "fictional-use",
+        "frame_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "checked_inputs": 4,
+        "scientific_validation": "not_established"
+      },
+      "expected_corrected_result": "rejected"
+    },
+    {
+      "name": "used-alternative-basis",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-ce03-legacy-seals-v1\\used-alternative-basis\\outer",
+      "descriptor": {
+        "path": "catalog-policy/binding.json",
+        "sha256": "ac25eceb9ae58ed654135d98dabc880157161935fef66332fd4cd1a16c70f596",
+        "bytes": 4987
+      },
+      "old_result": {
+        "method": "tether.sealed_catalog_binding.v1",
+        "status": "artifact_policy_consistency_verified",
+        "policy_id": "fictional-policy",
+        "use_id": "fictional-use",
+        "frame_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "checked_inputs": 4,
+        "scientific_validation": "not_established"
+      },
+      "expected_corrected_result": "accepted"
+    }
+  ]
+}

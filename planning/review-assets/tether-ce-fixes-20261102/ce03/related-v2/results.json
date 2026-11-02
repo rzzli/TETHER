@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-02T19:20:33.639312+00:00",
+  "interpreter": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-dev\\Scripts\\python.exe",
+  "scope": "Fictional CE03 regression suite; no network/model/data collection",
+  "modules": [
+    "test_ce03_receipt_time",
+    "test_catalog_policy",
+    "test_catalog_binding",
+    "test_store_temporal_hardening",
+    "test_study_source_fact_sources"
+  ],
+  "tests": 85,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "source_sha256": {
+    "src/asof/provenance.py": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3",
+    "packages/tether/src/tether/_catalog_binding.py": "ee8a0d0ccc8453be3464e5b34baeaeb03696869b3e2add443d2a27c6725b10e8",
+    "packages/tether/tests/test_ce03_receipt_time.py": "7ad3c4bac8ac56ac66523cf54c1c4334697c22ec6403ce86170bf433de2eecb7"
+  },
+  "runner_sha256": "a52ea1616c5a7832076f821c3547060904712c0a64244ac2de9c3b9be6bfc22d",
+  "temporary_root": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-ce03-tests\\suite-related-v2"
+}

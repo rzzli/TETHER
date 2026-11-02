@@ -2,6 +2,8 @@
 
 This table distinguishes the interface, version, input anchor and property being checked. A passing check establishes the stated consistency property; it does not establish biological truth, source authenticity or clinical validity. The [current corrective plan](<../planning/TETHER Corrective Execution Plan 2026-11-02.md>) and [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) retain the counterexamples that motivated these distinctions.
 
+The [new execution plan](<../planning/TETHER Benchmark Execution Plan 2026-11-02.md>) is active. TETHER 0.5.1/AsOf 0.3.12 are undergoing separate qualification for receipt-time consistency and failed-call usage accounting; the supporting transport verifier also gains non-replacing report publication. The qualified historical rows below do not certify this working revision. Preserve matching 0.5.0/0.3.11 wheels for older outer runs.
+
 ## Qualified interfaces
 
 | Interface | Checked property | Required evidence | Remaining limit |

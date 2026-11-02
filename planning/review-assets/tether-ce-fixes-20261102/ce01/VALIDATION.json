@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-02T19:19:48.3923091+00:00",
+  "scope": "CE01 fictional Windows transport report publication regression",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "powershell_version": "7.6.5",
+  "before_regression": "before-regression.txt",
+  "after_tests": "after-tests-02.txt",
+  "before_script_sha256": "5a0ebfd307e97bd3d1cc37191beec3ec4672c2d5097a748f8844d2e431656eb4",
+  "fixed_script_sha256": "e817b0b365d4f4d31c705e00fa5e8f7629283f8dcdccd47920013202b10e79ab",
+  "regression_sha256": "ec4c26ed41fd47e3bae7974ff8aba1577f189234d595375023c0615d2a780f09",
+  "syntax": "PowerShell parser passed",
+  "retained_environment_failures": [
+    "before-harness-error.txt: sandbox default TEMP access failure, rerun in workspace TEMP",
+    "after-tests-01.txt: sandbox denied hardlink and junction creation; same suite passed with reviewed escalation"
+  ],
+  "preserved": "No downloader worker, production receipts, raw datasets, stopped monitor or runtime/package version changed by CE01.",
+  "limitation": "Windows/PowerShell7 utility scope; no concurrent malicious filesystem-owner guarantee or scientific/temporal validation."
+}

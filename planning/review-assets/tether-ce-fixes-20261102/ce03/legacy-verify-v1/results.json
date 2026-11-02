@@ -1,0 +1,61 @@
+{
+  "scope": "Fictional old policy seals; no engine dispatch",
+  "producer_versions": {
+    "tether": "0.5.0",
+    "engine": "0.3.11",
+    "binding_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Lib\\site-packages\\tether\\_catalog_binding.py",
+    "provenance_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Lib\\site-packages\\asof\\provenance.py",
+    "binding_sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+    "provenance_sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446"
+  },
+  "verifier_versions": {
+    "tether": "0.5.1",
+    "engine": "0.3.12",
+    "binding_path": "D:\\Projects\\drug_target_agents\\packages\\tether\\src\\tether\\_catalog_binding.py",
+    "provenance_path": "D:\\Projects\\drug_target_agents\\src\\asof\\provenance.py",
+    "binding_sha256": "ee8a0d0ccc8453be3464e5b34baeaeb03696869b3e2add443d2a27c6725b10e8",
+    "provenance_sha256": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3"
+  },
+  "results": [
+    {
+      "actual": "accepted",
+      "verification": {
+        "method": "tether.sealed_catalog_binding.v1",
+        "status": "artifact_policy_consistency_verified",
+        "policy_id": "fictional-policy",
+        "use_id": "fictional-use",
+        "frame_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "checked_inputs": 4,
+        "scientific_validation": "not_established"
+      },
+      "name": "unused-valid",
+      "expected": "accepted",
+      "passed": true
+    },
+    {
+      "actual": "rejected",
+      "exception": "ContractError",
+      "message": "Contemporary availability bound does not match public-download receipt",
+      "name": "unused-contradictory",
+      "expected": "rejected",
+      "passed": true
+    },
+    {
+      "actual": "accepted",
+      "verification": {
+        "method": "tether.sealed_catalog_binding.v1",
+        "status": "artifact_policy_consistency_verified",
+        "policy_id": "fictional-policy",
+        "use_id": "fictional-use",
+        "frame_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "checked_inputs": 4,
+        "scientific_validation": "not_established"
+      },
+      "name": "used-alternative-basis",
+      "expected": "accepted",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "archives_sha256": "5ed82ae2d825a40c400f931bbea09170c13c49ed4ee5088436a3e45094c4c466"
+}

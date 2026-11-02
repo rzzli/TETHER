@@ -1,16 +1,16 @@
 """TETHER: Target Evidence Tracking Harness for Evaluation and Reproducibility.
 
-The public namespace uses the pinned AsOf 0.3.11 scientific engine. Legacy
+The public namespace uses the pinned AsOf 0.3.12 scientific engine. Legacy
 module objects and serialized identities remain intact for compatibility.
 """
 from __future__ import annotations
 
 from asof import __version__ as __core_version__
 
-__version__ = "0.5.0"
+__version__ = "0.5.1"
 
-if __core_version__ != "0.3.11":
-    raise ImportError("TETHER 0.5.0 requires the pinned legacy engine 0.3.11")
+if __core_version__ != "0.3.12":
+    raise ImportError("TETHER 0.5.1 requires the pinned legacy engine 0.3.12")
 
 from ._aliases import install as _install_aliases, public_roots as _public_roots
 

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-02T19:19:22.184606+00:00",
+  "interpreter": "D:\\Projects\\drug_target_agents\\.venv\\Scripts\\python.exe",
+  "scope": "Fictional CE03 regression suite; no network/model/data collection",
+  "modules": [
+    "test_ce03_receipt_time",
+    "test_catalog_policy",
+    "test_store_temporal_hardening",
+    "test_study_source_fact_sources"
+  ],
+  "tests": 71,
+  "failures": 9,
+  "errors": 4,
+  "skipped": 0,
+  "successful": false,
+  "source_sha256": {
+    "src/asof/provenance.py": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3",
+    "packages/tether/src/tether/_catalog_binding.py": "ee8a0d0ccc8453be3464e5b34baeaeb03696869b3e2add443d2a27c6725b10e8",
+    "packages/tether/tests/test_ce03_receipt_time.py": "7ad3c4bac8ac56ac66523cf54c1c4334697c22ec6403ce86170bf433de2eecb7"
+  },
+  "runner_sha256": "18cc2300f64119c3fa7be494eb6311f269ef5a89e9c3b31951666620c7ec95cb"
+}

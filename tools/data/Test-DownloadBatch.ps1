@@ -11,6 +11,55 @@ if ((Get-Command ConvertFrom-Json).Parameters.ContainsKey('DateKind')) { $readAr
 $queue = Get-Content -LiteralPath $QueuePath -Raw | ConvertFrom-Json @readArgs
 $records = @($queue.files)
 if (-not $records.Count) { throw 'Empty verification scope.' }
+
+function Assert-FreshReportDestination([string]$Path) {
+    # Reject link aliases, including dangling links, before touching a report.
+    # Exclusive publication below remains necessary for concurrent writers.
+    $cursor = $Path
+    while ($cursor) {
+        $item = Get-Item -LiteralPath $cursor -Force -ErrorAction Ignore
+        if ($null -ne $item) {
+            if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
+                throw 'Report destination must not traverse a reparse point.'
+            }
+            if ($cursor -eq $Path) { throw 'Report destination already exists; use a fresh path.' }
+            if (-not $item.PSIsContainer) { throw 'Report parent is not a directory.' }
+        }
+        $cursor = [IO.Path]::GetDirectoryName($cursor)
+    }
+}
+
+$reportPath = $null
+if ($OutputPath) {
+    $reportPath = [IO.Path]::GetFullPath($OutputPath)
+    $reportRoot = [IO.Path]::GetPathRoot($reportPath)
+    if ($reportPath.Substring($reportRoot.Length).Contains(':')) {
+        throw 'Report destination must not use an alternate data stream.'
+    }
+    $protectedPaths = [Collections.Generic.List[string]]::new()
+    $protectedPaths.Add([IO.Path]::GetFullPath($QueuePath))
+    foreach ($record in $records) {
+        # Protect even missing originals/receipts: a failed report must not be
+        # mistaken for a newly collected input. Invalid paths remain per-record
+        # failures in the verifier below.
+        try {
+            if ($record.relative_path -is [string]) {
+                $protectedPaths.Add([IO.Path]::GetFullPath((Join-Path $root $record.relative_path)))
+            }
+        } catch { }
+        try {
+            if ($record.receipt_id -is [string]) {
+                $protectedPaths.Add([IO.Path]::GetFullPath((Join-Path $root ('manifests\receipts\'+$record.receipt_id+'.json'))))
+            }
+        } catch { }
+    }
+    foreach ($protectedPath in $protectedPaths) {
+        if ([string]::Equals($protectedPath, $reportPath, [StringComparison]::OrdinalIgnoreCase)) {
+            throw 'Report destination aliases a queue, original or receipt input.'
+        }
+    }
+    Assert-FreshReportDestination $reportPath
+}
 $failures = [Collections.Generic.List[object]]::new()
 $verified = 0
 $bytes = [long]0
@@ -66,9 +115,31 @@ $result=[pscustomobject]@{
     complete=($verified -eq $records.Count -and $failures.Count -eq 0);failures=@($failures)
     limitations='Transport/content integrity only; no scientific/schema/temporal-validity claim.'
 }
-if ($OutputPath) {
-    $parent=[IO.Path]::GetDirectoryName([IO.Path]::GetFullPath($OutputPath));New-Item -ItemType Directory -Path $parent -Force | Out-Null
-    $result | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $OutputPath -Encoding utf8NoBOM
+$resultJson = $result | ConvertTo-Json -Depth 8
+if ($reportPath) {
+    $parent = [IO.Path]::GetDirectoryName($reportPath)
+    $null = [IO.Directory]::CreateDirectory($parent)
+    Assert-FreshReportDestination $reportPath
+    $temporaryPath = Join-Path $parent ('.verify-report-'+[Guid]::NewGuid().ToString('N')+'.tmp')
+    $created = $false
+    $stream = $null
+    try {
+        $stream = [IO.File]::Open($temporaryPath, [IO.FileMode]::CreateNew,
+                                 [IO.FileAccess]::Write, [IO.FileShare]::None)
+        $created = $true
+        $content = [Text.UTF8Encoding]::new($false).GetBytes($resultJson+[Environment]::NewLine)
+        $stream.Write($content, 0, $content.Length)
+        $stream.Flush($true)
+        $stream.Dispose()
+        $stream = $null
+        # This overload never replaces an existing destination. Only a fully
+        # written report becomes visible, and concurrent publishers cannot win
+        # by truncating a report or source created since preflight.
+        [IO.File]::Move($temporaryPath, $reportPath)
+    } finally {
+        if ($null -ne $stream) { $stream.Dispose() }
+        if ($created -and [IO.File]::Exists($temporaryPath)) { [IO.File]::Delete($temporaryPath) }
+    }
 }
-$result | ConvertTo-Json -Depth 8
+$resultJson
 if (-not $result.complete) { exit 2 }

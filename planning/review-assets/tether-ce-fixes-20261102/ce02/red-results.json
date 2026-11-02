@@ -1,0 +1,47 @@
+{
+  "phase": "red",
+  "tests": 8,
+  "failures": 6,
+  "errors": 1,
+  "skips": 0,
+  "success": false,
+  "elapsed_seconds": 1.047000000020489,
+  "failures_detail": [
+    {
+      "test": "test_failed_archive_rejects_changed_response_hash (ce02_regressions.CE02UsageAccountingTests.test_failed_archive_rejects_changed_response_hash)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 106, in test_failed_archive_rejects_changed_response_hash\n    with self.assertRaises(ContractError):\nAssertionError: ContractError not raised\n"
+    },
+    {
+      "test": "test_failed_archive_rejects_missing_or_extra_account (ce02_regressions.CE02UsageAccountingTests.test_failed_archive_rejects_missing_or_extra_account) (account_count=7)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 115, in test_failed_archive_rejects_missing_or_extra_account\n    with self.assertRaises(ContractError):\nAssertionError: ContractError not raised\n"
+    },
+    {
+      "test": "test_failed_archive_rejects_missing_or_extra_account (ce02_regressions.CE02UsageAccountingTests.test_failed_archive_rejects_missing_or_extra_account) (account_count=9)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 115, in test_failed_archive_rejects_missing_or_extra_account\n    with self.assertRaises(ContractError):\nAssertionError: ContractError not raised\n"
+    },
+    {
+      "test": "test_failed_archive_rejects_quote_downgrade_of_validated_usage (ce02_regressions.CE02UsageAccountingTests.test_failed_archive_rejects_quote_downgrade_of_validated_usage)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 99, in test_failed_archive_rejects_quote_downgrade_of_validated_usage\n    with self.assertRaises(ContractError):\nAssertionError: ContractError not raised\n"
+    },
+    {
+      "test": "test_overquote_reported_usage_survives_and_stops_dispatch (ce02_regressions.CE02UsageAccountingTests.test_overquote_reported_usage_survives_and_stops_dispatch) (changes={'tokens_evaluated': 1000000})",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 65, in test_overquote_reported_usage_survives_and_stops_dispatch\n    self.assertEqual(result.calls, 1)\nAssertionError: 8 != 1\n"
+    },
+    {
+      "test": "test_overquote_reported_usage_survives_and_stops_dispatch (ce02_regressions.CE02UsageAccountingTests.test_overquote_reported_usage_survives_and_stops_dispatch) (changes={'tokens_predicted': 257})",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 65, in test_overquote_reported_usage_survives_and_stops_dispatch\n    self.assertEqual(result.calls, 1)\nAssertionError: 8 != 1\n"
+    }
+  ],
+  "errors_detail": [
+    {
+      "test": "test_overquote_exception_carries_validated_usage (ce02_regressions.CE02UsageAccountingTests.test_overquote_exception_carries_validated_usage)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_ce02_usage_accounting.py\", line 86, in test_overquote_exception_carries_validated_usage\n    backend.select(request)\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 199, in select\n    raise ContractError('Local model exceeded generation reservation')\nasof.serde.ContractError: Local model exceeded generation reservation\n"
+    }
+  ],
+  "source_sha256": {
+    "src\\asof\\local_model.py": "38090cc12d4a10a1809513ae906e4dd1084f44a66a5605c559e53a8116e5f9a4",
+    "src\\asof\\workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+    "tests\\test_ce02_usage_accounting.py": "7c10b0c3d0d44679dd65ef22861cd56e2579ebaba8b9a9faa9d05f4dc4f70d98"
+  },
+  "scope": "Fictional in-process opener; no actual model/network/provider call"
+}

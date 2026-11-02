@@ -1,0 +1,75 @@
+{
+  "scope": "Fictional sealed usage controls; no server, model, network or scientific evaluation",
+  "engine_version": "0.3.11",
+  "module_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Lib\\site-packages\\asof\\local_model.py",
+  "module_sha256": "38090cc12d4a10a1809513ae906e4dd1084f44a66a5605c559e53a8116e5f9a4",
+  "runs": [
+    {
+      "mode": "bool-count",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-peer-ce02-old-v1\\bool-count\\run",
+      "receipt_sha256": "423d58f066c41d57b6dff3b6f7b4fbd69d8107f25f4a3db7fdb0de339f3f7957",
+      "calls": 8,
+      "measured": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "estimated": {
+        "input_tokens": 36365,
+        "output_tokens": 2048,
+        "cost_usd": 0
+      },
+      "status": "partial",
+      "claims": 0,
+      "violations": 0,
+      "verification": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 35,
+        "receipt_sha256": "423d58f066c41d57b6dff3b6f7b4fbd69d8107f25f4a3db7fdb0de339f3f7957",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "mode": "timeout",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-peer-ce02-old-v1\\timeout\\run",
+      "receipt_sha256": "9183b54c8394d4dfd76576e23e3cbe01a858122c8adddfd444f9d25cc901bcdd",
+      "calls": 8,
+      "measured": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "estimated": {
+        "input_tokens": 36365,
+        "output_tokens": 2048,
+        "cost_usd": 0
+      },
+      "status": "partial",
+      "claims": 0,
+      "violations": 0,
+      "verification": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 35,
+        "receipt_sha256": "9183b54c8394d4dfd76576e23e3cbe01a858122c8adddfd444f9d25cc901bcdd",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    }
+  ],
+  "passed": true
+}

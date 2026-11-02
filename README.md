@@ -7,7 +7,7 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-**Current distribution: `tether-target-agents` 0.5.0 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
+**Current development distribution: `tether-target-agents` 0.5.1 in `packages/tether`, with AsOf 0.3.12 and v2 execution contracts.** Qualification of the three correctness fixes is in progress; the prior 0.5.0/0.3.11 wheels remain preserved. The earlier 1,774-test
 acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
 optional skips. All 78 frozen P05 code pins and 100 package payloads remain
@@ -18,9 +18,11 @@ performance measurements.
 
 ## Current status and next step
 
+The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
+
 The [benchmark and methodology review](<reports/TETHER benchmarks and methodological advances.md>) recommends an independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. It distinguishes native benchmark results from derived tests and maps peer methods to actual code gaps. These are proposals: no benchmark or new model was run, and the corrections below remain open.
 
-The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identifies three new, unpatched P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. It also measures repeated verification/compiler work and proposes a matched policy-equivalent baseline; [TODO](TODO.md) keeps these corrections open. Runtime and sealed paper/results are unchanged, and the existing scientific and owner-deferred limits remain in force.
+The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identified three P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. Their implementations now pass focused checks; [TODO](TODO.md) keeps BG01 open until full and installed qualification succeed. The audit also measures repeated verification/compiler work and proposes a matched policy-equivalent baseline. Sealed paper/results and the existing scientific and owner-deferred limits remain unchanged.
 
 The [2 November full-project review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) reproduced gaps in legacy coverage/review/dossier verification and corrected receipt and genetics-QC utilities. TETHER 0.4.1 adds stronger verification at the canonical CLI boundary; direct legacy API aliases retain their earlier semantics. The [corrective plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>) is the current execution authority. The earlier 0.4.0 packet remains a version-specific historical artifact, not qualification of the new working tree.
 

@@ -1,0 +1,130 @@
+{
+  "scope": "Fictional sealed usage controls; no server, model, network or scientific evaluation",
+  "engine_version": "0.3.12",
+  "module_path": "D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py",
+  "module_sha256": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+  "runs": [
+    {
+      "mode": "overquote",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-peer-ce02-new-v2\\overquote\\run",
+      "receipt_sha256": "396aa25fc98f0e14db9497388c99eb7d90b1c846d9c3947d398d804474a26798",
+      "calls": 1,
+      "measured": {
+        "input_tokens": 1000000,
+        "output_tokens": 1,
+        "cost_usd": 0
+      },
+      "estimated": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "status": "budget_exhausted",
+      "claims": 0,
+      "violations": 1,
+      "verification": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 8,
+        "receipt_sha256": "396aa25fc98f0e14db9497388c99eb7d90b1c846d9c3947d398d804474a26798",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "mode": "bool-count",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-peer-ce02-new-v2\\bool-count\\run",
+      "receipt_sha256": "49c8c6caf3c38f852cf6745a3fc2d1b8522bb88cf8772f5a3e0bf6e65b65ffd2",
+      "calls": 8,
+      "measured": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "estimated": {
+        "input_tokens": 36365,
+        "output_tokens": 2048,
+        "cost_usd": 0
+      },
+      "status": "partial",
+      "claims": 0,
+      "violations": 0,
+      "verification": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 35,
+        "receipt_sha256": "49c8c6caf3c38f852cf6745a3fc2d1b8522bb88cf8772f5a3e0bf6e65b65ffd2",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    },
+    {
+      "mode": "timeout",
+      "output": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-peer-ce02-new-v2\\timeout\\run",
+      "receipt_sha256": "92ba572a040501e754902ec7cc715dba1e5d0db06e58c87c2b25b7350e135837",
+      "calls": 8,
+      "measured": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0
+      },
+      "estimated": {
+        "input_tokens": 36365,
+        "output_tokens": 2048,
+        "cost_usd": 0
+      },
+      "status": "partial",
+      "claims": 0,
+      "violations": 0,
+      "verification": {
+        "status": "integrity_verified",
+        "outputs": 8,
+        "source_artifacts_checked": 2,
+        "trace_events": 35,
+        "receipt_sha256": "92ba572a040501e754902ec7cc715dba1e5d0db06e58c87c2b25b7350e135837",
+        "external_anchor_checked": true,
+        "auxiliary_outputs_checked": 1,
+        "unsealed_auxiliary_outputs": [],
+        "code_matches_current": true,
+        "semantic_consistency": "verified",
+        "source_binding": "current_originals",
+        "scientific_validity": "not_established"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "mutation": "wrong-attempt",
+      "rejected": true,
+      "message": "Local model reservation/account identity mismatch"
+    },
+    {
+      "mutation": "wrong-reservation",
+      "rejected": true,
+      "message": "Local model reservation/account identity mismatch"
+    },
+    {
+      "mutation": "swapped-accounts",
+      "rejected": true,
+      "message": "Local model reservation/account identity mismatch"
+    },
+    {
+      "mutation": "wrong-unknown-amount",
+      "rejected": true,
+      "message": "Invalid unknown local execution accounting"
+    }
+  ],
+  "passed": true
+}

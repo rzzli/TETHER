@@ -1,0 +1,11 @@
+{
+  "stage": "offline_development_environment",
+  "status": "failed_before_lock_or_environment_creation",
+  "command": "uv lock --offline",
+  "exit_code": 1,
+  "error": "Failed to query Python interpreter: failed to persist interpreter-v4 cache temporary file in the Windows sandbox AppData uv cache; Access is denied (os error 5).",
+  "session": 97830,
+  "terminal_verified": true,
+  "observed_uv_or_python_processes_after_failure": 0,
+  "next_action": "Retry the same offline local dependency operations with the required filesystem permission; do not restart a live operation."
+}

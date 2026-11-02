@@ -1,5 +1,7 @@
 # TETHER research memory index
 
+- [[research-log-2026-11-02-benchmark-execution]] - Current active goal: sequential fixes → equal-policy comparator → SciFact → one LAB-Bench task family → Inspect comparison. BG01 code/focused checks and archive-profile migration pass; full gate01 retained failed/interrupted, fresh source-bracketed full/installed qualification pending. No benchmark/model execution yet; historical releases/results preserved.
+
 - [[research-log-2026-11-02-benchmarks-and-methods]] - Current research: independent equal-policy conformance comparison, then SciFact and one LAB-Bench task after adapters/solvers exist; ALCE and conditional domain/temporal alternatives. Peer transfers separate entailment, valid-case retention, independent behavioral tests, scoped reuse and later reliability/tool security. Existing accounting/grouping/caches acknowledged; public exposure/access limits retained. No benchmark execution or runtime fixes; CE01–CE04 open, Q04/Q05 inactive, experts retired, owner facts deferred.
 
 - [[research-log-2026-11-02-comparative-efficiency-audit]] - Prior audit: three confirmed unpatched P2 defects in receipt/report aliasing, legacy local-model usage accounting and unused raw receipt-time consistency; scoped repeated hash/parse work measured. Strongest claim is admission plus replay. Proposes a policy-equivalent simple baseline and post hoc evidence panels; runtime/sealed results unchanged, Q04/Q05 inactive, owner facts deferred, no new model/data/expert input.

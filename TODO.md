@@ -29,7 +29,7 @@ The owner now authorizes sequential implementation and evaluation of the recomme
 - [ ] BG05 Implement and test the same obligations within Inspect; measure policy parity, retained execution evidence, cost and implementation complexity.
 - [ ] BG06 Audit all five stages against the full goal, reconcile documentation/memory and retain a final report. No stage is complete merely because a narrower test passes.
 
-Current checkpoint: baseline `114fecf` is clean and the three open defects are being corrected. The independent comparator and external benchmarks have not yet been implemented or run. The original source-reporting paper, data receipts, archived releases, downloader and stopped monitor remain preserved.
+Current checkpoint: the three fixes and focused/peer checks pass, and the 0.3.12 archive execution profile is explicitly migrated with its old bytes retained. The first full gate was interrupted after 14 stale-profile failures; 52 archive tests now pass after correction. A fresh bracketed full gate and installed qualification are next. BG01 is not complete. The independent comparator and external benchmarks have not yet been implemented or run; historical results and downloader/monitor remain preserved.
 
 ## Benchmark and methodology review — 2 November 2026
 
@@ -47,7 +47,9 @@ The [benchmark and methodology report](<reports/TETHER benchmarks and methodolog
 
 The [completed report](<reports/TETHER efficiency and comparative value.md>) and [validation record](<research_notes/TETHER efficiency and comparative value/REPORT-VALIDATION.json>) retain three new P2 findings, current/source-version boundaries, targeted overlapping test scopes and measured repeated work. No runtime fix or sealed-paper change was made. These findings supplement the earlier dated qualification; Q/P completion statuses below retain their original scopes.
 
-### Proposed corrections from the audit — not implemented
+### Corrections from the audit — qualification in progress
+
+CE01–CE03 implementations and focused checks pass. Their boxes remain open until the full BG01 gate and installed qualification pass. CE04 remains a separate proposed optimization.
 
 - [ ] CE01 Prevent transport verification reports from aliasing input receipts, queues or sources; use fresh exclusive publication and preserve inputs on collision/failure.
 - [ ] CE02 Preserve validated adapter-reported over-reservation usage through failed local-model calls, reconcile retained archives and stop subsequent dispatch. Version the correction separately from frozen engine artifacts; no closed model retry.

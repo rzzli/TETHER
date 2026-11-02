@@ -1,0 +1,67 @@
+{
+  "tests": 80,
+  "failures": 0,
+  "errors": 11,
+  "skips": 0,
+  "success": false,
+  "elapsed_seconds": 9.468000000109896,
+  "patterns": [
+    "test_local_model.py",
+    "test_backend_hardening.py",
+    "test_runtime_hardening_peer.py",
+    "test_selection_cap.py",
+    "test_framework.py",
+    "test_science_role_backend.py",
+    "test_science_role_constraint_peer.py",
+    "test_science_comparison_workflow.py"
+  ],
+  "source_sha256": "68d9001f65236b9683374d03885ffd4de152487fb83b7a0fca67172f007520fb",
+  "failures_detail": [],
+  "errors_detail": [
+    {
+      "test": "test_shared_wire_model_execution_is_source_verified_without_rewriting_evidence (test_local_model.LocalModelTests.test_shared_wire_model_execution_is_source_verified_without_rewriting_evidence)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_local_model.py\", line 172, in test_shared_wire_model_execution_is_source_verified_without_rewriting_evidence\n    self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_workflow_source_inclusive_semantics_and_tamper_detection (test_local_model.LocalModelTests.test_workflow_source_inclusive_semantics_and_tamper_detection)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_local_model.py\", line 157, in test_workflow_source_inclusive_semantics_and_tamper_detection\n    self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_workflow_timeout_preserves_attempt_and_conservative_accounting (test_local_model.LocalModelTests.test_workflow_timeout_preserves_attempt_and_conservative_accounting)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_local_model.py\", line 182, in test_workflow_timeout_preserves_attempt_and_conservative_accounting\n    self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_http_error_continues_categories_without_retry_and_seals_accounting (test_runtime_hardening_peer.RuntimeHardeningPeerTests.test_http_error_continues_categories_without_retry_and_seals_accounting)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 110, in test_http_error_continues_categories_without_retry_and_seals_accounting\n    result, backend = self.execute(FailingTransport(error))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 67, in execute\n    verified = verify_run(output, receipt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_malformed_response_continues_with_conservative_not_measured_usage (test_runtime_hardening_peer.RuntimeHardeningPeerTests.test_malformed_response_continues_with_conservative_not_measured_usage)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 117, in test_malformed_response_continues_with_conservative_not_measured_usage\n    result, backend = self.execute(FailingTransport(response=malformed))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 67, in execute\n    verified = verify_run(output, receipt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_unexpected_oserror_is_fatal_after_one_accounted_call (test_runtime_hardening_peer.RuntimeHardeningPeerTests.test_unexpected_oserror_is_fatal_after_one_accounted_call)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 124, in test_unexpected_oserror_is_fatal_after_one_accounted_call\n    result, backend = self.execute(FailingTransport(OSError('fixture unexpected IO failure')))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 67, in execute\n    verified = verify_run(output, receipt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_url_error_continues_categories_without_retry_and_seals_accounting (test_runtime_hardening_peer.RuntimeHardeningPeerTests.test_url_error_continues_categories_without_retry_and_seals_accounting)",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 101, in test_url_error_continues_categories_without_retry_and_seals_accounting\n    result, backend = self.execute(FailingTransport(urllib.error.URLError('fixture unavailable')))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_runtime_hardening_peer.py\", line 67, in execute\n    verified = verify_run(output, receipt)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\artifacts.py\", line 233, in verify_run\n    verify_backend_execution(read_json(output / 'backend-execution.json'), trace, inputs['configuration'])\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\local_model.py\", line 122, in verify_backend_execution\n    reported = decode(Usage, account['usage'])\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Projects\\drug_target_agents\\src\\asof\\serde.py\", line 155, in decode\n    raise ContractError(f\"{location}: expected object\")\nasof.serde.ContractError: input: expected object\n"
+    },
+    {
+      "test": "test_selection_cap (unittest.loader._FailedTest.test_selection_cap)",
+      "traceback": "ImportError: Failed to import test module: test_selection_cap\nTraceback (most recent call last):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_selection_cap.py\", line 18, in <module>\n    from tools.science import comparison_workflow as comparison\nModuleNotFoundError: No module named 'tools'\n\n"
+    },
+    {
+      "test": "test_science_role_backend (unittest.loader._FailedTest.test_science_role_backend)",
+      "traceback": "ImportError: Failed to import test module: test_science_role_backend\nTraceback (most recent call last):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_science_role_backend.py\", line 15, in <module>\n    from tools.science.role_backend import RoleSelectionBackend, STAGES, role_allowed_ids, role_selection_payload\nModuleNotFoundError: No module named 'tools'\n\n"
+    },
+    {
+      "test": "test_science_role_constraint_peer (unittest.loader._FailedTest.test_science_role_constraint_peer)",
+      "traceback": "ImportError: Failed to import test module: test_science_role_constraint_peer\nTraceback (most recent call last):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_science_role_constraint_peer.py\", line 13, in <module>\n    from tests import test_science_comparison_workflow as workflow_fixtures\nModuleNotFoundError: No module named 'tests'\n\n"
+    },
+    {
+      "test": "test_science_comparison_workflow (unittest.loader._FailedTest.test_science_comparison_workflow)",
+      "traceback": "ImportError: Failed to import test module: test_science_comparison_workflow\nTraceback (most recent call last):\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 419, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\Lib\\unittest\\loader.py\", line 362, in _get_module_from_name\n    __import__(name)\n  File \"D:\\Projects\\drug_target_agents\\tests\\test_science_comparison_workflow.py\", line 15, in <module>\n    from tools.science.role_backend import RoleSelectionBackend\nModuleNotFoundError: No module named 'tools'\n\n"
+    }
+  ],
+  "scope": "Existing fictional adapter/framework tests; no actual model/network/provider call"
+}

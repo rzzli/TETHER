@@ -1,8 +1,8 @@
 # TETHER
 
 TETHER is the canonical front door for the evidence-agent framework. This
-distribution is `tether-target-agents` 0.5.0, with Python namespace `tether` and
-command `tether`. It depends on the unchanged `asof-target-agents==0.3.11`
+distribution is `tether-target-agents` 0.5.1, with Python namespace `tether` and
+command `tether`. It depends on the separately versioned `asof-target-agents==0.3.12`
 compatibility engine. The default uses no third-party runtime libraries; the
 optional `ingest` extra pins PyArrow 21.0.0. Local models remain explicit opt-in.
 

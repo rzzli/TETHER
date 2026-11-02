@@ -14,10 +14,24 @@ import urllib.request
 
 from .agents import Selection, SpecialistRequest, Usage
 from .retrieval import RetrievalPolicy, bounded_request
-from .serde import ContractError, canonical, decode, fingerprint, parse_json, read_json, sha256_file
+from .serde import ContractError, canonical, decode, encode, fingerprint, parse_json, read_json, sha256_file
 from .wire import FORMAT, request_bytes
+from .workflow import BackendFailure, over_quote
 
 LOCAL_PROMPT_BYTE_CAP = 16384
+
+
+class LocalUsageReservationExceeded(BackendFailure, ContractError):
+    """A rejected response whose validated usage must still be accounted.
+
+    Keep the adapter's ContractError boundary for direct callers while carrying
+    Usage through the workflow's measured-failure path. Reported counts are not
+    an independent attestation of physical model consumption.
+    """
+
+
+def _payload_quote(payload, maximum):
+    return Usage(len(payload['prompt'].encode('utf-8')) + 32, maximum, 0)
 
 
 def validate_selection_cap(value=3):
@@ -80,13 +94,14 @@ def verify_backend_execution(document, trace, configuration):
     accounts = [e['details'] for e in trace if e['event'] == 'attempt_accounted']
     reviews = {e['details']['category']: e['details'] for e in trace if e['event'] == 'review'}
     attempts = document['attempts']
-    if len(attempts) != len(dispatched):
+    if len(attempts) != len(dispatched) or len(accounts) != len(dispatched):
         raise ContractError('Local execution/journal attempt count mismatch')
     config = configuration['backend_provenance']['config']
     selection_cap = validate_selection_cap(config.get('selection_cap', 3))
     retrievals = {f"{e['details']['category']}:{e['details']['attempt']}": e['details']
                   for e in trace if e['event'] == 'bounded_retrieval'}
-    for entry, dispatch, account in zip(attempts, dispatched, accounts):
+    expected_violations = []
+    for index, (entry, dispatch, account) in enumerate(zip(attempts, dispatched, accounts)):
         request = decode(SpecialistRequest, entry['request'])
         retrieval = retrievals.get(dispatch['attempt_id'])
         payload = selection_payload(request, config['max_output_tokens'], config['seed'],
@@ -98,16 +113,55 @@ def verify_backend_execution(document, trace, configuration):
                 fingerprint(entry['payload']) != fingerprint(payload) or
                 entry['payload_sha256'] != fingerprint(payload)):
             raise ContractError('Local model request/payload binding mismatch')
+        # Older standalone verifier fixtures omit journal-only reservation/ID
+        # fields. Rebuild their quote; when present, require the exact binding.
+        quote = _payload_quote(payload, config['max_output_tokens'])
+        if (('reserved' in dispatch and fingerprint(dispatch['reserved']) != fingerprint(quote)) or
+                account.get('attempt_id', dispatch['attempt_id']) != dispatch['attempt_id']):
+            raise ContractError('Local model reservation/account identity mismatch')
+        reported = decode(Usage, encode(account['usage']))
+        reported.validate()
+        selected, usage = None, None
+        if 'response' in entry:
+            if entry.get('response_sha256') != fingerprint(entry['response']):
+                raise ContractError('Local model retained response hash mismatch')
+            try:
+                selected, usage = parse_selection(entry['response'],
+                    [x.observation_id for x in request.evidence], selection_cap)
+            except ContractError:
+                # Malformed/unqualified content or counts are not measured usage.
+                # Preserve this distinction for valid historical failed archives.
+                pass
+        elif 'response_sha256' in entry:
+            raise ContractError('Local model response hash lacks its response')
         if entry['status'] == 'completed':
-            response = entry['response']
-            selected, usage = parse_selection(response, [x.observation_id for x in request.evidence], selection_cap)
-            if (entry['response_sha256'] != fingerprint(response) or
+            review = reviews.get(request.category.value)
+            if (usage is None or over_quote(usage, quote) or review is None or
                     tuple(entry['selection']) != selected or fingerprint(usage) != fingerprint(entry['measured_usage']) or
-                    fingerprint(usage) != fingerprint(account['usage']) or account['basis'] != 'adapter_reported' or
-                    tuple(reviews[request.category.value]['selected']) != selected):
+                    usage != reported or account['basis'] != 'adapter_reported' or
+                    tuple(review['selected']) != selected):
                 raise ContractError('Local model response/usage/selection binding mismatch')
-        elif entry['status'] not in ('failed', 'timeout') or account['basis'] != 'quoted_upper_bound_not_measured':
+        elif entry['status'] not in ('failed', 'timeout'):
             raise ContractError('Invalid failed local execution accounting')
+        elif usage is not None:
+            # A fully validated response cannot be relabeled unknown just because
+            # its reservation was exceeded. Older contradictory archives also
+            # fail this stronger revalidation; their bytes are never rewritten.
+            if (entry['status'] != 'failed' or not over_quote(usage, quote) or
+                    entry.get('failure_kind') != 'usage_reservation_exceeded' or
+                    'selection' in entry or account['basis'] != 'adapter_reported' or
+                    fingerprint(entry.get('measured_usage')) != fingerprint(usage) or
+                    reported != usage):
+                raise ContractError('Failed local response lost its validated usage')
+            if index != len(attempts) - 1:
+                raise ContractError('Local model dispatched after a usage reservation breach')
+            expected_violations.append({'category': request.category.value, 'usage': usage})
+        elif (account['basis'] != 'quoted_upper_bound_not_measured' or
+                reported != quote or 'measured_usage' in entry):
+            raise ContractError('Invalid unknown local execution accounting')
+    violations = [event['details'] for event in trace if event['event'] == 'backend_usage_contract_violated']
+    if fingerprint(violations) != fingerprint(expected_violations):
+        raise ContractError('Local model usage violation/journal mismatch')
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -168,8 +222,7 @@ class LocalSelectionBackend:
         if len(request_bytes(request, self.policy.wire_format)) > self.policy.max_request_bytes or len(request.evidence) > self.policy.max_records:
             raise ContractError('Unprepared local model request')
         # UTF-8 bytes include escaped delimiters, plus conservative special-token headroom.
-        prompt = self.payload_for(request)['prompt']
-        return Usage(len(prompt.encode('utf-8')) + 32, self.max_output, 0)
+        return _payload_quote(self.payload_for(request), self.max_output)
 
     def select(self, request):
         self.quote(request)
@@ -196,7 +249,8 @@ class LocalSelectionBackend:
                 raise ContractError('Local model exceeded its exact output schema cap')
             quote = self.quote(request)
             if actual.input_tokens > quote.input_tokens or actual.output_tokens > quote.output_tokens:
-                raise ContractError('Local model exceeded generation reservation')
+                record.update(measured_usage=actual, failure_kind='usage_reservation_exceeded')
+                raise LocalUsageReservationExceeded('Local model exceeded generation reservation', actual)
             record.update(status='completed', selection=tuple(selected), measured_usage=actual)
             return Selection(tuple(selected), actual)
         except (socket.timeout, TimeoutError) as exc:

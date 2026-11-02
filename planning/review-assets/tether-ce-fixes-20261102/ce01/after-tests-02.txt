@@ -1,0 +1,17 @@
+test_concurrent_publication_has_exactly_one_winner (tests.test_download_report_publication.DownloadReportPublicationTests.test_concurrent_publication_has_exactly_one_winner) ... ok
+test_equivalent_and_case_paths_cannot_replace_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_equivalent_and_case_paths_cannot_replace_receipt) ... ok
+test_existing_unrelated_report_is_preserved (tests.test_download_report_publication.DownloadReportPublicationTests.test_existing_unrelated_report_is_preserved) ... ok
+test_failed_validation_still_publishes_complete_failure_report (tests.test_download_report_publication.DownloadReportPublicationTests.test_failed_validation_still_publishes_complete_failure_report) ... ok
+test_fresh_report_succeeds_without_modifying_inputs (tests.test_download_report_publication.DownloadReportPublicationTests.test_fresh_report_succeeds_without_modifying_inputs) ... ok
+test_hard_link_alias_preserves_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_hard_link_alias_preserves_receipt) ... ok
+test_junction_parent_cannot_redirect_output (tests.test_download_report_publication.DownloadReportPublicationTests.test_junction_parent_cannot_redirect_output) ... ok
+test_missing_source_destinations_are_not_created_as_reports (tests.test_download_report_publication.DownloadReportPublicationTests.test_missing_source_destinations_are_not_created_as_reports) ... ok
+test_report_cannot_replace_queue_or_raw_original (tests.test_download_report_publication.DownloadReportPublicationTests.test_report_cannot_replace_queue_or_raw_original) ... ok
+test_report_cannot_replace_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_report_cannot_replace_receipt) ... ok
+test_stdout_only_remains_supported (tests.test_download_report_publication.DownloadReportPublicationTests.test_stdout_only_remains_supported) ... ok
+test_unwritable_parent_fails_without_modifying_inputs (tests.test_download_report_publication.DownloadReportPublicationTests.test_unwritable_parent_fails_without_modifying_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 5.363s
+
+OK

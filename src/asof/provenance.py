@@ -31,6 +31,22 @@ def check_role(dataset_id: str, role: str, catalog: Mapping | None) -> None:
             raise ContractError(f"Catalog denies agent access: {dataset_id}")
 
 
+def check_receipt_availability(node: SourceNode, receipt: Mapping) -> None:
+    """Reconcile a declared download-based bound with its exact receipt.
+
+    Callers must separately verify receipt identity and bytes. A later download
+    proves no earlier availability; other documented availability bases retain
+    their own eligibility rules rather than inheriting the download timestamp.
+    Shared by used-ancestry verification and the all-input policy boundary.
+    """
+    if node.availability.basis != "public_download_receipt":
+        return
+    observed_at = decode(datetime, receipt.get("completed_at_utc"))
+    if (node.availability.known_public_by is None or node.availability.known_public_by < observed_at or
+            node.availability.evidence_ref != node.receipt_sha256 or node.source_url != receipt.get("url")):
+        raise ContractError("Contemporary availability bound does not match public-download receipt")
+
+
 class InputGraph:
     def __init__(self, snapshot: Snapshot, root: Path, catalog: Mapping | None):
         self.snapshot, self.root, self.catalog = snapshot, root.resolve(), catalog
@@ -125,11 +141,7 @@ class InputGraph:
                         safe_child(Path(self.snapshot.raw_root or self.root), receipt.get("relative_path", "")) != path or
                         receipt.get("bytes") != path.stat().st_size):
                     raise ContractError("Input receipt identity/status mismatch")
-                if node.availability.basis == "public_download_receipt":
-                    observed_at = decode(datetime, receipt.get("completed_at_utc"))
-                    if (node.availability.known_public_by is None or node.availability.known_public_by < observed_at or
-                            node.availability.evidence_ref != node.receipt_sha256 or node.source_url != receipt.get("url")):
-                        raise ContractError("Contemporary availability bound does not match public-download receipt")
+                check_receipt_availability(node, receipt)
                 proof["receipt_path"], proof["receipt_sha256"] = str(receipt_path), node.receipt_sha256
             elif self.snapshot.profile != Profile.DEMO and node.computed_at is None:
                 raise ContractError("Real raw inputs require archived public-download receipts")
