@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "frozen_before_first_biological_row_inspection": true,
+  "task_spec_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-q03-20261102\\task-spec\\SOURCE-ONLY-TASK.md",
+  "task_spec_sha256": "25e6d7e577cd0bad3fbb029f0f7b54a8497783f36f22b334ca18de86ade59847",
+  "declared_evidence_universe": "exact100completeParquetpaths in SOURCE-INVENTORY.json gwas_credible_sets_evidence; require equality with named core queue partition",
+  "declared_credible_set_universe": "exact25completeParquetpaths in SOURCE-INVENTORY.json credible_set; require equality with selected ot_credible_set catalog path list",
+  "universe_inventory_sha256": "618251a840fddf6a75fa5525808a8a84609742aa4591a23d617572883ccae2a8",
+  "selection_rule": "Lexicographically first eligible tuple(exact nonempty diseaseId, ordered DISTINCT targetId pair), each target has>=1 direct evidence row and union has>=2 distinct nonempty studyLocusId; no scores, effects, overlap pattern, gene or disease labels considered. Full100-shard projected ID scan.",
+  "prebound_ids": null,
+  "max_evidence_rows": 2000000,
+  "max_credible_set_rows": 3000000,
+  "batch_rows": 8192,
+  "metadata_policy": "After deterministic binding, project scientific metadata only for matching source rows; read all source rowgroups needed for those rows, retain physical locators and report decode counts. No locus/ldSet arrays, current API, candidate/reference outputs, or backend."
+}

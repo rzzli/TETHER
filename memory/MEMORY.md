@@ -1,6 +1,8 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-02-artifact-catalog-policy]] - Current checkpoint: Q02 complete for TETHER 0.5.0 registered Windows/offline policy; 129 package tests/66 independent assertions and installed strong-policy qualification. 178 product statuses unchanged, 266 exact artifacts, ten allowed/seven blocked AACT uses; real OSMR preparation only checks18 originals with zero dispatch. Q03 scientific task/data feasibility is next.
+- [[research-log-2026-11-02-source-composition-feasibility]] - Current checkpoint: Q03 complete/reporting-only; 125 originals receipt-hashed and1,160 independent source checks pass. Missing study/variant/effect/cohort inputs prevent stronger science; baseline solves composition. Overwritten first-attempt outputs/unavailable executed-code pins disclosed. Q04/Q05 unactivated; Q06 narrow technical working-paper branch active, owner facts deferred.
+
+- [[research-log-2026-11-02-artifact-catalog-policy]] - Prior checkpoint: Q02 complete for TETHER 0.5.0 registered Windows/offline policy; 129 package tests/66 independent assertions and installed strong-policy qualification. 178 product statuses unchanged, 266 exact artifacts, ten allowed/seven blocked AACT uses; real OSMR preparation only checks18 originals with zero dispatch. Q03 scientific task/data feasibility was next.
 
 - [[research-log-2026-11-02-bounded-tether-release]] - Prior checkpoint: Q01 complete for TETHER 0.4.2 Windows CLI, 86 package tests/116 independent assertions and installed success/timeout/overflow qualification. Old artifacts preserved; established Q02 migration prerequisites. Broader science and author facts remain incomplete/deferred.
 

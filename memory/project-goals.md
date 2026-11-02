@@ -10,6 +10,18 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+Q03 is complete as reporting-only source feasibility. Four evidence rows join four
+credible-set objects, but evidence-side study/variant IDs are missing; scientific
+independence/effects remain unqualified and the deterministic baseline solves the
+task. Independent source replay passes1,160 checks. Failed-attempt overwrites and
+missing measured-code pins are documented; future no-clobber fixtures pass.
+See [[research-log-2026-11-02-source-composition-feasibility]] and
+[[Project Progress Reassessment 2026-11-02 - Source Composition Feasibility]].
+Q04/Q05 remain unactivated, not completed. Q06's narrow technical paper/release
+branch is active; owner facts stay deferred and broader science conditional.
+
+### Prior artifact-policy checkpoint
+
 Q02 is complete in its registered Windows/offline scope. TETHER 0.5.0 adds exact
 artifact/use policy and sealed input/projection checks. All 129 package tests,
 66 independent assertions and installed qualification pass. All 178 product statuses

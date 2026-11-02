@@ -1,0 +1,54 @@
+{
+  "scope": "route logic and documentation only; no biological row or answer construction",
+  "checks": [
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Corrective Execution Plan 2026-11-02.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Full Project Critical Review 2026-11-02.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\full-project-review-20261102\\results\\RESULTS-REVIEW.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\REVIEW-ERRATA-20261102.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-q03-20261102\\task-spec\\SOURCE-ONLY-TASK.md",
+      "pass": true
+    },
+    {
+      "kind": "local_link",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-q03-20261102\\task-spec\\DESIGN-ADDENDUM-01.md",
+      "pass": true
+    },
+    {
+      "kind": "specification_hash",
+      "path": "task-spec/SOURCE-ONLY-TASK.md",
+      "sha256": "25e6d7e577cd0bad3fbb029f0f7b54a8497783f36f22b334ca18de86ade59847",
+      "pass": true
+    },
+    {
+      "kind": "specification_hash",
+      "path": "task-spec/DESIGN-ADDENDUM-01.md",
+      "sha256": "8eab5cdb540a5e9a65c3bdd23dc20671539dc9102807ea3b14654b1a6252bbb6",
+      "pass": true
+    },
+    {
+      "kind": "source_inventory_scope",
+      "row_values_read": 0,
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "review_sha256": "0a70b55514ead7b1c027803acd3f99c95570013ef8effbfc67df4e543580f655"
+}

@@ -50,7 +50,7 @@ These are a prioritized backlog, not completed work and not authorization to res
 
 ### Q03 Qualify data needed for a meaningful scientific task
 
-**Next active milestone.** Follow the source-only task/field feasibility sequence in the [Q02 assessment](<Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>). No new cohort, answer set or experiment is yet frozen.
+**Completed as a reporting-only feasibility decision.** See the [Q03 assessment](<Project Progress Reassessment 2026-11-02 - Source Composition Feasibility.md>) and [independent source review](review-assets/tether-q03-20261102/review/INDEPENDENT-FEASIBILITY-REVIEW.md). The exact source-object join works, but selected missing study/variant/effect/cohort fields and source QC flags prevent stronger scientific claims. A deterministic baseline solves the task. The first failed audit's overwritten outputs and missing measured-code pins remain explicit; no new benchmark qualification is claimed. The following sequence records the decision criteria. No new cohort, answer set or experiment is frozen.
 
 1. Choose one task requiring source scoping or multi-record composition beyond direct copying. Specify the expected answer semantics before examining candidate performance.
 2. For a genetics-based task, establish upstream study, locus, variant, build, allele orientation, cohort/ancestry and sample-size identity first. The absent study table and unresolved composite join are explicit inputs, not fields to infer from locus equality.
@@ -61,6 +61,8 @@ These are a prioritized backlog, not completed work and not authorization to res
 **Done when:** representative original rows support every requested field and transformation; scientifically necessary unknowns are resolved or force explicit exclusions; eligible independent groups and missingness are counted. Otherwise retain a reporting-only task.
 
 ### Q04 Freeze a discriminating evaluation
+
+**Not activated after Q03.** The required model/scientific discrimination is unestablished. These prerequisites remain unfinished conditional work; use Q06's already accepted narrow technical-paper branch now.
 
 1. Specify one primary estimand and the independent unit. Group by source study/cohort/target family where appropriate; report unresolved grouping instead of assuming independence.
 2. Quantify baseline difficulty. If the literal assembler is again at the ceiling, evaluate an actual verification/usability/resource question or revise the development task before freezing.
@@ -74,11 +76,15 @@ These are a prioritized backlog, not completed work and not authorization to res
 
 ### Q05 Execute and analyze one justified study
 
+**Not activated; conditional on Q04.** No new study is authorized by the Q03 feasibility slice alone.
+
 Execute each declared cell once, retain failures, reproduce source-derived scores and report source verification separately from model/controller work. Measure logical bytes, physical I/O if available, wall time, peak memory, tokens and known/unknown costs. Optimize repeated hashing only under a tested source-stability policy; do not weaken integrity checks solely to improve speed. Report unseen-fault performance and valid-input false rejection on distinct denominators.
 
 **Done when:** all scheduled cells have dispositions, exact code/data versions are retained, an independently implemented check reconstructs the specified quantities, and uncertainty is no stronger than the sampling design supports.
 
 ### Q06 Reconcile manuscript and release
+
+**Active: narrow technical working-paper branch.** The Q03 assessment supports this existing branch; it does not complete Q04/Q05 or remove deferred author obligations.
 
 The current working paper may remain a narrow technical report without Q03–Q05 if its claims stay within the existing evidence. Before a submission-ready version, reconcile the new semantic findings and threshold/resource interpretation; keep the negative model results. Update source, PDF and package together under a new version, recheck numerical/figure/citation consistency and the lawful allowlist, and obtain the owner-supplied author facts/acceptance when the owner resumes that step. Those facts remain deferred now.
 

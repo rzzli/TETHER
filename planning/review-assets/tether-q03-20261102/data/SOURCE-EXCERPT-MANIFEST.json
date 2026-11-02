@@ -1,0 +1,224 @@
+{
+  "role": "source-only feasibility projections, not a candidate/reference-answer pack",
+  "locator_schema": {
+    "relative_path": "relative to E:/projects_data/drug_target_agents_data",
+    "row_group": "zero-based physical Parquet row group",
+    "row_in_group": "zero-based physical row offset in that group"
+  },
+  "projected_columns": {
+    "selection_evidence": [
+      "datasourceId",
+      "targetId",
+      "diseaseId",
+      "studyLocusId"
+    ],
+    "slice_evidence_keys": [
+      "id",
+      "datasourceId",
+      "targetId",
+      "diseaseId",
+      "studyLocusId",
+      "studyId",
+      "variantId"
+    ],
+    "evidence_scientific_metadata": [
+      "variantRsId",
+      "ancestry",
+      "ancestryId",
+      "cohortDescription",
+      "cohortId",
+      "cohortShortName",
+      "studyCases",
+      "studySampleSize",
+      "beta",
+      "betaConfidenceIntervalLower",
+      "betaConfidenceIntervalUpper",
+      "oddsRatio",
+      "oddsRatioConfidenceIntervalLower",
+      "oddsRatioConfidenceIntervalUpper",
+      "pValueMantissa",
+      "pValueExponent",
+      "statisticalMethod"
+    ],
+    "credible_set_key_scan": [
+      "studyLocusId"
+    ],
+    "credible_set_scientific_metadata": [
+      "studyLocusId",
+      "studyId",
+      "variantId",
+      "studyType",
+      "chromosome",
+      "position",
+      "region",
+      "beta",
+      "zScore",
+      "pValueMantissa",
+      "pValueExponent",
+      "effectAlleleFrequencyFromSource",
+      "standardError",
+      "subStudyDescription",
+      "qualityControls",
+      "finemappingMethod",
+      "credibleSetIndex",
+      "credibleSetlog10BF",
+      "purityMeanR2",
+      "purityMinR2",
+      "locusStart",
+      "locusEnd",
+      "sampleSize",
+      "confidence",
+      "isTransQtl"
+    ],
+    "target_labels": [
+      "id",
+      "approvedSymbol"
+    ],
+    "disease_labels": [
+      "id",
+      "name"
+    ]
+  },
+  "excerpts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q03\\source-slice-evidence.json",
+      "sha256": "c580ae1b332babfb63e602b5da76225c24c3031e6d45437b722a4b9a250b3deb",
+      "row_count": 4,
+      "actual_fields": [
+        "ancestry",
+        "ancestryId",
+        "beta",
+        "betaConfidenceIntervalLower",
+        "betaConfidenceIntervalUpper",
+        "cohortDescription",
+        "cohortId",
+        "cohortShortName",
+        "datasourceId",
+        "diseaseId",
+        "id",
+        "oddsRatio",
+        "oddsRatioConfidenceIntervalLower",
+        "oddsRatioConfidenceIntervalUpper",
+        "pValueExponent",
+        "pValueMantissa",
+        "statisticalMethod",
+        "studyCases",
+        "studyId",
+        "studyLocusId",
+        "studySampleSize",
+        "targetId",
+        "variantId",
+        "variantRsId"
+      ],
+      "locators": [
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00005-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 5911
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00021-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 4561
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00073-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 15908
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00091-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 5140
+        }
+      ]
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q03\\source-slice-credible-set.json",
+      "sha256": "c8b5e40491baa2c85c9df5759872b3b9408b9a2c6139616149f48c3c3f18f1f4",
+      "row_count": 4,
+      "actual_fields": [
+        "beta",
+        "chromosome",
+        "confidence",
+        "credibleSetIndex",
+        "credibleSetlog10BF",
+        "effectAlleleFrequencyFromSource",
+        "finemappingMethod",
+        "isTransQtl",
+        "locusEnd",
+        "locusStart",
+        "pValueExponent",
+        "pValueMantissa",
+        "position",
+        "purityMeanR2",
+        "purityMinR2",
+        "qualityControls",
+        "region",
+        "sampleSize",
+        "standardError",
+        "studyId",
+        "studyLocusId",
+        "studyType",
+        "subStudyDescription",
+        "variantId",
+        "zScore"
+      ],
+      "locators": [
+        {
+          "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 11938
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 55494
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 55495
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/preprint-p02-credible-completion-20261101T031842Z/credible_set/part-00021-6a6a5652-1853-4b3d-bced-0c0c0741606d-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 55617
+        }
+      ]
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-q03\\source-slice-labels.json",
+      "sha256": "2a4041a6db8797454afcdfbfa8d5fc77977f8ad8824458ad467ca0c02352f2e1",
+      "row_count": 3,
+      "actual_fields": [
+        "approvedSymbol",
+        "id",
+        "name"
+      ],
+      "locators": [
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/target/part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 25
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/target/part-00003-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+          "row_group": 0,
+          "row_in_group": 45
+        },
+        {
+          "relative_path": "raw/open_targets_platform/25.09/output/disease/disease.parquet",
+          "row_group": 0,
+          "row_in_group": 25569
+        }
+      ]
+    }
+  ],
+  "retention_provenance": {
+    "retained_attempt": 2,
+    "first_attempt_separate_bytes_or_hashes": false,
+    "first_attempt_outputs_were_overwritten": true,
+    "between_attempt_byte_equality": "Unavailable; current hashes identify only retained second-attempt projections."
+  }
+}

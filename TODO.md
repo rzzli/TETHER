@@ -18,13 +18,13 @@ Neither task should delay the paper's objective multicase evaluation.
 
 ## Full project review and corrections
 
-Current execution: Q01 and Q02 are complete in their stated Windows/offline scopes; Q03 scientific task/data feasibility is next. See the [artifact-policy progress assessment](<planning/Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md>). Earlier release qualifications remain retained.
+Current execution: Q01/Q02 are complete in their stated Windows/offline scopes; Q03 is complete as a reporting-only feasibility decision. Q04/Q05 remain unactivated, not completed. The accepted narrow Q06 manuscript/release branch is active. See the [source-composition assessment](<planning/Project Progress Reassessment 2026-11-02 - Source Composition Feasibility.md>). Earlier qualifications remain retained.
 
 - [x] Q01 Bound the canonical launcher's owned child execution and qualify TETHER 0.4.2; 86 package tests and independent adversarial checks pass, installed success/timeout/overflow qualification passes. Retain the explicit capability table, residual host/process-tree limits and matching-version archive instructions.
 - [x] Q02 Add artifact/use-specific policy and sealed execution/verification in TETHER 0.5.0; 129 package tests, 66 independent assertions and installed qualification pass. Preserve 178 product statuses; register 248 raw artifacts/11 packets/seven blocked AACT identities with ten allowed/seven blocked uses. Real OSMR preparation checks 18 originals with zero engine dispatches; no scientific status promotion.
-- [ ] Q03 Qualify one scientifically meaningful composition/scoping task using existing eligible sources first, or document why only reporting is supportable.
-- [ ] Q04 Freeze a discriminating, feasible evaluation with independent-unit/exposure limits and mathematically distinct criteria.
-- [ ] Q05 Execute the newly justified study once and independently reconstruct its declared quantities.
+- [x] Q03 Audit one source-composition task using eligible originals and document why only reporting is supportable. 125 originals freshly receipt-hashed; independent selection/source replay passes 1,160 checks. Four linked objects have unassessable evidence-side study/variant comparisons; deterministic baseline solves the task. Failed-attempt overwrites and missing executed-code pins remain explicit; future no-clobber fixtures pass.
+- [ ] Q04 **Not activated after Q03 feasibility.** Freeze a discriminating, feasible evaluation with independent-unit/exposure limits and mathematically distinct criteria if a new task justifies it.
+- [ ] Q05 **Conditional on Q04, not activated.** Execute the newly justified study once and independently reconstruct its declared quantities.
 - [ ] Q06 Reconcile a new manuscript/release with the actual tested scope. Owner declarations and acceptance remain deferred; no publication is implied.
 
 - [x] C01 Inventory the entire tracked project and perform risk-based code/data/results/planning reviews; retain coverage limits and concrete counterexamples.
@@ -33,7 +33,7 @@ Current execution: Q01 and Q02 are complete in their stated Windows/offline scop
 - [x] C04 Correct current planning authority, data-frame distinctions and proof claims; retain the old plans as historical records and write paper errata.
 - [x] C05 Independently review corrections, verify source/artifact preservation and documentation consistency, then retain a timestamped local checkpoint. Original study/package bytes remain intact; 102 current local links resolve. Remaining Q01–Q06 limitations are explicit.
 
-Q03–Q06 in the corrective plan are the remaining ordered backlog. No new study execution, closed model retry or downloader restart is implied. Broad paper/scientific completion remains pending as specified below.
+Q06's narrow technical working-paper branch is the next authorized work. Q04/Q05 remain a conditional backlog; no new study execution, closed model retry or downloader restart is implied. Broad paper/scientific completion remains pending as specified below.
 
 ## TETHER renaming — historical completion checkpoint
 
