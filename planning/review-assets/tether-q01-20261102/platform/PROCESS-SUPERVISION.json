@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "PASS_LOCAL_WINDOWS_Q01",
+  "version": "0.4.2",
+  "base_commit": "43d0384",
+  "engine": "unchanged_asof_0.3.11",
+  "scientific_validation": "not_established",
+  "defaults": {
+    "timeout_seconds": 3600.0,
+    "max_output_bytes": 16777216,
+    "cleanup_wait_seconds": 5.0
+  },
+  "tests": {
+    "combined_methods": 86,
+    "passed": 86,
+    "seconds": 31.649,
+    "new_process_methods": 13
+  },
+  "independent_assertions_before_final_pins": 115,
+  "wheel": "WHEEL-QUALIFICATION-FINAL.json",
+  "wheel_sha256": "090c49f8613101d31dd5a7859033ffcf830223ab99b3ffaa9b2f53abfda0dc06",
+  "source_proofs": {
+    "packages/tether/src/tether/__init__.py": {
+      "sha256": "c2d8df4f6b92728944d8f9e8613c3c8476975a61eb3396c182982aedfadc8326",
+      "bytes": 829
+    },
+    "packages/tether/src/tether/__main__.py": {
+      "sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "bytes": 118
+    },
+    "packages/tether/src/tether/_aliases.py": {
+      "sha256": "d9eb371c5ab99a37b07068f86a000def57d0d22f8489a72411cfa0a27b1a0bae",
+      "bytes": 4600
+    },
+    "packages/tether/src/tether/_cli.py": {
+      "sha256": "26d77e4ba13f1764fc87152b426ca19531aab6ce8b72e0adb8b92948ea6e8e44",
+      "bytes": 5303
+    },
+    "packages/tether/src/tether/_presentation.py": {
+      "sha256": "f3c054ee0f13f8c0756781b4384a12ceaaa892d8bfb9b2dc27ecc963d3274086",
+      "bytes": 22844
+    },
+    "packages/tether/src/tether/_process.py": {
+      "sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "bytes": 11639
+    },
+    "packages/tether/src/tether/_semantics.py": {
+      "sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "bytes": 14044
+    },
+    "packages/tether/src/tether/archive/__init__.py": {
+      "sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "bytes": 212
+    },
+    "packages/tether/src/tether/archive/__main__.py": {
+      "sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "bytes": 1890
+    },
+    "packages/tether/src/tether/study/__init__.py": {
+      "sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "bytes": 207
+    },
+    "packages/tether/src/tether/study/__main__.py": {
+      "sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "bytes": 968
+    },
+    "packages/tether/src/tether/study/authority_four_arm.py": {
+      "sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "bytes": 322
+    },
+    "packages/tether/src/tether/study/baseline_smoke.py": {
+      "sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "bytes": 312
+    },
+    "packages/tether/src/tether/study/fixed_evidence_smoke.py": {
+      "sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "bytes": 330
+    },
+    "packages/tether/src/tether/study/native_diagnostic.py": {
+      "sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "bytes": 321
+    },
+    "packages/tether/src/tether/study/retrieval_smoke.py": {
+      "sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "bytes": 323
+    },
+    "packages/tether/pyproject.toml": {
+      "sha256": "1da1865e29f5c1c53ff495f561b7dce12187d880235701a0a612089562a58a09",
+      "bytes": 588
+    },
+    "packages/tether/uv.lock": {
+      "sha256": "015c90d991d143ccf3e98901d61ef82831d66b026075a8ad7c0efa232ce313b0",
+      "bytes": 9947
+    },
+    "packages/tether/README.md": {
+      "sha256": "a4e8b64fdc72d984c4ffbb1266f61cb7bd55d84135f46c527ec94c247688f45f",
+      "bytes": 5901
+    },
+    "packages/tether/tests/test_process.py": {
+      "sha256": "1e4d63188c5b6860c3f6a19c833e230ed805c3e0e4c6a6b51ee85635da3ef49c",
+      "bytes": 9272
+    },
+    "packages/tether/tests/test_frontdoor.py": {
+      "sha256": "07ac0e6c3ab20480a045aed47d38417a8e40b4c77c9141a1eb86494477b53ce5",
+      "bytes": 26799
+    }
+  },
+  "evidence": {
+    "PROCESS-SUPERVISION.md": "f79667838a594e68ed7cd3bbb041fb3dc2eb91777c9c81544644c060ecd50472",
+    "PACKAGE-TESTS-FINAL.txt": "3856d8629093d708d9aa739d5c755d90946fe74e5c5b8c86704b9e94c72cc350",
+    "WHEEL-QUALIFICATION-FINAL.json": "ee117a90ee9fed5388efc7946f406ecb126aa52f99a082001cdf665c417a8964"
+  },
+  "limits": [
+    "Local Windows qualification only; POSIX branch unexecuted.",
+    "Process deadline excludes outer in-process verification/publication and cannot preempt OS process creation.",
+    "Five-second cleanup wait budget does not guarantee native OS API realtime behavior.",
+    "Only owned child is terminated; descendants are not contained.",
+    "Windows embedded multithreaded application context is unqualified.",
+    "Captured-byte cap is not a complete process RSS cap.",
+    "Failed delegated commands print diagnostic metadata without implicit partial-byte artifacts.",
+    "Legacy direct Python aliases and frozen old engine retain their earlier contracts.",
+    "No scientific validation, hosted CI, native-model execution or paper-package rebuild."
+  ],
+  "new_model_calls": 0,
+  "new_provider_downloads": 0,
+  "provider_spending_usd": 0
+}

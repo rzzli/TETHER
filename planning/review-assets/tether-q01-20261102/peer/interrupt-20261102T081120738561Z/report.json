@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checks": [
+    {
+      "name": "original interruption remains cause",
+      "passed": true
+    },
+    {
+      "name": "interruption classified",
+      "passed": true
+    },
+    {
+      "name": "interrupted child reaped",
+      "passed": true
+    },
+    {
+      "name": "one interrupted dispatch",
+      "passed": true
+    },
+    {
+      "name": "delegate timeout returns failure",
+      "passed": true
+    },
+    {
+      "name": "delegate emits bounded reason",
+      "passed": true
+    },
+    {
+      "name": "delegate emits cleanup disposition",
+      "passed": true
+    },
+    {
+      "name": "delegate never retries",
+      "passed": true
+    },
+    {
+      "name": "delegate does not fabricate durable output",
+      "passed": true
+    },
+    {
+      "name": "wrapper flags removed from engine args",
+      "passed": true
+    }
+  ],
+  "interruption": {
+    "schema_version": 1,
+    "method": "tether.process_envelope.v1",
+    "limits": {
+      "timeout_seconds": 2,
+      "max_output_bytes": 128
+    },
+    "termination_reason": "interrupted",
+    "execution_elapsed_seconds": 0.125,
+    "total_elapsed_seconds": 0.14099999994505197,
+    "retained_stdout_bytes": 0,
+    "retained_stderr_bytes": 0,
+    "observed_stdout_bytes": 0,
+    "observed_stderr_bytes": 0,
+    "observed_counts_are_lower_bounds": false,
+    "pipe_eof": {
+      "stdout": true,
+      "stderr": true
+    },
+    "process_started": true,
+    "process_reaped": true,
+    "cleanup_errors": []
+  },
+  "delegate_diagnostic": {
+    "schema_version": 1,
+    "method": "tether.process_envelope.v1",
+    "limits": {
+      "timeout_seconds": 0.3,
+      "max_output_bytes": 128
+    },
+    "termination_reason": "deadline_exceeded",
+    "execution_elapsed_seconds": 0.31299999996554106,
+    "total_elapsed_seconds": 0.31299999996554106,
+    "retained_stdout_bytes": 4,
+    "retained_stderr_bytes": 0,
+    "observed_stdout_bytes": 4,
+    "observed_stderr_bytes": 0,
+    "observed_counts_are_lower_bounds": false,
+    "pipe_eof": {
+      "stdout": true,
+      "stderr": true
+    },
+    "process_started": true,
+    "process_reaped": true,
+    "cleanup_errors": []
+  }
+}

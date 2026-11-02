@@ -1,6 +1,8 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-02-full-project-review]] - Current critical review and corrective authority: reproduced semantic/receipt/QC/reporting defects, stronger TETHER 0.4.1 CLI, scoped data inventory and independently recomputed results. Corrects stale planning, 65-input scope, redundant 80/100 thresholds and proof overreach. Q01–Q06 remain a prioritized backlog; old packets and scientific limitations are preserved.
+- [[research-log-2026-11-02-bounded-tether-release]] - Current checkpoint: Q01 complete for TETHER 0.4.2 Windows CLI, 86 package tests/116 independent assertions and installed success/timeout/overflow qualification. Old artifacts preserved; Q02 additive artifact-policy migration is next, with receipt-identity, AACT-use and method-conditional LD corrections. Broader science and author facts remain incomplete/deferred.
+
+- [[research-log-2026-11-02-full-project-review]] - Prior critical review and corrective authority: reproduced semantic/receipt/QC/reporting defects, stronger TETHER 0.4.1 CLI, scoped data inventory and independently recomputed results. Corrects stale planning, 65-input scope, redundant 80/100 thresholds and proof overreach. Established the Q01–Q06 backlog; old packets and scientific limitations are preserved.
 
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.

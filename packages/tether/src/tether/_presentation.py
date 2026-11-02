@@ -5,7 +5,6 @@ independently retained hash to detect replacement of an entire output tree.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
 import hashlib
 from importlib import metadata
 import os
@@ -26,6 +25,8 @@ from asof.study.proofs import capture_file
 from asof.study.stable_read import read_file
 
 from . import __version__
+from ._process import (EngineResult, EngineInterrupted, ProcessLimits, supervise_command,
+                       validate_success_report, CLEANUP_SECONDS)
 
 MANIFEST = "tether-manifest.json"
 RECEIPT = "tether-receipt.json"
@@ -35,7 +36,6 @@ METHOD = "tether.engine_presentation.v1"
 MAX_METADATA_BYTES = MAX_NORMALIZED_JSON_BYTES
 MAX_DOSSIER_BYTES = MAX_LEDGER_JSON_BYTES
 READ_SECONDS = 300
-CLEANUP_SECONDS = 5
 
 
 def need(condition, message):
@@ -166,9 +166,9 @@ def code_proof():
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(asof.__version__ == "0.3.11" and __version__ == "0.4.1", "Unsupported TETHER/core version")
+    need(asof.__version__ == "0.3.11" and __version__ == "0.4.2", "Unsupported TETHER/core version")
     need(versions["asof-target-agents"] in (None, "0.3.11")
-         and versions["tether-target-agents"] in (None, "0.4.1"), "Installed distribution version differs")
+         and versions["tether-target-agents"] in (None, "0.4.2"), "Installed distribution version differs")
     return dict(schema_version=1, method="tether.launcher_code.v1", facade_version=__version__,
                 core_version=asof.__version__, installed_distributions=versions, code=proof)
 
@@ -179,90 +179,14 @@ def project_dossier(payload):
     return b"# TETHER dossier:" + payload[len(prefix):]
 
 
-@dataclass(frozen=True)
-class EngineResult:
-    returncode: int | None
-    stdout: bytes = b""
-    stderr: bytes = b""
-
-
 class EngineFailure(ContractError):
     def __init__(self, returncode):
         super().__init__(f"engine exited {returncode}; inspect this attempt, never automatically redispatch")
         self.exit_code = 130 if returncode == 130 else 3 if returncode == 3 else 2
 
 
-class EngineInterrupted(KeyboardInterrupt):
-    def __init__(self, result):
-        super().__init__("engine interrupted; retained attempt may need inspection")
-        self.result = result
-
-
-def invoke_engine(argv):
-    """One dispatch; failures attempt bounded cleanup without replacing their cause."""
-    process = subprocess.Popen([sys.executable, "-I", "-m", "asof", *argv],
-                               stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    try:
-        stdout, stderr = process.communicate()
-    except BaseException as primary:
-        errors, captures = [], []
-        stdout = stderr = b""
-
-        def capture(label, value):
-            nonlocal stdout, stderr
-            out, err = value
-            out = out if isinstance(out, bytes) else b""
-            err = err if isinstance(err, bytes) else b""
-            if out or err:
-                captures.append((label, out, err))
-            stdout, stderr = out or stdout, err or stderr
-
-        def problem(operation, error):
-            errors.append(dict(operation=operation, error_class=type(error).__name__))
-            capture(operation, (getattr(error, "output", None), getattr(error, "stderr", None)))
-
-        capture("primary_exception", (getattr(primary, "output", None), getattr(primary, "stderr", None)))
-        try:
-            alive = process.poll() is None
-        except BaseException as error:
-            problem("process_poll", error)
-            alive = True
-        if alive:
-            try:
-                process.terminate()
-            except BaseException as error:
-                problem("process_terminate", error)
-        try:
-            capture("terminate_communicate", process.communicate(timeout=CLEANUP_SECONDS))
-        except BaseException as error:
-            problem("terminate_communicate", error)
-            try:
-                if process.poll() is None:
-                    process.kill()
-            except BaseException as error:
-                problem("process_kill", error)
-            try:
-                capture("kill_communicate", process.communicate(timeout=CLEANUP_SECONDS))
-            except BaseException as error:
-                problem("kill_communicate", error)
-        reaped = False
-        try:
-            process.wait(timeout=CLEANUP_SECONDS)
-            reaped = True
-        except BaseException as error:
-            problem("process_wait", error)
-        result = EngineResult(process.returncode, stdout, stderr)
-        retained = EngineInterrupted(result) if isinstance(primary, KeyboardInterrupt) else primary
-        retained.tether_engine_result = result
-        retained.tether_cleanup_errors = errors
-        retained.tether_partial_captures = captures
-        retained.tether_process_reaped = reaped
-        if errors:
-            retained.add_note("TETHER owned-engine cleanup had retained errors; inspect the failed outer attempt")
-        if retained is not primary:
-            raise retained from primary
-        raise
-    return EngineResult(process.returncode, stdout, stderr)
+def invoke_engine(argv, *, limits=ProcessLimits()):
+    return supervise_command([sys.executable, "-I", "-m", "asof", *argv], limits=limits)
 
 
 def preflight_run_journals(output, *, verify=False):
@@ -298,9 +222,9 @@ def _engine_args(argv, output):
     result, index = [], 0
     while index < len(argv):
         token = argv[index]
-        if token == "--output":
+        if token in ("--output", "--process-timeout-seconds", "--process-output-bytes"):
             index += 2
-        elif token.startswith("--output="):
+        elif token.startswith(("--output=", "--process-timeout-seconds=", "--process-output-bytes=")):
             index += 1
         else:
             result.append(token)
@@ -313,8 +237,9 @@ def _retain_streams(root, result):
         _save(root / name, payload)
 
 
-def create_outer(output, argv, *, engine=invoke_engine):
+def create_outer(output, argv, *, engine=None, limits=ProcessLimits()):
     """Reserve a fresh leaf, run once, close journal, then publish the final receipt."""
+    limits.validate()
     output = Path(output).absolute()
     _no_links(output.parent)
     # Exclusive ownership precedes every write, including failure records.
@@ -323,12 +248,15 @@ def create_outer(output, argv, *, engine=invoke_engine):
     try:
         journal = RunJournal(output / "attempt")
         proof = code_proof()
-        journal.append("tether_prepared", command=argv[0], launcher_proof_sha256=digest(canonical(proof)))
+        journal.append("tether_prepared", command=argv[0], launcher_proof_sha256=digest(canonical(proof)),
+                       process_limits=limits.payload())
         stage = "engine_dispatch"
-        journal.append("engine_dispatch", argv_sha256=digest(canonical(argv)), output="engine")
-        result = engine(_engine_args(argv, output / "engine"))
+        journal.append("engine_dispatch", argv_sha256=digest(canonical(argv)), output="engine",
+                       process_limits=limits.payload())
+        result = (invoke_engine(_engine_args(argv, output / "engine"), limits=limits) if engine is None
+                  else engine(_engine_args(argv, output / "engine")))
         _retain_streams(output, result)
-        journal.append("engine_returned", returncode=result.returncode)
+        journal.append("engine_returned", returncode=result.returncode, supervision=result.supervision)
         if result.returncode == 130:
             raise EngineInterrupted(result)
         if result.returncode != 0:
@@ -336,6 +264,7 @@ def create_outer(output, argv, *, engine=invoke_engine):
         stage = "source_verification"
         engine_receipt = digest(_read(output / "engine/receipt.json"))
         _core_check(output, engine_receipt)
+        validate_success_report(result.supervision, limits, len(result.stdout), len(result.stderr))
         stage = "presentation"
         _save(output / "dossier.md", project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)))
         need(canonical(code_proof()) == canonical(proof), "TETHER launcher code changed during execution")
@@ -344,6 +273,7 @@ def create_outer(output, argv, *, engine=invoke_engine):
         manifest = dict(schema_version=1, method=METHOD, brand="TETHER", status="completed",
                         role="evaluation_only", agent_visible=False, scientific_validation="not_established",
                         command=argv[0], invocation_sha256=digest(canonical(argv)),
+                        process_limits=limits.payload(), supervision=result.supervision,
                         engine=dict(path="engine", receipt_sha256=engine_receipt),
                         projection=dict(source="engine/dossier.md", target="dossier.md", transform="exact_first_header_v1"),
                         launcher=proof, artifacts=artifacts)
@@ -400,6 +330,7 @@ def create_outer(output, argv, *, engine=invoke_engine):
         failure = dict(schema_version=1, method=METHOD, brand="TETHER", role="evaluation_only", agent_visible=False,
                        status="interrupted" if isinstance(error, KeyboardInterrupt) else "failed", stage=stage,
                        error_class=type(error).__name__, engine_returncode=result.returncode if result else None,
+                       process_limits=limits.payload(), supervision=result.supervision if result else None,
                        cleanup_errors=failures, partial_streams=partial_streams,
                        engine_process_reaped=getattr(error, "tether_process_reaped", None),
                        scientific_validation="not_established",
@@ -434,7 +365,12 @@ def verify_outer(output, expected_receipt_sha256=None):
     manifest_raw = _read(output / MANIFEST)
     need(digest(manifest_raw) == receipt["manifest_sha256"], "TETHER manifest hash differs")
     manifest = parse_json(manifest_raw)
-    _envelope(manifest, common | {"command", "invocation_sha256", "engine", "projection", "launcher", "artifacts"})
+    _envelope(manifest, common | {"command", "invocation_sha256", "engine", "projection", "launcher", "artifacts",
+                                  "process_limits", "supervision"})
+    need(type(manifest["process_limits"]) is dict and set(manifest["process_limits"]) ==
+         {"timeout_seconds", "max_output_bytes"}, "TETHER process limits differ")
+    limits = ProcessLimits(**manifest["process_limits"])
+    limits.validate()
     need(manifest["command"] in ("demo", "run") and manifest["engine"] == dict(path="engine", receipt_sha256=receipt["engine_receipt_sha256"]),
          "TETHER engine binding differs")
     need(canonical(manifest["launcher"]) == canonical(code_proof()), "TETHER current launcher code/version differs")
@@ -457,9 +393,14 @@ def verify_outer(output, expected_receipt_sha256=None):
          and all(type(e["sequence"]) is int for e in events)
          and events[-1]["details"] == dict(manifest_sha256=receipt["manifest_sha256"], engine_receipt_sha256=receipt["engine_receipt_sha256"]),
          "TETHER journal terminal binding differs")
-    need(canonical(events[1]["details"]) == canonical(dict(command=manifest["command"], launcher_proof_sha256=digest(canonical(manifest["launcher"]))))
-         and canonical(events[2]["details"]) == canonical(dict(argv_sha256=manifest["invocation_sha256"], output="engine"))
-         and canonical(events[3]["details"]) == canonical(dict(returncode=0)), "TETHER journal dispatch/proof binding differs")
+    need(canonical(events[1]["details"]) == canonical(dict(command=manifest["command"],
+            launcher_proof_sha256=digest(canonical(manifest["launcher"])), process_limits=limits.payload()))
+         and canonical(events[2]["details"]) == canonical(dict(argv_sha256=manifest["invocation_sha256"],
+            output="engine", process_limits=limits.payload()))
+         and canonical(events[3]["details"]) == canonical(dict(returncode=0,
+            supervision=manifest["supervision"])), "TETHER journal dispatch/proof binding differs")
+    validate_success_report(manifest["supervision"], limits,
+                            len(_read(output / "engine-stdout.txt")), len(_read(output / "engine-stderr.txt")))
     need(not any(e["event"] in ("run_failed", "run_interrupted") for e in events), "TETHER failure journal cannot qualify")
     need(_read(output / "dossier.md", max_bytes=MAX_DOSSIER_BYTES)
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")

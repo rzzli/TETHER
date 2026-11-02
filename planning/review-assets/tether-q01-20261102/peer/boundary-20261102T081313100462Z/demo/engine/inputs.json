@@ -1,0 +1,252 @@
+{
+  "case": {
+    "schema_version": 2,
+    "case_id": "demo-program-001",
+    "task": "T1",
+    "origin": "2023-01-01",
+    "hypothesis": {
+      "target_id": "DEMO:TARGET1",
+      "indication_id": "DEMO:DISEASE1",
+      "target_namespace_version": "demo-v1",
+      "indication_namespace_version": "demo-v1",
+      "intended_action": "inhibit",
+      "modality": "small_molecule",
+      "tissue": "fictional tissue",
+      "availability": {
+        "first_public_at": "2018-01-01",
+        "release_public_at": "2019-01-01",
+        "record_public_at": "2019-01-01",
+        "annotation_public_at": "2019-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed",
+        "known_public_by": null,
+        "evidence_ref": null
+      }
+    },
+    "program": {
+      "program_id": "DEMO:PROGRAM1",
+      "molecule_id": "DEMO:MOLECULE1",
+      "sponsor": "Fictional sponsor",
+      "phase_at_origin": 2,
+      "status_at_origin": "active",
+      "eligible_since": "2022-01-01",
+      "mapping_confidence": 1.0,
+      "trial_ids": [
+        "DEMO:TRIAL1"
+      ],
+      "availability": {
+        "first_public_at": "2022-01-01",
+        "release_public_at": "2022-01-01",
+        "record_public_at": "2022-01-01",
+        "annotation_public_at": "2022-01-01",
+        "retrieved_at": "2026-10-10",
+        "basis": "Fictional fixture availability dates",
+        "uncertainty": "Synthetic; no historical availability is claimed",
+        "known_public_by": null,
+        "evidence_ref": null
+      }
+    },
+    "endpoint": {
+      "name": "phase_2_to_3",
+      "horizon_months": 24
+    },
+    "origin_at": "2023-01-01T23:59:59.999999+00:00"
+  },
+  "snapshot": {
+    "schema_version": 2,
+    "snapshot_id": "synthetic-v2",
+    "profile": "synthetic_demo",
+    "origin": "2023-01-01",
+    "allow_reconstructed": false,
+    "artifacts": [
+      {
+        "artifact_id": "demo-evidence",
+        "dataset_id": "synthetic_fixture",
+        "release_id": "fixture-v1",
+        "path": "evidence.json",
+        "sha256": "734fc7288ccc1b87e49e5df5ed355c819e05942a95831d8044e8823432156972",
+        "role": "agent_evidence",
+        "access_approved": true,
+        "temporal_classification": "verified_historical",
+        "availability": {
+          "first_public_at": "2018-01-01",
+          "release_public_at": "2019-01-01",
+          "record_public_at": "2019-01-01",
+          "annotation_public_at": "2019-01-01",
+          "retrieved_at": "2026-10-10",
+          "basis": "Fictional fixture availability dates",
+          "uncertainty": "Synthetic; no historical availability is claimed",
+          "known_public_by": null,
+          "evidence_ref": null
+        },
+        "source_url": "https://example.invalid/synthetic-fixture",
+        "input_refs": [
+          "demo-original-input"
+        ]
+      },
+      {
+        "artifact_id": "demo-future",
+        "dataset_id": "synthetic_fixture",
+        "release_id": "fixture-v1",
+        "path": "future.json",
+        "sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "role": "agent_evidence",
+        "access_approved": true,
+        "temporal_classification": "verified_historical",
+        "availability": {
+          "first_public_at": "2018-01-01",
+          "release_public_at": "2025-01-01",
+          "record_public_at": "2025-01-01",
+          "annotation_public_at": "2025-01-01",
+          "retrieved_at": "2026-10-10",
+          "basis": "Fictional fixture availability dates",
+          "uncertainty": "Synthetic; no historical availability is claimed",
+          "known_public_by": null,
+          "evidence_ref": null
+        },
+        "source_url": "https://example.invalid/synthetic-fixture",
+        "input_refs": [
+          "demo-future-input"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "demo-original-input",
+        "dataset_id": "synthetic_fixture",
+        "release_id": "fixture-v1",
+        "path": "raw-inputs.json",
+        "sha256": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+        "role": "agent_evidence",
+        "availability": {
+          "first_public_at": "2018-01-01",
+          "release_public_at": "2019-01-01",
+          "record_public_at": "2019-01-01",
+          "annotation_public_at": "2019-01-01",
+          "retrieved_at": "2026-10-10",
+          "basis": "Fictional fixture availability dates",
+          "uncertainty": "Synthetic; no historical availability is claimed",
+          "known_public_by": null,
+          "evidence_ref": null
+        },
+        "temporal_classification": "verified_historical",
+        "source_url": "https://example.invalid/synthetic-fixture",
+        "parents": [],
+        "computed_at": null,
+        "method_id": null,
+        "method_version": null,
+        "receipt_path": null,
+        "receipt_sha256": null
+      },
+      {
+        "source_id": "demo-future-input",
+        "dataset_id": "synthetic_fixture",
+        "release_id": "fixture-v1",
+        "path": "future.json",
+        "sha256": "f09001f9e922b698a39238f8620aad77b959d61c8ddcf323f852895fcf9ce48c",
+        "role": "agent_evidence",
+        "availability": {
+          "first_public_at": "2018-01-01",
+          "release_public_at": "2025-01-01",
+          "record_public_at": "2025-01-01",
+          "annotation_public_at": "2025-01-01",
+          "retrieved_at": "2026-10-10",
+          "basis": "Fictional fixture availability dates",
+          "uncertainty": "Synthetic; no historical availability is claimed",
+          "known_public_by": null,
+          "evidence_ref": null
+        },
+        "temporal_classification": "verified_historical",
+        "source_url": "https://example.invalid/synthetic-fixture",
+        "parents": [],
+        "computed_at": null,
+        "method_id": null,
+        "method_version": null,
+        "receipt_path": null,
+        "receipt_sha256": null
+      }
+    ],
+    "raw_root": null,
+    "coverage": {
+      "source_completeness": "complete"
+    },
+    "origin_at": "2023-01-01T23:59:59.999999+00:00"
+  },
+  "scorer": {
+    "schema_version": 2,
+    "model_id": "synthetic-logistic-v2",
+    "kind": "synthetic_demo",
+    "feature_schema": "asof-features-v2",
+    "aggregation": "mean_of_unique_dependency_groups_v2",
+    "endpoint": "phase_2_to_3",
+    "horizon_months": 24,
+    "phases": [
+      2
+    ],
+    "modalities": [
+      "small_molecule"
+    ],
+    "intended_actions": [
+      "inhibit"
+    ],
+    "target_namespace_versions": [
+      "demo-v1"
+    ],
+    "indication_namespace_versions": [
+      "demo-v1"
+    ],
+    "training_origin_max": "2020-01-01",
+    "training_label_available_max": "2022-01-01",
+    "calibration_label_available_max": null,
+    "training_manifest_sha256": "f3767154d6d09a54ea8aca38f01127a40ce7ab4d3f8f44b2a28c766e530c5e6d",
+    "calibration": "none",
+    "intercept": -1.4,
+    "coefficients": {
+      "genetic_support": 0.8,
+      "direction_alignment": 0.4,
+      "perturbation_support": 0.3,
+      "expression_relevance": 0.2,
+      "modality_feasibility": 0.2,
+      "literature_support": 0.3,
+      "safety_liability": -0.6,
+      "pathway_support": 0.1
+    },
+    "required_features": [
+      "genetic_support",
+      "direction_alignment"
+    ],
+    "missing_values": {},
+    "minimum_coverage": 0.75
+  },
+  "catalog_policy": null,
+  "configuration": {
+    "budget": {
+      "max_calls": 16,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_cost_usd": 0,
+      "max_seconds": 300,
+      "max_retries": 1
+    },
+    "disabled": [],
+    "review_enabled": true,
+    "backend_id": "offline-extractive-v1",
+    "backend_provenance": null,
+    "hypothesis_key": "96c2c0db141d8cb3831339eb72049a2cd46ee6028405f7fa7deae4e1a4979a8c",
+    "scorer_preflight": null
+  },
+  "snapshot_base": "D:\\Projects\\drug_target_agents\\src\\asof\\demo\\v2",
+  "environment": {
+    "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "runtime_dependencies": {
+      "asof-target-agents": "0.3.11",
+      "pyarrow": "21.0.0"
+    },
+    "build_inputs": {
+      "pyproject.toml": "4952d70ccbb0d651bcb1b3c0d3d10608e19b46a4460a6f8c5d1bd1a55df6d97a",
+      "uv.lock": "155678fce1ad8cb536bf9f9bf1de04cd6e0f030cedbe4bbd685b239dddc12d12"
+    }
+  }
+}

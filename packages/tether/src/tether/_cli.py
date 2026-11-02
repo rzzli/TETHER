@@ -15,6 +15,7 @@ from . import _presentation as presentation
 
 def _brand(parser):
     parser.prog = parser.prog.replace("asof", "tether", 1)
+    parser.allow_abbrev = False
     if parser.description:
         parser.description = parser.description.replace("AsOf", "TETHER")
     for action in parser._actions:
@@ -28,6 +29,14 @@ def parser():
     result = _brand(legacy.parser())
     result.description = "TETHER auditable evidence workflow (frozen AsOf compatibility engine)"
     result.add_argument("--version", action="version", version=f"TETHER {__version__} (compatibility engine {__core_version__})")
+    for action in result._actions:
+        if isinstance(action, argparse._SubParsersAction):
+            for name, child in action.choices.items():
+                if name != "verify":
+                    child.add_argument("--process-timeout-seconds", type=float, default=None,
+                        help="Owned child absolute deadline, default 3600s; separate from workflow budget")
+                    child.add_argument("--process-output-bytes", type=int, default=None,
+                        help="Aggregate child stdout/stderr cap, default 16777216 bytes (maximum 67108864)")
     return result
 
 
@@ -39,8 +48,8 @@ def _is_outer(path):
     return any((Path(path) / name).exists() for name in (presentation.RECEIPT, presentation.MANIFEST, presentation.FAILURE, "attempt"))
 
 
-def _delegate(argv):
-    result = presentation.invoke_engine(argv)
+def _delegate(argv, limits):
+    result = presentation.invoke_engine(argv, limits=limits)
     if result.stdout:
         sys.stdout.write(result.stdout.decode("utf-8", errors="replace"))
     if result.stderr:
@@ -53,8 +62,26 @@ def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
     args = parser().parse_args(argv)
     try:
+        explicit = any(getattr(args, name, None) is not None for name in
+                       ("process_timeout_seconds", "process_output_bytes"))
+        defaults = presentation.ProcessLimits()
+        limits = presentation.ProcessLimits(
+            args.process_timeout_seconds if getattr(args, "process_timeout_seconds", None) is not None else defaults.timeout_seconds,
+            args.process_output_bytes if getattr(args, "process_output_bytes", None) is not None else defaults.max_output_bytes)
+        limits.validate()
+        # Wrapper controls never enter the frozen parser or its workflow budget.
+        engine_argv, index = [], 0
+        while index < len(argv):
+            token = argv[index]
+            if token in ("--process-timeout-seconds", "--process-output-bytes"):
+                index += 2
+            elif token.startswith(("--process-timeout-seconds=", "--process-output-bytes=")):
+                index += 1
+            else:
+                engine_argv.append(token)
+                index += 1
         if args.command in ("demo", "run"):
-            _print(presentation.create_outer(args.output, argv))
+            _print(presentation.create_outer(args.output, argv, limits=limits))
             return 0
         if args.command == "verify" and _is_outer(args.run_dir):
             if args.outputs_only:
@@ -62,6 +89,8 @@ def main(argv=None):
             _print(presentation.verify_outer(args.run_dir, args.receipt_sha256))
             return 0
         if args.command == "inspect-run" and _is_outer(args.run_dir):
+            if explicit:
+                raise ContractError("Process limits do not apply to in-process outer inspection")
             _print(presentation.inspect_outer(args.run_dir))
             return 0
         if args.command == "verify":
@@ -69,10 +98,16 @@ def main(argv=None):
             return 0
         if args.command in ("verify", "inspect-run"):
             presentation.preflight_run_journals(args.run_dir, verify=args.command == "verify")
-        return _delegate(argv)
-    except KeyboardInterrupt:
-        print("tether: interrupted; inspect retained attempts before starting a new output", file=sys.stderr)
+        return _delegate(engine_argv, limits)
+    except KeyboardInterrupt as error:
+        print("tether: interrupted; inspect any retained attempt before starting a new output", file=sys.stderr)
+        captured = getattr(error, "tether_engine_result", None)
+        if captured is not None and captured.supervision is not None:
+            print(json.dumps({"tether_process_failure": captured.supervision}), file=sys.stderr)
         return 130
     except Exception as error:
         print(f"tether: {error}", file=sys.stderr)
+        captured = getattr(error, "tether_engine_result", None)
+        if captured is not None and captured.supervision is not None:
+            print(json.dumps({"tether_process_failure": captured.supervision}), file=sys.stderr)
         return getattr(error, "exit_code", 2)

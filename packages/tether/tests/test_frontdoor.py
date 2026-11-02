@@ -26,6 +26,7 @@ from asof.journal import RunJournal, read_chain
 from asof.serde import ContractError, canonical, fingerprint
 from tether import _cli as cli
 from tether import _presentation as layer
+from tether import _process as supervisor
 
 
 class FrontDoorTests(unittest.TestCase):
@@ -79,14 +80,14 @@ class FrontDoorTests(unittest.TestCase):
     def test_distribution_and_license_are_separate_from_legacy_core(self):
         project = tomllib.loads((PROJECT / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-agents")
-        self.assertEqual(project["project"]["version"], "0.4.1")
+        self.assertEqual(project["project"]["version"], "0.4.2")
         self.assertEqual(project["project"]["dependencies"], ["asof-target-agents==0.3.11"])
         self.assertEqual(project["project"]["optional-dependencies"]["ingest"], ["pyarrow==21.0.0"])
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"], ["tether", "tether.*"])
         self.assertEqual((PROJECT / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
     def test_help_version_and_legacy_parser_are_independent(self):
-        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.4.1"),
+        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.4.2"),
                                (["run", "--help"], "usage: tether run")]:
             stream = io.StringIO()
             with redirect_stdout(stream), self.assertRaises(SystemExit) as stop:
@@ -392,55 +393,56 @@ class FrontDoorTests(unittest.TestCase):
 
     def test_subprocess_interruption_reaps_one_dispatch(self):
         process = Mock()
-        process.poll.return_value = None
+        process.poll.side_effect = [None, -1]
         process.returncode = -1
-        process.communicate.side_effect = [KeyboardInterrupt(), (b"out", b"err")]
-        with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, self.assertRaises(layer.EngineInterrupted):
+        with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, \
+             patch.object(supervisor, "_read_ready", side_effect=[KeyboardInterrupt(), b"out", b"err"]), \
+             self.assertRaises(layer.EngineInterrupted) as caught:
             layer.invoke_engine(["demo", "--output", "fictional"])
         spawn.assert_called_once()
         process.terminate.assert_called_once()
-        self.assertEqual(process.communicate.call_count, 2)
+        process.communicate.assert_not_called()
+        self.assertTrue(caught.exception.tether_process_reaped)
 
     def test_pipe_oserror_and_systemexit_preserve_primary_and_reap_once(self):
         for primary in (OSError("fictional pipe error"), SystemExit(7)):
             with self.subTest(error=type(primary).__name__):
                 process = Mock()
-                process.poll.return_value = None
+                process.poll.side_effect = [None, -1]
                 process.returncode = -1
-                process.communicate.side_effect = [primary, (b"partial output", b"accounting")]
-                with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, self.assertRaises(type(primary)) as caught:
+                with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, \
+                     patch.object(supervisor, "_read_ready", side_effect=[primary, b"partial output", b"accounting"]), \
+                     self.assertRaises(type(primary)) as caught:
                     layer.invoke_engine(["demo", "--output", "fictional"])
                 self.assertIs(caught.exception, primary)
                 self.assertEqual(primary.tether_engine_result.stdout, b"partial output")
                 self.assertTrue(primary.tether_process_reaped)
                 spawn.assert_called_once()
                 process.terminate.assert_called_once()
-                process.wait.assert_called_once_with(timeout=layer.CLEANUP_SECONDS)
+                process.wait.assert_called_once_with(timeout=0)
+                process.communicate.assert_not_called()
 
     def test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure(self):
         primary = OSError("fictional primary")
-        primary.output = b"before cleanup"
-        primary.stderr = b"usage before cleanup"
         process = Mock()
-        process.poll.return_value = None
+        process.poll.side_effect = [None, OSError("fictional poll"), OSError("fictional poll")]
         process.returncode = None
         process.terminate.side_effect = OSError("fictional terminate failure")
         process.kill.side_effect = OSError("fictional kill failure")
-        process.wait.side_effect = layer.subprocess.TimeoutExpired("fictional", 5)
-        process.communicate.side_effect = [primary, layer.subprocess.TimeoutExpired("fictional", 5), OSError("fictional drain failure")]
-        with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, self.assertRaises(OSError) as caught:
+        with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, \
+             patch.object(supervisor, "_read_ready", side_effect=[b"before cleanup", primary,
+                 b"more", b"usage before cleanup", None, None]), self.assertRaises(OSError) as caught:
             layer.create_outer(self.output, ["demo", "--output", str(self.output)])
         self.assertIs(caught.exception, primary)
         spawn.assert_called_once()
-        self.assertEqual(process.communicate.call_count, 3)
+        process.communicate.assert_not_called()
         self.assertFalse((self.output / layer.RECEIPT).exists())
         failure = json.loads((self.output / layer.FAILURE).read_text())
         self.assertIs(failure["engine_process_reaped"], False)
         self.assertEqual(failure["error_class"], "OSError")
         self.assertIn("process_kill", [x["operation"] for x in failure["cleanup_errors"]])
-        captures = {row["path"]: (self.output / row["path"]).read_bytes() for row in failure["partial_streams"]}
-        self.assertIn(b"before cleanup", captures.values())
-        self.assertIn(b"usage before cleanup", captures.values())
+        self.assertEqual((self.output / "engine-stdout.txt").read_bytes(), b"before cleanupmore")
+        self.assertEqual((self.output / "engine-stderr.txt").read_bytes(), b"usage before cleanup")
 
     def test_failure_metadata_fault_does_not_replace_primary(self):
         primary = OSError("fictional original failure")

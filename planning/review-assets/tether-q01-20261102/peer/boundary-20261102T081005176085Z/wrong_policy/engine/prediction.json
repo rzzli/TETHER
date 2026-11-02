@@ -1,0 +1,89 @@
+{
+  "case_id": "demo-program-001",
+  "origin": "2023-01-01",
+  "endpoint": "phase_2_to_3",
+  "horizon_months": 24,
+  "status": "scored",
+  "probability": 0.48250714233361036,
+  "reason": null,
+  "scorer_id": "synthetic-logistic-v2",
+  "synthetic": true,
+  "calibration": "none",
+  "feature_coverage": 1.0,
+  "intercept": -1.4,
+  "contributions": {
+    "direction_alignment": {
+      "value": 0.6,
+      "coefficient": 0.4,
+      "log_odds": 0.24,
+      "imputed": false,
+      "observation_ids": [
+        "demo-genetics-1"
+      ]
+    },
+    "expression_relevance": {
+      "value": 0.7,
+      "coefficient": 0.2,
+      "log_odds": 0.13999999999999999,
+      "imputed": false,
+      "observation_ids": [
+        "demo-expression-1"
+      ]
+    },
+    "genetic_support": {
+      "value": 0.8,
+      "coefficient": 0.8,
+      "log_odds": 0.6400000000000001,
+      "imputed": false,
+      "observation_ids": [
+        "demo-genetics-1"
+      ]
+    },
+    "literature_support": {
+      "value": 0.6,
+      "coefficient": 0.3,
+      "log_odds": 0.18,
+      "imputed": false,
+      "observation_ids": [
+        "demo-literature-1",
+        "demo-literature-duplicate"
+      ]
+    },
+    "modality_feasibility": {
+      "value": 0.5,
+      "coefficient": 0.2,
+      "log_odds": 0.1,
+      "imputed": false,
+      "observation_ids": [
+        "demo-modality-1"
+      ]
+    },
+    "pathway_support": {
+      "value": 0.3,
+      "coefficient": 0.1,
+      "log_odds": 0.03,
+      "imputed": false,
+      "observation_ids": [
+        "demo-pathway-1"
+      ]
+    },
+    "perturbation_support": {
+      "value": 0.4,
+      "coefficient": 0.3,
+      "log_odds": 0.12,
+      "imputed": false,
+      "observation_ids": [
+        "demo-perturbation-1"
+      ]
+    },
+    "safety_liability": {
+      "value": 0.2,
+      "coefficient": -0.6,
+      "log_odds": -0.12,
+      "imputed": false,
+      "observation_ids": [
+        "demo-safety-1"
+      ]
+    }
+  }
+}

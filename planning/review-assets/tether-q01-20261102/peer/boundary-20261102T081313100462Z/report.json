@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "recorded_at_utc": "2026-11-02T08:13:15.089295+00:00",
+  "checks": [
+    {
+      "name": "--process-timeout-s=10: parser rejects",
+      "passed": true
+    },
+    {
+      "name": "--process-timeout-s=10: zero reservation/dispatch",
+      "passed": true
+    },
+    {
+      "name": "--process-output-b=100: parser rejects",
+      "passed": true
+    },
+    {
+      "name": "--process-output-b=100: zero reservation/dispatch",
+      "passed": true
+    },
+    {
+      "name": "genuine demo succeeds",
+      "passed": true
+    },
+    {
+      "name": "raw accepted invocation retained",
+      "passed": true
+    },
+    {
+      "name": "effective process policy retained",
+      "passed": true
+    },
+    {
+      "name": "genuine process supervised",
+      "passed": true
+    },
+    {
+      "name": "genuine source-inclusive verification",
+      "passed": true
+    },
+    {
+      "name": "stronger semantics still checked",
+      "passed": true
+    },
+    {
+      "name": "verify: explicit in-process limits rejected",
+      "passed": true
+    },
+    {
+      "name": "verify: no dispatch",
+      "passed": true
+    },
+    {
+      "name": "inspect-run: explicit in-process limits rejected",
+      "passed": true
+    },
+    {
+      "name": "inspect-run: no dispatch",
+      "passed": true
+    },
+    {
+      "name": "past_deadline: resealed process inconsistency rejected",
+      "passed": true
+    },
+    {
+      "name": "bytes_mismatch: resealed process inconsistency rejected",
+      "passed": true
+    },
+    {
+      "name": "typed_eof: resealed process inconsistency rejected",
+      "passed": true
+    },
+    {
+      "name": "unreaped: resealed process inconsistency rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_policy: resealed process inconsistency rejected",
+      "passed": true
+    }
+  ],
+  "details": [
+    {
+      "genuine_summary": {
+        "brand": "TETHER",
+        "status": "completed",
+        "output": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-q01-20261102\\peer\\boundary-20261102T081313100462Z\\demo",
+        "receipt_sha256": "80642f4fcf8705875020ff05df96d5c52d1e6d229091971b66aec65d5f7788af",
+        "engine_receipt_sha256": "bc6bf6bfab666349310a026a4862afb2ad029adffc225b923f2c8c9a0de1440d",
+        "scientific_validation": "not_established"
+      },
+      "verification": {
+        "brand": "TETHER",
+        "status": "integrity_verified",
+        "receipt_sha256": "80642f4fcf8705875020ff05df96d5c52d1e6d229091971b66aec65d5f7788af",
+        "external_anchor_checked": true,
+        "launcher_code_verified": true,
+        "presentation_projection": "exact_first_header_v1",
+        "engine": {
+          "status": "integrity_verified",
+          "outputs": 8,
+          "source_artifacts_checked": 2,
+          "trace_events": 37,
+          "receipt_sha256": "bc6bf6bfab666349310a026a4862afb2ad029adffc225b923f2c8c9a0de1440d",
+          "external_anchor_checked": true,
+          "auxiliary_outputs_checked": 1,
+          "unsealed_auxiliary_outputs": [],
+          "code_matches_current": true,
+          "semantic_consistency": "verified",
+          "source_binding": "current_originals",
+          "scientific_validity": "not_established",
+          "tether_semantics": {
+            "method": "tether.execution_semantics.v1",
+            "coverage_state_machine": "verified",
+            "review_to_claims": "verified",
+            "dossier_reconstruction": "verified"
+          }
+        },
+        "scientific_validation": "not_established"
+      }
+    },
+    {
+      "mutation": "past_deadline",
+      "error_class": "ContractError",
+      "error": "TETHER successful process exceeded its deadline"
+    },
+    {
+      "mutation": "bytes_mismatch",
+      "error_class": "ContractError",
+      "error": "TETHER process stream accounting differs"
+    },
+    {
+      "mutation": "typed_eof",
+      "error_class": "ContractError",
+      "error": "TETHER successful process supervision declaration differs"
+    },
+    {
+      "mutation": "unreaped",
+      "error_class": "ContractError",
+      "error": "TETHER successful process supervision declaration differs"
+    },
+    {
+      "mutation": "wrong_policy",
+      "error_class": "ContractError",
+      "error": "TETHER successful process supervision declaration differs"
+    }
+  ],
+  "code_sha256": {
+    "packages/tether/src/tether/_process.py": "87f1948b3b1453f3c552b1e2226afb1eb6597f98ccc06d36b5ab20a31d15d3e9",
+    "packages/tether/src/tether/_presentation.py": "f3c054ee0f13f8c0756781b4384a12ceaaa892d8bfb9b2dc27ecc963d3274086",
+    "packages/tether/src/tether/_cli.py": "26d77e4ba13f1764fc87152b426ca19531aab6ce8b72e0adb8b92948ea6e8e44"
+  }
+}

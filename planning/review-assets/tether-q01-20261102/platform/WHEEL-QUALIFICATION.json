@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ISOLATED_TETHER_042_WHEEL",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "wheel_path": "data/cache/tether-042-qualified-build/wheels/tether_target_agents-0.4.2-py3-none-any.whl",
+  "wheel_sha256": "d453b1b2790d275439fe487ad7a7ffadf6a48e2094c7b7f7c638c5b626fd2da7",
+  "wheel_bytes": 32553,
+  "wheel_members": 22,
+  "runtime_source_files_checked": 16,
+  "record_closure": "verified",
+  "environment": {
+    "isolated_installed_imports": true,
+    "arrow": false,
+    "version": "0.4.2"
+  },
+  "calls": [
+    {
+      "argv": [
+        "-c",
+        "import tether,asof,sys,pathlib,importlib.util,json; assert tether.__version__=='0.4.2'; assert asof.__version__=='0.3.11'; assert pathlib.Path(tether.__file__).is_relative_to(pathlib.Path(sys.prefix)); assert pathlib.Path(asof.__file__).is_relative_to(pathlib.Path(sys.prefix)); assert importlib.util.find_spec('pyarrow') is None; print(json.dumps({'isolated_installed_imports':True,'arrow':False,'version':tether.__version__}))"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "931e94f935e06736a6fbc4ad72925e31c62c672f5cc20654f1b197efe8d5cfac",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "demo",
+        "--output",
+        "demo"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "b159874f3aacde62b8b9417b633748249ffec909ce31b7c8ea74c956a26b681c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "verify",
+        "--run-dir",
+        "demo",
+        "--receipt-sha256",
+        "a814c5fbecdaab82d4cc7bdc9481ae57c43f7c9a529c1f6849df60fea32e0d90"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "12994a57bf7e5a0dd68a6c7965be3c6831b3d40077fe722f6e9083394206ff98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "verify",
+        "--run-dir",
+        "demo",
+        "--receipt-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c8f36c9dd0edff29faf9e1618309c2ad443217ea01c772a67e1c2b89b763eabc"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "demo",
+        "--output",
+        "timeout",
+        "--process-timeout-seconds",
+        "0.000001"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "de7312c487b232a80ba04f70a0380f559c0cb1063b5dd20e66b132f9cc18e48e"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "inspect-run",
+        "--run-dir",
+        "timeout"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "449e35a2732f7a20e124c11c94f48d9bf53035f7f2aeba92a631260e45923d8b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "demo",
+        "--output",
+        "overflow",
+        "--process-output-bytes",
+        "1"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5f4d0b99d539fbec9cf7f341f6d900d12ae45416623d32d719ad59e4bc77a1a0"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "inspect-run",
+        "--run-dir",
+        "overflow"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "2754425b63f6a63cef7bfa7e13c504945b74a820239b04ca3503f3b90c871ab2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "outer_verification": {
+    "brand": "TETHER",
+    "status": "integrity_verified",
+    "receipt_sha256": "a814c5fbecdaab82d4cc7bdc9481ae57c43f7c9a529c1f6849df60fea32e0d90",
+    "external_anchor_checked": true,
+    "launcher_code_verified": true,
+    "presentation_projection": "exact_first_header_v1",
+    "engine": {
+      "status": "integrity_verified",
+      "outputs": 8,
+      "source_artifacts_checked": 2,
+      "trace_events": 37,
+      "receipt_sha256": "b06047a5170f620f256cc74226bce4ef607c9f7daf110acf007766d5fd3a790a",
+      "external_anchor_checked": true,
+      "auxiliary_outputs_checked": 1,
+      "unsealed_auxiliary_outputs": [],
+      "code_matches_current": true,
+      "semantic_consistency": "verified",
+      "source_binding": "current_originals",
+      "scientific_validity": "not_established",
+      "tether_semantics": {
+        "method": "tether.execution_semantics.v1",
+        "coverage_state_machine": "verified",
+        "review_to_claims": "verified",
+        "dossier_reconstruction": "verified"
+      }
+    },
+    "scientific_validation": "not_established"
+  },
+  "failure_qualification": [
+    {
+      "name": "timeout",
+      "termination_reason": "deadline_exceeded",
+      "retained_stream_bytes": 0,
+      "process_reaped": true,
+      "dispatches": 1,
+      "inspection_without_redispatch": true
+    },
+    {
+      "name": "overflow",
+      "termination_reason": "output_limit_exceeded",
+      "retained_stream_bytes": 1,
+      "process_reaped": true,
+      "dispatches": 1,
+      "inspection_without_redispatch": true
+    }
+  ],
+  "execution_platform": "Windows",
+  "posix_branch_executed": false,
+  "wrong_anchor_rejected_without_redispatch": true,
+  "canonical_locked_sync": "passed_offline",
+  "limits": [
+    "Fresh workspace-cache environment; both imports resolve inside its site-packages.",
+    "Windows-only execution; POSIX select branch has not been executed here.",
+    "No new scientific source reconstruction, paper package or hosted CI qualification.",
+    "Core legacy wheel and published earlier artifacts remain unchanged."
+  ],
+  "new_model_calls": 0,
+  "new_provider_downloads": 0,
+  "provider_spending_usd": 0
+}

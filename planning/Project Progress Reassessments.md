@@ -1,7 +1,9 @@
 # TETHER project progress reassessments
 
-Current checkpoint: [2 November full critical review](<TETHER Full Project Critical Review 2026-11-02.md>)
-and [corrective execution plan](<TETHER Corrective Execution Plan 2026-11-02.md>).
+Current checkpoint: [Q01 bounded TETHER 0.4.2 release](<Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md>).
+The Windows CLI qualification passes; Q02 artifact-specific catalog migration is next.
+The [2 November full critical review](<TETHER Full Project Critical Review 2026-11-02.md>)
+and [corrective execution plan](<TETHER Corrective Execution Plan 2026-11-02.md>) remain the broader authority.
 New semantic-verification counterexamples require a stronger versioned CLI boundary.
 Current planning separates tested properties from scientific validity and corrects
 the scope of missing-data counts and redundant coverage thresholds. Older accepted

@@ -9,6 +9,10 @@ They supersede earlier next-action prose, including the old P02-next instruction
 The semantic findings qualify older acceptance claims; successful historical
 test runs remain evidence only for their tested properties and revisions.
 
+Latest completed checkpoint: [Q01 bounded TETHER 0.4.2 release](<Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md>).
+Next: [Q02 artifact-specific catalog migration](review-assets/tether-q02-20261102/PROPOSAL.md),
+whose design is reviewed but implementation remains pending.
+
 Historical naming references remain the
 [naming and compatibility plan](<TETHER Naming and Compatibility Plan 2026-11-01.md>),
 [completed rename/status review](<TETHER Rename Completion and Project Status 2026-11-01.md>),

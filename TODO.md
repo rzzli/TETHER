@@ -18,13 +18,22 @@ Neither task should delay the paper's objective multicase evaluation.
 
 ## Full project review and corrections
 
+Current execution: Q01 is complete in its stated Windows CLI scope; Q02 migration is next. See the [bounded-release progress assessment](<planning/Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md>). Earlier 0.4.1 qualification remains retained.
+
+- [x] Q01 Bound the canonical launcher's owned child execution and qualify TETHER 0.4.2; 86 package tests and independent adversarial checks pass, installed success/timeout/overflow qualification passes. Retain the explicit capability table, residual host/process-tree limits and matching-version archive instructions.
+- [ ] Q02 Migrate catalog policy to distinguish scientific inputs, validation dependencies and release/artifact roles; reconcile readiness only from retained evidence.
+- [ ] Q03 Qualify one scientifically meaningful composition/scoping task using existing eligible sources first, or document why only reporting is supportable.
+- [ ] Q04 Freeze a discriminating, feasible evaluation with independent-unit/exposure limits and mathematically distinct criteria.
+- [ ] Q05 Execute the newly justified study once and independently reconstruct its declared quantities.
+- [ ] Q06 Reconcile a new manuscript/release with the actual tested scope. Owner declarations and acceptance remain deferred; no publication is implied.
+
 - [x] C01 Inventory the entire tracked project and perform risk-based code/data/results/planning reviews; retain coverage limits and concrete counterexamples.
 - [x] C02 Fix reproduced semantic, receipt-identity, variant-QC and validation-report defects; validate targeted regressions and installed current interfaces. TETHER 0.4.1 passes 73 interface tests and installed verification; independent 24-test/four-probe review passes. Separate legacy/data/verifier/validator scopes pass 115/61/6/13 tests.
 - [x] C03 Independently recompute retained paper quantities and document scientific/design limitations without rewriting the original experiment.
 - [x] C04 Correct current planning authority, data-frame distinctions and proof claims; retain the old plans as historical records and write paper errata.
 - [x] C05 Independently review corrections, verify source/artifact preservation and documentation consistency, then retain a timestamped local checkpoint. Original study/package bytes remain intact; 102 current local links resolve. Remaining Q01–Q06 limitations are explicit.
 
-Future Q01–Q06 in the corrective plan are an explicit prioritized backlog, not completed tasks or instructions to restart closed experiments during this review. Broad paper/scientific completion remains pending as specified below.
+Q02–Q06 in the corrective plan are the remaining ordered backlog. No new study execution, closed model retry or downloader restart is implied. Broad paper/scientific completion remains pending as specified below.
 
 ## TETHER renaming — historical completion checkpoint
 
@@ -67,7 +76,9 @@ Future Q01–Q06 in the corrective plan are an explicit prioritized backlog, not
 [current assessment](<planning/Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md>). The primary scientific measurements remain unqualified; the implemented endpoint is grouped literal source reporting.
 A complete preprint needs an empirical argument and manuscript, not only more tests.
 
-## Current evidence and limits
+## Retained paper checkpoint evidence and limits
+
+The version/test counts in this historical table describe the naming and paper checkpoint. Current software corrections and release qualification are tracked in C01–C05 and Q01 above.
 
 | Area | Current status |
 |---|---|

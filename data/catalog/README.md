@@ -19,7 +19,7 @@ Legacy keys such as `asof_release_date` and `asofDate` express temporal/contract
 semantics. The `asof_normalized_packets` dataset ID, archived paths and all other
 identifiers remain unchanged. They are not instructions to use a new source role
 or replace a sealed artifact. The canonical package is `tether-target-agents`
-0.4.0 in `packages/tether`; its CLI/import aliases retain the frozen AsOf 0.3.11
+0.4.2 in `packages/tether`; its CLI/import aliases retain the frozen AsOf 0.3.11
 engine. See [installation and compatibility](../../README.md#installation-and-compatibility).
 
 The history copy is evidence, not an acquisition queue or a new reference/generation

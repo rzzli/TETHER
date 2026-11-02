@@ -10,13 +10,24 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+Q01 is complete in the qualified Windows CLI scope: TETHER 0.4.2 adds absolute
+child deadlines and aggregate output caps; 86 package tests, 116 independent
+assertions and isolated final-wheel success/failure checks pass. See
+[[research-log-2026-11-02-bounded-tether-release]] and
+[[Project Progress Reassessment 2026-11-02 - Bounded TETHER Release]]. Q02 is next:
+add artifact/use-specific policy with explicit input versus validation ancestry
+and a bound compatibility projection. Its reviewed design requires no external
+files; no catalog promotion or scientific qualification has happened yet.
+
+### Prior full-review checkpoint
+
 Current authority: [[TETHER Full Project Critical Review 2026-11-02]] and
 [[TETHER Corrective Execution Plan 2026-11-02]], with evidence in
 [[research-log-2026-11-02-full-project-review]]. The new review reproduced missing
 legacy semantic checks and corrected current CLI/receipt/QC/reporting behavior.
 TETHER 0.4.1 is distinct from the archived 0.4.0 packet. Original paper quantities
 recompute, but redundant thresholds, source verification overhead and scientific
-scope need explicit interpretation. Q01–Q06 are the next prioritized backlog;
+scope need explicit interpretation. At that checkpoint Q01–Q06 were the prioritized backlog;
 no retired human gate, stopped downloader or closed experiment is reactivated.
 
 ### Prior naming checkpoint (retained history)

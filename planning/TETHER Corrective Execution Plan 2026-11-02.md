@@ -27,6 +27,8 @@ These are a prioritized backlog, not completed work and not authorization to res
 
 ### Q01 Complete the corrected verification release
 
+**Completed for the qualified local Windows CLI scope:** see the [Q01 release/progress assessment](<Project Progress Reassessment 2026-11-02 - Bounded TETHER Release.md>), [capability table](../docs/TETHER-VERIFICATION-SCOPE.md) and [exact proof record](review-assets/tether-q01-20261102/VALIDATION.json). Version 0.4.2 adds the process envelope; the following steps record the acceptance scope rather than an instruction to repeat them. The exact 0.4.0 and 0.4.1 launchers remain necessary for their archived outer runs.
+
 1. Keep the new semantic guard's independent negative controls, including contradictory terminal events, review/claim mismatch, missing coverage context and unsupported dossier text.
 2. Retain the completed local 0.4.1 wheel/install qualification and the distinction between direct legacy API and stronger canonical CLI. Next publish a concise capability table for the intended release rather than a blanket “semantic verified” claim; do not rerun installation solely because the older plan called it unfinished.
 3. Review aggregate subprocess-output and absolute-time bounds before unattended use. Test a child that blocks, emits indefinitely, trickles data and fails during cleanup. Every failure must preserve the owned process's terminal/accounting evidence without redispatch.
@@ -36,7 +38,9 @@ These are a prioritized backlog, not completed work and not authorization to res
 
 ### Q02 Make catalog readiness artifact-specific
 
-1. Design a small schema migration with distinct `input_dependencies`, `validation_dependencies` and release/artifact role records. `genetics_qc_cases` is a validation dependency, not scientific ancestry of `genetics_results`.
+**Next active milestone.** Use the [prepared migration design and consumer inventory](review-assets/tether-q02-20261102/PROPOSAL.md). Add schema-2 policy beside the preserved schema-1 catalog and frozen engine, with a checked, archived use-specific projection. Indexing all products does not admit all artifacts. Canonical preflight and reverification must bind exact policy/input/artifact identities; a projection alone is insufficient. No implementation or collection promotion is claimed by that design report.
+
+1. Design a small schema migration with distinct `input_dependencies`, `validation_dependencies` and release/artifact role records. `genetics_qc_cases` is a validation dependency, not scientific ancestry of `genetics_results`. LD belongs to its applicable method condition rather than an unconditional genetics edge. Keep genuine evaluator training ancestry for planned scorers blocked under the current inference policy; do not erase it as a validation dependency.
 2. Split the use of origin AACT snapshots from endpoint/follow-up evaluator snapshots without changing their original receipts or assigning a universal provider role.
 3. Reconcile the 178-product inventory from existing neutral receipts. Record source bytes, parsed subset and scientific qualification separately. Resolve missing/path/status drift only from evidence; keep genuine unavailable releases explicit.
 4. Bind collected original/receipt records to immutable copies. Specify a future downloader receipt policy that never rewrites a receipt already used as an anchor.

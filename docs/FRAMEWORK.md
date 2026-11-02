@@ -11,7 +11,7 @@ tags:
 
 # TETHER — framework: legacy v2 contracts
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.1 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.4.2 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
 
 Version 0.4.1 adds canonical CLI checks for coverage terminal state, reviewed selections versus committed claims and deterministic dossier text. Direct legacy API aliases keep the frozen engine semantics. Archived TETHER 0.4.0 outer runs require the matching old wheel; the new source is not covered by its receipt. See the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) for reproduced gaps and limits.
 
@@ -272,12 +272,15 @@ progress. `inspect-run` reads unresolved reservations or build state without res
 work. New attempts require fresh output directories. Hard termination may leave no
 terminal event; the last durable stage is the retained recovery evidence.
 
-Wall-time checks cannot forcibly interrupt an arbitrary blocking backend. The older
-local adapter uses socket inactivity timeouts; an absolute total deadline requires
-additional supervision. The outer TETHER engine process also lacks a total execution
-deadline/output cap; its bounded cleanup starts after an exception. Newer native
-transport watchdogs have a separate qualified scope. Source admission/verification time is outside the workflow meter
-and is reported separately by the development harness.
+Workflow wall-time checks cannot forcibly interrupt an arbitrary blocking backend.
+The older local adapter uses socket inactivity timeouts. TETHER 0.4.2 separately
+supervises its owned engine child with an absolute deadline and aggregate output
+cap, including pipe EOF; it does not change the adapter or contain descendants.
+Outer verification/publication after that child returns remains in process and
+outside this child deadline. Newer native transport watchdogs have a separate
+qualified scope. Source admission/verification time is outside the workflow meter
+and is reported separately by the development harness. See the
+[capability table](TETHER-VERIFICATION-SCOPE.md) for exact defaults and limitations.
 
 Finalization archives effective case/snapshot/scorer, catalog policy, configuration,
 replay provenance, code fingerprints and dependency versions. The required v2 receipt
