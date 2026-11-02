@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-02 20:01:08 UTC",
+  "updated_at_utc": "2026-11-02T20:24:48.554963+00:00",
   "goal_status": "active",
   "stage": "BG01",
   "completed": [
@@ -8,22 +8,46 @@
     "CE02 red-to-green and 12 regression tests; 122 related tests",
     "CE03 red-to-green and 9 regression tests; 85 related tests",
     "Independent CE02/CE03 controls and old-release preservation",
-    "Complete TETHER facade suite: 138 tests"
+    "Complete TETHER facade suite: 138 tests",
+    "Fresh installed qualification: 14 commands and source/wheel/installed equality"
   ],
   "in_progress": {
-    "operation": "Fresh full-gate02 prepared after 52 archive tests pass; not yet launched",
-    "unified_exec_session_id": null,
-    "log": "integration/full-gate-02.log",
-    "report": "integration/full-gate-02.json",
-    "last_observation": "Old session78654 is terminal with no matchingPythonprocesses. Profile migration and focused archive checks pass; source-bracketed new gate is prepared.",
-    "resumption_rule": "Poll the exact existing handle and inspect report/log. A saved state alone does not prove liveness or failure. Do not restart on observation timeout."
+    "operation": "Fresh complete full-gate03 with unchanged runtime/test/tool/source pins",
+    "unified_exec_session_id": 44594,
+    "validator_pid_at_launch": 25188,
+    "started_record": "integration/full-gate-03.started.json",
+    "source_bracket": "integration/full-gate-03.source-bracket.json",
+    "log": "integration/full-gate-03.log",
+    "report": "integration/full-gate-03.json",
+    "last_observation": "Session44594 running; source-before hash equals attempt02; no final pass asserted.",
+    "resumption_rule": "Poll this exact handle and inspect report/log/PID. Saved state is not liveness. Do not restart on observation timeout."
   },
-  "next_if_gate_passes": "After archive-focused tests pass, run integration/run_gate.py --stem integration/full-gate-02 (absolute path under this directory), retaining before/after source pins. After that gate passes, run installed qualification, finalcheck, documentation and commit; only then BG02.",
+  "installed_qualification": {
+    "status": "PASS",
+    "unified_exec_session_id": 36257,
+    "exit_code": 0,
+    "path": "data/cache/tether-051-installed-qualification-attempt01/QUALIFICATION.json",
+    "sha256": "6ea45e6f05a4b6702a44c81f04a45813b837c88b9313fd7f1f0b66f941531a79",
+    "scope": "14 commands; isolated copied build context; no parent-gate or aggregate completion claim"
+  },
+  "next_if_gate_passes": "Run final stage checker against full-gate03, installed attempt01, archive and preservation records. Update docs/TODO and commit. Only then begin BG02.",
   "not_started": [
     "BG02 independent equal-policy validator comparison",
     "BG03 SciFact native integration/evaluation",
     "BG04 one LAB-Bench task family",
     "BG05 Inspect implementation/comparison"
   ],
-  "limitations": "Overlapping targeted test counts are not summed. No new benchmark/model execution has occurred. BG01 remains incomplete until full and installed validation pass."
+  "limitations": "Overlapping targeted test counts are not summed. No new benchmark/model execution has occurred. BG01 remains incomplete until full and installed validation pass.",
+  "next_if_gate_fails": "Retain terminal evidence and diagnose actual failure; do not waive errors or repeat blindly. Check exact process state before any restart.",
+  "previous_failed_attempt": {
+    "id": "full-gate-02",
+    "status": "FAILED_INTERRUPTED",
+    "session_exit_code": 1,
+    "interruption_record": "integration/full-gate-02.interruption.json",
+    "observed_pass_methods": 1354,
+    "captured_errors": 1,
+    "cause": "unestablished fixture WinError5; exact method passes3/3 separately",
+    "processes_after_stop": 0,
+    "changed_pinned_sources": []
+  }
 }

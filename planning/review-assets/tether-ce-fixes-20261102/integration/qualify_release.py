@@ -1,8 +1,10 @@
 """Offline, fresh-path installed qualification for CE01--CE03 releases.
 
-Prepare/help is safe while another gate builds; execution requires the parent's
-explicit --execute --core-gate-terminal confirmation. No retries or old outputs
-are overwritten. This is fictional software qualification, not a study.
+Both wheels build from an exclusively created minimal source context, never the
+checkout's build directories. Use --isolated-build-context while a parent gate
+is live, or --core-gate-terminal only after caller confirmation. No retries or
+old outputs are overwritten. This is fictional software qualification, not a
+study or aggregate-stage completion.
 """
 from __future__ import annotations
 
@@ -53,6 +55,40 @@ def package_sources():
         result[namespace] = {namespace + "/" + p.relative_to(directory).as_posix(): digest(p.read_bytes())
                              for p in sorted(paths)}
     return result
+
+
+def capture_build_context(output, sources, build_inputs):
+    """Copy only declared build inputs, preserving the relative package layout."""
+    context = output / "build-context"
+    context.mkdir(exist_ok=False)
+    members = dict(build_inputs)
+    for namespace, files in sources.items():
+        prefix = "src/" if namespace == "asof" else "packages/tether/src/"
+        members.update({prefix + member: pin for member, pin in files.items()})
+    captured = {}
+    for relative, expected in sorted(members.items()):
+        original = ROOT / relative
+        payload = original.read_bytes()
+        assert digest(payload) == expected, "Source changed during build-context capture: " + relative
+        destination = context / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        with destination.open("xb") as stream:
+            stream.write(payload)
+        assert destination.read_bytes() == payload, "Build-context copy differs: " + relative
+        captured[relative] = dict(sha256=expected, bytes=len(payload), original=str(original), copied=str(destination))
+    assert {p.relative_to(context).as_posix() for p in context.rglob("*") if p.is_file()} == set(captured)
+    verify_build_context(captured)
+    save(output / "build-context-proof.json", dict(context=str(context), inputs=captured,
+        scope="Exact minimal package sources/resources, pyprojects, licenses and backend constraints before either build"))
+    return context, captured
+
+
+def verify_build_context(captured):
+    for relative, item in captured.items():
+        original, copied = Path(item["original"]), Path(item["copied"])
+        assert original.read_bytes() == copied.read_bytes(), "Original/captured build input differs: " + relative
+        assert digest(copied.read_bytes()) == item["sha256"] and copied.stat().st_size == item["bytes"], \
+            "Captured build input changed: " + relative
 
 
 class Commands:
@@ -150,10 +186,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--execute", action="store_true")
-    parser.add_argument("--core-gate-terminal", action="store_true")
+    execution = parser.add_mutually_exclusive_group(required=True)
+    execution.add_argument("--core-gate-terminal", action="store_true",
+                           help="Caller confirms the core gate is terminal; builds still use copied context")
+    execution.add_argument("--isolated-build-context", action="store_true",
+                           help="Allow isolated builds while the parent gate remains unasserted/pending")
     args = parser.parse_args()
-    if not args.execute or not args.core_gate_terminal:
-        parser.error("Build is gated: explicitly supply --execute --core-gate-terminal after parent confirmation")
+    if not args.execute:
+        parser.error("Explicit --execute is required; choose a truthful mutually exclusive parent-gate mode")
     output = args.output.absolute().resolve()
     cache = (ROOT / "data/cache").resolve()
     if not output.is_relative_to(cache) or output == cache:
@@ -167,22 +207,32 @@ def main():
     try:
         sources = package_sources()
         build_inputs = {str(p.relative_to(ROOT)).replace("\\", "/"): digest(p.read_bytes()) for p in
-                        (ROOT / "pyproject.toml", ROOT / "packages/tether/pyproject.toml", CONSTRAINTS)}
+                        (ROOT / "pyproject.toml", ROOT / "packages/tether/pyproject.toml", ROOT / "LICENSE",
+                         ROOT / "packages/tether/LICENSE", CONSTRAINTS)}
         for path in (ROOT / "pyproject.toml", ROOT / "packages/tether/pyproject.toml"):
             project = tomllib.loads(path.read_text(encoding="utf-8"))["project"]
             assert EXPECTED[project["name"]] == project["version"]
         manifest = dict(versions=EXPECTED, sources=sources, build_inputs=build_inputs,
                         qualifier_sha256=digest(Path(__file__).read_bytes()))
         save(output / "source-manifest.json", manifest)
+        gating = dict(execution_mode="isolated_build_context" if args.isolated_build_context else "core_gate_terminal",
+            parent_core_gate_terminal_confirmed=bool(args.core_gate_terminal),
+            parent_gate_status="not_asserted" if args.isolated_build_context else "terminal_confirmed_by_caller",
+            aggregate_stage_status="pending_parent_integration_gate")
         commands.event("qualification_started", dict(manifest_sha256=digest((output / "source-manifest.json").read_bytes()),
-            parent_core_gate_terminal_confirmed=True, scope="Offline installed software qualification; fictional inputs only"))
+            **gating, scope="Offline installed software qualification; fictional inputs only"))
+        context, captured = capture_build_context(output, sources, build_inputs)
+        commands.event("isolated_build_context_verified", dict(context=str(context), inputs=len(captured),
+            proof_sha256=digest((output / "build-context-proof.json").read_bytes())))
         uv = shutil.which("uv")
         assert uv, "uv is unavailable"
         commands.run("uv-version", [uv, "--version"], timeout=15)
         wheels = output / "wheels"
         wheels.mkdir()
-        for name, directory in (("core", ROOT), ("facade", ROOT / "packages/tether")):
-            commands.run("build-" + name, [uv, "build", "--offline", "--build-constraints", CONSTRAINTS,
+        for name, directory in (("core", context), ("facade", context / "packages/tether")):
+            verify_build_context(captured)
+            commands.run("build-" + name, [uv, "build", "--offline", "--build-constraints",
+                context / "paper/release/build-constraints.txt",
                 "--python", sys.executable, "--wheel", "--out-dir", wheels], cwd=directory, timeout=300)
         core = wheels / "asof_target_agents-0.3.12-py3-none-any.whl"
         facade = wheels / "tether_target_agents-0.5.1-py3-none-any.whl"
@@ -259,12 +309,15 @@ def main():
                 assert result["artifact_policy"]["status"] == "artifact_policy_consistency_verified"
                 results["valid_policy"] = result
         assert sources == package_sources(), "Checkout package sources changed during qualification"
+        verify_build_context(captured)
         assert digest(Path(__file__).read_bytes()) == manifest["qualifier_sha256"], "Qualifier changed during execution"
         for relative, pin in build_inputs.items():
             assert digest((ROOT / relative).read_bytes()) == pin, "Build input changed during qualification"
-        commands.event("qualification_completed", dict(versions=EXPECTED, scientific_validation="not_established"))
+        commands.event("qualification_completed", dict(versions=EXPECTED, **gating, scientific_validation="not_established"))
         save(output / "QUALIFICATION.json", dict(status="PASS", versions=EXPECTED, wheel_proofs=wheel_proofs,
             installed=inspection, results=results, commands=commands.commands, source_manifest=manifest,
+            parent_gating=gating, build_context=dict(path=str(context), inputs=len(captured),
+                proof_sha256=digest((output / "build-context-proof.json").read_bytes()), post_capture_stability="verified"),
             journal_sha256=digest((output / "journal.jsonl").read_bytes()),
             limits="Windows/local offline software qualification; no benchmark, model, clinical or biological validation."))
         print(json.dumps(dict(status="PASS", output=str(output),

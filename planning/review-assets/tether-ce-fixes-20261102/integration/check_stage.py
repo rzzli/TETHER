@@ -217,7 +217,48 @@ def inspect_wheel(audit, proof, expected_sources):
             audit.need("asof-target-agents==0.3.12" in metadata.get_all("Requires-Dist", []), "facade pins corrected engine")
 
 
+def check_build_context(audit, path, result, manifest):
+    gating = result["parent_gating"]
+    mode = gating.get("execution_mode")
+    audit.need(mode in {"isolated_build_context", "core_gate_terminal"}, "qualification execution mode recognized")
+    terminal = mode == "core_gate_terminal"
+    expected_gating = dict(execution_mode=mode, parent_core_gate_terminal_confirmed=terminal,
+                          parent_gate_status="terminal_confirmed_by_caller" if terminal else "not_asserted",
+                          aggregate_stage_status="pending_parent_integration_gate")
+    audit.need(gating == expected_gating and gating["parent_core_gate_terminal_confirmed"] is terminal,
+               "qualification reports truthful separate parent gating")
+    context_path = path.parent / "build-context"
+    proof_path = path.parent / "build-context-proof.json"
+    proof = audit.read(proof_path)
+    context = result["build_context"]
+    audit.need(Path(context["path"]).resolve() == Path(proof["context"]).resolve() == context_path.resolve() and
+               context["proof_sha256"] == sha(proof_path) and context["post_capture_stability"] == "verified",
+               "isolated build context and proof bound")
+    expected_build_inputs = {"pyproject.toml", "packages/tether/pyproject.toml", "LICENSE",
+                             "packages/tether/LICENSE", "paper/release/build-constraints.txt"}
+    audit.need(set(manifest["build_inputs"]) == expected_build_inputs, "isolated build prerequisites complete")
+    expected_inputs = dict(manifest["build_inputs"])
+    for namespace, members in manifest["sources"].items():
+        audit.need(namespace in SOURCE_ROOTS, "build context namespace recognized", namespace=namespace)
+        prefix = "src/" if namespace == "asof" else "packages/tether/src/"
+        expected_inputs.update({prefix + member: pin for member, pin in members.items()})
+    audit.need(set(proof["inputs"]) == set(expected_inputs) and type(context["inputs"]) is int and
+               context["inputs"] == len(expected_inputs), "isolated build input inventory complete")
+    for relative, expected in expected_inputs.items():
+        item = proof["inputs"][relative]
+        original, copied = Path(item["original"]), Path(item["copied"])
+        audit.need(original.resolve() == (ROOT / relative).resolve() and
+                   copied.resolve() == (context_path / relative).resolve() and
+                   copied.resolve().is_relative_to(context_path.resolve()),
+                   "isolated build member paths match", member=relative)
+        audit.need(item["sha256"] == expected == sha(original) == sha(copied) and type(item["bytes"]) is int and
+                   item["bytes"] == original.stat().st_size == copied.stat().st_size,
+                   "isolated build member bytes unchanged", member=relative)
+    return expected_gating, dict(context=str(context_path), inputs=len(expected_inputs), proof_sha256=sha(proof_path))
+
+
 def check_installed(audit, path):
+    path = path.resolve()
     path = path / "QUALIFICATION.json" if path.is_dir() else path
     result = audit.read(path)
     audit.need(result.get("status") == "PASS" and result.get("versions") == VERSIONS, "installed qualification complete")
@@ -226,6 +267,7 @@ def check_installed(audit, path):
     audit.need(manifest == result["source_manifest"] and manifest["versions"] == VERSIONS, "installed manifest identity")
     audit.need(manifest["qualifier_sha256"] == sha(Path(__file__).with_name("qualify_release.py")), "qualifier code unchanged")
     audit.pins(manifest["build_inputs"])
+    gating, context_event = check_build_context(audit, path, result, manifest)
     wheels = audit.read(path.parent / "wheel-proofs.json")
     audit.need(wheels == result["wheel_proofs"] and {r["distribution"] for r in wheels} == set(VERSIONS) and len(wheels) == 2,
                "two expected wheel proofs")
@@ -263,6 +305,15 @@ def check_installed(audit, path):
         for field in ("stdout", "stderr"):
             audit.need(sha(command[field]) == command[field + "_sha256"], "installed command log unchanged", label=command["label"], stream=field)
     by_label = {command["label"]: command for command in commands}
+    for label, directory in (("build-core", path.parent / "build-context"),
+                             ("build-facade", path.parent / "build-context/packages/tether")):
+        command, argv = by_label[label], by_label[label]["argv"]
+        audit.need(Path(command["cwd"]).resolve() == directory.resolve() and len(argv) == 10 and
+                   argv[0] == by_label["uv-version"]["argv"][0] and argv[1:4] == ["build", "--offline", "--build-constraints"] and
+                   Path(argv[4]).resolve() == (path.parent / "build-context/paper/release/build-constraints.txt").resolve() and
+                   argv[5] == "--python" and argv[7:9] == ["--wheel", "--out-dir"] and
+                   Path(argv[9]).resolve() == (path.parent / "wheels").resolve(),
+                   "wheel build uses isolated context and copied constraints", label=label)
     audit.need(audit.read(by_label["installed-source-proof"]["stdout"]) == result["installed"], "installed proof equals retained stdout")
     version_text = Path(by_label["tether-version"]["stdout"]).read_text().strip()
     audit.need(version_text == "TETHER 0.5.1 (compatibility engine 0.3.12)", "installed CLI version proof")
@@ -270,15 +321,29 @@ def check_installed(audit, path):
         audit.need(audit.read(by_label[label]["stdout"]) == result["results"][key], "installed verification equals retained stdout", run=key)
     journal_path = path.parent / "journal.jsonl"
     audit.need(sha(journal_path) == result["journal_sha256"], "qualification journal hash matches")
-    previous, events = None, []
+    previous, events, journal = None, [], []
     for sequence, line in enumerate(journal_path.read_bytes().splitlines()):
         row = json.loads(line)
         claimed = row.pop("sha256")
         audit.need(row["sequence"] == sequence and row["previous_sha256"] == previous and
                    hashlib.sha256(canonical(row)).hexdigest() == claimed, "qualification journal chain valid", sequence=sequence)
-        previous = claimed; events.append(row["event"])
+        previous = claimed; events.append(row["event"]); journal.append(row)
     audit.need(events[0] == "qualification_started" and events[-1] == "qualification_completed" and not any("failed" in e for e in events),
                "qualification journal terminal success")
+    for event in ("qualification_started", "qualification_completed"):
+        records = [row["details"] for row in journal if row["event"] == event]
+        audit.need(len(records) == 1 and all(records[0].get(key) == value for key, value in gating.items()) and
+                   records[0].get("parent_core_gate_terminal_confirmed") is gating["parent_core_gate_terminal_confirmed"],
+                   "qualification journal agrees with parent gating", event=event)
+    audit.need(journal[0]["details"]["manifest_sha256"] == sha(path.parent / "source-manifest.json") and
+               journal[-1]["details"]["versions"] == VERSIONS and
+               journal[-1]["details"]["scientific_validation"] == "not_established",
+               "qualification journal binds manifest versions and scope")
+    context_records = [row["details"] for row in journal if row["event"] == "isolated_build_context_verified"]
+    audit.need(context_records == [context_event] and events.index("isolated_build_context_verified") < events.index("command_reserved"),
+               "qualification journal binds context before any build command")
+    audit.need([row["details"] for row in journal if row["event"] == "command_returned"] == commands,
+               "qualification journal binds completed command records")
     for name in ("asof_demo", "tether_demo", "valid_policy"):
         verified = result["results"][name]
         engine = verified.get("engine", verified)

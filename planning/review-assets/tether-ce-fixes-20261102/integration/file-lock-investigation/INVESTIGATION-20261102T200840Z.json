@@ -1,0 +1,51 @@
+{
+  "status": "UNREPRODUCED_IN_THREE_ISOLATED_ATTEMPTS",
+  "checked_at_utc": "2026-11-02T20:08:42.119031+00:00",
+  "test": "tests.test_science_comparison_workflow.ComparisonWorkflowTests.test_rehashed_coverage_cannot_invent_source_count",
+  "root_reported_failure": "full-gate02: setUp write_json(snapshot.json), os.replace PermissionError WinError5",
+  "attempts": [
+    {
+      "number": 1,
+      "returncode": 0,
+      "result": "attempt01-20261102T200840Z.json",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7222bbe3640e6b398125026ea1df9350ae0bddab6daaaa26ea831be3b82199d9"
+    },
+    {
+      "number": 2,
+      "returncode": 0,
+      "result": "attempt02-20261102T200840Z.json",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "deb67e290781fb98df65c3fd8aaab69ec6acdd640029a0ad3cafa80eac16b5e1"
+    },
+    {
+      "number": 3,
+      "returncode": 0,
+      "result": "attempt03-20261102T200840Z.json",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4eb1390ae097cabb381c9bc33227d97eb861210c354c3726c1ec99949806b0c3"
+    }
+  ],
+  "source_pins_before": {
+    "src/asof/serde.py": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+    "src/asof/local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+    "src/asof/demo/v2/snapshot.json": "d57871fbe5b7e273f66ae58ee66a1eb99dc0254d51c6011676fbabec707eff47",
+    "tests/test_science_comparison_workflow.py": "0e0c6b923ba774fac59d55274f37b411dda47341f51246d291a9bd932e4708e3",
+    "tools/science/comparison_workflow.py": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad"
+  },
+  "source_pins_after": {
+    "src/asof/serde.py": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+    "src/asof/local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+    "src/asof/demo/v2/snapshot.json": "d57871fbe5b7e273f66ae58ee66a1eb99dc0254d51c6011676fbabec707eff47",
+    "tests/test_science_comparison_workflow.py": "0e0c6b923ba774fac59d55274f37b411dda47341f51246d291a9bd932e4708e3",
+    "tools/science/comparison_workflow.py": "8a8e4323a991baa0ce8f24a1793a85fe389f5de2e25bfb59b7aa122de328fdad"
+  },
+  "source_unchanged": true,
+  "output": "D:\\Projects\\drug_target_agents\\data\\cache\\ce02-file-lock-investigation-20261102T200840Z",
+  "cause": "Not established; no AV/open-handle attribution is proved",
+  "original_gate_paths_accessed": false,
+  "source_edits": false,
+  "actual_model_calls": 0,
+  "network_calls": 0,
+  "provider_spending_usd": 0
+}

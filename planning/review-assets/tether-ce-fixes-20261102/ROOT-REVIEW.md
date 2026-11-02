@@ -1,6 +1,6 @@
 # BG01 implementation review
 
-Status: implementation and focused checks pass; full-gate and installed-release qualification are still required. This is not the BG01 completion record. Baseline for the fixes is `114fecf`; the activated execution plan was committed as `749f296`.
+Status: implementation, focused checks and fresh installed-release qualification pass; a clean full gate and aggregate check are still required. This is not the BG01 completion record. Baseline for the fixes is `114fecf`; the activated execution plan was committed as `749f296`.
 
 ## Reviewed changes
 
@@ -21,3 +21,5 @@ The 0.3.12 archive profile preserves the previous resource byte-for-byte, retain
 The old 0.5.0/0.3.11 environment and releases are preserved and separately checked under `legacy-preservation/`. Old benchmark results, paper/PDF/release artifacts, original receipts, downloader and stopped monitor are not modified. No new biomedical benchmark, model call or provider spending has occurred in BG01.
 
 The final `VALIDATION.json` must verify the completed full gate, installed qualification, retained source pins and preservation evidence before TODO marks BG01/CE01–CE03 complete. The goal then proceeds to BG02; this review does not substitute for that independent comparison.
+
+Full-gate02 has one temporary-fixture `os.replace` access error; the failing method passes three isolated fresh-process reruns. Its cause is unestablished. The already unsuccessful full gate was deliberately interrupted after 1,354 passing methods to avoid continuing it; zero matching Python processes and unchanged pinned sources were then checked. The raw log and separate manual interruption record remain, with no ordinary full report or wrapper finalization claimed. This is recorded in `integration/file-lock-investigation/` and `integration/full-gate-02.interruption.json`; no production patch or validation waiver is justified by the targeted results. Fresh full-gate03 uses identical pins and fresh temporary paths. Installed qualification attempt01 passes all 14 commands from a byte-checked minimal build context; root separately passes 501 installed-evidence checks. The context avoids shared checkout build directories. Its anchored demos, installed module paths/bytes and valid/invalid artifact-policy checks pass; scientific validation and aggregate BG01 completion remain unestablished.
