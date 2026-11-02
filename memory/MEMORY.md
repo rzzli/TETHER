@@ -1,6 +1,8 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-02-corrected-working-paper]] - Current checkpoint: Q06a corrected technical paper/0.5.0 review packet qualified; source66/PDF83/packet284 checks pass,23pages/347units,78-member byte-identical ZIP. Original artifacts preserved; failedPDFattempt/fix retained. Q04/Q05 unactivated, Q06b authorfacts/acceptance owner-deferred, broader science unfinished; no new expert/model/download/publication.
+- [[research-log-2026-11-02-comparative-efficiency-audit]] - Current audit: three confirmed unpatched P2 defects in receipt/report aliasing, legacy local-model usage accounting and unused raw receipt-time consistency; scoped repeated hash/parse work measured. Strongest claim is admission plus replay. Proposes a policy-equivalent simple baseline and post hoc evidence panels; runtime/sealed results unchanged, Q04/Q05 inactive, owner facts deferred, no new model/data/expert input.
+
+- [[research-log-2026-11-02-corrected-working-paper]] - Prior paper checkpoint: Q06a corrected technical paper/0.5.0 review packet qualified; source66/PDF83/packet284 checks pass,23pages/347units,78-member byte-identical ZIP. Original artifacts preserved; failedPDFattempt/fix retained. Q04/Q05 unactivated, Q06b authorfacts/acceptance owner-deferred, broader science unfinished; no new expert/model/download/publication.
 
 - [[research-log-2026-11-02-source-composition-feasibility]] - Prior checkpoint: Q03 complete/reporting-only; 125 originals receipt-hashed and1,160 independent source checks pass. Missing study/variant/effect/cohort inputs prevent stronger science; baseline solves composition. Overwritten first-attempt outputs/unavailable executed-code pins disclosed. Q04/Q05 unactivated; Q06 narrow technical working-paper branch was active, owner facts deferred.
 

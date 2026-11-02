@@ -16,6 +16,23 @@ The old categorical genetics adapter and retrospective old-pair audit are option
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
 
+## Comparative efficiency audit — 2 November 2026
+
+- [x] Compare TETHER's efficiency and comparative value against relevant research and systems, keeping demonstrated capabilities separate from proposed benefits.
+- [x] Audit current runtime and supporting pipeline code with reproducible fictional-input probes; distinguish maintained code from frozen reproduction artifacts.
+- [x] Synthesize findings and prioritize additional analyses or evidence that strengthen the paper, with data requirements, limitations and effort made explicit.
+
+The [completed report](<reports/TETHER efficiency and comparative value.md>) and [validation record](<research_notes/TETHER efficiency and comparative value/REPORT-VALIDATION.json>) retain three new P2 findings, current/source-version boundaries, targeted overlapping test scopes and measured repeated work. No runtime fix or sealed-paper change was made. These findings supplement the earlier dated qualification; Q/P completion statuses below retain their original scopes.
+
+### Proposed corrections from the audit — not implemented
+
+- [ ] CE01 Prevent transport verification reports from aliasing input receipts, queues or sources; use fresh exclusive publication and preserve inputs on collision/failure.
+- [ ] CE02 Preserve validated adapter-reported over-reservation usage through failed local-model calls, reconcile retained archives and stop subsequent dispatch. Version the correction separately from frozen engine artifacts; no closed model retry.
+- [ ] CE03 Reconcile receipt-derived availability for every supplied raw policy node, including unused granted nodes, with paired used/unused negative controls and valid near misses.
+- [ ] CE04 After correctness fixes, qualify operation-scoped task-fingerprint and bounded source-parse reuse. Define the stability lifetime before reducing cross-boundary hash passes; retain independent verification and historical pins.
+
+Optional research proposals are ranked in the report. A policy-equivalent simple-validator comparison is needed to assess architectural value; a hash/schema-only ablation is insufficient. These proposals do not activate Q04/Q05, reopen the model branch, acquire new data, reinstate external experts or request deferred author facts.
+
 ## Full project review and corrections
 
 Current execution: Q01/Q02 are complete in their stated Windows/offline scopes; Q03 is complete as a reporting-only decision and Q06a's corrected technical working packet is locally qualified. Q04/Q05 remain unactivated, not completed. Q06b's owner facts/acceptance remain explicitly deferred. See the [current closure and remaining-work assessment](<planning/Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md>). Earlier qualifications remain retained.

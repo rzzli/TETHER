@@ -1,0 +1,1593 @@
+{
+  "head": "b8d107059c781bb96ab27807f857f1127ed09608",
+  "runtime_files": 84,
+  "runtime_lines": 23906,
+  "all_ast_parsed": true,
+  "files": [
+    {
+      "path": "src/asof/__init__.py",
+      "sha256": "0f79afc03e90ebdb0641e3081e7e699934a840e65c7030049c383bf496f6bec6",
+      "bytes": 88,
+      "lines": 4,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "src/asof/__main__.py",
+      "sha256": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
+      "bytes": 49,
+      "lines": 4,
+      "functions": 0,
+      "imports": [
+        "from .cli import main"
+      ]
+    },
+    {
+      "path": "src/asof/agents.py",
+      "sha256": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+      "bytes": 7395,
+      "lines": 173,
+      "functions": 11,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass",
+        "import math",
+        "from pathlib import Path",
+        "from collections.abc import Mapping",
+        "from typing import Protocol",
+        "from .contracts import Category, Case, GroundedObservation",
+        "from .serde import ContractError, Frozen, canonical, decode, encode, fingerprint, read_json, sha256_file"
+      ]
+    },
+    {
+      "path": "src/asof/archive/__init__.py",
+      "sha256": "b89c721b29e7b9058e018124eb097319c18dfbebcd2a0f0077b85dec4169c4d9",
+      "bytes": 76,
+      "lines": 1,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "src/asof/archive/__main__.py",
+      "sha256": "43559f1f21a898b69d81b8d642caebd5433816d43703e9f28fbbcbcea2eff9dd",
+      "bytes": 1611,
+      "lines": 36,
+      "functions": 1,
+      "imports": [
+        "import argparse",
+        "import json",
+        "from .restore import materialize, verify"
+      ]
+    },
+    {
+      "path": "src/asof/archive/core.py",
+      "sha256": "d5a44748367a3d0697588c6e8266cce6bf53d503437d830c4d4dafe4da58fd40",
+      "bytes": 25552,
+      "lines": 402,
+      "functions": 19,
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import re",
+        "from collections import Counter",
+        "from dataclasses import replace",
+        "from datetime import datetime",
+        "from pathlib import Path, PurePosixPath, PureWindowsPath",
+        "from asof.chrono import EvidenceStore, Exclusion",
+        "from asof.contracts import Availability, Case, Category, Citation, Claim, EvidencePacket, EvidenceStatus, GroundedObservation, Profile, Snapshot, validate_observation",
+        "from asof.features import FeatureVector, build_features",
+        "from asof.provenance import InputGraph, catalog_index, check_role",
+        "from asof.scorer import Prediction, ScorerArtifact, abstain, score",
+        "from asof.semantics import check_execution",
+        "from asof.serde import ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES, decode, encode, fingerprint, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/archive/interpretation.py",
+      "sha256": "3ee725f7c55218346dd197b2ee9b1992a2f180d89267e680bc42e1f61fcfd6e5",
+      "bytes": 59126,
+      "lines": 836,
+      "functions": 35,
+      "imports": [
+        "import ast",
+        "import hashlib",
+        "import math",
+        "import re",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass",
+        "from pathlib import PureWindowsPath, PurePosixPath",
+        "from asof.agents import Usage",
+        "from asof.contracts import Case, Category",
+        "from asof.serde import ContractError, Frozen, canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget, add_usage, over_quote"
+      ]
+    },
+    {
+      "path": "src/asof/archive/paths.py",
+      "sha256": "1edf549c5a858139b9ba0de747ba4d28446cb41f21232a447af8fade717c4c84",
+      "bytes": 14047,
+      "lines": 283,
+      "functions": 16,
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import os",
+        "import re",
+        "import stat",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "from types import MappingProxyType",
+        "from asof.serde import ContractError"
+      ]
+    },
+    {
+      "path": "src/asof/archive/restore.py",
+      "sha256": "3bbdc289941eac23305f3018aff89bc0c2e89e82d4727a6ae64248a58558c4ec",
+      "bytes": 10803,
+      "lines": 173,
+      "functions": 7,
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import os",
+        "import re",
+        "from pathlib import Path",
+        "from .paths import ArchiveResolver, _no_links, _relative, logical_key, join, from_envelope",
+        "from asof.serde import ContractError"
+      ]
+    },
+    {
+      "path": "src/asof/artifacts.py",
+      "sha256": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+      "bytes": 18952,
+      "lines": 279,
+      "functions": 4,
+      "imports": [
+        "from __future__ import annotations",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "import sys",
+        "import platform",
+        "from importlib import metadata",
+        "from . import __version__",
+        "from .chrono import EvidenceStore, admit_snapshot, required_source_proofs",
+        "from .scorer import ScorerArtifact",
+        "from .serde import ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, encode, fingerprint, read_json, read_ledger_json, safe_child, sha256_file, write_json",
+        "from .contracts import Case, Category, Claim, Snapshot",
+        "from .features import FeatureVector",
+        "from .scorer import Prediction",
+        "from .semantics import check_execution, check_semantics",
+        "from .journal import RunJournal, read_chain",
+        "from .workflow import RunResult"
+      ]
+    },
+    {
+      "path": "src/asof/atomic.py",
+      "sha256": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+      "bytes": 1871,
+      "lines": 49,
+      "functions": 2,
+      "imports": [
+        "from __future__ import annotations",
+        "import os",
+        "from pathlib import Path",
+        "import tempfile",
+        "from threading import Lock"
+      ]
+    },
+    {
+      "path": "src/asof/chrono.py",
+      "sha256": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
+      "bytes": 11964,
+      "lines": 222,
+      "functions": 10,
+      "imports": [
+        "from __future__ import annotations",
+        "import re",
+        "import hashlib",
+        "from dataclasses import dataclass",
+        "from datetime import date",
+        "from pathlib import Path",
+        "from .contracts import Case, Category, Citation, EvidencePacket, GroundedObservation, Profile, Snapshot, TemporalClass, validate_observation",
+        "from .serde import ContractError, Frozen, decode, freeze, fingerprint, parse_json, read_json, safe_child",
+        "from .provenance import InputGraph, catalog_index, check_role"
+      ]
+    },
+    {
+      "path": "src/asof/cli.py",
+      "sha256": "ad2f44a43387c884b2af9547a246322e751e0ae1ebcc3f0506baeed5788ff5f0",
+      "bytes": 9243,
+      "lines": 162,
+      "functions": 2,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import json",
+        "import sys",
+        "from pathlib import Path",
+        "from .agents import ExtractiveBackend, ReplayBackend",
+        "from .artifacts import verify_run, write_run",
+        "from .chrono import load_snapshot",
+        "from .contracts import Case, Category",
+        "from .scorer import Prediction, ScorerArtifact",
+        "from .serde import ContractError, decode, encode, fingerprint, read_json, write_json",
+        "from .workflow import Budget, run_workflow",
+        "from .journal import RunJournal, inspect_run"
+      ]
+    },
+    {
+      "path": "src/asof/contracts.py",
+      "sha256": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+      "bytes": 14676,
+      "lines": 391,
+      "functions": 8,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass, field",
+        "from datetime import date, datetime, time, timezone",
+        "from collections.abc import Mapping",
+        "from enum import StrEnum",
+        "from typing import Any",
+        "import math",
+        "from .serde import ContractError, Frozen, fingerprint"
+      ]
+    },
+    {
+      "path": "src/asof/evaluation.py",
+      "sha256": "d76ca20564a289a66ec4ac27c98aa35e0a90afbec5afef46d643e09691644eb3",
+      "bytes": 6373,
+      "lines": 119,
+      "functions": 2,
+      "imports": [
+        "from __future__ import annotations",
+        "from dataclasses import dataclass",
+        "from datetime import date",
+        "from statistics import mean",
+        "from .scorer import Prediction",
+        "from .serde import ContractError"
+      ]
+    },
+    {
+      "path": "src/asof/features.py",
+      "sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+      "bytes": 3665,
+      "lines": 90,
+      "functions": 2,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections import defaultdict",
+        "from dataclasses import dataclass",
+        "from statistics import mean",
+        "from collections.abc import Mapping",
+        "from .contracts import Case, Claim, FEATURE_CATEGORIES",
+        "from .serde import Frozen"
+      ]
+    },
+    {
+      "path": "src/asof/ingest.py",
+      "sha256": "79575d9dd4f8163eecb2c9e2611368e3d4bd5f6f02338795c377c3fb9a75ee61",
+      "bytes": 44659,
+      "lines": 742,
+      "functions": 17,
+      "imports": [
+        "from __future__ import annotations",
+        "import csv",
+        "import hashlib",
+        "import math",
+        "import os",
+        "import re",
+        "import time",
+        "from collections import Counter",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass, replace",
+        "from datetime import date, datetime, timezone",
+        "from pathlib import Path",
+        "from typing import Any",
+        "from .atomic import ensure_directory, publish_bytes",
+        "from .contracts import Artifact, Availability, Case, Category, EvidencePacket, EvidenceStatus, Hypothesis, Method, Observation, Polarity, Profile, QuantitativeResult, ScientificContext, Snapshot, SourceNode, TemporalClass",
+        "from .provenance import catalog_index, check_role",
+        "from .journal import RunJournal",
+        "from .serde import ContractError, Frozen, canonical, decode, encode, fingerprint, read_json, parse_json, safe_child, sha256_file, write_json, MAX_NORMALIZED_JSON_BYTES"
+      ]
+    },
+    {
+      "path": "src/asof/journal.py",
+      "sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "bytes": 4961,
+      "lines": 110,
+      "functions": 7,
+      "imports": [
+        "from __future__ import annotations",
+        "import os",
+        "import uuid",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from .serde import ContractError, canonical, fingerprint, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/ledger.py",
+      "sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+      "bytes": 2023,
+      "lines": 42,
+      "functions": 3,
+      "imports": [
+        "from __future__ import annotations",
+        "from .chrono import EvidenceStore",
+        "from .contracts import Case, Category, Claim, EvidenceStatus",
+        "from .serde import ContractError, fingerprint"
+      ]
+    },
+    {
+      "path": "src/asof/local_model.py",
+      "sha256": "38090cc12d4a10a1809513ae906e4dd1084f44a66a5605c559e53a8116e5f9a4",
+      "bytes": 13404,
+      "lines": 212,
+      "functions": 10,
+      "imports": [
+        "from collections.abc import Mapping",
+        "import math",
+        "from pathlib import Path",
+        "import re",
+        "import socket",
+        "import urllib.error",
+        "import urllib.parse",
+        "import urllib.request",
+        "from .agents import Selection, SpecialistRequest, Usage",
+        "from .retrieval import RetrievalPolicy, bounded_request",
+        "from .serde import ContractError, canonical, decode, fingerprint, parse_json, read_json, sha256_file",
+        "from .wire import FORMAT, request_bytes"
+      ]
+    },
+    {
+      "path": "src/asof/maintenance.py",
+      "sha256": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a",
+      "bytes": 17134,
+      "lines": 274,
+      "functions": 7,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import copy",
+        "import json",
+        "import os",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from .atomic import publish_bytes",
+        "from .serde import ContractError, encode, read_json, safe_child, sha256_file, write_json"
+      ]
+    },
+    {
+      "path": "src/asof/provenance.py",
+      "sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+      "bytes": 7167,
+      "lines": 139,
+      "functions": 9,
+      "imports": [
+        "from __future__ import annotations",
+        "import re",
+        "from pathlib import Path",
+        "from collections.abc import Mapping",
+        "from datetime import datetime",
+        "from .contracts import Case, Profile, Snapshot, SourceNode, TemporalClass",
+        "from .serde import ContractError, decode, freeze, read_json, safe_child, sha256_file"
+      ]
+    },
+    {
+      "path": "src/asof/retrieval.py",
+      "sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+      "bytes": 4320,
+      "lines": 79,
+      "functions": 3,
+      "imports": [
+        "from dataclasses import dataclass, replace",
+        "import re",
+        "from .agents import SpecialistRequest",
+        "from .serde import ContractError, Frozen, canonical, fingerprint",
+        "from .wire import FORMAT, request_bytes"
+      ]
+    },
+    {
+      "path": "src/asof/scorer.py",
+      "sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+      "bytes": 7624,
+      "lines": 159,
+      "functions": 4,
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "from dataclasses import dataclass",
+        "from datetime import date",
+        "from collections.abc import Mapping",
+        "from .contracts import Case, FEATURE_CATEGORIES, Profile",
+        "from .features import FEATURE_SCHEMA, FeatureVector",
+        "from .serde import ContractError, Frozen"
+      ]
+    },
+    {
+      "path": "src/asof/semantics.py",
+      "sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+      "bytes": 9468,
+      "lines": 150,
+      "functions": 2,
+      "imports": [
+        "from collections import Counter",
+        "from dataclasses import replace",
+        "from pathlib import Path",
+        "from .agents import Usage",
+        "from .chrono import eligible_artifacts, observation_exclusion",
+        "from .contracts import Case, Category, Claim, EvidenceStatus, Profile, Snapshot",
+        "from .features import build_features",
+        "from .provenance import InputGraph, catalog_index",
+        "from .scorer import abstain, score",
+        "from .serde import ContractError, decode, encode, fingerprint"
+      ]
+    },
+    {
+      "path": "src/asof/serde.py",
+      "sha256": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+      "bytes": 11545,
+      "lines": 281,
+      "functions": 17,
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import math",
+        "import types",
+        "import os",
+        "import tempfile",
+        "from dataclasses import MISSING, fields, is_dataclass",
+        "from datetime import date, datetime, timezone",
+        "from collections.abc import Mapping",
+        "from types import MappingProxyType",
+        "from enum import Enum",
+        "from pathlib import Path",
+        "from typing import Any, Union, get_args, get_origin, get_type_hints"
+      ]
+    },
+    {
+      "path": "src/asof/study/__init__.py",
+      "sha256": "58b9a509fe0304b40f28ce54b5ac9453b63de681afa41314dd77ad27ee7ef686",
+      "bytes": 87,
+      "lines": 1,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "src/asof/study/__main__.py",
+      "sha256": "7b32994a57dc5ab7096da2580eb713885b4a1ed433469adeabdb6f46930c2a2f",
+      "bytes": 4005,
+      "lines": 121,
+      "functions": 3,
+      "imports": [
+        "import argparse",
+        "import hashlib",
+        "from pathlib import Path",
+        "from asof.agents import Usage",
+        "from asof.serde import canonical, encode, fingerprint",
+        "from asof.workflow import Budget",
+        "from .diagnostic import REQUIRED_RESOURCES, load_synthetic_request, prepare_payload",
+        "from .recorded import RecordedBackend, RecordedVerifier",
+        "from .session import StudySession, inspect_study, verify_study"
+      ]
+    },
+    {
+      "path": "src/asof/study/authority_four_arm.py",
+      "sha256": "31c4d5e660747b30cc3446fd8a40e199aa1fc86a14cd2cd9abbe4218d5ca60f7",
+      "bytes": 61538,
+      "lines": 1650,
+      "functions": 45,
+      "imports": [
+        "import argparse",
+        "from contextlib import ExitStack",
+        "from dataclasses import replace",
+        "import hashlib",
+        "from importlib import resources",
+        "import json",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import time",
+        "from asof.journal import RunJournal, read_chain",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget",
+        "from .baseline_smoke import _prepare_parent, _read, _write",
+        "from .baselines import _policy, _select",
+        "from .collected_source import CollectedSourceInput, MODE_FILES, SOURCE_FILES, literal_document",
+        "from .collected_source import TRACK as COLLECTED_TRACK",
+        "from .diagnostic import validate_output",
+        "from .diagnostic_codec import need, quote_choices",
+        "from .fixed_evidence import INTERFACE, load_plan",
+        "from .fixed_evidence_smoke import _assignment, _interpretation_view",
+        "from .preparation_payloads import prepare_actual_payload",
+        "from .proofs import _no_links, capture_file, capture_package_proof, verify_package_proof",
+        "from .retrieval_preparation import _records, authority_anchor, fixture_authority, policy_for, prepare_retrieval, verify_retrieval_preparation",
+        "from .retrieval_smoke import CELL_FILES, PARENT_FILES, REQUIRED_RESOURCES as RETRIEVAL_RESOURCES, RetrievalRecordedVerifier",
+        "from .session import StudySession, verify_study",
+        "from . import native_mode, native_interpretation",
+        "from .native_accounting import accounting as native_accounting",
+        "from .interpretation_interface import prepare_payload as prepare_native_payload",
+        "from .tokenization import REQUIRED_RESOURCES as TOKEN_RESOURCES, prepare_tokenizer_spec, tokenize_prompt"
+      ]
+    },
+    {
+      "path": "src/asof/study/baseline_smoke.py",
+      "sha256": "c7d8d19f95e62f2c9b31e430bc73f25b1f5924537d58d163be724f5157d10c7c",
+      "bytes": 10855,
+      "lines": 324,
+      "functions": 12,
+      "imports": [
+        "import argparse",
+        "import hashlib",
+        "import json",
+        "from pathlib import Path",
+        "import re",
+        "from asof.atomic import ensure_directory, publish_bytes",
+        "from asof.serde import canonical, encode, freeze, parse_json",
+        "from .baselines import REQUIRED_RESOURCES, reviewer_view, run_baseline, verify_baseline",
+        "from .diagnostic import load_synthetic_request",
+        "from .diagnostic_codec import need",
+        "from .proofs import _no_links, capture_file, capture_package_proof, verify_package_proof"
+      ]
+    },
+    {
+      "path": "src/asof/study/baselines.py",
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "bytes": 8475,
+      "lines": 248,
+      "functions": 7,
+      "imports": [
+        "import hashlib",
+        "import re",
+        "import unicodedata",
+        "from asof.serde import canonical, encode, fingerprint, freeze",
+        "from .diagnostic import REQUIRED_RESOURCES as REQUIRED_RESOURCES",
+        "from .diagnostic import load_synthetic_request",
+        "from .diagnostic_codec import need, validate_request"
+      ]
+    },
+    {
+      "path": "src/asof/study/collected_source.py",
+      "sha256": "04b9d4d7999d893f9a7342dc6044994b2e212ec677dfb31765cb3a40ede2ea9c",
+      "bytes": 11845,
+      "lines": 323,
+      "functions": 10,
+      "imports": [
+        "from contextlib import contextmanager",
+        "from dataclasses import dataclass, field",
+        "from collections.abc import Mapping",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.contracts import Category",
+        "from asof.serde import canonical, fingerprint, freeze",
+        "from .baseline_smoke import _read, _write",
+        "from .diagnostic_codec import need, quote_choices",
+        "from .retrieval_preparation import _records",
+        "from .source_preparation import _authority, _source_path_guard, prepare_source_request",
+        "from .stable_read import checked_path, deadline_check, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/study/diagnostic.py",
+      "sha256": "03dbf421992e173e5bcd9d4dbe5ab9da00b9a64502a47bb40d8e1ee751f125d3",
+      "bytes": 9390,
+      "lines": 258,
+      "functions": 10,
+      "imports": [
+        "import json",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from . import diagnostic_codec as codec",
+        "from .diagnostic_resources import REQUIRED_RESOURCES as REQUIRED_RESOURCES",
+        "from .diagnostic_resources import load_resource"
+      ]
+    },
+    {
+      "path": "src/asof/study/diagnostic_codec.py",
+      "sha256": "f9b6b7f0c8a5aabe91b2da29d7139fcc9a90eb5acbdfac0554967e7b77d4d43b",
+      "bytes": 35406,
+      "lines": 1034,
+      "functions": 19,
+      "imports": [
+        "import json",
+        "import re",
+        "from asof.contracts import Case",
+        "from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from .diagnostic_resources import load_resource"
+      ]
+    },
+    {
+      "path": "src/asof/study/diagnostic_resources.py",
+      "sha256": "c557d82bb31d8e04886f6b6e9bf36e7e59e756eb7377d486ffb9c82097691083",
+      "bytes": 1275,
+      "lines": 25,
+      "functions": 1,
+      "imports": [
+        "from importlib.resources import files",
+        "import hashlib",
+        "from asof.serde import ContractError, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/study/fixed_evidence.py",
+      "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10",
+      "bytes": 18519,
+      "lines": 497,
+      "functions": 20,
+      "imports": [
+        "import copy",
+        "import hashlib",
+        "from importlib.resources import files",
+        "from pathlib import Path",
+        "import re",
+        "import math",
+        "import time",
+        "from asof.journal import read_chain",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget",
+        "from .baseline_smoke import _read",
+        "from .baselines import _authenticated",
+        "from .diagnostic import ACTIVE_SIMPLIFIED_SCHEMA, load_synthetic_request, validate_output",
+        "from .diagnostic_resources import REQUIRED_RESOURCES as DIAGNOSTIC_RESOURCES",
+        "from .diagnostic_codec import need, quote_choices",
+        "from .proofs import _no_links, capture_file",
+        "from .recorded import RecordedBackend, RecordedVerifier, _document",
+        "from .session import GeneratedBytes, _identity, verify_study"
+      ]
+    },
+    {
+      "path": "src/asof/study/fixed_evidence_smoke.py",
+      "sha256": "c2647cdf12261e7fe1f4744947ccd79401aee045282846030be2f67ae6e9c9ab",
+      "bytes": 29110,
+      "lines": 779,
+      "functions": 12,
+      "imports": [
+        "import argparse",
+        "from dataclasses import replace",
+        "import json",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.journal import RunJournal, read_chain",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze",
+        "from asof.workflow import Budget",
+        "from .baseline_smoke import _prepare_parent, _read, _write",
+        "from .baselines import run_baseline, reviewer_view",
+        "from .diagnostic import load_synthetic_request",
+        "from .diagnostic_codec import need",
+        "from .fixed_evidence import ARMS, PLAN_SHA256, REQUIRED_RESOURCES, DeadlineRecordedBackend, RoleRecordedVerifier, cell_path, load_plan, preflight, prepare_payload, recorded_document",
+        "from .proofs import _no_links, capture_file, capture_package_proof, verify_package_proof",
+        "from .session import StudySession, verify_study"
+      ]
+    },
+    {
+      "path": "src/asof/study/interpretation_generation.py",
+      "sha256": "dd74e8b7829162a66419e9fdbc5a72d62cd457158a39d59288999cf05adc5e4f",
+      "bytes": 6818,
+      "lines": 168,
+      "functions": 5,
+      "imports": [
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from . import interpretation_interface as legacy",
+        "from .diagnostic_codec import need, pointer",
+        "from .fixed_evidence import load_plan",
+        "from .interpretation_grammar import build_grammar"
+      ]
+    },
+    {
+      "path": "src/asof/study/interpretation_grammar.py",
+      "sha256": "6ee02a55b41b59e3390f9a0c807ef168a646a355c646bde73621d75480ca3c97",
+      "bytes": 17046,
+      "lines": 445,
+      "functions": 17,
+      "imports": [
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "import json",
+        "from asof.serde import ContractError, freeze"
+      ]
+    },
+    {
+      "path": "src/asof/study/interpretation_interface.py",
+      "sha256": "5f8933c53bd94fa3c1044b0656f175a1328b487805a962b715d23ec4ce8a82f3",
+      "bytes": 13666,
+      "lines": 346,
+      "functions": 7,
+      "imports": [
+        "import hashlib",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from .diagnostic import _flat as validate_flat",
+        "from .diagnostic_codec import need, pointer, quote_choices, validate_request",
+        "from .fixed_evidence import REQUIRED_RESOURCES as REQUIRED_RESOURCES",
+        "from .fixed_evidence import load_plan",
+        "from .preparation_payloads import prepare_actual_payload"
+      ]
+    },
+    {
+      "path": "src/asof/study/native.py",
+      "sha256": "d5bee09aff10d50073a606d3bb9d806204aa7ef5f0f23b9ed6a7cc261e6bb97a",
+      "bytes": 24592,
+      "lines": 680,
+      "functions": 23,
+      "imports": [
+        "import base64",
+        "import hashlib",
+        "import http.client",
+        "import math",
+        "from pathlib import Path",
+        "import re",
+        "import socket",
+        "import struct",
+        "from threading import Lock, Timer",
+        "import time",
+        "from urllib.parse import urlsplit",
+        "from asof.agents import Usage",
+        "from asof.atomic import publish_bytes",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from .diagnostic import REQUIRED_RESOURCES, prepare_payload, validate_output",
+        "from .session import BackendCapabilities, GeneratedBytes, _identity, need"
+      ]
+    },
+    {
+      "path": "src/asof/study/native_accounting.py",
+      "sha256": "17a58dd7f65af6e44c1241f51eb504b39c765bdd91688ea899d5a00b50383a6c",
+      "bytes": 5973,
+      "lines": 138,
+      "functions": 1,
+      "imports": [
+        "import base64",
+        "import hashlib",
+        "from asof.agents import Usage",
+        "from asof.journal import read_chain",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, parse_json",
+        "from .native import PROTOCOL",
+        "from .diagnostic_codec import need"
+      ]
+    },
+    {
+      "path": "src/asof/study/native_diagnostic.py",
+      "sha256": "1101fc146ed0b0493b1903a4388a03b0ffcbc6bb6085d792fccec8694b9780e8",
+      "bytes": 37980,
+      "lines": 996,
+      "functions": 13,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import ctypes",
+        "import hashlib",
+        "import http.client",
+        "import json",
+        "import math",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.agents import Usage",
+        "from asof.atomic import publish_bytes",
+        "from asof.journal import RunJournal, read_chain",
+        "from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json, safe_child",
+        "from asof.workflow import Budget, add_usage",
+        "from .diagnostic import REQUIRED_RESOURCES, prepare_payload, request_from_payload",
+        "from .native import LocalBackend, NativeVerifier, bounded_health_probe, windows_listener_owner",
+        "from .process import OwnedServer, ServerSpec",
+        "from .proofs import capture_file, capture_package_proof, verify_package_proof",
+        "from .session import StudySession, inspect_study, need, verify_study"
+      ]
+    },
+    {
+      "path": "src/asof/study/native_interpretation.py",
+      "sha256": "decc0ba3dd7dca8c84883b58bf3fe8acb0b277ef0aaf5a5a7186b7864477d674",
+      "bytes": 11843,
+      "lines": 336,
+      "functions": 12,
+      "imports": [
+        "from collections.abc import Mapping",
+        "import math",
+        "from pathlib import Path",
+        "from threading import Lock",
+        "import time",
+        "from asof.agents import Usage",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget",
+        "from . import native, tokenization",
+        "from .interpretation_interface import INTERFACE, request_from_payload, validate_output",
+        "from .session import BackendCapabilities, _identity, need",
+        "from .stable_read import deadline_check",
+        "from .token_capacity import require_policy"
+      ]
+    },
+    {
+      "path": "src/asof/study/native_mode.py",
+      "sha256": "637cbd706936fc58614dc91c3b743eb98ed4ff0577fc25b7af6d8bab9c510e2b",
+      "bytes": 18331,
+      "lines": 514,
+      "functions": 15,
+      "imports": [
+        "from collections.abc import Mapping",
+        "from contextlib import contextmanager",
+        "from dataclasses import dataclass, field",
+        "import hashlib",
+        "import math",
+        "from importlib import resources",
+        "from pathlib import Path",
+        "import re",
+        "import subprocess",
+        "import sys",
+        "import time",
+        "from threading import Lock",
+        "from asof.serde import canonical, encode, fingerprint, freeze, parse_json",
+        "from .baseline_smoke import _read, _write",
+        "from .collected_source import _guard",
+        "from .diagnostic_codec import need",
+        "from .interpretation_interface import INTERFACE",
+        "from . import native, tokenization",
+        "from .process import OwnedServer, ServerSpec, _port_free",
+        "from .stable_read import checked_path, deadline_check, hash_file, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/study/preparation_payloads.py",
+      "sha256": "0e871a0e1aa9a57aaf750c217802b6eea1906018808faefe8b4dbc49d0d78247",
+      "bytes": 6504,
+      "lines": 158,
+      "functions": 2,
+      "imports": [
+        "import copy",
+        "from asof.serde import canonical, encode, fingerprint, freeze",
+        "from .diagnostic import ACTIVE_SIMPLIFIED_SCHEMA",
+        "from .diagnostic_codec import need, quote_choices, validate_request",
+        "from .fixed_evidence import load_plan"
+      ]
+    },
+    {
+      "path": "src/asof/study/process.py",
+      "sha256": "5e2378eefc1ffafb21af1555a3de5de3c725cc3ae8f3365aafdd47ea51a08e91",
+      "bytes": 12344,
+      "lines": 309,
+      "functions": 10,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import socket",
+        "import subprocess",
+        "import time",
+        "import urllib.error",
+        "from asof.atomic import publish_bytes",
+        "from asof.serde import ContractError, Frozen, canonical, freeze",
+        "from .proofs import verify_file"
+      ]
+    },
+    {
+      "path": "src/asof/study/proofs.py",
+      "sha256": "4d5e7170dafb15b1c701d77e639cb1acf7ecfcdc4546f6c9ce4e7ba9ea649b0f",
+      "bytes": 7645,
+      "lines": 219,
+      "functions": 11,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "from importlib import metadata",
+        "import os",
+        "from pathlib import Path",
+        "import platform",
+        "import re",
+        "import stat",
+        "from asof.serde import ContractError, fingerprint, freeze"
+      ]
+    },
+    {
+      "path": "src/asof/study/recorded.py",
+      "sha256": "beb14f0528de5edf9caddf4ea66a71e3ebae7e8e41517903226bb68d0bd04705",
+      "bytes": 4394,
+      "lines": 127,
+      "functions": 8,
+      "imports": [
+        "from asof.agents import Usage",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from .diagnostic import REQUIRED_RESOURCES, prepare_payload, validate_output",
+        "from .session import BackendCapabilities, GeneratedBytes, _identity, need"
+      ]
+    },
+    {
+      "path": "src/asof/study/retrieval_preparation.py",
+      "sha256": "5672daf0da1b98255922a2360fdf6ed4d36edc630b25376ab2b83ffc76ea6fba",
+      "bytes": 25882,
+      "lines": 715,
+      "functions": 18,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections.abc import Mapping",
+        "from dataclasses import replace",
+        "import hashlib",
+        "from importlib import resources",
+        "from pathlib import Path",
+        "import time",
+        "from asof.agents import make_request",
+        "from asof.atomic import publish_bytes",
+        "from asof.contracts import Case, Category, GroundedObservation, Observation, Citation, validate_observation",
+        "from asof.journal import RunJournal",
+        "from asof.retrieval import RetrievalPolicy, bounded_request",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.wire import request_bytes",
+        "from .baseline_smoke import _prepare_parent",
+        "from .diagnostic import REQUIRED_RESOURCES as DIAGNOSTIC_RESOURCES",
+        "from .diagnostic_codec import bind_question, need, validate_request",
+        "from .proofs import capture_package_proof, verify_package_proof, _no_links",
+        "from .source_preparation import verify_source_preparation, _bounded_chain, _source_path_guard",
+        "from .stable_read import checked_path, deadline_check, read_file, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/study/retrieval_smoke.py",
+      "sha256": "c386167bb087f8239a66d806edb807a84a7a111d4ed337626745df4eddd3a7c1",
+      "bytes": 23393,
+      "lines": 431,
+      "functions": 21,
+      "imports": [
+        "import argparse",
+        "from dataclasses import replace",
+        "import hashlib",
+        "from importlib import resources",
+        "import json",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.journal import RunJournal, read_chain",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget",
+        "from .baseline_smoke import _prepare_parent, _read, _write",
+        "from .diagnostic import validate_output",
+        "from .diagnostic_codec import need",
+        "from .fixed_evidence import DeadlineRecordedBackend, INTERFACE, PLAN_RESOURCE",
+        "from .preparation_payloads import prepare_payloads",
+        "from .proofs import _no_links, capture_file, capture_package_proof, verify_package_proof",
+        "from .recorded import RecordedBackend, RecordedVerifier",
+        "from .retrieval_preparation import REQUIRED_RESOURCES as RETRIEVAL_RESOURCES, authority_anchor, fixture_authority, policy_for, prepare_retrieval, verify_retrieval_preparation",
+        "from .session import StudySession, _identity, verify_study"
+      ]
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "sha256": "419af810d7ca8f61d7eb46c34ff3aa2fcdfc845b9e00a14cdb491a6ff99661e1",
+      "bytes": 33028,
+      "lines": 842,
+      "functions": 23,
+      "imports": [
+        "from __future__ import annotations",
+        "import inspect",
+        "import hashlib",
+        "import math",
+        "import time",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "from typing import Protocol",
+        "from asof.agents import Usage",
+        "from asof.atomic import publish_bytes",
+        "from asof.journal import RunJournal, read_chain",
+        "from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json",
+        "from asof.workflow import Budget, over_quote",
+        "from .proofs import capture_file, capture_package_proof, verify_package_proof"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_adapters.py",
+      "sha256": "4651cfdaef34f4e51e89c7df61d5db884edfa90baf7c4f5b41645d596bc299e0",
+      "bytes": 10934,
+      "lines": 238,
+      "functions": 11,
+      "imports": [
+        "import hashlib",
+        "import math",
+        "import re",
+        "from asof.serde import ContractError, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_cell.py",
+      "sha256": "c8bcc688e59ec2f2c1428476ede3301a1c0040d64bb3e5c1347c9028dcfb5437",
+      "bytes": 17456,
+      "lines": 333,
+      "functions": 10,
+      "imports": [
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.journal import RunJournal",
+        "from asof.serde import ContractError, canonical, freeze",
+        "from asof.workflow import Budget",
+        "from .source_fact_adapters import adapt_output",
+        "from .source_fact_reporting import literal_report, render_reporting_prompt, reporting_view",
+        "from .source_fact_transport import TransportResult, prepare_completion"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_evaluation.py",
+      "sha256": "81b58e7ab2b90dd14c13796a918dc52a4a795dfa86e9b994ecb47a70d3f299c2",
+      "bytes": 12892,
+      "lines": 235,
+      "functions": 11,
+      "imports": [
+        "from collections import Counter",
+        "from collections.abc import Mapping",
+        "from fractions import Fraction",
+        "import hashlib",
+        "import re",
+        "from asof.serde import ContractError, fingerprint, freeze",
+        "from asof.wire import same_json",
+        "from .source_fact_adapters import adapt_output, WIRE_FORMATS"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_inputs.py",
+      "sha256": "29f760dc20cdaf6357411c629ea48e9919a78ffd68f62d36ce5da3597b65ae04",
+      "bytes": 28901,
+      "lines": 439,
+      "functions": 14,
+      "imports": [
+        "from __future__ import annotations",
+        "import csv",
+        "from datetime import date, datetime, time as day_time, timezone",
+        "from pathlib import Path",
+        "import time",
+        "from asof.contracts import Snapshot, SourceNode",
+        "from asof.provenance import InputGraph, catalog_index",
+        "from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json",
+        "from .stable_read import checked_path, deadline_check, hash_file, read_file, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_reporting.py",
+      "sha256": "8c81e9589566346d7345bbb7d8d10e5bbdf811c7a89180065ee5d1d05e91f742",
+      "bytes": 10512,
+      "lines": 166,
+      "functions": 4,
+      "imports": [
+        "from collections.abc import Mapping",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze",
+        "from asof.wire import same_json",
+        "from .source_fact_adapters import adapt_output",
+        "from .source_fact_inputs import EVIDENCE_FIELDS, METHOD",
+        "from .source_fact_sources import validate_task"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_sources.py",
+      "sha256": "18d059744b39390a12f84d4cf1b92fee00f86438b4a7574ec2cd202c9ab76ec8",
+      "bytes": 30373,
+      "lines": 531,
+      "functions": 19,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass",
+        "from datetime import date, datetime, time, timezone",
+        "import math",
+        "from pathlib import Path",
+        "import re",
+        "from types import SimpleNamespace",
+        "from asof.contracts import Profile, Snapshot",
+        "from asof.provenance import InputGraph, catalog_index",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json",
+        "from asof.wire import same_json",
+        "from .source_rows import parquet_row",
+        "from .stable_read import checked_path, deadline_check, hash_file, read_file, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_fact_transport.py",
+      "sha256": "1ac7c16b26e4fb065e40fa689fdbfec5fa101a289677c61cc7f6a9a446b6dc99",
+      "bytes": 15495,
+      "lines": 317,
+      "functions": 12,
+      "imports": [
+        "from collections.abc import Mapping",
+        "from contextlib import contextmanager",
+        "from dataclasses import dataclass",
+        "import hashlib",
+        "import math",
+        "import re",
+        "import threading",
+        "import urllib.error",
+        "import urllib.parse",
+        "import urllib.request",
+        "from asof.serde import ContractError, Frozen, canonical, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_preparation.py",
+      "sha256": "a01ae55d3a06c1130f293eec4fd10872b62dcfaf43c49b7e9da88dbee23418c1",
+      "bytes": 21083,
+      "lines": 589,
+      "functions": 14,
+      "imports": [
+        "from __future__ import annotations",
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.atomic import publish_bytes",
+        "from asof.chrono import load_snapshot, eligible_artifacts",
+        "from asof.contracts import Case, Category, Profile, Snapshot",
+        "from asof.journal import RunJournal",
+        "from asof.provenance import InputGraph, catalog_index",
+        "from asof.serde import canonical, decode, encode, fingerprint, freeze, parse_json, safe_child",
+        "from .baseline_smoke import _prepare_parent",
+        "from .diagnostic import REQUIRED_RESOURCES",
+        "from .diagnostic_codec import bind_question, need, question_template",
+        "from .proofs import _no_links, capture_package_proof, verify_package_proof",
+        "from .source_rows import audit_selected"
+      ]
+    },
+    {
+      "path": "src/asof/study/source_rows.py",
+      "sha256": "977c3b898da1796a18830854ab086f3d94469597bf07c16c3204a1865aa36138",
+      "bytes": 10467,
+      "lines": 294,
+      "functions": 5,
+      "imports": [
+        "from __future__ import annotations",
+        "import csv",
+        "from collections.abc import Mapping",
+        "from asof.contracts import Observation, EvidenceStatus, Polarity, ScientificContext, QuantitativeResult, Method",
+        "from asof.ingest import EVIDENCE_COLUMNS, TYPE_CATEGORIES, NORMALIZATION_VERSION, _json_value, _publication, arrow",
+        "from asof.serde import ContractError, canonical, encode, fingerprint, freeze",
+        "from .diagnostic_codec import need"
+      ]
+    },
+    {
+      "path": "src/asof/study/stable_read.py",
+      "sha256": "40d71fa950422e8f19fd863952b3e7ea39237c12d1c92a9d38b0a9c23a2f4a0b",
+      "bytes": 6450,
+      "lines": 183,
+      "functions": 5,
+      "imports": [
+        "from __future__ import annotations",
+        "from contextlib import contextmanager",
+        "import ctypes",
+        "from ctypes import wintypes",
+        "import hashlib",
+        "import math",
+        "import os",
+        "from pathlib import Path",
+        "import stat",
+        "import time",
+        "from asof.serde import ContractError, freeze",
+        "from .proofs import _identity, _no_links, _relative"
+      ]
+    },
+    {
+      "path": "src/asof/study/token_capacity.py",
+      "sha256": "7995a58b43829879bbf221886b59cfb332873b6d979a6ed5e5a8d61035eb39ef",
+      "bytes": 8912,
+      "lines": 166,
+      "functions": 12,
+      "imports": [
+        "from dataclasses import dataclass",
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "import math",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.agents import Usage",
+        "from asof.serde import canonical, encode, fingerprint, freeze",
+        "from . import tokenization",
+        "from .recorded import RecordedBackend, _document",
+        "from .session import BackendCapabilities, GeneratedBytes, _identity, _usage, need",
+        "from .stable_read import deadline_check"
+      ]
+    },
+    {
+      "path": "src/asof/study/tokenization.py",
+      "sha256": "460e2aeaa0a2e57075f448bad71559e9d76801bbaddbbccf67ebeb202c65c711",
+      "bytes": 27753,
+      "lines": 776,
+      "functions": 20,
+      "imports": [
+        "from __future__ import annotations",
+        "import ast",
+        "from collections.abc import Mapping",
+        "import hashlib",
+        "import os",
+        "from pathlib import Path",
+        "import re",
+        "import subprocess",
+        "import threading",
+        "import time",
+        "from asof.atomic import publish_bytes",
+        "from asof.journal import RunJournal",
+        "from asof.serde import ContractError, canonical, fingerprint, freeze, parse_json",
+        "from .baseline_smoke import _prepare_parent",
+        "from .proofs import _no_links, capture_package_proof, verify_package_proof",
+        "from .stable_read import checked_path, deadline_check, hash_file, read_file, stable_files"
+      ]
+    },
+    {
+      "path": "src/asof/wire.py",
+      "sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+      "bytes": 6081,
+      "lines": 131,
+      "functions": 8,
+      "imports": [
+        "from collections.abc import Mapping",
+        "from functools import lru_cache",
+        "from .agents import SpecialistRequest",
+        "from .serde import ContractError, canonical, decode, encode, freeze, parse_json"
+      ]
+    },
+    {
+      "path": "src/asof/workflow.py",
+      "sha256": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+      "bytes": 13189,
+      "lines": 268,
+      "functions": 9,
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "import time",
+        "from collections.abc import Mapping",
+        "from dataclasses import dataclass, replace",
+        "from .agents import Backend, Selection, Usage, critique, make_request",
+        "from .chrono import EvidenceStore",
+        "from .contracts import Case, Category, Claim, EvidenceStatus, Profile",
+        "from .features import FeatureVector, build_features",
+        "from .journal import RunJournal",
+        "from .ledger import EvidenceLedger",
+        "from .scorer import Prediction, ScorerArtifact, abstain, preflight_scorer, score",
+        "from .serde import ContractError, Frozen, fingerprint, freeze"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/__init__.py",
+      "sha256": "f9f66269f43b65c14a161fbbbeb4942a0962fdc30ad7b42bd67fc93a67afd7c6",
+      "bytes": 829,
+      "lines": 27,
+      "functions": 1,
+      "imports": [
+        "from __future__ import annotations",
+        "from asof import __version__ as __core_version__",
+        "from ._aliases import install as _install_aliases, public_roots as _public_roots"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/__main__.py",
+      "sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "bytes": 118,
+      "lines": 5,
+      "functions": 0,
+      "imports": [
+        "from ._cli import main"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_aliases.py",
+      "sha256": "23410cd1288bdffcdf3b78aa037a82e4b14a5635babb28d313475516174ef0f9",
+      "bytes": 4653,
+      "lines": 94,
+      "functions": 6,
+      "imports": [
+        "from __future__ import annotations",
+        "import importlib.abc",
+        "import importlib.machinery",
+        "import importlib.util",
+        "from importlib import import_module",
+        "from pathlib import Path",
+        "import sys"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_catalog_binding.py",
+      "sha256": "1134c595fc69f29b50f964226f31dfa70a37aea7886368f08da9bb6e587d1470",
+      "bytes": 18330,
+      "lines": 316,
+      "functions": 15,
+      "imports": [
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "import re",
+        "import time",
+        "from asof.atomic import publish_bytes",
+        "from asof.chrono import load_snapshot",
+        "from asof.contracts import Case, Snapshot",
+        "from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json",
+        "from asof.study.stable_read import checked_path, hash_file, read_file",
+        "from ._catalog_policy import authorize_snapshot, reconcile_receipt, strict_json, validate_policy, validate_source_catalog"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_catalog_policy.py",
+      "sha256": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+      "bytes": 29106,
+      "lines": 495,
+      "functions": 24,
+      "imports": [
+        "from __future__ import annotations",
+        "import copy",
+        "from datetime import datetime, timezone",
+        "import hashlib",
+        "import json",
+        "import math",
+        "from pathlib import PurePosixPath, PureWindowsPath",
+        "import re",
+        "from asof.contracts import Availability",
+        "from asof.serde import ContractError, canonical, decode, fingerprint"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_cli.py",
+      "sha256": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699",
+      "bytes": 6825,
+      "lines": 130,
+      "functions": 6,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import json",
+        "from pathlib import Path",
+        "import sys",
+        "from asof import cli as legacy",
+        "from asof.serde import ContractError, encode",
+        "from . import __version__, __core_version__",
+        "from . import _presentation as presentation"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_presentation.py",
+      "sha256": "aee8d5cba2d205bbf4442f75cbfb145f2b6953605966f483e72d126c05b7d79d",
+      "bytes": 24756,
+      "lines": 459,
+      "functions": 25,
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "from importlib import metadata",
+        "import os",
+        "from pathlib import Path",
+        "import re",
+        "import stat",
+        "import subprocess",
+        "import sys",
+        "import time",
+        "import asof",
+        "from asof.artifacts import verify_run",
+        "from asof.atomic import publish_bytes",
+        "from asof.journal import RunJournal",
+        "from asof.serde import ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES, canonical, encode, fingerprint, parse_json",
+        "from asof.study.proofs import capture_file",
+        "from asof.study.stable_read import read_file",
+        "from . import __version__",
+        "from ._process import EngineResult, EngineInterrupted, ProcessLimits, supervise_command, validate_success_report, CLEANUP_SECONDS"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_process.py",
+      "sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "bytes": 11639,
+      "lines": 255,
+      "functions": 9,
+      "imports": [
+        "from dataclasses import dataclass",
+        "import math",
+        "import os",
+        "import select",
+        "import subprocess",
+        "import time",
+        "from asof.serde import ContractError, canonical"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/_semantics.py",
+      "sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "bytes": 14044,
+      "lines": 241,
+      "functions": 5,
+      "imports": [
+        "from types import SimpleNamespace",
+        "from asof.artifacts import dossier",
+        "from asof.chrono import Exclusion",
+        "from asof.agents import Usage",
+        "from asof.contracts import Case, Claim, Snapshot",
+        "from asof.features import FeatureVector",
+        "from asof.scorer import Prediction",
+        "from asof.serde import ContractError, canonical, decode",
+        "from asof.workflow import Budget, PlanStep, RunResult"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/archive/__init__.py",
+      "sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "bytes": 212,
+      "lines": 5,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/archive/__main__.py",
+      "sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "bytes": 1890,
+      "lines": 45,
+      "functions": 1,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import json"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/study/__init__.py",
+      "sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "bytes": 207,
+      "lines": 5,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/study/__main__.py",
+      "sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "bytes": 968,
+      "lines": 27,
+      "functions": 1,
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "from pathlib import Path"
+      ]
+    },
+    {
+      "path": "packages/tether/src/tether/study/authority_four_arm.py",
+      "sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "bytes": 322,
+      "lines": 8,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/study/baseline_smoke.py",
+      "sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "bytes": 312,
+      "lines": 8,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/study/fixed_evidence_smoke.py",
+      "sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "bytes": 330,
+      "lines": 8,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/study/native_diagnostic.py",
+      "sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "bytes": 321,
+      "lines": 8,
+      "functions": 0,
+      "imports": []
+    },
+    {
+      "path": "packages/tether/src/tether/study/retrieval_smoke.py",
+      "sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "bytes": 323,
+      "lines": 8,
+      "functions": 0,
+      "imports": []
+    }
+  ],
+  "wheel": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\wheels\\tether_target_agents-0.5.0-py3-none-any.whl",
+    "sha256": "b28f2680c675b6266c6ea6cc9cfd2002191af9f7d20396b5b2ec629a9909f8d8",
+    "source_member_matches": {
+      "tether/__init__.py": true,
+      "tether/__main__.py": true,
+      "tether/_aliases.py": true,
+      "tether/_catalog_binding.py": true,
+      "tether/_catalog_policy.py": true,
+      "tether/_cli.py": true,
+      "tether/_presentation.py": true,
+      "tether/_process.py": true,
+      "tether/_semantics.py": true,
+      "tether/archive/__init__.py": true,
+      "tether/archive/__main__.py": true,
+      "tether/study/__init__.py": true,
+      "tether/study/__main__.py": true,
+      "tether/study/authority_four_arm.py": true,
+      "tether/study/baseline_smoke.py": true,
+      "tether/study/fixed_evidence_smoke.py": true,
+      "tether/study/native_diagnostic.py": true,
+      "tether/study/retrieval_smoke.py": true
+    }
+  },
+  "engine_installed_source_matches": {
+    "src/asof/__init__.py": true,
+    "src/asof/__main__.py": true,
+    "src/asof/agents.py": true,
+    "src/asof/archive/__init__.py": true,
+    "src/asof/archive/__main__.py": true,
+    "src/asof/archive/core.py": true,
+    "src/asof/archive/interpretation.py": true,
+    "src/asof/archive/paths.py": true,
+    "src/asof/archive/restore.py": true,
+    "src/asof/artifacts.py": true,
+    "src/asof/atomic.py": true,
+    "src/asof/chrono.py": true,
+    "src/asof/cli.py": true,
+    "src/asof/contracts.py": true,
+    "src/asof/evaluation.py": true,
+    "src/asof/features.py": true,
+    "src/asof/ingest.py": true,
+    "src/asof/journal.py": true,
+    "src/asof/ledger.py": true,
+    "src/asof/local_model.py": true,
+    "src/asof/maintenance.py": true,
+    "src/asof/provenance.py": true,
+    "src/asof/retrieval.py": true,
+    "src/asof/scorer.py": true,
+    "src/asof/semantics.py": true,
+    "src/asof/serde.py": true,
+    "src/asof/study/__init__.py": true,
+    "src/asof/study/__main__.py": true,
+    "src/asof/study/authority_four_arm.py": true,
+    "src/asof/study/baseline_smoke.py": true,
+    "src/asof/study/baselines.py": true,
+    "src/asof/study/collected_source.py": true,
+    "src/asof/study/diagnostic.py": true,
+    "src/asof/study/diagnostic_codec.py": true,
+    "src/asof/study/diagnostic_resources.py": true,
+    "src/asof/study/fixed_evidence.py": true,
+    "src/asof/study/fixed_evidence_smoke.py": true,
+    "src/asof/study/interpretation_generation.py": true,
+    "src/asof/study/interpretation_grammar.py": true,
+    "src/asof/study/interpretation_interface.py": true,
+    "src/asof/study/native.py": true,
+    "src/asof/study/native_accounting.py": true,
+    "src/asof/study/native_diagnostic.py": true,
+    "src/asof/study/native_interpretation.py": true,
+    "src/asof/study/native_mode.py": true,
+    "src/asof/study/preparation_payloads.py": true,
+    "src/asof/study/process.py": true,
+    "src/asof/study/proofs.py": true,
+    "src/asof/study/recorded.py": true,
+    "src/asof/study/retrieval_preparation.py": true,
+    "src/asof/study/retrieval_smoke.py": true,
+    "src/asof/study/session.py": true,
+    "src/asof/study/source_fact_adapters.py": true,
+    "src/asof/study/source_fact_cell.py": true,
+    "src/asof/study/source_fact_evaluation.py": true,
+    "src/asof/study/source_fact_inputs.py": true,
+    "src/asof/study/source_fact_reporting.py": true,
+    "src/asof/study/source_fact_sources.py": true,
+    "src/asof/study/source_fact_transport.py": true,
+    "src/asof/study/source_preparation.py": true,
+    "src/asof/study/source_rows.py": true,
+    "src/asof/study/stable_read.py": true,
+    "src/asof/study/token_capacity.py": true,
+    "src/asof/study/tokenization.py": true,
+    "src/asof/wire.py": true,
+    "src/asof/workflow.py": true
+  },
+  "environment": {
+    "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+    "interpreter": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Scripts\\python.exe",
+    "core": "0.3.11",
+    "facade": "0.5.0"
+  },
+  "tracked_runtime_diff": ""
+}

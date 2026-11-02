@@ -1,0 +1,48 @@
+[
+  {
+    "argv": [
+      "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "-m",
+      "tether",
+      "verify",
+      "--run-dir",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\unused-future-receipt\\outer",
+      "--receipt-sha256",
+      "70180cc79778d85a4c3eacdc4c75d64884549d1002f858ebc8dd24a92445df53"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"brand\": \"TETHER\",\n  \"status\": \"integrity_verified\",\n  \"receipt_sha256\": \"70180cc79778d85a4c3eacdc4c75d64884549d1002f858ebc8dd24a92445df53\",\n  \"external_anchor_checked\": true,\n  \"launcher_code_verified\": true,\n  \"presentation_projection\": \"exact_first_header_v1\",\n  \"engine\": {\n    \"status\": \"integrity_verified\",\n    \"outputs\": 8,\n    \"source_artifacts_checked\": 3,\n    \"trace_events\": 37,\n    \"receipt_sha256\": \"36cbacce65a439e1acc57fedc3a0d8dbb9b7aa8b1fdde7da9e1822b8ce43149f\",\n    \"external_anchor_checked\": true,\n    \"auxiliary_outputs_checked\": 1,\n    \"unsealed_auxiliary_outputs\": [],\n    \"code_matches_current\": true,\n    \"semantic_consistency\": \"verified\",\n    \"source_binding\": \"current_originals\",\n    \"scientific_validity\": \"not_established\",\n    \"tether_semantics\": {\n      \"method\": \"tether.execution_semantics.v1\",\n      \"coverage_state_machine\": \"verified\",\n      \"review_to_claims\": \"verified\",\n      \"dossier_reconstruction\": \"verified\"\n    }\n  },\n  \"artifact_policy\": {\n    \"method\": \"tether.sealed_catalog_binding.v1\",\n    \"status\": \"artifact_policy_consistency_verified\",\n    \"policy_id\": \"fictional-policy\",\n    \"use_id\": \"fictional-use\",\n    \"frame_sha256\": \"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\",\n    \"checked_inputs\": 4,\n    \"scientific_validation\": \"not_established\"\n  },\n  \"scientific_validation\": \"not_established\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "-m",
+      "tether",
+      "run",
+      "--case",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\case.json",
+      "--snapshot",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\normalized\\snapshot.json",
+      "--catalog",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\data\\catalog\\sources.json",
+      "--catalog-policy",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\policy.json",
+      "--policy-roots",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\roots.json",
+      "--policy-use",
+      "fictional-use",
+      "--policy-frame-sha256",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "--output",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\comparative-audit-20261102\\runtime-probe-v1\\referenced-future-receipt\\outer-negative-v1"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "tether: Contemporary availability bound does not match public-download receipt\n"
+  }
+]

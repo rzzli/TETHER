@@ -10,6 +10,20 @@ updated: 2026-11-02
 
 ## Current recovery execution
 
+The comparative efficiency audit is complete; see [[TETHER efficiency and comparative value]]
+and [[research-log-2026-11-02-comparative-efficiency-audit]]. Three newly confirmed P2
+defects remain unpatched: report/receipt aliasing in the transport verifier, discarded
+validated over-reservation usage in the legacy local-model path, and unused granted
+raw-node receipt-time contradictions in current policy consistency checking. These
+are bounded engineering findings, not falsification of the paper's numerical results.
+The separate unchecked correction backlog is in TODO; no runtime or sealed artifact
+was changed. Prioritize these fixes, then scoped immutable-task/JSON reuse. A future
+policy-equivalent simple-validator comparison would test TETHER's incremental value;
+hash/schema ablation alone cannot establish architectural novelty. No new study,
+closed model retry, download or external expert gate is activated.
+
+### Retained corrected working-paper checkpoint
+
 Q06a's corrected technical working paper and TETHER0.5.0 review packet are locally
 qualified. All five errata incorporated; source66/PDF83/packet284 checks pass,
 23pages/347units and all-page visual review;78-member ZIP repeats across processes.

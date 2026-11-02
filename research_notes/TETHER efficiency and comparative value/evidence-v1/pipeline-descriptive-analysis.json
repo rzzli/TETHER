@@ -1,0 +1,163 @@
+{
+  "status": "POST_HOC_DESCRIPTIVE_AUDIT_NOT_NEW_EXPERIMENT",
+  "input_pins": {
+    "paper/results/tables/native_missingness.csv": {
+      "sha256": "f7064f479b8e69e1195681c61b97b50fc0100e7307a22a971b49967df24b4657",
+      "bytes": 864
+    },
+    "paper/results/tables/native_case_results.csv": {
+      "sha256": "ff60a90221d289fbfae2b2999b84f27725b4456875951c1a4e80f5d396c012bc",
+      "bytes": 2512
+    },
+    "paper/results/tables/constructed_control_verdicts.csv": {
+      "sha256": "7c1402b725491f7012917123db6cbe6650bceaf3d3b8e1134a3218d613739785",
+      "bytes": 5119
+    },
+    "paper/results/tables/resource_phases.csv": {
+      "sha256": "59d418dcef80c084ce4412ef3a08131bcde00cdd7950dff4e47350bc59a4895e",
+      "bytes": 1197
+    },
+    "paper/results/tables/output_schedule.csv": {
+      "sha256": "ec7eed5c89cdf4cc323e2ac472d4e92808ab9ca777fc20442306b1577eff55fe",
+      "bytes": 2788
+    },
+    "paper/results/tables/native_operation_resources.csv": {
+      "sha256": "efc024934169bc4d2c70c751dd8890771b62bcc883d78647848334db10a74f9f",
+      "bytes": 1782
+    }
+  },
+  "measurement_availability": {
+    "units": 12,
+    "requested": 48,
+    "answerable": 40,
+    "available_fraction": 0.8333333333333334,
+    "nulls": 8,
+    "units_by_null_count": {
+      "0": 5,
+      "1": 6,
+      "2": 1
+    },
+    "complete_units": 5,
+    "incomplete_units": 7,
+    "independent_studies": "not_established",
+    "broader_exposure": {
+      "UNKNOWN": 12
+    }
+  },
+  "threshold_geometry": {
+    "2": {
+      "0.6": 2,
+      "0.8": 2,
+      "1.0": 2
+    },
+    "3": {
+      "0.6": 2,
+      "0.8": 3,
+      "1.0": 3
+    },
+    "4": {
+      "0.6": 3,
+      "0.8": 4,
+      "1.0": 4
+    }
+  },
+  "guard_attribution": {
+    "full_first_rejection": {
+      "G0": 1,
+      "G1": 1,
+      "G2": 2,
+      "G4": 5,
+      "G3": 1
+    },
+    "admitted_when_only_G2_is_removed": [
+      "F03",
+      "F04"
+    ],
+    "additionally_admitted_when_G1_G3_and_exactness_are_removed": [
+      "F02",
+      "F05",
+      "F06",
+      "F07",
+      "F09"
+    ],
+    "invalid_schema_passing": 8,
+    "warning": "Nested policies identify G2 incremental contribution on two exposed fixtures; the remaining five joint changes do not independently estimate each guard's causal value or prevalence."
+  },
+  "coverage_error_contrasts": [
+    {
+      "scenario_id": "C04",
+      "measurement_coverage": "unknown",
+      "core_exact_report": "true",
+      "full_source_admitted": "true",
+      "full_verified_exact": "true",
+      "measurement_completion": "false"
+    },
+    {
+      "scenario_id": "F03",
+      "measurement_coverage": "1.0",
+      "core_exact_report": "true",
+      "full_source_admitted": "false",
+      "full_verified_exact": "false",
+      "measurement_completion": "true"
+    },
+    {
+      "scenario_id": "F04",
+      "measurement_coverage": "1.0",
+      "core_exact_report": "true",
+      "full_source_admitted": "false",
+      "full_verified_exact": "false",
+      "measurement_completion": "true"
+    },
+    {
+      "scenario_id": "F05",
+      "measurement_coverage": "0.75",
+      "core_exact_report": "false",
+      "full_source_admitted": "true",
+      "full_verified_exact": "false",
+      "measurement_completion": "false"
+    },
+    {
+      "scenario_id": "F06",
+      "measurement_coverage": "0.75",
+      "core_exact_report": "false",
+      "full_source_admitted": "true",
+      "full_verified_exact": "false",
+      "measurement_completion": "false"
+    },
+    {
+      "scenario_id": "F07",
+      "measurement_coverage": "1.0",
+      "core_exact_report": "false",
+      "full_source_admitted": "true",
+      "full_verified_exact": "false",
+      "measurement_completion": "false"
+    }
+  ],
+  "resource_decomposition": {
+    "producer_wall_seconds": 203.8279999999795,
+    "verification_wall_seconds": 197.81200000003446,
+    "verification_fraction": 0.9704849186571735,
+    "shared_generation_seconds": 0.18599999975413084,
+    "native_scoring_seconds": 0.07900000002700835,
+    "remaining_producer_seconds": 5.751000000163913,
+    "ideal_ceiling_speedup_if_generation_and_scoring_cost_zero": 1.0013018082843193,
+    "ideal_ceiling_speedup_if_source_verification_cost_zero": 33.88098404285924,
+    "logical_hash_bytes_per_frozen_unique_source_byte": 49.00214219861227,
+    "original_byte_denominator_source": "paper/revisions/20261102/manuscript.md line 59; frozen 137-source frame",
+    "independent_audit_wall_seconds": 7.125,
+    "physical_io_bytes": "unknown",
+    "hash_amplification_warning": "Logical rehash byte ratio; not physical disk I/O, a cache benchmark, or measured attainable speedup.",
+    "zero_literal_scoring_times": 10,
+    "zero_abstain_scoring_times": 9
+  },
+  "output_accounting": {
+    "outputs": 38,
+    "terminal_counts": {
+      "returned": 36,
+      "malformed": 2
+    },
+    "native_output_count": 24,
+    "warning": "38 outputs and 90 repeated policy decisions are not 90 independent experimental units."
+  },
+  "inference": "No confidence intervals, tests, resampling or independent-study claims. Inputs already exposed; computed quantities are post hoc descriptive only."
+}

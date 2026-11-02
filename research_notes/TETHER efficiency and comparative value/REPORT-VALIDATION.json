@@ -1,0 +1,515 @@
+{
+  "status": "PASS",
+  "audit_date": "2026-11-02",
+  "validated_at_utc": "2026-11-02T15:18:45.718447+00:00",
+  "baseline": "b8d107059c781bb96ab27807f857f1127ed09608",
+  "scope": "Documentation synthesis, links, source pins and descriptive arithmetic; no new scientific experiment or runtime correction.",
+  "report_word_count": 4268,
+  "document_hashes": {
+    "reports/TETHER efficiency and comparative value.md": "09ac369fe7d124c4ddd512711f227bee9f7d340ca9752053b6138d3dffa9c277",
+    "memory/research-log-2026-11-02-comparative-efficiency-audit.md": "1b4ea2d97ea574f8a5adca669edfb7b6e36b8dc953026b969626686c4e3866e2",
+    "memory/MEMORY.md": "892bdafca559a8f21dd85c23309cc342fcb727fa0066e9292017ed9276ca7679",
+    "memory/project-goals.md": "ba5ebf24dc40a1965d56da4d039ffb41f548d429e699fde2ad2a6eb4c1d17d2c",
+    "README.md": "35730f1eb020402325cb401d3f59149462fd034a8dc3d8decb0aa540816bc590",
+    "TODO.md": "5a43a5e9ec5175fddcc8469396202c25bad2f1aa0fa0b826e768c14f6ec1fd63"
+  },
+  "research_note_hashes": {
+    "comparative_systems.md": "e515ccec485b6960ae106e6125986bbd64b98a957fa46e9ac8b6bbf15d92fbde",
+    "runtime/runtime_audit.md": "c3acfbc7fbdec4cb150795a128b6bbe396367f784d7a88ab974278570e594e8a",
+    "pipeline_argument.md": "3ba354550e565bb07b4a3ac1f7d639f66d5b0042e8e80eb92264afbc9d0a5e71",
+    "peer_checks.md": "18e7d2ce75b8915130bc2530d3ee24482b7a4a5d11154d8dfc2f16dbb1bfb64a"
+  },
+  "link_validation": {
+    "local_count": 61,
+    "external_count": 17,
+    "links": [
+      {
+        "target": "D:/Projects/drug_target_agents/paper/revisions/20261102/manuscript.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/peer_checks.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/pins-v1/runtime_inventory.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/planning/Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/EVIDENCE-MANIFEST.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/revisions/20261102/manuscript.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/revisions/20261102/manuscript.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "https://pubmed.ncbi.nlm.nih.gov/42752167/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://raw.githubusercontent.com/harrisongzhang/TheVirtualBiotech/71f9da68c95c5ee0ef4c1d9b8f45f10693de022d/README.md",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12773016/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://aclanthology.org/2025.acl-long.167.pdf",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://pubmed.ncbi.nlm.nih.gov/42424436/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://github.com/snap-stanford/Biomni",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://www.biorxiv.org/content/10.64898/2026.05.12.724604v2.full",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://arxiv.org/html/2606.19245v2",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://aclanthology.org/2023.emnlp-main.398/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://aclanthology.org/2024.naacl-long.20/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://www.w3.org/TR/prov-dm/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://docs.seqera.io/nextflow/cache-and-resume",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://docs.seqera.io/nextflow/reference/process/directives/cache",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/comparative_systems.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12970349/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://pubmed.ncbi.nlm.nih.gov/42752167/",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://aclanthology.org/2025.acl-long.167.pdf",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "https://arxiv.org/html/2606.19245v2",
+        "kind": "external_primary_source",
+        "fresh_fetch_in_writer": false
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/RELATED-WORK-SOURCE-AUDIT.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/docs/TETHER-VERIFICATION-SCOPE.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/peer_checks.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/tools/data/Test-DownloadBatch.ps1:24",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/tools/data/Test-DownloadBatch.ps1:69",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/peer-controls-results.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/pipeline_argument.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/local_model.py:194",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/workflow.py:200",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/local_model.py:109",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/peer-controls-results.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/packages/tether/src/tether/_presentation.py:254",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/workflow.py:190",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/installed-witness.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/packages/tether/src/tether/_catalog_policy.py:421",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/packages/tether/src/tether/_catalog_binding.py:113",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/provenance.py:127",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/docs/TETHER-CATALOG-POLICY.md:35",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/peer_checks.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/accounting-and-compiler-probes.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_sources.py:486",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_sources.py:405",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_sources.py:234",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/stable_read.py:122",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_rows.py:169",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/policy-and-hash-probes.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/packages/tether/src/tether/_catalog_binding.py:186",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/packages/tether/src/tether/_presentation.py:263",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/runtime_audit.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-tool-inventory.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-q06-20261102/BUILD-RECIPE.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/pins-v1/runtime_inventory.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-descriptive-analysis.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/native_missingness.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/constructed_control_verdicts.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/constructed_control_verdicts.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/resource_phases.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/resource_phases.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/revisions/20261102/manuscript.md:59",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/paper/results/tables/native_operation_resources.csv",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-partial-threshold.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_evaluation.py:164",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/planning/Project Progress Reassessment 2026-11-02 - Source Composition Feasibility.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/comparative_systems.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/data/DATA_PLAN.md:194",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/runtime_audit.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/pipeline_argument.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/core-tests-initial.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/core-tests-correction.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/runtime/evidence-v1/optional-tests.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-focused-tests.json",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/planning/TETHER Corrective Execution Plan 2026-11-02.md",
+        "kind": "local",
+        "exists": true
+      },
+      {
+        "target": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/REPORT-VALIDATION.json",
+        "kind": "local",
+        "exists": true
+      }
+    ],
+    "external_access": "Primary-source access and limits inherited from completed comparative research; writer made no new fetch."
+  },
+  "preservation": {
+    "runtime_inventory_files_rehashed": 84,
+    "runtime_mismatches": [],
+    "tool_inventory_files_rehashed": 126,
+    "tool_mismatches": [],
+    "git_diff_vs_baseline_runtime_packages_tools_paper_catalog": "",
+    "historical_Q_P_C_N_statuses_unchanged": true,
+    "original_raw_sources_rehashed": false,
+    "sealed_artifacts_rebuilt": false
+  },
+  "numerical_crosschecks": {
+    "missingness_null_counts": {
+      "0": 5,
+      "1": 6,
+      "2": 1
+    },
+    "measurement_requested": 48,
+    "measurement_answerable": 40,
+    "invalid_schema_pass": 8,
+    "first_rejection": {
+      "G0": 1,
+      "G1": 1,
+      "G2": 2,
+      "G4": 5,
+      "G3": 1
+    },
+    "producer_seconds": 203.8279999999795,
+    "verification_seconds": 197.81200000003446,
+    "verification_percent": 97.04849186571734,
+    "ideal_speedup_generation_scoring_free": 1.0013018082843193,
+    "logical_hash_amplification": 49.00214219861227,
+    "zero_scoring_counts": {
+      "literal": 10,
+      "abstain": 9
+    },
+    "all_six_aggregate_input_hashes_match": true
+  },
+  "test_scope": "Prior audit evidence: 240 core scope initially 238 pass/1 optional skip/1 harness error; corrected affected 62 pass; optional 54 pass; pipeline 35 pass. Overlapping counts not summed; no new full suite.",
+  "limits": [
+    "Three new P2 findings remain unpatched.",
+    "No competitor execution, new models, dataset acquisition, protected human/clinical reads or provider spending.",
+    "Fictional probes are engineering witnesses, not scientific independent observations.",
+    "No full historical line audit, raw-data rehash, physical-I/O benchmark or Linux/hosted qualification.",
+    "Author facts deferred; external experts retired; Q04/Q05 not activated."
+  ],
+  "retained_compact_evidence": {
+    "manifest_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/EVIDENCE-MANIFEST.json",
+    "manifest_sha256": "95f57a1d516340187a01d254ac89d9adcb42f44402c015d539da5ec07f977c51",
+    "entries": [
+      {
+        "original_path": "D:/Projects/drug_target_agents/data/cache/comparative-audit-20261102/peer-controls-v1/results.json",
+        "retained_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/peer-controls-results.json",
+        "bytes": 3122,
+        "original_sha256": "5cca59ca8c9a98503f95e7e7638f756b2dd7e2962b77333435aa5cb93eee50c5",
+        "retained_sha256": "5cca59ca8c9a98503f95e7e7638f756b2dd7e2962b77333435aa5cb93eee50c5",
+        "byte_identical": true
+      },
+      {
+        "original_path": "D:/Projects/drug_target_agents/data/cache/comparative-audit-20261102/pipeline-attempt-01/tool-inventory.json",
+        "retained_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-tool-inventory.json",
+        "bytes": 66751,
+        "original_sha256": "99a1ec6d483e5f4d17a883b20b43f35fb8c2efc85b006592a72ac053eedfc01d",
+        "retained_sha256": "99a1ec6d483e5f4d17a883b20b43f35fb8c2efc85b006592a72ac053eedfc01d",
+        "byte_identical": true
+      },
+      {
+        "original_path": "D:/Projects/drug_target_agents/data/cache/comparative-audit-20261102/pipeline-attempt-01/descriptive-analysis.json",
+        "retained_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-descriptive-analysis.json",
+        "bytes": 5276,
+        "original_sha256": "9e79f1e832a0756f9ee3e77f1639be50dbe8e8a41fb89705cc1baedcbaafe48d",
+        "retained_sha256": "9e79f1e832a0756f9ee3e77f1639be50dbe8e8a41fb89705cc1baedcbaafe48d",
+        "byte_identical": true
+      },
+      {
+        "original_path": "D:/Projects/drug_target_agents/data/cache/comparative-audit-20261102/pipeline-attempt-02/result.json",
+        "retained_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-focused-tests.json",
+        "bytes": 284,
+        "original_sha256": "a02f794f77d5ee5465849be695c1e90157a4954efd724115998197fade3b542c",
+        "retained_sha256": "a02f794f77d5ee5465849be695c1e90157a4954efd724115998197fade3b542c",
+        "byte_identical": true
+      },
+      {
+        "original_path": "D:/Projects/drug_target_agents/data/cache/comparative-audit-20261102/pipeline-attempt-03/result.json",
+        "retained_path": "D:/Projects/drug_target_agents/research_notes/TETHER efficiency and comparative value/evidence-v1/pipeline-partial-threshold.json",
+        "bytes": 1546,
+        "original_sha256": "5077aee49c974cf087368c5c099c3020e10dbb6341df61f5b94b96fcdba4241f",
+        "retained_sha256": "5077aee49c974cf087368c5c099c3020e10dbb6341df61f5b94b96fcdba4241f",
+        "byte_identical": true
+      }
+    ],
+    "total_bytes": 76979,
+    "all_original_retained_hashes_match": true,
+    "report_direct_ignored_cache_links": 0,
+    "new_tests_or_research": false,
+    "fixture_trees_or_raw_datasets_copied": false
+  }
+}
