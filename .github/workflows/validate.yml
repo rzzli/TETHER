@@ -9,6 +9,11 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         mode: [core, full]
+        # Full qualification includes native Win32 handle/path controls and
+        # requires zero skips. Ubuntu retains the portable core gate.
+        exclude:
+          - os: ubuntu-latest
+            mode: full
     runs-on: ${{ matrix.os }}
     # Complete local gates exceed 20 minutes; hosted timing is not yet qualified.
     timeout-minutes: 90

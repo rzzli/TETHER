@@ -1,0 +1,26 @@
+test_concurrent_json_publication_has_one_winner (tests.test_atomic_publication.AtomicPublicationTests.test_concurrent_json_publication_has_one_winner) ... ok
+test_directory_initialization_uses_shared_lock (tests.test_atomic_publication.AtomicPublicationTests.test_directory_initialization_uses_shared_lock) ... ok
+test_directory_permission_failure_propagates_without_retry (tests.test_atomic_publication.AtomicPublicationTests.test_directory_permission_failure_propagates_without_retry) ... ok
+test_existing_target_never_changes (tests.test_atomic_publication.AtomicPublicationTests.test_existing_target_never_changes) ... ok
+test_json_without_hardlinks_windows_or_fail_closed_posix (tests.test_atomic_publication.AtomicPublicationTests.test_json_without_hardlinks_windows_or_fail_closed_posix) ... ok
+test_receipt_concurrent_publication_and_conflict (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_concurrent_publication_and_conflict) ... ok
+test_receipt_without_hardlinks_preserves_exact_transport_bytes (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_without_hardlinks_preserves_exact_transport_bytes) ... ok
+test_receipt_write_failure_does_not_update_node (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_write_failure_does_not_update_node) ... ok
+test_unsupported_publication_primitive_fails_closed (tests.test_atomic_publication.AtomicPublicationTests.test_unsupported_publication_primitive_fails_closed) ... ok
+test_write_failure_cleans_temporary_and_keeps_original (tests.test_atomic_publication.AtomicPublicationTests.test_write_failure_cleans_temporary_and_keeps_original) ... ok
+test_acquisition_does_not_promote_bad_receipts (tests.test_maintenance.MaintenanceTests.test_acquisition_does_not_promote_bad_receipts) ... ok
+test_complete_normalization_clears_only_missing_input_blocker (tests.test_maintenance.MaintenanceTests.test_complete_normalization_clears_only_missing_input_blocker) ... ok
+test_concurrent_updates_have_one_winner_without_lost_changes (tests.test_maintenance.MaintenanceTests.test_concurrent_updates_have_one_winner_without_lost_changes) ... ok
+test_correction_rejects_tampering_and_scientific_or_collection_promotion (tests.test_maintenance.MaintenanceTests.test_correction_rejects_tampering_and_scientific_or_collection_promotion) ... ok
+test_forbidden_fields_and_write_failure_leave_catalog_unchanged (tests.test_maintenance.MaintenanceTests.test_forbidden_fields_and_write_failure_leave_catalog_unchanged) ... ok
+test_missing_demo_inputs_do_not_leave_output (tests.test_maintenance.MaintenanceTests.test_missing_demo_inputs_do_not_leave_output) ... ok
+test_no_clobber_and_readonly_manifest_preparation (tests.test_maintenance.MaintenanceTests.test_no_clobber_and_readonly_manifest_preparation) ... ok
+test_powershell_overwrite_and_queue_identity_without_monitor_start (tests.test_maintenance.MaintenanceTests.test_powershell_overwrite_and_queue_identity_without_monitor_start) ... ok
+test_required_probe_none_and_empty_cannot_succeed (tests.test_maintenance.MaintenanceTests.test_required_probe_none_and_empty_cannot_succeed) ... ok
+test_status_correction_preserves_acquisition_policy_and_scientific_status (tests.test_maintenance.MaintenanceTests.test_status_correction_preserves_acquisition_policy_and_scientific_status) ... ok
+test_transport_update_preserves_policy_and_scientific_fields (tests.test_maintenance.MaintenanceTests.test_transport_update_preserves_policy_and_scientific_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 2.613s
+
+OK

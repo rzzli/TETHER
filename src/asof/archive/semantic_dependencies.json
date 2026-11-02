@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "policy": "v0.2-compatibility-20261026",
-  "executing_build_profile": "tether-ce-corrections-0.3.12-20261102",
-  "previous_resource_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
-  "scope": "Reviewed executing helper migration to0.3.12: version declaration, validated over-reservation usage reconciliation, and shared receipt-availability helper. Ordinary valid archived runs remain eligible; contradictory failed overquote accounting is rejected by stronger verification. No archived bytes or frozen admission policy are rewritten.",
-  "compatibility_review": "planning/review-assets/tether-ce-fixes-20261102/archive-profile/REVIEW.md",
+  "executing_build_profile": "tether-ce-corrections-0.3.12-atomic-retry-20261102",
+  "previous_resource_sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59",
+  "scope": "Second unpublished 0.3.12 candidate profile: bounded atomic JSON replacement retry for native Windows errors 5/32/33 and preservation of primary failures on cleanup. Serialization, canonical fingerprints, admission policy, archive Python and prior artifacts are unchanged. Earlier qualification records describe only their retained source bytes.",
+  "compatibility_review": "planning/review-assets/tether-ce-fixes-20261102/archive-profile-v2/REVIEW.md",
   "modules": {
     "__init__.py": "d315a82efe204650f93ac5d79c68d3349e3d19002f62d13948f1a1a05ea8fff7",
     "__main__.py": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
@@ -25,7 +25,7 @@
     "retrieval.py": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
     "scorer.py": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
     "semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
-    "serde.py": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+    "serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
     "wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
     "workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6"
   }

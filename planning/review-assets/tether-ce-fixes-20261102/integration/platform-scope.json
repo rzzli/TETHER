@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "Validator skip-policy and failfast regression tests; CI configuration review only, no hosted or Linux execution",
+  "utc": "2026-11-02T20:43:17.264068+00:00",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "red_control": {
+    "test": "ValidationGateTests.test_native_windows_skip_is_only_allowed_in_core_mode",
+    "observed_before_allowlist_change": "FAILED; core rejected the explicit new native-Windows skip reason",
+    "evidence": "Root tool execution before tools/validate.py change; no standalone raw red log retained"
+  },
+  "core_policy": "Allows the exact native held-handle Windows skip reason; all other unexpected skips/failures remain failures",
+  "full_policy": "Every skip is still a failure; final aggregate requires exactly2020tests and no skips",
+  "ci_matrix": {
+    "retained": [
+      "ubuntu-latest/core",
+      "windows-latest/core",
+      "windows-latest/full"
+    ],
+    "excluded": [
+      "ubuntu-latest/full"
+    ],
+    "reason": "Native Windows handle/path controls are intentionally unavailable on Linux; zero-skip full qualification is Windows only. This is a declared platform boundary, not Linux qualification."
+  },
+  "initial_green_attempt_caveat": "An initial root run without workspace TEMP returned7testspassed but included sandbox TEMP cleanup errors inside expected-failure tests. The retained fresh workspace-TEMP rerun has no such errors and is the qualifying evidence.",
+  "files": {
+    "tools/validate.py": "ea5a4d12079b80b6a3f5d38820ee77027098b08d43dc9f3d2d6cd8c7543b7d53",
+    "tests/test_validation.py": "22de9e2f0369f1b0a74c685da05f7c579555556fa67a3914d2925abd79554e39",
+    "tests/test_validation_live_errors.py": "b0ce320ab7d96250d0959230374b9dc272cd260ab7886b7a643ee18c84534302",
+    ".github/workflows/validate.yml": "ecfdcc1ef8530548a9114123e29962c46b07ba2a1f88d6eedf07404a1d1d328e",
+    "planning/review-assets/tether-ce-fixes-20261102/integration/platform-gate-tests.log": "139deef5071104bf8502e605dc191be00a2bc160a67fed30624461a60159ca42"
+  }
+}

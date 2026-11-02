@@ -32,6 +32,17 @@ Windows qualification uses the CLI polling loop with one reader per pipe. Micros
 
 Workflow token/cost/time budgets, individual filesystem read limits and a child-process envelope are different limits. An elapsed-time bound does not estimate scientific feasibility or guarantee that a large source build will fit. Neither the facade nor the frozen engine is an operating-system sandbox. Host compromise, malicious native code, forced termination, filesystem unavailability and unreported remote billing are outside these consistency guarantees.
 
+The unpublished 0.5.1/0.3.12 candidate adds bounded retry to mutable JSON file
+replacement on Windows: native access/sharing/lock errors permit three attempts
+on the same staged bytes, with 50/100 ms requested waits. Permanent failures and
+interruptions still propagate; cleanup errors cannot replace the primary error.
+This neither retries model calls nor changes the no-clobber publisher. It does
+not guarantee write availability, wall-clock completion, or version ordering
+under contention. The [retained peer probes](../planning/review-assets/tether-ce-fixes-20261102/integration/windows-replace-peer/REVIEW.md)
+include explicit failed writes and last-completing-writer-wins behavior. Full
+candidate qualification remains pending; earlier same-version candidate wheels
+have different code hashes and must be treated separately.
+
 ## Verifying historical artifacts
 
 Keep the original outer receipt hash outside the artifact tree. Select the exact archived TETHER wheel and the pinned `asof-target-agents==0.3.11` wheel in a separate environment; install those local files without dependency resolution or network access. Run that environment's `python -I -m tether verify --run-dir <archive> --receipt-sha256 <original-hash>`. Match the launcher source fingerprint as well as the displayed version: two source revisions with the same version number are not interchangeable proofs.

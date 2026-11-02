@@ -1,0 +1,12 @@
+{
+  "status": "PRESERVED_AWAITING_REVIEWED_SERDE_HASH",
+  "previous_resource_sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59",
+  "original_profile_sha256": "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5",
+  "active_resource": "src/asof/archive/semantic_dependencies.json",
+  "previous_copy": "planning/review-assets/tether-ce-fixes-20261102/archive-profile-v2/semantic_dependencies-0.3.12-first-candidate.json",
+  "candidate_versions": {
+    "asof-target-agents": "0.3.12",
+    "tether-target-agents": "0.5.1"
+  },
+  "scope": "Unpublished candidate integration; no previous evidence or active profile changed"
+}

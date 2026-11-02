@@ -8,6 +8,7 @@ import math
 import types
 import os
 import tempfile
+import time
 from dataclasses import MISSING, fields, is_dataclass
 from datetime import date, datetime, timezone
 from collections.abc import Mapping
@@ -15,6 +16,10 @@ from types import MappingProxyType
 from enum import Enum
 from pathlib import Path
 from typing import Any, Union, get_args, get_origin, get_type_hints
+
+
+_WINDOWS_REPLACE_RETRY = os.name == "nt"
+_REPLACE_RETRY_DELAYS = (0.05, 0.1)
 
 
 class ContractError(ValueError):
@@ -215,19 +220,49 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _replace_staged(temporary: Path, path: Path) -> None:
+    """Retry only native Windows access failures on the same staged bytes.
+
+    Error 5 can be permanent; this is a bounded retry policy, not a diagnosis.
+    At most three replace calls and 150 ms requested sleep are added. Individual
+    filesystem calls/scheduler delays are not a hard wall-time guarantee. This
+    mutable-file operation is deliberately separate from no-clobber publication.
+    """
+    for attempt in range(len(_REPLACE_RETRY_DELAYS) + 1):
+        try:
+            os.replace(temporary, path)
+            return
+        except OSError as error:
+            if (not _WINDOWS_REPLACE_RETRY or getattr(error, "winerror", None) not in (5, 32, 33) or
+                    attempt == len(_REPLACE_RETRY_DELAYS)):
+                if attempt:
+                    error.add_note(f"Atomic JSON replacement failed after {attempt + 1} attempts; same staged file retained until cleanup")
+                raise
+            time.sleep(_REPLACE_RETRY_DELAYS[attempt])
+
+
 def write_json(path: Path, value: Any, *, compact: bool = False) -> None:
     payload = canonical(value) if compact else (
         json.dumps(encode(value), indent=2, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
     descriptor, name = tempfile.mkstemp(prefix=".writing-", dir=path.parent)
     temporary = Path(name)
+    primary = None
     try:
         with os.fdopen(descriptor, "wb") as stream:
             stream.write(payload)
             stream.flush()
             os.fsync(stream.fileno())
-        os.replace(temporary, path)
+        _replace_staged(temporary, path)
+    except BaseException as error:
+        primary = error
+        raise
     finally:
-        temporary.unlink(missing_ok=True)
+        try:
+            temporary.unlink(missing_ok=True)
+        except BaseException as cleanup_error:
+            if primary is None:
+                raise
+            primary.add_note(f"Staged JSON cleanup failed ({type(cleanup_error).__name__}): {cleanup_error}; path={temporary}")
 
 
 def _windows_path_spelling(value: str) -> str:

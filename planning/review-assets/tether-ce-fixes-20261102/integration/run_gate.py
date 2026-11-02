@@ -1,4 +1,8 @@
-"""Run the ordinary complete gate with before/after source pins and fresh logs."""
+"""Run the complete gate with source pins, fresh logs and ordinary fail-fast reports.
+
+A successful run still executes every discovered test. Failed runs stop at their
+first test failure, letting the driver publish its terminal report and bracket.
+"""
 from __future__ import annotations
 
 import argparse
@@ -62,7 +66,7 @@ def main():
     temporary.mkdir(exist_ok=False)
     environment.update(TMP=str(temporary), TEMP=str(temporary), PYTHONDONTWRITEBYTECODE="1")
     argv = [sys.executable, "-B", str(ROOT / "tools/validate.py"), "--mode", "full", "--package",
-            "--report", str(names["report"])]
+            "--failfast", "--report", str(names["report"])]
     record = {"schema_version": 1, "status": "started", "argv": argv, "cwd": str(ROOT),
               "started_at_utc": datetime.now(timezone.utc).isoformat(),
               "before_path": str(names["before"]), "before_sha256": digest(names["before"])}

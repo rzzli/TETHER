@@ -41,6 +41,15 @@ class ValidationGateTests(unittest.TestCase):
         self.assertTrue(validate.successful_tests(result, 'core'))
         self.assertFalse(validate.successful_tests(result, 'full'))
 
+    def test_native_windows_skip_is_only_allowed_in_core_mode(self):
+        def native_only():
+            raise unittest.SkipTest('native held-handle test requires Windows')
+        result = unittest.TextTestRunner(stream=io.StringIO()).run(unittest.FunctionTestCase(native_only))
+        self.assertEqual(result.testsRun, 1)
+        self.assertEqual(len(result.skipped), 1)
+        self.assertTrue(validate.successful_tests(result, 'core'))
+        self.assertFalse(validate.successful_tests(result, 'full'))
+
     def test_parquet_optional_skip_keeps_wrong_arrow_version_rejected(self):
         from tests.test_study_source_fact_sources import SourceFactSourceTests
         wrong_arrow = ModuleType('pyarrow')

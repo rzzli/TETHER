@@ -16,6 +16,13 @@ The source includes optional study preparation, recorded comparison and bounded
 model interfaces. Recorded fixtures and passing software tests are not scientific
 performance measurements.
 
+Current full qualification includes native Windows handle/path controls and
+requires zero skips; CI schedules it on Windows. Ubuntu retains the portable
+core gate with named optional/platform skips. This configuration does not
+establish Linux execution results. The unpublished 0.5.1/0.3.12 candidate is
+being requalified after a bounded Windows file-replacement correction; earlier
+candidate artifacts remain identified by their original code and wheel hashes.
+
 ## Current status and next step
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.

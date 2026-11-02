@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "scope": "Archive regression and relocated fictional old-run verification; no model/network/benchmark execution",
+  "profile_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
+  "modules": {
+    "__init__.py": "d315a82efe204650f93ac5d79c68d3349e3d19002f62d13948f1a1a05ea8fff7",
+    "__main__.py": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
+    "agents.py": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+    "artifacts.py": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+    "atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+    "chrono.py": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
+    "cli.py": "ad2f44a43387c884b2af9547a246322e751e0ae1ebcc3f0506baeed5788ff5f0",
+    "contracts.py": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+    "evaluation.py": "d76ca20564a289a66ec4ac27c98aa35e0a90afbec5afef46d643e09691644eb3",
+    "features.py": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+    "ingest.py": "79575d9dd4f8163eecb2c9e2611368e3d4bd5f6f02338795c377c3fb9a75ee61",
+    "journal.py": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+    "ledger.py": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+    "local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+    "maintenance.py": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a",
+    "provenance.py": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3",
+    "retrieval.py": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+    "scorer.py": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+    "semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+    "serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+    "wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+    "workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6"
+  },
+  "script_sha256": "86f07b765bd74cfc37c464a0c16856ac2546b8e97a8375cdd6f79659863c8155",
+  "work": "D:\\Projects\\drug_target_agents\\data\\cache\\ce-archive-profile-v2-attempt01",
+  "tests": {
+    "run": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tests_log_sha256": "37c5e240884c3e26a2ab13e726f46f39a0799337ab666cd50440bf7ebc7b4cf1",
+  "old_producer": {
+    "argv": [
+      "D:\\Projects\\drug_target_agents\\data\\cache\\tether-050-qualified-build\\env\\Scripts\\python.exe",
+      "-I",
+      "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\archive-profile-v2\\run_archive_regressions.py",
+      "--produce-old",
+      "--work",
+      "D:\\Projects\\drug_target_agents\\data\\cache\\ce-archive-profile-v2-attempt01\\old"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e0da7cfdbb7c05a263639ef105a36d73520410a17d60e4e5ba1a3023e79c7e97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "old_manifest_sha256": "74068823a345716221aa1de722e2b96c74b942577c7cec3153b8475708652955",
+  "relocated_controls": [
+    {
+      "kind": "normal",
+      "expected": "verified",
+      "disposition": "verified",
+      "verification": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 2,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 66,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 43
+      }
+    },
+    {
+      "kind": "unknown-timeout",
+      "expected": "verified",
+      "disposition": "verified",
+      "verification": {
+        "status": "relocated_receipt_verified",
+        "byte_integrity": "verified",
+        "semantic_consistency": "verified",
+        "source_binding": "relocated_verified_original_bytes",
+        "source_artifacts_checked": 2,
+        "code_archive_integrity": "verified_original_pins",
+        "code_files_checked": 66,
+        "executing_policy": "v0.2-compatibility-20261026",
+        "executing_dependency_resource_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
+        "archived_code_executed": false,
+        "external_anchor_checked": true,
+        "scientific_validity": "not_established",
+        "trace_events": 35
+      }
+    },
+    {
+      "kind": "invalid-overquote",
+      "expected": "rejected",
+      "disposition": "rejected",
+      "error": "Failed local response lost its validated usage"
+    }
+  ],
+  "completed_at_utc": "2026-11-02T20:42:39.208656+00:00"
+}

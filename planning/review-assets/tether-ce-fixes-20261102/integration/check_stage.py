@@ -29,7 +29,8 @@ VERSIONS = {"asof-target-agents": "0.3.12", "tether-target-agents": "0.5.1"}
 SOURCE_ROOTS = {"asof": ROOT / "src/asof", "tether": ROOT / "packages/tether/src/tether"}
 PROFILE_PATH = "src/asof/archive/semantic_dependencies.json"
 OLD_PROFILE_SHA256 = "f30b24c24af91523d67e98c0daec50a78aba1e637db89fd8d21c20386988dba5"
-NEW_PROFILE_SHA256 = "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+FIRST_PROFILE_SHA256 = "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59"
+NEW_PROFILE_SHA256 = "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016"
 
 
 def sha(path):
@@ -115,50 +116,49 @@ def check_source_bracket(audit, path, full_gate, full_log):
                ("schema_version", "argv", "cwd", "started_at_utc", "before_path", "before_sha256", "pid")),
                "full gate start record binds bracket")
     argv = bracket["argv"]
-    audit.need(len(argv) == 8 and argv[1] == "-B" and Path(argv[2]).resolve() == (ROOT / "tools/validate.py").resolve()
-               and argv[3:7] == ["--mode", "full", "--package", "--report"] and
-               Path(argv[7]).resolve() == full_gate.resolve() and Path(bracket["cwd"]).resolve() == ROOT,
+    audit.need(len(argv) == 9 and argv[1] == "-B" and Path(argv[2]).resolve() == (ROOT / "tools/validate.py").resolve()
+               and argv[3:8] == ["--mode", "full", "--package", "--failfast", "--report"] and
+               Path(argv[8]).resolve() == full_gate.resolve() and Path(bracket["cwd"]).resolve() == ROOT,
                "full gate invoked required complete driver")
     start, finish = (datetime.fromisoformat(bracket[field]) for field in ("started_at_utc", "finished_at_utc"))
     audit.need(start.utcoffset() is not None and finish.utcoffset() is not None and finish >= start,
                "full gate bracket timestamps ordered")
 
 
-def check_archive_profile(audit, validation_path):
-    directory = EVIDENCE / "archive-profile"
+def check_profile_step(audit, directory, old_pin, new_pin, changed_modules, profile_name):
     prepared_path, applied_path = directory / "PREPARED.json", directory / "APPLIED.json"
     prepared, applied = audit.read(prepared_path), audit.read(applied_path)
     old_path, candidate_path = ROOT / prepared["old_copy"], ROOT / prepared["candidate"]
     old, candidate = audit.read(old_path), audit.read(candidate_path)
-    active = audit.read(ROOT / PROFILE_PATH)
     audit.need(prepared["baseline"] == applied["baseline"] == BASELINE and
                prepared["active_resource"] == applied["active_resource"] == PROFILE_PATH and
-               prepared["old_resource_sha256"] == applied["old_resource_sha256"] == sha(old_path) == OLD_PROFILE_SHA256 and
-               prepared["new_resource_sha256"] == applied["new_resource_sha256"] == sha(candidate_path) ==
-               sha(ROOT / PROFILE_PATH) == NEW_PROFILE_SHA256, "exact reviewed archive profile migration")
-    baseline_bytes = subprocess.check_output(["git", "show", BASELINE + ":" + PROFILE_PATH], cwd=ROOT)
-    audit.need(baseline_bytes == old_path.read_bytes(), "old profile bytes preserved from baseline")
+               prepared["old_resource_sha256"] == applied["old_resource_sha256"] == sha(old_path) == old_pin and
+               prepared["new_resource_sha256"] == applied["new_resource_sha256"] == sha(candidate_path) == new_pin,
+               "exact reviewed archive profile migration", migration=directory.name)
     audit.need(applied["prepared_sha256"] == sha(prepared_path) and
                applied["review_sha256"] == sha(ROOT / prepared["review"]), "archive migration application binds review")
     unchanged_metadata = {key: value for key, value in old.items() if key not in
                           {"modules", "executing_build_profile", "previous_resource_sha256", "scope", "compatibility_review"}}
-    audit.need(active == candidate and set(candidate) == set(old) and
+    audit.need(set(candidate) == set(old) and
                all(candidate[key] == value for key, value in unchanged_metadata.items()) and
-               candidate["previous_resource_sha256"] == OLD_PROFILE_SHA256 and
-               candidate["executing_build_profile"] == "tether-ce-corrections-0.3.12-20261102" and
+               candidate["previous_resource_sha256"] == old_pin and
+               candidate["executing_build_profile"] == profile_name and
                candidate["compatibility_review"] == prepared["review"], "archive policy and metadata delta bounded")
     changed = {name for name in old["modules"] if old["modules"][name] != candidate["modules"].get(name)}
     audit.need(set(old["modules"]) == set(candidate["modules"]) and len(old["modules"]) == 22 and
-               changed == set(prepared["changed_modules"]) == {"__init__.py", "local_model.py", "provenance.py"} and
-               prepared["unchanged_module_count"] == 19 and prepared["policy_unchanged"] is True,
-               "archive inventory retains nineteen unchanged module pins")
+               changed == set(prepared["changed_modules"]) == changed_modules and
+               prepared["unchanged_module_count"] == 22 - len(changed_modules) and prepared["policy_unchanged"] is True,
+               "archive inventory changes only reviewed module pins", migration=directory.name)
     for name in changed:
         audit.need(prepared["changed_modules"][name] == dict(old_sha256=old["modules"][name], new_sha256=candidate["modules"][name]),
                    "archive reviewed module delta matches", module=name)
-    audit.pins({"src/asof/" + name: expected for name, expected in candidate["modules"].items()})
+    return old_path, candidate_path, candidate
+
+
+def check_profile_validation(audit, validation_path, directory, profile_pin, modules):
     validation = audit.read(validation_path)
-    audit.need(validation["status"] == "PASS" and validation["profile_sha256"] == NEW_PROFILE_SHA256 and
-               validation["modules"] == candidate["modules"] and
+    audit.need(validation["status"] == "PASS" and validation["profile_sha256"] == profile_pin and
+               validation["modules"] == modules and
                validation["script_sha256"] == sha(directory / "run_archive_regressions.py"), "archive profile qualification bound")
     audit.need(validation["tests"] == dict(run=52, failures=0, errors=0, skipped=0), "archive profile regression suite passed")
     work = Path(validation["work"])
@@ -182,8 +182,24 @@ def check_archive_profile(audit, validation_path):
             audit.need(row["expected"] == row["disposition"] == "verified" and
                        verified["semantic_consistency"] == "verified" and verified["external_anchor_checked"] is True and
                        verified["archived_code_executed"] is False and
-                       verified["executing_dependency_resource_sha256"] == NEW_PROFILE_SHA256,
+                       verified["executing_dependency_resource_sha256"] == profile_pin,
                        "ordinary valid old archive verifies under reviewed helper profile", kind=row["kind"])
+
+
+def check_archive_profile(audit, validation_path):
+    first_dir, second_dir = EVIDENCE / "archive-profile", EVIDENCE / "archive-profile-v2"
+    old_path, first_path, first = check_profile_step(audit, first_dir, OLD_PROFILE_SHA256, FIRST_PROFILE_SHA256,
+        {"__init__.py", "local_model.py", "provenance.py"}, "tether-ce-corrections-0.3.12-20261102")
+    baseline_bytes = subprocess.check_output(["git", "show", BASELINE + ":" + PROFILE_PATH], cwd=ROOT)
+    audit.need(baseline_bytes == old_path.read_bytes(), "old profile bytes preserved from baseline")
+    check_profile_validation(audit, first_dir / "VALIDATION.json", first_dir, FIRST_PROFILE_SHA256, first["modules"])
+    previous_path, candidate_path, candidate = check_profile_step(audit, second_dir, FIRST_PROFILE_SHA256, NEW_PROFILE_SHA256,
+        {"serde.py"}, "tether-ce-corrections-0.3.12-atomic-retry-20261102")
+    audit.need(first_path.read_bytes() == previous_path.read_bytes() and
+               (ROOT / PROFILE_PATH).read_bytes() == candidate_path.read_bytes(),
+               "active profile follows exact two-step reviewed migration")
+    audit.pins({"src/asof/" + name: expected for name, expected in candidate["modules"].items()})
+    check_profile_validation(audit, validation_path, second_dir, NEW_PROFILE_SHA256, candidate["modules"])
     return old_path
 
 
@@ -401,9 +417,47 @@ def check_regressions(audit):
                "CE03 old seal paired compatibility")
 
 
+def check_atomic_validation(audit, path):
+    result = audit.read(path)
+    directory = EVIDENCE / "integration/windows-replace"
+    audit.need(result["status"] == "PASS" and result["attempt_limit"] == 3 and
+               result["requested_backoff_seconds"] == [0.05, 0.1] and result["eligible_native_errors"] == [5, 32, 33] and
+               result["no_clobber_sources_unchanged"] is True and
+               result["provider_spending_usd"] == result["actual_model_calls"] == 0,
+               "bounded atomic replacement qualification passed")
+    audit.need(set(result["source_sha256"]) == {"src/asof/serde.py", "src/asof/atomic.py", "src/asof/maintenance.py",
+                                               "tests/test_serde_atomic_replace.py"}, "atomic source and regression pins complete")
+    audit.pins(result["source_sha256"])
+    audit.need(result["driver_sha256"] == sha(directory / "run_regressions.py") and
+               result["summarizer_sha256"] == sha(directory / "summarize.py"), "atomic regression driver and summary code unchanged")
+    phases = {"red": 10, "green": 10, "compatibility": 72, "atomic-maintenance": 21}
+    audit.need(set(result["evidence_sha256"]) == {phase + "-results.json" for phase in phases} and
+               set(result["log_sha256"]) == {phase + "-tests.log" for phase in phases},
+               "atomic retained result and log inventories complete")
+    for phase, count in phases.items():
+        record_path, log_path = directory / (phase + "-results.json"), directory / (phase + "-tests.log")
+        record = audit.read(record_path)
+        audit.need(result["evidence_sha256"][record_path.name] == sha(record_path) and
+                   result["log_sha256"][log_path.name] == record["log_sha256"] == sha(log_path) and
+                   record["driver_sha256"] == result["driver_sha256"] and
+                   all(record[key] == value for key, value in result["results"][phase].items()),
+                   "atomic phase evidence bound", phase=phase)
+        if phase == "red":
+            audit.need(record["tests"] == count and record["success"] is False and
+                       (record["failures"], record["errors"], record["skipped"]) == (5, 6, 0) and
+                       record["source_sha256"]["src\\asof\\serde.py"] ==
+                       "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+                       "atomic pre-fix regression witness retained")
+            audit.pins({name: pin for name, pin in record["source_sha256"].items() if name != "src\\asof\\serde.py"})
+        else:
+            audit.tests(record, count, skip_key="skipped")
+            audit.pins(record["source_sha256"])
+            audit.unittest_log(log_path, count)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("full-gate", "full-log", "source-bracket", "archive-profile-validation", "facade-log", "installed",
+    for name in ("full-gate", "full-log", "source-bracket", "archive-profile-validation", "atomic-validation", "facade-log", "installed",
                  "preservation", "preservation-readback", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     args = parser.parse_args()
@@ -416,12 +470,37 @@ def main():
         limitations=["Source bracketing covers the declared runtime, resources, tests, tools and build inputs; documentation and evidence files outside that inventory are not a whole-worktree attestation.",
                     "No claim of hostile-worktree tamper resistance, scientific validity, Linux execution, benchmark integration or whole-goal completion."])
     try:
+        platform = audit.read(EVIDENCE / "integration/platform-scope.json")
+        audit.need(platform["status"] == "PASS" and platform["tests"] == 7 and
+                   platform["failures"] == platform["errors"] == platform["skips"] == 0,
+                   "validator platform-scope controls passed")
+        audit.pins(platform["files"])
+        audit.unittest_log(EVIDENCE / "integration/platform-gate-tests.log", 7)
+        peer_directory = EVIDENCE / "integration/windows-replace-peer"
+        peer = audit.read(peer_directory / "PEER-REVIEW.json")
+        audit.need(peer["status"] == "SCOPED_PASS_WITH_EXPLICIT_CONTENTION_FAILURES" and
+                   peer["primary_control_families"] == 7, "atomic peer safety scope explicit")
+        audit.pins(peer["source_pins"])
+        for item in peer["evidence"]:
+            evidence_path = ROOT / item["path"].replace("\\", "/")
+            audit.need(sha(evidence_path) == item["sha256"] and evidence_path.stat().st_size == item["bytes"],
+                       "atomic peer evidence unchanged", path=str(evidence_path))
+        first_peer = audit.read(peer_directory / "INITIAL-STRESS-RESULT.json")
+        final_peer = audit.read(peer_directory / "peer-v2-console.json")
+        audit.need(first_peer["status"] == "FAILED" and final_peer["status"] == "PASS" and
+                   final_peer["source_stability"] == "verified", "failed stress expectation and scoped followup retained")
+        controls = final_peer["controls"]
+        audit.need(len(controls) == 7 and all(row["status"] == "PASS" for row in controls) and
+                   {row["name"] for row in controls} == {"released_handle", "persistent_handle", "noneligible_and_interrupt",
+                   "cleanup_preserves_primary", "no_clobber_unchanged", "concurrent_complete_json", "stale_writer_semantics"},
+                   "atomic peer control families complete")
         old_profile_copy = check_archive_profile(audit, args.archive_profile_validation)
+        check_atomic_validation(audit, args.atomic_validation)
         check_source_bracket(audit, args.source_bracket, args.full_gate, args.full_log)
         full = audit.read(args.full_gate)
         audit.need(full["status"] == "passed" and full["stage"] == "complete" and full["mode"] == "full", "full gate terminal pass")
         tests = full["tests"]
-        audit.need(tests["run"] >= 1973 and tests["failures"] == tests["errors"] == 0 and tests["skipped"] == [], "full test gate no failures/skips")
+        audit.need(tests["run"] == 2020 and tests["failures"] == tests["errors"] == 0 and tests["skipped"] == [], "complete 2020-test gate no failures/skips")
         audit.unittest_log(args.full_log, tests["run"])
         audit.need(full["powershell_syntax"] is True and full["required_probes_exit_code"] == 0 and
                    full["packaging"]["dependency_free_demo"] == "passed" and full["packaging"]["package_network_policy"] == "offline" and

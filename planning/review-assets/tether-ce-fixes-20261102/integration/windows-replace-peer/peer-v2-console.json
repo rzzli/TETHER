@@ -1,0 +1,713 @@
+{
+  "status": "PASS",
+  "start": {
+    "source_pins": {
+      "src\\asof\\serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+      "src\\asof\\atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+      "src\\asof\\maintenance.py": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a"
+    },
+    "interpreter": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-dev\\Scripts\\python.exe",
+    "script_sha256": "89569250c75d20c75646e3f412704fef947696a239b6bffc3b020b23d077efa9",
+    "scope": "Invented local files; real Windows sharing controls plus labeled injected errors; no provider or model"
+  },
+  "controls": [
+    {
+      "name": "released_handle",
+      "status": "PASS",
+      "details": {
+        "attempts": [
+          {
+            "source": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\released_handle\\.writing-nc2eudpb",
+            "sha256": "85cd0359d352698fcc50896575c05efd4ce8591f814690f144da66a7cba95fce",
+            "winerror": 5
+          },
+          {
+            "source": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\released_handle\\.writing-nc2eudpb",
+            "sha256": "85cd0359d352698fcc50896575c05efd4ce8591f814690f144da66a7cba95fce",
+            "success": true
+          }
+        ],
+        "seconds": 0.06200000015087426,
+        "same_staged_bytes": true,
+        "caller_mutation_not_reserialized": true
+      }
+    },
+    {
+      "name": "persistent_handle",
+      "status": "PASS",
+      "details": {
+        "attempts": [
+          {
+            "source": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\persistent_handle\\.writing-wvp5hcow",
+            "sha256": "1fc4c6f771432eb325b22e0deea84bd6330e892ef68db4cbc47da253bdc2ffe4",
+            "winerror": 5
+          },
+          {
+            "source": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\persistent_handle\\.writing-wvp5hcow",
+            "sha256": "1fc4c6f771432eb325b22e0deea84bd6330e892ef68db4cbc47da253bdc2ffe4",
+            "winerror": 5
+          },
+          {
+            "source": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\persistent_handle\\.writing-wvp5hcow",
+            "sha256": "1fc4c6f771432eb325b22e0deea84bd6330e892ef68db4cbc47da253bdc2ffe4",
+            "winerror": 5
+          }
+        ],
+        "sleeps": [
+          0.05,
+          0.1
+        ],
+        "failure": {
+          "type": "PermissionError",
+          "winerror": 5,
+          "notes": [
+            "Atomic JSON replacement failed after 3 attempts; same staged file retained until cleanup"
+          ]
+        },
+        "seconds": 0.15699999989010394,
+        "destination_unchanged": true
+      }
+    },
+    {
+      "name": "noneligible_and_interrupt",
+      "status": "PASS",
+      "details": {
+        "cases": [
+          {
+            "name": "native2",
+            "replace_calls": 1,
+            "sleeps": 0
+          },
+          {
+            "name": "native87",
+            "replace_calls": 1,
+            "sleeps": 0
+          },
+          {
+            "name": "errno_without_native",
+            "replace_calls": 1,
+            "sleeps": 0
+          },
+          {
+            "name": "interrupt",
+            "replace_calls": 1,
+            "sleeps": 0
+          },
+          {
+            "name": "sleep-interrupt",
+            "replace_calls": 1,
+            "sleeps": 1
+          },
+          {
+            "name": "non-windows-flag-control",
+            "replace_calls": 1,
+            "sleeps": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "cleanup_preserves_primary",
+      "status": "PASS",
+      "details": {
+        "cases": [
+          {
+            "name": "io",
+            "primary_preserved": true,
+            "notes": [
+              "Staged JSON cleanup failed (PermissionError): [Errno 13] fictional cleanup denial; path=D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\cleanup_preserves_primary\\.writing-w48fjh3b"
+            ]
+          },
+          {
+            "name": "interrupt",
+            "primary_preserved": true,
+            "notes": [
+              "Staged JSON cleanup failed (PermissionError): [Errno 13] fictional cleanup denial; path=D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\cleanup_preserves_primary\\.writing-1kji4cb_"
+            ]
+          }
+        ],
+        "intentional_retained_staging": [
+          "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\cleanup_preserves_primary\\.writing-1kji4cb_",
+          "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\cleanup_preserves_primary\\.writing-w48fjh3b"
+        ]
+      }
+    },
+    {
+      "name": "no_clobber_unchanged",
+      "status": "PASS",
+      "details": {
+        "rename_calls": 1,
+        "replace_calls": 0,
+        "sleeps": 0,
+        "destination_unchanged": true
+      }
+    },
+    {
+      "name": "concurrent_complete_json",
+      "status": "PASS",
+      "details": {
+        "modes": [
+          {
+            "reader_mode": "native_share_delete",
+            "writers": 4,
+            "scheduled_writes": 16,
+            "completed_writes": 15,
+            "failed_writes": 1,
+            "outcomes": [
+              {
+                "operation": "0:0",
+                "status": "written"
+              },
+              {
+                "operation": "0:1",
+                "status": "written"
+              },
+              {
+                "operation": "0:2",
+                "status": "written"
+              },
+              {
+                "operation": "0:3",
+                "status": "written"
+              },
+              {
+                "operation": "1:0",
+                "status": "written"
+              },
+              {
+                "operation": "1:1",
+                "status": "written"
+              },
+              {
+                "operation": "1:2",
+                "status": "written"
+              },
+              {
+                "operation": "1:3",
+                "status": "written"
+              },
+              {
+                "operation": "2:0",
+                "status": "written"
+              },
+              {
+                "operation": "2:1",
+                "status": "failed",
+                "error_class": "PermissionError",
+                "winerror": 5,
+                "notes": [
+                  "Atomic JSON replacement failed after 3 attempts; same staged file retained until cleanup"
+                ]
+              },
+              {
+                "operation": "2:2",
+                "status": "written"
+              },
+              {
+                "operation": "2:3",
+                "status": "written"
+              },
+              {
+                "operation": "3:0",
+                "status": "written"
+              },
+              {
+                "operation": "3:1",
+                "status": "written"
+              },
+              {
+                "operation": "3:2",
+                "status": "written"
+              },
+              {
+                "operation": "3:3",
+                "status": "written"
+              }
+            ],
+            "attempts": {
+              "3:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-wk7ipuh5",
+                  "status": "replaced"
+                }
+              ],
+              "1:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-rqyzf1z4",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-rqyzf1z4",
+                  "status": "replaced"
+                }
+              ],
+              "2:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-1fovl_6l",
+                  "status": "replaced"
+                }
+              ],
+              "0:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-8s7pria6",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-8s7pria6",
+                  "status": "replaced"
+                }
+              ],
+              "2:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-1ai9ydpd",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-1ai9ydpd",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-1ai9ydpd",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                }
+              ],
+              "3:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-ml_y_ard",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-ml_y_ard",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-ml_y_ard",
+                  "status": "replaced"
+                }
+              ],
+              "0:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-973_x3jc",
+                  "status": "replaced"
+                }
+              ],
+              "1:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-5bnhj_tz",
+                  "status": "replaced"
+                }
+              ],
+              "0:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-2b7q3rqv",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-2b7q3rqv",
+                  "status": "replaced"
+                }
+              ],
+              "1:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-u3wpzinb",
+                  "status": "replaced"
+                }
+              ],
+              "1:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-nvvj_w4a",
+                  "status": "replaced"
+                }
+              ],
+              "0:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-gtjt2a4v",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-gtjt2a4v",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-gtjt2a4v",
+                  "status": "replaced"
+                }
+              ],
+              "3:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-5n7emfcs",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-5n7emfcs",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-5n7emfcs",
+                  "status": "replaced"
+                }
+              ],
+              "2:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-77xovq4r",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-77xovq4r",
+                  "status": "replaced"
+                }
+              ],
+              "2:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-hui5bion",
+                  "status": "replaced"
+                }
+              ],
+              "3:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-6yd5jzwi",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\native_share_delete\\.writing-6yd5jzwi",
+                  "status": "replaced"
+                }
+              ]
+            },
+            "observed_complete_documents": 196,
+            "reader_io_failures": [],
+            "remaining_staging": []
+          },
+          {
+            "reader_mode": "normal_python_open",
+            "writers": 4,
+            "scheduled_writes": 16,
+            "completed_writes": 14,
+            "failed_writes": 2,
+            "outcomes": [
+              {
+                "operation": "0:0",
+                "status": "written"
+              },
+              {
+                "operation": "0:1",
+                "status": "failed",
+                "error_class": "PermissionError",
+                "winerror": 5,
+                "notes": [
+                  "Atomic JSON replacement failed after 3 attempts; same staged file retained until cleanup"
+                ]
+              },
+              {
+                "operation": "0:2",
+                "status": "failed",
+                "error_class": "PermissionError",
+                "winerror": 5,
+                "notes": [
+                  "Atomic JSON replacement failed after 3 attempts; same staged file retained until cleanup"
+                ]
+              },
+              {
+                "operation": "0:3",
+                "status": "written"
+              },
+              {
+                "operation": "1:0",
+                "status": "written"
+              },
+              {
+                "operation": "1:1",
+                "status": "written"
+              },
+              {
+                "operation": "1:2",
+                "status": "written"
+              },
+              {
+                "operation": "1:3",
+                "status": "written"
+              },
+              {
+                "operation": "2:0",
+                "status": "written"
+              },
+              {
+                "operation": "2:1",
+                "status": "written"
+              },
+              {
+                "operation": "2:2",
+                "status": "written"
+              },
+              {
+                "operation": "2:3",
+                "status": "written"
+              },
+              {
+                "operation": "3:0",
+                "status": "written"
+              },
+              {
+                "operation": "3:1",
+                "status": "written"
+              },
+              {
+                "operation": "3:2",
+                "status": "written"
+              },
+              {
+                "operation": "3:3",
+                "status": "written"
+              }
+            ],
+            "attempts": {
+              "2:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-h6_fpc3o",
+                  "status": "replaced"
+                }
+              ],
+              "3:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-r3rw6409",
+                  "status": "replaced"
+                }
+              ],
+              "1:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-rhm2vc0q",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-rhm2vc0q",
+                  "status": "replaced"
+                }
+              ],
+              "0:0": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-et_wn0k0",
+                  "status": "replaced"
+                }
+              ],
+              "2:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-bff6c8re",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-bff6c8re",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-bff6c8re",
+                  "status": "replaced"
+                }
+              ],
+              "0:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-gf0_jn0z",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-gf0_jn0z",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-gf0_jn0z",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                }
+              ],
+              "3:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-he0_4itx",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-he0_4itx",
+                  "status": "replaced"
+                }
+              ],
+              "1:1": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-xigwtt_s",
+                  "status": "replaced"
+                }
+              ],
+              "1:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5wvcms11",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5wvcms11",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5wvcms11",
+                  "status": "replaced"
+                }
+              ],
+              "3:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-q_mnajvg",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-q_mnajvg",
+                  "status": "replaced"
+                }
+              ],
+              "3:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-lkeq2py9",
+                  "status": "replaced"
+                }
+              ],
+              "2:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5rlokj0d",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5rlokj0d",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-5rlokj0d",
+                  "status": "replaced"
+                }
+              ],
+              "0:2": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-mh_pqh5j",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-mh_pqh5j",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-mh_pqh5j",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                }
+              ],
+              "1:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-qzibo14r",
+                  "status": "replaced"
+                }
+              ],
+              "2:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-yss19bn7",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-yss19bn7",
+                  "status": "replaced"
+                }
+              ],
+              "0:3": [
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-56pjgdvd",
+                  "status": "failed",
+                  "error_class": "PermissionError",
+                  "winerror": 5
+                },
+                {
+                  "temporary": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-windows-replace-peer-20261102-v2\\concurrent_complete_json\\normal_python_open\\.writing-56pjgdvd",
+                  "status": "replaced"
+                }
+              ]
+            },
+            "observed_complete_documents": 211,
+            "reader_io_failures": [
+              {
+                "error_class": "PermissionError",
+                "winerror": null
+              }
+            ],
+            "remaining_staging": []
+          }
+        ],
+        "semantics": "Safety with explicit terminal failures; no universal writer-availability guarantee"
+      }
+    },
+    {
+      "name": "stale_writer_semantics",
+      "status": "PASS",
+      "details": {
+        "attempt_order": [
+          "older-writer",
+          "MainThread",
+          "older-writer"
+        ],
+        "observed_new_generation": 2,
+        "final_generation": 1,
+        "classification": "Existing last-writer-wins semantics; retry is not compare-and-swap or version ordering"
+      }
+    }
+  ],
+  "source_stability": "verified",
+  "limits": "No diagnosis of the full-gate WinError5 cause; no hard wall-time bound or stale-writer ordering guarantee"
+}

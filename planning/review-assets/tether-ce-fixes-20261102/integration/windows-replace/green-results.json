@@ -1,0 +1,23 @@
+{
+  "phase": "green",
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "elapsed_seconds": 0.06200000015087426,
+  "modules": [
+    "tests.test_serde_atomic_replace"
+  ],
+  "log_sha256": "31b1b3824f128044dceb3d344ede49f6897f4b4ea9b39bb72b3d2eacff85233a",
+  "source_sha256": {
+    "src\\asof\\serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+    "tests\\test_serde_atomic_replace.py": "6639b7cd3ae8a64b4dea91d47b1a5faae0ec758b00414f98204acd0598f7a616",
+    "src\\asof\\atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+    "src\\asof\\maintenance.py": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a"
+  },
+  "driver_sha256": "a94f635d964113367b51f1cbc7a6dec59225ad1ec297fbb0f68c0b5139e44c51",
+  "failures_detail": [],
+  "errors_detail": [],
+  "scope": "Deterministic fictional errors and private native Win32 file handles; no model/network action"
+}

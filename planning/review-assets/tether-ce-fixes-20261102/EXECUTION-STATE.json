@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-02T20:24:48.554963+00:00",
+  "updated_at_utc": "2026-11-02T20:47:02.546303+00:00",
   "goal_status": "active",
   "stage": "BG01",
   "completed": [
@@ -9,28 +9,33 @@
     "CE03 red-to-green and 9 regression tests; 85 related tests",
     "Independent CE02/CE03 controls and old-release preservation",
     "Complete TETHER facade suite: 138 tests",
-    "Fresh installed qualification: 14 commands and source/wheel/installed equality"
+    "Fresh installed qualification: 14 commands and source/wheel/installed equality",
+    "Bounded Windows atomic replacement:10 new,72 related,21 publication tests; peer safety controls with explicit contention failures",
+    "Second reviewed archive-profile migration:52 tests and3 old-run controls",
+    "Fresh facade suite:138 tests",
+    "Fresh installed qualification attempt02:14 commands; changed source/wheel proof"
   ],
   "in_progress": {
-    "operation": "Fresh complete full-gate03 with unchanged runtime/test/tool/source pins",
-    "unified_exec_session_id": 44594,
-    "validator_pid_at_launch": 25188,
-    "started_record": "integration/full-gate-03.started.json",
-    "source_bracket": "integration/full-gate-03.source-bracket.json",
-    "log": "integration/full-gate-03.log",
-    "report": "integration/full-gate-03.json",
-    "last_observation": "Session44594 running; source-before hash equals attempt02; no final pass asserted.",
-    "resumption_rule": "Poll this exact handle and inspect report/log/PID. Saved state is not liveness. Do not restart on observation timeout."
+    "operation": "Full-gate04: exact2020tests, failfast driver, fresh source bracket",
+    "unified_exec_session_id": 40947,
+    "validator_pid_at_launch": 15348,
+    "started_record": "integration/full-gate-04.started.json",
+    "source_bracket": "integration/full-gate-04.source-bracket.json",
+    "log": "integration/full-gate-04.log",
+    "report": "integration/full-gate-04.json",
+    "before_sha256": "1f3aafcab76de3d497ab7817cd5b8dd2e3c45c6f3cbcfbdd41cd9cf8829b6f91",
+    "last_observation": "Started and progressing; no terminal pass asserted. No runtime/test/tool source edits while it runs.",
+    "resumption_rule": "Poll exact session40947 and inspect report/log/PID before any restart. A saved record is not liveness; timeout is not terminal."
   },
   "installed_qualification": {
     "status": "PASS",
-    "unified_exec_session_id": 36257,
+    "unified_exec_session_id": 97395,
     "exit_code": 0,
-    "path": "data/cache/tether-051-installed-qualification-attempt01/QUALIFICATION.json",
-    "sha256": "6ea45e6f05a4b6702a44c81f04a45813b837c88b9313fd7f1f0b66f941531a79",
-    "scope": "14 commands; isolated copied build context; no parent-gate or aggregate completion claim"
+    "path": "data/cache/tether-051-installed-qualification-attempt02/QUALIFICATION.json",
+    "sha256": "16fec5a9d5092fde373e72b0c7fa7eaa3b520750b515a82d908774e14d8c1f00",
+    "scope": "Current candidate bytes including bounded retry and second profile. No aggregate completion claim."
   },
-  "next_if_gate_passes": "Run final stage checker against full-gate03, installed attempt01, archive and preservation records. Update docs/TODO and commit. Only then begin BG02.",
+  "next_if_gate_passes": "Run check_stage.py with full-gate04, archive-profile-v2/VALIDATION.json, windows-replace/VALIDATION.json, package-tests-02.log, installed attempt02 and original preservation records. Update docs/TODO and commit, then BG02.",
   "not_started": [
     "BG02 independent equal-policy validator comparison",
     "BG03 SciFact native integration/evaluation",
@@ -38,16 +43,41 @@
     "BG05 Inspect implementation/comparison"
   ],
   "limitations": "Overlapping targeted test counts are not summed. No new benchmark/model execution has occurred. BG01 remains incomplete until full and installed validation pass.",
-  "next_if_gate_fails": "Retain terminal evidence and diagnose actual failure; do not waive errors or repeat blindly. Check exact process state before any restart.",
-  "previous_failed_attempt": {
-    "id": "full-gate-02",
-    "status": "FAILED_INTERRUPTED",
-    "session_exit_code": 1,
-    "interruption_record": "integration/full-gate-02.interruption.json",
-    "observed_pass_methods": 1354,
-    "captured_errors": 1,
-    "cause": "unestablished fixture WinError5; exact method passes3/3 separately",
-    "processes_after_stop": 0,
-    "changed_pinned_sources": []
+  "next_if_gate_fails": "Investigate actual recorded failure; do not waive errors or restart blindly. Retain failures, primary causes and source pins.",
+  "failed_attempts": [
+    {
+      "id": "full-gate-02",
+      "status": "FAILED_INTERRUPTED",
+      "session_exit_code": 1,
+      "interruption_record": "integration/full-gate-02.interruption.json",
+      "observed_pass_methods": 1354,
+      "captured_errors": 1,
+      "cause": "unestablished fixture WinError5; exact method passes3/3 separately",
+      "processes_after_stop": 0,
+      "changed_pinned_sources": []
+    },
+    {
+      "id": "full-gate-03",
+      "status": "FAILED_INTERRUPTED",
+      "session_exit_code": 1,
+      "interruption_record": "integration/full-gate-03.interruption.json",
+      "observed_pass_methods": 869,
+      "captured_assertion_failures": 1,
+      "cause": "WinError5 replacing execution-report.json masked expected test injection; native cause unestablished",
+      "processes_after_stop": 0,
+      "changed_pinned_sources": []
+    }
+  ],
+  "previous_installed_qualification": {
+    "status": "PASS",
+    "unified_exec_session_id": 36257,
+    "exit_code": 0,
+    "path": "data/cache/tether-051-installed-qualification-attempt01/QUALIFICATION.json",
+    "sha256": "6ea45e6f05a4b6702a44c81f04a45813b837c88b9313fd7f1f0b66f941531a79",
+    "scope": "PASS for original candidate bytes only; planned serde/profile change requires a new attempt with fresh hashes. Same unpublished candidate version; no prior artifacts overwritten."
+  },
+  "candidate_pins": {
+    "serde_sha256": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+    "archive_profile_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016"
   }
 }
