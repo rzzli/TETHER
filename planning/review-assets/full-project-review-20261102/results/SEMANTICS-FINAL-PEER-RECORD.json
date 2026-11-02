@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-02T06:53:42.230044+00:00",
+  "scope": "Final independent delta review; prior peer record preserved",
+  "changes_since_prior_pins": [
+    {
+      "path": "packages/tether/src/tether/_semantics.py",
+      "earlier_sha256": "74ff05db1e58ef029b23bd8d33c2e66f5c6e865660679c5ed14e9f0bb63250d4",
+      "current_sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f"
+    },
+    {
+      "path": "packages/tether/tests/test_semantics.py",
+      "earlier_sha256": "5b77b0ba0bf053b25bb6d5d8c148c5c399472a32d025764fff7667d1391fc53f",
+      "current_sha256": "3a038da434b2d6a2bd0e903a9b492db169ef01f40b2d02f969aec4cf165d2dda"
+    }
+  ],
+  "delta_review": [
+    "Known standard exception classification now distinguishes handled/fatal/interrupted names; RecursionError is correctly handled via RuntimeError ancestry.",
+    "Known fatal and KeyboardInterrupt events now require immediate finalization. Custom exception inheritance remains explicitly unproved."
+  ],
+  "validation": {
+    "semantic_test_methods": 24,
+    "failures": 0,
+    "errors": 0,
+    "independent_negative_probes": 4,
+    "intended_rejections": 4,
+    "test_output": "SEMANTICS-TESTS-FINAL.txt",
+    "probe_output": "SEMANTICS-PROBES-FINAL.json"
+  },
+  "root_document_review": {
+    "numerical_results": "No material discrepancy found in the reported result quantities against independent recomputation.",
+    "method_and_counter_claims": "Clear distinction between slots, native units, study groups, test counts and source authenticity. Method-specific genetics requirements explicitly separated.",
+    "planning_correction_sent_to_root": "Q01 step2 says Finish current-version wheel/install qualification, though final current-version wheel qualification is now complete; update to retain completed scope and isolate remaining release tasks."
+  },
+  "sha256": {
+    "packages/tether/src/tether/_semantics.py": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+    "packages/tether/src/tether/_presentation.py": "51d679719adc62137c5fe314fd4681af7703347f6a07066c2528ff936faace1b",
+    "packages/tether/tests/test_semantics.py": "3a038da434b2d6a2bd0e903a9b492db169ef01f40b2d02f969aec4cf165d2dda",
+    "src/asof/workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+    "src/asof/semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+    "src/asof/artifacts.py": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+    "planning/review-assets/full-project-review-20261102/results/SEMANTICS-INDEPENDENT-REVIEW.md": "e8df88c1f9f3680271e423cbb2ed7c8d9a92520356ff087e848a721714a8163c",
+    "planning/review-assets/full-project-review-20261102/results/SEMANTICS-PROBE-RECORDS.json": "6aa2017cdbf6e30f01e79fee5c1d4a834790708714fd9e58bb19d59b5fece918",
+    "planning/review-assets/full-project-review-20261102/results/SEMANTICS-TESTS.txt": "e6121bda5463180b990ef1e1b82367c7141c370f6040a566e0b9c0971f826ef7",
+    "planning/review-assets/full-project-review-20261102/results/probe_retrieval_semantics.py": "52c98af015f8f168c68ee9a104cc480a544356d50bcf25befd89e97dc6f4a3ee",
+    "planning/review-assets/full-project-review-20261102/results/probe_failure_semantics.py": "da61e05df1674dd6c9ef8935ae1d11e83a2affb0a11630c6aff9f7b30fe24f82",
+    "planning/review-assets/full-project-review-20261102/results/probe_quote_failure_semantics.py": "a4049b2c1f5d9bff34ad0d7ff343f2955eb9cab99fa8b989b7b48f22f9907d00",
+    "planning/review-assets/full-project-review-20261102/results/probe_missing_disposition_semantics.py": "f868395cf063145d84ebaff2aaba92fbbbd93eaffbb7e8295fcd0b47daad1619",
+    "planning/review-assets/full-project-review-20261102/results/SEMANTICS-TESTS-FINAL.txt": "68da901319ffacd8ca24e6b2b7e728f48ff7fc2b534177233c144982420d894f",
+    "planning/review-assets/full-project-review-20261102/results/SEMANTICS-PROBES-FINAL.json": "ba0bd543953e4c32a0d56f4f677efadb630b4f29dcc664a6433718db7b8da8a6",
+    "planning/TETHER Full Project Critical Review 2026-11-02.md": "d87c8a8fffffa26170c6d576737661e7f19e0581faf3aed16f3cee9e23936cda",
+    "planning/TETHER Corrective Execution Plan 2026-11-02.md": "665fc6220fdc103d6de0debb5232721d3c21a2cad6f9dbfa74494c98c095a76d"
+  }
+}

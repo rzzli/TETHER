@@ -15,6 +15,8 @@ import time
 def effect_orientation(ref, alt, effect, other):
     if any(len(a) != 1 or a not in 'ACGT' for a in (ref,alt,effect,other)):
         return None
+    if ref == alt or effect == other:
+        return None
     if {ref,alt} in ({'A','T'}, {'C','G'}):
         return None
     if (effect,other)==(alt,ref):

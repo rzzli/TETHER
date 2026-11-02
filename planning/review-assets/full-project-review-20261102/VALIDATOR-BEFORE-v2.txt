@@ -1,0 +1,46 @@
+test_structural_error_retains_failed_report (tests.test_validation_failure_report.ValidationFailureReportTests.test_structural_error_retains_failed_report) ... ERROR
+test_existing_report_rejected_before_expensive_work (tests.test_validation_failure_report.ValidationFailureReportTests.test_existing_report_rejected_before_expensive_work) ... ERROR
+
+======================================================================
+ERROR: test_structural_error_retains_failed_report (tests.test_validation_failure_report.ValidationFailureReportTests.test_structural_error_retains_failed_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_validation_failure_report.py", line 19, in test_structural_error_retains_failed_report
+    result = validate.main(['--mode', 'core', '--report', str(report)])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tools\validate.py", line 149, in main
+    report = {'schema_version':1,'mode':args.mode,'structural':structural_checks(),
+                                                               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+ValueError: invented invalid catalog
+
+======================================================================
+ERROR: test_existing_report_rejected_before_expensive_work (tests.test_validation_failure_report.ValidationFailureReportTests.test_existing_report_rejected_before_expensive_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_validation_failure_report.py", line 47, in test_existing_report_rejected_before_expensive_work
+    validate.main(['--mode', 'core', '--report', str(report)])
+  File "D:\Projects\drug_target_agents\tools\validate.py", line 150, in main
+    'powershell_syntax':powershell_check()}
+                        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: unexpected work after existing report
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.018s
+
+FAILED (errors=2)

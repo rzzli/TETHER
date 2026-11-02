@@ -64,6 +64,9 @@ def main(argv=None):
         if args.command == "inspect-run" and _is_outer(args.run_dir):
             _print(presentation.inspect_outer(args.run_dir))
             return 0
+        if args.command == "verify":
+            _print(presentation.verify_engine(args.run_dir, args.receipt_sha256, not args.outputs_only))
+            return 0
         if args.command in ("verify", "inspect-run"):
             presentation.preflight_run_journals(args.run_dir, verify=args.command == "verify")
         return _delegate(argv)

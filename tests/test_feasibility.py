@@ -52,5 +52,14 @@ class FeasibilityTests(unittest.TestCase):
             self.assertFalse(valid_stats(*values))
         self.assertTrue(valid_stats('0.1','0.02','0.001'))
 
+    def test_identical_ref_alt_cannot_be_an_oriented_snp(self):
+        for allele in 'ACGT':
+            with self.subTest(allele=allele):
+                self.assertIsNone(effect_orientation(allele, allele, allele, allele))
+
+    def test_identical_effect_other_alleles_are_not_aligned(self):
+        for alleles in [('A', 'C', 'A', 'A'), ('A', 'C', 'C', 'C')]:
+            self.assertIsNone(effect_orientation(*alleles))
+
 
 if __name__=='__main__':unittest.main()

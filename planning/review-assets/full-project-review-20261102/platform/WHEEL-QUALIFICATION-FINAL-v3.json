@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "PASS_ISOLATED_TETHER_041_WHEEL",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "wheel_path": "data/cache/tether-041-qualified-build-v3/wheels/tether_target_agents-0.4.1-py3-none-any.whl",
+  "wheel_sha256": "b392440919fddb8cab17b1741ee716bfa95d4cc1172878725b2603b115b322d5",
+  "wheel_bytes": 28747,
+  "wheel_members": 21,
+  "runtime_source_files_checked": 15,
+  "record_closure": "verified",
+  "environment": {
+    "isolated_installed_imports": true,
+    "arrow": false,
+    "version": "0.4.1"
+  },
+  "calls": [
+    {
+      "argv": [
+        "-c",
+        "import tether,asof,sys,pathlib,importlib.util,json; assert tether.__version__=='0.4.1'; assert asof.__version__=='0.3.11'; assert pathlib.Path(tether.__file__).is_relative_to(pathlib.Path(sys.prefix)); assert pathlib.Path(asof.__file__).is_relative_to(pathlib.Path(sys.prefix)); assert importlib.util.find_spec('pyarrow') is None; print(json.dumps({'isolated_installed_imports':True,'arrow':False,'version':tether.__version__}))"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "24dc04b0dfd140027295f0dddc486431fbb974468a3f5a349c30e4bffe3a5e8f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "demo",
+        "--output",
+        "demo"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9acef68b1628d3481c4f9717476bbd306f93d321ad4a76021e7651269e2999b6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "verify",
+        "--run-dir",
+        "demo",
+        "--receipt-sha256",
+        "d4b62fde5ea4da2310bd0a188158c5f4f754d132fe246809d1e177efb54cd4e3"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9a04bb7d7a202ba3b0b4c42be623a0c747eb997941527852260640521bd3749e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "-m",
+        "tether",
+        "verify",
+        "--run-dir",
+        "demo",
+        "--receipt-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c8f36c9dd0edff29faf9e1618309c2ad443217ea01c772a67e1c2b89b763eabc"
+    }
+  ],
+  "outer_verification": {
+    "brand": "TETHER",
+    "status": "integrity_verified",
+    "receipt_sha256": "d4b62fde5ea4da2310bd0a188158c5f4f754d132fe246809d1e177efb54cd4e3",
+    "external_anchor_checked": true,
+    "launcher_code_verified": true,
+    "presentation_projection": "exact_first_header_v1",
+    "engine": {
+      "status": "integrity_verified",
+      "outputs": 8,
+      "source_artifacts_checked": 2,
+      "trace_events": 37,
+      "receipt_sha256": "697de9dc9e6b90010fdf9020784156d8d9002b2cdcdde4d0e987d64e86ebbc27",
+      "external_anchor_checked": true,
+      "auxiliary_outputs_checked": 1,
+      "unsealed_auxiliary_outputs": [],
+      "code_matches_current": true,
+      "semantic_consistency": "verified",
+      "source_binding": "current_originals",
+      "scientific_validity": "not_established",
+      "tether_semantics": {
+        "method": "tether.execution_semantics.v1",
+        "coverage_state_machine": "verified",
+        "review_to_claims": "verified",
+        "dossier_reconstruction": "verified"
+      }
+    },
+    "scientific_validation": "not_established"
+  },
+  "wrong_anchor_rejected_without_redispatch": true,
+  "canonical_locked_sync": "passed_offline",
+  "limits": [
+    "Fresh workspace-cache environment; both imports resolve inside its site-packages.",
+    "No new scientific source reconstruction, paper package or hosted CI qualification.",
+    "Core legacy wheel and published earlier artifacts remain unchanged."
+  ],
+  "new_model_calls": 0,
+  "new_provider_downloads": 0,
+  "provider_spending_usd": 0
+}

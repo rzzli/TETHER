@@ -1,6 +1,13 @@
 # TETHER project progress reassessments
 
-Current identity/milestone: [TETHER naming and compatibility](<TETHER Naming and Compatibility Plan 2026-11-01.md>).
+Current checkpoint: [2 November full critical review](<TETHER Full Project Critical Review 2026-11-02.md>)
+and [corrective execution plan](<TETHER Corrective Execution Plan 2026-11-02.md>).
+New semantic-verification counterexamples require a stronger versioned CLI boundary.
+Current planning separates tested properties from scientific validity and corrects
+the scope of missing-data counts and redundant coverage thresholds. Older accepted
+checks below retain their original scope; their next-action text is historical.
+
+Prior identity/milestone: [TETHER naming and compatibility](<TETHER Naming and Compatibility Plan 2026-11-01.md>).
 The owner renamed the active project TETHER. Canonical interfaces and documentation
 use the new name; dated AsOf records and frozen contracts remain unchanged.
 The [completed rename/status review](<TETHER Rename Completion and Project Status 2026-11-01.md>)

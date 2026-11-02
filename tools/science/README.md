@@ -1,5 +1,11 @@
 # Scientific qualification utilities
 
+Current authority: [full project review](<../../planning/TETHER Full Project Critical Review 2026-11-02.md>)
+and [corrective plan](<../../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
+The dated execution/test counts and next steps below are retained checkpoints,
+not current completion gates. Historical expert-response dependencies are retired;
+examples do not authorize restarting closed model or clinical attempts.
+
 These evaluator-side tools preserve source identity and distinguish input readiness
 from qualified scientific conclusions. They use the Python standard library and the
 local AsOf package. The ingestion extra is not required for their fixture tests.

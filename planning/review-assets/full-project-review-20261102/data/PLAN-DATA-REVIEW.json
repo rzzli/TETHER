@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "status": "PASS_CURRENT_SCOPED_DATA_WORDING_WITH_PENDING_ROOT_VALIDATION_LINK",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "subjects": {
+    "planning/TETHER Full Project Critical Review 2026-11-02.md": "d87c8a8fffffa26170c6d576737661e7f19e0581faf3aed16f3cee9e23936cda",
+    "planning/TETHER Corrective Execution Plan 2026-11-02.md": "665fc6220fdc103d6de0debb5232721d3c21a2cad6f9dbfa74494c98c095a76d"
+  },
+  "links": [
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "TETHER Corrective Execution Plan 2026-11-02.md",
+      "exists": true
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/BASELINE-INVENTORY.json",
+      "exists": true
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/platform/PLATFORM-REVIEW.md",
+      "exists": false
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/data/DATA-REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/results/RESULTS-REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/VALIDATION.json",
+      "exists": false
+    },
+    {
+      "source": "TETHER Corrective Execution Plan 2026-11-02.md",
+      "target": "TETHER Full Project Critical Review 2026-11-02.md",
+      "exists": true
+    },
+    {
+      "source": "TETHER Corrective Execution Plan 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/VALIDATION.json",
+      "exists": false
+    }
+  ],
+  "missing_links": [
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/platform/PLATFORM-REVIEW.md",
+      "exists": false
+    },
+    {
+      "source": "TETHER Full Project Critical Review 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/VALIDATION.json",
+      "exists": false
+    },
+    {
+      "source": "TETHER Corrective Execution Plan 2026-11-02.md",
+      "target": "review-assets/full-project-review-20261102/VALIDATION.json",
+      "exists": false
+    }
+  ],
+  "data_quantities_checked": [
+    "178/83 catalog",
+    "22/19/3/134 collection",
+    "177/1 parsing;178 scientific not_run",
+    "1222 named paths/1145present/77missing",
+    "2206 canonicalfiles/9038960079bytes/0missing/31554overlappingcaseobservations",
+    "65olderinterpretationinputs distinct36/17of32/0of12 clinicalscopes"
+  ],
+  "method_specific_genetics_correction_present": true,
+  "scientific_claims": "No new data feasibility promotion; incomplete branches explicit."
+}

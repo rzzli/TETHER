@@ -1,5 +1,12 @@
 # Bounded feasibility utilities
 
+Current TETHER scope and decisions: [full project review](<../../planning/TETHER Full Project Critical Review 2026-11-02.md>)
+and [corrective plan](<../../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
+Below are historical recipes and examples, not instructions to restart completed
+restores or seek external expert responses. Old AsOf names identify their original
+engine/protocol. Current QC rejects identical REF/ALT or effect/other alleles;
+this correction does not retrospectively qualify earlier technical subsets.
+
 Registry-scale evaluator sizing is implemented under the frozen v0.4 protocol.
 See `planning/Registry-scale Cohort and Label Audit v0.4.md`; these are development
 events, with null training labels and no scientific validation claim.

@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "review_date_utc": "2026-11-02",
+  "base_commit": "21f64e7",
+  "current_tether_version": "0.4.1",
+  "frozen_engine_version": "0.3.11",
+  "status": "BOUNDED_CORRECTION_VALIDATED",
+  "findings": [
+    {
+      "id": "P01",
+      "severity": "P1",
+      "basis": "synthetic_reproduction",
+      "finding": "Contradictory coverage and terminal state accepted",
+      "status": "fixed_at_tether_command_boundary"
+    },
+    {
+      "id": "P02",
+      "severity": "P1",
+      "basis": "synthetic_reproduction",
+      "finding": "Reviewed selection not bound to committed claims",
+      "status": "fixed_at_tether_command_boundary"
+    },
+    {
+      "id": "P03",
+      "severity": "P2",
+      "basis": "synthetic_reproduction",
+      "finding": "Dossier prose not deterministically reconstructed",
+      "status": "fixed_at_tether_command_boundary"
+    },
+    {
+      "id": "P04",
+      "severity": "P2",
+      "basis": "source_inspection",
+      "finding": "Main child communicate has no absolute deadline or streamed output cap",
+      "status": "versioned_followup"
+    },
+    {
+      "id": "P05",
+      "severity": "P2",
+      "basis": "source_inspection",
+      "finding": "Older urllib transports use socket inactivity timeout",
+      "status": "documented_versioned_followup"
+    },
+    {
+      "id": "P06",
+      "severity": "P3",
+      "basis": "source_inspection",
+      "finding": "Packet size precheck precedes unbounded read_bytes",
+      "status": "versioned_followup"
+    },
+    {
+      "id": "P07",
+      "severity": "compatibility_boundary",
+      "basis": "source_inspection_and_tests",
+      "finding": "Legacy aliases preserve weaker semantics and old outer artifacts bind old launcher",
+      "status": "documented"
+    }
+  ],
+  "validation": {
+    "package_tests": 73,
+    "package_tests_passed": 73,
+    "seconds": 28.328,
+    "new_semantic_test_methods": 24,
+    "independent_negative_probes": 4,
+    "independent_negative_probes_reject": 4,
+    "wheel_qualification": "WHEEL-QUALIFICATION-FINAL-v3.json",
+    "wheel_sha256": "b392440919fddb8cab17b1741ee716bfa95d4cc1172878725b2603b115b322d5",
+    "wheel_bytes": 28747,
+    "wheel_members": 21,
+    "runtime_source_files_checked": 15,
+    "frozen_engine_diff_from_base": "empty"
+  },
+  "scientific_validation": "not_established",
+  "new_model_calls": 0,
+  "new_provider_downloads": 0,
+  "provider_spending_usd": 0,
+  "module_inventory": [
+    {
+      "path": "src/asof/__init__.py",
+      "bytes": 88,
+      "sha256": "0f79afc03e90ebdb0641e3081e7e699934a840e65c7030049c383bf496f6bec6",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/__main__.py",
+      "bytes": 49,
+      "sha256": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/agents.py",
+      "bytes": 7395,
+      "sha256": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/archive/__init__.py",
+      "bytes": 76,
+      "sha256": "b89c721b29e7b9058e018124eb097319c18dfbebcd2a0f0077b85dec4169c4d9",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/archive/__main__.py",
+      "bytes": 1611,
+      "sha256": "43559f1f21a898b69d81b8d642caebd5433816d43703e9f28fbbcbcea2eff9dd",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/archive/core.py",
+      "bytes": 25552,
+      "sha256": "d5a44748367a3d0697588c6e8266cce6bf53d503437d830c4d4dafe4da58fd40",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/archive/interpretation.py",
+      "bytes": 59126,
+      "sha256": "3ee725f7c55218346dd197b2ee9b1992a2f180d89267e680bc42e1f61fcfd6e5",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/archive/paths.py",
+      "bytes": 14047,
+      "sha256": "1edf549c5a858139b9ba0de747ba4d28446cb41f21232a447af8fade717c4c84",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/archive/restore.py",
+      "bytes": 10803,
+      "sha256": "3bbdc289941eac23305f3018aff89bc0c2e89e82d4727a6ae64248a58558c4ec",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/artifacts.py",
+      "bytes": 18952,
+      "sha256": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/atomic.py",
+      "bytes": 1871,
+      "sha256": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/chrono.py",
+      "bytes": 11964,
+      "sha256": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/cli.py",
+      "bytes": 9243,
+      "sha256": "ad2f44a43387c884b2af9547a246322e751e0ae1ebcc3f0506baeed5788ff5f0",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/contracts.py",
+      "bytes": 14676,
+      "sha256": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/evaluation.py",
+      "bytes": 6373,
+      "sha256": "d76ca20564a289a66ec4ac27c98aa35e0a90afbec5afef46d643e09691644eb3",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/features.py",
+      "bytes": 3665,
+      "sha256": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/ingest.py",
+      "bytes": 44659,
+      "sha256": "79575d9dd4f8163eecb2c9e2611368e3d4bd5f6f02338795c377c3fb9a75ee61",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/journal.py",
+      "bytes": 4961,
+      "sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/ledger.py",
+      "bytes": 2023,
+      "sha256": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/local_model.py",
+      "bytes": 13404,
+      "sha256": "38090cc12d4a10a1809513ae906e4dd1084f44a66a5605c559e53a8116e5f9a4",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/maintenance.py",
+      "bytes": 17134,
+      "sha256": "5dcc1846407f8597db9e89f07a41256ad14ee43e7c17e838fafc67534801f23a",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/provenance.py",
+      "bytes": 7167,
+      "sha256": "c3ed818ebd48b47bd7219a65ac495f9f86675680994fb3a0dd587fa56393b446",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/retrieval.py",
+      "bytes": 4320,
+      "sha256": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/scorer.py",
+      "bytes": 7624,
+      "sha256": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/semantics.py",
+      "bytes": 9468,
+      "sha256": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/serde.py",
+      "bytes": 11545,
+      "sha256": "5f5daf814e4debe49cfce22a25b2d6b71cc20b6e9184ddb6a4a4c5a4eeb5b7a8",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/study/__init__.py",
+      "bytes": 87,
+      "sha256": "58b9a509fe0304b40f28ce54b5ac9453b63de681afa41314dd77ad27ee7ef686",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/__main__.py",
+      "bytes": 4005,
+      "sha256": "7b32994a57dc5ab7096da2580eb713885b4a1ed433469adeabdb6f46930c2a2f",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/authority_four_arm.py",
+      "bytes": 61538,
+      "sha256": "31c4d5e660747b30cc3446fd8a40e199aa1fc86a14cd2cd9abbe4218d5ca60f7",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/baseline_smoke.py",
+      "bytes": 10855,
+      "sha256": "c7d8d19f95e62f2c9b31e430bc73f25b1f5924537d58d163be724f5157d10c7c",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/baselines.py",
+      "bytes": 8475,
+      "sha256": "17de53972108b06eb9a1999d3a2aaa896e1dde6f67cb437bc0ec7ffd6e71a501",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/collected_source.py",
+      "bytes": 11845,
+      "sha256": "04b9d4d7999d893f9a7342dc6044994b2e212ec677dfb31765cb3a40ede2ea9c",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/diagnostic.py",
+      "bytes": 9390,
+      "sha256": "03dbf421992e173e5bcd9d4dbe5ab9da00b9a64502a47bb40d8e1ee751f125d3",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/diagnostic_codec.py",
+      "bytes": 35406,
+      "sha256": "f9b6b7f0c8a5aabe91b2da29d7139fcc9a90eb5acbdfac0554967e7b77d4d43b",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/diagnostic_resources.py",
+      "bytes": 1275,
+      "sha256": "c557d82bb31d8e04886f6b6e9bf36e7e59e756eb7377d486ffb9c82097691083",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/fixed_evidence.py",
+      "bytes": 18519,
+      "sha256": "f28c627672de2e8699d9448633e239205106487703c82e86c483642310a76d10",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/fixed_evidence_smoke.py",
+      "bytes": 29110,
+      "sha256": "c2647cdf12261e7fe1f4744947ccd79401aee045282846030be2f67ae6e9c9ab",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/interpretation_generation.py",
+      "bytes": 6818,
+      "sha256": "dd74e8b7829162a66419e9fdbc5a72d62cd457158a39d59288999cf05adc5e4f",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/interpretation_grammar.py",
+      "bytes": 17046,
+      "sha256": "6ee02a55b41b59e3390f9a0c807ef168a646a355c646bde73621d75480ca3c97",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/interpretation_interface.py",
+      "bytes": 13666,
+      "sha256": "5f8933c53bd94fa3c1044b0656f175a1328b487805a962b715d23ec4ce8a82f3",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/native.py",
+      "bytes": 24592,
+      "sha256": "d5bee09aff10d50073a606d3bb9d806204aa7ef5f0f23b9ed6a7cc261e6bb97a",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/study/native_accounting.py",
+      "bytes": 5973,
+      "sha256": "17a58dd7f65af6e44c1241f51eb504b39c765bdd91688ea899d5a00b50383a6c",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/native_diagnostic.py",
+      "bytes": 37980,
+      "sha256": "1101fc146ed0b0493b1903a4388a03b0ffcbc6bb6085d792fccec8694b9780e8",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/native_interpretation.py",
+      "bytes": 11843,
+      "sha256": "decc0ba3dd7dca8c84883b58bf3fe8acb0b277ef0aaf5a5a7186b7864477d674",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/native_mode.py",
+      "bytes": 18331,
+      "sha256": "637cbd706936fc58614dc91c3b743eb98ed4ff0577fc25b7af6d8bab9c510e2b",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/preparation_payloads.py",
+      "bytes": 6504,
+      "sha256": "0e871a0e1aa9a57aaf750c217802b6eea1906018808faefe8b4dbc49d0d78247",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/process.py",
+      "bytes": 12344,
+      "sha256": "5e2378eefc1ffafb21af1555a3de5de3c725cc3ae8f3365aafdd47ea51a08e91",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/study/proofs.py",
+      "bytes": 7645,
+      "sha256": "4d5e7170dafb15b1c701d77e639cb1acf7ecfcdc4546f6c9ce4e7ba9ea649b0f",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/recorded.py",
+      "bytes": 4394,
+      "sha256": "beb14f0528de5edf9caddf4ea66a71e3ebae7e8e41517903226bb68d0bd04705",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/retrieval_preparation.py",
+      "bytes": 25882,
+      "sha256": "5672daf0da1b98255922a2360fdf6ed4d36edc630b25376ab2b83ffc76ea6fba",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/retrieval_smoke.py",
+      "bytes": 23393,
+      "sha256": "c386167bb087f8239a66d806edb807a84a7a111d4ed337626745df4eddd3a7c1",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/session.py",
+      "bytes": 33028,
+      "sha256": "419af810d7ca8f61d7eb46c34ff3aa2fcdfc845b9e00a14cdb491a6ff99661e1",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_adapters.py",
+      "bytes": 10934,
+      "sha256": "4651cfdaef34f4e51e89c7df61d5db884edfa90baf7c4f5b41645d596bc299e0",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_cell.py",
+      "bytes": 17456,
+      "sha256": "c8bcc688e59ec2f2c1428476ede3301a1c0040d64bb3e5c1347c9028dcfb5437",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_evaluation.py",
+      "bytes": 12892,
+      "sha256": "81b58e7ab2b90dd14c13796a918dc52a4a795dfa86e9b994ecb47a70d3f299c2",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_inputs.py",
+      "bytes": 28901,
+      "sha256": "29f760dc20cdaf6357411c629ea48e9919a78ffd68f62d36ce5da3597b65ae04",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_reporting.py",
+      "bytes": 10512,
+      "sha256": "8c81e9589566346d7345bbb7d8d10e5bbdf811c7a89180065ee5d1d05e91f742",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_sources.py",
+      "bytes": 30373,
+      "sha256": "18d059744b39390a12f84d4cf1b92fee00f86438b4a7574ec2cd202c9ab76ec8",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_fact_transport.py",
+      "bytes": 15495,
+      "sha256": "1ac7c16b26e4fb065e40fa689fdbfec5fa101a289677c61cc7f6a9a446b6dc99",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/study/source_preparation.py",
+      "bytes": 21083,
+      "sha256": "a01ae55d3a06c1130f293eec4fd10872b62dcfaf43c49b7e9da88dbee23418c1",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/source_rows.py",
+      "bytes": 10467,
+      "sha256": "977c3b898da1796a18830854ab086f3d94469597bf07c16c3204a1865aa36138",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/stable_read.py",
+      "bytes": 6450,
+      "sha256": "40d71fa950422e8f19fd863952b3e7ea39237c12d1c92a9d38b0a9c23a2f4a0b",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "src/asof/study/token_capacity.py",
+      "bytes": 8912,
+      "sha256": "7995a58b43829879bbf221886b59cfb332873b6d979a6ed5e5a8d61035eb39ef",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/study/tokenization.py",
+      "bytes": 27753,
+      "sha256": "460e2aeaa0a2e57075f448bad71559e9d76801bbaddbbccf67ebeb202c65c711",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/wire.py",
+      "bytes": 6081,
+      "sha256": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "src/asof/workflow.py",
+      "bytes": 13189,
+      "sha256": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "packages/tether/src/tether/__init__.py",
+      "bytes": 829,
+      "sha256": "99e172e2457e3693beb2c17b70283a6c082d5a7728b5420bb87c3db60f6143d2",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/__main__.py",
+      "bytes": 118,
+      "sha256": "83fdeda07fb949ee59280d17045284db653cb239ae8099fafa0698fad12c0e2b",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/_aliases.py",
+      "bytes": 4581,
+      "sha256": "6567987421a9fa694768d610e437864440ab87ee272ad4d2519e497b7dd05d69",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "packages/tether/src/tether/_cli.py",
+      "bytes": 3007,
+      "sha256": "8ba7e55b38916a6622a95c99a9ebcff915189ba1663a669d43977fb01aa06d37",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "packages/tether/src/tether/_presentation.py",
+      "bytes": 24438,
+      "sha256": "51d679719adc62137c5fe314fd4681af7703347f6a07066c2528ff936faace1b",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "packages/tether/src/tether/_semantics.py",
+      "bytes": 14044,
+      "sha256": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+      "coverage": "focused_function_review"
+    },
+    {
+      "path": "packages/tether/src/tether/archive/__init__.py",
+      "bytes": 212,
+      "sha256": "40821b83e61850b34e39fdd4e094c6fc14e43bb944c89a9850bcff765c693904",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/archive/__main__.py",
+      "bytes": 1890,
+      "sha256": "7aa432cd0d1eaa5d2002230f7e695e22d22ed2ae8088503c8216550de2017f65",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/__init__.py",
+      "bytes": 207,
+      "sha256": "4d9925c1f837585499753600d43f1a183a3d7fd2e422b8e1b69d4763e8e018d2",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/__main__.py",
+      "bytes": 968,
+      "sha256": "50efb2a4962d4464811d5b7458442d9a7b10c67be303f320fe76cd7e838c5964",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/authority_four_arm.py",
+      "bytes": 322,
+      "sha256": "04415fca550aba1f7b32fcbd164cd243bca113a27d17d0c4a918396b45608a08",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/baseline_smoke.py",
+      "bytes": 312,
+      "sha256": "3538b6f3cfda4e820c35d16d05a94d6fc4ec5e75e4f962956ec8fd0872a38444",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/fixed_evidence_smoke.py",
+      "bytes": 330,
+      "sha256": "5ee6f3e2d483f32447e1dbded749f61510998a0a35b958f3e68a35a036d23ad9",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/native_diagnostic.py",
+      "bytes": 321,
+      "sha256": "d6661d374a246423205fb9100fa20e784ab5c3586306a7e9095accd4f91e50b2",
+      "coverage": "inventory_only"
+    },
+    {
+      "path": "packages/tether/src/tether/study/retrieval_smoke.py",
+      "bytes": 323,
+      "sha256": "93f4c81e30f604edb50d6eeb6ddede11dc5badde83dfedf05e9d01f5de638974",
+      "coverage": "inventory_only"
+    }
+  ],
+  "evidence": {
+    "PLATFORM-REVIEW.md": {
+      "sha256": "c7d11640b72a70eb95f4e6102b9312e9ea3fab979635d8614e40472ca9159986",
+      "bytes": 11675
+    },
+    "SEMANTIC-PROBES-BEFORE.json": {
+      "sha256": "2d280b1197006de9db57c2fd5231766de62edb58e879ab40061c4914adde291e",
+      "bytes": 1512
+    },
+    "TETHER-041-FULL-TESTS-FINAL-v2.txt": {
+      "sha256": "562101583b0d44e9ef581d517f3ad30aa26670a612db583c84413981dd131d94",
+      "bytes": 11109
+    },
+    "WHEEL-QUALIFICATION-FINAL-v3.json": {
+      "sha256": "9ab3abc6f57126d045cec4e04a2e2df88a4dc9f3c715a866d94064824bd96551",
+      "bytes": 4108
+    }
+  },
+  "limits": [
+    "Focused functions inspected; remaining inventoried modules are not claimed deeply reviewed.",
+    "Current stronger CLI does not replace the weaker frozen Python aliases.",
+    "New consistency checks are not execution authenticity, billing, data completeness or scientific validation.",
+    "Arbitrary custom exception inheritance cannot be established from error_class strings.",
+    "Generic backend request digests are not independently reconstructed from complete backend implementation.",
+    "Archived TETHER 0.4.0 outer verification requires pinned old source/wheel.",
+    "No complete rerun of legacy scientific suite, data ingestion, native models or paper package qualification."
+  ]
+}

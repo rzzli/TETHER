@@ -3,6 +3,13 @@
 **Target Evidence Tracking Harness for Evaluation and Reproducibility.**
 
 The current project name is TETHER. Start with the
+[full critical review](<TETHER Full Project Critical Review 2026-11-02.md>) and
+[current corrective execution plan](<TETHER Corrective Execution Plan 2026-11-02.md>).
+They supersede earlier next-action prose, including the old P02-next instructions.
+The semantic findings qualify older acceptance claims; successful historical
+test runs remain evidence only for their tested properties and revisions.
+
+Historical naming references remain the
 [naming and compatibility plan](<TETHER Naming and Compatibility Plan 2026-11-01.md>),
 [completed rename/status review](<TETHER Rename Completion and Project Status 2026-11-01.md>),
 [live checklist](../TODO.md), [project status index](<Project Progress Reassessments.md>)

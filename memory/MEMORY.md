@@ -1,5 +1,7 @@
 # TETHER research memory index
 
+- [[research-log-2026-11-02-full-project-review]] - Current critical review and corrective authority: reproduced semantic/receipt/QC/reporting defects, stronger TETHER 0.4.1 CLI, scoped data inventory and independently recomputed results. Corrects stale planning, 65-input scope, redundant 80/100 thresholds and proof overreach. Q01–Q06 remain a prioritized backlog; old packets and scientific limitations are preserved.
+
 The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 

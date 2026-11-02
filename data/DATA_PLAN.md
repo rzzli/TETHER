@@ -11,7 +11,9 @@ status: acquisition-started
 
 # TETHER full data requirements and acquisition plan
 
-**Current TETHER checkpoint, 1 November 2026:** the bounded source-reporting
+**Current review, 2 November 2026 UTC:** the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) distinguishes catalog plans, canonical October 17 dossiers and the selected paper frame. The canonical build reports no missing inputs in its own manifest; 65 missing inputs belong to an older frozen interpretation slice. Catalog role/dependency and status granularity need a versioned migration; no collection/scientific status was promoted here. See the [corrective plan](<../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
+
+**Retained TETHER checkpoint, 1 November 2026:** the bounded source-reporting
 study, P09 installed Windows reconstruction and P10b local working packet are
 complete within their declared technical scopes. The retained P09 run reproduces
 38 output hashes and 90 policy decisions from 137 complete originals; the separate

@@ -1,6 +1,9 @@
 # TETHER project execution checklist
 
-Updated 1 November 2026, America/Los_Angeles. Current paper roadmap:
+Updated 2 November 2026 UTC. Current review and corrective roadmap:
+[Full critical review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) and
+[corrective execution plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>).
+The following paper roadmap and completed naming tasks are retained history:
 [Preprint readiness review and completion plan](<planning/Preprint Readiness Review and Completion Plan 2026-10-31.md>).
 The [post-pilot scope decision](<planning/Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md>) narrows the remaining experiment to deterministic source validation after the model conformance branch closed negative.
 The [AI-only input/claim policy](<planning/AI Only Evaluation Plan 2026-10-31.md>) and
@@ -13,7 +16,17 @@ The old categorical genetics adapter and retrospective old-pair audit are option
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
 
-## TETHER renaming — completion checkpoint
+## Full project review and corrections
+
+- [x] C01 Inventory the entire tracked project and perform risk-based code/data/results/planning reviews; retain coverage limits and concrete counterexamples.
+- [x] C02 Fix reproduced semantic, receipt-identity, variant-QC and validation-report defects; validate targeted regressions and installed current interfaces. TETHER 0.4.1 passes 73 interface tests and installed verification; independent 24-test/four-probe review passes. Separate legacy/data/verifier/validator scopes pass 115/61/6/13 tests.
+- [x] C03 Independently recompute retained paper quantities and document scientific/design limitations without rewriting the original experiment.
+- [x] C04 Correct current planning authority, data-frame distinctions and proof claims; retain the old plans as historical records and write paper errata.
+- [x] C05 Independently review corrections, verify source/artifact preservation and documentation consistency, then retain a timestamped local checkpoint. Original study/package bytes remain intact; 102 current local links resolve. Remaining Q01–Q06 limitations are explicit.
+
+Future Q01–Q06 in the corrective plan are an explicit prioritized backlog, not completed tasks or instructions to restart closed experiments during this review. Broad paper/scientific completion remains pending as specified below.
+
+## TETHER renaming — historical completion checkpoint
 
 - [x] N01 Retain the pre-rename baseline, immutable proof/artifact inventory and naming decision: 118 file pins/100 legacy payloads and all three sealed authorities/archives match `7625f8c`. Current branding and compatibility identifiers are explicitly distinguished.
 - [x] N02 Add TETHER 0.4.0 distribution, namespace and CLI with type/proof identity and sealed outer run presentation. All 49 tests pass in full/core environments; 12 independent probes pass after fixing bounded/stable reads and owned-child cleanup. Isolated two-wheel installation/demo/source verification passes without checkout imports or optional libraries; documented offline project sync and dependency checks pass.

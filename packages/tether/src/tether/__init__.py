@@ -7,10 +7,10 @@ from __future__ import annotations
 
 from asof import __version__ as __core_version__
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 if __core_version__ != "0.3.11":
-    raise ImportError("TETHER 0.4.0 requires the pinned legacy engine 0.3.11")
+    raise ImportError("TETHER 0.4.1 requires the pinned legacy engine 0.3.11")
 
 from ._aliases import install as _install_aliases, public_roots as _public_roots
 

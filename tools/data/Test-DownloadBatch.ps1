@@ -24,7 +24,13 @@ foreach ($record in $records) {
         $receiptPath = Join-Path $root ('manifests\receipts\'+$record.receipt_id+'.json')
         if (-not (Test-Path -LiteralPath $receiptPath -PathType Leaf)) { throw 'Source receipt is missing.' }
         $receipt = Get-Content -LiteralPath $receiptPath -Raw | ConvertFrom-Json @readArgs
-        if ($receipt.status -ne 'completed' -or $receipt.url -ne $record.url -or $receipt.relative_path -ne $record.relative_path) { throw 'Receipt/source/path mismatch.' }
+        if ($receipt.status -cne 'completed' -or
+            $receipt.receipt_id -cne $record.receipt_id -or
+            $receipt.dataset_id -cne $record.dataset_id -or
+            $receipt.release_id -cne $record.release_id -or
+            $receipt.url -cne $record.url -or $receipt.relative_path -cne $record.relative_path) {
+            throw 'Receipt/dataset/release/source/path identity mismatch.'
+        }
         $length = (Get-Item -LiteralPath $path).Length
         if ($length -ne [long]$receipt.bytes) { throw 'Receipt byte count mismatch.' }
         if ($null -ne $record.expected_bytes -and $length -ne [long]$record.expected_bytes) { throw 'Exact source byte count mismatch.' }

@@ -79,14 +79,14 @@ class FrontDoorTests(unittest.TestCase):
     def test_distribution_and_license_are_separate_from_legacy_core(self):
         project = tomllib.loads((PROJECT / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-agents")
-        self.assertEqual(project["project"]["version"], "0.4.0")
+        self.assertEqual(project["project"]["version"], "0.4.1")
         self.assertEqual(project["project"]["dependencies"], ["asof-target-agents==0.3.11"])
         self.assertEqual(project["project"]["optional-dependencies"]["ingest"], ["pyarrow==21.0.0"])
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"], ["tether", "tether.*"])
         self.assertEqual((PROJECT / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
     def test_help_version_and_legacy_parser_are_independent(self):
-        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.4.0"),
+        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.4.1"),
                                (["run", "--help"], "usage: tether run")]:
             stream = io.StringIO()
             with redirect_stdout(stream), self.assertRaises(SystemExit) as stop:
@@ -504,7 +504,7 @@ class FrontDoorTests(unittest.TestCase):
             self.assertEqual(cli.main(["verify", "--run-dir", str(self.output), "--outputs-only"]), 2)
         self.assertIn("tether:", stream.getvalue())
         with patch.object(layer, "invoke_engine", return_value=layer.EngineResult(2, stderr=b"asof: bad fixture\n")), redirect_stderr(stream):
-            self.assertEqual(cli.main(["verify", "--run-dir", str(self.root / "absent")]), 2)
+            self.assertEqual(cli.main(["inspect-run", "--run-dir", str(self.root / "absent")]), 2)
         self.assertIn("tether: bad fixture", stream.getvalue())
 
 

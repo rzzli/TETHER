@@ -1,0 +1,66 @@
+test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) ... 
+  test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'receipt_id': 'Receipt-example'}) ... FAIL
+  test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'dataset_id': 'OT_target'}) ... FAIL
+  test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'release_id': 'release-25.09'}) ... FAIL
+  test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'url': 'https://ftp.ebi.ac.uk/Fictional.parquet'}) ... FAIL
+  test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'relative_path': 'raw/Example.parquet'}) ... FAIL
+test_missing_identity_rejected (__main__.ReceiptIdentityTests.test_missing_identity_rejected) ... ok
+test_valid_receipt_passes_without_rewriting_originals (__main__.ReceiptIdentityTests.test_valid_receipt_passes_without_rewriting_originals) ... ok
+test_wrong_dataset_rejected (__main__.ReceiptIdentityTests.test_wrong_dataset_rejected) ... ok
+test_wrong_receipt_identity_rejected (__main__.ReceiptIdentityTests.test_wrong_receipt_identity_rejected) ... ok
+test_wrong_release_rejected (__main__.ReceiptIdentityTests.test_wrong_release_rejected) ... ok
+
+======================================================================
+FAIL: test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'receipt_id': 'Receipt-example'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 79, in test_case_only_source_identity_changes_are_rejected
+    self.assert_rejected(changed, queued)
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 51, in assert_rejected
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'dataset_id': 'OT_target'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 79, in test_case_only_source_identity_changes_are_rejected
+    self.assert_rejected(changed, queued)
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 51, in assert_rejected
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'release_id': 'release-25.09'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 79, in test_case_only_source_identity_changes_are_rejected
+    self.assert_rejected(changed, queued)
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 51, in assert_rejected
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'url': 'https://ftp.ebi.ac.uk/Fictional.parquet'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 79, in test_case_only_source_identity_changes_are_rejected
+    self.assert_rejected(changed, queued)
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 51, in assert_rejected
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_case_only_source_identity_changes_are_rejected (__main__.ReceiptIdentityTests.test_case_only_source_identity_changes_are_rejected) (changed={'relative_path': 'raw/Example.parquet'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 79, in test_case_only_source_identity_changes_are_rejected
+    self.assert_rejected(changed, queued)
+  File "D:\Projects\drug_target_agents\planning\review-assets\full-project-review-20261102\data\test_download_verifier.py", line 51, in assert_rejected
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.997s
+
+FAILED (failures=5)

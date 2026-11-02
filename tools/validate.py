@@ -13,6 +13,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import traceback
 import unittest
 import zipfile
 from pathlib import Path
@@ -141,34 +142,54 @@ def main(argv=None):
     parser.add_argument('--package',action='store_true')
     parser.add_argument('--failfast',action='store_true',help='Stop failed test execution after recording its first traceback')
     args = parser.parse_args(argv)
-    if args.mode=='full':
-        import pyarrow
-        if pyarrow.__version__!='21.0.0' or not shutil.which('pwsh'):
-            raise ContractError('Full validation requires pyarrow 21.0.0 and PowerShell 7')
+    # Reject stale destinations before imports, discovery or expensive checks.
+    # Atomic final publication still rejects a competing writer; this preflight
+    # is not a cross-process reservation or hard-kill recovery guarantee.
+    if args.report and (args.report.exists() or args.report.is_symlink()):
+        raise FileExistsError(args.report)
     started = time.monotonic()
-    report = {'schema_version':1,'mode':args.mode,'structural':structural_checks(),
-              'powershell_syntax':powershell_check()}
-    suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
-    result = unittest.TextTestRunner(verbosity=2, failfast=args.failfast, resultclass=LiveErrorResult).run(suite)
-    report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),
-                     'skipped':[{'test':t.id(),'reason':reason} for t,reason in result.skipped]}
-    success = successful_tests(result,args.mode)
-    with tempfile.TemporaryDirectory(prefix='asof-validation-') as temporary:
-        directory=Path(temporary)
-        previous=sys.argv
-        try:
-            sys.argv=['probe_framework','--output',str(directory/'probes.json')]
-            report['required_probes_exit_code']=probe_main()
-        finally:
-            sys.argv=previous
-        success = success and report['required_probes_exit_code']==0
-        if args.package:
-            report['packaging']=package_check(directory)
-    report.update(status='passed' if success else 'failed',elapsed_seconds=time.monotonic()-started)
+    report = {'schema_version':1,'mode':args.mode,'status':'running','stage':'prerequisites'}
+    exit_code = 1
+    try:
+        if args.mode=='full':
+            import pyarrow
+            if pyarrow.__version__!='21.0.0' or not shutil.which('pwsh'):
+                raise ContractError('Full validation requires pyarrow 21.0.0 and PowerShell 7')
+        report['stage'] = 'structural'
+        report['structural'] = structural_checks()
+        report['stage'] = 'powershell_syntax'
+        report['powershell_syntax'] = powershell_check()
+        report['stage'] = 'tests'
+        suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
+        result = unittest.TextTestRunner(verbosity=2, failfast=args.failfast, resultclass=LiveErrorResult).run(suite)
+        report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),
+                         'skipped':[{'test':t.id(),'reason':reason} for t,reason in result.skipped]}
+        success = successful_tests(result,args.mode)
+        with tempfile.TemporaryDirectory(prefix='asof-validation-') as temporary:
+            directory=Path(temporary)
+            previous=sys.argv
+            report['stage'] = 'required_probes'
+            try:
+                sys.argv=['probe_framework','--output',str(directory/'probes.json')]
+                report['required_probes_exit_code']=probe_main()
+            finally:
+                sys.argv=previous
+            success = success and report['required_probes_exit_code']==0
+            if args.package:
+                report['stage'] = 'packaging'
+                report['packaging']=package_check(directory)
+        report.update(status='passed' if success else 'failed',stage='complete')
+        exit_code = 0 if success else 1
+    except BaseException as error:
+        report.update(status='interrupted' if isinstance(error, KeyboardInterrupt) else 'failed',
+                      error={'type':type(error).__name__,'message':str(error)})
+        exit_code = 130 if isinstance(error, KeyboardInterrupt) else 1
+        traceback.print_exc()
+    report['elapsed_seconds'] = time.monotonic()-started
+    print(json.dumps(report,indent=2))
     if args.report:
         write_new_json(args.report,report)
-    print(json.dumps(report,indent=2))
-    return 0 if success else 1
+    return exit_code
 
 
 if __name__=='__main__':

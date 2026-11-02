@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "method": "tether.full_review_data_findings.v2",
+  "baseline_commit": "21f64e7",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "status": "REVIEW_COMPLETE_TWO_REPRODUCED_DEFECTS_FIXED_OTHER_LIMITS_EXPLICIT",
+  "findings": [
+    {
+      "id": "D01",
+      "priority": "P2",
+      "status": "fixed",
+      "title": "Transport verifier omitted receipt/dataset/release identity",
+      "path": "tools/data/Test-DownloadBatch.ps1",
+      "line": 27,
+      "action": "Case-sensitive status/receipt/dataset/release/URL/path identities required; six regression methods/twelve fixtures pass."
+    },
+    {
+      "id": "D02",
+      "priority": "P2",
+      "status": "fixed",
+      "title": "Identical REF/ALT accepted as oriented SNP",
+      "path": "tools/feasibility/qc_genetics_region.py",
+      "line": 15,
+      "action": "Reject identical reference/alternate or effect/other alleles; final61 tests pass."
+    },
+    {
+      "id": "D03",
+      "priority": "P2",
+      "status": "open_design",
+      "title": "Agent-evidence product unconditionally depends on evaluator-only QC",
+      "path": "data/catalog/sources.json",
+      "line": 25247,
+      "action": "Catalog v2 separates input dependencies from validation attestations; no runtime leakage shown."
+    },
+    {
+      "id": "D04",
+      "priority": "P2",
+      "status": "open_design",
+      "title": "AACT product role spans origin and explicitly evaluator follow-up assets",
+      "path": "data/catalog/sources.json",
+      "line": 11408,
+      "action": "Require artifact/release intended-use roles, not blanket promotion."
+    },
+    {
+      "id": "D05",
+      "priority": "P2",
+      "status": "open_reconciliation",
+      "title": "Catalog status and no-artifact notes lag retained scoped artifacts",
+      "path": "data/catalog/sources.json",
+      "line": 3,
+      "action": "Create neutral dated artifact observation ledger; do not promote from existence checks alone."
+    },
+    {
+      "id": "D06",
+      "priority": "P2",
+      "status": "open_unchanged_worker_boundary",
+      "title": "Downloader cache-hit receipt rewrite and stale running state",
+      "path": "tools/data/Start-DownloadBatch.ps1",
+      "line": 124,
+      "action": "Versioned future worker with immutable receipts and process-start identity; archived copies mitigate existing replay risk."
+    },
+    {
+      "id": "D07",
+      "priority": "P2",
+      "status": "open_before_new_acquisition",
+      "title": "Regional Tabix I/O lacks explicit total wall bound",
+      "path": "tools/feasibility/fetch_genetics_region.py",
+      "line": 50,
+      "action": "Supervise subprocess with deadline and header/output limits before another acquisition."
+    },
+    {
+      "id": "D08",
+      "priority": "scientific",
+      "status": "deferred",
+      "title": "Clinical labels and causal genetic input qualification remain unresolved",
+      "path": "planning/review-assets/science-prerequisites-20261018/item5/genetics-disposition.json",
+      "line": 1,
+      "action": "Retain scientific defer; technical checks do not replace endpoint/study/assay qualification."
+    }
+  ],
+  "checks": {
+    "targeted_python_tests": 61,
+    "powershell_verifier_test_methods": 6,
+    "powershell_synthetic_fixture_executions": 12,
+    "catalog_products": 178,
+    "catalog_providers": 83,
+    "named_original_paths_statted": 1222,
+    "present": 1145,
+    "missing_in_queued_partial_products": 77,
+    "neutral_catalog_metadata_paths": 12,
+    "pinned_metadata_hashes_verified": 9,
+    "parquet_footers_read": 4,
+    "original_rows_decoded": 0
+  },
+  "scope_limits": [
+    "Not a fresh entire-drive content hash or schema/row audit",
+    "59 initial existing tests and final61 tests overlap; do not add counts",
+    "Before SNP tests have four failing subcases; before verifier tests six failing subcases",
+    "Initial C temp permission failures were environmental and retained",
+    "No original/source/downloader/monitor/catalog changes or model/network/DB/science execution",
+    "No protected normalized outcomes or human responses read",
+    "Future catalog/worker/retrieval changes require separate implementation and validation"
+  ],
+  "changed_code": {
+    "tools/data/Test-DownloadBatch.ps1": {
+      "before_sha256": "1ffcca0420116baf4845ca2ba49a7a43ae6247e0943bb9f6a7bb3eb8dc348a85",
+      "after_sha256": "5a0ebfd307e97bd3d1cc37191beec3ec4672c2d5097a748f8844d2e431656eb4"
+    },
+    "tools/feasibility/qc_genetics_region.py": {
+      "before_sha256": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3",
+      "after_sha256": "cbb3a590d038237fa5005104eded752b0e1a70e57b3bf42773580f2d82f6130f"
+    },
+    "tests/test_feasibility.py": {
+      "before_sha256": "4817ccf476e851dbb0a57a276a8146b3047c0831b5afde26af14370786c81436",
+      "after_sha256": "b2b16e728ab584222377f7e4a108c9bb7de9ba114e5e0c67272958431bdeb4c9"
+    }
+  },
+  "unchanged_protected_scope": {
+    "tools/data/Start-DownloadBatch.ps1": "e432007fea83a2e6838002318cfaa87351ce59328533fa6b023182d422659601",
+    "tools/data/Watch-DownloadBatch.ps1": "24ce70091ffd9a9997a0421199a0b1a8f7514e5be237acb8e53efd679e783892",
+    "data/catalog/sources.json": "eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac"
+  },
+  "evidence": {
+    "audit_catalog.py": {
+      "sha256": "b0e011455daaad3fa08c839d8b503cc3baf37a57a0445f8dd44c1777e3bb7dfe",
+      "bytes": 4688
+    },
+    "CATALOG-AND-INVENTORY.json": {
+      "sha256": "6961f665310c30aa46ce217a4c75241f8fbf8aeb593056c84040a5d21bbe999c",
+      "bytes": 333850
+    },
+    "DATA-FINDINGS-v1.json": {
+      "sha256": "2a6ce24ebd972529899962b71e7553e1298693648858a4934b960636cf15cdd9",
+      "bytes": 7473
+    },
+    "DATA-REVIEW.md": {
+      "sha256": "2970e331768c206db2fe119778a3a282a46136af836886afd56525705f4ca7f2",
+      "bytes": 15078
+    },
+    "PLAN-DATA-REVIEW.json": {
+      "sha256": "ab8a8c7f111a2a53887c2d404b8d0e539ee0f1777355f3ecac1aae0210225cdd",
+      "bytes": 3064
+    },
+    "probe_validation_peer.py": {
+      "sha256": "0681dbef5a6dcd29940a799ca4d4d7e7fea435d86ec4b7705603e99a15c5ad11",
+      "bytes": 4398
+    },
+    "qc_genetics_region-before.py.txt": {
+      "sha256": "30d95800c94770fd311c97a76432ab003945c5efd5327ea01baae740c4ea4ad3",
+      "bytes": 9314
+    },
+    "SELECTED-SCHEMA-REVIEW.json": {
+      "sha256": "9c3e668b1d4ea50c96abccd92d81b91dc6a0594de33034353575527c0dc5333c",
+      "bytes": 6146
+    },
+    "SNP-REGRESSIONS-AFTER.txt": {
+      "sha256": "ef6ab9b794a24a59898e928ae33c8abfafc6c006d0c79d3d2cea6666cc2ec965",
+      "bytes": 5030
+    },
+    "SNP-REGRESSIONS-BEFORE.txt": {
+      "sha256": "50c1108e319a230c1eda395e704da97824cf22cfe5b992e5bc755d1a10c662ce",
+      "bytes": 4320
+    },
+    "TARGETED-TESTS-FINAL.txt": {
+      "sha256": "d30079b887bf27216b52a142adbab0d72b32cd862823a96583413d4847ce6fd3",
+      "bytes": 11341
+    },
+    "TARGETED-TESTS-WORKSPACE-TEMP.txt": {
+      "sha256": "540a238efbfb1e57bab59ed10af82941027ea6e8cb5aa1a48a9fe6f4feeb6e37",
+      "bytes": 11039
+    },
+    "TARGETED-TESTS.txt": {
+      "sha256": "ec356f21c3a69b21d85ea74c1a62f94e46b38eb624f85d57e20b443c98abc69f",
+      "bytes": 118110
+    },
+    "test_download_verifier.py": {
+      "sha256": "4b6530c50859af39606c8fa67151fbdace9f039d496fa6879ac099b6dd14d83b",
+      "bytes": 3993
+    },
+    "VALIDATOR-PEER.json": {
+      "sha256": "6dc50c8126bb82d1841427a5e5424c73abffc23fc61a2fbc23a560168890cacc",
+      "bytes": 1469
+    },
+    "VALIDATOR-PEER.md": {
+      "sha256": "2eafcd8f2d933655dd21cbb4f792dbb801373fb1352081d44d46d8d0e6cc9b70",
+      "bytes": 2170
+    },
+    "VERIFIER-CASE-REGRESSIONS-BEFORE.txt": {
+      "sha256": "0038d9f53808bafc7f47bee874284043b43d308a0ec695df37a871e33f96a4a3",
+      "bytes": 5855
+    },
+    "VERIFIER-REGRESSIONS-AFTER-v2.txt": {
+      "sha256": "c6e60e04466c65792641e7a9e2c62da4275e6396ad8946cafaaa2a36cc407174",
+      "bytes": 803
+    },
+    "VERIFIER-REGRESSIONS-AFTER.txt": {
+      "sha256": "fa5628809a28f08e48840034cf839c7ce910a8973ce7b74058cf2317b25cb511",
+      "bytes": 659
+    },
+    "VERIFIER-REGRESSIONS-BEFORE.txt": {
+      "sha256": "6d092da02783a6e38ea84a3e2ccb6d788c6c9cd0709b84cc62df10f32fa479b3",
+      "bytes": 5353
+    },
+    "WRONG-RECEIPT-PROBE.json": {
+      "sha256": "cdeee6890b481aa912f952a77dad2bff1997546fb14ea92482c66e128256dcb6",
+      "bytes": 450
+    }
+  },
+  "revision_notes": "Root peer identified default PowerShell case-insensitive comparisons. Five additional case-only negatives failed before -cne correction and pass afterward. Earlier v1 record and test transcripts retained."
+}

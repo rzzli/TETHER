@@ -1,7 +1,7 @@
 # TETHER
 
 TETHER is the canonical front door for the evidence-agent framework. This
-distribution is `tether-target-agents` 0.4.0, with Python namespace `tether` and
+distribution is `tether-target-agents` 0.4.1, with Python namespace `tether` and
 command `tether`. It depends on the unchanged `asof-target-agents==0.3.11`
 compatibility engine. The default uses no third-party runtime libraries; the
 optional `ingest` extra pins PyArrow 21.0.0. Local models remain explicit opt-in.
@@ -10,6 +10,17 @@ The separate project preserves the original root project, wire IDs, dataclass
 identities, code proofs and historical release bytes. Legacy names in those
 artifacts identify their actual implementation; they are not silently rewritten.
 An installed TETHER launcher is additional code, with its own proof.
+
+Version 0.4.1 adds deterministic verification of category status transitions,
+reviewed selections versus committed claims, and the complete engine dossier.
+The `tether verify` command applies these checks to v2 engine runs as well as
+new outer runs. The aliases `tether.artifacts` and `tether.semantics` continue to
+expose the frozen legacy API; use the CLI or `tether._presentation.verify_engine`
+for the additional boundary. Version-one receipts retain their original scope.
+
+Archived TETHER 0.4.0 outer runs require the pinned 0.4.0 wheel/source to verify
+their launcher fingerprint. The original review packet remains that historical
+version; this correction does not rewrite its sources, paper or artifacts.
 
 From this directory, development tooling resolves the engine through
 `tool.uv.sources` at `../..`. Root integration instructions own environment/lock
@@ -35,8 +46,8 @@ explicitly unestablished.
 
 Outer verification checks the launcher, paths, complete file inventory, journal,
 exact dossier projection and genuine source-inclusive engine verification.
-`--outputs-only` is rejected for an outer run. Direct legacy run verification and
-other commands retain their engine semantics. TETHER metadata/journal reads are
+`--outputs-only` is rejected for an outer run. Direct v2 engine verification adds
+the checks described above; other commands retain their engine semantics. TETHER metadata/journal reads are
 limited to 64 MiB; dossier reads/products have a separate 256 MiB limit. These
 reads reject oversized or nonregular files before opening, use bounded chunks,
 reject links/reparse points and check file identity before and after reading.

@@ -1,0 +1,20 @@
+test_claims_cannot_follow_rejected_review (test_semantics.SemanticBoundaryTests.test_claims_cannot_follow_rejected_review) ... ok
+test_current_cli_rejects_bad_legacy_run_without_dispatch (test_semantics.SemanticBoundaryTests.test_current_cli_rejects_bad_legacy_run_without_dispatch) ... ok
+test_deadline_after_response_preserves_failed_category (test_semantics.SemanticBoundaryTests.test_deadline_after_response_preserves_failed_category) ... ok
+test_deadline_during_claim_commit_preserves_partial_prefix (test_semantics.SemanticBoundaryTests.test_deadline_during_claim_commit_preserves_partial_prefix) ... ok
+test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) ... ok
+test_no_observed_and_disabled_categories_remain_valid (test_semantics.SemanticBoundaryTests.test_no_observed_and_disabled_categories_remain_valid) ... ok
+test_outer_cannot_finalize_inconsistent_engine_producer (test_semantics.SemanticBoundaryTests.test_outer_cannot_finalize_inconsistent_engine_producer) ... ok
+test_quote_failures_and_empty_retrieval_remain_valid (test_semantics.SemanticBoundaryTests.test_quote_failures_and_empty_retrieval_remain_valid) ... ok
+test_real_completed_run_is_reconstructed (test_semantics.SemanticBoundaryTests.test_real_completed_run_is_reconstructed) ... ok
+test_rejected_review_retry_and_valid_empty_selection (test_semantics.SemanticBoundaryTests.test_rejected_review_retry_and_valid_empty_selection) ... ok
+test_request_denial_and_usage_overage_remain_valid (test_semantics.SemanticBoundaryTests.test_request_denial_and_usage_overage_remain_valid) ... ok
+test_resealed_unbound_dossier_prose_rejects (test_semantics.SemanticBoundaryTests.test_resealed_unbound_dossier_prose_rejects) ... ok
+test_review_selection_cannot_differ_from_committed_claims (test_semantics.SemanticBoundaryTests.test_review_selection_cannot_differ_from_committed_claims) ... ok
+test_review_usage_must_match_accounted_usage (test_semantics.SemanticBoundaryTests.test_review_usage_must_match_accounted_usage) ... ok
+test_valid_partial_fatal_and_interrupted_runs_remain_verifiable (test_semantics.SemanticBoundaryTests.test_valid_partial_fatal_and_interrupted_runs_remain_verifiable) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 7.921s
+
+OK

@@ -1,5 +1,12 @@
 # TETHER technical paper working draft
 
+**2 November review update:** read the [technical errata and interpretation notes](REVIEW-ERRATA-20261102.md)
+before sharing this version. The retained quantities recompute, but legacy
+semantic-verification claims need qualification, the native 80/100 thresholds
+coincide, and generator/performance conclusions need their stated limits.
+The paper/PDF/0.4.0 ZIP below remain the original working version; current
+TETHER 0.4.1 corrections require their own release qualification.
+
 **Target Evidence Tracking Harness for Evaluation and Reproducibility.**
 TETHER is the current project name; the original software and frozen artifacts
 used AsOf. The naming revision changes no experiment, result, cost or source fact.

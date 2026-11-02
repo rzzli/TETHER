@@ -166,9 +166,9 @@ def code_proof():
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(asof.__version__ == "0.3.11" and __version__ == "0.4.0", "Unsupported TETHER/core version")
+    need(asof.__version__ == "0.3.11" and __version__ == "0.4.1", "Unsupported TETHER/core version")
     need(versions["asof-target-agents"] in (None, "0.3.11")
-         and versions["tether-target-agents"] in (None, "0.4.0"), "Installed distribution version differs")
+         and versions["tether-target-agents"] in (None, "0.4.1"), "Installed distribution version differs")
     return dict(schema_version=1, method="tether.launcher_code.v1", facade_version=__version__,
                 core_version=asof.__version__, installed_distributions=versions, code=proof)
 
@@ -275,11 +275,22 @@ def preflight_run_journals(output, *, verify=False):
 
 
 def _core_check(root, receipt_hash):
-    preflight_run_journals(root / "engine", verify=True)
-    result = verify_run(root / "engine", receipt_hash, True)
+    result = verify_engine(root / "engine", receipt_hash, True)
     need(result.get("code_matches_current") is True and result.get("semantic_consistency") == "verified"
          and result.get("source_binding") == "current_originals", "Engine source/code verification is incomplete")
     need(_json(root / "engine/run.json").get("status") == "completed", "Engine run did not complete")
+    return result
+
+
+def verify_engine(output, receipt_hash=None, verify_sources=True):
+    """TETHER-qualified v2 verification; v1 retains its declared legacy scope."""
+    output = Path(output)
+    preflight_run_journals(output, verify=True)
+    result = verify_run(output, receipt_hash, verify_sources)
+    if _json(output / "receipt.json")["schema_version"] == 2:
+        from ._semantics import check_engine_semantics
+        result["tether_semantics"] = check_engine_semantics(
+            output, _json, _read, _journal_events, MAX_DOSSIER_BYTES)
     return result
 
 

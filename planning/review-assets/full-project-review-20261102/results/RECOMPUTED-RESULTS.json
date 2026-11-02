@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "method": "independent_retained_result_arithmetic_review_v1",
+  "status": "PASS_RETAINED_RESULT_ARITHMETIC_WITH_DESIGN_LIMITATIONS",
+  "role": "evaluation_only",
+  "agent_visible": false,
+  "checks": [
+    {
+      "label": "byte binding: analysis",
+      "passed": true
+    },
+    {
+      "label": "byte binding: analysis_seal",
+      "passed": true
+    },
+    {
+      "label": "byte binding: audit",
+      "passed": true
+    },
+    {
+      "label": "byte binding: ledger",
+      "passed": true
+    },
+    {
+      "label": "byte binding: register",
+      "passed": true
+    },
+    {
+      "label": "byte binding: README.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure1-flow-caption.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure1-flow-data.json",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure1-flow-preview.png",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure1-flow.pdf",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure1-flow.svg",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure2-availability-caption.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure2-availability-data.json",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure2-availability-preview.png",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure2-availability.pdf",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure2-availability.svg",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure3-controls-caption.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure3-controls-data.json",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure3-controls-preview.png",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure3-controls.pdf",
+      "passed": true
+    },
+    {
+      "label": "byte binding: figures/figure3-controls.svg",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/constructed_control_verdicts.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/constructed_control_verdicts.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/constructed_policy_summary.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/constructed_policy_summary.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/decision_schedule.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/decision_schedule.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_case_results.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_case_results.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_fact_accounting.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_fact_accounting.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_missingness.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_missingness.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_operation_resources.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/native_operation_resources.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/output_schedule.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/output_schedule.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/paired_discordance.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/paired_discordance.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/paired_verdict_cells.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/paired_verdict_cells.md",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/resource_phases.csv",
+      "passed": true
+    },
+    {
+      "label": "byte binding: tables/resource_phases.md",
+      "passed": true
+    },
+    {
+      "label": "eleven tables / 392 rows",
+      "passed": true
+    },
+    {
+      "label": "38 outputs / 90 decisions",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-01",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-01",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-01",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-02",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-02",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-02",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-03",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-03",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-03",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-04",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-04",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-04",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-05",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-05",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-05",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-06",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-06",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-06",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-07",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-07",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-07",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-08",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-08",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-08",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-09",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-09",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-09",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-10",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-10",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-10",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-11",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-11",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-11",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-L-p05-12",
+      "passed": true
+    },
+    {
+      "label": "15 slots/4 measurements/11 identities: p05-12",
+      "passed": true
+    },
+    {
+      "label": "retained raw: N-A-p05-12",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-C01",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-C02",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-C03",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-C04",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F01",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F02",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F03",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F04",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F05",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F06",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F07",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F08",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F09",
+      "passed": true
+    },
+    {
+      "label": "retained raw: S-F10",
+      "passed": true
+    },
+    {
+      "label": "native availability",
+      "passed": true
+    },
+    {
+      "label": "80 and 100 mathematically identical in every native unit",
+      "passed": true
+    },
+    {
+      "label": "terminal totals",
+      "passed": true
+    },
+    {
+      "label": "decision totals",
+      "passed": true
+    },
+    {
+      "label": "native completion L",
+      "passed": true
+    },
+    {
+      "label": "native completion A",
+      "passed": true
+    },
+    {
+      "label": "constructed FULL",
+      "passed": true
+    },
+    {
+      "label": "constructed WITHOUT_WRAPPER",
+      "passed": true
+    },
+    {
+      "label": "constructed WIRE_ONLY",
+      "passed": true
+    }
+  ],
+  "check_count": 104,
+  "source_originals_reread": false,
+  "scientific_validation": "not_established",
+  "tables": {
+    "constructed_control_verdicts": 42,
+    "constructed_policy_summary": 3,
+    "decision_schedule": 90,
+    "native_case_results": 24,
+    "native_fact_accounting": 96,
+    "native_missingness": 12,
+    "native_operation_resources": 12,
+    "output_schedule": 38,
+    "paired_discordance": 7,
+    "paired_verdict_cells": 63,
+    "resource_phases": 5
+  },
+  "native": [
+    {
+      "case_id": "p05-01",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-02",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-03",
+      "measurement_known": 4,
+      "measurement_null": 0,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 3,
+      "minimum_matches_80": 4,
+      "minimum_matches_100": 4
+    },
+    {
+      "case_id": "p05-04",
+      "measurement_known": 4,
+      "measurement_null": 0,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 3,
+      "minimum_matches_80": 4,
+      "minimum_matches_100": 4
+    },
+    {
+      "case_id": "p05-05",
+      "measurement_known": 4,
+      "measurement_null": 0,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 3,
+      "minimum_matches_80": 4,
+      "minimum_matches_100": 4
+    },
+    {
+      "case_id": "p05-06",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-07",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-08",
+      "measurement_known": 2,
+      "measurement_null": 2,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 2,
+      "minimum_matches_100": 2
+    },
+    {
+      "case_id": "p05-09",
+      "measurement_known": 4,
+      "measurement_null": 0,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 3,
+      "minimum_matches_80": 4,
+      "minimum_matches_100": 4
+    },
+    {
+      "case_id": "p05-10",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-11",
+      "measurement_known": 3,
+      "measurement_null": 1,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 2,
+      "minimum_matches_80": 3,
+      "minimum_matches_100": 3
+    },
+    {
+      "case_id": "p05-12",
+      "measurement_known": 4,
+      "measurement_null": 0,
+      "identity_known": 9,
+      "identity_null": 2,
+      "minimum_matches_60": 3,
+      "minimum_matches_80": 4,
+      "minimum_matches_100": 4
+    }
+  ],
+  "outputs": {
+    "returned": 36,
+    "malformed": 2
+  },
+  "decisions": {
+    "admitted": 57,
+    "rejected": 33
+  },
+  "constructed": {
+    "FULL": {
+      "invalid_admitted": 0,
+      "invalid_count": 10,
+      "valid_rejected": 0,
+      "valid_count": 4
+    },
+    "WITHOUT_WRAPPER": {
+      "invalid_admitted": 2,
+      "invalid_count": 10,
+      "valid_rejected": 0,
+      "valid_count": 4
+    },
+    "WIRE_ONLY": {
+      "invalid_admitted": 7,
+      "invalid_count": 10,
+      "valid_rejected": 0,
+      "valid_count": 4
+    }
+  },
+  "new_design_observations": {
+    "native_80_and_100_identical_for_every_possible_match_count": true,
+    "source_wrapper_fraction_of_production_wall": 0.9704849186571735,
+    "logical_hash_bytes_per_selected_frame_byte": 49.00214219861227
+  },
+  "limitations": [
+    "Arithmetic and current retained-byte checks, not a new source-inclusive scientific audit.",
+    "No producer/scorer imports or execution; no source/response/protected outcome read; no model/network calls."
+  ]
+}

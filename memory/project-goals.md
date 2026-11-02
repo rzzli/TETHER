@@ -3,12 +3,23 @@ name: project-goals
 description: Current TETHER implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-11-01
+updated: 2026-11-02
 ---
 
 # TETHER project goals
 
 ## Current recovery execution
+
+Current authority: [[TETHER Full Project Critical Review 2026-11-02]] and
+[[TETHER Corrective Execution Plan 2026-11-02]], with evidence in
+[[research-log-2026-11-02-full-project-review]]. The new review reproduced missing
+legacy semantic checks and corrected current CLI/receipt/QC/reporting behavior.
+TETHER 0.4.1 is distinct from the archived 0.4.0 packet. Original paper quantities
+recompute, but redundant thresholds, source verification overhead and scientific
+scope need explicit interpretation. Q01–Q06 are the next prioritized backlog;
+no retired human gate, stopped downloader or closed experiment is reactivated.
+
+### Prior naming checkpoint (retained history)
 
 Current identity: **TETHER — Target Evidence Tracking Harness for Evaluation and
 Reproducibility**. The owner explicitly requested rebranding the active project.

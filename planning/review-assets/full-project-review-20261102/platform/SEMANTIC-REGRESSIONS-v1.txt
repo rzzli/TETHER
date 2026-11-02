@@ -1,0 +1,241 @@
+test_claims_cannot_follow_rejected_review (test_semantics.SemanticBoundaryTests.test_claims_cannot_follow_rejected_review) ... ERROR
+test_current_cli_rejects_bad_legacy_run_without_dispatch (test_semantics.SemanticBoundaryTests.test_current_cli_rejects_bad_legacy_run_without_dispatch) ... ok
+test_deadline_after_response_preserves_failed_category (test_semantics.SemanticBoundaryTests.test_deadline_after_response_preserves_failed_category) ... ERROR
+test_deadline_during_claim_commit_preserves_partial_prefix (test_semantics.SemanticBoundaryTests.test_deadline_during_claim_commit_preserves_partial_prefix) ... ERROR
+test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) ... 
+  test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='failed') ... ERROR
+  test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='biologically_absent') ... ERROR
+  test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='invented_status') ... ERROR
+  test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='disabled') ... ERROR
+test_no_observed_and_disabled_categories_remain_valid (test_semantics.SemanticBoundaryTests.test_no_observed_and_disabled_categories_remain_valid) ... ERROR
+test_outer_cannot_finalize_inconsistent_engine_producer (test_semantics.SemanticBoundaryTests.test_outer_cannot_finalize_inconsistent_engine_producer) ... ERROR
+test_quote_failures_and_empty_retrieval_remain_valid (test_semantics.SemanticBoundaryTests.test_quote_failures_and_empty_retrieval_remain_valid) ... ERROR
+test_real_completed_run_is_reconstructed (test_semantics.SemanticBoundaryTests.test_real_completed_run_is_reconstructed) ... ERROR
+test_rejected_review_retry_and_valid_empty_selection (test_semantics.SemanticBoundaryTests.test_rejected_review_retry_and_valid_empty_selection) ... ERROR
+test_request_denial_and_usage_overage_remain_valid (test_semantics.SemanticBoundaryTests.test_request_denial_and_usage_overage_remain_valid) ... ERROR
+test_resealed_unbound_dossier_prose_rejects (test_semantics.SemanticBoundaryTests.test_resealed_unbound_dossier_prose_rejects) ... ERROR
+test_review_selection_cannot_differ_from_committed_claims (test_semantics.SemanticBoundaryTests.test_review_selection_cannot_differ_from_committed_claims) ... ERROR
+test_review_usage_must_match_accounted_usage (test_semantics.SemanticBoundaryTests.test_review_usage_must_match_accounted_usage) ... ERROR
+test_valid_partial_fatal_and_interrupted_runs_remain_verifiable (test_semantics.SemanticBoundaryTests.test_valid_partial_fatal_and_interrupted_runs_remain_verifiable) ... ERROR
+
+======================================================================
+ERROR: test_claims_cannot_follow_rejected_review (test_semantics.SemanticBoundaryTests.test_claims_cannot_follow_rejected_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 82, in test_claims_cannot_follow_rejected_review
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_deadline_after_response_preserves_failed_category (test_semantics.SemanticBoundaryTests.test_deadline_after_response_preserves_failed_category)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 150, in test_deadline_after_response_preserves_failed_category
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_deadline_during_claim_commit_preserves_partial_prefix (test_semantics.SemanticBoundaryTests.test_deadline_during_claim_commit_preserves_partial_prefix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 139, in test_deadline_during_claim_commit_preserves_partial_prefix
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 68, in test_failed_absent_and_unknown_coverage_statuses_reject
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='biologically_absent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 68, in test_failed_absent_and_unknown_coverage_statuses_reject
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='invented_status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 68, in test_failed_absent_and_unknown_coverage_statuses_reject
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_failed_absent_and_unknown_coverage_statuses_reject (test_semantics.SemanticBoundaryTests.test_failed_absent_and_unknown_coverage_statuses_reject) (status='disabled')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 68, in test_failed_absent_and_unknown_coverage_statuses_reject
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_no_observed_and_disabled_categories_remain_valid (test_semantics.SemanticBoundaryTests.test_no_observed_and_disabled_categories_remain_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 116, in test_no_observed_and_disabled_categories_remain_valid
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_outer_cannot_finalize_inconsistent_engine_producer (test_semantics.SemanticBoundaryTests.test_outer_cannot_finalize_inconsistent_engine_producer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 197, in test_outer_cannot_finalize_inconsistent_engine_producer
+    layer.create_outer(target, ["demo", "--output", str(target)], engine=producer)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 338, in create_outer
+    _core_check(output, engine_receipt)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 278, in _core_check
+    result = verify_engine(root / "engine", receipt_hash, True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_quote_failures_and_empty_retrieval_remain_valid (test_semantics.SemanticBoundaryTests.test_quote_failures_and_empty_retrieval_remain_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 161, in test_quote_failures_and_empty_retrieval_remain_valid
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_real_completed_run_is_reconstructed (test_semantics.SemanticBoundaryTests.test_real_completed_run_is_reconstructed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 55, in test_real_completed_run_is_reconstructed
+    result = layer.verify_engine(target, digest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_rejected_review_retry_and_valid_empty_selection (test_semantics.SemanticBoundaryTests.test_rejected_review_retry_and_valid_empty_selection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 177, in test_rejected_review_retry_and_valid_empty_selection
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_request_denial_and_usage_overage_remain_valid (test_semantics.SemanticBoundaryTests.test_request_denial_and_usage_overage_remain_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 121, in test_request_denial_and_usage_overage_remain_valid
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_resealed_unbound_dossier_prose_rejects (test_semantics.SemanticBoundaryTests.test_resealed_unbound_dossier_prose_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 99, in test_resealed_unbound_dossier_prose_rejects
+    layer.verify_engine(target, sha256_file(target / "receipt.json"))
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_review_selection_cannot_differ_from_committed_claims (test_semantics.SemanticBoundaryTests.test_review_selection_cannot_differ_from_committed_claims)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 75, in test_review_selection_cannot_differ_from_committed_claims
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_review_usage_must_match_accounted_usage (test_semantics.SemanticBoundaryTests.test_review_usage_must_match_accounted_usage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 89, in test_review_usage_must_match_accounted_usage
+    layer.verify_engine(target, digest)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+======================================================================
+ERROR: test_valid_partial_fatal_and_interrupted_runs_remain_verifiable (test_semantics.SemanticBoundaryTests.test_valid_partial_fatal_and_interrupted_runs_remain_verifiable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_semantics.py", line 111, in test_valid_partial_fatal_and_interrupted_runs_remain_verifiable
+    self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 291, in verify_engine
+    from ._semantics import check_engine_semantics
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_aliases.py", line 84, in find_spec
+    raise ModuleNotFoundError(f"{fullname!r} is not in the TETHER public module inventory", name=fullname)
+ModuleNotFoundError: 'tether._semantics' is not in the TETHER public module inventory
+
+----------------------------------------------------------------------
+Ran 15 tests in 6.534s
+
+FAILED (errors=17)

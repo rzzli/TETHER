@@ -35,7 +35,7 @@ _LEGACY_MODULES = frozenset((
     "demo", "demo.v2", "study.resources",
 ))
 _CANONICAL_ALIASES = {"cli": "tether._cli"}
-_OWN_MODULES = frozenset(("tether.__main__", "tether._aliases", "tether._cli", "tether._presentation"))
+_OWN_MODULES = frozenset(("tether.__main__", "tether._aliases", "tether._cli", "tether._presentation", "tether._semantics"))
 _ENTRYPOINTS = {
     "tether.study.__main__": ("study", "__main__.py"),
     "tether.archive.__main__": ("archive", "__main__.py"),

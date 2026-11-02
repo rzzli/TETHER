@@ -1,0 +1,1518 @@
+test_boolean_byte_metadata_does_not_alias_integer_zero (test_frontdoor.FrontDoorTests.test_boolean_byte_metadata_does_not_alias_integer_zero) ... ERROR
+test_boolean_byte_metadata_does_not_alias_integer_zero (test_frontdoor.FrontDoorTests.test_boolean_byte_metadata_does_not_alias_integer_zero) ... ERROR
+test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure (test_frontdoor.FrontDoorTests.test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure) ... FAIL
+test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure (test_frontdoor.FrontDoorTests.test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure) ... ERROR
+test_cli_demo_and_inspect_do_not_redispatch (test_frontdoor.FrontDoorTests.test_cli_demo_and_inspect_do_not_redispatch) ... tether: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-nk0irer5\\outer'
+FAIL
+test_cli_demo_and_inspect_do_not_redispatch (test_frontdoor.FrontDoorTests.test_cli_demo_and_inspect_do_not_redispatch) ... ERROR
+test_concurrent_reservation_dispatches_exactly_once (test_frontdoor.FrontDoorTests.test_concurrent_reservation_dispatches_exactly_once) ... FAIL
+test_concurrent_reservation_dispatches_exactly_once (test_frontdoor.FrontDoorTests.test_concurrent_reservation_dispatches_exactly_once) ... ERROR
+test_constructor_failure_keeps_readable_outer_failure (test_frontdoor.FrontDoorTests.test_constructor_failure_keeps_readable_outer_failure) ... ERROR
+test_constructor_failure_keeps_readable_outer_failure (test_frontdoor.FrontDoorTests.test_constructor_failure_keeps_readable_outer_failure) ... ERROR
+test_distribution_and_license_are_separate_from_legacy_core (test_frontdoor.FrontDoorTests.test_distribution_and_license_are_separate_from_legacy_core) ... ERROR
+test_engine_interrupt_exit_is_retained_as_interrupted (test_frontdoor.FrontDoorTests.test_engine_interrupt_exit_is_retained_as_interrupted) ... ERROR
+test_engine_interrupt_exit_is_retained_as_interrupted (test_frontdoor.FrontDoorTests.test_engine_interrupt_exit_is_retained_as_interrupted) ... ERROR
+test_engine_receipt_tamper_rejects (test_frontdoor.FrontDoorTests.test_engine_receipt_tamper_rejects) ... ERROR
+test_engine_receipt_tamper_rejects (test_frontdoor.FrontDoorTests.test_engine_receipt_tamper_rejects) ... ERROR
+test_existing_output_is_never_changed (test_frontdoor.FrontDoorTests.test_existing_output_is_never_changed) ... ERROR
+test_existing_output_is_never_changed (test_frontdoor.FrontDoorTests.test_existing_output_is_never_changed) ... ERROR
+test_failure_append_error_does_not_suppress_failure_seal (test_frontdoor.FrontDoorTests.test_failure_append_error_does_not_suppress_failure_seal) ... ERROR
+test_failure_append_error_does_not_suppress_failure_seal (test_frontdoor.FrontDoorTests.test_failure_append_error_does_not_suppress_failure_seal) ... ERROR
+test_failure_metadata_fault_does_not_replace_primary (test_frontdoor.FrontDoorTests.test_failure_metadata_fault_does_not_replace_primary) ... FAIL
+test_failure_metadata_fault_does_not_replace_primary (test_frontdoor.FrontDoorTests.test_failure_metadata_fault_does_not_replace_primary) ... ERROR
+test_help_version_and_legacy_parser_are_independent (test_frontdoor.FrontDoorTests.test_help_version_and_legacy_parser_are_independent) ... ERROR
+test_interruption_retains_inner_journal_and_never_retries (test_frontdoor.FrontDoorTests.test_interruption_retains_inner_journal_and_never_retries) ... ERROR
+test_interruption_retains_inner_journal_and_never_retries (test_frontdoor.FrontDoorTests.test_interruption_retains_inner_journal_and_never_retries) ... ERROR
+test_invalid_arguments_are_branded_and_never_reserve_or_dispatch (test_frontdoor.FrontDoorTests.test_invalid_arguments_are_branded_and_never_reserve_or_dispatch) ... ERROR
+test_journal_close_failure_prevents_success_receipt (test_frontdoor.FrontDoorTests.test_journal_close_failure_prevents_success_receipt) ... FAIL
+test_journal_close_failure_prevents_success_receipt (test_frontdoor.FrontDoorTests.test_journal_close_failure_prevents_success_receipt) ... ERROR
+test_legacy_verify_journal_preflight_blocks_delegate (test_frontdoor.FrontDoorTests.test_legacy_verify_journal_preflight_blocks_delegate) ... ERROR
+test_legacy_verify_journal_preflight_blocks_delegate (test_frontdoor.FrontDoorTests.test_legacy_verify_journal_preflight_blocks_delegate) ... ERROR
+test_link_and_reparse_metadata_are_rejected_before_open (test_frontdoor.FrontDoorTests.test_link_and_reparse_metadata_are_rejected_before_open) ... ERROR
+test_link_and_reparse_metadata_are_rejected_before_open (test_frontdoor.FrontDoorTests.test_link_and_reparse_metadata_are_rejected_before_open) ... ERROR
+test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) ... 
+  test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-receipt.json') ... ERROR
+  test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-manifest.json') ... ERROR
+  test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-failure.json') ... ERROR
+test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) ... ERROR
+test_nonregular_metadata_is_rejected_before_open (test_frontdoor.FrontDoorTests.test_nonregular_metadata_is_rejected_before_open) ... ERROR
+test_nonregular_metadata_is_rejected_before_open (test_frontdoor.FrontDoorTests.test_nonregular_metadata_is_rejected_before_open) ... ERROR
+test_nonzero_engine_retains_attempt_and_has_no_success_receipt (test_frontdoor.FrontDoorTests.test_nonzero_engine_retains_attempt_and_has_no_success_receipt) ... ERROR
+test_nonzero_engine_retains_attempt_and_has_no_success_receipt (test_frontdoor.FrontDoorTests.test_nonzero_engine_retains_attempt_and_has_no_success_receipt) ... ERROR
+test_outer_body_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_body_tamper_rejected_even_after_rehash) ... ERROR
+test_outer_body_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_body_tamper_rejected_even_after_rehash) ... ERROR
+test_outer_header_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_header_tamper_rejected_even_after_rehash) ... ERROR
+test_outer_header_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_header_tamper_rejected_even_after_rehash) ... ERROR
+test_output_rewrite_removes_both_legacy_argument_forms (test_frontdoor.FrontDoorTests.test_output_rewrite_removes_both_legacy_argument_forms) ... ERROR
+test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded (test_frontdoor.FrontDoorTests.test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded) ... ERROR
+test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded (test_frontdoor.FrontDoorTests.test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded) ... ERROR
+test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) ... 
+  test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) (relative='attempt/journal.jsonl') ... ERROR
+  test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) (relative='engine/journal.jsonl') ... ERROR
+test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) ... ERROR
+test_pipe_oserror_and_systemexit_preserve_primary_and_reap_once (test_frontdoor.FrontDoorTests.test_pipe_oserror_and_systemexit_preserve_primary_and_reap_once) ... ERROR
+test_read_rejects_actual_midread_file_mutation (test_frontdoor.FrontDoorTests.test_read_rejects_actual_midread_file_mutation) ... ERROR
+test_read_rejects_actual_midread_file_mutation (test_frontdoor.FrontDoorTests.test_read_rejects_actual_midread_file_mutation) ... ERROR
+test_read_uses_bounded_chunks_and_a_separate_dossier_limit (test_frontdoor.FrontDoorTests.test_read_uses_bounded_chunks_and_a_separate_dossier_limit) ... ERROR
+test_read_uses_bounded_chunks_and_a_separate_dossier_limit (test_frontdoor.FrontDoorTests.test_read_uses_bounded_chunks_and_a_separate_dossier_limit) ... ERROR
+test_real_demo_is_sealed_and_source_inclusively_verified (test_frontdoor.FrontDoorTests.test_real_demo_is_sealed_and_source_inclusively_verified) ... ERROR
+test_real_demo_is_sealed_and_source_inclusively_verified (test_frontdoor.FrontDoorTests.test_real_demo_is_sealed_and_source_inclusively_verified) ... ERROR
+test_receipt_and_external_anchor_tamper_reject (test_frontdoor.FrontDoorTests.test_receipt_and_external_anchor_tamper_reject) ... ERROR
+test_receipt_and_external_anchor_tamper_reject (test_frontdoor.FrontDoorTests.test_receipt_and_external_anchor_tamper_reject) ... ERROR
+test_receipt_readback_failure_quarantines_published_receipt (test_frontdoor.FrontDoorTests.test_receipt_readback_failure_quarantines_published_receipt) ... FAIL
+test_receipt_readback_failure_quarantines_published_receipt (test_frontdoor.FrontDoorTests.test_receipt_readback_failure_quarantines_published_receipt) ... ERROR
+test_rechained_journal_cannot_contradict_launcher_proof (test_frontdoor.FrontDoorTests.test_rechained_journal_cannot_contradict_launcher_proof) ... ERROR
+test_rechained_journal_cannot_contradict_launcher_proof (test_frontdoor.FrontDoorTests.test_rechained_journal_cannot_contradict_launcher_proof) ... ERROR
+test_source_tamper_uses_only_copied_synthetic_json (test_frontdoor.FrontDoorTests.test_source_tamper_uses_only_copied_synthetic_json) ... ERROR
+test_source_tamper_uses_only_copied_synthetic_json (test_frontdoor.FrontDoorTests.test_source_tamper_uses_only_copied_synthetic_json) ... ERROR
+test_subprocess_interruption_reaps_one_dispatch (test_frontdoor.FrontDoorTests.test_subprocess_interruption_reaps_one_dispatch) ... ERROR
+test_unlisted_artifact_and_directory_reject (test_frontdoor.FrontDoorTests.test_unlisted_artifact_and_directory_reject) ... ERROR
+test_unlisted_artifact_and_directory_reject (test_frontdoor.FrontDoorTests.test_unlisted_artifact_and_directory_reject) ... ERROR
+test_wrapper_file_tamper_rejects_without_editing_executing_source (test_frontdoor.FrontDoorTests.test_wrapper_file_tamper_rejects_without_editing_executing_source) ... ERROR
+test_wrapper_file_tamper_rejects_without_editing_executing_source (test_frontdoor.FrontDoorTests.test_wrapper_file_tamper_rejects_without_editing_executing_source) ... ERROR
+test_bounded_advanced_entrypoints_offer_help_without_execution (test_namespace.NamespaceTests.test_bounded_advanced_entrypoints_offer_help_without_execution) ... ok
+test_canonical_cli_alias_is_the_public_front_door (test_namespace.NamespaceTests.test_canonical_cli_alias_is_the_public_front_door) ... ok
+test_finite_inventory_covers_only_the_reviewed_engine_modules (test_namespace.NamespaceTests.test_finite_inventory_covers_only_the_reviewed_engine_modules) ... ok
+test_import_orders_preserve_modules_classes_and_metadata (test_namespace.NamespaceTests.test_import_orders_preserve_modules_classes_and_metadata) ... ok
+test_installer_is_idempotent (test_namespace.NamespaceTests.test_installer_is_idempotent) ... ok
+test_nested_alias_monkeypatch_is_visible_in_engine (test_namespace.NamespaceTests.test_nested_alias_monkeypatch_is_visible_in_engine) ... ok
+test_nested_main_normal_import_does_not_clobber_engine_parent (test_namespace.NamespaceTests.test_nested_main_normal_import_does_not_clobber_engine_parent) ... ok
+test_plain_import_does_not_eagerly_load_optional_scientific_modules (test_namespace.NamespaceTests.test_plain_import_does_not_eagerly_load_optional_scientific_modules) ... ok
+test_public_and_engine_versions_are_separate (test_namespace.NamespaceTests.test_public_and_engine_versions_are_separate) ... ok
+test_resource_aliases_resolve_the_original_files (test_namespace.NamespaceTests.test_resource_aliases_resolve_the_original_files) ... ok
+test_serialization_and_fingerprint_match_original_objects (test_namespace.NamespaceTests.test_serialization_and_fingerprint_match_original_objects) ... ok
+test_subprocess_entrypoint_help_is_canonical_and_offline (test_namespace.NamespaceTests.test_subprocess_entrypoint_help_is_canonical_and_offline) ... ok
+test_unapproved_names_fail_before_target_resolution (test_namespace.NamespaceTests.test_unapproved_names_fail_before_target_resolution) ... ok
+
+======================================================================
+ERROR: test_boolean_byte_metadata_does_not_alias_integer_zero (test_frontdoor.FrontDoorTests.test_boolean_byte_metadata_does_not_alias_integer_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 279, in test_boolean_byte_metadata_does_not_alias_integer_zero
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9gvsx4sj\\outer'
+
+======================================================================
+ERROR: test_boolean_byte_metadata_does_not_alias_integer_zero (test_frontdoor.FrontDoorTests.test_boolean_byte_metadata_does_not_alias_integer_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9gvsx4sj'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9gvsx4sj'
+
+======================================================================
+ERROR: test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure (test_frontdoor.FrontDoorTests.test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-hkm8i4np'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-hkm8i4np'
+
+======================================================================
+ERROR: test_cli_demo_and_inspect_do_not_redispatch (test_frontdoor.FrontDoorTests.test_cli_demo_and_inspect_do_not_redispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-nk0irer5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-nk0irer5'
+
+======================================================================
+ERROR: test_concurrent_reservation_dispatches_exactly_once (test_frontdoor.FrontDoorTests.test_concurrent_reservation_dispatches_exactly_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-yrhx_pju'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-yrhx_pju'
+
+======================================================================
+ERROR: test_constructor_failure_keeps_readable_outer_failure (test_frontdoor.FrontDoorTests.test_constructor_failure_keeps_readable_outer_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 475, in test_constructor_failure_keeps_readable_outer_failure
+    inspected = layer.inspect_outer(self.output)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 463, in inspect_outer
+    output = _no_links(Path(output).absolute())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 53, in _no_links
+    info = part.lstat()
+           ^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1163, in lstat
+    return self.stat(follow_symlinks=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1013, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-2n6unm0m\\outer'
+
+======================================================================
+ERROR: test_constructor_failure_keeps_readable_outer_failure (test_frontdoor.FrontDoorTests.test_constructor_failure_keeps_readable_outer_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-2n6unm0m'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-2n6unm0m'
+
+======================================================================
+ERROR: test_distribution_and_license_are_separate_from_legacy_core (test_frontdoor.FrontDoorTests.test_distribution_and_license_are_separate_from_legacy_core)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-5gnmov0j'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-5gnmov0j'
+
+======================================================================
+ERROR: test_engine_interrupt_exit_is_retained_as_interrupted (test_frontdoor.FrontDoorTests.test_engine_interrupt_exit_is_retained_as_interrupted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 373, in test_engine_interrupt_exit_is_retained_as_interrupted
+    layer.create_outer(self.output, ["demo", "--output", str(self.output)],
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-p3oq3tgh\\outer'
+
+======================================================================
+ERROR: test_engine_interrupt_exit_is_retained_as_interrupted (test_frontdoor.FrontDoorTests.test_engine_interrupt_exit_is_retained_as_interrupted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-p3oq3tgh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-p3oq3tgh'
+
+======================================================================
+ERROR: test_engine_receipt_tamper_rejects (test_frontdoor.FrontDoorTests.test_engine_receipt_tamper_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 307, in test_engine_receipt_tamper_rejects
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-q8niylf6\\outer'
+
+======================================================================
+ERROR: test_engine_receipt_tamper_rejects (test_frontdoor.FrontDoorTests.test_engine_receipt_tamper_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-q8niylf6'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-q8niylf6'
+
+======================================================================
+ERROR: test_existing_output_is_never_changed (test_frontdoor.FrontDoorTests.test_existing_output_is_never_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 335, in test_existing_output_is_never_changed
+    self.output.mkdir()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9bgdiz8o\\outer'
+
+======================================================================
+ERROR: test_existing_output_is_never_changed (test_frontdoor.FrontDoorTests.test_existing_output_is_never_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9bgdiz8o'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-9bgdiz8o'
+
+======================================================================
+ERROR: test_failure_append_error_does_not_suppress_failure_seal (test_frontdoor.FrontDoorTests.test_failure_append_error_does_not_suppress_failure_seal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 484, in test_failure_append_error_does_not_suppress_failure_seal
+    layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=lambda argv: layer.EngineResult(2))
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-gr_n974s\\outer'
+
+======================================================================
+ERROR: test_failure_append_error_does_not_suppress_failure_seal (test_frontdoor.FrontDoorTests.test_failure_append_error_does_not_suppress_failure_seal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-gr_n974s'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-gr_n974s'
+
+======================================================================
+ERROR: test_failure_metadata_fault_does_not_replace_primary (test_frontdoor.FrontDoorTests.test_failure_metadata_fault_does_not_replace_primary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-f5lnjaxh'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-f5lnjaxh'
+
+======================================================================
+ERROR: test_help_version_and_legacy_parser_are_independent (test_frontdoor.FrontDoorTests.test_help_version_and_legacy_parser_are_independent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-z8hvtwdr'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-z8hvtwdr'
+
+======================================================================
+ERROR: test_interruption_retains_inner_journal_and_never_retries (test_frontdoor.FrontDoorTests.test_interruption_retains_inner_journal_and_never_retries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 387, in test_interruption_retains_inner_journal_and_never_retries
+    layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=interrupted)
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-13p7db2_\\outer'
+
+======================================================================
+ERROR: test_interruption_retains_inner_journal_and_never_retries (test_frontdoor.FrontDoorTests.test_interruption_retains_inner_journal_and_never_retries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-13p7db2_'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-13p7db2_'
+
+======================================================================
+ERROR: test_invalid_arguments_are_branded_and_never_reserve_or_dispatch (test_frontdoor.FrontDoorTests.test_invalid_arguments_are_branded_and_never_reserve_or_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-kzkcffjo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-kzkcffjo'
+
+======================================================================
+ERROR: test_journal_close_failure_prevents_success_receipt (test_frontdoor.FrontDoorTests.test_journal_close_failure_prevents_success_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-byysj3rd'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-byysj3rd'
+
+======================================================================
+ERROR: test_legacy_verify_journal_preflight_blocks_delegate (test_frontdoor.FrontDoorTests.test_legacy_verify_journal_preflight_blocks_delegate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 220, in test_legacy_verify_journal_preflight_blocks_delegate
+    self.output.mkdir()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-94srrhvj\\outer'
+
+======================================================================
+ERROR: test_legacy_verify_journal_preflight_blocks_delegate (test_frontdoor.FrontDoorTests.test_legacy_verify_journal_preflight_blocks_delegate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-94srrhvj'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-94srrhvj'
+
+======================================================================
+ERROR: test_link_and_reparse_metadata_are_rejected_before_open (test_frontdoor.FrontDoorTests.test_link_and_reparse_metadata_are_rejected_before_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 132, in test_link_and_reparse_metadata_are_rejected_before_open
+    path.write_bytes(b"{}")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-v0suxb6w\\fictional-link.json'
+
+======================================================================
+ERROR: test_link_and_reparse_metadata_are_rejected_before_open (test_frontdoor.FrontDoorTests.test_link_and_reparse_metadata_are_rejected_before_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-v0suxb6w'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-v0suxb6w'
+
+======================================================================
+ERROR: test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-receipt.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 114, in test_metadata_oversize_is_rejected_before_open_without_large_allocation
+    path.write_bytes(b"{}")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-chlviwte\\tether-receipt.json'
+
+======================================================================
+ERROR: test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-manifest.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 114, in test_metadata_oversize_is_rejected_before_open_without_large_allocation
+    path.write_bytes(b"{}")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-chlviwte\\tether-manifest.json'
+
+======================================================================
+ERROR: test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation) (name='tether-failure.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 114, in test_metadata_oversize_is_rejected_before_open_without_large_allocation
+    path.write_bytes(b"{}")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-chlviwte\\tether-failure.json'
+
+======================================================================
+ERROR: test_metadata_oversize_is_rejected_before_open_without_large_allocation (test_frontdoor.FrontDoorTests.test_metadata_oversize_is_rejected_before_open_without_large_allocation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-chlviwte'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-chlviwte'
+
+======================================================================
+ERROR: test_nonregular_metadata_is_rejected_before_open (test_frontdoor.FrontDoorTests.test_nonregular_metadata_is_rejected_before_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 123, in test_nonregular_metadata_is_rejected_before_open
+    path.write_bytes(b"{}")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-x37ksqtr\\fictional-fifo.json'
+
+======================================================================
+ERROR: test_nonregular_metadata_is_rejected_before_open (test_frontdoor.FrontDoorTests.test_nonregular_metadata_is_rejected_before_open)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-x37ksqtr'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-x37ksqtr'
+
+======================================================================
+ERROR: test_nonzero_engine_retains_attempt_and_has_no_success_receipt (test_frontdoor.FrontDoorTests.test_nonzero_engine_retains_attempt_and_has_no_success_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 363, in test_nonzero_engine_retains_attempt_and_has_no_success_receipt
+    layer.create_outer(self.output, ["demo", "--output", str(self.output)],
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-64wyg7ef\\outer'
+
+======================================================================
+ERROR: test_nonzero_engine_retains_attempt_and_has_no_success_receipt (test_frontdoor.FrontDoorTests.test_nonzero_engine_retains_attempt_and_has_no_success_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-64wyg7ef'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-64wyg7ef'
+
+======================================================================
+ERROR: test_outer_body_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_body_tamper_rejected_even_after_rehash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 259, in test_outer_body_tamper_rejected_even_after_rehash
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-rj5zz087\\outer'
+
+======================================================================
+ERROR: test_outer_body_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_body_tamper_rejected_even_after_rehash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-rj5zz087'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-rj5zz087'
+
+======================================================================
+ERROR: test_outer_header_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_header_tamper_rejected_even_after_rehash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 251, in test_outer_header_tamper_rejected_even_after_rehash
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-diu87l5v\\outer'
+
+======================================================================
+ERROR: test_outer_header_tamper_rejected_even_after_rehash (test_frontdoor.FrontDoorTests.test_outer_header_tamper_rejected_even_after_rehash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-diu87l5v'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-diu87l5v'
+
+======================================================================
+ERROR: test_output_rewrite_removes_both_legacy_argument_forms (test_frontdoor.FrontDoorTests.test_output_rewrite_removes_both_legacy_argument_forms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-600vtyg5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-600vtyg5'
+
+======================================================================
+ERROR: test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded (test_frontdoor.FrontDoorTests.test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 501, in test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-6lzz_sn1\\outer'
+
+======================================================================
+ERROR: test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded (test_frontdoor.FrontDoorTests.test_outputs_only_cannot_qualify_outer_and_delegate_errors_are_branded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-6lzz_sn1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-6lzz_sn1'
+
+======================================================================
+ERROR: test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) (relative='attempt/journal.jsonl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 207, in test_oversize_outer_and_engine_journals_are_not_opened_by_inspect
+    output.mkdir(exist_ok=True)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-ukz42wub\\attempt'
+
+======================================================================
+ERROR: test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect) (relative='engine/journal.jsonl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 207, in test_oversize_outer_and_engine_journals_are_not_opened_by_inspect
+    output.mkdir(exist_ok=True)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-ukz42wub\\engine'
+
+======================================================================
+ERROR: test_oversize_outer_and_engine_journals_are_not_opened_by_inspect (test_frontdoor.FrontDoorTests.test_oversize_outer_and_engine_journals_are_not_opened_by_inspect)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-ukz42wub'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-ukz42wub'
+
+======================================================================
+ERROR: test_pipe_oserror_and_systemexit_preserve_primary_and_reap_once (test_frontdoor.FrontDoorTests.test_pipe_oserror_and_systemexit_preserve_primary_and_reap_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-g38y9pna'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-g38y9pna'
+
+======================================================================
+ERROR: test_read_rejects_actual_midread_file_mutation (test_frontdoor.FrontDoorTests.test_read_rejects_actual_midread_file_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 148, in test_read_rejects_actual_midread_file_mutation
+    path.write_bytes(b'{"fictional":1}')
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ie1t59c\\changing.json'
+
+======================================================================
+ERROR: test_read_rejects_actual_midread_file_mutation (test_frontdoor.FrontDoorTests.test_read_rejects_actual_midread_file_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ie1t59c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ie1t59c'
+
+======================================================================
+ERROR: test_read_uses_bounded_chunks_and_a_separate_dossier_limit (test_frontdoor.FrontDoorTests.test_read_uses_bounded_chunks_and_a_separate_dossier_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 177, in test_read_uses_bounded_chunks_and_a_separate_dossier_limit
+    path.write_bytes(b"123456789")
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1067, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-5_ozoc8i\\small.bin'
+
+======================================================================
+ERROR: test_read_uses_bounded_chunks_and_a_separate_dossier_limit (test_frontdoor.FrontDoorTests.test_read_uses_bounded_chunks_and_a_separate_dossier_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-5_ozoc8i'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-5_ozoc8i'
+
+======================================================================
+ERROR: test_real_demo_is_sealed_and_source_inclusively_verified (test_frontdoor.FrontDoorTests.test_real_demo_is_sealed_and_source_inclusively_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 229, in test_real_demo_is_sealed_and_source_inclusively_verified
+    result = self.complete()
+             ^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-wz964px0\\outer'
+
+======================================================================
+ERROR: test_real_demo_is_sealed_and_source_inclusively_verified (test_frontdoor.FrontDoorTests.test_real_demo_is_sealed_and_source_inclusively_verified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-wz964px0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-wz964px0'
+
+======================================================================
+ERROR: test_receipt_and_external_anchor_tamper_reject (test_frontdoor.FrontDoorTests.test_receipt_and_external_anchor_tamper_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 267, in test_receipt_and_external_anchor_tamper_reject
+    result = self.complete()
+             ^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_kc_mol5\\outer'
+
+======================================================================
+ERROR: test_receipt_and_external_anchor_tamper_reject (test_frontdoor.FrontDoorTests.test_receipt_and_external_anchor_tamper_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_kc_mol5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_kc_mol5'
+
+======================================================================
+ERROR: test_receipt_readback_failure_quarantines_published_receipt (test_frontdoor.FrontDoorTests.test_receipt_readback_failure_quarantines_published_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-bejd1bw0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-bejd1bw0'
+
+======================================================================
+ERROR: test_rechained_journal_cannot_contradict_launcher_proof (test_frontdoor.FrontDoorTests.test_rechained_journal_cannot_contradict_launcher_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 288, in test_rechained_journal_cannot_contradict_launcher_proof
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ts40k5n\\outer'
+
+======================================================================
+ERROR: test_rechained_journal_cannot_contradict_launcher_proof (test_frontdoor.FrontDoorTests.test_rechained_journal_cannot_contradict_launcher_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ts40k5n'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-_ts40k5n'
+
+======================================================================
+ERROR: test_source_tamper_uses_only_copied_synthetic_json (test_frontdoor.FrontDoorTests.test_source_tamper_uses_only_copied_synthetic_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 297, in test_source_tamper_uses_only_copied_synthetic_json
+    shutil.copytree(ROOT / "src/asof/demo/v2", sources)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 573, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 471, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-dbbh_e0v\\fictional-sources'
+
+======================================================================
+ERROR: test_source_tamper_uses_only_copied_synthetic_json (test_frontdoor.FrontDoorTests.test_source_tamper_uses_only_copied_synthetic_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-dbbh_e0v'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-dbbh_e0v'
+
+======================================================================
+ERROR: test_subprocess_interruption_reaps_one_dispatch (test_frontdoor.FrontDoorTests.test_subprocess_interruption_reaps_one_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-45jb3ye3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-45jb3ye3'
+
+======================================================================
+ERROR: test_unlisted_artifact_and_directory_reject (test_frontdoor.FrontDoorTests.test_unlisted_artifact_and_directory_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 324, in test_unlisted_artifact_and_directory_reject
+    self.complete()
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 40, in complete
+    return layer.create_outer(self.output, argv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\packages\tether\src\tether\_presentation.py", line 310, in create_outer
+    output.mkdir(exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-8jrx17rp\\outer'
+
+======================================================================
+ERROR: test_unlisted_artifact_and_directory_reject (test_frontdoor.FrontDoorTests.test_unlisted_artifact_and_directory_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-8jrx17rp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-8jrx17rp'
+
+======================================================================
+ERROR: test_wrapper_file_tamper_rejects_without_editing_executing_source (test_frontdoor.FrontDoorTests.test_wrapper_file_tamper_rejects_without_editing_executing_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 315, in test_wrapper_file_tamper_rejects_without_editing_executing_source
+    shutil.copytree(PROJECT / "src/tether", copied, ignore=shutil.ignore_patterns("__pycache__"))
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 573, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 471, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-7fy3d0r0\\fictional-package'
+
+======================================================================
+ERROR: test_wrapper_file_tamper_rejects_without_editing_executing_source (test_frontdoor.FrontDoorTests.test_wrapper_file_tamper_rejects_without_editing_executing_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-7fy3d0r0'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 947, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{ad2398cc-2bb8-49b3-a719-65b17c3e122f}\\AC\\Temp\\tether-frontdoor-7fy3d0r0'
+
+======================================================================
+FAIL: test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure (test_frontdoor.FrontDoorTests.test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 433, in test_cleanup_failure_preserves_primary_and_partial_bytes_in_failure
+    self.assertIs(caught.exception, primary)
+AssertionError: PermissionError(13, 'Access is denied') is not OSError('fictional primary')
+
+======================================================================
+FAIL: test_cli_demo_and_inspect_do_not_redispatch (test_frontdoor.FrontDoorTests.test_cli_demo_and_inspect_do_not_redispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 242, in test_cli_demo_and_inspect_do_not_redispatch
+    self.assertEqual(cli.main(["demo", "--output", str(self.output)]), 0)
+AssertionError: 2 != 0
+
+======================================================================
+FAIL: test_concurrent_reservation_dispatches_exactly_once (test_frontdoor.FrontDoorTests.test_concurrent_reservation_dispatches_exactly_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 356, in test_concurrent_reservation_dispatches_exactly_once
+    self.assertEqual(len(count), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_failure_metadata_fault_does_not_replace_primary (test_frontdoor.FrontDoorTests.test_failure_metadata_fault_does_not_replace_primary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 456, in test_failure_metadata_fault_does_not_replace_primary
+    self.assertIs(caught.exception, primary)
+AssertionError: PermissionError(13, 'Access is denied') is not OSError('fictional original failure')
+
+======================================================================
+FAIL: test_journal_close_failure_prevents_success_receipt (test_frontdoor.FrontDoorTests.test_journal_close_failure_prevents_success_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 465, in test_journal_close_failure_prevents_success_receipt
+    self.assertTrue((self.output / layer.FAILURE).exists())
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_receipt_readback_failure_quarantines_published_receipt (test_frontdoor.FrontDoorTests.test_receipt_readback_failure_quarantines_published_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\packages\tether\tests\test_frontdoor.py", line 497, in test_receipt_readback_failure_quarantines_published_receipt
+    self.assertTrue((self.output / "tether-receipt.failed.json").exists())
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 49 tests in 2.725s
+
+FAILED (failures=6, errors=63)

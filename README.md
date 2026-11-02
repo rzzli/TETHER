@@ -7,7 +7,7 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-**Current distribution: `tether-target-agents` 0.4.0 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
+**Current distribution: `tether-target-agents` 0.4.1 in `packages/tether`, over the frozen AsOf 0.3.11 engine and v2 execution contracts.** The earlier 1,774-test
 acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
 optional skips. All 78 frozen P05 code pins and 100 package payloads remain
@@ -17,6 +17,12 @@ model interfaces. Recorded fixtures and passing software tests are not scientifi
 performance measurements.
 
 ## Current status and next step
+
+The [2 November full-project review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) reproduced gaps in legacy coverage/review/dossier verification and corrected receipt and genetics-QC utilities. TETHER 0.4.1 adds stronger verification at the canonical CLI boundary; direct legacy API aliases retain their earlier semantics. The [corrective plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>) is the current execution authority. The earlier 0.4.0 packet remains a version-specific historical artifact, not qualification of the new working tree.
+
+Retained paper quantities recompute correctly, but the study remains literal source reporting. Its native 80% and 100% thresholds are equivalent; source verification dominates runtime; study independence and causal/clinical conclusions remain unqualified. Read the [paper review notes](paper/REVIEW-ERRATA-20261102.md) before sharing the current working PDF. Author facts remain deferred.
+
+## Retained naming and paper checkpoint
 
 The active project is now **TETHER**. The [rename/status assessment](<planning/TETHER Rename Completion and Project Status 2026-11-01.md>) and [naming plan](<planning/TETHER Naming and Compatibility Plan 2026-11-01.md>) describe the new interfaces and retained compatibility names. All 49 TETHER tests pass in full/core environments, twelve independent code probes pass, and a source-isolated two-wheel installation/demo/verification succeeds without optional libraries. Targeted legacy regressions pass 115 tests in full and 96 executed plus 19 optional skips in core. The engine and original 100 code payloads remain unchanged.
 
