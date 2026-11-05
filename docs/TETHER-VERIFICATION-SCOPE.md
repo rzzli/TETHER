@@ -18,11 +18,11 @@ The [execution plan](<../planning/TETHER Benchmark Execution Plan 2026-11-02.md>
 
 The `semantic_consistency` field alone is not a complete description. Preserve the command, version, `source_binding`, stronger TETHER check details and external-anchor status with the result. Without an external anchor, replacing the complete self-consistent output tree cannot be detected solely by its internal hashes.
 
-### Replay-correction candidate: 0.5.2 / 0.3.13
+### Replay correction: 0.5.2 / 0.3.13
 
 The first independent-policy comparison exposed an additional live v2 gap: a
 retained replay response could name the wrong request fingerprint while its other
-archive relationships remained consistent. The working candidate now checks
+archive relationships remained consistent. The corrected live version checks
 consumed replay entries against source-reconstructed requests, response order,
 selected IDs, usage and review feedback, before publication and during live v2
 verification. This correction also applies to direct live engine aliases. The
@@ -39,9 +39,11 @@ original whitespace. Unused response entries do not become consumed evidence.
 
 Focused replay, archive, facade and isolated installed checks pass, including the
 retained counterexample and a valid replay after removal of its original input
-file. Full regression qualification remains in progress; consult the
-[candidate checkpoint](../planning/review-assets/tether-replay-correction-20261105/STATUS.md)
-before describing this as a completed release. Matching older wheels remain
+file. The full Windows gate passes 2,100 tests with zero failures/errors/skips,
+required probes and offline packaging; source hashes are unchanged. The
+[local completion record](../planning/review-assets/tether-replay-correction-20261105/CANDIDATE-RELEASE-COMPLETION.md)
+keeps test scopes and installed/full-gate wheel identities distinct. Corrected
+comparison scoring remains unfinished; no public release is implied. Matching older wheels remain
 necessary for old outer-artifact code proofs.
 
 The [artifact-policy guide](TETHER-CATALOG-POLICY.md) specifies the 0.5.0 interface and its separate `artifact_policy.status` result. It requires current original raw files/receipts even though exact metadata, controls and receipt copies are archived. Strong policy grants do not qualify scientific interpretation or guarantee that all records pass publication/temporal admission. Legacy schema-1 APIs and runs keep their declared scope.

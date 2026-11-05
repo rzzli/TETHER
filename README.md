@@ -7,13 +7,15 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
-The working checkout is the replay-correction candidate TETHER 0.5.2 / AsOf
-0.3.13. Focused replay, archive compatibility, facade and fresh installed checks
-pass; the complete regression gate and corrected comparison are still in progress.
-The following 0.5.1 qualification remains the last completed release gate. See the
-[current correction checkpoint](planning/review-assets/tether-replay-correction-20261105/STATUS.md).
+**Current locally qualified distribution: `tether-target-agents` 0.5.2, with AsOf
+0.3.13 and v2 execution contracts.** The [replay-correction completion record](planning/review-assets/tether-replay-correction-20261105/CANDIDATE-RELEASE-COMPLETION.md)
+binds 2,100 full tests with zero failures/errors/skips, separate facade and installed
+checks, and preservation of the original comparison and older installation.
+The corrected equal-policy comparison remains in progress. These are local
+Windows/offline engineering checks; no public release or scientific validation
+is implied. See the [current checkpoint](planning/review-assets/tether-replay-correction-20261105/STATUS.md).
 
-**Current locally qualified distribution: `tether-target-agents` 0.5.1 in `packages/tether`, with AsOf 0.3.12 and v2 execution contracts.** The [BG01 completion record](planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md) binds 2,020 full tests, 138 facade tests, current installed wheels and 742 aggregate evidence checks. These are Windows/offline engineering checks; no benchmark or scientific performance is established. Prior 0.5.0/0.3.11 wheels remain preserved. The earlier 1,774-test
+The earlier TETHER 0.5.1 / AsOf 0.3.12 [BG01 completion record](planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md) retains its 2,020 full tests, 138 facade tests, matching installed wheels and 742 aggregate evidence checks. Those scopes are historical, not additional independent tests of the current release. Prior wheels remain preserved. The earlier 1,774-test
 acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
 optional skips. All 78 frozen P05 code pins and 100 package payloads remain

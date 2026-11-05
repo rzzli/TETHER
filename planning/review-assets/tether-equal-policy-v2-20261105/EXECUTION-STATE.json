@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-05T21:45:00Z",
-  "status": "both_frozen_unscored_waiting_for_full_gate",
+  "updated_at_utc": "2026-11-05T22:13:53.0429178Z",
+  "status": "original_executing_patched_frozen",
   "original": {
     "directory": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02",
     "preparation_session": 80834,
@@ -9,7 +9,9 @@
     "prepared_cases": 109,
     "prefreeze_review": "planning/review-assets/tether-equal-policy-v2-20261105/preflight/ORIGINAL-ATTEMPT02-20261105.json",
     "freeze_sha256": "f7b4b09f4b144d84761e565452a19082dba16c778e81e422b314880aec531bc7",
-    "executed": false
+    "executed": false,
+    "execution_session": 3300,
+    "execution_state": "running"
   },
   "patched": {
     "directory": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01",
@@ -21,7 +23,18 @@
     "executed": false
   },
   "shared_execution_pins": 103,
-  "qualification_test_scopes": {"runner": 42, "independent_reconstruction": 40},
-  "release_full_gate": {"session": 54110, "pid": 10536, "state": "running", "stem": "planning/review-assets/tether-replay-correction-20261105/integration/tether052-full-gate-03"},
-  "instructions": "Poll the retained gate session; never restart a live or existing comparison output. Keep all frozen execution sources stable. Run timed comparisons after heavy validation work ends, then independently reconstruct and audit causes before BG02 closure."
+  "qualification_test_scopes": {
+    "runner": 42,
+    "independent_reconstruction": 40
+  },
+  "release_full_gate": {
+    "session": 54110,
+    "pid": 10536,
+    "state": "passed",
+    "stem": "planning/review-assets/tether-replay-correction-20261105/integration/tether052-full-gate-03",
+    "exit_code": 0,
+    "tests_passed": 2100
+  },
+  "instructions": "Full gate54110 is terminal PASS. Poll original comparison3300; never restart an existing comparison output. Keep all frozen execution sources stable. After original execution, analyze and independently reconstruct it; run the patched comparison next, then audit all results before BG02 closure.",
+  "release_aggregate_sha256": "d966fa3f74fa5ace029a041642a279bcacef346aa70df65f7bc048733835b01e"
 }

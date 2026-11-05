@@ -8,6 +8,16 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5, 22:12 UTC: gate54110 is terminal exit0/PASS:2,100 tests, zero failures,
+errors or skips; probes/offline packaging pass; source bracket unchanged (2c6d4288),
+wholegate2192.125s. Final aggregate d966fa3f passes all eight declared scopes;
+0.5.2/0.3.13 is locally qualified. Installed core wheel b7446a71/facade8fa01017
+are distinct from separate fullgate packaging wheel bb7392d1. Completion record:
+tether-replay-correction-20261105/CANDIDATE-RELEASE-COMPLETION.md. Both frozen
+inputs remain unchanged. Original-version corrected comparison is RUNNING as
+session3300 in v2-original-attempt02; poll without restarting. Patched run and
+independent reconstruction/causal audits remain pending. BG02 still incomplete.
+
 November 5, 21:45 UTC: both corrected corpora now pass independent preflight and
 are frozen, unscored. Original-attempt02 freeze f7b4b09f; patched-attempt01 freeze
 3ec7625f. Each109cases/103source-evidencepins. Gate54110 remains live and its log
