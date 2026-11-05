@@ -1,5 +1,11 @@
 # TETHER SciFact execution protocol — BG03
 
+**Execution checkpoint:** preparation and fictional component qualification have
+advanced since this protocol was written; see the [current status](review-assets/tether-scifact-20261105/STATUS.md).
+The acquisition table and final paragraph below retain the plan-time state.
+They are not the current implementation inventory. Evaluation rules, model/grid,
+denominators and completion criteria remain unchanged.
+
 **Status: implementation and evaluation plan; no trained SciFact model or scored SciFact result.** BG02 closed at project checkpoint `4dbe7be`. This protocol implements stage 3 of the [benchmark execution plan](<TETHER Benchmark Execution Plan 2026-11-02.md>). It does not reopen the original comparison, historical clinical studies, expert-return route or closed model attempts. Preserve all prior files and results. The default is a small CPU-trained scientific-claim baseline, with native task metrics and a paired assessment of TETHER's checks. A weak or negative result is reportable.
 
 ## 1. Question, estimands and limits

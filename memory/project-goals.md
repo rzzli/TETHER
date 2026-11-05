@@ -22,9 +22,9 @@ BG03 preparation and component implementation now pass: 5,183 corpus rows;
 380/82/69 fit/tune/reserved-calibration claims after 278 training claims are
 quarantined for overlap with the full 300-claim public dev set. Twelve projected
 products reconstruct from the original archive. The CPU environment and native
-scorer are qualified; 121 fictional component tests pass, including a watchdog
-failure correction. Real fitting/tuning/dev scoring
-have not begun. Controller integration and complete fictional rehearsal are next,
+scorer are qualified; 148 fictional component/controller tests pass, including
+bounded separate checking/scoring and failure corrections. Real fitting/tuning/dev
+scoring have not begun. The complete fictional process rehearsal is running,
 then actual execution and independent reconstruction. See
 [[research-log-2026-11-05-scifact-components]]. The peer comparison does not
 change the sequential execution order or establish semantic performance.

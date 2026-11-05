@@ -14,6 +14,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 MODULES=('baseline','data_views','evaluate','native_contract','runtime','split','tether_adapter','worker')
 TESTS=('baseline','data_views','policy','runtime','scoring','split','worker')
+SCOPE='fictional native component tests; excludes runner integration, real fitting and benchmark results'
+EXTRA_SOURCES=()
 
 
 def pins(paths):
@@ -26,6 +28,7 @@ def main():
     os.environ['TEMP']=str(temp);os.environ['TMP']=str(temp);tempfile.tempdir=str(temp)
     paths=[ROOT/'experiments/scifact'/f'{n}.py' for n in MODULES]
     paths += [ROOT/'experiments/scifact/tests'/f'test_scifact_{n}.py' for n in TESTS]
+    paths += [Path(path) for path in EXTRA_SOURCES]
     before=pins(paths)
     snapshots=output/'sources';snapshots.mkdir()
     for p in paths:
@@ -43,7 +46,7 @@ def main():
             'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skips':len(result.skipped),
             'elapsed_seconds':time.perf_counter()-started,'sources_unchanged':before==after,
             'source_pins':after,'tests_log_sha256':hashlib.sha256((output/'tests.log').read_bytes()).hexdigest(),
-            'scope':'fictional native component tests; excludes runner integration, real fitting and benchmark results'}
+            'scope':SCOPE}
     (output/'VALIDATION.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in report.items() if k!='source_pins'}))
     if report['status']!='PASS':raise SystemExit(1)

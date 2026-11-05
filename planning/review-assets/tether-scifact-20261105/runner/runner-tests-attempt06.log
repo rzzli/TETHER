@@ -1,0 +1,16 @@
+test_code_change_fails_before_worker_dispatch (test_scifact_run.RunnerTests.test_code_change_fails_before_worker_dispatch) ... ok
+test_failure_ledger_preserves_every_scheduled_case_without_nei_placeholder (test_scifact_run.RunnerTests.test_failure_ledger_preserves_every_scheduled_case_without_nei_placeholder) ... ok
+test_full_controller_uses_sanitized_recipes_and_freezes_before_dev (test_scifact_run.RunnerTests.test_full_controller_uses_sanitized_recipes_and_freezes_before_dev) ... ok
+test_invalid_limits_and_interpreter_fail_before_reservation (test_scifact_run.RunnerTests.test_invalid_limits_and_interpreter_fail_before_reservation) ... ok
+test_missing_duplicate_failed_or_nonfinite_tuning_result_rejected (test_scifact_run.RunnerTests.test_missing_duplicate_failed_or_nonfinite_tuning_result_rejected) ... ok
+test_output_reservation_is_exclusive (test_scifact_run.RunnerTests.test_output_reservation_is_exclusive) ... ok
+test_parent_timeout_retains_transport_and_all_missing_cases_once (test_scifact_run.RunnerTests.test_parent_timeout_retains_transport_and_all_missing_cases_once) ... ok
+test_qualified_runtime_alias_is_explicitly_resolved_without_relaxing_artifact_paths (test_scifact_run.RunnerTests.test_qualified_runtime_alias_is_explicitly_resolved_without_relaxing_artifact_paths) ... ok
+test_source_bracket_cannot_dispatch_after_consuming_remaining_budget (test_scifact_run.RunnerTests.test_source_bracket_cannot_dispatch_after_consuming_remaining_budget) ... ok
+test_tuning_ties_follow_both_metrics_and_then_size_threshold (test_scifact_run.RunnerTests.test_tuning_ties_follow_both_metrics_and_then_size_threshold) ... ok
+test_worker_session_must_bind_submitted_configuration_inputs_and_queries (test_scifact_run.RunnerTests.test_worker_session_must_bind_submitted_configuration_inputs_and_queries) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 27.093s
+
+OK

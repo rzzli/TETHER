@@ -17,6 +17,13 @@ from experiments.scifact.baseline import fit_model, load_model_bytes, save_model
 from experiments.scifact.runtime import IOAudit, Watchdog, load_input, measured
 from experiments.scifact.tether_adapter import NativeSession
 
+MAX_SETUP_SECONDS = 1800
+
+
+def enforce_elapsed(start, seconds, operation):
+    if time.perf_counter() - start > seconds:
+        raise TimeoutError(operation + " exceeded its time budget")
+
 
 def write(path, value):
     publish_bytes(path, canonical(value) + b"\n")
@@ -51,10 +58,11 @@ def run(recipe_path, output):
     audit = IOAudit([p["path"] for p in inputs.values()], output, roots)
     audit.activate()
     phase_seconds = recipe["limits"]["phase_seconds"]
+    setup_seconds = min(phase_seconds, MAX_SETUP_SECONDS)
     setup_id = "fit" if recipe["mode"] == "fit" else "setup"
     schedule = [setup_id] + ([] if recipe["mode"] == "fit" else [str(x) for x in recipe["schedule"]])
     with Watchdog(output, memory_limit=recipe["limits"]["memory_bytes"],
-                  sample_seconds=0.5, call_seconds=phase_seconds) as watchdog:
+                  sample_seconds=0.5, call_seconds=setup_seconds) as watchdog:
         with NativeSession(output / "session", schedule, recipe["configuration"],
                            max_wall_seconds=phase_seconds) as session:
             current = setup_id
@@ -75,6 +83,7 @@ def run(recipe_path, output):
                     result = {"kind": "fitted_native_model", "files": files, "metadata": model.metadata}
                     resources = measured(start, cpu, input_bytes=input_bytes,
                                          output_bytes=sum(x["bytes"] for x in files), examples=len(pairs))
+                    enforce_elapsed(start, setup_seconds, "Native fitting/index construction")
                     session.finish(current, result, resources)
                 else:
                     model_path = Path(inputs["model_json"]["path"])
@@ -84,6 +93,7 @@ def run(recipe_path, output):
                     queries = rows(raw["queries"])
                     if [row["id"] for row in queries] != recipe["schedule"]:
                         raise ValueError("Query schedule differs from frozen recipe")
+                    enforce_elapsed(start, setup_seconds, "Native model/index loading")
                     session.finish(current, {"kind": "native_model_loaded", "queries": len(queries)},
                                    measured(start, cpu, input_bytes=input_bytes, output_bytes=0, examples=0))
                     watchdog.active_started = None
@@ -96,6 +106,7 @@ def run(recipe_path, output):
                         result = model.predict(query, k=recipe["configuration"]["k"],
                                                rationale_threshold=recipe["configuration"]["rationale_threshold"])
                         payload = canonical(result)
+                        enforce_elapsed(start, recipe["limits"]["query_seconds"], "Native prediction")
                         session.finish(current, result, measured(start, cpu, input_bytes=len(canonical(query)),
                                        output_bytes=len(payload), examples=1))
                         watchdog.active_started = None
@@ -104,6 +115,7 @@ def run(recipe_path, output):
                 audit.flush()
                 write(output / "COMPLETE.json", {"status": "completed", "session_receipt_sha256": receipt["sha256"],
                                                 "memory_sampling_seconds": watchdog.sample_seconds,
+                                                "setup_time_limit_seconds": setup_seconds,
                                                 "peak_sampled_working_set_bytes": watchdog.peak_sample,
                                                 "memory_samples": watchdog.samples,
                                                 "memory_observations": watchdog.memory_observations,

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-scifact-20261105\reconstruction\test_reconstruct.py", line 9, in <module>
+    SPEC.loader.exec_module(r)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\reconstruction\\reconstruct.py'

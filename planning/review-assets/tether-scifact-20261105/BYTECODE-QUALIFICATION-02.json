@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-05T23:38:09.031064+00:00",
+  "status": "PASS",
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "roots": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages",
+    "D:\\Projects\\drug_target_agents\\experiments\\scifact"
+  ],
+  "cache_files": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\__pycache__\\_virtualenv.cpython-311.pyc",
+      "sha256": "64e52723a5f22826709a6c83672e20b014be919571efa1ff703dc994f27f1b81",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\_virtualenv.py",
+      "source_sha256": "6cf30c56faf2a55228914dbbd17f8088ed371ebb08f5e7fa6fd931f913fcaf1d",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\__init__.cpython-311.pyc",
+      "sha256": "22614b0b388232057e69dc4393b1aafda1c38406c4bdc75e59a23752453d9f32",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__init__.py",
+      "source_sha256": "973c597ba50a51d44f8b0017b7440410e462e835d4df94d873f4141817f7fcb6",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\atomic.cpython-311.pyc",
+      "sha256": "57933f7d4252ea143303d81809013405eac00dcb213164238ba533808907a76b",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\atomic.py",
+      "source_sha256": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\contracts.cpython-311.pyc",
+      "sha256": "6dca0f18055764839bbc40bd7c78cf6713a77cf56da17bb7222dbe236fe0d9e2",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\contracts.py",
+      "source_sha256": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\journal.cpython-311.pyc",
+      "sha256": "3d78b6141507a53e3df123c7a965626bff0de83cd40fc863a0a14b187ffdb388",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\journal.py",
+      "source_sha256": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\provenance.cpython-311.pyc",
+      "sha256": "4b2b4d9a2b32d7141200af7bd01e6a81554a5a921542887ce70b94da8e1d98e9",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\provenance.py",
+      "source_sha256": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\__pycache__\\serde.cpython-311.pyc",
+      "sha256": "6977b1592eb7c25af9a2b4079d4d84b0ee836ec75bb95e4806f7608e78de333e",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\serde.py",
+      "source_sha256": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\__pycache__\\__init__.cpython-311.pyc",
+      "sha256": "5aabbcd5385f0e89cbd7dc2e16f38a5a7d4dd25387ded06cc8ee51c731b3a832",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\__init__.py",
+      "source_sha256": "58b9a509fe0304b40f28ce54b5ac9453b63de681afa41314dd77ad27ee7ef686",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\__pycache__\\proofs.cpython-311.pyc",
+      "sha256": "bf6bdba71b46c85ea960c7f127cce9e18f54e8e8d95657d324584837b6f4abb1",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\proofs.py",
+      "source_sha256": "4d5e7170dafb15b1c701d77e639cb1acf7ecfcdc4546f6c9ce4e7ba9ea649b0f",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\__pycache__\\stable_read.cpython-311.pyc",
+      "sha256": "838b3a2ae1cb79224d6a007314b668be6e6fd64d1d69c234461649883cc1df28",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\asof\\study\\stable_read.py",
+      "source_sha256": "40d71fa950422e8f19fd863952b3e7ea39237c12d1c92a9d38b0a9c23a2f4a0b",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\numpy\\distutils\\__pycache__\\conv_template.cpython-311.pyc",
+      "sha256": "cb88c1e61c838636a3df614e419b59965fcb49657edfc38a2fa9b76d63ee75d3",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\numpy\\distutils\\conv_template.py",
+      "source_sha256": "84bd030f2eed309fb923eeb70669169282cd5f67391a241d4218fe5cd1b74e6f",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": false,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\__pycache__\\__init__.cpython-311.pyc",
+      "sha256": "44fd8f9dea553efa52a7d510496af57dedeca96b7e00c19344e5b676b50e9219",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\__init__.py",
+      "source_sha256": "ae347395079b001855576ef37462db9cd93da7f182e44a4ed6fcfdb421acc384",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\__pycache__\\_aliases.cpython-311.pyc",
+      "sha256": "39e5588b1b8534619c90ee6960f26ade2a0667b0b296c06b3d7626c2f7eb50c6",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\_aliases.py",
+      "source_sha256": "7ae91c83e322003c82444cce91de8276b85bd59057c72c8638365971fcad6407",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\__pycache__\\_process.cpython-311.pyc",
+      "sha256": "08cb0f4435a35bdacea1bb6ab2fb862e03f2210805d59fd3a196aa63ed3ae8f8",
+      "source_path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Lib\\site-packages\\tether\\_process.py",
+      "source_sha256": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\__init__.cpython-311.pyc",
+      "sha256": "d1da7811982bd86846f2742396f9b245cca9a844bd3128e72b41eb372c32848b",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__init__.py",
+      "source_sha256": "777c6590deb2e803729ac0bf8d3d60cf39dc97af194a2f0590e61ea4ecfe5d79",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\check_worker.cpython-311.pyc",
+      "sha256": "ab4df83a35e73bf6c1d99b128354514ef31205a8c845044601a97aa0a730011b",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\check_worker.py",
+      "source_sha256": "779780090109b10d839a91e00e28fb36ed4062b297a751e0bf6c8f59f92171eb",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\data_views.cpython-311.pyc",
+      "sha256": "81d90762b0e2cfee4cc09493cfc0e9b2678345dea87a3988943dcc28c909a694",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\data_views.py",
+      "source_sha256": "c94347cdb746e1d62b311e0bed08afc8afa8645be80f0e7669845449ef903a5d",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\evaluate.cpython-311.pyc",
+      "sha256": "408c95dc4ac2d3bd52d653e054d63b22b157fd55325ca263ba2aa7c007be26a6",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\evaluate.py",
+      "source_sha256": "945c6a9ca1f42d89ada671026178f50dac431a8e77e7b9f9c69652b818909bd8",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\native_contract.cpython-311.pyc",
+      "sha256": "58107b7c740b31f86b25bd15e2c3080005734f42787fb5ff3d9967e029f0bbe6",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\native_contract.py",
+      "source_sha256": "4fe362fc425d10249cdd84b4fba1d3e172f43b862c46e941500ea29db81494e9",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\run.cpython-311.pyc",
+      "sha256": "2b5933e492dad82f750ba42a285cab071f4ab9b3518c657b2dd3ee998eb2858e",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\run.py",
+      "source_sha256": "749b89f015bf24ca950cbb404ed76df7bb7631fc1e4eb50845494718cbd98d54",
+      "optimization": 0,
+      "code_matches_compiled_source": false,
+      "usable_by_default_interpreter": false,
+      "header_validation": "source_mtime_and_size",
+      "status": "stale_cache_ignored_by_interpreter"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\runtime.cpython-311.pyc",
+      "sha256": "8d2c5c5ad43757d8ec4b549939aa6926f680bbba68a68c782915f67da935dc97",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\runtime.py",
+      "source_sha256": "e5b07142927ab638504eae954610c0e9b3a2b2f53474191fb98e3e06deaf4ce2",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\split.cpython-311.pyc",
+      "sha256": "a062f7a5c328620197bc19b4840433f5fc3b6eabaf42d7ebae05ca90b7b0cf95",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\split.py",
+      "source_sha256": "63adae26ea6a518141be2312cc719345f8903d9beeb3cd8db218138d157c9d2f",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\__pycache__\\tether_adapter.cpython-311.pyc",
+      "sha256": "f998d823dfcfd3871a3e34ec0084808afae1f0fa3c8dd3fe3dd979bf3be76d1a",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tether_adapter.py",
+      "source_sha256": "3a0bf288270279536b78825950b6754d0bb647556edd1a469f17f6a72087d20b",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\__pycache__\\test_scifact_check_worker.cpython-311.pyc",
+      "sha256": "8e8512291c3855fc79fdbdffa56467ca25947bfa22c8bc849e223a2a0411265d",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\test_scifact_check_worker.py",
+      "source_sha256": "3978a54506ab8def6a9c0b488155adbae67baca06bc850301da418eab55e837f",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\__pycache__\\test_scifact_policy.cpython-311.pyc",
+      "sha256": "34a56d36dd9e274ea8f596c809f145cb26095fc681a7c83a8b471702203fed38",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\test_scifact_policy.py",
+      "source_sha256": "beac52ad5d195d8dd7ea1824c02fa24f5141854f6d5605a235957fd2c15767d3",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\__pycache__\\test_scifact_runtime.cpython-311.pyc",
+      "sha256": "538d20c9c3b6fd14bc7e9c2b40eaffc3f2377fa92fb594f79883718ee5f11548",
+      "source_path": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\tests\\test_scifact_runtime.py",
+      "source_sha256": "9381d730dc277113e6139c496aa58d4844911a84f000ab4a1d57cac3928cc5f8",
+      "optimization": 0,
+      "code_matches_compiled_source": true,
+      "usable_by_default_interpreter": true,
+      "header_validation": "source_mtime_and_size",
+      "status": "matches_source"
+    }
+  ],
+  "scope": "installed_scientific_and_TETHER_packages_plus_native_task_code",
+  "limits": "Does not attest stdlib/OS files or transient changes; no caches deleted or executed."
+}

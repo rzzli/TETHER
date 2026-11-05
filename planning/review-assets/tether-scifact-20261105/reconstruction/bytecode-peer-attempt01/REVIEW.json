@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "helper_sha256": "eec6ff0d63a5087517efc1254fc4e2d58f51b2cf46e509f9d97130a0b1e4792d",
+  "helper_unchanged": true,
+  "cases": [
+    {
+      "case": "current_timestamp",
+      "status": "PASS",
+      "helper_rejected": false,
+      "helper_error": null,
+      "python_loader_code_matches_current_source": true,
+      "source_sha256": "9d32793e9c6dd0389602adb2d7a9616f931c6bb3431f964055f8e8932f8d76f5",
+      "cache_sha256": "823edd9b6c425c53ffb5601e778e0f12bb10b57a44d46999c3df16fc36e9460f",
+      "cache_unchanged": true,
+      "module_code_executed": false
+    },
+    {
+      "case": "stale_timestamp",
+      "status": "PASS",
+      "helper_rejected": false,
+      "helper_error": null,
+      "python_loader_code_matches_current_source": true,
+      "source_sha256": "b74b27aacce67a7eaa9b0ea3e7f9ac21d2f949cc2b184d2d82d77dc555d0574a",
+      "cache_sha256": "165310c2806e710b35d2df94fb120e690b752ca17fc12961a0148fe01b0ee42d",
+      "cache_unchanged": true,
+      "module_code_executed": false
+    },
+    {
+      "case": "forged_current_timestamp",
+      "status": "PASS",
+      "helper_rejected": true,
+      "helper_error": "Usable import-cache code differs from current source: D:\\Projects\\drug_target_agents\\data\\cache\\scifact-scoring-test-temp\\tmpy9u37_hk\\forged_current_timestamp\\experiments\\scifact\\__pycache__\\fictional_cache.cpython-311.pyc",
+      "python_loader_code_matches_current_source": false,
+      "source_sha256": "b74b27aacce67a7eaa9b0ea3e7f9ac21d2f949cc2b184d2d82d77dc555d0574a",
+      "cache_sha256": "a8f7e5bb64097bf4245d0618da1eb2504ebbf575d3be44d29b1afc0ba3895772",
+      "cache_unchanged": true,
+      "module_code_executed": false
+    }
+  ],
+  "scope": "Three fictional timestamp caches; native/project caches unchanged; no module bytecode executed.",
+  "limitations": [
+    "Hash-based caches are reviewed by inspection here, not exercised by these three fixtures.",
+    "The helper assumes Python's default hash-cache validation mode and normal (non-optimized) assertion checking."
+  ]
+}

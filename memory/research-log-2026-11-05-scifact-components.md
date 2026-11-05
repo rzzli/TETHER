@@ -7,6 +7,15 @@ metadata:
 
 # SciFact component checkpoint
 
+Latest checkpoint: integration-attempt01 passes **148 tests**, zero failures,
+errors or skips, in60.689 seconds with unchanged source hashes. Separate bounded
+checker/scorer processes now join actual producer requests and terminal bytes.
+Deadline overrun between watchdog polls is checked before prediction commit.
+Full process rehearsal02 is running; attempt01 stopped before any fit on an
+explicitly resolved runtime-executable alias issue. Real benchmark execution has
+not started. Cached bytecode is separately checked against compiled source;
+stale interpreter-invalidated caches are distinguished from usable caches.
+
 BG03 is in progress. The original public archive and receipts remain unchanged.
 Preparation attempt03 reconstructs twelve products (12,015,507 bytes) containing
 5,183 abstracts, all 300 public dev claims, and source-disjoint fit380/tune82/

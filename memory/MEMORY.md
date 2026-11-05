@@ -1,6 +1,6 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-05-scifact-components]] - Active BG03 checkpoint: verified 5,183-document corpus and source-disjoint 380/82/69 fit/tune/calibration partitions, full300 dev; native scorer/CPU environment qualified,121 fictional components pass including watchdog correction. Controller integration, real fit/tune/dev and independent reconstruction remain pending. BG01/BG02 complete; LAB-Bench,Inspect and final audit follow.
+- [[research-log-2026-11-05-scifact-components]] - Active BG03 checkpoint: verified 5,183-document corpus and source-disjoint 380/82/69 fit/tune/calibration partitions, full300 dev; native scorer/CPU environment qualified,148 fictional component/controller tests pass. Full process rehearsal running; real fit/tune/dev and independent reconstruction pending. BG01/BG02 complete; LAB-Bench,Inspect and final audit follow.
 
 - [[research-log-2026-11-02-benchmark-execution]] - Active goal: BG01/BG02 complete in Windows/offline finite-conformance scope. Replay correction0.5.2/0.3.13 full2100/installed checks pass; both1308-cell comparisons independently reconstruct. Original TETHER108/109,patched/independent109/109; median paired cost ratio1.65 against TETHER. Original failures retained. Next actual SciFact,then LAB-Bench,Inspect,final audit; no native scientific benchmark performance claimed.
 

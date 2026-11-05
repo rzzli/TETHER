@@ -61,6 +61,19 @@ class WorkerTests(unittest.TestCase):
             candidates=[r['result']['prediction'] for r in records if r['cell_id']!='setup']
             self.assertEqual(len(candidates),3)
             self.assertEqual(sum(not x['evidence'] for x in candidates),1)
+            # A cell that overruns between watchdog polls must not be accepted.
+            # Reuse the fitted fictional model, with no additional fitting.
+            recipe['limits'] = {**limits, 'query_seconds': 1e-9}
+            expired, result = self.launch(recipe, root, 'expired-query-job')
+            self.assertNotEqual(result.returncode, 0)
+            self.assertFalse((expired / 'COMPLETE.json').exists())
+            failure = json.loads((expired / 'FAILED.json').read_bytes())
+            self.assertEqual(failure['error_type'], 'TimeoutError')
+            events = [json.loads(line) for line in (expired / 'session/journal.jsonl').read_bytes().splitlines()]
+            terminals = [event['details'] for event in events if event['event'] == 'native_terminal']
+            query_terminals = [row for row in terminals if row['cell_id'] != 'setup']
+            self.assertEqual(len(query_terminals), 1)
+            self.assertNotEqual(query_terminals[0]['status'], 'completed')
 
     def test_extra_reference_input_is_denied_before_fitting(self):
         with tempfile.TemporaryDirectory() as d:

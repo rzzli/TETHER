@@ -33,9 +33,9 @@ BG03 now has verified projection and source-disjoint splits: 5,183 abstracts,
 380 fit claims, 82 tune claims, 69 reserved calibration claims and all 300 public
 dev claims. Of 809 original training claims, 278 overlap dev source/claim groups
 and are quarantined. The native scorer, baseline, policy adapter and audited
-worker pass 121 combined fictional component tests, including the watchdog
-failure correction. The CPU environment is qualified.
-Controller integration, complete fictional rehearsal, real fitting/tuning/dev
+worker and controller pass 148 combined fictional tests, including separate
+bounded checking/scoring and failure corrections. The CPU environment is qualified.
+The complete fictional process rehearsal, real fitting/tuning/dev
 execution and independent result reconstruction remain unfinished. No native
 performance score exists. See the [current checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
 

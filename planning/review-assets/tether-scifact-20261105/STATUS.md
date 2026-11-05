@@ -11,7 +11,8 @@ evaluation have not started.** BG01/BG02 remain complete in their declared scope
 | CPU environment | ENVIRONMENT-QUALIFICATION-02.json; seven packages/3,900 RECORD payloads | Complete |
 | Native policy/baseline/worker components | components-attempt03/VALIDATION.json; 121 tests, zero failures/errors/skips and unchanged source pins | Complete component checkpoint |
 | Watchdog persistence failure | policy/red-watchdog-marker01.log and green-watchdog-marker01.log; eight runtime tests | Corrected and focused validation passes |
-| Controller and complete fictional rehearsal | runner/ and policy/RUNNER-PREEXECUTION-PROBES-02.json | In progress; no actual data dispatch |
+| Components/controller integration | integration-attempt01/VALIDATION.json; 148 tests, zero failures/errors/skips; source hashes unchanged | Complete fictional test checkpoint |
+| Full fictional process rehearsal | runner/; attempt01 stopped before fitting on runtime executable alias, corrected with explicit resolution/proof | Attempt02 running; no actual benchmark dispatch |
 | Real fit, nine tune configurations, full 300-query dev | No execution result | Pending |
 | Independent reconstruction and final source audit | reconstruction/ under development | Pending |
 
@@ -27,6 +28,5 @@ are retained. The new native policy does not automatically inherit full BG02 or
 therapeutic schema2 equivalence. Public-development scores, when generated, will
 not establish a private holdout result, scientific truth or clinical prediction.
 
-Next: finish bounded isolated scoring/checking and controller joins, validate a
-complete fictional rehearsal, freeze effective sources, then execute once in a
+Next: complete the fictional process rehearsal, freeze effective sources, then execute once in a
 fresh directory. An observation timeout never authorizes a duplicate dispatch.

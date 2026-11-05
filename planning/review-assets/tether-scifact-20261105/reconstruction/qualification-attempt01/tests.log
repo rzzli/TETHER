@@ -1,0 +1,22 @@
+test_exact_comparison_rejects_denominator_and_extra_fields (__main__.ReconstructionTests.test_exact_comparison_rejects_denominator_and_extra_fields) ... ok
+test_failure_empty_and_successful_nei_have_different_denominators (__main__.ReconstructionTests.test_failure_empty_and_successful_nei_have_different_denominators) ... ok
+test_grid_tie_break_is_declared_not_lexicographic (__main__.ReconstructionTests.test_grid_tie_break_is_declared_not_lexicographic) ... ok
+test_json_duplicate_keys_rejected (__main__.ReconstructionTests.test_json_duplicate_keys_rejected) ... ok
+test_native_prediction_contract (__main__.ReconstructionTests.test_native_prediction_contract) ... ok
+test_official_cli_runs_unchanged_only_on_invented_rows (__main__.ReconstructionTests.test_official_cli_runs_unchanged_only_on_invented_rows) ... ok
+test_path_escape_and_empty_schedule_rejected (__main__.ReconstructionTests.test_path_escape_and_empty_schedule_rejected) ... ok
+test_receipt_tampering_and_extra_files (__main__.ReconstructionTests.test_receipt_tampering_and_extra_files) ... ok
+test_reconstruction_imports_no_project_or_producer_helpers (__main__.ReconstructionTests.test_reconstruction_imports_no_project_or_producer_helpers) ... ok
+test_resource_totals_keep_unknown_and_peak_not_sum (__main__.ReconstructionTests.test_resource_totals_keep_unknown_and_peak_not_sum) ... ok
+test_schedule_cannot_drop_duplicate_or_reorder (__main__.ReconstructionTests.test_schedule_cannot_drop_duplicate_or_reorder) ... ok
+test_session_rebuild_rejects_rehashed_accounting_contradiction (__main__.ReconstructionTests.test_session_rebuild_rejects_rehashed_accounting_contradiction) ... ok
+test_session_rejects_rehashed_budget_contradiction (__main__.ReconstructionTests.test_session_rejects_rehashed_budget_contradiction) ... ok
+test_source_binding_exact_coverage_and_unretrieved_doc (__main__.ReconstructionTests.test_source_binding_exact_coverage_and_unretrieved_doc) ... ok
+test_source_binding_uses_original_sentence_bytes (__main__.ReconstructionTests.test_source_binding_uses_original_sentence_bytes) ... ok
+test_source_components_and_reference_strata_are_independent (__main__.ReconstructionTests.test_source_components_and_reference_strata_are_independent) ... ok
+test_strict_native_rationale_cap_and_alternatives (__main__.ReconstructionTests.test_strict_native_rationale_cap_and_alternatives) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.702s
+
+OK
