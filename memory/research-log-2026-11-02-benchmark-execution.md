@@ -19,8 +19,10 @@ descriptors/1938files/339directories are checked. The previous need for a fresh
 preparation was satisfied by attempt03, not still pending. The operative v2
 coverage ledger preserves the original and records runtime-only witnesses and
 unexercised boundaries. Freeze now includes its evidence and installed payloads.
-Actual paired execution, independent reconstruction and BG02 closure remain next;
-no corpus scores or native benchmark answers are claimed.
+Paired execution is now running in attempt03 under session47997:108cases x4arms
+x3repetitions, freeze26b30fef132fc6ce6acd6f1844a41521da47fb091d53e513d4b14588db476736.
+Poll the recorded live process; do not restart. Independent reconstruction and
+BG02 closure remain pending. No native benchmark answers are claimed.
 
 Earlier November 2 BG02 implementation checkpoint: the independent stdlib validator now covers the
 declared current-v2 core and schema2/outer interfaces. A frozen 27-obligation policy

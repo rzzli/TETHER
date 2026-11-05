@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "running",
+  "recorded_at_utc": "2026-11-05T20:59:30.093361+00:00",
+  "stage": "BG02",
+  "run": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-20261102-attempt03",
+  "tool_session_id": 47997,
+  "freeze_sha256": "26b30fef132fc6ce6acd6f1844a41521da47fb091d53e513d4b14588db476736",
+  "code_checkpoint": "5560339",
+  "unique_cases": 108,
+  "expected_cells": 1296,
+  "instructions": "Poll the recorded live session; if absent inspect actual process and terminal EXECUTION.json. Never restart this run automatically. Frozen code and inputs must remain unchanged through analysis."
+}
