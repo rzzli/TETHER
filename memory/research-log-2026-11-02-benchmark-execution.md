@@ -8,6 +8,18 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+2026-11-05T22:52:01.490230+00:00: BG03 public acquisition has begun after BG02 local closure
+commit4dbe7be (status-document LF convention restored in d710a79). Five original
+files total3,196,330B, with original receipt hashes freshly checked. Data archive
+11c62128 and code commits scifact68b98a56/scorer66feffc5 are pinned in
+planning/review-assets/tether-scifact-20261105/ACQUISITION-20261105.json.
+Archive member inventory only; no data labels parsed, model fitted or candidate
+scored. Code/license review is separate from original downloaded-not-parsed
+receipt status. Native protocol and method review underway. All scientific
+benchmark scores remain unavailable; no spend or old-worker/monitor change.
+Timestamp text in recent commit subjects was manually entered; actual Git commit
+metadata and retained execution/receipt timestamps define chronology.
+
 November 5, 22:45 UTC checkpoint: BG02 complete in the declared finite exposed
 scope. Sessions3300/87679 both terminal0,1,308cells each; independent
 reconstructions aa6f39df/db43e00a agree on all cells. Original TETHER108/109,

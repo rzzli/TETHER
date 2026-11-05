@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-05T22:50:03.024872+00:00",
+  "status": "original_bytes_verified_content_qualification_pending",
+  "originals": [
+    {
+      "file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-commit.json",
+      "bytes": 5389,
+      "sha256": "f7957ea8d352aac51cbdd19774aeca7d2c2a792224ba4458a81ed7ca3842437b",
+      "source_url": "https://api.github.com/repos/allenai/scifact/commits/master",
+      "retrieved_at_utc": "2026-11-05T22:48:48.603208+00:00",
+      "receipt_file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-commit.json.receipt.json",
+      "receipt_sha256": "98921daa29913e5d703d2d43346aed1c5763e88a584da842fae93cab0b9b8595"
+    },
+    {
+      "file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz",
+      "bytes": 3115079,
+      "sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+      "source_url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+      "retrieved_at_utc": "2026-11-05T22:48:50.959899+00:00",
+      "receipt_file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz.receipt.json",
+      "receipt_sha256": "b2aa9586681fbc22b1dbcd563daa6f49582f71f09331a80df78a5d4553fe4ba2"
+    },
+    {
+      "file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-evaluator-commit.json",
+      "bytes": 3228,
+      "sha256": "942f6a316fca24c8f06ca8e5c0c07e00f49a2b33ad4b49d5bec67a4aab410ef0",
+      "source_url": "https://api.github.com/repos/allenai/scifact-evaluator/commits/master",
+      "retrieved_at_utc": "2026-11-05T22:48:49.627716+00:00",
+      "receipt_file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-evaluator-commit.json.receipt.json",
+      "receipt_sha256": "9f7549f1726a0011ed03761286ff8aba0b4756120ce812952c6822a999da5b8d"
+    },
+    {
+      "file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-evaluator-source.zip",
+      "bytes": 13077,
+      "sha256": "16a743524ed0bbb83e56d862b7f04475c5fbdd22d21046aecad7583a1bc0b009",
+      "source_url": "https://codeload.github.com/allenai/scifact-evaluator/zip/66feffc5b2cc9e28e3ce3b8c9e824c3c642981eb",
+      "retrieved_at_utc": "2026-11-05T22:48:50.143044+00:00",
+      "receipt_file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-evaluator-source.zip.receipt.json",
+      "receipt_sha256": "2801f35f5af442c3beba3d56135fe471e5f0c098321f30e3f852fbde307652fe"
+    },
+    {
+      "file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-source.zip",
+      "bytes": 59557,
+      "sha256": "aba85f44b80e4014a93b905de8f91929104d1bc4886950e2ec33be243355f75b",
+      "source_url": "https://codeload.github.com/allenai/scifact/zip/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+      "retrieved_at_utc": "2026-11-05T22:48:49.160124+00:00",
+      "receipt_file": "data\\raw\\scifact_public\\20261105-attempt01\\scifact-source.zip.receipt.json",
+      "receipt_sha256": "ad5467d9fca5b9987839ae233ea815e2d6accfd16b8370c0ed2b9153b6068fc0"
+    }
+  ],
+  "archive_member_inventory": [
+    {
+      "name": "._data",
+      "bytes": 220,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/claims_dev.jsonl",
+      "bytes": 65007,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/claims_train.jsonl",
+      "bytes": 175616,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/claims_test.jsonl",
+      "bytes": 33769,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/corpus.jsonl",
+      "bytes": 8307875,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/._fold_4",
+      "bytes": 220,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_4",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/cross_validation/fold_3",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/cross_validation/fold_2",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/cross_validation/fold_5",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/cross_validation/._fold_1",
+      "bytes": 220,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_1",
+      "bytes": 0,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "name": "data/cross_validation/fold_1/claims_dev_1.jsonl",
+      "bytes": 47736,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_1/claims_train_1.jsonl",
+      "bytes": 192887,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_5/claims_train_5.jsonl",
+      "bytes": 193241,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_5/claims_dev_5.jsonl",
+      "bytes": 47382,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_2/claims_dev_2.jsonl",
+      "bytes": 48999,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_2/claims_train_2.jsonl",
+      "bytes": 191624,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_3/claims_train_3.jsonl",
+      "bytes": 192029,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_3/claims_dev_3.jsonl",
+      "bytes": 48594,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_4/claims_dev_4.jsonl",
+      "bytes": 47912,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "name": "data/cross_validation/fold_4/claims_train_4.jsonl",
+      "bytes": 192711,
+      "regular_file": true,
+      "directory": false
+    }
+  ],
+  "selected_code_license_member_pins": [
+    {
+      "archive": "scifact-source.zip",
+      "member": "scifact-68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/LICENSE.md",
+      "bytes": 542,
+      "sha256": "56ee69bc639cbab8f0b2e4b67091ec5e9390aa99a1d65f0a35e4274686c9a806"
+    },
+    {
+      "archive": "scifact-evaluator-source.zip",
+      "member": "scifact-evaluator-66feffc5b2cc9e28e3ce3b8c9e824c3c642981eb/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "archive": "scifact-evaluator-source.zip",
+      "member": "scifact-evaluator-66feffc5b2cc9e28e3ce3b8c9e824c3c642981eb/evaluator/eval.py",
+      "bytes": 8847,
+      "sha256": "2554fed44c3f5592bdeed59ab0d3918a412b452ba1c77da73ba0f62e74c9987f"
+    }
+  ],
+  "commits": {
+    "scifact": "68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+    "scifact-evaluator": "66feffc5b2cc9e28e3ce3b8c9e824c3c642981eb"
+  },
+  "data_contents_parsed": false,
+  "labels_seen_for_scoring": false,
+  "training_or_candidate_scoring": false,
+  "total_original_bytes": 3196330,
+  "provider_spend_usd": 0,
+  "notes": [
+    "Data latest URL is mutable; these actual downloaded bytes are now pinned.",
+    "HTTP/hash success is not native schema, license-reuse or solver qualification.",
+    "Source tar member inventory only; no extraction or label records parsed.",
+    "The original transport receipts remain unchanged."
+  ]
+}

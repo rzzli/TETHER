@@ -34,6 +34,13 @@ same-version candidate artifacts retain their distinct code and wheel hashes.
 
 ## Current status and next step
 
+The [updated peer comparison](<reports/TETHER benchmark priorities and methods.md>)
+prioritizes native SciFact, one original LAB-Bench task and equal-policy Inspect.
+It distinguishes existing controls from missing semantic answering, selective
+prediction and evidence-use evaluation, and notes Virtual Biotech's overlapping
+audit features. BG03 public inputs are now acquired and byte-verified; native
+parsing, solver qualification and task evaluation are still pending.
+
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
 The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact is next; LAB-Bench and Inspect remain unfinished. The first 108-case experiment, failures and old releases remain preserved.

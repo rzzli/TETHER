@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-11-05T22:45:24.786483+00:00",
+  "logical_cpus": 28,
+  "processor": "",
+  "memory_api": "GlobalMemoryStatusEx",
+  "physical_memory_bytes": 34188681216,
+  "available_memory_bytes_at_inspection": 19250589696,
+  "nvidia_smi": "NVIDIA GeForce RTX 5070 Ti, 16303 MiB, 610.88",
+  "environments": {
+    "data/cache/tether-052-dev/Scripts/python.exe": {
+      "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+      "matching_distributions": {}
+    },
+    ".venv/Scripts/python.exe": {
+      "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+      "matching_distributions": {}
+    },
+    "C:/Users/zzric/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "matching_distributions": {
+        "numpy": "2.3.5"
+      }
+    }
+  },
+  "limitations": [
+    "CIM queries unavailable; fallback Windows memory API and logical CPU count used",
+    "Dependency metadata only; no imports/model runs/native scorer qualification",
+    "VRAM inventory is not a demonstrated model memory/throughput budget",
+    "No SciFact acquisition performed"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "validated_at_utc": "2026-11-05T22:53:28.283851+00:00",
+  "scope": "Research-document local links, referenced line bounds, whitespace, final file/source pins and bounded peer reviews; not benchmark execution or external-software qualification. Root SciFact acquisition is a separate execution task.",
+  "output_pins": {
+    "reports/TETHER benchmark priorities and methods.md": {
+      "sha256": "90dc3f83d6f79e556fad4f5e18db64d2268764b587fb032890914db2c99c43c3",
+      "bytes": 19330
+    },
+    "research_notes/TETHER benchmark priorities and methods/biomedical.md": {
+      "sha256": "aa4ff2f7deb4381e40bc3c2155caf66b832cac4a564d41ece0dc087afabf06af",
+      "bytes": 19377
+    },
+    "memory/research-log-2026-11-05-benchmark-priorities.md": {
+      "sha256": "bba5512b4835883718e754fed4ac3424e495049159e451b7c41068a3c14ffcae",
+      "bytes": 4988
+    }
+  },
+  "local_source_pins": {
+    "research_notes/TETHER benchmark priorities and methods/general.md": {
+      "sha256": "65e416974b5303634dc6868911578310d91c174e1689cbec1c250ad8e1daf4a2",
+      "bytes": 27935
+    },
+    "research_notes/TETHER benchmark priorities and methods/implementation.md": {
+      "sha256": "a82eb0e479983aaf69073f50225fba4b30b0fbeee08cf65df37de905e3f82415",
+      "bytes": 14582
+    },
+    "research_notes/TETHER benchmark priorities and methods/implementation-scope.json": {
+      "sha256": "2e627d4ce12befed02f8d35590ce5e877563757a36a7719dc3c7ba59211a0e6e",
+      "bytes": 10738
+    },
+    "research_notes/TETHER benchmark priorities and methods/implementation-validation.json": {
+      "sha256": "a1438128e2bb0069466533fcc5d207bea580f2823e2abd990820077669f3048c",
+      "bytes": 555
+    },
+    "research_notes/TETHER benchmark priorities and methods/bg03-resource-inventory.json": {
+      "sha256": "952a6ed3a9e95c26e0e5da842556016bf0d8d06603eb05f4697bcdcf6a1d4fa7",
+      "bytes": 1232
+    },
+    "research_notes/TETHER benchmark priorities and methods/implementation-report-review.md": {
+      "sha256": "d89c169f97f79db7618ef99db0f523ee0a93f96a6b12d3afdf25575089c2f2f4",
+      "bytes": 2124
+    },
+    "planning/TETHER Equal Policy Comparison Results 2026-11-05.md": {
+      "sha256": "f24395d12845a7455d729ac1d305d552a58b77cc01b42349fbe3ec0adf1c5f59",
+      "bytes": 8981
+    },
+    "planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/OLD-RESULT-SUMMARY-20261105.json": {
+      "sha256": "2ae6a1e956bb9cec0bbba274144c927cb8430e48cc29986d0785f5e7e62e8951",
+      "bytes": 21432
+    },
+    "planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json": {
+      "sha256": "382953495ca3dd3a6dc7e025cf2f6e05fa336cff4ab47616f12c269864c2c122",
+      "bytes": 21490
+    },
+    "data/raw/scifact_public/20261105-attempt01/COMPLETE.json": {
+      "sha256": "1e760271637db847d14a15308ac505736dc49e3bf32301700baf40c01f55d7a2",
+      "bytes": 400
+    },
+    "research_notes/TETHER benchmark priorities and methods/general-report-review.md": {
+      "sha256": "4a9a34f1c085317abbc085bc3065fee06a5243a412f6812b639a566bb06dea97",
+      "bytes": 1664
+    }
+  },
+  "checks": [
+    {
+      "file": "reports/TETHER benchmark priorities and methods.md",
+      "words_excluding_link_targets": 2007,
+      "local_links": [
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/OLD-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/data/raw/scifact_public/20261105-attempt01/COMPLETE.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/bg03-resource-inventory.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/implementation-scope.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/agents.py:46",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/diagnostic_codec.py:604",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/session.py:75",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/agents.py:169",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/retrieval.py:24",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/tools/framework/compare_development.py:117",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/scorer.py:130",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/features.py:34",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Benchmark Execution Plan 2026-11-02.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/session.py:113",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/source_fact_evaluation.py:192",
+          "valid": true
+        }
+      ],
+      "trailing_whitespace_lines": []
+    },
+    {
+      "file": "research_notes/TETHER benchmark priorities and methods/biomedical.md",
+      "words_excluding_link_targets": 2160,
+      "local_links": [
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Benchmark Execution Plan 2026-11-02.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark fit and advances/current_project_gap_map.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/session.py:113",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark fit and advances/current_project_gap_map.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark fit and advances/current_project_gap_map.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark fit and advances/current_project_gap_map.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark fit and advances/current_project_gap_map.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/OLD-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/reports/TETHER benchmark fit and advances.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        }
+      ],
+      "trailing_whitespace_lines": []
+    },
+    {
+      "file": "memory/research-log-2026-11-05-benchmark-priorities.md",
+      "words_excluding_link_targets": 464,
+      "local_links": [
+        {
+          "target": "D:/Projects/drug_target_agents/reports/TETHER benchmark priorities and methods.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/biomedical.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/general.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/implementation.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/src/asof/study/session.py:113",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/research_notes/TETHER benchmark priorities and methods/implementation.md",
+          "valid": true
+        },
+        {
+          "target": "D:/Projects/drug_target_agents/data/raw/scifact_public/20261105-attempt01/COMPLETE.json",
+          "valid": true
+        }
+      ],
+      "trailing_whitespace_lines": []
+    }
+  ],
+  "peer_reviews": {
+    "implementation_and_BG02": "PASS, retained implementation-report-review.md; native-compute accounting and native-contract extension corrections applied",
+    "general_primary_sources_and_scoring": "PASS, retained general-report-review.md. Acquisition receipt remains explicitly quoted as downloaded-not-parsed/pending formal license review."
+  },
+  "limits": [
+    "Web branches are cited research sources, not pinned execution dependencies. Virtual Biotech live-main commit could not be resolved.",
+    "No scientific benchmark or model was executed by this research assignment.",
+    "No protected expert returns were read; no runtime/frozen experiment artifact was modified."
+  ]
+}

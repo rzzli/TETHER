@@ -18,6 +18,14 @@ TETHER. The original failure and causal flags remain retained. See
 then one LAB-Bench family, Inspect and the final goal audit. Native scientific
 benchmark performance is not established. Older sections retain dated scope.
 
+BG03 preparation has started: official SciFact data bytes and source/scorer
+commits are acquired in a fresh ignored directory, with five originals totaling
+3,196,330 bytes independently rehashed against their receipts. Archive member
+metadata and code/license text have been inspected; no labels were scored, model
+fitted or candidate produced. The native projection/training/evaluation protocol
+is being specified. [[TETHER benchmark priorities and methods]] incorporates the
+new peer comparison without changing the sequential execution order.
+
 ## Current recovery execution
 
 The owner has now activated [[TETHER Benchmark Execution Plan 2026-11-02]] as a
