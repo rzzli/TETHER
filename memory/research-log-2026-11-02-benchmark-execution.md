@@ -8,6 +8,14 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5, 21:45 UTC: both corrected corpora now pass independent preflight and
+are frozen, unscored. Original-attempt02 freeze f7b4b09f; patched-attempt01 freeze
+3ec7625f. Each109cases/103source-evidencepins. Gate54110 remains live and its log
+advances; wait for terminal validation before timed comparisons. A sandbox
+Get-Process lookup could not see elevated child10536, but exact session polling
+confirmed running and later log progress: this was not a terminated process.
+Comparison preparation checkpoint a4268a8 is committed. No new comparison score.
+
 November 5, 21:41 UTC: replay candidate checkpoint committed as9e3c03f.
 Facade138 and installed replay positive/counterexample pass. Fullgate03 remains
 running (session54110,pid10536); aggregate correctly reportsPENDING, no release

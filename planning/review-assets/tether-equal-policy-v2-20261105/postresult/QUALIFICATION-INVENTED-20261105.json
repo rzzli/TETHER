@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "PASS_INVENTED_OUTCOME_CONTROLS_ONLY",
+  "checked_at_utc": "2026-11-05T21:50:18.3681434Z",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "real_comparison_results_read": false,
+  "frozen_execution_files_edited": false,
+  "scope": "Supplemental rejection-reason mapping and complete-terminal-denominator controls. Primary and independent numerical analyzers remain separate. Authored self-tests do not establish independent review.",
+  "pins": [
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/postresult/causal_audit.py",
+      "sha256": "cf4e6529c8238bc97354114292730b1e600e0695fdb80d6d9ef808eac692fa23",
+      "bytes": 14493
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/postresult/test_causal_audit.py",
+      "sha256": "222fe25f78de33a350b343b57b4f0c92ec28d062b369d470fc43f42b78ce65df",
+      "bytes": 5010
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/postresult/CHECKLIST.md",
+      "sha256": "ee59c995bdd19a37a5872f2914f7f92c33a1f7edcc309ca2efee926285a93243",
+      "bytes": 4378
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/postresult/invented-controls-01.log",
+      "sha256": "f85d2e587f5018be01499b2eadc5cf14cbf68ee597ff9122e4b0b020d4c4a939",
+      "bytes": 1383
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+test_complete_consistent_invented_proof_reaches_pass (__main__.FullGateProofTests.test_complete_consistent_invented_proof_reaches_pass) ... ok
+test_consistently_resealed_missing_source_inventory_member_rejected (__main__.FullGateProofTests.test_consistently_resealed_missing_source_inventory_member_rejected) ... ok
+test_failed_final_log_summary_cannot_be_overridden_by_resealed_pass (__main__.FullGateProofTests.test_failed_final_log_summary_cannot_be_overridden_by_resealed_pass) ... FAIL
+test_focused_record_accepts_final_ok_despite_nested_negative_fixture (__main__.FullGateProofTests.test_focused_record_accepts_final_ok_despite_nested_negative_fixture) ... ok
+test_focused_record_cannot_use_an_earlier_ok_for_failed_final_suite (__main__.FullGateProofTests.test_focused_record_cannot_use_an_earlier_ok_for_failed_final_suite) ... FAIL
+test_log_skips_rejected_even_if_report_claims_none (__main__.FullGateProofTests.test_log_skips_rejected_even_if_report_claims_none) ... FAIL
+test_missing_terminal_bracket_is_pending_even_with_passed_report (__main__.FullGateProofTests.test_missing_terminal_bracket_is_pending_even_with_passed_report) ... ok
+test_missing_terminal_report_is_pending_even_with_claimed_pass_bracket (__main__.FullGateProofTests.test_missing_terminal_report_is_pending_even_with_claimed_pass_bracket) ... ok
+test_nested_negative_summary_does_not_override_successful_final_suite (__main__.FullGateProofTests.test_nested_negative_summary_does_not_override_successful_final_suite) ... ok
+test_passed_words_do_not_replace_successful_terminal_exit (__main__.FullGateProofTests.test_passed_words_do_not_replace_successful_terminal_exit) ... ok
+test_resealed_bracket_cannot_bind_a_different_started_invocation (__main__.FullGateProofTests.test_resealed_bracket_cannot_bind_a_different_started_invocation) ... ok
+test_resealed_passed_report_cannot_hide_log_test_count_mismatch (__main__.FullGateProofTests.test_resealed_passed_report_cannot_hide_log_test_count_mismatch) ... ok
+test_resealed_passed_report_cannot_hide_skipped_tests (__main__.FullGateProofTests.test_resealed_passed_report_cannot_hide_skipped_tests) ... ok
+test_previous_installed_payload_changed_rejected (__main__.PreviousProofPreservationTests.test_previous_installed_payload_changed_rejected) ... ok
+test_previous_qualification_bytes_changed_after_anchor_rejected (__main__.PreviousProofPreservationTests.test_previous_qualification_bytes_changed_after_anchor_rejected) ... ok
+test_previous_wheel_bytes_changed_rejected (__main__.PreviousProofPreservationTests.test_previous_wheel_bytes_changed_rejected) ... ok
+test_unchanged_invented_prior_proof_and_payloads_accepted (__main__.PreviousProofPreservationTests.test_unchanged_invented_prior_proof_and_payloads_accepted) ... ok
+
+======================================================================
+FAIL: test_failed_final_log_summary_cannot_be_overridden_by_resealed_pass (__main__.FullGateProofTests.test_failed_final_log_summary_cannot_be_overridden_by_resealed_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-replay-correction-20261105\test_aggregate_checker.py", line 107, in test_failed_final_log_summary_cannot_be_overridden_by_resealed_pass
+    with self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+======================================================================
+FAIL: test_focused_record_cannot_use_an_earlier_ok_for_failed_final_suite (__main__.FullGateProofTests.test_focused_record_cannot_use_an_earlier_ok_for_failed_final_suite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-replay-correction-20261105\test_aggregate_checker.py", line 125, in test_focused_record_cannot_use_an_earlier_ok_for_failed_final_suite
+    with self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+======================================================================
+FAIL: test_log_skips_rejected_even_if_report_claims_none (__main__.FullGateProofTests.test_log_skips_rejected_even_if_report_claims_none)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-replay-correction-20261105\test_aggregate_checker.py", line 118, in test_log_skips_rejected_even_if_report_claims_none
+    with self.assertRaises(AssertionError):
+AssertionError: AssertionError not raised
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.592s
+
+FAILED (failures=3)

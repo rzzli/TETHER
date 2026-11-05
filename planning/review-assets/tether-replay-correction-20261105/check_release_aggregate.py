@@ -1,0 +1,257 @@
+"""Read-only evidence aggregation; full-gate absence is PENDING, never PASS."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import re
+import traceback
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[3]
+HERE = Path(__file__).parent
+NEW = ROOT / 'data/cache/tether-052-installed-qualification-attempt01'
+OLD = ROOT / 'data/cache/tether-051-installed-qualification-attempt02'
+CORPUS = ROOT / 'data/benchmark/tether-equal-policy-20261102-attempt03'
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def load(path):
+    return json.loads(Path(path).read_bytes())
+
+
+def pin(path):
+    path = Path(path)
+    return dict(path=path.relative_to(ROOT).as_posix(), sha256=sha(path), bytes=path.stat().st_size)
+
+
+def files(directory, *, suffixes=None):
+    return {p.relative_to(directory).as_posix(): sha(p) for p in sorted(directory.rglob('*'))
+        if p.is_file() and '__pycache__' not in p.parts and (suffixes is None or p.suffix in suffixes)}
+
+
+def assert_hashes(values, root=ROOT):
+    for relative, expected in values.items():
+        path = root / relative
+        if isinstance(expected, dict):
+            assert set(expected) == {'sha256', 'bytes'}
+            assert sha(path) == expected['sha256'] and path.stat().st_size == expected['bytes'], 'Changed source: ' + relative
+        else:
+            assert sha(path) == expected, 'Changed source: ' + relative
+
+
+def final_unittest_summary(text):
+    """Bind the outcome to the last suite count, not an earlier nested fixture."""
+    counts = list(re.finditer(r'(?m)^Ran (\d+) tests? in [^\r\n]+$', text))
+    assert counts, 'Unittest completion count is missing'
+    final = counts[-1]
+    following = [line.strip() for line in text[final.end():].splitlines() if line.strip()]
+    assert following and following[0] == 'OK', 'Final unittest summary is not unqualified OK'
+    return dict(tests=int(final.group(1)), summary=following[0])
+
+
+def test_record(path, log, expected_count, *, test_key='tests'):
+    record = load(path)
+    assert record['status'] == 'PASS', str(path)
+    tests = record[test_key]
+    if isinstance(tests, int):
+        count, failures, errors, skipped = tests, record['failures'], record['errors'], record['skipped']
+    else:
+        count, failures, errors, skipped = (tests[k] for k in ('run', 'failures', 'errors', 'skipped'))
+    assert failures == errors == skipped == 0
+    summary = final_unittest_summary(log.read_text(encoding='utf-8-sig'))
+    assert summary['tests'] == count == expected_count
+    expected_log = record.get('log_sha256', record.get('tests_log_sha256'))
+    assert sha(log) == expected_log
+    return record, dict(record=pin(path), log=pin(log), parsed_test_count=count, log_summary=summary['summary'],
+                        failures=failures, errors=errors, skipped=skipped)
+
+
+def installed(base, anchor, versions, current):
+    qualification = base / 'QUALIFICATION.json'
+    assert sha(qualification) == anchor
+    q = load(qualification)
+    assert q['status'] == 'PASS' and q['versions'] == versions
+    assert q['installed']['isolated'] == 1
+    assert Path(q['installed']['executable']).resolve().is_relative_to(base / 'environment')
+    source = q['source_manifest']['sources']
+    counts = {}
+    for wheel in q['wheel_proofs']:
+        namespace = 'asof' if wheel['distribution'] == 'asof-target-agents' else 'tether'
+        assert sha(wheel['path']) == wheel['sha256']
+        with zipfile.ZipFile(wheel['path']) as archive:
+            members = {name: hashlib.sha256(archive.read(name)).hexdigest()
+                for name in archive.namelist() if name.startswith(namespace + '/')}
+        assert members == source[namespace] == wheel['source_sha256']
+        package = q['installed']['packages'][namespace]
+        package_root = Path(package['root'])
+        assert package_root.resolve().is_relative_to(base / 'environment/Lib/site-packages')
+        actual = {namespace + '/' + key: value for key, value in files(package_root, suffixes={'.py', '.json'}).items()}
+        assert actual == members == package['source_sha256']
+        if current:
+            checkout = ROOT / ('src' if namespace == 'asof' else 'packages/tether/src')
+            actual_checkout = {namespace + '/' + key: value for key, value in files(checkout / namespace, suffixes={'.py', '.json'}).items()}
+            assert actual_checkout == members
+        counts[namespace] = dict(package_members=len(members), wheel_sha256=wheel['sha256'])
+    for command in q['commands']:
+        assert command['exit_code'] == command['expected_exit']
+        assert all(sha(command[stream]) == command[stream + '_sha256'] for stream in ('stdout', 'stderr'))
+    assert sha(base / 'journal.jsonl') == q['journal_sha256']
+    build = load(base / 'build-context-proof.json')
+    assert sha(base / 'build-context-proof.json') == q['build_context']['proof_sha256']
+    for item in build['inputs'].values():
+        assert sha(item['copied']) == item['sha256']
+        if current:
+            assert sha(item['original']) == item['sha256']
+    return dict(qualification=pin(qualification), versions=versions, packages=counts,
+        command_logs_checked=len(q['commands']) * 2, build_inputs_checked=len(build['inputs']),
+        current_checkout_compared=current, installed_payload_unchanged=True)
+
+
+def original_preservation():
+    freeze = CORPUS / 'FROZEN.json'
+    assert sha(freeze) == '26b30fef132fc6ce6acd6f1844a41521da47fb091d53e513d4b14588db476736'
+    frozen = load(freeze)
+    for relative, expected in frozen['sources'].items():
+        member = ROOT / relative
+        assert sha(member) == expected['sha256'] and member.stat().st_size == expected['bytes']
+    bundle_root = CORPUS / 'bundles'
+    actual = {name: dict(sha256=digest, bytes=(bundle_root / name).stat().st_size)
+              for name, digest in files(bundle_root).items()}
+    assert actual == frozen['bundles']
+    directories = sorted(p.relative_to(bundle_root).as_posix() for p in bundle_root.rglob('*')
+                         if p.is_dir() and '__pycache__' not in p.parts)
+    assert directories == sorted(frozen['bundle_directories'])
+    for name, key in (('oracle.json', 'oracle_pin'), ('trusted-runtime.json', 'trusted_runtime_pin')):
+        assert sha(CORPUS / name) == frozen[key]['sha256']
+    for product in ('asof', 'tether', 'distribution_metadata'):
+        declared = frozen['installed_runtime'][product]
+        for name, proof in declared['files'].items():
+            path = Path(declared['root']) / name
+            assert sha(path) == proof['sha256'] and path.stat().st_size == proof['bytes']
+    assert sha(Path(frozen['python']['path'])) == frozen['python']['sha256']
+    return dict(freeze=pin(freeze), frozen_source_pins_checked=len(frozen['sources']),
+        bundle_files_checked=len(actual), bundle_directories_checked=len(directories),
+        old_runtime_pins_preserved=True, status='PASS')
+
+
+def gate_inventory():
+    paths = set()
+    for relative in ('src/asof', 'packages/tether/src/tether', 'tests', 'packages/tether/tests', 'tools'):
+        paths.update(p for p in (ROOT / relative).rglob('*') if p.is_file() and
+                     '__pycache__' not in p.parts and p.suffix in {'.py', '.ps1', '.json'})
+    paths.update(ROOT / relative for relative in ('pyproject.toml', 'uv.lock', 'packages/tether/pyproject.toml',
+        'packages/tether/uv.lock', 'paper/release/build-constraints.txt', 'data/catalog/sources.json',
+        'data/catalog/policy-v2.json', 'planning/review-assets/tether-ce-fixes-20261102/integration/run_gate.py'))
+    return {p.relative_to(ROOT).as_posix(): dict(sha256=sha(p), bytes=p.stat().st_size) for p in sorted(paths)}
+
+
+def full_gate():
+    stem = HERE / 'integration/tether052-full-gate-03'
+    started_path = stem.with_suffix('.started.json')
+    started = load(started_path)
+    before = load(started['before_path'])
+    assert sha(started['before_path']) == started['before_sha256']
+    assert_hashes(before['sources'])
+    assert before['sources'] == gate_inventory(), 'Full-gate input inventory changed'
+    report_path = stem.with_suffix('.json')
+    bracket_path = stem.with_suffix('.source-bracket.json')
+    if not report_path.exists() or not bracket_path.exists():
+        return dict(status='PENDING', reason='Full gate lacks terminal report and source bracket',
+            started=pin(started_path), source_before=pin(started['before_path']))
+    bracket, report = load(bracket_path), load(report_path)
+    assert bracket['status'] == 'PASS' and bracket['exit_code'] == 0
+    assert bracket['before_sha256'] == started['before_sha256'] and not bracket['changed_sources']
+    assert all(started[key] == bracket[key] for key in
+               ('schema_version', 'argv', 'cwd', 'started_at_utc', 'before_path', 'before_sha256', 'pid'))
+    assert Path(bracket['report_path']).resolve() == report_path.resolve()
+    assert Path(bracket['log_path']).resolve() == stem.with_suffix('.log').resolve()
+    argv = bracket['argv']
+    assert len(argv) == 9 and argv[1] == '-B' and Path(argv[2]).resolve() == ROOT / 'tools/validate.py'
+    assert argv[3:8] == ['--mode', 'full', '--package', '--failfast', '--report']
+    assert Path(argv[8]).resolve() == report_path.resolve() and Path(bracket['cwd']).resolve() == ROOT
+    assert datetime.fromisoformat(bracket['finished_at_utc']) >= datetime.fromisoformat(bracket['started_at_utc'])
+    assert bracket['after_sources'] == before['sources']
+    assert_hashes(bracket['after_sources'])
+    assert sha(report_path) == bracket['report_sha256']
+    assert sha(bracket['log_path']) == bracket['log_sha256']
+    assert report['status'] == 'passed' and report['stage'] == 'complete' and report['mode'] == 'full'
+    assert report['tests']['run'] > 0 and report['tests']['failures'] == report['tests']['errors'] == 0
+    assert report['tests']['skipped'] == [] and report['required_probes_exit_code'] == 0
+    assert report['packaging']['dependency_free_demo'] == 'passed'
+    assert report['packaging']['package_network_policy'] == 'offline'
+    assert report['packaging']['build_constraints_sha256'] == sha(ROOT / 'paper/release/build-constraints.txt')
+    log = Path(bracket['log_path']).read_text(encoding='utf-8-sig')
+    summary = final_unittest_summary(log)
+    assert summary['tests'] == report['tests']['run']
+    return dict(status='PASS', report=pin(report_path), source_bracket=pin(bracket_path),
+        log=pin(bracket['log_path']), tests=report['tests'], packaging=report['packaging'],
+        source_files_checked=len(before['sources']), log_summary=summary['summary'])
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    output = args.output.resolve()
+    assert output.is_relative_to(HERE) and not output.exists()
+    record = dict(schema_version=1, status='PENDING', checked_at_utc=datetime.now(timezone.utc).isoformat(),
+        checker_sha256=sha(Path(__file__)),
+        scope='Finished-only candidate release evidence aggregation and preservation; not BG02 scoring or scientific validation', checks={})
+    try:
+        checks = record['checks']
+        checks['installed_candidate'] = installed(NEW, '7486fc505eaff3351238b6c5d05c19d8e969eba8398753a72ac9670aff180315',
+            {'asof-target-agents': '0.3.13', 'tether-target-agents': '0.5.2'}, True)
+        focus, checks['focused_replay'] = test_record(HERE / 'green02.json', HERE / 'green02.log', 25)
+        assert focus['source_unchanged']
+        assert_hashes(focus['source_sha256'])
+        archive, checks['archive'] = test_record(HERE / 'archive-profile/VALIDATION.json',
+            ROOT / 'data/cache/replay-archive-profile-0313-attempt01/archive-tests.log', 52)
+        assert archive['profile_and_archive_python_unchanged_during_validation'] and archive['old_controls_unchanged']
+        assert sha(ROOT / 'src/asof/archive/semantic_dependencies.json') == archive['profile_sha256']
+        assert_hashes(archive['executing_module_sha256'], ROOT / 'src/asof')
+        assert archive['preserved_v1_byte_check']['semantic_consistency'] == 'unavailable_legacy_v1'
+        assert [x['disposition'] for x in archive['retained_old_controls']] == ['verified', 'verified', 'rejected']
+        facade, checks['facade'] = test_record(HERE / 'facade/VALIDATION.json', HERE / 'facade/facade-tests.log', 138)
+        assert facade['sources_unchanged'] and facade['metadata_unchanged']
+        assert facade['source_sha256'] == facade['source_sha256_after']
+        assert_hashes(facade['source_sha256'])
+        assert facade['environment_metadata_sha256'] == facade['environment_metadata_sha256_after']
+        assert_hashes(facade['environment_metadata_sha256'], ROOT / 'data/cache/tether-052-dev')
+        replay_path = ROOT / 'data/cache/tether-052-installed-replay-attempt01/RESULT.json'
+        replay, index = load(replay_path), load(HERE / 'INSTALLED-REPLAY-VALIDATION.json')
+        assert sha(replay_path) == index['retained_result_sha256']
+        assert replay['status'] == 'PASS' and all(replay[k] for k in
+            ('installed_unchanged', 'retained_counterexample_unchanged', 'qualification_unchanged'))
+        assert replay['positive']['code_matches_current'] and replay['positive']['replay_binding']['request_binding'] == 'source_reconstructed'
+        assert replay['positive_archived_only']['replay_binding']['request_binding'] == 'archived_dispatch_fingerprints'
+        assert all(x['decision'] == 'reject' and 'request fingerprint' in x['reason'] for x in replay['retained_counterexample'])
+        assert replay['installed_before'] == replay['installed_after']
+        for product in ('asof', 'tether'):
+            assert files(NEW / 'environment/Lib/site-packages' / product) == replay['installed_after'][product]
+        checks['installed_replay'] = dict(result=pin(replay_path), index=pin(HERE / 'INSTALLED-REPLAY-VALIDATION.json'),
+            surfaces_checked=[x['surface'] for x in replay['retained_counterexample']], status='PASS')
+        checks['original_comparison_preserved'] = original_preservation()
+        checks['old_installed_release_preserved'] = installed(OLD,
+            '16fec5a9d5092fde373e72b0c7fa7eaa3b520750b515a82d908774e14d8c1f00',
+            {'asof-target-agents': '0.3.12', 'tether-target-agents': '0.5.1'}, False)
+        checks['full_gate'] = full_gate()
+        record['status'] = 'PASS' if checks['full_gate']['status'] == 'PASS' else 'PENDING'
+        record['candidate_release_complete'] = record['status'] == 'PASS'
+        record['bg02_scored_comparison_complete'] = False
+    except Exception as error:
+        record.update(status='FAIL', candidate_release_complete=False,
+            error=dict(type=type(error).__name__, reason=str(error), traceback=traceback.format_exc()))
+    with output.open('x', encoding='utf-8') as stream:
+        json.dump(record, stream, indent=2)
+        stream.write('\n')
+    print(json.dumps(dict(status=record['status'], checks=list(record['checks']),
+        full_gate=record['checks'].get('full_gate'), error=record.get('error'), output=str(output)), indent=2))
+    return 1 if record['status'] == 'FAIL' else 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

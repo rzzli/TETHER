@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "PENDING",
+  "checked_at_utc": "2026-11-05T21:39:38.762827+00:00",
+  "checker_sha256": "c22afbfd198c683f07746d4e26f983a6643a6805618b391fef69a0e0a03bd0b0",
+  "scope": "Finished-only candidate release evidence aggregation and preservation; not BG02 scoring or scientific validation",
+  "checks": {
+    "installed_candidate": {
+      "qualification": {
+        "path": "data/cache/tether-052-installed-qualification-attempt01/QUALIFICATION.json",
+        "sha256": "7486fc505eaff3351238b6c5d05c19d8e969eba8398753a72ac9670aff180315",
+        "bytes": 55018
+      },
+      "versions": {
+        "asof-target-agents": "0.3.13",
+        "tether-target-agents": "0.5.2"
+      },
+      "packages": {
+        "asof": {
+          "package_members": 93,
+          "wheel_sha256": "b7446a71636841fe4ba96c0f94db6a42028d4358c6e452c843d0f7224c870ef2"
+        },
+        "tether": {
+          "package_members": 18,
+          "wheel_sha256": "8fa010170b5bff38fbc41cedaf877a0a2308edb2b649271a37fccf12f9822ac2"
+        }
+      },
+      "command_logs_checked": 28,
+      "build_inputs_checked": 116,
+      "current_checkout_compared": true,
+      "installed_payload_unchanged": true
+    },
+    "focused_replay": {
+      "record": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/green02.json",
+        "sha256": "acbda7e33f0ed9f8297bf90efb5c35c9c024bf822070047f7d9f23904370064b",
+        "bytes": 1140
+      },
+      "log": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/green02.log",
+        "sha256": "4fc81f472d4712cc3ff5b2c18fcd75ef591bbcc41e35c1537f87361adffa74ff",
+        "bytes": 4669
+      },
+      "parsed_test_count": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "archive": {
+      "record": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/archive-profile/VALIDATION.json",
+        "sha256": "87e26ea300f44effe0d6b856027834cd13ebdae56c101dd2e61aa64abb600f50",
+        "bytes": 5609
+      },
+      "log": {
+        "path": "data/cache/replay-archive-profile-0313-attempt01/archive-tests.log",
+        "sha256": "02603d2a9c9520510df27a8f9fbd84698a9b0725dbf2b20607daaeb6ca2502d8",
+        "bytes": 8097
+      },
+      "parsed_test_count": 52,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "facade": {
+      "record": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/facade/VALIDATION.json",
+        "sha256": "f4772629a95da1e64900cb5b8b4833260182cfaa155ad76156da6524df0035c9",
+        "bytes": 71745
+      },
+      "log": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/facade/facade-tests.log",
+        "sha256": "ec754167646c3a396651e8a75e68953b8f56e6c864fc022025027fb69203c36e",
+        "bytes": 22101
+      },
+      "parsed_test_count": 138,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "installed_replay": {
+      "result": {
+        "path": "data/cache/tether-052-installed-replay-attempt01/RESULT.json",
+        "sha256": "f4a9bd764c6bdca4510ce0e5b7820bc88bbeca9601fc10700426f027fe0d7e8e",
+        "bytes": 30359
+      },
+      "index": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/INSTALLED-REPLAY-VALIDATION.json",
+        "sha256": "3f99e17892ee6b67239548776538c3791de65e97841aca4a58391f40a294fcb6",
+        "bytes": 4056
+      },
+      "surfaces_checked": [
+        "live_core_source",
+        "live_core_archived_only",
+        "facade_engine_source"
+      ],
+      "status": "PASS"
+    },
+    "original_comparison_preserved": {
+      "freeze": {
+        "path": "data/benchmark/tether-equal-policy-20261102-attempt03/FROZEN.json",
+        "sha256": "26b30fef132fc6ce6acd6f1844a41521da47fb091d53e513d4b14588db476736",
+        "bytes": 267976
+      },
+      "frozen_source_pins_checked": 46,
+      "bundle_files_checked": 1938,
+      "bundle_directories_checked": 339,
+      "old_runtime_pins_preserved": true,
+      "status": "PASS"
+    },
+    "old_installed_release_preserved": {
+      "qualification": {
+        "path": "data/cache/tether-051-installed-qualification-attempt02/QUALIFICATION.json",
+        "sha256": "16fec5a9d5092fde373e72b0c7fa7eaa3b520750b515a82d908774e14d8c1f00",
+        "bytes": 54765
+      },
+      "versions": {
+        "asof-target-agents": "0.3.12",
+        "tether-target-agents": "0.5.1"
+      },
+      "packages": {
+        "asof": {
+          "package_members": 92,
+          "wheel_sha256": "91926acf59cdec9c76af70ecc21d0a98ba0db77666113f1d3dfa9afb3dbd2d51"
+        },
+        "tether": {
+          "package_members": 18,
+          "wheel_sha256": "c82267e7114700a417d759926e6b7216fc214ae824eddedd7d9af266d943aa2a"
+        }
+      },
+      "command_logs_checked": 28,
+      "build_inputs_checked": 115,
+      "current_checkout_compared": false,
+      "installed_payload_unchanged": true
+    },
+    "full_gate": {
+      "status": "PENDING",
+      "reason": "Full gate lacks terminal report and source bracket",
+      "started": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/integration/tether052-full-gate-03.started.json",
+        "sha256": "8a1a5d3565703ab012200c3754efd2ccb3ca35eb251cb6a8c3b44eb8f9bcc2e7",
+        "bytes": 736
+      },
+      "source_before": {
+        "path": "planning/review-assets/tether-replay-correction-20261105/integration/tether052-full-gate-03.source-before.json",
+        "sha256": "2824497c2b2b1aaa7c77943a09b0676111081c0fe8f058d19447812147adbf40",
+        "bytes": 55490
+      }
+    }
+  },
+  "candidate_release_complete": false,
+  "bg02_scored_comparison_complete": false
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-05T21:41:00Z",
-  "status": "original_frozen_patched_prepared_unscored",
+  "updated_at_utc": "2026-11-05T21:45:00Z",
+  "status": "both_frozen_unscored_waiting_for_full_gate",
   "original": {
     "directory": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02",
     "preparation_session": 80834,
@@ -16,7 +16,8 @@
     "preparation_session": 34740,
     "preparation_exit_code": 0,
     "prepared_cases": 109,
-    "prefreeze_review": "in_progress",
+    "prefreeze_review": "planning/review-assets/tether-equal-policy-v2-20261105/preflight/PATCHED-ATTEMPT01-20261105.json",
+    "freeze_sha256": "3ec7625fa601a517d8e2dd302228f9f465f35e877f79cd1a587a3a63b394a4fc",
     "executed": false
   },
   "shared_execution_pins": 103,
