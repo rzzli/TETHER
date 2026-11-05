@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "test_count": 36,
+  "versions": {
+    "tether": "0.5.1",
+    "asof": "0.3.12"
+  },
+  "unit_exit_code": 0,
+  "native_prose": {
+    "unscored": true,
+    "original_unchanged": true,
+    "normalized_prose_identical": true,
+    "output_pin": {
+      "sha256": "2c180f9d55808567c353166b1585aca99ef4f5b216b0e207a34ab060bfdb114d",
+      "bytes": 6716
+    }
+  },
+  "invented_worker_smoke": {
+    "tether": {
+      "decision": "reject",
+      "implementation_file": "D:\\Projects\\drug_target_agents\\experiments\\equal_policy_v2\\reference.py",
+      "loaded_product_modules": {
+        "asof": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\asof\\__init__.py",
+        "tether": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\tether\\__init__.py"
+      }
+    },
+    "independent": {
+      "decision": "reject",
+      "implementation_file": "D:\\Projects\\drug_target_agents\\experiments\\equal_policy_v2\\independent.py",
+      "loaded_product_modules": {}
+    },
+    "hash_schema": {
+      "decision": "reject",
+      "implementation_file": "D:\\Projects\\drug_target_agents\\experiments\\equal_policy\\controls.py",
+      "loaded_product_modules": {}
+    },
+    "reject_all": {
+      "decision": "reject",
+      "implementation_file": "D:\\Projects\\drug_target_agents\\experiments\\equal_policy\\controls.py",
+      "loaded_product_modules": {}
+    }
+  },
+  "original_frozen_checks": {
+    "sources_unchanged": true,
+    "bundles_unchanged": true,
+    "bundle_directories_unchanged": true,
+    "oracle_unchanged": true,
+    "trusted_runtime_unchanged": true,
+    "installed_runtime_unchanged": true,
+    "python_unchanged": true
+  },
+  "source_pins": {
+    "experiments/equal_policy_v2/run_comparison.py": {
+      "sha256": "78122e9a7aa87902b599c48180a4d4c44e52f210ab85f16230b0caf1ebbfb1ac",
+      "bytes": 22867
+    },
+    "experiments/equal_policy_v2/worker.py": {
+      "sha256": "491e177ca3cc28e37e44a8dc8ff2c6964f4a924c8c07e1c690293ba5fec60608",
+      "bytes": 7116
+    },
+    "experiments/equal_policy_v2/reference.py": {
+      "sha256": "0c2b999fa818d8a0dac5b3819225f398d737e96189032f6ef02f6c4d35b68cc2",
+      "bytes": 6905
+    },
+    "experiments/equal_policy_v2/test_runner.py": {
+      "sha256": "d9f074582904782c38cb659329fe74b711b33f60a026608901605d0e3fff0d17",
+      "bytes": 21264
+    },
+    "experiments/equal_policy_v2/test_reference_worker.py": {
+      "sha256": "15cd7c1c328c7606b6793e405a5e64b19207a3dc053c6c88bab8ee3f85ff2fc5",
+      "bytes": 5894
+    }
+  },
+  "logs": {
+    "native-prose.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "native-prose.stdout": {
+      "sha256": "775ce67d8d3587e1eaf5a174c884b5d46ab4ec91a490e4cceff0074bcc88d0f9",
+      "bytes": 146
+    },
+    "trusted-runtime.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trusted-runtime.stdout": {
+      "sha256": "95330db6d14eac9d0114ef7a1a925bb02131b35e5f271510150fe8594fa6500c",
+      "bytes": 10057
+    },
+    "unit.stderr": {
+      "sha256": "81fae965f8e91df8f75bd5156e0e8599a64c7093383c9225da1daa60d026b721",
+      "bytes": 6293
+    },
+    "unit.stdout": {
+      "sha256": "d0add97fb8fd7ea5aae8f276d7e1f2b31408a80d6ce02d5232d88c45e9a02c24",
+      "bytes": 544
+    },
+    "worker-hash_schema.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "worker-hash_schema.stdout": {
+      "sha256": "80534b2d3375df41ecba3148c9a22d49826c6dbd718e24d6f4992a3660b6a184",
+      "bytes": 2143
+    },
+    "worker-independent.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "worker-independent.stdout": {
+      "sha256": "6995e0fd41d272819ec8ba19cd4a0bb59b89a225970d93cee861a063856988dd",
+      "bytes": 2133
+    },
+    "worker-reject_all.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "worker-reject_all.stdout": {
+      "sha256": "52af293d18e69eb9158a8043474651b51895a5f2c7a0e9053663c4a69315d8ba",
+      "bytes": 2172
+    },
+    "worker-tether.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "worker-tether.stdout": {
+      "sha256": "6ee77706f3129ac1acee07d73923f325a5737c7b21d18ac42a1c928769b3b8b9",
+      "bytes": 2470
+    }
+  },
+  "limitations": [
+    "No corrected-corpus scoring or patched-installation qualification performed here.",
+    "Smoke records are invented validation inputs, not independent benchmark evidence."
+  ],
+  "raw_directory": "data\\cache\\tether-equal-policy-v2-runner-qualification-20261105-attempt02",
+  "raw_qualification_pin": {
+    "sha256": "45961bf0fad197c67b04a57be2f3c9a385b0393e25966438ca4f956d448ac88e",
+    "bytes": 4981
+  }
+}

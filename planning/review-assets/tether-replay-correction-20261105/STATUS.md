@@ -1,6 +1,6 @@
 # Archived replay correction: current qualification status
 
-Checkpoint: 5 November 2026, 21:34 UTC. BG02 remains incomplete. The original
+Checkpoint: 5 November 2026, 21:41 UTC. BG02 remains incomplete. The original
 108-case comparison and its causal counterexample are retained without rescoring.
 The comparative research report predates that execution; its recommendation to
 test equal policies, then native SciFact, original LAB-Bench and Inspect is unchanged.
@@ -20,15 +20,15 @@ its weaker retained-dispatch binding. No model call is made by verification.
 | Full gate attempt 03 | Running under session 54110, with the unique `tether052-full-gate-03` stem, required filesystem permissions and existing offline uv cache. Poll that session; do not restart |
 | Facade checks | 138 tests pass with zero failures/errors/skips and unchanged source/distribution metadata; `facade/VALIDATION.json` |
 | Installed replay checks | Isolated 0.3.13/0.5.2 accepts the valid replay after its original input file is removed, and rejects the preserved EP075 diagnostic through all three tested verification surfaces; `INSTALLED-REPLAY-VALIDATION.json`. This does not complete the full release gate |
-| Corrected comparison | Version-two corpus has 109 cases. First old-runtime preparation is retained and unscored. Preflight found missing qualification evidence in its freeze closure; qualify the correction and prepare a new directory before freezing |
+| Corrected comparison | Version-two corpus has 109 cases and 103 execution/evidence pins. The missing qualification closure is corrected; 42 runner and 40 independent reconstruction tests pass. Fresh old-runtime attempt02 passes preflight and is frozen (`f7b4b09f4b144d84761e565452a19082dba16c778e81e422b314880aec531bc7`); patched attempt01 has all 109 cases prepared and is undergoing separate preflight. Neither corrected comparison has executed. First preparation and all previous results remain retained |
 
 The new editable development environment is `data/cache/tether-052-dev`. Initial
 setup encountered a sandbox cache-write failure and a simultaneous editable-source
 URL conflict; separate offline editable core and facade installation succeeded.
 Old installed 0.5.1/0.3.12 and all original comparison producers remain intact.
 
-Next: complete the full and facade gates and installed replay checks; qualify the
-corrected freeze closure; run separate four-arm comparisons against original and
+Next: complete the full gate and aggregate preservation check; finish patched
+preflight; run separate four-arm comparisons against original and
 patched installations; independently reconstruct every result and audit causes.
 SciFact, LAB-Bench and Inspect remain subsequent, unfinished stages. Provider spend
 remains zero. These are software conformance checks, not biological validation.

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "test_count": 40,
+  "scope": "Invented terminal/qualification records only; corrected corpus not scored",
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "experiments.equal_policy_v2.test_reconstruct",
+    "-v"
+  ],
+  "exit_code": 0,
+  "pins": [
+    {
+      "path": "experiments/equal_policy_v2/reconstruct.py",
+      "sha256": "c104547c4a22f1fcf4f11512074d08ff910b3a3730e37ed9cbe558317d4d9747",
+      "bytes": 29614
+    },
+    {
+      "path": "experiments/equal_policy_v2/test_reconstruct.py",
+      "sha256": "4663067e30ab632c2bb759dfa3945c4425f8159665ef6c5273f10350b5a99cd7",
+      "bytes": 26672
+    },
+    {
+      "path": "experiments/equal_policy/reconstruct.py",
+      "sha256": "a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65",
+      "bytes": 35662
+    }
+  ],
+  "logs": {
+    "tests.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests.stderr": {
+      "sha256": "12f2b0122ff006a79f0ffb00a6fee45a4a20ec409ac960e319c80b4be128db57",
+      "bytes": 7199
+    }
+  },
+  "method": "Qualified original independent evaluator primitives reused; independently authored v2 version/runtime/worker/qualification closure validation. No runner/validator/producer imports.",
+  "new_checks": [
+    "All three component qualification receipts and every declared source/log pin must appear in the freeze",
+    "FAILED or incomplete qualification cannot be accepted after consistent rehashing",
+    "Qualification orchestration scripts are separated from comparison infrastructure in footprint"
+  ],
+  "limitations": [
+    "No actual corrected benchmark scoring performed",
+    "Previous37-test qualification remains a retained earlier evaluator version"
+  ],
+  "raw_directory": "data/cache/tether-equal-policy-v2-reconstruction-qualification-20261105-attempt02",
+  "raw_qualification_pin": {
+    "sha256": "37698bfcb575b39441b161c2ba752d0662da82032e93c18a6461b2431b97fa76",
+    "bytes": 1979
+  }
+}

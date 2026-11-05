@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "corpus_id": "tether-equal-policy-fictional-v2",
+  "parent_corpus_id": "tether-equal-policy-fictional-v1",
+  "expected_cases": 109,
+  "exposure": "All controls authored with original code, policy and results available; exposed_authored_construction.",
+  "changes": [
+    {
+      "case": "EP023",
+      "change": "Seal unrelated source and receipt; retain observation lineage escape",
+      "decision": "reject"
+    },
+    {
+      "case": "EP072",
+      "change": "Add eligible later perturbation, expect both admitted IDs and one dispatch",
+      "decision": "accept"
+    },
+    {
+      "case": "EP075",
+      "change": "Native rerender and reseal after invalid replay request hash; keep the semantic defect",
+      "decision": "reject"
+    },
+    {
+      "case": "EP077",
+      "change": "No recovery observables are required after corrupt-chain rejection",
+      "decision": "reject"
+    },
+    {
+      "case": "EP097",
+      "change": "Add eligible later perturbation, expect both admitted IDs and one dispatch",
+      "decision": "accept"
+    },
+    {
+      "case": "EP109",
+      "change": "New clean valid recorded parent with declared native observables",
+      "decision": "accept"
+    }
+  ],
+  "unchanged_control": "Hash/schema EP057 directory-read error remains an error; no retroactive rescoring.",
+  "known_dependence": "EP001 and EP025 share the same source construction.",
+  "runtime_pairs": [
+    {
+      "tether": "0.5.1",
+      "asof": "0.3.12"
+    },
+    {
+      "tether": "0.5.2",
+      "asof": "0.3.13"
+    }
+  ],
+  "repetitions": 3,
+  "arms": [
+    "tether",
+    "independent",
+    "hash_schema",
+    "reject_all"
+  ],
+  "scheduled_cells_per_run": 1308,
+  "provider_spending_usd": 0
+}

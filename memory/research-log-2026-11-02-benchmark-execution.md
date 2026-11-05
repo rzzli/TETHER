@@ -8,6 +8,15 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5, 21:41 UTC: replay candidate checkpoint committed as9e3c03f.
+Facade138 and installed replay positive/counterexample pass. Fullgate03 remains
+running (session54110,pid10536); aggregate correctly reportsPENDING, no release
+completion. V2 qualification closure repaired and pins103 files; runner42 and
+independent reconstruction40 pass. Fresh original preparation-attempt02 has109cases,
+independent preflightPASS and FROZEN f7b4b09f. Patched preparation-attempt01 also
+has109cases; preflight is in progress. Neither corrected run has scored. Original
+experiment unchanged. See tether-equal-policy-v2-20261105/EXECUTION-STATE.json.
+
 November 5, 21:34 UTC correction checkpoint: candidate AsOf0.3.13/TETHER0.5.2
 passes25 focused replay and52 archive tests plus fresh isolated two-wheel/14-command
 qualification (7486fc50). Full gate01 retains a sandbox hard-link/packaging failure;

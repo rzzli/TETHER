@@ -18,6 +18,32 @@ The [execution plan](<../planning/TETHER Benchmark Execution Plan 2026-11-02.md>
 
 The `semantic_consistency` field alone is not a complete description. Preserve the command, version, `source_binding`, stronger TETHER check details and external-anchor status with the result. Without an external anchor, replacing the complete self-consistent output tree cannot be detected solely by its internal hashes.
 
+### Replay-correction candidate: 0.5.2 / 0.3.13
+
+The first independent-policy comparison exposed an additional live v2 gap: a
+retained replay response could name the wrong request fingerprint while its other
+archive relationships remained consistent. The working candidate now checks
+consumed replay entries against source-reconstructed requests, response order,
+selected IDs, usage and review feedback, before publication and during live v2
+verification. This correction also applies to direct live engine aliases. The
+historical archive verifier and original installed releases keep their stated
+policies; they do not acquire this guarantee.
+
+Successful recorded-run verification includes `replay_binding`. With current
+originals, its `request_binding` is `source_reconstructed`; with `--outputs-only`
+it is only `archived_dispatch_fingerprints`. The latter cannot establish that a
+retained dispatch describes unavailable original evidence. Verification neither
+opens the original replay-file path nor invokes its backend. The original raw-file
+hash remains an opaque declaration because canonical JSON cannot reconstruct its
+original whitespace. Unused response entries do not become consumed evidence.
+
+Focused replay, archive, facade and isolated installed checks pass, including the
+retained counterexample and a valid replay after removal of its original input
+file. Full regression qualification remains in progress; consult the
+[candidate checkpoint](../planning/review-assets/tether-replay-correction-20261105/STATUS.md)
+before describing this as a completed release. Matching older wheels remain
+necessary for old outer-artifact code proofs.
+
 The [artifact-policy guide](TETHER-CATALOG-POLICY.md) specifies the 0.5.0 interface and its separate `artifact_policy.status` result. It requires current original raw files/receipts even though exact metadata, controls and receipt copies are archived. Strong policy grants do not qualify scientific interpretation or guarantee that all records pass publication/temporal admission. Legacy schema-1 APIs and runs keep their declared scope.
 
 ## Execution limits and trust boundary

@@ -7,6 +7,12 @@ strict temporal and lineage admission, immutable evidence, bounded execution,
 failure/usage journals and semantic re-verification. The default backend runs
 offline and makes no model-provider requests.
 
+The working checkout is the replay-correction candidate TETHER 0.5.2 / AsOf
+0.3.13. Focused replay, archive compatibility, facade and fresh installed checks
+pass; the complete regression gate and corrected comparison are still in progress.
+The following 0.5.1 qualification remains the last completed release gate. See the
+[current correction checkpoint](planning/review-assets/tether-replay-correction-20261105/STATUS.md).
+
 **Current locally qualified distribution: `tether-target-agents` 0.5.1 in `packages/tether`, with AsOf 0.3.12 and v2 execution contracts.** The [BG01 completion record](planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md) binds 2,020 full tests, 138 facade tests, current installed wheels and 742 aggregate evidence checks. These are Windows/offline engineering checks; no benchmark or scientific performance is established. Prior 0.5.0/0.3.11 wheels remain preserved. The earlier 1,774-test
 acceptance is retained with its matching historical code. The following local gates describe the retained engine before the TETHER rename; rename-specific checks are recorded separately. Final local gates at
 `3629337` pass: full 1,973 tests/zero skips and core 1,973 collected/94 approved
@@ -27,7 +33,7 @@ same-version candidate artifacts retain their distinct code and wheel hashes.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
-The [benchmark and methodology review](<reports/TETHER benchmarks and methodological advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. It distinguishes native benchmark results from derived tests and maps peer methods to actual code gaps. No benchmark or new model has run yet; the three correctness fixes below are now locally qualified.
+The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. It distinguishes native benchmark results from derived tests and maps peer methods to actual code gaps. The first 1,296-cell fictional policy comparison has since executed and been independently reconstructed; causal review exposed a masked replay-verification defect and fixture/oracle errors. Its original results remain intact while the correction and a new 109-case comparison are qualified. No native SciFact or LAB-Bench performance is established; BG02 remains incomplete. See the [causal review](planning/review-assets/tether-equal-policy-result-review-20261105/STATUS.md).
 
 The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identified three P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. Their fixes pass the complete BG01 gate; [TODO](TODO.md) records the remaining comparison and benchmark stages. The audit also measures repeated verification/compiler work and motivates a matched policy-equivalent baseline. Sealed paper/results and the existing scientific and owner-deferred limits remain unchanged.
 

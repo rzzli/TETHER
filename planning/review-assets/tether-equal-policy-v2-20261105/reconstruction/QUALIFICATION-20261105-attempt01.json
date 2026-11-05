@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Invented terminal records and qualification fixtures only; no corrected corpus scoring",
+  "test_count": 37,
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "experiments.equal_policy_v2.test_reconstruct",
+    "-v"
+  ],
+  "exit_code": 0,
+  "source_pins": {
+    "experiments\\equal_policy_v2\\reconstruct.py": {
+      "sha256": "928c7554ac040db4ec2e5f7d29c8b51f674e679023d54da86220d15042c7aae8",
+      "bytes": 25461
+    },
+    "experiments\\equal_policy_v2\\test_reconstruct.py": {
+      "sha256": "b9d9e7e014b38ceaea481c63c340128a94d3a9b8266d3b1d4c20f792a38b2f52",
+      "bytes": 24678
+    },
+    "experiments\\equal_policy\\reconstruct.py": {
+      "sha256": "a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65",
+      "bytes": 35662
+    }
+  },
+  "method": "Versioned checks independently authored from declared schema. Original qualified independent evaluator reused for byte/observable/resource primitives; no execution or production helpers imported.",
+  "verified": [
+    "v2 freeze and exact four-arm grid",
+    "required20 transitive execution modules",
+    "supported paired package versions and literal installed versions",
+    "qualification and exact two-wheel proof closure against actual installed .py",
+    "versioned worker/full-validator paths and original control paths",
+    "errors and unsupported separated from rejection",
+    "independent input-volume reconciliation",
+    "source footprint origin split with each file counted once",
+    "per-case/per-obligation/resource aggregates and primary concordance on invented records"
+  ],
+  "logs": {
+    "tests.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests.stderr": {
+      "sha256": "b5d26437fd415e28ff692e39a98e189771dc964fd06e86e12a0ad45f27bcfa83",
+      "bytes": 6608
+    }
+  },
+  "original_evaluator_unchanged": true,
+  "limitations": [
+    "Corrected production corpus not scored; original and patched runs must be independently reconstructed after terminal execution.",
+    "The same qualified aggregate helper is reused across protocol versions; this is disclosed compatibility validation, not a second statistical method."
+  ],
+  "raw_directory": "data\\cache\\tether-equal-policy-v2-reconstruction-qualification-20261105-attempt01",
+  "raw_qualification_pin": {
+    "sha256": "d8ae05805192f506a6d29859a0795754ddc345f7cbf5c73690d55b3f96b5745c",
+    "bytes": 2453
+  }
+}

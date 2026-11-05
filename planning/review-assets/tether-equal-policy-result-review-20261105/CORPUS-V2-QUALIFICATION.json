@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "status": "PASS_CONSTRUCTION_AND_ADMISSION_ONLY",
+  "created_at_utc": "2026-11-05T21:18:52.886886+00:00",
+  "cases": 109,
+  "tests": 8,
+  "red_record": "corpus-v2-red01.log",
+  "green_record": "corpus-v2-green02.log",
+  "scope": "Unscored construction and source admission tests. No full native materialization, corrected freeze or corrected scoring yet. All controls authored/exposed.",
+  "pins": [
+    {
+      "path": "experiments/equal_policy_v2/cases.py",
+      "sha256": "310c7f05862f92df6842eae476886cf37d1cdecbdf5a3c18471b70ee2cbb7b8e",
+      "bytes": 5402
+    },
+    {
+      "path": "experiments/equal_policy_v2/test_cases.py",
+      "sha256": "8524e99792096a448701b6ee3eed2f620bae3ff5334f1830ff8de2b329783d24",
+      "bytes": 8372
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-result-review-20261105/corpus-v2-red01.log",
+      "sha256": "a172d4f84ac7ef0042752204505d0ec0d300133d87eb1e88ac6b13bbfa342d47",
+      "bytes": 7025
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-result-review-20261105/corpus-v2-green02.log",
+      "sha256": "e6fadebb85e7ebc701836fc8cc74a4c7b14cc76a0164715acbb2e2ed55294fbd",
+      "bytes": 1427
+    },
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/integration/full-gate-04.log",
+      "sha256": "bfb161c0ee520b21b572e66638e1e5b97c6340bddc64a33b9269b57840b9ad94",
+      "bytes": 377369
+    },
+    {
+      "path": "planning/review-assets/tether-ce-fixes-20261102/integration/full-gate-04.source-bracket.json",
+      "sha256": "eabe0228671f2aeebd28e30b813ac33eb339bad480d63c85cfd7d0f6cac23c5f",
+      "bytes": 56162
+    },
+    {
+      "path": "tests/test_ce02_usage_accounting.py",
+      "sha256": "a6ea39c5ade8a4af97cfc4f23fec8cd2aaaa4efeac4534bc06d76f49f477c047",
+      "bytes": 11295
+    }
+  ],
+  "original_frozen_sources_unchanged": [
+    {
+      "path": "data/cache/tether-equal-policy-runtime-witnesses-20261102-02/RUNTIME-WITNESSES.json",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/cases.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/controls.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent_local.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent_policy.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent_render.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent_runtime.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/independent_schema.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/materialize.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/policy_cases.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/reference.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/run_comparison.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/runtime_witnesses.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_cases.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_independent_policy.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_native.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_policy_cases.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_reference.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_runner.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/test_runtime_witnesses.py",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/equal_policy/worker.py",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/CASE-PROTOCOL.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/COVERAGE-QUALIFICATION-v2.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/COVERAGE-v1.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/COVERAGE.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/EXECUTION-PROTOCOL.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/POLICY-SPEC.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/RUNTIME-WITNESSES.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/RUNTIME-WITNESSES.md",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent-policy/native-current-runtime-green01.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent-policy/native-current-runtime-green01.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent-policy/unit-current-runtime-green01.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent-policy/unit-current-runtime-green01.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/CURRENT-RUNTIME-QUALIFICATION-20261105.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/RESUMPTION-QUALIFICATION-20261105.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/policy-peer-current-runtime01.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/policy-peer-current-runtime01.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/worker-current-runtime-green01.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/independent/worker-current-runtime-green01.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/policy-spec.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/runtime-witness-tests-01.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-20261102/runtime-witnesses-02.log",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-coverage-20261105/DOCUMENTATION-VALIDATION.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-coverage-20261105/EVIDENCE-INDEX.json",
+      "unchanged": true
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-coverage-20261105/V1-SCOPE-CONTROL.json",
+      "unchanged": true
+    }
+  ],
+  "reused_runtime_witness": {
+    "test": "tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_overquote_reported_usage_survives_and_stops_dispatch",
+    "retained_gate_line": 88,
+    "later_dispatch_archive_test_line": 80,
+    "actual_current_demo_eligible_observed_counts": {
+      "genetics": 1,
+      "perturbation": 1,
+      "expression": 1,
+      "modality": 1,
+      "literature": 2,
+      "clinical": 1,
+      "safety": 1,
+      "pathway": 1
+    },
+    "qualification": "Existing same-version gate PASS, corresponding test file hash unchanged; actual source admission confirms later eligible categories. No redundant runtime rerun."
+  },
+  "remaining": "Root-owned v2 materializer/reference/runner integration, corrected installed product qualification, actual corrected native archives, new freeze/scoring and reconstruction."
+}
