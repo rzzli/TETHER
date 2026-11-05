@@ -1,0 +1,25 @@
+{
+  "case_id": "FICTIONAL:CASE-1",
+  "origin": "2024-06-30",
+  "endpoint": "phase_2_to_3",
+  "horizon_months": 24,
+  "status": "scored",
+  "probability": 0.700567142473973,
+  "reason": null,
+  "scorer_id": "fictional-logistic-v1",
+  "synthetic": true,
+  "calibration": "none",
+  "feature_coverage": 1.0,
+  "intercept": 0.25,
+  "contributions": {
+    "genetic_support": {
+      "value": 0.75,
+      "coefficient": 0.8,
+      "log_odds": 0.6000000000000001,
+      "imputed": false,
+      "observation_ids": [
+        "obs-1"
+      ]
+    }
+  }
+}

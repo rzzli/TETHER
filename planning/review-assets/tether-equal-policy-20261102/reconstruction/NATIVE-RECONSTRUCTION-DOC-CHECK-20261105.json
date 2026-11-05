@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "completed_at_utc": "2026-11-05T21:12:00.366101+00:00",
+  "scope": "Compact report arithmetic/links/pins against independently reconstructed raw analysis; not a new experiment or policy-quality adjudication",
+  "checks": [
+    "raw report pin",
+    "freeze pin",
+    "primary analysis pin",
+    "terminal count",
+    "case count",
+    "obligation groups",
+    "primary agreement",
+    "unchanged qualified source experiments/equal_policy/reconstruct.py",
+    "unchanged qualified source experiments/equal_policy/test_reconstruct.py",
+    "hash_schema/python_total_wall_seconds/median",
+    "hash_schema/launcher_wall_seconds/median",
+    "hash_schema/python_total_cpu_seconds/median",
+    "hash_schema/memory_maxima",
+    "independent/python_total_wall_seconds/median",
+    "independent/launcher_wall_seconds/median",
+    "independent/python_total_cpu_seconds/median",
+    "independent/memory_maxima",
+    "reject_all/python_total_wall_seconds/median",
+    "reject_all/launcher_wall_seconds/median",
+    "reject_all/python_total_cpu_seconds/median",
+    "reject_all/memory_maxima",
+    "tether/python_total_wall_seconds/median",
+    "tether/launcher_wall_seconds/median",
+    "tether/python_total_cpu_seconds/median",
+    "tether/memory_maxima",
+    "inspect_run/core_v2_catalog1/tether/median",
+    "inspect_run/core_v2_catalog1/independent/median",
+    "prepare_run/artifact_policy_v2/tether/median",
+    "prepare_run/artifact_policy_v2/independent/median",
+    "prepare_run/core_v2_catalog1/tether/median",
+    "prepare_run/core_v2_catalog1/independent/median",
+    "verify_run/artifact_policy_v2/tether/median",
+    "verify_run/artifact_policy_v2/independent/median",
+    "verify_run/core_v2_catalog1/tether/median",
+    "verify_run/core_v2_catalog1/independent/median",
+    "local link D:/Projects/drug_target_agents/data/benchmark/tether-equal-policy-20261102-attempt03/INDEPENDENT-RECONSTRUCTION.json",
+    "local link D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-20261102/reconstruction/NATIVE-RECONSTRUCTION-SUMMARY-20261105.json",
+    "local link D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-20261102/reconstruction/qualification-20261105-attempt02.json",
+    "local link D:/Projects/drug_target_agents/planning/review-assets/tether-equal-policy-20261102/reconstruction/native-reconstruction-20261105-attempt01.json"
+  ],
+  "check_count": 39,
+  "report": {
+    "path": "planning/review-assets/tether-equal-policy-20261102/reconstruction/NATIVE-RECONSTRUCTION-20261105.md",
+    "sha256": "b8602f9adcd38a50e2b6f624e156601d2572cfc3be09d8f55bda1f4e61b20e2d",
+    "bytes": 9659
+  },
+  "summary": {
+    "path": "planning/review-assets/tether-equal-policy-20261102/reconstruction/NATIVE-RECONSTRUCTION-SUMMARY-20261105.json",
+    "sha256": "891f8de461c389a86b607acab715fb2bb57595fd6d59e9f279f36d173f93269c",
+    "bytes": 64996
+  },
+  "raw": {
+    "path": "data/benchmark/tether-equal-policy-20261102-attempt03/INDEPENDENT-RECONSTRUCTION.json",
+    "sha256": "6a16a1103791dab5d0255398414695c8c6bebc1e7fc673e4e7bda14920d96166",
+    "bytes": 1647341
+  }
+}

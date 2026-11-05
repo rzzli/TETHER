@@ -8,6 +8,18 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5 executed-comparison checkpoint: session47997 exited0 with all1296cells
+and unchanged frozen inputs/code/runtime. Independent reconstruction agrees with
+all primary decisions, observables and counts. Both full implementations match
+108/108 decisions but107/108 full observable expectations. Causal review proves
+EP075 masks missing archived replay request verification behind dossier table
+ordering; a separately sealed diagnostic copy exposes TETHER acceptance versus
+independent rejection. EP077 has an incorrect recovery observable oracle. EP023
+has an extra unsealed-source fault; EP072/097 lack eligible later work. Preserve
+original scores/source and qualify fixes only in a new experiment/version.
+BG02 remains incomplete; correction and revised corpus work is authorized and
+underway. Detailed evidence/status: planning/review-assets/tether-equal-policy-result-review-20261105/STATUS.md.
+
 November 5 current checkpoint: the comparative research review is committed as
 `44d367b`; it preserves the active sequence. BG02 current qualification corrects
 per-call actual installed-code reads and captured-buffer inspection. Component

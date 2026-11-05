@@ -1,0 +1,22 @@
+--- frozen-EP075/dossier.md
++++ diagnostic-copy/dossier.md
+@@ -40,14 +40,14 @@
+ 
+ | Specialist | Run status | Available | Selected |
+ | --- | --- | ---: | ---: |
++| clinical | no_observed_evidence | 0 | 0 |
++| expression | no_observed_evidence | 0 | 0 |
+ | genetics | completed | 1 | 1 |
++| literature | no_observed_evidence | 0 | 0 |
++| modality | no_observed_evidence | 0 | 0 |
++| pathway | no_observed_evidence | 0 | 0 |
+ | perturbation | no_observed_evidence | 0 | 0 |
+-| expression | no_observed_evidence | 0 | 0 |
+-| modality | no_observed_evidence | 0 | 0 |
+-| literature | no_observed_evidence | 0 | 0 |
+-| clinical | no_observed_evidence | 0 | 0 |
+ | safety | no_observed_evidence | 0 | 0 |
+-| pathway | no_observed_evidence | 0 | 0 |
+ 
+ Source coverage: `{"scientific_validation":"not_established","source_completeness":"selected_subset"}`.
+ 

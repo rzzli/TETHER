@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "claims": [
+    {
+      "claim_id": "claim-a6c5da38e7196fb1832f",
+      "specialist": "genetics",
+      "evidence": {
+        "observation": {
+          "observation_id": "obs-1",
+          "target_id": "FICTIONAL:TARGET-1",
+          "indication_id": "FICTIONAL:DISEASE-1",
+          "program_id": null,
+          "category": "genetics",
+          "source_kind": "primary",
+          "statement": "Fictional study reports a normalized support value of 0.75; this is a software fixture.",
+          "status": "observed",
+          "polarity": "supports",
+          "mechanism_direction": "inhibit",
+          "study_id": "FICTIONAL:STUDY-1",
+          "dependency_group": "fictional-group-1",
+          "context": {
+            "species": null,
+            "ancestry": null,
+            "tissue": null,
+            "disease_state": null,
+            "intervention": null,
+            "comparator": null,
+            "cohort_ids": [
+              "FICTIONAL:COHORT-1"
+            ]
+          },
+          "quantitative": {
+            "effect": null,
+            "scale": null,
+            "standard_error": null,
+            "ci_lower": null,
+            "ci_upper": null,
+            "sample_size": null,
+            "adjusted_p_value": null
+          },
+          "method": {
+            "code_id": "fictional-normalized-support",
+            "version": "1",
+            "parameters": {
+              "fictional": true
+            },
+            "qc_status": "passed",
+            "limitations": [
+              "Synthetic conformance control; no scientific result"
+            ]
+          },
+          "availability": {
+            "first_public_at": "2021-01-01",
+            "release_public_at": "2021-01-01",
+            "record_public_at": "2021-01-01",
+            "annotation_public_at": "2021-01-01",
+            "retrieved_at": "2026-11-02",
+            "basis": "fictional_release_documentation",
+            "uncertainty": "Fictional; no real availability claim",
+            "known_public_by": null,
+            "evidence_ref": null
+          },
+          "features": {
+            "genetic_support": 0.75
+          },
+          "feature_scope": "cc89c087b9beadde0cb9a0c4db96e6d00f2ab9883d31e8b64375bf238bb42862",
+          "input_refs": [
+            "mapping-1"
+          ],
+          "computed_at": null,
+          "source_locator": {
+            "row": 0
+          },
+          "source_metrics": {},
+          "missingness": {
+            "species": "Not reported by fictional source"
+          },
+          "publication_date": "2021-01-01",
+          "publication_year": 2021
+        },
+        "citation": {
+          "artifact_id": "packet-1",
+          "dataset_id": "fixture_evidence",
+          "release_id": "fictional-v1",
+          "artifact_sha256": "38bc6c3f89be726aae561a7fefef1b71ed5bb79891e016c7ac286ce5d454d2d8",
+          "source_url": "https://example.invalid/packet-1"
+        }
+      },
+      "extraction_mode": "verbatim_source_selection",
+      "admitted_fingerprint": "cde1031b7cc04661cdbce23f5755a04d425e2fe7571409952e8e5a01bc6fe994"
+    }
+  ]
+}

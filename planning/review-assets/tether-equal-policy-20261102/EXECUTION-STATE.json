@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "status": "running",
-  "recorded_at_utc": "2026-11-05T20:59:30.093361+00:00",
+  "status": "executed_reconstructed_under_causal_review",
+  "recorded_at_utc": "2026-11-05T21:10:02.418778+00:00",
   "stage": "BG02",
   "run": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-20261102-attempt03",
   "tool_session_id": 47997,
@@ -9,5 +9,12 @@
   "code_checkpoint": "5560339",
   "unique_cases": 108,
   "expected_cells": 1296,
-  "instructions": "Poll the recorded live session; if absent inspect actual process and terminal EXECUTION.json. Never restart this run automatically. Frozen code and inputs must remain unchanged through analysis."
+  "instructions": "Run is terminal; do not rerun or alter frozen inputs. BG02 remains pending causal fixture/oracle review (EP075/EP077) and final qualified comparison. Preserve all initial results, including mismatches.",
+  "tool_session_terminal": {
+    "session_id": 47997,
+    "exit_code": 0
+  },
+  "terminal_cells": 1296,
+  "all_after_checks_passed": true,
+  "independent_reconstruction_sha256": "6a16a1103791dab5d0255398414695c8c6bebc1e7fc673e4e7bda14920d96166"
 }

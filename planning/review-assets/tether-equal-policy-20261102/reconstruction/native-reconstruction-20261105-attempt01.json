@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-11-05T21:08:05.487013+00:00",
+  "finished_at_utc": "2026-11-05T21:08:24.434076+00:00",
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\experiments\\equal_policy\\reconstruct.py",
+    "--run",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-20261102-attempt03",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-20261102-attempt03\\INDEPENDENT-RECONSTRUCTION.json"
+  ],
+  "exit_code": 0,
+  "reconstruction_wall_seconds": 18.945939799999906,
+  "freeze_pin": {
+    "sha256": "26b30fef132fc6ce6acd6f1844a41521da47fb091d53e513d4b14588db476736",
+    "bytes": 267976
+  },
+  "log": {
+    "path": "planning/review-assets/tether-equal-policy-20261102/reconstruction/native-reconstruction-20261105-attempt01.log",
+    "sha256": "9fda82016a3d13d3a1a836612bd02b0ac01c9bf7213de73785a8a5143b55b5b8",
+    "bytes": 1599
+  },
+  "evaluator_qualification_pin": {
+    "sha256": "23a7b6426aea9133137b168f4cae24f7a2c47ed0bd8c2acf82a1ee9427e59c33",
+    "bytes": 1375
+  },
+  "qualified_source_pins": [
+    {
+      "path": "experiments/equal_policy/reconstruct.py",
+      "sha256": "a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65",
+      "bytes": 35662
+    },
+    {
+      "path": "experiments/equal_policy/test_reconstruct.py",
+      "sha256": "8d4d44f0b08a105535aea3ac0a4b0c7bc5ed337f393f9eff78ce518e6ede596a",
+      "bytes": 20171
+    }
+  ],
+  "output_pin": {
+    "sha256": "6a16a1103791dab5d0255398414695c8c6bebc1e7fc673e4e7bda14920d96166",
+    "bytes": 1647341
+  }
+}
