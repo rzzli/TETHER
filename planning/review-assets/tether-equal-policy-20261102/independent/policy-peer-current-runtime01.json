@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "source_sha256": {
+    "experiments/equal_policy/independent_policy.py": "0f52cd17ffbe06efeed9e6df99ff21d3c1eca5d39ec77190d856d4b6253cdcb6",
+    "planning/review-assets/tether-equal-policy-20261102/independent/peer_policy_probe.py": "3de3d90358d4c77adbc60e259d45aa71c748b948572e3eb377aea2bada5cc584",
+    "experiments/equal_policy/test_independent_policy.py": "3129413130954654131142ece11de760832d27e6812a8771aa4328403a889a57",
+    "experiments/equal_policy/independent_runtime.py": "7aeec8ff4b3154709cbdc8158669470f507f97ccf37d923f543558e4f77a63d1",
+    "experiments/equal_policy/independent.py": "38db99353bab07e5ed8eb6dc75b6f1f6d38615fc75287bc65c0c9b7a9f5f8e36",
+    "tests/test_equal_policy_independent.py": "c3c1ce77af60d6141fc47ad996b18103d3a4214e944410a3230209bcfe28e024"
+  },
+  "source_unchanged": true,
+  "log_sha256": "5339cf020d21d9a5f3fa4d2a535f0228a1ec1e323b891b5939eeb1446e1efda5",
+  "scope": "Independent fictional peer controls; inner verifier stubbed only for outer-envelope isolation; no corpus scoring",
+  "limitations": [
+    "Post-read alias/deadline probes inject boundary failures; no native race exploit is asserted",
+    "This record does not replace complete source-inclusive native integration"
+  ]
+}

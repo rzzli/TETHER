@@ -19,13 +19,14 @@ def main():
     if log_path.exists() or result_path.exists(): raise SystemExit('Refusing to overwrite retained evidence')
     source = root / 'experiments/equal_policy'
     names = ('independent.py', 'independent_schema.py', 'independent_local.py', 'independent_render.py',
-             'independent_policy.py', 'test_independent_policy.py', 'reference.py', 'cases.py', 'policy_cases.py', 'materialize.py')
-    files = [source / name for name in names] + [root / 'tests/test_equal_policy_native.py']
+             'independent_policy.py', 'independent_runtime.py', 'test_independent_policy.py', 'test_native.py',
+             'reference.py', 'cases.py', 'policy_cases.py', 'materialize.py')
+    files = [source / name for name in names] + [root / 'tests/test_equal_policy_independent.py']
     sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
     before = {p.relative_to(root).as_posix(): sha(p) for p in files}
     if mode == 'native':
         python = root / 'data/cache/tether-051-installed-qualification-attempt02/environment/Scripts/python.exe'
-        argv = [str(python), '-I', '-B', str(root / 'tests/test_equal_policy_native.py')]
+        argv = [str(python), '-I', '-B', str(source / 'test_native.py')]
     else:
         python = root / 'data/cache/tether-051-dev/Scripts/python.exe'
         argv = [str(python), '-B', '-m', 'unittest', 'experiments.equal_policy.test_independent_policy', '-v']

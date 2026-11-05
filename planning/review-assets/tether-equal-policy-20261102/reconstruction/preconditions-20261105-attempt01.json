@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "preconditions_checked_without_scoring",
+  "completed_at_utc": "2026-11-05T20:55:09.632856+00:00",
+  "scope": "Read-only input shape, installed proof/hash reconciliation and footprint classification; no case decisions produced or compared and no oracle read",
+  "run": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-20261102-attempt03",
+  "descriptor_count": 108,
+  "bundle_file_count": 1938,
+  "bundle_directory_count": 339,
+  "bundle_logical_bytes": 4387486,
+  "installed_python_files": {
+    "asof": 66,
+    "tether": 18
+  },
+  "independent_runtime_files": 6,
+  "independent_runtime_bytes": 156573,
+  "trusted_runtime_pin": {
+    "sha256": "b4a190fbbf8fc5c258f15c72fba7a4edbe1dc27575247e57fa86dc513daa0b06",
+    "bytes": 9747
+  },
+  "evaluator_pin": {
+    "sha256": "a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65",
+    "bytes": 35662
+  },
+  "freeze_present_at_check": false,
+  "comparison_present_at_check": false
+}

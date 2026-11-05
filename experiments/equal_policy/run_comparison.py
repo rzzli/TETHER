@@ -92,7 +92,23 @@ def source_pins():
     paths = [path for path in Path(__file__).parent.glob('*.py')
              if path.name not in ('reconstruct.py', 'test_reconstruct.py')]
     paths += [EVIDENCE / name for name in ('POLICY-SPEC.md', 'policy-spec.json', 'COVERAGE.md',
-                                         'CASE-PROTOCOL.md', 'EXECUTION-PROTOCOL.md')]
+        'COVERAGE-v1.md', 'COVERAGE-QUALIFICATION-v2.md', 'CASE-PROTOCOL.md',
+        'EXECUTION-PROTOCOL.md', 'RUNTIME-WITNESSES.md', 'RUNTIME-WITNESSES.json',
+        'runtime-witnesses-02.log', 'runtime-witness-tests-01.log',
+        'independent/RESUMPTION-QUALIFICATION-20261105.json',
+        'independent/CURRENT-RUNTIME-QUALIFICATION-20261105.json',
+        'independent/worker-current-runtime-green01.json',
+        'independent/worker-current-runtime-green01.log',
+        'independent/policy-peer-current-runtime01.json',
+        'independent/policy-peer-current-runtime01.log',
+        'independent-policy/unit-current-runtime-green01.json',
+        'independent-policy/unit-current-runtime-green01.log',
+        'independent-policy/native-current-runtime-green01.json',
+        'independent-policy/native-current-runtime-green01.log')]
+    coverage = PROJECT / 'planning/review-assets/tether-equal-policy-coverage-20261105'
+    paths += [coverage / name for name in ('EVIDENCE-INDEX.json', 'DOCUMENTATION-VALIDATION.json',
+                                          'V1-SCOPE-CONTROL.json')]
+    paths.append(PROJECT / 'data/cache/tether-equal-policy-runtime-witnesses-20261102-02/RUNTIME-WITNESSES.json')
     return {p.relative_to(PROJECT).as_posix(): pin(p) for p in sorted(paths)}
 
 

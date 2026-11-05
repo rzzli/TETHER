@@ -15,6 +15,7 @@ from unittest.mock import patch
 from experiments.equal_policy import cases, policy_cases
 from experiments.equal_policy import independent_policy as policy
 from experiments.equal_policy.independent import PolicyError, validate_bundle
+from tests.test_equal_policy_independent import fake_runtime
 
 
 def write(path, value):
@@ -200,7 +201,7 @@ class IndependentOuterUnits(unittest.TestCase):
             process_started=True, process_reaped=True, cleanup_errors=[])
         common = dict(schema_version=1, method='tether.engine_presentation.v1', brand='TETHER', status='completed',
             role='evaluation_only', agent_visible=False, scientific_validation='not_established')
-        trusted = dict(schema_version=1, versions=dict(tether='0.5.1', asof='0.3.12'), launcher_proof={'fictional': 'unit identity'})
+        trusted = fake_runtime(self.root)
         files = {'engine/dossier.md': b'# AsOf dossier: FICTIONAL\n', 'dossier.md': b'# TETHER dossier: FICTIONAL\n',
                  'engine/journal.jsonl': journal([('run_reserved', {})]), 'engine/trace.jsonl': b'{}\n',
                  'engine-stdout.txt': b'ok', 'engine-stderr.txt': b''}
@@ -234,6 +235,27 @@ class IndependentOuterUnits(unittest.TestCase):
             result = policy.verify_outer(output, None, trusted)
         verify.assert_called_once_with(output / 'engine', 'c' * 64, trusted_runtime=trusted)
         self.assertEqual(result['verification']['source_binding'], 'current_originals')
+
+    def test_outer_proof_checks_current_payload_inventory_and_distribution_each_call(self):
+        output, manifest, trusted = self.outer()
+        root = Path(trusted['runtime_paths']['tether_file']).parent
+        original = (root / 'module.py').read_bytes()
+        metadata = root.parent / 'tether_target_agents-0.5.1.dist-info/METADATA'
+        original_metadata = metadata.read_bytes()
+        inner = dict(semantic_consistency='verified', code_matches_current=True, status='completed')
+        for mutation in ('content', 'add', 'remove', 'distribution'):
+            with self.subTest(mutation=mutation), patch.object(policy, 'verify_core', return_value=inner):
+                if mutation == 'content': (root / 'module.py').write_bytes(b'VALUE = 2\n')
+                elif mutation == 'add': (root / 'extra.py').write_bytes(b'ADDED = True\n')
+                elif mutation == 'remove': (root / 'module.py').unlink()
+                else: metadata.write_bytes(original_metadata.replace(b'0.5.1', b'9.9.9'))
+                with self.assertRaises(PolicyError): policy.verify_outer(output, None, trusted)
+                (root / 'module.py').write_bytes(original); metadata.write_bytes(original_metadata)
+                if (root / 'extra.py').exists(): (root / 'extra.py').unlink()
+        # Comparison is to actual code, not merely the retained trusted proof.
+        trusted['launcher_proof'] = {'historical': 'stale'}
+        with patch.object(policy, 'verify_core', return_value=inner):
+            self.assertEqual(policy.verify_outer(output, None, trusted)['verification']['status'], 'integrity_verified')
 
     def test_resealed_projection_and_process_count_rejected(self):
         output, manifest, trusted = self.outer()

@@ -11,7 +11,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-REPOSITORY = Path(__file__).resolve().parents[1]
+REPOSITORY = Path(__file__).resolve().parents[2]
 QUALIFIED = REPOSITORY / 'data/cache/tether-051-installed-qualification-attempt02'
 sys.path.insert(0, str(REPOSITORY / 'experiments'))
 from equal_policy import cases, independent, materialize, policy_cases, reference

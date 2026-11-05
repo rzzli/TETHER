@@ -42,6 +42,23 @@ def write_json(path, value):
     path.write_bytes((json.dumps(value, ensure_ascii=False, allow_nan=False) + '\n').encode('utf-8'))
 
 
+def fake_runtime(root):
+    """Fictional files only: importing these packages would deliberately fail."""
+    site = root / 'fake-site-packages'
+    for package, version in (('asof', '0.3.12'), ('tether', '0.5.1')):
+        folder = site / package; folder.mkdir(parents=True)
+        (folder / '__init__.py').write_text("__version__ = " + repr(version) + "\nraise AssertionError('must not import fixture')\n", encoding='utf-8')
+        (folder / 'module.py').write_text('VALUE = 1\n', encoding='utf-8')
+        dist = site / (package + '_target_agents-' + version + '.dist-info'); dist.mkdir()
+        (dist / 'METADATA').write_text('Metadata-Version: 2.1\nName: ' + package + '-target-agents\nVersion: ' + version + '\n', encoding='utf-8')
+    core = {p.name: iv.file_digest(p) for p in (site / 'asof').glob('*.py')}
+    facade = {p.name: dict(path=p.name, sha256=iv.file_digest(p), bytes=p.stat().st_size) for p in (site / 'tether').glob('*.py')}
+    proof = dict(schema_version=1, method='tether.launcher_code.v1', facade_version='0.5.1', core_version='0.3.12',
+        installed_distributions={'tether-target-agents': '0.5.1', 'asof-target-agents': '0.3.12'}, code=facade)
+    return dict(schema_version=1, versions=dict(tether='0.5.1', asof='0.3.12'), launcher_proof=proof,
+        core_code_sha256=core, runtime_paths=dict(asof_file=str(site / 'asof/__init__.py'), tether_file=str(site / 'tether/__init__.py')))
+
+
 def fixture(root, observations=None):
     c = case()
     raw = root / 'original.txt'
@@ -386,6 +403,18 @@ class IndependentArchiveTests(unittest.TestCase):
         self.assertEqual(result['durable_events'], 2)
         self.assertIn('never automatically repeat', result['recovery_action'])
 
+    def test_recovery_parses_captured_bytes_without_reopening(self):
+        events = chain([('run_reserved', {}), ('dispatch', dict(attempt_id='pending', reserved=dict(input_tokens=10, output_tokens=5, cost_usd=0)))])
+        payload = b''.join(iv.canonical(event) + b'\n' for event in events) + b'{partial'
+        def capture(path):
+            path.write_bytes(b'changed after completed stable capture')
+            return payload
+        with patch.object(iv, 'bounded_stable_bytes', side_effect=capture) as reader:
+            result = iv.inspect_core(self.run_dir)
+        reader.assert_called_once_with(self.run_dir / 'journal.jsonl')
+        self.assertEqual(result['unresolved_attempts'], ['pending'])
+        self.assertEqual(result['estimated_upper_usage']['input_tokens'], 10)
+
     def test_internal_crash_is_error_and_not_policy_rejection(self):
         descriptor = dict(schema_version=1, control_id='unit', variant='core_v2_catalog1', operation='prepare_run',
                           paths=dict(case='case.json', snapshot='snapshot.json'), options={}, anchors={})
@@ -464,8 +493,29 @@ class IndependentArchiveTests(unittest.TestCase):
             iv.verify_core(self.run_dir)
 
     def test_bare_core_code_mismatch_is_diagnostic_not_rejection(self):
-        result = iv.verify_core(self.run_dir, trusted_runtime={'core_code_sha256': {'x.py': 'a' * 64}})
+        result = iv.verify_core(self.run_dir, trusted_runtime=fake_runtime(self.root))
         self.assertFalse(result['code_matches_current'])
+
+    def test_core_code_compares_actual_payload_each_call_not_historical_manifest(self):
+        trusted = fake_runtime(self.root)
+        receipt = iv.read_json(self.run_dir / 'receipt.json')
+        receipt['code'] = trusted['core_code_sha256']
+        write_json(self.run_dir / 'receipt.json', receipt)
+        self.assertTrue(iv.verify_core(self.run_dir, trusted_runtime=trusted)['code_matches_current'])
+        module = Path(trusted['runtime_paths']['asof_file']).parent / 'module.py'
+        original = module.read_bytes()
+        for mutation in ('content', 'add', 'remove'):
+            with self.subTest(mutation=mutation):
+                extra = module.with_name('extra.py')
+                if mutation == 'content': module.write_bytes(b'VALUE = 2\n')
+                elif mutation == 'add': extra.write_bytes(b'ADDED = True\n')
+                else: module.unlink()
+                self.assertFalse(iv.verify_core(self.run_dir, trusted_runtime=trusted)['code_matches_current'])
+                module.write_bytes(original)
+                if extra.exists(): extra.unlink()
+        # A stale manifest cannot turn current matching bytes into a mismatch.
+        trusted['core_code_sha256'] = {'fictional_old.py': '0' * 64}
+        self.assertTrue(iv.verify_core(self.run_dir, trusted_runtime=trusted)['code_matches_current'])
 
 
 class IndependentLocalTests(unittest.TestCase):

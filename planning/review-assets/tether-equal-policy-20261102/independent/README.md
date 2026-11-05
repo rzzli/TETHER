@@ -119,12 +119,42 @@ subcontrols are retained in `worker-resume-red01`, together with the exact prior
 source. The correction adds the required-field guard; it changes no product
 runtime, fictional source, oracle or scientific result.
 
-Current records are `worker-resume-green01` (53 component/worker methods),
+Records at that review point were `worker-resume-green01` (53 component/worker methods),
 `../independent-policy/unit-resume01` (17 policy methods) and
 `../independent-policy/native-resume01` (five actual native integration methods).
 They all pass with unchanged source brackets. The native suite uses the pinned
 installed attempt02 interpreter with `-I`. The six earlier policy peer probes
-still bind the unchanged current policy module. `RESUMPTION-QUALIFICATION-20261105.json`
+bound the policy module at that point. `RESUMPTION-QUALIFICATION-20261105.json`
 checks each log, terminal count and source hash, including preserved red evidence.
 These scopes overlap and are not added into an independent sample size. No paired
 comparison was executed during this qualification.
+
+## Additional pre-freeze parity corrections — 5 November 2026
+
+Clause review subsequently exposed two independent-validator gaps: code identity
+was compared to retained manifest hashes rather than actual installed files on
+each call, and core inspection reopened its journal after capturing stable
+bytes. `worker-current-runtime-red01` (55 methods; four failures and one error)
+and `../independent-policy/unit-current-runtime-red01` (18 methods; four failures
+and one error) preserve the reproductions; exact prior implementations are kept
+in the two `*-before-current-runtime.py.txt` files. These are new qualification
+defects, not scored comparison observations.
+
+`independent_runtime.py` now reads actual package entry paths supplied by the
+trusted runtime record, without importing either product. Bare-core archived
+code is compared to current core source bytes; a mismatch remains diagnostic.
+Outer verification reconstructs the current launcher proof from facade file
+sizes/hashes, repeated source inventory, literal package versions and installed
+distribution metadata. Historical proof fields are not used as current code.
+Fictional package controls exercise content, inventory and distribution changes
+without editing the qualified installation. Inspection now parses exactly the
+captured durable journal prefix.
+
+Current qualification records are `worker-current-runtime-green01` (55 methods),
+`../independent-policy/unit-current-runtime-green01` (18 methods),
+`../independent-policy/native-current-runtime-green01` (five methods) and
+`policy-peer-current-runtime01` (six methods). The dedicated installed native
+suite is now `experiments/equal_policy/test_native.py`; it is invoked explicitly
+with the pinned Python and `-I -B`, outside default production-test discovery.
+Earlier records remain immutable historical evidence. The current qualification
+does not freeze or score the paired corpus or establish scientific validity.

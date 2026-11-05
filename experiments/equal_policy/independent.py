@@ -655,7 +655,10 @@ def prediction(case, profile, features, scorer, run_status='completed'):
 
 
 def read_chain(path, partial=False):
-    payload = Path(path).read_bytes()
+    return parse_chain(Path(path).read_bytes(), partial=partial)
+
+
+def parse_chain(payload, partial=False):
     lines = payload.splitlines()
     events = []
     previous = None
@@ -1024,8 +1027,11 @@ def verify_core(run_dir, receipt_sha256=None, *, canonical_facade=True, trusted_
         actual = (root / 'dossier.md').read_bytes()
         require(actual in (expected_text, expected_text.replace(b'\n', b'\r\n')),
                 'EP-VERIFY-03', 'Dossier differs from deterministic rendering')
+    if trusted_runtime is not None:
+        from .independent_runtime import core_code
+        current_code = core_code(trusted_runtime)
     return dict(semantic_consistency='verified', receipt_sha256=file_digest(receipt_path),
-        code_matches_current=(receipt.get('code') == trusted_runtime['core_code_sha256']) if trusted_runtime is not None else None,
+        code_matches_current=(receipt.get('code') == current_code) if trusted_runtime is not None else None,
         admitted_observation_ids=sorted(source['records']), selected_observation_ids=sorted(c['evidence']['observation']['observation_id'] for c in claims),
         exclusions=source['exclusions'], features=rebuilt, prediction=predicted, status=run['status'],
         accounting=[event['details'] for event in trace if event['event'] == 'attempt_accounted'],
@@ -1034,8 +1040,7 @@ def verify_core(run_dir, receipt_sha256=None, *, canonical_facade=True, trusted_
 
 def inspect_core(run_dir):
     root = Path(run_dir)
-    bounded_stable_bytes(root / 'journal.jsonl')
-    trace = read_chain(root / 'journal.jsonl', partial=True)
+    trace = parse_chain(bounded_stable_bytes(root / 'journal.jsonl'), partial=True)
     if trace[0]['event'] == 'build_reserved':
         stage, progress, failure = None, {}, None
         for event in trace:

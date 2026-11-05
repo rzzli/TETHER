@@ -34,8 +34,11 @@ an agent scheduler or demonstrate those properties merely by accepting a trace.
    explicit fictional backends. Local-model transport fixtures use an in-memory
    response object; no model, weights or network endpoint is executed. Preserve
    all producer attempts and preparation failures. Apply only declared mutations.
-4. Freeze the complete schedule, oracle, descriptors, byte inventory, experiment
-   code, policy, installed runtime proof and execution settings before comparison.
+4. Freeze the complete schedule, oracle, descriptors, byte and directory inventories,
+   experiment code, policy, operative coverage ledger and its qualification evidence,
+   installed package payloads and distribution metadata, interpreter and execution
+   settings before comparison. Actual installed payloads must match the trusted
+   runtime proof; checking a historical manifest alone is insufficient.
    A missing recipe is a preparation failure, never a silently omitted case.
 5. Run every scheduled case through all four implementations in fresh isolated
    processes. Use the same Python environment, input paths, external anchors,
@@ -69,9 +72,15 @@ conformance observations, not natural fault prevalence, biological truth, clinic
 benefit or general agent intelligence. Identical mistakes by both implementations
 remain wrong against the independent oracle.
 
+Primary timed comparisons use import plus operation durations or launcher wall time:
+the adapters import product code at different stages, so operation-only durations
+are not an equal boundary. Independent result reconstruction is separately pinned
+and is never imported by validators or used to determine expected answers.
+
 Wall and CPU durations, memory and logical input/copy volume have separately named
 measurement boundaries. File sizes/open volumes do not establish physical disk I/O.
-Retained-copy overhead is part of schema2 preparation and is not silently removed
+Post-run retained file sizes do not measure total writes. Retained-copy overhead is
+part of schema2 preparation and is not silently removed
 from one implementation. Report runtime code, experiment glue, tests, dependencies
 and evidence files separately when comparing maintenance surface.
 

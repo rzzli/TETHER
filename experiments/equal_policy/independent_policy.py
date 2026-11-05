@@ -587,7 +587,8 @@ def verify_outer(output, anchor, trusted_runtime, *, expected_policy=None):
     check(manifest['command'] in ('run', 'demo') and manifest['engine'] == dict(path='engine', receipt_sha256=receipt['engine_receipt_sha256']), 'Engine identity binding')
     check(type(trusted_runtime) is dict and type(trusted_runtime.get('schema_version')) is int and trusted_runtime['schema_version'] == 1 and
           trusted_runtime.get('versions') == {'tether': '0.5.1', 'asof': '0.3.12'}, 'Trusted current runtime required')
-    check(canonical(manifest['launcher']) == canonical(trusted_runtime['launcher_proof']), 'Launcher identity differs from pinned runtime')
+    from .independent_runtime import launcher_proof
+    check(canonical(manifest['launcher']) == canonical(launcher_proof(trusted_runtime)), 'Launcher identity differs from current installed runtime')
     pin(manifest['invocation_sha256'])
     check(manifest['projection'] == dict(source='engine/dossier.md', target='dossier.md', transform='exact_first_header_v1'), 'Projection declaration')
     check(type(manifest['artifacts']) is dict, 'Outer artifact inventory')

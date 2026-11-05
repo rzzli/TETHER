@@ -3,12 +3,26 @@ name: research-log-2026-11-02-benchmark-execution
 description: BG01 locally complete; active goal proceeds to independent equal-policy validator and native benchmarks
 metadata:
   type: project
-updated: 2026-11-02
+updated: 2026-11-05
 ---
 
 # Authorized benchmark execution
 
-BG02 implementation checkpoint: the independent stdlib validator now covers the
+November 5 current checkpoint: the comparative research review is committed as
+`44d367b`; it preserves the active sequence. BG02 current qualification corrects
+per-call actual installed-code reads and captured-buffer inspection. Component
+scopes pass55 core/worker,18 policy,5 installed native and6 peer methods; these
+overlap. Runner19 and independent reconstruction27 pass. The latter includes the
+new independent_runtime.py helper in implementation footprint. Three unscored
+preparation sets exist; attempt03's four producer pins remain current and its108
+descriptors/1938files/339directories are checked. The previous need for a fresh
+preparation was satisfied by attempt03, not still pending. The operative v2
+coverage ledger preserves the original and records runtime-only witnesses and
+unexercised boundaries. Freeze now includes its evidence and installed payloads.
+Actual paired execution, independent reconstruction and BG02 closure remain next;
+no corpus scores or native benchmark answers are claimed.
+
+Earlier November 2 BG02 implementation checkpoint: the independent stdlib validator now covers the
 declared current-v2 core and schema2/outer interfaces. A frozen 27-obligation policy
 and independently authored 108-case fictional draft oracle distinguish preparation,
 sealed verification and inspect-only recovery. Root's installed reference adapter

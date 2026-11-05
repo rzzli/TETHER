@@ -102,7 +102,9 @@ def main():
     log, record = target / (phase + '.log'), target / (phase + '.json')
     if log.exists() or record.exists():
         raise SystemExit('Refusing to overwrite peer evidence')
-    files = [Path(policy.__file__), Path(__file__), ROOT / 'experiments/equal_policy/test_independent_policy.py']
+    files = [Path(policy.__file__), Path(__file__), ROOT / 'experiments/equal_policy/test_independent_policy.py',
+             ROOT / 'experiments/equal_policy/independent_runtime.py',
+             ROOT / 'experiments/equal_policy/independent.py', ROOT / 'tests/test_equal_policy_independent.py']
     hashes = lambda: {path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in files}
     before = hashes()
     stream = io.StringIO()

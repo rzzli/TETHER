@@ -22,7 +22,9 @@ inspection accounting from one captured journal buffer. Only outer-envelope unit
 isolation stubs the inner verifier, and the records label this limitation.
 
 The native integration suite runs with the BG01 installed qualification attempt02
-Python using `-I`. Only the experiment directory is added to Python's search path.
+Python using `-I -B` at `experiments/equal_policy/test_native.py`. It is outside
+default production-unit discovery because it requires this private qualified
+installation. Only the experiment directory is added to Python's search path.
 Fresh, explicitly named UNIT inputs are materialized once with the native
 producer, then the independent validator reads those exact files. Tests include
 scored and recorded core runs, complete schema1/schema2 outer runs and policy
@@ -51,3 +53,11 @@ are test-method counts, not independent biological observations or estimates of
 natural error rates. Native fixture files use temporary workspace paths and are
 removed after these tests; the scored corpus has a separate retained preparation
 and freeze process owned by the root runner.
+
+The current Nov 5 qualification is `unit-current-runtime-green01` (18 methods)
+and `native-current-runtime-green01` (five methods). Current runtime proof now
+reads actual installed package files on each call using the standard-library
+`independent_runtime.py` helper. Unit mutations touch fictional packages only;
+the installed runtime remains unchanged. The preceding
+`unit-current-runtime-red01` preserves the reproduced retained-manifest weakness.
+Current source-inclusive native positives pass against actual installed paths.

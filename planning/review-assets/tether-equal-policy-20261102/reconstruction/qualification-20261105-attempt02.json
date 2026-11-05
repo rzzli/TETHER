@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "Independent reconstruction qualification on invented records only; no paired corpus score",
+  "completed_at_utc": "2026-11-05T20:54:44.947424+00:00",
+  "exit_code": 0,
+  "test_count": 27,
+  "test_log": {
+    "path": "planning/review-assets/tether-equal-policy-20261102/reconstruction/invented-record-tests-20261105-attempt02.log",
+    "sha256": "fe0106e559748cf6ce8917b145e1833f8c1f2a1bebd82ffd25842781e88b2ed8",
+    "bytes": 3893
+  },
+  "regression_red_log": {
+    "path": "planning/review-assets/tether-equal-policy-20261102/reconstruction/footprint-red-20261105-attempt01.log",
+    "sha256": "714dbc800650a31893e6f63a51976a12993af57d80790a5d95f8b16899a40e12",
+    "bytes": 876
+  },
+  "source_pins": [
+    {
+      "path": "experiments/equal_policy/reconstruct.py",
+      "sha256": "a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65",
+      "bytes": 35662
+    },
+    {
+      "path": "experiments/equal_policy/test_reconstruct.py",
+      "sha256": "8d4d44f0b08a105535aea3ac0a4b0c7bc5ed337f393f9eff78ce518e6ede596a",
+      "bytes": 20171
+    }
+  ],
+  "correction": "Include independent_runtime.py in independent validator footprint; keep runtime witnesses, tests and orchestration distinct",
+  "separation": "Evaluator imports no runner, product, corpus producer, or oracle-construction code"
+}

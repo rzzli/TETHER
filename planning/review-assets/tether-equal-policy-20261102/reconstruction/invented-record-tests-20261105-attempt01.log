@@ -1,0 +1,31 @@
+test_added_empty_directory_is_detected (__main__.ReconstructionTests.test_added_empty_directory_is_detected) ... ok
+test_boolean_terminal_schema_is_rejected (__main__.ReconstructionTests.test_boolean_terminal_schema_is_rejected) ... ok
+test_changed_empty_directory_is_detected (__main__.ReconstructionTests.test_changed_empty_directory_is_detected) ... ok
+test_changed_execution_source_is_detected (__main__.ReconstructionTests.test_changed_execution_source_is_detected) ... ok
+test_changed_installed_code_is_detected (__main__.ReconstructionTests.test_changed_installed_code_is_detected) ... ok
+test_changed_installed_metadata_is_detected (__main__.ReconstructionTests.test_changed_installed_metadata_is_detected) ... ok
+test_changed_oracle_and_changed_source_are_detected (__main__.ReconstructionTests.test_changed_oracle_and_changed_source_are_detected) ... ok
+test_complete_grid_decisions_and_resource_boundaries (__main__.ReconstructionTests.test_complete_grid_decisions_and_resource_boundaries) ... ok
+test_duplicate_cell_cannot_replace_missing_cell (__main__.ReconstructionTests.test_duplicate_cell_cannot_replace_missing_cell) ... ok
+test_duplicate_json_field_and_nonfinite_metadata_are_rejected (__main__.ReconstructionTests.test_duplicate_json_field_and_nonfinite_metadata_are_rejected) ... ok
+test_errors_and_unsupported_are_never_correct_rejections (__main__.ReconstructionTests.test_errors_and_unsupported_are_never_correct_rejections) ... ok
+test_evaluator_has_no_product_runner_or_producer_imports (__main__.ReconstructionTests.test_evaluator_has_no_product_runner_or_producer_imports) ... ok
+test_failed_invocation_cannot_claim_policy_rejection (__main__.ReconstructionTests.test_failed_invocation_cannot_claim_policy_rejection) ... ok
+test_invalid_inspection_is_separately_counted (__main__.ReconstructionTests.test_invalid_inspection_is_separately_counted) ... ok
+test_missing_null_observable_remains_missing (__main__.ReconstructionTests.test_missing_null_observable_remains_missing) ... ok
+test_missing_resource_measurement_is_not_zero (__main__.ReconstructionTests.test_missing_resource_measurement_is_not_zero) ... ok
+test_native_observable_types_and_unknown_fields (__main__.ReconstructionTests.test_native_observable_types_and_unknown_fields) ... ok
+test_primary_analysis_is_compared_without_importing_its_evaluator (__main__.ReconstructionTests.test_primary_analysis_is_compared_without_importing_its_evaluator) ... ok
+test_product_import_in_independent_worker_invalidates_comparison (__main__.ReconstructionTests.test_product_import_in_independent_worker_invalidates_comparison) ... ok
+test_resource_copy_volume_is_actual_retained_scratch (__main__.ReconstructionTests.test_resource_copy_volume_is_actual_retained_scratch) ... ok
+test_short_inventory_cannot_claim_complete_counts (__main__.ReconstructionTests.test_short_inventory_cannot_claim_complete_counts) ... ok
+test_stream_pin_and_result_projection_are_both_checked (__main__.ReconstructionTests.test_stream_pin_and_result_projection_are_both_checked) ... ok
+test_trusted_and_frozen_interpreter_disagreement_is_rejected (__main__.ReconstructionTests.test_trusted_and_frozen_interpreter_disagreement_is_rejected) ... ok
+test_unlisted_attempt_directory_is_not_ignored (__main__.ReconstructionTests.test_unlisted_attempt_directory_is_not_ignored) ... ok
+test_valid_cells_in_wrong_order_are_rejected (__main__.ReconstructionTests.test_valid_cells_in_wrong_order_are_rejected) ... ok
+test_worker_invocation_input_binding_is_checked (__main__.ReconstructionTests.test_worker_invocation_input_binding_is_checked) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 9.094s
+
+OK

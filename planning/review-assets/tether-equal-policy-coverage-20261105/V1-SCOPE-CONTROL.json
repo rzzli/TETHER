@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Separate archived-v1 interface control; excluded from every primary v2 performance/accuracy denominator",
+  "expected_decision": "unsupported",
+  "observed": {
+    "reference": {
+      "schema_version": 1,
+      "control_id": "SCOPE-LEGACY-V1",
+      "decision": "unsupported",
+      "stage": "verify_run",
+      "violated_obligations": [],
+      "checked_scope": [
+        "descriptor"
+      ],
+      "observables": {},
+      "reason": "Legacy v1 receipt-only interface is outside current-v2 semantic comparison"
+    },
+    "independent": {
+      "schema_version": 1,
+      "control_id": "SCOPE-LEGACY-V1",
+      "decision": "unsupported",
+      "stage": "verify_run",
+      "violated_obligations": [],
+      "checked_scope": [
+        "descriptor"
+      ],
+      "observables": {},
+      "error": "Legacy v1 has receipt-only verification through a separate interface; current-v2 semantic parity unavailable"
+    }
+  },
+  "descriptor": {
+    "schema_version": 1,
+    "control_id": "SCOPE-LEGACY-V1",
+    "operation": "verify_run",
+    "variant": "core_v2_catalog1",
+    "paths": {
+      "run_dir": "run"
+    },
+    "options": {},
+    "anchors": {}
+  },
+  "original_fixture": "tests/fixtures/legacy-v1",
+  "copied_fixture": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-equal-policy-v1-scope-20261105\\run",
+  "fixture_sha256": {
+    "dossier.md": "fc7f8451d4dbb391c61bc2bf642621cb69248d21884cdf4c030d778d4ec80aa8",
+    "features.json": "5c1b24824049d510ccf6356a35d54353cfb49044537b0d1c7fbf05d15e1b6250",
+    "inputs.json": "7ba6555653708ba5eb81705b81b148f9d5e56883e1d6316266ad27cc7ff26c00",
+    "ledger.json": "18780cc020611fbfd8de5223f91c37ecc29d89eeff6192bcb929bdc96057375f",
+    "prediction.json": "64edf096e46dccbb39beb21ee07f97742743b1766d78c937998d331f75dad474",
+    "README.md": "c4ac48bae2193535653b3fdff3e527b4c3b6a2ea80dd6b1eeb83fda9798efd34",
+    "receipt.json": "07a2cf58d1237674271e631f6e0dff328828994604c3ea02fbdb1b6806dffda6",
+    "receipt.sha256": "d4ae756524dc597df89c12b24b8be7255b2feafb239a057ec89687b7f6f1e744",
+    "run.json": "1656ee34794f8f87fa8255b18a3930c81b69f61b8672229cd5cdf6a5befa3d8b",
+    "source.json": "e76ba421e3cc5a31d9cb56f49d2308a8ab417e7dcc15457a31caa19baa15c919",
+    "trace.jsonl": "591b4564da56617130036b75a0c853a1cc89a87d80f3bbd8b2515e8413df6bea"
+  },
+  "unchanged": true,
+  "backend_quote_calls": 0,
+  "backend_select_calls": 0,
+  "reference_sha256": "7349c3290f0dc9dd00ff7579e6d1ade063e2f5c031ea0d60f284a66e0b647336",
+  "independent_sha256": "ebf896b64cbda4f1caf7348f2dd15738c05144125aa8122e5c34ec514de53c92",
+  "checker_sha256": "9fe9f303d1dd6616b6b448a262128274e7cf11729b261177d2ef5bf03b176148",
+  "runtime": {
+    "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "asof_version": "0.3.12",
+    "tether_version": "0.5.1",
+    "asof_file": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\asof\\__init__.py",
+    "tether_file": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\tether\\__init__.py"
+  },
+  "limitation": "This checks explicit scope handling; the adapters do not semantically verify v1. Existing v1 receipt-integrity qualification remains separate."
+}
