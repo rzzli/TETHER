@@ -11,7 +11,8 @@ offline and makes no model-provider requests.
 0.3.13 and v2 execution contracts.** The [replay-correction completion record](planning/review-assets/tether-replay-correction-20261105/CANDIDATE-RELEASE-COMPLETION.md)
 binds 2,100 full tests with zero failures/errors/skips, separate facade and installed
 checks, and preservation of the original comparison and older installation.
-The corrected equal-policy comparison remains in progress. These are local
+The corrected equal-policy comparison is complete: both TETHER and the independent
+validator conform on 109/109 authored cases, with higher measured TETHER cost. These are local
 Windows/offline engineering checks; no public release or scientific validation
 is implied. See the [current checkpoint](planning/review-assets/tether-replay-correction-20261105/STATUS.md).
 
@@ -35,7 +36,7 @@ same-version candidate artifacts retain their distinct code and wheel hashes.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
-The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. It distinguishes native benchmark results from derived tests and maps peer methods to actual code gaps. The first 1,296-cell fictional policy comparison has since executed and been independently reconstructed; causal review exposed a masked replay-verification defect and fixture/oracle errors. Its original results remain intact while the correction and a new 109-case comparison are qualified. No native SciFact or LAB-Bench performance is established; BG02 remains incomplete. See the [causal review](planning/review-assets/tether-equal-policy-result-review-20261105/STATUS.md).
+The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact is next; LAB-Bench and Inspect remain unfinished. The first 108-case experiment, failures and old releases remain preserved.
 
 The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identified three P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. Their fixes pass the complete BG01 gate; [TODO](TODO.md) records the remaining comparison and benchmark stages. The audit also measures repeated verification/compiler work and motivates a matched policy-equivalent baseline. Sealed paper/results and the existing scientific and owner-deferred limits remain unchanged.
 

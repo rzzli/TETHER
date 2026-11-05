@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-05T22:36:16.449170+00:00",
+  "scope": "Read-only completion evidence index; no validators or score/resource reanalysis",
+  "external_anchor": {
+    "commit": "2f1b5eb7faae37898f6053a638026adb868eec26",
+    "commit_time": "2026-11-05T13:57:14-08:00",
+    "path": "planning/review-assets/tether-equal-policy-v2-20261105/EXECUTION-STATE.json",
+    "committed_bytes_sha256": "31443ba64693eaadaee975c9da9155d16b6a59014905bfede71dc258af7644be"
+  },
+  "runs": {
+    "original": {
+      "directory": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02",
+      "freeze": {
+        "path": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02/FROZEN.json",
+        "bytes": 282444,
+        "sha256": "f7b4b09f4b144d84761e565452a19082dba16c778e81e422b314880aec531bc7"
+      },
+      "start": {
+        "path": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02/comparison/STARTED.json",
+        "bytes": 476,
+        "sha256": "3a0123f8566392e9abb047c2895d1e9bb66962c60d3b8c57ff6934df1366e042"
+      },
+      "started_at_utc": "2026-11-05T22:11:38.895816+00:00",
+      "terminal": {
+        "path": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02/comparison/EXECUTION.json",
+        "bytes": 156778,
+        "sha256": "c7eab1ff3b7b05aace2e4263c54d72701b12852cda0dd850b9ab76b0ab65779d"
+      },
+      "analysis": {
+        "path": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02/ANALYSIS.json",
+        "bytes": 475919,
+        "sha256": "bdd3533638fb2ea5251492adf9db805960157011253a65c7fe8ebe0f8eef9ea4"
+      },
+      "sources_checked": 103,
+      "runtime_proofs_checked": 3,
+      "unique_cases": 109,
+      "oracle_counts": {
+        "accept": 44,
+        "reject": 64,
+        "inspect_only": 1
+      },
+      "scheduled_cells": 1308,
+      "terminal_cells": 1308,
+      "analysis_rows": 1308,
+      "after_checks": {
+        "bundle_directories_unchanged": true,
+        "bundles_unchanged": true,
+        "installed_runtime_unchanged": true,
+        "oracle_unchanged": true,
+        "python_unchanged": true,
+        "qualification_closure_unchanged": true,
+        "runtime_proofs_unchanged": true,
+        "sources_unchanged": true,
+        "trusted_runtime_unchanged": true,
+        "versioned_grid_unchanged": true
+      },
+      "independent_runtime_records_checked": 327,
+      "independent_dispositions": {
+        "returned": 327
+      },
+      "declared_primary_totals": {
+        "hash_schema": {
+          "cells": 327,
+          "decision_accept": 288,
+          "decision_correct": 168,
+          "decision_error": 3,
+          "decision_inspect_only": 3,
+          "decision_reject": 33,
+          "false_admission": 156,
+          "fully_conformant": 36,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "independent": {
+          "cells": 327,
+          "decision_accept": 132,
+          "decision_correct": 327,
+          "decision_inspect_only": 3,
+          "decision_reject": 192,
+          "fully_conformant": 327,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "reject_all": {
+          "cells": 327,
+          "decision_correct": 192,
+          "decision_reject": 327,
+          "false_rejection": 132,
+          "fully_conformant": 192,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "tether": {
+          "cells": 327,
+          "decision_accept": 135,
+          "decision_correct": 324,
+          "decision_inspect_only": 3,
+          "decision_reject": 189,
+          "false_admission": 3,
+          "fully_conformant": 324,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        }
+      },
+      "reconstruction": {
+        "status": "PASS",
+        "record": {
+          "path": "data/benchmark/tether-equal-policy-v2-original-20261105-attempt02/INDEPENDENT-RECONSTRUCTION.json",
+          "bytes": 1690974,
+          "sha256": "aa6f39df533d65d7a8377e0b5ded5777fc04d7fa64f5f7477d3b4c7fdb69b50f"
+        },
+        "concordance": {
+          "comparison": "Every cell decision, conformance, mismatch-key set, grouping and total; missing-value sentinel formatting is evaluator-specific",
+          "primary_analysis_pin": {
+            "bytes": 475919,
+            "sha256": "bdd3533638fb2ea5251492adf9db805960157011253a65c7fe8ebe0f8eef9ea4"
+          },
+          "status": "agrees"
+        }
+      },
+      "preflight": {
+        "path": "planning/review-assets/tether-equal-policy-v2-20261105/preflight/ORIGINAL-ATTEMPT02-20261105.json",
+        "bytes": 8962,
+        "sha256": "fd35013c207f9edfdd9ee1b1dcd81bff1e0ab4bf7433abf7d754caabe593d626"
+      }
+    },
+    "patched": {
+      "directory": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01",
+      "freeze": {
+        "path": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01/FROZEN.json",
+        "bytes": 282558,
+        "sha256": "3ec7625fa601a517d8e2dd302228f9f465f35e877f79cd1a587a3a63b394a4fc"
+      },
+      "start": {
+        "path": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01/comparison/STARTED.json",
+        "bytes": 476,
+        "sha256": "929484420038f1dd5573b45bed92f13218b89f6630394ec05b2e9c3b7d002693"
+      },
+      "started_at_utc": "2026-11-05T22:23:20.564673+00:00",
+      "terminal": {
+        "path": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01/comparison/EXECUTION.json",
+        "bytes": 156778,
+        "sha256": "ce82079cd16a10016cef40b2c64264f35216ba3dfc06c94ea0e7ebd06c8677b4"
+      },
+      "analysis": {
+        "path": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01/ANALYSIS.json",
+        "bytes": 475896,
+        "sha256": "29c82309809677ff7f831672dfee45b7ffbb8d10fba398b6757a8a65009f96ca"
+      },
+      "sources_checked": 103,
+      "runtime_proofs_checked": 3,
+      "unique_cases": 109,
+      "oracle_counts": {
+        "accept": 44,
+        "reject": 64,
+        "inspect_only": 1
+      },
+      "scheduled_cells": 1308,
+      "terminal_cells": 1308,
+      "analysis_rows": 1308,
+      "after_checks": {
+        "bundle_directories_unchanged": true,
+        "bundles_unchanged": true,
+        "installed_runtime_unchanged": true,
+        "oracle_unchanged": true,
+        "python_unchanged": true,
+        "qualification_closure_unchanged": true,
+        "runtime_proofs_unchanged": true,
+        "sources_unchanged": true,
+        "trusted_runtime_unchanged": true,
+        "versioned_grid_unchanged": true
+      },
+      "independent_runtime_records_checked": 327,
+      "independent_dispositions": {
+        "returned": 327
+      },
+      "declared_primary_totals": {
+        "hash_schema": {
+          "cells": 327,
+          "decision_accept": 288,
+          "decision_correct": 168,
+          "decision_error": 3,
+          "decision_inspect_only": 3,
+          "decision_reject": 33,
+          "false_admission": 156,
+          "fully_conformant": 36,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "independent": {
+          "cells": 327,
+          "decision_accept": 132,
+          "decision_correct": 327,
+          "decision_inspect_only": 3,
+          "decision_reject": 192,
+          "fully_conformant": 327,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "reject_all": {
+          "cells": 327,
+          "decision_correct": 192,
+          "decision_reject": 327,
+          "false_rejection": 132,
+          "fully_conformant": 192,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        },
+        "tether": {
+          "cells": 327,
+          "decision_accept": 132,
+          "decision_correct": 327,
+          "decision_inspect_only": 3,
+          "decision_reject": 192,
+          "fully_conformant": 327,
+          "oracle_accept": 132,
+          "oracle_inspect_only": 3,
+          "oracle_reject": 192
+        }
+      },
+      "reconstruction": {
+        "status": "PASS",
+        "record": {
+          "path": "data/benchmark/tether-equal-policy-v2-patched-20261105-attempt01/INDEPENDENT-RECONSTRUCTION.json",
+          "bytes": 1691015,
+          "sha256": "db43e00ad671c74029a3954a56766a47f0e79085629764815fe895bac2e170c3"
+        },
+        "concordance": {
+          "comparison": "Every cell decision, conformance, mismatch-key set, grouping and total; missing-value sentinel formatting is evaluator-specific",
+          "primary_analysis_pin": {
+            "bytes": 475896,
+            "sha256": "29c82309809677ff7f831672dfee45b7ffbb8d10fba398b6757a8a65009f96ca"
+          },
+          "status": "agrees"
+        }
+      },
+      "preflight": {
+        "path": "planning/review-assets/tether-equal-policy-v2-20261105/preflight/PATCHED-ATTEMPT01-20261105.json",
+        "bytes": 16790,
+        "sha256": "88b6a01748571576bc3d0637ab4e7f35304b5cbc64af3886508ea6982e1ca921"
+      }
+    }
+  },
+  "qualifications": [
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/runner/QUALIFICATION-CLOSURE-20261105.json",
+      "bytes": 15220,
+      "sha256": "6118face558084c72c13780dbbed4d8f92b9cf088349ecd58281dcf3ac0b4b9e",
+      "status": "PASS_RUNNER_QUALIFICATION"
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-result-review-20261105/CORPUS-V2-QUALIFICATION.json",
+      "bytes": 8525,
+      "sha256": "2789e2e68e458f3d5c1d7d7dfb14150ebad7f40e8193bc1dbbab7b021d60109d",
+      "status": "PASS_CONSTRUCTION_AND_ADMISSION_ONLY"
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-result-review-20261105/INDEPENDENT-V2-QUALIFICATION.json",
+      "bytes": 2570,
+      "sha256": "dc8e6f85284ceab7efbcc69bf03f9c8053bfc15a252b0305db367b0c8dc67a9d",
+      "status": "PASS_COMPONENT_QUALIFICATION"
+    },
+    {
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/QUALIFICATION-20261105-attempt02.json",
+      "bytes": 2222,
+      "sha256": "17e32dca558f547b9dba230a3ba728d2f58dbe555ae8153fa22d0712c400a57d",
+      "status": "PASS"
+    },
+    {
+      "path": "planning/review-assets/tether-replay-correction-20261105/RELEASE-AGGREGATE-FINAL01.json",
+      "bytes": 6625,
+      "sha256": "d966fa3f74fa5ace029a041642a279bcacef346aa70df65f7bc048733835b01e",
+      "status": "PASS"
+    }
+  ],
+  "policy": {
+    "specification": {
+      "path": "planning/review-assets/tether-equal-policy-20261102/policy-spec.json",
+      "bytes": 87234,
+      "sha256": "9766892efedaafeac8a74f65dc4bc5cc750136d96fd3a9591029226a52bb3e8b"
+    },
+    "coverage": {
+      "path": "planning/review-assets/tether-equal-policy-20261102/COVERAGE-QUALIFICATION-v2.md",
+      "bytes": 20614,
+      "sha256": "84376cd1551138afa412c76986e8799dafb1ad358efeffe4ed56099b651d2caf"
+    },
+    "obligation_count": 27,
+    "coverage_map_ids": [
+      "EP-CASE-01",
+      "EP-DAG-01",
+      "EP-DAG-02",
+      "EP-EXEC-01",
+      "EP-EXEC-02",
+      "EP-EXEC-03",
+      "EP-EXEC-04",
+      "EP-FAIL-01",
+      "EP-FEATURE-01",
+      "EP-IO-01",
+      "EP-OBS-01",
+      "EP-PACKET-01",
+      "EP-POLICY-01",
+      "EP-POLICY-02",
+      "EP-POLICY-03",
+      "EP-POLICY-04",
+      "EP-PROCESS-01",
+      "EP-PROGRAM-01",
+      "EP-SCOPE-01",
+      "EP-SCORER-01",
+      "EP-SCORER-02",
+      "EP-SOURCE-01",
+      "EP-TIME-01",
+      "EP-VERIFY-01",
+      "EP-VERIFY-02",
+      "EP-VERIFY-03",
+      "EP-WIRE-01"
+    ],
+    "limitation": "Family labels and finite controls do not establish every clause or all-input equivalence"
+  },
+  "independent_implementation": {
+    "files": [
+      {
+        "path": "experiments/equal_policy/independent.py",
+        "bytes": 67890,
+        "sha256": "38db99353bab07e5ed8eb6dc75b6f1f6d38615fc75287bc65c0c9b7a9f5f8e36",
+        "imports": [
+          ".independent_local",
+          ".independent_policy",
+          ".independent_render",
+          ".independent_runtime",
+          ".independent_schema",
+          "__future__",
+          "collections",
+          "datetime",
+          "fractions",
+          "hashlib",
+          "json",
+          "math",
+          "os",
+          "pathlib",
+          "re",
+          "stat",
+          "time"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy/independent_local.py",
+        "bytes": 19704,
+        "sha256": "d37e976e0c253f91c5001b0f9878c6897320d457713a7ea420f88a376b719965",
+        "imports": [
+          ".independent",
+          ".independent_schema",
+          "__future__",
+          "copy",
+          "math",
+          "re",
+          "urllib.parse"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy/independent_policy.py",
+        "bytes": 48252,
+        "sha256": "0f52cd17ffbe06efeed9e6df99ff21d3c1eca5d39ec77190d856d4b6253cdcb6",
+        "imports": [
+          ".independent",
+          ".independent_runtime",
+          "__future__",
+          "copy",
+          "datetime",
+          "hashlib",
+          "math",
+          "os",
+          "pathlib",
+          "re",
+          "stat",
+          "time"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy/independent_render.py",
+        "bytes": 5765,
+        "sha256": "3213a4fbc58e6a73881cd16df3aee432cb2f55e4e113e8775c45cea5d1740135",
+        "imports": [
+          ".independent"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy/independent_runtime.py",
+        "bytes": 4442,
+        "sha256": "7aeec8ff4b3154709cbdc8158669470f507f97ccf37d923f543558e4f77a63d1",
+        "imports": [
+          ".independent",
+          "__future__",
+          "ast",
+          "hashlib",
+          "importlib",
+          "os",
+          "pathlib",
+          "re",
+          "stat"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy/independent_schema.py",
+        "bytes": 10520,
+        "sha256": "66f2c80a0be3c381cfd4ad6e5e7a5a27c55e8597601ea4af1c472b67b317b545",
+        "imports": [
+          "__future__",
+          "copy",
+          "datetime",
+          "math"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy_v2/independent.py",
+        "bytes": 10684,
+        "sha256": "98e37066915bad0729943df22c405082c954b4f9b0c677fb7333239ff89c0bad",
+        "imports": [
+          ".independent_runtime",
+          "equal_policy.independent",
+          "equal_policy.independent_policy",
+          "hashlib",
+          "pathlib",
+          "time"
+        ],
+        "dynamic_execution_calls": []
+      },
+      {
+        "path": "experiments/equal_policy_v2/independent_runtime.py",
+        "bytes": 1711,
+        "sha256": "808ca8431bf5952499a03f17c9e5a797b5eb695572d6f189b00ff39a992ef30e",
+        "imports": [
+          "equal_policy.independent",
+          "equal_policy.independent_runtime"
+        ],
+        "dynamic_execution_calls": []
+      }
+    ],
+    "actual_worker_records_without_product_modules": 654,
+    "limitation": "Code review and recorded runtime imports; not a hostile-code sandbox or independent authorship claim"
+  },
+  "status": "EVIDENCE_CHECKS_PASS_CAUSAL_REVIEW_PENDING",
+  "pending": [
+    "Both version-specific supplemental causal reports and final manual first-reason review",
+    "Final scoped BG02 report/status update after all completion evidence is reviewed"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-052-installed-qualification-attempt01\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\experiments\\equal_policy_v2\\reconstruct.py",
+    "--run",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-v2-patched-20261105-attempt01",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-v2-patched-20261105-attempt01\\INDEPENDENT-RECONSTRUCTION.json"
+  ],
+  "started_at_utc": "2026-11-05T22:33:29.711682+00:00",
+  "finished_at_utc": "2026-11-05T22:34:30.666875+00:00",
+  "wall_seconds": 60.95479300000079,
+  "exit_code": 0,
+  "evaluator_pin": {
+    "sha256": "c104547c4a22f1fcf4f11512074d08ff910b3a3730e37ed9cbe558317d4d9747",
+    "bytes": 29614
+  },
+  "stdout_pin": {
+    "sha256": "19bd23840ef015c7ee81b768a7962fcebd04b898d7078a643b01e8172388174c",
+    "bytes": 1610
+  },
+  "stderr_pin": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "freeze_pin": {
+    "sha256": "3ec7625fa601a517d8e2dd302228f9f465f35e877f79cd1a587a3a63b394a4fc",
+    "bytes": 282558
+  },
+  "primary_analysis_pin": {
+    "sha256": "29c82309809677ff7f831672dfee45b7ffbb8d10fba398b6757a8a65009f96ca",
+    "bytes": 475896
+  },
+  "output_pin": {
+    "sha256": "db43e00ad671c74029a3954a56766a47f0e79085629764815fe895bac2e170c3",
+    "bytes": 1691015
+  },
+  "unique_cases": 109,
+  "terminal_cells": 1308,
+  "totals": {
+    "hash_schema": {
+      "cells": 327,
+      "decision_accept": 288,
+      "decision_correct": 168,
+      "decision_error": 3,
+      "decision_inspect_only": 3,
+      "decision_reject": 33,
+      "false_admission": 156,
+      "fully_conformant": 36,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "independent": {
+      "cells": 327,
+      "decision_accept": 132,
+      "decision_correct": 327,
+      "decision_inspect_only": 3,
+      "decision_reject": 192,
+      "fully_conformant": 327,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "reject_all": {
+      "cells": 327,
+      "decision_correct": 192,
+      "decision_reject": 327,
+      "false_rejection": 132,
+      "fully_conformant": 192,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "tether": {
+      "cells": 327,
+      "decision_accept": 132,
+      "decision_correct": 327,
+      "decision_inspect_only": 3,
+      "decision_reject": 192,
+      "fully_conformant": 327,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    }
+  },
+  "primary_analysis_concordance": {
+    "comparison": "Every cell decision, conformance, mismatch-key set, grouping and total; missing-value sentinel formatting is evaluator-specific",
+    "primary_analysis_pin": {
+      "bytes": 475896,
+      "sha256": "29c82309809677ff7f831672dfee45b7ffbb8d10fba398b6757a8a65009f96ca"
+    },
+    "status": "agrees"
+  }
+}

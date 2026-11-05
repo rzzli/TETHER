@@ -8,6 +8,18 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5, 22:45 UTC checkpoint: BG02 complete in the declared finite exposed
+scope. Sessions3300/87679 both terminal0,1,308cells each; independent
+reconstructions aa6f39df/db43e00a agree on all cells. Original TETHER108/109,
+patched TETHER/independent109/109. EP075 is the only cross-version score change.
+Causal review cc0cd404 resolves the raw EP010 matcher warning by input/code review,
+without changing helper/oracle/results; closure cc1b9773 passes the requirement
+matrix. Patched median import+operation .4290/.2608s and paired ratio1.65 retain
+adverse cost. All previous releases/results/failures remain. Report:
+[[TETHER Equal Policy Comparison Results 2026-11-05]]. Next BG03 SciFact; LAB-Bench,
+Inspect and final audit unfinished. No scientific answering or universal-policy
+claim. Latest peer-method research is additive; runtime and frozen pins unchanged.
+
 November 5, 22:12 UTC: gate54110 is terminal exit0/PASS:2,100 tests, zero failures,
 errors or skips; probes/offline packaging pass; source bracket unchanged (2c6d4288),
 wholegate2192.125s. Final aggregate d966fa3f passes all eight declared scopes;

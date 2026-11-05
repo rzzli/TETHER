@@ -1,0 +1,58 @@
+{
+  "status": "reconstructed",
+  "unique_cases": 109,
+  "terminal_cells": 1308,
+  "totals": {
+    "tether": {
+      "cells": 327,
+      "oracle_accept": 132,
+      "decision_accept": 135,
+      "decision_correct": 324,
+      "fully_conformant": 324,
+      "oracle_reject": 192,
+      "decision_reject": 189,
+      "false_admission": 3,
+      "oracle_inspect_only": 3,
+      "decision_inspect_only": 3
+    },
+    "independent": {
+      "cells": 327,
+      "oracle_accept": 132,
+      "decision_accept": 132,
+      "decision_correct": 327,
+      "fully_conformant": 327,
+      "oracle_reject": 192,
+      "decision_reject": 192,
+      "oracle_inspect_only": 3,
+      "decision_inspect_only": 3
+    },
+    "hash_schema": {
+      "cells": 327,
+      "oracle_accept": 132,
+      "decision_accept": 288,
+      "decision_correct": 168,
+      "fully_conformant": 36,
+      "oracle_reject": 192,
+      "false_admission": 156,
+      "decision_reject": 33,
+      "decision_error": 3,
+      "oracle_inspect_only": 3,
+      "decision_inspect_only": 3
+    },
+    "reject_all": {
+      "cells": 327,
+      "oracle_accept": 132,
+      "decision_reject": 327,
+      "decision_correct": 192,
+      "fully_conformant": 192,
+      "false_rejection": 132,
+      "oracle_reject": 192,
+      "oracle_inspect_only": 3
+    }
+  },
+  "output": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-equal-policy-v2-original-20261105-attempt02\\INDEPENDENT-RECONSTRUCTION.json",
+  "output_pin": {
+    "sha256": "aa6f39df533d65d7a8377e0b5ded5777fc04d7fa64f5f7477d3b4c7fdb69b50f",
+    "bytes": 1690974
+  }
+}

@@ -8,14 +8,15 @@ updated: 2026-11-05
 
 # TETHER project goals
 
-Current November5 execution: the initial equal-policy comparison is complete and
-independently reconstructed, but causal review exposed a masked replay-verification
-defect and corpus issues. BG02 remains open. The0.5.2/0.3.13 correction now passes
-full2,100/facade138 tests, installed qualification and final preservation checks.
-Both corrected109-case corpora are frozen; original-version execution is running.
-The additive research section below describes
-the pre-execution checkpoint; see [[research-log-2026-11-02-benchmark-execution]] for
-current terminal/live records. Native SciFact, LAB-Bench and Inspect remain subsequent.
+Current November5 execution: BG01 and BG02 are complete. The replay correction
+0.5.2/0.3.13 passes the full 2,100-test gate, installed checks and preservation
+aggregation. Both corrected comparisons finish 1,308 cells and independently
+reconstruct. Original TETHER conforms on 108/109 exposed cases; patched TETHER and
+independent each conform on 109/109. Median paired cost ratio is 1.65 against
+TETHER. The original failure and causal flags remain retained. See
+[[TETHER Equal Policy Comparison Results 2026-11-05]]. Next is actual SciFact,
+then one LAB-Bench family, Inspect and the final goal audit. Native scientific
+benchmark performance is not established. Older sections retain dated scope.
 
 ## Current recovery execution
 
@@ -24,8 +25,9 @@ sequential execution goal. [[research-log-2026-11-02-benchmark-execution]] and B
 in TODO are current. BG01 is complete locally: full2020/facade138 tests,
 current installed qualification and742 aggregate evidence checks pass on Windows.
 The three fixes, bounded replacement correction and reviewed profile migrations
-retain all earlier failures and old release bytes. Next, implement and compare an independent equal-policy validator, add and
-evaluate SciFact, add one LAB-Bench task family, and test an Inspect implementation.
+retain all earlier failures and old release bytes. The independent equal-policy
+comparison is now complete. Next, evaluate SciFact, one LAB-Bench task family,
+and an Inspect implementation.
 Earlier recommendation-only/inactive wording below retains its date-specific
 scope; it does not block the new goal. Historical failures/results, retired expert
 inputs, deferred owner facts and the stopped downloader monitor remain unchanged.
@@ -34,8 +36,8 @@ inputs, deferred owner facts and the stopped downloader monitor remain unchanged
 
 [[TETHER benchmark fit and advances]] and
 [[research-log-2026-11-05-benchmark-fit-and-advances]] update benchmark readiness
-and peer-method comparisons without changing the active sequence above. BG02
-remains unscored; actual SciFact and one original LAB-Bench answering task precede
+and peer-method comparisons without changing the active sequence above. At that
+research checkpoint BG02 was unscored; the completed comparison is described above. Actual SciFact and one original LAB-Bench answering task precede
 the policy-equivalent Inspect comparison. ALCE is a later citation-quality route.
 Gated LABBench2, identity/evidence diagnostics and interactive benchmarks are
 conditional additions, not new blockers. Native tasks need a typed study adapter

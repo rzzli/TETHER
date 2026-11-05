@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "status": "RECONSTRUCTED_RESULTS_RETAINED",
+  "run": "data\\benchmark\\tether-equal-policy-v2-patched-20261105-attempt01",
+  "independent_output_pin": {
+    "sha256": "db43e00ad671c74029a3954a56766a47f0e79085629764815fe895bac2e170c3",
+    "bytes": 1691015
+  },
+  "command_record_pin": {
+    "sha256": "fae2ee59c6025078b5105826c1d0efd23dbe89c2dbb5a9084ed2772ea8804a1b",
+    "bytes": 3204
+  },
+  "unique_cases": 109,
+  "repetitions": 3,
+  "terminal_cells": 1308,
+  "integrity": {
+    "bundle_bytes": 4478114,
+    "bundle_directories": 342,
+    "bundle_files": 1966,
+    "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-052-installed-qualification-attempt01\\environment\\Scripts\\python.exe",
+    "qualification": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-052-installed-qualification-attempt01\\QUALIFICATION.json",
+    "qualification_input_files": 51,
+    "qualification_receipts": 3,
+    "runtime_proof_files": 3,
+    "source_files": 103,
+    "versions": {
+      "asof": "0.3.13",
+      "tether": "0.5.2"
+    }
+  },
+  "primary_analysis_concordance": {
+    "comparison": "Every cell decision, conformance, mismatch-key set, grouping and total; missing-value sentinel formatting is evaluator-specific",
+    "primary_analysis_pin": {
+      "bytes": 475896,
+      "sha256": "29c82309809677ff7f831672dfee45b7ffbb8d10fba398b6757a8a65009f96ca"
+    },
+    "status": "agrees"
+  },
+  "totals": {
+    "hash_schema": {
+      "cells": 327,
+      "decision_accept": 288,
+      "decision_correct": 168,
+      "decision_error": 3,
+      "decision_inspect_only": 3,
+      "decision_reject": 33,
+      "false_admission": 156,
+      "fully_conformant": 36,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "independent": {
+      "cells": 327,
+      "decision_accept": 132,
+      "decision_correct": 327,
+      "decision_inspect_only": 3,
+      "decision_reject": 192,
+      "fully_conformant": 327,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "reject_all": {
+      "cells": 327,
+      "decision_correct": 192,
+      "decision_reject": 327,
+      "false_rejection": 132,
+      "fully_conformant": 192,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    },
+    "tether": {
+      "cells": 327,
+      "decision_accept": 132,
+      "decision_correct": 327,
+      "decision_inspect_only": 3,
+      "decision_reject": 192,
+      "fully_conformant": 327,
+      "oracle_accept": 132,
+      "oracle_inspect_only": 3,
+      "oracle_reject": 192
+    }
+  },
+  "unique_case_counts": {
+    "hash_schema": {
+      "cells": 109,
+      "decision_accept": 96,
+      "decision_correct": 56,
+      "decision_error": 1,
+      "decision_inspect_only": 1,
+      "decision_reject": 11,
+      "false_admission": 52,
+      "fully_conformant": 12,
+      "oracle_accept": 44,
+      "oracle_inspect_only": 1,
+      "oracle_reject": 64
+    },
+    "independent": {
+      "cells": 109,
+      "decision_accept": 44,
+      "decision_correct": 109,
+      "decision_inspect_only": 1,
+      "decision_reject": 64,
+      "fully_conformant": 109,
+      "oracle_accept": 44,
+      "oracle_inspect_only": 1,
+      "oracle_reject": 64
+    },
+    "reject_all": {
+      "cells": 109,
+      "decision_correct": 64,
+      "decision_reject": 109,
+      "false_rejection": 44,
+      "fully_conformant": 64,
+      "oracle_accept": 44,
+      "oracle_inspect_only": 1,
+      "oracle_reject": 64
+    },
+    "tether": {
+      "cells": 109,
+      "decision_accept": 44,
+      "decision_correct": 109,
+      "decision_inspect_only": 1,
+      "decision_reject": 64,
+      "fully_conformant": 109,
+      "oracle_accept": 44,
+      "oracle_inspect_only": 1,
+      "oracle_reject": 64
+    }
+  },
+  "all_repetitions_same_observations": {
+    "hash_schema": true,
+    "independent": true,
+    "reject_all": true,
+    "tether": true
+  },
+  "full_implementation_mismatches": [],
+  "resource_summaries": {
+    "hash_schema": {
+      "python_total_wall_seconds": {
+        "maximum": 0.23744510000051378,
+        "median": 0.14660930000081862,
+        "minimum": 0.05564349999986007,
+        "observations": 327,
+        "p95_nearest_rank": 0.20474790000025678,
+        "total": 47.60692110001855,
+        "unavailable": 0
+      },
+      "launcher_wall_seconds": {
+        "maximum": 0.402338900000359,
+        "median": 0.29506169999967824,
+        "minimum": 0.18870830000014394,
+        "observations": 327,
+        "p95_nearest_rank": 0.35714459999962855,
+        "total": 96.54586290000134,
+        "unavailable": 0
+      },
+      "python_total_cpu_seconds": {
+        "maximum": 0.234375,
+        "median": 0.140625,
+        "minimum": 0.046875,
+        "observations": 327,
+        "p95_nearest_rank": 0.1875,
+        "total": 46.046875,
+        "unavailable": 0
+      },
+      "os_process_peak_bytes": {
+        "maximum": 291020800,
+        "median": 89186304,
+        "minimum": 24125440,
+        "observations": 327,
+        "p95_nearest_rank": 290619392,
+        "total": 54115004416,
+        "unavailable": 0
+      },
+      "python_operation_peak_bytes": {
+        "maximum": 269254140,
+        "median": 67876314,
+        "minimum": 748201,
+        "observations": 327,
+        "p95_nearest_rank": 269247262,
+        "total": 47162901367,
+        "unavailable": 0
+      },
+      "retained_scratch_bytes": {
+        "maximum": 0,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 0,
+        "total": 0,
+        "unavailable": 0
+      },
+      "retained_scratch_files": {
+        "maximum": 0,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 0,
+        "total": 0,
+        "unavailable": 0
+      },
+      "logical_input_bytes": {
+        "maximum": 117786,
+        "median": 30917,
+        "minimum": 17005,
+        "observations": 327,
+        "p95_nearest_rank": 81941,
+        "total": 13434342,
+        "unavailable": 0
+      },
+      "logical_input_files": {
+        "maximum": 52,
+        "median": 19,
+        "minimum": 9,
+        "observations": 327,
+        "p95_nearest_rank": 30,
+        "total": 5898,
+        "unavailable": 0
+      }
+    },
+    "independent": {
+      "python_total_wall_seconds": {
+        "maximum": 0.8099444999988918,
+        "median": 0.2607962999991287,
+        "minimum": 0.18040529999962018,
+        "observations": 327,
+        "p95_nearest_rank": 0.5604827999995905,
+        "total": 108.50720580000052,
+        "unavailable": 0
+      },
+      "launcher_wall_seconds": {
+        "maximum": 0.9771458000004714,
+        "median": 0.41773060000014084,
+        "minimum": 0.3320526000006794,
+        "observations": 327,
+        "p95_nearest_rank": 0.7260705999997299,
+        "total": 158.58134840000093,
+        "unavailable": 0
+      },
+      "python_total_cpu_seconds": {
+        "maximum": 0.765625,
+        "median": 0.25,
+        "minimum": 0.140625,
+        "observations": 327,
+        "p95_nearest_rank": 0.546875,
+        "total": 102.015625,
+        "unavailable": 0
+      },
+      "os_process_peak_bytes": {
+        "maximum": 297099264,
+        "median": 94871552,
+        "minimum": 27635712,
+        "observations": 327,
+        "p95_nearest_rank": 296628224,
+        "total": 50227687424,
+        "unavailable": 0
+      },
+      "python_operation_peak_bytes": {
+        "maximum": 272875223,
+        "median": 71307483,
+        "minimum": 4159714,
+        "observations": 327,
+        "p95_nearest_rank": 272743509,
+        "total": 42498148748,
+        "unavailable": 0
+      },
+      "retained_scratch_bytes": {
+        "maximum": 22902,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 19548,
+        "total": 429528,
+        "unavailable": 0
+      },
+      "retained_scratch_files": {
+        "maximum": 13,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 10,
+        "total": 231,
+        "unavailable": 0
+      },
+      "logical_input_bytes": {
+        "maximum": 117786,
+        "median": 30917,
+        "minimum": 17005,
+        "observations": 327,
+        "p95_nearest_rank": 81941,
+        "total": 13434342,
+        "unavailable": 0
+      },
+      "logical_input_files": {
+        "maximum": 52,
+        "median": 19,
+        "minimum": 9,
+        "observations": 327,
+        "p95_nearest_rank": 30,
+        "total": 5898,
+        "unavailable": 0
+      }
+    },
+    "reject_all": {
+      "python_total_wall_seconds": {
+        "maximum": 0.07431980000001204,
+        "median": 0.05643960000088555,
+        "minimum": 0.0535213000002841,
+        "observations": 327,
+        "p95_nearest_rank": 0.0639154000000417,
+        "total": 18.671374400003515,
+        "unavailable": 0
+      },
+      "launcher_wall_seconds": {
+        "maximum": 0.2556563999996797,
+        "median": 0.21172870000009425,
+        "minimum": 0.18771509999987757,
+        "observations": 327,
+        "p95_nearest_rank": 0.23434950000046229,
+        "total": 67.62927619998936,
+        "unavailable": 0
+      },
+      "python_total_cpu_seconds": {
+        "maximum": 0.078125,
+        "median": 0.0625,
+        "minimum": 0.03125,
+        "observations": 327,
+        "p95_nearest_rank": 0.0625,
+        "total": 17.671875,
+        "unavailable": 0
+      },
+      "os_process_peak_bytes": {
+        "maximum": 24977408,
+        "median": 24526848,
+        "minimum": 23580672,
+        "observations": 327,
+        "p95_nearest_rank": 24694784,
+        "total": 8002707456,
+        "unavailable": 0
+      },
+      "python_operation_peak_bytes": {
+        "maximum": 738531,
+        "median": 738336,
+        "minimum": 737449,
+        "observations": 327,
+        "p95_nearest_rank": 738531,
+        "total": 241423350,
+        "unavailable": 0
+      },
+      "retained_scratch_bytes": {
+        "maximum": 0,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 0,
+        "total": 0,
+        "unavailable": 0
+      },
+      "retained_scratch_files": {
+        "maximum": 0,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 0,
+        "total": 0,
+        "unavailable": 0
+      },
+      "logical_input_bytes": {
+        "maximum": 117786,
+        "median": 30917,
+        "minimum": 17005,
+        "observations": 327,
+        "p95_nearest_rank": 81941,
+        "total": 13434342,
+        "unavailable": 0
+      },
+      "logical_input_files": {
+        "maximum": 52,
+        "median": 19,
+        "minimum": 9,
+        "observations": 327,
+        "p95_nearest_rank": 30,
+        "total": 5898,
+        "unavailable": 0
+      }
+    },
+    "tether": {
+      "python_total_wall_seconds": {
+        "maximum": 1.0575466999998753,
+        "median": 0.4290396000005785,
+        "minimum": 0.3055918999989444,
+        "observations": 327,
+        "p95_nearest_rank": 0.771483999999873,
+        "total": 164.3994571000003,
+        "unavailable": 0
+      },
+      "launcher_wall_seconds": {
+        "maximum": 1.2202474999994593,
+        "median": 0.5823580999995102,
+        "minimum": 0.44097770000007586,
+        "observations": 327,
+        "p95_nearest_rank": 0.9310307000005196,
+        "total": 213.5237934000006,
+        "unavailable": 0
+      },
+      "python_total_cpu_seconds": {
+        "maximum": 1.0,
+        "median": 0.40625,
+        "minimum": 0.234375,
+        "observations": 327,
+        "p95_nearest_rank": 0.734375,
+        "total": 154.625,
+        "unavailable": 0
+      },
+      "os_process_peak_bytes": {
+        "maximum": 306663424,
+        "median": 103702528,
+        "minimum": 33419264,
+        "observations": 327,
+        "p95_nearest_rank": 305106944,
+        "total": 54026403840,
+        "unavailable": 0
+      },
+      "python_operation_peak_bytes": {
+        "maximum": 276331720,
+        "median": 74812348,
+        "minimum": 6809510,
+        "observations": 327,
+        "p95_nearest_rank": 275505420,
+        "total": 44670763434,
+        "unavailable": 0
+      },
+      "retained_scratch_bytes": {
+        "maximum": 24945,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 19550,
+        "total": 447939,
+        "unavailable": 0
+      },
+      "retained_scratch_files": {
+        "maximum": 13,
+        "median": 0,
+        "minimum": 0,
+        "observations": 327,
+        "p95_nearest_rank": 10,
+        "total": 231,
+        "unavailable": 0
+      },
+      "logical_input_bytes": {
+        "maximum": 117786,
+        "median": 30917,
+        "minimum": 17005,
+        "observations": 327,
+        "p95_nearest_rank": 81941,
+        "total": 13434342,
+        "unavailable": 0
+      },
+      "logical_input_files": {
+        "maximum": 52,
+        "median": 19,
+        "minimum": 9,
+        "observations": 327,
+        "p95_nearest_rank": 30,
+        "total": 5898,
+        "unavailable": 0
+      }
+    }
+  },
+  "paired_python_import_operation_ratio": {
+    "count": 109,
+    "median": 1.653314178005102,
+    "minimum": 1.1195524974596165,
+    "maximum": 2.0632189757669845
+  },
+  "footprint": {
+    "comparison_infrastructure": {
+      "file_count": 4,
+      "bytes": 71029,
+      "physical_lines": 1189,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 36200,
+          "file_count": 2,
+          "physical_lines": 613
+        },
+        "version_two_delta": {
+          "bytes": 34829,
+          "file_count": 2,
+          "physical_lines": 576
+        }
+      }
+    },
+    "diagnostic_controls": {
+      "file_count": 1,
+      "bytes": 6167,
+      "physical_lines": 123,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 6167,
+          "file_count": 1,
+          "physical_lines": 123
+        }
+      }
+    },
+    "fictional_corpus_construction": {
+      "file_count": 5,
+      "bytes": 71670,
+      "physical_lines": 1057,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 62363,
+          "file_count": 3,
+          "physical_lines": 881
+        },
+        "version_two_delta": {
+          "bytes": 9307,
+          "file_count": 2,
+          "physical_lines": 176
+        }
+      }
+    },
+    "frozen_experiment_tests": {
+      "file_count": 12,
+      "bytes": 135203,
+      "physical_lines": 2313,
+      "by_origin": {
+        "retained_evidence": {
+          "bytes": 11295,
+          "file_count": 1,
+          "physical_lines": 203
+        },
+        "shared_original": {
+          "bytes": 73735,
+          "file_count": 7,
+          "physical_lines": 1225
+        },
+        "version_two_delta": {
+          "bytes": 50173,
+          "file_count": 4,
+          "physical_lines": 885
+        }
+      }
+    },
+    "frozen_protocol_documentation": {
+      "file_count": 69,
+      "bytes": 995731,
+      "physical_lines": 11288,
+      "by_origin": {
+        "retained_evidence": {
+          "bytes": 995731,
+          "file_count": 69,
+          "physical_lines": 11288
+        }
+      }
+    },
+    "independent_validator": {
+      "file_count": 8,
+      "bytes": 168968,
+      "physical_lines": 2642,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 156573,
+          "file_count": 6,
+          "physical_lines": 2470
+        },
+        "version_two_delta": {
+          "bytes": 12395,
+          "file_count": 2,
+          "physical_lines": 172
+        }
+      }
+    },
+    "installed_asof_whole_package": {
+      "file_count": 67,
+      "bytes": 982596,
+      "physical_lines": 22027,
+      "by_origin": {
+        "installed_whole_package": {
+          "bytes": 982596,
+          "file_count": 67,
+          "physical_lines": 22027
+        }
+      }
+    },
+    "installed_tether_whole_package": {
+      "file_count": 18,
+      "bytes": 115734,
+      "physical_lines": 2150,
+      "by_origin": {
+        "installed_whole_package": {
+          "bytes": 115734,
+          "file_count": 18,
+          "physical_lines": 2150
+        }
+      }
+    },
+    "qualification_orchestration": {
+      "file_count": 1,
+      "bytes": 7086,
+      "physical_lines": 122,
+      "by_origin": {
+        "retained_evidence": {
+          "bytes": 7086,
+          "file_count": 1,
+          "physical_lines": 122
+        }
+      }
+    },
+    "reference_adapter": {
+      "file_count": 2,
+      "bytes": 29929,
+      "physical_lines": 533,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 23024,
+          "file_count": 1,
+          "physical_lines": 404
+        },
+        "version_two_delta": {
+          "bytes": 6905,
+          "file_count": 1,
+          "physical_lines": 129
+        }
+      }
+    },
+    "runtime_only_witnesses": {
+      "file_count": 1,
+      "bytes": 10977,
+      "physical_lines": 195,
+      "by_origin": {
+        "shared_original": {
+          "bytes": 10977,
+          "file_count": 1,
+          "physical_lines": 195
+        }
+      }
+    }
+  },
+  "version_pair_conformance_differences": {
+    "original_reconstruction_pin": {
+      "sha256": "aa6f39df533d65d7a8377e0b5ded5777fc04d7fa64f5f7477d3b4c7fdb69b50f",
+      "bytes": 1690974
+    },
+    "cell_count": 3,
+    "differences": [
+      {
+        "cell": "EP075-r1-tether",
+        "before": {
+          "expected_decision": "reject",
+          "observed_decision": "accept",
+          "fully_conformant": false,
+          "observable_mismatches": {}
+        },
+        "after": {
+          "expected_decision": "reject",
+          "observed_decision": "reject",
+          "fully_conformant": true,
+          "observable_mismatches": {}
+        }
+      },
+      {
+        "cell": "EP075-r2-tether",
+        "before": {
+          "expected_decision": "reject",
+          "observed_decision": "accept",
+          "fully_conformant": false,
+          "observable_mismatches": {}
+        },
+        "after": {
+          "expected_decision": "reject",
+          "observed_decision": "reject",
+          "fully_conformant": true,
+          "observable_mismatches": {}
+        }
+      },
+      {
+        "cell": "EP075-r3-tether",
+        "before": {
+          "expected_decision": "reject",
+          "observed_decision": "accept",
+          "fully_conformant": false,
+          "observable_mismatches": {}
+        },
+        "after": {
+          "expected_decision": "reject",
+          "observed_decision": "reject",
+          "fully_conformant": true,
+          "observable_mismatches": {}
+        }
+      }
+    ],
+    "scope": "Matched semantic constructions and same within-run inputs; cross-version native archives differ. This compares policy scores, not an identical-archive speed experiment."
+  },
+  "limitations": [
+    "All cases are artificial, authored with access to repository and policy. No natural fault prevalence or scientific efficacy inference.",
+    "Repetitions are timing/replay observations, not additional independent cases; policy-family denominators overlap.",
+    "An integrity reconstruction does not prove that either implementation fulfills every clause outside tested controls.",
+    "Tracemalloc-instrumented timings include Python allocation instrumentation; fresh worker process startup is separate launcher wall time.",
+    "OS peak memory covers the worker lifetime, including imports; Python allocation peaks omit non-Python allocations.",
+    "Scratch bytes are a postrun retained-file inventory, not cumulative copy/write traffic or an execution-time peak.",
+    "Logical input inventory includes all bundled preparation/control files, not solely bytes consumed by the validator.",
+    "Actual logical read traffic and physical disk/cache behavior are unmeasured.",
+    "Local consistency hashes and pinned environment files are not a signed external attestation of execution or filesystem ownership.",
+    "Line/function counts are descriptive maintenance surface, not cyclomatic complexity or proof of simpler guarantees.",
+    "Frozen experiment tests exclude unpinned tests elsewhere in the repository; qualification logs supply their separate scope.",
+    "This evaluator and its tests are separately pinned and not charged to either implementation.",
+    "Python standard-library implementation bytes and operating-system dependencies are not counted.",
+    "Shared-original modules and version-two wrappers are separately labeled; each distinct file is counted once.",
+    "Helper modules can serve several arms. Classification is an inventory partition, not exclusive runtime or development-cost attribution.",
+    "Whole installed packages include functionality outside this validation endpoint; comparing their LOC with comparator modules does not prove a minimal implementation advantage."
+  ]
+}
