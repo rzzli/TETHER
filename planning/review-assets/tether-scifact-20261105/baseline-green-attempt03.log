@@ -1,0 +1,15 @@
+test_array_tamper_rejected_and_no_overwrite (test_scifact_baseline.BaselineTests.test_array_tamper_rejected_and_no_overwrite) ... ok
+test_duplicate_pairs_and_claims_rejected (test_scifact_baseline.BaselineTests.test_duplicate_pairs_and_claims_rejected) ... ok
+test_invalid_prediction_configuration_rejected (test_scifact_baseline.BaselineTests.test_invalid_prediction_configuration_rejected) ... ok
+test_learns_three_way_document_labels (test_scifact_baseline.BaselineTests.test_learns_three_way_document_labels) ... ok
+test_missing_class_cannot_silently_become_binary_model (test_scifact_baseline.BaselineTests.test_missing_class_cannot_silently_become_binary_model) ... ok
+test_native_nei_is_successful_empty_dictionary (test_scifact_baseline.BaselineTests.test_native_nei_is_successful_empty_dictionary) ... ok
+test_retrieval_vocabulary_never_uses_claims (test_scifact_baseline.BaselineTests.test_retrieval_vocabulary_never_uses_claims) ... ok
+test_serialized_numeric_inference_agrees_with_fit (test_scifact_baseline.BaselineTests.test_serialized_numeric_inference_agrees_with_fit) ... ok
+test_supervision_must_reference_exact_fit_claims_and_corpus (test_scifact_baseline.BaselineTests.test_supervision_must_reference_exact_fit_claims_and_corpus) ... ok
+test_zero_similarity_has_numeric_id_tie_order (test_scifact_baseline.BaselineTests.test_zero_similarity_has_numeric_id_tie_order) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.361s
+
+OK

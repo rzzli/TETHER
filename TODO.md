@@ -29,12 +29,15 @@ The owner now authorizes sequential implementation and evaluation of the recomme
 - [ ] BG05 Implement and test the same obligations within Inspect; measure policy parity, retained execution evidence, cost and implementation complexity.
 - [ ] BG06 Audit all five stages against the full goal, reconcile documentation/memory and retain a final report. No stage is complete merely because a narrower test passes.
 
-BG03 has begun with isolated public-source acquisition: five files totaling
-3,196,330 bytes, including the official data archive and exact SciFact/scorer
-source commits. Original bytes and receipt hashes verify; only archive member
-metadata and selected code/license text have been inspected. Native data parsing,
-field-role projection, fitting/calibration, solver/scorer qualification and actual
-evaluation remain unfinished. See the [acquisition record](planning/review-assets/tether-scifact-20261105/ACQUISITION-20261105.json).
+BG03 now has verified projection and source-disjoint splits: 5,183 abstracts,
+380 fit claims, 82 tune claims, 69 reserved calibration claims and all 300 public
+dev claims. Of 809 original training claims, 278 overlap dev source/claim groups
+and are quarantined. The native scorer, baseline, policy adapter and audited
+worker pass 121 combined fictional component tests, including the watchdog
+failure correction. The CPU environment is qualified.
+Controller integration, complete fictional rehearsal, real fitting/tuning/dev
+execution and independent result reconstruction remain unfinished. No native
+performance score exists. See the [current checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
 
 Current checkpoint: BG01 and BG02 are complete within their declared Windows/offline engineering scopes. The replay correction is locally qualified as TETHER 0.5.2/AsOf 0.3.13 (full gate 2,100 tests, zero failures/errors/skips; separate installed and preservation checks). Both corrected comparisons finished all 1,308 scheduled cells and independently reconstruct. Original TETHER conforms on 108/109 cases because EP075 falsely admits an invalid replay request; patched TETHER and the independent validator conform on 109/109. TETHER's median import-plus-operation time is 0.429 versus 0.261 seconds; median paired ratio 1.65. Causal review explains the retained EP010 message flag without altering raw outputs. All cases are exposed constructions, not scientific tasks. The [completion report](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) and requirement matrix retain evidence and limitations. Next is BG03 actual SciFact, followed by LAB-Bench, Inspect and the final audit. No native benchmark performance is established yet. Historical artifacts, downloader and monitor remain unchanged.
 

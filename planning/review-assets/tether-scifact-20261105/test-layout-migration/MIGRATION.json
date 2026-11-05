@@ -1,0 +1,55 @@
+{
+  "reason": "Separate optional scientific dependency suite from dependency-free core discovery",
+  "old_test_sources_preserved": true,
+  "files": [
+    {
+      "original_path": "tests\\test_scifact_baseline.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_baseline.py",
+      "original_sha256": "b56b92844fa7fe048a93911409a4dfbf078423e07a0eda341c9458211048d4c1",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_baseline.py",
+      "current_sha256": "b56b92844fa7fe048a93911409a4dfbf078423e07a0eda341c9458211048d4c1"
+    },
+    {
+      "original_path": "tests\\test_scifact_data_views.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_data_views.py",
+      "original_sha256": "7617738e6a775ddb24b5b7eeb7d76b23d3d5db27d08db8e31d6b68d46b400086",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_data_views.py",
+      "current_sha256": "7617738e6a775ddb24b5b7eeb7d76b23d3d5db27d08db8e31d6b68d46b400086"
+    },
+    {
+      "original_path": "tests\\test_scifact_policy.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_policy.py",
+      "original_sha256": "beac52ad5d195d8dd7ea1824c02fa24f5141854f6d5605a235957fd2c15767d3",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_policy.py",
+      "current_sha256": "beac52ad5d195d8dd7ea1824c02fa24f5141854f6d5605a235957fd2c15767d3"
+    },
+    {
+      "original_path": "tests\\test_scifact_runtime.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_runtime.py",
+      "original_sha256": "17a2c0c558d7aa5c3605ed42c5ce0910a491c85a940e379a930698185f458e3c",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_runtime.py",
+      "current_sha256": "c609544a3063a12f77a1771ed0b89de7b41d7493dbcb5bb1c50d4aabc7fd2461"
+    },
+    {
+      "original_path": "tests\\test_scifact_scoring.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_scoring.py",
+      "original_sha256": "e5ec6ad340b3ed0f7c3320d2592ccb6b6f3034cc324ccdcb27714893771a0ff4",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_scoring.py",
+      "current_sha256": "032dfe05bba930d1c12a7b69124d0563762485056174f7204f1b7969c3cc2e20"
+    },
+    {
+      "original_path": "tests\\test_scifact_split.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_split.py",
+      "original_sha256": "96ce8a12f6bf893bac76c466eb4442012c273cb1de3c6108750d3d401d22920f",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_split.py",
+      "current_sha256": "96ce8a12f6bf893bac76c466eb4442012c273cb1de3c6108750d3d401d22920f"
+    },
+    {
+      "original_path": "tests\\test_scifact_worker.py",
+      "archived_original": "planning\\review-assets\\tether-scifact-20261105\\test-layout-migration\\test_scifact_worker.py",
+      "original_sha256": "1c1261701a6b1b19bb5ed79c7a47ccf358ec91ba3303fcc8565a9d52ac341450",
+      "current_path": "experiments\\scifact\\tests\\test_scifact_worker.py",
+      "current_sha256": "357c411785cc38471faa83b3fc224a3f66f59c609b68d066e75573f08d2eec40"
+    }
+  ]
+}

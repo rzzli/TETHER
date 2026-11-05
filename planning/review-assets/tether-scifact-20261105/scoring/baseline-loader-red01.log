@@ -1,0 +1,79 @@
+test_array_tamper_rejected_and_no_overwrite (test_scifact_baseline.BaselineTests.test_array_tamper_rejected_and_no_overwrite) ... ok
+test_duplicate_pairs_and_claims_rejected (test_scifact_baseline.BaselineTests.test_duplicate_pairs_and_claims_rejected) ... ok
+test_invalid_prediction_configuration_rejected (test_scifact_baseline.BaselineTests.test_invalid_prediction_configuration_rejected) ... ok
+test_learns_three_way_document_labels (test_scifact_baseline.BaselineTests.test_learns_three_way_document_labels) ... ok
+test_missing_class_cannot_silently_become_binary_model (test_scifact_baseline.BaselineTests.test_missing_class_cannot_silently_become_binary_model) ... ok
+test_native_nei_is_successful_empty_dictionary (test_scifact_baseline.BaselineTests.test_native_nei_is_successful_empty_dictionary) ... ok
+test_numeric_load_uses_hash_verified_capture_despite_disk_replacement (test_scifact_baseline.BaselineTests.test_numeric_load_uses_hash_verified_capture_despite_disk_replacement) ... FAIL
+test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) ... 
+  test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='unexpected_array_key') ... ERROR
+  test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='fractional_column_indices') ... FAIL
+  test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='truncated_data') ... FAIL
+  test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='column_out_of_range') ... FAIL
+test_retrieval_vocabulary_never_uses_claims (test_scifact_baseline.BaselineTests.test_retrieval_vocabulary_never_uses_claims) ... ok
+test_serialized_numeric_inference_agrees_with_fit (test_scifact_baseline.BaselineTests.test_serialized_numeric_inference_agrees_with_fit) ... ok
+test_supervision_must_reference_exact_fit_claims_and_corpus (test_scifact_baseline.BaselineTests.test_supervision_must_reference_exact_fit_claims_and_corpus) ... ok
+test_zero_similarity_has_numeric_id_tie_order (test_scifact_baseline.BaselineTests.test_zero_similarity_has_numeric_id_tie_order) ... ok
+
+======================================================================
+ERROR: test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='unexpected_array_key')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_baseline.py", line 126, in test_numeric_schema_and_csr_structure_are_validated_before_construction
+    load_model(path)
+  File "D:\Projects\drug_target_agents\experiments\scifact\baseline.py", line 251, in load_model
+    index = sparse.csr_matrix((arrays["index_data"], arrays["index_indices"], arrays["index_indptr"]),
+                               ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'index_data'
+
+======================================================================
+FAIL: test_numeric_load_uses_hash_verified_capture_despite_disk_replacement (test_scifact_baseline.BaselineTests.test_numeric_load_uses_hash_verified_capture_despite_disk_replacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_baseline.py", line 100, in test_numeric_load_uses_hash_verified_capture_despite_disk_replacement
+    np.testing.assert_array_equal(loaded.label_coefficients, self.model.label_coefficients)
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\numpy\testing\_private\utils.py", line 1054, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\numpy\testing\_private\utils.py", line 919, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 1 / 432 (0.231%)
+Max absolute difference among violations: 10.
+Max relative difference among violations: inf
+ ACTUAL: array([[10.      ,  0.      ,  0.      ,  0.      ,  0.      ,  0.      ,
+         8.945138,  8.945138,  0.      ,  0.      ,  0.      ,  0.      ,
+         0.      ,  0.      ,  0.      , -4.446406, -4.446406,  0.      ,...
+ DESIRED: array([[ 0.      ,  0.      ,  0.      ,  0.      ,  0.      ,  0.      ,
+         8.945138,  8.945138,  0.      ,  0.      ,  0.      ,  0.      ,
+         0.      ,  0.      ,  0.      , -4.446406, -4.446406,  0.      ,...
+
+======================================================================
+FAIL: test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='fractional_column_indices')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_baseline.py", line 125, in test_numeric_schema_and_csr_structure_are_validated_before_construction
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='truncated_data')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_baseline.py", line 125, in test_numeric_schema_and_csr_structure_are_validated_before_construction
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_numeric_schema_and_csr_structure_are_validated_before_construction (test_scifact_baseline.BaselineTests.test_numeric_schema_and_csr_structure_are_validated_before_construction) (name='column_out_of_range')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_baseline.py", line 125, in test_numeric_schema_and_csr_structure_are_validated_before_construction
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.424s
+
+FAILED (failures=4, errors=1)

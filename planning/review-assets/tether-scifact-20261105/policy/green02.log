@@ -1,0 +1,57 @@
+.F.EE...........
+======================================================================
+ERROR: test_normalized_receipt_tamper_rejected (tests.test_scifact_policy.ContainerTests.test_normalized_receipt_tamper_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_policy.py", line 66, in test_normalized_receipt_tamper_rejected
+    proof=self.admit()
+          ^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tests\test_scifact_policy.py", line 40, in admit
+    return admit_container(self.archive, self.receipt, self.root / "normalized.json",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\tether_adapter.py", line 123, in admit_container
+    need(_date(normalized["completed_at_utc"])<=_date(cutoff),"Container eligibility: available_after_origin")
+                                                ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\tether_adapter.py", line 48, in _date
+    result=decode(datetime,value)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\serde.py", line 138, in decode
+    raise ContractError(f"{location}: expected timezone-aware ISO timestamp")
+asof.serde.ContractError: input: expected timezone-aware ISO timestamp
+
+======================================================================
+ERROR: test_original_event_is_admitted_without_rewriting_transport (tests.test_scifact_policy.ContainerTests.test_original_event_is_admitted_without_rewriting_transport)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_policy.py", line 46, in test_original_event_is_admitted_without_rewriting_transport
+    proof = self.admit()
+            ^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tests\test_scifact_policy.py", line 40, in admit
+    return admit_container(self.archive, self.receipt, self.root / "normalized.json",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\tether_adapter.py", line 123, in admit_container
+    need(_date(normalized["completed_at_utc"])<=_date(cutoff),"Container eligibility: available_after_origin")
+                                                ^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\tether_adapter.py", line 48, in _date
+    result=decode(datetime,value)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\src\asof\serde.py", line 138, in decode
+    raise ContractError(f"{location}: expected timezone-aware ISO timestamp")
+asof.serde.ContractError: input: expected timezone-aware ISO timestamp
+
+======================================================================
+FAIL: test_future_original_rejected (tests.test_scifact_policy.ContainerTests.test_future_original_rejected)
+----------------------------------------------------------------------
+asof.serde.ContractError: input: expected timezone-aware ISO timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_policy.py", line 52, in test_future_original_rejected
+    with self.assertRaisesRegex(ContractError, "after_origin"):
+AssertionError: "after_origin" does not match "input: expected timezone-aware ISO timestamp"
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.225s
+
+FAILED (failures=1, errors=2)

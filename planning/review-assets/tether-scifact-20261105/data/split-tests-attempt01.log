@@ -1,0 +1,14 @@
+test_components_cannot_split_across_internal_partitions (test_scifact_split.SplitTests.test_components_cannot_split_across_internal_partitions) ... ok
+test_duplicate_ids_rejected (test_scifact_split.SplitTests.test_duplicate_ids_rejected) ... ok
+test_evidence_document_edges_included_outside_citations (test_scifact_split.SplitTests.test_evidence_document_edges_included_outside_citations) ... ok
+test_exact_normalized_text_connection (test_scifact_split.SplitTests.test_exact_normalized_text_connection) ... ok
+test_input_order_invariance_and_fixed_proportions (test_scifact_split.SplitTests.test_input_order_invariance_and_fixed_proportions) ... ok
+test_labels_do_not_change_group_assignment (test_scifact_split.SplitTests.test_labels_do_not_change_group_assignment) ... ok
+test_missing_classes_explicitly_reported (test_scifact_split.SplitTests.test_missing_classes_explicitly_reported) ... ok
+test_only_annotated_cited_negatives_constructed (test_scifact_split.SplitTests.test_only_annotated_cited_negatives_constructed) ... ok
+test_source_connection_quarantines_transitively (test_scifact_split.SplitTests.test_source_connection_quarantines_transitively) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+OK

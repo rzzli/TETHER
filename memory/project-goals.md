@@ -18,13 +18,16 @@ TETHER. The original failure and causal flags remain retained. See
 then one LAB-Bench family, Inspect and the final goal audit. Native scientific
 benchmark performance is not established. Older sections retain dated scope.
 
-BG03 preparation has started: official SciFact data bytes and source/scorer
-commits are acquired in a fresh ignored directory, with five originals totaling
-3,196,330 bytes independently rehashed against their receipts. Archive member
-metadata and code/license text have been inspected; no labels were scored, model
-fitted or candidate produced. The native projection/training/evaluation protocol
-is being specified. [[TETHER benchmark priorities and methods]] incorporates the
-new peer comparison without changing the sequential execution order.
+BG03 preparation and component implementation now pass: 5,183 corpus rows;
+380/82/69 fit/tune/reserved-calibration claims after 278 training claims are
+quarantined for overlap with the full 300-claim public dev set. Twelve projected
+products reconstruct from the original archive. The CPU environment and native
+scorer are qualified; 121 fictional component tests pass, including a watchdog
+failure correction. Real fitting/tuning/dev scoring
+have not begun. Controller integration and complete fictional rehearsal are next,
+then actual execution and independent reconstruction. See
+[[research-log-2026-11-05-scifact-components]]. The peer comparison does not
+change the sequential execution order or establish semantic performance.
 
 ## Current recovery execution
 

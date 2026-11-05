@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Projects\drug_target_agents\experiments\scifact\data_views.py", line 320, in <module>
+    main()
+  File "D:\Projects\drug_target_agents\experiments\scifact\data_views.py", line 316, in main
+    print(canonical(prepare_release(args.acquisition, args.output)).decode())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\data_views.py", line 230, in prepare_release
+    loaded = load_archive(archive["path"], archive["sha256"], archive["bytes"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\data_views.py", line 144, in load_archive
+    need(all(_integer(k) and k in corpus for k in cited) and len(set(cited)) == len(cited), "Invalid/duplicate cited document")
+  File "D:\Projects\drug_target_agents\experiments\scifact\data_views.py", line 38, in need
+    raise ContractError(message)
+asof.serde.ContractError: Invalid/duplicate cited document

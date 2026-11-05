@@ -1,0 +1,25 @@
+test_apple_metadata_ignored_without_becoming_product (test_scifact_data_views.DataViewsTests.test_apple_metadata_ignored_without_becoming_product) ... ok
+test_archive_hash_and_length_fail (test_scifact_data_views.DataViewsTests.test_archive_hash_and_length_fail) ... ok
+test_caller_cannot_grant_extra_product_purpose (test_scifact_data_views.DataViewsTests.test_caller_cannot_grant_extra_product_purpose) ... ok
+test_claim_and_source_changes_alter_only_appropriate_public_products (test_scifact_data_views.DataViewsTests.test_claim_and_source_changes_alter_only_appropriate_public_products) ... ok
+test_collision_preserves_first_attempt (test_scifact_data_views.DataViewsTests.test_collision_preserves_first_attempt) ... ok
+test_duplicate_and_link_members_rejected (test_scifact_data_views.DataViewsTests.test_duplicate_and_link_members_rejected) ... ok
+test_duplicate_json_keys_nonfinite_and_blank_rows_rejected (test_scifact_data_views.DataViewsTests.test_duplicate_json_keys_nonfinite_and_blank_rows_rejected) ... ok
+test_duplicate_native_ids_and_boolean_ids_rejected (test_scifact_data_views.DataViewsTests.test_duplicate_native_ids_and_boolean_ids_rejected) ... ok
+test_expanded_size_limit_rejects_without_extracting (test_scifact_data_views.DataViewsTests.test_expanded_size_limit_rejects_without_extracting) ... ok
+test_full_prepare_reconstruct_and_purpose_controls (test_scifact_data_views.DataViewsTests.test_full_prepare_reconstruct_and_purpose_controls) ... ok
+test_label_and_citation_mutations_leave_public_dev_view_unchanged (test_scifact_data_views.DataViewsTests.test_label_and_citation_mutations_leave_public_dev_view_unchanged) ... ok
+test_nested_loaded_mappings_are_immutable (test_scifact_data_views.DataViewsTests.test_nested_loaded_mappings_are_immutable) ... ok
+test_omitted_projector_proof_rejected_even_with_new_anchor (test_scifact_data_views.DataViewsTests.test_omitted_projector_proof_rejected_even_with_new_anchor) ... ok
+test_reanchored_permission_laundering_fails_reprojection (test_scifact_data_views.DataViewsTests.test_reanchored_permission_laundering_fails_reprojection) ... ok
+test_source_change_and_receipt_change_fail (test_scifact_data_views.DataViewsTests.test_source_change_and_receipt_change_fail) ... ok
+test_traversal_absolute_windows_and_unknown_member_rejected (test_scifact_data_views.DataViewsTests.test_traversal_absolute_windows_and_unknown_member_rejected) ... ok
+test_unknown_doc_invalid_sentence_and_conflicting_or_overlapping_rationale_rejected (test_scifact_data_views.DataViewsTests.test_unknown_doc_invalid_sentence_and_conflicting_or_overlapping_rationale_rejected) ... ok
+test_unknown_fields_are_enumerated_and_excluded (test_scifact_data_views.DataViewsTests.test_unknown_fields_are_enumerated_and_excluded) ... ok
+test_valid_projection_retains_text_and_indices_but_no_reference_fields (test_scifact_data_views.DataViewsTests.test_valid_projection_retains_text_and_indices_but_no_reference_fields) ... ok
+test_write_failure_retains_terminal_journal (test_scifact_data_views.DataViewsTests.test_write_failure_retains_terminal_journal) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.072s
+
+OK

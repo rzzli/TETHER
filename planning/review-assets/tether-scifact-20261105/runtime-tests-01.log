@@ -1,0 +1,10 @@
+test_explicit_file_hash_is_required (test_scifact_runtime.RuntimeTests.test_explicit_file_hash_is_required) ... ok
+test_observed_memory_ceiling_stops_worker (test_scifact_runtime.RuntimeTests.test_observed_memory_ceiling_stops_worker) ... ok
+test_resource_schema_has_native_measurements_without_tokens (test_scifact_runtime.RuntimeTests.test_resource_schema_has_native_measurements_without_tokens) ... ok
+test_watchdog_stops_stalled_call_without_completing_it (test_scifact_runtime.RuntimeTests.test_watchdog_stops_stalled_call_without_completing_it) ... ok
+test_worker_denies_undeclared_reference_and_retains_attempt (test_scifact_runtime.RuntimeTests.test_worker_denies_undeclared_reference_and_retains_attempt) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.632s
+
+OK

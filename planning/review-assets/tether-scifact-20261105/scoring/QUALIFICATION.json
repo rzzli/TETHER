@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "PASS_COMPONENT_ONLY",
+  "checked_at_utc": "2026-11-05T23:09:22.839083+00:00",
+  "unit_tests": {
+    "count": 31,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "log": "green04.log"
+  },
+  "official_cli": {
+    "fictional_claims": 7,
+    "native_metrics": 12,
+    "exit_code": 0,
+    "hand_counts_match": true,
+    "failure_placeholder_contrast": true,
+    "record": "qualification-attempt02/VALIDATION.json"
+  },
+  "pins": [
+    {
+      "path": "experiments\\scifact\\native_contract.py",
+      "bytes": 7458,
+      "sha256": "4fe362fc425d10249cdd84b4fba1d3e172f43b862c46e941500ea29db81494e9"
+    },
+    {
+      "path": "experiments\\scifact\\evaluate.py",
+      "bytes": 14365,
+      "sha256": "945c6a9ca1f42d89ada671026178f50dac431a8e77e7b9f9c69652b818909bd8"
+    },
+    {
+      "path": "tests\\test_scifact_scoring.py",
+      "bytes": 15417,
+      "sha256": "e5ec6ad340b3ed0f7c3320d2592ccb6b6f3034cc324ccdcb27714893771a0ff4"
+    },
+    {
+      "path": "planning\\review-assets\\tether-scifact-20261105\\scoring\\qualify_scoring.py",
+      "bytes": 7887,
+      "sha256": "1e89d714ecd3bca51e6cd5646f3b3ed1f48f811f17a5f06874e0612659b940ba"
+    },
+    {
+      "path": "planning\\review-assets\\tether-scifact-20261105\\scoring\\QUALIFICATION.md",
+      "bytes": 5025,
+      "sha256": "069ef279cd06748a21f21599f5a82cff5b69ecea72461caa71f8c9967c527c89"
+    },
+    {
+      "path": "planning\\review-assets\\tether-scifact-20261105\\scoring\\green04.log",
+      "bytes": 5166,
+      "sha256": "22e7cf44c856541bf374f29839b216a6a7df1c6568b0cb6cb01306a316b375c7"
+    },
+    {
+      "path": "planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt02\\VALIDATION.json",
+      "bytes": 3961,
+      "sha256": "9f1e90cd6fcd5ddd50f59c8b4d66510d6339d7877cbbb7e9dbe39b1b1862e14f"
+    },
+    {
+      "path": "data\\reference\\scifact-evaluator-66feffc5\\MATERIALIZED.json",
+      "bytes": 1601,
+      "sha256": "167e8828af56e19bbc5324055e13baa36f0c57e01d8afc103497fc95af95a693"
+    }
+  ],
+  "prior_attempts_preserved": [
+    "red01.log",
+    "green01.log",
+    "green02.log",
+    "green03.log",
+    "citation-metadata-red01.log",
+    "qualification-attempt01"
+  ],
+  "production_reference_access": false,
+  "trained_solver": false,
+  "actual_benchmark_result": false,
+  "remaining": [
+    "scoped policy qualification",
+    "actual source/model/producer qualification",
+    "full scheduled evaluation",
+    "production reconstruction"
+  ]
+}

@@ -1,0 +1,61 @@
+setUpClass (test_scifact_scoring.OfficialScorerQualificationTests) ... ERROR
+test_copy_is_deeply_immutable_and_order_preserved (test_scifact_scoring.PredictionContractTests.test_copy_is_deeply_immutable_and_order_preserved) ... ok
+test_gold_references_validate_order_and_known_metadata (test_scifact_scoring.PredictionContractTests.test_gold_references_validate_order_and_known_metadata) ... ok
+test_gold_rejects_mixed_labels_overlap_empty_and_bad_sentence (test_scifact_scoring.PredictionContractTests.test_gold_rejects_mixed_labels_overlap_empty_and_bad_sentence) ... ok
+test_ids_and_expected_identity (test_scifact_scoring.PredictionContractTests.test_ids_and_expected_identity) ... ok
+test_native_document_ids_and_unknown_documents (test_scifact_scoring.PredictionContractTests.test_native_document_ids_and_unknown_documents) ... ok
+test_native_empty_evidence_and_empty_rationale_are_legal (test_scifact_scoring.PredictionContractTests.test_native_empty_evidence_and_empty_rationale_are_legal) ... ok
+test_only_native_document_fields (test_scifact_scoring.PredictionContractTests.test_only_native_document_fields) ... ok
+test_only_native_prediction_fields (test_scifact_scoring.PredictionContractTests.test_only_native_prediction_fields) ... ok
+test_parser_rejects_duplicate_keys_nonfinite_and_oversize (test_scifact_scoring.PredictionContractTests.test_parser_rejects_duplicate_keys_nonfinite_and_oversize) ... ok
+test_schedule_requires_nonempty_unique_ordered_native_ids (test_scifact_scoring.PredictionContractTests.test_schedule_requires_nonempty_unique_ordered_native_ids) ... ok
+test_semantically_wrong_but_well_formed_labels_are_not_rejected (test_scifact_scoring.PredictionContractTests.test_semantically_wrong_but_well_formed_labels_are_not_rejected) ... ok
+test_sentence_ids (test_scifact_scoring.PredictionContractTests.test_sentence_ids) ... ok
+test_string_key_corpus_and_ambiguous_alias (test_scifact_scoring.PredictionContractTests.test_string_key_corpus_and_ambiguous_alias) ... ok
+
+======================================================================
+ERROR: setUpClass (test_scifact_scoring.OfficialScorerQualificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_scifact_scoring.py", line 153, in setUpClass
+    cls.evaluator = materialize_official_evaluator(ARCHIVE_ROOT, cls.output)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact\evaluate.py", line 84, in materialize_official_evaluator
+    output.mkdir(parents=True, exist_ok=False)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9c598bd9-1854-4eb8-8e8c-abce93fe2c5e}\\AC\\Temp\\tmp0dbvsnpz\\official'
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.006s
+
+FAILED (errors=1)
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 636, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9c598bd9-1854-4eb8-8e8c-abce93fe2c5e}\\AC\\Temp\\tmp0dbvsnpz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\weakref.py", line 666, in _exitfunc
+    f()
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 933, in _cleanup
+    cls._rmtree(name, ignore_errors=ignore_errors)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 929, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\shutil.py", line 638, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 890, in onerror
+    _resetperms(path)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 287, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\tempfile.py", line 278, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zzric\\AppData\\Local\\Packages\\sandbox.{9c598bd9-1854-4eb8-8e8c-abce93fe2c5e}\\AC\\Temp\\tmp0dbvsnpz'

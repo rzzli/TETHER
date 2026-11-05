@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-05T23:14:06.280371+00:00",
+  "scope": "Fictional supervised baseline only; no production data/model fitting",
+  "reviewed_source_sha256": "4af7440bc32e643c272c12f10bd272d67fb0530ace27cad3ed448373a0005fa8",
+  "source_unchanged_during_review": true,
+  "document_probability_parity": {
+    "rows": 4,
+    "values": 12,
+    "atol": 1e-14,
+    "passed": true
+  },
+  "sentence_probability_parity": {
+    "rows": 3,
+    "values": 6,
+    "atol": 1e-14,
+    "passed": true
+  },
+  "checked_array_bytes_preserved_on_path_replacement": true,
+  "finding": "captured_bytes_preserved",
+  "provider_spend_usd": 0
+}

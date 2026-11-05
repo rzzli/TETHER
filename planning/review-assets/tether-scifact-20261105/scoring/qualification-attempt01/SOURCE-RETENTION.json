@@ -1,0 +1,47 @@
+{
+  "status": "all original source hashes matched",
+  "sources": [
+    {
+      "original": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\native_contract.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\experiments\\scifact\\native_contract.py",
+      "sha256": "e3c54bd379f4bff197938ee49d55c9dcda2398bc964889fc9f90e4743018aa0f",
+      "note": "reverse subsequent citation-metadata edit; original recorded hash matched"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\evaluate.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\experiments\\scifact\\evaluate.py",
+      "sha256": "945c6a9ca1f42d89ada671026178f50dac431a8e77e7b9f9c69652b818909bd8",
+      "note": "retained unchanged source"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\tests\\test_scifact_scoring.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\tests\\test_scifact_scoring.py",
+      "sha256": "c8000f861bc73df2ebc578cf913210b88c9b69fbdb8e7a49c2131cc7f12a54c6",
+      "note": "remove subsequently added test and restore original separator; original recorded hash matched"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualify_scoring.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualify_scoring.py",
+      "sha256": "140983adb550a4ec0f3543abe8956d6242b0eb0f3c832360f591f7deadf389b1",
+      "note": "retained unchanged source"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\data\\reference\\scifact-evaluator-66feffc5\\evaluator\\eval.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\data\\reference\\scifact-evaluator-66feffc5\\evaluator\\eval.py",
+      "sha256": "2554fed44c3f5592bdeed59ab0d3918a412b452ba1c77da73ba0f62e74c9987f",
+      "note": "retained unchanged source"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\src\\asof\\serde.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\src\\asof\\serde.py",
+      "sha256": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+      "note": "retained unchanged source"
+    },
+    {
+      "original": "D:\\Projects\\drug_target_agents\\src\\asof\\atomic.py",
+      "snapshot": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\scoring\\qualification-attempt01\\source_snapshots\\src\\asof\\atomic.py",
+      "sha256": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+      "note": "retained unchanged source"
+    }
+  ]
+}

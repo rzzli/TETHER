@@ -1,0 +1,53 @@
+{
+  "status": "PASS_BOUNDED_REVIEW_AFTER_FIX",
+  "checked_at_utc": "2026-11-05T23:14:56.434861+00:00",
+  "pins": [
+    {
+      "path": "experiments/scifact/baseline.py",
+      "bytes": 16233,
+      "sha256": "4af7440bc32e643c272c12f10bd272d67fb0530ace27cad3ed448373a0005fa8"
+    },
+    {
+      "path": "tests/test_scifact_baseline.py",
+      "bytes": 7976,
+      "sha256": "b56b92844fa7fe048a93911409a4dfbf078423e07a0eda341c9458211048d4c1"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/review_baseline.py",
+      "bytes": 3956,
+      "sha256": "bb4c1eaf9c41153e8f215b021d2413e2563a445a7e0e081164ff85f0abc399a3"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/baseline-loader-red01.log",
+      "bytes": 7329,
+      "sha256": "c9847e2e350b9f5e3b555d07f465e954faa8fc757c7239b6ba9f0b555376e201"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/baseline-loader-green01.log",
+      "bytes": 1884,
+      "sha256": "daef3cd6632714eb3045343cbdbfde8197990a81923cac073d3c89942125c60e"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/baseline-peer-attempt01/REVIEW.json",
+      "bytes": 679,
+      "sha256": "ce96281805ab1b8ee9cd519fdd324b614b638cba033ccd6c19a6da772fe03c4b"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/baseline-peer-attempt02/REVIEW.json",
+      "bytes": 651,
+      "sha256": "0659b88dc5f74cab4acdad0964ba55fb0c6d6478f7097c4019d9182777138102"
+    },
+    {
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/BASELINE-PEER-REVIEW.md",
+      "bytes": 2773,
+      "sha256": "7115478c92946ea3eeea15b62e2379ab9f70b0028bca8a86ebde8aefe731e29a"
+    }
+  ],
+  "test_methods": 12,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "numerical_parity_values": 18,
+  "verified_capture_replacement_regression": "passes",
+  "actual_scifact_data_fit": false
+}

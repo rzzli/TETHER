@@ -38,8 +38,11 @@ The [updated peer comparison](<reports/TETHER benchmark priorities and methods.m
 prioritizes native SciFact, one original LAB-Bench task and equal-policy Inspect.
 It distinguishes existing controls from missing semantic answering, selective
 prediction and evidence-use evaluation, and notes Virtual Biotech's overlapping
-audit features. BG03 public inputs are now acquired and byte-verified; native
-parsing, solver qualification and task evaluation are still pending.
+audit features. BG03 has receipt-verified public inputs, source-disjoint data
+products, a qualified native scorer and a small trainable baseline. Its latest
+combined component checkpoint passes 121 fictional tests, including corrected
+watchdog failure handling. Controller integration and real-data
+fitting/evaluation remain unfinished. See the [SciFact checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
