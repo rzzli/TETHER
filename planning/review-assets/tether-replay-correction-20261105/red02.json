@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "FAIL",
+  "created_at_utc": "2026-11-05T21:19:34.064234+00:00",
+  "tests": 25,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "src/asof/agents.py": "d6517766232959f2fc0f9d5d84b3fc181c35774cb4dac32df2d88f99bcc4d2fc",
+    "src/asof/artifacts.py": "bb8027adea7bc2719f24895db9afbe05b44281231ee0a7a3e29592047290cd98",
+    "src/asof/replay_validation.py": "6096f58ba6a9d53f03c519dbe86d9aea1c96a9d208a8e8547f43728b2e93d9b9",
+    "tests/test_replay_archive_verification.py": "7c4b1c7b51b210b84bf4bfbdf90bc9f0365804f1dde52467ec09b83dc972b3c7"
+  },
+  "source_unchanged": true,
+  "log_path": "planning/review-assets/tether-replay-correction-20261105/red02.log",
+  "log_sha256": "80219c3efc85ced8d176ae942a601637fa04ebd40c211bdffba8078c1758cfa5",
+  "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+  "isolated": true,
+  "checker_sha256": "7f792f1c6c17689f62d4374a810e7899f32bf3465994fbad04984ddd9fa439ad",
+  "scope": "Fictional source-tree replay archive regression tests"
+}

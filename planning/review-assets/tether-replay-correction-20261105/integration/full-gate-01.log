@@ -1,0 +1,202 @@
+test_any_arm_and_enrollment_do_not_establish_experimental_dosing (tests.test_advancement_rules.AdvancementRuleTests.test_any_arm_and_enrollment_do_not_establish_experimental_dosing) ... ok
+test_conditional_missing_or_preorigin_bounds_and_late_reports (tests.test_advancement_rules.AdvancementRuleTests.test_conditional_missing_or_preorigin_bounds_and_late_reports) ... ok
+test_contradictory_dates_and_unknown_schema_values_rejected (tests.test_advancement_rules.AdvancementRuleTests.test_contradictory_dates_and_unknown_schema_values_rejected) ... ok
+test_disagreeing_event_claims_are_not_silently_deduplicated (tests.test_advancement_rules.AdvancementRuleTests.test_disagreeing_event_claims_are_not_silently_deduplicated) ... ok
+test_mixed_stage_skipped_phase_and_risk_set_are_explicit_gates (tests.test_advancement_rules.AdvancementRuleTests.test_mixed_stage_skipped_phase_and_risk_set_are_explicit_gates) ... ok
+test_origin_nested_population_and_selected_dose_preserve_narrowing (tests.test_advancement_rules.AdvancementRuleTests.test_origin_nested_population_and_selected_dose_preserve_narrowing) ... ok
+test_policy_changes_and_non_evaluator_role_fail (tests.test_advancement_rules.AdvancementRuleTests.test_policy_changes_and_non_evaluator_role_fail) ... ok
+test_product_partner_new_population_and_unknown_cannot_silently_match (tests.test_advancement_rules.AdvancementRuleTests.test_product_partner_new_population_and_unknown_cannot_silently_match) ... ok
+test_qualified_fixture_does_not_become_training_label (tests.test_advancement_rules.AdvancementRuleTests.test_qualified_fixture_does_not_become_training_label) ... ok
+test_shared_event_count_once_and_split_dependency_retained (tests.test_advancement_rules.AdvancementRuleTests.test_shared_event_count_once_and_split_dependency_retained) ... ok
+test_envelope_resealed_features_still_fail_semantics (tests.test_archive_core.ArchiveCoreTests.test_envelope_resealed_features_still_fail_semantics) ... ok
+test_legacy_keeps_unavailable_semantics (tests.test_archive_core.ArchiveCoreTests.test_legacy_keeps_unavailable_semantics) ... ok
+test_missing_packet_or_ancestor_cannot_fall_back (tests.test_archive_core.ArchiveCoreTests.test_missing_packet_or_ancestor_cannot_fall_back) ... ok
+test_original_files_are_not_opened_by_verifier (tests.test_archive_core.ArchiveCoreTests.test_original_files_are_not_opened_by_verifier) ... ok
+test_receipt_and_code_anchors_are_required (tests.test_archive_core.ArchiveCoreTests.test_receipt_and_code_anchors_are_required) ... ok
+test_unsupported_live_semantic_drift_fails_explicitly (tests.test_archive_core.ArchiveCoreTests.test_unsupported_live_semantic_drift_fails_explicitly) ... ok
+test_v2_replays_sources_features_accounting_after_relocation (tests.test_archive_core.ArchiveCoreTests.test_v2_replays_sources_features_accounting_after_relocation) ... ok
+test_missing_code_inventory_must_not_report_verified (tests.test_archive_core_peer.ArchiveCorePeerTests.test_missing_code_inventory_must_not_report_verified) ... ok
+test_resealed_admission_fingerprint_fails (tests.test_archive_core_peer.ArchiveCorePeerTests.test_resealed_admission_fingerprint_fails) ... ok
+test_resealed_call_accounting_fails_semantics (tests.test_archive_core_peer.ArchiveCorePeerTests.test_resealed_call_accounting_fails_semantics) ... ok
+test_resealed_duplicate_source_proof_fails_inventory (tests.test_archive_core_peer.ArchiveCorePeerTests.test_resealed_duplicate_source_proof_fails_inventory) ... ok
+test_resealed_omitted_parent_proof_fails_inventory (tests.test_archive_core_peer.ArchiveCorePeerTests.test_resealed_omitted_parent_proof_fails_inventory) ... ok
+test_altered_archived_code_and_missing_dependency_fail (tests.test_archive_interpretation.ArchiveInterpretationTests.test_altered_archived_code_and_missing_dependency_fail) ... ok
+test_bounded_recorded_restores_without_tools_import_at_verification (tests.test_archive_interpretation.ArchiveInterpretationTests.test_bounded_recorded_restores_without_tools_import_at_verification) ... ok
+test_failed_run_is_inspected_not_promoted_or_repeated (tests.test_archive_interpretation.ArchiveInterpretationTests.test_failed_run_is_inspected_not_promoted_or_repeated) ... ok
+test_original_root_fallback_is_absent (tests.test_archive_interpretation.ArchiveInterpretationTests.test_original_root_fallback_is_absent) ... ok
+test_recorded_question_restores_and_replays_admission (tests.test_archive_interpretation.ArchiveInterpretationTests.test_recorded_question_restores_and_replays_admission) ... ok
+test_response_identity_and_state_mismatch_fail (tests.test_archive_interpretation.ArchiveInterpretationTests.test_response_identity_and_state_mismatch_fail) ... ok
+test_wrong_external_receipt_anchor_fails (tests.test_archive_interpretation.ArchiveInterpretationTests.test_wrong_external_receipt_anchor_fails) ... ok
+test_concurrent_mutation_is_not_accepted (tests.test_archive_paths.ArchivePathsTests.test_concurrent_mutation_is_not_accepted) ... ok
+test_conflicting_cas_alias_and_bool_size_denied (tests.test_archive_paths.ArchivePathsTests.test_conflicting_cas_alias_and_bool_size_denied) ... ok
+test_declared_spelling_and_immutable_entries (tests.test_archive_paths.ArchivePathsTests.test_declared_spelling_and_immutable_entries) ... ok
+test_duplicate_logical_and_foreign_roots (tests.test_archive_paths.ArchivePathsTests.test_duplicate_logical_and_foreign_roots) ... ok
+test_envelope_anchor_and_caller_roots (tests.test_archive_paths.ArchivePathsTests.test_envelope_anchor_and_caller_roots) ... ok
+test_envelope_rejects_unsupported_versions_duplicate_roots_and_runs (tests.test_archive_paths.ArchivePathsTests.test_envelope_rejects_unsupported_versions_duplicate_roots_and_runs) ... ok
+test_hash_size_missing_and_mutable_input_isolation (tests.test_archive_paths.ArchivePathsTests.test_hash_size_missing_and_mutable_input_isolation) ... ok
+test_layout_only_for_root_and_excluded_missing_nodes (tests.test_archive_paths.ArchivePathsTests.test_layout_only_for_root_and_excluded_missing_nodes) ... ok
+test_layout_reparse_rejected_even_without_registered_file (tests.test_archive_paths.ArchivePathsTests.test_layout_reparse_rejected_even_without_registered_file) ... ok
+test_posix_case_sensitive_and_component_join (tests.test_archive_paths.ArchivePathsTests.test_posix_case_sensitive_and_component_join) ... ok
+test_reparse_denied_without_platform_privileges (tests.test_archive_paths.ArchivePathsTests.test_reparse_denied_without_platform_privileges) ... ok
+test_root_collisions (tests.test_archive_paths.ArchivePathsTests.test_root_collisions) ... ok
+test_same_logical_code_different_run_content (tests.test_archive_paths.ArchivePathsTests.test_same_logical_code_different_run_content) ... ok
+test_unsafe_paths (tests.test_archive_paths.ArchivePathsTests.test_unsafe_paths) ... ok
+test_windows_identity_and_no_original_fallback (tests.test_archive_paths.ArchivePathsTests.test_windows_identity_and_no_original_fallback) ... ok
+test_actual_size_over_limit_rejected_before_open (tests.test_archive_read_limits.ArchiveReadLimitTests.test_actual_size_over_limit_rejected_before_open) ... ok
+test_declared_size_over_limit_rejected_before_open (tests.test_archive_read_limits.ArchiveReadLimitTests.test_declared_size_over_limit_rejected_before_open) ... ok
+test_exact_and_under_limit_preserve_bytes_and_hash_checks (tests.test_archive_read_limits.ArchiveReadLimitTests.test_exact_and_under_limit_preserve_bytes_and_hash_checks) ... ok
+test_growth_between_stat_and_open_rejected_before_read (tests.test_archive_read_limits.ArchiveReadLimitTests.test_growth_between_stat_and_open_rejected_before_read) ... ok
+test_growth_during_read_uses_bounded_request_and_rejects (tests.test_archive_read_limits.ArchiveReadLimitTests.test_growth_during_read_uses_bounded_request_and_rejects) ... ok
+test_raw_verification_and_default_read_are_not_json_capped (tests.test_archive_read_limits.ArchiveReadLimitTests.test_raw_verification_and_default_read_are_not_json_capped) ... ok
+test_zero_limit_accepts_only_empty_bytes_and_invalid_limits_fail (tests.test_archive_read_limits.ArchiveReadLimitTests.test_zero_limit_accepts_only_empty_bytes_and_invalid_limits_fail) ... ok
+test_cli_dispatch_requires_explicit_roots (tests.test_archive_restore.RestoreTests.test_cli_dispatch_requires_explicit_roots) ... ok
+test_concurrent_reservation_allows_one_writer (tests.test_archive_restore.RestoreTests.test_concurrent_reservation_allows_one_writer) ... ok
+test_external_anchor_before_reservation (tests.test_archive_restore.RestoreTests.test_external_anchor_before_reservation) ... ok
+test_hash_failure_retained (tests.test_archive_restore.RestoreTests.test_hash_failure_retained) ... ok
+test_historical_overlay_uses_pinned_supplement (tests.test_archive_restore.RestoreTests.test_historical_overlay_uses_pinned_supplement) ... ok
+test_materialization_preserves_sealed_bytes_and_no_overwrite (tests.test_archive_restore.RestoreTests.test_materialization_preserves_sealed_bytes_and_no_overwrite) ... ok
+test_object_traversal_rejected (tests.test_archive_restore.RestoreTests.test_object_traversal_rejected) ... ok
+test_receipt_requires_independent_anchor (tests.test_archive_restore.RestoreTests.test_receipt_requires_independent_anchor) ... ok
+test_shared_raw_conflicts_rejected (tests.test_archive_restore.RestoreTests.test_shared_raw_conflicts_rejected) ... ok
+test_chain_parses_verified_buffer_even_if_path_changes_after_read (tests.test_archive_review_regressions.ArchiveReviewRegressions.test_chain_parses_verified_buffer_even_if_path_changes_after_read) ... ok
+test_nested_immutable_journal_pin_accepts_matching_bytes (tests.test_archive_review_regressions.ArchiveReviewRegressions.test_nested_immutable_journal_pin_accepts_matching_bytes) ... ok
+test_concurrent_json_publication_has_one_winner (tests.test_atomic_publication.AtomicPublicationTests.test_concurrent_json_publication_has_one_winner) ... ok
+test_directory_initialization_uses_shared_lock (tests.test_atomic_publication.AtomicPublicationTests.test_directory_initialization_uses_shared_lock) ... ok
+test_directory_permission_failure_propagates_without_retry (tests.test_atomic_publication.AtomicPublicationTests.test_directory_permission_failure_propagates_without_retry) ... ok
+test_existing_target_never_changes (tests.test_atomic_publication.AtomicPublicationTests.test_existing_target_never_changes) ... ok
+test_json_without_hardlinks_windows_or_fail_closed_posix (tests.test_atomic_publication.AtomicPublicationTests.test_json_without_hardlinks_windows_or_fail_closed_posix) ... ok
+test_receipt_concurrent_publication_and_conflict (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_concurrent_publication_and_conflict) ... ok
+test_receipt_without_hardlinks_preserves_exact_transport_bytes (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_without_hardlinks_preserves_exact_transport_bytes) ... ok
+test_receipt_write_failure_does_not_update_node (tests.test_atomic_publication.AtomicPublicationTests.test_receipt_write_failure_does_not_update_node) ... ok
+test_unsupported_publication_primitive_fails_closed (tests.test_atomic_publication.AtomicPublicationTests.test_unsupported_publication_primitive_fails_closed) ... ok
+test_write_failure_cleans_temporary_and_keeps_original (tests.test_atomic_publication.AtomicPublicationTests.test_write_failure_cleans_temporary_and_keeps_original) ... ok
+test_malformed_content_and_usage_raise_contract_error (tests.test_backend_hardening.BackendHardeningTests.test_malformed_content_and_usage_raise_contract_error) ... ok
+test_malformed_response_is_retained_and_interruption_not_normalized (tests.test_backend_hardening.BackendHardeningTests.test_malformed_response_is_retained_and_interruption_not_normalized) ... ok
+test_prepare_preflights_escaped_prompt_before_quote_or_dispatch (tests.test_backend_hardening.BackendHardeningTests.test_prepare_preflights_escaped_prompt_before_quote_or_dispatch) ... ok
+test_small_request_large_policy_preserves_exact_payload_and_audit (tests.test_backend_hardening.BackendHardeningTests.test_small_request_large_policy_preserves_exact_payload_and_audit) ... ok
+test_timeout_remains_timeout_and_reservation_is_not_measured (tests.test_backend_hardening.BackendHardeningTests.test_timeout_remains_timeout_and_reservation_is_not_measured) ... ok
+test_url_and_http_errors_normalized_without_retry (tests.test_backend_hardening.BackendHardeningTests.test_url_and_http_errors_normalized_without_retry) ... ok
+test_failed_archive_rejects_changed_response_hash (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_failed_archive_rejects_changed_response_hash) ... ok
+test_failed_archive_rejects_later_dispatch_after_validated_breach (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_failed_archive_rejects_later_dispatch_after_validated_breach) ... ok
+test_failed_archive_rejects_measured_usage_and_violation_tampering (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_failed_archive_rejects_measured_usage_and_violation_tampering) ... ok
+test_failed_archive_rejects_missing_or_extra_account (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_failed_archive_rejects_missing_or_extra_account) ... ok
+test_failed_archive_rejects_quote_downgrade_of_validated_usage (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_failed_archive_rejects_quote_downgrade_of_validated_usage) ... ok
+test_immutable_journal_forms_verify_for_success_failure_and_unknown (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_immutable_journal_forms_verify_for_success_failure_and_unknown) ... ok
+test_malformed_content_or_counts_remain_unknown_estimates (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_malformed_content_or_counts_remain_unknown_estimates) ... ok
+test_normal_usage_is_measured_and_archive_verifies (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_normal_usage_is_measured_and_archive_verifies) ... ok
+test_overquote_exception_carries_validated_usage (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_overquote_exception_carries_validated_usage) ... ok
+test_overquote_reported_usage_survives_and_stops_dispatch (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_overquote_reported_usage_survives_and_stops_dispatch) ... ok
+test_transport_exception_retains_unknown_estimates (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_transport_exception_retains_unknown_estimates) ... ok
+test_unknown_usage_archive_rejects_wrong_quote_and_account_order (tests.test_ce02_usage_accounting.CE02UsageAccountingTests.test_unknown_usage_archive_rejects_wrong_quote_and_account_order) ... ok
+test_frozen_proofs_detect_changes (tests.test_chronology_policy.ChronologyPolicyTests.test_frozen_proofs_detect_changes) ... ok
+test_future_evaluator_or_current_annotation_predictors_rejected (tests.test_chronology_policy.ChronologyPolicyTests.test_future_evaluator_or_current_annotation_predictors_rejected) ... ok
+test_incomplete_gates_and_unearned_lock_or_public_registration_rejected (tests.test_chronology_policy.ChronologyPolicyTests.test_incomplete_gates_and_unearned_lock_or_public_registration_rejected) ... ok
+test_later_contributor_or_missing_reviewer_rejected (tests.test_chronology_policy.ChronologyPolicyTests.test_later_contributor_or_missing_reviewer_rejected) ... ok
+test_mutable_revision_or_later_finetune_rejected (tests.test_chronology_policy.ChronologyPolicyTests.test_mutable_revision_or_later_finetune_rejected) ... ok
+test_timezone_and_order_are_explicit (tests.test_chronology_policy.ChronologyPolicyTests.test_timezone_and_order_are_explicit) ... ok
+test_valid_protocol_does_not_certify_lock_or_science (tests.test_chronology_policy.ChronologyPolicyTests.test_valid_protocol_does_not_certify_lock_or_science) ... ok
+test_completed_and_stopped_never_become_clinical_labels (tests.test_clinical_followup.FollowupTests.test_completed_and_stopped_never_become_clinical_labels) ... ok
+test_future_public_information_rejected_but_planned_dates_preserved (tests.test_clinical_followup.FollowupTests.test_future_public_information_rejected_but_planned_dates_preserved) ... ok
+test_missing_duplicate_and_unselected_records_are_explicit (tests.test_clinical_followup.FollowupTests.test_missing_duplicate_and_unselected_records_are_explicit) ... ok
+test_status_formatting_and_early_results_do_not_invent_events (tests.test_clinical_followup.FollowupTests.test_status_formatting_and_early_results_do_not_invent_events) ... ok
+test_build_requires_unchanged_sealed_extract_and_never_reuses_output (tests.test_clinical_timeline.ClinicalTimelineTests.test_build_requires_unchanged_sealed_extract_and_never_reuses_output) ... ok
+test_later_inputs_duplicates_and_out_of_order_rejected (tests.test_clinical_timeline.ClinicalTimelineTests.test_later_inputs_duplicates_and_out_of_order_rejected) ... ok
+test_missing_observation_does_not_invent_timing_or_censoring (tests.test_clinical_timeline.ClinicalTimelineTests.test_missing_observation_does_not_invent_timing_or_censoring) ... ok
+test_phase_formatting_does_not_become_transition (tests.test_clinical_timeline.ClinicalTimelineTests.test_phase_formatting_does_not_become_transition) ... ok
+test_reversals_and_unknown_are_observations_not_first_events (tests.test_clinical_timeline.ClinicalTimelineTests.test_reversals_and_unknown_are_observations_not_first_events) ... ok
+test_comparison_rejects_scientific_or_source_mutation (tests.test_context_revision.ContextRevisionTests.test_comparison_rejects_scientific_or_source_mutation) ... ok
+test_context_only_conflicts_cannot_be_coalesced (tests.test_context_revision.ContextRevisionTests.test_context_only_conflicts_cannot_be_coalesced) ... ok
+test_dossier_surfaces_relevance_boundary_and_missing_qualifications (tests.test_context_revision.ContextRevisionTests.test_dossier_surfaces_relevance_boundary_and_missing_qualifications) ... ok
+test_null_context_and_case_qualifications_stay_unresolved (tests.test_context_revision.ContextRevisionTests.test_null_context_and_case_qualifications_stay_unresolved) ... ok
+test_oversized_packet_still_fails_without_truncation (tests.test_context_revision.ContextRevisionTests.test_oversized_packet_still_fails_without_truncation) ... ok
+test_passages_and_variant_classifications_preserve_exact_source_context (tests.test_context_revision.ContextRevisionTests.test_passages_and_variant_classifications_preserve_exact_source_context) ... ok
+test_mapping_defaults_are_factories_not_misleading_none (tests.test_contract_diagnostics.ContractDiagnosticsTests.test_mapping_defaults_are_factories_not_misleading_none) ... ok
+test_union_retains_each_branch_diagnostic (tests.test_contract_diagnostics.ContractDiagnosticsTests.test_union_retains_each_branch_diagnostic) ... ok
+test_valid_union_and_strict_mapping_null_stay_unchanged (tests.test_contract_diagnostics.ContractDiagnosticsTests.test_valid_union_and_strict_mapping_null_stay_unchanged) ... ok
+test_ablations_are_separate_explicit_masks_not_model_effects (tests.test_development_comparison.DevelopmentComparisonTests.test_ablations_are_separate_explicit_masks_not_model_effects) ... ok
+test_actual_selection_and_simple_baselines_are_paired (tests.test_development_comparison.DevelopmentComparisonTests.test_actual_selection_and_simple_baselines_are_paired) ... ok
+test_candidate_identity_scope_and_features_checked (tests.test_development_comparison.DevelopmentComparisonTests.test_candidate_identity_scope_and_features_checked) ... ok
+test_duplicate_ids_and_clinical_requests_rejected (tests.test_development_comparison.DevelopmentComparisonTests.test_duplicate_ids_and_clinical_requests_rejected) ... ok
+test_empty_agreement_is_not_one_and_inapplicability_not_zero (tests.test_development_comparison.DevelopmentComparisonTests.test_empty_agreement_is_not_one_and_inapplicability_not_zero) ... ok
+test_full_report_failure_retention_and_output_reservation (tests.test_development_comparison.DevelopmentComparisonTests.test_full_report_failure_retention_and_output_reservation) ... fixture_group fixture: 1 paired requests
+ok
+test_invalid_top_k_and_method_rejected (tests.test_development_comparison.DevelopmentComparisonTests.test_invalid_top_k_and_method_rejected) ... ok
+test_missing_bool_and_nonfinite_scores_abstain (tests.test_development_comparison.DevelopmentComparisonTests.test_missing_bool_and_nonfinite_scores_abstain) ... ok
+test_older_canonical_report_uses_verified_archived_transport (tests.test_development_comparison.DevelopmentComparisonTests.test_older_canonical_report_uses_verified_archived_transport) ... ok
+test_one_candidate_is_uninformative_agreement_not_accuracy (tests.test_development_comparison.DevelopmentComparisonTests.test_one_candidate_is_uninformative_agreement_not_accuracy) ... ok
+test_protocol_caps_budget_and_duplicate_groups_checked (tests.test_development_comparison.DevelopmentComparisonTests.test_protocol_caps_budget_and_duplicate_groups_checked) ... ok
+test_provider_scales_never_silently_merged (tests.test_development_comparison.DevelopmentComparisonTests.test_provider_scales_never_silently_merged) ... ok
+test_request_response_selection_usage_tampering_fails (tests.test_development_comparison.DevelopmentComparisonTests.test_request_response_selection_usage_tampering_fails) ... ok
+test_ties_stable_and_inputs_immutable (tests.test_development_comparison.DevelopmentComparisonTests.test_ties_stable_and_inputs_immutable) ... ok
+test_unknown_duplicate_or_truncated_selections_fail (tests.test_development_comparison.DevelopmentComparisonTests.test_unknown_duplicate_or_truncated_selections_fail) ... ok
+test_concurrent_publication_has_exactly_one_winner (tests.test_download_report_publication.DownloadReportPublicationTests.test_concurrent_publication_has_exactly_one_winner) ... ok
+test_equivalent_and_case_paths_cannot_replace_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_equivalent_and_case_paths_cannot_replace_receipt) ... ok
+test_existing_unrelated_report_is_preserved (tests.test_download_report_publication.DownloadReportPublicationTests.test_existing_unrelated_report_is_preserved) ... ok
+test_failed_validation_still_publishes_complete_failure_report (tests.test_download_report_publication.DownloadReportPublicationTests.test_failed_validation_still_publishes_complete_failure_report) ... ok
+test_fresh_report_succeeds_without_modifying_inputs (tests.test_download_report_publication.DownloadReportPublicationTests.test_fresh_report_succeeds_without_modifying_inputs) ... ok
+test_hard_link_alias_preserves_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_hard_link_alias_preserves_receipt) ... ERROR
+
+Captured test error: test_hard_link_alias_preserves_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_hard_link_alias_preserves_receipt)
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_download_report_publication.py", line 92, in test_hard_link_alias_preserves_receipt
+    os.link(self.receipt, alias)
+PermissionError: [WinError 5] Access is denied: 'D:\\Projects\\drug_target_agents\\data\\cache\\full-gate-01-temp\\tmparspj4hf\\manifests\\receipts\\fictional.json' -> 'D:\\Projects\\drug_target_agents\\data\\cache\\full-gate-01-temp\\tmparspj4hf\\hardlink-report.json'
+
+======================================================================
+ERROR: test_hard_link_alias_preserves_receipt (tests.test_download_report_publication.DownloadReportPublicationTests.test_hard_link_alias_preserves_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_download_report_publication.py", line 92, in test_hard_link_alias_preserves_receipt
+    os.link(self.receipt, alias)
+PermissionError: [WinError 5] Access is denied: 'D:\\Projects\\drug_target_agents\\data\\cache\\full-gate-01-temp\\tmparspj4hf\\manifests\\receipts\\fictional.json' -> 'D:\\Projects\\drug_target_agents\\data\\cache\\full-gate-01-temp\\tmparspj4hf\\hardlink-report.json'
+
+----------------------------------------------------------------------
+Ran 136 tests in 40.889s
+
+FAILED (errors=1)
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tools\validate.py", line 192, in main
+    report['packaging']=package_check(directory)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\tools\validate.py", line 129, in package_check
+    subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['uv', 'build', '--offline', '--build-constraints', 'D:\\Projects\\drug_target_agents\\paper\\release\\build-constraints.txt', '--python', 'D:\\Projects\\drug_target_agents\\data\\cache\\tether-052-dev\\Scripts\\python.exe', '--wheel', '--out-dir', 'D:\\Projects\\drug_target_agents\\data\\cache\\full-gate-01-temp\\asof-validation-lavyo_wk\\dist']' returned non-zero exit status 2.
+F01_t6_future_program: passed=True; error=None
+F02_immutable_evidence: passed=True; error=None
+F03_hypothesis_binding: passed=True; error=None
+F04_provider_failures: passed=True; error=None
+F05_scorer_preflight: passed=True; error=None
+semantic_output_binding: passed=True; error=None
+catalog_policy_archived: passed=True; error=None
+missingness_preserved: passed=True; error=None
+computed_input_eligibility: passed=True; error=None
+legacy_verification: passed=True; error=None
+{
+  "schema_version": 1,
+  "mode": "full",
+  "status": "failed",
+  "stage": "packaging",
+  "structural": {
+    "tracked_scope_files": 8470,
+    "providers": 83,
+    "datasets": 178,
+    "preserved_invalid_python_archives": [
+      "planning/review-assets/recovery-step9-native-recognition-20261028/check_recognition_module_policy_v1_before_syntax.py"
+    ]
+  },
+  "powershell_syntax": true,
+  "tests": {
+    "run": 136,
+    "failures": 0,
+    "errors": 1,
+    "skipped": []
+  },
+  "required_probes_exit_code": 0,
+  "error": {
+    "type": "CalledProcessError",
+    "message": "Command '['uv', 'build', '--offline', '--build-constraints', 'D:\\\\Projects\\\\drug_target_agents\\\\paper\\\\release\\\\build-constraints.txt', '--python', 'D:\\\\Projects\\\\drug_target_agents\\\\data\\\\cache\\\\tether-052-dev\\\\Scripts\\\\python.exe', '--wheel', '--out-dir', 'D:\\\\Projects\\\\drug_target_agents\\\\data\\\\cache\\\\full-gate-01-temp\\\\asof-validation-lavyo_wk\\\\dist']' returned non-zero exit status 2."
+  },
+  "elapsed_seconds": 70.90700000000015
+}

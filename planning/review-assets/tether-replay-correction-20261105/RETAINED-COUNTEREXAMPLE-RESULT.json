@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checked_at_utc": "2026-11-05T21:20:44.370888+00:00",
+  "scope": "Post-hoc source-tree correction check; original scored comparison is unchanged",
+  "original_diagnostic_sha256": "3969181abb780339ae1cdbe35b6b5ef1f9dbc7b40d60768db54935f5b02b5139",
+  "original_diagnostic_unchanged": true,
+  "frozen_checks_before": {
+    "sources_unchanged": true,
+    "bundles_unchanged": true,
+    "bundle_directories_unchanged": true,
+    "oracle_unchanged": true,
+    "trusted_runtime_unchanged": true,
+    "installed_runtime_unchanged": true,
+    "python_unchanged": true
+  },
+  "frozen_checks_after": {
+    "sources_unchanged": true,
+    "bundles_unchanged": true,
+    "bundle_directories_unchanged": true,
+    "oracle_unchanged": true,
+    "trusted_runtime_unchanged": true,
+    "installed_runtime_unchanged": true,
+    "python_unchanged": true
+  },
+  "observed": {
+    "source_inclusive": {
+      "decision": "reject",
+      "error_class": "ContractError",
+      "reason": "Replay response does not match the request fingerprint"
+    },
+    "archived_only": {
+      "decision": "reject",
+      "error_class": "ContractError",
+      "reason": "Replay response does not match the request fingerprint"
+    }
+  },
+  "source_sha256": {
+    "src/asof/agents.py": "d6517766232959f2fc0f9d5d84b3fc181c35774cb4dac32df2d88f99bcc4d2fc",
+    "src/asof/artifacts.py": "bb8027adea7bc2719f24895db9afbe05b44281231ee0a7a3e29592047290cd98",
+    "src/asof/replay_validation.py": "9ac7442fe07d5d82c6516d2e2bc214d68354c8e2e1e216ed40dc872cb5c45905"
+  },
+  "checker_sha256": "05a131f221a47afca76e5a105bed300029b9d54b7f04a8006d66e727c3d6566b",
+  "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+  "isolated": true
+}

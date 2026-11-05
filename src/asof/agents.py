@@ -108,6 +108,18 @@ class ReplayDocument(Frozen):
     responses: Mapping[str, tuple[ReplayEntry, ...]]
 
 
+def replay_selection(responses, category: str, index: int, request_sha256: str) -> Selection:
+    """Resolve one immutable replay entry without dispatch or cursor mutation."""
+    entries = responses.get(category, ())
+    if index >= len(entries):
+        raise ContractError(f"No recorded response for {category} attempt {index + 1}")
+    entry = entries[index]
+    if entry.request_sha256 != request_sha256:
+        raise ContractError("Replay response does not match the request fingerprint")
+    entry.selection.usage.validate()
+    return entry.selection
+
+
 class ReplayBackend:
     """Explicit test/development backend; never makes a model-provider request."""
 
@@ -124,15 +136,7 @@ class ReplayBackend:
     def _next(self, request: SpecialistRequest) -> Selection:
         key = request.category.value
         index = self.indices.get(key, 0)
-        responses = self.responses.get(key, ())
-        if index >= len(responses):
-            raise ContractError(f"No recorded response for {key} attempt {index + 1}")
-        entry = responses[index]
-        if entry.request_sha256 != fingerprint(request):
-            raise ContractError("Replay response does not match the request fingerprint")
-        result = entry.selection
-        result.usage.validate()
-        return result
+        return replay_selection(self.responses, key, index, fingerprint(request))
 
     def quote(self, request: SpecialistRequest) -> Usage:
         return self._next(request).usage

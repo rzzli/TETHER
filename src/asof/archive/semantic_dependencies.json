@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "policy": "v0.2-compatibility-20261026",
-  "executing_build_profile": "tether-ce-corrections-0.3.12-atomic-retry-20261102",
-  "previous_resource_sha256": "27282ad12814df284cb9a81c25f935f0c47177ead845c9e831bc687c64d85e59",
-  "scope": "Second unpublished 0.3.12 candidate profile: bounded atomic JSON replacement retry for native Windows errors 5/32/33 and preservation of primary failures on cleanup. Serialization, canonical fingerprints, admission policy, archive Python and prior artifacts are unchanged. Earlier qualification records describe only their retained source bytes.",
-  "compatibility_review": "planning/review-assets/tether-ce-fixes-20261102/archive-profile-v2/REVIEW.md",
+  "executing_build_profile": "tether-replay-correction-0.3.13-20261105",
+  "previous_resource_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
+  "scope": "Reviewed executing dependency migration for live archived-v2 replay validation. The archive Python and frozen v0.2 compatibility policy remain unchanged; historical archive verification does not gain the new live replay guarantee. Original source/data/receipt bytes are preserved.",
+  "compatibility_review": "planning/review-assets/tether-replay-correction-20261105/archive-profile/REVIEW.md",
   "modules": {
-    "__init__.py": "d315a82efe204650f93ac5d79c68d3349e3d19002f62d13948f1a1a05ea8fff7",
+    "__init__.py": "973c597ba50a51d44f8b0017b7440410e462e835d4df94d873f4141817f7fcb6",
     "__main__.py": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
-    "agents.py": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
-    "artifacts.py": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+    "agents.py": "d6517766232959f2fc0f9d5d84b3fc181c35774cb4dac32df2d88f99bcc4d2fc",
+    "artifacts.py": "bb8027adea7bc2719f24895db9afbe05b44281231ee0a7a3e29592047290cd98",
     "atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
     "chrono.py": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
     "cli.py": "ad2f44a43387c884b2af9547a246322e751e0ae1ebcc3f0506baeed5788ff5f0",
@@ -27,6 +27,7 @@
     "semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
     "serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
     "wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
-    "workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6"
+    "workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6",
+    "replay_validation.py": "9ac7442fe07d5d82c6516d2e2bc214d68354c8e2e1e216ed40dc872cb5c45905"
   }
 }

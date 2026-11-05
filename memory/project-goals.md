@@ -3,10 +3,18 @@ name: project-goals
 description: Current TETHER implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-11-02
+updated: 2026-11-05
 ---
 
 # TETHER project goals
+
+Current November5 execution: the initial equal-policy comparison is complete and
+independently reconstructed, but causal review exposed a masked replay-verification
+defect and corpus issues. BG02 remains open. Candidate0.5.2/0.3.13 correction has
+focused/archive/installed-wheel qualification; full and facade gates plus a corrected
+109-case comparison are in progress. The additive research section below describes
+the pre-execution checkpoint; see [[research-log-2026-11-02-benchmark-execution]] for
+current terminal/live records. Native SciFact, LAB-Bench and Inspect remain subsequent.
 
 ## Current recovery execution
 

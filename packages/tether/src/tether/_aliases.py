@@ -19,7 +19,7 @@ _LEGACY_MODULES = frozenset((
     "agents", "archive", "archive.core", "archive.interpretation", "archive.paths",
     "archive.restore", "artifacts", "atomic", "chrono", "contracts", "evaluation",
     "features", "ingest", "journal", "ledger", "local_model", "maintenance",
-    "provenance", "retrieval", "scorer", "semantics", "serde", "wire", "workflow",
+    "provenance", "replay_validation", "retrieval", "scorer", "semantics", "serde", "wire", "workflow",
     "study", "study.authority_four_arm", "study.baseline_smoke", "study.baselines",
     "study.collected_source", "study.diagnostic", "study.diagnostic_codec",
     "study.diagnostic_resources", "study.fixed_evidence", "study.fixed_evidence_smoke",

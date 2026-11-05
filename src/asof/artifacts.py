@@ -129,6 +129,9 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
         verify_backend_execution(read_json(output / 'backend-execution.json'), encode(result.trace), encode(result.configuration))
         verify_retrieval_trace(result.case, store, encode(result.trace),
             RetrievalPolicy(**result.configuration['backend_provenance']['config']['retrieval']))
+    elif result.backend_id == 'recorded-selection-replay-v1':
+        from .replay_validation import verify_replay_archive
+        verify_replay_archive(result.case, result.configuration, result.trace, store)
     if journal is None:
         output.mkdir(parents=True, exist_ok=False)
     elif output.resolve() != journal.output or fingerprint(journal.events) != fingerprint(result.trace):
@@ -188,6 +191,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
         raise ContractError("Externally anchored receipt hash mismatch")
     receipt = read_json(receipt_path)
     legacy = receipt.get("schema_version") == 1
+    replay_binding = None
     if receipt.get("schema_version") not in (1, 2) or set(receipt.get("outputs", {})) != set(LEGACY_RUN_FILES if legacy else RUN_FILES):
         raise ContractError("Invalid run receipt or incomplete output set")
     for relative, expected in receipt["outputs"].items():
@@ -235,6 +239,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             raise ContractError("Semantic run input fingerprint mismatch")
         admitted = receipt["admitted_fingerprints"]
         _check_source_inventory(snapshot, case, Path(inputs["snapshot_base"]), inputs["catalog_policy"], receipt["sources"])
+        restored = None
         if verify_sources:
             try:
                 restored = admit_snapshot(snapshot, case, Path(inputs["snapshot_base"]), inputs["catalog_policy"])
@@ -263,10 +268,13 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                         decode(Prediction, read_json(output / "prediction.json")), run["coverage"],
                         inputs["configuration"], run["status"], model, admitted, inputs["catalog_policy"],
                         inputs["snapshot_base"], trace)
+        if run['backend_id'] == 'recorded-selection-replay-v1':
+            from .replay_validation import verify_replay_archive
+            replay_binding = verify_replay_archive(case, inputs['configuration'], trace, restored)
     code_root = Path(__file__).parent
     current_code = {path.relative_to(code_root).as_posix(): sha256_file(path)
                     for path in sorted(code_root.glob("*.py") if legacy else code_root.rglob("*.py"))}
-    return {"status": "integrity_verified", "outputs": len(LEGACY_RUN_FILES if legacy else RUN_FILES),
+    result = {"status": "integrity_verified", "outputs": len(LEGACY_RUN_FILES if legacy else RUN_FILES),
             "source_artifacts_checked": len(receipt["sources"]) if verify_sources else 0,
             "trace_events": count, "receipt_sha256": sha256_file(receipt_path),
             "external_anchor_checked": expected_receipt_sha256 is not None,
@@ -276,4 +284,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             "semantic_consistency": "unavailable_legacy_v1" if legacy else "verified",
             "source_binding": "current_originals" if verify_sources else "archived_fingerprints_only",
             "scientific_validity": "not_established"}
+    if replay_binding is not None:
+        result['replay_binding'] = replay_binding
+    return result
 

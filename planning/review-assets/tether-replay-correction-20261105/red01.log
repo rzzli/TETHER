@@ -1,0 +1,130 @@
+test_archived_only_still_checks_replay_against_dispatch (test_replay_archive_verification.ReplayArchiveVerificationTests.test_archived_only_still_checks_replay_against_dispatch) ... FAIL
+test_archived_only_verification_does_not_read_originals_or_overstate_binding (test_replay_archive_verification.ReplayArchiveVerificationTests.test_archived_only_verification_does_not_read_originals_or_overstate_binding) ... ERROR
+test_bad_request_can_legitimately_fail_quote (test_replay_archive_verification.ReplayArchiveVerificationTests.test_bad_request_can_legitimately_fail_quote) ... ok
+test_changed_recorded_selection_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_changed_recorded_selection_rejected) ... FAIL
+test_changed_recorded_usage_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_changed_recorded_usage_rejected) ... FAIL
+test_invalid_retained_replay_rejected_before_new_artifact_publication (test_replay_archive_verification.ReplayArchiveVerificationTests.test_invalid_retained_replay_rejected_before_new_artifact_publication) ... FAIL
+test_legacy_v1_receipt_scope_is_unchanged (test_replay_archive_verification.ReplayArchiveVerificationTests.test_legacy_v1_receipt_scope_is_unchanged) ... ok
+test_malformed_document_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_malformed_document_rejected) ... FAIL
+test_matching_fabricated_dispatch_and_entry_still_need_source_request (test_replay_archive_verification.ReplayArchiveVerificationTests.test_matching_fabricated_dispatch_and_entry_still_need_source_request) ... FAIL
+test_missing_consumed_role_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_missing_consumed_role_rejected) ... FAIL
+test_missing_provenance_document_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_missing_provenance_document_rejected) ... FAIL
+test_missing_role_can_legitimately_fail_quote_without_dispatch (test_replay_archive_verification.ReplayArchiveVerificationTests.test_missing_role_can_legitimately_fail_quote_without_dispatch) ... ok
+test_reordered_retry_entries_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_reordered_retry_entries_rejected) ... FAIL
+test_retry_uses_feedback_and_next_entry_in_order (test_replay_archive_verification.ReplayArchiveVerificationTests.test_retry_uses_feedback_and_next_entry_in_order) ... ok
+test_unused_extra_role_and_entries_remain_permitted (test_replay_archive_verification.ReplayArchiveVerificationTests.test_unused_extra_role_and_entries_remain_permitted) ... ok
+test_valid_archive_needs_no_original_replay_path_or_backend_calls (test_replay_archive_verification.ReplayArchiveVerificationTests.test_valid_archive_needs_no_original_replay_path_or_backend_calls) ... ERROR
+test_wrong_replay_schema_rejected_even_for_zero_calls (test_replay_archive_verification.ReplayArchiveVerificationTests.test_wrong_replay_schema_rejected_even_for_zero_calls) ... FAIL
+test_wrong_retained_request_fingerprint_rejected_after_consistent_reseal (test_replay_archive_verification.ReplayArchiveVerificationTests.test_wrong_retained_request_fingerprint_rejected_after_consistent_reseal) ... FAIL
+test_zero_call_budget_is_valid_with_unused_replay_responses (test_replay_archive_verification.ReplayArchiveVerificationTests.test_zero_call_budget_is_valid_with_unused_replay_responses) ... ok
+
+======================================================================
+ERROR: test_archived_only_verification_does_not_read_originals_or_overstate_binding (test_replay_archive_verification.ReplayArchiveVerificationTests.test_archived_only_verification_does_not_read_originals_or_overstate_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 187, in test_archived_only_verification_does_not_read_originals_or_overstate_binding
+    self.assertEqual(check['replay_binding']['request_binding'], 'archived_dispatch_fingerprints')
+                     ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'replay_binding'
+
+======================================================================
+ERROR: test_valid_archive_needs_no_original_replay_path_or_backend_calls (test_replay_archive_verification.ReplayArchiveVerificationTests.test_valid_archive_needs_no_original_replay_path_or_backend_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 82, in test_valid_archive_needs_no_original_replay_path_or_backend_calls
+    self.assertEqual(check['replay_binding']['request_binding'], 'source_reconstructed')
+                     ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'replay_binding'
+
+======================================================================
+FAIL: test_archived_only_still_checks_replay_against_dispatch (test_replay_archive_verification.ReplayArchiveVerificationTests.test_archived_only_still_checks_replay_against_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 192, in test_archived_only_still_checks_replay_against_dispatch
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_changed_recorded_selection_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_changed_recorded_selection_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 101, in test_changed_recorded_selection_rejected
+    with self.assertRaisesRegex(ContractError, '[Rr]eplay'):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_changed_recorded_usage_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_changed_recorded_usage_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 107, in test_changed_recorded_usage_rejected
+    with self.assertRaisesRegex(ContractError, '[Rr]eplay'):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_invalid_retained_replay_rejected_before_new_artifact_publication (test_replay_archive_verification.ReplayArchiveVerificationTests.test_invalid_retained_replay_rejected_before_new_artifact_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 203, in test_invalid_retained_replay_rejected_before_new_artifact_publication
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_malformed_document_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_malformed_document_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 119, in test_malformed_document_rejected
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_matching_fabricated_dispatch_and_entry_still_need_source_request (test_replay_archive_verification.ReplayArchiveVerificationTests.test_matching_fabricated_dispatch_and_entry_still_need_source_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 95, in test_matching_fabricated_dispatch_and_entry_still_need_source_request
+    with self.assertRaisesRegex(ContractError, '[Rr]eplay|request fingerprint'):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_missing_consumed_role_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_missing_consumed_role_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 113, in test_missing_consumed_role_rejected
+    with self.assertRaisesRegex(ContractError, '[Rr]eplay|recorded response'):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_missing_provenance_document_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_missing_provenance_document_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 131, in test_missing_provenance_document_rejected
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_reordered_retry_entries_rejected (test_replay_archive_verification.ReplayArchiveVerificationTests.test_reordered_retry_entries_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 179, in test_reordered_retry_entries_rejected
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_wrong_replay_schema_rejected_even_for_zero_calls (test_replay_archive_verification.ReplayArchiveVerificationTests.test_wrong_replay_schema_rejected_even_for_zero_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 125, in test_wrong_replay_schema_rejected_even_for_zero_calls
+    with self.assertRaises(ContractError):
+AssertionError: ContractError not raised
+
+======================================================================
+FAIL: test_wrong_retained_request_fingerprint_rejected_after_consistent_reseal (test_replay_archive_verification.ReplayArchiveVerificationTests.test_wrong_retained_request_fingerprint_rejected_after_consistent_reseal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\tests\test_replay_archive_verification.py", line 87, in test_wrong_retained_request_fingerprint_rejected_after_consistent_reseal
+    with self.assertRaisesRegex(ContractError, '[Rr]eplay|request fingerprint'):
+AssertionError: ContractError not raised
+
+----------------------------------------------------------------------
+Ran 19 tests in 8.287s
+
+FAILED (failures=11, errors=2)

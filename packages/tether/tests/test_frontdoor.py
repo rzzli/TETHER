@@ -80,14 +80,14 @@ class FrontDoorTests(unittest.TestCase):
     def test_distribution_and_license_are_separate_from_legacy_core(self):
         project = tomllib.loads((PROJECT / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-agents")
-        self.assertEqual(project["project"]["version"], "0.5.1")
-        self.assertEqual(project["project"]["dependencies"], ["asof-target-agents==0.3.12"])
+        self.assertEqual(project["project"]["version"], "0.5.2")
+        self.assertEqual(project["project"]["dependencies"], ["asof-target-agents==0.3.13"])
         self.assertEqual(project["project"]["optional-dependencies"]["ingest"], ["pyarrow==21.0.0"])
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"], ["tether", "tether.*"])
         self.assertEqual((PROJECT / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
     def test_help_version_and_legacy_parser_are_independent(self):
-        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.5.1"),
+        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.5.2"),
                                (["run", "--help"], "usage: tether run")]:
             stream = io.StringIO()
             with redirect_stdout(stream), self.assertRaises(SystemExit) as stop:

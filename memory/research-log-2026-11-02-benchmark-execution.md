@@ -8,6 +8,16 @@ updated: 2026-11-05
 
 # Authorized benchmark execution
 
+November 5, 21:34 UTC correction checkpoint: candidate AsOf0.3.13/TETHER0.5.2
+passes25 focused replay and52 archive tests plus fresh isolated two-wheel/14-command
+qualification (7486fc50). Full gate01 retains a sandbox hard-link/packaging failure;
+gate02 aborted before dispatch on a preserved historical temp-directory collision.
+Unique tether052-full-gate-03 is running as session54110; poll rather than restart.
+Facade and installed replay controls are separate. Original runtime/corpus remain
+intact. Corrected109-case preparation01 is unscored; missing qualification closure
+requires a corrected runner and fresh preparation before freeze. BG02 remains open.
+See planning/review-assets/tether-replay-correction-20261105/STATUS.md.
+
 November 5 executed-comparison checkpoint: session47997 exited0 with all1296cells
 and unchanged frozen inputs/code/runtime. Independent reconstruction agrees with
 all primary decisions, observables and counts. Both full implementations match

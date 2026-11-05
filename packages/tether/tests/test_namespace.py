@@ -25,9 +25,9 @@ class NamespaceTests(unittest.TestCase):
     def test_public_and_engine_versions_are_separate(self):
         import tether
         import asof
-        self.assertEqual(tether.__version__, "0.5.1")
-        self.assertEqual(tether.__core_version__, "0.3.12")
-        self.assertEqual(asof.__version__, "0.3.12")
+        self.assertEqual(tether.__version__, "0.5.2")
+        self.assertEqual(tether.__core_version__, "0.3.13")
+        self.assertEqual(asof.__version__, "0.3.13")
 
     def test_import_orders_preserve_modules_classes_and_metadata(self):
         script = r'''
