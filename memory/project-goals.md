@@ -21,6 +21,22 @@ Earlier recommendation-only/inactive wording below retains its date-specific
 scope; it does not block the new goal. Historical failures/results, retired expert
 inputs, deferred owner facts and the stopped downloader monitor remain unchanged.
 
+### Additive peer-method review — 5 November 2026
+
+[[TETHER benchmark fit and advances]] and
+[[research-log-2026-11-05-benchmark-fit-and-advances]] update benchmark readiness
+and peer-method comparisons without changing the active sequence above. BG02
+remains unscored; actual SciFact and one original LAB-Bench answering task precede
+the policy-equivalent Inspect comparison. ALCE is a later citation-quality route.
+Gated LABBench2, identity/evidence diagnostics and interactive benchmarks are
+conditional additions, not new blockers. Native tasks need a typed study adapter
+and capable producer; replaying gold outputs does not establish answering skill.
+Existing provenance, hypothesis/date gates, bounded retrieval, declared dependence,
+source isolation, masks, caches and failure accounting are retained strengths.
+New evaluation targets are semantic support, useful-answer risk/coverage, matched
+cost and justified repeated-trial denominators. No new experiment, provider spend,
+external-expert input or runtime/result change was made by this research review.
+
 The benchmark/method review is complete; see [[TETHER benchmarks and methodological advances]]
 and [[research-log-2026-11-02-benchmarks-and-methods]]. Proposed next research is an
 independent equal-policy conformance comparison, followed by SciFact and one

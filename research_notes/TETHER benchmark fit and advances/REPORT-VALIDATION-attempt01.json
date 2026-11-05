@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "checker_corrected",
+  "report_pin": {
+    "path": "reports/TETHER benchmark fit and advances.md",
+    "sha256": "8c9b5235166b833b8793aa9af5b760800f2a6bd6283e311094bcbbf7dce4daa3",
+    "bytes": 25377
+  },
+  "failure": "Initial documentation checker counted table separator cells rather than separator rows; report correctly contains two tables",
+  "initial_separator_cell_count": 4,
+  "corrected_separator_row_count": 2,
+  "report_changed_to_satisfy_check": false
+}
