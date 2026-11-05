@@ -1,0 +1,10 @@
+test_native_core_scored_and_recorded_are_source_verified (__main__.NativeIndependentIntegration.test_native_core_scored_and_recorded_are_source_verified) ... ok
+test_native_schema1_and_schema2_outer_verify_complete_bindings (__main__.NativeIndependentIntegration.test_native_schema1_and_schema2_outer_verify_complete_bindings) ... ok
+test_native_unresolved_dispatch_is_inspection_only (__main__.NativeIndependentIntegration.test_native_unresolved_dispatch_is_inspection_only) ... ok
+test_policy_preflight_copies_native_inputs_without_dispatch (__main__.NativeIndependentIntegration.test_policy_preflight_copies_native_inputs_without_dispatch) ... ok
+test_resealed_native_control_projection_and_dossier_mutations_reject (__main__.NativeIndependentIntegration.test_resealed_native_control_projection_and_dossier_mutations_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 13.109s
+
+OK

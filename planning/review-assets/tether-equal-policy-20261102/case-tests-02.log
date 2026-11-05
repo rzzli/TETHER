@@ -1,0 +1,22 @@
+test_base_has_complete_fictional_lineage_and_sealed_bytes (experiments.equal_policy.test_cases.CorpusTests.test_base_has_complete_fictional_lineage_and_sealed_bytes) ... ok
+test_case_module_does_not_import_validators_or_test_fixtures (experiments.equal_policy.test_cases.CorpusTests.test_case_module_does_not_import_validators_or_test_fixtures) ... ok
+test_complete_unique_schedule_and_obligation_coverage (experiments.equal_policy.test_cases.CorpusTests.test_complete_unique_schedule_and_obligation_coverage) ... ok
+test_dependency_constructions_are_distinct (experiments.equal_policy.test_cases.CorpusTests.test_dependency_constructions_are_distinct) ... ok
+test_descriptor_excludes_oracle_and_reports_pending_recipes (experiments.equal_policy.test_cases.CorpusTests.test_descriptor_excludes_oracle_and_reports_pending_recipes) ... ok
+test_file_faults_preserve_stale_pins_and_never_escape_fresh_root (experiments.equal_policy.test_cases.CorpusTests.test_file_faults_preserve_stale_pins_and_never_escape_fresh_root) ... ok
+test_hash_scope_preserves_incompatible_hypothesis_control (experiments.equal_policy.test_cases.CorpusTests.test_hash_scope_preserves_incompatible_hypothesis_control) ... ok
+test_local_configuration_and_runtime_witnesses_are_explicit_fictions (experiments.equal_policy.test_cases.CorpusTests.test_local_configuration_and_runtime_witnesses_are_explicit_fictions) ... ok
+test_manifests_and_calls_are_independently_owned (experiments.equal_policy.test_cases.CorpusTests.test_manifests_and_calls_are_independently_owned) ... ok
+test_mutations_are_explicit_and_unknown_operation_fails (experiments.equal_policy.test_cases.CorpusTests.test_mutations_are_explicit_and_unknown_operation_fails) ... ok
+test_preparation_never_claims_executed_scoring_or_selection (experiments.equal_policy.test_cases.CorpusTests.test_preparation_never_claims_executed_scoring_or_selection) ... ok
+test_all_scheduled_policy_recipes_materialize_without_dropping (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_all_scheduled_policy_recipes_materialize_without_dropping) ... ok
+test_alternative_basis_and_equivalent_timestamp_are_distinct_controls (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_alternative_basis_and_equivalent_timestamp_are_distinct_controls) ... ok
+test_invalid_grants_frame_and_evaluator_are_intentional (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_invalid_grants_frame_and_evaluator_are_intentional) ... ok
+test_materializer_imports_no_validator_or_oracle_implementation (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_materializer_imports_no_validator_or_oracle_implementation) ... ok
+test_positive_policy_has_complete_identity_grant_and_byte_closure (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_positive_policy_has_complete_identity_grant_and_byte_closure) ... ok
+test_receipt_faults_do_not_collapse_into_unintended_hash_errors (experiments.equal_policy.test_policy_cases.PolicyCorpusTests.test_receipt_faults_do_not_collapse_into_unintended_hash_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.838s
+
+OK

@@ -1,0 +1,342 @@
+{
+  "case_count": 108,
+  "created_at_utc": "2026-11-02T21:46:27.479114+00:00",
+  "decision_counts": {
+    "accept": 43,
+    "inspect_only": 1,
+    "reject": 64
+  },
+  "model_calls": 0,
+  "native_producer_recipes": {
+    "duplicate_selection": [
+      "EP071"
+    ],
+    "known_overquote": [
+      "EP072"
+    ],
+    "local_known_overquote": [
+      "EP097"
+    ],
+    "local_malformed_response": [
+      "EP096"
+    ],
+    "local_valid": [
+      "EP094",
+      "EP095",
+      "EP102",
+      "EP103",
+      "EP104"
+    ],
+    "malformed_usage": [
+      "EP073"
+    ],
+    "unknown_selection": [
+      "EP070"
+    ],
+    "unknown_timeout": [
+      "EP074"
+    ],
+    "unresolved_dispatch": [
+      "EP076",
+      "EP077"
+    ],
+    "valid_outer_schema1": [
+      "EP105",
+      "EP106",
+      "EP107"
+    ],
+    "valid_recorded": [
+      "EP075"
+    ],
+    "valid_scored": [
+      "EP003",
+      "EP035",
+      "EP036",
+      "EP037",
+      "EP044",
+      "EP045",
+      "EP046",
+      "EP051",
+      "EP052",
+      "EP053",
+      "EP054",
+      "EP059",
+      "EP060",
+      "EP061",
+      "EP062",
+      "EP063",
+      "EP064",
+      "EP065",
+      "EP066",
+      "EP067",
+      "EP068",
+      "EP069"
+    ]
+  },
+  "not_complete": [
+    "Native sealed bundles pending root materializer",
+    "Independent oracle/protocol review",
+    "Final code/input/oracle freeze",
+    "Paired scored execution and reconstruction"
+  ],
+  "obligation_case_map": {
+    "EP-CASE-01": [
+      "EP001",
+      "EP002",
+      "EP010"
+    ],
+    "EP-DAG-01": [
+      "EP020",
+      "EP021",
+      "EP022",
+      "EP023",
+      "EP024",
+      "EP056"
+    ],
+    "EP-DAG-02": [
+      "EP025",
+      "EP026",
+      "EP032",
+      "EP033",
+      "EP034"
+    ],
+    "EP-EXEC-01": [
+      "EP054",
+      "EP055"
+    ],
+    "EP-EXEC-02": [
+      "EP070",
+      "EP075",
+      "EP094",
+      "EP095",
+      "EP096",
+      "EP098",
+      "EP099",
+      "EP100",
+      "EP101",
+      "EP102",
+      "EP103"
+    ],
+    "EP-EXEC-03": [
+      "EP061",
+      "EP068",
+      "EP070",
+      "EP071"
+    ],
+    "EP-EXEC-04": [
+      "EP062",
+      "EP065",
+      "EP072",
+      "EP073",
+      "EP074",
+      "EP076",
+      "EP077",
+      "EP094",
+      "EP096",
+      "EP097",
+      "EP104"
+    ],
+    "EP-FAIL-01": [
+      "EP073",
+      "EP074",
+      "EP076",
+      "EP077",
+      "EP096"
+    ],
+    "EP-FEATURE-01": [
+      "EP044",
+      "EP045",
+      "EP046",
+      "EP063"
+    ],
+    "EP-IO-01": [
+      "EP018",
+      "EP056",
+      "EP057"
+    ],
+    "EP-OBS-01": [
+      "EP023",
+      "EP028",
+      "EP029",
+      "EP030",
+      "EP031",
+      "EP040",
+      "EP041",
+      "EP042",
+      "EP043"
+    ],
+    "EP-PACKET-01": [
+      "EP015",
+      "EP016",
+      "EP019"
+    ],
+    "EP-POLICY-01": [
+      "EP078",
+      "EP088"
+    ],
+    "EP-POLICY-02": [
+      "EP078",
+      "EP085",
+      "EP086",
+      "EP087",
+      "EP088",
+      "EP089"
+    ],
+    "EP-POLICY-03": [
+      "EP078",
+      "EP079",
+      "EP080",
+      "EP081",
+      "EP082",
+      "EP083",
+      "EP084"
+    ],
+    "EP-POLICY-04": [
+      "EP090",
+      "EP091",
+      "EP093"
+    ],
+    "EP-PROCESS-01": [
+      "EP105",
+      "EP106",
+      "EP108"
+    ],
+    "EP-PROGRAM-01": [
+      "EP004",
+      "EP005",
+      "EP006",
+      "EP007",
+      "EP008",
+      "EP009",
+      "EP013"
+    ],
+    "EP-SCOPE-01": [
+      "EP035",
+      "EP036",
+      "EP037",
+      "EP038",
+      "EP039",
+      "EP040"
+    ],
+    "EP-SCORER-01": [
+      "EP047",
+      "EP048",
+      "EP049",
+      "EP050"
+    ],
+    "EP-SCORER-02": [
+      "EP001",
+      "EP002",
+      "EP003",
+      "EP045",
+      "EP051",
+      "EP052",
+      "EP053",
+      "EP064"
+    ],
+    "EP-SOURCE-01": [
+      "EP017",
+      "EP018",
+      "EP060",
+      "EP066"
+    ],
+    "EP-TIME-01": [
+      "EP026",
+      "EP027",
+      "EP058"
+    ],
+    "EP-VERIFY-01": [
+      "EP059",
+      "EP066",
+      "EP067",
+      "EP069"
+    ],
+    "EP-VERIFY-02": [
+      "EP059",
+      "EP060",
+      "EP061",
+      "EP062",
+      "EP063",
+      "EP064",
+      "EP065",
+      "EP068",
+      "EP103",
+      "EP104"
+    ],
+    "EP-VERIFY-03": [
+      "EP090",
+      "EP091",
+      "EP092",
+      "EP093",
+      "EP105",
+      "EP106",
+      "EP107"
+    ],
+    "EP-WIRE-01": [
+      "EP010",
+      "EP011",
+      "EP012",
+      "EP013",
+      "EP014",
+      "EP095"
+    ]
+  },
+  "operation_counts": {
+    "inspect_run": 2,
+    "prepare_run": 64,
+    "verify_run": 42
+  },
+  "oracle_path": "CASE-ORACLE-DRAFT-v1.json",
+  "oracle_sha256": "cf979b1e971abde78b3e95cc4f924c80de0fb13b2f1fa40b7e2490dff622bf85",
+  "provider_spending_usd": 0,
+  "runtime_witnesses": [
+    {
+      "action": "nested mutation through store query method.parameters/features",
+      "expected": "admitted fingerprint unchanged",
+      "obligation_ids": [
+        "EP-SCOPE-01",
+        "EP-EXEC-03"
+      ],
+      "witness_id": "IMM001"
+    },
+    {
+      "action": "nested mutation through committed ledger claim",
+      "expected": "committed claim unchanged",
+      "obligation_ids": [
+        "EP-EXEC-03"
+      ],
+      "witness_id": "IMM002"
+    },
+    {
+      "action": "nested mutation through finalized coverage/trace/configuration",
+      "expected": "final result unchanged",
+      "obligation_ids": [
+        "EP-EXEC-04"
+      ],
+      "witness_id": "IMM003"
+    }
+  ],
+  "schedule_path": "CASE-SCHEDULE-DRAFT-v1.json",
+  "schedule_sha256": "15a739536290f692d439f10445fed6818f920009cd66ae7b9064c82cac149622",
+  "schema_version": 1,
+  "source_sha256": {
+    "experiments/equal_policy/cases.py": "84934a81b87e00a43be0d114026f2c0fcdc394711167505216069182acd47ebb",
+    "experiments/equal_policy/policy_cases.py": "7fd24fbf08d4e24734680b837f4123a6b947f81eba3ba770af5a584a0303e2f9",
+    "experiments/equal_policy/test_cases.py": "60a358e7d129ba77ada46d82f4da119701d3635307798e996346d3de44933381",
+    "experiments/equal_policy/test_policy_cases.py": "6c71d7b0cd4ac3ff3efdc1b2c15627014b33ddfe7bea4ffe062d1581599aa35c"
+  },
+  "status": "CONSTRUCTION_VALIDATED_NOT_FROZEN",
+  "stratum_counts": {
+    "exposed_regression": 13,
+    "new_synthetic_construction": 95
+  },
+  "validation": {
+    "errors": 0,
+    "failures": 0,
+    "log": "case-tests-02.log",
+    "log_sha256": "93ddb77d4106b6777a8f389f151161b8de53c82e75715f528a463294ef233738",
+    "scope": "Construction only; neither validator consulted",
+    "skips": 0,
+    "tests": 17
+  }
+}

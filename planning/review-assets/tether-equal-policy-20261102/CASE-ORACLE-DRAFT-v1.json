@@ -1,0 +1,1639 @@
+{
+  "cases": [
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP001",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-CASE-01",
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Eligible T1 inputs and configured synthetic scorer pass preflight",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP002",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-CASE-01",
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Eligible T6 inputs declare audit-only scorer preflight",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP003",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "prediction_status": "abstained",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "T1 without a frozen scorer validly abstains",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP004",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "T6 supplied future program fails before dispatch",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP005",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "T1 inactive program is invalid",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP006",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "T6 inactive program is permissible context",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP007",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "T1 endpoint must match origin phase",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP008",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "T1 requires a program",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP009",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Program eligibility after origin is invalid",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP010",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-WIRE-01",
+        "EP-CASE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Naive origin timestamp is invalid",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP011",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-WIRE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Legacy v1 cannot execute as a new case",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP012",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-WIRE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Duplicate JSON key is invalid",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP013",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-WIRE-01",
+        "EP-PROGRAM-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Boolean program phase is not an integer",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP014",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-WIRE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Unknown case contract field rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP015",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PACKET-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Packet v1 is not an eligible v2 packet",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP016",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PACKET-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Duplicate observation identities reject",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP017",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SOURCE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Changed original raw bytes reject",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP018",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SOURCE-01",
+        "EP-IO-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Missing eligible original rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP019",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PACKET-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Reference-only artifact cannot be agent packet",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP020",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-DAG-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Evaluator-only ancestor denies the entire graph",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP021",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-DAG-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "A missing input parent rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP022",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-DAG-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "A lineage self-cycle rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP023",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-DAG-01",
+        "EP-OBS-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Observation lineage cannot escape its packet",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP024",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-DAG-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "A derived node requires a computation timestamp",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP025",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-DAG-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "A new computation over eligible old inputs is allowed",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP026",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-TIME-01",
+        "EP-DAG-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "available_after_origin"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Future raw annotation excludes dependent evidence",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP027",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-TIME-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "available_after_origin"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Future observation availability excludes that record",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP028",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "publication_after_origin"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Future exact publication excludes an otherwise eligible record",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP029",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "publication_after_origin"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Future publication year excludes without imputation",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP030",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Same-origin publication year can use eligible complete lineage",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP031",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "publication_metadata_inconsistent"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Conflicting publication date/year excludes",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP032",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-DAG-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "reconstructed_history_not_approved"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Unapproved reconstructed history is excluded",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP033",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-DAG-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Explicitly approved reconstructed history remains eligible",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP034",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-DAG-02"
+      ],
+      "observables": {
+        "admitted_observation_ids": [],
+        "eligible_observation_ids": [],
+        "exclusion_reasons": [
+          "temporal_classification_unverified"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Unverified temporal classification excludes",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP035",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCOPE-01"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": null
+        },
+        "prediction_status": "abstained",
+        "probability_is_null": true,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Opposite action retains context but not numerical features",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP036",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCOPE-01"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": null
+        },
+        "prediction_status": "abstained",
+        "probability_is_null": true,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Different modality does not transfer scoped features",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP037",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCOPE-01"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": null
+        },
+        "prediction_status": "abstained",
+        "probability_is_null": true,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Different tissue does not transfer scoped features",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP038",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCOPE-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Different target cannot be selected",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP039",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCOPE-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Another program's observation stays outside retrieval",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP040",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-OBS-01",
+        "EP-SCOPE-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Missing numerical derivation scope rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP041",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Clinical evidence cannot create numerical features",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP042",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Failed QC cannot create numerical features",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP043",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-OBS-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Out-of-range normalized support rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP044",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-FEATURE-01"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": 0.5
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1",
+          "obs-2"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Independent dependence groups aggregate by mean",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP045",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-FEATURE-01",
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "feature_status": {
+          "genetic_support": "conflicting"
+        },
+        "feature_values": {
+          "genetic_support": null
+        },
+        "prediction_status": "abstained",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "Conflicting dependent records cause explicit missingness",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP046",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-FEATURE-01"
+      ],
+      "observables": {
+        "dependency_groups": {
+          "genetic_support": 1
+        },
+        "feature_values": {
+          "genetic_support": 0.75
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1",
+          "obs-2"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Shared cohort does not add an independent group",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP047",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SCORER-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Invalid scorer schema rejects before dispatch",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP048",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SCORER-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Training labels exactly at origin are forbidden",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP049",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SCORER-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Future calibration labels are forbidden",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP050",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SCORER-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Synthetic scorer cannot score contemporary inputs",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP051",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "prediction_reason": "outside_scorer_applicability",
+        "prediction_status": "abstained",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "A valid inapplicable scorer abstains",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP052",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "prediction_reason": "missing_feature_without_frozen_imputation",
+        "prediction_status": "abstained",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "No unconfigured imputation is invented",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP053",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-SCORER-02"
+      ],
+      "observables": {
+        "prediction_reason": "insufficient_feature_coverage",
+        "prediction_status": "abstained",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "Insufficient feature coverage validly abstains",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP054",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-01"
+      ],
+      "observables": {
+        "dispatches": 0,
+        "prediction_status": "abstained",
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Valid zero-call budget makes no dispatch",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP055",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Negative call budget rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP056",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-IO-01",
+        "EP-DAG-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Safe relative input path cannot escape the root",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP057",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-IO-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "A directory cannot substitute for raw input bytes",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP058",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-TIME-01"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": null
+      },
+      "operation": "prepare_run",
+      "rationale": "Same-day information is eligible at the exact day-end cutoff",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP059",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-VERIFY-01",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Valid source-inclusive sealed run",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP060",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SOURCE-01",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Omitted eligible raw-parent proof rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP061",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-03",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Journal claim and ledger disagreement rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP062",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-04",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Contradictory declared call count rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP063",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-FEATURE-01",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Feature values must rebuild from admitted claims",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP064",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SCORER-02",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Scorer contributions must match coefficients and values",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP065",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-04",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Final trace fingerprint must agree",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP066",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-SOURCE-01",
+        "EP-VERIFY-01"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Source alteration cannot pass byte integrity",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP067",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-VERIFY-01"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Auxiliary request output is receipt-bound",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP068",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-03",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Admission fingerprint binds source claim",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP069",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-VERIFY-01"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "External receipt anchor cannot be replaced",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP070",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-02",
+        "EP-EXEC-03"
+      ],
+      "observables": {
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Unknown selection never becomes a factual claim",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP071",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-03"
+      ],
+      "observables": {
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Duplicated selection fails review with no duplicate claim",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP072",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-04"
+      ],
+      "observables": {
+        "accounting_basis": "adapter_reported",
+        "later_dispatches": 0,
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Known overquote usage is retained as measured on failure",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP073",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-04",
+        "EP-FAIL-01"
+      ],
+      "observables": {
+        "accounting_basis": "quoted_upper_bound_not_measured",
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Unusable usage remains estimated rather than invented",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP074",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-04",
+        "EP-FAIL-01"
+      ],
+      "observables": {
+        "accounting_basis": "quoted_upper_bound_not_measured",
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "A timeout retains an honest verifiable failed run",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP075",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Recorded selection binds the request fingerprint",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP076",
+      "decision": "inspect_only",
+      "obligation_ids": [
+        "EP-FAIL-01",
+        "EP-EXEC-04"
+      ],
+      "observables": {
+        "recovery_may_dispatch": false,
+        "unresolved_attempts": [
+          "genetics:1"
+        ]
+      },
+      "operation": "inspect_run",
+      "rationale": "Interrupted unresolved dispatch is inspect-only",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP077",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-FAIL-01",
+        "EP-EXEC-04"
+      ],
+      "observables": {
+        "recovery_may_dispatch": false,
+        "unresolved_attempts": [
+          "genetics:1"
+        ]
+      },
+      "operation": "inspect_run",
+      "rationale": "Corrupt recovery journal chain rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP078",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-POLICY-01",
+        "EP-POLICY-02",
+        "EP-POLICY-03"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Complete schema2 policy accepts",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP079",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Used receipt completion cannot postdate its bound",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP080",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Unused receipt completion cannot postdate its bound",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP081",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Unused receipt URL must bind",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP082",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Unused receipt evidence reference must bind",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP083",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Equivalent UTC receipt notation is valid",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP084",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-POLICY-03"
+      ],
+      "observables": {
+        "admitted_observation_ids": [
+          "obs-1"
+        ],
+        "eligible_observation_ids": [
+          "obs-1"
+        ],
+        "scorer_preflight": "dossier_audit_has_no_clinical_probability"
+      },
+      "operation": "prepare_run",
+      "rationale": "Valid alternative availability basis tolerates later download",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP085",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Missing source grant rejects",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP086",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Supplied unused source cannot escape complete inventory",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP087",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Wrong policy frame anchor rejects",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP088",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-01",
+        "EP-POLICY-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Evaluator product cannot gain an agent-use grant",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP089",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Schema2 policy route rejects an unsupported scorer",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP090",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-04",
+        "EP-VERIFY-03"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Altered copied controls cannot verify",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP091",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-POLICY-04",
+        "EP-VERIFY-03"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Altered policy projection cannot verify",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP092",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-VERIFY-03"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Outer dossier must match the sealed engine result",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP093",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-POLICY-04",
+        "EP-VERIFY-03"
+      ],
+      "observables": {
+        "prediction_status": "audit_only",
+        "probability_is_null": true
+      },
+      "operation": "verify_run",
+      "rationale": "Complete unaltered outer policy run verifies",
+      "variant": "artifact_policy_v2"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP094",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-02",
+        "EP-EXEC-04"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": 0.75
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Local structured archive verifies without a live model",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP095",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-WIRE-01",
+        "EP-EXEC-02"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": 0.75
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Shared-scientific-field transport preserves local request semantics",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP096",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-02",
+        "EP-EXEC-04",
+        "EP-FAIL-01"
+      ],
+      "observables": {
+        "accounting_basis": "quoted_upper_bound_not_measured",
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Malformed local response retains an honest failed archive",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "exposed_regression",
+      "control_id": "EP097",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-04"
+      ],
+      "observables": {
+        "accounting_basis": "adapter_reported",
+        "later_dispatches": 0,
+        "probability_is_null": true,
+        "selected_observation_ids": []
+      },
+      "operation": "verify_run",
+      "rationale": "Local native overquote preserves validated measured usage",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP098",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Invalid local model provenance rejects at preparation",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP099",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Invalid bounded retrieval count rejects at preparation",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP100",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Unsupported selection cap rejects at preparation",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP101",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Non-loopback model endpoint rejects without network access",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP102",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-EXEC-02"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": 0.75
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Bounded local retrieval retains selected-subset semantics",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP103",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-02",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Changed local request hash cannot verify",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP104",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-EXEC-04",
+        "EP-VERIFY-02"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Local response usage must match measured journal accounting",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP105",
+      "decision": "accept",
+      "obligation_ids": [
+        "EP-VERIFY-03",
+        "EP-PROCESS-01"
+      ],
+      "observables": {
+        "feature_values": {
+          "genetic_support": 0.75
+        },
+        "prediction_status": "scored",
+        "probability_is_null": false,
+        "selected_observation_ids": [
+          "obs-1"
+        ]
+      },
+      "operation": "verify_run",
+      "rationale": "Complete schema1 outer facade verifies",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP106",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROCESS-01",
+        "EP-VERIFY-03"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Contradictory outer process supervision rejects",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP107",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-VERIFY-03"
+      ],
+      "observables": {},
+      "operation": "verify_run",
+      "rationale": "Outer code proof cannot disagree with the trusted runtime",
+      "variant": "core_v2_catalog1"
+    },
+    {
+      "construction_stratum": "new_synthetic_construction",
+      "control_id": "EP108",
+      "decision": "reject",
+      "obligation_ids": [
+        "EP-PROCESS-01"
+      ],
+      "observables": {},
+      "operation": "prepare_run",
+      "rationale": "Invalid process supervision bounds reject preparation",
+      "variant": "core_v2_catalog1"
+    }
+  ],
+  "corpus_id": "tether-equal-policy-fictional-v1",
+  "independence": "Expected outcomes from declared rules; authors exposed to repository and prior regressions",
+  "schema_version": 1,
+  "status": "construction_not_frozen"
+}

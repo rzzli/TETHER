@@ -8,6 +8,22 @@ updated: 2026-11-02
 
 # Authorized benchmark execution
 
+BG02 implementation checkpoint: the independent stdlib validator now covers the
+declared current-v2 core and schema2/outer interfaces. A frozen 27-obligation policy
+and independently authored 108-case fictional draft oracle distinguish preparation,
+sealed verification and inspect-only recovery. Root's installed reference adapter
+and native materializer produce shared input bytes; local transport fixtures use
+in-memory responses with no model execution. Two unscored native preparation sets
+are retained; final descriptor scope guards require a fresh preparation before
+paired scoring. Independent runner QA reproduced and corrected denominator,
+oracle/code/bundle stability, null-observable and fast-exit output-limit gaps;
+unchanged 15 peer tests pass. Separate installed runtime witnesses pass 10 controls
+plus 3 launcher tests. Component scopes overlap and are not added to BG01 counts.
+The full paired comparison, independent reconstruction and BG02 closure remain
+unfinished. A static suspected archived-replay request-binding gap remains a
+normative rejection control, not a waiver or an established benchmark result.
+The evidence directory is `planning/review-assets/tether-equal-policy-20261102`.
+
 Current checkpoint: BG01 is complete locally. Full-gate04 is terminalPASS (session40947 exit0), with2,020tests/zero failures/errors/skips, required probes/package checks and unchanged source bracket; elapsed2,204.375seconds. Fresh facade138 and installed attempt02/14commands pass. Final aggregate passes742checks; `planning/review-assets/tether-ce-fixes-20261102/VALIDATION.json` SHA256 `1792d94ed55e806dc0f3fdcbf8c08684b899ad5ddd6c8e420bde4aba63a4b90d`. Completion record identifies exact locally qualified0.5.1/0.3.12 wheel hashes. No public release or scientific performance claim. BG02 equal-policy independent validator is next; all later stages remain required.
 
 Aggregate checker review reproduced two evidence-acceptance gaps (earlier OK hiding incomplete later logs; incomplete preservation inventory). Checker-only corrections pass39 peer controls, with original witnesses and committed preservation anchors retained in `integration/aggregate-checker-peer/`. Final checker SHA is `1188ac0dd9edbf85ce605d4a8254fe9c31a70f3a02c47bab17f83de56f5e08b3`. Root reviewed the changes; full-gate input pins were unaffected. This stricter checker subsequently produced the742-check aggregatePASS.

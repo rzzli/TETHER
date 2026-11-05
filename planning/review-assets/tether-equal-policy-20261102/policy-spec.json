@@ -1,0 +1,2334 @@
+{
+  "schema_version": 1,
+  "policy_id": "tether-equal-policy-v1",
+  "revision": 1,
+  "status": "frozen_contract_before_scored_comparisons",
+  "reference_commit": "4dcd16c",
+  "reference_versions": {
+    "tether-target-agents": "0.5.1",
+    "asof-target-agents": "0.3.12"
+  },
+  "purpose": "Equal-policy independent validator comparison over the full declared supported canonical v2 T1/T6 admission, source-inclusive verification and inspection contract; not agent quality or scientific validity.",
+  "interface": {
+    "call": "validate_bundle(root: pathlib.Path, descriptor: dict, *, scratch_dir: pathlib.Path | None = None) -> dict",
+    "descriptor_required_keys": [
+      "schema_version",
+      "control_id",
+      "operation",
+      "variant",
+      "paths",
+      "options",
+      "anchors"
+    ],
+    "operations": [
+      "prepare_run",
+      "verify_run",
+      "inspect_run"
+    ],
+    "variants": [
+      "core_v2_catalog1",
+      "artifact_policy_v2"
+    ],
+    "path_keys": [
+      "case",
+      "snapshot",
+      "catalog",
+      "scorer",
+      "replay",
+      "local_model",
+      "catalog_policy",
+      "policy_roots",
+      "run_dir",
+      "trusted_runtime"
+    ],
+    "option_keys": [
+      "budget",
+      "disabled",
+      "review_enabled",
+      "process_limits",
+      "policy_use"
+    ],
+    "anchor_keys": [
+      "receipt_sha256",
+      "frame_sha256"
+    ],
+    "optional_nulls": "An optional path or anchor null is equivalent to omitted; native payload fields are not modified.",
+    "result": {
+      "required": [
+        "schema_version",
+        "control_id",
+        "decision",
+        "stage",
+        "violated_obligations",
+        "checked_scope",
+        "observables"
+      ],
+      "decisions": [
+        "accept",
+        "reject",
+        "inspect_only",
+        "unsupported",
+        "error"
+      ],
+      "observables": [
+        "admitted_observation_ids",
+        "eligible_observation_ids",
+        "exclusions",
+        "scorer_preflight",
+        "selected_observation_ids",
+        "features",
+        "prediction",
+        "calls",
+        "usage",
+        "measured_usage",
+        "estimated_usage",
+        "recovery",
+        "verification"
+      ],
+      "diagnostics": "Optional unscored reason/details fields. Unknown or unimplemented obligation reports unsupported, not successful rejection."
+    },
+    "prepare_observables": [
+      "admitted_observation_ids",
+      "eligible_observation_ids",
+      "exclusions",
+      "scorer_preflight"
+    ],
+    "stage": "Nonempty diagnostic stage string; not an acceptance oracle or exact error-message match.",
+    "observable_rules": {
+      "admitted_observation_ids": "Sorted IDs of every source-admitted observation, including nonobserved and other-hypothesis context.",
+      "eligible_observation_ids": "Sorted IDs of observed records queryable for this case target/indication/program across supported categories, before disabled/budget/selection.",
+      "exclusions": "Native ordered array of item_id, level, reason; exclusion is not top-level rejection.",
+      "scorer_preflight": "Null or exact declared reason; no probability/features are computed during prepare_run.",
+      "selected_observation_ids": "Only verify_run: sorted committed ledger observation IDs.",
+      "features": "Only verify_run: full independently rebuilt FeatureVector.",
+      "prediction": "Only verify_run: full independently rebuilt Prediction; scorer abstention is not contract rejection.",
+      "verification": "Only verify_run: supported integrity/source/semantic/code/anchor guarantees, distinctly reported.",
+      "recovery": "Only inspect_run: unresolved IDs, measured/estimated upper usage, terminal/receipt presence and explicit inspect-only/no-retry action."
+    }
+  },
+  "defaults": {
+    "budget": {
+      "max_calls": 16,
+      "max_input_tokens": 32000,
+      "max_output_tokens": 8000,
+      "max_cost_usd": 0,
+      "max_seconds": 300,
+      "max_retries": 1
+    },
+    "disabled": [],
+    "review_enabled": true,
+    "process_limits": {
+      "timeout_seconds": 3600,
+      "max_output_bytes": 16777216
+    },
+    "backend": "offline when neither replay nor local_model is provided",
+    "retrieval": {
+      "max_records": 12,
+      "max_request_bytes": 12000,
+      "wire_format": "canonical"
+    },
+    "local_selection_cap": 3
+  },
+  "normalization": [
+    "Descriptor uses original native-format JSON/file bytes; no reduced translation or dataset enrichment.",
+    "Prepare requires case/snapshot and real-profile catalog; verification/inspection require run_dir and derive configuration from retained native inputs. Policy mode requires catalog/catalog_policy/policy_roots/policy_use/frame anchor together and disallows demo/scorer/replay/local_model.",
+    "Do not silently ignore nonempty operation-inapplicable descriptor fields. Require source-inclusive verification; outputs-only is outside this endpoint.",
+    "Optional data exclusions and scorer abstention are acceptable request/run outcomes. Top-level rejection means contract invalidity, not insufficient scientific evidence.",
+    "Normalize optional descriptor paths/nulls only. Native JSON defaults, strict timestamps, fingerprints and profile-specific differences follow explicit obligations and wire_contracts.",
+    "Trust the common pinned runtime manifest supplied by root; it contains release/code identities only. It must be identical for both validators and frozen before scored runs.",
+    "prepare_run performs input validation only: no scheduler, quote/select/replay dispatch, feature aggregation, prediction, budget consumption or synthetic execution totals. Zero budget is valid preparation.",
+    "verify_run uses the same sealed native transcript/output tree for both validators, including completed and incomplete inner runs; a success outer run requires completed inner execution.",
+    "inspect_run reports inspection only and does not promote a partial trace to verified success.",
+    "Schema2 prepare uses caller-supplied fresh scratch_dir outside the frozen bundle for own-format immutable copies and stability rechecks; retention/I/O witnesses are separate from decision accuracy. No shared rule-validation implementation.",
+    "Legacy v1 receipt cases are explicitly unsupported separate-interface controls with legacy metadata, not invalid historical artifacts and not primary supported-v2 accuracy cases."
+  ],
+  "runtime_only_invariants": [
+    "Deep immutable admitted/query/ledger/finalized objects",
+    "Exclusive new output reservation and concurrent writer/no-clobber behavior",
+    "Journal write/fsync ordering, interrupted writes and available failure diagnostics",
+    "Actual request/quote/dispatch sequencing and no automatic billed-call recovery",
+    "Actual local transport loopback/no-redirect/payload/response bounds (only fake opener in BG02)",
+    "Monotonic workflow timeout checks including long claim commits",
+    "Owned child deadline/output/EOF cleanup and reaping",
+    "Windows bounded atomic replacement and primary error preservation"
+  ],
+  "trust_assumptions": [
+    "Trusted runner code, local machine/OS, clocks and declared roots; no adversarial filesystem-owner or process-isolation claim.",
+    "Externally supplied receipt/frame anchors are trusted caller selections, not derived from the artifact being judged.",
+    "Source receipts/checksums prove byte/identity consistency, not authenticity or truth of biological data or publication assertions.",
+    "Archived scorer training hash/date declarations do not inspect training data, establish no model pretraining leakage, or establish calibration.",
+    "Stored local model/runtime hashes are launcher declarations, not remote-server attestation; measured token counts are validated adapter reports.",
+    "Exclusion metadata and source completeness are declared scientific context; no availability test establishes biological absence.",
+    "Both implementations use same frozen native bytes, approved paths, limits, anchors, runtime identities and observable comparison policy; oracle labels remain separate."
+  ],
+  "legacy_and_separate_interfaces": [
+    "v1 receipt verification reports semantic consistency unavailable; no new v1 execution.",
+    "Direct asof/tether legacy aliases lack canonical facade state/dossier/artifact-policy additions; not substituted for canonical endpoint.",
+    "Relocated archive verifier preserves historical policy/source/code identities and does not execute archived Python; separate interface, not current outer run.",
+    "Study-specific protocols under asof.study (native grammar/role experiments/four-arm/interpretation/generation/source-fact studies), historical closed study locks and evaluator CLI are not generic run endpoints.",
+    "inspect-source/build-snapshot adapters and data download/clinical cohort/scorer training/MR computation are separate acquisition/science workflows; their produced normalized inputs are subject to this contract when supplied.",
+    "T2-T5, H6, live paid model/provider and clinical efficacy/calibration are not supported claims of this comparison."
+  ],
+  "obligations": [
+    {
+      "id": "EP-WIRE-01",
+      "title": "Native JSON, typed contracts and normalization",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Reject duplicate JSON keys, malformed UTF-8/JSON and NaN/Infinity. Typed dataclass decoding rejects unknown fields, missing required fields, bool-as-int/float and wrong container/scalar types; decode date as exact YYYY-MM-DD and aware datetime normalized to UTC. Preserve the native required/default field inventory recorded in wire_contracts.",
+        "Canonical fingerprints encode frozen dataclasses/enums/mappings/sequences, normalize aware timestamps, sort keys, use UTF-8 without ASCII escaping and compact separators, reject nonfinite numbers, and preserve native numeric spelling such as 1 versus 1.0. Do not fingerprint a lossy normalized replacement of original policy control bytes.",
+        "Core defaulted null mapping fields are limited to Snapshot.coverage and Observation.source_locator/source_metrics/missingness. Other nulls follow the typed contract. Deep immutability is a runtime invariant, separately exercised; a file validator alone cannot prove immutable Python objects."
+      ],
+      "source_files": [
+        "src/asof/serde.py",
+        "src/asof/contracts.py"
+      ]
+    },
+    {
+      "id": "EP-CASE-01",
+      "title": "Supported cases and hypothesis identity",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require schema 2 and task T1 or T6; nonempty case ID and target/indication IDs, namespace versions, intended action and modality. Require exact aware origin_at whose UTC date equals origin; snapshot origin and origin_at must equal the case.",
+        "Require eligible hypothesis mapping/annotation Availability. The hypothesis fingerprint contains target_id, indication_id, target_namespace_version, indication_namespace_version, intended_action, modality and tissue, including null tissue; it excludes availability.",
+        "Action/modality are nonempty strings, not an invented closed biomedical vocabulary. T6 does not require an endpoint or active phase. Do not silently substitute canonical IDs or alter hypothesis fields."
+      ],
+      "source_files": [
+        "src/asof/contracts.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-PROGRAM-01",
+      "title": "Program context and T1 eligibility",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Every supplied program, including T6 context, needs eligible availability, nonblank program/molecule/sponsor/status, integer phase 0..4, finite mapping confidence in [0,1] and eligible_since <= origin.",
+        "T1 additionally requires program and endpoint, active phase 1 or 2, matching phase_1_to_2 or phase_2_to_3 endpoint, positive horizon and mapping confidence >0. T6 may retain unresolved confidence zero.",
+        "Program-specific observations are queryable only for matching supplied program ID with confidence >0; null program IDs are contextual. With supplied zero-confidence mapping, program-specific observations are excluded as unresolved_program_mapping."
+      ],
+      "source_files": [
+        "src/asof/contracts.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-TIME-01",
+      "title": "Information availability without invented historical dates",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Availability basis must be nonblank. Each known first/release/record/annotation date is conservatively end-of-day UTC; none may exceed the exact cutoff or retrieved_at. This permits same-date exclusion for a cutoff earlier than end-of-day.",
+        "An aware known_public_by with nonempty evidence_ref may supply a bound when component dates are unknown; it must not exceed cutoff or retrieved_at date. Without that bound all four component dates are required. Retrieval date alone never proves historical availability.",
+        "Computed node/result timestamps are a separate clock: eligible information ancestry controls eligibility; newly computed results may be after origin. Do not impose an extra availability gate on computed-node metadata or computed-observation own availability."
+      ],
+      "source_files": [
+        "src/asof/contracts.py",
+        "src/asof/provenance.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-DAG-01",
+      "title": "Complete structural lineage and role validation",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require a nonempty unique source-ID inventory, valid source/release/hash identity, all references present and an acyclic graph, including unused supplied nodes. Validate every source path without opening ineligible bytes.",
+        "Each source role must be agent_evidence or reference. Non-demo catalog1 requires a registered dataset, role included in product roles and no evaluation_only role. Computed nodes require nonempty parents and versioned method with aware computed_at; raw nodes cannot declare parents.",
+        "Artifact/source identifiers cannot collide. Missing lineage is invalid, never a default to current annotation or an untracked parent."
+      ],
+      "source_files": [
+        "src/asof/provenance.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-DAG-02",
+      "title": "Ancestral temporal eligibility",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "For all parents in each relevant closure, apply availability to raw informational nodes. Historical profile requires verified_historical, or reconstructed only when allow_reconstructed is true; contemporary/demo reject unverified classification.",
+        "Core admission reports ineligible artifact/observation exclusions rather than rejecting the whole valid request, and does not open rejected packet bytes. Derived node own availability/classification and artifact own availability/classification do not replace ancestor eligibility.",
+        "Core structural validation includes unused nodes but core byte/receipt proof verification covers eligible artifact closures; schema2 all-supplied inventory has the stronger obligations in EP-POLICY-02/03."
+      ],
+      "source_files": [
+        "src/asof/provenance.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-SOURCE-01",
+      "title": "Source bytes, transport receipts and proof completeness",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Every eligible packet and its complete ancestor closure requires exact hashes and identities. Real raw sources require pinned receipt paths/hashes; synthetic_demo may omit receipts. Computed inputs remain hash-bound even when their computation date is newer.",
+        "Core raw receipt verification requires completed status, source SHA256, dataset/release, safe relative payload path and actual byte size. For public_download_receipt basis additionally require known_public_by >= receipt completion, evidence_ref == receipt_sha256 and source_url == receipt URL; alternative eligible availability bases do not inherit a false download cutoff.",
+        "Verification reconstructs the complete eligible proof inventory even with no external anchor and even when no observation was selected. Missing, extra or altered parent proofs reject. Original source bytes/receipts must remain available for this source-inclusive endpoint."
+      ],
+      "source_files": [
+        "src/asof/provenance.py",
+        "src/asof/chrono.py",
+        "src/asof/artifacts.py"
+      ]
+    },
+    {
+      "id": "EP-PACKET-01",
+      "title": "Artifact inventory and normalized packet integrity",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require schema2 snapshot with nonblank ID, unique artifact IDs and paths, explicit releases, lowercase 64-hex hashes and agent_evidence packet role. access_approved false is a core exclusion before catalog-role lookup; schema2 selected grants require access_approved true.",
+        "Eligible packet paths stay inside snapshot root; file must exist and fit 64 MiB. Hash the bytes actually decoded. Require EvidencePacket schema2; duplicate observation IDs across all read eligible packets reject, including excluded observations.",
+        "Do not silently truncate oversized packets, merge conflicting IDs or treat unopened/rejected input as empty biological evidence."
+      ],
+      "source_files": [
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-OBS-01",
+      "title": "Scientific record validity, lineage and publication",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require observation identity/target/indication/statement, complete input_refs, supported source kind primary/integrated/computed/clinical, supported category/status/polarity, mechanism direction inhibit/activate/degrade/uncertain/not_applicable, and QC passed/failed/not_run. Computed observations need computed_at and versioned method.",
+        "Validate positive standard error/sample size, p-value in [0,1], paired nonreversed confidence limits. Numerical features require observed status, passed QC, nonclinical source/category, versioned method, nonempty feature_scope, known feature/category mapping and declared range.",
+        "Observation ancestor closure must be a subset of its artifact's closure. Apply raw information eligibility and noncomputed observation availability; reject malformed publication types/year outside 1..9999, but exclude inconsistent date/year or explicit future publication. A year overlapping origin is not converted into an exact date."
+      ],
+      "source_files": [
+        "src/asof/contracts.py",
+        "src/asof/chrono.py"
+      ]
+    },
+    {
+      "id": "EP-SCOPE-01",
+      "title": "Hypothesis/program capabilities and contextual visibility",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Retrieval requires exact target, indication and specialist category plus permitted program identity. Nonmatching records may remain admitted but are not offered to that specialist or committed.",
+        "Features require exact seven-field hypothesis fingerprint, including intended action, modality and tissue. Mismatched features are suppressed in specialist views and deterministic aggregation; the raw observation remains context, with outside_applicability missingness.",
+        "Specialists receive evidence views and case JSON, not path/catalog/environment capabilities. This is a trusted-code API boundary and source-text treatment policy, not an OS sandbox or proof that a model obeys instructions."
+      ],
+      "source_files": [
+        "src/asof/chrono.py",
+        "src/asof/agents.py",
+        "src/asof/features.py",
+        "src/asof/ledger.py"
+      ]
+    },
+    {
+      "id": "EP-FEATURE-01",
+      "title": "Deterministic dependency-aware feature reconstruction",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Use schema asof-features-v2 and mean_of_unique_dependency_groups_v2. Join dependence transitively through explicit group, study ID or shared cohort, including observations without applicable features; different labels do not establish independent sampling.",
+        "Within each connected component and feature, identical values count once; conflicting values exclude the whole component. Average accepted component values; sort observation IDs/excluded groups. Missing becomes conflicting or not_measured, never zero evidence weight by default.",
+        "Derive missing reasons from coverage nonobserved statuses, source_incomplete when nonempty coverage is not complete, and outside_applicability for mismatched feature scopes. Rebuild and compare the entire archived FeatureVector."
+      ],
+      "source_files": [
+        "src/asof/features.py",
+        "src/asof/semantics.py"
+      ]
+    },
+    {
+      "id": "EP-SCORER-01",
+      "title": "Scorer predispatch validity and chronology",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1"
+      ],
+      "rules": [
+        "Validate schema2, synthetic_demo/frozen_model kind, fixed feature schema/aggregation, nonempty model/coefficient inventory, known feature names, required/imputed subsets, training hash, coverage [0,1], finite parameters, range-valid frozen imputations and supported calibration declaration.",
+        "Synthetic model weights only pair with synthetic_demo profile; synthetic profile cannot use a frozen real scorer. Training origin, training-label and any calibration-label cutoff must each be strictly before the case origin date; equality rejects.",
+        "Invalid scorer inputs reject before backend calls even for T6 or otherwise inapplicable models. A well-formed but out-of-scope scorer yields explicit abstention, not validation rejection."
+      ],
+      "source_files": [
+        "src/asof/scorer.py",
+        "src/asof/workflow.py"
+      ]
+    },
+    {
+      "id": "EP-SCORER-02",
+      "title": "Scoring applicability, contributions and abstention",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "T6 always has null probability and audit_only status. T1 with no model abstains; a model outside endpoint/horizon/phase/action/modality/namespace scope abstains. Incomplete run always abstains with run_incomplete.",
+        "For an applicable complete T1 run, enforce required features, minimum present coefficient coverage and explicit frozen imputation; otherwise abstain with the declared reason. Compute sorted contributions value*coefficient, imputation flag and source observation IDs, then stable logistic(intercept+sum); reject nonfinite logit.",
+        "Compare complete Prediction, not probability alone. Synthetic profile marks outputs synthetic. Artifact-policy runs have no scorer and cannot acquire one through a generated packet or projection."
+      ],
+      "source_files": [
+        "src/asof/scorer.py",
+        "src/asof/semantics.py"
+      ]
+    },
+    {
+      "id": "EP-POLICY-01",
+      "title": "Schema2 policy and original catalog integrity",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Strict schema2 envelope/product/artifact/use field sets, finite JSON, exact UTC timestamps, provider/product uniqueness, valid roles, exact reconstructed schema1 catalog fingerprint plus original-byte SHA256. Preserve all original metadata/status values.",
+        "Validate known/disjoint input and validation dependencies, conditional group references, required components and acyclic input-dependency graph. Genetics QC remains validation-only and LD method-conditional where those products exist. This checks declared classification, not scientific sufficiency or inferred completeness of every conditional requirement.",
+        "Artifact identity fingerprints dataset/release/root/path/hash/bytes. Validate safe portable paths, kinds/raw-parent relationship, full ancestry, provenance evidence, receipt references/URL, and not_established scientific status. Manual archives remain blocked for inference. Allowed selected products must have reviewed_for_selected_frame dependency status."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_catalog_policy.py"
+      ]
+    },
+    {
+      "id": "EP-POLICY-02",
+      "title": "Exact use/frame/grant and all supplied inventory authorization",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require all policy/catalog/use/roots/frame inputs together; only run, non-demo, offline extraction without scorer/replay/local-model. Select one allowed nonempty nonevaluation use bound to exact case/snapshot fingerprints, profile/origin and independent frame hash.",
+        "Absolute local distinct root aliases include metadata and distinct raw/snapshot aliases. Raw root and actual snapshot parent must agree. Validate no physical path aliases or collision with copied snapshot controls.",
+        "Every supplied source/packet, including unused nodes, must match exactly one granted artifact identity, role, kind, metadata and parent edges; grants equal supplied inventory and include every actual ancestor. Deny evaluator/comparison roles, evaluator products, scorer_artifacts and missing/extra grants. Packet access must be true; derive a schema1 projection granting only selected-use roles."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_catalog_policy.py",
+        "packages/tether/src/tether/_catalog_binding.py",
+        "packages/tether/src/tether/_cli.py"
+      ]
+    },
+    {
+      "id": "EP-POLICY-03",
+      "title": "All-node raw availability and receipt consistency",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "All supplied raw inputs must have eligible availability/classification at use origin, even if unused by any packet. All selected bytes and sizes, metadata evidence and receipts are checked; unused input cannot bypass these checks.",
+        "Require exact receipt ID/dataset/release/URL, completed status, integer byte count, payload hash, eligible UTC completion and safe relative transport path. Only slash/backslash spelling in transport receipt paths is normalized; case, IDs and URL remain exact.",
+        "For every public_download_receipt node, the bound cannot predate receipt completion, evidence_ref must equal the pinned receipt hash and node URL must equal receipt URL. Preserve legitimate separately evidenced historical bases. A present-day download does not prove historical availability."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_catalog_binding.py",
+        "packages/tether/src/tether/_catalog_policy.py",
+        "src/asof/provenance.py"
+      ]
+    },
+    {
+      "id": "EP-POLICY-04",
+      "title": "Copied controls, immutable receipts and actual engine binding",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Seal exact policy/catalog/case/snapshot/root controls, deterministic projection/decision, all snapshot-root packet/mapping bytes, selected metadata evidence and receipt copies in the reserved output. Raw originals remain external; archived receipt bytes must equal still-required original pinned receipt bytes.",
+        "Reconstruct the decision/projection and complete copies/external/receipts/provenance inventories from sealed controls; match byte hashes and sizes; reject extra/omitted proof rows or changed execution paths. Re-admit copied packets before dispatch and again for verification.",
+        "Actual engine inputs must equal decoded copied case/snapshot/projected catalog, scorer null, snapshot_base the copied inputs directory and backend offline-extractive-v1. A projection alone is never an artifact authorization."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_catalog_binding.py"
+      ]
+    },
+    {
+      "id": "EP-EXEC-01",
+      "title": "Budget and effective configuration",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Use default budget calls16/input32000/output8000/cost0/time300/retries1 unless explicitly overridden. Calls/tokens/retries are nonnegative integers; cost finite nonnegative; time finite positive. Disabled categories and review-enabled boolean remain archived effective configuration.",
+        "Before dispatch require case/store temporal consistency, explicit live snapshot base and scorer preflight. Query-only/archive-verification stores cannot execute. Reserve only when calls/time and used+quote token/cost bounds permit; inclusive token/cost caps, strict elapsed-time cutoff.",
+        "Preserve separate outer process defaults time3600 and output16MiB with maximum64MiB; no conflation with workflow budget."
+      ],
+      "source_files": [
+        "src/asof/workflow.py",
+        "packages/tether/src/tether/_process.py"
+      ]
+    },
+    {
+      "id": "EP-EXEC-02",
+      "title": "Backend request, bounded retrieval and local response provenance",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Offline selects all observed eligible views with zero usage. Replay schema2 entries require exact request fingerprint at runtime quote/select, increment only selection; replay and local-model config are mutually exclusive. For sealed recorded runs, validate retained provenance.document against reconstructed requests, selections and usage. The original replay path need not remain available; its original byte hash is an opaque declaration because retained JSON formatting may differ.",
+        "Local config requires explicit HTTP127.0.0.1 port with no credentials/path/query/fragment; declared weights/runtime hashes; generation1..256, timeout(0,120], integer seed, selection cap1..3(default3), retrieval count1..100(default12), bytes1024..64000(default12000), supported wire format. No live calls in BG02.",
+        "Local retrieval ranks literal case-token overlap then ID, retains whole records within record/byte caps, and preserves case/instructions/feedback. Rebuild source-linked retrieval traces and exact escaped prompt/payload (16KiB prompt cap); local response capped1MiB, truncated must be false, content exactly unique allowed IDs within cap and valid measured integer counts. Verify request/payload/response hashes, quotes, attempt/account association, selections and source scope. Invalid/unqualified responses retain unknown quoted usage; fully valid overquote responses retain measured usage and terminal breach."
+      ],
+      "source_files": [
+        "src/asof/agents.py",
+        "src/asof/local_model.py",
+        "src/asof/retrieval.py",
+        "src/asof/wire.py"
+      ]
+    },
+    {
+      "id": "EP-EXEC-03",
+      "title": "Selections, reviews and immutable source-grounded claims",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Only unique IDs inside the actual offered specialist request can pass review. Review retries occur only for rejected selection and within configured retries; backend failure does not trigger automatic retry for that category.",
+        "Claims require currently admitted immutable record fingerprint, exact case/category/program capability, observed status and write-time noncomputed availability. Claim ID is claim- plus first20hex of canonical case-ID/evidence fingerprint; extraction_mode is verbatim_source_selection.",
+        "Reconcile accepted review order to complete committed claim order, or a prefix only with explicit claim-commit time exhaustion. Journal committed claims must equal ledger; unselected, duplicated, fabricated or altered source claims reject."
+      ],
+      "source_files": [
+        "src/asof/agents.py",
+        "src/asof/ledger.py",
+        "src/asof/workflow.py",
+        "packages/tether/src/tether/_semantics.py"
+      ]
+    },
+    {
+      "id": "EP-EXEC-04",
+      "title": "Journal, accounting, category state and termination",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Verify hash-chain sequence/previous hashes, exact durable journal/trace bytes, one plan, complete eight-category inventory, run/case/snapshot/backend/configuration identity, reservation capacity and nonoverlapping uniquely identified attempts with one accounting event each.",
+        "Measured+estimated totals must equal total usage and calls equal dispatches. Unknown usage equals reserved quote, never measured zero. Fully validated overquote local usage requires exact breach event and no later dispatch. Finalized run cannot have unresolved attempts.",
+        "Replay canonical facade category state transitions, ordered specialists/attempts, review/claim flow, retrieval coverage, terminal failure/budget/interruption status, and final feature/prediction/status fingerprints. Known error classes constrain status; arbitrary custom exception inheritance cannot be proven from class-name strings."
+      ],
+      "source_files": [
+        "src/asof/journal.py",
+        "src/asof/workflow.py",
+        "src/asof/semantics.py",
+        "src/asof/local_model.py",
+        "packages/tether/src/tether/_semantics.py"
+      ]
+    },
+    {
+      "id": "EP-VERIFY-01",
+      "title": "Inner receipt byte integrity and external anchor",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Require v2 receipt and exact required run/inputs/ledger/features/prediction/trace/dossier/journal output set; check each hash, input fingerprint and run linkage. Validate declared auxiliary_outputs restricted to request.json/backend-execution.json. Local execution archive is mandatory for local backend.",
+        "External receipt anchor when supplied must match; without one report no external anchor rather than claiming tree replacement detection. request.json can be absent or a compatible old unsealed auxiliary; hashing it does not add a semantic reconstruction obligation not implemented by the verifier.",
+        "Always source-inclusive in BG02. Direct canonical engine verification may report code_matches_current false without rejecting an otherwise valid v2 run; outer verification requires current inner code. Inner receipt code inventory is evidence, not an external trust anchor by itself."
+      ],
+      "source_files": [
+        "src/asof/artifacts.py",
+        "packages/tether/src/tether/_presentation.py"
+      ]
+    },
+    {
+      "id": "EP-VERIFY-02",
+      "title": "Semantic source re-admission and final output reconstruction",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Rebuild eligible proof inventory, re-admit source packets from originals, compare complete admitted fingerprint map, exclusions, per-category observed/nonobserved/source coverage and citation identities. Resealing local hashes cannot repair a source/claim or proof mismatch.",
+        "Rebuild features, configured scorer result/contributions and final trace fingerprints; perform canonical facade state replay and deterministic complete engine dossier reconstruction, accepting platform LF/CRLF rendering equivalents.",
+        "Report byte integrity, semantic consistency, source binding, code identity and scientific validity separately. Verified software consistency never means validated biology, calibrated probabilities or independent source authenticity."
+      ],
+      "source_files": [
+        "src/asof/artifacts.py",
+        "src/asof/semantics.py",
+        "packages/tether/src/tether/_semantics.py"
+      ]
+    },
+    {
+      "id": "EP-VERIFY-03",
+      "title": "Outer facade envelope, complete inventory and launcher proof",
+      "operations": [
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Outer success requires no retained failure, exact completed evaluation-only/agent_visible=false/not_established envelopes, source-inclusive completed inner run with current code, current pinned launcher source/version proof, exact receipt/manifest/engine hashes and complete files/directories inventory.",
+        "Require exact outer journal event schedule and proof/dispatch/supervision/finalization bindings; compare all artifact path/hash/size descriptors. Verify exact first-header-only TETHER dossier projection and absence of unbound policy directory when no policy binding.",
+        "Independently pinned trusted_runtime supplies only reference release/source identities. It does not contain oracle labels or grant arbitrary acceptance. Old differently pinned facade archives are separate legacy compatibility interfaces, not silently accepted as this canonical release."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_presentation.py"
+      ]
+    },
+    {
+      "id": "EP-IO-01",
+      "title": "Path, file-kind, size and stable-read boundary",
+      "operations": [
+        "prepare_run",
+        "verify_run",
+        "inspect_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Envelope path references are contained relative paths. Native source paths follow their declared approved roots: forbid traversal/absolute/drive/ADS relative paths and require post-resolution containment. Do not make core catalog1 claim schema2 root authorization.",
+        "Facade/policy reads reject links/reparse points/nonregular files, bound bytes before/open/during read and check file identity before/after. Metadata/trace bound64MiB; policy controls16MiB; packet64MiB; ledger/dossier256MiB; selected policy passes have300s I/O deadline.",
+        "Read stability is per operation, not exclusive filesystem ownership, sandboxing, authenticated data provenance or a race-proof global transaction. Native malformed records and limit failures reject; no silent truncation."
+      ],
+      "source_files": [
+        "src/asof/serde.py",
+        "src/asof/study/stable_read.py",
+        "packages/tether/src/tether/_presentation.py",
+        "packages/tether/src/tether/_catalog_binding.py"
+      ]
+    },
+    {
+      "id": "EP-FAIL-01",
+      "title": "Durable failures and inspection-only recovery",
+      "operations": [
+        "inspect_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Inspection reads one durable valid hash-chain prefix; an unterminated last partial line may be ignored only in inspection. Report unresolved attempts, measured usage and conservative estimated upper usage including outstanding reservations; never automatically redispatch.",
+        "Outer failed/interrupted attempts retain available journals, diagnostics/captures and cleanup uncertainty; failed attempt cannot qualify as success. Failure metadata publication itself may fail; report the limitation rather than asserting every storage failure leaves complete records.",
+        "Reservation/write durability, nested immutability, bounded commit timing, no-clobber output race behavior, interruption and cleanup are runtime-only invariants tested through common scripted controls. A validator reading a record cannot independently prove that physical execution/history occurred."
+      ],
+      "source_files": [
+        "src/asof/journal.py",
+        "src/asof/workflow.py",
+        "packages/tether/src/tether/_presentation.py",
+        "packages/tether/src/tether/_process.py"
+      ]
+    },
+    {
+      "id": "EP-PROCESS-01",
+      "title": "Success supervision evidence and bounded execution scope",
+      "operations": [
+        "prepare_run",
+        "verify_run"
+      ],
+      "variants": [
+        "core_v2_catalog1",
+        "artifact_policy_v2"
+      ],
+      "rules": [
+        "Validate positive finite outer deadline and integer output cap1..64MiB. Success report must use exact schema/method/keys/limits, started and reaped true, both EOF true, termination exited, no cleanup errors and exact retained/observed stdout+stderr counts within cap.",
+        "Elapsed timings finite nonnegative; execution strictly less than deadline, total >= execution. Exact-cap output succeeds; observed extra byte fails and is not retained above cap.",
+        "Actual launch-once polling, deadline+pipe-EOF enforcement, separate5s cleanup and owned-child termination are execution-control tests, not inferred from self-declared timing. No process-tree containment, OS-process-creation preemption, Linux qualification or arbitrary embedded Windows multithreaded guarantee."
+      ],
+      "source_files": [
+        "packages/tether/src/tether/_process.py",
+        "packages/tether/src/tether/_presentation.py"
+      ]
+    }
+  ],
+  "wire_contracts": [
+    {
+      "class": "Availability",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "first_public_at",
+          "type": "date | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "release_public_at",
+          "type": "date | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "record_public_at",
+          "type": "date | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "annotation_public_at",
+          "type": "date | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "retrieved_at",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "basis",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "uncertainty",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "known_public_by",
+          "type": "datetime | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "evidence_ref",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        }
+      ]
+    },
+    {
+      "class": "Hypothesis",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "target_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "indication_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "target_namespace_version",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "indication_namespace_version",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "intended_action",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "modality",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "tissue",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "availability",
+          "type": "Availability",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Program",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "program_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "molecule_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "sponsor",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "phase_at_origin",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "status_at_origin",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "eligible_since",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "mapping_confidence",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "trial_ids",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "availability",
+          "type": "Availability",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Endpoint",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "name",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "horizon_months",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Case",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "case_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "task",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "origin",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "hypothesis",
+          "type": "Hypothesis",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "program",
+          "type": "Program | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "endpoint",
+          "type": "Endpoint | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "origin_at",
+          "type": "datetime | None",
+          "required": false,
+          "default_expression": "None"
+        }
+      ]
+    },
+    {
+      "class": "Artifact",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "artifact_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "dataset_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "release_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "path",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "sha256",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "role",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "access_approved",
+          "type": "bool",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "temporal_classification",
+          "type": "TemporalClass",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "availability",
+          "type": "Availability",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "source_url",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "input_refs",
+          "type": "tuple[str, ...]",
+          "required": false,
+          "default_expression": "()"
+        }
+      ]
+    },
+    {
+      "class": "SourceNode",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "source_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "dataset_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "release_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "path",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "sha256",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "role",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "availability",
+          "type": "Availability",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "temporal_classification",
+          "type": "TemporalClass",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "source_url",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "parents",
+          "type": "tuple[str, ...]",
+          "required": false,
+          "default_expression": "()"
+        },
+        {
+          "name": "computed_at",
+          "type": "datetime | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "method_id",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "method_version",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "receipt_path",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "receipt_sha256",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        }
+      ]
+    },
+    {
+      "class": "Snapshot",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "snapshot_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "profile",
+          "type": "Profile",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "origin",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "allow_reconstructed",
+          "type": "bool",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "artifacts",
+          "type": "tuple[Artifact, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "sources",
+          "type": "tuple[SourceNode, ...]",
+          "required": false,
+          "default_expression": "()"
+        },
+        {
+          "name": "raw_root",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "coverage",
+          "type": "Mapping[str, Any]",
+          "required": false,
+          "default_expression": "field(default_factory=dict)"
+        },
+        {
+          "name": "origin_at",
+          "type": "datetime | None",
+          "required": false,
+          "default_expression": "None"
+        }
+      ]
+    },
+    {
+      "class": "ScientificContext",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "species",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "ancestry",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "tissue",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "disease_state",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "intervention",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "comparator",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "cohort_ids",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "QuantitativeResult",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "effect",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "scale",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "standard_error",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "ci_lower",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "ci_upper",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "sample_size",
+          "type": "int | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "adjusted_p_value",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Method",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "code_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "version",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "parameters",
+          "type": "Mapping[str, Any]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "qc_status",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "limitations",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Observation",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "observation_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "target_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "indication_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "program_id",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "category",
+          "type": "Category",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "source_kind",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "statement",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "status",
+          "type": "EvidenceStatus",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "polarity",
+          "type": "Polarity",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "mechanism_direction",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "study_id",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "dependency_group",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "context",
+          "type": "ScientificContext",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "quantitative",
+          "type": "QuantitativeResult",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "method",
+          "type": "Method",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "availability",
+          "type": "Availability",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "features",
+          "type": "Mapping[str, float]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "feature_scope",
+          "type": "str | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "input_refs",
+          "type": "tuple[str, ...]",
+          "required": false,
+          "default_expression": "()"
+        },
+        {
+          "name": "computed_at",
+          "type": "datetime | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "source_locator",
+          "type": "Mapping[str, Any]",
+          "required": false,
+          "default_expression": "field(default_factory=dict)"
+        },
+        {
+          "name": "source_metrics",
+          "type": "Mapping[str, Any]",
+          "required": false,
+          "default_expression": "field(default_factory=dict)"
+        },
+        {
+          "name": "missingness",
+          "type": "Mapping[str, str]",
+          "required": false,
+          "default_expression": "field(default_factory=dict)"
+        },
+        {
+          "name": "publication_date",
+          "type": "date | None",
+          "required": false,
+          "default_expression": "None"
+        },
+        {
+          "name": "publication_year",
+          "type": "int | None",
+          "required": false,
+          "default_expression": "None"
+        }
+      ]
+    },
+    {
+      "class": "EvidencePacket",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "observations",
+          "type": "tuple[Observation, ...]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Citation",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "artifact_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "dataset_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "release_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "artifact_sha256",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "source_url",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "GroundedObservation",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "observation",
+          "type": "Observation",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "citation",
+          "type": "Citation",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Claim",
+      "source": "src/asof/contracts.py",
+      "fields": [
+        {
+          "name": "claim_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "specialist",
+          "type": "Category",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "evidence",
+          "type": "GroundedObservation",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "extraction_mode",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "admitted_fingerprint",
+          "type": "str",
+          "required": false,
+          "default_expression": "''"
+        }
+      ]
+    },
+    {
+      "class": "EvidenceView",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "observation_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "statement",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "source_ref",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "scientific_record_json",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "SpecialistRequest",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "case_json",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "category",
+          "type": "Category",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "evidence",
+          "type": "tuple[EvidenceView, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "instructions",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "feedback",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Usage",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "input_tokens",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "output_tokens",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "cost_usd",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Selection",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "observation_ids",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "usage",
+          "type": "Usage",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "ReplayEntry",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "request_sha256",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "selection",
+          "type": "Selection",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "ReplayDocument",
+      "source": "src/asof/agents.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "responses",
+          "type": "Mapping[str, tuple[ReplayEntry, ...]]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Feature",
+      "source": "src/asof/features.py",
+      "fields": [
+        {
+          "name": "value",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "dependency_groups",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "observation_ids",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "excluded_groups",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "missing_reasons",
+          "type": "tuple[str, ...]",
+          "required": false,
+          "default_expression": "()"
+        }
+      ]
+    },
+    {
+      "class": "FeatureVector",
+      "source": "src/asof/features.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "aggregation",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "values",
+          "type": "Mapping[str, Feature]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "ScorerArtifact",
+      "source": "src/asof/scorer.py",
+      "fields": [
+        {
+          "name": "schema_version",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "model_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "kind",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "feature_schema",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "aggregation",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "endpoint",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "horizon_months",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "phases",
+          "type": "tuple[int, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "modalities",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "intended_actions",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "target_namespace_versions",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "indication_namespace_versions",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "training_origin_max",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "training_label_available_max",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "calibration_label_available_max",
+          "type": "date | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "training_manifest_sha256",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "calibration",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "intercept",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "coefficients",
+          "type": "Mapping[str, float]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "required_features",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "missing_values",
+          "type": "Mapping[str, float]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "minimum_coverage",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Contribution",
+      "source": "src/asof/scorer.py",
+      "fields": [
+        {
+          "name": "value",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "coefficient",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "log_odds",
+          "type": "float",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "imputed",
+          "type": "bool",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "observation_ids",
+          "type": "tuple[str, ...]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Prediction",
+      "source": "src/asof/scorer.py",
+      "fields": [
+        {
+          "name": "case_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "origin",
+          "type": "date",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "endpoint",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "horizon_months",
+          "type": "int | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "probability",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "reason",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "scorer_id",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "synthetic",
+          "type": "bool",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "calibration",
+          "type": "str | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "feature_coverage",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "intercept",
+          "type": "float | None",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "contributions",
+          "type": "Mapping[str, Contribution]",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "Budget",
+      "source": "src/asof/workflow.py",
+      "fields": [
+        {
+          "name": "max_calls",
+          "type": "int",
+          "required": false,
+          "default_expression": "16"
+        },
+        {
+          "name": "max_input_tokens",
+          "type": "int",
+          "required": false,
+          "default_expression": "32000"
+        },
+        {
+          "name": "max_output_tokens",
+          "type": "int",
+          "required": false,
+          "default_expression": "8000"
+        },
+        {
+          "name": "max_cost_usd",
+          "type": "float",
+          "required": false,
+          "default_expression": "0"
+        },
+        {
+          "name": "max_seconds",
+          "type": "float",
+          "required": false,
+          "default_expression": "300"
+        },
+        {
+          "name": "max_retries",
+          "type": "int",
+          "required": false,
+          "default_expression": "1"
+        }
+      ]
+    },
+    {
+      "class": "PlanStep",
+      "source": "src/asof/workflow.py",
+      "fields": [
+        {
+          "name": "category",
+          "type": "Category",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "observed_records",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "initial_status",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "RunResult",
+      "source": "src/asof/workflow.py",
+      "fields": [
+        {
+          "name": "case",
+          "type": "Case",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "snapshot_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "profile",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "backend_id",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "status",
+          "type": "str",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "budget",
+          "type": "Budget",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "calls",
+          "type": "int",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "usage",
+          "type": "Usage",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "plan",
+          "type": "tuple[PlanStep, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "coverage",
+          "type": "Mapping",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "claims",
+          "type": "tuple[Claim, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "features",
+          "type": "FeatureVector",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "prediction",
+          "type": "Prediction",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "trace",
+          "type": "tuple[Mapping, ...]",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "measured_usage",
+          "type": "Usage",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "estimated_usage",
+          "type": "Usage",
+          "required": true,
+          "default_expression": null
+        },
+        {
+          "name": "configuration",
+          "type": "Mapping",
+          "required": true,
+          "default_expression": null
+        }
+      ]
+    },
+    {
+      "class": "RetrievalPolicy",
+      "source": "src/asof/retrieval.py",
+      "fields": [
+        {
+          "name": "max_records",
+          "type": "int",
+          "required": false,
+          "default_expression": "12"
+        },
+        {
+          "name": "max_request_bytes",
+          "type": "int",
+          "required": false,
+          "default_expression": "12000"
+        },
+        {
+          "name": "wire_format",
+          "type": "str",
+          "required": false,
+          "default_expression": "'canonical'"
+        }
+      ]
+    }
+  ],
+  "reference_source_sha256": {
+    "packages/tether/src/tether/__init__.py": "40e112aeb47b1493ea01d6cd278c6002dc2187ed2ab4f885db3d2327ab169d5b",
+    "packages/tether/src/tether/_catalog_binding.py": "ee8a0d0ccc8453be3464e5b34baeaeb03696869b3e2add443d2a27c6725b10e8",
+    "packages/tether/src/tether/_catalog_policy.py": "d47a18ad0e299de4826bd49a4bc4de649bb1f4ddf286448af3d743c821876eda",
+    "packages/tether/src/tether/_cli.py": "c2eb4914a41b6865ac2aab07ee5df1d5430a1bfdbf9843cb8f95b75e61bce699",
+    "packages/tether/src/tether/_presentation.py": "93b174fcdfd9337b25585d4e4aac4028eda03d4d430591c72fbca81a9ac28ba4",
+    "packages/tether/src/tether/_process.py": "37c5878f0bc51a4d3a884da19be5179a12ad89ffb2b8133aeb204aa20dfec426",
+    "packages/tether/src/tether/_semantics.py": "9e37a7c83381fa05669046cf025dce3af4e43bb9214cd574e99dc66db7951e0f",
+    "src/asof/__init__.py": "d315a82efe204650f93ac5d79c68d3349e3d19002f62d13948f1a1a05ea8fff7",
+    "src/asof/agents.py": "843b769c39e7e4fedb981b06808fb8d0ce175c398ac38bb9b75bb84eb5a5d394",
+    "src/asof/archive/semantic_dependencies.json": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
+    "src/asof/artifacts.py": "fdb1fc9e100eb08bb6bd47d31b190d914e2f34d33e42648c24a018e50d8369e8",
+    "src/asof/atomic.py": "57a3f38cc0379093d591022ba5ea1ed01dd8d8f3a9a33002fbc58d5e7e9f8a2c",
+    "src/asof/chrono.py": "e8c994fadbef9e3007ffef549a5a9771502893ebaf5d00a04ab857df1bdc25cb",
+    "src/asof/contracts.py": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
+    "src/asof/features.py": "3b7999bc2f1bd2624982c318a94cb049423e48425373291dec82c551d2aeb99a",
+    "src/asof/journal.py": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
+    "src/asof/ledger.py": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
+    "src/asof/local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",
+    "src/asof/provenance.py": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3",
+    "src/asof/retrieval.py": "57588c44ad86eff4d9174f58f00f97ee467134c4cbc876eab8a0171e224f0dc9",
+    "src/asof/scorer.py": "afc6dbbb6783a4c899f259d17136c8d4b2f886f3f5d26b3a988a812d007be21b",
+    "src/asof/semantics.py": "eedf9691e0b303f5604afd815b8e2f9bf50dc2593528d5dd7678a460f89475ca",
+    "src/asof/serde.py": "fa910ce74c0766240eac3a64443b4b4baf7b6b64b064a1b028cda4ace66eb79c",
+    "src/asof/study/stable_read.py": "40d71fa950422e8f19fd863952b3e7ea39237c12d1c92a9d38b0a9c23a2f4a0b",
+    "src/asof/wire.py": "1e4cd9d7c18e40a0004756cfa99ce22854bb8b9361c18a1015d0fda9763658e4",
+    "src/asof/workflow.py": "eafb5f8646e8d64d7aa797f636d66e3d321646cd859e92020973d01c15c9fcf6"
+  },
+  "coverage_status": "Unscored. Obligation list is mandatory; neither implementation completeness nor corpus coverage is established by this specification.",
+  "corpus_policy": {
+    "oracle_separation": "No expected verdict, target obligation, mutation/fault family or exposure label enters descriptor or trusted_runtime.",
+    "dispositions": "Accept/reject/inspect_only are scored against separately frozen expectations; unsupported/error are coverage/failure outcomes, never coerced to correct rejection.",
+    "single_faults": "Prefer paired valid and one-violation controls with explicit exact-boundary cases; multiple independent faults may permit several first-violation IDs.",
+    "exposure": "Separate prior-regression/review-exposed families from newly constructed cases; do not claim blind held-out generalization from developer-written controls.",
+    "observables": "Oracle declares exact compared projections before scoring; scalar acceptance alone cannot establish exclusion/scoring/accounting equality.",
+    "performance": "Warm/cold runs, source bytes/read count, copied bytes, verifier time and memory are separate. Same policy is not identical internal I/O; disclose any unmatched side effects.",
+    "freeze": "Freeze spec, implementations, corpus and oracle independently before scored comparison; amendments require new revision and preserve old records."
+  },
+  "prepared_at_utc": "2026-11-02T21:41:40.402322+00:00",
+  "known_implementation_questions": [
+    {
+      "obligation": "EP-EXEC-02",
+      "question": "Current product archive verification may omit retained replay request/selection/usage reconstruction. This is a testable implementation gap, not a policy waiver; preserve any confirmed false acceptance."
+    }
+  ],
+  "frozen_at_utc": "2026-11-02T21:43:11.832654+00:00"
+}

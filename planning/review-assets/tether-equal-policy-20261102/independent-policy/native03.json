@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "mode": "native",
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\tests\\test_equal_policy_native.py"
+  ],
+  "started_at": "2026-11-02T22:02:44.255322+00:00",
+  "finished_at": "2026-11-02T22:02:57.677355+00:00",
+  "elapsed_seconds": 13.419977500103414,
+  "returncode": 0,
+  "tests_run": 5,
+  "source_sha256": {
+    "experiments/equal_policy/independent.py": "00160a49032326f45d35a7bc0d2a6927cf9396c3bad0780c500f63196d9522f3",
+    "experiments/equal_policy/independent_schema.py": "66f2c80a0be3c381cfd4ad6e5e7a5a27c55e8597601ea4af1c472b67b317b545",
+    "experiments/equal_policy/independent_local.py": "d37e976e0c253f91c5001b0f9878c6897320d457713a7ea420f88a376b719965",
+    "experiments/equal_policy/independent_render.py": "3213a4fbc58e6a73881cd16df3aee432cb2f55e4e113e8775c45cea5d1740135",
+    "experiments/equal_policy/independent_policy.py": "6afe1ef8abe93de003648db09f3ce16b7b13256bd8123e684aae4011ab04afcd",
+    "experiments/equal_policy/test_independent_policy.py": "17ce4d103e15d6a93e84e4ac1de12d29416891d57e9996137d87fe77e77057b8",
+    "experiments/equal_policy/reference.py": "7349c3290f0dc9dd00ff7579e6d1ade063e2f5c031ea0d60f284a66e0b647336",
+    "experiments/equal_policy/cases.py": "84934a81b87e00a43be0d114026f2c0fcdc394711167505216069182acd47ebb",
+    "experiments/equal_policy/policy_cases.py": "7fd24fbf08d4e24734680b837f4123a6b947f81eba3ba770af5a584a0303e2f9",
+    "experiments/equal_policy/materialize.py": "ed2d70cd6fa36d66d422e7ff1f5d9f6ea2dfa0de27fb5daea547cdc9e31c9a45",
+    "tests/test_equal_policy_native.py": "1b496743152ad9544318b8374c93fb23d4cd7c913595bd16193713f89abf9d5f"
+  },
+  "source_unchanged": true,
+  "source_after_sha256": {
+    "experiments/equal_policy/independent.py": "00160a49032326f45d35a7bc0d2a6927cf9396c3bad0780c500f63196d9522f3",
+    "experiments/equal_policy/independent_schema.py": "66f2c80a0be3c381cfd4ad6e5e7a5a27c55e8597601ea4af1c472b67b317b545",
+    "experiments/equal_policy/independent_local.py": "d37e976e0c253f91c5001b0f9878c6897320d457713a7ea420f88a376b719965",
+    "experiments/equal_policy/independent_render.py": "3213a4fbc58e6a73881cd16df3aee432cb2f55e4e113e8775c45cea5d1740135",
+    "experiments/equal_policy/independent_policy.py": "6afe1ef8abe93de003648db09f3ce16b7b13256bd8123e684aae4011ab04afcd",
+    "experiments/equal_policy/test_independent_policy.py": "17ce4d103e15d6a93e84e4ac1de12d29416891d57e9996137d87fe77e77057b8",
+    "experiments/equal_policy/reference.py": "7349c3290f0dc9dd00ff7579e6d1ade063e2f5c031ea0d60f284a66e0b647336",
+    "experiments/equal_policy/cases.py": "84934a81b87e00a43be0d114026f2c0fcdc394711167505216069182acd47ebb",
+    "experiments/equal_policy/policy_cases.py": "7fd24fbf08d4e24734680b837f4123a6b947f81eba3ba770af5a584a0303e2f9",
+    "experiments/equal_policy/materialize.py": "ed2d70cd6fa36d66d422e7ff1f5d9f6ea2dfa0de27fb5daea547cdc9e31c9a45",
+    "tests/test_equal_policy_native.py": "1b496743152ad9544318b8374c93fb23d4cd7c913595bd16193713f89abf9d5f"
+  },
+  "log_sha256": "88494e02915d2c83566980b19a5ef2e1ecd5501bccaf1232881199b32d2844f9",
+  "driver_sha256": "ad9d3332d1f1f103342ec961ae021f854fc0f84cf9b53745cb4c1d978a202814",
+  "qualification_scope": "Unscored fictional tests; no corpus oracle or scored paired comparison",
+  "native_production": true,
+  "production_science_data": false,
+  "network_or_model_execution": false,
+  "unit_inner_verifier_stub": "None; full native bytes independently verified"
+}

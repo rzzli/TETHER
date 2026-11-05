@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "purpose": "Fictional component unit qualification; not benchmark scoring or held-out performance",
+  "tests_run": 38,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "elapsed_seconds": 1.0698268001433462,
+  "source_sha256": {
+    "tests/test_equal_policy_independent.py": "25c62dce1ac2be65b789c7db8985cb8aca34cb04181b192fc51188a37a570c05",
+    "experiments/equal_policy/independent.py": "0ea4e82098d5ca578b1f7d2e13435557f9c063cef5f4baf4304caf1a14d850fd",
+    "experiments/equal_policy/independent_schema.py": "73dd9096d2da9b975a9a0921cded43254f0292ea8ac9762a4c40feb883b5758c",
+    "experiments/equal_policy/independent_local.py": "d37e976e0c253f91c5001b0f9878c6897320d457713a7ea420f88a376b719965",
+    "experiments/equal_policy/independent_render.py": "3213a4fbc58e6a73881cd16df3aee432cb2f55e4e113e8775c45cea5d1740135"
+  },
+  "source_unchanged": true,
+  "test_log_sha256": "89548d89bf17e1a2045634279807d61ab8c437a453425e292744fca1002e4b34",
+  "driver_sha256": "fdf2a5b7695adc8501ca771e15bde65a6ece9105a5b481242967b0ee423be69b",
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-dev\\Scripts\\python.exe"
+}

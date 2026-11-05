@@ -1,0 +1,50 @@
+{
+  "actual_model_calls": 0,
+  "case_constructor_sha256": "84934a81b87e00a43be0d114026f2c0fcdc394711167505216069182acd47ebb",
+  "console_log": "runtime-witnesses-02.log",
+  "console_log_sha256": "7948c12fe10db0ef6eba42cc807a676508a2ed8563fb99f6fee242b2bfccef4b",
+  "control_count": 10,
+  "control_names": [
+    "query_nested_mapping",
+    "query_nested_sequence",
+    "query_feature_mapping",
+    "committed_claim_nested_mapping",
+    "finalized_nested_coverage",
+    "finalized_trace_configuration",
+    "finalized_configuration_budget",
+    "finalized_bytes_and_semantics_after_mutations",
+    "existing_output_collision_preserves_bytes_and_dispatches_nothing",
+    "interrupted_inspection_keeps_unresolved_usage_without_redispatch"
+  ],
+  "installed_python_payloads_rechecked": 84,
+  "installed_runtime_unchanged": true,
+  "launcher_tests": {
+    "errors": 0,
+    "failures": 0,
+    "log": "runtime-witness-tests-01.log",
+    "log_sha256": "2b9379aeecca448c1a1747c32878f46252d5bff7bff06014b0d54afea3d2034a",
+    "run": 3,
+    "skips": 0
+  },
+  "provider_spending_usd": 0,
+  "result_path": "data\\cache\\tether-equal-policy-runtime-witnesses-20261102-02\\RUNTIME-WITNESSES.json",
+  "result_sha256": "5217b2037035aa96daeb79c0280b84296f968bae5a55248f97a0397a82ad2440",
+  "retained_previous_attempt": {
+    "path": "data/cache/tether-equal-policy-runtime-witnesses-20261102-01/RUNTIME-WITNESSES.json",
+    "scope": "Passed before launcher failure-report hardening; superseded code, preserved unchanged",
+    "sha256": "c2c7664f443618309a7df568a885a9ba4d77ebd527d33cf1829f72aa8a21854b"
+  },
+  "runtime": {
+    "asof_file": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\asof\\__init__.py",
+    "asof_version": "0.3.12",
+    "isolated": 1,
+    "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Scripts\\python.exe",
+    "tether_file": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-051-installed-qualification-attempt02\\environment\\Lib\\site-packages\\tether\\__init__.py",
+    "tether_version": "0.5.1"
+  },
+  "schema_version": 1,
+  "scope": "Separate installed-runtime witnesses; not independent-validator performance or paired corpus denominators",
+  "status": "PASS",
+  "test_code_sha256": "47e960ff8107bf8a65b8b56a48ddcb044a1997f505c8550b4bb75418e40bf2b2",
+  "witness_code_sha256": "8dfbe08b4635fdc19e9100bf21ba46f91cfff1f5ca3c7e417b11ddd745d002e0"
+}

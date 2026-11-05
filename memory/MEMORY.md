@@ -1,6 +1,6 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-02-benchmark-execution]] - Current active goal: BG01 complete, Windows full2020/facade138/aggregate742 pass with installed0.5.1/0.3.12 and preserved failures/old releases. Next: equal-policy independent validator → SciFact → one LAB-Bench task family → Inspect comparison. No benchmark/model execution yet; scientific limitations remain.
+- [[research-log-2026-11-02-benchmark-execution]] - Current active goal: BG01 complete, Windows full2020/facade138/aggregate742 pass with installed0.5.1/0.3.12. BG02 independent validator/27-obligation policy/108 fictional cases implemented; final integration and paired execution pending. Then SciFact → one LAB-Bench task family → Inspect comparison. No model or scored benchmark execution yet; preserved failures and scientific limitations remain.
 
 - [[research-log-2026-11-02-benchmarks-and-methods]] - Current research: independent equal-policy conformance comparison, then SciFact and one LAB-Bench task after adapters/solvers exist; ALCE and conditional domain/temporal alternatives. Peer transfers separate entailment, valid-case retention, independent behavioral tests, scoped reuse and later reliability/tool security. Existing accounting/grouping/caches acknowledged; public exposure/access limits retained. No benchmark execution or runtime fixes; CE01–CE04 open, Q04/Q05 inactive, experts retired, owner facts deferred.
 
