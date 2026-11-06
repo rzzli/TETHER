@@ -156,3 +156,17 @@ one oldhttpdx.doi.org URL and a SICI suffix withanglebrackets. Five corrected
 projection controls pass. No keys/keypassages in diagnostic projection.
 Analysis specification adds allpairedfactorialcontrasts and10kseed20261106
 publication-component bootstrap before primaryanswer generation. SC04–SC09 open.
+
+## Supplied-source controller qualified while primary collection runs
+
+Code953c6b1:30 diagnostic controls pass. Actual fictional session15099 closedexit0:
+two local-model calls,619input/86outputtokens,$0provider;1/2 answersmatches,
+Vesprinefalseabstention retained. Independent review passes1251technicalchecks.
+Rootf9dd1f8b8d0a560730d0450cec03647ec8adcba5d23e0836c16e6af03c1cf19c;
+framee8a086e78196959c721d33b4105516bf595096308167d6461251bb1c1c06b013.
+SUPPLIED-CONTROLLER-QUALIFICATION.md records scope/resources. Freezer now requires
+this qualified code and a completeprimary externalroot anchor before diagnostic
+production. Primary48230 stilllive; latestpoll73/398 collection slots,338HTTP200
+and4failedtransfers,~15.99s/slot. Do not restart or modify its125frozen sourcefiles.
+Analysisaddendum keeps nativezero-precision-with-definedFalse while human ratio
+isnull/undefined; originalanalysisdoc pinnedbyfixture remains unchanged.

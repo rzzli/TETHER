@@ -60,3 +60,16 @@ Five projection controls pass after explicit normalization corrections.
 The [analysis specification](ANALYSIS-SPECIFICATION.md) fixes all paired factorial
 contrasts and10,000 publication-component bootstrap replicates before primary
 answers are generated. No threshold is fitted on the199 evaluated keys.
+
+## Diagnostic controller qualified
+
+Supplied-source controller implementation is now complete for qualification:
+30 controls pass, and the actual fictional trial finishes2 local-model calls and
+both maintained replay stages. Independent review passes1,251 technical checks;
+1/2 fictional answers matches, preserving the known false abstention. See
+[SUPPLIED-CONTROLLER-QUALIFICATION.md](SUPPLIED-CONTROLLER-QUALIFICATION.md).
+Session15099 is closedexit0; primary session48230 remains the only live experiment
+handle at this checkpoint. Diagnostic production waits for primary finalization,
+enforced by its freezer/controller. No production diagnostic HTTP call has run.
+The reporting [addendum](ANALYSIS-SPECIFICATION-ADDENDUM.md) preserves native
+zero-attempt precision conventions while showing the statistical ratio as undefined.

@@ -14,6 +14,8 @@ PRIMARY_FRAME=ROOT/'planning/review-assets/tether-semantic-20261106/sc04/product
 PRIMARY_SHA='bf2898bed1a1c2f0a6040dd116ec37223f514764217441e4b8cf84345e4801d0'
 INPUTS=ROOT/'data/benchmark/litqa_comparison/supplied-source-inputs-20261106-attempt03/MANIFEST.json'
 INPUT_SHA='6635f6b0501b0b40abeda01b7ca723f5b3309838f6e6e4ba4810689f1378290d'
+QUALIFICATION=ROOT/'planning/review-assets/tether-semantic-20261106/sc04/supplied-controller-review01/REVIEW.json'
+QUALIFICATION_SHA='4c28f98110dbf0eead15c7faae73b8d05fe42481af503b109ef8b6a478b6168c'
 
 
 def main():
@@ -26,7 +28,7 @@ def main():
     spec,_,provenance=run.model.make_server_spec(model['model_receipt']['path'],model['model_receipt']['sha256'],
         port=model['port'],alias=model['alias'],startup_seconds=180)
     model['model_spec']=encode(spec);model['model_provenance']=encode(provenance)
-    source_projection=None;parent=None
+    source_projection=None;parent=None;qualification=None
     if args.purpose=='fictional_qualification':
         queries=fixture.queries();hints=[dict(id=q['id'],question=q['question'],dois=[fixture.DOI]) for q in queries]
         products={}
@@ -34,6 +36,12 @@ def main():
             run.write(args.output/(name+'.json'),rows);products[name]=proofs.proof(args.output/(name+'.json'))
         counts=(2,1,2);seconds=dict(collect=300,answer=600);replay_seconds=180
     else:
+        qualification=proofs.proof(QUALIFICATION)
+        run.codecs.need(qualification['sha256']==QUALIFICATION_SHA,'Diagnostic controller qualification anchor')
+        qualified=proofs.read(qualification)
+        run.codecs.need(qualified['status']=='TECHNICAL_PASS_WITH_SEMANTIC_FAILURES' and qualified['model_calls']==2,
+                        'Known qualification result differs')
+        run.load_frame(ROOT/'planning/review-assets/tether-semantic-20261106/sc04/supplied-controller-freeze01/FRAME.json',qualified['frame_sha256'])
         run.codecs.need(args.primary_root is not None and args.primary_root_sha256,'Completed primary root and externally retained receipt hash required')
         receipt=proofs.proof(args.primary_root/'ROOT-RECEIPT.json')
         run.codecs.need(receipt['sha256']==args.primary_root_sha256,'Primary root external anchor')
@@ -48,10 +56,12 @@ def main():
         questions=counts[0],unique_dois=counts[1],question_doi_pairs=counts[2],products=products,model=model,code_pins=run.code_pins(),
         python=proofs.proof(sys.executable),generation_configuration=primary['generation_configuration'],policy=primary['policy'],
         primary_execution=parent,source_projection=source_projection,primary_frame=proofs.proof(PRIMARY_FRAME),
+        controller_qualification=qualification,
         phase_seconds=seconds,replay_seconds=replay_seconds,ordinary_retrieval=False,provider_cost_usd=0,automatic_retry=False,
         qualification_scope='Frozen answer producer has known false abstentions; this experiment measures them without prompt retuning.',
         protocol=proofs.proof(ROOT/'planning/TETHER LitQA2 Retrieval Comparison Protocol 2026-11-06.md'),
         analysis=proofs.proof(ROOT/'planning/review-assets/tether-semantic-20261106/sc04/ANALYSIS-SPECIFICATION.md'),
+        analysis_addendum=proofs.proof(ROOT/'planning/review-assets/tether-semantic-20261106/sc04/ANALYSIS-SPECIFICATION-ADDENDUM.md'),
         freeze_helper=proofs.proof(Path(__file__)))
     run.write(args.output/'FRAME.json',frame);proof=proofs.proof(args.output/'FRAME.json')
     run.load_frame(proof['path'],proof['sha256']);run.tasks(frame,'answer');run.primary_gate(frame)
