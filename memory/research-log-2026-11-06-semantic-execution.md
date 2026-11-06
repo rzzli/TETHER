@@ -294,3 +294,15 @@ Locked uv sync, a fresh demo in runs/readme-intuitive-20261106-attempt01, and
 source-inclusive verification with externally saved receipt hash all passed.
 Receipt: 9c1d7ed2c14f5d26654ed6b767edf5268cc9cca140603ec1153f2ea0635f955a.
 Local links/anchors and Markdown code fences checked; no runtime source changed.
+
+## Continued production and current documentation
+
+Primary session48230 remains verified live; at22:38:41UTC,357/398 collection
+products exist. All125 frozen primary source hashes freshly match. No new
+production attempt or answer scoring was started. Package overview versions now
+match pyproject metadata (TETHER0.5.2/engine0.3.13). SC05 feasibility now links its
+completed local calibration-reservation audit without claiming global non-use.
+R2E follow-up metadata binds both complete six-file official trees, zero GitHub
+release assets and one Zenodo repository ZIP; all15 local metadata proofs pass.
+The exact19176-member candidate universe remains unestablished, not an access
+failure. No R2E TSV/model acquired and SC05-SC09 remain inactive/incomplete.

@@ -5,6 +5,13 @@ read-only preparation allowed by the current execution plan. It does not start
 SC05, approve a final protocol, change any frozen experiment, or claim that the
 scientific prerequisites below have passed. SC04 must complete first.
 
+**Later prerequisite update:** the [retained calibration audit](SC05-CALIBRATION-ELIGIBILITY-AUDIT.md)
+completed at 22:14 UTC and supports local reservation of all 69 claims. It freshly
+verified the checkpoint, original split and retained worker records. This resolves
+the local non-use audit below within its stated scope; it does not resolve model
+pretraining exposure or start calibration. The original feasibility observations
+are retained as dated observations.
+
 ## Recommendation recorded before SC04 answers
 
 Use the **SC04 L/O lexical-source, lexical-selection arm** as the future first-pass
@@ -117,7 +124,8 @@ FEVER/PubMedQA/Evidence Inference training, before target-dataset fine-tuning.
 This supports conditional use of the 69 locally reserved calibration claims with
 the same SC03 solver. It does **not** establish global contamination freedom:
 encoder/scientific-corpus overlap and inherited model-development exposure remain
-unexcluded. A complete local fitting/tuning/non-use audit is still pending. Do not
+unexcluded. The subsequent local fitting/tuning/non-use audit supports reservation
+within retained execution records, with shared-corpus exposure explicit. Do not
 silently substitute the weaker sparse baseline or call these claims untouched.
 
 Proposed execution after that audit:
@@ -170,7 +178,8 @@ the SC02 `solver-qualification/full-freeze-attempt02/MANIFEST.json` pin.
 ## Unresolved gates
 
 - SC04 complete execution and independent acceptance before baseline reuse.
-- SciFact calibration non-use/role audit and source-preservation revalidation.
+- SciFact calibration role-aware execution and source-preservation revalidation;
+  the retained local reservation audit has passed within its stated scope.
 - New critique/repair prompts, exact budgets, failure policies, purpose grants,
   source merging and independent replay qualification.
 - No separately eligible LitQA2 calibration source is established locally.

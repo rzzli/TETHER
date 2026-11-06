@@ -1,9 +1,9 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T22:24:35Z
+## Current checkpoint: 2026-11-06T22:38:41Z
 
 SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 was
-confirmed live and had301/398 completed collection products. Expansion199 is
+confirmed live and had357/398 completed collection products. Expansion199 is
 complete; primary ranking/answers and the full supplied-source diagnostic are
 not finalized. Re-poll that session before inferring state; never restart it on
 an observation timeout. All125 frozen primary source pins remain unchanged.
@@ -39,6 +39,10 @@ Read-only forward checks are retained for later work:
 reservation, with shared-corpus exposure explicitly retained; no calibration was
 run. Later benchmark acquisition, full family counts, native judge feasibility,
 and the authoritative R2E candidate universe remain future qualification gates.
+The R2E metadata-access check now passes: two complete official repository trees,
+the release listing and Zenodo attachment metadata expose no separate vocabulary.
+This narrows the missing-input question; no TSV or candidate-universe payload has
+been acquired or interpreted. Both trees and 15 retained metadata proofs verify.
 
 Next: let the existing primary execution finalize; bind its printed root hash,
 freeze/run the full supplied diagnostic, then execute the qualified analyzer with

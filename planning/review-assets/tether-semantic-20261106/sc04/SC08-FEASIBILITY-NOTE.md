@@ -36,16 +36,20 @@ database. [Official product schemas and terms](https://github.com/BenevolentAI/r
 
 The number 19,176 is established; the authoritative ordered IDs, ontology release,
 aliases and complete membership are **not established**. The README lists
-evaluation columns, not a candidate-vocabulary manifest. A repository root view
-was accessible, but the recursive-tree API and nested listing/raw-license pages
-failed in the web reader. Those failures do not prove authentication is required
-or that the missing artifact does not exist. No immutable repository revision or
-dataset bytes were acquired in this task.
+evaluation columns, not a candidate-vocabulary manifest. Initial web-reader tree
+requests failed, but the official GitHub API follow-up below succeeded and pinned
+both the default branch and the published release. Their complete recursive
+trees contain no separate candidate-vocabulary file. No dataset payload was
+downloaded or parsed, so this does not determine whether the union of TSV target
+strings happens to cover every original candidate; that union is not documented
+as an authoritative vocabulary.
 
-The ACL landing page exposed no supplementary-asset link in its rendered text;
-the paper points back to the public repository. This limited navigation result
-does not establish that no supplementary candidate file exists. A later metadata
-tree/attachment inspection must settle that before task preparation.
+The ACL page's retrieved HTML exposes the paper PDF but no supplementary-asset
+link. The README links an official Zenodo release record containing one
+repository ZIP attachment and no separately listed vocabulary attachment.
+The ZIP was not downloaded. These checks establish the contents of the examined
+repository trees and attachment listings, not universal absence of a candidate
+file elsewhere.
 [ACL publication record](https://aclanthology.org/2025.acl-long.167/).
 
 Candidate reconstruction from the union of evaluation labels is not automatically
@@ -130,10 +134,72 @@ and proof of identical rankings. A modern alternative encoder changes the model
 condition. No public weights means the small native network sizes alone do not
 make original-model inference available.
 
-Dataset transfer bytes, public-corpus size, index size, full-family runtime and
-checkpoint access remain unknown; do not infer them from available disk space.
+Upstream metadata now reports 21,376,819 bytes across the four TSV blobs and a
+7,576,090-byte Zenodo repository ZIP. These are declared upstream sizes, not
+locally verified dataset payloads or measured transfer use. Public-corpus size,
+index size, full-family runtime and usable author-checkpoint access remain
+unestablished; do not infer them from available disk space.
 No expensive benchmark should start until a no-label performance qualification
 produces an extrapolated complete-family budget with explicit failure handling.
+
+## Official metadata follow-up: 6 November 2026, 22:28-22:31 UTC
+
+Read-only GitHub API access succeeded using the installed CLI after the initial
+sandbox connection failed. Only repository/ref/commit/tree/release metadata,
+the 3,518-byte README, Zenodo record JSON and ACL landing-page HTML were retained.
+No TSV, ZIP, model, paper PDF or dataset record was downloaded; no experiment ran.
+
+| Identity | Verified upstream value |
+|---|---|
+| Repository | `BenevolentAI/r2e-evaluation-data` |
+| Default branch | `main` |
+| Immutable default-branch commit | `55dbe0390423cba052661b58340a32fb7536d10d` |
+| Default-branch tree | `6fb98e740cd28053ebda49ecd363767fd1a91ac7` |
+| Published release | `v1.0.0`; the single returned release has zero uploaded assets |
+| Immutable release commit | `54a74aaa5492a70e4fe0dcec9408cd0c46827c82` |
+| Release tree | `db06d650e2513e057d41ddc5cf56aa3393b92e46` |
+| Tree completeness | Both official recursive responses report `truncated: false` |
+| Zenodo concept / version | `10.5281/zenodo.12088286` resolves to version `10.5281/zenodo.12088287` |
+
+Both trees contain exactly six files: `LICENSE`, `README.md` and the four TSVs
+below, with one `datasets/` directory. The two revisions have identical TSV and
+license Git blob IDs; their README differs because the newer commit adds the
+Zenodo DOI. The complete tree and release results can be reviewed through the
+[official immutable tree API](https://api.github.com/repos/BenevolentAI/r2e-evaluation-data/git/trees/6fb98e740cd28053ebda49ecd363767fd1a91ac7?recursive=1)
+and [published release](https://github.com/BenevolentAI/r2e-evaluation-data/releases/tag/v1.0.0).
+
+| Dataset path beneath `datasets/` | GitHub-declared blob bytes |
+|---|---:|
+| `heldout_biomedical_literature_test.tsv` | 9,705,190 |
+| `heldout_biomedical_literature_validation.tsv` | 3,142,230 |
+| `gene_description_facts.tsv` | 7,897,809 |
+| `clinical_trial_outcomes.tsv` | 631,590 |
+
+The [official Zenodo record](https://zenodo.org/records/12088287) lists only
+`BenevolentAI/r2e-evaluation-data-v1.0.0.zip`, with declared size 7,576,090 bytes
+and MD5 `627d1cd0a1dd0f4d462433474cf1c6e0`, and identifies the GitHub `v1.0.0`
+tree as its related software. This is attachment metadata, not verification of
+the archive bytes or internal contents. The repository README provides no
+additional candidate-list or ontology-version link.
+
+**Consequence:** public access to the evaluation-release metadata is established;
+the exact 19,176-member candidate universe remains an unresolved input. Author
+weights and proprietary evidence still limit exact reproduction of the authors'
+model, but their absence does not itself block development of a declared TETHER
+ranker. That ranker still needs a proven candidate universe and qualified public
+corpus to complete the planned full-universe evaluation. Reading the four TSVs
+and checking label coverage is a future preparation step, not permission to
+equate their label union with the original universe.
+
+Raw metadata, decoded README and SHA-256 proofs are retained under
+`data/cache/sc08-r2e-public-metadata-20261106T222856643824Z/`.
+Its `SUMMARY.json` SHA-256 is
+`14295668718ee55db774ac551307a223016903aaf8b9f156e6ffeb651624475b`.
+The summary binds 15 metadata/manifest files (85,988 bytes), including both
+recursive trees, the release record, Zenodo listing and ACL HTML. Original Git
+blob identities are preserved separately from locally calculated SHA-256 hashes;
+none is presented as a verified TSV payload hash. The unsuccessful first API
+attempt is retained in its own timestamped cache directory.
 
 ## Retained local evidence
 
@@ -149,6 +215,7 @@ Fresh hashes on `2026-11-06T22:14:48.325269Z`, paths relative to
 
 The bounded local checks listed in [SC07's note](SC07-FEASIBILITY-NOTE.md) found no
 R2E-named direct child in the inspected raw/cache/benchmark/model roots. This is
-not a global filesystem absence proof. Upstream pages were read; no full TSV,
-candidate list, source corpus or model bytes were inspected. All gates above
-remain pending, and SC08 remains inactive.
+not a global filesystem absence proof. Upstream pages and the metadata follow-up
+above were read; no full TSV, candidate list, source corpus or model bytes were
+inspected. The metadata-access gate is resolved; the candidate-universe, corpus,
+execution and scientific-validation gates remain pending. SC08 remains inactive.
