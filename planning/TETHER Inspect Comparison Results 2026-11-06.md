@@ -22,7 +22,7 @@ All arms use a common durable result wrapper. Inspect uses native Tasks, solvers
 | Batch elapsed seconds, repetitions 1 / 2 / 3 | 25.063 / 24.922 / 25.250 | 23.687 / 22.953 / 23.844 | 34.828 / 36.485 / 36.875 |
 | Median batch seconds | 25.063 | 23.687 | 36.485 |
 | Median worker CPU seconds | 22.641 | 20.906 | 28.703 |
-| Worker peak memory range, bytes | 296,906,752â€“297,123,840 | 304,492,544â€“304,803,840 | 401,149,952â€“401,727,488 |
+| Worker peak memory range, bytes | 296,906,752–297,123,840 | 304,492,544–304,803,840 | 401,149,952–401,727,488 |
 | Native Inspect samples / correct / errors | Not applicable | Not applicable | 327 / 327 / 0 |
 
 The median **paired** batch ratios are Inspect/independent 1.4604, Inspect/TETHER 1.5465 and TETHER/independent 0.9443. They are computed from each repetition's ratio, not the ratio of medians. Three repeated batches support descriptive timing only. BG02's earlier fresh-process-per-case TETHER/independent ratio of 1.65 remains valid for its different condition; it must not be pooled with these warm-within-batch timings. The reversal shows sensitivity to the experimental condition; changed wrappers, imports and execution granularity prevent attributing the difference to one cause.

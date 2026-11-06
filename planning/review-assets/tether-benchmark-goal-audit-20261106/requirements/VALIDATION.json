@@ -1,0 +1,56 @@
+{
+  "active_stage_blockers": [],
+  "additional_local_link_checks": {
+    "planning/TETHER Benchmark Goal Completion Audit 2026-11-06.md": 12,
+    "planning/review-assets/tether-benchmark-goal-audit-20261106/requirements/FINDINGS.md": 2
+  },
+  "current_bg05_acceptance": {
+    "bytes": 9105,
+    "path": "planning/review-assets/tether-inspect-20261106/stage/STAGE-ACCEPTANCE-02.json",
+    "sha256": "07b0d443617142c6c484b4a148b50adfd8244f24602f0f451aa4f59860a6d1c2"
+  },
+  "evidence_files_hashed": 38,
+  "final_goal_report_review": {
+    "local_links_checked": 12,
+    "new_active_requirement_blockers": [],
+    "report": {
+      "bytes": 15408,
+      "path": "planning/TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "sha256": "e377a5e9f5826a51d7c0dfbcb9c95f367cf4073055cfd1d9e7408dd5f06c52d5"
+    },
+    "status": "PASS_REQUIREMENTS_AND_SCOPE_REVIEW",
+    "suggested_BG02_semantic_twin_clarification_applied": true
+  },
+  "findings": {
+    "bytes": 5960,
+    "path": "planning/review-assets/tether-benchmark-goal-audit-20261106/requirements/FINDINGS.md",
+    "sha256": "c8b5c6100b3b72985d9f4917e9ba80950d4fa7a6b7bf791dbdddfd3d1591629f"
+  },
+  "local_links_checked": 60,
+  "markdown": {
+    "bytes": 18009,
+    "path": "planning/review-assets/tether-benchmark-goal-audit-20261106/requirements/REQUIREMENT-MATRIX.md",
+    "sha256": "f691dcefe281e08cbbfec9365382cff7f66d7331deb77661ae1e6c2537e0f0b5"
+  },
+  "matrix": {
+    "bytes": 27479,
+    "path": "planning/review-assets/tether-benchmark-goal-audit-20261106/requirements/REQUIREMENT-MATRIX.json",
+    "sha256": "7312fde15def688f41c273921defda940318a0725a5b2d6ce94dbd76d9ee9d01"
+  },
+  "method": "Read-only local record assertions/hash and percent-decoded link validation; no producer, scorer, test-suite, native execution or full raw/model rehash.",
+  "preserved_checkpoint": {
+    "bytes": 26712,
+    "path": "planning/review-assets/tether-benchmark-goal-audit-20261106/requirements/REQUIREMENT-MATRIX-checkpoint01.json",
+    "sha256": "40f10bd20acadacc0bbd35473b3a238aa5bf8bb9a4d02609afa00ef927ab86d6"
+  },
+  "requirements": 22,
+  "schema_version": 1,
+  "stage_requirements_complete": [
+    "BG01",
+    "BG02",
+    "BG03",
+    "BG04",
+    "BG05"
+  ],
+  "status": "PASS_BOUNDED_DOCUMENT_AND_RECORD_CHECKS"
+}

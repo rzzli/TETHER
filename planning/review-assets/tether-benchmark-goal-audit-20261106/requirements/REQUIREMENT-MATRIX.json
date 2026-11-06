@@ -1,0 +1,545 @@
+{
+  "active_requirement_blockers": [],
+  "active_stage_requirements_complete": [
+    "BG01",
+    "BG02",
+    "BG03",
+    "BG04",
+    "BG05"
+  ],
+  "evidence": {
+    "bg01_acceptance": {
+      "bytes": 92098,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/VALIDATION.json",
+      "sha256": "1792d94ed55e806dc0f3fdcbf8c08684b899ad5ddd6c8e420bde4aba63a4b90d"
+    },
+    "bg01_completion": {
+      "bytes": 4876,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md",
+      "sha256": "88951325b63e7cf0d97d1d6d01f0c5c508e824db372a1ca86e35a079201a8793"
+    },
+    "bg02_closure": {
+      "bytes": 2673,
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/completion/CLOSURE-20261105.json",
+      "sha256": "cc1b97730cf744c8ff709aa32daa3d5f75968ea4c487823e30e99517ea569f65"
+    },
+    "bg02_matrix": {
+      "bytes": 10392,
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/completion/REQUIREMENT-EVIDENCE-MATRIX.md",
+      "sha256": "7eddd059f07f7b48930f4d9446542f2c5bb3941d2fea2a64ae4c1634c1eaf864"
+    },
+    "bg02_old": {
+      "bytes": 21432,
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/OLD-RESULT-SUMMARY-20261105.json",
+      "sha256": "2ae6a1e956bb9cec0bbba274144c927cb8430e48cc29986d0785f5e7e62e8951"
+    },
+    "bg02_patched": {
+      "bytes": 21490,
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/reconstruction/PATCHED-RESULT-SUMMARY-20261105.json",
+      "sha256": "382953495ca3dd3a6dc7e025cf2f6e05fa336cff4ab47616f12c269864c2c122"
+    },
+    "bg02_protocol": {
+      "bytes": 6290,
+      "path": "planning/review-assets/tether-equal-policy-v2-20261105/CORRECTED-PROTOCOL.md",
+      "sha256": "a647832fbd341896b00dd347f1e59eb3972dfc300b65adf5cb84e2b2a28741d5"
+    },
+    "bg02_report": {
+      "bytes": 8981,
+      "path": "planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+      "sha256": "f24395d12845a7455d729ac1d305d552a58b77cc01b42349fbe3ec0adf1c5f59"
+    },
+    "bg03_acceptance": {
+      "bytes": 31813,
+      "path": "planning/review-assets/tether-scifact-20261105/actual-attempt01/ROOT-ACCEPTANCE.json",
+      "sha256": "3426f85542f3a2b3355542e9292168db2f5f2ce39c713836a3c0e7cc1202d462"
+    },
+    "bg03_acquisition": {
+      "bytes": 7799,
+      "path": "planning/review-assets/tether-scifact-20261105/ACQUISITION-20261105.json",
+      "sha256": "f5522fb41557d7d014de68abf0d684069a170ad204da816e8078c71f4e226fd3"
+    },
+    "bg03_gate": {
+      "bytes": 3410,
+      "path": "planning/review-assets/tether-scifact-20261105/integration-attempt01/VALIDATION.json",
+      "sha256": "b424884c195f01281c9d1340f5e6d70ad149062e4e468af2d44a967fef4483a3"
+    },
+    "bg03_protocol": {
+      "bytes": 28593,
+      "path": "planning/TETHER SciFact Execution Protocol 2026-11-05.md",
+      "sha256": "9d24a4ed4255389e324826bbf2d3a97f554d5d884b6e966a4918f4cb17156dab"
+    },
+    "bg03_reconstruction": {
+      "bytes": 26631,
+      "path": "data/benchmark/scifact/reconstruction-20261105-attempt01/RECONSTRUCTION.json",
+      "sha256": "35c589e3ea7706844196830305c61944dd6c66336e76f13d5a3da0bc470d3d07"
+    },
+    "bg03_report": {
+      "bytes": 31043,
+      "path": "planning/TETHER SciFact Native Evaluation Results 2026-11-05.md",
+      "sha256": "7bd7b9a55d5bdad4b72b37d346f7ed63a6f68f934ec77b03131d371790da2c3b"
+    },
+    "bg03_scoring": {
+      "bytes": 5025,
+      "path": "planning/review-assets/tether-scifact-20261105/scoring/QUALIFICATION.md",
+      "sha256": "069ef279cd06748a21f21599f5a82cff5b69ecea72461caa71f8c9967c527c89"
+    },
+    "bg04_acceptance": {
+      "bytes": 6116,
+      "path": "planning/review-assets/tether-labbench-20261106/STAGE-ACCEPTANCE-01.json",
+      "sha256": "0b132b69a4b8020004b5cf53bf31b1b97bf1e312c52785687be4bc9bf0d76a63"
+    },
+    "bg04_metric_agreement": {
+      "bytes": 1793,
+      "path": "planning/review-assets/tether-labbench-20261106/reconstruction/PRIMARY-COMPARISON.md",
+      "sha256": "fc83044fd5687554afb2c0008ced4d806b969d1d50bfd22a3cda2caabba6d4e6"
+    },
+    "bg04_pair_scope": {
+      "bytes": 1921,
+      "path": "planning/review-assets/tether-labbench-20261106/stage/PAIRED-COMPARISON-SCOPE.md",
+      "sha256": "df53c8c704c7951afd291b0327183c555b016be6dcfa203e58ff219c71a07dd3"
+    },
+    "bg04_protocol": {
+      "bytes": 16149,
+      "path": "planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md",
+      "sha256": "59dffc55c1ed8356ead9b77d338cabc1a0dbede226cc1239cab9b50ec33e69e6"
+    },
+    "bg04_reconstruction": {
+      "bytes": 5188,
+      "path": "data/benchmark/labbench/reconstruction-20261106-attempt01/RECONSTRUCTION.json",
+      "sha256": "e184cbaefa4ca767d0dcf0c55286b96ea768f624fd512d9585ec4aefe41f4fa0"
+    },
+    "bg04_report": {
+      "bytes": 15605,
+      "path": "planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md",
+      "sha256": "95cf2839c0e6693a1506c9f2cfc496d0a47c2a4048cc51ee6be502316cc18305"
+    },
+    "bg04_resources": {
+      "bytes": 11681,
+      "path": "planning/review-assets/tether-labbench-20261106/stage/RESOURCE-SCOPE-02.json",
+      "sha256": "8c39c654b6711e4c03c3ab4b1a476f65ede8f7277f46a0d19b3df665122c5218"
+    },
+    "bg04_scorer_qualification": {
+      "bytes": 1593,
+      "path": "planning/review-assets/tether-labbench-20261106/reconstruction/QUALIFICATION-01.json",
+      "sha256": "75df9b8fa9f014ee7865911646291a92fb0bebd9dc83db590ca0542df72c7cdb"
+    },
+    "bg05_acceptance": {
+      "bytes": 9105,
+      "path": "planning/review-assets/tether-inspect-20261106/stage/STAGE-ACCEPTANCE-02.json",
+      "sha256": "07b0d443617142c6c484b4a148b50adfd8244f24602f0f451aa4f59860a6d1c2"
+    },
+    "bg05_coverage": {
+      "bytes": 130174,
+      "path": "planning/review-assets/tether-inspect-20261106/integration/RESULT-COVERAGE-FINAL.json",
+      "sha256": "592650678dfbf2b5c9af2bafa0e2e1d28756f60848ac166471117821877766f7"
+    },
+    "bg05_environment": {
+      "bytes": 4988,
+      "path": "planning/review-assets/tether-inspect-20261106/environment/attempt02/ENVIRONMENT-QUALIFICATION.json",
+      "sha256": "d759f9fb05bcb985167add81a273e09294cfa325870c2de072e309fcdb9053b6"
+    },
+    "bg05_primary": {
+      "bytes": 255563,
+      "path": "planning/review-assets/tether-inspect-20261106/reconstruction/actual01/RECONSTRUCTION.json",
+      "sha256": "33720734fb1132fdd91a215f4bc6497d540c0e2ec56b382f859bb6c9e6683ce6"
+    },
+    "bg05_protocol": {
+      "bytes": 12260,
+      "path": "planning/TETHER Inspect Comparison Protocol 2026-11-06.md",
+      "sha256": "c8c710c1972a776656d54444d8a6ca90d5b4373936186c362b773340e43cb9a3"
+    },
+    "bg05_report": {
+      "bytes": 15757,
+      "path": "planning/TETHER Inspect Comparison Results 2026-11-06.md",
+      "sha256": "882eeecd9ad2d97da85baf8d6bfc8be9325bac53aee47d7db4f5d8578724a0cc"
+    },
+    "bg05_runtime": {
+      "bytes": 20697,
+      "path": "planning/review-assets/tether-inspect-20261106/reconstruction/runtime-actual01/RUNTIME-RECONSTRUCTION.json",
+      "sha256": "c1f3507eaa98e398c91bfaa7db9a851a09e5d9360e1612a2676257487dcf4f7b"
+    },
+    "ce01_green": {
+      "bytes": 1207,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce01/VALIDATION.json",
+      "sha256": "f7698b8664673e0581cd7edc47182116a76e52df627895a1fbdb5c482a85d5d0"
+    },
+    "ce01_red": {
+      "bytes": 353,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce01/before-regression.json",
+      "sha256": "f8cc16c112472c5d5436e95f2cf8e58eac5717523e41f2ec88254063d07675ff"
+    },
+    "ce02_green": {
+      "bytes": 626,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce02/green4-results.json",
+      "sha256": "872b403260bc26a2d7a874d92c98112ad03134be1f05e1dc0113b016cd49ba6a"
+    },
+    "ce02_red": {
+      "bytes": 4255,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce02/red-results.json",
+      "sha256": "f35ad2796b5044546b558e7e7fc9a8ddaf98ae6e1be964fa7af1a1fea1539f3c"
+    },
+    "ce03_green": {
+      "bytes": 728,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce03/green-v1/results.json",
+      "sha256": "4d0d97e0d70604d6170340e946d9055fa0434a1c6d4e43e0603999afd21db47a"
+    },
+    "ce03_red": {
+      "bytes": 729,
+      "path": "planning/review-assets/tether-ce-fixes-20261102/ce03/red-v2/results.json",
+      "sha256": "590f4bcc5bf1fada57c9e781172cb9d6c37778bc78424b0cba4c93537f8a4e84"
+    },
+    "plan": {
+      "bytes": 8028,
+      "path": "planning/TETHER Benchmark Execution Plan 2026-11-02.md",
+      "sha256": "3103892b5e51124484a2b74c9e68858181dc8bc22477be05bd2293e49e47d723"
+    },
+    "release052": {
+      "bytes": 6625,
+      "path": "planning/review-assets/tether-replay-correction-20261105/RELEASE-AGGREGATE-FINAL01.json",
+      "sha256": "d966fa3f74fa5ace029a041642a279bcacef346aa70df65f7bc048733835b01e"
+    }
+  },
+  "evidence_update_history": [
+    {
+      "current": {
+        "bytes": 9105,
+        "path": "planning/review-assets/tether-inspect-20261106/stage/STAGE-ACCEPTANCE-02.json",
+        "sha256": "07b0d443617142c6c484b4a148b50adfd8244f24602f0f451aa4f59860a6d1c2"
+      },
+      "id": "bg05_acceptance",
+      "previous": {
+        "bytes": 9105,
+        "path": "planning/review-assets/tether-inspect-20261106/stage/STAGE-ACCEPTANCE-01.json",
+        "sha256": "eb6c66d2a9bbd4c5d70432cffedf9ef702feec4a777792e50620779fd081f010"
+      },
+      "reason": "New current-document UTF-8 correction acceptance; unchanged experiment seals; checkpoint01 preserved"
+    }
+  ],
+  "frozen_files_changed": 0,
+  "full_inspect_runtime_parity": false,
+  "method": "Read-only requirement-to-retained-evidence audit; bounded selected JSON assertions and direct report/record hash checks, not a rerun of producers/scorers or exhaustive raw/model inventory.",
+  "new_downloads": 0,
+  "new_experiments": 0,
+  "new_model_calls": 0,
+  "remaining_active_goal_work": [
+    "Root BG06 synthesis, current status/memory closure, and final goal acceptance"
+  ],
+  "requirements": [
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "ce01_red",
+        "ce01_green",
+        "bg01_acceptance"
+      ],
+      "finding": "Expected before failure is retained; 12 corrected publication controls pass, including alias/collision behavior.",
+      "id": "BG01.R1",
+      "remaining_scope_limit": "Windows/offline finite filesystem tests; not hostile-worktree or cross-platform proof.",
+      "requirement": "Correct CE01 report/input aliases without overwriting evidence; retain failing-first regression",
+      "stage": "BG01",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "ce02_red",
+        "ce02_green",
+        "ce03_red",
+        "ce03_green",
+        "bg01_completion"
+      ],
+      "finding": "CE 02 original six failures/one mismatch and final 12 passing controls; CE 03 five failing controls become nine passing controls. Aggregate acceptance retains compatibility and valid-neighbor evidence.",
+      "id": "BG01.R2",
+      "remaining_scope_limit": "Only qualified reported usage is measured; malformed or unqualified responses retain conservative estimates. No physical billing attestation.",
+      "requirement": "Correct CE02 validated over-reservation usage and CE03 all-supplied raw availability; preserve unknown usage and valid alternative bases",
+      "stage": "BG01",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg01_acceptance",
+        "bg01_completion"
+      ],
+      "finding": "Versioned acceptance binds 742 passing aggregate checks,2020 full tests,138 facade tests and installed qualification. Overlapping scopes are not summed.",
+      "id": "BG01.R3",
+      "remaining_scope_limit": "These release-specific results are not attributed to newer or historical bytes. Later replay defect is separately corrected in 0.5.2/0.3.13.",
+      "requirement": "Qualify 0.5.1/0.3.12, full applicable tests and isolated installed controls; retain old wheels/runs",
+      "stage": "BG01",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg02_protocol",
+        "bg02_matrix",
+        "bg02_closure"
+      ],
+      "finding": "27 obligations, separate authored oracle, no unsupported obligation silently excluded; independent implementation boundary reviewed.",
+      "id": "BG02.R1",
+      "remaining_scope_limit": "Exposed constructions and shared AI-assisted project authorship are disclosed; not blinded external validation.",
+      "requirement": "Specify full supported policy and expected decisions independently before paired execution",
+      "stage": "BG02",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg02_old",
+        "bg02_patched",
+        "bg02_report"
+      ],
+      "finding": "Each version retains 109 cases\u00d74 arms\u00d73 repetitions=1308 cells; hash/schema errors stay in denominators and reject-all has the expected false rejections.",
+      "id": "BG02.R2",
+      "remaining_scope_limit": "Input bytes identical across arms within a version; original/patched archives are semantic twins, not byte-identical across versions.",
+      "requirement": "Compare four arms on identical inputs, retain failures and complete denominator",
+      "stage": "BG02",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg02_closure",
+        "bg02_old",
+        "bg02_patched",
+        "release052"
+      ],
+      "finding": "Corrected corpus exposes original EP 075 false admission. Patched TETHER and independent validator conform 109/109; causal review and independent reconstruction close the finite comparison.",
+      "id": "BG02.R3",
+      "remaining_scope_limit": "The first 108-case experiment had a causal confound and is preserved. Universal policy equivalence/natural fault prevalence are unestablished.",
+      "requirement": "Report false admission/rejection and replay/accounting/recovery agreement; independently recompute results",
+      "stage": "BG02",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg02_report",
+        "bg02_patched"
+      ],
+      "finding": "Cold import-plus-operation paired TETHER/independent ratio 1.65 is retained; CPU, lifetime peak memory, logical bytes and eight-module 2642-line comparator closure are reported.",
+      "id": "BG02.R4",
+      "remaining_scope_limit": "Descriptive shared-host cold timing and surface counts do not establish maintenance effort or warm throughput.",
+      "requirement": "Report cost, logical bytes and complete reused implementation surface, including negative results",
+      "stage": "BG02",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg03_protocol",
+        "bg03_acquisition",
+        "bg03_report"
+      ],
+      "finding": "Pinned archive and official evaluator; all 300 development claims retained; fit/tune/calibration/quarantine defined before scoring with purpose-scoped products.",
+      "id": "BG03.R1",
+      "remaining_scope_limit": "Public development exposure and possible pretraining contamination remain. Authorized fit supervision is distinct from held-out evaluator-only answers; no private test claim.",
+      "requirement": "Pin native public release/evaluator/licenses; separate supervised fitting and evaluator answers; freeze groups",
+      "stage": "BG03",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg03_report",
+        "bg03_acceptance"
+      ],
+      "finding": "A sparse retrieval/linear learned baseline performed one fit, nine tune settings, model/config freeze and full 300-query inference.",
+      "id": "BG03.R2",
+      "remaining_scope_limit": "Weak baseline; no SOTA, clinical, full therapeutic schema 2 or Virtual Biotech capability claim.",
+      "requirement": "Implement a task-capable answer/evidence route rather than matching/replaying supplied gold",
+      "stage": "BG03",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg03_scoring",
+        "bg03_reconstruction",
+        "bg03_acceptance"
+      ],
+      "finding": "Official CLI/API qualification and actual official-scorer reconstruction agree. All 300 pairs retained;27 strict-correct preserved,273 strict-incorrect admitted; raw/checked metrics identical.",
+      "id": "BG03.R3",
+      "remaining_scope_limit": "Strict per-case utility is an explicit supplement, not official micro-F 1. Provenance is not entailment; checking adds no accuracy in this run.",
+      "requirement": "Keep official native scores and same-candidate raw/checked utility, errors and costs; validate scorer independently",
+      "stage": "BG03",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg03_gate",
+        "bg03_acceptance",
+        "bg03_reconstruction"
+      ],
+      "finding": "148 integration controls and source/version brackets qualify current experiment; acceptance binds 1601 stage and 72 reconstruction outputs and all primary aggregates.",
+      "id": "BG03.R4",
+      "remaining_scope_limit": "Measured/estimated/unknown cost scopes remain separate; no exact independently timed ungated end-to-end speed ratio.",
+      "requirement": "Retain code/data/version/test/resource evidence and independently reconstruct all outputs",
+      "stage": "BG03",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg04_protocol",
+        "bg04_report"
+      ],
+      "finding": "Original 199 LitQA 2 questions selected prospectively; revision/choice shuffle and restricted references pinned; question-only public licensed retrieval.",
+      "id": "BG04.R1",
+      "remaining_scope_limit": "Retrieval-assisted condition differs from original tool-free paper condition; full original question set is not a reproduction of original model affordances.",
+      "requirement": "Choose LitQA2/DbQA before candidate performance, pin original task, sources and rights; isolate privileged data",
+      "stage": "BG04",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg04_acceptance",
+        "bg04_report"
+      ],
+      "finding": "199 tokenizations+199 local model calls, all 199 candidates;97 maintained fictional tests qualify transport/codec. ProspectiveA 01 retains failed fictional semantic control, A 02 fixes cache paths before inference.",
+      "id": "BG04.R2",
+      "remaining_scope_limit": "A 01 authorizes weak-baseline measurement, not a semantic smoke success. No post-result retuning; not statistical/clinical qualification.",
+      "requirement": "Implement answering/retrieval/native MCQ route and run all predeclared representative cases",
+      "stage": "BG04",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg04_reconstruction",
+        "bg04_metric_agreement",
+        "bg04_pair_scope",
+        "bg04_report"
+      ],
+      "finding": "Native key permutations and independent counts agree:12/199 correct,21 substantive,178 unsure; all 199 admitted and zero lost correct answers. Source DOI hits 10/199 questions and 10/205 pairs reported separately.",
+      "id": "BG04.R3",
+      "remaining_scope_limit": "187 incorrect-and-admitted includes 178 unsure, not 187 false claims. Source identity does not establish decisive passage or entailment; no contamination-free claim.",
+      "requirement": "Report accuracy, useful admitted answers, abstention, false rejection and source support for matched candidates",
+      "stage": "BG04",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg04_acceptance",
+        "bg04_scorer_qualification",
+        "bg04_reconstruction",
+        "bg04_resources"
+      ],
+      "finding": "Full 199 candidate pairs sealed before answers are scored; production/independent native scoring agrees. Usage 443470 input/34279 output is retained, with provider spending 0.",
+      "id": "BG04.R4",
+      "remaining_scope_limit": "Marginal checker time and full monotonic generation-stage time are uninstrumented; slow allocation probe is not causal profiling. Local/GPU/energy costs are not inferred from $0 provider spend.",
+      "requirement": "Retain full failure denominators, source-inclusive replay, independent scoring and cost unknowns",
+      "stage": "BG04",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg05_environment",
+        "bg05_report",
+        "bg05_acceptance"
+      ],
+      "finding": "Inspect 0.3.287/Python 3.11.15 environment pinned; real native tasks, scorers/logs and separate scripted ModelAPI control run; independent policy closure and shared TETHER supervisor disclosed.",
+      "id": "BG05.R1",
+      "remaining_scope_limit": "Not a wholly TETHER-free stack; trusted shared-process oracle separation/network audit, not hostile isolation.",
+      "requirement": "Pin isolated Inspect and implement actual Task/solver/scorer extension with explicit reused dependencies",
+      "stage": "BG05",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg05_primary",
+        "bg05_coverage"
+      ],
+      "finding": "109 cases\u00d73 arms\u00d73 repetitions=981 cells independently conform,327/327 perarm and all 327 native Inspect scoring joins match. No false admissions/rejections/unscored cases.",
+      "id": "BG05.R2",
+      "remaining_scope_limit": "Archive parity is finite and does not imply complete live runtime equivalence.",
+      "requirement": "Run same frozen conformance cases/candidate artifacts and compare standalone correctness",
+      "stage": "BG05",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg05_runtime",
+        "bg05_coverage",
+        "bg05_acceptance"
+      ],
+      "finding": "19 logical runtime dispositions independently match, including interrupted/unexecuted follow-on and one winning two-worker race. Nine claims and five narrow synthetic feature/scorer states are rebuilt.",
+      "id": "BG05.R3",
+      "remaining_scope_limit": "Full 8-specialist scheduler, positive review retry, live schema 2/facade/general feature engine and persisted native IX 11 write-fault scenario are not ported. Plan expressly requires honest missing-parity reporting; these findings do not make the scoped experiment unexecuted.",
+      "requirement": "Compare retained failures/accounting/replay and distinguish extension from framework guarantees",
+      "stage": "BG05",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg05_report",
+        "bg05_primary",
+        "bg05_acceptance"
+      ],
+      "finding": "Matched serial batch paired Inspect/TETHER ratio 1.5465 and Inspect/independent 1.4604; code groups, reused closure and real runtime limitations reported;60 root checks and 34 local links pass.",
+      "id": "BG05.R4",
+      "remaining_scope_limit": "Three timing repetitions are descriptive. Prior cold ratio is a different condition; line inventories are not maintenance-cost or equal-feature minimality evidence.",
+      "requirement": "Report execution cost and complete integration/reused maintenance surface without a simplicity claim",
+      "stage": "BG05",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg01_acceptance",
+        "bg02_closure",
+        "bg03_acceptance",
+        "bg04_acceptance",
+        "bg05_acceptance"
+      ],
+      "finding": "All stages have dated versioned evidence/acceptance and preserve unsuccessful attempts. New replay release and pre-dispatch LitQA 2 amendments remain explicit.",
+      "id": "CROSS.R1",
+      "remaining_scope_limit": "This review checks retained records and listed anchor identities; it does not rehash every raw/model byte or physically reattest earlier execution.",
+      "requirement": "Retain prospective pins, commands, failures, reports, release chronology and original artifacts",
+      "stage": "CROSS",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg03_acceptance",
+        "bg04_acceptance",
+        "bg05_acceptance",
+        "plan"
+      ],
+      "finding": "Current accepted experiments use zero paid provider spending and do not require a new human gate; no evidence of restarting closed historical model cells or old download monitoring.",
+      "id": "CROSS.R2",
+      "remaining_scope_limit": "Data rights are version/product-scoped, not blanket redistribution permissions. Local computation is not free.",
+      "requirement": "Keep no paid access/new human requirements, old downloader/monitor and closed historical cells untouched",
+      "stage": "CROSS",
+      "status": "satisfied_in_declared_scope"
+    },
+    {
+      "active_requirement_blocker": false,
+      "evidence_ids": [
+        "bg02_report",
+        "bg03_report",
+        "bg04_report",
+        "bg05_report",
+        "plan"
+      ],
+      "finding": "The evidence supports completion of BG 01\u2013BG 05 in declared scopes. Negative natural-task results and partial runtime portability remain explicit; final BG 06 synthesis is the only remaining active-goal documentation step.",
+      "id": "CROSS.R3",
+      "remaining_scope_limit": "Author declarations/publication, historical clinical cohorts, MR/scoring, competitors, T 2\u2013T 5/H 6, stronger answering and full Inspect migration are outside this goal.",
+      "requirement": "Separate implementations, actual execution and scientific conclusions; close only active goal requirements",
+      "stage": "CROSS",
+      "status": "satisfied_in_declared_scope"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_success": false,
+  "status": "PASS_REQUIREMENTS_REVIEW_WITH_EXPLICIT_LIMITATIONS",
+  "test_scope_rule": "Counts refer to their versioned sources and overlap; do not sum release, component, facade or independent reconstruction suites."
+}

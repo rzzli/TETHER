@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "recorded_at_utc": "2026-11-06T04:22:29.191127+00:00",
+  "checks": [
+    "external hash: SEALED.json run",
+    "external hash: FROZEN.json freeze",
+    "external hash: SEALED.json runtime-stage",
+    "external hash: FROZEN.json freeze",
+    "external hash: RECONSTRUCTION.json actual01",
+    "external hash: SUMMARY-02.json actual01",
+    "external hash: POSTFLIGHT-EXACT-INVENTORY-01.json stage",
+    "independent primary PASS / 981 scheduled",
+    "All three primary arms represented",
+    "bare_independent: 327 complete conforming",
+    "bare_independent: no false decisions or unscored",
+    "bare_tether: 327 complete conforming",
+    "bare_tether: no false decisions or unscored",
+    "inspect: 327 complete conforming",
+    "inspect: no false decisions or unscored",
+    "Runtime seal binds frozen execution",
+    "runtime completed without retries",
+    "runtime complete unique 19 logical-case denominator",
+    "runtime expected terminal disposition counts",
+    "independent exact postflight passed",
+    "Runtime independent PASS with all 19 dispositions, ordinary 16 and process witnesses",
+    "All 27 obligations have anchored results and explicit production/scientific gaps",
+    "Coverage evidence remains in project",
+    "Coverage evidence proof: RECONSTRUCTION.json",
+    "Coverage evidence remains in project",
+    "Coverage evidence proof: RUNTIME-RECONSTRUCTION.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> TETHER Inspect Comparison Protocol 2026-11-06.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/reconstruction/actual01/REVIEW.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/reconstruction/actual01/SUMMARY-02.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/stage/ROOT-RUNTIME-ANCHOR-01.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/stage/RUNTIME-OUTER-TIMING-01.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/stage/POSTFLIGHT-EXACT-INVENTORY-01.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/stage/IMPLEMENTATION-INVENTORY-01.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/integration/INTERFACE-AND-QUALIFICATION.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/controller/QUALIFICATION.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> ../reports/TETHER benchmark comparison update 2026-11-06.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> TETHER SciFact Native Evaluation Results 2026-11-05.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> TETHER LitQA2 Native Evaluation Results 2026-11-06.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/reconstruction/runtime-actual01/RUNTIME-RECONSTRUCTION.json",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/reconstruction/runtime-actual01/REVIEW.md",
+    "local link: TETHER Inspect Comparison Results 2026-11-06.md -> review-assets/tether-inspect-20261106/integration/RESULT-COVERAGE-FINAL.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> TETHER benchmark priorities and methods.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER Equal Policy Comparison Results 2026-11-05.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../experiments/labbench/tether_adapter.py",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../experiments/labbench/evaluate.py",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../src/asof/retrieval.py",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../experiments/scifact/baseline.py",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../experiments/labbench/retrieval.py",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER Inspect Comparison Results 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> TETHER benchmark priorities and methods.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../TODO.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> ../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> TETHER benchmark priorities and methods.md",
+    "local link: TETHER benchmark comparison update 2026-11-06.md -> TETHER benchmark fit and advances.md"
+  ],
+  "count": 60,
+  "local_links": 34,
+  "pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-inspect-20261106-attempt01\\run\\SEALED.json",
+      "bytes": 720389,
+      "sha256": "d0ea739f5e4cf004cb37802df3ffe25dcf97e1756c0ca0a1c52293a147bf1f9c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-inspect-20261106-attempt01\\freeze\\FROZEN.json",
+      "bytes": 4160168,
+      "sha256": "dd2e5e3d07cac7e966a02bff34b9b2e2fb1ea30507d6d861630d76b57244e6b4"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-runtime-witnesses-20261106-attempt01\\runtime-stage\\SEALED.json",
+      "bytes": 2823,
+      "sha256": "92d8f5754a2e119844df01964103c7f1f09d71e5bee5e70d6cec3ab1b344158f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-runtime-witnesses-20261106-attempt01\\freeze\\FROZEN.json",
+      "bytes": 2345621,
+      "sha256": "532b396ae05de2cdb07531898e1c0b72c3d38a557cee5c6fa5f6c70bb342a7b5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\actual01\\RECONSTRUCTION.json",
+      "bytes": 255563,
+      "sha256": "33720734fb1132fdd91a215f4bc6497d540c0e2ec56b382f859bb6c9e6683ce6"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\actual01\\SUMMARY-02.json",
+      "bytes": 7460,
+      "sha256": "dfe30cea88aeeb0c92656862ca1767617089d7011e840a9fb4da799051b23e97"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\POSTFLIGHT-EXACT-INVENTORY-01.json",
+      "bytes": 3662,
+      "sha256": "45dd026586ef7eeb305c8e1ab4999eaaec73cfde48343976b7206684134a8d8b"
+    },
+    {
+      "path": "planning\\review-assets\\tether-inspect-20261106\\reconstruction\\runtime-actual01\\RUNTIME-RECONSTRUCTION.json",
+      "bytes": 20697,
+      "sha256": "c1f3507eaa98e398c91bfaa7db9a851a09e5d9360e1612a2676257487dcf4f7b"
+    },
+    {
+      "path": "planning\\review-assets\\tether-inspect-20261106\\integration\\RESULT-COVERAGE-FINAL.json",
+      "bytes": 130174,
+      "sha256": "592650678dfbf2b5c9af2bafa0e2e1d28756f60848ac166471117821877766f7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "bytes": 15757,
+      "sha256": "882eeecd9ad2d97da85baf8d6bfc8be9325bac53aee47d7db4f5d8578724a0cc"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "bytes": 23667,
+      "sha256": "480782a5ffbc9b70ac6ce4a9d165ca789ce9f80f156312b7c6e6a671a1aa0448"
+    }
+  ],
+  "runtime_dispositions": {
+    "completed": 4,
+    "budget_exhausted": 3,
+    "error": 9,
+    "timeout": 1,
+    "interrupted_unresolved": 1,
+    "unexecuted": 1
+  },
+  "scope": "Root acceptance of independently reconstructed finite primary comparison and retained runtime review; no new inference, full production-runtime equivalence or scientific validation."
+}

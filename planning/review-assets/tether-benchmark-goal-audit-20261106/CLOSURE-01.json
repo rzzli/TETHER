@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "recorded_at_utc": "2026-11-06T04:31:35.129167+00:00",
+  "active_goal_tasks": {
+    "BG01": "completed",
+    "BG02": "completed",
+    "BG03": "completed",
+    "BG04": "completed",
+    "BG05": "completed",
+    "BG06": "completed"
+  },
+  "unresolved_active_goal_blockers": [],
+  "current_document_links": 150,
+  "distinct_current_link_targets": 102,
+  "links": [
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Execution Plan 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\COMPLETION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Equal Policy Comparison Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\STAGE-ACCEPTANCE-02.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\TEXT-ENCODING-CORRECTION-01.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\STAGE-ACCEPTANCE-02.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\research_notes\\TETHER benchmark priorities and methods\\PEER-REVIEW-20261106-03.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Execution Plan 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Full Project Critical Review 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Corrective Execution Plan 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Preprint Readiness Review and Completion Plan 2026-10-31.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\AI Only Evaluation Plan 2026-10-31.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\decisions\\2026-10-31-no-external-expert-input.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\history\\TODO-before-preprint-review-20261031.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\COMPLETION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Equal Policy Comparison Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\STATUS.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\STAGE-ACCEPTANCE-02.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\STATUS.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark fit and advances.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmarks and methodological advances.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\research_notes\\TETHER benchmarks and methodological advances\\REPORT-VALIDATION.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER efficiency and comparative value.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\research_notes\\TETHER efficiency and comparative value\\REPORT-VALIDATION.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Rename Completion and Project Status 2026-11-01.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\release\\tether\\RELEASE-RECORD.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Local Preprint Package.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\release\\WORKING-PACKET-RECORD.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-replay-correction-20261105\\CANDIDATE-RELEASE-COMPLETION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-replay-correction-20261105\\STATUS.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-ce-fixes-20261102\\COMPLETION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark priorities and methods.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Evaluation Protocol 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Execution Plan 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark fit and advances.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Equal Policy Comparison Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER efficiency and comparative value.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Full Project Critical Review 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Corrective Execution Plan 2026-11-02.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\revisions\\20261102\\manuscript.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\revisions\\20261102\\tether-source-reporting-preprint-v2.pdf"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\REVIEW-ERRATA-20261102.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\release\\tether-v2\\RELEASE-RECORD.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\TETHER-VERIFICATION-SCOPE.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\TETHER-CATALOG-POLICY.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-02 - Artifact Catalog Policy.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-02 - Source Composition Feasibility.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-02 - Corrected Working Paper.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Rename Completion and Project Status 2026-11-01.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Naming and Compatibility Plan 2026-11-01.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\README.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\release\\tether\\README.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\paper\\release\\tether\\RELEASE-RECORD.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Installed Source Reconstruction.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Local Preprint Package.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Source Fact Feasibility.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Credible Set Completion.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Source Fact Evaluator.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\SOURCE_FACT_EVALUATION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-31 - Deterministic Paper Scope.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p04-20261031\\P04-ACCEPTANCE-v1.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\preprint-p04b-20261031\\RUN-AUDIT-v1.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Source Reference Completion.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Technical Study Freeze.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Technical Study Result.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-11-01 - Audited Paper Results.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\AI Only Evaluation Plan 2026-10-31.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\run-registry.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Recovery and Evaluation Plan 2026-10-26.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessments.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\FRAMEWORK.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\V02_MIGRATION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\STUDY_RUNTIME.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\INTERPRETATION_INTERFACE.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\data\\DATA_PLAN.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\data\\catalog\\sources.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\docs\\history\\README-before-scientific-priority-20261031.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\data\\catalog\\README.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\registry-sizing-20261017\\README.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Scientific Prerequisites Execution 2026-10-18.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Matched T6 Comparison Execution 2026-10-20.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Ordered Execution Progress 2026-10-17.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\README.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Local Model Specialist Pilot 2026-10-17.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-30 - Entry Contract Coverage.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-30 - Entry Corrections.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Large Injected Producer.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Injected Producer.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Producer Literal Freeze.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Producer Format Schema.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Verifier Orchestration.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - UTF8 Oracle.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Recognition Disposition.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\R09 Unicode Coverage and Verifier Recovery Plan 2026-10-29.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\Project Progress Reassessment 2026-10-29 - Recognition Build.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\IL6R dossier scientific audit.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark priorities and methods.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Equal Policy Comparison Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\experiments\\labbench\\tether_adapter.py"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\experiments\\labbench\\evaluate.py"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Evaluation Protocol 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\src\\asof\\retrieval.py"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\experiments\\scifact\\baseline.py"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\experiments\\labbench\\retrieval.py"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark priorities and methods.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\TODO.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Evaluation Protocol 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark priorities and methods.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark fit and advances.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Protocol 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\actual01\\REVIEW.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\actual01\\SUMMARY-02.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\ROOT-RUNTIME-ANCHOR-01.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\RUNTIME-OUTER-TIMING-01.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\POSTFLIGHT-EXACT-INVENTORY-01.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\IMPLEMENTATION-INVENTORY-01.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\integration\\INTERFACE-AND-QUALIFICATION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\controller\\QUALIFICATION.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER SciFact Native Evaluation Results 2026-11-05.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\TETHER LitQA2 Native Evaluation Results 2026-11-06.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\runtime-actual01\\RUNTIME-RECONSTRUCTION.json"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\reconstruction\\runtime-actual01\\REVIEW.md"
+    },
+    {
+      "source": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "target": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\integration\\RESULT-COVERAGE-FINAL.md"
+    }
+  ],
+  "review_pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\requirements\\VALIDATION.json",
+      "bytes": 2330,
+      "sha256": "6029192ef81e7a97d83546e44c4f08bb5be022deac6a6f0d046c6dbe1d766d4a"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\requirements\\REQUIREMENT-MATRIX.json",
+      "bytes": 27479,
+      "sha256": "7312fde15def688f41c273921defda940318a0725a5b2d6ce94dbd76d9ee9d01"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\science\\FINAL-AUDIT-CONFIRMATION.json",
+      "bytes": 1265,
+      "sha256": "52daff78b8d1300b536803015acab7c257d86e6b9bcb34292ae0ffbc02fb929f"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\data\\PRESERVATION-CLOSURE-01.json",
+      "bytes": 6603,
+      "sha256": "5898d8f51b00c1856cb2fa19625efb9570b3fb57873e6b720673e294e9578249"
+    }
+  ],
+  "current_document_pins": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\TETHER Benchmark Goal Completion Audit 2026-11-06.md",
+      "bytes": 15408,
+      "sha256": "e377a5e9f5826a51d7c0dfbcb9c95f367cf4073055cfd1d9e7408dd5f06c52d5"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\TODO.md",
+      "bytes": 32120,
+      "sha256": "01f69d250e84fbd9020d2eca35f8b9958fc764278d7e55123a8a8a6f9298e53c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\README.md",
+      "bytes": 27730,
+      "sha256": "58d722519484a14d8c1615c20ef802ff6abc7b462fb4e2f8cdc59c4f9ca1662c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\MEMORY.md",
+      "bytes": 44093,
+      "sha256": "736ec8608787552cd9b79cd77171ab47f053b623e3cf424d640043f0b3ffa92c"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\project-goals.md",
+      "bytes": 148625,
+      "sha256": "4791f49f0a6eac882add709cfb3e642eb685111e48332d06e54223eea9d03e7e"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\memory\\research-log-2026-11-06-benchmark-goal-complete.md",
+      "bytes": 3660,
+      "sha256": "00999d184e14b1d10e94d7a1b2abec4af5578ceb45544c8ee36b57d3ecdfd2d7"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\reports\\TETHER benchmark comparison update 2026-11-06.md",
+      "bytes": 23667,
+      "sha256": "480782a5ffbc9b70ac6ce4a9d165ca789ce9f80f156312b7c6e6a671a1aa0448"
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\TETHER Inspect Comparison Results 2026-11-06.md",
+      "bytes": 15757,
+      "sha256": "882eeecd9ad2d97da85baf8d6bfc8be9325bac53aee47d7db4f5d8578724a0cc"
+    }
+  ],
+  "bg05_acceptance": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\stage\\STAGE-ACCEPTANCE-02.json",
+    "bytes": 9105,
+    "sha256": "07b0d443617142c6c484b4a148b50adfd8244f24602f0f451aa4f59860a6d1c2"
+  },
+  "validator": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-benchmark-goal-audit-20261106\\finalize_audit.py",
+    "bytes": 7048,
+    "sha256": "c97c2c69de6d12c8f60eae65167d397c6965f13f479ecd4176a6d55b42d99dc6"
+  },
+  "checkpoint_before_final_commit": "eda8118c002668bafdfefc70f61c00d3d2f46dd3",
+  "scope": "Bounded five-stage goal and final documentation audit. Earlier test counts retain original code/version scope. No new experiment or whole biological raw/model inventory check.",
+  "scientific_success": false,
+  "full_inspect_production_equivalence": false,
+  "whole_clinical_project_complete": false,
+  "submission_ready": false,
+  "remaining_separate_work": [
+    "stronger semantic answering and source acquisition experiments",
+    "full runtime migration if justified",
+    "clinical/MR/scoring/T2-T5/H6 and competitor studies",
+    "owner-deferred author facts and publication acceptance"
+  ]
+}
