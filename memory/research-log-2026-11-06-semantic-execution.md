@@ -135,3 +135,24 @@ remains authorized under the plan's negative-result contract. See sc04/CONTROLLE
 Next production freeze, fullprimary execution, supplied-source diagnostic and
 independent metrics. SC04–SC09 remain incomplete. README-only simplification
 d94b558 is pushed; preserve concise front page.
+
+## SC04 primary launched; supplied-source implementation underway
+
+Primary framebf2898bed1a1c2f0a6040dd116ec37223f514764217441e4b8cf84345e4801d0
+was committed/pushed inaead2f6 before launch. Live session48230 owns
+data/benchmark/litqa_comparison/primary-production-20261106-attempt01. Expansion
+199/199 accepted; collection active at last poll. Re-poll this exact handle;
+never infer termination from a stale checkpoint or restart on timeout.
+
+Newexperiments/litqa_supplied is outside all primary pinned source prefixes.
+Resolver, multi-root source admission, full-cohort collection/answer and maintained
+native replay pass25 invented controls (supplied-controls-attempt05). Failed
+receipt-root assumption preserved inattempt02; corrected by verifying each paper
+in its original receipt root, without changing original receipts. Diagnostic
+supervisor, frozen frame and real190-DOI/199-question execution still pending.
+Diagnostic inputmanifest6635f6b0501b0b40abeda01b7ca723f5b3309838f6e6e4ba4810689f1378290d
+reverifies199questions/205pairs/190DOIs. Two earlier projection failures retained:
+one oldhttpdx.doi.org URL and a SICI suffix withanglebrackets. Five corrected
+projection controls pass. No keys/keypassages in diagnostic projection.
+Analysis specification adds allpairedfactorialcontrasts and10kseed20261106
+publication-component bootstrap before primaryanswer generation. SC04–SC09 open.

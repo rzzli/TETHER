@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "tests": 20,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "experiments\\litqa_supplied\\admission.py": "482dc16511c5562b9dcfb8cb807b092de1f5ee39b311796cb04407555141d118",
+    "experiments\\litqa_supplied\\resolver.py": "1314e9e00b1c1fa6f11ed020e7f0e65076ce40c0cf98e65185e0756b83ac7a1f",
+    "experiments\\litqa_supplied\\test_admission.py": "fc119134daa218eed24b5b3de94eb1ad05fff13da7aff54f4dd8d1553da0851b",
+    "experiments\\litqa_supplied\\test_resolver.py": "14dcd7833b1fe48212eaf8128e767fdea6ca27de5fc2e89829ccb5ac4983bcd8"
+  },
+  "scope": "Invented supplied DOI resolution only; no network, model or clinical claims."
+}

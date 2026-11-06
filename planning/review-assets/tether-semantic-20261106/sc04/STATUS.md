@@ -31,3 +31,32 @@ validation. See [CONTROLLER-QUALIFICATION.md](CONTROLLER-QUALIFICATION.md).
 Session49444 is closed with exit0; source code is retained at92cdfd4.
 Next: freeze and execute full199 primary measurement, then the separate
 supplied-source diagnostic and independent scientific analysis. SC04 is unfinished.
+
+## Primary production active; diagnostic components prepared
+
+The full199 primary frame is frozen in `production-freeze01/FRAME.json`, SHA256
+`bf2898bed1a1c2f0a6040dd116ec37223f514764217441e4b8cf84345e4801d0`.
+Execution is under `data/benchmark/litqa_comparison/primary-production-20261106-attempt01`.
+The live unified-exec session is48230; re-poll that handle before inferring its
+state. Expansion completed199 slots and passed replay. Ordinary collection is
+active; this is not a completion claim. Never restart it on an observation timeout.
+
+New supplied-source work lives in `experiments/litqa_supplied`, outside the
+running primary experiment's frozen source prefixes.25 invented controls pass
+in `supplied-controls-attempt05`: exact DOI resolution, rights/identity failures,
+original receipt roots, multi-paper lineage, missingness, answering and native
+replay. A receipt-root mismatch was caught and fixed; its prior source/logs remain.
+These tests dispatch no real network requests or model calls. Its supervised
+controller, freeze, full190-DOI collection and199 answers remain to implement/run.
+
+The diagnostic-only paper-ID projection is retained under
+`data/benchmark/litqa_comparison/supplied-source-inputs-20261106-attempt03`,
+manifest SHA256`6635f6b0501b0b40abeda01b7ca723f5b3309838f6e6e4ba4810689f1378290d`.
+It contains199 question hints,205 pairs and190 distinct DOIs, no answer keys or key
+passages. Attempts01/02 exposed the original legacy `http://dx.doi.org` URL and a
+valid SICI DOI suffix containing angle brackets; both failures/source copies remain.
+Five projection controls pass after explicit normalization corrections.
+
+The [analysis specification](ANALYSIS-SPECIFICATION.md) fixes all paired factorial
+contrasts and10,000 publication-component bootstrap replicates before primary
+answers are generated. No threshold is fitted on the199 evaluated keys.
