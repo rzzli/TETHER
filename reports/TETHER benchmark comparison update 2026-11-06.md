@@ -1,6 +1,6 @@
 # TETHER benchmark comparison update
 
-Reviewed 6 November 2026 UTC. This supplements the [earlier peer comparison](<TETHER benchmark priorities and methods.md>) with the completed SciFact result and three additional methodological peers. The practical priority is scientific answer quality under matched controls. Provenance machinery alone has not shown an accuracy advantage.
+Reviewed 6 November 2026 UTC. This supplements the [earlier peer comparison](<TETHER benchmark priorities and methods.md>) with completed SciFact/LitQA2 results, a measured Inspect comparison and additional methodological peers. The practical priority is scientific answer quality under matched controls. Provenance machinery alone has not shown an accuracy advantage.
 
 TETHER's independent full-policy comparison found equal conformance on 109 exposed constructions, with greater measured fresh-process cost for TETHER. Its native SciFact experiment produced and admitted all 300 public-development answers; 27 met the declared strict correctness criterion. Raw and checked official scores were identical. Retrieval recovered 159/209 annotated claim–document pairs, while only one evidence-bearing claim was strict-correct. This suggests a serious answer-selection/interpretation bottleneck, although retrieval misses and the strict evidence-set criterion also contribute. It does not prove that a better retriever would be useless. ([Equal-policy results](<../planning/TETHER Equal Policy Comparison Results 2026-11-05.md>), [SciFact results](<../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>))
 
@@ -17,9 +17,9 @@ alongside case accuracy. ([Retained SciFact analysis](<../planning/TETHER SciFac
 |---|---|---|---|
 | **SciFact** | Scientific claim verification with retrieved abstract evidence | Official label/rationale precision, recall and F1; strict correct-and-admitted/all scheduled. Completed baseline is weak: rationalized F1 0.087 and 9% strict correctness. Public dev is not a private test. | Completed baseline; use a separately frozen future experiment for improvements. |
 | **Original LAB-Bench LitQA2** | Literature retrieval and biological factual answering | Completed public199 baseline:12correct,21substantive,178unsure; raw/check equal. Only10/199 questions have an annotated paper among selected sources. Reference answers/source hints were excluded from generation. | Completed weak baseline; improve retrieval/answering in a new frozen experiment. |
-| **Inspect with equivalent policies** | Whether the same obligations are easier or cheaper to implement in an established runner | Matched conformance, failure accounting, source binding, cost and added policy code. Inspect is a framework, not a scientific benchmark. | Following LAB-Bench. |
+| **Inspect with equivalent policies** | Whether the same obligations are easier or cheaper to implement in an established runner | All three arms conform on109 exposed cases across three repetitions; Inspect/TETHER median paired batch time1.5465. Real native extension, substantial reused policy code and runtime gaps. Inspect is a framework, not a scientific benchmark. | Executed; full replacement/simplicity advantage unestablished. |
 | **ALCE** | Correctness and citation quality in generated answers | Native correctness and citation precision/recall with a qualified evaluator. Citation existence is insufficient. | After a useful answer generator is qualified. |
-| **ScholarQABench** | Multi-paper scientific synthesis | Released questions, rubrics and citation evaluation are relevant to dossiers. Its automatic judge setup needs separate qualification and cost accounting; no new human panel is necessary to use existing released annotations. | Strong later synthesis benchmark. |
+| **ScholarQABench** | Multi-paper scientific synthesis | CS has rubric labels and Multi has annotations; Bio/Neuro lack correctness labels and support citation evaluation only in the released guide. Qualify the chosen subset, judge and cost; existing annotations are not universal biomedical correctness references. | Strong later synthesis benchmark, with subset-specific endpoints. |
 | **R2E** | Target-related retrieval and ranking | Native masked-gene ranking metrics with a frozen candidate universe. Clinical progression labels are not endpoint efficacy labels. | Domain-focused extension. |
 
 The original LAB-Bench release supports a public evaluation without importing newer LABBench2 tasks. The published 2024 model experiments were tool-free; a question-driven retrieval system is a tool-assisted public-task evaluation, not an exact reproduction of those model conditions. Its uncertainty option must be separated from timeout, malformed response and missing output. ([Original task paper](https://arxiv.org/html/2407.10362v1), [official dataset](https://huggingface.co/datasets/futurehouse/lab-bench))
@@ -33,7 +33,7 @@ a cross-paper score difference to TETHER's harness. A controlled method ablation
 is more informative than subtracting published leaderboard numbers.
 ([PaperQA2](https://arxiv.org/abs/2409.13740), [OpenScholar](https://www.nature.com/articles/s41586-025-10072-4))
 
-ALCE's released data and evaluation code provide a concrete citation test. ScholarQABench broadens the question from finding one answer to covering a literature question. The latter's repository exposes data, rubrics and evaluation scripts; code licensing does not automatically settle all incorporated-source and model rights. A local judge replacing its configured judge is a separate evaluation condition. ([ALCE](https://github.com/princeton-nlp/ALCE), [ScholarQABench](https://github.com/AkariAsai/ScholarQABench), [R2E release](https://github.com/BenevolentAI/r2e-evaluation-data))
+ALCE's released data and evaluation code provide a concrete citation test. ScholarQABench broadens the question from finding one answer to covering a literature question. Its CS rubric labels and Multi annotations differ from Bio/Neuro, which lack correctness labels and list citation evaluation only. Choose the endpoint per subset; source citation scores alone cannot establish biomedical answer completeness. Code licensing does not automatically settle incorporated-source and model rights. A local judge replacing its configured judge is a separate evaluation condition. ([ALCE](https://github.com/princeton-nlp/ALCE), [ScholarQABench](https://github.com/AkariAsai/ScholarQABench), [R2E release](https://github.com/BenevolentAI/r2e-evaluation-data))
 
 ScholarQABench's reference work dates to July–September 2024. Its repository
 warns that newer retrieved information changes comparability; the published v1
@@ -105,19 +105,24 @@ The transferable experiment is conditional retrieval and abstention against fixe
 5. **A simpler-runner comparison.** The standalone architecture needs empirical justification against policy-complete Inspect, counting extension code and all dependencies. Faster hashes alone cannot establish equal scientific safeguards.
 
 There is a consequential design alternative: retain TETHER's evidence-policy and
-verification components as an extension to a maintained evaluation runner. If
-equivalent-policy Inspect preserves the same failure records and source guarantees
-with less custom orchestration, that would argue for reducing TETHER's standalone
-runner surface. This is a decision criterion for BG05, not a result already
-established by reading documentation or by the simpler-validator experiment.
+verification components as an extension to a maintained evaluation runner. The
+executed Inspect comparison now demonstrates finite archive-policy feasibility:
+all981 scheduled cells conform across the three arms and three repetitions. It
+does not demonstrate simpler maintenance or a cheaper full replacement. Inspect
+requires1,010 new integration/policy lines plus2,642 reused policy lines, uses a
+common TETHER parent supervisor, and omits complete scheduler/retry paths.
+Its median paired batch time is1.55 times TETHER's. These counts and descriptive
+timings do not establish general architecture superiority. The earlier cold
+per-case TETHER/independent time ratio1.65 remains a different execution condition.
+([Measured results and scope](<../planning/TETHER Inspect Comparison Results 2026-11-06.md>))
 
 No reviewed benchmark jointly validates therapeutic success, model-weight chronology, all source policies and scientific synthesis. The strongest defensible paper combines scoped engineering guarantees with measured scientific utility, and retains negative findings when a control adds cost without improving answers. Virtual Biotech's overlapping provenance and orchestration capabilities further weaken any novelty claim based only on agent roles or trace collection; its pinned baseline and current implementation must remain separate comparison targets. ([Earlier source-qualified comparison](<TETHER benchmark priorities and methods.md>))
 
-LitQA2 is now complete in its declared public-task scope; equivalent-policy Inspect
-and the final goal audit remain. PaperQA2/OpenScholar-style semantic improvements
-and broader synthesis benchmarks are follow-on experiments, not silently added
-requirements. No peer performance number is transferred to TETHER, and this
-comparison does not replace the frozen SciFact result.
+LitQA2 and the primary Inspect comparison are now executed in their declared
+scopes. PaperQA2/OpenScholar-style semantic improvements and broader synthesis
+benchmarks are follow-on experiments, not silently added requirements. No peer
+performance number is transferred to TETHER, and this comparison does not replace
+the frozen SciFact result. Current stage acceptance is recorded in [TODO](../TODO.md).
 
 The completed LitQA2 run reinforces the distinction. Its97 maintained fictional
 tests and source-inclusive replay pass, while the same answerable fictional item
@@ -145,3 +150,74 @@ outside the worker deadline and omits that work from its pre-seal timer. These
 limits are disclosed, not corrected retroactively. Native-score reconstruction
 alone is cheaper than source-inclusive replay, but performs fewer obligations;
 their timings are not an equal-policy comparison. ([Resource and allocation evidence](<../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>))
+
+## Domain systems versus general evaluators
+
+Virtual Biotech is the closest drug-target due-diligence peer. Its current public
+documentation overlaps with TETHER on manifests, provenance, traces and incomplete
+outcomes. Therefore neither multi-agent roles nor retained evidence alone is a
+convincing novelty claim. Compare a defined target-evidence subtask using identical
+source releases, action/modality and budgets; do not compare entire systems' headline
+scores. Its current main branch is not the project's pinned historical baseline.
+No full competitor execution has been qualified here.
+([Official repository](https://github.com/harrisongzhang/TheVirtualBiotech),
+[version-sensitive review](<TETHER benchmark priorities and methods.md>))
+
+Biomni adds retrieval-assisted tool planning and executable biomedical analysis.
+This suggests a future way to turn TETHER's admitted evidence into checked
+computations, but also a much larger environment and execution-safety burden.
+A suitable comparison would use one analytical task, equal tools/data and a
+method-specific rubric, reporting whether the analysis is appropriate separately
+from whether its trace is complete. This is later than repairing the observed
+literature-answering weakness. It is not a missing prerequisite for the present
+source-reporting paper. ([Official Biomni implementation](https://github.com/snap-stanford/Biomni))
+
+BixBench, BiomniBench-DA, GenomeArena, TRQA and TargetBench remain conditional
+domain extensions. Their analytical tools, gated/public subsets, scorer behavior
+or code/data access require separate qualification. AgentDojo becomes relevant
+if untrusted retrieved text can drive live tools. SWE-bench or web-navigation
+scores would say little about this project's current therapeutic-evidence task.
+The [earlier feasibility comparison](<TETHER benchmark fit and advances.md>) retains
+the specific access, version and denominator limitations; none is represented as
+an executed TETHER result.
+
+## Recommended next experiment, after this completed comparison sequence
+
+Prioritize **semantic evidence use on SciFact**, then retrieval on LitQA2, before
+adding more agent roles or datasets. SciFact already retrieves all annotated
+documents for147/188 evidence-bearing claims, yet only one of those188 is strict-
+correct. That makes a stronger full-context label/rationale model a direct test
+of the observed post-retrieval bottleneck. First distinguish document false
+positives, label mistakes and incomplete rationales in the sealed baseline;
+strict failure does not isolate biological interpretation. Qualify the model/checkpoint's rights,
+training exposure, memory and compute first; no new checkpoint is assumed available.
+An externally trained checkpoint is a solver-baseline comparison, not a controlled
+architecture ablation against the current380-claim source-disjoint training set.
+Match supervision and tuning groups for an architecture claim, or explicitly
+report the additional training/exposure as part of the different method condition.
+
+Use a separately frozen protocol with: (a) the retained linear baseline,
+(b) a qualified joint label/rationale model inspired by MultiVerS, and
+(c) evidence-removal/rationale-only diagnostic conditions. Fix retrieved documents
+when testing interpretation, then separately vary retrieval. Preserve native
+metrics and every scheduled denominator. Improved useful correct answers are the
+scientific success criterion; a negative result still completes the measurement.
+Report admitted contradictions and rejected correct answers. Any changed threshold
+or selection rule needs fit/tune-only selection in a new frozen experiment, not
+retrospective repair on development answers. The public development set is already exposed;
+do not rename a retest as an untouched holdout.
+
+For LitQA2, compare the current question-only search with bounded query expansion
+and reranking at equal total resource caps. Add a separately labelled supplied-
+source diagnostic only after source-rights checks; it estimates answering given
+the reference paper, not end-to-end search performance. This can distinguish
+access/search failure from passage selection and interpretation. Neither missing
+annotated DOI hits nor correct answers without those hits establish the cause alone.
+
+Then use ALCE for free-text citation support, ScholarQABench for multi-paper
+synthesis, and R2E for target ranking. In each case report useful accuracy, semantic
+error rate, coverage/abstention, source recall and wall/CPU/memory/cost together.
+Released annotations can avoid a new expert-recruitment gate for the subsets and
+endpoints they actually cover. They do not remove the need to qualify model judges
+or justify the scientific endpoint. These are
+recommendations, not newly authorized downloads, model retries or experiments.

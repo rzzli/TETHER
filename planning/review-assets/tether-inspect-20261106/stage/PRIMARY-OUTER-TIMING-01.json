@@ -1,0 +1,11 @@
+{
+  "automatic_retry": false,
+  "launcher_error_type": null,
+  "schema_version": 1,
+  "completed_at_utc": "2026-11-06T03:54:48.3581244+00:00",
+  "seal_exists": true,
+  "console_sha256": "836d8ca88d1ef31e997c997be162e334fd3f217951dc11d04858a38d30cae124",
+  "wall_seconds": 410.4303097,
+  "exit_code": 0,
+  "scope": "Python parent launch through command return, including final stage seal when present and console redirection; excludes this timing record publication. A launcher error leaves process-exit status unknown."
+}

@@ -1,0 +1,21 @@
+{
+  "at_utc": "2026-11-06T04:01:59.5700125+00:00",
+  "schema_version": 1,
+  "launcher_sha256": "4c488a9618c8e459a63d95beabeb9debdc328ebe51a4eb0b688b3e541d962677",
+  "automatic_retry": false,
+  "freeze_sha256": "532b396ae05de2cdb07531898e1c0b72c3d38a557cee5c6fa5f6c70bb342a7b5",
+  "command": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-env-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-runtime-witnesses-20261106-attempt01\\runtime-parent-import-cache",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\integration\\run_runtime_stage.py",
+    "--freeze",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-runtime-witnesses-20261106-attempt01\\freeze\\FROZEN.json",
+    "--freeze-sha256",
+    "532b396ae05de2cdb07531898e1c0b72c3d38a557cee5c6fa5f6c70bb342a7b5",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-runtime-witnesses-20261106-attempt01\\runtime-stage"
+  ]
+}

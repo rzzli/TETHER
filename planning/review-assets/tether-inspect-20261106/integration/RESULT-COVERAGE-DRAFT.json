@@ -1,0 +1,1435 @@
+{
+  "denominators": {
+    "archive_authored_cases": 109,
+    "planned_archive_arms": 3,
+    "planned_archive_cells": 981,
+    "planned_archive_repetitions": 3,
+    "prepared_ordinary_runtime_cases": 16,
+    "prepared_process_source_cases": 3,
+    "prepared_unique_runtime_source_cases": 19,
+    "race_workers_same_source_case": 2,
+    "runtime_cases_added_to_primary_archive_denominator": 0,
+    "runtime_operation_groups": 3
+  },
+  "interpretation": "Component PASS is limited to the named function/control. No obligation is marked fully runtime-equivalent from archive cases or temporary tests. This derivative draft does not change either frozen normative document.",
+  "obligations": [
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP010",
+        "EP011",
+        "EP012",
+        "EP013",
+        "EP014",
+        "EP095"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-WIRE-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX04-nested-state"
+      ],
+      "qualified_test_refs": [
+        "records:duplicate_nonfinite_and_wrong_keys_reject",
+        "records:nested_capture_copies_and_freezes",
+        "archive:bool_does_not_equal_numeric_value"
+      ],
+      "reused_validation_paths": "independent_schema.decode; independent.parse/canonical",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Strict wire/copy qualification plus positive native admission; complete typed/default combinations remain the archive suite.",
+      "title": "Native JSON, typed contracts and normalization"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP001",
+        "EP002",
+        "EP010"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-CASE-01",
+      "prepared_runtime_case_ids": [
+        "IX02-future-program",
+        "IX03-request-mutation"
+      ],
+      "qualified_test_refs": [
+        "evidence:action_modality_tissue_change_suppresses_features_not_context",
+        "evidence:future_program_and_scorer_dates_fail_preflight"
+      ],
+      "reused_validation_paths": "independent.validate_case/hypothesis_key",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Case decoding and seven-field identity reuse the independent validator. The small native controls do not cover all malformed namespace/identity variants.",
+      "title": "Supported cases and hypothesis identity"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP004",
+        "EP005",
+        "EP006",
+        "EP007",
+        "EP008",
+        "EP009",
+        "EP013"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-PROGRAM-01",
+      "prepared_runtime_case_ids": [
+        "IX02-future-program"
+      ],
+      "qualified_test_refs": [
+        "evidence:future_program_and_scorer_dates_fail_preflight",
+        "native:native_future_program_gate_has_zero_provider_entries"
+      ],
+      "reused_validation_paths": "independent.validate_case/permitted",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Native future T6 program preflight is qualified with zero reservations/entries/dispatches; full T1 eligibility permutations are archive coverage.",
+      "title": "Program context and T1 eligibility"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP026",
+        "EP027",
+        "EP058"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-TIME-01",
+      "prepared_runtime_case_ids": [
+        "IX02-future-program",
+        "IX02-future-scorer"
+      ],
+      "qualified_test_refs": [
+        "evidence:future_program_and_scorer_dates_fail_preflight",
+        "native:native_future_program_gate_has_zero_provider_entries"
+      ],
+      "reused_validation_paths": "independent.availability_reason; InputGraph",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Temporal policy is reused. These controls do not independently reimplement all availability rules.",
+      "title": "Information availability without invented historical dates"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP020",
+        "EP021",
+        "EP022",
+        "EP023",
+        "EP024",
+        "EP056"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-DAG-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive"
+      ],
+      "qualified_test_refs": [
+        "native:native_archive_solver_scorer_and_source_replay",
+        "evidence:two_claims_commit_positive_and_expiring_prefix"
+      ],
+      "reused_validation_paths": "independent.InputGraph; check_role",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Positive native lineage admission is reused; complete structural negatives and all transitive roles remain frozen archive cases.",
+      "title": "Complete structural lineage and role validation"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP025",
+        "EP026",
+        "EP032",
+        "EP033",
+        "EP034"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-DAG-02",
+      "prepared_runtime_case_ids": [
+        "IX01-positive"
+      ],
+      "qualified_test_refs": [
+        "native:native_archive_solver_scorer_and_source_replay"
+      ],
+      "reused_validation_paths": "independent.InputGraph; observation_reason/admit",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "No separate live injected ancestor-date control. Reused source admission and archive negative controls are distinct from independent runtime replay.",
+      "title": "Ancestral temporal eligibility"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP017",
+        "EP018",
+        "EP060",
+        "EP066"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-SOURCE-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX03-request-mutation"
+      ],
+      "qualified_test_refs": [
+        "controller:source_bracket_detects_changed_and_omitted_files",
+        "controller:source_archive_binds_original_paths_to_exact_bytes",
+        "native:native_archive_solver_scorer_and_source_replay"
+      ],
+      "reused_validation_paths": "independent.InputGraph/admit/verify_core",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Source-inclusive proof reconstruction is pending. General eligibility is not independently reimplemented in the native runner.",
+      "title": "Source bytes, transport receipts and proof completeness"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP015",
+        "EP016",
+        "EP019"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-PACKET-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX08-owner"
+      ],
+      "qualified_test_refs": [
+        "records:size_limit_rejects_before_open_and_small_read_uses_actual_size",
+        "controller:global_audit_rejects_added_bundle_file_and_empty_directory"
+      ],
+      "reused_validation_paths": "independent.admit; bounded_stable_bytes",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Current packet admission reuses independent code; root inventory/size controls do not prove every packet semantic combination.",
+      "title": "Artifact inventory and normalized packet integrity"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP023",
+        "EP028",
+        "EP029",
+        "EP030",
+        "EP031",
+        "EP040",
+        "EP041",
+        "EP042",
+        "EP043"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-OBS-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX10-wrong-category"
+      ],
+      "qualified_test_refs": [
+        "evidence:duplicates_unoffered_and_wrong_category_rejected",
+        "evidence:two_claims_commit_positive_and_expiring_prefix"
+      ],
+      "reused_validation_paths": "independent.observation_validity/observation_reason",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Observed/source validity is reused at admission and commit; no independent biological truth validation.",
+      "title": "Scientific record validity, lineage and publication"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP035",
+        "EP036",
+        "EP037",
+        "EP038",
+        "EP039",
+        "EP040"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-SCOPE-01",
+      "prepared_runtime_case_ids": [
+        "IX04-nested-state",
+        "IX10-unoffered-selection",
+        "IX10-wrong-category"
+      ],
+      "qualified_test_refs": [
+        "evidence:action_modality_tissue_change_suppresses_features_not_context",
+        "evidence:duplicates_unoffered_and_wrong_category_rejected",
+        "native:native_generate_and_usage_with_frozen_source_despite_state_mutation"
+      ],
+      "reused_validation_paths": "independent.permitted/hypothesis_key/build_features",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Raw contextual eligibility remains separate from feature applicability. Only the minimal native category is executed.",
+      "title": "Hypothesis/program capabilities and contextual visibility"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP044",
+        "EP045",
+        "EP046",
+        "EP063"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-FEATURE-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX10-commit-prefix"
+      ],
+      "qualified_test_refs": [
+        "evidence:action_modality_tissue_change_suppresses_features_not_context",
+        "evidence:two_claims_commit_positive_and_expiring_prefix"
+      ],
+      "reused_validation_paths": "independent.build_features",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Producer uses reused deterministic features. Independent runtime feature/prediction reader is being added; acceptance is pending.",
+      "title": "Deterministic dependency-aware feature reconstruction"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP047",
+        "EP048",
+        "EP049",
+        "EP050"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-SCORER-01",
+      "prepared_runtime_case_ids": [
+        "IX02-future-scorer"
+      ],
+      "qualified_test_refs": [
+        "evidence:future_program_and_scorer_dates_fail_preflight"
+      ],
+      "reused_validation_paths": "independent.scorer_preflight",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Temporal scorer preflight reuses independent policy; native retained control has not run.",
+      "title": "Scorer predispatch validity and chronology"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP001",
+        "EP002",
+        "EP003",
+        "EP045",
+        "EP051",
+        "EP052",
+        "EP053",
+        "EP064"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-SCORER-02",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX10-commit-prefix"
+      ],
+      "qualified_test_refs": [
+        "evidence:two_claims_commit_positive_and_expiring_prefix",
+        "native:native_commit_deadline_retains_prefix_and_abstention"
+      ],
+      "reused_validation_paths": "independent.prediction",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Native incomplete prediction is null/run_incomplete. Independent contribution/feature replay remains pending; no clinical calibration is tested.",
+      "title": "Scoring applicability, contributions and abstention"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP078",
+        "EP088"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-POLICY-01",
+      "prepared_runtime_case_ids": [],
+      "qualified_test_refs": [
+        "native:native_archive_solver_scorer_and_source_replay"
+      ],
+      "reused_validation_paths": "independent_policy.validate_document/legacy",
+      "runtime_result_status": "archive_only_no_live_schema_equivalence_claim",
+      "runtime_scope_and_gaps": "Live witness input is core_v2_catalog1. Schema2 use/frame/catalog authorization is archive validation, not a new native schema2 scheduler.",
+      "title": "Schema2 policy and original catalog integrity"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP078",
+        "EP085",
+        "EP086",
+        "EP087",
+        "EP088",
+        "EP089"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-POLICY-02",
+      "prepared_runtime_case_ids": [],
+      "qualified_test_refs": [
+        "boundaries:nested_output_is_denied_before_protected_file_creation",
+        "controller:global_audit_rejects_added_bundle_file_and_empty_directory"
+      ],
+      "reused_validation_paths": "independent_policy.bind/root_map; v2.validate_policy_bundle",
+      "runtime_result_status": "archive_only_no_live_schema_equivalence_claim",
+      "runtime_scope_and_gaps": "Output/inventory controls are relevant components; the full live schema2 grant engine is not ported.",
+      "title": "Exact use/frame/grant and all supplied inventory authorization"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP078",
+        "EP079",
+        "EP080",
+        "EP081",
+        "EP082",
+        "EP083",
+        "EP084"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-POLICY-03",
+      "prepared_runtime_case_ids": [],
+      "qualified_test_refs": [
+        "controller:source_bracket_detects_changed_and_omitted_files"
+      ],
+      "reused_validation_paths": "independent_policy.receipt_check/checked_bytes/prepare_policy",
+      "runtime_result_status": "archive_only_no_live_schema_equivalence_claim",
+      "runtime_scope_and_gaps": "General all-node schema2 availability/receipt semantics remain reused archive validation. No separate native schema2 witness.",
+      "title": "All-node raw availability and receipt consistency"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP090",
+        "EP091",
+        "EP093"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-POLICY-04",
+      "prepared_runtime_case_ids": [
+        "IX03-request-mutation",
+        "IX04-nested-state"
+      ],
+      "qualified_test_refs": [
+        "records:immutable_request_bound_by_hash",
+        "boundaries:changed_temperature_does_not_dispatch"
+      ],
+      "reused_validation_paths": "independent_policy.prepare_policy/verify_binding; v2.validate_policy_bundle",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Exact scripted request/engine binding is qualified; this is not all native schema2 copied-control and receipt semantics.",
+      "title": "Copied controls, immutable receipts and actual engine binding"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP054",
+        "EP055"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-EXEC-01",
+      "prepared_runtime_case_ids": [
+        "IX02-zero-budget",
+        "IX05-overquote"
+      ],
+      "qualified_test_refs": [
+        "records:reservation_denial_before_any_dispatch",
+        "records:valid_overquote_is_measured_and_stops",
+        "boundaries:changed_temperature_does_not_dispatch",
+        "controller:current_supervisor_exact_cap_cap_plus_one_and_timeouts"
+      ],
+      "reused_validation_paths": "independent.validate_budget/validate_process_limits/prepare_core",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Native reserved-attempt/token/cost/time controls and shared parent child limits; no physical provider billing or full scheduler.",
+      "title": "Budget and effective configuration"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP070",
+        "EP075",
+        "EP094",
+        "EP095",
+        "EP096",
+        "EP098",
+        "EP099",
+        "EP100",
+        "EP101",
+        "EP102",
+        "EP103",
+        "EP109"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-EXEC-02",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX03-request-mutation",
+        "IX05-malformed",
+        "IX05-overquote"
+      ],
+      "qualified_test_refs": [
+        "native:native_hook_request_mutation_is_rejected_by_provider_guard",
+        "native:native_invalid_response_keeps_observed_telemetry_separate_from_conservative_policy_usage",
+        "native:native_valid_overquote_retains_measured_and_prevents_later_call"
+      ],
+      "reused_validation_paths": "independent_local.make_request/bound_request/payload_for/verify_local/verify_replay",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Scripted ModelAPI request/config binding, not a real model server or retrieval benchmark. Malformed responses retain quotes despite separately visible telemetry.",
+      "title": "Backend request, bounded retrieval and local response provenance"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP061",
+        "EP068",
+        "EP070",
+        "EP071"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-EXEC-03",
+      "prepared_runtime_case_ids": [
+        "IX04-nested-state",
+        "IX10-commit-prefix",
+        "IX10-duplicate-selection",
+        "IX10-unoffered-selection",
+        "IX10-wrong-category"
+      ],
+      "qualified_test_refs": [
+        "boundaries:duplicate_cross_step_claim_rejected",
+        "evidence:duplicates_unoffered_and_wrong_category_rejected",
+        "native:native_commit_deadline_retains_prefix_and_abstention"
+      ],
+      "reused_validation_paths": "independent.execution_accounting; independent_local.verify_replay",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Minimal source-grounded commit port only. Review retries explicitly zero; positive retry and all eight specialist categories are not ported.",
+      "title": "Selections, reviews and immutable source-grounded claims"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP062",
+        "EP065",
+        "EP072",
+        "EP073",
+        "EP074",
+        "EP076",
+        "EP077",
+        "EP094",
+        "EP096",
+        "EP097",
+        "EP104"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-EXEC-04",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX05-provider-error",
+        "IX05-timeout",
+        "IX05-malformed",
+        "IX05-overquote",
+        "IX07-optional-hook-error",
+        "IX07-required-hook-omitted",
+        "IX06-first",
+        "IX06-second"
+      ],
+      "qualified_test_refs": [
+        "native:native_error_is_not_retry_and_keeps_unknown_quote",
+        "native:native_timeout_retains_reservation_without_second_call",
+        "native:native_hook_failure_is_telemetry_not_admission_authority",
+        "native:native_missing_required_hook_cannot_be_success",
+        "runtime_process:real_interrupt_after_reservation_retains_unexecuted_case"
+      ],
+      "reused_validation_paths": "independent.execution_accounting/execution_states",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "accounting.calls counts reserved Inspect attempts, not provider dispatches. Request mutation is 1 reservation/1 provider entry/0 dispatch; chronology rejects at 0/0/0. Full category-state parity is not claimed.",
+      "title": "Journal, accounting, category state and termination"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP059",
+        "EP066",
+        "EP067",
+        "EP069"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-VERIFY-01",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX05-provider-error",
+        "IX06-first"
+      ],
+      "qualified_test_refs": [
+        "records:sealed_record_and_tamper",
+        "records:request_journal_binding_rejects_relabel",
+        "records:partial_prefix_is_not_completion_or_redispatch"
+      ],
+      "reused_validation_paths": "independent.verify_core",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Component byte/chain checks pass. Independently retained native-log contradictions and missing-terminal checks remain pending.",
+      "title": "Inner receipt byte integrity and external anchor"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP059",
+        "EP060",
+        "EP061",
+        "EP062",
+        "EP063",
+        "EP064",
+        "EP065",
+        "EP068",
+        "EP103",
+        "EP104",
+        "EP109"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-VERIFY-02",
+      "prepared_runtime_case_ids": [
+        "IX01-positive",
+        "IX10-commit-prefix"
+      ],
+      "qualified_test_refs": [
+        "native:native_archive_solver_scorer_and_source_replay",
+        "boundaries:archive_scorer_rejects_different_case_record_before_oracle",
+        "boundaries:runtime_scorer_rejects_different_case_record_before_oracle"
+      ],
+      "reused_validation_paths": "independent.verify_core/build_features/prediction; independent_render.render_dossier",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Archive replay uses reused semantic implementation. Independent runtime feature/prediction reconstruction is still pending; no full therapeutic dossier renderer port.",
+      "title": "Semantic source re-admission and final output reconstruction"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP090",
+        "EP091",
+        "EP092",
+        "EP093",
+        "EP105",
+        "EP106",
+        "EP107"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-VERIFY-03",
+      "prepared_runtime_case_ids": [],
+      "qualified_test_refs": [
+        "controller:source_archive_binds_original_paths_to_exact_bytes",
+        "run_runtime_stage:success_three_once_and_output_collision_preserves_seal"
+      ],
+      "reused_validation_paths": "v2.independent.verify_outer; v2.independent_runtime.launcher_proof",
+      "runtime_result_status": "archive_only_no_live_schema_equivalence_claim",
+      "runtime_scope_and_gaps": "New Inspect stage seals are not the same schema as the full TETHER outer facade. Old outer-envelope cases stay in the archive comparison.",
+      "title": "Outer facade envelope, complete inventory and launcher proof"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP018",
+        "EP056",
+        "EP057"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-IO-01",
+      "prepared_runtime_case_ids": [
+        "IX08-owner"
+      ],
+      "qualified_test_refs": [
+        "records:size_limit_rejects_before_open_and_small_read_uses_actual_size",
+        "records:no_clobber_normalized_alias_preserves_original",
+        "boundaries:nested_output_is_denied_before_protected_file_creation",
+        "runtime_process:two_actual_native_workers_only_one_owner_dispatches"
+      ],
+      "reused_validation_paths": "independent.child/bounded_stable_bytes; independent_policy.no_links/secure_path/stable",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Limited owned-filesystem witnesses; not a universal race/path theorem. Process output/EOF limits are shared TETHER supervisor controls.",
+      "title": "Path, file-kind, size and stable-read boundary"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP073",
+        "EP074",
+        "EP076",
+        "EP077",
+        "EP096"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-FAIL-01",
+      "prepared_runtime_case_ids": [
+        "IX05-provider-error",
+        "IX05-timeout",
+        "IX05-malformed",
+        "IX07-required-hook-omitted",
+        "IX06-first",
+        "IX06-second"
+      ],
+      "qualified_test_refs": [
+        "records:timeout_capacity_and_journal_write_failure_prevent_reservation",
+        "native:native_timeout_retains_reservation_without_second_call",
+        "runtime_process:real_interrupt_after_reservation_retains_unexecuted_case",
+        "run_runtime_stage:capture_write_failure_does_not_label_started_call_unexecuted"
+      ],
+      "reused_validation_paths": "independent.inspect_core; independent_policy.inspect_outer",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "IX11 write failure is component/mock qualification only. No persisted native write-fault row has run or been prepared. Native contradiction readers and read-only replay remain pending.",
+      "title": "Durable failures and inspection-only recovery"
+    },
+    {
+      "actual_result_evidence": [],
+      "archive_case_ids": [
+        "EP105",
+        "EP106",
+        "EP108"
+      ],
+      "archive_result_status": "pending_actual_109_case_run_and_independent_reconstruction",
+      "id": "EP-PROCESS-01",
+      "prepared_runtime_case_ids": [
+        "IX06-first",
+        "IX06-second"
+      ],
+      "qualified_test_refs": [
+        "controller:current_supervisor_exact_cap_cap_plus_one_and_timeouts",
+        "controller:fatal_per_case_deadline_leaves_marker",
+        "runtime_process:real_interrupt_after_reservation_retains_unexecuted_case"
+      ],
+      "reused_validation_paths": "independent_policy.validate_process_limits/supervision",
+      "runtime_result_status": "pending_retained_execution_and_independent_reconstruction",
+      "runtime_scope_and_gaps": "Parent supervision reuses installed qualified tether._process. It bounds one owned child, not arbitrary descendants. IX09 is a separate control group, not one of the prepared19 source cases.",
+      "title": "Success supervision evidence and bounded execution scope"
+    }
+  ],
+  "original_design": {
+    "bytes": 19624,
+    "path": "planning/review-assets/tether-inspect-20261106/policy/PORT-DESIGN.md",
+    "sha256": "8fb49bf2ad02e1b52843009a02a00bb2128c51d971962b0000108c37ab1663af"
+  },
+  "original_matrix": {
+    "bytes": 62328,
+    "path": "planning/review-assets/tether-inspect-20261106/policy/OBLIGATION-MATRIX.json",
+    "sha256": "cfdeaef5032524fbfea79274b89d183f680b1164bd7500ea9794b237f6567026"
+  },
+  "preparation": {
+    "bytes": 27287,
+    "path": "data/cache/tether-inspect-runtime-witnesses-20261106-attempt01/PREPARATION.json",
+    "sha256": "b17fdfba429a913cb5a12bd1d1c5e0388031066ed45d7e93fca6c931fa55077c"
+  },
+  "prepared_runtime_cases": [
+    {
+      "id": "IX01-positive",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX02-zero-budget",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX02-future-program",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX02-future-scorer",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX03-request-mutation",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX04-nested-state",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX05-provider-error",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX05-timeout",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX05-malformed",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX05-overquote",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX07-optional-hook-error",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX07-required-hook-omitted",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX10-commit-prefix",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX10-duplicate-selection",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX10-unoffered-selection",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX10-wrong-category",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX06-first",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX06-second",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "IX08-owner",
+      "result_evidence": [],
+      "status": "prepared_not_executed"
+    }
+  ],
+  "qualified_tests": {
+    "archive:bool_does_not_equal_numeric_value": {
+      "function": "ArchiveProjectionTests.test_bool_does_not_equal_numeric_value",
+      "line": 30,
+      "qualification_log": {
+        "bytes": 693,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/archive-projection-green01.log",
+        "sha256": "1a775c923e2962e594f031c8f7ee0f421b99accacf59d1d03252d34ec0c23474"
+      },
+      "source": {
+        "bytes": 1854,
+        "path": "experiments/inspect_policy/tests/test_archive.py",
+        "sha256": "4be287b3df5bd940b356f7b0ec22334515e0f0dfa878c727af062debee423f08"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "boundaries:archive_scorer_rejects_different_case_record_before_oracle": {
+      "function": "NativeBoundaryTests.test_archive_scorer_rejects_different_case_record_before_oracle",
+      "line": 37,
+      "qualification_log": {
+        "bytes": 877,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/boundary-tests01.log",
+        "sha256": "80d3128d6013ceafb2a8a5850ce618ab188f316f0a31578a79cd6de2e399f373"
+      },
+      "source": {
+        "bytes": 4703,
+        "path": "experiments/inspect_policy/tests/test_boundaries.py",
+        "sha256": "e5172af75003b1798a849856ff9c97fc90e104138e264a20789961276a4f7072"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "boundaries:changed_temperature_does_not_dispatch": {
+      "function": "NativeBoundaryTests.test_changed_temperature_does_not_dispatch",
+      "line": 53,
+      "qualification_log": {
+        "bytes": 877,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/boundary-tests01.log",
+        "sha256": "80d3128d6013ceafb2a8a5850ce618ab188f316f0a31578a79cd6de2e399f373"
+      },
+      "source": {
+        "bytes": 4703,
+        "path": "experiments/inspect_policy/tests/test_boundaries.py",
+        "sha256": "e5172af75003b1798a849856ff9c97fc90e104138e264a20789961276a4f7072"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "boundaries:duplicate_cross_step_claim_rejected": {
+      "function": "NativeBoundaryTests.test_duplicate_cross_step_claim_rejected",
+      "line": 78,
+      "qualification_log": {
+        "bytes": 877,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/boundary-tests01.log",
+        "sha256": "80d3128d6013ceafb2a8a5850ce618ab188f316f0a31578a79cd6de2e399f373"
+      },
+      "source": {
+        "bytes": 4703,
+        "path": "experiments/inspect_policy/tests/test_boundaries.py",
+        "sha256": "e5172af75003b1798a849856ff9c97fc90e104138e264a20789961276a4f7072"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "boundaries:nested_output_is_denied_before_protected_file_creation": {
+      "function": "NativeBoundaryTests.test_nested_output_is_denied_before_protected_file_creation",
+      "line": 70,
+      "qualification_log": {
+        "bytes": 877,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/boundary-tests01.log",
+        "sha256": "80d3128d6013ceafb2a8a5850ce618ab188f316f0a31578a79cd6de2e399f373"
+      },
+      "source": {
+        "bytes": 4703,
+        "path": "experiments/inspect_policy/tests/test_boundaries.py",
+        "sha256": "e5172af75003b1798a849856ff9c97fc90e104138e264a20789961276a4f7072"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "boundaries:runtime_scorer_rejects_different_case_record_before_oracle": {
+      "function": "NativeBoundaryTests.test_runtime_scorer_rejects_different_case_record_before_oracle",
+      "line": 46,
+      "qualification_log": {
+        "bytes": 877,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/boundary-tests01.log",
+        "sha256": "80d3128d6013ceafb2a8a5850ce618ab188f316f0a31578a79cd6de2e399f373"
+      },
+      "source": {
+        "bytes": 4703,
+        "path": "experiments/inspect_policy/tests/test_boundaries.py",
+        "sha256": "e5172af75003b1798a849856ff9c97fc90e104138e264a20789961276a4f7072"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "controller:current_supervisor_exact_cap_cap_plus_one_and_timeouts": {
+      "function": "ControllerTests.test_current_supervisor_exact_cap_cap_plus_one_and_timeouts",
+      "line": 96,
+      "qualification_log": {
+        "bytes": 1944,
+        "path": "planning/review-assets/tether-inspect-20261106/controller-tests08-inventory-green.log",
+        "sha256": "f9028333bf6f73ae4c0737f863b139c870bd8867a58a292c9118701a42afdc35"
+      },
+      "source": {
+        "bytes": 12711,
+        "path": "experiments/inspect_policy/tests/test_controller.py",
+        "sha256": "5e13f77b5c0f674abd5c01aff848b16d97d69c628ed2cf72b412d15c9208d280"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "controller:fatal_per_case_deadline_leaves_marker": {
+      "function": "ControllerTests.test_fatal_per_case_deadline_leaves_marker",
+      "line": 188,
+      "qualification_log": {
+        "bytes": 1944,
+        "path": "planning/review-assets/tether-inspect-20261106/controller-tests08-inventory-green.log",
+        "sha256": "f9028333bf6f73ae4c0737f863b139c870bd8867a58a292c9118701a42afdc35"
+      },
+      "source": {
+        "bytes": 12711,
+        "path": "experiments/inspect_policy/tests/test_controller.py",
+        "sha256": "5e13f77b5c0f674abd5c01aff848b16d97d69c628ed2cf72b412d15c9208d280"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "controller:global_audit_rejects_added_bundle_file_and_empty_directory": {
+      "function": "ControllerTests.test_global_audit_rejects_added_bundle_file_and_empty_directory",
+      "line": 166,
+      "qualification_log": {
+        "bytes": 1944,
+        "path": "planning/review-assets/tether-inspect-20261106/controller-tests08-inventory-green.log",
+        "sha256": "f9028333bf6f73ae4c0737f863b139c870bd8867a58a292c9118701a42afdc35"
+      },
+      "source": {
+        "bytes": 12711,
+        "path": "experiments/inspect_policy/tests/test_controller.py",
+        "sha256": "5e13f77b5c0f674abd5c01aff848b16d97d69c628ed2cf72b412d15c9208d280"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "controller:source_archive_binds_original_paths_to_exact_bytes": {
+      "function": "ControllerTests.test_source_archive_binds_original_paths_to_exact_bytes",
+      "line": 154,
+      "qualification_log": {
+        "bytes": 1944,
+        "path": "planning/review-assets/tether-inspect-20261106/controller-tests08-inventory-green.log",
+        "sha256": "f9028333bf6f73ae4c0737f863b139c870bd8867a58a292c9118701a42afdc35"
+      },
+      "source": {
+        "bytes": 12711,
+        "path": "experiments/inspect_policy/tests/test_controller.py",
+        "sha256": "5e13f77b5c0f674abd5c01aff848b16d97d69c628ed2cf72b412d15c9208d280"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "controller:source_bracket_detects_changed_and_omitted_files": {
+      "function": "ControllerTests.test_source_bracket_detects_changed_and_omitted_files",
+      "line": 41,
+      "qualification_log": {
+        "bytes": 1944,
+        "path": "planning/review-assets/tether-inspect-20261106/controller-tests08-inventory-green.log",
+        "sha256": "f9028333bf6f73ae4c0737f863b139c870bd8867a58a292c9118701a42afdc35"
+      },
+      "source": {
+        "bytes": 12711,
+        "path": "experiments/inspect_policy/tests/test_controller.py",
+        "sha256": "5e13f77b5c0f674abd5c01aff848b16d97d69c628ed2cf72b412d15c9208d280"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "evidence:action_modality_tissue_change_suppresses_features_not_context": {
+      "function": "EvidenceCommitTests.test_action_modality_tissue_change_suppresses_features_not_context",
+      "line": 57,
+      "qualification_log": {
+        "bytes": 895,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/evidence-tests01.log",
+        "sha256": "6d4a3737a651427cffd522734488e2766e7640799446538f26f80e984ba3ce6e"
+      },
+      "source": {
+        "bytes": 4330,
+        "path": "experiments/inspect_policy/tests/test_evidence.py",
+        "sha256": "b429cc70b618e696f7d2f6c5c0870e2fb9d667f16eb3d5ac3efac32f69982d29"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "evidence:duplicates_unoffered_and_wrong_category_rejected": {
+      "function": "EvidenceCommitTests.test_duplicates_unoffered_and_wrong_category_rejected",
+      "line": 51,
+      "qualification_log": {
+        "bytes": 895,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/evidence-tests01.log",
+        "sha256": "6d4a3737a651427cffd522734488e2766e7640799446538f26f80e984ba3ce6e"
+      },
+      "source": {
+        "bytes": 4330,
+        "path": "experiments/inspect_policy/tests/test_evidence.py",
+        "sha256": "b429cc70b618e696f7d2f6c5c0870e2fb9d667f16eb3d5ac3efac32f69982d29"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "evidence:future_program_and_scorer_dates_fail_preflight": {
+      "function": "EvidenceCommitTests.test_future_program_and_scorer_dates_fail_preflight",
+      "line": 68,
+      "qualification_log": {
+        "bytes": 895,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/evidence-tests01.log",
+        "sha256": "6d4a3737a651427cffd522734488e2766e7640799446538f26f80e984ba3ce6e"
+      },
+      "source": {
+        "bytes": 4330,
+        "path": "experiments/inspect_policy/tests/test_evidence.py",
+        "sha256": "b429cc70b618e696f7d2f6c5c0870e2fb9d667f16eb3d5ac3efac32f69982d29"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "evidence:two_claims_commit_positive_and_expiring_prefix": {
+      "function": "EvidenceCommitTests.test_two_claims_commit_positive_and_expiring_prefix",
+      "line": 23,
+      "qualification_log": {
+        "bytes": 895,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/evidence-tests01.log",
+        "sha256": "6d4a3737a651427cffd522734488e2766e7640799446538f26f80e984ba3ce6e"
+      },
+      "source": {
+        "bytes": 4330,
+        "path": "experiments/inspect_policy/tests/test_evidence.py",
+        "sha256": "b429cc70b618e696f7d2f6c5c0870e2fb9d667f16eb3d5ac3efac32f69982d29"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_archive_solver_scorer_and_source_replay": {
+      "function": "InspectNativeTests.test_native_archive_solver_scorer_and_source_replay",
+      "line": 74,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_commit_deadline_retains_prefix_and_abstention": {
+      "function": "InspectNativeTests.test_native_commit_deadline_retains_prefix_and_abstention",
+      "line": 164,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_error_is_not_retry_and_keeps_unknown_quote": {
+      "function": "InspectNativeTests.test_native_error_is_not_retry_and_keeps_unknown_quote",
+      "line": 123,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_future_program_gate_has_zero_provider_entries": {
+      "function": "InspectNativeTests.test_native_future_program_gate_has_zero_provider_entries",
+      "line": 187,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_generate_and_usage_with_frozen_source_despite_state_mutation": {
+      "function": "InspectNativeTests.test_native_generate_and_usage_with_frozen_source_despite_state_mutation",
+      "line": 93,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_hook_failure_is_telemetry_not_admission_authority": {
+      "function": "InspectNativeTests.test_native_hook_failure_is_telemetry_not_admission_authority",
+      "line": 172,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_hook_request_mutation_is_rejected_by_provider_guard": {
+      "function": "InspectNativeTests.test_native_hook_request_mutation_is_rejected_by_provider_guard",
+      "line": 197,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_invalid_response_keeps_observed_telemetry_separate_from_conservative_policy_usage": {
+      "function": "InspectNativeTests.test_native_invalid_response_keeps_observed_telemetry_separate_from_conservative_policy_usage",
+      "line": 152,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_missing_required_hook_cannot_be_success": {
+      "function": "InspectNativeTests.test_native_missing_required_hook_cannot_be_success",
+      "line": 179,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_timeout_retains_reservation_without_second_call": {
+      "function": "InspectNativeTests.test_native_timeout_retains_reservation_without_second_call",
+      "line": 134,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "native:native_valid_overquote_retains_measured_and_prevents_later_call": {
+      "function": "InspectNativeTests.test_native_valid_overquote_retains_measured_and_prevents_later_call",
+      "line": 143,
+      "qualification_log": {
+        "bytes": 5722,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/native-tests04.log",
+        "sha256": "6cc4a0a7ea159db302698feeb81c0b5a98a2211732cdca402bef39c8f4cb2611"
+      },
+      "source": {
+        "bytes": 11615,
+        "path": "experiments/inspect_policy/tests/test_native.py",
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:duplicate_nonfinite_and_wrong_keys_reject": {
+      "function": "ExtensionRecordTests.test_duplicate_nonfinite_and_wrong_keys_reject",
+      "line": 40,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:immutable_request_bound_by_hash": {
+      "function": "ExtensionRecordTests.test_immutable_request_bound_by_hash",
+      "line": 91,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:nested_capture_copies_and_freezes": {
+      "function": "ExtensionRecordTests.test_nested_capture_copies_and_freezes",
+      "line": 30,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:no_clobber_normalized_alias_preserves_original": {
+      "function": "ExtensionRecordTests.test_no_clobber_normalized_alias_preserves_original",
+      "line": 59,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:partial_prefix_is_not_completion_or_redispatch": {
+      "function": "ExtensionRecordTests.test_partial_prefix_is_not_completion_or_redispatch",
+      "line": 66,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:request_journal_binding_rejects_relabel": {
+      "function": "ExtensionRecordTests.test_request_journal_binding_rejects_relabel",
+      "line": 77,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:reservation_denial_before_any_dispatch": {
+      "function": "ExtensionRecordTests.test_reservation_denial_before_any_dispatch",
+      "line": 102,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:sealed_record_and_tamper": {
+      "function": "ExtensionRecordTests.test_sealed_record_and_tamper",
+      "line": 48,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:size_limit_rejects_before_open_and_small_read_uses_actual_size": {
+      "function": "ExtensionRecordTests.test_size_limit_rejects_before_open_and_small_read_uses_actual_size",
+      "line": 83,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:timeout_capacity_and_journal_write_failure_prevent_reservation": {
+      "function": "ExtensionRecordTests.test_timeout_capacity_and_journal_write_failure_prevent_reservation",
+      "line": 131,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "records:valid_overquote_is_measured_and_stops": {
+      "function": "ExtensionRecordTests.test_valid_overquote_is_measured_and_stops",
+      "line": 122,
+      "qualification_log": {
+        "bytes": 1954,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/records-tests01.log",
+        "sha256": "7b0f3eca6c2f2d5c6beb024801f5275eaba7bc83322123525c75d8d45f9f0ed0"
+      },
+      "source": {
+        "bytes": 7650,
+        "path": "experiments/inspect_policy/tests/test_records.py",
+        "sha256": "ca28260c19166af9d2773b9d18f650e2373b620b7b4b0b2f52860e1b6d59aebe"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "run_runtime_stage:capture_write_failure_does_not_label_started_call_unexecuted": {
+      "function": "RuntimeStageTests.test_capture_write_failure_does_not_label_started_call_unexecuted",
+      "line": 130,
+      "qualification_log": {
+        "bytes": 1366,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/runtime-stage-mock-tests03.log",
+        "sha256": "33fc6d5a37961d1ba7d6213caf92c2b6af6bf80be3189fc64a90a778d55e4adf"
+      },
+      "source": {
+        "bytes": 8366,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/test_run_runtime_stage.py",
+        "sha256": "8eaefcf9bd1d75f2bd81c1b81b2041a572531637641f5db7c52c742c606bc0a9"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "run_runtime_stage:success_three_once_and_output_collision_preserves_seal": {
+      "function": "RuntimeStageTests.test_success_three_once_and_output_collision_preserves_seal",
+      "line": 79,
+      "qualification_log": {
+        "bytes": 1366,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/runtime-stage-mock-tests03.log",
+        "sha256": "33fc6d5a37961d1ba7d6213caf92c2b6af6bf80be3189fc64a90a778d55e4adf"
+      },
+      "source": {
+        "bytes": 8366,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/test_run_runtime_stage.py",
+        "sha256": "8eaefcf9bd1d75f2bd81c1b81b2041a572531637641f5db7c52c742c606bc0a9"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "runtime_process:real_interrupt_after_reservation_retains_unexecuted_case": {
+      "function": "NativeProcessWitnessTests.test_real_interrupt_after_reservation_retains_unexecuted_case",
+      "line": 22,
+      "qualification_log": {
+        "bytes": 456,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/runtime-process-tests01.log",
+        "sha256": "667b6d375a19d1332d77afad61ebd59228ab972bf8e0551fa60f4535497b73a0"
+      },
+      "source": {
+        "bytes": 2291,
+        "path": "experiments/inspect_policy/tests/test_runtime_process.py",
+        "sha256": "f16bc7b8e99dcc162cd156f182939afe485127783c6c15f1daee88baa092f06b"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    },
+    "runtime_process:two_actual_native_workers_only_one_owner_dispatches": {
+      "function": "NativeProcessWitnessTests.test_two_actual_native_workers_only_one_owner_dispatches",
+      "line": 34,
+      "qualification_log": {
+        "bytes": 456,
+        "path": "planning/review-assets/tether-inspect-20261106/integration/runtime-process-tests01.log",
+        "sha256": "667b6d375a19d1332d77afad61ebd59228ab972bf8e0551fa60f4535497b73a0"
+      },
+      "source": {
+        "bytes": 2291,
+        "path": "experiments/inspect_policy/tests/test_runtime_process.py",
+        "sha256": "f16bc7b8e99dcc162cd156f182939afe485127783c6c15f1daee88baa092f06b"
+      },
+      "status": "qualified_component_or_native_temporary_fixture"
+    }
+  },
+  "remaining_gaps": [
+    "Full eight-specialist T1/T6 scheduler not ported",
+    "Positive review retry not ported; configured retries are zero",
+    "Shared TETHER parent supervisor is a disclosed dependency, not an Inspect native guarantee",
+    "General source eligibility uses the reused independent validator, not a second independent runtime implementation",
+    "Independent runtime features/prediction reader is under development; no replay pass yet",
+    "IX11 write failure is component/mock qualification; no native persisted write-fault control executed",
+    "IX11 native-log contradiction and IX12 complete/failed/interrupted independent replay results pending",
+    "Python hook guard is trusted-code network enforcement; not an OS sandbox",
+    "Injected commit clock is a contract control, not a real long-workload timing result",
+    "Parent proof/seal overhead not hard-preempted; owned-child guard does not prove arbitrary process-tree cleanup"
+  ],
+  "schema_version": 1,
+  "status": "draft_results_pending"
+}

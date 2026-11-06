@@ -1,0 +1,25 @@
+{
+  "launcher_sha256": "7f99a442f447079305cc6e62182d440249ab1910ae5782b476470ebf2084f412",
+  "freeze_sha256": "dd2e5e3d07cac7e966a02bff34b9b2e2fb1ea30507d6d861630d76b57244e6b4",
+  "automatic_retry": false,
+  "at_utc": "2026-11-06T03:47:57.8900847+00:00",
+  "schema_version": 1,
+  "ready_sha256": "335d31305e2df50337bef763a1b1073e6aca2cfa311bc1fce283fd0e3b842b39",
+  "parent_bytecode_note": "Adds a fresh parent cache prefix to READY argv; workers already use fresh prefixes. No experiment source, policy, schedule or budget changed.",
+  "implementation_commit": "e8e40af",
+  "command": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-env-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-inspect-20261106-attempt01\\parent-import-cache01",
+    "D:\\Projects\\drug_target_agents\\experiments\\inspect_policy\\controller.py",
+    "run",
+    "--freeze",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-inspect-20261106-attempt01\\freeze\\FROZEN.json",
+    "--sha",
+    "dd2e5e3d07cac7e966a02bff34b9b2e2fb1ea30507d6d861630d76b57244e6b4",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\tether-inspect-20261106-attempt01\\run"
+  ]
+}

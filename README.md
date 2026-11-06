@@ -61,11 +61,11 @@ match. Only 10/199 questions have an annotated paper among selected sources.
 Source-inclusive replay, separate native reconstruction and source comparisons
 pass. See the [LitQA2 results](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>).
 The report retains finalization and measurement limits; this is not scientific
-qualification. Equal-policy Inspect and the final audit follow.
+qualification. The Inspect comparison is also complete in its declared scope; the final goal audit follows.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
-The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact and BG04 LitQA2 are now complete as the weak public-development results above; equivalent-policy Inspect remains in preparation under the [prospective protocol](<planning/TETHER Inspect Comparison Protocol 2026-11-06.md>). Its isolated0.3.287 environment and native mock qualify; new extension defects are being corrected before the comparison is frozen. The first108-case experiment, failures and old releases remain preserved.
+The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact and BG04 LitQA2 are now complete as the weak public-development results above; the [Inspect comparison](<planning/TETHER Inspect Comparison Results 2026-11-06.md>) independently reconstructs all981 conformance cells and19 intended runtime dispositions. The median paired Inspect/TETHER batch time is1.5465; substantial reused code and explicit runtime gaps prevent a simpler-complete-replacement claim. BG06 is the remaining active goal audit. The first108-case experiment, failures and old releases remain preserved.
 
 The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identified three P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. Their fixes pass the complete BG01 gate; [TODO](TODO.md) records the remaining comparison and benchmark stages. The audit also measures repeated verification/compiler work and motivates a matched policy-equivalent baseline. Sealed paper/results and the existing scientific and owner-deferred limits remain unchanged.
 
@@ -101,7 +101,7 @@ The [current source-reference checkpoint](<planning/Project Progress Reassessmen
 - R07's technical diagnostic remains negative: six complete responses, zero frozen-contract passes. The former human gate is retired; a separate AI retrospective assessment is planned. A stronger-model control remains unqualified.
 - Source5 corrects two API/axis-kind guards: 43 executable controls pass, four branches remain deferred and one static. The separate C79 fake-target component passed; the installed C++ tools work without restart.
 - Further private native-bank/physical14/new84 proof work is deferred pending a demonstrated study need. It is not a prerequisite for reporting the existing extractive framework and negative feasibility result.
-- Scientific H5 and clinical H1–H4 remain open. Real numerical features stay empty and probabilities null. The frozen interpretation slice has 65 missing inputs; the clinical route has 36 unqualified endpoints and 0/12 jointly source-ready cases.
+- Scientific H5 and clinical H1â€“H4 remain open. Real numerical features stay empty and probabilities null. The frozen interpretation slice has 65 missing inputs; the clinical route has 36 unqualified endpoints and 0/12 jointly source-ready cases.
 
 The original native recognition result remains FAILED and whole verification
 INCOMPLETE_TIMEOUT. Failed attempts are retained, with no automatic replay or
@@ -272,7 +272,7 @@ Defaults remain 16 calls, 32,000 input tokens, 8,000 output tokens, $0 provider 
 300 seconds and one critic retry per category. An optional explicit loopback model
 adapter is available through `--local-model config.json`; the default stays offline.
 MR/colocalization computation and a trained clinical scorer remain gated. T1 has a program/endpoint
-interface; T6 has a dossier interface. T2–T5, qualified historical clinical benchmarks, H6 reconstruction
+interface; T6 has a dossier interface. T2â€“T5, qualified historical clinical benchmarks, H6 reconstruction
 and locked benchmark inference remain later milestones. The separate evaluator reports
 descriptive metrics for supplied cohorts.
 
