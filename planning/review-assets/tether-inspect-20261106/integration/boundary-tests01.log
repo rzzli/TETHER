@@ -1,0 +1,10 @@
+test_archive_scorer_rejects_different_case_record_before_oracle (test_boundaries.NativeBoundaryTests.test_archive_scorer_rejects_different_case_record_before_oracle) ... ok
+test_changed_temperature_does_not_dispatch (test_boundaries.NativeBoundaryTests.test_changed_temperature_does_not_dispatch) ... ok
+test_duplicate_cross_step_claim_rejected (test_boundaries.NativeBoundaryTests.test_duplicate_cross_step_claim_rejected) ... ok
+test_nested_output_is_denied_before_protected_file_creation (test_boundaries.NativeBoundaryTests.test_nested_output_is_denied_before_protected_file_creation) ... ok
+test_runtime_scorer_rejects_different_case_record_before_oracle (test_boundaries.NativeBoundaryTests.test_runtime_scorer_rejects_different_case_record_before_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.128s
+
+OK

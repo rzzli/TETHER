@@ -1,0 +1,18 @@
+{
+  "scope": "actual-format fictional batch only, not complete stage",
+  "join_basis": "native ID after resolving sealed native attachments",
+  "joins": [
+    {
+      "id": "FICTIONAL-POSITIVE",
+      "native_correct": true,
+      "native_error": false,
+      "native_unscored": false
+    },
+    {
+      "id": "FICTIONAL-INVALID",
+      "native_correct": true,
+      "native_error": false,
+      "native_unscored": false
+    }
+  ]
+}

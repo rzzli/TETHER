@@ -1,0 +1,17 @@
+test_bool_does_not_equal_numeric_value (test_archive.ArchiveProjectionTests.test_bool_does_not_equal_numeric_value) ... ok
+test_error_and_unsupported_never_match_rejection (test_archive.ArchiveProjectionTests.test_error_and_unsupported_never_match_rejection) ... ok
+test_expected_dictionary_is_declared_subset_not_full_feature_inventory (test_archive.ArchiveProjectionTests.test_expected_dictionary_is_declared_subset_not_full_feature_inventory) ... FAIL
+test_missing_is_distinct_from_explicit_null (test_archive.ArchiveProjectionTests.test_missing_is_distinct_from_explicit_null) ... ok
+
+======================================================================
+FAIL: test_expected_dictionary_is_declared_subset_not_full_feature_inventory (test_archive.ArchiveProjectionTests.test_expected_dictionary_is_declared_subset_not_full_feature_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\inspect_policy\tests\test_archive.py", line 15, in test_expected_dictionary_is_declared_subset_not_full_feature_inventory
+    self.assertTrue(compare_result(observed, expected)["full_match"])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)

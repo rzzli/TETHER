@@ -1,0 +1,13 @@
+test_current_supervisor_exact_cap_cap_plus_one_and_timeouts (test_controller.ControllerTests.test_current_supervisor_exact_cap_cap_plus_one_and_timeouts) ... ok
+test_errors_on_rejects_and_unstarted_do_not_score_correct (test_controller.ControllerTests.test_errors_on_rejects_and_unstarted_do_not_score_correct) ... ok
+test_invalid_limits_and_protected_outputs_fail_before_mutation (test_controller.ControllerTests.test_invalid_limits_and_protected_outputs_fail_before_mutation) ... ok
+test_postflight_failure_preserves_dispatched_valid_prefix (test_controller.ControllerTests.test_postflight_failure_preserves_dispatched_valid_prefix) ... ok
+test_recipe_and_output_collisions_never_dispatch (test_controller.ControllerTests.test_recipe_and_output_collisions_never_dispatch) ... ok
+test_source_bracket_detects_changed_and_omitted_files (test_controller.ControllerTests.test_source_bracket_detects_changed_and_omitted_files) ... ok
+test_task_recipe_excludes_oracle_from_bare_workers (test_controller.ControllerTests.test_task_recipe_excludes_oracle_from_bare_workers) ... ok
+test_three_rotations_have_identical_full_denominator (test_controller.ControllerTests.test_three_rotations_have_identical_full_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.463s
+
+OK

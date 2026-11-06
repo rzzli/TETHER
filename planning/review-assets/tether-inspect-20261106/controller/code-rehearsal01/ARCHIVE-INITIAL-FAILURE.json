@@ -1,0 +1,18 @@
+{
+  "status": "initial_capture_incomplete",
+  "matched_files": 54,
+  "mismatches": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\inspect_policy\\tests\\test_native.py",
+      "expected": {
+        "bytes": 11737,
+        "sha256": "ff4f7d285ade50634295d2ebfc191ef30bf61403818f93fdc4aa6a9788b4c060"
+      },
+      "observed": {
+        "bytes": 11615,
+        "sha256": "c8b855f609e3ac4a8db933cf27e689aab4a7158cc7a0fe05a5fc86a193031272"
+      }
+    }
+  ],
+  "cause": "Source owner changed one test after independent reconstruction and explicit HOLD release; prior bytes recovered only if exact frozen hash matches."
+}

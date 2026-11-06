@@ -1,0 +1,56 @@
+inspect_ai v0.3.287
+- hooks enabled: 1
+  inspect_policy_telemetry: Non-authoritative scripted witness telemetry
+
+test_native_archive_solver_scorer_and_source_replay (test_native.InspectNativeTests.test_native_archive_solver_scorer_and_source_replay) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319e3f250>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_commit_deadline_retains_prefix_and_abstention (test_native.InspectNativeTests.test_native_commit_deadline_retains_prefix_and_abstention) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\inspect_ai\model\_retry.py:134: DeprecationWarning: The 'initial' parameter is deprecated, use 'multiplier' instead
+  else wait_exponential_jitter(initial=3, max=(30 * 60), jitter=3)
+ok
+test_native_error_is_not_retry_and_keeps_unknown_quote (test_native.InspectNativeTests.test_native_error_is_not_retry_and_keeps_unknown_quote) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319e7be10>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319e3ce90>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_future_program_gate_has_zero_provider_entries (test_native.InspectNativeTests.test_native_future_program_gate_has_zero_provider_entries) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c31a023f90>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_generate_and_usage_with_frozen_source_despite_state_mutation (test_native.InspectNativeTests.test_native_generate_and_usage_with_frozen_source_despite_state_mutation) ... ok
+test_native_hook_failure_is_telemetry_not_admission_authority (test_native.InspectNativeTests.test_native_hook_failure_is_telemetry_not_admission_authority) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319ed3510>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_hook_request_mutation_is_rejected_by_provider_guard (test_native.InspectNativeTests.test_native_hook_request_mutation_is_rejected_by_provider_guard) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319ff74d0>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c31a0395d0>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_invalid_response_keeps_observed_telemetry_separate_from_conservative_policy_usage (test_native.InspectNativeTests.test_native_invalid_response_keeps_observed_telemetry_separate_from_conservative_policy_usage) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c31a0e8690>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_missing_required_hook_cannot_be_success (test_native.InspectNativeTests.test_native_missing_required_hook_cannot_be_success) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c31a115f50>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_timeout_retains_reservation_without_second_call (test_native.InspectNativeTests.test_native_timeout_retains_reservation_without_second_call) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c31a30f910>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_valid_overquote_retains_measured_and_prevents_later_call (test_native.InspectNativeTests.test_native_valid_overquote_retains_measured_and_prevents_later_call) ... ok
+test_native_zero_call_budget_prevents_provider (test_native.InspectNativeTests.test_native_zero_call_budget_prevents_provider) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1c319fe6b90>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 42.391s
+
+OK

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<stdin>", line 12, in <module>
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-inspect-20261106\reconstruction\reconstruct.py", line 257, in native_archive_join
+    require(event['sample']['id'] == ident and event['sample']['target'] == ''
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-inspect-20261106\reconstruction\reconstruct.py", line 26, in require
+    raise ValueError(message)
+ValueError: Native initialization differs

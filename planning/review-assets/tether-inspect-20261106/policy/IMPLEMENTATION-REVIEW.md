@@ -30,3 +30,9 @@ The 109-case, three-arm, three-repetition order-rotated design is appropriate fo
 One normative accounting distinction requires an explicit decision before freeze. The unchanged `EP-EXEC-02` contract assigns quoted conservative usage to invalid or unqualified local responses; fully qualified responses, including valid overquote, receive measured accounting. The protocol draft instead says valid usage must be retained when content is malformed. Retaining native reported usage separately as telemetry is consistent with the original contract. Replacing its conservative policy accounting with that usage would be a prospective runtime-policy difference and must be labeled accordingly rather than called unchanged-policy parity.
 
 Completion of this review's findings requires fresh probe output plus owner regressions. A later closure note must distinguish fixed defects, tested runtime guarantees and explicit untested clauses.
+
+## Closure of the four reproduced defects
+
+After the implementation owner supplied fixes and five maintained boundary controls, the unchanged independent probe was rerun. [REVIEW-PROBES-02.log](REVIEW-PROBES-02.log) confirms that R1–R4 now reject: the configuration mismatch has zero dispatches, and the output/input overlap is rejected before any case file is written. The first failed output remains retained. This closes these four reproductions, not the remaining live witness matrix or all possible implementation defects. Sources were still under qualification at this checkpoint.
+
+The parent corrected the prospective protocol's malformed-response accounting language before freeze. Native reported usage may be retained separately while unchanged policy accounting remains conservative until the complete response is qualified.

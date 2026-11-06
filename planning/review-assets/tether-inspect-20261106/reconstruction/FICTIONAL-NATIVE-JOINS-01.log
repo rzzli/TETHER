@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<stdin>", line 14, in <module>
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-inspect-20261106\reconstruction\reconstruct.py", line 249, in native_archive_join
+    require(sample['id'] == ident == request['control_id'] == result['control_id'], 'Native case identity differs')
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-inspect-20261106\reconstruction\reconstruct.py", line 26, in require
+    raise ValueError(message)
+ValueError: Native case identity differs

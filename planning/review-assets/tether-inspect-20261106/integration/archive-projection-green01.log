@@ -1,0 +1,9 @@
+test_bool_does_not_equal_numeric_value (test_archive.ArchiveProjectionTests.test_bool_does_not_equal_numeric_value) ... ok
+test_error_and_unsupported_never_match_rejection (test_archive.ArchiveProjectionTests.test_error_and_unsupported_never_match_rejection) ... ok
+test_expected_dictionary_is_declared_subset_not_full_feature_inventory (test_archive.ArchiveProjectionTests.test_expected_dictionary_is_declared_subset_not_full_feature_inventory) ... ok
+test_missing_is_distinct_from_explicit_null (test_archive.ArchiveProjectionTests.test_missing_is_distinct_from_explicit_null) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

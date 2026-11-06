@@ -1,0 +1,15 @@
+inspect_ai v0.3.287
+- hooks enabled: 1
+  inspect_policy_telemetry: Non-authoritative scripted witness telemetry
+
+test_native_timeout_retains_reservation_without_second_call (test_native.InspectNativeTests.test_native_timeout_retains_reservation_without_second_call) ... D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\inspect_ai\model\_retry.py:134: DeprecationWarning: The 'initial' parameter is deprecated, use 'multiplier' instead
+  else wait_exponential_jitter(initial=3, max=(30 * 60), jitter=3)
+D:\Projects\drug_target_agents\data\cache\tether-inspect-env-attempt02\environment\Lib\site-packages\anyio\streams\memory.py:207: ResourceWarning: Unclosed <MemoryObjectReceiveStream at 1e0273dfa50>
+  warnings.warn(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.327s
+
+OK

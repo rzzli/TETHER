@@ -1,0 +1,20 @@
+test_duplicate_and_nonfinite_core_json_rejected (test_reconstruct.ReconstructionTests.test_duplicate_and_nonfinite_core_json_rejected) ... ok
+test_missing_errors_and_unsupported_stay_on_schedule (test_reconstruct.ReconstructionTests.test_missing_errors_and_unsupported_stay_on_schedule) ... ok
+test_native_candidate_request_target_and_identity_joins (test_reconstruct.ReconstructionTests.test_native_candidate_request_target_and_identity_joins) ... ok
+test_native_condensed_attachments_resolve_before_semantic_joins (test_reconstruct.ReconstructionTests.test_native_condensed_attachments_resolve_before_semantic_joins) ... ok
+test_native_nan_unscored_is_not_core_nan_or_correct (test_reconstruct.ReconstructionTests.test_native_nan_unscored_is_not_core_nan_or_correct) ... ok
+test_observable_numbers_null_and_expected_subset (test_reconstruct.ReconstructionTests.test_observable_numbers_null_and_expected_subset) ... ok
+test_pinned_record_and_changed_request_fail (test_reconstruct.ReconstructionTests.test_pinned_record_and_changed_request_fail) ... ok
+test_primary_count_projection_hand_computed_includes_failure (test_reconstruct.ReconstructionTests.test_primary_count_projection_hand_computed_includes_failure) ... ok
+test_statistics_are_descriptive_and_drop_no_positive_value (test_reconstruct.ReconstructionTests.test_statistics_are_descriptive_and_drop_no_positive_value) ... ok
+test_valid_byte_seal_cannot_relabel_case_identity (test_reconstruct.ReconstructionTests.test_valid_byte_seal_cannot_relabel_case_identity) ... ok
+test_zip_native_log_and_duplicate_sample_rejected (test_reconstruct.ReconstructionTests.test_zip_native_log_and_duplicate_sample_rejected) ... ok
+test_duplicate_overlapping_attempts_and_post_error_dispatch_reject (test_runtime_reconstruct.RuntimeReconstructionTests.test_duplicate_overlapping_attempts_and_post_error_dispatch_reject) ... ok
+test_journal_claims_must_equal_ledger_and_be_unique (test_runtime_reconstruct.RuntimeReconstructionTests.test_journal_claims_must_equal_ledger_and_be_unique) ... ok
+test_measured_and_unknown_usage_are_distinct (test_runtime_reconstruct.RuntimeReconstructionTests.test_measured_and_unknown_usage_are_distinct) ... ok
+test_usage_contradiction_and_changed_request_reject (test_runtime_reconstruct.RuntimeReconstructionTests.test_usage_contradiction_and_changed_request_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.058s
+
+OK
