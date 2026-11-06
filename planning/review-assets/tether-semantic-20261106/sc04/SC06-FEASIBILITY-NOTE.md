@@ -177,10 +177,11 @@ project's code license. [ALCE code license](https://github.com/princeton-nlp/ALC
 [ASQA source repository](https://github.com/google-research/language),
 [ASQA release documentation](https://github.com/google-research/language/tree/master/language/asqa).
 
-The retained AutoAIS model metadata reports Apache-2.0; the new browser fetch of
-its pinned README returned a tool retrieval error, not an observed authorization
-denial. Do not relabel that as a credential requirement. No genuine authentication
-or manual-configuration blocker is demonstrated now. Actual transfers, archive
+The retained AutoAIS model metadata reports Apache-2.0. The initial browser fetch
+of its pinned README failed, but the runtime follow-up below retrieved that exact
+README successfully and confirmed the declaration. All three judge-model APIs
+report public, ungated, enabled repositories. No genuine authentication blocker
+is demonstrated now. Actual transfers, archive
 rights/contents, native Windows loading, memory limits and complete-family runtime
 are still unqualified. No smaller family or judge is substituted for those gates.
 
@@ -197,3 +198,101 @@ Workspace root: `D:\Projects\drug_target_agents`. Freshly hashed retained files:
 Archive/checkpoint revisions, byte sizes and LFS hashes are retained metadata,
 not local payload verification. Official source URLs above were read in this
 follow-up, without saving new dataset/model payloads. SC06 remains unstarted.
+
+## Runtime prerequisite addendum — 6 November 2026, 22:44 UTC
+
+**The pinned evaluator cannot be assumed to run unchanged on this workstation.**
+Its metric definitions remain the target; explicit, qualified loading and process
+placement are needed. This review retained small official source/configuration
+files and metadata only. No installation, model initialization, inference, weight
+download or benchmark-data download occurred.
+
+The complete ALCE Git tree at the pinned revision has no requirements lock or
+`requirements.txt` (the latter returns HTTP 404). Its README reports Python 3.9.7,
+PyTorch `2.1.0.dev20230514+cu118`, Transformers `4.28.1`, Accelerate `0.17.1` and
+OpenAI `0.27.4` as tested versions; it does not pin every metric dependency.
+The OpenAI package belongs to the historical answerer and is unnecessary for a
+separate offline local answerer/evaluator. Reusing released GTR passages also
+avoids Pyserini, Java, Sentence Transformers and a new retrieval index.
+[Pinned requirements section](https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/README.md#requirements).
+
+| Native component | Concrete dependencies and settings to preserve |
+|---|---|
+| QA-EM/F1/Hit | Transformers question-answering pipeline, pinned RoBERTa checkpoint and tokenizer; native `device=0` and impossible-answer handling |
+| ROUGE-Lsum / sentence boundaries | `rouge-score`, NumPy, NLTK English sentence segmentation and separately pinned tokenizer resources; stemmer and bootstrap behavior |
+| MAUVE | `mauve-text`, GPT2-large model/tokenizer, PyTorch/Transformers, NumPy, scikit-learn/SciPy and CPU FAISS; ALCE uses GPU features, batch 8, 512-token feature limit and 100-word question/answer text views |
+| Citation AutoAIS | Pinned TRUE T5-XXL, Transformers, Accelerate and SentencePiece for the slow T5 tokenizer; unchanged BF16 judge, premise/hypothesis format and exact entailment decode |
+
+These are distinct model lifetimes. The native evaluator runs MAUVE before
+AutoAIS; the inspected MAUVE implementation keeps GPT2 in a module-global cache,
+so that GPU allocation survives the metric call. Separate metric workers or
+explicit qualified teardown are required to avoid accidental overlap. Preserve
+native first-line answer preprocessing and citation-stripped metric views while
+retaining the complete raw answer separately.
+[ALCE evaluator](https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/eval.py),
+[pinned inspected MAUVE implementation](https://github.com/krishnap25/mauve/blob/2e596eae66ed72b35e698542bfce5ff2cd32fc44/src/mauve/compute_mauve.py).
+
+**Concrete offload issue:** ALCE's `get_max_memory()` subtracts six from free
+GPU GiB, returns decimal-GB allowances for GPU keys only, and omits `"cpu"`.
+Accelerate 0.17.1 preserves that supplied key set; its mapper then adds disk as
+the fallback. Transformers 4.28.1 rejects disk-mapped `.bin` weights without an
+`offload_folder`, which ALCE does not supply. A model-free function probe using
+an invented 16,303-MiB-free device produced `{0: "9GB"}` and then
+`{0: 9000000000}`, with no CPU allowance. Combined with the already established
+21.25-GiB BF16 tensor estimate, this is a source-level loading blocker for that
+unchanged route, not an observed attempt to load the model.
+[ALCE memory helper](https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/utils.py#L31-L37),
+[Accelerate 0.17.1 mapper](https://github.com/huggingface/accelerate/blob/v0.17.1/src/accelerate/utils/modeling.py#L341-L361),
+[Transformers 4.28.1 disk guard](https://github.com/huggingface/transformers/blob/v4.28.1/src/transformers/modeling_utils.py#L2888-L2897).
+
+The future loading adapter must declare GPU **and CPU** budgets, an authorized
+offload directory and state-dictionary/shard loading policy, while preserving
+the same tensors, tokenizer, inputs and decoding. Disk capacity does not remove
+RAM staging or activation requirements. Qualify Windows file mapping, cleanup,
+peak RAM/VRAM and throughput; record any precision/device-dependent entailment
+differences. CPU-only execution also needs an explicit adapter because the native
+helper assumes CUDA. The unchanged scoring functions can be retained behind this
+placement boundary. No offload implementation or performance has been qualified.
+[Official memory-map guidance](https://huggingface.co/docs/accelerate/main/concept_guides/big_model_inference).
+
+**Windows is not a blanket blocker.** Official FAISS supports Windows x86-64 CPU
+builds; GPU FAISS is unnecessary for MAUVE's native CPU k-means. Freeze its version,
+BLAS/OpenMP settings and MAUVE defaults rather than substituting a different
+clustering algorithm. The inspected MAUVE revision declares version 0.4.0 and
+GPLv3, with `faiss-cpu>=1.7.0`; ALCE does not establish which historical MAUVE
+build its authors used. A new exact environment lock needs metric-parity testing.
+[Official FAISS installation](https://github.com/facebookresearch/faiss/blob/main/INSTALL.md),
+[MAUVE package metadata](https://github.com/krishnap25/mauve/blob/2e596eae66ed72b35e698542bfce5ff2cd32fc44/setup.py).
+
+The 2023 CUDA build is not a demonstrated RTX 5070 Ti runtime. PyTorch documents
+Blackwell support with 2.7/CUDA 12.8. The local MultiVerS environment already has
+`torch 2.7.1+cu128` and `transformers 4.57.1`, but lacks Accelerate, NLTK,
+SentencePiece, ROUGE, MAUVE and FAISS. The sparse-baseline environment lacks these
+and PyTorch/Transformers. Neither is an ALCE-ready environment; preserve both and
+prepare a separate pinned environment later. This is a metadata inspection, not
+an import or hardware test.
+[PyTorch release documentation](https://pytorch.org/blog/pytorch-2-7/).
+
+NLTK 3.9.2 specifically loads `tokenizers/punkt_tab/english/`, including four
+parameter files. Installing `nltk` alone is insufficient. Pin the version and
+resource bytes, and check sentence-boundary parity on abbreviations/citations;
+do not silently replace the older sentence segmenter or train one on evaluation
+answers. [Pinned NLTK resource loader](https://github.com/nltk/nltk/blob/3.9.2/nltk/tokenize/punkt.py#L1746-L1771).
+
+Public model metadata confirms Apache-2.0 for AutoAIS and MIT for GPT2-large;
+the pinned QA repository has no model-card license declaration. This is an
+unresolved redistribution/provenance question, not evidence of an authentication
+requirement. Keep external model/package licenses distinct from TETHER's license;
+the archive/passage rights caveats above remain. No new credential request or
+human-expert dependency follows from this check.
+[AutoAIS pinned card](https://huggingface.co/google/t5_xxl_true_nli_mixture/blob/aa6cfe1dd4257853bfdd772992045f41bfc14988/README.md),
+[QA pinned metadata](https://huggingface.co/api/models/gaotianyu1350/roberta-large-squad/revision/02bcd9fab9c9d84a346389074e0bcdf770c5141b),
+[GPT2 pinned metadata](https://huggingface.co/api/models/openai-community/gpt2-large/revision/32b71b12589c2f8d625668d2335a01cac3249519).
+
+Retained evidence: `data/cache/sc06-runtime-metadata-20261106T224432789864Z/`.
+All 19 successful source/metadata captures pass their hashes; the expected
+requirements-file 404 is recorded separately. `MANIFEST.json` SHA-256:
+`1708e8633624df2d72f526d7fcc83711aa33e04709c7a0b7901298bd67438726`.
+The local-package inventory and model-free budget probe are in `RUNTIME-CHECK.json`,
+SHA-256 `6fabf9c1824e6a638ad365314e067fb40dfdd94a085c913268de600af7e15a69`.
+The complete ASQA family and every declared native metric remain required.

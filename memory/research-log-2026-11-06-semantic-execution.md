@@ -317,3 +317,28 @@ inputs. Matplotlib3.10.7 uses11 exact wheels/31,210,636bytes in isolatedenvironm
 attempts and prior figure/helper/test bytes retained. Production plots unbuilt.
 Supplied-source readiness independently verifies134pins, complete199/190/205
 schedule and fresh paths. Primary ROOT-RECEIPT remains required before freezing.
+
+At22:54:22UTC the existing primary run has accepted all398 collection products
+after maintained replay and started ranking. Collection worker6871.719seconds,
+exit0/reaped, no automatic retry. Package68f942bfe744fadb5b3623fe829c28df1f78fdcac66faa7f85908578e653f883;
+stage receipt9237a3b70656e20b5954d065a7245fd40070afa953a5030bcc3e515d7f93bf11.
+SC05 prospective design now fixes scalar/strict endpoint, monotone ridge sigmoid,
+label-independent tight Lipschitz bound, cutoffs and conditional uncertainty;
+no confidence values/fits/inference computed. SC06 source/runtime metadata proves
+an unchanged GPU-only loader cannot supply the needed CPU/disk offload; explicit
+qualified placement and separate metric lifetimes are required, with all native
+metrics retained. Nineteen small metadata/source captures freshly verify.
+Scope audit corrected added hard gates: SC08 author19176 vocabulary is needed for
+exact reproduction, not the authorized complete public-universe TETHER condition;
+SC07 native judge is the preferred route, not an unrequested exact-checkpoint
+mandate. Alternatives require full coverage, qualified endpoints and explicit
+changed conditions; no easier subset or unqualified judge is selected.
+
+Independent source-format/capacity audit now covers398/398 via sealed388+10
+observations and final unchanged-marker verification. Combinedreceipt
+9c008aa0e8a3fd55f207bf8cccb2f856e066e2ee0b9b2a623e4f660ffcc5a3c0;
+maximum any-permitted-eight prompt10135/14000bytes, no overflow. Initial probe's
+incorrect E-must-expanded assumption is preserved and corrected to allow frozen
+lexical fallback. This is not answer/native/full-run acceptance. Rank startup
+was checked through owned process counters without restart; at22:58:10UTC31/398
+ranking slots are complete, owned server4288 ready and parent session48230live.

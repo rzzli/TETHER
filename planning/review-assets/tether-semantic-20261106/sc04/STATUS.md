@@ -1,12 +1,17 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T22:38:41Z
+## Current checkpoint: 2026-11-06T22:54:22Z
 
-SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 was
-confirmed live and had357/398 completed collection products. Expansion199 is
-complete; primary ranking/answers and the full supplied-source diagnostic are
-not finalized. Re-poll that session before inferring state; never restart it on
-an observation timeout. All125 frozen primary source pins remain unchanged.
+SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 remains
+live. Expansion199 and collection398 have completed and passed maintained replay;
+ranking has started. Collection worker elapsed6871.719 seconds within its7200-second
+cap and exited0 with cleanup verified. Primary answers and the full supplied-source
+diagnostic are not finalized. Re-poll that session before inferring state; never
+restart it on an observation timeout. All125 frozen primary source pins remain
+unchanged. The collection package SHA is
+`68f942bfe744fadb5b3623fe829c28df1f78fdcac66faa7f85908578e653f883`;
+the stage receipt SHA is
+`9237a3b70656e20b5954d065a7245fd40070afa953a5030bcc3e515d7f93bf11`.
 
 The final independent analysis CLI is qualified:146 tests pass in
 [analysis-controls-attempt12](analysis-controls-attempt12/QUALIFICATION.json).
@@ -20,9 +25,12 @@ failed attempts remain. Known fictional false abstentions remain unchanged.
 
 The [integration audit](analysis-integration-audit01/AUDIT-FINDINGS.md) retains
 the conditional producer capacity limitation and corrected analysis gaps.
-Forty selected actual-format collections reconstruct; all219 closed collections
-checked at that earlier probe fit14,000 prompt bytes under any permitted order.
-These are partial-input feasibility checks, not full production verification.
+The earlier partial probes are superseded for input coverage by the
+[complete398-product check](closed-capacity-format-check02/RESULTS.md): all source
+collections reconstruct, with maximum possible answer prompt10,135bytes against
+14,000. Two disjoint observations and final unchanged-marker checks bind all398
+products. This addresses actual input-byte feasibility, not recovery behavior,
+token-context sufficiency, answer quality or full production verification.
 
 The planning-only root acceptance/report renderer passes16 controls, including
 independent10,000-draw unequal-group bootstrap arithmetic and malformed-result
@@ -45,11 +53,17 @@ Read-only forward checks are retained for later work:
 [SC08](SC08-FEASIBILITY-NOTE.md). The69 calibration claims have supported local
 reservation, with shared-corpus exposure explicitly retained; no calibration was
 run. Later benchmark acquisition, full family counts, native judge feasibility,
-and the authoritative R2E candidate universe remain future qualification gates.
+and a complete qualified R2E candidate universe remain future qualification gates.
 The R2E metadata-access check now passes: two complete official repository trees,
 the release listing and Zenodo attachment metadata expose no separate vocabulary.
 This narrows the missing-input question; no TSV or candidate-universe payload has
 been acquired or interpreted. Both trees and 15 retained metadata proofs verify.
+Scope review corrected two overstrict implications in these forward notes:
+SC08 permits a fully qualified public gene universe, with changed-universe
+comparability explicit; SC07 requires a qualified identified judge and all chosen
+quality/citation endpoints, not an invented exact-checkpoint reproduction gate.
+Native judge qualification remains the preferred first route; neither correction
+permits a convenient subset, unqualified replacement or weaker endpoint.
 
 Next: let the existing primary execution finalize; bind its printed root hash,
 freeze/run the full supplied diagnostic, then execute the qualified analyzer with

@@ -5,7 +5,9 @@ installation, model call, benchmark execution or source-code change was made.
 The prospective recommendation is **the complete ScholarQA-Multi family**;
 native quality evaluation is not yet qualified on this machine. The earlier
 7B-judge suggestion is a separately labelled changed-evaluator condition, not a
-way to satisfy a native-judge requirement silently.
+way to claim native-judge equivalence silently. The published judge is the
+preferred first qualification route; exact checkpoint reproduction is not an
+additional requirement imposed by the authoritative SC07 plan.
 
 ## Family, annotations and source eligibility
 
@@ -95,7 +97,7 @@ are arithmetic, not measured runtime.
 2. Qualify a complete question-only retrieval pool; freeze a source cutoff and
    fulltext/excerpt/availability report for every case. Never drop unavailable
    cases to make coverage look complete.
-3. Resolve BGB model rights and measure native BF16 offload with invented controls:
+3. First resolve BGB model rights and measure native BF16 offload with invented controls:
    unsupported addition, missing required content, irrelevant fluent answer,
    citation mismatch, reference copying, malformed output, truncation and longest
    permitted reference. Preserve controls and parsing failures. These are
@@ -115,7 +117,17 @@ Local CS judging would also be a changed condition. No expert recruitment is
 needed. No manual credential blocker has been demonstrated for Multi; unresolved
 source pool, rights and native memory/latency qualification are real gates.
 If unchanged native evaluation cannot be qualified, report that gate rather than
-silently declaring the stage complete with another judge.
+silently declaring the stage complete with another judge. The plan requires a
+qualified judge, the chosen released subset's full quality/citation endpoints,
+all its cases and explicit evaluator dependence. Its parent comparison report
+recognizes a replacement judge as a separate evaluation condition. Therefore a
+genuinely unresolved native route can motivate a prospectively declared
+alternative, with endpoint-specific qualification, the same reference/rubric
+handling, full Multi coverage and clear changed-evaluator reporting. Smaller
+size, lower cost or easier passing controls alone do not justify substitution.
+Such a condition cannot inherit native-judge or published-score equivalence;
+citation-only results, abstention-only outputs or a partial family cannot satisfy
+the quality endpoint. No alternative is selected or authorized as qualified here.
 
 ## Local evidence and verification scope
 
@@ -135,5 +147,8 @@ Freshly hashed retained inputs (all paths relative to `D:\Projects\drug_target_a
 | `planning/review-assets/tether-semantic-20261106/synthesis-feasibility/PUBLIC-METADATA.json` | `8226e5357de9894b1dbfa8e96393adc4ff8c2b286ec7493385510866e492fabb` |
 | `planning/review-assets/tether-semantic-20261106/sc04/SC06-FEASIBILITY-NOTE.md` | `926286057b4037e4b5fe306d6fd8ef91835d1b11a4c8a97ef1d75715a415fb9e` |
 
-The authoritative plan requires all chosen released cases and qualified native
-endpoints. This note neither activates SC07 nor changes that requirement.
+The authoritative plan requires all chosen released cases, the stated quality
+and citation endpoints, and a qualified explicitly identified judge. Exact
+published-judge reproduction and a declared changed-evaluator condition have
+different comparability. This clarification corrects an overstrict implication
+in the earlier note; it neither activates SC07 nor reduces its required coverage.

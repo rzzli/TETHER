@@ -32,7 +32,7 @@ credited to NLM. Clinical labels mean phase-II/III-to-approval progression, not
 measured efficacy. Citeline permission covers the released subset, not its entire
 database. [Official product schemas and terms](https://github.com/BenevolentAI/r2e-evaluation-data).
 
-## Exact candidate universe and data gaps
+## Original candidate universe and data gaps
 
 The number 19,176 is established; the authoritative ordered IDs, ontology release,
 aliases and complete membership are **not established**. The README lists
@@ -55,11 +55,26 @@ file elsewhere.
 Candidate reconstruction from the union of evaluation labels is not automatically
 valid: it can omit candidates that have no sampled query. Current HGNC/Ensembl
 protein-coding lists can add, merge or retire entries and are not an equivalent
-universe. Required evidence is the original vocabulary or a versioned mapping
-whose membership is proven equal to it. Preserve original strings alongside
+universe. Exact published-universe reproduction requires the original vocabulary
+or a versioned mapping proven equal to it. That is a comparability limitation,
+not an additional hard requirement for the prospective TETHER condition below.
+Preserve original strings alongside
 stable IDs; report ambiguous aliases, duplicate mappings, one-to-many mappings,
 unresolved labels and candidates with no eligible evidence. Missing candidates
 must remain scheduled; don't erase them from rank denominators.
+
+**Scope correction after independent review:** the authoritative SC08 plan and
+its parent comparison report require a **fixed candidate universe, qualified
+identifiers, a declared corpus and native masked-gene ranking metrics**. They do
+not require recovering the authors' exact ontology or reproducing proprietary
+weights. The earlier wording in this note incorrectly promoted exact-universe
+reproduction into a completion gate. A complete, independently sourced public
+human protein-coding universe is an eligible prospective condition if its release,
+membership and mapping policy are frozen independently of evaluation labels.
+This is not a reference-label union, target-only shortlist or top-k substitute.
+Keep every candidate, including those without collected evidence, and every
+released scheduled query. Report changed-universe/corpus/model conditions plainly;
+no claim of exact published-score comparability follows.
 
 Current catalog `r2e_outcomes` covers only the clinical comparison product and is
 still planned/not parsed. It cannot stand in for the two ranking products, the
@@ -79,10 +94,15 @@ the task with pair classification.
    promised ranking family. Recommend retaining **all literature-test and all
    gene-fact records**, with validation separate and no outcome-driven choice of
    the easier family. Confirm actual counts before freezing IDs.
-2. Resolve the complete original candidate vocabulary and mapping provenance.
-   If that cannot be obtained or proven, pause the exact-universe gate. A new
-   universe can only be a separately authorized changed benchmark, not completion
-   of this requirement.
+2. Qualify and freeze a complete public human protein-coding universe and mapping
+   provenance at a declared identifier-release date. Prefer the original universe
+   if its membership can be established, but do not make unavailable author
+   assets an invented prerequisite. Preserve original names, mapping ambiguity
+   and all candidates. Missing, ambiguous or out-of-universe reference targets
+   remain explicit in full-schedule accounting; never fabricate an ordinal rank.
+   Native rank metrics need their actual evaluable denominators, alongside
+   separately labelled all-scheduled success/failure measures. Do not tune
+   membership after inspecting reference labels or candidate scores.
 3. Freeze a rights-qualified public evidence corpus and its lineage. Exclude query
    sentences and their source documents from retrieval where required, keep labels
    inaccessible during scoring, and prevent gene-description gold text or clinical
@@ -102,7 +122,7 @@ the task with pair classification.
    aggregation, and preserve operational failures in the scheduled denominator.
 6. Retain raw query/candidate scores, source manifests, source chronology,
    ambiguity counts, coverage, measured resource use and independent reconstruction.
-   Report comparisons to literature values as differing model/corpus conditions,
+   Report comparisons to literature values as differing universe/model/corpus conditions,
    not matched-data superiority. Clinical progression remains a separate endpoint.
 
 The public-corpus route preserves task coverage but changes the original evidence
@@ -125,9 +145,10 @@ condition, without claiming coverage of the original proprietary corpus.
 
 ## Compute foreseeability
 
-Using documented counts, the two ranking families imply
+Using the authors' documented counts as a sizing scenario, the two ranking families imply
 `(44,362 + 60,839) * 19,176 = 2,017,334,376` candidate scores. This is a streaming/scalable ranker
-problem, not a suitable separate Qwen generation call for each candidate.
+problem, not a suitable separate Qwen generation call for each candidate. Recompute
+the full budget from the qualified public universe before freezing production.
 Native 300 GB index residency does not fit 32 GB host RAM. Sharded exact search
 could preserve a score definition with higher I/O, but needs measured throughput
 and proof of identical rankings. A modern alternative encoder changes the model
@@ -183,10 +204,10 @@ the archive bytes or internal contents. The repository README provides no
 additional candidate-list or ontology-version link.
 
 **Consequence:** public access to the evaluation-release metadata is established;
-the exact 19,176-member candidate universe remains an unresolved input. Author
+the exact 19,176-member author candidate universe remains unresolved. Author
 weights and proprietary evidence still limit exact reproduction of the authors'
 model, but their absence does not itself block development of a declared TETHER
-ranker. That ranker still needs a proven candidate universe and qualified public
+ranker. That ranker still needs its own proven full candidate universe and qualified public
 corpus to complete the planned full-universe evaluation. Reading the four TSVs
 and checking label coverage is a future preparation step, not permission to
 equate their label union with the original universe.
