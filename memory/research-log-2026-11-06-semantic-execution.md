@@ -306,3 +306,14 @@ R2E follow-up metadata binds both complete six-file official trees, zero GitHub
 release assets and one Zenodo repository ZIP; all15 local metadata proofs pass.
 The exact19176-member candidate universe remains unestablished, not an access
 failure. No R2E TSV/model acquired and SC05-SC09 remain inactive/incomplete.
+
+SC04 presentation preparation is complete:23 figure controls pass; final fictional
+receipt b19765d96e1e35a2a9e347e7251fc890c7b457cea48d10eff2c704b6a1edfb61
+binds three SVG/PNG pairs and direct plot-data/source joins. Peer and root inspected
+all three PNGs. O means lexical passage ordering, not original article order.
+Direct count/precision/contrast guards now reject three deliberately inconsistent
+inputs. Matplotlib3.10.7 uses11 exact wheels/31,210,636bytes in isolatedenvironment03;
+2268 installed RECORD files andsix console launchers verified. Two prior install
+attempts and prior figure/helper/test bytes retained. Production plots unbuilt.
+Supplied-source readiness independently verifies134pins, complete199/190/205
+schedule and fresh paths. Primary ROOT-RECEIPT remains required before freezing.

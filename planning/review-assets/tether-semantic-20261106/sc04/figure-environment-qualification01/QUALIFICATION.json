@@ -1,0 +1,318 @@
+{
+  "acquisition": {
+    "bytes": 83660,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\ACQUISITION.json",
+    "sha256": "c38a9bd85a02a0735a6517b13b569974fc26592fa9e7f7a7582697cc93eaaec8"
+  },
+  "base_executable": {
+    "bytes": 91648,
+    "path": "C:\\Users\\zzric\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+    "sha256": "d2ec5b9401b6471874373fe3e4329da1da85014d98f8abedd4e0f02ffdaa21a1"
+  },
+  "executable": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\environment02\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "failed_attempts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\metadata\\FAILURE.json",
+      "reason": "Ambiguous fonttools native/universal wheel; explicit native preference fixed; no wheel acquired in that attempt."
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\environment",
+      "reason": "Sandbox prevented Windows launcher PE update; retained; new environment02 created with scoped escalation."
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\environment02",
+      "reason": "Initial sandbox offline installation reported fonttools launcher PE error; scoped offline invocation then checked all packages; compatibility and plotting import passed."
+    }
+  ],
+  "installed": {
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.60.1",
+    "kiwisolver": "1.4.9",
+    "matplotlib": "3.10.7",
+    "numpy": "2.3.4",
+    "packaging": "25.0",
+    "pillow": "12.0.0",
+    "pyparsing": "3.2.5",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0"
+  },
+  "limits": [
+    "Isolated plotting dependencies do not alter or requalify the scientific analysis environment.",
+    "Wheels are hash verified, not a source-code security audit."
+  ],
+  "lock": {
+    "bytes": 1058,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\requirements.lock",
+    "sha256": "8dbec0500230f87131ad150cdd7590c0ebd6dbb372abc8c6ba739fd794891e75"
+  },
+  "matplotlib_backend": "Agg",
+  "official_references": [
+    "https://pypi.org/project/matplotlib/3.10.7/",
+    "https://matplotlib.org/3.10.7/project/license.html"
+  ],
+  "official_wheel_plan": {
+    "bytes": 83542,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\metadata02\\WHEEL-PLAN.json",
+    "sha256": "bd68de73c23e7a381ee179b91e1977d9680ee585c7b72c9379c486deaca2fc76"
+  },
+  "provider_spend_usd": 0,
+  "python": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "qualifier": {
+    "bytes": 3735,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\qualify_figures_env.py",
+    "sha256": "fffe4d3d24b9d5788a402627082ea15426cb026c57b329cb8816ab371a74ea3e"
+  },
+  "setup_helper": {
+    "bytes": 5659,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\setup_figures_env.py",
+    "sha256": "544a5f4cb5b7e02fd46fe12e0b543139fc0158d4563e9fdd2d47e7295ce2c762"
+  },
+  "status": "PASS",
+  "validation": [
+    "All 11 installed versions exactly match the lock.",
+    "uv pip check succeeded.",
+    "All wheel bytes and hashes match official archived PyPI metadata.",
+    "License files retained inside every original wheel.",
+    "Agg figure initialization succeeded."
+  ],
+  "venv_configuration": {
+    "bytes": 178,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\environment02\\pyvenv.cfg",
+    "sha256": "cd7f9a2d36a6d120cc92d2280ad0d65ff06d275f6f11ac885406c9e2c521c707"
+  },
+  "wheel_bytes": 31210636,
+  "wheel_cap_bytes": 262144000,
+  "wheels": [
+    {
+      "license_files": [
+        {
+          "bytes": 4830,
+          "name": "matplotlib-3.10.7.dist-info/LICENSE",
+          "sha256": "5a1a81ea301728c8bba2933da832c0cd62229daf20893a024ab3d53244468dbc"
+        },
+        {
+          "bytes": 4816,
+          "name": "matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU",
+          "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e"
+        },
+        {
+          "bytes": 5476,
+          "name": "matplotlib/mpl-data/fonts/ttf/LICENSE_STIX",
+          "sha256": "bab3d31dfef07f483624f2f65f2711e76065b8e7273278b1c071ede1041c9959"
+        }
+      ],
+      "name": "matplotlib",
+      "version": "3.10.7",
+      "wheel": {
+        "bytes": 8115142,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\matplotlib-3.10.7-cp311-cp311-win_amd64.whl",
+        "sha256": "6516ce375109c60ceec579e699524e9d504cd7578506f01150f7a6bc174a775e"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1563,
+          "name": "contourpy-1.3.3.dist-info/LICENSE",
+          "sha256": "8553102e03001dd966278098cc027d0683c412b34ea141351b060be4330f39a9"
+        }
+      ],
+      "name": "contourpy",
+      "version": "1.3.3",
+      "wheel": {
+        "bytes": 225234,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\contourpy-1.3.3-cp311-cp311-win_amd64.whl",
+        "sha256": "3519428f6be58431c56581f1694ba8e50626f2dd550af225f82fb5f5814d2a42"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1497,
+          "name": "cycler-0.12.1.dist-info/LICENSE",
+          "sha256": "f1218143d766da3fea66f13396b7f15df46a83303f29bf96ba6e98eb4d42f408"
+        }
+      ],
+      "name": "cycler",
+      "version": "0.12.1",
+      "wheel": {
+        "bytes": 8321,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\cycler-0.12.1-py3-none-any.whl",
+        "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1093,
+          "name": "fonttools-4.60.1.dist-info/licenses/LICENSE",
+          "sha256": "22bef80697ecfaa17f97e62b9a26dfa12820be05583e8dd12ad169b241274c99"
+        },
+        {
+          "bytes": 20410,
+          "name": "fonttools-4.60.1.dist-info/licenses/LICENSE.external",
+          "sha256": "b082a5f86775b2641f01bccb8b9c82908481de5f502bb254b1e13bfc2a9f303d"
+        }
+      ],
+      "name": "fonttools",
+      "version": "4.60.1",
+      "wheel": {
+        "bytes": 2278184,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\fonttools-4.60.1-cp311-cp311-win_amd64.whl",
+        "sha256": "d066ea419f719ed87bc2c99a4a4bfd77c2e5949cb724588b9dd58f3fd90b92bf"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 3360,
+          "name": "kiwisolver-1.4.9.dist-info/licenses/LICENSE",
+          "sha256": "ec817f05f420b00835020fb5c7067433ade3424d256dd3a78a1a8f8a5d9d87f3"
+        }
+      ],
+      "name": "kiwisolver",
+      "version": "1.4.9",
+      "wheel": {
+        "bytes": 73840,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\kiwisolver-1.4.9-cp311-cp311-win_amd64.whl",
+        "sha256": "be6a04e6c79819c9a8c2373317d19a96048e5a3f90bec587787e86a1153883c2"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1616,
+          "name": "numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "bytes": 3582,
+          "name": "numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        },
+        {
+          "bytes": 1039,
+          "name": "numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "bytes": 46841,
+          "name": "numpy-2.3.4.dist-info/LICENSE.txt",
+          "sha256": "596b953e1dcbe829b32ae444387efa15003fc6abdeca8a2179f364a6364c286e"
+        }
+      ],
+      "name": "numpy",
+      "version": "2.3.4",
+      "wheel": {
+        "bytes": 13089358,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\numpy-2.3.4-cp311-cp311-win_amd64.whl",
+        "sha256": "faba246fb30ea2a526c2e9645f61612341de1a83fb1e0c5edf4ddda5a9c10996"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 5715,
+          "name": "packaging/licenses/__init__.py",
+          "sha256": "56c2b8a36ec225759f4e2f2bdb26c99ac06809d8699c15ae36bb2468254a3fb5"
+        },
+        {
+          "bytes": 48398,
+          "name": "packaging/licenses/_spdx.py",
+          "sha256": "a009b5ced3c5c25b2608a7bb94002cbff38839f4b57160eef5b34191ebbeda7b"
+        },
+        {
+          "bytes": 197,
+          "name": "packaging-25.0.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "bytes": 10174,
+          "name": "packaging-25.0.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "bytes": 1344,
+          "name": "packaging-25.0.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        }
+      ],
+      "name": "packaging",
+      "version": "25.0",
+      "wheel": {
+        "bytes": 66469,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\packaging-25.0-py3-none-any.whl",
+        "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 78078,
+          "name": "pillow-12.0.0.dist-info/licenses/LICENSE",
+          "sha256": "9a083a15f1026b3d7096629be74f79cc80544ebf443e652d434c19f2594574d7"
+        }
+      ],
+      "name": "pillow",
+      "version": "12.0.0",
+      "wheel": {
+        "bytes": 6999256,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\pillow-12.0.0-cp311-cp311-win_amd64.whl",
+        "sha256": "b583dc9070312190192631373c6c8ed277254aa6e6084b74bdd0a6d3b221608e"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1023,
+          "name": "pyparsing-3.2.5.dist-info/licenses/LICENSE",
+          "sha256": "10d5120a16805804ffda8b688c220bfb4e8f39741b57320604d455a309e01972"
+        }
+      ],
+      "name": "pyparsing",
+      "version": "3.2.5",
+      "wheel": {
+        "bytes": 113890,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\pyparsing-3.2.5-py3-none-any.whl",
+        "sha256": "e38a4f02064cf41fe6593d328d0512495ad1f3d8a91c4f73fc401b3079a59a5e"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 2889,
+          "name": "python_dateutil-2.9.0.post0.dist-info/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        }
+      ],
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "wheel": {
+        "bytes": 229892,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+        "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+      }
+    },
+    {
+      "license_files": [
+        {
+          "bytes": 1066,
+          "name": "six-1.17.0.dist-info/LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        }
+      ],
+      "name": "six",
+      "version": "1.17.0",
+      "wheel": {
+        "bytes": 11050,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-figures-env-attempt01\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+        "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+      }
+    }
+  ]
+}

@@ -32,6 +32,13 @@ The rehearsal receipt is
 `fbdc09d48dd25ea1265cab5d920f91eca792813d2679dffc437cc2b30fa5ef8c`.
 It prepares acceptance and reporting; it does not accept unfinished production.
 
+The [figure pipeline](FIGURE-REPRODUCTION.md) is also qualified:23 controls pass,
+and three fictional SVG/PNG pairs match externally anchored analysis/acceptance.
+Independent review and root visual inspection pass. Corrected lexical-passage
+labels and direct precision/contrast consistency checks are retained. The isolated
+Matplotlib3.10.7 environment used31,210,636 bytes of pinned wheels; original failed
+installation attempts remain. Production figures await complete accepted results.
+
 Read-only forward checks are retained for later work:
 [SC05 calibration](SC05-CALIBRATION-ELIGIBILITY-AUDIT.md),
 [SC06](SC06-FEASIBILITY-NOTE.md), [SC07](SC07-FEASIBILITY-NOTE.md), and
