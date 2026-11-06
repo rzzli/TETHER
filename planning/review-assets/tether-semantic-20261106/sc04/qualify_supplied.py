@@ -21,7 +21,7 @@ def main():
     log=io.StringIO();result=unittest.TextTestRunner(stream=log,verbosity=2).run(unittest.defaultTestLoader.discover(str(root),pattern='test_*.py'))
     (args.output/'TEST-RESULTS.txt').write_text(log.getvalue(),encoding='utf-8',newline='\n')
     report=dict(status='PASS' if result.wasSuccessful() else 'FAIL',tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),
-                skipped=len(result.skipped),source_sha256=pins,scope='Invented supplied DOI resolution only; no network, model or clinical claims.')
+                skipped=len(result.skipped),source_sha256=pins,scope='Invented diagnostic resolution, lineage, answer, controller and native replay controls; no network or actual model dispatch.')
     (args.output/'QUALIFICATION.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in report.items() if k!='source_sha256'}))
     if not result.wasSuccessful():print(log.getvalue());raise SystemExit(1)
