@@ -1,15 +1,22 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T23:33:20Z
+## Current checkpoint: 2026-11-06T23:41Z
 
-SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 remains
-live. Expansion199, collection398 and ranking398 have completed and passed
-maintained replay; all796 answer-slot records are written, with answer finalization
-and replay still pending. Collection worker elapsed6871.719
+SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 has
+closed successfully (exit0). Expansion199, collection398, ranking398 and all796
+answer records have completed and passed maintained replay. The externally
+captured primary root receipt is
+`d021ddeb76d1cffb7ddcd64722b5470c30a9bbb0925c78a3b25cb131a6675ccc`.
+The answer worker took1326.750seconds and its replay287.468seconds, both reaped
+with exit0. Collection worker elapsed6871.719
 seconds and ranking1069seconds, each within its7200-second cap and exited0 with
-cleanup verified. Primary answers and the full supplied-source diagnostic are
-not finalized. Re-poll that session before inferring state; never
-restart it on an observation timeout. All125 frozen primary source pins remain
+cleanup verified. The supplied-source diagnostic is now live in session7966;
+re-poll that handle before inferring state and never restart on an observation
+timeout. Its full190-DOI/199-answer frame is
+[supplied-production-freeze01](supplied-production-freeze01/FRAME.json), SHA256
+`e820b492dc2eedec6a14e6ba42a3a000b89225cdc24d0437c79f8f7dec77463f`.
+Output is `data/benchmark/litqa_comparison/supplied-production-20261106-attempt01`.
+Full scientific analysis and final acceptance remain pending. All125 primary source pins remain
 unchanged. The collection package SHA is
 `68f942bfe744fadb5b3623fe829c28df1f78fdcac66faa7f85908578e653f883`;
 the stage receipt SHA is

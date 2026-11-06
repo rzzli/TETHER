@@ -363,3 +363,17 @@ fallback retains lexical query/pool order. Tracked auxiliary report/anchor retai
 the limits; root independently verifies51 distinct proof paths. No answer score
 or final-run acceptance is claimed. The intuitive root README is already pushed
 in84963dc; another read-only review checks all11 local links and CLI alignment.
+
+Primary session48230 is now CLOSED exit0; all796answers pass maintained replay.
+External root receipt d021ddeb76d1cffb7ddcd64722b5470c30a9bbb0925c78a3b25cb131a6675ccc;
+answer package6b96124b8995e90d5f4bfdd2b8c0a8f341046a47318dada930f9c1199537622e.
+Worker1326.750s/replay287.468s, both reaped/exit0. The supplied production frame
+e820b492dc2eedec6a14e6ba42a3a000b89225cdc24d0437c79f8f7dec77463f passes its
+completed-primary gate. Supplied production session7966 is LIVE; re-poll it,
+never restart on observation timeout. Output supplied-production-20261106-attempt01
+under data/benchmark/litqa_comparison. The freezer session42252 is CLOSED exit0.
+Full independent analysis waits for both sealed runs. Reporting preflight finds
+no production-size cap blocker; final readable report must additionally surface
+supplied-source eligible subsets, ranking selection/correctness transitions and
+paragraph-only extraction limits already defined in the frozen specification.
+Read-only calibration math review found no design change needed; no fit executed.
