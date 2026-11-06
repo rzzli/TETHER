@@ -1,0 +1,596 @@
+{
+  "count": 84,
+  "distributions": [
+    {
+      "metadata_sha256": "899b3856e8da1590c04f21d0761d8acdeb9382acff7e8e95894b94b74d1a5c3b",
+      "name": "agent-client-protocol",
+      "record_sha256": "98e4f2be77373fe6cf7075c3d7268e72a078222dd598f776c05a52b201031aba",
+      "record_verified_files": 45,
+      "version": "0.12.1"
+    },
+    {
+      "metadata_sha256": "fd63fdf03b36c0fa367871741414e85e7cb5aee67c1aba27841b529a0c8653c1",
+      "name": "aiobotocore",
+      "record_sha256": "49fc37161d04281174383f9967dd5ac6afde135ca7745dad18dc77d4ccc75264",
+      "record_verified_files": 43,
+      "version": "3.10.0"
+    },
+    {
+      "metadata_sha256": "e68d1bf48aec9dcc2767343dedec25e12860085cba180e10bc3d3bdd031602ba",
+      "name": "aiohappyeyeballs",
+      "record_sha256": "4cf83f5c22692e8ac384e4d8cd9f596cc31a2adcc62f6a83f529d60e6dc51958",
+      "record_verified_files": 11,
+      "version": "2.7.1"
+    },
+    {
+      "metadata_sha256": "50b29a2268649f7ce5b22c0a41b60896d246fee58e2a74b468f66848e469834c",
+      "name": "aiohttp",
+      "record_sha256": "b3bb9166207ce97eb2d9603660f06d1ad592ce6eded5f36a6de9cae9319e8218",
+      "record_verified_files": 74,
+      "version": "3.14.5"
+    },
+    {
+      "metadata_sha256": "91cc60bedec3f5f9760a37747dc07830081560c7ef42c3f9a8eb75626b1be01d",
+      "name": "aioitertools",
+      "record_sha256": "672ed237824ecd885262aec3edee93cdf025e021f4c24dfc828210cbcff8fa80",
+      "record_verified_files": 21,
+      "version": "0.13.0"
+    },
+    {
+      "metadata_sha256": "09247ef1da8bc696728d47130e702e4307f6f7d101d6c485bff9f3a71ce7008d",
+      "name": "aiosignal",
+      "record_sha256": "01c85ddbabfa7359c849ee77e6382dfbe861aa86e285a36c4d164d6380452eb1",
+      "record_verified_files": 8,
+      "version": "1.4.0"
+    },
+    {
+      "metadata_sha256": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46",
+      "name": "annotated-doc",
+      "record_sha256": "f8ebd25f9cb785d523fabd3d8902e53b87e8ca3f5f0e81bec6b623a99568c272",
+      "record_verified_files": 9,
+      "version": "0.0.5"
+    },
+    {
+      "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298",
+      "name": "annotated-types",
+      "record_sha256": "3f0b84de3d724c300c88e5f9e95e0c3028995801dea1681b42fa2f28b9840966",
+      "record_verified_files": 8,
+      "version": "0.8.0"
+    },
+    {
+      "metadata_sha256": "b184ac9cd097e2bb7f90d42799346cc91c276095d000d95d7f7ddd407d0c887e",
+      "name": "anyio",
+      "record_sha256": "598f7fef5cf5970637f5ec251a5ca11c8a7e707382959087b8330f0ebd159bbb",
+      "record_verified_files": 54,
+      "version": "4.16.0"
+    },
+    {
+      "metadata_sha256": "2bac8e80324dda95d9344d65e5098ad773253bedce9b304412b5c1452d5a48aa",
+      "name": "asof-target-agents",
+      "record_sha256": "a4e4e13a708dd9cbdbc128c5a1207e91909e2ace303c306c91436c474d224c07",
+      "record_verified_files": 102,
+      "version": "0.3.13"
+    },
+    {
+      "metadata_sha256": "4cd40e690f23bf37cbcad34efd6758e062df1df07c86833f7e3ce95bf1fa38cc",
+      "name": "attrs",
+      "record_sha256": "b2d3a55aa67d147ca5166f4cf6454ed7013f408994f97a507440227fe70c28bc",
+      "record_verified_files": 36,
+      "version": "26.1.0"
+    },
+    {
+      "metadata_sha256": "b2f888103259f1607c85f3b1163be1bc49fc9941a3243c3b89a21075bfc6d4fb",
+      "name": "beautifulsoup4",
+      "record_sha256": "91a0f5506cdb4ccd3ff916975b8e172bf3a6f5b8a260f6c5619d1e349193dddf",
+      "record_verified_files": 22,
+      "version": "4.15.0"
+    },
+    {
+      "metadata_sha256": "05c69b643675ea665d31f78ed47b67228881e4beb7554cc3dded34b5d8fba82a",
+      "name": "boto3",
+      "record_sha256": "3aa3230d15159ada804531c9689d5e0e0630274c6988152d731452d6ef6cc702",
+      "record_verified_files": 63,
+      "version": "1.43.117"
+    },
+    {
+      "metadata_sha256": "bdf0dd6ebbf182bc4d075862eb5cb0ea319b85c3095b58368826e37c58e46f1e",
+      "name": "botocore",
+      "record_sha256": "442ccc1ec6f67c5013e177af9ffff31f51093217492a9cbbab378cd0f3ed1d28",
+      "record_verified_files": 2016,
+      "version": "1.43.117"
+    },
+    {
+      "metadata_sha256": "e463e38f7fe7da36a11e6d3fecc5dfa5b97be8c8022620400750d79ae7d842bc",
+      "name": "certifi",
+      "record_sha256": "c787d13c67194cd6908d461858611c60304906f11c12697ca0a7d76f5de99252",
+      "record_verified_files": 13,
+      "version": "2026.10.23"
+    },
+    {
+      "metadata_sha256": "89ce6362bb7be88558f4be99a98f5d1b4da93d19cd0323e5ee0bac05cf883dfb",
+      "name": "charset-normalizer",
+      "record_sha256": "9b2c29a5111f7a648d585b3c72c81afe62b51070f303f094a170cd94843aa0de",
+      "record_verified_files": 23,
+      "version": "3.5.2"
+    },
+    {
+      "metadata_sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501",
+      "name": "click",
+      "record_sha256": "5d097d4965b29925ca4ff900580f3b9aaf30ed8c93dcbe82d45ecd990a178cd2",
+      "record_verified_files": 23,
+      "version": "8.5.0"
+    },
+    {
+      "metadata_sha256": "c9d6ef5712b5e28d2cd2146a0fc764260381f1729ff0e0da9b0c77dd2230bc64",
+      "name": "debugpy",
+      "record_sha256": "1d006c256190396dfc44f4554d6cf664e875a56a9786de55900c880f65803445",
+      "record_verified_files": 303,
+      "version": "1.8.22"
+    },
+    {
+      "metadata_sha256": "cbc42027997fd4b194ae5fd064a4d1e57b92976941d0c26d369561a7c016a333",
+      "name": "docstring_parser",
+      "record_sha256": "8877cf66de774534d2a7da6caf28ef1d3c304c71c70e01329e5603ed3056d5a1",
+      "record_verified_files": 15,
+      "version": "0.18.0"
+    },
+    {
+      "metadata_sha256": "71eccf0418f121959670e72e343ec964105ea0190783e5048eef970a539c4e63",
+      "name": "fastapi",
+      "record_sha256": "6b44e8d7c242895c39fb98996852a0c3effb45675ab738f279e9f3da4a9c4adc",
+      "record_verified_files": 67,
+      "version": "0.162.0"
+    },
+    {
+      "metadata_sha256": "946c22dc9f7e2c76f2d698f00a4306dbe49a820e2b3f1a0e22fe5286cbec35f1",
+      "name": "frozenlist",
+      "record_sha256": "120a1ef797422fd32cf3c6406e21a9096cb5ea64334c88a944f27864752eb716",
+      "record_verified_files": 11,
+      "version": "1.8.0"
+    },
+    {
+      "metadata_sha256": "20c85c024a69a059237c3a7985d381a3745017ae1d634c554b0c5901dde81095",
+      "name": "fsspec",
+      "record_sha256": "bda5dc25a756447724e9a3b3aa4e794ca3f4c08ce9540767becb5316f3f51e60",
+      "record_verified_files": 62,
+      "version": "2026.6.0"
+    },
+    {
+      "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64",
+      "name": "h11",
+      "record_sha256": "72cd889e3d709a7c6593fce10ab6122d6d55b8b42026ed5202f225275bb8c669",
+      "record_verified_files": 18,
+      "version": "0.16.0"
+    },
+    {
+      "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21",
+      "name": "httpcore",
+      "record_sha256": "6017d447f37a0e0fa835b15a8fc4e115a0e8f82db2567b04ecf99222065c5631",
+      "record_verified_files": 37,
+      "version": "1.0.9"
+    },
+    {
+      "metadata_sha256": "febb9b0f8f3e80d57c8199c304f35c4336e8581d1d18d7983c92766b82793b25",
+      "name": "httpx",
+      "record_sha256": "8d70b0efc485f6ff2b39330b1f94173f39e0551864d985b67001547af358eff3",
+      "record_verified_files": 31,
+      "version": "0.28.1"
+    },
+    {
+      "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85",
+      "name": "idna",
+      "record_sha256": "9bc37382cef206753c93845ee826c7314c8bb513cd79b199781d51900202264d",
+      "record_verified_files": 18,
+      "version": "3.20"
+    },
+    {
+      "metadata_sha256": "a1a8aaeb35426089be48bba5ea2f4a75f7d0adb2ea1d21a2a5d64cdc31557fa6",
+      "name": "ijson",
+      "record_sha256": "9a59598270efa545c54639997f3d92e6e8e2ac47a271d845e6b8c79d31426f80",
+      "record_verified_files": 23,
+      "version": "3.6.0"
+    },
+    {
+      "metadata_sha256": "cce8a2988e41e9a4f5f127d6dd72eea501494b051acdee00e7f4419e7e602143",
+      "name": "inspect_ai",
+      "record_sha256": "3321bc67f3dc7f3e20b7833a49ec685b9ec88844095b6af45ea805404afaf8bb",
+      "record_verified_files": 929,
+      "version": "0.3.287"
+    },
+    {
+      "metadata_sha256": "81181e9a312f1b87e5be7c8376c57b0e8c962ba524a25a313d43dc2e2d3984f3",
+      "name": "jmespath",
+      "record_sha256": "462ae0415c1fed135c37060c8b85477c65525be395921bfe1fe351f794a5f8e8",
+      "record_verified_files": 15,
+      "version": "1.1.0"
+    },
+    {
+      "metadata_sha256": "5c3321bb4b3f59d96945201cb1ecac0599e94889ca6b9104330c8467ee59b471",
+      "name": "jsonlines",
+      "record_sha256": "143258abe68a091331bdf3b320c99274900ed9160501cd34f3d9f20ba7932ce0",
+      "record_verified_files": 9,
+      "version": "4.0.0"
+    },
+    {
+      "metadata_sha256": "68ffd25b7630078c589dab1182f9186df960d76ced241c57f414395661c7e429",
+      "name": "jsonpatch",
+      "record_sha256": "c99237046904b24dea3fc13fb0f06a2a502e672152d0f97007567b9b1fe66188",
+      "record_verified_files": 13,
+      "version": "1.43"
+    },
+    {
+      "metadata_sha256": "8b18dbd7742f6dd865eb9af064c2884c969560107d4a7ca4185465797e57d03a",
+      "name": "jsonpath-ng",
+      "record_sha256": "76a32473c6392711bd0e56d366407618089f0f2ee32a30532c7bf688d0f05380",
+      "record_verified_files": 33,
+      "version": "1.16.0"
+    },
+    {
+      "metadata_sha256": "3972ea171c64d1afe9b2c5350557dfdf21477b0f976ed2bc9dbaf073f46cfbea",
+      "name": "jsonpointer",
+      "record_sha256": "67f8f4585e0a4eb7f2a3728e4697a1395b2fee1b172d53dcc7d1cb579abe4c01",
+      "record_verified_files": 10,
+      "version": "3.9"
+    },
+    {
+      "metadata_sha256": "f98db3890394fba23912faab86ad8f70ed564fc8c885298b636b270f28453e43",
+      "name": "jsonref",
+      "record_sha256": "4d6aa626c95e4affe0ae06d7b8567daa4225767e46314f7a815678cdc7504406",
+      "record_verified_files": 7,
+      "version": "1.1.0"
+    },
+    {
+      "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2",
+      "name": "jsonschema",
+      "record_sha256": "6debdaf42a79d1c51cc8354e2225ef41a2c1db96c22109ad877a7e3ae32068ce",
+      "record_verified_files": 45,
+      "version": "4.26.0"
+    },
+    {
+      "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d",
+      "name": "jsonschema-specifications",
+      "record_sha256": "a472360901b65fc3b25c6d4fb7161115d02d514b549ef1609bb267aaa8b25608",
+      "record_verified_files": 29,
+      "version": "2025.9.1"
+    },
+    {
+      "metadata_sha256": "5bc112f7a322ec1d8b3a71c3357daf6340353f773ad386fa9784c22de8339eb9",
+      "name": "linkify-it-py",
+      "record_sha256": "63e340254485ff69d54c85caa2dd9ee7140a10c139eb8ed02e8e644a64d9b17c",
+      "record_verified_files": 11,
+      "version": "2.2.0"
+    },
+    {
+      "metadata_sha256": "72c36ff516755443b1ecb61e17b2567a990230b49a504b0eb0c42d5f82448a9c",
+      "name": "markdown-it-py",
+      "record_sha256": "2b85583207ec4acd75d3b4d448e3aa9b079749b3a8f92bbbf1b3e8656b98d7a8",
+      "record_verified_files": 76,
+      "version": "4.2.0"
+    },
+    {
+      "metadata_sha256": "cd9486029c276a4bf819a85ca25f32f3bcff07a7e1c577dd45be523c7f0c472e",
+      "name": "mdit-py-plugins",
+      "record_sha256": "d996e9055b6d35cb6a5eac37c573c763b4fea1ac1f6f822ec76a9909921fc5e7",
+      "record_verified_files": 61,
+      "version": "0.6.1"
+    },
+    {
+      "metadata_sha256": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d",
+      "name": "mdurl",
+      "record_sha256": "8f5e7875722ec98a44fd33c8e069d2934806d68319e7286c6ad44c1d63ba272c",
+      "record_verified_files": 12,
+      "version": "0.1.2"
+    },
+    {
+      "metadata_sha256": "c0e9c9f193d0caa406ca8e603b9c937cd80aa90314da5a9f9b7b5a176ae25a52",
+      "name": "mmh3",
+      "record_sha256": "f0d377406987b287aa288a2d4a1eb2f42e8d037cae8b84570b48ff446254621b",
+      "record_verified_files": 13,
+      "version": "5.3.1"
+    },
+    {
+      "metadata_sha256": "679ab105e4019e3f8923f30b19ea5cbf358e21d8a1832ea3f2b6755112ac9276",
+      "name": "multidict",
+      "record_sha256": "0485386984dceddebd01194f4ac14b8b07533602a630bd4c98b9c345adf33d84",
+      "record_verified_files": 16,
+      "version": "7.2.1"
+    },
+    {
+      "metadata_sha256": "9a0ef1a102935c197dd14e7e4422076dbf34846c882d1f9ccf9b334edc688b5a",
+      "name": "nest-asyncio2",
+      "record_sha256": "f755981ce02bd2b93d32357d1b4a8be84884b784198d9406d4583aa8cb2bb60d",
+      "record_verified_files": 7,
+      "version": "1.7.4"
+    },
+    {
+      "metadata_sha256": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+      "name": "numpy",
+      "record_sha256": "37d985a089da8ac72b94f76f607647acc0459bfd7af7624b5855d4f07c0eb5d3",
+      "record_verified_files": 1064,
+      "version": "2.4.6"
+    },
+    {
+      "metadata_sha256": "aa93f63be0d6d1f662966e67b22a77c0d9966752e3a32ad87c1347f595cea7cb",
+      "name": "opentelemetry-api",
+      "record_sha256": "9f8ac6ac96c28296dbfe5a14bfab855a3b85e559cce303577eab6910b627ab2c",
+      "record_verified_files": 48,
+      "version": "1.45.2"
+    },
+    {
+      "metadata_sha256": "d059bb0ecbd782595d550d0bedbd6700bae9136efe5809d53c4210e089ab9400",
+      "name": "pathlib_abc",
+      "record_sha256": "432b66f376647c16f9164dab26fad42992994dd79325ae20d6d70a504c95b5be",
+      "record_verified_files": 9,
+      "version": "0.5.2"
+    },
+    {
+      "metadata_sha256": "90d11f277fd5868da679ee257c97656dde511c8aac7d025231407e6ce90839e2",
+      "name": "pip",
+      "record_sha256": "f515e80b2db00bcdaed7522b904e195c6acb6f0215ea39510547f80c70558f3d",
+      "record_verified_files": 528,
+      "version": "24.0"
+    },
+    {
+      "metadata_sha256": "707dadf34f860bd32d498e7d4d7ca9f8df4bec218de1c58f2579ee6bf93d8026",
+      "name": "platformdirs",
+      "record_sha256": "1af20418daa5b766c8d2b546d6acbe87c8ff7ed5eba447c4f53338f3ccb3c405",
+      "record_verified_files": 19,
+      "version": "4.14.5"
+    },
+    {
+      "metadata_sha256": "6ed3bac0ad43050ceaf8bd09878ba3d673c94c4da0d4498f903f86c36cc6fb57",
+      "name": "propcache",
+      "record_sha256": "4452581fd311deabc0d0133394f96783d7cbafaa8f4cf978ad35d607ff1b319d",
+      "record_verified_files": 14,
+      "version": "0.5.4"
+    },
+    {
+      "metadata_sha256": "525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f",
+      "name": "psutil",
+      "record_sha256": "0f40260b033fd5a871b2fc3a48bf4f54c0fcf15e08e63c9ab135560bb78fdf9a",
+      "record_verified_files": 17,
+      "version": "7.2.2"
+    },
+    {
+      "metadata_sha256": "c3eb8984172bedc8e056655e1419351f4497374a91b7b709dbc4a1340f50e1e9",
+      "name": "pydantic",
+      "record_sha256": "a0d510967d293558c77317f1db2777c74f7265849fc3dafc3e5b23f272b5a2c0",
+      "record_verified_files": 113,
+      "version": "2.14.3"
+    },
+    {
+      "metadata_sha256": "bb1956097beb504f190f8ea20c859b5dfea567679a247ce252d7813dd73f361d",
+      "name": "pydantic_core",
+      "record_sha256": "bd7b8f631927baf25be5ce55a0860a7649191f69e6b55f4b9ea1e934301a26e9",
+      "record_verified_files": 12,
+      "version": "2.50.4"
+    },
+    {
+      "metadata_sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43",
+      "name": "Pygments",
+      "record_sha256": "4729f17a3dc0c171eeb4d7698dd714c3decef4f7b6b1ca2c230f544bf475f0e1",
+      "record_verified_files": 351,
+      "version": "2.21.0"
+    },
+    {
+      "metadata_sha256": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93",
+      "name": "python-dateutil",
+      "record_sha256": "83a09fbff02e718faecd02aebf6de968347f7bb9beda84cb762169e4f1379a14",
+      "record_verified_files": 26,
+      "version": "2.9.0.post0"
+    },
+    {
+      "metadata_sha256": "87cfee6042412d48df1100ea7822684988c3f2b79de7a250f4717f4df3026d6f",
+      "name": "python-dotenv",
+      "record_sha256": "e6f3a9a1a6218af635e37090c9ef5f284d90704855775be418b22ea2c662490c",
+      "record_verified_files": 17,
+      "version": "1.2.4"
+    },
+    {
+      "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+      "name": "PyYAML",
+      "record_sha256": "59581cd5c17b73a4ab40c6d096fd8d656e0482c01b81aa01c28e5206ad837ae4",
+      "record_verified_files": 25,
+      "version": "6.0.3"
+    },
+    {
+      "metadata_sha256": "c93b00e6ab1524fd60848376604c189a114374776475c25a31d57be47b29de6a",
+      "name": "referencing",
+      "record_sha256": "283223b9c87d9322002cb3e0952f3189d88c401e58186f75ece106d2e38f0b4c",
+      "record_verified_files": 20,
+      "version": "0.37.0"
+    },
+    {
+      "metadata_sha256": "33859377dbf8dd38ee3de73fd97faebf4a63d50576e3cc1a9dfe44df08b0936a",
+      "name": "regex",
+      "record_sha256": "36ee4c4818435792ce82bb18a8dd4df4653550735bb7e40e530fcddb38bdb2d2",
+      "record_verified_files": 11,
+      "version": "2026.9.29"
+    },
+    {
+      "metadata_sha256": "8c384ba3e979480faae2859d3c5e6c1276dd2c3616e322e124d52c8cfc556f27",
+      "name": "requests",
+      "record_sha256": "d05db942ec041d5c3cdab7f2419a16016a44787dec9fedadc5e2889e6b146b8f",
+      "record_verified_files": 27,
+      "version": "2.34.2"
+    },
+    {
+      "metadata_sha256": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b",
+      "name": "rich",
+      "record_sha256": "af78391c5e41290da7fcfdd558445dfc84d5fe3556b271eef3a63fbdea771eff",
+      "record_verified_files": 106,
+      "version": "15.0.0"
+    },
+    {
+      "metadata_sha256": "5d72dca2e387c8d2b4180b68ee87c15b64751e059100a6db58891ec9995445c3",
+      "name": "rpds-py",
+      "record_sha256": "ad01fb01c25fa398864923a696807d6683c280fad0d2db99ea110d14ae8811b8",
+      "record_verified_files": 10,
+      "version": "2026.9.1"
+    },
+    {
+      "metadata_sha256": "e877606bb3178a254f856d5b6c0d776e0e896294917eca00acff1d67d3043712",
+      "name": "s3fs",
+      "record_sha256": "dbd2465900fd918bee9486eeff7447ad24d76a1eba0be94e87d7a8f516464e11",
+      "record_verified_files": 12,
+      "version": "2026.6.0"
+    },
+    {
+      "metadata_sha256": "7b7029ecab804a4f394906ed493b93402beb32538be18caa7b462873e2ed7d81",
+      "name": "s3transfer",
+      "record_sha256": "5edd38e321eb424b16c50c795224f59fae82b58a6a68db814b070ef9b8a71404",
+      "record_verified_files": 23,
+      "version": "0.19.3"
+    },
+    {
+      "metadata_sha256": "739ffce2897c9a145c73ac0539a76368b392dfa0ffb20e0503fb1e5963f1481d",
+      "name": "semver",
+      "record_sha256": "4075202f8c3763a8e2640f62dcea3447cda4ea32ce7367189c5724a05e0b0065",
+      "record_verified_files": 16,
+      "version": "3.1.0"
+    },
+    {
+      "metadata_sha256": "d3152caeb1486d143b30b1d41fffaaddb7ea95fdc9547ae1135ce697b1a420b5",
+      "name": "setuptools",
+      "record_sha256": "96f9fb80ff93050d980e9f489b3483c7e290aeae8d8e87ec4691380d69e8d642",
+      "record_verified_files": 515,
+      "version": "79.0.1"
+    },
+    {
+      "metadata_sha256": "76f39eb41b4bb36f8e36682178ff470d36153c9a49e6d451db0ae9e4a81f5819",
+      "name": "shortuuid",
+      "record_sha256": "f7595cb496304c441cad570caa9964c86118bed49c8e46af51e41e07ee948dd5",
+      "record_verified_files": 14,
+      "version": "1.0.13"
+    },
+    {
+      "metadata_sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468",
+      "name": "six",
+      "record_sha256": "cbad33300b7bf18468a82bbfc5a45e2376dcf142cfe7ad5409f9693b985ebeff",
+      "record_verified_files": 7,
+      "version": "1.17.0"
+    },
+    {
+      "metadata_sha256": "e87e83bd780638c08d4ae02ba8c36a89c6b55e2ea910d441aa20ad0b30e51fb6",
+      "name": "sniffio",
+      "record_sha256": "c41d709cc12031bd0b1f11bdc739b23e22b477af4c9c34c276817bf0a4703994",
+      "record_verified_files": 14,
+      "version": "1.3.1"
+    },
+    {
+      "metadata_sha256": "99a07bf71bbb38088f2428c5fd86c820e633d1cc39bdbed5fb4cf413ea0a2356",
+      "name": "soupsieve",
+      "record_sha256": "2a5280c57121d8d524c1035f13a463259859611b847915a5443d78e929586291",
+      "record_verified_files": 14,
+      "version": "4.0.1"
+    },
+    {
+      "metadata_sha256": "82f72dde2c5c3c55d45d9461adce5e30973481f7f3e10b59e497bbc5b8abf598",
+      "name": "starlette",
+      "record_sha256": "7eb2eddcf4aca90cf11920e359a81bc30aff396b38057ffbdae5fe5553f26ec0",
+      "record_verified_files": 42,
+      "version": "1.10.0"
+    },
+    {
+      "metadata_sha256": "1d30f0b4cd3cf1ad585400f9ea9c424e64c630ea63e57209a1f16fce72e68eb7",
+      "name": "tenacity",
+      "record_sha256": "9019ae60840ecd3e9bd4bbe2da3c155a633cdcf92a48df87426cddca0e0b452c",
+      "record_verified_files": 19,
+      "version": "9.2.1"
+    },
+    {
+      "metadata_sha256": "f692b7a2a4a270e7c3c5df8faff64bd271eeadc396df21d4e3fee4a00e3a7434",
+      "name": "tether-target-agents",
+      "record_sha256": "fbec10c0baf1b3e4909b31f0d9ff2d014eb6c88740289e30b611dc35d3659d33",
+      "record_verified_files": 27,
+      "version": "0.5.2"
+    },
+    {
+      "metadata_sha256": "fa4831c4001c94a8d8177cccd05099d8fa021575c81a3bd53eae3b995eb22f1e",
+      "name": "textual",
+      "record_sha256": "d3ad5e9706d6efb2ad860d1b9ef6f8c9f03d215d145b95d6be820e53add557dd",
+      "record_verified_files": 269,
+      "version": "8.2.8"
+    },
+    {
+      "metadata_sha256": "30086725221223f7a19463e71c0e9f79fe7aba9125b36632c00bf50a23fa968a",
+      "name": "tiktoken",
+      "record_sha256": "5acf2f3741adf7c59a1edeb81339676175adb934c445ab52b3c216b5590262a9",
+      "record_verified_files": 15,
+      "version": "0.14.0"
+    },
+    {
+      "metadata_sha256": "7306933907768b0098784e56dfd678242f52383ff3e35c10a4c150539393d6ec",
+      "name": "typing-inspection",
+      "record_sha256": "100d6d4320444a2d4a22d5cb4ada58bb53fcd847a2c89b205925bcaffd4951b3",
+      "record_verified_files": 10,
+      "version": "0.4.5"
+    },
+    {
+      "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46",
+      "name": "typing_extensions",
+      "record_sha256": "ebf0b4a1b305ee98ebaa37f5a37c41c2e8fe479bba80cccd997a87112488d5ad",
+      "record_verified_files": 6,
+      "version": "4.16.0"
+    },
+    {
+      "metadata_sha256": "c0ff9a45fb6b6f1af0ffbe1abb4a5eca67be4478d784cf8241ddf13ee59610bf",
+      "name": "universal_pathlib",
+      "record_sha256": "f85f12af7aa5c6db95968e11878bc8ab5bcf68987efc91b8fbd76a2eeb02045e",
+      "record_verified_files": 38,
+      "version": "0.3.10"
+    },
+    {
+      "metadata_sha256": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4",
+      "name": "urllib3",
+      "record_sha256": "5d1fcd55f7238a1b6e315b16854ca44ea02ff8d791eab0d42be3590c4f6b9e41",
+      "record_verified_files": 43,
+      "version": "2.8.0"
+    },
+    {
+      "metadata_sha256": "9399e5ddda3d26e842d6fb5420c38b0857aac568d53badbdc224b3a21339efa8",
+      "name": "uvicorn",
+      "record_sha256": "faa7c86d9536af1dc78c06bc690bd6be85ae40f9f1b9f707f28eb8e8fc652cb7",
+      "record_verified_files": 53,
+      "version": "0.54.0"
+    },
+    {
+      "metadata_sha256": "ceab6c052af5f2dfe7d70e4e57521a9556c0f106a327aa897d66fd0c26e9db89",
+      "name": "wrapt",
+      "record_sha256": "79cd9098a29f053f273d5e5282a36b732aeacd0e98108552b60ac552b58cd8c1",
+      "record_verified_files": 23,
+      "version": "2.5.2"
+    },
+    {
+      "metadata_sha256": "fd6baa258a11c4d7e7008272a69180d4d34aa04a6a5afda36ac5e55aa0aa4f41",
+      "name": "yarl",
+      "record_sha256": "e6c5431466baa16608d7cce963a8bc964224bcb86607fb63216ea4ae3f3ae78d",
+      "record_verified_files": 18,
+      "version": "1.25.1"
+    },
+    {
+      "metadata_sha256": "195b9d50880a580e1c40d944a2c0f1e9228d132daa7aaf9f715ae40226a8438c",
+      "name": "zipfile-zstd",
+      "record_sha256": "c99252c2ea8605ab00ea8cbd33d661588de5baacacdbe418059e9e3aae0e2147",
+      "record_verified_files": 9,
+      "version": "0.0.4"
+    },
+    {
+      "metadata_sha256": "f84611a1ae509959f8a60875c24ff61793a67ca575cb5fdfa98076d3531bdbf9",
+      "name": "zipp",
+      "record_sha256": "47a531d24c7626576fa67967fa9169adcfb3ddc100a04e55da3cdad48201a96a",
+      "record_verified_files": 13,
+      "version": "4.1.2"
+    },
+    {
+      "metadata_sha256": "03d37736b26b9ae48451dd17026d93dffbd252fb708c1a2a9ae1be0c0966de92",
+      "name": "zstandard",
+      "record_sha256": "6f45ff6a50612dd2d06568b189e57aa5dbf7df7fb4daa7529665af544c487504",
+      "record_verified_files": 12,
+      "version": "0.25.0"
+    }
+  ],
+  "inventory_sha256": "cbbe73e46f699f99b359215f974fa5f1be657baeb3234fbfa5733508da0cfd4b",
+  "record_verified_files": 8071,
+  "unchecked_record_count": 936
+}

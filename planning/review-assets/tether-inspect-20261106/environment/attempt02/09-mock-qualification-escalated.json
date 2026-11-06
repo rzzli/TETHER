@@ -1,0 +1,20 @@
+{
+  "acquisition_storage_cap_bytes": 536870912,
+  "command": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-inspect-env-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-inspect-20261106\\environment\\mock03_entry.py"
+  ],
+  "elapsed_seconds": 7.297000000002299,
+  "exit_code": 0,
+  "expanded_environment_cap_bytes": 1073741824,
+  "final_expanded_environment_bytes": 209294632,
+  "final_wheel_tmp_bytes": 81234458,
+  "guard_sampling_seconds": 0.1,
+  "log_sha256": "7a4b838a3cc2b6e0a4f35d18e9e4600f04f33a31eb888ff4354eb707d95b6076",
+  "pip_config_file": "nul",
+  "proxy_environment": "not inherited",
+  "started_at": "2026-11-06T03:04:32.540205+00:00",
+  "timeout_seconds": 90
+}

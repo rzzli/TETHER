@@ -25,7 +25,11 @@ comparisons pass. All97 maintained fictional tests pass. A01/A02 and failed
 semantic controls remain; measuredcompletion is not scientificqualification.
 Exec94153/46694 are closed; no model retry. Readallocation/finalization and timing
 limits remain explicit. See [[research-log-2026-11-06-labbench-results]].
-Inspect equivalent-policy implementation and the final goal audit follow. Dated sections
+Inspect equivalent-policy implementation is in preparation: pinned0.3.287 environment
+and actual native mock qualify; the27-obligation matrix and prospective981-cell
+comparison are retained. New extension defects are being corrected before freeze;
+no comparison result yet. See [[research-log-2026-11-06-inspect-preparation]].
+The final goal audit follows BG05. Dated sections
 below retain earlier research scope and do not supersede this checkpoint.
 
 ## Current recovery execution

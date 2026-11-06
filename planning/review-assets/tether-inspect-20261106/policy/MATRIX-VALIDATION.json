@@ -1,0 +1,18 @@
+{
+  "files": {
+    "INSPECT-SOURCE-REVIEW.json": "22119f9c3695417c74034e7637d30821766621d132f17a0ba7a5b77f695e27a8",
+    "OBLIGATION-MATRIX.json": "cfdeaef5032524fbfea79274b89d183f680b1164bd7500ea9794b237f6567026",
+    "OBLIGATION-MATRIX.md": "d1daf4af343547c83014966cee5b0fe49b745bfcc186bbe9ca70f497f6c3302b",
+    "PORT-DESIGN.md": "8fb49bf2ad02e1b52843009a02a00bb2128c51d971962b0000108c37ab1663af"
+  },
+  "fixed_case_count": 109,
+  "inspect_source_files_checked": 5,
+  "local_markdown_links_checked": 6,
+  "native_rule_copy_exact": true,
+  "obligation_count": 27,
+  "primary_scheduled_cells": 981,
+  "reused_validator_files_checked": 8,
+  "reused_validator_physical_lines": 2642,
+  "scope": "Documentation structure, exact normative rules, original oracle case mapping, reused validator hashes and pinned installed Inspect source hashes only; no Inspect execution",
+  "status": "PASS"
+}

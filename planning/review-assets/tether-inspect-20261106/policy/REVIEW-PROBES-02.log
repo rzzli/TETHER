@@ -1,0 +1,22 @@
+{
+  "findings": {
+    "altered_temperature": {
+      "dispatches": 0,
+      "reason": "Native provider request/configuration differs from reserved payload",
+      "rejected": true
+    },
+    "cross_case_record_swap": {
+      "reason": "Sample and retained policy case identities differ",
+      "rejected": true
+    },
+    "duplicate_cross_step_claim": {
+      "reason": "Previously committed observation cannot be committed again",
+      "rejected": true
+    },
+    "nested_input_output": {
+      "reason": "Output and frozen input trees must not overlap",
+      "rejected_before_write": true
+    }
+  },
+  "scope": "fictional direct-function probes; no native eval or production corpus"
+}

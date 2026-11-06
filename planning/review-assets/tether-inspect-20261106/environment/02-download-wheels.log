@@ -1,0 +1,391 @@
+Collecting inspect-ai==0.3.287
+  Downloading inspect_ai-0.3.287-py3-none-any.whl.metadata (9.1 kB)
+Collecting agent-client-protocol>=0.12.0 (from inspect-ai==0.3.287)
+  Downloading agent_client_protocol-0.12.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting aiobotocore>=2.18.0 (from inspect-ai==0.3.287)
+  Downloading aiobotocore-3.10.0-py3-none-any.whl.metadata (32 kB)
+Collecting anyio>=4.14.2 (from inspect-ai==0.3.287)
+  Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting beautifulsoup4>=4.10.0 (from inspect-ai==0.3.287)
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting boto3 (from inspect-ai==0.3.287)
+  Downloading boto3-1.43.125-py3-none-any.whl.metadata (6.6 kB)
+Collecting click!=8.2.0,!=8.2.2,!=8.3.0,!=8.3.1,>=8.1.3 (from inspect-ai==0.3.287)
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting debugpy (from inspect-ai==0.3.287)
+  Downloading debugpy-1.8.22-cp311-cp311-win_amd64.whl.metadata (1.4 kB)
+Collecting docstring-parser>=0.16 (from inspect-ai==0.3.287)
+  Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting fastapi>=0.119.0 (from inspect-ai==0.3.287)
+  Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+Collecting fsspec<=2026.6.0,>=2023.1.0 (from inspect-ai==0.3.287)
+  Downloading fsspec-2026.6.0-py3-none-any.whl.metadata (10 kB)
+Collecting httpx (from inspect-ai==0.3.287)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting ijson>=3.2.0 (from inspect-ai==0.3.287)
+  Downloading ijson-3.6.0-cp311-cp311-win_amd64.whl.metadata (24 kB)
+Collecting jsonlines>=3.0.0 (from inspect-ai==0.3.287)
+  Downloading jsonlines-4.0.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting jsonpatch>=1.32 (from inspect-ai==0.3.287)
+  Downloading jsonpatch-1.43-py3-none-any.whl.metadata (4.3 kB)
+Collecting jsonpath-ng>=1.8.0 (from inspect-ai==0.3.287)
+  Downloading jsonpath_ng-1.16.0-py3-none-any.whl.metadata (17 kB)
+Collecting jsonref>=1.1.0 (from inspect-ai==0.3.287)
+  Downloading jsonref-1.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting jsonschema>3.1.1 (from inspect-ai==0.3.287)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting markdown-it-py>=2.2.0 (from inspect-ai==0.3.287)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting mmh3>3.1.0 (from inspect-ai==0.3.287)
+  Downloading mmh3-5.3.1-cp311-cp311-win_amd64.whl.metadata (14 kB)
+Collecting nest_asyncio2>=1.7.4 (from inspect-ai==0.3.287)
+  Downloading nest_asyncio2-1.7.4-py3-none-any.whl.metadata (7.0 kB)
+Collecting numpy (from inspect-ai==0.3.287)
+  Downloading numpy-2.4.6-cp311-cp311-win_amd64.whl.metadata (6.6 kB)
+Collecting platformdirs>=2.3.0 (from inspect-ai==0.3.287)
+  Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+Collecting psutil (from inspect-ai==0.3.287)
+  Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Collecting pydantic>=2.13.0 (from inspect-ai==0.3.287)
+  Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+     -------------------------------------- 141.5/141.5 kB 8.2 MB/s eta 0:00:00
+Collecting python-dotenv>=0.16.0 (from inspect-ai==0.3.287)
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting pyyaml (from inspect-ai==0.3.287)
+  Downloading pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+Collecting rich!=14.0.0,>=13.3.3 (from inspect-ai==0.3.287)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting s3fs>=2023 (from inspect-ai==0.3.287)
+  Downloading s3fs-2026.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting semver>=3.0.0 (from inspect-ai==0.3.287)
+  Downloading semver-3.1.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting shortuuid (from inspect-ai==0.3.287)
+  Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+Collecting sniffio (from inspect-ai==0.3.287)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting tenacity (from inspect-ai==0.3.287)
+  Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting textual>=6.2.0 (from inspect-ai==0.3.287)
+  Downloading textual-8.2.8-py3-none-any.whl.metadata (9.1 kB)
+Collecting tiktoken>=0.12.0 (from inspect-ai==0.3.287)
+  Downloading tiktoken-0.14.0-cp311-cp311-win_amd64.whl.metadata (6.8 kB)
+Collecting typing_extensions>=4.14.0 (from inspect-ai==0.3.287)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting universal-pathlib>=0.2.6 (from inspect-ai==0.3.287)
+  Downloading universal_pathlib-0.3.10-py3-none-any.whl.metadata (39 kB)
+Collecting uvicorn (from inspect-ai==0.3.287)
+  Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting zipfile-zstd>=0.0.4 (from inspect-ai==0.3.287)
+  Downloading zipfile_zstd-0.0.4-py3-none-any.whl.metadata (2.0 kB)
+Collecting zipp>=3.19.1 (from inspect-ai==0.3.287)
+  Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting zstandard>=0.20.0 (from inspect-ai==0.3.287)
+  Downloading zstandard-0.25.0-cp311-cp311-win_amd64.whl.metadata (3.3 kB)
+Collecting aiohttp<4.0.0,>=3.14.0 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading aiohttp-3.14.5-cp311-cp311-win_amd64.whl.metadata (8.5 kB)
+Collecting aioitertools<1.0.0,>=0.5.1 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading aioitertools-0.13.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting botocore<1.43.118,>=1.43.115 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading botocore-1.43.117-py3-none-any.whl.metadata (5.6 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting multidict<8.0.0,>=6.0.0 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading multidict-7.2.1-cp311-cp311-win_amd64.whl.metadata (6.3 kB)
+Collecting python-dateutil<3.0.0,>=2.1 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting wrapt<3.0.0,>=1.10.10 (from aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading wrapt-2.5.2-cp311-cp311-win_amd64.whl.metadata (7.7 kB)
+Collecting idna>=2.8 (from anyio>=4.14.2->inspect-ai==0.3.287)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.10.0->inspect-ai==0.3.287)
+  Downloading soupsieve-4.0.1-py3-none-any.whl.metadata (4.4 kB)
+Collecting starlette>=0.46.0 (from fastapi>=0.119.0->inspect-ai==0.3.287)
+  Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi>=0.119.0->inspect-ai==0.3.287)
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi>=0.119.0->inspect-ai==0.3.287)
+  Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi>=0.119.0->inspect-ai==0.3.287)
+  Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+Collecting attrs>=19.2.0 (from jsonlines>=3.0.0->inspect-ai==0.3.287)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonpointer>=3.8 (from jsonpatch>=1.32->inspect-ai==0.3.287)
+  Downloading jsonpointer-3.9-py3-none-any.whl.metadata (2.7 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>3.1.1->inspect-ai==0.3.287)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>3.1.1->inspect-ai==0.3.287)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>3.1.1->inspect-ai==0.3.287)
+  Downloading rpds_py-2026.9.1-cp311-cp311-win_amd64.whl.metadata (4.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->inspect-ai==0.3.287)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.13.0->inspect-ai==0.3.287)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.4 (from pydantic>=2.13.0->inspect-ai==0.3.287)
+  Downloading pydantic_core-2.50.4-cp311-cp311-win_amd64.whl.metadata (6.7 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich!=14.0.0,>=13.3.3->inspect-ai==0.3.287)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+INFO: pip is looking at multiple versions of s3fs to determine which version is compatible with other requirements. This could take a while.
+Collecting s3fs>=2023 (from inspect-ai==0.3.287)
+  Downloading s3fs-2026.7.0-py3-none-any.whl.metadata (1.2 kB)
+  Downloading s3fs-2026.6.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting mdit-py-plugins (from textual>=6.2.0->inspect-ai==0.3.287)
+  Downloading mdit_py_plugins-0.6.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting regex (from tiktoken>=0.12.0->inspect-ai==0.3.287)
+  Downloading regex-2026.9.29-cp311-cp311-win_amd64.whl.metadata (41 kB)
+     ---------------------------------------- 41.6/41.6 kB ? eta 0:00:00
+Collecting requests (from tiktoken>=0.12.0->inspect-ai==0.3.287)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting pathlib-abc<0.6.0,>=0.5.1 (from universal-pathlib>=0.2.6->inspect-ai==0.3.287)
+  Downloading pathlib_abc-0.5.2-py3-none-any.whl.metadata (4.6 kB)
+INFO: pip is looking at multiple versions of boto3 to determine which version is compatible with other requirements. This could take a while.
+Collecting boto3 (from inspect-ai==0.3.287)
+  Downloading boto3-1.43.124-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.123-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.122-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.121-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.120-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.119-py3-none-any.whl.metadata (6.6 kB)
+  Downloading boto3-1.43.118-py3-none-any.whl.metadata (6.6 kB)
+INFO: pip is still looking at multiple versions of boto3 to determine which version is compatible with other requirements. This could take a while.
+  Downloading boto3-1.43.117-py3-none-any.whl.metadata (6.6 kB)
+Collecting s3transfer<0.20.0,>=0.19.0 (from boto3->inspect-ai==0.3.287)
+  Downloading s3transfer-0.19.3-py3-none-any.whl.metadata (1.7 kB)
+Collecting certifi (from httpx->inspect-ai==0.3.287)
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx->inspect-ai==0.3.287)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx->inspect-ai==0.3.287)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading frozenlist-1.8.0-cp311-cp311-win_amd64.whl.metadata (21 kB)
+Collecting propcache>=0.2.0 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading propcache-0.5.4-cp311-cp311-win_amd64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp<4.0.0,>=3.14.0->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading yarl-1.25.1-cp311-cp311-win_amd64.whl.metadata (115 kB)
+     -------------------------------------- 115.0/115.0 kB 7.0 MB/s eta 0:00:00
+Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.43.118,>=1.43.115->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting linkify-it-py<3,>=1 (from markdown-it-py[linkify]>=2.1.0->textual>=6.2.0->inspect-ai==0.3.287)
+  Downloading linkify_it_py-2.2.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->aiobotocore>=2.18.0->inspect-ai==0.3.287)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests->tiktoken>=0.12.0->inspect-ai==0.3.287)
+  Downloading charset_normalizer-3.5.2-cp311-cp311-win_amd64.whl.metadata (47 kB)
+     ---------------------------------------- 47.3/47.3 kB ? eta 0:00:00
+Downloading inspect_ai-0.3.287-py3-none-any.whl (35.5 MB)
+   ---------------------------------------- 35.5/35.5 MB 16.4 MB/s eta 0:00:00
+Downloading agent_client_protocol-0.12.1-py3-none-any.whl (85 kB)
+   ---------------------------------------- 85.9/85.9 kB ? eta 0:00:00
+Downloading aiobotocore-3.10.0-py3-none-any.whl (102 kB)
+   ---------------------------------------- 102.8/102.8 kB 5.8 MB/s eta 0:00:00
+Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+   ---------------------------------------- 134.5/134.5 kB ? eta 0:00:00
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+   ---------------------------------------- 109.9/109.9 kB ? eta 0:00:00
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+   ---------------------------------------- 125.3/125.3 kB ? eta 0:00:00
+Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+   ---------------------------------------- 148.9/148.9 kB ? eta 0:00:00
+Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+   ---------------------------------------- 203.9/203.9 kB ? eta 0:00:00
+Downloading ijson-3.6.0-cp311-cp311-win_amd64.whl (54 kB)
+   ---------------------------------------- 54.7/54.7 kB ? eta 0:00:00
+Downloading jsonlines-4.0.0-py3-none-any.whl (8.7 kB)
+Downloading jsonpatch-1.43-py3-none-any.whl (23 kB)
+Downloading jsonpath_ng-1.16.0-py3-none-any.whl (86 kB)
+   ---------------------------------------- 86.2/86.2 kB ? eta 0:00:00
+Downloading jsonref-1.1.0-py3-none-any.whl (9.4 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+   ---------------------------------------- 90.6/90.6 kB 5.4 MB/s eta 0:00:00
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+   ---------------------------------------- 91.7/91.7 kB ? eta 0:00:00
+Downloading mmh3-5.3.1-cp311-cp311-win_amd64.whl (41 kB)
+   ---------------------------------------- 41.7/41.7 kB ? eta 0:00:00
+Downloading nest_asyncio2-1.7.4-py3-none-any.whl (8.5 kB)
+Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+   --------------------------------------- 494.1/494.1 kB 32.3 MB/s eta 0:00:00
+Downloading pydantic_core-2.50.4-cp311-cp311-win_amd64.whl (2.3 MB)
+   ---------------------------------------- 2.3/2.3 MB 20.6 MB/s eta 0:00:00
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+   --------------------------------------- 310.7/310.7 kB 18.8 MB/s eta 0:00:00
+Downloading s3fs-2026.6.0-py3-none-any.whl (32 kB)
+Downloading semver-3.1.0-py3-none-any.whl (18 kB)
+Downloading textual-8.2.8-py3-none-any.whl (731 kB)
+   --------------------------------------- 731.4/731.4 kB 23.3 MB/s eta 0:00:00
+Downloading tiktoken-0.14.0-cp311-cp311-win_amd64.whl (944 kB)
+   --------------------------------------- 944.4/944.4 kB 19.9 MB/s eta 0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+   ---------------------------------------- 45.6/45.6 kB ? eta 0:00:00
+Downloading universal_pathlib-0.3.10-py3-none-any.whl (83 kB)
+   ---------------------------------------- 83.5/83.5 kB ? eta 0:00:00
+Downloading zipfile_zstd-0.0.4-py3-none-any.whl (4.1 kB)
+Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+Downloading zstandard-0.25.0-cp311-cp311-win_amd64.whl (506 kB)
+   --------------------------------------- 506.2/506.2 kB 16.0 MB/s eta 0:00:00
+Downloading boto3-1.43.117-py3-none-any.whl (140 kB)
+   ---------------------------------------- 140.0/140.0 kB ? eta 0:00:00
+Downloading debugpy-1.8.22-cp311-cp311-win_amd64.whl (5.3 MB)
+   ---------------------------------------- 5.3/5.3 MB 18.7 MB/s eta 0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+   ---------------------------------------- 73.5/73.5 kB ? eta 0:00:00
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+   ---------------------------------------- 78.8/78.8 kB ? eta 0:00:00
+Downloading numpy-2.4.6-cp311-cp311-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 16.8 MB/s eta 0:00:00
+Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+   ---------------------------------------- 137.7/137.7 kB ? eta 0:00:00
+Downloading pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+   ---------------------------------------- 158.8/158.8 kB 9.3 MB/s eta 0:00:00
+Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading tenacity-9.2.1-py3-none-any.whl (32 kB)
+Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+   ---------------------------------------- 87.4/87.4 kB 4.8 MB/s eta 0:00:00
+Downloading aiohttp-3.14.5-cp311-cp311-win_amd64.whl (512 kB)
+   --------------------------------------- 512.6/512.6 kB 15.7 MB/s eta 0:00:00
+Downloading aioitertools-0.13.0-py3-none-any.whl (24 kB)
+Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+   ---------------------------------------- 67.5/67.5 kB ? eta 0:00:00
+Downloading botocore-1.43.117-py3-none-any.whl (16.1 MB)
+   ---------------------------------------- 16.1/16.1 MB 17.2 MB/s eta 0:00:00
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+   ---------------------------------------- 69.6/69.6 kB ? eta 0:00:00
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading jsonpointer-3.9-py3-none-any.whl (10 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading multidict-7.2.1-cp311-cp311-win_amd64.whl (94 kB)
+   ---------------------------------------- 94.9/94.9 kB 5.3 MB/s eta 0:00:00
+Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+   ---------------------------------------- 60.3/60.3 kB ? eta 0:00:00
+Downloading pathlib_abc-0.5.2-py3-none-any.whl (19 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ---------------------------------------- 1.3/1.3 MB 19.7 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   --------------------------------------- 229.9/229.9 kB 13.7 MB/s eta 0:00:00
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-2026.9.1-cp311-cp311-win_amd64.whl (226 kB)
+   --------------------------------------- 226.0/226.0 kB 13.5 MB/s eta 0:00:00
+Downloading s3transfer-0.19.3-py3-none-any.whl (90 kB)
+   ---------------------------------------- 90.3/90.3 kB ? eta 0:00:00
+Downloading soupsieve-4.0.1-py3-none-any.whl (50 kB)
+   ---------------------------------------- 50.7/50.7 kB ? eta 0:00:00
+Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+   ---------------------------------------- 80.6/80.6 kB ? eta 0:00:00
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading wrapt-2.5.2-cp311-cp311-win_amd64.whl (106 kB)
+   ---------------------------------------- 106.1/106.1 kB ? eta 0:00:00
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+   ---------------------------------------- 135.1/135.1 kB 7.8 MB/s eta 0:00:00
+Downloading mdit_py_plugins-0.6.1-py3-none-any.whl (66 kB)
+   ---------------------------------------- 66.7/66.7 kB ? eta 0:00:00
+Downloading regex-2026.9.29-cp311-cp311-win_amd64.whl (280 kB)
+   --------------------------------------- 280.6/280.6 kB 16.9 MB/s eta 0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+   ---------------------------------------- 73.1/73.1 kB ? eta 0:00:00
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading charset_normalizer-3.5.2-cp311-cp311-win_amd64.whl (214 kB)
+   ---------------------------------------- 214.9/214.9 kB ? eta 0:00:00
+Downloading frozenlist-1.8.0-cp311-cp311-win_amd64.whl (44 kB)
+   ---------------------------------------- 44.1/44.1 kB ? eta 0:00:00
+Downloading linkify_it_py-2.2.0-py3-none-any.whl (21 kB)
+Downloading propcache-0.5.4-cp311-cp311-win_amd64.whl (46 kB)
+   ---------------------------------------- 46.3/46.3 kB ? eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+   ---------------------------------------- 135.7/135.7 kB 8.4 MB/s eta 0:00:00
+Downloading yarl-1.25.1-cp311-cp311-win_amd64.whl (102 kB)
+   ---------------------------------------- 102.9/102.9 kB ? eta 0:00:00
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\inspect_ai-0.3.287-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\agent_client_protocol-0.12.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\aiobotocore-3.10.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\anyio-4.16.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\beautifulsoup4-4.15.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\click-8.5.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\docstring_parser-0.18.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\fastapi-0.162.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\fsspec-2026.6.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\ijson-3.6.0-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonlines-4.0.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonpatch-1.43-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonpath_ng-1.16.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonref-1.1.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonschema-4.26.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\markdown_it_py-4.2.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\mmh3-5.3.1-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\nest_asyncio2-1.7.4-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\platformdirs-4.14.5-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\pydantic-2.14.3-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\pydantic_core-2.50.4-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\python_dotenv-1.2.4-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\rich-15.0.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\s3fs-2026.6.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\semver-3.1.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\textual-8.2.8-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\tiktoken-0.14.0-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\typing_extensions-4.16.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\universal_pathlib-0.3.10-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\zipfile_zstd-0.0.4-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\zipp-4.1.2-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\zstandard-0.25.0-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\boto3-1.43.117-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\debugpy-1.8.22-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\httpx-0.28.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\httpcore-1.0.9-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\numpy-2.4.6-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\psutil-7.2.2-cp37-abi3-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\pyyaml-6.0.3-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\shortuuid-1.0.13-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\sniffio-1.3.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\tenacity-9.2.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\uvicorn-0.54.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\aiohttp-3.14.5-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\aioitertools-0.13.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\annotated_doc-0.0.5-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\annotated_types-0.8.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\attrs-26.1.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\botocore-1.43.117-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\h11-0.16.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\idna-3.20-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jmespath-1.1.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonpointer-3.9-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\jsonschema_specifications-2025.9.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\mdurl-0.1.2-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\multidict-7.2.1-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\opentelemetry_api-1.45.2-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\pathlib_abc-0.5.2-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\pygments-2.21.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\referencing-0.37.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\rpds_py-2026.9.1-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\s3transfer-0.19.3-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\soupsieve-4.0.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\starlette-1.10.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\typing_inspection-0.4.5-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\wrapt-2.5.2-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\certifi-2026.10.23-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\mdit_py_plugins-0.6.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\regex-2026.9.29-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\requests-2.34.2-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\aiohappyeyeballs-2.7.1-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\aiosignal-1.4.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\charset_normalizer-3.5.2-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\frozenlist-1.8.0-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\linkify_it_py-2.2.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\propcache-0.5.4-cp311-cp311-win_amd64.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\six-1.17.0-py2.py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\urllib3-2.8.0-py3-none-any.whl
+Saved d:\projects\drug_target_agents\data\cache\tether-inspect-env-attempt01\wheels\yarl-1.25.1-cp311-cp311-win_amd64.whl
+Successfully downloaded inspect-ai agent-client-protocol aiobotocore anyio beautifulsoup4 click docstring-parser fastapi fsspec ijson jsonlines jsonpatch jsonpath-ng jsonref jsonschema markdown-it-py mmh3 nest_asyncio2 platformdirs pydantic pydantic-core python-dotenv rich s3fs semver textual tiktoken typing_extensions universal-pathlib zipfile-zstd zipp zstandard boto3 debugpy httpx httpcore numpy psutil pyyaml shortuuid sniffio tenacity uvicorn aiohttp aioitertools annotated-doc annotated-types attrs botocore h11 idna jmespath jsonpointer jsonschema-specifications mdurl multidict opentelemetry-api pathlib-abc pygments python-dateutil referencing rpds-py s3transfer soupsieve starlette typing-inspection wrapt certifi mdit-py-plugins regex requests aiohappyeyeballs aiosignal charset_normalizer frozenlist linkify-it-py propcache six urllib3 yarl

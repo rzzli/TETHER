@@ -1,5 +1,7 @@
 # TETHER research memory index
 
+- [[research-log-2026-11-06-inspect-preparation]] - Current BG05 preparation: qualified Inspect0.3.287 environment/native mock, complete27-obligation design and prospective981-cell comparison; root inherited2,179-file check passes. New extension defects are being corrected before freeze; no actual comparison result. BG01–BG04 complete, BG06 pending.
+
 - [[research-log-2026-11-06-labbench-results]] - Current: BG01–BG04 complete. LitQA2 all199 sealed/replayed;12correct,21substantive,178unsure,ninewrong; alladmitted, no semantic gain. Separate native/source comparisons agree;10/199 annotated-source hits. Retained resource/allocation/finalization limits;97 maintainedtests. Next equal-policy Inspect, then final goal audit. No new human/model retry or owner-fact request.
 
 - [[research-log-2026-11-06-labbench-preparation]] - Current BG04: all199 source cases collected/audited;97 fictional tests pass; all199 actual candidates sealed with199calls and normal cleanup. Source-inclusive scorer exec46694 and independent reconstruction pending; no accuracy result yet. Failed fictional semantic control retained under A01, A02 path fix prospectively frozen. BG01–BG03 complete; Inspect/final audit follow.

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "preparation documents and retained scope only; no comparison dispatched",
+  "local_links": 10,
+  "files": {
+    "planning\\TETHER Inspect Comparison Protocol 2026-11-06.md": {
+      "sha256": "c8c710c1972a776656d54444d8a6ca90d5b4373936186c362b773340e43cb9a3",
+      "bytes": 12260
+    },
+    "planning\\review-assets\\tether-inspect-20261106\\policy\\PORT-DESIGN.md": {
+      "sha256": "8fb49bf2ad02e1b52843009a02a00bb2128c51d971962b0000108c37ab1663af",
+      "bytes": 19624
+    },
+    "planning\\review-assets\\tether-inspect-20261106\\policy\\IMPLEMENTATION-REVIEW.md": {
+      "sha256": "528169181f2980bccd2693572e6c3f6149a781ee05a0940f0027cc815b9ede0f",
+      "bytes": 5725
+    },
+    "planning\\review-assets\\tether-inspect-20261106\\environment\\attempt02\\ENVIRONMENT-QUALIFICATION.json": {
+      "sha256": "d759f9fb05bcb985167add81a273e09294cfa325870c2de072e309fcdb9053b6",
+      "bytes": 4988
+    },
+    "planning\\review-assets\\tether-inspect-20261106\\stage\\INHERITED-INPUT-CHECK-01.json": {
+      "sha256": "810f0b98edf25bb6d7eb82e6b6e95481ee881a88d04197e1846ac25d918880f8",
+      "bytes": 562259
+    }
+  }
+}
