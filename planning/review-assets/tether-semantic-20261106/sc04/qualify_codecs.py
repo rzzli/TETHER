@@ -28,7 +28,7 @@ def main():
     (args.output/'TEST-RESULTS.txt').write_text(log.getvalue(),encoding='utf-8',newline='\n')
     report=dict(status='PASS' if result.wasSuccessful() else 'FAIL',tests=result.testsRun,
                 failures=len(result.failures),errors=len(result.errors),skipped=len(result.skipped),
-                source_sha256=pins,scope='Invented codec/selection controls only; no real model or benchmark.')
+                source_sha256=pins,scope='Invented codec, transport, acquisition, lineage and schedule controls; no real model or benchmark.')
     (args.output/'QUALIFICATION.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in report.items() if k!='source_sha256'}))
     if not result.wasSuccessful():print(log.getvalue())
