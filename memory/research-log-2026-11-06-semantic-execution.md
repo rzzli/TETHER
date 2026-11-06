@@ -282,3 +282,15 @@ ScholarMulti108 nativejudges~93GB each require loading/runtimechecks, no quiet
 7Bsubstitution. R2Eauthor-modelreproduction unavailable doesnotbyitself block a
 TETHERranker; full19176candidate membership, fullreleasedrankingfamilies, IDs and
 licensabledeclaredcorpus stillneedproof. No futuredatasets/models acquired.
+
+## README usability refinement
+
+Owner-requested root README now leads with the drug-target use case, one Mermaid
+workflow, a three-row evidence/execution/evaluation explanation, and four demo
+commands. Technical detail remains linked; the illustrative IL6R hypothesis is
+separate from the deterministic fictional demo. Removed default permission-check
+implication and retained the distinction between verification and scientific validity.
+Locked uv sync, a fresh demo in runs/readme-intuitive-20261106-attempt01, and
+source-inclusive verification with externally saved receipt hash all passed.
+Receipt: 9c1d7ed2c14f5d26654ed6b767edf5268cc9cca140603ec1153f2ea0635f955a.
+Local links/anchors and Markdown code fences checked; no runtime source changed.

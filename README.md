@@ -1,34 +1,40 @@
 # TETHER
 
-### Drug-target research you can trace back to the evidence.
+**Trace every drug-target claim back to its evidence.**
 
-An **agent execution and evaluation harness** for drug-target research. Turn a hypothesis and versioned evidence into a dossier of **claims, sources, and gaps**.
+TETHER is an **agent execution and evaluation harness** for drug-target research. Give it a hypothesis and versioned evidence; get a dossier of **source-linked claims, evidence gaps, and a verifiable execution record**.
 
-**T**arget **E**vidence **T**racking **H**arness for **E**valuation and **R**eproducibility
+*Target Evidence Tracking Harness for Evaluation and Reproducibility*
 
-[Run the demo](#quick-start) · [How it works](#how-it-works) · [Results](#current-results) · [Documentation](#explore)
+[Try it](#quick-start) · [Status & results](#current-results) · [Docs](#explore)
 
 <a id="how-it-works"></a>
 
-## One question → a traceable dossier
+## How it works
 
-> **Example hypothesis:** Inhibit IL6R with an antibody to treat rheumatoid arthritis.
+> **Illustrative input:** Evaluate IL6R inhibition by an antibody for rheumatoid arthritis, using evidence available by a specified date.
 
 ```mermaid
 flowchart LR
-    Q["1 · DEFINE<br/>Target + disease<br/>Action + modality + cutoff"] --> G
-    E[("Versioned evidence")] --> G
-    G["2 · CHECK INPUTS<br/>Dates · permissions<br/>Source lineage"] --> S
-    S["3 · REVIEW EVIDENCE<br/>Specialist workflows<br/>Bounded execution"] --> D
-    D["4 · READ THE DOSSIER<br/>Claims + sources<br/>Gaps + unresolved questions"]
-    G -.-> A["AUDIT TRAIL<br/>Inputs · decisions · calls · failures"]
-    S -.-> A
+    H["Your hypothesis"] --> C
+    E[("Versioned evidence")] --> C
+    C["Check inputs<br/>Identity · dates · lineage"] --> W
+    W["Run evidence workflows<br/>Specialists · budgets · claim checks"] --> D
+    D["Research dossier<br/>Claims · citations · gaps"]
+    C -.-> A["Execution record<br/>Inputs · calls · decisions · failures"]
+    W -.-> A
     D -.-> A
+    style D fill:#dcfce7,stroke:#15803d,color:#14532d
+    style A fill:#eff6ff,stroke:#2563eb,color:#1e3a8a
 ```
 
-Specialist routes: **genetics · expression · perturbation · pathways · modality · literature · clinical · safety**. Capabilities depend on the data and backend.
+| Component | What it does |
+|---|---|
+| **Evidence** | Tracks source versions, dates, and relationships between inputs. |
+| **Execution** | Routes evidence through specialists, limits work, and records accepted claims. |
+| **Evaluation** | Checks run consistency and measures scientific answers on benchmarks. |
 
-**Traceability is not scientific correctness.** Verification checks records and consistency, not clinical benefit.
+Specialist routes include genetics, expression, perturbation, pathways, modality, literature, clinical, and safety. Available capabilities depend on the inputs and backend.
 
 <a id="installation-and-compatibility"></a>
 <a id="try-it"></a>
@@ -44,39 +50,27 @@ uv run --project packages/tether --no-sync tether demo --output runs/my-first-de
 uv run --project packages/tether --no-sync tether verify --run-dir runs/my-first-demo
 ```
 
-**Fictional evidence · offline demo · no API key.** Installation may need network access. Choose a fresh output directory each time.
+**Deterministic offline demo · fictional evidence · no API key.** Installation may need network access. Use a fresh output directory each time.
 
 <a id="tether-cli-run-layout"></a>
 
 **Read the result:** `runs/my-first-demo/dossier.md`.
 
-Save the printed receipt hash separately; add `--receipt-sha256 <saved-hash>` to verification to check against it. [Real inputs & CLI details →](packages/tether/README.md)
+For stronger integrity checking, save the printed receipt hash separately and pass `--receipt-sha256 <saved-hash>` to verification.
 
 <a id="what-works-today"></a>
+<a id="current-results"></a>
 
-## Current results
+## Status & results
 
-| Ready | In progress | Not validated |
-|---|---|---|
-| Offline execution, 10 development dossiers, source audits | Retrieval and scientific-answering evaluations | Clinical probabilities and therapeutic benefit |
+- **Built:** offline execution, verifiable runs, and [10 development dossiers](planning/run-registry.json).
+- **Measured:** [SciFact](<planning/TETHER SciFact Full Context Results 2026-11-06.md>) and [initial LitQA2](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) results, including failures and limitations.
+- **Under development:** stronger retrieval and scientific answering. [Roadmap →](TODO.md)
 
-<details>
-<summary>Benchmark results and limitations</summary>
-
-- [SciFact](<planning/TETHER SciFact Full Context Results 2026-11-06.md>): 27/300 → 127/300 strictly correct after changing the solver; rationale recall fell. Harness filtering added no correctness gain.
-- [Initial LitQA2](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>): 12/199 correct, 178 unsure.
-- [Pilot artifacts](planning/run-registry.json) · [Current evaluation plan](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>)
-
-</details>
+**A verified run is not a validated scientific conclusion.** Clinical probabilities and therapeutic benefit remain unvalidated.
 
 ## Explore
 
-| Start here for… | Link |
-|---|---|
-| Running your own case | [CLI guide](packages/tether/README.md) |
-| Architecture | [Framework](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) |
-| Data | [Data guide](data/README.md) · [Source catalog](data/catalog/sources.json) |
-| Research | [Experiments](experiments/) · [Working paper](paper/README.md) |
-| Remaining work | [TODO](TODO.md) |
+[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Experiments](experiments/) · [Working paper](paper/README.md)
 
 [Apache-2.0](LICENSE). Data has separate terms; bulk datasets and model weights are excluded. The compatibility engine lives in `src/asof/`.
