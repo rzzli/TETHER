@@ -1,0 +1,33 @@
+{
+  "all_frozen_pins_unchanged": true,
+  "automatic_retry": false,
+  "cases": [
+    {
+      "case_id": "a",
+      "status": "unexecuted"
+    },
+    {
+      "case_id": "b",
+      "status": "unexecuted"
+    },
+    {
+      "case_id": "c",
+      "status": "unexecuted"
+    }
+  ],
+  "child_pid": 7112,
+  "completed_at_utc": "2026-11-06T18:05:43.201682+00:00",
+  "deadline_scope": "Owned child only; final source hashes and terminal-file writes are cooperative parent I/O.",
+  "disposition_semantics": "Completed/start states follow complete retained events; an incomplete next start event is unknown_start, later unstarted cases remain unexecuted.",
+  "error": {
+    "message": "Child exited unsuccessfully",
+    "type": "SupervisionError"
+  },
+  "events_observed": 0,
+  "exit_code": 17,
+  "manifest_sha256": "c389c94e71c66e1ea35b6c302f24acc404a3c68ff70c151c25300c2201e9cc53",
+  "observed_child_phase_seconds": 0.10900000001129229,
+  "partial_event_bytes": 0,
+  "schema_version": 1,
+  "status": "failure"
+}

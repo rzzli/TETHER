@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "experiments/scifact_multivers_supervision/qualify.py",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt01"
+  ],
+  "cwd": "D:\\Projects\\drug_target_agents",
+  "interpreter": {
+    "bytes": 46592,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+    "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+  },
+  "scope": "Invented tiny child processes only; no model or benchmark imports.",
+  "sources": [
+    {
+      "bytes": 74,
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\__init__.py",
+      "sha256": "f35d036b6d48a6d43d107f8c3ea9fa44d346d2a87630085962a48da87de9519f"
+    },
+    {
+      "bytes": 2100,
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\qualify.py",
+      "sha256": "ec138fca8b8388e8deff8e22b8b0c56e6776d24e57f205ef665986b07145e581"
+    },
+    {
+      "bytes": 14048,
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\supervise.py",
+      "sha256": "d394ba83a86ac8ac600a91ce58aba11382ac7a41f48afdaabd3b7d4e037b7db2"
+    },
+    {
+      "bytes": 6877,
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\tests\\test_supervise.py",
+      "sha256": "088291d129bfb0a1f1dccde1076c9d6592f29938c770590911ac849057865417"
+    }
+  ]
+}

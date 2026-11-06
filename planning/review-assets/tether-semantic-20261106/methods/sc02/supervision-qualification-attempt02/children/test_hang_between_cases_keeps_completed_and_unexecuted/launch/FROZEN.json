@@ -1,0 +1,55 @@
+{
+  "deadline_scope": "Owned child includes startup/imports and case work; parent pinning/finalization is cooperative local I/O.",
+  "manifest": {
+    "command": [
+      "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\child.py",
+      "--mode",
+      "between_hang",
+      "--output",
+      "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\result"
+    ],
+    "cwd": "D:\\Projects\\drug_target_agents",
+    "kind": "multivers_qualification_supervision",
+    "launch_output": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\launch",
+    "limits": {
+      "case_seconds": 0.25,
+      "poll_seconds": 0.01,
+      "process_seconds": 0.7
+    },
+    "pins": [
+      {
+        "bytes": 46592,
+        "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+        "sha256": "43a8d6a15c6abed2f42d794b8f28d1c4b0e74bf11d42299304febe145f2ba52d"
+      },
+      {
+        "bytes": 1011,
+        "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\child.py",
+        "sha256": "a271322108740159eaee0958eccc439a1967c83d740e12415a119f8d1f2ae110"
+      },
+      {
+        "bytes": 14650,
+        "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\supervise.py",
+        "sha256": "e29640644dc337dea0e7d7bf0faba6184645adea786b2509ffa1c9e1fe259b2b"
+      }
+    ],
+    "qualification_output": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\result",
+    "schedule": [
+      "a",
+      "b",
+      "c"
+    ],
+    "schema_version": 1
+  },
+  "manifest_sha256": "ada509b30fa944504f819c1b393c2507758caec339bb1c0094f41c6c8ed86029",
+  "preflight_seconds": 0.0,
+  "status": "FROZEN",
+  "supervisor": {
+    "bytes": 14650,
+    "path": "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers_supervision\\supervise.py",
+    "sha256": "e29640644dc337dea0e7d7bf0faba6184645adea786b2509ffa1c9e1fe259b2b"
+  }
+}

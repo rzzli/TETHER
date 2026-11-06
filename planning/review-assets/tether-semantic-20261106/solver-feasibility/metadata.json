@@ -1,0 +1,94 @@
+{
+  "schema": "multivers-read-only-feasibility-v1",
+  "date": "2026-11-06",
+  "status": "preparation_only_no_weights_downloaded_no_install_no_model_dispatch",
+  "source_commit": "a6ce033f0e17ae38c1f102eae1ee4ca213fbbe2e",
+  "source_commit_utc": "2023-08-16T06:59:51Z",
+  "checkpoint_observation_utc": "2026-11-06T17:28:15Z",
+  "checkpoints": [
+    {
+      "name": "fever_sci",
+      "url": "https://scifact.s3.us-west-2.amazonaws.com/longchecker/latest/checkpoints/fever_sci.ckpt",
+      "version_pinned_url": "https://scifact.s3.us-west-2.amazonaws.com/longchecker/latest/checkpoints/fever_sci.ckpt?versionId=GYe58tFsyvvn1n7rib5H4wrsiq32ZY5Y",
+      "version_pinned_head_utc": "2026-11-06T17:29:41Z",
+      "head_status": 200,
+      "bytes": 5253768950,
+      "version_id": "GYe58tFsyvvn1n7rib5H4wrsiq32ZY5Y",
+      "etag": "403b4c5d71629101475b34e6099dc536-627",
+      "last_modified_utc": "2022-01-24T04:46:33Z",
+      "sha256": null,
+      "sha256_status": "not_published_in_examined_sources_or_checksum_requested_HEAD; no_body_downloaded",
+      "training": "author_documented_stage1_FEVER_PubMedQA_EvidenceInference_before_target_finetuning",
+      "recommended_role": "primary_zero_shot_then_optional_fit380_finetune"
+    },
+    {
+      "name": "scifact",
+      "url": "https://scifact.s3.us-west-2.amazonaws.com/longchecker/latest/checkpoints/scifact.ckpt",
+      "head_status": 200,
+      "bytes": 5253770098,
+      "version_id": "bl9aHXTs8s_8g6CIdMVn_hVPQEA5LWaQ",
+      "etag": "31fb2fdb1e8bf4d35e9bcba4dde85bfe-627",
+      "last_modified_utc": "2022-01-24T04:47:29Z",
+      "sha256": null,
+      "training": "SciFact_target_finetuning_scifact_20; paper_N1109_implies_train809_plus_dev300; exact_training_IDs_not_inspected",
+      "recommended_role": "excluded_from_clean_public_dev_comparison"
+    },
+    {
+      "name": "longformer_large_science",
+      "url": "https://scifact.s3.us-west-2.amazonaws.com/longchecker/latest/checkpoints/longformer_large_science.ckpt",
+      "head_status": 200,
+      "bytes": 1646843693,
+      "version_id": "wF9yCMtT9B7Y3UDR9OASQHIulb7M3fdz",
+      "etag": "709ce59d17a514deaf2f585303ed8b57-197",
+      "last_modified_utc": "2022-01-25T04:16:55Z",
+      "sha256": null,
+      "recommended_role": "only_if_needed_for_reference_initialization; not_a_trained_joint_solver"
+    }
+  ],
+  "source_files": [
+    {"path":"README.md","bytes":6031,"sha256":"4bfa4cbd71eb2285d2ca89516025947286fc8aabb909ab4085f92d6aa40d6000"},
+    {"path":"LICENSE","bytes":1069,"sha256":"25162243751ff793ea9e5d36acd59fb8845e2a6104cd6b023d508c566dece6e7"},
+    {"path":"doc/training.md","bytes":4882,"sha256":"dfd60f500830e752fa93c1eb3f6cb2494e6789f3f77c65bb28d6009474661136"},
+    {"path":"requirements.txt","bytes":257,"sha256":"d9aa0b56ddff73aa15f421aa6c369025b132de60c9ae641351b09d47347d68b3"},
+    {"path":"script/get_checkpoint.py","bytes":1049,"sha256":"012cd500848481d0932268f12cabb56695217bb8490c469534a8e29ba7089be9"},
+    {"path":"script/predict.sh","bytes":1400,"sha256":"c56a8290a21ddaac4d05e504970603665280a28eacbb53d81022df937ebdc1d3"},
+    {"path":"multivers/model.py","bytes":16063,"sha256":"e4c41ef94c8c165f4a99132e7653931ee38197a007c7d91013b03dd6ddfc4ed4"},
+    {"path":"multivers/data.py","bytes":10738,"sha256":"8f244b3611859b531f18ff80b79ec1f5226e5a7978c41b7ff8184e6beebaaef8"},
+    {"path":"multivers/predict.py","bytes":3215,"sha256":"f1b8788ed24d78ffffa83a8d53784b88a1976d062482acf73f7eea1d58d73ca2"},
+    {"path":"script/train_target.py","bytes":2700,"sha256":"ede99a021d7f3ed6e94f36b05eca800f24d6298103b94ee65e74354a762174a2"}
+  ],
+  "source_raw_url_prefix": "https://raw.githubusercontent.com/dwadden/multivers/a6ce033f0e17ae38c1f102eae1ee4ca213fbbe2e/",
+  "tokenizer_config": {
+    "model_id": "allenai/longformer-large-4096",
+    "revision": "b190dd42e462d2dee634d1162c839710079f97ab",
+    "required_future_assets": ["config.json","vocab.json","merges.txt","tokenizer.json"],
+    "license_metadata": null,
+    "hashes": null,
+    "downloaded": false,
+    "extra_tokens_in_author_order": ["<|sec|>","</|sec|>","<|sec-title|>","</|sec-title|>","<|abs|>","</|abs|>","<|title|>","</|title|>","<|sent|>","<|par|>"]
+  },
+  "candidate_torch_wheel": {
+    "index": "https://download.pytorch.org/whl/cu128/torch/",
+    "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.7.1%2Bcu128-cp311-cp311-win_amd64.whl",
+    "sha256": "138c66dcd0ed2f07aafba3ed8b7958e2bed893694990e0b4b55b6b2b4a336aa6",
+    "status": "official_public_index_metadata_only_not_downloaded_or_installed"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpu_vram_mib": 16303,
+    "driver": "610.88",
+    "cpu": "Intel(R) Core(TM) i7-14700F",
+    "logical_processors": 28,
+    "total_physical_memory_bytes": 34188681216,
+    "available_physical_memory_bytes_at_probe": 20472606720,
+    "drive_D_free_bytes_at_probe": 1699419750400,
+    "python": "3.11.15",
+    "cim_status": "access_unavailable; used_win32_memory_status_and_cpu_registry_read"
+  },
+  "bounded_runtime_inventory": {
+    "examined": [".venv/Lib/site-packages", "data/cache/tether-scifact-env-attempt02/environment/Lib/site-packages", "data/cache/tether-inspect-env-attempt02/environment/Lib/site-packages"],
+    "torch_transformers_tokenizers_present": false,
+    "global_model_or_weight_scan": false
+  },
+  "unmeasured": ["checkpoint_internal_objects_and_tensor_keys", "full_file_checkpoint_sha256", "separate_checkpoint_license", "exact_pretraining_overlap_with_SciFact", "exact_scifact_checkpoint_training_IDs", "adapter_numerical_parity", "CUDA_runtime_smoke", "CPU_GPU_throughput", "peak_inference_VRAM", "local_finetune_time"]
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\child.py",
+    "--mode",
+    "between_hang",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\supervision-qualification-attempt02\\children\\test_hang_between_cases_keeps_completed_and_unexecuted\\result"
+  ],
+  "automatic_retry": false,
+  "cwd": "D:\\Projects\\drug_target_agents",
+  "started_utc": "2026-11-06T18:06:43.724565+00:00"
+}

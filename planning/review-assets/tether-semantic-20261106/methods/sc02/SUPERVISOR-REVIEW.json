@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "PASS_pre_execution_supervision_review",
+  "supervisor": {
+    "path": "experiments/scifact_multivers_supervision/supervise.py",
+    "sha256": "e29640644dc337dea0e7d7bf0faba6184645adea786b2509ffa1c9e1fe259b2b"
+  },
+  "qualification": {
+    "path": "planning/review-assets/tether-semantic-20261106/methods/sc02/supervision-qualification-attempt02/QUALIFICATION.json",
+    "sha256": "d9c36c44f3f1a152cc5e8d238841bb7876c75b4707cd673aefcd0419e5e14c5d",
+    "tests_run": 13,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_review": {
+    "reviewer": "/root/semantic_error_decomposition",
+    "review_mode": "Read-only source, tests and execution-accounting inspection; no model run",
+    "conclusion": "No blocking timeout, interruption or accounting defect found for the pinned single-process qualifier."
+  },
+  "verified_boundaries": [
+    "One owned child, no retry; process timer begins before Popen and initial model imports.",
+    "Case timer begins at emitted monotonic case_started, includes tensorization, actual and reference forwards, assertions and case result writes.",
+    "Late case completion is rejected even when start and completion are first observed in the same polling read.",
+    "Whole process and case limits cannot exceed 1800 and 120 seconds respectively.",
+    "Frozen command, manifest, supplied source/authority/interpreter pins are retained before child launch and rechecked after.",
+    "Startup failures, between-case failures, active-case failures and partial next starts preserve distinct case accounting.",
+    "No fabricated NEI prediction, empty evidence result or benchmark success represents execution failure.",
+    "Owned child kill and wait precede final case accounting. Source preservation failure overrides overall success."
+  ],
+  "limitations": [
+    "Only the owned child PID is killed; the qualified child must use no subprocess workers.",
+    "Preflight source hashing and parent final hashing/terminal writes are cooperative local I/O outside the child deadline.",
+    "Process scheduling and bounded event-file reads can add polling latency.",
+    "Long-case input construction precedes case_started and is covered by the whole-process cap rather than the case cap.",
+    "The root must provide the full source/authority closure in pins; the helper additionally requires interpreter, supervisor and child entrypoint pins."
+  ],
+  "actual_model_execution_in_this_review": false,
+  "benchmark_rows_read_in_this_review": false
+}

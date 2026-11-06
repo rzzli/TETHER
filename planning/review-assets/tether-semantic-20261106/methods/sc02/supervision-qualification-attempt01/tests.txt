@@ -1,0 +1,15 @@
+test_active_case_has_independent_deadline (test_supervise.SupervisorTests.test_active_case_has_independent_deadline) ... ok
+test_controller_interruption_stops_owned_child_and_retains_active_case (test_supervise.SupervisorTests.test_controller_interruption_stops_owned_child_and_retains_active_case) ... ok
+test_existing_launch_is_not_clobbered (test_supervise.SupervisorTests.test_existing_launch_is_not_clobbered) ... ok
+test_hang_between_cases_keeps_completed_and_unexecuted (test_supervise.SupervisorTests.test_hang_between_cases_keeps_completed_and_unexecuted) ... ok
+test_import_failure_retains_stderr_and_never_creates_successful_nei (test_supervise.SupervisorTests.test_import_failure_retains_stderr_and_never_creates_successful_nei) ... ok
+test_initial_import_or_setup_hang_is_inside_outer_deadline (test_supervise.SupervisorTests.test_initial_import_or_setup_hang_is_inside_outer_deadline) ... ok
+test_late_case_completion_is_timeout_relevant_even_if_observed_together (test_supervise.SupervisorTests.test_late_case_completion_is_timeout_relevant_even_if_observed_together) ... ok
+test_manifest_mismatch_fails_before_any_launch_output (test_supervise.SupervisorTests.test_manifest_mismatch_fails_before_any_launch_output) ... ok
+test_success_retains_three_cases_command_and_freeze (test_supervise.SupervisorTests.test_success_retains_three_cases_command_and_freeze) ... ok
+test_wrong_order_and_post_terminal_events_fail (test_supervise.SupervisorTests.test_wrong_order_and_post_terminal_events_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.208s
+
+OK

@@ -1,0 +1,33 @@
+{
+  "all_frozen_pins_unchanged": true,
+  "automatic_retry": false,
+  "cases": [
+    {
+      "case_id": "a",
+      "status": "completed"
+    },
+    {
+      "case_id": "b",
+      "status": "unknown_start"
+    },
+    {
+      "case_id": "c",
+      "status": "unexecuted"
+    }
+  ],
+  "child_pid": 3300,
+  "completed_at_utc": "2026-11-06T18:06:45.198455+00:00",
+  "deadline_scope": "Owned child only; final source hashes and terminal-file writes are cooperative parent I/O.",
+  "disposition_semantics": "Completed/start states follow complete retained events; an incomplete next start event is unknown_start, later unstarted cases remain unexecuted.",
+  "error": {
+    "message": "Process deadline exceeded",
+    "type": "SupervisionError"
+  },
+  "events_observed": 5,
+  "exit_code": 1,
+  "manifest_sha256": "d89aa48dff05f08cea96920680218fdb5ea9f5625ad61796491bb95ff3e45f08",
+  "observed_child_phase_seconds": 0.6089999999967404,
+  "partial_event_bytes": 37,
+  "schema_version": 1,
+  "status": "timeout"
+}

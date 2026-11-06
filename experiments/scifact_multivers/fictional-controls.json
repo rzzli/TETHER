@@ -1,0 +1,30 @@
+{
+  "schema": "multivers-fictional-controls-v1",
+  "purpose": "Source-level parity and observed semantic diagnostics; no SciFact labels or claims",
+  "force_rationale": false,
+  "dtype": "float32",
+  "batch_size": 1,
+  "workers": 0,
+  "max_input_tokens": 4096,
+  "parity_atol": 0.00001,
+  "parity_rtol": 0.0001,
+  "maximum_case_seconds": 120,
+  "maximum_process_seconds": 1800,
+  "long_context_recipe": {
+    "prefix": "Fictional calibration details: ",
+    "repeat_word": "signal ",
+    "suffix": "The instrument was checked.",
+    "method": "binary-search repeat count in [0,6000] for largest token count at or below target; no output-informed adaptation"
+  },
+  "cases": [
+    {"id": "fictional_support", "claim": "Treatment FX-42 increased concentrations of marker Z in cultured cells.", "title": "A fictional marker experiment", "sentences": ["Cultured cells were randomly assigned to FX-42 treatment or a control group.", "Marker Z concentrations were higher after FX-42 treatment than in the control group."], "expected_label_diagnostic": "SUPPORT"},
+    {"id": "fictional_contradict", "claim": "Treatment FX-42 increased concentrations of marker Z in cultured cells.", "title": "A fictional marker experiment", "sentences": ["Cultured cells were randomly assigned to FX-42 treatment or a control group.", "Marker Z concentrations were lower after FX-42 treatment than in the control group."], "expected_label_diagnostic": "CONTRADICT"},
+    {"id": "fictional_nei", "claim": "Treatment FX-42 increased concentrations of marker Z in cultured cells.", "title": "A fictional imaging experiment", "sentences": ["This experiment measured the resolution of a microscope using a patterned slide.", "The microscope resolved two lines separated by one micrometer."], "expected_label_diagnostic": "NEI"},
+    {"id": "fictional_claim_negation", "claim": "Treatment FX-42 decreased concentrations of marker Z in cultured cells.", "title": "A fictional marker experiment", "sentences": ["Cultured cells were randomly assigned to FX-42 treatment or a control group.", "Marker Z concentrations were higher after FX-42 treatment than in the control group."], "expected_label_diagnostic": "CONTRADICT"},
+    {"id": "fictional_long_context", "claim": "Treatment FX-42 increased concentrations of marker Z in cultured cells.", "title": "A fictional marker experiment", "sentences": ["Cultured cells were randomly assigned to FX-42 treatment or a control group.", "Marker Z concentrations were higher after FX-42 treatment than in the control group."], "target_tokens": 700, "expected_label_diagnostic": "SUPPORT"},
+    {"id": "fictional_near_limit", "claim": "Treatment FX-42 increased concentrations of marker Z in cultured cells.", "title": "A fictional marker experiment", "sentences": ["Cultured cells were randomly assigned to FX-42 treatment or a control group.", "Marker Z concentrations were higher after FX-42 treatment than in the control group."], "target_tokens": 4080, "expected_label_diagnostic": "SUPPORT"},
+    {"id": "fictional_no_title", "claim": "An invented sensor detected blue light.", "title": null, "sentences": ["An invented sensor detected blue light in a controlled experiment."], "expected_label_diagnostic": "SUPPORT"},
+    {"id": "fictional_empty_title", "claim": "An invented sensor detected blue light.", "title": "", "sentences": ["An invented sensor detected blue light in a controlled experiment."], "expected_label_diagnostic": "SUPPORT"},
+    {"id": "fictional_overflow", "claim": "An invented sensor detected blue light.", "title": "A fictional experiment", "sentences": ["The sensor detected blue light."], "target_tokens": 4100, "expected_rejection": "input_overflow"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "FAIL_BEFORE_REVIEW",
+  "error_type": "ModuleNotFoundError",
+  "error": "The retained vendored packaging implementation imports pip._vendor.pyparsing; adding the vendor directory alone did not expose its package namespace.",
+  "returncode": 1,
+  "recovery": "Add the explicit read-only qualified Inspect site-packages path, use the original pip._vendor.packaging namespace and retain all imported parser-source hashes. No install or model execution."
+}

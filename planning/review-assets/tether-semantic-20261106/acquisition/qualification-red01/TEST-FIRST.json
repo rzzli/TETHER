@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "phase": "invented_tests_before_implementation",
+  "test_file": "experiments/scifact_multivers_transport/tests/test_download.py",
+  "expected_red_exit_code": 1,
+  "observed_red_exit_code": 1,
+  "observed_failure": "ModuleNotFoundError: No module named 'experiments.scifact_multivers_transport.download'",
+  "actual_network_calls": 0,
+  "scope": "Invented manifest and injected-stream controls; implementation absent at first test run."
+}
