@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "tests": 16,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "acceptance_source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\accept_analysis.py",
+    "bytes": 55984,
+    "sha256": "76594417f9a688c383a0cc9063f214327eec761f7d2f7541cd841a3ca0d06f87"
+  },
+  "test_source": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\test_accept_analysis.py",
+    "bytes": 8620,
+    "sha256": "9f9aff5c4d03d50c2c40dfe4ff4b4da1d5c6c5185bd9c3fa3b9bb82063d4a32f"
+  },
+  "scope": "Fictional retained outputs and invented corruption/multigroup uncertainty controls only; no production scoring."
+}

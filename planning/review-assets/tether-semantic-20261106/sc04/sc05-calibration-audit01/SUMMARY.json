@@ -1,0 +1,159 @@
+{
+  "annotated_calibration_documents": 52,
+  "artifacts": {
+    "audit_code": {
+      "bytes": 15906,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\sc05-calibration-audit01\\audit.py",
+      "sha256": "2150d354dc45a7c9617bd3e91ae85804412980e1c571753c1f66c1e1138a1712"
+    },
+    "file_inventory": {
+      "bytes": 3063185,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc05-calibration-eligibility-audit-20261106T221428265016Z\\PROOFS.json",
+      "sha256": "9ef9553a317b24a9f7276934c45da92a1a59ad82aa4e47ea1f8929077deabed9"
+    },
+    "narrative": {
+      "bytes": 11951,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\SC05-CALIBRATION-ELIGIBILITY-AUDIT.md",
+      "sha256": "7e273a7f80136718731aa96c0c7b4ab6dbeb5f79fa1a5abe31ed42d82e48a98d"
+    },
+    "report": {
+      "bytes": 13636,
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc05-calibration-eligibility-audit-20261106T221428265016Z\\REPORT.json",
+      "sha256": "513069c5801fe1540812d517871a86f66fcd57066c815c2c867a7c995b208cf6"
+    }
+  },
+  "baseline": {
+    "calibration_product_reads": 0,
+    "io_audit_events": 3423,
+    "recipe_count": 21
+  },
+  "calibration_claims": 69,
+  "calibration_groups": 49,
+  "checkpoint": {
+    "bytes": 5253768950,
+    "fresh_weight_hash_verified": true,
+    "hash_seconds": 2.7660000000032596,
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-multivers-acquisition-20261106-attempt01\\checkpoint\\fever_sci.ckpt",
+    "s3_version_id": "GYe58tFsyvvn1n7rib5H4wrsiq32ZY5Y",
+    "sha256": "6b48f1b83eaedbc2570bc50135518ef3cf6f3c6dcdd380a9a3a433918e7f982d"
+  },
+  "created_at_utc": "2026-11-06T22:14:37.923317+00:00",
+  "elapsed_seconds": 9.65700000000652,
+  "group_sizes": {
+    "1": 32,
+    "2": 15,
+    "3": 1,
+    "4": 1
+  },
+  "inference_calls": 0,
+  "kind": "sc05_calibration_prerequisite_summary",
+  "limits": [
+    "Public benchmark training claims; globally untouched/contamination-free status is not established.",
+    "All5183 corpus abstracts were available to the baseline/index; retrieved-document exposure is separate from claim/label fitting.",
+    "SC03 has explicit bounded input recipes and frozen source, not independent OS-level no-access attestation.",
+    "Original supervised containers and reference projections are read here for provenance/source grouping; outcomes are not interpreted for selection or calibration.",
+    "Pre-SciFact-finetuning checkpoint status does not exclude encoder/weak-supervision/model-development overlap.",
+    "A new calibrate-purpose controller and frozen scalar/endpoint/regularization protocol are required before69-case inference and fitting."
+  ],
+  "partition_overlap": {
+    "dev": {
+      "annotated_documents": 0,
+      "ids": 0,
+      "normalized_claim_texts": 0
+    },
+    "fit": {
+      "annotated_documents": 0,
+      "ids": 0,
+      "normalized_claim_texts": 0
+    },
+    "quarantined_train": {
+      "annotated_documents": 0,
+      "ids": 0,
+      "normalized_claim_texts": 0
+    },
+    "tune": {
+      "annotated_documents": 0,
+      "ids": 0,
+      "normalized_claim_texts": 0
+    }
+  },
+  "probabilities": {
+    "calibration_outputs_in_examined_runs": false,
+    "finite_range_and_dimensions_verified": true,
+    "primary_pair_label_probability_vectors": 1500,
+    "primary_sentence_probabilities": 13000,
+    "release_decode_reconstructed": true,
+    "scope": "Shape, release decode and preservation checks only; no scalar confidence, correctness, threshold or reliability computation."
+  },
+  "provider_spend_usd": 0,
+  "purpose_roles": {
+    "corpus": [
+      "calibrate",
+      "evaluate",
+      "fit",
+      "predict",
+      "preparation_audit",
+      "tune"
+    ],
+    "queries_calibration": [
+      "calibrate",
+      "preparation_audit"
+    ],
+    "references_calibration": [
+      "calibrate",
+      "preparation_audit"
+    ]
+  },
+  "sc03_conditions": {
+    "constructed_conflict": {
+      "calibration_annotated_documents_seen_as_input": 6,
+      "calibration_claim_or_exact_text_overlap": 0,
+      "calibration_claims_connected_to_seen_documents": 7,
+      "claims": 300,
+      "claims_using_any_calibration_document": 6,
+      "requests_sha256": "ce7ec4d766978d188821d404df81b36e18901af123acc611bab7d9025ba27b83",
+      "worker_receipt_sha256": "974e0f3cf97e251642d1604a03d4dc1f9673f0a48cddf2e9eff47f8c04be6866"
+    },
+    "evidence_removal": {
+      "calibration_annotated_documents_seen_as_input": 6,
+      "calibration_claim_or_exact_text_overlap": 0,
+      "calibration_claims_connected_to_seen_documents": 7,
+      "claims": 300,
+      "claims_using_any_calibration_document": 6,
+      "requests_sha256": "085a171c71b4724c32d8cc1ce56ef0bfc6924372539d5fc5a7ee782c06561375",
+      "worker_receipt_sha256": "e32af0bac157cd898747fb3db462acff42994b1bd2e2297fd3add7da888ca179"
+    },
+    "irrelevant_context": {
+      "calibration_annotated_documents_seen_as_input": 6,
+      "calibration_claim_or_exact_text_overlap": 0,
+      "calibration_claims_connected_to_seen_documents": 7,
+      "claims": 300,
+      "claims_using_any_calibration_document": 6,
+      "requests_sha256": "44ec641876da3a2f16a9a57e48a7a40f2e78587054e47fc0b4dc59d44ddd54c4",
+      "worker_receipt_sha256": "7313a8f8f9b4849d4a7de8a9680c43a6cfc41aec46341f8065fa8203c80d13ae"
+    },
+    "primary": {
+      "calibration_annotated_documents_seen_as_input": 6,
+      "calibration_claim_or_exact_text_overlap": 0,
+      "calibration_claims_connected_to_seen_documents": 7,
+      "claims": 300,
+      "claims_using_any_calibration_document": 6,
+      "requests_sha256": "bdc444dc9e4b35b74752ae5e4f41ec69e4ee6067bcb5e200d09b51ecf413611d",
+      "worker_receipt_sha256": "e1fa28d660ad849f01304a2991f5739e2730f4c9ab5ffdaad521d18387449e3a"
+    },
+    "rationale_only": {
+      "calibration_annotated_documents_seen_as_input": 6,
+      "calibration_claim_or_exact_text_overlap": 0,
+      "calibration_claims_connected_to_seen_documents": 7,
+      "claims": 300,
+      "claims_using_any_calibration_document": 6,
+      "requests_sha256": "11aedb6a6eed1698cb31b757335f7f6c466fa908e6f0e2aead517677ff43b497",
+      "worker_receipt_sha256": "2375d4c23a3d52c1cbe6a398a4df6c8d3472ce714741b4f14a28998464fc79b0"
+    }
+  },
+  "sc05_started": false,
+  "schema_version": 1,
+  "status": "conditional_local_eligibility_supported",
+  "verified_entries": 10900,
+  "verified_unique_paths": 10876
+}

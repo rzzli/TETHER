@@ -1,0 +1,131 @@
+test_budget_violation_rejected_after_output_crossjoins (__main__.RootAcceptanceTests.test_budget_violation_rejected_after_output_crossjoins) ... ERROR
+test_changed_sealed_file_rejected (__main__.RootAcceptanceTests.test_changed_sealed_file_rejected) ... ok
+test_complete_fictional_summary_reconciles (__main__.RootAcceptanceTests.test_complete_fictional_summary_reconciles) ... ERROR
+test_failure_is_not_silently_unsure (__main__.RootAcceptanceTests.test_failure_is_not_silently_unsure) ... ERROR
+test_incomplete_five_arm_family_rejected (__main__.RootAcceptanceTests.test_incomplete_five_arm_family_rejected) ... ERROR
+test_missing_contrast_rejected (__main__.RootAcceptanceTests.test_missing_contrast_rejected) ... ERROR
+test_original_fictional_answer_key_is_fixed (__main__.RootAcceptanceTests.test_original_fictional_answer_key_is_fixed) ... ERROR
+test_physical_total_budget_and_phase_totals_reconciled (__main__.RootAcceptanceTests.test_physical_total_budget_and_phase_totals_reconciled) ... ERROR
+test_single_group_uncertainty_is_not_zero_width (__main__.RootAcceptanceTests.test_single_group_uncertainty_is_not_zero_width) ... ERROR
+test_source_projection_counts_do_not_promote_fictional_to_production (__main__.RootAcceptanceTests.test_source_projection_counts_do_not_promote_fictional_to_production) ... ERROR
+test_tampered_accuracy_count_rejected (__main__.RootAcceptanceTests.test_tampered_accuracy_count_rejected) ... ERROR
+test_tampered_source_coverage_rejected (__main__.RootAcceptanceTests.test_tampered_source_coverage_rejected) ... ERROR
+test_unequal_multigroup_varied_outcomes_full_intervals (__main__.RootAcceptanceTests.test_unequal_multigroup_varied_outcomes_full_intervals) ... ok
+test_wrong_external_receipt_anchor_rejected (__main__.RootAcceptanceTests.test_wrong_external_receipt_anchor_rejected) ... ok
+test_zero_attempt_precision_native_zero_statistical_null (__main__.RootAcceptanceTests.test_zero_attempt_precision_native_zero_statistical_null) ... ERROR
+
+======================================================================
+ERROR: test_budget_violation_rejected_after_output_crossjoins (__main__.RootAcceptanceTests.test_budget_violation_rejected_after_output_crossjoins)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 37, in test_budget_violation_rejected_after_output_crossjoins
+    d=self.data();d['primary']['source_cases']['E/R'][0]['logical_model_usage']['generation_calls']=4
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_complete_fictional_summary_reconciles (__main__.RootAcceptanceTests.test_complete_fictional_summary_reconciles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 26, in test_complete_fictional_summary_reconciles
+    result=self.validate(intervals=True);self.assertEqual(result['answer_records'],10);self.assertEqual(result['publication_groups'],1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 23, in validate
+    def validate(self,data=None,intervals=False):return r.validate_summary(**(self.data() if data is None else data),recompute_intervals=intervals)
+                                                                              ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_failure_is_not_silently_unsure (__main__.RootAcceptanceTests.test_failure_is_not_silently_unsure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 89, in test_failure_is_not_silently_unsure
+    d=self.data();q=d['inputs']['queries'];refs=d['inputs']['references']
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_incomplete_five_arm_family_rejected (__main__.RootAcceptanceTests.test_incomplete_five_arm_family_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 31, in test_incomplete_five_arm_family_rejected
+    d=self.data();del d['summary']['arms']['E/R']
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_missing_contrast_rejected (__main__.RootAcceptanceTests.test_missing_contrast_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 46, in test_missing_contrast_rejected
+    d=self.data();del d['summary']['paired']['metrics']['raw_accuracy']['publication_components']['contrasts']['interaction']
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_original_fictional_answer_key_is_fixed (__main__.RootAcceptanceTests.test_original_fictional_answer_key_is_fixed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 43, in test_original_fictional_answer_key_is_fixed
+    d=self.data();d['inputs']['references'][1]['answer_index']=0
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_physical_total_budget_and_phase_totals_reconciled (__main__.RootAcceptanceTests.test_physical_total_budget_and_phase_totals_reconciled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 83, in test_physical_total_budget_and_phase_totals_reconciled
+    d=self.data();p=d['primary'];frame=r.load(FIXTURE/'FRAME.json');original=Path(frame['primary']['root'])
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_single_group_uncertainty_is_not_zero_width (__main__.RootAcceptanceTests.test_single_group_uncertainty_is_not_zero_width)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 63, in test_single_group_uncertainty_is_not_zero_width
+    d=self.data();report=d['summary']['paired']['metrics']['raw_accuracy']['publication_components']
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_source_projection_counts_do_not_promote_fictional_to_production (__main__.RootAcceptanceTests.test_source_projection_counts_do_not_promote_fictional_to_production)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 41, in test_source_projection_counts_do_not_promote_fictional_to_production
+    with self.assertRaisesRegex(ValueError,'original input schedule'):r.validate_inputs(self.data()['inputs'],False)
+                                                                                        ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_tampered_accuracy_count_rejected (__main__.RootAcceptanceTests.test_tampered_accuracy_count_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 28, in test_tampered_accuracy_count_rejected
+    d=self.data();d['summary']['arms']['L/O']['counts']['raw_correct']=2
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_tampered_source_coverage_rejected (__main__.RootAcceptanceTests.test_tampered_source_coverage_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 34, in test_tampered_source_coverage_rejected
+    d=self.data();d['summary']['source_metrics']['L/O']['selected']['matched_annotated_source_count']=1
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+======================================================================
+ERROR: test_zero_attempt_precision_native_zero_statistical_null (__main__.RootAcceptanceTests.test_zero_attempt_precision_native_zero_statistical_null)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-semantic-20261106\sc04\test_accept_analysis.py", line 68, in test_zero_attempt_precision_native_zero_statistical_null
+    d=self.data();q=d['inputs']['queries'];refs=d['inputs']['references']
+      ^^^^^^^^^^^
+TypeError: 'dict' object is not callable
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.489s
+
+FAILED (errors=12)

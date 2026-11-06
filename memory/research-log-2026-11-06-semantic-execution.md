@@ -256,3 +256,29 @@ all10answers/5arms;13.547ssupervised,peak162369536B. Priorattempt03bytes and all
 failurecontrols preserved. Qualificationhelper now accepts explicit successpath,
 externalSHA and controls. No ongoinganalysisworkers remain. Primary48230 remains
 the single live experiment; fullproduction/supplied/scientificanalysis not done.
+
+## Root acceptance/reporting and forward scientific prerequisites
+
+Primary48230 verifiedlive at2026-11-06T22:24:35Z;301/398collectionproducts complete,
+no rootreceipt yet. Existing run continues, no restart. SC04-SC09remain incomplete.
+Qualified source-inclusive analysis CLI remainsunchanged (146controls). Planning-only
+accept_analysis.py and16controls now provide byte/journal/choice/source/count/budget
+and independent10kbootstrap acceptance plus readableRESULTS.md/REPRODUCE.md.
+Fictional03acceptance checks425inventoryentries,49journals,130analysispins,10answers;
+receipt fbdc09d48dd25ea1265cab5d920f91eca792813d2679dffc437cc2b30fa5ef8c.
+It delegates originalsource/nativeparsing to the qualifiedCLI; no thirdscientific
+adjudication or productioncompletion is claimed. Original helper/test failures remain.
+
+SC05-CALIBRATION-ELIGIBILITY-AUDIT.md retains10900proofchecks/10876paths, actual
+fever_sci 5.25GBhash and exact69claim/49group reservation. No calibrationproducts
+read in21baseline recipes/3423IOevents. Sharedcorpus and6documents associated
+with7calibrationclaims used asSC03distractors prevent anuntouchedsourceclaim.
+All1500dev labelvectors/13000sentenceprobabilities areusable; new69calibration
+passes andnewpurpose-aware controller remain. Nofit/calibrationoutcomes computed.
+
+SC06/SC07/SC08 feasibilitynotes are read-only, notactivation. ALCE expected948
+ASQA-GTR stillrequires actualarchivecount/rights+AutoAIS/QA/MAUVEqualification.
+ScholarMulti108 nativejudges~93GB each require loading/runtimechecks, no quiet
+7Bsubstitution. R2Eauthor-modelreproduction unavailable doesnotbyitself block a
+TETHERranker; full19176candidate membership, fullreleasedrankingfamilies, IDs and
+licensabledeclaredcorpus stillneedproof. No futuredatasets/models acquired.

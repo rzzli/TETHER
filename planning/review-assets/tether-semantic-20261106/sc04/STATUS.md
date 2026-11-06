@@ -1,9 +1,9 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T22:00:58Z
+## Current checkpoint: 2026-11-06T22:24:35Z
 
 SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 was
-confirmed live and had222/398 completed collection products. Expansion199 is
+confirmed live and had301/398 completed collection products. Expansion199 is
 complete; primary ranking/answers and the full supplied-source diagnostic are
 not finalized. Re-poll that session before inferring state; never restart it on
 an observation timeout. All125 frozen primary source pins remain unchanged.
@@ -23,6 +23,22 @@ the conditional producer capacity limitation and corrected analysis gaps.
 Forty selected actual-format collections reconstruct; all219 closed collections
 checked at that earlier probe fit14,000 prompt bytes under any permitted order.
 These are partial-input feasibility checks, not full production verification.
+
+The planning-only root acceptance/report renderer passes16 controls, including
+independent10,000-draw unequal-group bootstrap arithmetic and malformed-result
+rejection. Its [fictional rehearsal](analysis-root-acceptance-fictional03/ROOT-ACCEPTANCE.json)
+checks425 inventory entries,49 journals,130 analysis code pins and10 answers.
+The rehearsal receipt is
+`fbdc09d48dd25ea1265cab5d920f91eca792813d2679dffc437cc2b30fa5ef8c`.
+It prepares acceptance and reporting; it does not accept unfinished production.
+
+Read-only forward checks are retained for later work:
+[SC05 calibration](SC05-CALIBRATION-ELIGIBILITY-AUDIT.md),
+[SC06](SC06-FEASIBILITY-NOTE.md), [SC07](SC07-FEASIBILITY-NOTE.md), and
+[SC08](SC08-FEASIBILITY-NOTE.md). The69 calibration claims have supported local
+reservation, with shared-corpus exposure explicitly retained; no calibration was
+run. Later benchmark acquisition, full family counts, native judge feasibility,
+and the authoritative R2E candidate universe remain future qualification gates.
 
 Next: let the existing primary execution finalize; bind its printed root hash,
 freeze/run the full supplied diagnostic, then execute the qualified analyzer with
