@@ -1,0 +1,278 @@
+{
+  "files": {
+    "COMPLETE.json": "a0497ecbf2899d36f80398e3704228663152416ded184a0d47894e578413fca9",
+    "SUPERVISION.json": "34428d68ba04cbe208dcf9c4eae723adb7195770fd7c5f9fd2787e4b5872f792",
+    "journal.jsonl": "6da2ebab4ff81ef1d4a3eb474cb92b5dd910fd0a1c32870ff1e27d7030982e26",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "16fa5d2edc2d12ca73e5bb1d9f44af12fd947cb5f60d2fde4087c240e1f7c289",
+    "worker/COMPLETE.json": "5856fc1d1699249a19d79440dc918001b13c585ecd71066d4d7b7b964bb6b0c9",
+    "worker/MODEL.json": "8cf78958b0b0c3e227d7f3ce98c3ce3bb347bc8a39dd5b979c4552b13f9e5212",
+    "worker/REPORT.json": "2ff22275950354f77e5a35b626ee461ebd9c3587e4f338367269a5a75f6837b7",
+    "worker/fixture-00-summary.json": "121cf582fcf1b832de4ba35d26fc478123a1947e2c06e27362da8da5a4dfced9",
+    "worker/fixture-00/native-response.bin": "d154e0cdc16bb0ba7846e8e54ef7fc8933178efd416950a6e1195383884658cd",
+    "worker/fixture-00/payload.json": "841155382941800239726d0382d6a293d33b23869fcbdd05844007e08ad21481",
+    "worker/fixture-00/request.json": "721bc84c3265f2423938a76ceb1cb22b55576f06f2c98700e6a687ca45aa7ad4",
+    "worker/fixture-00/result.json": "f46f054b606b405b6e2d95ea1896031353f8b7a13f1b4cf9263b1e37c8169c80",
+    "worker/fixture-00/tokenization/body.bin": "66130d7d5a8cc187dea48188353c6109be08d12c87141a56858d57df8bb2b216",
+    "worker/fixture-00/tokenization/request.json": "0e82d7aeb905b699366e1a7f7ab4e33a2721ea3d9a5f2a4a41b942651d7ce36d",
+    "worker/fixture-00/tokenization/result.json": "889d483b94bccdb12968f995316d4ccb5eb4d226353dfcf73fe1af86ee8ed964",
+    "worker/fixture-01-summary.json": "f7b894685e065fb18416d1960e7e659c6156f6ec2a6d7609318e759dc7a8ca84",
+    "worker/fixture-01/native-response.bin": "651e66e4e573a06a8bfc26d6613cb26e290648fc8708ca662bba24b9b7ce7954",
+    "worker/fixture-01/payload.json": "81f170b42ea56dd132b70ab1604342c5013fdf63d9e901a450ff71a72b3019b3",
+    "worker/fixture-01/request.json": "550f1cf269a12c991f4b19d35b158aebc8243c01d1821b69b61338950d02ecc0",
+    "worker/fixture-01/result.json": "5da0799efaf299b05b24ce8a8f96baf17d0db67f9faa1f3495397437d10bec6f",
+    "worker/fixture-01/tokenization/body.bin": "e5e3c9751ddd2371f637210e968543d9c92e5e48ab3434f6e7d9907537e3bfe2",
+    "worker/fixture-01/tokenization/request.json": "5ebfa62154f0782ebe9b098125c32434d331e82c74cae74f634db138b2f87a06",
+    "worker/fixture-01/tokenization/result.json": "fcc74a5d63d66b3e45741d3b5c631bfe0187bf3441259013dbdd46e5b2030e67",
+    "worker/fixture-02-summary.json": "3760d2ce4b1569273c70669a2add323d75d352d9e71df693a36410b9ab0751bf",
+    "worker/fixture-02/native-response.bin": "32350a728b59433e6f8e18c7719992bb3b24830f31894c4a40f5fa85cc4fe671",
+    "worker/fixture-02/payload.json": "e9b9b2490e57d701cb5ec13fe49c47e27b2869282180a83fb49896145a215990",
+    "worker/fixture-02/request.json": "90cf3f28950b06d1a5afe7380580e91887c32ff15d78ea66dc02c18827c5203a",
+    "worker/fixture-02/result.json": "79f2f295b934fc88e9189ef3a88b0403e73796560f9077b2a9fbf1a6c62690f8",
+    "worker/fixture-02/tokenization/body.bin": "c321d7db9cdffcf08c90a7c1f9c5d10f0066be3db31ec7e5bc480654726edb1e",
+    "worker/fixture-02/tokenization/request.json": "2c57223cf88c3108108e733455ba121ccb9f07b4123b517696c2862e372b2627",
+    "worker/fixture-02/tokenization/result.json": "01c0f217242288f563ed28f5aa63669fbbb5fd0b125dfe827e3f546bd3932bbc",
+    "worker/fixture-03-summary.json": "4dbb10fb670ba6ba1b6f4025925975644ef2334068dcecdbaecd17b3b62a7a07",
+    "worker/fixture-03/native-response.bin": "7708cd3fda0c5af24c7b942144b6bae3eb9a39f2a3c7c733c293b5aa526d9538",
+    "worker/fixture-03/payload.json": "5380d6268a9737fb42b5e02279cac620872f33b81440969a544703b863ab63bf",
+    "worker/fixture-03/request.json": "fa333a245732b7cd1b176d61e5eeaed8d026ace12e1ba043d58faebcfc0bfaf4",
+    "worker/fixture-03/result.json": "54b05b70486b4a53554dec083b81ea268305116c257718b46c776f308b5da169",
+    "worker/fixture-03/tokenization/body.bin": "a0b40a7ecf3ccb6d2840c7e00cdaf916a01fb05073fb2388ab1ba858f79e4e1f",
+    "worker/fixture-03/tokenization/request.json": "2c7ab9734195e03918645f4a7bc920d75a67e6dabe189137caf51e4c7849df1f",
+    "worker/fixture-03/tokenization/result.json": "473b8daf51256fd99e67ab556dbeef917dd2a18a1c9b402dd65bc04a604a681c",
+    "worker/fixture-04-summary.json": "5c63cc22dda107a798f51044b8c886ae0d4c966f5f1ea4dc12f53ab39e23c18b",
+    "worker/fixture-04/session/configuration.json": "f0f63d7ecea2c111e795244d5a90ee14f673af11ab7392531068c5f17196a643",
+    "worker/fixture-04/session/journal.jsonl": "0c45bb6476228824b4ae964000382ffde80da0deccdf6cf4f9132bbd1086960f",
+    "worker/fixture-04/session/payload.json": "1d6f77a44538a9cd4a34f590769ce41f75f835d1ece762850cf676ee092b5b38",
+    "worker/fixture-04/session/raw-response.bin": "77433de7a4284026c3939736dd3b55502d0ac046cd4fb6f8df38fbd277f665bd",
+    "worker/fixture-04/session/receipt.json": "1b3671d9f7791a2395ab7a5878824dbcd57b45a2b8a7f4839fb569d71eab635a",
+    "worker/fixture-04/session/report.json": "21f39687e622d91c8e20d9c873a66899dfb586c54b22806d76df5297984eba03",
+    "worker/fixture-04/session/request.json": "145ca65ffa129e165dc77fb8b5d2668814d715b43746f98c2587291363ec71c9",
+    "worker/fixture-04/session/response.json": "68d34d8f502cad646387f39f7849e4f76a8d44328bc90ec3baf1c1ea9526a384",
+    "worker/fixture-04/tokenization/body.bin": "1640fd2317db2772545b0be4ba475e1e8a15763b24288a07b1411d664f8e17a0",
+    "worker/fixture-04/tokenization/request.json": "e56ec04dedc2d1a70da6b49699f587b447c61fedefaaf92bdfb558fee8d2af4c",
+    "worker/fixture-04/tokenization/result.json": "f3ca7a23e826d165474a903823ba7ee23c48ac77f34e3b0a37a59bc349fb0e73",
+    "worker/fixture-05-summary.json": "9880165df24d77fa79daec5e4ff2b776904647035d5a82af3abecb2c624a878f",
+    "worker/fixture-05/session/configuration.json": "c93c69fff799d67dbc3d589245fe39c81c886ab119335209b44b005037941059",
+    "worker/fixture-05/session/journal.jsonl": "4b598a1447f879660b5b495275d617cd18f76992905d356ff4d3aa0ff5922b90",
+    "worker/fixture-05/session/payload.json": "08984a8c5adb330ddedb6e6fb5152f79d526e4b802b0740ea0c43173715b19cf",
+    "worker/fixture-05/session/raw-response.bin": "a70b655fffc21c9b4c4fa8d010e1825b27f77ef2c6b4bbd8088aa7d605cb7da7",
+    "worker/fixture-05/session/receipt.json": "fa7650c767852c05e87edb99a4b55bef70c5c8babade1998d994b00a48ece74b",
+    "worker/fixture-05/session/report.json": "92c4247e3c3a91dedb6a79cb4bfe225cf6393acf5f89c84ea6785a33ebc5b0f9",
+    "worker/fixture-05/session/request.json": "37a507790ef05731a149267db3e9a82fd76c6633b3ddfbdf4e59a32e45a46e19",
+    "worker/fixture-05/session/response.json": "6b4574e70117a978197bbcf3cfa77d81a3b5439c7a6c36e4ec11dff5be37187a",
+    "worker/fixture-05/tokenization/body.bin": "8fea09dce502042e64b4003ec36758aa1045dc48b5a507a0dcb468e6bc730d1c",
+    "worker/fixture-05/tokenization/request.json": "5c00f51c735dde5d13e3d5139e5da741310747036d2562c15058c48bb314d6fe",
+    "worker/fixture-05/tokenization/result.json": "b05ab1e6de49be08b3c737ed8232a2da0e2cc994ea2681240195a61531cf57d2",
+    "worker/journal.jsonl": "d5ed092b08d1222e2e6c814f72df575ed9f72ca1b504d42346ddd037a13b890a",
+    "worker/server/server-command.json": "0eba8e238490602f810032d6424be47459d4edf74bec5edef6f0523bcfd57b5b",
+    "worker/server/server.stderr.log": "e10e99521d9cd7a4a63ad24ede573de4e85c69e808c7b1b1b38b0723547504da",
+    "worker/server/server.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "findings": [
+    "Supported MCQ incorrectly abstained; no full benchmark execution authorized by this qualification result.",
+    "Expansion output concatenates aliases into a quoted phrase. Tighten on fictional inputs before prospective production freeze."
+  ],
+  "provider_cost_usd": 0,
+  "run_root": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-model-qualification-attempt01",
+  "semantic_matches": 5,
+  "six_call_schedule_complete": true,
+  "source_pins_unchanged": true,
+  "status": "transport_completed_semantic_gate_not_passed",
+  "worker_report": {
+    "benchmark_questions": 0,
+    "fixtures": 6,
+    "provider_cost_usd": 0,
+    "results": [
+      {
+        "index": 0,
+        "result": {
+          "conservative_reserved_input_tokens": 819,
+          "conservative_reserved_output_tokens": 256,
+          "decoded": {
+            "queries": [
+              [
+                "protein Lumarin LMR7",
+                "cobalt transport"
+              ],
+              [
+                "Lumarin LMR7",
+                "cobalt transport",
+                "protein function",
+                "metal transport"
+              ]
+            ]
+          },
+          "exact_prompt_tokens": 194,
+          "generation_entered": true,
+          "measured_usage": {
+            "cost_usd": 0.0,
+            "input_tokens": 194,
+            "output_tokens": 35
+          },
+          "payload_sha256": "841155382941800239726d0382d6a293d33b23869fcbdd05844007e08ad21481",
+          "provider_cost_usd": 0,
+          "request_sha256": "721bc84c3265f2423938a76ceb1cb22b55576f06f2c98700e6a687ca45aa7ad4",
+          "status": "completed",
+          "task": "expand",
+          "wall_seconds": 0.6090000000112923
+        },
+        "semantic_fixture_match": true,
+        "task": "expand"
+      },
+      {
+        "index": 1,
+        "result": {
+          "conservative_reserved_input_tokens": 818,
+          "conservative_reserved_output_tokens": 256,
+          "decoded": {
+            "queries": [
+              [
+                "Vesprine VSP9",
+                "amber uptake"
+              ],
+              [
+                "Vesprine VSP9",
+                "amber transport"
+              ]
+            ]
+          },
+          "exact_prompt_tokens": 193,
+          "generation_entered": true,
+          "measured_usage": {
+            "cost_usd": 0.0,
+            "input_tokens": 193,
+            "output_tokens": 31
+          },
+          "payload_sha256": "81f170b42ea56dd132b70ab1604342c5013fdf63d9e901a450ff71a72b3019b3",
+          "provider_cost_usd": 0,
+          "request_sha256": "550f1cf269a12c991f4b19d35b158aebc8243c01d1821b69b61338950d02ecc0",
+          "status": "completed",
+          "task": "expand",
+          "wall_seconds": 0.5159999999887077
+        },
+        "semantic_fixture_match": true,
+        "task": "expand"
+      },
+      {
+        "index": 2,
+        "result": {
+          "conservative_reserved_input_tokens": 960,
+          "conservative_reserved_output_tokens": 256,
+          "decoded": [
+            "p01",
+            "p00",
+            "p02"
+          ],
+          "exact_prompt_tokens": 221,
+          "generation_entered": true,
+          "measured_usage": {
+            "cost_usd": 0.0,
+            "input_tokens": 221,
+            "output_tokens": 16
+          },
+          "payload_sha256": "e9b9b2490e57d701cb5ec13fe49c47e27b2869282180a83fb49896145a215990",
+          "provider_cost_usd": 0,
+          "request_sha256": "90cf3f28950b06d1a5afe7380580e91887c32ff15d78ea66dc02c18827c5203a",
+          "status": "completed",
+          "task": "rank",
+          "wall_seconds": 0.3590000000112923
+        },
+        "semantic_fixture_match": true,
+        "task": "rank"
+      },
+      {
+        "index": 3,
+        "result": {
+          "conservative_reserved_input_tokens": 981,
+          "conservative_reserved_output_tokens": 256,
+          "decoded": [
+            "p00",
+            "p01",
+            "p02"
+          ],
+          "exact_prompt_tokens": 220,
+          "generation_entered": true,
+          "measured_usage": {
+            "cost_usd": 0.0,
+            "input_tokens": 220,
+            "output_tokens": 16
+          },
+          "payload_sha256": "5380d6268a9737fb42b5e02279cac620872f33b81440969a544703b863ab63bf",
+          "provider_cost_usd": 0,
+          "request_sha256": "fa333a245732b7cd1b176d61e5eeaed8d026ace12e1ba043d58faebcfc0bfaf4",
+          "status": "completed",
+          "task": "rank",
+          "wall_seconds": 0.35899999999674037
+        },
+        "semantic_fixture_match": true,
+        "task": "rank"
+      },
+      {
+        "index": 4,
+        "prediction": {
+          "answer_index": 1,
+          "evidence_ids": [
+            "fiction-lumen7:p0001"
+          ]
+        },
+        "replay": {
+          "byte_integrity": "verified",
+          "consumer_contract": "verified",
+          "mechanical_consistency": "verified",
+          "run_id": "4b66a521-ed36-49fc-bad5-ef4d3321536a",
+          "scientific_validation": "not_established",
+          "status": "verified_study_cell"
+        },
+        "semantic_fixture_match": false,
+        "task": "answer",
+        "usage": {
+          "cost_usd": 0.0,
+          "input_tokens": 298,
+          "output_tokens": 24
+        }
+      },
+      {
+        "index": 5,
+        "prediction": {
+          "answer_index": 1,
+          "evidence_ids": []
+        },
+        "replay": {
+          "byte_integrity": "verified",
+          "consumer_contract": "verified",
+          "mechanical_consistency": "verified",
+          "run_id": "fc381223-9aae-476b-963b-593407ca88e4",
+          "scientific_validation": "not_established",
+          "status": "verified_study_cell"
+        },
+        "semantic_fixture_match": true,
+        "task": "answer",
+        "usage": {
+          "cost_usd": 0.0,
+          "input_tokens": 259,
+          "output_tokens": 12
+        }
+      }
+    ],
+    "scope": "Fictional semantic/codec checks, not accuracy qualification on real literature.",
+    "semantic_fixtures_passed": 5,
+    "server_terminal": {
+      "elapsed_seconds": 257.7810000000027,
+      "exit_code": 1,
+      "peak_native_memory_bytes": null,
+      "peak_native_memory_reason": "Not instrumented",
+      "pid": 27452,
+      "secondary_failures": [],
+      "server_stopped": true,
+      "started": true
+    },
+    "status": "completed",
+    "wall_seconds": 258.32799999999406,
+    "worker_memory": {
+      "cpu_seconds": 24.84375,
+      "process_peak_working_set_bytes": 32944128,
+      "working_set_bytes": 31875072
+    }
+  }
+}

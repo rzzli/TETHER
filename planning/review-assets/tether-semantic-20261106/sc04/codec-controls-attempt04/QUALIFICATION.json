@@ -1,0 +1,16 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "scope": "Invented codec/selection controls only; no real model or benchmark.",
+  "skipped": 0,
+  "source_sha256": {
+    "experiments\\litqa_comparison\\__init__.py": "cfcfae32703777cd378508eb7c6422642c3adc3109089707b821795b5e74240a",
+    "experiments\\litqa_comparison\\codecs.py": "e11283f43f50985e237ad6bd8975dd00fdcc3d9a96a8146635729a8faf28397e",
+    "experiments\\litqa_comparison\\selection.py": "fc91e5bc1335de9a9c110b548cd754d7f5407c806f8ceb49fdb79a71b7c014db",
+    "experiments\\litqa_comparison\\tests\\test_codecs.py": "9589c19f9221c1ea6dc056c8e8967f4cf5f33209824927f765679049a655c005",
+    "experiments\\litqa_comparison\\tests\\test_transport.py": "b1cbba1b738743ca24044bf3641b455ac2b51cb8eaeffe609ddbc33c5579ba6e",
+    "experiments\\litqa_comparison\\transport.py": "0de1230edbf8582ad3dba2ad494a7075eca9572b6896d825d697ac608ed17a71"
+  },
+  "status": "PASS",
+  "tests": 34
+}
