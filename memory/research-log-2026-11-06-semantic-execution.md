@@ -8,6 +8,27 @@ updated: 2026-11-06
 
 # Semantic capability goal activated
 
+Current checkpoint: SC01 and SC02 are complete; SC03 is active. The released
+fever_sci model now passes full-architecture source-level parity on eight
+fictional examples and rejects one overlength input. All eight fictional labels
+match, without using semantic correctness as the parity gate. 24 component tests,
+13 supervisor controls and separate stdlib captured reconstruction pass. Root
+acceptance checks 421 assertions and 228 files, freshly hashing all 30 acquired
+payloads and 81 runtime/source pins. Receipt: bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4.
+See [[TETHER MultiVerS Qualification Results 2026-11-06]].
+
+The first full qualification failed before inference on legacy trainer globals.
+Its outputs and prior sources remain preserved. Static inspection plus explicit
+inert-marker mappings permit only the two recorded training identifiers under
+weights_only loading; malicious invocation/construction tests reject them.
+The second qualification used a new freeze and output. Runtime is offline
+torch2.7.1+cu128/transformers4.57.1 on RTX5070Ti. Observed qualifier wall16.218s,
+peak process7.691GB, CUDA allocation4.182GB (two resident parity models).
+Historical binary parity, SciFact accuracy and clinical validity are not claimed.
+No benchmark/calibration predictions yet; provider spending$0.
+
+The sections below retain earlier checkpoints in chronological context.
+
 SC01 now passes: all 300 baseline cases and native metrics independently
 reconstruct, with 23 analyzer tests and 14 separate native boundary controls.
 All 1,601 original outputs, the exact inventory, 12 prepared products and raw

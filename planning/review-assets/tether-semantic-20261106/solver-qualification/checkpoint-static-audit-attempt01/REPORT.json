@@ -1,0 +1,334 @@
+{
+  "scope": "Static pickle opcode inspection only; no unpickling or model call",
+  "metadata_bytes": 248795,
+  "metadata_sha256": "ccd4dec4f8a443f116545817373279fa0d8d75131dbfd9025c5bc7caf310b239",
+  "globals": [
+    "argparse Namespace",
+    "collections OrderedDict",
+    "pytorch_lightning.callbacks.model_checkpoint ModelCheckpoint",
+    "pytorch_lightning.utilities.argparse _gpus_arg_default",
+    "torch FloatStorage",
+    "torch LongStorage",
+    "torch._utils _rebuild_tensor_v2"
+  ],
+  "windows": [
+    {
+      "global": "pytorch_lightning.callbacks.model_checkpoint ModelCheckpoint",
+      "position": 106,
+      "operations": [
+        {
+          "op": "BINUNICODE",
+          "arg": "pytorch-lightning_version",
+          "position": 43
+        },
+        {
+          "op": "BINPUT",
+          "arg": "3",
+          "position": 73
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "1.2.1",
+          "position": 75
+        },
+        {
+          "op": "BINPUT",
+          "arg": "4",
+          "position": 85
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "callbacks",
+          "position": 87
+        },
+        {
+          "op": "BINPUT",
+          "arg": "5",
+          "position": 101
+        },
+        {
+          "op": "EMPTY_DICT",
+          "arg": "None",
+          "position": 103
+        },
+        {
+          "op": "BINPUT",
+          "arg": "6",
+          "position": 104
+        },
+        {
+          "op": "GLOBAL",
+          "arg": "pytorch_lightning.callbacks.model_checkpoint ModelCheckpoint",
+          "position": 106
+        },
+        {
+          "op": "BINPUT",
+          "arg": "7",
+          "position": 168
+        },
+        {
+          "op": "EMPTY_DICT",
+          "arg": "None",
+          "position": 170
+        },
+        {
+          "op": "BINPUT",
+          "arg": "8",
+          "position": 171
+        },
+        {
+          "op": "MARK",
+          "arg": "None",
+          "position": 173
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "monitor",
+          "position": 174
+        },
+        {
+          "op": "BINPUT",
+          "arg": "9",
+          "position": 186
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "valid_abstract_rationalized_f1",
+          "position": 188
+        },
+        {
+          "op": "BINPUT",
+          "arg": "10",
+          "position": 223
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "best_model_score",
+          "position": 225
+        },
+        {
+          "op": "BINPUT",
+          "arg": "11",
+          "position": 246
+        },
+        {
+          "op": "GLOBAL",
+          "arg": "torch._utils _rebuild_tensor_v2",
+          "position": 248
+        }
+      ]
+    },
+    {
+      "global": "argparse Namespace",
+      "position": 245944,
+      "operations": [
+        {
+          "op": "BINUNICODE",
+          "arg": "kwargs",
+          "position": 245879
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15190",
+          "position": 245890
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "hyper_parameters",
+          "position": 245895
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15191",
+          "position": 245916
+        },
+        {
+          "op": "EMPTY_DICT",
+          "arg": "None",
+          "position": 245921
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15192",
+          "position": 245922
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "hparams",
+          "position": 245927
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15193",
+          "position": 245939
+        },
+        {
+          "op": "GLOBAL",
+          "arg": "argparse Namespace",
+          "position": 245944
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15194",
+          "position": 245964
+        },
+        {
+          "op": "EMPTY_TUPLE",
+          "arg": "None",
+          "position": 245969
+        },
+        {
+          "op": "NEWOBJ",
+          "arg": "None",
+          "position": 245970
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15195",
+          "position": 245971
+        },
+        {
+          "op": "EMPTY_DICT",
+          "arg": "None",
+          "position": 245976
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15196",
+          "position": 245977
+        },
+        {
+          "op": "MARK",
+          "arg": "None",
+          "position": 245982
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "datasets",
+          "position": 245983
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15197",
+          "position": 245996
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "fever,pubmedqa,evidence_inference",
+          "position": 246001
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15198",
+          "position": 246039
+        }
+      ]
+    },
+    {
+      "global": "pytorch_lightning.utilities.argparse _gpus_arg_default",
+      "position": 247261,
+      "operations": [
+        {
+          "op": "BINUNICODE",
+          "arg": "gpus",
+          "position": 247199
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15239",
+          "position": 247208
+        },
+        {
+          "op": "BININT1",
+          "arg": "8",
+          "position": 247213
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "auto_select_gpus",
+          "position": 247215
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15240",
+          "position": 247236
+        },
+        {
+          "op": "NEWFALSE",
+          "arg": "None",
+          "position": 247241
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "tpu_cores",
+          "position": 247242
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15241",
+          "position": 247256
+        },
+        {
+          "op": "GLOBAL",
+          "arg": "pytorch_lightning.utilities.argparse _gpus_arg_default",
+          "position": 247261
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15242",
+          "position": 247317
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "log_gpu_memory",
+          "position": 247322
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15243",
+          "position": 247341
+        },
+        {
+          "op": "NONE",
+          "arg": "None",
+          "position": 247346
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "progress_bar_refresh_rate",
+          "position": 247347
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15244",
+          "position": 247377
+        },
+        {
+          "op": "NONE",
+          "arg": "None",
+          "position": 247382
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "overfit_batches",
+          "position": 247383
+        },
+        {
+          "op": "LONG_BINPUT",
+          "arg": "15245",
+          "position": 247403
+        },
+        {
+          "op": "BINFLOAT",
+          "arg": "0.0",
+          "position": 247408
+        },
+        {
+          "op": "BINUNICODE",
+          "arg": "track_grad_norm",
+          "position": 247417
+        }
+      ]
+    }
+  ]
+}

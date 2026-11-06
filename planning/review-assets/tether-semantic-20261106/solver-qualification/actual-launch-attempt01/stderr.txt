@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\qualify.py", line 207, in <module>
+    main()
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\qualify.py", line 203, in main
+    run(parser.parse_args())
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\qualify.py", line 90, in run
+    model, tokenizer, state, checkpoint, captured = load_components(args.acquisition_root, args.receipt_sha256)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\runtime.py", line 67, in load_components
+    state, metadata = load_checkpoint_state(checkpoint['verified_path'], expected_sha256=checkpoint['sha256'],
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\checkpoint.py", line 53, in load_checkpoint_state
+    need(set(unsafe) <= {'argparse.Namespace'}, 'Unsupported checkpoint global: ' + ', '.join(unsafe))
+  File "D:\Projects\drug_target_agents\experiments\scifact_multivers\contracts.py", line 14, in need
+    raise ContractError(message)
+experiments.scifact_multivers.contracts.ContractError: Unsupported checkpoint global: pytorch_lightning.utilities.argparse._gpus_arg_default, pytorch_lightning.callbacks.model_checkpoint.ModelCheckpoint, argparse.Namespace

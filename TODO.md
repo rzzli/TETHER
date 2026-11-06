@@ -24,7 +24,7 @@ Neither task should delay the paper's objective multicase evaluation.
 The owner now authorizes executing the recommended scientific-capability sequence autonomously. Complete and validate each stage before the next execution, retain failed attempts and all-case denominators, and preserve the old frozen benchmarks. Read-only later-stage feasibility can run in parallel. Weak results complete a measurement but do not establish improvement.
 
 - [x] SC01 Decompose the sealed SciFact baseline's retrieval, document-selection, label and rationale errors. All 300 cases independently reconstruct; 23 analyzer tests and 14 native boundary controls pass; all 1,601 original output hashes are preserved. See [results](<planning/TETHER SciFact Error Decomposition Results 2026-11-06.md>) and [root acceptance](planning/review-assets/tether-semantic-20261106/decomposition/ROOT-ACCEPTANCE.json).
-- [ ] SC02 Qualify/acquire the full-context joint solver and isolated runtime; verify rights/training exposure and actual inference/resource controls.
+- [x] SC02 Qualify/acquire the full-context joint solver and isolated runtime. Eight full-model fictional parity cases and one overflow rejection pass; 24 component tests, 13 supervisor controls and independent captured reconstruction pass. Root acceptance checks 421 assertions/228 files. Rights/exposure and historical-binary limits remain explicit in the [qualification report](<planning/TETHER MultiVerS Qualification Results 2026-11-06.md>).
 - [ ] SC03 Freeze and execute the stronger SciFact comparison with fixed-retrieval and evidence-use diagnostic conditions; retain native metrics, source replay and independent results.
 - [ ] SC04 Freeze and execute controlled LitQA2 query-expansion/reranking and separately labelled supplied-source diagnostics across the original199 questions.
 - [ ] SC05 Execute bounded retrieval refinement/answer repair and selective-answering comparisons under matched caps, counting repaired and damaged answers.
@@ -33,7 +33,7 @@ The owner now authorizes executing the recommended scientific-capability sequenc
 - [ ] SC08 Implement, qualify and execute R2E ranking with a frozen candidate universe, source corpus and native metrics.
 - [ ] SC09 Audit all new stages; update reports, documentation, memory and reproduction guidance, and retain the final validated local checkpoint.
 
-Current new-goal checkpoint: SC01 is complete; SC02 acquisition/runtime and solver qualification are active. Of 300 baseline claims, 41 miss annotated sources in retrieval and 242 select extra documents (overlapping counts); these are descriptive, annotation-relative errors. The earlier BG01–BG06 completion below does not complete this new goal.
+Current new-goal checkpoint: SC01 and SC02 are complete; SC03 is active, with production comparison not yet executed. Of 300 baseline claims, 41 miss annotated sources in retrieval and 242 select extra documents (overlapping counts); these are descriptive, annotation-relative errors. The earlier BG01–BG06 completion below does not complete this new goal.
 
 ## Authorized benchmark execution — completed historical goal
 

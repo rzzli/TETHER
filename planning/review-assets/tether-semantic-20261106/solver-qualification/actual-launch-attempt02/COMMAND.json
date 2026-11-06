@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-multivers-env-20261106-attempt01\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\cache\\sc02-full-qual-pycache02",
+    "D:\\Projects\\drug_target_agents\\experiments\\scifact_multivers\\qualify.py",
+    "--acquisition-root",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-multivers-acquisition-20261106-attempt01",
+    "--receipt-sha256",
+    "a76d300564d0a5a4477a31cf167748e2e5b8540696b1c836d0fb8fab537b1610",
+    "--reference-bundle",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\solver-feasibility",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02",
+    "--device",
+    "cuda:0"
+  ],
+  "automatic_retry": false,
+  "cwd": "D:\\Projects\\drug_target_agents",
+  "started_utc": "2026-11-06T18:53:23.800806+00:00"
+}

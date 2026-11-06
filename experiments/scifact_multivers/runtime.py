@@ -65,7 +65,7 @@ def load_components(acquisition_root, receipt_sha256):
     config = LongformerConfig(**config_data)
     config._attn_implementation = 'eager'
     state, metadata = load_checkpoint_state(checkpoint['verified_path'], expected_sha256=checkpoint['sha256'],
-                                            expected_bytes=checkpoint['bytes'])
+                                            expected_bytes=checkpoint['bytes'], allow_legacy_training_metadata=True)
     hparams = metadata['hparams']
     need(hparams.get('num_labels', 3) == 3, 'Checkpoint does not use three labels')
     model = MultiVerS(config, label_threshold=hparams.get('label_threshold'),

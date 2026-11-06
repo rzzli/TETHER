@@ -15,7 +15,11 @@ errors, then qualify/execute the full-context solver and evidence-use conditions
 then LitQA2 retrieval/reranking/repair and ALCE/selectedScholarQA/R2E. Final audit
 requires all stages; a successful diagnostic alone does not complete this goal.
 SC01 is complete with all 300 cases independently reconstructed and old sources
-preserved; SC02 acquisition/runtime/solver qualification is active. See
+preserved; SC02 full-model qualification is complete and SC03 is active. Eight
+fictional parity cases plus overflow rejection, 24 component tests, 13 supervisor
+controls and independent reconstruction pass; root acceptance checks 421
+assertions/228 files. No new development predictions yet. See
+[[TETHER MultiVerS Qualification Results 2026-11-06]] and
 [[TETHER SciFact Error Decomposition Results 2026-11-06]]. Previous completed-goal
 status below is historical and does not supersede this new authorization.
 

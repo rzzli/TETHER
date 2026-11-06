@@ -1,0 +1,54 @@
+{
+  "all_frozen_pins_unchanged": true,
+  "automatic_retry": false,
+  "cases": [
+    {
+      "case_id": "fictional_support",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_contradict",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_nei",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_claim_negation",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_long_context",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_near_limit",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_no_title",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_empty_title",
+      "status": "completed"
+    },
+    {
+      "case_id": "fictional_overflow",
+      "status": "completed"
+    }
+  ],
+  "child_pid": 2784,
+  "completed_at_utc": "2026-11-06T18:53:48.913476+00:00",
+  "deadline_scope": "Owned child only; final source hashes and terminal-file writes are cooperative parent I/O.",
+  "disposition_semantics": "Completed/start states follow complete retained events; an incomplete next start event is unknown_start, later unstarted cases remain unexecuted.",
+  "error": null,
+  "events_observed": 22,
+  "exit_code": 0,
+  "manifest_sha256": "fbcff0a79e7054fdb3e128a3ad038ff03b6dc1ced9411e2ee7ed1a83becf64e6",
+  "observed_child_phase_seconds": 23.968999999997322,
+  "partial_event_bytes": 0,
+  "schema_version": 1,
+  "status": "completed"
+}

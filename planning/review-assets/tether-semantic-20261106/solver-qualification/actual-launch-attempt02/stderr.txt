@@ -1,0 +1,3 @@
+Input ids are automatically padded to be a multiple of `config.attention_window`: 512
+archived-batched-index-select:1447: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+Token indices sequence length is longer than the specified maximum sequence length for this model (4568 > 4096). Running this sequence through the model will result in indexing errors

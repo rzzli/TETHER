@@ -8,7 +8,11 @@ separately.
 
 `runtime.load_components` requires the SHA256 of a completed acquisition receipt,
 validates the pinned tokenizer/config assets, and restricts checkpoint loading to
-`weights_only=True` with at most the explicit `argparse.Namespace` allowlist.
+`weights_only=True`. The pinned legacy checkpoint also requires two trainer-only
+global identifiers. These map to inert local markers that raise on construction
+or invocation; Lightning is never imported. The unused `tpu_cores` default is
+recorded as null with its original identifier and reason. Other nonprimitive
+hyperparameters remain rejected. `argparse.Namespace` is explicitly allowed.
 Every learned tensor loads strictly; the former position-ID buffer is explicitly
 retained and validated. No network lookup, unrestricted pickle fallback,
 truncation, or inference-time tuning occurs.

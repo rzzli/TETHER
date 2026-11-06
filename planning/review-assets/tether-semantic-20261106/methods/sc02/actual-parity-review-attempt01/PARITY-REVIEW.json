@@ -1,0 +1,392 @@
+{
+  "cases": [
+    {
+      "case_id": "fictional_support",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "101": {
+            "label": "SUPPORT",
+            "sentences": [
+              1
+            ]
+          }
+        },
+        "id": 1
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 57
+    },
+    {
+      "case_id": "fictional_contradict",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "102": {
+            "label": "CONTRADICT",
+            "sentences": [
+              1
+            ]
+          }
+        },
+        "id": 2
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 57
+    },
+    {
+      "case_id": "fictional_nei",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {},
+        "id": 3
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 49
+    },
+    {
+      "case_id": "fictional_claim_negation",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "104": {
+            "label": "CONTRADICT",
+            "sentences": [
+              1
+            ]
+          }
+        },
+        "id": 4
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 57
+    },
+    {
+      "case_id": "fictional_long_context",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "105": {
+            "label": "SUPPORT",
+            "sentences": []
+          }
+        },
+        "id": 5
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 700
+    },
+    {
+      "case_id": "fictional_near_limit",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "106": {
+            "label": "SUPPORT",
+            "sentences": []
+          }
+        },
+        "id": 6
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 4080
+    },
+    {
+      "case_id": "fictional_no_title",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "107": {
+            "label": "SUPPORT",
+            "sentences": [
+              0
+            ]
+          }
+        },
+        "id": 7
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 21
+    },
+    {
+      "case_id": "fictional_empty_title",
+      "maximum_absolute_differences": {
+        "label_logits": 0.0,
+        "label_probs": 0.0,
+        "rationale_logits": 0.0,
+        "rationale_probs": 0.0
+      },
+      "native_prediction": {
+        "evidence": {
+          "108": {
+            "label": "SUPPORT",
+            "sentences": [
+              0
+            ]
+          }
+        },
+        "id": 8
+      },
+      "semantic_diagnostic_match": true,
+      "tokens": 22
+    },
+    {
+      "case_id": "fictional_overflow",
+      "result": "expected_overflow",
+      "tokens": 4100
+    }
+  ],
+  "inference_cases": 8,
+  "input_pins": {
+    "00-fictional_support.decoded.json": {
+      "bytes": 754,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\00-fictional_support.decoded.json",
+      "sha256": "9771b119e9589c72c8178699d4eb04e4d63f2a9002821497b26f1bc5c33b0c3a"
+    },
+    "00-fictional_support.input.json": {
+      "bytes": 401,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\00-fictional_support.input.json",
+      "sha256": "8caf07eb26fd9f0e840fc13649cb141f31888c6adf81c8cd5cfc62a516514978"
+    },
+    "00-fictional_support.result.json": {
+      "bytes": 1122,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\00-fictional_support.result.json",
+      "sha256": "51441c31c2f29be4a0a8605567f0383efe1f382f7d823e7f45c779b7ce4ae2d5"
+    },
+    "00-fictional_support.tensors.json": {
+      "bytes": 5772,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\00-fictional_support.tensors.json",
+      "sha256": "3ed2dade7fa1fad215dfcd089fd64905ad135aa920c35420c709dacc313ad653"
+    },
+    "01-fictional_contradict.decoded.json": {
+      "bytes": 758,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\01-fictional_contradict.decoded.json",
+      "sha256": "b6423dd021fc21104f0a0bec97b8e2bd472cfb9c873ef36140a30d529838b5ec"
+    },
+    "01-fictional_contradict.input.json": {
+      "bytes": 406,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\01-fictional_contradict.input.json",
+      "sha256": "2a807bf3cf00aa3684a861a52ba79be8182f3156f29ef84dc919f7d7b037e363"
+    },
+    "01-fictional_contradict.result.json": {
+      "bytes": 1136,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\01-fictional_contradict.result.json",
+      "sha256": "012d21c11f57d820552dbbe33a5fcf459f4c11f755b2dc8f8514ee4899e44262"
+    },
+    "01-fictional_contradict.tensors.json": {
+      "bytes": 5771,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\01-fictional_contradict.tensors.json",
+      "sha256": "61a0615aa9da336175971e40f4eec7fb9c98ce26259e90f7bba9029775310e83"
+    },
+    "02-fictional_nei.decoded.json": {
+      "bytes": 728,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\02-fictional_nei.decoded.json",
+      "sha256": "166803c470306c10458f85a70b7836b02bdce4ccba44e970ea38bc9b2470ce66"
+    },
+    "02-fictional_nei.input.json": {
+      "bytes": 376,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\02-fictional_nei.input.json",
+      "sha256": "7835486f51c48e827f3f899c2ecd1f6a24d490da9b5eea231894389ceac4e347"
+    },
+    "02-fictional_nei.result.json": {
+      "bytes": 1007,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\02-fictional_nei.result.json",
+      "sha256": "16793d5061f53b9787b038f0f75aa6292912137c72cb56adf31c93a3fd220239"
+    },
+    "02-fictional_nei.tensors.json": {
+      "bytes": 5450,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\02-fictional_nei.tensors.json",
+      "sha256": "600df335092dbc5fe48f51fc6025489475fb8a48509efdbd861fbfa6c8ebc1c9"
+    },
+    "03-fictional_claim_negation.decoded.json": {
+      "bytes": 758,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\03-fictional_claim_negation.decoded.json",
+      "sha256": "d3476bef72abd9faf3ac3b18f8746a905ade67b1f7f00545c427b4aa88ba4b7a"
+    },
+    "03-fictional_claim_negation.input.json": {
+      "bytes": 411,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\03-fictional_claim_negation.input.json",
+      "sha256": "51f1eb9acb621a5b9ce92e8bcb1a4916c96c3b9030a0e3ce8f526476a53b39b3"
+    },
+    "03-fictional_claim_negation.result.json": {
+      "bytes": 1140,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\03-fictional_claim_negation.result.json",
+      "sha256": "9de7c72d9a8af5e2aad6bfce26fe7183034334d11275840e828b99ef4d1663b2"
+    },
+    "03-fictional_claim_negation.tensors.json": {
+      "bytes": 5781,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\03-fictional_claim_negation.tensors.json",
+      "sha256": "8cf4d6e4d16fcc9993719a89c9316b02b35838644ebfb887711d4da035b3aec1"
+    },
+    "04-fictional_long_context.decoded.json": {
+      "bytes": 790,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\04-fictional_long_context.decoded.json",
+      "sha256": "510681becfe7b2a514ddb439d3314c44d797c5f8eeab663e69bf62fe0fb2be1b"
+    },
+    "04-fictional_long_context.input.json": {
+      "bytes": 4954,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\04-fictional_long_context.input.json",
+      "sha256": "f10dc57965bc6dd0c520a78b629ff622ff14dc463b2f73483285a54270df9790"
+    },
+    "04-fictional_long_context.result.json": {
+      "bytes": 1141,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\04-fictional_long_context.result.json",
+      "sha256": "c2cbc45b0797da67ed77b8b38f877fa6837c1257009a7c9c4a22fb1533369564"
+    },
+    "04-fictional_long_context.tensors.json": {
+      "bytes": 32949,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\04-fictional_long_context.tensors.json",
+      "sha256": "8fd78b9684ceb7ad3a480b082450979e443bd98a0d805fb625d8d3db041ab0d7"
+    },
+    "05-fictional_near_limit.decoded.json": {
+      "bytes": 782,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\05-fictional_near_limit.decoded.json",
+      "sha256": "3464f69fdc4536058e3dcf6aa77b54acfa5dc9561a204f02947047317a621785"
+    },
+    "05-fictional_near_limit.input.json": {
+      "bytes": 28614,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\05-fictional_near_limit.input.json",
+      "sha256": "7fe12c0e542516788d9b89084b9224ac45d7a417a0c514ac9e1db50ed78c99c7"
+    },
+    "05-fictional_near_limit.result.json": {
+      "bytes": 1137,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\05-fictional_near_limit.result.json",
+      "sha256": "a6d27cd861f0337d30e4c272e759ba99e07621154972f3cb6a3f5ed31bdd0df7"
+    },
+    "05-fictional_near_limit.tensors.json": {
+      "bytes": 174907,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\05-fictional_near_limit.tensors.json",
+      "sha256": "caa02607028998f61d32d4a49c02ea3aa76306b2cc083c185f993bb97bd215df"
+    },
+    "06-fictional_no_title.decoded.json": {
+      "bytes": 704,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\06-fictional_no_title.decoded.json",
+      "sha256": "a4748a6059233b41dcc87bf2ae06bcb2e42c9483b3955ce9d5bedec56ab7d5b6"
+    },
+    "06-fictional_no_title.input.json": {
+      "bytes": 241,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\06-fictional_no_title.input.json",
+      "sha256": "8bf73dd3a7a26a6e957f4492bb9f40970b23f8a19dfa543c370a3ca6ac6bca3c"
+    },
+    "06-fictional_no_title.result.json": {
+      "bytes": 1095,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\06-fictional_no_title.result.json",
+      "sha256": "997d3a0a7206b33bdf65e73c619be9fabe3b5c98337e34798d97783f5f554c39"
+    },
+    "06-fictional_no_title.tensors.json": {
+      "bytes": 4134,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\06-fictional_no_title.tensors.json",
+      "sha256": "75843f96b3d470576a29f5267e15a1ab66143bc7a0b5c29ed6acc4d4102da39d"
+    },
+    "07-fictional_empty_title.decoded.json": {
+      "bytes": 704,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\07-fictional_empty_title.decoded.json",
+      "sha256": "7a172e79c8afa5e1853aa233b674a66023c7ea668719925932fc8a78413eb6e9"
+    },
+    "07-fictional_empty_title.input.json": {
+      "bytes": 242,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\07-fictional_empty_title.input.json",
+      "sha256": "89cab5feb065677c4f7ed250bb3e46a237d230089bdcbad2cb252c7651b12228"
+    },
+    "07-fictional_empty_title.result.json": {
+      "bytes": 1098,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\07-fictional_empty_title.result.json",
+      "sha256": "56e7c9e7dd06890e3e02a412ce6573c625c59e34500d2cf339fc1ac8625535e7"
+    },
+    "07-fictional_empty_title.tensors.json": {
+      "bytes": 4184,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\07-fictional_empty_title.tensors.json",
+      "sha256": "1f8286546f0ebdf60186bb141039c9c6c3a75ce819261e0bdcc7ab1af00a48b2"
+    },
+    "08-fictional_overflow.input.json": {
+      "bytes": 28835,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\08-fictional_overflow.input.json",
+      "sha256": "1e1f0c93874495a602b8683d377857c2b4d4fba39971a8901cf0cc3f3b0b21c4"
+    },
+    "08-fictional_overflow.result.json": {
+      "bytes": 150,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\08-fictional_overflow.result.json",
+      "sha256": "6543d1c739f677289f766c1c88d0e9dcf6a63215671526a609ad5ae62730683f"
+    },
+    "QUALIFICATION.json": {
+      "bytes": 15563,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\QUALIFICATION.json",
+      "sha256": "e54fd34919a6c965cbc54397d1b7c44ecadf837e1123cb226ecdc44ff1292374"
+    },
+    "controls.json": {
+      "bytes": 3703,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_multivers\\qualification-20261106-attempt02\\controls.json",
+      "sha256": "65a697882396742b46589bfd96f1a18c3862583447f202560dea1d6a3a6ada2e"
+    }
+  },
+  "limits": [
+    "Token IDs are checked against captured source-rule masks and offsets; this checker does not independently run the tokenizer backend.",
+    "Captured reference/adapter agreement is source-level parity on the modern runtime, not historical binary reproduction.",
+    "Fictional semantic diagnostic matches do not establish SciFact accuracy or clinical validity."
+  ],
+  "overflow_controls": 1,
+  "reviewer": {
+    "bytes": 13379,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\sc02\\review_captured_parity.py",
+    "sha256": "a7fc885d41014f1c05c9cce133cf7bf4be3a580f43a518bde7dcdc5a068e89cd"
+  },
+  "scheduled_cases": 9,
+  "scope": "All retained tensors, native decode, masks, IDs and numerical tolerances reconstructed with stdlib only; no torch/model import or GPU run.",
+  "self_controls": {
+    "adverse_controls": 3,
+    "positive_decode": {
+      "abstract_id": 10,
+      "claim_id": 1,
+      "label_probs": [
+        0.21194155761708547,
+        0.21194155761708547,
+        0.5761168847658291
+      ],
+      "predicted_label": "SUPPORT",
+      "predicted_rationale": [
+        0
+      ],
+      "rationale_probs": [
+        0.5,
+        0.2689414213699951
+      ]
+    },
+    "status": "PASS"
+  },
+  "status": "PASS_captured_source_parity_reconstruction"
+}
